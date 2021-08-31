@@ -1,0 +1,197 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.ListTeamAppsArg
+  commentId: T:Dropbox.Api.Team.ListTeamAppsArg
+  id: ListTeamAppsArg
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.ListTeamAppsArg.#ctor
+  - Dropbox.Api.Team.ListTeamAppsArg.#ctor(System.String)
+  - Dropbox.Api.Team.ListTeamAppsArg.Cursor
+  langs:
+  - csharp
+  - vb
+  name: ListTeamAppsArg
+  nameWithType: ListTeamAppsArg
+  fullName: Dropbox.Api.Team.ListTeamAppsArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListTeamAppsArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ListTeamAppsArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListTeamAppsArg.cs
+    startLine: 17
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Arguments for <xref href=\"Dropbox.Api.Team.Routes.TeamTeamRoutes.LinkedAppsListTeamLinkedAppsAsync(Dropbox.Api.Team.ListTeamAppsArg)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+  example: []
+  syntax:
+    content: 'public class ListTeamAppsArg : object'
+    content.vb: >-
+      Public Class ListTeamAppsArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.ListTeamAppsArg.#ctor(System.String)
+  commentId: M:Dropbox.Api.Team.ListTeamAppsArg.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.Team.ListTeamAppsArg
+  langs:
+  - csharp
+  - vb
+  name: ListTeamAppsArg(String)
+  nameWithType: ListTeamAppsArg.ListTeamAppsArg(String)
+  fullName: Dropbox.Api.Team.ListTeamAppsArg.ListTeamAppsArg(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListTeamAppsArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListTeamAppsArg.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.ListTeamAppsArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public ListTeamAppsArg(string cursor = null)
+    parameters:
+    - id: cursor
+      type: System.String
+      description: >-
+        At the first call to the <xref href="Dropbox.Api.Team.Routes.TeamTeamRoutes.LinkedAppsListTeamLinkedAppsAsync(Dropbox.Api.Team.ListTeamAppsArg)" data-throw-if-not-resolved="false"></xref>
+
+        the cursor shouldn&apos;t be passed. Then, if the result of the call includes a cursor,
+
+        the following requests should include the received cursors in order to receive the
+
+        next sub list of the team applications.
+    content.vb: Public Sub New(cursor As String = Nothing)
+  overload: Dropbox.Api.Team.ListTeamAppsArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.ListTeamAppsArg.#ctor
+  commentId: M:Dropbox.Api.Team.ListTeamAppsArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.ListTeamAppsArg
+  langs:
+  - csharp
+  - vb
+  name: ListTeamAppsArg()
+  nameWithType: ListTeamAppsArg.ListTeamAppsArg()
+  fullName: Dropbox.Api.Team.ListTeamAppsArg.ListTeamAppsArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListTeamAppsArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListTeamAppsArg.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.ListTeamAppsArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public ListTeamAppsArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.ListTeamAppsArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.ListTeamAppsArg.Cursor
+  commentId: P:Dropbox.Api.Team.ListTeamAppsArg.Cursor
+  id: Cursor
+  parent: Dropbox.Api.Team.ListTeamAppsArg
+  langs:
+  - csharp
+  - vb
+  name: Cursor
+  nameWithType: ListTeamAppsArg.Cursor
+  fullName: Dropbox.Api.Team.ListTeamAppsArg.Cursor
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListTeamAppsArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Cursor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListTeamAppsArg.cs
+    startLine: 63
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>At the first call to the <xref href=\"Dropbox.Api.Team.Routes.TeamTeamRoutes.LinkedAppsListTeamLinkedAppsAsync(Dropbox.Api.Team.ListTeamAppsArg)\" data-throw-if-not-resolved=\"false\"></xref>\nthe cursor shouldn&apos;t be passed. Then, if the result of the call includes a cursor,\nthe following requests should include the received cursors in order to receive the\nnext sub list of the team applications.</p>\n"
+  example: []
+  syntax:
+    content: public string Cursor { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Cursor As String
+  overload: Dropbox.Api.Team.ListTeamAppsArg.Cursor*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Team.Routes.TeamTeamRoutes.LinkedAppsListTeamLinkedAppsAsync(Dropbox.Api.Team.ListTeamAppsArg)
+  commentId: M:Dropbox.Api.Team.Routes.TeamTeamRoutes.LinkedAppsListTeamLinkedAppsAsync(Dropbox.Api.Team.ListTeamAppsArg)
+  isExternal: true
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.ListTeamAppsArg
+  commentId: T:Dropbox.Api.Team.ListTeamAppsArg
+  parent: Dropbox.Api.Team
+  name: ListTeamAppsArg
+  nameWithType: ListTeamAppsArg
+  fullName: Dropbox.Api.Team.ListTeamAppsArg
+- uid: Dropbox.Api.Team.ListTeamAppsArg.#ctor*
+  commentId: Overload:Dropbox.Api.Team.ListTeamAppsArg.#ctor
+  name: ListTeamAppsArg
+  nameWithType: ListTeamAppsArg.ListTeamAppsArg
+  fullName: Dropbox.Api.Team.ListTeamAppsArg.ListTeamAppsArg
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Team.ListTeamAppsArg.Cursor*
+  commentId: Overload:Dropbox.Api.Team.ListTeamAppsArg.Cursor
+  name: Cursor
+  nameWithType: ListTeamAppsArg.Cursor
+  fullName: Dropbox.Api.Team.ListTeamAppsArg.Cursor
+shouldSkipMarkup: true

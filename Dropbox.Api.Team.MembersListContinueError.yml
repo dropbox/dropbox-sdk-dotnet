@@ -1,0 +1,288 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.MembersListContinueError
+  commentId: T:Dropbox.Api.Team.MembersListContinueError
+  id: MembersListContinueError
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.MembersListContinueError.#ctor
+  - Dropbox.Api.Team.MembersListContinueError.AsInvalidCursor
+  - Dropbox.Api.Team.MembersListContinueError.AsOther
+  - Dropbox.Api.Team.MembersListContinueError.IsInvalidCursor
+  - Dropbox.Api.Team.MembersListContinueError.IsOther
+  langs:
+  - csharp
+  - vb
+  name: MembersListContinueError
+  nameWithType: MembersListContinueError
+  fullName: Dropbox.Api.Team.MembersListContinueError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersListContinueError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: MembersListContinueError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersListContinueError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The members list continue error object</p>\n"
+  example: []
+  syntax:
+    content: 'public class MembersListContinueError : object'
+    content.vb: >-
+      Public Class MembersListContinueError
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Team.MembersListContinueError.InvalidCursor
+  - Dropbox.Api.Team.MembersListContinueError.Other
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.MembersListContinueError.#ctor
+  commentId: M:Dropbox.Api.Team.MembersListContinueError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.MembersListContinueError
+  langs:
+  - csharp
+  - vb
+  name: MembersListContinueError()
+  nameWithType: MembersListContinueError.MembersListContinueError()
+  fullName: Dropbox.Api.Team.MembersListContinueError.MembersListContinueError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersListContinueError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersListContinueError.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.MembersListContinueError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public MembersListContinueError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.MembersListContinueError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.MembersListContinueError.IsInvalidCursor
+  commentId: P:Dropbox.Api.Team.MembersListContinueError.IsInvalidCursor
+  id: IsInvalidCursor
+  parent: Dropbox.Api.Team.MembersListContinueError
+  langs:
+  - csharp
+  - vb
+  name: IsInvalidCursor
+  nameWithType: MembersListContinueError.IsInvalidCursor
+  fullName: Dropbox.Api.Team.MembersListContinueError.IsInvalidCursor
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersListContinueError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsInvalidCursor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersListContinueError.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is InvalidCursor</p>\n"
+  example: []
+  syntax:
+    content: public bool IsInvalidCursor { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsInvalidCursor As Boolean
+  overload: Dropbox.Api.Team.MembersListContinueError.IsInvalidCursor*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersListContinueError.AsInvalidCursor
+  commentId: P:Dropbox.Api.Team.MembersListContinueError.AsInvalidCursor
+  id: AsInvalidCursor
+  parent: Dropbox.Api.Team.MembersListContinueError
+  langs:
+  - csharp
+  - vb
+  name: AsInvalidCursor
+  nameWithType: MembersListContinueError.AsInvalidCursor
+  fullName: Dropbox.Api.Team.MembersListContinueError.AsInvalidCursor
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersListContinueError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsInvalidCursor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersListContinueError.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a InvalidCursor, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MembersListContinueError.InvalidCursor AsInvalidCursor { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.MembersListContinueError.InvalidCursor
+    content.vb: Public ReadOnly Property AsInvalidCursor As MembersListContinueError.InvalidCursor
+  overload: Dropbox.Api.Team.MembersListContinueError.AsInvalidCursor*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersListContinueError.IsOther
+  commentId: P:Dropbox.Api.Team.MembersListContinueError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Team.MembersListContinueError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: MembersListContinueError.IsOther
+  fullName: Dropbox.Api.Team.MembersListContinueError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersListContinueError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersListContinueError.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Team.MembersListContinueError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersListContinueError.AsOther
+  commentId: P:Dropbox.Api.Team.MembersListContinueError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Team.MembersListContinueError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: MembersListContinueError.AsOther
+  fullName: Dropbox.Api.Team.MembersListContinueError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersListContinueError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersListContinueError.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MembersListContinueError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.MembersListContinueError.Other
+    content.vb: Public ReadOnly Property AsOther As MembersListContinueError.Other
+  overload: Dropbox.Api.Team.MembersListContinueError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.MembersListContinueError
+  commentId: T:Dropbox.Api.Team.MembersListContinueError
+  parent: Dropbox.Api.Team
+  name: MembersListContinueError
+  nameWithType: MembersListContinueError
+  fullName: Dropbox.Api.Team.MembersListContinueError
+- uid: Dropbox.Api.Team.MembersListContinueError.#ctor*
+  commentId: Overload:Dropbox.Api.Team.MembersListContinueError.#ctor
+  name: MembersListContinueError
+  nameWithType: MembersListContinueError.MembersListContinueError
+  fullName: Dropbox.Api.Team.MembersListContinueError.MembersListContinueError
+- uid: Dropbox.Api.Team.MembersListContinueError.IsInvalidCursor*
+  commentId: Overload:Dropbox.Api.Team.MembersListContinueError.IsInvalidCursor
+  name: IsInvalidCursor
+  nameWithType: MembersListContinueError.IsInvalidCursor
+  fullName: Dropbox.Api.Team.MembersListContinueError.IsInvalidCursor
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Team.MembersListContinueError.AsInvalidCursor*
+  commentId: Overload:Dropbox.Api.Team.MembersListContinueError.AsInvalidCursor
+  name: AsInvalidCursor
+  nameWithType: MembersListContinueError.AsInvalidCursor
+  fullName: Dropbox.Api.Team.MembersListContinueError.AsInvalidCursor
+- uid: Dropbox.Api.Team.MembersListContinueError.InvalidCursor
+  commentId: T:Dropbox.Api.Team.MembersListContinueError.InvalidCursor
+  parent: Dropbox.Api.Team
+  name: MembersListContinueError.InvalidCursor
+  nameWithType: MembersListContinueError.InvalidCursor
+  fullName: Dropbox.Api.Team.MembersListContinueError.InvalidCursor
+- uid: Dropbox.Api.Team.MembersListContinueError.IsOther*
+  commentId: Overload:Dropbox.Api.Team.MembersListContinueError.IsOther
+  name: IsOther
+  nameWithType: MembersListContinueError.IsOther
+  fullName: Dropbox.Api.Team.MembersListContinueError.IsOther
+- uid: Dropbox.Api.Team.MembersListContinueError.AsOther*
+  commentId: Overload:Dropbox.Api.Team.MembersListContinueError.AsOther
+  name: AsOther
+  nameWithType: MembersListContinueError.AsOther
+  fullName: Dropbox.Api.Team.MembersListContinueError.AsOther
+- uid: Dropbox.Api.Team.MembersListContinueError.Other
+  commentId: T:Dropbox.Api.Team.MembersListContinueError.Other
+  parent: Dropbox.Api.Team
+  name: MembersListContinueError.Other
+  nameWithType: MembersListContinueError.Other
+  fullName: Dropbox.Api.Team.MembersListContinueError.Other
+shouldSkipMarkup: true

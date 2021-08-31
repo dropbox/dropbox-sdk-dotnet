@@ -1,0 +1,476 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Paper.AddPaperDocUser
+  commentId: T:Dropbox.Api.Paper.AddPaperDocUser
+  id: AddPaperDocUser
+  parent: Dropbox.Api.Paper
+  children:
+  - Dropbox.Api.Paper.AddPaperDocUser.#ctor
+  - Dropbox.Api.Paper.AddPaperDocUser.#ctor(System.String,System.Collections.Generic.IEnumerable{Dropbox.Api.Paper.AddMember},System.String,System.Boolean)
+  - Dropbox.Api.Paper.AddPaperDocUser.CustomMessage
+  - Dropbox.Api.Paper.AddPaperDocUser.Members
+  - Dropbox.Api.Paper.AddPaperDocUser.Quiet
+  langs:
+  - csharp
+  - vb
+  name: AddPaperDocUser
+  nameWithType: AddPaperDocUser
+  fullName: Dropbox.Api.Paper.AddPaperDocUser
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/AddPaperDocUser.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AddPaperDocUser
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/AddPaperDocUser.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>The add paper doc user object</p>\n"
+  example: []
+  syntax:
+    content: 'public class AddPaperDocUser : RefPaperDoc'
+    content.vb: >-
+      Public Class AddPaperDocUser
+          Inherits RefPaperDoc
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Paper.RefPaperDoc
+  inheritedMembers:
+  - Dropbox.Api.Paper.RefPaperDoc.DocId
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Paper.AddPaperDocUser.#ctor(System.String,System.Collections.Generic.IEnumerable{Dropbox.Api.Paper.AddMember},System.String,System.Boolean)
+  commentId: M:Dropbox.Api.Paper.AddPaperDocUser.#ctor(System.String,System.Collections.Generic.IEnumerable{Dropbox.Api.Paper.AddMember},System.String,System.Boolean)
+  id: '#ctor(System.String,System.Collections.Generic.IEnumerable{Dropbox.Api.Paper.AddMember},System.String,System.Boolean)'
+  parent: Dropbox.Api.Paper.AddPaperDocUser
+  langs:
+  - csharp
+  - vb
+  name: AddPaperDocUser(String, System.Collections.Generic.IEnumerable<AddMember>, String, Boolean)
+  nameWithType: AddPaperDocUser.AddPaperDocUser(String, System.Collections.Generic.IEnumerable<AddMember>, String, Boolean)
+  fullName: Dropbox.Api.Paper.AddPaperDocUser.AddPaperDocUser(System.String, System.Collections.Generic.IEnumerable<Dropbox.Api.Paper.AddMember>, System.String, System.Boolean)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/AddPaperDocUser.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/AddPaperDocUser.cs
+    startLine: 41
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Paper.AddPaperDocUser\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public AddPaperDocUser(string docId, System.Collections.Generic.IEnumerable<AddMember> members, string customMessage = null, bool quiet = false)
+    parameters:
+    - id: docId
+      type: System.String
+      description: The Paper doc ID.
+    - id: members
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.Paper.AddMember}
+      description: >-
+        User which should be added to the Paper doc. Specify only
+
+        email address or Dropbox account ID.
+    - id: customMessage
+      type: System.String
+      description: >-
+        A personal message that will be emailed to each
+
+        successfully added member.
+    - id: quiet
+      type: System.Boolean
+      description: >-
+        Clients should set this to true if no email message shall be
+
+        sent to added users.
+    content.vb: Public Sub New(docId As String, members As System.Collections.Generic.IEnumerable(Of AddMember), customMessage As String = Nothing, quiet As Boolean = False)
+  overload: Dropbox.Api.Paper.AddPaperDocUser.#ctor*
+  nameWithType.vb: AddPaperDocUser.AddPaperDocUser(String, System.Collections.Generic.IEnumerable(Of AddMember), String, Boolean)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Paper.AddPaperDocUser.AddPaperDocUser(System.String, System.Collections.Generic.IEnumerable(Of Dropbox.Api.Paper.AddMember), System.String, System.Boolean)
+  name.vb: AddPaperDocUser(String, System.Collections.Generic.IEnumerable(Of AddMember), String, Boolean)
+- uid: Dropbox.Api.Paper.AddPaperDocUser.#ctor
+  commentId: M:Dropbox.Api.Paper.AddPaperDocUser.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Paper.AddPaperDocUser
+  langs:
+  - csharp
+  - vb
+  name: AddPaperDocUser()
+  nameWithType: AddPaperDocUser.AddPaperDocUser()
+  fullName: Dropbox.Api.Paper.AddPaperDocUser.AddPaperDocUser()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/AddPaperDocUser.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/AddPaperDocUser.cs
+    startLine: 69
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Paper.AddPaperDocUser\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public AddPaperDocUser()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Paper.AddPaperDocUser.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Paper.AddPaperDocUser.Members
+  commentId: P:Dropbox.Api.Paper.AddPaperDocUser.Members
+  id: Members
+  parent: Dropbox.Api.Paper.AddPaperDocUser
+  langs:
+  - csharp
+  - vb
+  name: Members
+  nameWithType: AddPaperDocUser.Members
+  fullName: Dropbox.Api.Paper.AddPaperDocUser.Members
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/AddPaperDocUser.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Members
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/AddPaperDocUser.cs
+    startLine: 79
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>User which should be added to the Paper doc. Specify only email address or\nDropbox account ID.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<AddMember> Members { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{Dropbox.Api.Paper.AddMember}
+    content.vb: Public Property Members As System.Collections.Generic.IList(Of AddMember)
+  overload: Dropbox.Api.Paper.AddPaperDocUser.Members*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Paper.AddPaperDocUser.CustomMessage
+  commentId: P:Dropbox.Api.Paper.AddPaperDocUser.CustomMessage
+  id: CustomMessage
+  parent: Dropbox.Api.Paper.AddPaperDocUser
+  langs:
+  - csharp
+  - vb
+  name: CustomMessage
+  nameWithType: AddPaperDocUser.CustomMessage
+  fullName: Dropbox.Api.Paper.AddPaperDocUser.CustomMessage
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/AddPaperDocUser.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: CustomMessage
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/AddPaperDocUser.cs
+    startLine: 85
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>A personal message that will be emailed to each successfully added\nmember.</p>\n"
+  example: []
+  syntax:
+    content: public string CustomMessage { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property CustomMessage As String
+  overload: Dropbox.Api.Paper.AddPaperDocUser.CustomMessage*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Paper.AddPaperDocUser.Quiet
+  commentId: P:Dropbox.Api.Paper.AddPaperDocUser.Quiet
+  id: Quiet
+  parent: Dropbox.Api.Paper.AddPaperDocUser
+  langs:
+  - csharp
+  - vb
+  name: Quiet
+  nameWithType: AddPaperDocUser.Quiet
+  fullName: Dropbox.Api.Paper.AddPaperDocUser.Quiet
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/AddPaperDocUser.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Quiet
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/AddPaperDocUser.cs
+    startLine: 91
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Clients should set this to true if no email message shall be sent to added\nusers.</p>\n"
+  example: []
+  syntax:
+    content: public bool Quiet { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property Quiet As Boolean
+  overload: Dropbox.Api.Paper.AddPaperDocUser.Quiet*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Paper
+  commentId: N:Dropbox.Api.Paper
+  name: Dropbox.Api.Paper
+  nameWithType: Dropbox.Api.Paper
+  fullName: Dropbox.Api.Paper
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Paper.RefPaperDoc
+  commentId: T:Dropbox.Api.Paper.RefPaperDoc
+  parent: Dropbox.Api.Paper
+  name: RefPaperDoc
+  nameWithType: RefPaperDoc
+  fullName: Dropbox.Api.Paper.RefPaperDoc
+- uid: Dropbox.Api.Paper.RefPaperDoc.DocId
+  commentId: P:Dropbox.Api.Paper.RefPaperDoc.DocId
+  parent: Dropbox.Api.Paper.RefPaperDoc
+  name: DocId
+  nameWithType: RefPaperDoc.DocId
+  fullName: Dropbox.Api.Paper.RefPaperDoc.DocId
+- uid: Dropbox.Api.Paper.AddPaperDocUser
+  commentId: T:Dropbox.Api.Paper.AddPaperDocUser
+  parent: Dropbox.Api.Paper
+  name: AddPaperDocUser
+  nameWithType: AddPaperDocUser
+  fullName: Dropbox.Api.Paper.AddPaperDocUser
+- uid: Dropbox.Api.Paper.AddPaperDocUser.#ctor*
+  commentId: Overload:Dropbox.Api.Paper.AddPaperDocUser.#ctor
+  name: AddPaperDocUser
+  nameWithType: AddPaperDocUser.AddPaperDocUser
+  fullName: Dropbox.Api.Paper.AddPaperDocUser.AddPaperDocUser
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Collections.Generic.IEnumerable{Dropbox.Api.Paper.AddMember}
+  commentId: '!:System.Collections.Generic.IEnumerable{Dropbox.Api.Paper.AddMember}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<AddMember>
+  nameWithType: System.Collections.Generic.IEnumerable<AddMember>
+  fullName: System.Collections.Generic.IEnumerable<Dropbox.Api.Paper.AddMember>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of AddMember)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Dropbox.Api.Paper.AddMember)
+  name.vb: System.Collections.Generic.IEnumerable(Of AddMember)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Paper.AddMember
+    name: AddMember
+    nameWithType: AddMember
+    fullName: Dropbox.Api.Paper.AddMember
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Paper.AddMember
+    name: AddMember
+    nameWithType: AddMember
+    fullName: Dropbox.Api.Paper.AddMember
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: System.Collections.Generic.IEnumerable<>
+  nameWithType: System.Collections.Generic.IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: System.Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Paper.AddPaperDocUser.Members*
+  commentId: Overload:Dropbox.Api.Paper.AddPaperDocUser.Members
+  name: Members
+  nameWithType: AddPaperDocUser.Members
+  fullName: Dropbox.Api.Paper.AddPaperDocUser.Members
+- uid: System.Collections.Generic.IList{Dropbox.Api.Paper.AddMember}
+  commentId: '!:System.Collections.Generic.IList{Dropbox.Api.Paper.AddMember}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<AddMember>
+  nameWithType: System.Collections.Generic.IList<AddMember>
+  fullName: System.Collections.Generic.IList<Dropbox.Api.Paper.AddMember>
+  nameWithType.vb: System.Collections.Generic.IList(Of AddMember)
+  fullName.vb: System.Collections.Generic.IList(Of Dropbox.Api.Paper.AddMember)
+  name.vb: System.Collections.Generic.IList(Of AddMember)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Paper.AddMember
+    name: AddMember
+    nameWithType: AddMember
+    fullName: Dropbox.Api.Paper.AddMember
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Paper.AddMember
+    name: AddMember
+    nameWithType: AddMember
+    fullName: Dropbox.Api.Paper.AddMember
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  isExternal: true
+  name: System.Collections.Generic.IList<>
+  nameWithType: System.Collections.Generic.IList<>
+  fullName: System.Collections.Generic.IList<>
+  nameWithType.vb: System.Collections.Generic.IList(Of )
+  fullName.vb: System.Collections.Generic.IList(Of )
+  name.vb: System.Collections.Generic.IList(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Paper.AddPaperDocUser.CustomMessage*
+  commentId: Overload:Dropbox.Api.Paper.AddPaperDocUser.CustomMessage
+  name: CustomMessage
+  nameWithType: AddPaperDocUser.CustomMessage
+  fullName: Dropbox.Api.Paper.AddPaperDocUser.CustomMessage
+- uid: Dropbox.Api.Paper.AddPaperDocUser.Quiet*
+  commentId: Overload:Dropbox.Api.Paper.AddPaperDocUser.Quiet
+  name: Quiet
+  nameWithType: AddPaperDocUser.Quiet
+  fullName: Dropbox.Api.Paper.AddPaperDocUser.Quiet
+shouldSkipMarkup: true

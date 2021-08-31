@@ -1,0 +1,176 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.TeamFolderCreateError.FolderNameAlreadyUsed
+  commentId: T:Dropbox.Api.Team.TeamFolderCreateError.FolderNameAlreadyUsed
+  id: TeamFolderCreateError.FolderNameAlreadyUsed
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.TeamFolderCreateError.FolderNameAlreadyUsed.Instance
+  langs:
+  - csharp
+  - vb
+  name: TeamFolderCreateError.FolderNameAlreadyUsed
+  nameWithType: TeamFolderCreateError.FolderNameAlreadyUsed
+  fullName: Dropbox.Api.Team.TeamFolderCreateError.FolderNameAlreadyUsed
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderCreateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: FolderNameAlreadyUsed
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderCreateError.cs
+    startLine: 314
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>There is already a team folder with the provided name.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class FolderNameAlreadyUsed : TeamFolderCreateError'
+    content.vb: >-
+      Public NotInheritable Class FolderNameAlreadyUsed
+          Inherits TeamFolderCreateError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.TeamFolderCreateError
+  inheritedMembers:
+  - Dropbox.Api.Team.TeamFolderCreateError.IsInvalidFolderName
+  - Dropbox.Api.Team.TeamFolderCreateError.AsInvalidFolderName
+  - Dropbox.Api.Team.TeamFolderCreateError.IsFolderNameAlreadyUsed
+  - Dropbox.Api.Team.TeamFolderCreateError.AsFolderNameAlreadyUsed
+  - Dropbox.Api.Team.TeamFolderCreateError.IsFolderNameReserved
+  - Dropbox.Api.Team.TeamFolderCreateError.AsFolderNameReserved
+  - Dropbox.Api.Team.TeamFolderCreateError.IsSyncSettingsError
+  - Dropbox.Api.Team.TeamFolderCreateError.AsSyncSettingsError
+  - Dropbox.Api.Team.TeamFolderCreateError.IsOther
+  - Dropbox.Api.Team.TeamFolderCreateError.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Team.TeamFolderCreateError.FolderNameAlreadyUsed.Instance
+  commentId: F:Dropbox.Api.Team.TeamFolderCreateError.FolderNameAlreadyUsed.Instance
+  id: Instance
+  parent: Dropbox.Api.Team.TeamFolderCreateError.FolderNameAlreadyUsed
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: TeamFolderCreateError.FolderNameAlreadyUsed.Instance
+  fullName: Dropbox.Api.Team.TeamFolderCreateError.FolderNameAlreadyUsed.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderCreateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderCreateError.cs
+    startLine: 339
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>A singleton instance of FolderNameAlreadyUsed</p>\n"
+  example: []
+  syntax:
+    content: public static readonly TeamFolderCreateError.FolderNameAlreadyUsed Instance
+    return:
+      type: Dropbox.Api.Team.TeamFolderCreateError.FolderNameAlreadyUsed
+    content.vb: Public Shared ReadOnly Instance As TeamFolderCreateError.FolderNameAlreadyUsed
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.TeamFolderCreateError
+  commentId: T:Dropbox.Api.Team.TeamFolderCreateError
+  parent: Dropbox.Api.Team
+  name: TeamFolderCreateError
+  nameWithType: TeamFolderCreateError
+  fullName: Dropbox.Api.Team.TeamFolderCreateError
+- uid: Dropbox.Api.Team.TeamFolderCreateError.IsInvalidFolderName
+  commentId: P:Dropbox.Api.Team.TeamFolderCreateError.IsInvalidFolderName
+  parent: Dropbox.Api.Team.TeamFolderCreateError
+  name: IsInvalidFolderName
+  nameWithType: TeamFolderCreateError.IsInvalidFolderName
+  fullName: Dropbox.Api.Team.TeamFolderCreateError.IsInvalidFolderName
+- uid: Dropbox.Api.Team.TeamFolderCreateError.AsInvalidFolderName
+  commentId: P:Dropbox.Api.Team.TeamFolderCreateError.AsInvalidFolderName
+  parent: Dropbox.Api.Team.TeamFolderCreateError
+  name: AsInvalidFolderName
+  nameWithType: TeamFolderCreateError.AsInvalidFolderName
+  fullName: Dropbox.Api.Team.TeamFolderCreateError.AsInvalidFolderName
+- uid: Dropbox.Api.Team.TeamFolderCreateError.IsFolderNameAlreadyUsed
+  commentId: P:Dropbox.Api.Team.TeamFolderCreateError.IsFolderNameAlreadyUsed
+  parent: Dropbox.Api.Team.TeamFolderCreateError
+  name: IsFolderNameAlreadyUsed
+  nameWithType: TeamFolderCreateError.IsFolderNameAlreadyUsed
+  fullName: Dropbox.Api.Team.TeamFolderCreateError.IsFolderNameAlreadyUsed
+- uid: Dropbox.Api.Team.TeamFolderCreateError.AsFolderNameAlreadyUsed
+  commentId: P:Dropbox.Api.Team.TeamFolderCreateError.AsFolderNameAlreadyUsed
+  parent: Dropbox.Api.Team.TeamFolderCreateError
+  name: AsFolderNameAlreadyUsed
+  nameWithType: TeamFolderCreateError.AsFolderNameAlreadyUsed
+  fullName: Dropbox.Api.Team.TeamFolderCreateError.AsFolderNameAlreadyUsed
+- uid: Dropbox.Api.Team.TeamFolderCreateError.IsFolderNameReserved
+  commentId: P:Dropbox.Api.Team.TeamFolderCreateError.IsFolderNameReserved
+  parent: Dropbox.Api.Team.TeamFolderCreateError
+  name: IsFolderNameReserved
+  nameWithType: TeamFolderCreateError.IsFolderNameReserved
+  fullName: Dropbox.Api.Team.TeamFolderCreateError.IsFolderNameReserved
+- uid: Dropbox.Api.Team.TeamFolderCreateError.AsFolderNameReserved
+  commentId: P:Dropbox.Api.Team.TeamFolderCreateError.AsFolderNameReserved
+  parent: Dropbox.Api.Team.TeamFolderCreateError
+  name: AsFolderNameReserved
+  nameWithType: TeamFolderCreateError.AsFolderNameReserved
+  fullName: Dropbox.Api.Team.TeamFolderCreateError.AsFolderNameReserved
+- uid: Dropbox.Api.Team.TeamFolderCreateError.IsSyncSettingsError
+  commentId: P:Dropbox.Api.Team.TeamFolderCreateError.IsSyncSettingsError
+  parent: Dropbox.Api.Team.TeamFolderCreateError
+  name: IsSyncSettingsError
+  nameWithType: TeamFolderCreateError.IsSyncSettingsError
+  fullName: Dropbox.Api.Team.TeamFolderCreateError.IsSyncSettingsError
+- uid: Dropbox.Api.Team.TeamFolderCreateError.AsSyncSettingsError
+  commentId: P:Dropbox.Api.Team.TeamFolderCreateError.AsSyncSettingsError
+  parent: Dropbox.Api.Team.TeamFolderCreateError
+  name: AsSyncSettingsError
+  nameWithType: TeamFolderCreateError.AsSyncSettingsError
+  fullName: Dropbox.Api.Team.TeamFolderCreateError.AsSyncSettingsError
+- uid: Dropbox.Api.Team.TeamFolderCreateError.IsOther
+  commentId: P:Dropbox.Api.Team.TeamFolderCreateError.IsOther
+  parent: Dropbox.Api.Team.TeamFolderCreateError
+  name: IsOther
+  nameWithType: TeamFolderCreateError.IsOther
+  fullName: Dropbox.Api.Team.TeamFolderCreateError.IsOther
+- uid: Dropbox.Api.Team.TeamFolderCreateError.AsOther
+  commentId: P:Dropbox.Api.Team.TeamFolderCreateError.AsOther
+  parent: Dropbox.Api.Team.TeamFolderCreateError
+  name: AsOther
+  nameWithType: TeamFolderCreateError.AsOther
+  fullName: Dropbox.Api.Team.TeamFolderCreateError.AsOther
+- uid: Dropbox.Api.Team.TeamFolderCreateError.FolderNameAlreadyUsed
+  commentId: T:Dropbox.Api.Team.TeamFolderCreateError.FolderNameAlreadyUsed
+  parent: Dropbox.Api.Team
+  name: TeamFolderCreateError.FolderNameAlreadyUsed
+  nameWithType: TeamFolderCreateError.FolderNameAlreadyUsed
+  fullName: Dropbox.Api.Team.TeamFolderCreateError.FolderNameAlreadyUsed
+shouldSkipMarkup: true

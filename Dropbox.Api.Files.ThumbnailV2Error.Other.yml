@@ -1,0 +1,204 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.ThumbnailV2Error.Other
+  commentId: T:Dropbox.Api.Files.ThumbnailV2Error.Other
+  id: ThumbnailV2Error.Other
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.ThumbnailV2Error.Other.Instance
+  langs:
+  - csharp
+  - vb
+  name: ThumbnailV2Error.Other
+  nameWithType: ThumbnailV2Error.Other
+  fullName: Dropbox.Api.Files.ThumbnailV2Error.Other
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailV2Error.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Other
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailV2Error.cs
+    startLine: 748
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The other object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Other : ThumbnailV2Error'
+    content.vb: >-
+      Public NotInheritable Class Other
+          Inherits ThumbnailV2Error
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Files.ThumbnailV2Error
+  inheritedMembers:
+  - Dropbox.Api.Files.ThumbnailV2Error.IsPath
+  - Dropbox.Api.Files.ThumbnailV2Error.AsPath
+  - Dropbox.Api.Files.ThumbnailV2Error.IsUnsupportedExtension
+  - Dropbox.Api.Files.ThumbnailV2Error.AsUnsupportedExtension
+  - Dropbox.Api.Files.ThumbnailV2Error.IsUnsupportedImage
+  - Dropbox.Api.Files.ThumbnailV2Error.AsUnsupportedImage
+  - Dropbox.Api.Files.ThumbnailV2Error.IsConversionError
+  - Dropbox.Api.Files.ThumbnailV2Error.AsConversionError
+  - Dropbox.Api.Files.ThumbnailV2Error.IsAccessDenied
+  - Dropbox.Api.Files.ThumbnailV2Error.AsAccessDenied
+  - Dropbox.Api.Files.ThumbnailV2Error.IsNotFound
+  - Dropbox.Api.Files.ThumbnailV2Error.AsNotFound
+  - Dropbox.Api.Files.ThumbnailV2Error.IsOther
+  - Dropbox.Api.Files.ThumbnailV2Error.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Files.ThumbnailV2Error.Other.Instance
+  commentId: F:Dropbox.Api.Files.ThumbnailV2Error.Other.Instance
+  id: Instance
+  parent: Dropbox.Api.Files.ThumbnailV2Error.Other
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: ThumbnailV2Error.Other.Instance
+  fullName: Dropbox.Api.Files.ThumbnailV2Error.Other.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailV2Error.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailV2Error.cs
+    startLine: 772
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>A singleton instance of Other</p>\n"
+  example: []
+  syntax:
+    content: public static readonly ThumbnailV2Error.Other Instance
+    return:
+      type: Dropbox.Api.Files.ThumbnailV2Error.Other
+    content.vb: Public Shared ReadOnly Instance As ThumbnailV2Error.Other
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.ThumbnailV2Error
+  commentId: T:Dropbox.Api.Files.ThumbnailV2Error
+  parent: Dropbox.Api.Files
+  name: ThumbnailV2Error
+  nameWithType: ThumbnailV2Error
+  fullName: Dropbox.Api.Files.ThumbnailV2Error
+- uid: Dropbox.Api.Files.ThumbnailV2Error.IsPath
+  commentId: P:Dropbox.Api.Files.ThumbnailV2Error.IsPath
+  parent: Dropbox.Api.Files.ThumbnailV2Error
+  name: IsPath
+  nameWithType: ThumbnailV2Error.IsPath
+  fullName: Dropbox.Api.Files.ThumbnailV2Error.IsPath
+- uid: Dropbox.Api.Files.ThumbnailV2Error.AsPath
+  commentId: P:Dropbox.Api.Files.ThumbnailV2Error.AsPath
+  parent: Dropbox.Api.Files.ThumbnailV2Error
+  name: AsPath
+  nameWithType: ThumbnailV2Error.AsPath
+  fullName: Dropbox.Api.Files.ThumbnailV2Error.AsPath
+- uid: Dropbox.Api.Files.ThumbnailV2Error.IsUnsupportedExtension
+  commentId: P:Dropbox.Api.Files.ThumbnailV2Error.IsUnsupportedExtension
+  parent: Dropbox.Api.Files.ThumbnailV2Error
+  name: IsUnsupportedExtension
+  nameWithType: ThumbnailV2Error.IsUnsupportedExtension
+  fullName: Dropbox.Api.Files.ThumbnailV2Error.IsUnsupportedExtension
+- uid: Dropbox.Api.Files.ThumbnailV2Error.AsUnsupportedExtension
+  commentId: P:Dropbox.Api.Files.ThumbnailV2Error.AsUnsupportedExtension
+  parent: Dropbox.Api.Files.ThumbnailV2Error
+  name: AsUnsupportedExtension
+  nameWithType: ThumbnailV2Error.AsUnsupportedExtension
+  fullName: Dropbox.Api.Files.ThumbnailV2Error.AsUnsupportedExtension
+- uid: Dropbox.Api.Files.ThumbnailV2Error.IsUnsupportedImage
+  commentId: P:Dropbox.Api.Files.ThumbnailV2Error.IsUnsupportedImage
+  parent: Dropbox.Api.Files.ThumbnailV2Error
+  name: IsUnsupportedImage
+  nameWithType: ThumbnailV2Error.IsUnsupportedImage
+  fullName: Dropbox.Api.Files.ThumbnailV2Error.IsUnsupportedImage
+- uid: Dropbox.Api.Files.ThumbnailV2Error.AsUnsupportedImage
+  commentId: P:Dropbox.Api.Files.ThumbnailV2Error.AsUnsupportedImage
+  parent: Dropbox.Api.Files.ThumbnailV2Error
+  name: AsUnsupportedImage
+  nameWithType: ThumbnailV2Error.AsUnsupportedImage
+  fullName: Dropbox.Api.Files.ThumbnailV2Error.AsUnsupportedImage
+- uid: Dropbox.Api.Files.ThumbnailV2Error.IsConversionError
+  commentId: P:Dropbox.Api.Files.ThumbnailV2Error.IsConversionError
+  parent: Dropbox.Api.Files.ThumbnailV2Error
+  name: IsConversionError
+  nameWithType: ThumbnailV2Error.IsConversionError
+  fullName: Dropbox.Api.Files.ThumbnailV2Error.IsConversionError
+- uid: Dropbox.Api.Files.ThumbnailV2Error.AsConversionError
+  commentId: P:Dropbox.Api.Files.ThumbnailV2Error.AsConversionError
+  parent: Dropbox.Api.Files.ThumbnailV2Error
+  name: AsConversionError
+  nameWithType: ThumbnailV2Error.AsConversionError
+  fullName: Dropbox.Api.Files.ThumbnailV2Error.AsConversionError
+- uid: Dropbox.Api.Files.ThumbnailV2Error.IsAccessDenied
+  commentId: P:Dropbox.Api.Files.ThumbnailV2Error.IsAccessDenied
+  parent: Dropbox.Api.Files.ThumbnailV2Error
+  name: IsAccessDenied
+  nameWithType: ThumbnailV2Error.IsAccessDenied
+  fullName: Dropbox.Api.Files.ThumbnailV2Error.IsAccessDenied
+- uid: Dropbox.Api.Files.ThumbnailV2Error.AsAccessDenied
+  commentId: P:Dropbox.Api.Files.ThumbnailV2Error.AsAccessDenied
+  parent: Dropbox.Api.Files.ThumbnailV2Error
+  name: AsAccessDenied
+  nameWithType: ThumbnailV2Error.AsAccessDenied
+  fullName: Dropbox.Api.Files.ThumbnailV2Error.AsAccessDenied
+- uid: Dropbox.Api.Files.ThumbnailV2Error.IsNotFound
+  commentId: P:Dropbox.Api.Files.ThumbnailV2Error.IsNotFound
+  parent: Dropbox.Api.Files.ThumbnailV2Error
+  name: IsNotFound
+  nameWithType: ThumbnailV2Error.IsNotFound
+  fullName: Dropbox.Api.Files.ThumbnailV2Error.IsNotFound
+- uid: Dropbox.Api.Files.ThumbnailV2Error.AsNotFound
+  commentId: P:Dropbox.Api.Files.ThumbnailV2Error.AsNotFound
+  parent: Dropbox.Api.Files.ThumbnailV2Error
+  name: AsNotFound
+  nameWithType: ThumbnailV2Error.AsNotFound
+  fullName: Dropbox.Api.Files.ThumbnailV2Error.AsNotFound
+- uid: Dropbox.Api.Files.ThumbnailV2Error.IsOther
+  commentId: P:Dropbox.Api.Files.ThumbnailV2Error.IsOther
+  parent: Dropbox.Api.Files.ThumbnailV2Error
+  name: IsOther
+  nameWithType: ThumbnailV2Error.IsOther
+  fullName: Dropbox.Api.Files.ThumbnailV2Error.IsOther
+- uid: Dropbox.Api.Files.ThumbnailV2Error.AsOther
+  commentId: P:Dropbox.Api.Files.ThumbnailV2Error.AsOther
+  parent: Dropbox.Api.Files.ThumbnailV2Error
+  name: AsOther
+  nameWithType: ThumbnailV2Error.AsOther
+  fullName: Dropbox.Api.Files.ThumbnailV2Error.AsOther
+- uid: Dropbox.Api.Files.ThumbnailV2Error.Other
+  commentId: T:Dropbox.Api.Files.ThumbnailV2Error.Other
+  parent: Dropbox.Api.Files
+  name: ThumbnailV2Error.Other
+  nameWithType: ThumbnailV2Error.Other
+  fullName: Dropbox.Api.Files.ThumbnailV2Error.Other
+shouldSkipMarkup: true

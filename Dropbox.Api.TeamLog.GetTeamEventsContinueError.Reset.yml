@@ -1,0 +1,203 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.GetTeamEventsContinueError.Reset
+  commentId: T:Dropbox.Api.TeamLog.GetTeamEventsContinueError.Reset
+  id: GetTeamEventsContinueError.Reset
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.GetTeamEventsContinueError.Reset.#ctor(System.DateTime)
+  - Dropbox.Api.TeamLog.GetTeamEventsContinueError.Reset.Value
+  langs:
+  - csharp
+  - vb
+  name: GetTeamEventsContinueError.Reset
+  nameWithType: GetTeamEventsContinueError.Reset
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsContinueError.Reset
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GetTeamEventsContinueError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Reset
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GetTeamEventsContinueError.cs
+    startLine: 260
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Cursors are intended to be used quickly. Individual cursor values are\nnormally valid for days, but in rare cases may be reset sooner.</p>\n<p>Cursor reset errors should be handled by fetching a new cursor from <xref href=\"Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.GetEventsAsync(Dropbox.Api.TeamLog.GetTeamEventsArg)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n<p>The associated value is the approximate timestamp of the most recent event\nreturned by the cursor. This should be used as a resumption point when calling <xref href=\"Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.GetEventsAsync(Dropbox.Api.TeamLog.GetTeamEventsArg)\" data-throw-if-not-resolved=\"false\"></xref> to obtain a\nnew cursor.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Reset : GetTeamEventsContinueError'
+    content.vb: >-
+      Public NotInheritable Class Reset
+          Inherits GetTeamEventsContinueError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.TeamLog.GetTeamEventsContinueError
+  inheritedMembers:
+  - Dropbox.Api.TeamLog.GetTeamEventsContinueError.IsBadCursor
+  - Dropbox.Api.TeamLog.GetTeamEventsContinueError.AsBadCursor
+  - Dropbox.Api.TeamLog.GetTeamEventsContinueError.IsReset
+  - Dropbox.Api.TeamLog.GetTeamEventsContinueError.AsReset
+  - Dropbox.Api.TeamLog.GetTeamEventsContinueError.IsOther
+  - Dropbox.Api.TeamLog.GetTeamEventsContinueError.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.TeamLog.GetTeamEventsContinueError.Reset.#ctor(System.DateTime)
+  commentId: M:Dropbox.Api.TeamLog.GetTeamEventsContinueError.Reset.#ctor(System.DateTime)
+  id: '#ctor(System.DateTime)'
+  parent: Dropbox.Api.TeamLog.GetTeamEventsContinueError.Reset
+  langs:
+  - csharp
+  - vb
+  name: Reset(System.DateTime)
+  nameWithType: GetTeamEventsContinueError.Reset.Reset(System.DateTime)
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsContinueError.Reset.Reset(System.DateTime)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GetTeamEventsContinueError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GetTeamEventsContinueError.cs
+    startLine: 278
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.GetTeamEventsContinueError.Reset\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public Reset(System.DateTime value)
+    parameters:
+    - id: value
+      type: System.DateTime
+      description: The value
+    content.vb: Public Sub New(value As System.DateTime)
+  overload: Dropbox.Api.TeamLog.GetTeamEventsContinueError.Reset.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.GetTeamEventsContinueError.Reset.Value
+  commentId: P:Dropbox.Api.TeamLog.GetTeamEventsContinueError.Reset.Value
+  id: Value
+  parent: Dropbox.Api.TeamLog.GetTeamEventsContinueError.Reset
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: GetTeamEventsContinueError.Reset.Value
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsContinueError.Reset.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GetTeamEventsContinueError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GetTeamEventsContinueError.cs
+    startLine: 292
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public System.DateTime Value { get; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public ReadOnly Property Value As System.DateTime
+  overload: Dropbox.Api.TeamLog.GetTeamEventsContinueError.Reset.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.GetEventsAsync(Dropbox.Api.TeamLog.GetTeamEventsArg)
+  commentId: M:Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.GetEventsAsync(Dropbox.Api.TeamLog.GetTeamEventsArg)
+  isExternal: true
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.GetTeamEventsContinueError
+  commentId: T:Dropbox.Api.TeamLog.GetTeamEventsContinueError
+  parent: Dropbox.Api.TeamLog
+  name: GetTeamEventsContinueError
+  nameWithType: GetTeamEventsContinueError
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsContinueError
+- uid: Dropbox.Api.TeamLog.GetTeamEventsContinueError.IsBadCursor
+  commentId: P:Dropbox.Api.TeamLog.GetTeamEventsContinueError.IsBadCursor
+  parent: Dropbox.Api.TeamLog.GetTeamEventsContinueError
+  name: IsBadCursor
+  nameWithType: GetTeamEventsContinueError.IsBadCursor
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsContinueError.IsBadCursor
+- uid: Dropbox.Api.TeamLog.GetTeamEventsContinueError.AsBadCursor
+  commentId: P:Dropbox.Api.TeamLog.GetTeamEventsContinueError.AsBadCursor
+  parent: Dropbox.Api.TeamLog.GetTeamEventsContinueError
+  name: AsBadCursor
+  nameWithType: GetTeamEventsContinueError.AsBadCursor
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsContinueError.AsBadCursor
+- uid: Dropbox.Api.TeamLog.GetTeamEventsContinueError.IsReset
+  commentId: P:Dropbox.Api.TeamLog.GetTeamEventsContinueError.IsReset
+  parent: Dropbox.Api.TeamLog.GetTeamEventsContinueError
+  name: IsReset
+  nameWithType: GetTeamEventsContinueError.IsReset
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsContinueError.IsReset
+- uid: Dropbox.Api.TeamLog.GetTeamEventsContinueError.AsReset
+  commentId: P:Dropbox.Api.TeamLog.GetTeamEventsContinueError.AsReset
+  parent: Dropbox.Api.TeamLog.GetTeamEventsContinueError
+  name: AsReset
+  nameWithType: GetTeamEventsContinueError.AsReset
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsContinueError.AsReset
+- uid: Dropbox.Api.TeamLog.GetTeamEventsContinueError.IsOther
+  commentId: P:Dropbox.Api.TeamLog.GetTeamEventsContinueError.IsOther
+  parent: Dropbox.Api.TeamLog.GetTeamEventsContinueError
+  name: IsOther
+  nameWithType: GetTeamEventsContinueError.IsOther
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsContinueError.IsOther
+- uid: Dropbox.Api.TeamLog.GetTeamEventsContinueError.AsOther
+  commentId: P:Dropbox.Api.TeamLog.GetTeamEventsContinueError.AsOther
+  parent: Dropbox.Api.TeamLog.GetTeamEventsContinueError
+  name: AsOther
+  nameWithType: GetTeamEventsContinueError.AsOther
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsContinueError.AsOther
+- uid: Dropbox.Api.TeamLog.GetTeamEventsContinueError.Reset
+  commentId: T:Dropbox.Api.TeamLog.GetTeamEventsContinueError.Reset
+  parent: Dropbox.Api.TeamLog
+  name: GetTeamEventsContinueError.Reset
+  nameWithType: GetTeamEventsContinueError.Reset
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsContinueError.Reset
+- uid: Dropbox.Api.TeamLog.GetTeamEventsContinueError.Reset.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.GetTeamEventsContinueError.Reset.#ctor
+  name: Reset
+  nameWithType: GetTeamEventsContinueError.Reset.Reset
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsContinueError.Reset.Reset
+- uid: System.DateTime
+  isExternal: true
+  name: System.DateTime
+  nameWithType: System.DateTime
+  fullName: System.DateTime
+- uid: Dropbox.Api.TeamLog.GetTeamEventsContinueError.Reset.Value*
+  commentId: Overload:Dropbox.Api.TeamLog.GetTeamEventsContinueError.Reset.Value
+  name: Value
+  nameWithType: GetTeamEventsContinueError.Reset.Value
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsContinueError.Reset.Value
+shouldSkipMarkup: true

@@ -1,0 +1,381 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.FileProperties.TemplateError
+  commentId: T:Dropbox.Api.FileProperties.TemplateError
+  id: TemplateError
+  parent: Dropbox.Api.FileProperties
+  children:
+  - Dropbox.Api.FileProperties.TemplateError.#ctor
+  - Dropbox.Api.FileProperties.TemplateError.AsOther
+  - Dropbox.Api.FileProperties.TemplateError.AsRestrictedContent
+  - Dropbox.Api.FileProperties.TemplateError.AsTemplateNotFound
+  - Dropbox.Api.FileProperties.TemplateError.IsOther
+  - Dropbox.Api.FileProperties.TemplateError.IsRestrictedContent
+  - Dropbox.Api.FileProperties.TemplateError.IsTemplateNotFound
+  langs:
+  - csharp
+  - vb
+  name: TemplateError
+  nameWithType: TemplateError
+  fullName: Dropbox.Api.FileProperties.TemplateError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/TemplateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TemplateError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/TemplateError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>The template error object</p>\n"
+  example: []
+  syntax:
+    content: 'public class TemplateError : object'
+    content.vb: >-
+      Public Class TemplateError
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.FileProperties.TemplateError.Other
+  - Dropbox.Api.FileProperties.TemplateError.RestrictedContent
+  - Dropbox.Api.FileProperties.TemplateError.TemplateNotFound
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.FileProperties.TemplateError.#ctor
+  commentId: M:Dropbox.Api.FileProperties.TemplateError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.FileProperties.TemplateError
+  langs:
+  - csharp
+  - vb
+  name: TemplateError()
+  nameWithType: TemplateError.TemplateError()
+  fullName: Dropbox.Api.FileProperties.TemplateError.TemplateError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/TemplateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/TemplateError.cs
+    startLine: 32
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.FileProperties.TemplateError\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public TemplateError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.FileProperties.TemplateError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileProperties.TemplateError.IsTemplateNotFound
+  commentId: P:Dropbox.Api.FileProperties.TemplateError.IsTemplateNotFound
+  id: IsTemplateNotFound
+  parent: Dropbox.Api.FileProperties.TemplateError
+  langs:
+  - csharp
+  - vb
+  name: IsTemplateNotFound
+  nameWithType: TemplateError.IsTemplateNotFound
+  fullName: Dropbox.Api.FileProperties.TemplateError.IsTemplateNotFound
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/TemplateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsTemplateNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/TemplateError.cs
+    startLine: 39
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Gets a value indicating whether this instance is TemplateNotFound</p>\n"
+  example: []
+  syntax:
+    content: public bool IsTemplateNotFound { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsTemplateNotFound As Boolean
+  overload: Dropbox.Api.FileProperties.TemplateError.IsTemplateNotFound*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileProperties.TemplateError.AsTemplateNotFound
+  commentId: P:Dropbox.Api.FileProperties.TemplateError.AsTemplateNotFound
+  id: AsTemplateNotFound
+  parent: Dropbox.Api.FileProperties.TemplateError
+  langs:
+  - csharp
+  - vb
+  name: AsTemplateNotFound
+  nameWithType: TemplateError.AsTemplateNotFound
+  fullName: Dropbox.Api.FileProperties.TemplateError.AsTemplateNotFound
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/TemplateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsTemplateNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/TemplateError.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Gets this instance as a TemplateNotFound, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public TemplateError.TemplateNotFound AsTemplateNotFound { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.FileProperties.TemplateError.TemplateNotFound
+    content.vb: Public ReadOnly Property AsTemplateNotFound As TemplateError.TemplateNotFound
+  overload: Dropbox.Api.FileProperties.TemplateError.AsTemplateNotFound*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileProperties.TemplateError.IsRestrictedContent
+  commentId: P:Dropbox.Api.FileProperties.TemplateError.IsRestrictedContent
+  id: IsRestrictedContent
+  parent: Dropbox.Api.FileProperties.TemplateError
+  langs:
+  - csharp
+  - vb
+  name: IsRestrictedContent
+  nameWithType: TemplateError.IsRestrictedContent
+  fullName: Dropbox.Api.FileProperties.TemplateError.IsRestrictedContent
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/TemplateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsRestrictedContent
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/TemplateError.cs
+    startLine: 61
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Gets a value indicating whether this instance is RestrictedContent</p>\n"
+  example: []
+  syntax:
+    content: public bool IsRestrictedContent { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsRestrictedContent As Boolean
+  overload: Dropbox.Api.FileProperties.TemplateError.IsRestrictedContent*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileProperties.TemplateError.AsRestrictedContent
+  commentId: P:Dropbox.Api.FileProperties.TemplateError.AsRestrictedContent
+  id: AsRestrictedContent
+  parent: Dropbox.Api.FileProperties.TemplateError
+  langs:
+  - csharp
+  - vb
+  name: AsRestrictedContent
+  nameWithType: TemplateError.AsRestrictedContent
+  fullName: Dropbox.Api.FileProperties.TemplateError.AsRestrictedContent
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/TemplateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsRestrictedContent
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/TemplateError.cs
+    startLine: 72
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Gets this instance as a RestrictedContent, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public TemplateError.RestrictedContent AsRestrictedContent { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.FileProperties.TemplateError.RestrictedContent
+    content.vb: Public ReadOnly Property AsRestrictedContent As TemplateError.RestrictedContent
+  overload: Dropbox.Api.FileProperties.TemplateError.AsRestrictedContent*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileProperties.TemplateError.IsOther
+  commentId: P:Dropbox.Api.FileProperties.TemplateError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.FileProperties.TemplateError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: TemplateError.IsOther
+  fullName: Dropbox.Api.FileProperties.TemplateError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/TemplateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/TemplateError.cs
+    startLine: 83
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.FileProperties.TemplateError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileProperties.TemplateError.AsOther
+  commentId: P:Dropbox.Api.FileProperties.TemplateError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.FileProperties.TemplateError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: TemplateError.AsOther
+  fullName: Dropbox.Api.FileProperties.TemplateError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/TemplateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/TemplateError.cs
+    startLine: 94
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public TemplateError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.FileProperties.TemplateError.Other
+    content.vb: Public ReadOnly Property AsOther As TemplateError.Other
+  overload: Dropbox.Api.FileProperties.TemplateError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.FileProperties
+  commentId: N:Dropbox.Api.FileProperties
+  name: Dropbox.Api.FileProperties
+  nameWithType: Dropbox.Api.FileProperties
+  fullName: Dropbox.Api.FileProperties
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.FileProperties.TemplateError
+  commentId: T:Dropbox.Api.FileProperties.TemplateError
+  parent: Dropbox.Api.FileProperties
+  name: TemplateError
+  nameWithType: TemplateError
+  fullName: Dropbox.Api.FileProperties.TemplateError
+- uid: Dropbox.Api.FileProperties.TemplateError.#ctor*
+  commentId: Overload:Dropbox.Api.FileProperties.TemplateError.#ctor
+  name: TemplateError
+  nameWithType: TemplateError.TemplateError
+  fullName: Dropbox.Api.FileProperties.TemplateError.TemplateError
+- uid: Dropbox.Api.FileProperties.TemplateError.IsTemplateNotFound*
+  commentId: Overload:Dropbox.Api.FileProperties.TemplateError.IsTemplateNotFound
+  name: IsTemplateNotFound
+  nameWithType: TemplateError.IsTemplateNotFound
+  fullName: Dropbox.Api.FileProperties.TemplateError.IsTemplateNotFound
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.FileProperties.TemplateError.AsTemplateNotFound*
+  commentId: Overload:Dropbox.Api.FileProperties.TemplateError.AsTemplateNotFound
+  name: AsTemplateNotFound
+  nameWithType: TemplateError.AsTemplateNotFound
+  fullName: Dropbox.Api.FileProperties.TemplateError.AsTemplateNotFound
+- uid: Dropbox.Api.FileProperties.TemplateError.TemplateNotFound
+  commentId: T:Dropbox.Api.FileProperties.TemplateError.TemplateNotFound
+  parent: Dropbox.Api.FileProperties
+  name: TemplateError.TemplateNotFound
+  nameWithType: TemplateError.TemplateNotFound
+  fullName: Dropbox.Api.FileProperties.TemplateError.TemplateNotFound
+- uid: Dropbox.Api.FileProperties.TemplateError.IsRestrictedContent*
+  commentId: Overload:Dropbox.Api.FileProperties.TemplateError.IsRestrictedContent
+  name: IsRestrictedContent
+  nameWithType: TemplateError.IsRestrictedContent
+  fullName: Dropbox.Api.FileProperties.TemplateError.IsRestrictedContent
+- uid: Dropbox.Api.FileProperties.TemplateError.AsRestrictedContent*
+  commentId: Overload:Dropbox.Api.FileProperties.TemplateError.AsRestrictedContent
+  name: AsRestrictedContent
+  nameWithType: TemplateError.AsRestrictedContent
+  fullName: Dropbox.Api.FileProperties.TemplateError.AsRestrictedContent
+- uid: Dropbox.Api.FileProperties.TemplateError.RestrictedContent
+  commentId: T:Dropbox.Api.FileProperties.TemplateError.RestrictedContent
+  parent: Dropbox.Api.FileProperties
+  name: TemplateError.RestrictedContent
+  nameWithType: TemplateError.RestrictedContent
+  fullName: Dropbox.Api.FileProperties.TemplateError.RestrictedContent
+- uid: Dropbox.Api.FileProperties.TemplateError.IsOther*
+  commentId: Overload:Dropbox.Api.FileProperties.TemplateError.IsOther
+  name: IsOther
+  nameWithType: TemplateError.IsOther
+  fullName: Dropbox.Api.FileProperties.TemplateError.IsOther
+- uid: Dropbox.Api.FileProperties.TemplateError.AsOther*
+  commentId: Overload:Dropbox.Api.FileProperties.TemplateError.AsOther
+  name: AsOther
+  nameWithType: TemplateError.AsOther
+  fullName: Dropbox.Api.FileProperties.TemplateError.AsOther
+- uid: Dropbox.Api.FileProperties.TemplateError.Other
+  commentId: T:Dropbox.Api.FileProperties.TemplateError.Other
+  parent: Dropbox.Api.FileProperties
+  name: TemplateError.Other
+  nameWithType: TemplateError.Other
+  fullName: Dropbox.Api.FileProperties.TemplateError.Other
+shouldSkipMarkup: true

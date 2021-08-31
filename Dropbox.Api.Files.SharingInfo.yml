@@ -1,0 +1,210 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.SharingInfo
+  commentId: T:Dropbox.Api.Files.SharingInfo
+  id: SharingInfo
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.SharingInfo.#ctor
+  - Dropbox.Api.Files.SharingInfo.#ctor(System.Boolean)
+  - Dropbox.Api.Files.SharingInfo.ReadOnly
+  langs:
+  - csharp
+  - vb
+  name: SharingInfo
+  nameWithType: SharingInfo
+  fullName: Dropbox.Api.Files.SharingInfo
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SharingInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SharingInfo
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SharingInfo.cs
+    startLine: 17
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Sharing info for a file or folder.</p>\n"
+  example: []
+  syntax:
+    content: 'public class SharingInfo : object'
+    content.vb: >-
+      Public Class SharingInfo
+          Inherits Object
+  seealso:
+  - linkId: Dropbox.Api.Files.FileSharingInfo
+    commentId: T:Dropbox.Api.Files.FileSharingInfo
+  - linkId: Dropbox.Api.Files.FolderSharingInfo
+    commentId: T:Dropbox.Api.Files.FolderSharingInfo
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Files.FileSharingInfo
+  - Dropbox.Api.Files.FolderSharingInfo
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.SharingInfo.#ctor(System.Boolean)
+  commentId: M:Dropbox.Api.Files.SharingInfo.#ctor(System.Boolean)
+  id: '#ctor(System.Boolean)'
+  parent: Dropbox.Api.Files.SharingInfo
+  langs:
+  - csharp
+  - vb
+  name: SharingInfo(Boolean)
+  nameWithType: SharingInfo.SharingInfo(Boolean)
+  fullName: Dropbox.Api.Files.SharingInfo.SharingInfo(System.Boolean)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SharingInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SharingInfo.cs
+    startLine: 36
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.SharingInfo\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public SharingInfo(bool readOnly)
+    parameters:
+    - id: readOnly
+      type: System.Boolean
+      description: >-
+        True if the file or folder is inside a read-only shared
+
+        folder.
+    content.vb: Public Sub New(readOnly As Boolean)
+  overload: Dropbox.Api.Files.SharingInfo.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.SharingInfo.#ctor
+  commentId: M:Dropbox.Api.Files.SharingInfo.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.SharingInfo
+  langs:
+  - csharp
+  - vb
+  name: SharingInfo()
+  nameWithType: SharingInfo.SharingInfo()
+  fullName: Dropbox.Api.Files.SharingInfo.SharingInfo()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SharingInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SharingInfo.cs
+    startLine: 46
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.SharingInfo\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public SharingInfo()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.SharingInfo.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.SharingInfo.ReadOnly
+  commentId: P:Dropbox.Api.Files.SharingInfo.ReadOnly
+  id: ReadOnly
+  parent: Dropbox.Api.Files.SharingInfo
+  langs:
+  - csharp
+  - vb
+  name: ReadOnly
+  nameWithType: SharingInfo.ReadOnly
+  fullName: Dropbox.Api.Files.SharingInfo.ReadOnly
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SharingInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ReadOnly
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SharingInfo.cs
+    startLine: 54
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>True if the file or folder is inside a read-only shared folder.</p>\n"
+  example: []
+  syntax:
+    content: public bool ReadOnly { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property ReadOnly As Boolean
+  overload: Dropbox.Api.Files.SharingInfo.ReadOnly*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Files.FileSharingInfo
+  commentId: T:Dropbox.Api.Files.FileSharingInfo
+  parent: Dropbox.Api.Files
+  name: FileSharingInfo
+  nameWithType: FileSharingInfo
+  fullName: Dropbox.Api.Files.FileSharingInfo
+- uid: Dropbox.Api.Files.FolderSharingInfo
+  commentId: T:Dropbox.Api.Files.FolderSharingInfo
+  parent: Dropbox.Api.Files
+  name: FolderSharingInfo
+  nameWithType: FolderSharingInfo
+  fullName: Dropbox.Api.Files.FolderSharingInfo
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.SharingInfo
+  commentId: T:Dropbox.Api.Files.SharingInfo
+  parent: Dropbox.Api.Files
+  name: SharingInfo
+  nameWithType: SharingInfo
+  fullName: Dropbox.Api.Files.SharingInfo
+- uid: Dropbox.Api.Files.SharingInfo.#ctor*
+  commentId: Overload:Dropbox.Api.Files.SharingInfo.#ctor
+  name: SharingInfo
+  nameWithType: SharingInfo.SharingInfo
+  fullName: Dropbox.Api.Files.SharingInfo.SharingInfo
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Files.SharingInfo.ReadOnly*
+  commentId: Overload:Dropbox.Api.Files.SharingInfo.ReadOnly
+  name: ReadOnly
+  nameWithType: SharingInfo.ReadOnly
+  fullName: Dropbox.Api.Files.SharingInfo.ReadOnly
+shouldSkipMarkup: true

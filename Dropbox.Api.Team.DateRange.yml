@@ -1,0 +1,317 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.DateRange
+  commentId: T:Dropbox.Api.Team.DateRange
+  id: DateRange
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.DateRange.#ctor
+  - Dropbox.Api.Team.DateRange.#ctor(System.Nullable{System.DateTime},System.Nullable{System.DateTime})
+  - Dropbox.Api.Team.DateRange.EndDate
+  - Dropbox.Api.Team.DateRange.StartDate
+  langs:
+  - csharp
+  - vb
+  name: DateRange
+  nameWithType: DateRange
+  fullName: Dropbox.Api.Team.DateRange
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DateRange.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: DateRange
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DateRange.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Input arguments that can be provided for most reports.</p>\n"
+  example: []
+  syntax:
+    content: 'public class DateRange : object'
+    content.vb: >-
+      Public Class DateRange
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.DateRange.#ctor(System.Nullable{System.DateTime},System.Nullable{System.DateTime})
+  commentId: M:Dropbox.Api.Team.DateRange.#ctor(System.Nullable{System.DateTime},System.Nullable{System.DateTime})
+  id: '#ctor(System.Nullable{System.DateTime},System.Nullable{System.DateTime})'
+  parent: Dropbox.Api.Team.DateRange
+  langs:
+  - csharp
+  - vb
+  name: DateRange(Nullable<System.DateTime>, Nullable<System.DateTime>)
+  nameWithType: DateRange.DateRange(Nullable<System.DateTime>, Nullable<System.DateTime>)
+  fullName: Dropbox.Api.Team.DateRange.DateRange(System.Nullable<System.DateTime>, System.Nullable<System.DateTime>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DateRange.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DateRange.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.DateRange\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public DateRange(System.DateTime? startDate = null, System.DateTime? endDate = null)
+    parameters:
+    - id: startDate
+      type: System.Nullable{System.DateTime}
+      description: >-
+        Optional starting date (inclusive). If start_date is None
+
+        or too long ago, this field will  be set to 6 months ago.
+    - id: endDate
+      type: System.Nullable{System.DateTime}
+      description: Optional ending date (exclusive).
+    content.vb: Public Sub New(startDate As System.DateTime? = Nothing, endDate As System.DateTime? = Nothing)
+  overload: Dropbox.Api.Team.DateRange.#ctor*
+  nameWithType.vb: DateRange.DateRange(Nullable(Of System.DateTime), Nullable(Of System.DateTime))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Team.DateRange.DateRange(System.Nullable(Of System.DateTime), System.Nullable(Of System.DateTime))
+  name.vb: DateRange(Nullable(Of System.DateTime), Nullable(Of System.DateTime))
+- uid: Dropbox.Api.Team.DateRange.#ctor
+  commentId: M:Dropbox.Api.Team.DateRange.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.DateRange
+  langs:
+  - csharp
+  - vb
+  name: DateRange()
+  nameWithType: DateRange.DateRange()
+  fullName: Dropbox.Api.Team.DateRange.DateRange()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DateRange.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DateRange.cs
+    startLine: 47
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.DateRange\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public DateRange()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.DateRange.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.DateRange.StartDate
+  commentId: P:Dropbox.Api.Team.DateRange.StartDate
+  id: StartDate
+  parent: Dropbox.Api.Team.DateRange
+  langs:
+  - csharp
+  - vb
+  name: StartDate
+  nameWithType: DateRange.StartDate
+  fullName: Dropbox.Api.Team.DateRange.StartDate
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DateRange.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: StartDate
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DateRange.cs
+    startLine: 56
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Optional starting date (inclusive). If start_date is None or too long ago,\nthis field will  be set to 6 months ago.</p>\n"
+  example: []
+  syntax:
+    content: public System.DateTime? StartDate { get; protected set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property StartDate As System.DateTime?
+  overload: Dropbox.Api.Team.DateRange.StartDate*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.DateRange.EndDate
+  commentId: P:Dropbox.Api.Team.DateRange.EndDate
+  id: EndDate
+  parent: Dropbox.Api.Team.DateRange
+  langs:
+  - csharp
+  - vb
+  name: EndDate
+  nameWithType: DateRange.EndDate
+  fullName: Dropbox.Api.Team.DateRange.EndDate
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DateRange.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: EndDate
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DateRange.cs
+    startLine: 61
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Optional ending date (exclusive).</p>\n"
+  example: []
+  syntax:
+    content: public System.DateTime? EndDate { get; protected set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property EndDate As System.DateTime?
+  overload: Dropbox.Api.Team.DateRange.EndDate*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.DateRange
+  commentId: T:Dropbox.Api.Team.DateRange
+  parent: Dropbox.Api.Team
+  name: DateRange
+  nameWithType: DateRange
+  fullName: Dropbox.Api.Team.DateRange
+- uid: Dropbox.Api.Team.DateRange.#ctor*
+  commentId: Overload:Dropbox.Api.Team.DateRange.#ctor
+  name: DateRange
+  nameWithType: DateRange.DateRange
+  fullName: Dropbox.Api.Team.DateRange.DateRange
+- uid: System.Nullable{System.DateTime}
+  commentId: '!:System.Nullable{System.DateTime}'
+  definition: System.Nullable`1
+  name: Nullable<System.DateTime>
+  nameWithType: Nullable<System.DateTime>
+  fullName: System.Nullable<System.DateTime>
+  nameWithType.vb: Nullable(Of System.DateTime)
+  fullName.vb: System.Nullable(Of System.DateTime)
+  name.vb: Nullable(Of System.DateTime)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.DateTime
+    name: System.DateTime
+    nameWithType: System.DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.DateTime
+    name: System.DateTime
+    nameWithType: System.DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  isExternal: true
+  name: Nullable<>
+  nameWithType: Nullable<>
+  fullName: System.Nullable<>
+  nameWithType.vb: Nullable(Of )
+  fullName.vb: System.Nullable(Of )
+  name.vb: Nullable(Of )
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Team.DateRange.StartDate*
+  commentId: Overload:Dropbox.Api.Team.DateRange.StartDate
+  name: StartDate
+  nameWithType: DateRange.StartDate
+  fullName: Dropbox.Api.Team.DateRange.StartDate
+- uid: Dropbox.Api.Team.DateRange.EndDate*
+  commentId: Overload:Dropbox.Api.Team.DateRange.EndDate
+  name: EndDate
+  nameWithType: DateRange.EndDate
+  fullName: Dropbox.Api.Team.DateRange.EndDate
+shouldSkipMarkup: true

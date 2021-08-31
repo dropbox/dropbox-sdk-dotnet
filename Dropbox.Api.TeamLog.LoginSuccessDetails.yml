@@ -1,0 +1,323 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.LoginSuccessDetails
+  commentId: T:Dropbox.Api.TeamLog.LoginSuccessDetails
+  id: LoginSuccessDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.LoginSuccessDetails.#ctor
+  - Dropbox.Api.TeamLog.LoginSuccessDetails.#ctor(Dropbox.Api.TeamLog.LoginMethod,System.Nullable{System.Boolean})
+  - Dropbox.Api.TeamLog.LoginSuccessDetails.IsEmmManaged
+  - Dropbox.Api.TeamLog.LoginSuccessDetails.LoginMethod
+  langs:
+  - csharp
+  - vb
+  name: LoginSuccessDetails
+  nameWithType: LoginSuccessDetails
+  fullName: Dropbox.Api.TeamLog.LoginSuccessDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginSuccessDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: LoginSuccessDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginSuccessDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Signed in.</p>\n"
+  example: []
+  syntax:
+    content: 'public class LoginSuccessDetails : object'
+    content.vb: >-
+      Public Class LoginSuccessDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.LoginSuccessDetails.#ctor(Dropbox.Api.TeamLog.LoginMethod,System.Nullable{System.Boolean})
+  commentId: M:Dropbox.Api.TeamLog.LoginSuccessDetails.#ctor(Dropbox.Api.TeamLog.LoginMethod,System.Nullable{System.Boolean})
+  id: '#ctor(Dropbox.Api.TeamLog.LoginMethod,System.Nullable{System.Boolean})'
+  parent: Dropbox.Api.TeamLog.LoginSuccessDetails
+  langs:
+  - csharp
+  - vb
+  name: LoginSuccessDetails(LoginMethod, Nullable<Boolean>)
+  nameWithType: LoginSuccessDetails.LoginSuccessDetails(LoginMethod, Nullable<Boolean>)
+  fullName: Dropbox.Api.TeamLog.LoginSuccessDetails.LoginSuccessDetails(Dropbox.Api.TeamLog.LoginMethod, System.Nullable<System.Boolean>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginSuccessDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginSuccessDetails.cs
+    startLine: 36
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.LoginSuccessDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public LoginSuccessDetails(LoginMethod loginMethod, bool? isEmmManaged = null)
+    parameters:
+    - id: loginMethod
+      type: Dropbox.Api.TeamLog.LoginMethod
+      description: Login method.
+    - id: isEmmManaged
+      type: System.Nullable{System.Boolean}
+      description: >-
+        Tells if the login device is EMM managed. Might be
+
+        missing due to historical data gap.
+    content.vb: Public Sub New(loginMethod As LoginMethod, isEmmManaged As Boolean? = Nothing)
+  overload: Dropbox.Api.TeamLog.LoginSuccessDetails.#ctor*
+  nameWithType.vb: LoginSuccessDetails.LoginSuccessDetails(LoginMethod, Nullable(Of Boolean))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.TeamLog.LoginSuccessDetails.LoginSuccessDetails(Dropbox.Api.TeamLog.LoginMethod, System.Nullable(Of System.Boolean))
+  name.vb: LoginSuccessDetails(LoginMethod, Nullable(Of Boolean))
+- uid: Dropbox.Api.TeamLog.LoginSuccessDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.LoginSuccessDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.LoginSuccessDetails
+  langs:
+  - csharp
+  - vb
+  name: LoginSuccessDetails()
+  nameWithType: LoginSuccessDetails.LoginSuccessDetails()
+  fullName: Dropbox.Api.TeamLog.LoginSuccessDetails.LoginSuccessDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginSuccessDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginSuccessDetails.cs
+    startLine: 54
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.LoginSuccessDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public LoginSuccessDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.LoginSuccessDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.LoginSuccessDetails.LoginMethod
+  commentId: P:Dropbox.Api.TeamLog.LoginSuccessDetails.LoginMethod
+  id: LoginMethod
+  parent: Dropbox.Api.TeamLog.LoginSuccessDetails
+  langs:
+  - csharp
+  - vb
+  name: LoginMethod
+  nameWithType: LoginSuccessDetails.LoginMethod
+  fullName: Dropbox.Api.TeamLog.LoginSuccessDetails.LoginMethod
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginSuccessDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: LoginMethod
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginSuccessDetails.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Login method.</p>\n"
+  example: []
+  syntax:
+    content: public LoginMethod LoginMethod { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.LoginMethod
+    content.vb: Public Property LoginMethod As LoginMethod
+  overload: Dropbox.Api.TeamLog.LoginSuccessDetails.LoginMethod*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.LoginSuccessDetails.IsEmmManaged
+  commentId: P:Dropbox.Api.TeamLog.LoginSuccessDetails.IsEmmManaged
+  id: IsEmmManaged
+  parent: Dropbox.Api.TeamLog.LoginSuccessDetails
+  langs:
+  - csharp
+  - vb
+  name: IsEmmManaged
+  nameWithType: LoginSuccessDetails.IsEmmManaged
+  fullName: Dropbox.Api.TeamLog.LoginSuccessDetails.IsEmmManaged
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginSuccessDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsEmmManaged
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LoginSuccessDetails.cs
+    startLine: 68
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Tells if the login device is EMM managed. Might be missing due to historical\ndata gap.</p>\n"
+  example: []
+  syntax:
+    content: public bool? IsEmmManaged { get; protected set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: Public Property IsEmmManaged As Boolean?
+  overload: Dropbox.Api.TeamLog.LoginSuccessDetails.IsEmmManaged*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.LoginSuccessDetails
+  commentId: T:Dropbox.Api.TeamLog.LoginSuccessDetails
+  parent: Dropbox.Api.TeamLog
+  name: LoginSuccessDetails
+  nameWithType: LoginSuccessDetails
+  fullName: Dropbox.Api.TeamLog.LoginSuccessDetails
+- uid: Dropbox.Api.TeamLog.LoginSuccessDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.LoginSuccessDetails.#ctor
+  name: LoginSuccessDetails
+  nameWithType: LoginSuccessDetails.LoginSuccessDetails
+  fullName: Dropbox.Api.TeamLog.LoginSuccessDetails.LoginSuccessDetails
+- uid: Dropbox.Api.TeamLog.LoginMethod
+  commentId: T:Dropbox.Api.TeamLog.LoginMethod
+  parent: Dropbox.Api.TeamLog
+  name: LoginMethod
+  nameWithType: LoginMethod
+  fullName: Dropbox.Api.TeamLog.LoginMethod
+- uid: System.Nullable{System.Boolean}
+  commentId: '!:System.Nullable{System.Boolean}'
+  definition: System.Nullable`1
+  name: Nullable<Boolean>
+  nameWithType: Nullable<Boolean>
+  fullName: System.Nullable<System.Boolean>
+  nameWithType.vb: Nullable(Of Boolean)
+  fullName.vb: System.Nullable(Of System.Boolean)
+  name.vb: Nullable(Of Boolean)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  isExternal: true
+  name: Nullable<>
+  nameWithType: Nullable<>
+  fullName: System.Nullable<>
+  nameWithType.vb: Nullable(Of )
+  fullName.vb: System.Nullable(Of )
+  name.vb: Nullable(Of )
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.TeamLog.LoginSuccessDetails.LoginMethod*
+  commentId: Overload:Dropbox.Api.TeamLog.LoginSuccessDetails.LoginMethod
+  name: LoginMethod
+  nameWithType: LoginSuccessDetails.LoginMethod
+  fullName: Dropbox.Api.TeamLog.LoginSuccessDetails.LoginMethod
+- uid: Dropbox.Api.TeamLog.LoginSuccessDetails.IsEmmManaged*
+  commentId: Overload:Dropbox.Api.TeamLog.LoginSuccessDetails.IsEmmManaged
+  name: IsEmmManaged
+  nameWithType: LoginSuccessDetails.IsEmmManaged
+  fullName: Dropbox.Api.TeamLog.LoginSuccessDetails.IsEmmManaged
+shouldSkipMarkup: true

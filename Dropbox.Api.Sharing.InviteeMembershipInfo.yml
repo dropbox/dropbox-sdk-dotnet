@@ -1,0 +1,396 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.InviteeMembershipInfo
+  commentId: T:Dropbox.Api.Sharing.InviteeMembershipInfo
+  id: InviteeMembershipInfo
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.InviteeMembershipInfo.#ctor
+  - Dropbox.Api.Sharing.InviteeMembershipInfo.#ctor(Dropbox.Api.Sharing.AccessLevel,Dropbox.Api.Sharing.InviteeInfo,System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.MemberPermission},System.String,System.Boolean,Dropbox.Api.Sharing.UserInfo)
+  - Dropbox.Api.Sharing.InviteeMembershipInfo.Invitee
+  - Dropbox.Api.Sharing.InviteeMembershipInfo.User
+  langs:
+  - csharp
+  - vb
+  name: InviteeMembershipInfo
+  nameWithType: InviteeMembershipInfo
+  fullName: Dropbox.Api.Sharing.InviteeMembershipInfo
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/InviteeMembershipInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: InviteeMembershipInfo
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/InviteeMembershipInfo.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Information about an invited member of a shared content.</p>\n"
+  example: []
+  syntax:
+    content: 'public class InviteeMembershipInfo : MembershipInfo'
+    content.vb: >-
+      Public Class InviteeMembershipInfo
+          Inherits MembershipInfo
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Sharing.MembershipInfo
+  inheritedMembers:
+  - Dropbox.Api.Sharing.MembershipInfo.AccessType
+  - Dropbox.Api.Sharing.MembershipInfo.Permissions
+  - Dropbox.Api.Sharing.MembershipInfo.Initials
+  - Dropbox.Api.Sharing.MembershipInfo.IsInherited
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Sharing.InviteeMembershipInfo.#ctor(Dropbox.Api.Sharing.AccessLevel,Dropbox.Api.Sharing.InviteeInfo,System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.MemberPermission},System.String,System.Boolean,Dropbox.Api.Sharing.UserInfo)
+  commentId: M:Dropbox.Api.Sharing.InviteeMembershipInfo.#ctor(Dropbox.Api.Sharing.AccessLevel,Dropbox.Api.Sharing.InviteeInfo,System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.MemberPermission},System.String,System.Boolean,Dropbox.Api.Sharing.UserInfo)
+  id: '#ctor(Dropbox.Api.Sharing.AccessLevel,Dropbox.Api.Sharing.InviteeInfo,System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.MemberPermission},System.String,System.Boolean,Dropbox.Api.Sharing.UserInfo)'
+  parent: Dropbox.Api.Sharing.InviteeMembershipInfo
+  langs:
+  - csharp
+  - vb
+  name: InviteeMembershipInfo(AccessLevel, InviteeInfo, System.Collections.Generic.IEnumerable<MemberPermission>, String, Boolean, UserInfo)
+  nameWithType: InviteeMembershipInfo.InviteeMembershipInfo(AccessLevel, InviteeInfo, System.Collections.Generic.IEnumerable<MemberPermission>, String, Boolean, UserInfo)
+  fullName: Dropbox.Api.Sharing.InviteeMembershipInfo.InviteeMembershipInfo(Dropbox.Api.Sharing.AccessLevel, Dropbox.Api.Sharing.InviteeInfo, System.Collections.Generic.IEnumerable<Dropbox.Api.Sharing.MemberPermission>, System.String, System.Boolean, Dropbox.Api.Sharing.UserInfo)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/InviteeMembershipInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/InviteeMembershipInfo.cs
+    startLine: 43
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.InviteeMembershipInfo\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public InviteeMembershipInfo(AccessLevel accessType, InviteeInfo invitee, System.Collections.Generic.IEnumerable<MemberPermission> permissions = null, string initials = null, bool isInherited = false, UserInfo user = null)
+    parameters:
+    - id: accessType
+      type: Dropbox.Api.Sharing.AccessLevel
+      description: >-
+        The access type for this member. It contains inherited
+
+        access type from parent folder, and acquired access type from this folder.
+    - id: invitee
+      type: Dropbox.Api.Sharing.InviteeInfo
+      description: Recipient of the invitation.
+    - id: permissions
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.MemberPermission}
+      description: >-
+        The permissions that requesting user has on this member.
+
+        The set of permissions corresponds to the MemberActions in the request.
+    - id: initials
+      type: System.String
+      description: Never set.
+    - id: isInherited
+      type: System.Boolean
+      description: >-
+        True if the member has access from a parent
+
+        folder.
+    - id: user
+      type: Dropbox.Api.Sharing.UserInfo
+      description: The user this invitation is tied to, if available.
+    content.vb: Public Sub New(accessType As AccessLevel, invitee As InviteeInfo, permissions As System.Collections.Generic.IEnumerable(Of MemberPermission) = Nothing, initials As String = Nothing, isInherited As Boolean = False, user As UserInfo = Nothing)
+  overload: Dropbox.Api.Sharing.InviteeMembershipInfo.#ctor*
+  nameWithType.vb: InviteeMembershipInfo.InviteeMembershipInfo(AccessLevel, InviteeInfo, System.Collections.Generic.IEnumerable(Of MemberPermission), String, Boolean, UserInfo)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Sharing.InviteeMembershipInfo.InviteeMembershipInfo(Dropbox.Api.Sharing.AccessLevel, Dropbox.Api.Sharing.InviteeInfo, System.Collections.Generic.IEnumerable(Of Dropbox.Api.Sharing.MemberPermission), System.String, System.Boolean, Dropbox.Api.Sharing.UserInfo)
+  name.vb: InviteeMembershipInfo(AccessLevel, InviteeInfo, System.Collections.Generic.IEnumerable(Of MemberPermission), String, Boolean, UserInfo)
+- uid: Dropbox.Api.Sharing.InviteeMembershipInfo.#ctor
+  commentId: M:Dropbox.Api.Sharing.InviteeMembershipInfo.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Sharing.InviteeMembershipInfo
+  langs:
+  - csharp
+  - vb
+  name: InviteeMembershipInfo()
+  nameWithType: InviteeMembershipInfo.InviteeMembershipInfo()
+  fullName: Dropbox.Api.Sharing.InviteeMembershipInfo.InviteeMembershipInfo()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/InviteeMembershipInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/InviteeMembershipInfo.cs
+    startLine: 66
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.InviteeMembershipInfo\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public InviteeMembershipInfo()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Sharing.InviteeMembershipInfo.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.InviteeMembershipInfo.Invitee
+  commentId: P:Dropbox.Api.Sharing.InviteeMembershipInfo.Invitee
+  id: Invitee
+  parent: Dropbox.Api.Sharing.InviteeMembershipInfo
+  langs:
+  - csharp
+  - vb
+  name: Invitee
+  nameWithType: InviteeMembershipInfo.Invitee
+  fullName: Dropbox.Api.Sharing.InviteeMembershipInfo.Invitee
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/InviteeMembershipInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Invitee
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/InviteeMembershipInfo.cs
+    startLine: 74
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Recipient of the invitation.</p>\n"
+  example: []
+  syntax:
+    content: public InviteeInfo Invitee { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.InviteeInfo
+    content.vb: Public Property Invitee As InviteeInfo
+  overload: Dropbox.Api.Sharing.InviteeMembershipInfo.Invitee*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.InviteeMembershipInfo.User
+  commentId: P:Dropbox.Api.Sharing.InviteeMembershipInfo.User
+  id: User
+  parent: Dropbox.Api.Sharing.InviteeMembershipInfo
+  langs:
+  - csharp
+  - vb
+  name: User
+  nameWithType: InviteeMembershipInfo.User
+  fullName: Dropbox.Api.Sharing.InviteeMembershipInfo.User
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/InviteeMembershipInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: User
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/InviteeMembershipInfo.cs
+    startLine: 79
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The user this invitation is tied to, if available.</p>\n"
+  example: []
+  syntax:
+    content: public UserInfo User { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.UserInfo
+    content.vb: Public Property User As UserInfo
+  overload: Dropbox.Api.Sharing.InviteeMembershipInfo.User*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.MembershipInfo
+  commentId: T:Dropbox.Api.Sharing.MembershipInfo
+  parent: Dropbox.Api.Sharing
+  name: MembershipInfo
+  nameWithType: MembershipInfo
+  fullName: Dropbox.Api.Sharing.MembershipInfo
+- uid: Dropbox.Api.Sharing.MembershipInfo.AccessType
+  commentId: P:Dropbox.Api.Sharing.MembershipInfo.AccessType
+  parent: Dropbox.Api.Sharing.MembershipInfo
+  name: AccessType
+  nameWithType: MembershipInfo.AccessType
+  fullName: Dropbox.Api.Sharing.MembershipInfo.AccessType
+- uid: Dropbox.Api.Sharing.MembershipInfo.Permissions
+  commentId: P:Dropbox.Api.Sharing.MembershipInfo.Permissions
+  parent: Dropbox.Api.Sharing.MembershipInfo
+  name: Permissions
+  nameWithType: MembershipInfo.Permissions
+  fullName: Dropbox.Api.Sharing.MembershipInfo.Permissions
+- uid: Dropbox.Api.Sharing.MembershipInfo.Initials
+  commentId: P:Dropbox.Api.Sharing.MembershipInfo.Initials
+  parent: Dropbox.Api.Sharing.MembershipInfo
+  name: Initials
+  nameWithType: MembershipInfo.Initials
+  fullName: Dropbox.Api.Sharing.MembershipInfo.Initials
+- uid: Dropbox.Api.Sharing.MembershipInfo.IsInherited
+  commentId: P:Dropbox.Api.Sharing.MembershipInfo.IsInherited
+  parent: Dropbox.Api.Sharing.MembershipInfo
+  name: IsInherited
+  nameWithType: MembershipInfo.IsInherited
+  fullName: Dropbox.Api.Sharing.MembershipInfo.IsInherited
+- uid: Dropbox.Api.Sharing.InviteeMembershipInfo
+  commentId: T:Dropbox.Api.Sharing.InviteeMembershipInfo
+  name: InviteeMembershipInfo
+  nameWithType: InviteeMembershipInfo
+  fullName: Dropbox.Api.Sharing.InviteeMembershipInfo
+- uid: Dropbox.Api.Sharing.InviteeMembershipInfo.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.InviteeMembershipInfo.#ctor
+  name: InviteeMembershipInfo
+  nameWithType: InviteeMembershipInfo.InviteeMembershipInfo
+  fullName: Dropbox.Api.Sharing.InviteeMembershipInfo.InviteeMembershipInfo
+- uid: Dropbox.Api.Sharing.AccessLevel
+  commentId: T:Dropbox.Api.Sharing.AccessLevel
+  parent: Dropbox.Api.Sharing
+  name: AccessLevel
+  nameWithType: AccessLevel
+  fullName: Dropbox.Api.Sharing.AccessLevel
+- uid: Dropbox.Api.Sharing.InviteeInfo
+  commentId: T:Dropbox.Api.Sharing.InviteeInfo
+  parent: Dropbox.Api.Sharing
+  name: InviteeInfo
+  nameWithType: InviteeInfo
+  fullName: Dropbox.Api.Sharing.InviteeInfo
+- uid: System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.MemberPermission}
+  commentId: '!:System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.MemberPermission}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<MemberPermission>
+  nameWithType: System.Collections.Generic.IEnumerable<MemberPermission>
+  fullName: System.Collections.Generic.IEnumerable<Dropbox.Api.Sharing.MemberPermission>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of MemberPermission)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Dropbox.Api.Sharing.MemberPermission)
+  name.vb: System.Collections.Generic.IEnumerable(Of MemberPermission)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Sharing.MemberPermission
+    name: MemberPermission
+    nameWithType: MemberPermission
+    fullName: Dropbox.Api.Sharing.MemberPermission
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Sharing.MemberPermission
+    name: MemberPermission
+    nameWithType: MemberPermission
+    fullName: Dropbox.Api.Sharing.MemberPermission
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Sharing.UserInfo
+  commentId: T:Dropbox.Api.Sharing.UserInfo
+  parent: Dropbox.Api.Sharing
+  name: UserInfo
+  nameWithType: UserInfo
+  fullName: Dropbox.Api.Sharing.UserInfo
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: System.Collections.Generic.IEnumerable<>
+  nameWithType: System.Collections.Generic.IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: System.Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Sharing.InviteeMembershipInfo.Invitee*
+  commentId: Overload:Dropbox.Api.Sharing.InviteeMembershipInfo.Invitee
+  name: Invitee
+  nameWithType: InviteeMembershipInfo.Invitee
+  fullName: Dropbox.Api.Sharing.InviteeMembershipInfo.Invitee
+- uid: Dropbox.Api.Sharing.InviteeMembershipInfo.User*
+  commentId: Overload:Dropbox.Api.Sharing.InviteeMembershipInfo.User
+  name: User
+  nameWithType: InviteeMembershipInfo.User
+  fullName: Dropbox.Api.Sharing.InviteeMembershipInfo.User
+shouldSkipMarkup: true

@@ -1,0 +1,288 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.GetCopyReferenceError
+  commentId: T:Dropbox.Api.Files.GetCopyReferenceError
+  id: GetCopyReferenceError
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.GetCopyReferenceError.#ctor
+  - Dropbox.Api.Files.GetCopyReferenceError.AsOther
+  - Dropbox.Api.Files.GetCopyReferenceError.AsPath
+  - Dropbox.Api.Files.GetCopyReferenceError.IsOther
+  - Dropbox.Api.Files.GetCopyReferenceError.IsPath
+  langs:
+  - csharp
+  - vb
+  name: GetCopyReferenceError
+  nameWithType: GetCopyReferenceError
+  fullName: Dropbox.Api.Files.GetCopyReferenceError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetCopyReferenceError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GetCopyReferenceError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetCopyReferenceError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The get copy reference error object</p>\n"
+  example: []
+  syntax:
+    content: 'public class GetCopyReferenceError : object'
+    content.vb: >-
+      Public Class GetCopyReferenceError
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Files.GetCopyReferenceError.Other
+  - Dropbox.Api.Files.GetCopyReferenceError.Path
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.GetCopyReferenceError.#ctor
+  commentId: M:Dropbox.Api.Files.GetCopyReferenceError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.GetCopyReferenceError
+  langs:
+  - csharp
+  - vb
+  name: GetCopyReferenceError()
+  nameWithType: GetCopyReferenceError.GetCopyReferenceError()
+  fullName: Dropbox.Api.Files.GetCopyReferenceError.GetCopyReferenceError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetCopyReferenceError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetCopyReferenceError.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.GetCopyReferenceError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public GetCopyReferenceError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.GetCopyReferenceError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.GetCopyReferenceError.IsPath
+  commentId: P:Dropbox.Api.Files.GetCopyReferenceError.IsPath
+  id: IsPath
+  parent: Dropbox.Api.Files.GetCopyReferenceError
+  langs:
+  - csharp
+  - vb
+  name: IsPath
+  nameWithType: GetCopyReferenceError.IsPath
+  fullName: Dropbox.Api.Files.GetCopyReferenceError.IsPath
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetCopyReferenceError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsPath
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetCopyReferenceError.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is Path</p>\n"
+  example: []
+  syntax:
+    content: public bool IsPath { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsPath As Boolean
+  overload: Dropbox.Api.Files.GetCopyReferenceError.IsPath*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.GetCopyReferenceError.AsPath
+  commentId: P:Dropbox.Api.Files.GetCopyReferenceError.AsPath
+  id: AsPath
+  parent: Dropbox.Api.Files.GetCopyReferenceError
+  langs:
+  - csharp
+  - vb
+  name: AsPath
+  nameWithType: GetCopyReferenceError.AsPath
+  fullName: Dropbox.Api.Files.GetCopyReferenceError.AsPath
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetCopyReferenceError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsPath
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetCopyReferenceError.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a Path, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public GetCopyReferenceError.Path AsPath { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.GetCopyReferenceError.Path
+    content.vb: Public ReadOnly Property AsPath As GetCopyReferenceError.Path
+  overload: Dropbox.Api.Files.GetCopyReferenceError.AsPath*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.GetCopyReferenceError.IsOther
+  commentId: P:Dropbox.Api.Files.GetCopyReferenceError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Files.GetCopyReferenceError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: GetCopyReferenceError.IsOther
+  fullName: Dropbox.Api.Files.GetCopyReferenceError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetCopyReferenceError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetCopyReferenceError.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Files.GetCopyReferenceError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.GetCopyReferenceError.AsOther
+  commentId: P:Dropbox.Api.Files.GetCopyReferenceError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Files.GetCopyReferenceError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: GetCopyReferenceError.AsOther
+  fullName: Dropbox.Api.Files.GetCopyReferenceError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetCopyReferenceError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetCopyReferenceError.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public GetCopyReferenceError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.GetCopyReferenceError.Other
+    content.vb: Public ReadOnly Property AsOther As GetCopyReferenceError.Other
+  overload: Dropbox.Api.Files.GetCopyReferenceError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.GetCopyReferenceError
+  commentId: T:Dropbox.Api.Files.GetCopyReferenceError
+  parent: Dropbox.Api.Files
+  name: GetCopyReferenceError
+  nameWithType: GetCopyReferenceError
+  fullName: Dropbox.Api.Files.GetCopyReferenceError
+- uid: Dropbox.Api.Files.GetCopyReferenceError.#ctor*
+  commentId: Overload:Dropbox.Api.Files.GetCopyReferenceError.#ctor
+  name: GetCopyReferenceError
+  nameWithType: GetCopyReferenceError.GetCopyReferenceError
+  fullName: Dropbox.Api.Files.GetCopyReferenceError.GetCopyReferenceError
+- uid: Dropbox.Api.Files.GetCopyReferenceError.IsPath*
+  commentId: Overload:Dropbox.Api.Files.GetCopyReferenceError.IsPath
+  name: IsPath
+  nameWithType: GetCopyReferenceError.IsPath
+  fullName: Dropbox.Api.Files.GetCopyReferenceError.IsPath
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Files.GetCopyReferenceError.AsPath*
+  commentId: Overload:Dropbox.Api.Files.GetCopyReferenceError.AsPath
+  name: AsPath
+  nameWithType: GetCopyReferenceError.AsPath
+  fullName: Dropbox.Api.Files.GetCopyReferenceError.AsPath
+- uid: Dropbox.Api.Files.GetCopyReferenceError.Path
+  commentId: T:Dropbox.Api.Files.GetCopyReferenceError.Path
+  parent: Dropbox.Api.Files
+  name: GetCopyReferenceError.Path
+  nameWithType: GetCopyReferenceError.Path
+  fullName: Dropbox.Api.Files.GetCopyReferenceError.Path
+- uid: Dropbox.Api.Files.GetCopyReferenceError.IsOther*
+  commentId: Overload:Dropbox.Api.Files.GetCopyReferenceError.IsOther
+  name: IsOther
+  nameWithType: GetCopyReferenceError.IsOther
+  fullName: Dropbox.Api.Files.GetCopyReferenceError.IsOther
+- uid: Dropbox.Api.Files.GetCopyReferenceError.AsOther*
+  commentId: Overload:Dropbox.Api.Files.GetCopyReferenceError.AsOther
+  name: AsOther
+  nameWithType: GetCopyReferenceError.AsOther
+  fullName: Dropbox.Api.Files.GetCopyReferenceError.AsOther
+- uid: Dropbox.Api.Files.GetCopyReferenceError.Other
+  commentId: T:Dropbox.Api.Files.GetCopyReferenceError.Other
+  parent: Dropbox.Api.Files
+  name: GetCopyReferenceError.Other
+  nameWithType: GetCopyReferenceError.Other
+  fullName: Dropbox.Api.Files.GetCopyReferenceError.Other
+shouldSkipMarkup: true

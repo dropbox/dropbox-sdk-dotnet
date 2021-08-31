@@ -1,0 +1,343 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.RevokeLinkedApiAppBatchArg
+  commentId: T:Dropbox.Api.Team.RevokeLinkedApiAppBatchArg
+  id: RevokeLinkedApiAppBatchArg
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.RevokeLinkedApiAppBatchArg.#ctor
+  - Dropbox.Api.Team.RevokeLinkedApiAppBatchArg.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Team.RevokeLinkedApiAppArg})
+  - Dropbox.Api.Team.RevokeLinkedApiAppBatchArg.RevokeLinkedApp
+  langs:
+  - csharp
+  - vb
+  name: RevokeLinkedApiAppBatchArg
+  nameWithType: RevokeLinkedApiAppBatchArg
+  fullName: Dropbox.Api.Team.RevokeLinkedApiAppBatchArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeLinkedApiAppBatchArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: RevokeLinkedApiAppBatchArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeLinkedApiAppBatchArg.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The revoke linked api app batch arg object</p>\n"
+  example: []
+  syntax:
+    content: 'public class RevokeLinkedApiAppBatchArg : object'
+    content.vb: >-
+      Public Class RevokeLinkedApiAppBatchArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.RevokeLinkedApiAppBatchArg.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Team.RevokeLinkedApiAppArg})
+  commentId: M:Dropbox.Api.Team.RevokeLinkedApiAppBatchArg.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Team.RevokeLinkedApiAppArg})
+  id: '#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Team.RevokeLinkedApiAppArg})'
+  parent: Dropbox.Api.Team.RevokeLinkedApiAppBatchArg
+  langs:
+  - csharp
+  - vb
+  name: RevokeLinkedApiAppBatchArg(System.Collections.Generic.IEnumerable<RevokeLinkedApiAppArg>)
+  nameWithType: RevokeLinkedApiAppBatchArg.RevokeLinkedApiAppBatchArg(System.Collections.Generic.IEnumerable<RevokeLinkedApiAppArg>)
+  fullName: Dropbox.Api.Team.RevokeLinkedApiAppBatchArg.RevokeLinkedApiAppBatchArg(System.Collections.Generic.IEnumerable<Dropbox.Api.Team.RevokeLinkedApiAppArg>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeLinkedApiAppBatchArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeLinkedApiAppBatchArg.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.RevokeLinkedApiAppBatchArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public RevokeLinkedApiAppBatchArg(System.Collections.Generic.IEnumerable<RevokeLinkedApiAppArg> revokeLinkedApp)
+    parameters:
+    - id: revokeLinkedApp
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.Team.RevokeLinkedApiAppArg}
+      description: The revoke linked app
+    content.vb: Public Sub New(revokeLinkedApp As System.Collections.Generic.IEnumerable(Of RevokeLinkedApiAppArg))
+  overload: Dropbox.Api.Team.RevokeLinkedApiAppBatchArg.#ctor*
+  nameWithType.vb: RevokeLinkedApiAppBatchArg.RevokeLinkedApiAppBatchArg(System.Collections.Generic.IEnumerable(Of RevokeLinkedApiAppArg))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Team.RevokeLinkedApiAppBatchArg.RevokeLinkedApiAppBatchArg(System.Collections.Generic.IEnumerable(Of Dropbox.Api.Team.RevokeLinkedApiAppArg))
+  name.vb: RevokeLinkedApiAppBatchArg(System.Collections.Generic.IEnumerable(Of RevokeLinkedApiAppArg))
+- uid: Dropbox.Api.Team.RevokeLinkedApiAppBatchArg.#ctor
+  commentId: M:Dropbox.Api.Team.RevokeLinkedApiAppBatchArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.RevokeLinkedApiAppBatchArg
+  langs:
+  - csharp
+  - vb
+  name: RevokeLinkedApiAppBatchArg()
+  nameWithType: RevokeLinkedApiAppBatchArg.RevokeLinkedApiAppBatchArg()
+  fullName: Dropbox.Api.Team.RevokeLinkedApiAppBatchArg.RevokeLinkedApiAppBatchArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeLinkedApiAppBatchArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeLinkedApiAppBatchArg.cs
+    startLine: 52
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.RevokeLinkedApiAppBatchArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public RevokeLinkedApiAppBatchArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.RevokeLinkedApiAppBatchArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.RevokeLinkedApiAppBatchArg.RevokeLinkedApp
+  commentId: P:Dropbox.Api.Team.RevokeLinkedApiAppBatchArg.RevokeLinkedApp
+  id: RevokeLinkedApp
+  parent: Dropbox.Api.Team.RevokeLinkedApiAppBatchArg
+  langs:
+  - csharp
+  - vb
+  name: RevokeLinkedApp
+  nameWithType: RevokeLinkedApiAppBatchArg.RevokeLinkedApp
+  fullName: Dropbox.Api.Team.RevokeLinkedApiAppBatchArg.RevokeLinkedApp
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeLinkedApiAppBatchArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: RevokeLinkedApp
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeLinkedApiAppBatchArg.cs
+    startLine: 60
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets the revoke linked app of the revoke linked api app batch arg</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<RevokeLinkedApiAppArg> RevokeLinkedApp { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{Dropbox.Api.Team.RevokeLinkedApiAppArg}
+    content.vb: Public Property RevokeLinkedApp As System.Collections.Generic.IList(Of RevokeLinkedApiAppArg)
+  overload: Dropbox.Api.Team.RevokeLinkedApiAppBatchArg.RevokeLinkedApp*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.RevokeLinkedApiAppBatchArg
+  commentId: T:Dropbox.Api.Team.RevokeLinkedApiAppBatchArg
+  parent: Dropbox.Api.Team
+  name: RevokeLinkedApiAppBatchArg
+  nameWithType: RevokeLinkedApiAppBatchArg
+  fullName: Dropbox.Api.Team.RevokeLinkedApiAppBatchArg
+- uid: Dropbox.Api.Team.RevokeLinkedApiAppBatchArg.#ctor*
+  commentId: Overload:Dropbox.Api.Team.RevokeLinkedApiAppBatchArg.#ctor
+  name: RevokeLinkedApiAppBatchArg
+  nameWithType: RevokeLinkedApiAppBatchArg.RevokeLinkedApiAppBatchArg
+  fullName: Dropbox.Api.Team.RevokeLinkedApiAppBatchArg.RevokeLinkedApiAppBatchArg
+- uid: System.Collections.Generic.IEnumerable{Dropbox.Api.Team.RevokeLinkedApiAppArg}
+  commentId: '!:System.Collections.Generic.IEnumerable{Dropbox.Api.Team.RevokeLinkedApiAppArg}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<RevokeLinkedApiAppArg>
+  nameWithType: System.Collections.Generic.IEnumerable<RevokeLinkedApiAppArg>
+  fullName: System.Collections.Generic.IEnumerable<Dropbox.Api.Team.RevokeLinkedApiAppArg>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of RevokeLinkedApiAppArg)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Dropbox.Api.Team.RevokeLinkedApiAppArg)
+  name.vb: System.Collections.Generic.IEnumerable(Of RevokeLinkedApiAppArg)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Team.RevokeLinkedApiAppArg
+    name: RevokeLinkedApiAppArg
+    nameWithType: RevokeLinkedApiAppArg
+    fullName: Dropbox.Api.Team.RevokeLinkedApiAppArg
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Team.RevokeLinkedApiAppArg
+    name: RevokeLinkedApiAppArg
+    nameWithType: RevokeLinkedApiAppArg
+    fullName: Dropbox.Api.Team.RevokeLinkedApiAppArg
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: System.Collections.Generic.IEnumerable<>
+  nameWithType: System.Collections.Generic.IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: System.Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Team.RevokeLinkedApiAppBatchArg.RevokeLinkedApp*
+  commentId: Overload:Dropbox.Api.Team.RevokeLinkedApiAppBatchArg.RevokeLinkedApp
+  name: RevokeLinkedApp
+  nameWithType: RevokeLinkedApiAppBatchArg.RevokeLinkedApp
+  fullName: Dropbox.Api.Team.RevokeLinkedApiAppBatchArg.RevokeLinkedApp
+- uid: System.Collections.Generic.IList{Dropbox.Api.Team.RevokeLinkedApiAppArg}
+  commentId: '!:System.Collections.Generic.IList{Dropbox.Api.Team.RevokeLinkedApiAppArg}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<RevokeLinkedApiAppArg>
+  nameWithType: System.Collections.Generic.IList<RevokeLinkedApiAppArg>
+  fullName: System.Collections.Generic.IList<Dropbox.Api.Team.RevokeLinkedApiAppArg>
+  nameWithType.vb: System.Collections.Generic.IList(Of RevokeLinkedApiAppArg)
+  fullName.vb: System.Collections.Generic.IList(Of Dropbox.Api.Team.RevokeLinkedApiAppArg)
+  name.vb: System.Collections.Generic.IList(Of RevokeLinkedApiAppArg)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Team.RevokeLinkedApiAppArg
+    name: RevokeLinkedApiAppArg
+    nameWithType: RevokeLinkedApiAppArg
+    fullName: Dropbox.Api.Team.RevokeLinkedApiAppArg
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Team.RevokeLinkedApiAppArg
+    name: RevokeLinkedApiAppArg
+    nameWithType: RevokeLinkedApiAppArg
+    fullName: Dropbox.Api.Team.RevokeLinkedApiAppArg
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  isExternal: true
+  name: System.Collections.Generic.IList<>
+  nameWithType: System.Collections.Generic.IList<>
+  fullName: System.Collections.Generic.IList<>
+  nameWithType.vb: System.Collections.Generic.IList(Of )
+  fullName.vb: System.Collections.Generic.IList(Of )
+  name.vb: System.Collections.Generic.IList(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+shouldSkipMarkup: true

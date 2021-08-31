@@ -1,0 +1,474 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.SearchError
+  commentId: T:Dropbox.Api.Files.SearchError
+  id: SearchError
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.SearchError.#ctor
+  - Dropbox.Api.Files.SearchError.AsInternalError
+  - Dropbox.Api.Files.SearchError.AsInvalidArgument
+  - Dropbox.Api.Files.SearchError.AsOther
+  - Dropbox.Api.Files.SearchError.AsPath
+  - Dropbox.Api.Files.SearchError.IsInternalError
+  - Dropbox.Api.Files.SearchError.IsInvalidArgument
+  - Dropbox.Api.Files.SearchError.IsOther
+  - Dropbox.Api.Files.SearchError.IsPath
+  langs:
+  - csharp
+  - vb
+  name: SearchError
+  nameWithType: SearchError
+  fullName: Dropbox.Api.Files.SearchError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SearchError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The search error object</p>\n"
+  example: []
+  syntax:
+    content: 'public class SearchError : object'
+    content.vb: >-
+      Public Class SearchError
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Files.SearchError.InternalError
+  - Dropbox.Api.Files.SearchError.InvalidArgument
+  - Dropbox.Api.Files.SearchError.Other
+  - Dropbox.Api.Files.SearchError.Path
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.SearchError.#ctor
+  commentId: M:Dropbox.Api.Files.SearchError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.SearchError
+  langs:
+  - csharp
+  - vb
+  name: SearchError()
+  nameWithType: SearchError.SearchError()
+  fullName: Dropbox.Api.Files.SearchError.SearchError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchError.cs
+    startLine: 32
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.SearchError\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public SearchError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.SearchError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.SearchError.IsPath
+  commentId: P:Dropbox.Api.Files.SearchError.IsPath
+  id: IsPath
+  parent: Dropbox.Api.Files.SearchError
+  langs:
+  - csharp
+  - vb
+  name: IsPath
+  nameWithType: SearchError.IsPath
+  fullName: Dropbox.Api.Files.SearchError.IsPath
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsPath
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchError.cs
+    startLine: 39
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is Path</p>\n"
+  example: []
+  syntax:
+    content: public bool IsPath { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsPath As Boolean
+  overload: Dropbox.Api.Files.SearchError.IsPath*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.SearchError.AsPath
+  commentId: P:Dropbox.Api.Files.SearchError.AsPath
+  id: AsPath
+  parent: Dropbox.Api.Files.SearchError
+  langs:
+  - csharp
+  - vb
+  name: AsPath
+  nameWithType: SearchError.AsPath
+  fullName: Dropbox.Api.Files.SearchError.AsPath
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsPath
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchError.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a Path, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SearchError.Path AsPath { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.SearchError.Path
+    content.vb: Public ReadOnly Property AsPath As SearchError.Path
+  overload: Dropbox.Api.Files.SearchError.AsPath*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.SearchError.IsInvalidArgument
+  commentId: P:Dropbox.Api.Files.SearchError.IsInvalidArgument
+  id: IsInvalidArgument
+  parent: Dropbox.Api.Files.SearchError
+  langs:
+  - csharp
+  - vb
+  name: IsInvalidArgument
+  nameWithType: SearchError.IsInvalidArgument
+  fullName: Dropbox.Api.Files.SearchError.IsInvalidArgument
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsInvalidArgument
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchError.cs
+    startLine: 61
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is InvalidArgument</p>\n"
+  example: []
+  syntax:
+    content: public bool IsInvalidArgument { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsInvalidArgument As Boolean
+  overload: Dropbox.Api.Files.SearchError.IsInvalidArgument*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.SearchError.AsInvalidArgument
+  commentId: P:Dropbox.Api.Files.SearchError.AsInvalidArgument
+  id: AsInvalidArgument
+  parent: Dropbox.Api.Files.SearchError
+  langs:
+  - csharp
+  - vb
+  name: AsInvalidArgument
+  nameWithType: SearchError.AsInvalidArgument
+  fullName: Dropbox.Api.Files.SearchError.AsInvalidArgument
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsInvalidArgument
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchError.cs
+    startLine: 72
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a InvalidArgument, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SearchError.InvalidArgument AsInvalidArgument { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.SearchError.InvalidArgument
+    content.vb: Public ReadOnly Property AsInvalidArgument As SearchError.InvalidArgument
+  overload: Dropbox.Api.Files.SearchError.AsInvalidArgument*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.SearchError.IsInternalError
+  commentId: P:Dropbox.Api.Files.SearchError.IsInternalError
+  id: IsInternalError
+  parent: Dropbox.Api.Files.SearchError
+  langs:
+  - csharp
+  - vb
+  name: IsInternalError
+  nameWithType: SearchError.IsInternalError
+  fullName: Dropbox.Api.Files.SearchError.IsInternalError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsInternalError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchError.cs
+    startLine: 83
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is InternalError</p>\n"
+  example: []
+  syntax:
+    content: public bool IsInternalError { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsInternalError As Boolean
+  overload: Dropbox.Api.Files.SearchError.IsInternalError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.SearchError.AsInternalError
+  commentId: P:Dropbox.Api.Files.SearchError.AsInternalError
+  id: AsInternalError
+  parent: Dropbox.Api.Files.SearchError
+  langs:
+  - csharp
+  - vb
+  name: AsInternalError
+  nameWithType: SearchError.AsInternalError
+  fullName: Dropbox.Api.Files.SearchError.AsInternalError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsInternalError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchError.cs
+    startLine: 94
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a InternalError, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SearchError.InternalError AsInternalError { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.SearchError.InternalError
+    content.vb: Public ReadOnly Property AsInternalError As SearchError.InternalError
+  overload: Dropbox.Api.Files.SearchError.AsInternalError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.SearchError.IsOther
+  commentId: P:Dropbox.Api.Files.SearchError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Files.SearchError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: SearchError.IsOther
+  fullName: Dropbox.Api.Files.SearchError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchError.cs
+    startLine: 105
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Files.SearchError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.SearchError.AsOther
+  commentId: P:Dropbox.Api.Files.SearchError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Files.SearchError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: SearchError.AsOther
+  fullName: Dropbox.Api.Files.SearchError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchError.cs
+    startLine: 116
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SearchError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.SearchError.Other
+    content.vb: Public ReadOnly Property AsOther As SearchError.Other
+  overload: Dropbox.Api.Files.SearchError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.SearchError
+  commentId: T:Dropbox.Api.Files.SearchError
+  parent: Dropbox.Api.Files
+  name: SearchError
+  nameWithType: SearchError
+  fullName: Dropbox.Api.Files.SearchError
+- uid: Dropbox.Api.Files.SearchError.#ctor*
+  commentId: Overload:Dropbox.Api.Files.SearchError.#ctor
+  name: SearchError
+  nameWithType: SearchError.SearchError
+  fullName: Dropbox.Api.Files.SearchError.SearchError
+- uid: Dropbox.Api.Files.SearchError.IsPath*
+  commentId: Overload:Dropbox.Api.Files.SearchError.IsPath
+  name: IsPath
+  nameWithType: SearchError.IsPath
+  fullName: Dropbox.Api.Files.SearchError.IsPath
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Files.SearchError.AsPath*
+  commentId: Overload:Dropbox.Api.Files.SearchError.AsPath
+  name: AsPath
+  nameWithType: SearchError.AsPath
+  fullName: Dropbox.Api.Files.SearchError.AsPath
+- uid: Dropbox.Api.Files.SearchError.Path
+  commentId: T:Dropbox.Api.Files.SearchError.Path
+  parent: Dropbox.Api.Files
+  name: SearchError.Path
+  nameWithType: SearchError.Path
+  fullName: Dropbox.Api.Files.SearchError.Path
+- uid: Dropbox.Api.Files.SearchError.IsInvalidArgument*
+  commentId: Overload:Dropbox.Api.Files.SearchError.IsInvalidArgument
+  name: IsInvalidArgument
+  nameWithType: SearchError.IsInvalidArgument
+  fullName: Dropbox.Api.Files.SearchError.IsInvalidArgument
+- uid: Dropbox.Api.Files.SearchError.AsInvalidArgument*
+  commentId: Overload:Dropbox.Api.Files.SearchError.AsInvalidArgument
+  name: AsInvalidArgument
+  nameWithType: SearchError.AsInvalidArgument
+  fullName: Dropbox.Api.Files.SearchError.AsInvalidArgument
+- uid: Dropbox.Api.Files.SearchError.InvalidArgument
+  commentId: T:Dropbox.Api.Files.SearchError.InvalidArgument
+  parent: Dropbox.Api.Files
+  name: SearchError.InvalidArgument
+  nameWithType: SearchError.InvalidArgument
+  fullName: Dropbox.Api.Files.SearchError.InvalidArgument
+- uid: Dropbox.Api.Files.SearchError.IsInternalError*
+  commentId: Overload:Dropbox.Api.Files.SearchError.IsInternalError
+  name: IsInternalError
+  nameWithType: SearchError.IsInternalError
+  fullName: Dropbox.Api.Files.SearchError.IsInternalError
+- uid: Dropbox.Api.Files.SearchError.AsInternalError*
+  commentId: Overload:Dropbox.Api.Files.SearchError.AsInternalError
+  name: AsInternalError
+  nameWithType: SearchError.AsInternalError
+  fullName: Dropbox.Api.Files.SearchError.AsInternalError
+- uid: Dropbox.Api.Files.SearchError.InternalError
+  commentId: T:Dropbox.Api.Files.SearchError.InternalError
+  parent: Dropbox.Api.Files
+  name: SearchError.InternalError
+  nameWithType: SearchError.InternalError
+  fullName: Dropbox.Api.Files.SearchError.InternalError
+- uid: Dropbox.Api.Files.SearchError.IsOther*
+  commentId: Overload:Dropbox.Api.Files.SearchError.IsOther
+  name: IsOther
+  nameWithType: SearchError.IsOther
+  fullName: Dropbox.Api.Files.SearchError.IsOther
+- uid: Dropbox.Api.Files.SearchError.AsOther*
+  commentId: Overload:Dropbox.Api.Files.SearchError.AsOther
+  name: AsOther
+  nameWithType: SearchError.AsOther
+  fullName: Dropbox.Api.Files.SearchError.AsOther
+- uid: Dropbox.Api.Files.SearchError.Other
+  commentId: T:Dropbox.Api.Files.SearchError.Other
+  parent: Dropbox.Api.Files
+  name: SearchError.Other
+  nameWithType: SearchError.Other
+  fullName: Dropbox.Api.Files.SearchError.Other
+shouldSkipMarkup: true

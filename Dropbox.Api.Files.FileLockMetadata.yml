@@ -1,0 +1,461 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.FileLockMetadata
+  commentId: T:Dropbox.Api.Files.FileLockMetadata
+  id: FileLockMetadata
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.FileLockMetadata.#ctor
+  - Dropbox.Api.Files.FileLockMetadata.#ctor(System.Nullable{System.Boolean},System.String,System.String,System.Nullable{System.DateTime})
+  - Dropbox.Api.Files.FileLockMetadata.Created
+  - Dropbox.Api.Files.FileLockMetadata.IsLockholder
+  - Dropbox.Api.Files.FileLockMetadata.LockholderAccountId
+  - Dropbox.Api.Files.FileLockMetadata.LockholderName
+  langs:
+  - csharp
+  - vb
+  name: FileLockMetadata
+  nameWithType: FileLockMetadata
+  fullName: Dropbox.Api.Files.FileLockMetadata
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileLockMetadata.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: FileLockMetadata
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileLockMetadata.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The file lock metadata object</p>\n"
+  example: []
+  syntax:
+    content: 'public class FileLockMetadata : object'
+    content.vb: >-
+      Public Class FileLockMetadata
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.FileLockMetadata.#ctor(System.Nullable{System.Boolean},System.String,System.String,System.Nullable{System.DateTime})
+  commentId: M:Dropbox.Api.Files.FileLockMetadata.#ctor(System.Nullable{System.Boolean},System.String,System.String,System.Nullable{System.DateTime})
+  id: '#ctor(System.Nullable{System.Boolean},System.String,System.String,System.Nullable{System.DateTime})'
+  parent: Dropbox.Api.Files.FileLockMetadata
+  langs:
+  - csharp
+  - vb
+  name: FileLockMetadata(Nullable<Boolean>, String, String, Nullable<System.DateTime>)
+  nameWithType: FileLockMetadata.FileLockMetadata(Nullable<Boolean>, String, String, Nullable<System.DateTime>)
+  fullName: Dropbox.Api.Files.FileLockMetadata.FileLockMetadata(System.Nullable<System.Boolean>, System.String, System.String, System.Nullable<System.DateTime>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileLockMetadata.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileLockMetadata.cs
+    startLine: 38
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.FileLockMetadata\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public FileLockMetadata(bool? isLockholder = null, string lockholderName = null, string lockholderAccountId = null, System.DateTime? created = null)
+    parameters:
+    - id: isLockholder
+      type: System.Nullable{System.Boolean}
+      description: True if caller holds the file lock.
+    - id: lockholderName
+      type: System.String
+      description: The display name of the lock holder.
+    - id: lockholderAccountId
+      type: System.String
+      description: >-
+        The account ID of the lock holder if
+
+        known.
+    - id: created
+      type: System.Nullable{System.DateTime}
+      description: The timestamp of the lock was created.
+    content.vb: Public Sub New(isLockholder As Boolean? = Nothing, lockholderName As String = Nothing, lockholderAccountId As String = Nothing, created As System.DateTime? = Nothing)
+  overload: Dropbox.Api.Files.FileLockMetadata.#ctor*
+  nameWithType.vb: FileLockMetadata.FileLockMetadata(Nullable(Of Boolean), String, String, Nullable(Of System.DateTime))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Files.FileLockMetadata.FileLockMetadata(System.Nullable(Of System.Boolean), System.String, System.String, System.Nullable(Of System.DateTime))
+  name.vb: FileLockMetadata(Nullable(Of Boolean), String, String, Nullable(Of System.DateTime))
+- uid: Dropbox.Api.Files.FileLockMetadata.#ctor
+  commentId: M:Dropbox.Api.Files.FileLockMetadata.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.FileLockMetadata
+  langs:
+  - csharp
+  - vb
+  name: FileLockMetadata()
+  nameWithType: FileLockMetadata.FileLockMetadata()
+  fullName: Dropbox.Api.Files.FileLockMetadata.FileLockMetadata()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileLockMetadata.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileLockMetadata.cs
+    startLine: 67
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.FileLockMetadata\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public FileLockMetadata()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.FileLockMetadata.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.FileLockMetadata.IsLockholder
+  commentId: P:Dropbox.Api.Files.FileLockMetadata.IsLockholder
+  id: IsLockholder
+  parent: Dropbox.Api.Files.FileLockMetadata
+  langs:
+  - csharp
+  - vb
+  name: IsLockholder
+  nameWithType: FileLockMetadata.IsLockholder
+  fullName: Dropbox.Api.Files.FileLockMetadata.IsLockholder
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileLockMetadata.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsLockholder
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileLockMetadata.cs
+    startLine: 75
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>True if caller holds the file lock.</p>\n"
+  example: []
+  syntax:
+    content: public bool? IsLockholder { get; protected set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: Public Property IsLockholder As Boolean?
+  overload: Dropbox.Api.Files.FileLockMetadata.IsLockholder*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.FileLockMetadata.LockholderName
+  commentId: P:Dropbox.Api.Files.FileLockMetadata.LockholderName
+  id: LockholderName
+  parent: Dropbox.Api.Files.FileLockMetadata
+  langs:
+  - csharp
+  - vb
+  name: LockholderName
+  nameWithType: FileLockMetadata.LockholderName
+  fullName: Dropbox.Api.Files.FileLockMetadata.LockholderName
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileLockMetadata.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: LockholderName
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileLockMetadata.cs
+    startLine: 80
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The display name of the lock holder.</p>\n"
+  example: []
+  syntax:
+    content: public string LockholderName { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property LockholderName As String
+  overload: Dropbox.Api.Files.FileLockMetadata.LockholderName*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.FileLockMetadata.LockholderAccountId
+  commentId: P:Dropbox.Api.Files.FileLockMetadata.LockholderAccountId
+  id: LockholderAccountId
+  parent: Dropbox.Api.Files.FileLockMetadata
+  langs:
+  - csharp
+  - vb
+  name: LockholderAccountId
+  nameWithType: FileLockMetadata.LockholderAccountId
+  fullName: Dropbox.Api.Files.FileLockMetadata.LockholderAccountId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileLockMetadata.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: LockholderAccountId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileLockMetadata.cs
+    startLine: 85
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The account ID of the lock holder if known.</p>\n"
+  example: []
+  syntax:
+    content: public string LockholderAccountId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property LockholderAccountId As String
+  overload: Dropbox.Api.Files.FileLockMetadata.LockholderAccountId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.FileLockMetadata.Created
+  commentId: P:Dropbox.Api.Files.FileLockMetadata.Created
+  id: Created
+  parent: Dropbox.Api.Files.FileLockMetadata
+  langs:
+  - csharp
+  - vb
+  name: Created
+  nameWithType: FileLockMetadata.Created
+  fullName: Dropbox.Api.Files.FileLockMetadata.Created
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileLockMetadata.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Created
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileLockMetadata.cs
+    startLine: 90
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The timestamp of the lock was created.</p>\n"
+  example: []
+  syntax:
+    content: public System.DateTime? Created { get; protected set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property Created As System.DateTime?
+  overload: Dropbox.Api.Files.FileLockMetadata.Created*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.FileLockMetadata
+  commentId: T:Dropbox.Api.Files.FileLockMetadata
+  parent: Dropbox.Api.Files
+  name: FileLockMetadata
+  nameWithType: FileLockMetadata
+  fullName: Dropbox.Api.Files.FileLockMetadata
+- uid: Dropbox.Api.Files.FileLockMetadata.#ctor*
+  commentId: Overload:Dropbox.Api.Files.FileLockMetadata.#ctor
+  name: FileLockMetadata
+  nameWithType: FileLockMetadata.FileLockMetadata
+  fullName: Dropbox.Api.Files.FileLockMetadata.FileLockMetadata
+- uid: System.Nullable{System.Boolean}
+  commentId: '!:System.Nullable{System.Boolean}'
+  definition: System.Nullable`1
+  name: Nullable<Boolean>
+  nameWithType: Nullable<Boolean>
+  fullName: System.Nullable<System.Boolean>
+  nameWithType.vb: Nullable(Of Boolean)
+  fullName.vb: System.Nullable(Of System.Boolean)
+  name.vb: Nullable(Of Boolean)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Nullable{System.DateTime}
+  commentId: '!:System.Nullable{System.DateTime}'
+  definition: System.Nullable`1
+  name: Nullable<System.DateTime>
+  nameWithType: Nullable<System.DateTime>
+  fullName: System.Nullable<System.DateTime>
+  nameWithType.vb: Nullable(Of System.DateTime)
+  fullName.vb: System.Nullable(Of System.DateTime)
+  name.vb: Nullable(Of System.DateTime)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.DateTime
+    name: System.DateTime
+    nameWithType: System.DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.DateTime
+    name: System.DateTime
+    nameWithType: System.DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  isExternal: true
+  name: Nullable<>
+  nameWithType: Nullable<>
+  fullName: System.Nullable<>
+  nameWithType.vb: Nullable(Of )
+  fullName.vb: System.Nullable(Of )
+  name.vb: Nullable(Of )
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Files.FileLockMetadata.IsLockholder*
+  commentId: Overload:Dropbox.Api.Files.FileLockMetadata.IsLockholder
+  name: IsLockholder
+  nameWithType: FileLockMetadata.IsLockholder
+  fullName: Dropbox.Api.Files.FileLockMetadata.IsLockholder
+- uid: Dropbox.Api.Files.FileLockMetadata.LockholderName*
+  commentId: Overload:Dropbox.Api.Files.FileLockMetadata.LockholderName
+  name: LockholderName
+  nameWithType: FileLockMetadata.LockholderName
+  fullName: Dropbox.Api.Files.FileLockMetadata.LockholderName
+- uid: Dropbox.Api.Files.FileLockMetadata.LockholderAccountId*
+  commentId: Overload:Dropbox.Api.Files.FileLockMetadata.LockholderAccountId
+  name: LockholderAccountId
+  nameWithType: FileLockMetadata.LockholderAccountId
+  fullName: Dropbox.Api.Files.FileLockMetadata.LockholderAccountId
+- uid: Dropbox.Api.Files.FileLockMetadata.Created*
+  commentId: Overload:Dropbox.Api.Files.FileLockMetadata.Created
+  name: Created
+  nameWithType: FileLockMetadata.Created
+  fullName: Dropbox.Api.Files.FileLockMetadata.Created
+shouldSkipMarkup: true

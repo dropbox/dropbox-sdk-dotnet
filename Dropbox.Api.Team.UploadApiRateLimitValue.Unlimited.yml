@@ -1,0 +1,148 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.UploadApiRateLimitValue.Unlimited
+  commentId: T:Dropbox.Api.Team.UploadApiRateLimitValue.Unlimited
+  id: UploadApiRateLimitValue.Unlimited
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.UploadApiRateLimitValue.Unlimited.Instance
+  langs:
+  - csharp
+  - vb
+  name: UploadApiRateLimitValue.Unlimited
+  nameWithType: UploadApiRateLimitValue.Unlimited
+  fullName: Dropbox.Api.Team.UploadApiRateLimitValue.Unlimited
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UploadApiRateLimitValue.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Unlimited
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UploadApiRateLimitValue.cs
+    startLine: 184
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>This team has unlimited upload API quota. So far both server version account\nand legacy  account type have unlimited monthly upload api quota.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Unlimited : UploadApiRateLimitValue'
+    content.vb: >-
+      Public NotInheritable Class Unlimited
+          Inherits UploadApiRateLimitValue
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.UploadApiRateLimitValue
+  inheritedMembers:
+  - Dropbox.Api.Team.UploadApiRateLimitValue.IsUnlimited
+  - Dropbox.Api.Team.UploadApiRateLimitValue.AsUnlimited
+  - Dropbox.Api.Team.UploadApiRateLimitValue.IsLimit
+  - Dropbox.Api.Team.UploadApiRateLimitValue.AsLimit
+  - Dropbox.Api.Team.UploadApiRateLimitValue.IsOther
+  - Dropbox.Api.Team.UploadApiRateLimitValue.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Team.UploadApiRateLimitValue.Unlimited.Instance
+  commentId: F:Dropbox.Api.Team.UploadApiRateLimitValue.Unlimited.Instance
+  id: Instance
+  parent: Dropbox.Api.Team.UploadApiRateLimitValue.Unlimited
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: UploadApiRateLimitValue.Unlimited.Instance
+  fullName: Dropbox.Api.Team.UploadApiRateLimitValue.Unlimited.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UploadApiRateLimitValue.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UploadApiRateLimitValue.cs
+    startLine: 208
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>A singleton instance of Unlimited</p>\n"
+  example: []
+  syntax:
+    content: public static readonly UploadApiRateLimitValue.Unlimited Instance
+    return:
+      type: Dropbox.Api.Team.UploadApiRateLimitValue.Unlimited
+    content.vb: Public Shared ReadOnly Instance As UploadApiRateLimitValue.Unlimited
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.UploadApiRateLimitValue
+  commentId: T:Dropbox.Api.Team.UploadApiRateLimitValue
+  parent: Dropbox.Api.Team
+  name: UploadApiRateLimitValue
+  nameWithType: UploadApiRateLimitValue
+  fullName: Dropbox.Api.Team.UploadApiRateLimitValue
+- uid: Dropbox.Api.Team.UploadApiRateLimitValue.IsUnlimited
+  commentId: P:Dropbox.Api.Team.UploadApiRateLimitValue.IsUnlimited
+  parent: Dropbox.Api.Team.UploadApiRateLimitValue
+  name: IsUnlimited
+  nameWithType: UploadApiRateLimitValue.IsUnlimited
+  fullName: Dropbox.Api.Team.UploadApiRateLimitValue.IsUnlimited
+- uid: Dropbox.Api.Team.UploadApiRateLimitValue.AsUnlimited
+  commentId: P:Dropbox.Api.Team.UploadApiRateLimitValue.AsUnlimited
+  parent: Dropbox.Api.Team.UploadApiRateLimitValue
+  name: AsUnlimited
+  nameWithType: UploadApiRateLimitValue.AsUnlimited
+  fullName: Dropbox.Api.Team.UploadApiRateLimitValue.AsUnlimited
+- uid: Dropbox.Api.Team.UploadApiRateLimitValue.IsLimit
+  commentId: P:Dropbox.Api.Team.UploadApiRateLimitValue.IsLimit
+  parent: Dropbox.Api.Team.UploadApiRateLimitValue
+  name: IsLimit
+  nameWithType: UploadApiRateLimitValue.IsLimit
+  fullName: Dropbox.Api.Team.UploadApiRateLimitValue.IsLimit
+- uid: Dropbox.Api.Team.UploadApiRateLimitValue.AsLimit
+  commentId: P:Dropbox.Api.Team.UploadApiRateLimitValue.AsLimit
+  parent: Dropbox.Api.Team.UploadApiRateLimitValue
+  name: AsLimit
+  nameWithType: UploadApiRateLimitValue.AsLimit
+  fullName: Dropbox.Api.Team.UploadApiRateLimitValue.AsLimit
+- uid: Dropbox.Api.Team.UploadApiRateLimitValue.IsOther
+  commentId: P:Dropbox.Api.Team.UploadApiRateLimitValue.IsOther
+  parent: Dropbox.Api.Team.UploadApiRateLimitValue
+  name: IsOther
+  nameWithType: UploadApiRateLimitValue.IsOther
+  fullName: Dropbox.Api.Team.UploadApiRateLimitValue.IsOther
+- uid: Dropbox.Api.Team.UploadApiRateLimitValue.AsOther
+  commentId: P:Dropbox.Api.Team.UploadApiRateLimitValue.AsOther
+  parent: Dropbox.Api.Team.UploadApiRateLimitValue
+  name: AsOther
+  nameWithType: UploadApiRateLimitValue.AsOther
+  fullName: Dropbox.Api.Team.UploadApiRateLimitValue.AsOther
+- uid: Dropbox.Api.Team.UploadApiRateLimitValue.Unlimited
+  commentId: T:Dropbox.Api.Team.UploadApiRateLimitValue.Unlimited
+  parent: Dropbox.Api.Team
+  name: UploadApiRateLimitValue.Unlimited
+  nameWithType: UploadApiRateLimitValue.Unlimited
+  fullName: Dropbox.Api.Team.UploadApiRateLimitValue.Unlimited
+shouldSkipMarkup: true

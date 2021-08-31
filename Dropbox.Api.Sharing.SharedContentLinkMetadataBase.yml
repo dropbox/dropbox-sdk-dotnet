@@ -1,0 +1,858 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.SharedContentLinkMetadataBase
+  commentId: T:Dropbox.Api.Sharing.SharedContentLinkMetadataBase
+  id: SharedContentLinkMetadataBase
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.SharedContentLinkMetadataBase.#ctor
+  - Dropbox.Api.Sharing.SharedContentLinkMetadataBase.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.LinkAudience},Dropbox.Api.Sharing.LinkAudience,System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.LinkPermission},System.Boolean,Dropbox.Api.Sharing.AccessLevel,Dropbox.Api.Sharing.AudienceRestrictingSharedFolder,System.Nullable{System.DateTime})
+  - Dropbox.Api.Sharing.SharedContentLinkMetadataBase.AccessLevel
+  - Dropbox.Api.Sharing.SharedContentLinkMetadataBase.AudienceOptions
+  - Dropbox.Api.Sharing.SharedContentLinkMetadataBase.AudienceRestrictingSharedFolder
+  - Dropbox.Api.Sharing.SharedContentLinkMetadataBase.CurrentAudience
+  - Dropbox.Api.Sharing.SharedContentLinkMetadataBase.Expiry
+  - Dropbox.Api.Sharing.SharedContentLinkMetadataBase.LinkPermissions
+  - Dropbox.Api.Sharing.SharedContentLinkMetadataBase.PasswordProtected
+  langs:
+  - csharp
+  - vb
+  name: SharedContentLinkMetadataBase
+  nameWithType: SharedContentLinkMetadataBase
+  fullName: Dropbox.Api.Sharing.SharedContentLinkMetadataBase
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedContentLinkMetadataBase.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SharedContentLinkMetadataBase
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedContentLinkMetadataBase.cs
+    startLine: 17
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The shared content link metadata base object</p>\n"
+  example: []
+  syntax:
+    content: 'public class SharedContentLinkMetadataBase : object'
+    content.vb: >-
+      Public Class SharedContentLinkMetadataBase
+          Inherits Object
+  seealso:
+  - linkId: Dropbox.Api.Sharing.ExpectedSharedContentLinkMetadata
+    commentId: T:Dropbox.Api.Sharing.ExpectedSharedContentLinkMetadata
+  - linkId: Dropbox.Api.Sharing.SharedContentLinkMetadata
+    commentId: T:Dropbox.Api.Sharing.SharedContentLinkMetadata
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Sharing.ExpectedSharedContentLinkMetadata
+  - Dropbox.Api.Sharing.SharedContentLinkMetadata
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Sharing.SharedContentLinkMetadataBase.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.LinkAudience},Dropbox.Api.Sharing.LinkAudience,System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.LinkPermission},System.Boolean,Dropbox.Api.Sharing.AccessLevel,Dropbox.Api.Sharing.AudienceRestrictingSharedFolder,System.Nullable{System.DateTime})
+  commentId: M:Dropbox.Api.Sharing.SharedContentLinkMetadataBase.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.LinkAudience},Dropbox.Api.Sharing.LinkAudience,System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.LinkPermission},System.Boolean,Dropbox.Api.Sharing.AccessLevel,Dropbox.Api.Sharing.AudienceRestrictingSharedFolder,System.Nullable{System.DateTime})
+  id: '#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.LinkAudience},Dropbox.Api.Sharing.LinkAudience,System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.LinkPermission},System.Boolean,Dropbox.Api.Sharing.AccessLevel,Dropbox.Api.Sharing.AudienceRestrictingSharedFolder,System.Nullable{System.DateTime})'
+  parent: Dropbox.Api.Sharing.SharedContentLinkMetadataBase
+  langs:
+  - csharp
+  - vb
+  name: SharedContentLinkMetadataBase(System.Collections.Generic.IEnumerable<LinkAudience>, LinkAudience, System.Collections.Generic.IEnumerable<LinkPermission>, Boolean, AccessLevel, AudienceRestrictingSharedFolder, Nullable<System.DateTime>)
+  nameWithType: SharedContentLinkMetadataBase.SharedContentLinkMetadataBase(System.Collections.Generic.IEnumerable<LinkAudience>, LinkAudience, System.Collections.Generic.IEnumerable<LinkPermission>, Boolean, AccessLevel, AudienceRestrictingSharedFolder, Nullable<System.DateTime>)
+  fullName: Dropbox.Api.Sharing.SharedContentLinkMetadataBase.SharedContentLinkMetadataBase(System.Collections.Generic.IEnumerable<Dropbox.Api.Sharing.LinkAudience>, Dropbox.Api.Sharing.LinkAudience, System.Collections.Generic.IEnumerable<Dropbox.Api.Sharing.LinkPermission>, System.Boolean, Dropbox.Api.Sharing.AccessLevel, Dropbox.Api.Sharing.AudienceRestrictingSharedFolder, System.Nullable<System.DateTime>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedContentLinkMetadataBase.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedContentLinkMetadataBase.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.SharedContentLinkMetadataBase\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public SharedContentLinkMetadataBase(System.Collections.Generic.IEnumerable<LinkAudience> audienceOptions, LinkAudience currentAudience, System.Collections.Generic.IEnumerable<LinkPermission> linkPermissions, bool passwordProtected, AccessLevel accessLevel = null, AudienceRestrictingSharedFolder audienceRestrictingSharedFolder = null, System.DateTime? expiry = null)
+    parameters:
+    - id: audienceOptions
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.LinkAudience}
+      description: >-
+        The audience options that are available for the
+
+        content. Some audience options may be unavailable. For example, team_only may be
+
+        unavailable if the content is not owned by a user on a team. The &apos;default&apos; audience
+
+        option is always available if the user can modify link settings.
+    - id: currentAudience
+      type: Dropbox.Api.Sharing.LinkAudience
+      description: The current audience of the link.
+    - id: linkPermissions
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.LinkPermission}
+      description: >-
+        A list of permissions for actions you can perform on
+
+        the link.
+    - id: passwordProtected
+      type: System.Boolean
+      description: >-
+        Whether the link is protected by a
+
+        password.
+    - id: accessLevel
+      type: Dropbox.Api.Sharing.AccessLevel
+      description: The access level on the link for this file.
+    - id: audienceRestrictingSharedFolder
+      type: Dropbox.Api.Sharing.AudienceRestrictingSharedFolder
+      description: >-
+        The shared folder that prevents the
+
+        link audience for this link from being more restrictive.
+    - id: expiry
+      type: System.Nullable{System.DateTime}
+      description: >-
+        Whether the link has an expiry set on it. A link with an
+
+        expiry will have its  audience changed to members when the expiry is
+
+        reached.
+    content.vb: Public Sub New(audienceOptions As System.Collections.Generic.IEnumerable(Of LinkAudience), currentAudience As LinkAudience, linkPermissions As System.Collections.Generic.IEnumerable(Of LinkPermission), passwordProtected As Boolean, accessLevel As AccessLevel = Nothing, audienceRestrictingSharedFolder As AudienceRestrictingSharedFolder = Nothing, expiry As System.DateTime? = Nothing)
+  overload: Dropbox.Api.Sharing.SharedContentLinkMetadataBase.#ctor*
+  nameWithType.vb: SharedContentLinkMetadataBase.SharedContentLinkMetadataBase(System.Collections.Generic.IEnumerable(Of LinkAudience), LinkAudience, System.Collections.Generic.IEnumerable(Of LinkPermission), Boolean, AccessLevel, AudienceRestrictingSharedFolder, Nullable(Of System.DateTime))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Sharing.SharedContentLinkMetadataBase.SharedContentLinkMetadataBase(System.Collections.Generic.IEnumerable(Of Dropbox.Api.Sharing.LinkAudience), Dropbox.Api.Sharing.LinkAudience, System.Collections.Generic.IEnumerable(Of Dropbox.Api.Sharing.LinkPermission), System.Boolean, Dropbox.Api.Sharing.AccessLevel, Dropbox.Api.Sharing.AudienceRestrictingSharedFolder, System.Nullable(Of System.DateTime))
+  name.vb: SharedContentLinkMetadataBase(System.Collections.Generic.IEnumerable(Of LinkAudience), LinkAudience, System.Collections.Generic.IEnumerable(Of LinkPermission), Boolean, AccessLevel, AudienceRestrictingSharedFolder, Nullable(Of System.DateTime))
+- uid: Dropbox.Api.Sharing.SharedContentLinkMetadataBase.#ctor
+  commentId: M:Dropbox.Api.Sharing.SharedContentLinkMetadataBase.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Sharing.SharedContentLinkMetadataBase
+  langs:
+  - csharp
+  - vb
+  name: SharedContentLinkMetadataBase()
+  nameWithType: SharedContentLinkMetadataBase.SharedContentLinkMetadataBase()
+  fullName: Dropbox.Api.Sharing.SharedContentLinkMetadataBase.SharedContentLinkMetadataBase()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedContentLinkMetadataBase.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedContentLinkMetadataBase.cs
+    startLine: 92
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.SharedContentLinkMetadataBase\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public SharedContentLinkMetadataBase()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Sharing.SharedContentLinkMetadataBase.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.SharedContentLinkMetadataBase.AudienceOptions
+  commentId: P:Dropbox.Api.Sharing.SharedContentLinkMetadataBase.AudienceOptions
+  id: AudienceOptions
+  parent: Dropbox.Api.Sharing.SharedContentLinkMetadataBase
+  langs:
+  - csharp
+  - vb
+  name: AudienceOptions
+  nameWithType: SharedContentLinkMetadataBase.AudienceOptions
+  fullName: Dropbox.Api.Sharing.SharedContentLinkMetadataBase.AudienceOptions
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedContentLinkMetadataBase.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AudienceOptions
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedContentLinkMetadataBase.cs
+    startLine: 103
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The audience options that are available for the content. Some audience\noptions may be unavailable. For example, team_only may be unavailable if the\ncontent is not owned by a user on a team. The &apos;default&apos; audience option is always\navailable if the user can modify link settings.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<LinkAudience> AudienceOptions { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{Dropbox.Api.Sharing.LinkAudience}
+    content.vb: Public Property AudienceOptions As System.Collections.Generic.IList(Of LinkAudience)
+  overload: Dropbox.Api.Sharing.SharedContentLinkMetadataBase.AudienceOptions*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.SharedContentLinkMetadataBase.CurrentAudience
+  commentId: P:Dropbox.Api.Sharing.SharedContentLinkMetadataBase.CurrentAudience
+  id: CurrentAudience
+  parent: Dropbox.Api.Sharing.SharedContentLinkMetadataBase
+  langs:
+  - csharp
+  - vb
+  name: CurrentAudience
+  nameWithType: SharedContentLinkMetadataBase.CurrentAudience
+  fullName: Dropbox.Api.Sharing.SharedContentLinkMetadataBase.CurrentAudience
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedContentLinkMetadataBase.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: CurrentAudience
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedContentLinkMetadataBase.cs
+    startLine: 108
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The current audience of the link.</p>\n"
+  example: []
+  syntax:
+    content: public LinkAudience CurrentAudience { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.LinkAudience
+    content.vb: Public Property CurrentAudience As LinkAudience
+  overload: Dropbox.Api.Sharing.SharedContentLinkMetadataBase.CurrentAudience*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.SharedContentLinkMetadataBase.LinkPermissions
+  commentId: P:Dropbox.Api.Sharing.SharedContentLinkMetadataBase.LinkPermissions
+  id: LinkPermissions
+  parent: Dropbox.Api.Sharing.SharedContentLinkMetadataBase
+  langs:
+  - csharp
+  - vb
+  name: LinkPermissions
+  nameWithType: SharedContentLinkMetadataBase.LinkPermissions
+  fullName: Dropbox.Api.Sharing.SharedContentLinkMetadataBase.LinkPermissions
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedContentLinkMetadataBase.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: LinkPermissions
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedContentLinkMetadataBase.cs
+    startLine: 113
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>A list of permissions for actions you can perform on the link.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<LinkPermission> LinkPermissions { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{Dropbox.Api.Sharing.LinkPermission}
+    content.vb: Public Property LinkPermissions As System.Collections.Generic.IList(Of LinkPermission)
+  overload: Dropbox.Api.Sharing.SharedContentLinkMetadataBase.LinkPermissions*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.SharedContentLinkMetadataBase.PasswordProtected
+  commentId: P:Dropbox.Api.Sharing.SharedContentLinkMetadataBase.PasswordProtected
+  id: PasswordProtected
+  parent: Dropbox.Api.Sharing.SharedContentLinkMetadataBase
+  langs:
+  - csharp
+  - vb
+  name: PasswordProtected
+  nameWithType: SharedContentLinkMetadataBase.PasswordProtected
+  fullName: Dropbox.Api.Sharing.SharedContentLinkMetadataBase.PasswordProtected
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedContentLinkMetadataBase.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PasswordProtected
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedContentLinkMetadataBase.cs
+    startLine: 118
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Whether the link is protected by a password.</p>\n"
+  example: []
+  syntax:
+    content: public bool PasswordProtected { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property PasswordProtected As Boolean
+  overload: Dropbox.Api.Sharing.SharedContentLinkMetadataBase.PasswordProtected*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.SharedContentLinkMetadataBase.AccessLevel
+  commentId: P:Dropbox.Api.Sharing.SharedContentLinkMetadataBase.AccessLevel
+  id: AccessLevel
+  parent: Dropbox.Api.Sharing.SharedContentLinkMetadataBase
+  langs:
+  - csharp
+  - vb
+  name: AccessLevel
+  nameWithType: SharedContentLinkMetadataBase.AccessLevel
+  fullName: Dropbox.Api.Sharing.SharedContentLinkMetadataBase.AccessLevel
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedContentLinkMetadataBase.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AccessLevel
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedContentLinkMetadataBase.cs
+    startLine: 123
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The access level on the link for this file.</p>\n"
+  example: []
+  syntax:
+    content: public AccessLevel AccessLevel { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.AccessLevel
+    content.vb: Public Property AccessLevel As AccessLevel
+  overload: Dropbox.Api.Sharing.SharedContentLinkMetadataBase.AccessLevel*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.SharedContentLinkMetadataBase.AudienceRestrictingSharedFolder
+  commentId: P:Dropbox.Api.Sharing.SharedContentLinkMetadataBase.AudienceRestrictingSharedFolder
+  id: AudienceRestrictingSharedFolder
+  parent: Dropbox.Api.Sharing.SharedContentLinkMetadataBase
+  langs:
+  - csharp
+  - vb
+  name: AudienceRestrictingSharedFolder
+  nameWithType: SharedContentLinkMetadataBase.AudienceRestrictingSharedFolder
+  fullName: Dropbox.Api.Sharing.SharedContentLinkMetadataBase.AudienceRestrictingSharedFolder
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedContentLinkMetadataBase.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AudienceRestrictingSharedFolder
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedContentLinkMetadataBase.cs
+    startLine: 129
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The shared folder that prevents the link audience for this link from being\nmore restrictive.</p>\n"
+  example: []
+  syntax:
+    content: public AudienceRestrictingSharedFolder AudienceRestrictingSharedFolder { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.AudienceRestrictingSharedFolder
+    content.vb: Public Property AudienceRestrictingSharedFolder As AudienceRestrictingSharedFolder
+  overload: Dropbox.Api.Sharing.SharedContentLinkMetadataBase.AudienceRestrictingSharedFolder*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.SharedContentLinkMetadataBase.Expiry
+  commentId: P:Dropbox.Api.Sharing.SharedContentLinkMetadataBase.Expiry
+  id: Expiry
+  parent: Dropbox.Api.Sharing.SharedContentLinkMetadataBase
+  langs:
+  - csharp
+  - vb
+  name: Expiry
+  nameWithType: SharedContentLinkMetadataBase.Expiry
+  fullName: Dropbox.Api.Sharing.SharedContentLinkMetadataBase.Expiry
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedContentLinkMetadataBase.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Expiry
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedContentLinkMetadataBase.cs
+    startLine: 135
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Whether the link has an expiry set on it. A link with an expiry will have its\naudience changed to members when the expiry is reached.</p>\n"
+  example: []
+  syntax:
+    content: public System.DateTime? Expiry { get; protected set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property Expiry As System.DateTime?
+  overload: Dropbox.Api.Sharing.SharedContentLinkMetadataBase.Expiry*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Sharing.ExpectedSharedContentLinkMetadata
+  commentId: T:Dropbox.Api.Sharing.ExpectedSharedContentLinkMetadata
+  parent: Dropbox.Api.Sharing
+  name: ExpectedSharedContentLinkMetadata
+  nameWithType: ExpectedSharedContentLinkMetadata
+  fullName: Dropbox.Api.Sharing.ExpectedSharedContentLinkMetadata
+- uid: Dropbox.Api.Sharing.SharedContentLinkMetadata
+  commentId: T:Dropbox.Api.Sharing.SharedContentLinkMetadata
+  parent: Dropbox.Api.Sharing
+  name: SharedContentLinkMetadata
+  nameWithType: SharedContentLinkMetadata
+  fullName: Dropbox.Api.Sharing.SharedContentLinkMetadata
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.SharedContentLinkMetadataBase
+  commentId: T:Dropbox.Api.Sharing.SharedContentLinkMetadataBase
+  parent: Dropbox.Api.Sharing
+  name: SharedContentLinkMetadataBase
+  nameWithType: SharedContentLinkMetadataBase
+  fullName: Dropbox.Api.Sharing.SharedContentLinkMetadataBase
+- uid: Dropbox.Api.Sharing.SharedContentLinkMetadataBase.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.SharedContentLinkMetadataBase.#ctor
+  name: SharedContentLinkMetadataBase
+  nameWithType: SharedContentLinkMetadataBase.SharedContentLinkMetadataBase
+  fullName: Dropbox.Api.Sharing.SharedContentLinkMetadataBase.SharedContentLinkMetadataBase
+- uid: System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.LinkAudience}
+  commentId: '!:System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.LinkAudience}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<LinkAudience>
+  nameWithType: System.Collections.Generic.IEnumerable<LinkAudience>
+  fullName: System.Collections.Generic.IEnumerable<Dropbox.Api.Sharing.LinkAudience>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of LinkAudience)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Dropbox.Api.Sharing.LinkAudience)
+  name.vb: System.Collections.Generic.IEnumerable(Of LinkAudience)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Sharing.LinkAudience
+    name: LinkAudience
+    nameWithType: LinkAudience
+    fullName: Dropbox.Api.Sharing.LinkAudience
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Sharing.LinkAudience
+    name: LinkAudience
+    nameWithType: LinkAudience
+    fullName: Dropbox.Api.Sharing.LinkAudience
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Sharing.LinkAudience
+  commentId: T:Dropbox.Api.Sharing.LinkAudience
+  parent: Dropbox.Api.Sharing
+  name: LinkAudience
+  nameWithType: LinkAudience
+  fullName: Dropbox.Api.Sharing.LinkAudience
+- uid: System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.LinkPermission}
+  commentId: '!:System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.LinkPermission}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<LinkPermission>
+  nameWithType: System.Collections.Generic.IEnumerable<LinkPermission>
+  fullName: System.Collections.Generic.IEnumerable<Dropbox.Api.Sharing.LinkPermission>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of LinkPermission)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Dropbox.Api.Sharing.LinkPermission)
+  name.vb: System.Collections.Generic.IEnumerable(Of LinkPermission)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Sharing.LinkPermission
+    name: LinkPermission
+    nameWithType: LinkPermission
+    fullName: Dropbox.Api.Sharing.LinkPermission
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Sharing.LinkPermission
+    name: LinkPermission
+    nameWithType: LinkPermission
+    fullName: Dropbox.Api.Sharing.LinkPermission
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Sharing.AccessLevel
+  commentId: T:Dropbox.Api.Sharing.AccessLevel
+  parent: Dropbox.Api.Sharing
+  name: AccessLevel
+  nameWithType: AccessLevel
+  fullName: Dropbox.Api.Sharing.AccessLevel
+- uid: Dropbox.Api.Sharing.AudienceRestrictingSharedFolder
+  commentId: T:Dropbox.Api.Sharing.AudienceRestrictingSharedFolder
+  parent: Dropbox.Api.Sharing
+  name: AudienceRestrictingSharedFolder
+  nameWithType: AudienceRestrictingSharedFolder
+  fullName: Dropbox.Api.Sharing.AudienceRestrictingSharedFolder
+- uid: System.Nullable{System.DateTime}
+  commentId: '!:System.Nullable{System.DateTime}'
+  definition: System.Nullable`1
+  name: Nullable<System.DateTime>
+  nameWithType: Nullable<System.DateTime>
+  fullName: System.Nullable<System.DateTime>
+  nameWithType.vb: Nullable(Of System.DateTime)
+  fullName.vb: System.Nullable(Of System.DateTime)
+  name.vb: Nullable(Of System.DateTime)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.DateTime
+    name: System.DateTime
+    nameWithType: System.DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.DateTime
+    name: System.DateTime
+    nameWithType: System.DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: System.Collections.Generic.IEnumerable<>
+  nameWithType: System.Collections.Generic.IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: System.Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  isExternal: true
+  name: Nullable<>
+  nameWithType: Nullable<>
+  fullName: System.Nullable<>
+  nameWithType.vb: Nullable(Of )
+  fullName.vb: System.Nullable(Of )
+  name.vb: Nullable(Of )
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Sharing.SharedContentLinkMetadataBase.AudienceOptions*
+  commentId: Overload:Dropbox.Api.Sharing.SharedContentLinkMetadataBase.AudienceOptions
+  name: AudienceOptions
+  nameWithType: SharedContentLinkMetadataBase.AudienceOptions
+  fullName: Dropbox.Api.Sharing.SharedContentLinkMetadataBase.AudienceOptions
+- uid: System.Collections.Generic.IList{Dropbox.Api.Sharing.LinkAudience}
+  commentId: '!:System.Collections.Generic.IList{Dropbox.Api.Sharing.LinkAudience}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<LinkAudience>
+  nameWithType: System.Collections.Generic.IList<LinkAudience>
+  fullName: System.Collections.Generic.IList<Dropbox.Api.Sharing.LinkAudience>
+  nameWithType.vb: System.Collections.Generic.IList(Of LinkAudience)
+  fullName.vb: System.Collections.Generic.IList(Of Dropbox.Api.Sharing.LinkAudience)
+  name.vb: System.Collections.Generic.IList(Of LinkAudience)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Sharing.LinkAudience
+    name: LinkAudience
+    nameWithType: LinkAudience
+    fullName: Dropbox.Api.Sharing.LinkAudience
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Sharing.LinkAudience
+    name: LinkAudience
+    nameWithType: LinkAudience
+    fullName: Dropbox.Api.Sharing.LinkAudience
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  isExternal: true
+  name: System.Collections.Generic.IList<>
+  nameWithType: System.Collections.Generic.IList<>
+  fullName: System.Collections.Generic.IList<>
+  nameWithType.vb: System.Collections.Generic.IList(Of )
+  fullName.vb: System.Collections.Generic.IList(Of )
+  name.vb: System.Collections.Generic.IList(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Sharing.SharedContentLinkMetadataBase.CurrentAudience*
+  commentId: Overload:Dropbox.Api.Sharing.SharedContentLinkMetadataBase.CurrentAudience
+  name: CurrentAudience
+  nameWithType: SharedContentLinkMetadataBase.CurrentAudience
+  fullName: Dropbox.Api.Sharing.SharedContentLinkMetadataBase.CurrentAudience
+- uid: Dropbox.Api.Sharing.SharedContentLinkMetadataBase.LinkPermissions*
+  commentId: Overload:Dropbox.Api.Sharing.SharedContentLinkMetadataBase.LinkPermissions
+  name: LinkPermissions
+  nameWithType: SharedContentLinkMetadataBase.LinkPermissions
+  fullName: Dropbox.Api.Sharing.SharedContentLinkMetadataBase.LinkPermissions
+- uid: System.Collections.Generic.IList{Dropbox.Api.Sharing.LinkPermission}
+  commentId: '!:System.Collections.Generic.IList{Dropbox.Api.Sharing.LinkPermission}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<LinkPermission>
+  nameWithType: System.Collections.Generic.IList<LinkPermission>
+  fullName: System.Collections.Generic.IList<Dropbox.Api.Sharing.LinkPermission>
+  nameWithType.vb: System.Collections.Generic.IList(Of LinkPermission)
+  fullName.vb: System.Collections.Generic.IList(Of Dropbox.Api.Sharing.LinkPermission)
+  name.vb: System.Collections.Generic.IList(Of LinkPermission)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Sharing.LinkPermission
+    name: LinkPermission
+    nameWithType: LinkPermission
+    fullName: Dropbox.Api.Sharing.LinkPermission
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Sharing.LinkPermission
+    name: LinkPermission
+    nameWithType: LinkPermission
+    fullName: Dropbox.Api.Sharing.LinkPermission
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Sharing.SharedContentLinkMetadataBase.PasswordProtected*
+  commentId: Overload:Dropbox.Api.Sharing.SharedContentLinkMetadataBase.PasswordProtected
+  name: PasswordProtected
+  nameWithType: SharedContentLinkMetadataBase.PasswordProtected
+  fullName: Dropbox.Api.Sharing.SharedContentLinkMetadataBase.PasswordProtected
+- uid: Dropbox.Api.Sharing.SharedContentLinkMetadataBase.AccessLevel*
+  commentId: Overload:Dropbox.Api.Sharing.SharedContentLinkMetadataBase.AccessLevel
+  name: AccessLevel
+  nameWithType: SharedContentLinkMetadataBase.AccessLevel
+  fullName: Dropbox.Api.Sharing.SharedContentLinkMetadataBase.AccessLevel
+- uid: Dropbox.Api.Sharing.SharedContentLinkMetadataBase.AudienceRestrictingSharedFolder*
+  commentId: Overload:Dropbox.Api.Sharing.SharedContentLinkMetadataBase.AudienceRestrictingSharedFolder
+  name: AudienceRestrictingSharedFolder
+  nameWithType: SharedContentLinkMetadataBase.AudienceRestrictingSharedFolder
+  fullName: Dropbox.Api.Sharing.SharedContentLinkMetadataBase.AudienceRestrictingSharedFolder
+- uid: Dropbox.Api.Sharing.SharedContentLinkMetadataBase.Expiry*
+  commentId: Overload:Dropbox.Api.Sharing.SharedContentLinkMetadataBase.Expiry
+  name: Expiry
+  nameWithType: SharedContentLinkMetadataBase.Expiry
+  fullName: Dropbox.Api.Sharing.SharedContentLinkMetadataBase.Expiry
+shouldSkipMarkup: true

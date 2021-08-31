@@ -1,0 +1,214 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Paper.PaperDocSharingPolicy
+  commentId: T:Dropbox.Api.Paper.PaperDocSharingPolicy
+  id: PaperDocSharingPolicy
+  parent: Dropbox.Api.Paper
+  children:
+  - Dropbox.Api.Paper.PaperDocSharingPolicy.#ctor
+  - Dropbox.Api.Paper.PaperDocSharingPolicy.#ctor(System.String,Dropbox.Api.Paper.SharingPolicy)
+  - Dropbox.Api.Paper.PaperDocSharingPolicy.SharingPolicy
+  langs:
+  - csharp
+  - vb
+  name: PaperDocSharingPolicy
+  nameWithType: PaperDocSharingPolicy
+  fullName: Dropbox.Api.Paper.PaperDocSharingPolicy
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperDocSharingPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PaperDocSharingPolicy
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperDocSharingPolicy.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>The paper doc sharing policy object</p>\n"
+  example: []
+  syntax:
+    content: 'public class PaperDocSharingPolicy : RefPaperDoc'
+    content.vb: >-
+      Public Class PaperDocSharingPolicy
+          Inherits RefPaperDoc
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Paper.RefPaperDoc
+  inheritedMembers:
+  - Dropbox.Api.Paper.RefPaperDoc.DocId
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Paper.PaperDocSharingPolicy.#ctor(System.String,Dropbox.Api.Paper.SharingPolicy)
+  commentId: M:Dropbox.Api.Paper.PaperDocSharingPolicy.#ctor(System.String,Dropbox.Api.Paper.SharingPolicy)
+  id: '#ctor(System.String,Dropbox.Api.Paper.SharingPolicy)'
+  parent: Dropbox.Api.Paper.PaperDocSharingPolicy
+  langs:
+  - csharp
+  - vb
+  name: PaperDocSharingPolicy(String, SharingPolicy)
+  nameWithType: PaperDocSharingPolicy.PaperDocSharingPolicy(String, SharingPolicy)
+  fullName: Dropbox.Api.Paper.PaperDocSharingPolicy.PaperDocSharingPolicy(System.String, Dropbox.Api.Paper.SharingPolicy)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperDocSharingPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperDocSharingPolicy.cs
+    startLine: 37
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Paper.PaperDocSharingPolicy\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public PaperDocSharingPolicy(string docId, SharingPolicy sharingPolicy)
+    parameters:
+    - id: docId
+      type: System.String
+      description: The Paper doc ID.
+    - id: sharingPolicy
+      type: Dropbox.Api.Paper.SharingPolicy
+      description: >-
+        The default sharing policy to be set for the Paper
+
+        doc.
+    content.vb: Public Sub New(docId As String, sharingPolicy As SharingPolicy)
+  overload: Dropbox.Api.Paper.PaperDocSharingPolicy.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Paper.PaperDocSharingPolicy.#ctor
+  commentId: M:Dropbox.Api.Paper.PaperDocSharingPolicy.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Paper.PaperDocSharingPolicy
+  langs:
+  - csharp
+  - vb
+  name: PaperDocSharingPolicy()
+  nameWithType: PaperDocSharingPolicy.PaperDocSharingPolicy()
+  fullName: Dropbox.Api.Paper.PaperDocSharingPolicy.PaperDocSharingPolicy()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperDocSharingPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperDocSharingPolicy.cs
+    startLine: 55
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Paper.PaperDocSharingPolicy\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public PaperDocSharingPolicy()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Paper.PaperDocSharingPolicy.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Paper.PaperDocSharingPolicy.SharingPolicy
+  commentId: P:Dropbox.Api.Paper.PaperDocSharingPolicy.SharingPolicy
+  id: SharingPolicy
+  parent: Dropbox.Api.Paper.PaperDocSharingPolicy
+  langs:
+  - csharp
+  - vb
+  name: SharingPolicy
+  nameWithType: PaperDocSharingPolicy.SharingPolicy
+  fullName: Dropbox.Api.Paper.PaperDocSharingPolicy.SharingPolicy
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperDocSharingPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SharingPolicy
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperDocSharingPolicy.cs
+    startLine: 63
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>The default sharing policy to be set for the Paper doc.</p>\n"
+  example: []
+  syntax:
+    content: public SharingPolicy SharingPolicy { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Paper.SharingPolicy
+    content.vb: Public Property SharingPolicy As SharingPolicy
+  overload: Dropbox.Api.Paper.PaperDocSharingPolicy.SharingPolicy*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Paper
+  commentId: N:Dropbox.Api.Paper
+  name: Dropbox.Api.Paper
+  nameWithType: Dropbox.Api.Paper
+  fullName: Dropbox.Api.Paper
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Paper.RefPaperDoc
+  commentId: T:Dropbox.Api.Paper.RefPaperDoc
+  parent: Dropbox.Api.Paper
+  name: RefPaperDoc
+  nameWithType: RefPaperDoc
+  fullName: Dropbox.Api.Paper.RefPaperDoc
+- uid: Dropbox.Api.Paper.RefPaperDoc.DocId
+  commentId: P:Dropbox.Api.Paper.RefPaperDoc.DocId
+  parent: Dropbox.Api.Paper.RefPaperDoc
+  name: DocId
+  nameWithType: RefPaperDoc.DocId
+  fullName: Dropbox.Api.Paper.RefPaperDoc.DocId
+- uid: Dropbox.Api.Paper.PaperDocSharingPolicy
+  commentId: T:Dropbox.Api.Paper.PaperDocSharingPolicy
+  parent: Dropbox.Api.Paper
+  name: PaperDocSharingPolicy
+  nameWithType: PaperDocSharingPolicy
+  fullName: Dropbox.Api.Paper.PaperDocSharingPolicy
+- uid: Dropbox.Api.Paper.PaperDocSharingPolicy.#ctor*
+  commentId: Overload:Dropbox.Api.Paper.PaperDocSharingPolicy.#ctor
+  name: PaperDocSharingPolicy
+  nameWithType: PaperDocSharingPolicy.PaperDocSharingPolicy
+  fullName: Dropbox.Api.Paper.PaperDocSharingPolicy.PaperDocSharingPolicy
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Paper.SharingPolicy
+  commentId: T:Dropbox.Api.Paper.SharingPolicy
+  parent: Dropbox.Api.Paper
+  name: SharingPolicy
+  nameWithType: SharingPolicy
+  fullName: Dropbox.Api.Paper.SharingPolicy
+- uid: Dropbox.Api.Paper.PaperDocSharingPolicy.SharingPolicy*
+  commentId: Overload:Dropbox.Api.Paper.PaperDocSharingPolicy.SharingPolicy
+  name: SharingPolicy
+  nameWithType: PaperDocSharingPolicy.SharingPolicy
+  fullName: Dropbox.Api.Paper.PaperDocSharingPolicy.SharingPolicy
+shouldSkipMarkup: true

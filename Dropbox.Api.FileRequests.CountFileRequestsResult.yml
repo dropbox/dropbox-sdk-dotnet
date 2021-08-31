@@ -1,0 +1,190 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.FileRequests.CountFileRequestsResult
+  commentId: T:Dropbox.Api.FileRequests.CountFileRequestsResult
+  id: CountFileRequestsResult
+  parent: Dropbox.Api.FileRequests
+  children:
+  - Dropbox.Api.FileRequests.CountFileRequestsResult.#ctor
+  - Dropbox.Api.FileRequests.CountFileRequestsResult.#ctor(System.UInt64)
+  - Dropbox.Api.FileRequests.CountFileRequestsResult.FileRequestCount
+  langs:
+  - csharp
+  - vb
+  name: CountFileRequestsResult
+  nameWithType: CountFileRequestsResult
+  fullName: Dropbox.Api.FileRequests.CountFileRequestsResult
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/CountFileRequestsResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: CountFileRequestsResult
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/CountFileRequestsResult.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Result for <xref href=\"Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.CountAsync\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+  example: []
+  syntax:
+    content: 'public class CountFileRequestsResult : object'
+    content.vb: >-
+      Public Class CountFileRequestsResult
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.FileRequests.CountFileRequestsResult.#ctor(System.UInt64)
+  commentId: M:Dropbox.Api.FileRequests.CountFileRequestsResult.#ctor(System.UInt64)
+  id: '#ctor(System.UInt64)'
+  parent: Dropbox.Api.FileRequests.CountFileRequestsResult
+  langs:
+  - csharp
+  - vb
+  name: CountFileRequestsResult(UInt64)
+  nameWithType: CountFileRequestsResult.CountFileRequestsResult(UInt64)
+  fullName: Dropbox.Api.FileRequests.CountFileRequestsResult.CountFileRequestsResult(System.UInt64)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/CountFileRequestsResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/CountFileRequestsResult.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.FileRequests.CountFileRequestsResult\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public CountFileRequestsResult(ulong fileRequestCount)
+    parameters:
+    - id: fileRequestCount
+      type: System.UInt64
+      description: The number file requests owner by this user.
+    content.vb: Public Sub New(fileRequestCount As ULong)
+  overload: Dropbox.Api.FileRequests.CountFileRequestsResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileRequests.CountFileRequestsResult.#ctor
+  commentId: M:Dropbox.Api.FileRequests.CountFileRequestsResult.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.FileRequests.CountFileRequestsResult
+  langs:
+  - csharp
+  - vb
+  name: CountFileRequestsResult()
+  nameWithType: CountFileRequestsResult.CountFileRequestsResult()
+  fullName: Dropbox.Api.FileRequests.CountFileRequestsResult.CountFileRequestsResult()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/CountFileRequestsResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/CountFileRequestsResult.cs
+    startLine: 46
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.FileRequests.CountFileRequestsResult\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public CountFileRequestsResult()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.FileRequests.CountFileRequestsResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileRequests.CountFileRequestsResult.FileRequestCount
+  commentId: P:Dropbox.Api.FileRequests.CountFileRequestsResult.FileRequestCount
+  id: FileRequestCount
+  parent: Dropbox.Api.FileRequests.CountFileRequestsResult
+  langs:
+  - csharp
+  - vb
+  name: FileRequestCount
+  nameWithType: CountFileRequestsResult.FileRequestCount
+  fullName: Dropbox.Api.FileRequests.CountFileRequestsResult.FileRequestCount
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/CountFileRequestsResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: FileRequestCount
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/CountFileRequestsResult.cs
+    startLine: 54
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>The number file requests owner by this user.</p>\n"
+  example: []
+  syntax:
+    content: public ulong FileRequestCount { get; protected set; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: Public Property FileRequestCount As ULong
+  overload: Dropbox.Api.FileRequests.CountFileRequestsResult.FileRequestCount*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.CountAsync
+  commentId: M:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.CountAsync
+  isExternal: true
+- uid: Dropbox.Api.FileRequests
+  commentId: N:Dropbox.Api.FileRequests
+  name: Dropbox.Api.FileRequests
+  nameWithType: Dropbox.Api.FileRequests
+  fullName: Dropbox.Api.FileRequests
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.FileRequests.CountFileRequestsResult
+  commentId: T:Dropbox.Api.FileRequests.CountFileRequestsResult
+  parent: Dropbox.Api.FileRequests
+  name: CountFileRequestsResult
+  nameWithType: CountFileRequestsResult
+  fullName: Dropbox.Api.FileRequests.CountFileRequestsResult
+- uid: Dropbox.Api.FileRequests.CountFileRequestsResult.#ctor*
+  commentId: Overload:Dropbox.Api.FileRequests.CountFileRequestsResult.#ctor
+  name: CountFileRequestsResult
+  nameWithType: CountFileRequestsResult.CountFileRequestsResult
+  fullName: Dropbox.Api.FileRequests.CountFileRequestsResult.CountFileRequestsResult
+- uid: System.UInt64
+  isExternal: true
+  name: UInt64
+  nameWithType: UInt64
+  fullName: System.UInt64
+- uid: Dropbox.Api.FileRequests.CountFileRequestsResult.FileRequestCount*
+  commentId: Overload:Dropbox.Api.FileRequests.CountFileRequestsResult.FileRequestCount
+  name: FileRequestCount
+  nameWithType: CountFileRequestsResult.FileRequestCount
+  fullName: Dropbox.Api.FileRequests.CountFileRequestsResult.FileRequestCount
+shouldSkipMarkup: true

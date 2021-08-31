@@ -1,0 +1,173 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.CreateFolderError.Path
+  commentId: T:Dropbox.Api.Files.CreateFolderError.Path
+  id: CreateFolderError.Path
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.CreateFolderError.Path.#ctor(Dropbox.Api.Files.WriteError)
+  - Dropbox.Api.Files.CreateFolderError.Path.Value
+  langs:
+  - csharp
+  - vb
+  name: CreateFolderError.Path
+  nameWithType: CreateFolderError.Path
+  fullName: Dropbox.Api.Files.CreateFolderError.Path
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/CreateFolderError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Path
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/CreateFolderError.cs
+    startLine: 124
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The path object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Path : CreateFolderError'
+    content.vb: >-
+      Public NotInheritable Class Path
+          Inherits CreateFolderError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Files.CreateFolderError
+  inheritedMembers:
+  - Dropbox.Api.Files.CreateFolderError.IsPath
+  - Dropbox.Api.Files.CreateFolderError.AsPath
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Files.CreateFolderError.Path.#ctor(Dropbox.Api.Files.WriteError)
+  commentId: M:Dropbox.Api.Files.CreateFolderError.Path.#ctor(Dropbox.Api.Files.WriteError)
+  id: '#ctor(Dropbox.Api.Files.WriteError)'
+  parent: Dropbox.Api.Files.CreateFolderError.Path
+  langs:
+  - csharp
+  - vb
+  name: Path(WriteError)
+  nameWithType: CreateFolderError.Path.Path(WriteError)
+  fullName: Dropbox.Api.Files.CreateFolderError.Path.Path(Dropbox.Api.Files.WriteError)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/CreateFolderError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/CreateFolderError.cs
+    startLine: 142
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.CreateFolderError.Path\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public Path(WriteError value)
+    parameters:
+    - id: value
+      type: Dropbox.Api.Files.WriteError
+      description: The value
+    content.vb: Public Sub New(value As WriteError)
+  overload: Dropbox.Api.Files.CreateFolderError.Path.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.CreateFolderError.Path.Value
+  commentId: P:Dropbox.Api.Files.CreateFolderError.Path.Value
+  id: Value
+  parent: Dropbox.Api.Files.CreateFolderError.Path
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: CreateFolderError.Path.Value
+  fullName: Dropbox.Api.Files.CreateFolderError.Path.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/CreateFolderError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/CreateFolderError.cs
+    startLine: 156
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public WriteError Value { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.WriteError
+    content.vb: Public ReadOnly Property Value As WriteError
+  overload: Dropbox.Api.Files.CreateFolderError.Path.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.CreateFolderError
+  commentId: T:Dropbox.Api.Files.CreateFolderError
+  parent: Dropbox.Api.Files
+  name: CreateFolderError
+  nameWithType: CreateFolderError
+  fullName: Dropbox.Api.Files.CreateFolderError
+- uid: Dropbox.Api.Files.CreateFolderError.IsPath
+  commentId: P:Dropbox.Api.Files.CreateFolderError.IsPath
+  parent: Dropbox.Api.Files.CreateFolderError
+  name: IsPath
+  nameWithType: CreateFolderError.IsPath
+  fullName: Dropbox.Api.Files.CreateFolderError.IsPath
+- uid: Dropbox.Api.Files.CreateFolderError.AsPath
+  commentId: P:Dropbox.Api.Files.CreateFolderError.AsPath
+  parent: Dropbox.Api.Files.CreateFolderError
+  name: AsPath
+  nameWithType: CreateFolderError.AsPath
+  fullName: Dropbox.Api.Files.CreateFolderError.AsPath
+- uid: Dropbox.Api.Files.CreateFolderError.Path
+  commentId: T:Dropbox.Api.Files.CreateFolderError.Path
+  parent: Dropbox.Api.Files
+  name: CreateFolderError.Path
+  nameWithType: CreateFolderError.Path
+  fullName: Dropbox.Api.Files.CreateFolderError.Path
+- uid: Dropbox.Api.Files.CreateFolderError.Path.#ctor*
+  commentId: Overload:Dropbox.Api.Files.CreateFolderError.Path.#ctor
+  name: Path
+  nameWithType: CreateFolderError.Path.Path
+  fullName: Dropbox.Api.Files.CreateFolderError.Path.Path
+- uid: Dropbox.Api.Files.WriteError
+  commentId: T:Dropbox.Api.Files.WriteError
+  parent: Dropbox.Api.Files
+  name: WriteError
+  nameWithType: WriteError
+  fullName: Dropbox.Api.Files.WriteError
+- uid: Dropbox.Api.Files.CreateFolderError.Path.Value*
+  commentId: Overload:Dropbox.Api.Files.CreateFolderError.Path.Value
+  name: Value
+  nameWithType: CreateFolderError.Path.Value
+  fullName: Dropbox.Api.Files.CreateFolderError.Path.Value
+shouldSkipMarkup: true

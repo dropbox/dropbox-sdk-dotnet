@@ -1,0 +1,343 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.DeleteSecondaryEmailsResult
+  commentId: T:Dropbox.Api.Team.DeleteSecondaryEmailsResult
+  id: DeleteSecondaryEmailsResult
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.DeleteSecondaryEmailsResult.#ctor
+  - Dropbox.Api.Team.DeleteSecondaryEmailsResult.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Team.UserDeleteResult})
+  - Dropbox.Api.Team.DeleteSecondaryEmailsResult.Results
+  langs:
+  - csharp
+  - vb
+  name: DeleteSecondaryEmailsResult
+  nameWithType: DeleteSecondaryEmailsResult
+  fullName: Dropbox.Api.Team.DeleteSecondaryEmailsResult
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DeleteSecondaryEmailsResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: DeleteSecondaryEmailsResult
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DeleteSecondaryEmailsResult.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The delete secondary emails result object</p>\n"
+  example: []
+  syntax:
+    content: 'public class DeleteSecondaryEmailsResult : object'
+    content.vb: >-
+      Public Class DeleteSecondaryEmailsResult
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.DeleteSecondaryEmailsResult.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Team.UserDeleteResult})
+  commentId: M:Dropbox.Api.Team.DeleteSecondaryEmailsResult.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Team.UserDeleteResult})
+  id: '#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Team.UserDeleteResult})'
+  parent: Dropbox.Api.Team.DeleteSecondaryEmailsResult
+  langs:
+  - csharp
+  - vb
+  name: DeleteSecondaryEmailsResult(System.Collections.Generic.IEnumerable<UserDeleteResult>)
+  nameWithType: DeleteSecondaryEmailsResult.DeleteSecondaryEmailsResult(System.Collections.Generic.IEnumerable<UserDeleteResult>)
+  fullName: Dropbox.Api.Team.DeleteSecondaryEmailsResult.DeleteSecondaryEmailsResult(System.Collections.Generic.IEnumerable<Dropbox.Api.Team.UserDeleteResult>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DeleteSecondaryEmailsResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DeleteSecondaryEmailsResult.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.DeleteSecondaryEmailsResult\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public DeleteSecondaryEmailsResult(System.Collections.Generic.IEnumerable<UserDeleteResult> results)
+    parameters:
+    - id: results
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.Team.UserDeleteResult}
+      description: The results
+    content.vb: Public Sub New(results As System.Collections.Generic.IEnumerable(Of UserDeleteResult))
+  overload: Dropbox.Api.Team.DeleteSecondaryEmailsResult.#ctor*
+  nameWithType.vb: DeleteSecondaryEmailsResult.DeleteSecondaryEmailsResult(System.Collections.Generic.IEnumerable(Of UserDeleteResult))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Team.DeleteSecondaryEmailsResult.DeleteSecondaryEmailsResult(System.Collections.Generic.IEnumerable(Of Dropbox.Api.Team.UserDeleteResult))
+  name.vb: DeleteSecondaryEmailsResult(System.Collections.Generic.IEnumerable(Of UserDeleteResult))
+- uid: Dropbox.Api.Team.DeleteSecondaryEmailsResult.#ctor
+  commentId: M:Dropbox.Api.Team.DeleteSecondaryEmailsResult.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.DeleteSecondaryEmailsResult
+  langs:
+  - csharp
+  - vb
+  name: DeleteSecondaryEmailsResult()
+  nameWithType: DeleteSecondaryEmailsResult.DeleteSecondaryEmailsResult()
+  fullName: Dropbox.Api.Team.DeleteSecondaryEmailsResult.DeleteSecondaryEmailsResult()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DeleteSecondaryEmailsResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DeleteSecondaryEmailsResult.cs
+    startLine: 52
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.DeleteSecondaryEmailsResult\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public DeleteSecondaryEmailsResult()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.DeleteSecondaryEmailsResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.DeleteSecondaryEmailsResult.Results
+  commentId: P:Dropbox.Api.Team.DeleteSecondaryEmailsResult.Results
+  id: Results
+  parent: Dropbox.Api.Team.DeleteSecondaryEmailsResult
+  langs:
+  - csharp
+  - vb
+  name: Results
+  nameWithType: DeleteSecondaryEmailsResult.Results
+  fullName: Dropbox.Api.Team.DeleteSecondaryEmailsResult.Results
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DeleteSecondaryEmailsResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Results
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DeleteSecondaryEmailsResult.cs
+    startLine: 60
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets the results of the delete secondary emails result</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<UserDeleteResult> Results { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{Dropbox.Api.Team.UserDeleteResult}
+    content.vb: Public Property Results As System.Collections.Generic.IList(Of UserDeleteResult)
+  overload: Dropbox.Api.Team.DeleteSecondaryEmailsResult.Results*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.DeleteSecondaryEmailsResult
+  commentId: T:Dropbox.Api.Team.DeleteSecondaryEmailsResult
+  parent: Dropbox.Api.Team
+  name: DeleteSecondaryEmailsResult
+  nameWithType: DeleteSecondaryEmailsResult
+  fullName: Dropbox.Api.Team.DeleteSecondaryEmailsResult
+- uid: Dropbox.Api.Team.DeleteSecondaryEmailsResult.#ctor*
+  commentId: Overload:Dropbox.Api.Team.DeleteSecondaryEmailsResult.#ctor
+  name: DeleteSecondaryEmailsResult
+  nameWithType: DeleteSecondaryEmailsResult.DeleteSecondaryEmailsResult
+  fullName: Dropbox.Api.Team.DeleteSecondaryEmailsResult.DeleteSecondaryEmailsResult
+- uid: System.Collections.Generic.IEnumerable{Dropbox.Api.Team.UserDeleteResult}
+  commentId: '!:System.Collections.Generic.IEnumerable{Dropbox.Api.Team.UserDeleteResult}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<UserDeleteResult>
+  nameWithType: System.Collections.Generic.IEnumerable<UserDeleteResult>
+  fullName: System.Collections.Generic.IEnumerable<Dropbox.Api.Team.UserDeleteResult>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of UserDeleteResult)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Dropbox.Api.Team.UserDeleteResult)
+  name.vb: System.Collections.Generic.IEnumerable(Of UserDeleteResult)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Team.UserDeleteResult
+    name: UserDeleteResult
+    nameWithType: UserDeleteResult
+    fullName: Dropbox.Api.Team.UserDeleteResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Team.UserDeleteResult
+    name: UserDeleteResult
+    nameWithType: UserDeleteResult
+    fullName: Dropbox.Api.Team.UserDeleteResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: System.Collections.Generic.IEnumerable<>
+  nameWithType: System.Collections.Generic.IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: System.Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Team.DeleteSecondaryEmailsResult.Results*
+  commentId: Overload:Dropbox.Api.Team.DeleteSecondaryEmailsResult.Results
+  name: Results
+  nameWithType: DeleteSecondaryEmailsResult.Results
+  fullName: Dropbox.Api.Team.DeleteSecondaryEmailsResult.Results
+- uid: System.Collections.Generic.IList{Dropbox.Api.Team.UserDeleteResult}
+  commentId: '!:System.Collections.Generic.IList{Dropbox.Api.Team.UserDeleteResult}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<UserDeleteResult>
+  nameWithType: System.Collections.Generic.IList<UserDeleteResult>
+  fullName: System.Collections.Generic.IList<Dropbox.Api.Team.UserDeleteResult>
+  nameWithType.vb: System.Collections.Generic.IList(Of UserDeleteResult)
+  fullName.vb: System.Collections.Generic.IList(Of Dropbox.Api.Team.UserDeleteResult)
+  name.vb: System.Collections.Generic.IList(Of UserDeleteResult)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Team.UserDeleteResult
+    name: UserDeleteResult
+    nameWithType: UserDeleteResult
+    fullName: Dropbox.Api.Team.UserDeleteResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Team.UserDeleteResult
+    name: UserDeleteResult
+    nameWithType: UserDeleteResult
+    fullName: Dropbox.Api.Team.UserDeleteResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  isExternal: true
+  name: System.Collections.Generic.IList<>
+  nameWithType: System.Collections.Generic.IList<>
+  fullName: System.Collections.Generic.IList<>
+  nameWithType.vb: System.Collections.Generic.IList(Of )
+  fullName.vb: System.Collections.Generic.IList(Of )
+  name.vb: System.Collections.Generic.IList(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+shouldSkipMarkup: true

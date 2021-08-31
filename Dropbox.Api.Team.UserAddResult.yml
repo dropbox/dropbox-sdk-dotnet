@@ -1,0 +1,567 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.UserAddResult
+  commentId: T:Dropbox.Api.Team.UserAddResult
+  id: UserAddResult
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.UserAddResult.#ctor
+  - Dropbox.Api.Team.UserAddResult.AsInvalidUser
+  - Dropbox.Api.Team.UserAddResult.AsOther
+  - Dropbox.Api.Team.UserAddResult.AsPlaceholderUser
+  - Dropbox.Api.Team.UserAddResult.AsSuccess
+  - Dropbox.Api.Team.UserAddResult.AsUnverified
+  - Dropbox.Api.Team.UserAddResult.IsInvalidUser
+  - Dropbox.Api.Team.UserAddResult.IsOther
+  - Dropbox.Api.Team.UserAddResult.IsPlaceholderUser
+  - Dropbox.Api.Team.UserAddResult.IsSuccess
+  - Dropbox.Api.Team.UserAddResult.IsUnverified
+  langs:
+  - csharp
+  - vb
+  name: UserAddResult
+  nameWithType: UserAddResult
+  fullName: Dropbox.Api.Team.UserAddResult
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserAddResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: UserAddResult
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserAddResult.cs
+    startLine: 18
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Result of trying to add secondary emails to a user. &apos;success&apos; is the only value\nindicating that a user was successfully retrieved for adding secondary emails. The\nother values explain the type of error that occurred, and include the user for which\nthe error occurred.</p>\n"
+  example: []
+  syntax:
+    content: 'public class UserAddResult : object'
+    content.vb: >-
+      Public Class UserAddResult
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Team.UserAddResult.InvalidUser
+  - Dropbox.Api.Team.UserAddResult.Other
+  - Dropbox.Api.Team.UserAddResult.PlaceholderUser
+  - Dropbox.Api.Team.UserAddResult.Success
+  - Dropbox.Api.Team.UserAddResult.Unverified
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.UserAddResult.#ctor
+  commentId: M:Dropbox.Api.Team.UserAddResult.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.UserAddResult
+  langs:
+  - csharp
+  - vb
+  name: UserAddResult()
+  nameWithType: UserAddResult.UserAddResult()
+  fullName: Dropbox.Api.Team.UserAddResult.UserAddResult()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserAddResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserAddResult.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.UserAddResult\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public UserAddResult()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.UserAddResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.UserAddResult.IsSuccess
+  commentId: P:Dropbox.Api.Team.UserAddResult.IsSuccess
+  id: IsSuccess
+  parent: Dropbox.Api.Team.UserAddResult
+  langs:
+  - csharp
+  - vb
+  name: IsSuccess
+  nameWithType: UserAddResult.IsSuccess
+  fullName: Dropbox.Api.Team.UserAddResult.IsSuccess
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserAddResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsSuccess
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserAddResult.cs
+    startLine: 42
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is Success</p>\n"
+  example: []
+  syntax:
+    content: public bool IsSuccess { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsSuccess As Boolean
+  overload: Dropbox.Api.Team.UserAddResult.IsSuccess*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.UserAddResult.AsSuccess
+  commentId: P:Dropbox.Api.Team.UserAddResult.AsSuccess
+  id: AsSuccess
+  parent: Dropbox.Api.Team.UserAddResult
+  langs:
+  - csharp
+  - vb
+  name: AsSuccess
+  nameWithType: UserAddResult.AsSuccess
+  fullName: Dropbox.Api.Team.UserAddResult.AsSuccess
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserAddResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsSuccess
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserAddResult.cs
+    startLine: 53
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a Success, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public UserAddResult.Success AsSuccess { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.UserAddResult.Success
+    content.vb: Public ReadOnly Property AsSuccess As UserAddResult.Success
+  overload: Dropbox.Api.Team.UserAddResult.AsSuccess*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.UserAddResult.IsInvalidUser
+  commentId: P:Dropbox.Api.Team.UserAddResult.IsInvalidUser
+  id: IsInvalidUser
+  parent: Dropbox.Api.Team.UserAddResult
+  langs:
+  - csharp
+  - vb
+  name: IsInvalidUser
+  nameWithType: UserAddResult.IsInvalidUser
+  fullName: Dropbox.Api.Team.UserAddResult.IsInvalidUser
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserAddResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsInvalidUser
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserAddResult.cs
+    startLine: 64
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is InvalidUser</p>\n"
+  example: []
+  syntax:
+    content: public bool IsInvalidUser { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsInvalidUser As Boolean
+  overload: Dropbox.Api.Team.UserAddResult.IsInvalidUser*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.UserAddResult.AsInvalidUser
+  commentId: P:Dropbox.Api.Team.UserAddResult.AsInvalidUser
+  id: AsInvalidUser
+  parent: Dropbox.Api.Team.UserAddResult
+  langs:
+  - csharp
+  - vb
+  name: AsInvalidUser
+  nameWithType: UserAddResult.AsInvalidUser
+  fullName: Dropbox.Api.Team.UserAddResult.AsInvalidUser
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserAddResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsInvalidUser
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserAddResult.cs
+    startLine: 75
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a InvalidUser, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public UserAddResult.InvalidUser AsInvalidUser { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.UserAddResult.InvalidUser
+    content.vb: Public ReadOnly Property AsInvalidUser As UserAddResult.InvalidUser
+  overload: Dropbox.Api.Team.UserAddResult.AsInvalidUser*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.UserAddResult.IsUnverified
+  commentId: P:Dropbox.Api.Team.UserAddResult.IsUnverified
+  id: IsUnverified
+  parent: Dropbox.Api.Team.UserAddResult
+  langs:
+  - csharp
+  - vb
+  name: IsUnverified
+  nameWithType: UserAddResult.IsUnverified
+  fullName: Dropbox.Api.Team.UserAddResult.IsUnverified
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserAddResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsUnverified
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserAddResult.cs
+    startLine: 86
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is Unverified</p>\n"
+  example: []
+  syntax:
+    content: public bool IsUnverified { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsUnverified As Boolean
+  overload: Dropbox.Api.Team.UserAddResult.IsUnverified*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.UserAddResult.AsUnverified
+  commentId: P:Dropbox.Api.Team.UserAddResult.AsUnverified
+  id: AsUnverified
+  parent: Dropbox.Api.Team.UserAddResult
+  langs:
+  - csharp
+  - vb
+  name: AsUnverified
+  nameWithType: UserAddResult.AsUnverified
+  fullName: Dropbox.Api.Team.UserAddResult.AsUnverified
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserAddResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsUnverified
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserAddResult.cs
+    startLine: 97
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a Unverified, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public UserAddResult.Unverified AsUnverified { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.UserAddResult.Unverified
+    content.vb: Public ReadOnly Property AsUnverified As UserAddResult.Unverified
+  overload: Dropbox.Api.Team.UserAddResult.AsUnverified*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.UserAddResult.IsPlaceholderUser
+  commentId: P:Dropbox.Api.Team.UserAddResult.IsPlaceholderUser
+  id: IsPlaceholderUser
+  parent: Dropbox.Api.Team.UserAddResult
+  langs:
+  - csharp
+  - vb
+  name: IsPlaceholderUser
+  nameWithType: UserAddResult.IsPlaceholderUser
+  fullName: Dropbox.Api.Team.UserAddResult.IsPlaceholderUser
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserAddResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsPlaceholderUser
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserAddResult.cs
+    startLine: 108
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is PlaceholderUser</p>\n"
+  example: []
+  syntax:
+    content: public bool IsPlaceholderUser { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsPlaceholderUser As Boolean
+  overload: Dropbox.Api.Team.UserAddResult.IsPlaceholderUser*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.UserAddResult.AsPlaceholderUser
+  commentId: P:Dropbox.Api.Team.UserAddResult.AsPlaceholderUser
+  id: AsPlaceholderUser
+  parent: Dropbox.Api.Team.UserAddResult
+  langs:
+  - csharp
+  - vb
+  name: AsPlaceholderUser
+  nameWithType: UserAddResult.AsPlaceholderUser
+  fullName: Dropbox.Api.Team.UserAddResult.AsPlaceholderUser
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserAddResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsPlaceholderUser
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserAddResult.cs
+    startLine: 119
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a PlaceholderUser, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public UserAddResult.PlaceholderUser AsPlaceholderUser { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.UserAddResult.PlaceholderUser
+    content.vb: Public ReadOnly Property AsPlaceholderUser As UserAddResult.PlaceholderUser
+  overload: Dropbox.Api.Team.UserAddResult.AsPlaceholderUser*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.UserAddResult.IsOther
+  commentId: P:Dropbox.Api.Team.UserAddResult.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Team.UserAddResult
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: UserAddResult.IsOther
+  fullName: Dropbox.Api.Team.UserAddResult.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserAddResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserAddResult.cs
+    startLine: 130
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Team.UserAddResult.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.UserAddResult.AsOther
+  commentId: P:Dropbox.Api.Team.UserAddResult.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Team.UserAddResult
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: UserAddResult.AsOther
+  fullName: Dropbox.Api.Team.UserAddResult.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserAddResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserAddResult.cs
+    startLine: 141
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public UserAddResult.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.UserAddResult.Other
+    content.vb: Public ReadOnly Property AsOther As UserAddResult.Other
+  overload: Dropbox.Api.Team.UserAddResult.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.UserAddResult
+  commentId: T:Dropbox.Api.Team.UserAddResult
+  parent: Dropbox.Api.Team
+  name: UserAddResult
+  nameWithType: UserAddResult
+  fullName: Dropbox.Api.Team.UserAddResult
+- uid: Dropbox.Api.Team.UserAddResult.#ctor*
+  commentId: Overload:Dropbox.Api.Team.UserAddResult.#ctor
+  name: UserAddResult
+  nameWithType: UserAddResult.UserAddResult
+  fullName: Dropbox.Api.Team.UserAddResult.UserAddResult
+- uid: Dropbox.Api.Team.UserAddResult.IsSuccess*
+  commentId: Overload:Dropbox.Api.Team.UserAddResult.IsSuccess
+  name: IsSuccess
+  nameWithType: UserAddResult.IsSuccess
+  fullName: Dropbox.Api.Team.UserAddResult.IsSuccess
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Team.UserAddResult.AsSuccess*
+  commentId: Overload:Dropbox.Api.Team.UserAddResult.AsSuccess
+  name: AsSuccess
+  nameWithType: UserAddResult.AsSuccess
+  fullName: Dropbox.Api.Team.UserAddResult.AsSuccess
+- uid: Dropbox.Api.Team.UserAddResult.Success
+  commentId: T:Dropbox.Api.Team.UserAddResult.Success
+  parent: Dropbox.Api.Team
+  name: UserAddResult.Success
+  nameWithType: UserAddResult.Success
+  fullName: Dropbox.Api.Team.UserAddResult.Success
+- uid: Dropbox.Api.Team.UserAddResult.IsInvalidUser*
+  commentId: Overload:Dropbox.Api.Team.UserAddResult.IsInvalidUser
+  name: IsInvalidUser
+  nameWithType: UserAddResult.IsInvalidUser
+  fullName: Dropbox.Api.Team.UserAddResult.IsInvalidUser
+- uid: Dropbox.Api.Team.UserAddResult.AsInvalidUser*
+  commentId: Overload:Dropbox.Api.Team.UserAddResult.AsInvalidUser
+  name: AsInvalidUser
+  nameWithType: UserAddResult.AsInvalidUser
+  fullName: Dropbox.Api.Team.UserAddResult.AsInvalidUser
+- uid: Dropbox.Api.Team.UserAddResult.InvalidUser
+  commentId: T:Dropbox.Api.Team.UserAddResult.InvalidUser
+  parent: Dropbox.Api.Team
+  name: UserAddResult.InvalidUser
+  nameWithType: UserAddResult.InvalidUser
+  fullName: Dropbox.Api.Team.UserAddResult.InvalidUser
+- uid: Dropbox.Api.Team.UserAddResult.IsUnverified*
+  commentId: Overload:Dropbox.Api.Team.UserAddResult.IsUnverified
+  name: IsUnverified
+  nameWithType: UserAddResult.IsUnverified
+  fullName: Dropbox.Api.Team.UserAddResult.IsUnverified
+- uid: Dropbox.Api.Team.UserAddResult.AsUnverified*
+  commentId: Overload:Dropbox.Api.Team.UserAddResult.AsUnverified
+  name: AsUnverified
+  nameWithType: UserAddResult.AsUnverified
+  fullName: Dropbox.Api.Team.UserAddResult.AsUnverified
+- uid: Dropbox.Api.Team.UserAddResult.Unverified
+  commentId: T:Dropbox.Api.Team.UserAddResult.Unverified
+  parent: Dropbox.Api.Team
+  name: UserAddResult.Unverified
+  nameWithType: UserAddResult.Unverified
+  fullName: Dropbox.Api.Team.UserAddResult.Unverified
+- uid: Dropbox.Api.Team.UserAddResult.IsPlaceholderUser*
+  commentId: Overload:Dropbox.Api.Team.UserAddResult.IsPlaceholderUser
+  name: IsPlaceholderUser
+  nameWithType: UserAddResult.IsPlaceholderUser
+  fullName: Dropbox.Api.Team.UserAddResult.IsPlaceholderUser
+- uid: Dropbox.Api.Team.UserAddResult.AsPlaceholderUser*
+  commentId: Overload:Dropbox.Api.Team.UserAddResult.AsPlaceholderUser
+  name: AsPlaceholderUser
+  nameWithType: UserAddResult.AsPlaceholderUser
+  fullName: Dropbox.Api.Team.UserAddResult.AsPlaceholderUser
+- uid: Dropbox.Api.Team.UserAddResult.PlaceholderUser
+  commentId: T:Dropbox.Api.Team.UserAddResult.PlaceholderUser
+  parent: Dropbox.Api.Team
+  name: UserAddResult.PlaceholderUser
+  nameWithType: UserAddResult.PlaceholderUser
+  fullName: Dropbox.Api.Team.UserAddResult.PlaceholderUser
+- uid: Dropbox.Api.Team.UserAddResult.IsOther*
+  commentId: Overload:Dropbox.Api.Team.UserAddResult.IsOther
+  name: IsOther
+  nameWithType: UserAddResult.IsOther
+  fullName: Dropbox.Api.Team.UserAddResult.IsOther
+- uid: Dropbox.Api.Team.UserAddResult.AsOther*
+  commentId: Overload:Dropbox.Api.Team.UserAddResult.AsOther
+  name: AsOther
+  nameWithType: UserAddResult.AsOther
+  fullName: Dropbox.Api.Team.UserAddResult.AsOther
+- uid: Dropbox.Api.Team.UserAddResult.Other
+  commentId: T:Dropbox.Api.Team.UserAddResult.Other
+  parent: Dropbox.Api.Team
+  name: UserAddResult.Other
+  nameWithType: UserAddResult.Other
+  fullName: Dropbox.Api.Team.UserAddResult.Other
+shouldSkipMarkup: true

@@ -1,0 +1,148 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.InviteOnly
+  commentId: T:Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.InviteOnly
+  id: PaperDefaultFolderPolicy.InviteOnly
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.InviteOnly.Instance
+  langs:
+  - csharp
+  - vb
+  name: PaperDefaultFolderPolicy.InviteOnly
+  nameWithType: PaperDefaultFolderPolicy.InviteOnly
+  fullName: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.InviteOnly
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDefaultFolderPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: InviteOnly
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDefaultFolderPolicy.cs
+    startLine: 253
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The invite only object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class InviteOnly : PaperDefaultFolderPolicy'
+    content.vb: >-
+      Public NotInheritable Class InviteOnly
+          Inherits PaperDefaultFolderPolicy
+  inheritance:
+  - System.Object
+  - Dropbox.Api.TeamLog.PaperDefaultFolderPolicy
+  inheritedMembers:
+  - Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.IsEveryoneInTeam
+  - Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.AsEveryoneInTeam
+  - Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.IsInviteOnly
+  - Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.AsInviteOnly
+  - Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.IsOther
+  - Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.InviteOnly.Instance
+  commentId: F:Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.InviteOnly.Instance
+  id: Instance
+  parent: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.InviteOnly
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: PaperDefaultFolderPolicy.InviteOnly.Instance
+  fullName: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.InviteOnly.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDefaultFolderPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDefaultFolderPolicy.cs
+    startLine: 277
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>A singleton instance of InviteOnly</p>\n"
+  example: []
+  syntax:
+    content: public static readonly PaperDefaultFolderPolicy.InviteOnly Instance
+    return:
+      type: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.InviteOnly
+    content.vb: Public Shared ReadOnly Instance As PaperDefaultFolderPolicy.InviteOnly
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy
+  commentId: T:Dropbox.Api.TeamLog.PaperDefaultFolderPolicy
+  parent: Dropbox.Api.TeamLog
+  name: PaperDefaultFolderPolicy
+  nameWithType: PaperDefaultFolderPolicy
+  fullName: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy
+- uid: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.IsEveryoneInTeam
+  commentId: P:Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.IsEveryoneInTeam
+  parent: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy
+  name: IsEveryoneInTeam
+  nameWithType: PaperDefaultFolderPolicy.IsEveryoneInTeam
+  fullName: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.IsEveryoneInTeam
+- uid: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.AsEveryoneInTeam
+  commentId: P:Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.AsEveryoneInTeam
+  parent: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy
+  name: AsEveryoneInTeam
+  nameWithType: PaperDefaultFolderPolicy.AsEveryoneInTeam
+  fullName: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.AsEveryoneInTeam
+- uid: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.IsInviteOnly
+  commentId: P:Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.IsInviteOnly
+  parent: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy
+  name: IsInviteOnly
+  nameWithType: PaperDefaultFolderPolicy.IsInviteOnly
+  fullName: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.IsInviteOnly
+- uid: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.AsInviteOnly
+  commentId: P:Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.AsInviteOnly
+  parent: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy
+  name: AsInviteOnly
+  nameWithType: PaperDefaultFolderPolicy.AsInviteOnly
+  fullName: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.AsInviteOnly
+- uid: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.IsOther
+  commentId: P:Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.IsOther
+  parent: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy
+  name: IsOther
+  nameWithType: PaperDefaultFolderPolicy.IsOther
+  fullName: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.IsOther
+- uid: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.AsOther
+  commentId: P:Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.AsOther
+  parent: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy
+  name: AsOther
+  nameWithType: PaperDefaultFolderPolicy.AsOther
+  fullName: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.AsOther
+- uid: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.InviteOnly
+  commentId: T:Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.InviteOnly
+  parent: Dropbox.Api.TeamLog
+  name: PaperDefaultFolderPolicy.InviteOnly
+  nameWithType: PaperDefaultFolderPolicy.InviteOnly
+  fullName: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.InviteOnly
+shouldSkipMarkup: true

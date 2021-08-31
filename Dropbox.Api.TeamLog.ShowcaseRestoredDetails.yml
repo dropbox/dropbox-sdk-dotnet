@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.ShowcaseRestoredDetails
+  commentId: T:Dropbox.Api.TeamLog.ShowcaseRestoredDetails
+  id: ShowcaseRestoredDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.ShowcaseRestoredDetails.#ctor
+  - Dropbox.Api.TeamLog.ShowcaseRestoredDetails.#ctor(System.String)
+  - Dropbox.Api.TeamLog.ShowcaseRestoredDetails.EventUuid
+  langs:
+  - csharp
+  - vb
+  name: ShowcaseRestoredDetails
+  nameWithType: ShowcaseRestoredDetails
+  fullName: Dropbox.Api.TeamLog.ShowcaseRestoredDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseRestoredDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ShowcaseRestoredDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseRestoredDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Unarchived showcase.</p>\n"
+  example: []
+  syntax:
+    content: 'public class ShowcaseRestoredDetails : object'
+    content.vb: >-
+      Public Class ShowcaseRestoredDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.ShowcaseRestoredDetails.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.ShowcaseRestoredDetails.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.ShowcaseRestoredDetails
+  langs:
+  - csharp
+  - vb
+  name: ShowcaseRestoredDetails(String)
+  nameWithType: ShowcaseRestoredDetails.ShowcaseRestoredDetails(String)
+  fullName: Dropbox.Api.TeamLog.ShowcaseRestoredDetails.ShowcaseRestoredDetails(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseRestoredDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseRestoredDetails.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.ShowcaseRestoredDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public ShowcaseRestoredDetails(string eventUuid)
+    parameters:
+    - id: eventUuid
+      type: System.String
+      description: Event unique identifier.
+    content.vb: Public Sub New(eventUuid As String)
+  overload: Dropbox.Api.TeamLog.ShowcaseRestoredDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.ShowcaseRestoredDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.ShowcaseRestoredDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.ShowcaseRestoredDetails
+  langs:
+  - csharp
+  - vb
+  name: ShowcaseRestoredDetails()
+  nameWithType: ShowcaseRestoredDetails.ShowcaseRestoredDetails()
+  fullName: Dropbox.Api.TeamLog.ShowcaseRestoredDetails.ShowcaseRestoredDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseRestoredDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseRestoredDetails.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.ShowcaseRestoredDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public ShowcaseRestoredDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.ShowcaseRestoredDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.ShowcaseRestoredDetails.EventUuid
+  commentId: P:Dropbox.Api.TeamLog.ShowcaseRestoredDetails.EventUuid
+  id: EventUuid
+  parent: Dropbox.Api.TeamLog.ShowcaseRestoredDetails
+  langs:
+  - csharp
+  - vb
+  name: EventUuid
+  nameWithType: ShowcaseRestoredDetails.EventUuid
+  fullName: Dropbox.Api.TeamLog.ShowcaseRestoredDetails.EventUuid
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseRestoredDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: EventUuid
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseRestoredDetails.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Event unique identifier.</p>\n"
+  example: []
+  syntax:
+    content: public string EventUuid { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property EventUuid As String
+  overload: Dropbox.Api.TeamLog.ShowcaseRestoredDetails.EventUuid*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.ShowcaseRestoredDetails
+  commentId: T:Dropbox.Api.TeamLog.ShowcaseRestoredDetails
+  parent: Dropbox.Api.TeamLog
+  name: ShowcaseRestoredDetails
+  nameWithType: ShowcaseRestoredDetails
+  fullName: Dropbox.Api.TeamLog.ShowcaseRestoredDetails
+- uid: Dropbox.Api.TeamLog.ShowcaseRestoredDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.ShowcaseRestoredDetails.#ctor
+  name: ShowcaseRestoredDetails
+  nameWithType: ShowcaseRestoredDetails.ShowcaseRestoredDetails
+  fullName: Dropbox.Api.TeamLog.ShowcaseRestoredDetails.ShowcaseRestoredDetails
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.ShowcaseRestoredDetails.EventUuid*
+  commentId: Overload:Dropbox.Api.TeamLog.ShowcaseRestoredDetails.EventUuid
+  name: EventUuid
+  nameWithType: ShowcaseRestoredDetails.EventUuid
+  fullName: Dropbox.Api.TeamLog.ShowcaseRestoredDetails.EventUuid
+shouldSkipMarkup: true

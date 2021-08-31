@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.PaperFolderDeletedDetails
+  commentId: T:Dropbox.Api.TeamLog.PaperFolderDeletedDetails
+  id: PaperFolderDeletedDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.PaperFolderDeletedDetails.#ctor
+  - Dropbox.Api.TeamLog.PaperFolderDeletedDetails.#ctor(System.String)
+  - Dropbox.Api.TeamLog.PaperFolderDeletedDetails.EventUuid
+  langs:
+  - csharp
+  - vb
+  name: PaperFolderDeletedDetails
+  nameWithType: PaperFolderDeletedDetails
+  fullName: Dropbox.Api.TeamLog.PaperFolderDeletedDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperFolderDeletedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PaperFolderDeletedDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperFolderDeletedDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Archived Paper folder.</p>\n"
+  example: []
+  syntax:
+    content: 'public class PaperFolderDeletedDetails : object'
+    content.vb: >-
+      Public Class PaperFolderDeletedDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.PaperFolderDeletedDetails.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.PaperFolderDeletedDetails.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.PaperFolderDeletedDetails
+  langs:
+  - csharp
+  - vb
+  name: PaperFolderDeletedDetails(String)
+  nameWithType: PaperFolderDeletedDetails.PaperFolderDeletedDetails(String)
+  fullName: Dropbox.Api.TeamLog.PaperFolderDeletedDetails.PaperFolderDeletedDetails(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperFolderDeletedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperFolderDeletedDetails.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.PaperFolderDeletedDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public PaperFolderDeletedDetails(string eventUuid)
+    parameters:
+    - id: eventUuid
+      type: System.String
+      description: Event unique identifier.
+    content.vb: Public Sub New(eventUuid As String)
+  overload: Dropbox.Api.TeamLog.PaperFolderDeletedDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.PaperFolderDeletedDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.PaperFolderDeletedDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.PaperFolderDeletedDetails
+  langs:
+  - csharp
+  - vb
+  name: PaperFolderDeletedDetails()
+  nameWithType: PaperFolderDeletedDetails.PaperFolderDeletedDetails()
+  fullName: Dropbox.Api.TeamLog.PaperFolderDeletedDetails.PaperFolderDeletedDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperFolderDeletedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperFolderDeletedDetails.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.PaperFolderDeletedDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public PaperFolderDeletedDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.PaperFolderDeletedDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.PaperFolderDeletedDetails.EventUuid
+  commentId: P:Dropbox.Api.TeamLog.PaperFolderDeletedDetails.EventUuid
+  id: EventUuid
+  parent: Dropbox.Api.TeamLog.PaperFolderDeletedDetails
+  langs:
+  - csharp
+  - vb
+  name: EventUuid
+  nameWithType: PaperFolderDeletedDetails.EventUuid
+  fullName: Dropbox.Api.TeamLog.PaperFolderDeletedDetails.EventUuid
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperFolderDeletedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: EventUuid
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperFolderDeletedDetails.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Event unique identifier.</p>\n"
+  example: []
+  syntax:
+    content: public string EventUuid { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property EventUuid As String
+  overload: Dropbox.Api.TeamLog.PaperFolderDeletedDetails.EventUuid*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.PaperFolderDeletedDetails
+  commentId: T:Dropbox.Api.TeamLog.PaperFolderDeletedDetails
+  parent: Dropbox.Api.TeamLog
+  name: PaperFolderDeletedDetails
+  nameWithType: PaperFolderDeletedDetails
+  fullName: Dropbox.Api.TeamLog.PaperFolderDeletedDetails
+- uid: Dropbox.Api.TeamLog.PaperFolderDeletedDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.PaperFolderDeletedDetails.#ctor
+  name: PaperFolderDeletedDetails
+  nameWithType: PaperFolderDeletedDetails.PaperFolderDeletedDetails
+  fullName: Dropbox.Api.TeamLog.PaperFolderDeletedDetails.PaperFolderDeletedDetails
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.PaperFolderDeletedDetails.EventUuid*
+  commentId: Overload:Dropbox.Api.TeamLog.PaperFolderDeletedDetails.EventUuid
+  name: EventUuid
+  nameWithType: PaperFolderDeletedDetails.EventUuid
+  fullName: Dropbox.Api.TeamLog.PaperFolderDeletedDetails.EventUuid
+shouldSkipMarkup: true

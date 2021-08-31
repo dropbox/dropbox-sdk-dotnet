@@ -1,0 +1,350 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.FileRequests.DeleteFileRequestArgs
+  commentId: T:Dropbox.Api.FileRequests.DeleteFileRequestArgs
+  id: DeleteFileRequestArgs
+  parent: Dropbox.Api.FileRequests
+  children:
+  - Dropbox.Api.FileRequests.DeleteFileRequestArgs.#ctor
+  - Dropbox.Api.FileRequests.DeleteFileRequestArgs.#ctor(System.Collections.Generic.IEnumerable{System.String})
+  - Dropbox.Api.FileRequests.DeleteFileRequestArgs.Ids
+  langs:
+  - csharp
+  - vb
+  name: DeleteFileRequestArgs
+  nameWithType: DeleteFileRequestArgs
+  fullName: Dropbox.Api.FileRequests.DeleteFileRequestArgs
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteFileRequestArgs.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: DeleteFileRequestArgs
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteFileRequestArgs.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Arguments for <xref href=\"Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.DeleteAsync(Dropbox.Api.FileRequests.DeleteFileRequestArgs)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+  example: []
+  syntax:
+    content: 'public class DeleteFileRequestArgs : object'
+    content.vb: >-
+      Public Class DeleteFileRequestArgs
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.FileRequests.DeleteFileRequestArgs.#ctor(System.Collections.Generic.IEnumerable{System.String})
+  commentId: M:Dropbox.Api.FileRequests.DeleteFileRequestArgs.#ctor(System.Collections.Generic.IEnumerable{System.String})
+  id: '#ctor(System.Collections.Generic.IEnumerable{System.String})'
+  parent: Dropbox.Api.FileRequests.DeleteFileRequestArgs
+  langs:
+  - csharp
+  - vb
+  name: DeleteFileRequestArgs(System.Collections.Generic.IEnumerable<String>)
+  nameWithType: DeleteFileRequestArgs.DeleteFileRequestArgs(System.Collections.Generic.IEnumerable<String>)
+  fullName: Dropbox.Api.FileRequests.DeleteFileRequestArgs.DeleteFileRequestArgs(System.Collections.Generic.IEnumerable<System.String>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteFileRequestArgs.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteFileRequestArgs.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.FileRequests.DeleteFileRequestArgs\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public DeleteFileRequestArgs(System.Collections.Generic.IEnumerable<string> ids)
+    parameters:
+    - id: ids
+      type: System.Collections.Generic.IEnumerable{System.String}
+      description: List IDs of the file requests to delete.
+    content.vb: Public Sub New(ids As System.Collections.Generic.IEnumerable(Of String))
+  overload: Dropbox.Api.FileRequests.DeleteFileRequestArgs.#ctor*
+  nameWithType.vb: DeleteFileRequestArgs.DeleteFileRequestArgs(System.Collections.Generic.IEnumerable(Of String))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.FileRequests.DeleteFileRequestArgs.DeleteFileRequestArgs(System.Collections.Generic.IEnumerable(Of System.String))
+  name.vb: DeleteFileRequestArgs(System.Collections.Generic.IEnumerable(Of String))
+- uid: Dropbox.Api.FileRequests.DeleteFileRequestArgs.#ctor
+  commentId: M:Dropbox.Api.FileRequests.DeleteFileRequestArgs.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.FileRequests.DeleteFileRequestArgs
+  langs:
+  - csharp
+  - vb
+  name: DeleteFileRequestArgs()
+  nameWithType: DeleteFileRequestArgs.DeleteFileRequestArgs()
+  fullName: Dropbox.Api.FileRequests.DeleteFileRequestArgs.DeleteFileRequestArgs()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteFileRequestArgs.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteFileRequestArgs.cs
+    startLine: 53
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.FileRequests.DeleteFileRequestArgs\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public DeleteFileRequestArgs()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.FileRequests.DeleteFileRequestArgs.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileRequests.DeleteFileRequestArgs.Ids
+  commentId: P:Dropbox.Api.FileRequests.DeleteFileRequestArgs.Ids
+  id: Ids
+  parent: Dropbox.Api.FileRequests.DeleteFileRequestArgs
+  langs:
+  - csharp
+  - vb
+  name: Ids
+  nameWithType: DeleteFileRequestArgs.Ids
+  fullName: Dropbox.Api.FileRequests.DeleteFileRequestArgs.Ids
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteFileRequestArgs.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Ids
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteFileRequestArgs.cs
+    startLine: 61
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>List IDs of the file requests to delete.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<string> Ids { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{System.String}
+    content.vb: Public Property Ids As System.Collections.Generic.IList(Of String)
+  overload: Dropbox.Api.FileRequests.DeleteFileRequestArgs.Ids*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.DeleteAsync(Dropbox.Api.FileRequests.DeleteFileRequestArgs)
+  commentId: M:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.DeleteAsync(Dropbox.Api.FileRequests.DeleteFileRequestArgs)
+  isExternal: true
+- uid: Dropbox.Api.FileRequests
+  commentId: N:Dropbox.Api.FileRequests
+  name: Dropbox.Api.FileRequests
+  nameWithType: Dropbox.Api.FileRequests
+  fullName: Dropbox.Api.FileRequests
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.FileRequests.DeleteFileRequestArgs
+  commentId: T:Dropbox.Api.FileRequests.DeleteFileRequestArgs
+  parent: Dropbox.Api.FileRequests
+  name: DeleteFileRequestArgs
+  nameWithType: DeleteFileRequestArgs
+  fullName: Dropbox.Api.FileRequests.DeleteFileRequestArgs
+- uid: Dropbox.Api.FileRequests.DeleteFileRequestArgs.#ctor*
+  commentId: Overload:Dropbox.Api.FileRequests.DeleteFileRequestArgs.#ctor
+  name: DeleteFileRequestArgs
+  nameWithType: DeleteFileRequestArgs.DeleteFileRequestArgs
+  fullName: Dropbox.Api.FileRequests.DeleteFileRequestArgs.DeleteFileRequestArgs
+- uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: '!:System.Collections.Generic.IEnumerable{System.String}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<String>
+  nameWithType: System.Collections.Generic.IEnumerable<String>
+  fullName: System.Collections.Generic.IEnumerable<System.String>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of String)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.String)
+  name.vb: System.Collections.Generic.IEnumerable(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: System.Collections.Generic.IEnumerable<>
+  nameWithType: System.Collections.Generic.IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: System.Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.FileRequests.DeleteFileRequestArgs.Ids*
+  commentId: Overload:Dropbox.Api.FileRequests.DeleteFileRequestArgs.Ids
+  name: Ids
+  nameWithType: DeleteFileRequestArgs.Ids
+  fullName: Dropbox.Api.FileRequests.DeleteFileRequestArgs.Ids
+- uid: System.Collections.Generic.IList{System.String}
+  commentId: '!:System.Collections.Generic.IList{System.String}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<String>
+  nameWithType: System.Collections.Generic.IList<String>
+  fullName: System.Collections.Generic.IList<System.String>
+  nameWithType.vb: System.Collections.Generic.IList(Of String)
+  fullName.vb: System.Collections.Generic.IList(Of System.String)
+  name.vb: System.Collections.Generic.IList(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  isExternal: true
+  name: System.Collections.Generic.IList<>
+  nameWithType: System.Collections.Generic.IList<>
+  fullName: System.Collections.Generic.IList<>
+  nameWithType.vb: System.Collections.Generic.IList(Of )
+  fullName.vb: System.Collections.Generic.IList(Of )
+  name.vb: System.Collections.Generic.IList(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+shouldSkipMarkup: true

@@ -1,0 +1,29 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Paper.Routes
+  commentId: N:Dropbox.Api.Paper.Routes
+  id: Dropbox.Api.Paper.Routes
+  children:
+  - Dropbox.Api.Paper.Routes.PaperUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: Dropbox.Api.Paper.Routes
+  nameWithType: Dropbox.Api.Paper.Routes
+  fullName: Dropbox.Api.Paper.Routes
+  type: Namespace
+  assemblies:
+  - Dropbox.Api
+references:
+- uid: Dropbox.Api.Paper.Routes.PaperUserRoutes
+  commentId: T:Dropbox.Api.Paper.Routes.PaperUserRoutes
+  parent: Dropbox.Api.Paper.Routes
+  name: PaperUserRoutes
+  nameWithType: PaperUserRoutes
+  fullName: Dropbox.Api.Paper.Routes.PaperUserRoutes
+- uid: Dropbox.Api.Paper.Routes
+  commentId: N:Dropbox.Api.Paper.Routes
+  name: Dropbox.Api.Paper.Routes
+  nameWithType: Dropbox.Api.Paper.Routes
+  fullName: Dropbox.Api.Paper.Routes
+shouldSkipMarkup: true

@@ -1,0 +1,236 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.ShowcaseChangeEnabledPolicyDetails
+  commentId: T:Dropbox.Api.TeamLog.ShowcaseChangeEnabledPolicyDetails
+  id: ShowcaseChangeEnabledPolicyDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.ShowcaseChangeEnabledPolicyDetails.#ctor
+  - Dropbox.Api.TeamLog.ShowcaseChangeEnabledPolicyDetails.#ctor(Dropbox.Api.TeamLog.ShowcaseEnabledPolicy,Dropbox.Api.TeamLog.ShowcaseEnabledPolicy)
+  - Dropbox.Api.TeamLog.ShowcaseChangeEnabledPolicyDetails.NewValue
+  - Dropbox.Api.TeamLog.ShowcaseChangeEnabledPolicyDetails.PreviousValue
+  langs:
+  - csharp
+  - vb
+  name: ShowcaseChangeEnabledPolicyDetails
+  nameWithType: ShowcaseChangeEnabledPolicyDetails
+  fullName: Dropbox.Api.TeamLog.ShowcaseChangeEnabledPolicyDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseChangeEnabledPolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ShowcaseChangeEnabledPolicyDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseChangeEnabledPolicyDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Enabled/disabled Dropbox Showcase for team.</p>\n"
+  example: []
+  syntax:
+    content: 'public class ShowcaseChangeEnabledPolicyDetails : object'
+    content.vb: >-
+      Public Class ShowcaseChangeEnabledPolicyDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.ShowcaseChangeEnabledPolicyDetails.#ctor(Dropbox.Api.TeamLog.ShowcaseEnabledPolicy,Dropbox.Api.TeamLog.ShowcaseEnabledPolicy)
+  commentId: M:Dropbox.Api.TeamLog.ShowcaseChangeEnabledPolicyDetails.#ctor(Dropbox.Api.TeamLog.ShowcaseEnabledPolicy,Dropbox.Api.TeamLog.ShowcaseEnabledPolicy)
+  id: '#ctor(Dropbox.Api.TeamLog.ShowcaseEnabledPolicy,Dropbox.Api.TeamLog.ShowcaseEnabledPolicy)'
+  parent: Dropbox.Api.TeamLog.ShowcaseChangeEnabledPolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: ShowcaseChangeEnabledPolicyDetails(ShowcaseEnabledPolicy, ShowcaseEnabledPolicy)
+  nameWithType: ShowcaseChangeEnabledPolicyDetails.ShowcaseChangeEnabledPolicyDetails(ShowcaseEnabledPolicy, ShowcaseEnabledPolicy)
+  fullName: Dropbox.Api.TeamLog.ShowcaseChangeEnabledPolicyDetails.ShowcaseChangeEnabledPolicyDetails(Dropbox.Api.TeamLog.ShowcaseEnabledPolicy, Dropbox.Api.TeamLog.ShowcaseEnabledPolicy)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseChangeEnabledPolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseChangeEnabledPolicyDetails.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.ShowcaseChangeEnabledPolicyDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public ShowcaseChangeEnabledPolicyDetails(ShowcaseEnabledPolicy newValue, ShowcaseEnabledPolicy previousValue)
+    parameters:
+    - id: newValue
+      type: Dropbox.Api.TeamLog.ShowcaseEnabledPolicy
+      description: New Dropbox Showcase policy.
+    - id: previousValue
+      type: Dropbox.Api.TeamLog.ShowcaseEnabledPolicy
+      description: Previous Dropbox Showcase policy.
+    content.vb: Public Sub New(newValue As ShowcaseEnabledPolicy, previousValue As ShowcaseEnabledPolicy)
+  overload: Dropbox.Api.TeamLog.ShowcaseChangeEnabledPolicyDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.ShowcaseChangeEnabledPolicyDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.ShowcaseChangeEnabledPolicyDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.ShowcaseChangeEnabledPolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: ShowcaseChangeEnabledPolicyDetails()
+  nameWithType: ShowcaseChangeEnabledPolicyDetails.ShowcaseChangeEnabledPolicyDetails()
+  fullName: Dropbox.Api.TeamLog.ShowcaseChangeEnabledPolicyDetails.ShowcaseChangeEnabledPolicyDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseChangeEnabledPolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseChangeEnabledPolicyDetails.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.ShowcaseChangeEnabledPolicyDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public ShowcaseChangeEnabledPolicyDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.ShowcaseChangeEnabledPolicyDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.ShowcaseChangeEnabledPolicyDetails.NewValue
+  commentId: P:Dropbox.Api.TeamLog.ShowcaseChangeEnabledPolicyDetails.NewValue
+  id: NewValue
+  parent: Dropbox.Api.TeamLog.ShowcaseChangeEnabledPolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: NewValue
+  nameWithType: ShowcaseChangeEnabledPolicyDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.ShowcaseChangeEnabledPolicyDetails.NewValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseChangeEnabledPolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NewValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseChangeEnabledPolicyDetails.cs
+    startLine: 66
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>New Dropbox Showcase policy.</p>\n"
+  example: []
+  syntax:
+    content: public ShowcaseEnabledPolicy NewValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.ShowcaseEnabledPolicy
+    content.vb: Public Property NewValue As ShowcaseEnabledPolicy
+  overload: Dropbox.Api.TeamLog.ShowcaseChangeEnabledPolicyDetails.NewValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.ShowcaseChangeEnabledPolicyDetails.PreviousValue
+  commentId: P:Dropbox.Api.TeamLog.ShowcaseChangeEnabledPolicyDetails.PreviousValue
+  id: PreviousValue
+  parent: Dropbox.Api.TeamLog.ShowcaseChangeEnabledPolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: PreviousValue
+  nameWithType: ShowcaseChangeEnabledPolicyDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.ShowcaseChangeEnabledPolicyDetails.PreviousValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseChangeEnabledPolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PreviousValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseChangeEnabledPolicyDetails.cs
+    startLine: 71
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Previous Dropbox Showcase policy.</p>\n"
+  example: []
+  syntax:
+    content: public ShowcaseEnabledPolicy PreviousValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.ShowcaseEnabledPolicy
+    content.vb: Public Property PreviousValue As ShowcaseEnabledPolicy
+  overload: Dropbox.Api.TeamLog.ShowcaseChangeEnabledPolicyDetails.PreviousValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.ShowcaseChangeEnabledPolicyDetails
+  commentId: T:Dropbox.Api.TeamLog.ShowcaseChangeEnabledPolicyDetails
+  parent: Dropbox.Api.TeamLog
+  name: ShowcaseChangeEnabledPolicyDetails
+  nameWithType: ShowcaseChangeEnabledPolicyDetails
+  fullName: Dropbox.Api.TeamLog.ShowcaseChangeEnabledPolicyDetails
+- uid: Dropbox.Api.TeamLog.ShowcaseChangeEnabledPolicyDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.ShowcaseChangeEnabledPolicyDetails.#ctor
+  name: ShowcaseChangeEnabledPolicyDetails
+  nameWithType: ShowcaseChangeEnabledPolicyDetails.ShowcaseChangeEnabledPolicyDetails
+  fullName: Dropbox.Api.TeamLog.ShowcaseChangeEnabledPolicyDetails.ShowcaseChangeEnabledPolicyDetails
+- uid: Dropbox.Api.TeamLog.ShowcaseEnabledPolicy
+  commentId: T:Dropbox.Api.TeamLog.ShowcaseEnabledPolicy
+  parent: Dropbox.Api.TeamLog
+  name: ShowcaseEnabledPolicy
+  nameWithType: ShowcaseEnabledPolicy
+  fullName: Dropbox.Api.TeamLog.ShowcaseEnabledPolicy
+- uid: Dropbox.Api.TeamLog.ShowcaseChangeEnabledPolicyDetails.NewValue*
+  commentId: Overload:Dropbox.Api.TeamLog.ShowcaseChangeEnabledPolicyDetails.NewValue
+  name: NewValue
+  nameWithType: ShowcaseChangeEnabledPolicyDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.ShowcaseChangeEnabledPolicyDetails.NewValue
+- uid: Dropbox.Api.TeamLog.ShowcaseChangeEnabledPolicyDetails.PreviousValue*
+  commentId: Overload:Dropbox.Api.TeamLog.ShowcaseChangeEnabledPolicyDetails.PreviousValue
+  name: PreviousValue
+  nameWithType: ShowcaseChangeEnabledPolicyDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.ShowcaseChangeEnabledPolicyDetails.PreviousValue
+shouldSkipMarkup: true

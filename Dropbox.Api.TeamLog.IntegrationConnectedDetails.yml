@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.IntegrationConnectedDetails
+  commentId: T:Dropbox.Api.TeamLog.IntegrationConnectedDetails
+  id: IntegrationConnectedDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.IntegrationConnectedDetails.#ctor
+  - Dropbox.Api.TeamLog.IntegrationConnectedDetails.#ctor(System.String)
+  - Dropbox.Api.TeamLog.IntegrationConnectedDetails.IntegrationName
+  langs:
+  - csharp
+  - vb
+  name: IntegrationConnectedDetails
+  nameWithType: IntegrationConnectedDetails
+  fullName: Dropbox.Api.TeamLog.IntegrationConnectedDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/IntegrationConnectedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IntegrationConnectedDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/IntegrationConnectedDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Connected integration for member.</p>\n"
+  example: []
+  syntax:
+    content: 'public class IntegrationConnectedDetails : object'
+    content.vb: >-
+      Public Class IntegrationConnectedDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.IntegrationConnectedDetails.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.IntegrationConnectedDetails.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.IntegrationConnectedDetails
+  langs:
+  - csharp
+  - vb
+  name: IntegrationConnectedDetails(String)
+  nameWithType: IntegrationConnectedDetails.IntegrationConnectedDetails(String)
+  fullName: Dropbox.Api.TeamLog.IntegrationConnectedDetails.IntegrationConnectedDetails(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/IntegrationConnectedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/IntegrationConnectedDetails.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.IntegrationConnectedDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public IntegrationConnectedDetails(string integrationName)
+    parameters:
+    - id: integrationName
+      type: System.String
+      description: Name of the third-party integration.
+    content.vb: Public Sub New(integrationName As String)
+  overload: Dropbox.Api.TeamLog.IntegrationConnectedDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.IntegrationConnectedDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.IntegrationConnectedDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.IntegrationConnectedDetails
+  langs:
+  - csharp
+  - vb
+  name: IntegrationConnectedDetails()
+  nameWithType: IntegrationConnectedDetails.IntegrationConnectedDetails()
+  fullName: Dropbox.Api.TeamLog.IntegrationConnectedDetails.IntegrationConnectedDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/IntegrationConnectedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/IntegrationConnectedDetails.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.IntegrationConnectedDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public IntegrationConnectedDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.IntegrationConnectedDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.IntegrationConnectedDetails.IntegrationName
+  commentId: P:Dropbox.Api.TeamLog.IntegrationConnectedDetails.IntegrationName
+  id: IntegrationName
+  parent: Dropbox.Api.TeamLog.IntegrationConnectedDetails
+  langs:
+  - csharp
+  - vb
+  name: IntegrationName
+  nameWithType: IntegrationConnectedDetails.IntegrationName
+  fullName: Dropbox.Api.TeamLog.IntegrationConnectedDetails.IntegrationName
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/IntegrationConnectedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IntegrationName
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/IntegrationConnectedDetails.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Name of the third-party integration.</p>\n"
+  example: []
+  syntax:
+    content: public string IntegrationName { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property IntegrationName As String
+  overload: Dropbox.Api.TeamLog.IntegrationConnectedDetails.IntegrationName*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.IntegrationConnectedDetails
+  commentId: T:Dropbox.Api.TeamLog.IntegrationConnectedDetails
+  parent: Dropbox.Api.TeamLog
+  name: IntegrationConnectedDetails
+  nameWithType: IntegrationConnectedDetails
+  fullName: Dropbox.Api.TeamLog.IntegrationConnectedDetails
+- uid: Dropbox.Api.TeamLog.IntegrationConnectedDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.IntegrationConnectedDetails.#ctor
+  name: IntegrationConnectedDetails
+  nameWithType: IntegrationConnectedDetails.IntegrationConnectedDetails
+  fullName: Dropbox.Api.TeamLog.IntegrationConnectedDetails.IntegrationConnectedDetails
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.IntegrationConnectedDetails.IntegrationName*
+  commentId: Overload:Dropbox.Api.TeamLog.IntegrationConnectedDetails.IntegrationName
+  name: IntegrationName
+  nameWithType: IntegrationConnectedDetails.IntegrationName
+  fullName: Dropbox.Api.TeamLog.IntegrationConnectedDetails.IntegrationName
+shouldSkipMarkup: true

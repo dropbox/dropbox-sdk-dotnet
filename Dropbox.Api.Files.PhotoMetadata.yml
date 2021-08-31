@@ -1,0 +1,296 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.PhotoMetadata
+  commentId: T:Dropbox.Api.Files.PhotoMetadata
+  id: PhotoMetadata
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.PhotoMetadata.#ctor
+  - Dropbox.Api.Files.PhotoMetadata.#ctor(Dropbox.Api.Files.Dimensions,Dropbox.Api.Files.GpsCoordinates,System.Nullable{System.DateTime})
+  langs:
+  - csharp
+  - vb
+  name: PhotoMetadata
+  nameWithType: PhotoMetadata
+  fullName: Dropbox.Api.Files.PhotoMetadata
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PhotoMetadata.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PhotoMetadata
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PhotoMetadata.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Metadata for a photo.</p>\n"
+  example: []
+  syntax:
+    content: 'public class PhotoMetadata : MediaMetadata'
+    content.vb: >-
+      Public Class PhotoMetadata
+          Inherits MediaMetadata
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Files.MediaMetadata
+  inheritedMembers:
+  - Dropbox.Api.Files.MediaMetadata.IsPhoto
+  - Dropbox.Api.Files.MediaMetadata.AsPhoto
+  - Dropbox.Api.Files.MediaMetadata.IsVideo
+  - Dropbox.Api.Files.MediaMetadata.AsVideo
+  - Dropbox.Api.Files.MediaMetadata.Dimensions
+  - Dropbox.Api.Files.MediaMetadata.Location
+  - Dropbox.Api.Files.MediaMetadata.TimeTaken
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.PhotoMetadata.#ctor(Dropbox.Api.Files.Dimensions,Dropbox.Api.Files.GpsCoordinates,System.Nullable{System.DateTime})
+  commentId: M:Dropbox.Api.Files.PhotoMetadata.#ctor(Dropbox.Api.Files.Dimensions,Dropbox.Api.Files.GpsCoordinates,System.Nullable{System.DateTime})
+  id: '#ctor(Dropbox.Api.Files.Dimensions,Dropbox.Api.Files.GpsCoordinates,System.Nullable{System.DateTime})'
+  parent: Dropbox.Api.Files.PhotoMetadata
+  langs:
+  - csharp
+  - vb
+  name: PhotoMetadata(Dimensions, GpsCoordinates, Nullable<System.DateTime>)
+  nameWithType: PhotoMetadata.PhotoMetadata(Dimensions, GpsCoordinates, Nullable<System.DateTime>)
+  fullName: Dropbox.Api.Files.PhotoMetadata.PhotoMetadata(Dropbox.Api.Files.Dimensions, Dropbox.Api.Files.GpsCoordinates, System.Nullable<System.DateTime>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PhotoMetadata.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PhotoMetadata.cs
+    startLine: 36
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.PhotoMetadata\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public PhotoMetadata(Dimensions dimensions = null, GpsCoordinates location = null, System.DateTime? timeTaken = null)
+    parameters:
+    - id: dimensions
+      type: Dropbox.Api.Files.Dimensions
+      description: Dimension of the photo/video.
+    - id: location
+      type: Dropbox.Api.Files.GpsCoordinates
+      description: The GPS coordinate of the photo/video.
+    - id: timeTaken
+      type: System.Nullable{System.DateTime}
+      description: The timestamp when the photo/video is taken.
+    content.vb: Public Sub New(dimensions As Dimensions = Nothing, location As GpsCoordinates = Nothing, timeTaken As System.DateTime? = Nothing)
+  overload: Dropbox.Api.Files.PhotoMetadata.#ctor*
+  nameWithType.vb: PhotoMetadata.PhotoMetadata(Dimensions, GpsCoordinates, Nullable(Of System.DateTime))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Files.PhotoMetadata.PhotoMetadata(Dropbox.Api.Files.Dimensions, Dropbox.Api.Files.GpsCoordinates, System.Nullable(Of System.DateTime))
+  name.vb: PhotoMetadata(Dimensions, GpsCoordinates, Nullable(Of System.DateTime))
+- uid: Dropbox.Api.Files.PhotoMetadata.#ctor
+  commentId: M:Dropbox.Api.Files.PhotoMetadata.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.PhotoMetadata
+  langs:
+  - csharp
+  - vb
+  name: PhotoMetadata()
+  nameWithType: PhotoMetadata.PhotoMetadata()
+  fullName: Dropbox.Api.Files.PhotoMetadata.PhotoMetadata()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PhotoMetadata.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PhotoMetadata.cs
+    startLine: 48
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.PhotoMetadata\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public PhotoMetadata()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.PhotoMetadata.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.MediaMetadata
+  commentId: T:Dropbox.Api.Files.MediaMetadata
+  parent: Dropbox.Api.Files
+  name: MediaMetadata
+  nameWithType: MediaMetadata
+  fullName: Dropbox.Api.Files.MediaMetadata
+- uid: Dropbox.Api.Files.MediaMetadata.IsPhoto
+  commentId: P:Dropbox.Api.Files.MediaMetadata.IsPhoto
+  parent: Dropbox.Api.Files.MediaMetadata
+  name: IsPhoto
+  nameWithType: MediaMetadata.IsPhoto
+  fullName: Dropbox.Api.Files.MediaMetadata.IsPhoto
+- uid: Dropbox.Api.Files.MediaMetadata.AsPhoto
+  commentId: P:Dropbox.Api.Files.MediaMetadata.AsPhoto
+  parent: Dropbox.Api.Files.MediaMetadata
+  name: AsPhoto
+  nameWithType: MediaMetadata.AsPhoto
+  fullName: Dropbox.Api.Files.MediaMetadata.AsPhoto
+- uid: Dropbox.Api.Files.MediaMetadata.IsVideo
+  commentId: P:Dropbox.Api.Files.MediaMetadata.IsVideo
+  parent: Dropbox.Api.Files.MediaMetadata
+  name: IsVideo
+  nameWithType: MediaMetadata.IsVideo
+  fullName: Dropbox.Api.Files.MediaMetadata.IsVideo
+- uid: Dropbox.Api.Files.MediaMetadata.AsVideo
+  commentId: P:Dropbox.Api.Files.MediaMetadata.AsVideo
+  parent: Dropbox.Api.Files.MediaMetadata
+  name: AsVideo
+  nameWithType: MediaMetadata.AsVideo
+  fullName: Dropbox.Api.Files.MediaMetadata.AsVideo
+- uid: Dropbox.Api.Files.MediaMetadata.Dimensions
+  commentId: P:Dropbox.Api.Files.MediaMetadata.Dimensions
+  parent: Dropbox.Api.Files.MediaMetadata
+  name: Dimensions
+  nameWithType: MediaMetadata.Dimensions
+  fullName: Dropbox.Api.Files.MediaMetadata.Dimensions
+- uid: Dropbox.Api.Files.MediaMetadata.Location
+  commentId: P:Dropbox.Api.Files.MediaMetadata.Location
+  parent: Dropbox.Api.Files.MediaMetadata
+  name: Location
+  nameWithType: MediaMetadata.Location
+  fullName: Dropbox.Api.Files.MediaMetadata.Location
+- uid: Dropbox.Api.Files.MediaMetadata.TimeTaken
+  commentId: P:Dropbox.Api.Files.MediaMetadata.TimeTaken
+  parent: Dropbox.Api.Files.MediaMetadata
+  name: TimeTaken
+  nameWithType: MediaMetadata.TimeTaken
+  fullName: Dropbox.Api.Files.MediaMetadata.TimeTaken
+- uid: Dropbox.Api.Files.PhotoMetadata
+  commentId: T:Dropbox.Api.Files.PhotoMetadata
+  parent: Dropbox.Api.Files
+  name: PhotoMetadata
+  nameWithType: PhotoMetadata
+  fullName: Dropbox.Api.Files.PhotoMetadata
+- uid: Dropbox.Api.Files.PhotoMetadata.#ctor*
+  commentId: Overload:Dropbox.Api.Files.PhotoMetadata.#ctor
+  name: PhotoMetadata
+  nameWithType: PhotoMetadata.PhotoMetadata
+  fullName: Dropbox.Api.Files.PhotoMetadata.PhotoMetadata
+- uid: Dropbox.Api.Files.Dimensions
+  commentId: T:Dropbox.Api.Files.Dimensions
+  parent: Dropbox.Api.Files
+  name: Dimensions
+  nameWithType: Dimensions
+  fullName: Dropbox.Api.Files.Dimensions
+- uid: Dropbox.Api.Files.GpsCoordinates
+  commentId: T:Dropbox.Api.Files.GpsCoordinates
+  parent: Dropbox.Api.Files
+  name: GpsCoordinates
+  nameWithType: GpsCoordinates
+  fullName: Dropbox.Api.Files.GpsCoordinates
+- uid: System.Nullable{System.DateTime}
+  commentId: '!:System.Nullable{System.DateTime}'
+  definition: System.Nullable`1
+  name: Nullable<System.DateTime>
+  nameWithType: Nullable<System.DateTime>
+  fullName: System.Nullable<System.DateTime>
+  nameWithType.vb: Nullable(Of System.DateTime)
+  fullName.vb: System.Nullable(Of System.DateTime)
+  name.vb: Nullable(Of System.DateTime)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.DateTime
+    name: System.DateTime
+    nameWithType: System.DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.DateTime
+    name: System.DateTime
+    nameWithType: System.DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  isExternal: true
+  name: Nullable<>
+  nameWithType: Nullable<>
+  fullName: System.Nullable<>
+  nameWithType.vb: Nullable(Of )
+  fullName.vb: System.Nullable(Of )
+  name.vb: Nullable(Of )
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+shouldSkipMarkup: true

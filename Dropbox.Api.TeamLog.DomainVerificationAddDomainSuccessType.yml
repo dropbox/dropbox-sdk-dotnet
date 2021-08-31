@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.DomainVerificationAddDomainSuccessType
+  commentId: T:Dropbox.Api.TeamLog.DomainVerificationAddDomainSuccessType
+  id: DomainVerificationAddDomainSuccessType
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.DomainVerificationAddDomainSuccessType.#ctor
+  - Dropbox.Api.TeamLog.DomainVerificationAddDomainSuccessType.#ctor(System.String)
+  - Dropbox.Api.TeamLog.DomainVerificationAddDomainSuccessType.Description
+  langs:
+  - csharp
+  - vb
+  name: DomainVerificationAddDomainSuccessType
+  nameWithType: DomainVerificationAddDomainSuccessType
+  fullName: Dropbox.Api.TeamLog.DomainVerificationAddDomainSuccessType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DomainVerificationAddDomainSuccessType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: DomainVerificationAddDomainSuccessType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DomainVerificationAddDomainSuccessType.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The domain verification add domain success type object</p>\n"
+  example: []
+  syntax:
+    content: 'public class DomainVerificationAddDomainSuccessType : object'
+    content.vb: >-
+      Public Class DomainVerificationAddDomainSuccessType
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.DomainVerificationAddDomainSuccessType.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.DomainVerificationAddDomainSuccessType.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.DomainVerificationAddDomainSuccessType
+  langs:
+  - csharp
+  - vb
+  name: DomainVerificationAddDomainSuccessType(String)
+  nameWithType: DomainVerificationAddDomainSuccessType.DomainVerificationAddDomainSuccessType(String)
+  fullName: Dropbox.Api.TeamLog.DomainVerificationAddDomainSuccessType.DomainVerificationAddDomainSuccessType(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DomainVerificationAddDomainSuccessType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DomainVerificationAddDomainSuccessType.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.DomainVerificationAddDomainSuccessType\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public DomainVerificationAddDomainSuccessType(string description)
+    parameters:
+    - id: description
+      type: System.String
+      description: The description
+    content.vb: Public Sub New(description As String)
+  overload: Dropbox.Api.TeamLog.DomainVerificationAddDomainSuccessType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.DomainVerificationAddDomainSuccessType.#ctor
+  commentId: M:Dropbox.Api.TeamLog.DomainVerificationAddDomainSuccessType.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.DomainVerificationAddDomainSuccessType
+  langs:
+  - csharp
+  - vb
+  name: DomainVerificationAddDomainSuccessType()
+  nameWithType: DomainVerificationAddDomainSuccessType.DomainVerificationAddDomainSuccessType()
+  fullName: Dropbox.Api.TeamLog.DomainVerificationAddDomainSuccessType.DomainVerificationAddDomainSuccessType()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DomainVerificationAddDomainSuccessType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DomainVerificationAddDomainSuccessType.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.DomainVerificationAddDomainSuccessType\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public DomainVerificationAddDomainSuccessType()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.DomainVerificationAddDomainSuccessType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.DomainVerificationAddDomainSuccessType.Description
+  commentId: P:Dropbox.Api.TeamLog.DomainVerificationAddDomainSuccessType.Description
+  id: Description
+  parent: Dropbox.Api.TeamLog.DomainVerificationAddDomainSuccessType
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: DomainVerificationAddDomainSuccessType.Description
+  fullName: Dropbox.Api.TeamLog.DomainVerificationAddDomainSuccessType.Description
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DomainVerificationAddDomainSuccessType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Description
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DomainVerificationAddDomainSuccessType.cs
+    startLine: 59
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets the description of the domain verification add domain success\ntype</p>\n"
+  example: []
+  syntax:
+    content: public string Description { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Dropbox.Api.TeamLog.DomainVerificationAddDomainSuccessType.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.DomainVerificationAddDomainSuccessType
+  commentId: T:Dropbox.Api.TeamLog.DomainVerificationAddDomainSuccessType
+  parent: Dropbox.Api.TeamLog
+  name: DomainVerificationAddDomainSuccessType
+  nameWithType: DomainVerificationAddDomainSuccessType
+  fullName: Dropbox.Api.TeamLog.DomainVerificationAddDomainSuccessType
+- uid: Dropbox.Api.TeamLog.DomainVerificationAddDomainSuccessType.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.DomainVerificationAddDomainSuccessType.#ctor
+  name: DomainVerificationAddDomainSuccessType
+  nameWithType: DomainVerificationAddDomainSuccessType.DomainVerificationAddDomainSuccessType
+  fullName: Dropbox.Api.TeamLog.DomainVerificationAddDomainSuccessType.DomainVerificationAddDomainSuccessType
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.DomainVerificationAddDomainSuccessType.Description*
+  commentId: Overload:Dropbox.Api.TeamLog.DomainVerificationAddDomainSuccessType.Description
+  name: Description
+  nameWithType: DomainVerificationAddDomainSuccessType.Description
+  fullName: Dropbox.Api.TeamLog.DomainVerificationAddDomainSuccessType.Description
+shouldSkipMarkup: true

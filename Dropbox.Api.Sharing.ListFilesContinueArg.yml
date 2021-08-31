@@ -1,0 +1,193 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.ListFilesContinueArg
+  commentId: T:Dropbox.Api.Sharing.ListFilesContinueArg
+  id: ListFilesContinueArg
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.ListFilesContinueArg.#ctor
+  - Dropbox.Api.Sharing.ListFilesContinueArg.#ctor(System.String)
+  - Dropbox.Api.Sharing.ListFilesContinueArg.Cursor
+  langs:
+  - csharp
+  - vb
+  name: ListFilesContinueArg
+  nameWithType: ListFilesContinueArg
+  fullName: Dropbox.Api.Sharing.ListFilesContinueArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFilesContinueArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ListFilesContinueArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFilesContinueArg.cs
+    startLine: 17
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Arguments for <xref href=\"Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListReceivedFilesContinueAsync(Dropbox.Api.Sharing.ListFilesContinueArg)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+  example: []
+  syntax:
+    content: 'public class ListFilesContinueArg : object'
+    content.vb: >-
+      Public Class ListFilesContinueArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Sharing.ListFilesContinueArg.#ctor(System.String)
+  commentId: M:Dropbox.Api.Sharing.ListFilesContinueArg.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.Sharing.ListFilesContinueArg
+  langs:
+  - csharp
+  - vb
+  name: ListFilesContinueArg(String)
+  nameWithType: ListFilesContinueArg.ListFilesContinueArg(String)
+  fullName: Dropbox.Api.Sharing.ListFilesContinueArg.ListFilesContinueArg(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFilesContinueArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFilesContinueArg.cs
+    startLine: 37
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.ListFilesContinueArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public ListFilesContinueArg(string cursor)
+    parameters:
+    - id: cursor
+      type: System.String
+      description: Cursor in <xref href="Dropbox.Api.Sharing.ListFilesResult.Cursor" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Sub New(cursor As String)
+  overload: Dropbox.Api.Sharing.ListFilesContinueArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.ListFilesContinueArg.#ctor
+  commentId: M:Dropbox.Api.Sharing.ListFilesContinueArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Sharing.ListFilesContinueArg
+  langs:
+  - csharp
+  - vb
+  name: ListFilesContinueArg()
+  nameWithType: ListFilesContinueArg.ListFilesContinueArg()
+  fullName: Dropbox.Api.Sharing.ListFilesContinueArg.ListFilesContinueArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFilesContinueArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFilesContinueArg.cs
+    startLine: 53
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.ListFilesContinueArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public ListFilesContinueArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Sharing.ListFilesContinueArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.ListFilesContinueArg.Cursor
+  commentId: P:Dropbox.Api.Sharing.ListFilesContinueArg.Cursor
+  id: Cursor
+  parent: Dropbox.Api.Sharing.ListFilesContinueArg
+  langs:
+  - csharp
+  - vb
+  name: Cursor
+  nameWithType: ListFilesContinueArg.Cursor
+  fullName: Dropbox.Api.Sharing.ListFilesContinueArg.Cursor
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFilesContinueArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Cursor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFilesContinueArg.cs
+    startLine: 61
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Cursor in <xref href=\"Dropbox.Api.Sharing.ListFilesResult.Cursor\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+  example: []
+  syntax:
+    content: public string Cursor { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Cursor As String
+  overload: Dropbox.Api.Sharing.ListFilesContinueArg.Cursor*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListReceivedFilesContinueAsync(Dropbox.Api.Sharing.ListFilesContinueArg)
+  commentId: M:Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListReceivedFilesContinueAsync(Dropbox.Api.Sharing.ListFilesContinueArg)
+  isExternal: true
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.ListFilesContinueArg
+  commentId: T:Dropbox.Api.Sharing.ListFilesContinueArg
+  parent: Dropbox.Api.Sharing
+  name: ListFilesContinueArg
+  nameWithType: ListFilesContinueArg
+  fullName: Dropbox.Api.Sharing.ListFilesContinueArg
+- uid: Dropbox.Api.Sharing.ListFilesResult.Cursor
+  commentId: P:Dropbox.Api.Sharing.ListFilesResult.Cursor
+  isExternal: true
+- uid: Dropbox.Api.Sharing.ListFilesContinueArg.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.ListFilesContinueArg.#ctor
+  name: ListFilesContinueArg
+  nameWithType: ListFilesContinueArg.ListFilesContinueArg
+  fullName: Dropbox.Api.Sharing.ListFilesContinueArg.ListFilesContinueArg
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Sharing.ListFilesContinueArg.Cursor*
+  commentId: Overload:Dropbox.Api.Sharing.ListFilesContinueArg.Cursor
+  name: Cursor
+  nameWithType: ListFilesContinueArg.Cursor
+  fullName: Dropbox.Api.Sharing.ListFilesContinueArg.Cursor
+shouldSkipMarkup: true

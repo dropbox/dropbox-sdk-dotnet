@@ -1,0 +1,403 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.MemberChangeStatusDetails
+  commentId: T:Dropbox.Api.TeamLog.MemberChangeStatusDetails
+  id: MemberChangeStatusDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.MemberChangeStatusDetails.#ctor
+  - Dropbox.Api.TeamLog.MemberChangeStatusDetails.#ctor(Dropbox.Api.TeamLog.MemberStatus,Dropbox.Api.TeamLog.MemberStatus,Dropbox.Api.TeamLog.ActionDetails,System.String,System.String)
+  - Dropbox.Api.TeamLog.MemberChangeStatusDetails.Action
+  - Dropbox.Api.TeamLog.MemberChangeStatusDetails.NewTeam
+  - Dropbox.Api.TeamLog.MemberChangeStatusDetails.NewValue
+  - Dropbox.Api.TeamLog.MemberChangeStatusDetails.PreviousTeam
+  - Dropbox.Api.TeamLog.MemberChangeStatusDetails.PreviousValue
+  langs:
+  - csharp
+  - vb
+  name: MemberChangeStatusDetails
+  nameWithType: MemberChangeStatusDetails
+  fullName: Dropbox.Api.TeamLog.MemberChangeStatusDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberChangeStatusDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: MemberChangeStatusDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberChangeStatusDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Changed member status (invited, joined, suspended, etc.).</p>\n"
+  example: []
+  syntax:
+    content: 'public class MemberChangeStatusDetails : object'
+    content.vb: >-
+      Public Class MemberChangeStatusDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.MemberChangeStatusDetails.#ctor(Dropbox.Api.TeamLog.MemberStatus,Dropbox.Api.TeamLog.MemberStatus,Dropbox.Api.TeamLog.ActionDetails,System.String,System.String)
+  commentId: M:Dropbox.Api.TeamLog.MemberChangeStatusDetails.#ctor(Dropbox.Api.TeamLog.MemberStatus,Dropbox.Api.TeamLog.MemberStatus,Dropbox.Api.TeamLog.ActionDetails,System.String,System.String)
+  id: '#ctor(Dropbox.Api.TeamLog.MemberStatus,Dropbox.Api.TeamLog.MemberStatus,Dropbox.Api.TeamLog.ActionDetails,System.String,System.String)'
+  parent: Dropbox.Api.TeamLog.MemberChangeStatusDetails
+  langs:
+  - csharp
+  - vb
+  name: MemberChangeStatusDetails(MemberStatus, MemberStatus, ActionDetails, String, String)
+  nameWithType: MemberChangeStatusDetails.MemberChangeStatusDetails(MemberStatus, MemberStatus, ActionDetails, String, String)
+  fullName: Dropbox.Api.TeamLog.MemberChangeStatusDetails.MemberChangeStatusDetails(Dropbox.Api.TeamLog.MemberStatus, Dropbox.Api.TeamLog.MemberStatus, Dropbox.Api.TeamLog.ActionDetails, System.String, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberChangeStatusDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberChangeStatusDetails.cs
+    startLine: 42
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.MemberChangeStatusDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public MemberChangeStatusDetails(MemberStatus newValue, MemberStatus previousValue = null, ActionDetails action = null, string newTeam = null, string previousTeam = null)
+    parameters:
+    - id: newValue
+      type: Dropbox.Api.TeamLog.MemberStatus
+      description: New member status.
+    - id: previousValue
+      type: Dropbox.Api.TeamLog.MemberStatus
+      description: >-
+        Previous member status. Might be missing due to
+
+        historical data gap.
+    - id: action
+      type: Dropbox.Api.TeamLog.ActionDetails
+      description: >-
+        Additional information indicating the action taken that caused
+
+        status change.
+    - id: newTeam
+      type: System.String
+      description: >-
+        The user&apos;s new team name. This field is relevant when the
+
+        user is transferred off the team.
+    - id: previousTeam
+      type: System.String
+      description: >-
+        The user&apos;s previous team name. This field is relevant
+
+        when the user is transferred onto the team.
+    content.vb: Public Sub New(newValue As MemberStatus, previousValue As MemberStatus = Nothing, action As ActionDetails = Nothing, newTeam As String = Nothing, previousTeam As String = Nothing)
+  overload: Dropbox.Api.TeamLog.MemberChangeStatusDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.MemberChangeStatusDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.MemberChangeStatusDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.MemberChangeStatusDetails
+  langs:
+  - csharp
+  - vb
+  name: MemberChangeStatusDetails()
+  nameWithType: MemberChangeStatusDetails.MemberChangeStatusDetails()
+  fullName: Dropbox.Api.TeamLog.MemberChangeStatusDetails.MemberChangeStatusDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberChangeStatusDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberChangeStatusDetails.cs
+    startLine: 66
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.MemberChangeStatusDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public MemberChangeStatusDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.MemberChangeStatusDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.MemberChangeStatusDetails.NewValue
+  commentId: P:Dropbox.Api.TeamLog.MemberChangeStatusDetails.NewValue
+  id: NewValue
+  parent: Dropbox.Api.TeamLog.MemberChangeStatusDetails
+  langs:
+  - csharp
+  - vb
+  name: NewValue
+  nameWithType: MemberChangeStatusDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.MemberChangeStatusDetails.NewValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberChangeStatusDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NewValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberChangeStatusDetails.cs
+    startLine: 74
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>New member status.</p>\n"
+  example: []
+  syntax:
+    content: public MemberStatus NewValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.MemberStatus
+    content.vb: Public Property NewValue As MemberStatus
+  overload: Dropbox.Api.TeamLog.MemberChangeStatusDetails.NewValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.MemberChangeStatusDetails.PreviousValue
+  commentId: P:Dropbox.Api.TeamLog.MemberChangeStatusDetails.PreviousValue
+  id: PreviousValue
+  parent: Dropbox.Api.TeamLog.MemberChangeStatusDetails
+  langs:
+  - csharp
+  - vb
+  name: PreviousValue
+  nameWithType: MemberChangeStatusDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.MemberChangeStatusDetails.PreviousValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberChangeStatusDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PreviousValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberChangeStatusDetails.cs
+    startLine: 79
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Previous member status. Might be missing due to historical data gap.</p>\n"
+  example: []
+  syntax:
+    content: public MemberStatus PreviousValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.MemberStatus
+    content.vb: Public Property PreviousValue As MemberStatus
+  overload: Dropbox.Api.TeamLog.MemberChangeStatusDetails.PreviousValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.MemberChangeStatusDetails.Action
+  commentId: P:Dropbox.Api.TeamLog.MemberChangeStatusDetails.Action
+  id: Action
+  parent: Dropbox.Api.TeamLog.MemberChangeStatusDetails
+  langs:
+  - csharp
+  - vb
+  name: Action
+  nameWithType: MemberChangeStatusDetails.Action
+  fullName: Dropbox.Api.TeamLog.MemberChangeStatusDetails.Action
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberChangeStatusDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Action
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberChangeStatusDetails.cs
+    startLine: 85
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Additional information indicating the action taken that caused status\nchange.</p>\n"
+  example: []
+  syntax:
+    content: public ActionDetails Action { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.ActionDetails
+    content.vb: Public Property Action As ActionDetails
+  overload: Dropbox.Api.TeamLog.MemberChangeStatusDetails.Action*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.MemberChangeStatusDetails.NewTeam
+  commentId: P:Dropbox.Api.TeamLog.MemberChangeStatusDetails.NewTeam
+  id: NewTeam
+  parent: Dropbox.Api.TeamLog.MemberChangeStatusDetails
+  langs:
+  - csharp
+  - vb
+  name: NewTeam
+  nameWithType: MemberChangeStatusDetails.NewTeam
+  fullName: Dropbox.Api.TeamLog.MemberChangeStatusDetails.NewTeam
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberChangeStatusDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NewTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberChangeStatusDetails.cs
+    startLine: 91
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The user&apos;s new team name. This field is relevant when the user is transferred\noff the team.</p>\n"
+  example: []
+  syntax:
+    content: public string NewTeam { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property NewTeam As String
+  overload: Dropbox.Api.TeamLog.MemberChangeStatusDetails.NewTeam*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.MemberChangeStatusDetails.PreviousTeam
+  commentId: P:Dropbox.Api.TeamLog.MemberChangeStatusDetails.PreviousTeam
+  id: PreviousTeam
+  parent: Dropbox.Api.TeamLog.MemberChangeStatusDetails
+  langs:
+  - csharp
+  - vb
+  name: PreviousTeam
+  nameWithType: MemberChangeStatusDetails.PreviousTeam
+  fullName: Dropbox.Api.TeamLog.MemberChangeStatusDetails.PreviousTeam
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberChangeStatusDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PreviousTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberChangeStatusDetails.cs
+    startLine: 97
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The user&apos;s previous team name. This field is relevant when the user is\ntransferred onto the team.</p>\n"
+  example: []
+  syntax:
+    content: public string PreviousTeam { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property PreviousTeam As String
+  overload: Dropbox.Api.TeamLog.MemberChangeStatusDetails.PreviousTeam*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.MemberChangeStatusDetails
+  commentId: T:Dropbox.Api.TeamLog.MemberChangeStatusDetails
+  parent: Dropbox.Api.TeamLog
+  name: MemberChangeStatusDetails
+  nameWithType: MemberChangeStatusDetails
+  fullName: Dropbox.Api.TeamLog.MemberChangeStatusDetails
+- uid: Dropbox.Api.TeamLog.MemberChangeStatusDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberChangeStatusDetails.#ctor
+  name: MemberChangeStatusDetails
+  nameWithType: MemberChangeStatusDetails.MemberChangeStatusDetails
+  fullName: Dropbox.Api.TeamLog.MemberChangeStatusDetails.MemberChangeStatusDetails
+- uid: Dropbox.Api.TeamLog.MemberStatus
+  commentId: T:Dropbox.Api.TeamLog.MemberStatus
+  parent: Dropbox.Api.TeamLog
+  name: MemberStatus
+  nameWithType: MemberStatus
+  fullName: Dropbox.Api.TeamLog.MemberStatus
+- uid: Dropbox.Api.TeamLog.ActionDetails
+  commentId: T:Dropbox.Api.TeamLog.ActionDetails
+  parent: Dropbox.Api.TeamLog
+  name: ActionDetails
+  nameWithType: ActionDetails
+  fullName: Dropbox.Api.TeamLog.ActionDetails
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.MemberChangeStatusDetails.NewValue*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberChangeStatusDetails.NewValue
+  name: NewValue
+  nameWithType: MemberChangeStatusDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.MemberChangeStatusDetails.NewValue
+- uid: Dropbox.Api.TeamLog.MemberChangeStatusDetails.PreviousValue*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberChangeStatusDetails.PreviousValue
+  name: PreviousValue
+  nameWithType: MemberChangeStatusDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.MemberChangeStatusDetails.PreviousValue
+- uid: Dropbox.Api.TeamLog.MemberChangeStatusDetails.Action*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberChangeStatusDetails.Action
+  name: Action
+  nameWithType: MemberChangeStatusDetails.Action
+  fullName: Dropbox.Api.TeamLog.MemberChangeStatusDetails.Action
+- uid: Dropbox.Api.TeamLog.MemberChangeStatusDetails.NewTeam*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberChangeStatusDetails.NewTeam
+  name: NewTeam
+  nameWithType: MemberChangeStatusDetails.NewTeam
+  fullName: Dropbox.Api.TeamLog.MemberChangeStatusDetails.NewTeam
+- uid: Dropbox.Api.TeamLog.MemberChangeStatusDetails.PreviousTeam*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberChangeStatusDetails.PreviousTeam
+  name: PreviousTeam
+  nameWithType: MemberChangeStatusDetails.PreviousTeam
+  fullName: Dropbox.Api.TeamLog.MemberChangeStatusDetails.PreviousTeam
+shouldSkipMarkup: true

@@ -1,0 +1,1147 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.DropboxTeamClient
+  commentId: T:Dropbox.Api.DropboxTeamClient
+  id: DropboxTeamClient
+  parent: Dropbox.Api
+  children:
+  - Dropbox.Api.DropboxTeamClient.#ctor(System.String)
+  - Dropbox.Api.DropboxTeamClient.#ctor(System.String,DateTime)
+  - Dropbox.Api.DropboxTeamClient.#ctor(System.String,DateTime,Dropbox.Api.DropboxClientConfig)
+  - Dropbox.Api.DropboxTeamClient.#ctor(System.String,Dropbox.Api.DropboxClientConfig)
+  - Dropbox.Api.DropboxTeamClient.#ctor(System.String,System.String)
+  - Dropbox.Api.DropboxTeamClient.#ctor(System.String,System.String,DateTime,System.String)
+  - Dropbox.Api.DropboxTeamClient.#ctor(System.String,System.String,DateTime,System.String,Dropbox.Api.DropboxClientConfig)
+  - Dropbox.Api.DropboxTeamClient.#ctor(System.String,System.String,DateTime,System.String,System.String)
+  - Dropbox.Api.DropboxTeamClient.#ctor(System.String,System.String,DateTime,System.String,System.String,Dropbox.Api.DropboxClientConfig)
+  - Dropbox.Api.DropboxTeamClient.#ctor(System.String,System.String,Dropbox.Api.DropboxClientConfig)
+  - Dropbox.Api.DropboxTeamClient.#ctor(System.String,System.String,System.String)
+  - Dropbox.Api.DropboxTeamClient.#ctor(System.String,System.String,System.String,Dropbox.Api.DropboxClientConfig)
+  - Dropbox.Api.DropboxTeamClient.#ctor(System.String,System.String,System.String,System.String,Dropbox.Api.DropboxClientConfig)
+  - Dropbox.Api.DropboxTeamClient.AsAdmin(System.String)
+  - Dropbox.Api.DropboxTeamClient.AsMember(System.String)
+  - Dropbox.Api.DropboxTeamClient.FileProperties
+  - Dropbox.Api.DropboxTeamClient.RefreshAccessToken(System.String[])
+  - Dropbox.Api.DropboxTeamClient.Team
+  - Dropbox.Api.DropboxTeamClient.TeamLog
+  langs:
+  - csharp
+  - vb
+  name: DropboxTeamClient
+  nameWithType: DropboxTeamClient
+  fullName: Dropbox.Api.DropboxTeamClient
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/DropboxTeamClient.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: DropboxTeamClient
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/DropboxTeamClient.cs
+    startLine: 13
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api
+  summary: "\nThe client which contains endpoints which perform team-level actions.\n"
+  example: []
+  syntax:
+    content: 'public sealed class DropboxTeamClient : DropboxClientBase'
+    content.vb: >-
+      Public NotInheritable Class DropboxTeamClient
+          Inherits DropboxClientBase
+  inheritance:
+  - System.Object
+  - Dropbox.Api.DropboxClientBase
+  inheritedMembers:
+  - Dropbox.Api.DropboxClientBase.Dispose
+  - Dropbox.Api.DropboxClientBase.Dispose(System.Boolean)
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.DropboxTeamClient.#ctor(System.String)
+  commentId: M:Dropbox.Api.DropboxTeamClient.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.DropboxTeamClient
+  langs:
+  - csharp
+  - vb
+  name: DropboxTeamClient(String)
+  nameWithType: DropboxTeamClient.DropboxTeamClient(String)
+  fullName: Dropbox.Api.DropboxTeamClient.DropboxTeamClient(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/DropboxTeamClient.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/DropboxTeamClient.cs
+    startLine: 30
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api
+  summary: "\nInitializes a new instance of the <xref href=\"Dropbox.Api.DropboxTeamClient\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public DropboxTeamClient(string oauth2Token)
+    parameters:
+    - id: oauth2Token
+      type: System.String
+      description: The oauth2 access token for making client requests.
+    content.vb: Public Sub New(oauth2Token As String)
+  overload: Dropbox.Api.DropboxTeamClient.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.DropboxTeamClient.#ctor(System.String,System.String)
+  commentId: M:Dropbox.Api.DropboxTeamClient.#ctor(System.String,System.String)
+  id: '#ctor(System.String,System.String)'
+  parent: Dropbox.Api.DropboxTeamClient
+  langs:
+  - csharp
+  - vb
+  name: DropboxTeamClient(String, String)
+  nameWithType: DropboxTeamClient.DropboxTeamClient(String, String)
+  fullName: Dropbox.Api.DropboxTeamClient.DropboxTeamClient(System.String, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/DropboxTeamClient.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/DropboxTeamClient.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api
+  summary: "\nInitializes a new instance of the <xref href=\"Dropbox.Api.DropboxTeamClient\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public DropboxTeamClient(string oauth2RefreshToken, string appKey)
+    parameters:
+    - id: oauth2RefreshToken
+      type: System.String
+      description: The oauth2 access token for making client requests.
+    - id: appKey
+      type: System.String
+      description: The app key to be used for refreshing tokens.
+    content.vb: Public Sub New(oauth2RefreshToken As String, appKey As String)
+  overload: Dropbox.Api.DropboxTeamClient.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.DropboxTeamClient.#ctor(System.String,System.String,Dropbox.Api.DropboxClientConfig)
+  commentId: M:Dropbox.Api.DropboxTeamClient.#ctor(System.String,System.String,Dropbox.Api.DropboxClientConfig)
+  id: '#ctor(System.String,System.String,Dropbox.Api.DropboxClientConfig)'
+  parent: Dropbox.Api.DropboxTeamClient
+  langs:
+  - csharp
+  - vb
+  name: DropboxTeamClient(String, String, DropboxClientConfig)
+  nameWithType: DropboxTeamClient.DropboxTeamClient(String, String, DropboxClientConfig)
+  fullName: Dropbox.Api.DropboxTeamClient.DropboxTeamClient(System.String, System.String, Dropbox.Api.DropboxClientConfig)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/DropboxTeamClient.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/DropboxTeamClient.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api
+  summary: "\nInitializes a new instance of the <xref href=\"Dropbox.Api.DropboxTeamClient\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public DropboxTeamClient(string oauth2RefreshToken, string appKey, DropboxClientConfig config)
+    parameters:
+    - id: oauth2RefreshToken
+      type: System.String
+      description: The oauth2 access token for making client requests.
+    - id: appKey
+      type: System.String
+      description: The app key to be used for refreshing tokens.
+    - id: config
+      type: Dropbox.Api.DropboxClientConfig
+      description: The <xref href="Dropbox.Api.DropboxClientConfig" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Sub New(oauth2RefreshToken As String, appKey As String, config As DropboxClientConfig)
+  overload: Dropbox.Api.DropboxTeamClient.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.DropboxTeamClient.#ctor(System.String,System.String,System.String,Dropbox.Api.DropboxClientConfig)
+  commentId: M:Dropbox.Api.DropboxTeamClient.#ctor(System.String,System.String,System.String,Dropbox.Api.DropboxClientConfig)
+  id: '#ctor(System.String,System.String,System.String,Dropbox.Api.DropboxClientConfig)'
+  parent: Dropbox.Api.DropboxTeamClient
+  langs:
+  - csharp
+  - vb
+  name: DropboxTeamClient(String, String, String, DropboxClientConfig)
+  nameWithType: DropboxTeamClient.DropboxTeamClient(String, String, String, DropboxClientConfig)
+  fullName: Dropbox.Api.DropboxTeamClient.DropboxTeamClient(System.String, System.String, System.String, Dropbox.Api.DropboxClientConfig)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/DropboxTeamClient.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/DropboxTeamClient.cs
+    startLine: 63
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api
+  summary: "\nInitializes a new instance of the <xref href=\"Dropbox.Api.DropboxTeamClient\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public DropboxTeamClient(string oauth2RefreshToken, string appKey, string appSecret, DropboxClientConfig config)
+    parameters:
+    - id: oauth2RefreshToken
+      type: System.String
+      description: The oauth2 refresh token for refreshing access tokens.
+    - id: appKey
+      type: System.String
+      description: The app key to be used for refreshing tokens.
+    - id: appSecret
+      type: System.String
+      description: The app secret to be used for refreshing tokens.
+    - id: config
+      type: Dropbox.Api.DropboxClientConfig
+      description: The <xref href="Dropbox.Api.DropboxClientConfig" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Sub New(oauth2RefreshToken As String, appKey As String, appSecret As String, config As DropboxClientConfig)
+  overload: Dropbox.Api.DropboxTeamClient.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.DropboxTeamClient.#ctor(System.String,System.String,System.String)
+  commentId: M:Dropbox.Api.DropboxTeamClient.#ctor(System.String,System.String,System.String)
+  id: '#ctor(System.String,System.String,System.String)'
+  parent: Dropbox.Api.DropboxTeamClient
+  langs:
+  - csharp
+  - vb
+  name: DropboxTeamClient(String, String, String)
+  nameWithType: DropboxTeamClient.DropboxTeamClient(String, String, String)
+  fullName: Dropbox.Api.DropboxTeamClient.DropboxTeamClient(System.String, System.String, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/DropboxTeamClient.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/DropboxTeamClient.cs
+    startLine: 74
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api
+  summary: "\nInitializes a new instance of the <xref href=\"Dropbox.Api.DropboxTeamClient\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public DropboxTeamClient(string oauth2RefreshToken, string appKey, string appSecret)
+    parameters:
+    - id: oauth2RefreshToken
+      type: System.String
+      description: The oauth2 refresh token for refreshing access tokens.
+    - id: appKey
+      type: System.String
+      description: The app key to be used for refreshing tokens.
+    - id: appSecret
+      type: System.String
+      description: The app secret to be used for refreshing tokens.
+    content.vb: Public Sub New(oauth2RefreshToken As String, appKey As String, appSecret As String)
+  overload: Dropbox.Api.DropboxTeamClient.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.DropboxTeamClient.#ctor(System.String,Dropbox.Api.DropboxClientConfig)
+  commentId: M:Dropbox.Api.DropboxTeamClient.#ctor(System.String,Dropbox.Api.DropboxClientConfig)
+  id: '#ctor(System.String,Dropbox.Api.DropboxClientConfig)'
+  parent: Dropbox.Api.DropboxTeamClient
+  langs:
+  - csharp
+  - vb
+  name: DropboxTeamClient(String, DropboxClientConfig)
+  nameWithType: DropboxTeamClient.DropboxTeamClient(String, DropboxClientConfig)
+  fullName: Dropbox.Api.DropboxTeamClient.DropboxTeamClient(System.String, Dropbox.Api.DropboxClientConfig)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/DropboxTeamClient.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/DropboxTeamClient.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api
+  summary: "\nInitializes a new instance of the <xref href=\"Dropbox.Api.DropboxTeamClient\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public DropboxTeamClient(string oauth2AccessToken, DropboxClientConfig config)
+    parameters:
+    - id: oauth2AccessToken
+      type: System.String
+      description: The oauth2 access token for making client requests.
+    - id: config
+      type: Dropbox.Api.DropboxClientConfig
+      description: The <xref href="Dropbox.Api.DropboxClientConfig" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Sub New(oauth2AccessToken As String, config As DropboxClientConfig)
+  overload: Dropbox.Api.DropboxTeamClient.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.DropboxTeamClient.#ctor(System.String,DateTime)
+  commentId: M:Dropbox.Api.DropboxTeamClient.#ctor(System.String,DateTime)
+  id: '#ctor(System.String,DateTime)'
+  parent: Dropbox.Api.DropboxTeamClient
+  langs:
+  - csharp
+  - vb
+  name: DropboxTeamClient(String, DateTime)
+  nameWithType: DropboxTeamClient.DropboxTeamClient(String, DateTime)
+  fullName: Dropbox.Api.DropboxTeamClient.DropboxTeamClient(System.String, DateTime)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/DropboxTeamClient.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/DropboxTeamClient.cs
+    startLine: 94
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api
+  summary: "\nInitializes a new instance of the <xref href=\"Dropbox.Api.DropboxTeamClient\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public DropboxTeamClient(string oauth2AccessToken, DateTime oauth2AccessTokenExpiresAt)
+    parameters:
+    - id: oauth2AccessToken
+      type: System.String
+      description: The oauth2 access token for making client requests.
+    - id: oauth2AccessTokenExpiresAt
+      type: DateTime
+      description: The time when the current access token expires, can be null if using long-lived tokens.
+    content.vb: Public Sub New(oauth2AccessToken As String, oauth2AccessTokenExpiresAt As DateTime)
+  overload: Dropbox.Api.DropboxTeamClient.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.DropboxTeamClient.#ctor(System.String,DateTime,Dropbox.Api.DropboxClientConfig)
+  commentId: M:Dropbox.Api.DropboxTeamClient.#ctor(System.String,DateTime,Dropbox.Api.DropboxClientConfig)
+  id: '#ctor(System.String,DateTime,Dropbox.Api.DropboxClientConfig)'
+  parent: Dropbox.Api.DropboxTeamClient
+  langs:
+  - csharp
+  - vb
+  name: DropboxTeamClient(String, DateTime, DropboxClientConfig)
+  nameWithType: DropboxTeamClient.DropboxTeamClient(String, DateTime, DropboxClientConfig)
+  fullName: Dropbox.Api.DropboxTeamClient.DropboxTeamClient(System.String, DateTime, Dropbox.Api.DropboxClientConfig)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/DropboxTeamClient.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/DropboxTeamClient.cs
+    startLine: 105
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api
+  summary: "\nInitializes a new instance of the <xref href=\"Dropbox.Api.DropboxTeamClient\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public DropboxTeamClient(string oauth2AccessToken, DateTime oauth2AccessTokenExpiresAt, DropboxClientConfig config)
+    parameters:
+    - id: oauth2AccessToken
+      type: System.String
+      description: The oauth2 access token for making client requests.
+    - id: oauth2AccessTokenExpiresAt
+      type: DateTime
+      description: The time when the current access token expires, can be null if using long-lived tokens.
+    - id: config
+      type: Dropbox.Api.DropboxClientConfig
+      description: The <xref href="Dropbox.Api.DropboxClientConfig" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Sub New(oauth2AccessToken As String, oauth2AccessTokenExpiresAt As DateTime, config As DropboxClientConfig)
+  overload: Dropbox.Api.DropboxTeamClient.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.DropboxTeamClient.#ctor(System.String,System.String,DateTime,System.String,System.String)
+  commentId: M:Dropbox.Api.DropboxTeamClient.#ctor(System.String,System.String,DateTime,System.String,System.String)
+  id: '#ctor(System.String,System.String,DateTime,System.String,System.String)'
+  parent: Dropbox.Api.DropboxTeamClient
+  langs:
+  - csharp
+  - vb
+  name: DropboxTeamClient(String, String, DateTime, String, String)
+  nameWithType: DropboxTeamClient.DropboxTeamClient(String, String, DateTime, String, String)
+  fullName: Dropbox.Api.DropboxTeamClient.DropboxTeamClient(System.String, System.String, DateTime, System.String, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/DropboxTeamClient.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/DropboxTeamClient.cs
+    startLine: 118
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api
+  summary: "\nInitializes a new instance of the <xref href=\"Dropbox.Api.DropboxTeamClient\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public DropboxTeamClient(string oauth2AccessToken, string oauth2RefreshToken, DateTime oauth2AccessTokenExpiresAt, string appKey, string appSecret)
+    parameters:
+    - id: oauth2AccessToken
+      type: System.String
+      description: The oauth2 access token for making client requests.
+    - id: oauth2RefreshToken
+      type: System.String
+      description: The oauth2 refresh token for refreshing access tokens.
+    - id: oauth2AccessTokenExpiresAt
+      type: DateTime
+      description: The time when the current access token expires, can be null if using long-lived tokens.
+    - id: appKey
+      type: System.String
+      description: The app key to be used for refreshing tokens.
+    - id: appSecret
+      type: System.String
+      description: The app secret to be used for refreshing tokens.
+    content.vb: Public Sub New(oauth2AccessToken As String, oauth2RefreshToken As String, oauth2AccessTokenExpiresAt As DateTime, appKey As String, appSecret As String)
+  overload: Dropbox.Api.DropboxTeamClient.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.DropboxTeamClient.#ctor(System.String,System.String,DateTime,System.String,Dropbox.Api.DropboxClientConfig)
+  commentId: M:Dropbox.Api.DropboxTeamClient.#ctor(System.String,System.String,DateTime,System.String,Dropbox.Api.DropboxClientConfig)
+  id: '#ctor(System.String,System.String,DateTime,System.String,Dropbox.Api.DropboxClientConfig)'
+  parent: Dropbox.Api.DropboxTeamClient
+  langs:
+  - csharp
+  - vb
+  name: DropboxTeamClient(String, String, DateTime, String, DropboxClientConfig)
+  nameWithType: DropboxTeamClient.DropboxTeamClient(String, String, DateTime, String, DropboxClientConfig)
+  fullName: Dropbox.Api.DropboxTeamClient.DropboxTeamClient(System.String, System.String, DateTime, System.String, Dropbox.Api.DropboxClientConfig)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/DropboxTeamClient.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/DropboxTeamClient.cs
+    startLine: 131
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api
+  summary: "\nInitializes a new instance of the <xref href=\"Dropbox.Api.DropboxTeamClient\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public DropboxTeamClient(string oauth2AccessToken, string oauth2RefreshToken, DateTime oauth2AccessTokenExpiresAt, string appKey, DropboxClientConfig config)
+    parameters:
+    - id: oauth2AccessToken
+      type: System.String
+      description: The oauth2 access token for making client requests.
+    - id: oauth2RefreshToken
+      type: System.String
+      description: The oauth2 refresh token for refreshing access tokens.
+    - id: oauth2AccessTokenExpiresAt
+      type: DateTime
+      description: The time when the current access token expires, can be null if using long-lived tokens.
+    - id: appKey
+      type: System.String
+      description: The app key to be used for refreshing tokens.
+    - id: config
+      type: Dropbox.Api.DropboxClientConfig
+      description: The <xref href="Dropbox.Api.DropboxClientConfig" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Sub New(oauth2AccessToken As String, oauth2RefreshToken As String, oauth2AccessTokenExpiresAt As DateTime, appKey As String, config As DropboxClientConfig)
+  overload: Dropbox.Api.DropboxTeamClient.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.DropboxTeamClient.#ctor(System.String,System.String,DateTime,System.String)
+  commentId: M:Dropbox.Api.DropboxTeamClient.#ctor(System.String,System.String,DateTime,System.String)
+  id: '#ctor(System.String,System.String,DateTime,System.String)'
+  parent: Dropbox.Api.DropboxTeamClient
+  langs:
+  - csharp
+  - vb
+  name: DropboxTeamClient(String, String, DateTime, String)
+  nameWithType: DropboxTeamClient.DropboxTeamClient(String, String, DateTime, String)
+  fullName: Dropbox.Api.DropboxTeamClient.DropboxTeamClient(System.String, System.String, DateTime, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/DropboxTeamClient.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/DropboxTeamClient.cs
+    startLine: 147
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api
+  summary: "\nInitializes a new instance of the <xref href=\"Dropbox.Api.DropboxTeamClient\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public DropboxTeamClient(string oauth2AccessToken, string oauth2RefreshToken, DateTime oauth2AccessTokenExpiresAt, string appKey)
+    parameters:
+    - id: oauth2AccessToken
+      type: System.String
+      description: The oauth2 access token for making client requests.
+    - id: oauth2RefreshToken
+      type: System.String
+      description: The oauth2 refresh token for refreshing access tokens.
+    - id: oauth2AccessTokenExpiresAt
+      type: DateTime
+      description: The time when the current access token expires, can be null if using long-lived tokens.
+    - id: appKey
+      type: System.String
+      description: The app key to be used for refreshing tokens.
+    content.vb: Public Sub New(oauth2AccessToken As String, oauth2RefreshToken As String, oauth2AccessTokenExpiresAt As DateTime, appKey As String)
+  overload: Dropbox.Api.DropboxTeamClient.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.DropboxTeamClient.#ctor(System.String,System.String,DateTime,System.String,System.String,Dropbox.Api.DropboxClientConfig)
+  commentId: M:Dropbox.Api.DropboxTeamClient.#ctor(System.String,System.String,DateTime,System.String,System.String,Dropbox.Api.DropboxClientConfig)
+  id: '#ctor(System.String,System.String,DateTime,System.String,System.String,Dropbox.Api.DropboxClientConfig)'
+  parent: Dropbox.Api.DropboxTeamClient
+  langs:
+  - csharp
+  - vb
+  name: DropboxTeamClient(String, String, DateTime, String, String, DropboxClientConfig)
+  nameWithType: DropboxTeamClient.DropboxTeamClient(String, String, DateTime, String, String, DropboxClientConfig)
+  fullName: Dropbox.Api.DropboxTeamClient.DropboxTeamClient(System.String, System.String, DateTime, System.String, System.String, Dropbox.Api.DropboxClientConfig)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/DropboxTeamClient.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/DropboxTeamClient.cs
+    startLine: 161
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api
+  summary: "\nInitializes a new instance of the <xref href=\"Dropbox.Api.DropboxTeamClient\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public DropboxTeamClient(string oauth2AccessToken, string oauth2RefreshToken, DateTime oauth2AccessTokenExpiresAt, string appKey, string appSecret, DropboxClientConfig config)
+    parameters:
+    - id: oauth2AccessToken
+      type: System.String
+      description: The oauth2 access token for making client requests.
+    - id: oauth2RefreshToken
+      type: System.String
+      description: The oauth2 refresh token for refreshing access tokens.
+    - id: oauth2AccessTokenExpiresAt
+      type: DateTime
+      description: The time when the current access token expires, can be null if using long-lived tokens.
+    - id: appKey
+      type: System.String
+      description: The app key to be used for refreshing tokens.
+    - id: appSecret
+      type: System.String
+      description: The app secret to be used for refreshing tokens.
+    - id: config
+      type: Dropbox.Api.DropboxClientConfig
+      description: The <xref href="Dropbox.Api.DropboxClientConfig" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Sub New(oauth2AccessToken As String, oauth2RefreshToken As String, oauth2AccessTokenExpiresAt As DateTime, appKey As String, appSecret As String, config As DropboxClientConfig)
+  overload: Dropbox.Api.DropboxTeamClient.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.DropboxTeamClient.#ctor(System.String,System.String,System.String,System.String,Dropbox.Api.DropboxClientConfig)
+  commentId: M:Dropbox.Api.DropboxTeamClient.#ctor(System.String,System.String,System.String,System.String,Dropbox.Api.DropboxClientConfig)
+  id: '#ctor(System.String,System.String,System.String,System.String,Dropbox.Api.DropboxClientConfig)'
+  parent: Dropbox.Api.DropboxTeamClient
+  langs:
+  - csharp
+  - vb
+  name: DropboxTeamClient(String, String, String, String, DropboxClientConfig)
+  nameWithType: DropboxTeamClient.DropboxTeamClient(String, String, String, String, DropboxClientConfig)
+  fullName: Dropbox.Api.DropboxTeamClient.DropboxTeamClient(System.String, System.String, System.String, System.String, Dropbox.Api.DropboxClientConfig)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/DropboxTeamClient.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/DropboxTeamClient.cs
+    startLine: 178
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api
+  summary: "\nInitializes a new instance of the <xref href=\"Dropbox.Api.DropboxTeamClient\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public DropboxTeamClient(string oauth2AccessToken, string oauth2RefreshToken, string appKey, string appSecret, DropboxClientConfig config)
+    parameters:
+    - id: oauth2AccessToken
+      type: System.String
+      description: The oauth2 access token for making client requests.
+    - id: oauth2RefreshToken
+      type: System.String
+      description: The oauth2 refresh token for refreshing access tokens.
+    - id: appKey
+      type: System.String
+      description: The app key to be used for refreshing tokens.
+    - id: appSecret
+      type: System.String
+      description: The app secret to be used for refreshing tokens.
+    - id: config
+      type: Dropbox.Api.DropboxClientConfig
+      description: The <xref href="Dropbox.Api.DropboxClientConfig" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Sub New(oauth2AccessToken As String, oauth2RefreshToken As String, appKey As String, appSecret As String, config As DropboxClientConfig)
+  overload: Dropbox.Api.DropboxTeamClient.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.DropboxTeamClient.RefreshAccessToken(System.String[])
+  commentId: M:Dropbox.Api.DropboxTeamClient.RefreshAccessToken(System.String[])
+  id: RefreshAccessToken(System.String[])
+  parent: Dropbox.Api.DropboxTeamClient
+  langs:
+  - csharp
+  - vb
+  name: RefreshAccessToken(String[])
+  nameWithType: DropboxTeamClient.RefreshAccessToken(String[])
+  fullName: Dropbox.Api.DropboxTeamClient.RefreshAccessToken(System.String[])
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/DropboxTeamClient.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: RefreshAccessToken
+    path: dropbox-sdk-dotnet/Dropbox.Api/DropboxTeamClient.cs
+    startLine: 213
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api
+  summary: "\nRefreshes access token regardless of if existing token is expired.\n"
+  example: []
+  syntax:
+    content: public Task<bool> RefreshAccessToken(string[] scopeList)
+    parameters:
+    - id: scopeList
+      type: System.String[]
+      description: subset of scopes to refresh token with, or null to refresh with all scopes.
+    return:
+      type: Task{System.Boolean}
+      description: true if token is successfully refreshed, false otherwise.
+    content.vb: Public Function RefreshAccessToken(scopeList As String()) As Task(Of Boolean)
+  overload: Dropbox.Api.DropboxTeamClient.RefreshAccessToken*
+  nameWithType.vb: DropboxTeamClient.RefreshAccessToken(String())
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.DropboxTeamClient.RefreshAccessToken(System.String())
+  name.vb: RefreshAccessToken(String())
+- uid: Dropbox.Api.DropboxTeamClient.AsMember(System.String)
+  commentId: M:Dropbox.Api.DropboxTeamClient.AsMember(System.String)
+  id: AsMember(System.String)
+  parent: Dropbox.Api.DropboxTeamClient
+  langs:
+  - csharp
+  - vb
+  name: AsMember(String)
+  nameWithType: DropboxTeamClient.AsMember(String)
+  fullName: Dropbox.Api.DropboxTeamClient.AsMember(System.String)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/DropboxTeamClient.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsMember
+    path: dropbox-sdk-dotnet/Dropbox.Api/DropboxTeamClient.cs
+    startLine: 223
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api
+  summary: "\nConvert the team client to a user client which can perform action on the given team member&apos;s Dropbox.\n"
+  example: []
+  syntax:
+    content: public DropboxClient AsMember(string memberId)
+    parameters:
+    - id: memberId
+      type: System.String
+      description: The member id of a user who is in the team.
+    return:
+      type: Dropbox.Api.DropboxClient
+      description: The <xref href="Dropbox.Api.DropboxClient" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Function AsMember(memberId As String) As DropboxClient
+  overload: Dropbox.Api.DropboxTeamClient.AsMember*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.DropboxTeamClient.AsAdmin(System.String)
+  commentId: M:Dropbox.Api.DropboxTeamClient.AsAdmin(System.String)
+  id: AsAdmin(System.String)
+  parent: Dropbox.Api.DropboxTeamClient
+  langs:
+  - csharp
+  - vb
+  name: AsAdmin(String)
+  nameWithType: DropboxTeamClient.AsAdmin(String)
+  fullName: Dropbox.Api.DropboxTeamClient.AsAdmin(System.String)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/DropboxTeamClient.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsAdmin
+    path: dropbox-sdk-dotnet/Dropbox.Api/DropboxTeamClient.cs
+    startLine: 235
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api
+  summary: "\nConvert the team client to a user client which can perform action on team owned contents.\nSee documentation for <a href=\"https://www.dropbox.com/developers/documentation/http/teams\">Dropbox-API-Select-Admin</a>\nfor detail.\n"
+  example: []
+  syntax:
+    content: public DropboxClient AsAdmin(string adminId)
+    parameters:
+    - id: adminId
+      type: System.String
+      description: The member id of a team admin.
+    return:
+      type: Dropbox.Api.DropboxClient
+      description: The <xref href="Dropbox.Api.DropboxClient" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Function AsAdmin(adminId As String) As DropboxClient
+  overload: Dropbox.Api.DropboxTeamClient.AsAdmin*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.DropboxTeamClient.FileProperties
+  commentId: P:Dropbox.Api.DropboxTeamClient.FileProperties
+  id: FileProperties
+  parent: Dropbox.Api.DropboxTeamClient
+  langs:
+  - csharp
+  - vb
+  name: FileProperties
+  nameWithType: DropboxTeamClient.FileProperties
+  fullName: Dropbox.Api.DropboxTeamClient.FileProperties
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/DropboxTeamClient.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: FileProperties
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/DropboxTeamClient.cs
+    startLine: 18
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api
+  summary: "\n<p>Gets the FileProperties routes.</p>\n"
+  example: []
+  syntax:
+    content: public FilePropertiesTeamRoutes FileProperties { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes
+    content.vb: Public ReadOnly Property FileProperties As FilePropertiesTeamRoutes
+  overload: Dropbox.Api.DropboxTeamClient.FileProperties*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.DropboxTeamClient.Team
+  commentId: P:Dropbox.Api.DropboxTeamClient.Team
+  id: Team
+  parent: Dropbox.Api.DropboxTeamClient
+  langs:
+  - csharp
+  - vb
+  name: Team
+  nameWithType: DropboxTeamClient.Team
+  fullName: Dropbox.Api.DropboxTeamClient.Team
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/DropboxTeamClient.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Team
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/DropboxTeamClient.cs
+    startLine: 23
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api
+  summary: "\n<p>Gets the Team routes.</p>\n"
+  example: []
+  syntax:
+    content: public TeamTeamRoutes Team { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.Routes.TeamTeamRoutes
+    content.vb: Public ReadOnly Property Team As TeamTeamRoutes
+  overload: Dropbox.Api.DropboxTeamClient.Team*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.DropboxTeamClient.TeamLog
+  commentId: P:Dropbox.Api.DropboxTeamClient.TeamLog
+  id: TeamLog
+  parent: Dropbox.Api.DropboxTeamClient
+  langs:
+  - csharp
+  - vb
+  name: TeamLog
+  nameWithType: DropboxTeamClient.TeamLog
+  fullName: Dropbox.Api.DropboxTeamClient.TeamLog
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/DropboxTeamClient.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TeamLog
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/DropboxTeamClient.cs
+    startLine: 28
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api
+  summary: "\n<p>Gets the TeamLog routes.</p>\n"
+  example: []
+  syntax:
+    content: public TeamLogTeamRoutes TeamLog { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes
+    content.vb: Public ReadOnly Property TeamLog As TeamLogTeamRoutes
+  overload: Dropbox.Api.DropboxTeamClient.TeamLog*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api
+  commentId: N:Dropbox.Api
+  name: Dropbox.Api
+  nameWithType: Dropbox.Api
+  fullName: Dropbox.Api
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.DropboxClientBase
+  commentId: T:Dropbox.Api.DropboxClientBase
+  parent: Dropbox.Api
+  name: DropboxClientBase
+  nameWithType: DropboxClientBase
+  fullName: Dropbox.Api.DropboxClientBase
+- uid: Dropbox.Api.DropboxClientBase.Dispose
+  commentId: M:Dropbox.Api.DropboxClientBase.Dispose
+  parent: Dropbox.Api.DropboxClientBase
+  name: Dispose()
+  nameWithType: DropboxClientBase.Dispose()
+  fullName: Dropbox.Api.DropboxClientBase.Dispose()
+  spec.csharp:
+  - uid: Dropbox.Api.DropboxClientBase.Dispose
+    name: Dispose
+    nameWithType: DropboxClientBase.Dispose
+    fullName: Dropbox.Api.DropboxClientBase.Dispose
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Dropbox.Api.DropboxClientBase.Dispose
+    name: Dispose
+    nameWithType: DropboxClientBase.Dispose
+    fullName: Dropbox.Api.DropboxClientBase.Dispose
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.DropboxClientBase.Dispose(System.Boolean)
+  commentId: M:Dropbox.Api.DropboxClientBase.Dispose(System.Boolean)
+  parent: Dropbox.Api.DropboxClientBase
+  isExternal: true
+  name: Dispose(Boolean)
+  nameWithType: DropboxClientBase.Dispose(Boolean)
+  fullName: Dropbox.Api.DropboxClientBase.Dispose(System.Boolean)
+  spec.csharp:
+  - uid: Dropbox.Api.DropboxClientBase.Dispose(System.Boolean)
+    name: Dispose
+    nameWithType: DropboxClientBase.Dispose
+    fullName: Dropbox.Api.DropboxClientBase.Dispose
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Dropbox.Api.DropboxClientBase.Dispose(System.Boolean)
+    name: Dispose
+    nameWithType: DropboxClientBase.Dispose
+    fullName: Dropbox.Api.DropboxClientBase.Dispose
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.DropboxTeamClient
+  commentId: T:Dropbox.Api.DropboxTeamClient
+  name: DropboxTeamClient
+  nameWithType: DropboxTeamClient
+  fullName: Dropbox.Api.DropboxTeamClient
+- uid: Dropbox.Api.DropboxTeamClient.#ctor*
+  commentId: Overload:Dropbox.Api.DropboxTeamClient.#ctor
+  name: DropboxTeamClient
+  nameWithType: DropboxTeamClient.DropboxTeamClient
+  fullName: Dropbox.Api.DropboxTeamClient.DropboxTeamClient
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.DropboxClientConfig
+  commentId: T:Dropbox.Api.DropboxClientConfig
+  parent: Dropbox.Api
+  name: DropboxClientConfig
+  nameWithType: DropboxClientConfig
+  fullName: Dropbox.Api.DropboxClientConfig
+- uid: DateTime
+  isExternal: true
+  name: DateTime
+  nameWithType: DateTime
+  fullName: DateTime
+- uid: Dropbox.Api.DropboxTeamClient.RefreshAccessToken*
+  commentId: Overload:Dropbox.Api.DropboxTeamClient.RefreshAccessToken
+  name: RefreshAccessToken
+  nameWithType: DropboxTeamClient.RefreshAccessToken
+  fullName: Dropbox.Api.DropboxTeamClient.RefreshAccessToken
+- uid: System.String[]
+  isExternal: true
+  name: String[]
+  nameWithType: String[]
+  fullName: System.String[]
+  nameWithType.vb: String()
+  fullName.vb: System.String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: Task{System.Boolean}
+  commentId: '!:Task{System.Boolean}'
+  definition: Task`1
+  name: Task<Boolean>
+  nameWithType: Task<Boolean>
+  fullName: Task<System.Boolean>
+  nameWithType.vb: Task(Of Boolean)
+  fullName.vb: Task(Of System.Boolean)
+  name.vb: Task(Of Boolean)
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Task`1
+  isExternal: true
+  name: Task<>
+  nameWithType: Task<>
+  fullName: Task<>
+  nameWithType.vb: Task(Of )
+  fullName.vb: Task(Of )
+  name.vb: Task(Of )
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.DropboxClient
+  commentId: T:Dropbox.Api.DropboxClient
+  parent: Dropbox.Api
+  name: DropboxClient
+  nameWithType: DropboxClient
+  fullName: Dropbox.Api.DropboxClient
+- uid: Dropbox.Api.DropboxTeamClient.AsMember*
+  commentId: Overload:Dropbox.Api.DropboxTeamClient.AsMember
+  name: AsMember
+  nameWithType: DropboxTeamClient.AsMember
+  fullName: Dropbox.Api.DropboxTeamClient.AsMember
+- uid: Dropbox.Api.DropboxTeamClient.AsAdmin*
+  commentId: Overload:Dropbox.Api.DropboxTeamClient.AsAdmin
+  name: AsAdmin
+  nameWithType: DropboxTeamClient.AsAdmin
+  fullName: Dropbox.Api.DropboxTeamClient.AsAdmin
+- uid: Dropbox.Api.DropboxTeamClient.FileProperties*
+  commentId: Overload:Dropbox.Api.DropboxTeamClient.FileProperties
+  name: FileProperties
+  nameWithType: DropboxTeamClient.FileProperties
+  fullName: Dropbox.Api.DropboxTeamClient.FileProperties
+- uid: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes
+  commentId: T:Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes
+  parent: Dropbox.Api.FileProperties.Routes
+  name: FilePropertiesTeamRoutes
+  nameWithType: FilePropertiesTeamRoutes
+  fullName: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes
+- uid: Dropbox.Api.FileProperties.Routes
+  commentId: N:Dropbox.Api.FileProperties.Routes
+  name: Dropbox.Api.FileProperties.Routes
+  nameWithType: Dropbox.Api.FileProperties.Routes
+  fullName: Dropbox.Api.FileProperties.Routes
+- uid: Dropbox.Api.DropboxTeamClient.Team*
+  commentId: Overload:Dropbox.Api.DropboxTeamClient.Team
+  name: Team
+  nameWithType: DropboxTeamClient.Team
+  fullName: Dropbox.Api.DropboxTeamClient.Team
+- uid: Dropbox.Api.Team.Routes.TeamTeamRoutes
+  commentId: T:Dropbox.Api.Team.Routes.TeamTeamRoutes
+  parent: Dropbox.Api.Team.Routes
+  name: TeamTeamRoutes
+  nameWithType: TeamTeamRoutes
+  fullName: Dropbox.Api.Team.Routes.TeamTeamRoutes
+- uid: Dropbox.Api.Team.Routes
+  commentId: N:Dropbox.Api.Team.Routes
+  name: Dropbox.Api.Team.Routes
+  nameWithType: Dropbox.Api.Team.Routes
+  fullName: Dropbox.Api.Team.Routes
+- uid: Dropbox.Api.DropboxTeamClient.TeamLog*
+  commentId: Overload:Dropbox.Api.DropboxTeamClient.TeamLog
+  name: TeamLog
+  nameWithType: DropboxTeamClient.TeamLog
+  fullName: Dropbox.Api.DropboxTeamClient.TeamLog
+- uid: Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes
+  commentId: T:Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes
+  parent: Dropbox.Api.TeamLog.Routes
+  name: TeamLogTeamRoutes
+  nameWithType: TeamLogTeamRoutes
+  fullName: Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes
+- uid: Dropbox.Api.TeamLog.Routes
+  commentId: N:Dropbox.Api.TeamLog.Routes
+  name: Dropbox.Api.TeamLog.Routes
+  nameWithType: Dropbox.Api.TeamLog.Routes
+  fullName: Dropbox.Api.TeamLog.Routes
+shouldSkipMarkup: true

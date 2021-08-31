@@ -1,0 +1,236 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.WatermarkingPolicyChangedDetails
+  commentId: T:Dropbox.Api.TeamLog.WatermarkingPolicyChangedDetails
+  id: WatermarkingPolicyChangedDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.WatermarkingPolicyChangedDetails.#ctor
+  - Dropbox.Api.TeamLog.WatermarkingPolicyChangedDetails.#ctor(Dropbox.Api.TeamLog.WatermarkingPolicy,Dropbox.Api.TeamLog.WatermarkingPolicy)
+  - Dropbox.Api.TeamLog.WatermarkingPolicyChangedDetails.NewValue
+  - Dropbox.Api.TeamLog.WatermarkingPolicyChangedDetails.PreviousValue
+  langs:
+  - csharp
+  - vb
+  name: WatermarkingPolicyChangedDetails
+  nameWithType: WatermarkingPolicyChangedDetails
+  fullName: Dropbox.Api.TeamLog.WatermarkingPolicyChangedDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/WatermarkingPolicyChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: WatermarkingPolicyChangedDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/WatermarkingPolicyChangedDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Changed watermarking policy for team.</p>\n"
+  example: []
+  syntax:
+    content: 'public class WatermarkingPolicyChangedDetails : object'
+    content.vb: >-
+      Public Class WatermarkingPolicyChangedDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.WatermarkingPolicyChangedDetails.#ctor(Dropbox.Api.TeamLog.WatermarkingPolicy,Dropbox.Api.TeamLog.WatermarkingPolicy)
+  commentId: M:Dropbox.Api.TeamLog.WatermarkingPolicyChangedDetails.#ctor(Dropbox.Api.TeamLog.WatermarkingPolicy,Dropbox.Api.TeamLog.WatermarkingPolicy)
+  id: '#ctor(Dropbox.Api.TeamLog.WatermarkingPolicy,Dropbox.Api.TeamLog.WatermarkingPolicy)'
+  parent: Dropbox.Api.TeamLog.WatermarkingPolicyChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: WatermarkingPolicyChangedDetails(WatermarkingPolicy, WatermarkingPolicy)
+  nameWithType: WatermarkingPolicyChangedDetails.WatermarkingPolicyChangedDetails(WatermarkingPolicy, WatermarkingPolicy)
+  fullName: Dropbox.Api.TeamLog.WatermarkingPolicyChangedDetails.WatermarkingPolicyChangedDetails(Dropbox.Api.TeamLog.WatermarkingPolicy, Dropbox.Api.TeamLog.WatermarkingPolicy)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/WatermarkingPolicyChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/WatermarkingPolicyChangedDetails.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.WatermarkingPolicyChangedDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public WatermarkingPolicyChangedDetails(WatermarkingPolicy newValue, WatermarkingPolicy previousValue)
+    parameters:
+    - id: newValue
+      type: Dropbox.Api.TeamLog.WatermarkingPolicy
+      description: New watermarking policy.
+    - id: previousValue
+      type: Dropbox.Api.TeamLog.WatermarkingPolicy
+      description: Previous watermarking policy.
+    content.vb: Public Sub New(newValue As WatermarkingPolicy, previousValue As WatermarkingPolicy)
+  overload: Dropbox.Api.TeamLog.WatermarkingPolicyChangedDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.WatermarkingPolicyChangedDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.WatermarkingPolicyChangedDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.WatermarkingPolicyChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: WatermarkingPolicyChangedDetails()
+  nameWithType: WatermarkingPolicyChangedDetails.WatermarkingPolicyChangedDetails()
+  fullName: Dropbox.Api.TeamLog.WatermarkingPolicyChangedDetails.WatermarkingPolicyChangedDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/WatermarkingPolicyChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/WatermarkingPolicyChangedDetails.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.WatermarkingPolicyChangedDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public WatermarkingPolicyChangedDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.WatermarkingPolicyChangedDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.WatermarkingPolicyChangedDetails.NewValue
+  commentId: P:Dropbox.Api.TeamLog.WatermarkingPolicyChangedDetails.NewValue
+  id: NewValue
+  parent: Dropbox.Api.TeamLog.WatermarkingPolicyChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: NewValue
+  nameWithType: WatermarkingPolicyChangedDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.WatermarkingPolicyChangedDetails.NewValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/WatermarkingPolicyChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NewValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/WatermarkingPolicyChangedDetails.cs
+    startLine: 66
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>New watermarking policy.</p>\n"
+  example: []
+  syntax:
+    content: public WatermarkingPolicy NewValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.WatermarkingPolicy
+    content.vb: Public Property NewValue As WatermarkingPolicy
+  overload: Dropbox.Api.TeamLog.WatermarkingPolicyChangedDetails.NewValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.WatermarkingPolicyChangedDetails.PreviousValue
+  commentId: P:Dropbox.Api.TeamLog.WatermarkingPolicyChangedDetails.PreviousValue
+  id: PreviousValue
+  parent: Dropbox.Api.TeamLog.WatermarkingPolicyChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: PreviousValue
+  nameWithType: WatermarkingPolicyChangedDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.WatermarkingPolicyChangedDetails.PreviousValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/WatermarkingPolicyChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PreviousValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/WatermarkingPolicyChangedDetails.cs
+    startLine: 71
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Previous watermarking policy.</p>\n"
+  example: []
+  syntax:
+    content: public WatermarkingPolicy PreviousValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.WatermarkingPolicy
+    content.vb: Public Property PreviousValue As WatermarkingPolicy
+  overload: Dropbox.Api.TeamLog.WatermarkingPolicyChangedDetails.PreviousValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.WatermarkingPolicyChangedDetails
+  commentId: T:Dropbox.Api.TeamLog.WatermarkingPolicyChangedDetails
+  parent: Dropbox.Api.TeamLog
+  name: WatermarkingPolicyChangedDetails
+  nameWithType: WatermarkingPolicyChangedDetails
+  fullName: Dropbox.Api.TeamLog.WatermarkingPolicyChangedDetails
+- uid: Dropbox.Api.TeamLog.WatermarkingPolicyChangedDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.WatermarkingPolicyChangedDetails.#ctor
+  name: WatermarkingPolicyChangedDetails
+  nameWithType: WatermarkingPolicyChangedDetails.WatermarkingPolicyChangedDetails
+  fullName: Dropbox.Api.TeamLog.WatermarkingPolicyChangedDetails.WatermarkingPolicyChangedDetails
+- uid: Dropbox.Api.TeamLog.WatermarkingPolicy
+  commentId: T:Dropbox.Api.TeamLog.WatermarkingPolicy
+  parent: Dropbox.Api.TeamLog
+  name: WatermarkingPolicy
+  nameWithType: WatermarkingPolicy
+  fullName: Dropbox.Api.TeamLog.WatermarkingPolicy
+- uid: Dropbox.Api.TeamLog.WatermarkingPolicyChangedDetails.NewValue*
+  commentId: Overload:Dropbox.Api.TeamLog.WatermarkingPolicyChangedDetails.NewValue
+  name: NewValue
+  nameWithType: WatermarkingPolicyChangedDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.WatermarkingPolicyChangedDetails.NewValue
+- uid: Dropbox.Api.TeamLog.WatermarkingPolicyChangedDetails.PreviousValue*
+  commentId: Overload:Dropbox.Api.TeamLog.WatermarkingPolicyChangedDetails.PreviousValue
+  name: PreviousValue
+  nameWithType: WatermarkingPolicyChangedDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.WatermarkingPolicyChangedDetails.PreviousValue
+shouldSkipMarkup: true

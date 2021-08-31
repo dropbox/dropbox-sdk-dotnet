@@ -1,0 +1,412 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.UserInfo
+  commentId: T:Dropbox.Api.Sharing.UserInfo
+  id: UserInfo
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.UserInfo.#ctor
+  - Dropbox.Api.Sharing.UserInfo.#ctor(System.String,System.String,System.String,System.Boolean,System.String)
+  - Dropbox.Api.Sharing.UserInfo.AccountId
+  - Dropbox.Api.Sharing.UserInfo.DisplayName
+  - Dropbox.Api.Sharing.UserInfo.Email
+  - Dropbox.Api.Sharing.UserInfo.SameTeam
+  - Dropbox.Api.Sharing.UserInfo.TeamMemberId
+  langs:
+  - csharp
+  - vb
+  name: UserInfo
+  nameWithType: UserInfo
+  fullName: Dropbox.Api.Sharing.UserInfo
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UserInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: UserInfo
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UserInfo.cs
+    startLine: 20
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Basic information about a user. Use <xref href=\"Dropbox.Api.Users.Routes.UsersUserRoutes.GetAccountAsync(Dropbox.Api.Users.GetAccountArg)\" data-throw-if-not-resolved=\"false\"></xref> and <xref href=\"Dropbox.Api.Users.Routes.UsersUserRoutes.GetAccountBatchAsync(Dropbox.Api.Users.GetAccountBatchArg)\" data-throw-if-not-resolved=\"false\"></xref> to obtain more\ndetailed information.</p>\n"
+  example: []
+  syntax:
+    content: 'public class UserInfo : object'
+    content.vb: >-
+      Public Class UserInfo
+          Inherits Object
+  seealso:
+  - linkId: Dropbox.Api.Sharing.UserFileMembershipInfo
+    commentId: T:Dropbox.Api.Sharing.UserFileMembershipInfo
+  - linkId: Dropbox.Api.Sharing.UserMembershipInfo
+    commentId: T:Dropbox.Api.Sharing.UserMembershipInfo
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Sharing.UserInfo.#ctor(System.String,System.String,System.String,System.Boolean,System.String)
+  commentId: M:Dropbox.Api.Sharing.UserInfo.#ctor(System.String,System.String,System.String,System.Boolean,System.String)
+  id: '#ctor(System.String,System.String,System.String,System.Boolean,System.String)'
+  parent: Dropbox.Api.Sharing.UserInfo
+  langs:
+  - csharp
+  - vb
+  name: UserInfo(String, String, String, Boolean, String)
+  nameWithType: UserInfo.UserInfo(String, String, String, Boolean, String)
+  fullName: Dropbox.Api.Sharing.UserInfo.UserInfo(System.String, System.String, System.String, System.Boolean, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UserInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UserInfo.cs
+    startLine: 43
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.UserInfo\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public UserInfo(string accountId, string email, string displayName, bool sameTeam, string teamMemberId = null)
+    parameters:
+    - id: accountId
+      type: System.String
+      description: The account ID of the user.
+    - id: email
+      type: System.String
+      description: Email address of user.
+    - id: displayName
+      type: System.String
+      description: The display name of the user.
+    - id: sameTeam
+      type: System.Boolean
+      description: If the user is in the same team as current user.
+    - id: teamMemberId
+      type: System.String
+      description: >-
+        The team member ID of the shared folder member. Only
+
+        present if <code data-dev-comment-type="paramref" class="paramref">sameTeam</code> is true.
+    content.vb: Public Sub New(accountId As String, email As String, displayName As String, sameTeam As Boolean, teamMemberId As String = Nothing)
+  overload: Dropbox.Api.Sharing.UserInfo.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.UserInfo.#ctor
+  commentId: M:Dropbox.Api.Sharing.UserInfo.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Sharing.UserInfo
+  langs:
+  - csharp
+  - vb
+  name: UserInfo()
+  nameWithType: UserInfo.UserInfo()
+  fullName: Dropbox.Api.Sharing.UserInfo.UserInfo()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UserInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UserInfo.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.UserInfo\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public UserInfo()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Sharing.UserInfo.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.UserInfo.AccountId
+  commentId: P:Dropbox.Api.Sharing.UserInfo.AccountId
+  id: AccountId
+  parent: Dropbox.Api.Sharing.UserInfo
+  langs:
+  - csharp
+  - vb
+  name: AccountId
+  nameWithType: UserInfo.AccountId
+  fullName: Dropbox.Api.Sharing.UserInfo.AccountId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UserInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AccountId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UserInfo.cs
+    startLine: 92
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The account ID of the user.</p>\n"
+  example: []
+  syntax:
+    content: public string AccountId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property AccountId As String
+  overload: Dropbox.Api.Sharing.UserInfo.AccountId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.UserInfo.Email
+  commentId: P:Dropbox.Api.Sharing.UserInfo.Email
+  id: Email
+  parent: Dropbox.Api.Sharing.UserInfo
+  langs:
+  - csharp
+  - vb
+  name: Email
+  nameWithType: UserInfo.Email
+  fullName: Dropbox.Api.Sharing.UserInfo.Email
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UserInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Email
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UserInfo.cs
+    startLine: 97
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Email address of user.</p>\n"
+  example: []
+  syntax:
+    content: public string Email { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Email As String
+  overload: Dropbox.Api.Sharing.UserInfo.Email*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.UserInfo.DisplayName
+  commentId: P:Dropbox.Api.Sharing.UserInfo.DisplayName
+  id: DisplayName
+  parent: Dropbox.Api.Sharing.UserInfo
+  langs:
+  - csharp
+  - vb
+  name: DisplayName
+  nameWithType: UserInfo.DisplayName
+  fullName: Dropbox.Api.Sharing.UserInfo.DisplayName
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UserInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: DisplayName
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UserInfo.cs
+    startLine: 102
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The display name of the user.</p>\n"
+  example: []
+  syntax:
+    content: public string DisplayName { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property DisplayName As String
+  overload: Dropbox.Api.Sharing.UserInfo.DisplayName*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.UserInfo.SameTeam
+  commentId: P:Dropbox.Api.Sharing.UserInfo.SameTeam
+  id: SameTeam
+  parent: Dropbox.Api.Sharing.UserInfo
+  langs:
+  - csharp
+  - vb
+  name: SameTeam
+  nameWithType: UserInfo.SameTeam
+  fullName: Dropbox.Api.Sharing.UserInfo.SameTeam
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UserInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SameTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UserInfo.cs
+    startLine: 107
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>If the user is in the same team as current user.</p>\n"
+  example: []
+  syntax:
+    content: public bool SameTeam { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property SameTeam As Boolean
+  overload: Dropbox.Api.Sharing.UserInfo.SameTeam*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.UserInfo.TeamMemberId
+  commentId: P:Dropbox.Api.Sharing.UserInfo.TeamMemberId
+  id: TeamMemberId
+  parent: Dropbox.Api.Sharing.UserInfo
+  langs:
+  - csharp
+  - vb
+  name: TeamMemberId
+  nameWithType: UserInfo.TeamMemberId
+  fullName: Dropbox.Api.Sharing.UserInfo.TeamMemberId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UserInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TeamMemberId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UserInfo.cs
+    startLine: 113
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The team member ID of the shared folder member. Only present if <xref href=\"Dropbox.Api.Sharing.UserInfo.SameTeam\" data-throw-if-not-resolved=\"false\"></xref> is true.</p>\n"
+  example: []
+  syntax:
+    content: public string TeamMemberId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property TeamMemberId As String
+  overload: Dropbox.Api.Sharing.UserInfo.TeamMemberId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Users.Routes.UsersUserRoutes.GetAccountAsync(Dropbox.Api.Users.GetAccountArg)
+  commentId: M:Dropbox.Api.Users.Routes.UsersUserRoutes.GetAccountAsync(Dropbox.Api.Users.GetAccountArg)
+  isExternal: true
+- uid: Dropbox.Api.Users.Routes.UsersUserRoutes.GetAccountBatchAsync(Dropbox.Api.Users.GetAccountBatchArg)
+  commentId: M:Dropbox.Api.Users.Routes.UsersUserRoutes.GetAccountBatchAsync(Dropbox.Api.Users.GetAccountBatchArg)
+  isExternal: true
+- uid: Dropbox.Api.Sharing.UserFileMembershipInfo
+  commentId: T:Dropbox.Api.Sharing.UserFileMembershipInfo
+  name: UserFileMembershipInfo
+  nameWithType: UserFileMembershipInfo
+  fullName: Dropbox.Api.Sharing.UserFileMembershipInfo
+- uid: Dropbox.Api.Sharing.UserMembershipInfo
+  commentId: T:Dropbox.Api.Sharing.UserMembershipInfo
+  parent: Dropbox.Api.Sharing
+  name: UserMembershipInfo
+  nameWithType: UserMembershipInfo
+  fullName: Dropbox.Api.Sharing.UserMembershipInfo
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.UserInfo
+  commentId: T:Dropbox.Api.Sharing.UserInfo
+  parent: Dropbox.Api.Sharing
+  name: UserInfo
+  nameWithType: UserInfo
+  fullName: Dropbox.Api.Sharing.UserInfo
+- uid: Dropbox.Api.Sharing.UserInfo.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.UserInfo.#ctor
+  name: UserInfo
+  nameWithType: UserInfo.UserInfo
+  fullName: Dropbox.Api.Sharing.UserInfo.UserInfo
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Sharing.UserInfo.AccountId*
+  commentId: Overload:Dropbox.Api.Sharing.UserInfo.AccountId
+  name: AccountId
+  nameWithType: UserInfo.AccountId
+  fullName: Dropbox.Api.Sharing.UserInfo.AccountId
+- uid: Dropbox.Api.Sharing.UserInfo.Email*
+  commentId: Overload:Dropbox.Api.Sharing.UserInfo.Email
+  name: Email
+  nameWithType: UserInfo.Email
+  fullName: Dropbox.Api.Sharing.UserInfo.Email
+- uid: Dropbox.Api.Sharing.UserInfo.DisplayName*
+  commentId: Overload:Dropbox.Api.Sharing.UserInfo.DisplayName
+  name: DisplayName
+  nameWithType: UserInfo.DisplayName
+  fullName: Dropbox.Api.Sharing.UserInfo.DisplayName
+- uid: Dropbox.Api.Sharing.UserInfo.SameTeam*
+  commentId: Overload:Dropbox.Api.Sharing.UserInfo.SameTeam
+  name: SameTeam
+  nameWithType: UserInfo.SameTeam
+  fullName: Dropbox.Api.Sharing.UserInfo.SameTeam
+- uid: Dropbox.Api.Sharing.UserInfo.SameTeam
+  commentId: P:Dropbox.Api.Sharing.UserInfo.SameTeam
+  isExternal: true
+- uid: Dropbox.Api.Sharing.UserInfo.TeamMemberId*
+  commentId: Overload:Dropbox.Api.Sharing.UserInfo.TeamMemberId
+  name: TeamMemberId
+  nameWithType: UserInfo.TeamMemberId
+  fullName: Dropbox.Api.Sharing.UserInfo.TeamMemberId
+shouldSkipMarkup: true

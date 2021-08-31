@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestReminderType
+  commentId: T:Dropbox.Api.TeamLog.TeamMergeRequestReminderType
+  id: TeamMergeRequestReminderType
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.TeamMergeRequestReminderType.#ctor
+  - Dropbox.Api.TeamLog.TeamMergeRequestReminderType.#ctor(System.String)
+  - Dropbox.Api.TeamLog.TeamMergeRequestReminderType.Description
+  langs:
+  - csharp
+  - vb
+  name: TeamMergeRequestReminderType
+  nameWithType: TeamMergeRequestReminderType
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestReminderType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestReminderType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TeamMergeRequestReminderType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestReminderType.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The team merge request reminder type object</p>\n"
+  example: []
+  syntax:
+    content: 'public class TeamMergeRequestReminderType : object'
+    content.vb: >-
+      Public Class TeamMergeRequestReminderType
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestReminderType.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.TeamMergeRequestReminderType.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.TeamMergeRequestReminderType
+  langs:
+  - csharp
+  - vb
+  name: TeamMergeRequestReminderType(String)
+  nameWithType: TeamMergeRequestReminderType.TeamMergeRequestReminderType(String)
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestReminderType.TeamMergeRequestReminderType(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestReminderType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestReminderType.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.TeamMergeRequestReminderType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public TeamMergeRequestReminderType(string description)
+    parameters:
+    - id: description
+      type: System.String
+      description: The description
+    content.vb: Public Sub New(description As String)
+  overload: Dropbox.Api.TeamLog.TeamMergeRequestReminderType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestReminderType.#ctor
+  commentId: M:Dropbox.Api.TeamLog.TeamMergeRequestReminderType.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.TeamMergeRequestReminderType
+  langs:
+  - csharp
+  - vb
+  name: TeamMergeRequestReminderType()
+  nameWithType: TeamMergeRequestReminderType.TeamMergeRequestReminderType()
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestReminderType.TeamMergeRequestReminderType()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestReminderType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestReminderType.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.TeamMergeRequestReminderType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public TeamMergeRequestReminderType()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.TeamMergeRequestReminderType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestReminderType.Description
+  commentId: P:Dropbox.Api.TeamLog.TeamMergeRequestReminderType.Description
+  id: Description
+  parent: Dropbox.Api.TeamLog.TeamMergeRequestReminderType
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: TeamMergeRequestReminderType.Description
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestReminderType.Description
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestReminderType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Description
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestReminderType.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets the description of the team merge request reminder type</p>\n"
+  example: []
+  syntax:
+    content: public string Description { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Dropbox.Api.TeamLog.TeamMergeRequestReminderType.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestReminderType
+  commentId: T:Dropbox.Api.TeamLog.TeamMergeRequestReminderType
+  parent: Dropbox.Api.TeamLog
+  name: TeamMergeRequestReminderType
+  nameWithType: TeamMergeRequestReminderType
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestReminderType
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestReminderType.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.TeamMergeRequestReminderType.#ctor
+  name: TeamMergeRequestReminderType
+  nameWithType: TeamMergeRequestReminderType.TeamMergeRequestReminderType
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestReminderType.TeamMergeRequestReminderType
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestReminderType.Description*
+  commentId: Overload:Dropbox.Api.TeamLog.TeamMergeRequestReminderType.Description
+  name: Description
+  nameWithType: TeamMergeRequestReminderType.Description
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestReminderType.Description
+shouldSkipMarkup: true

@@ -1,0 +1,229 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.ShareFolderErrorBase.BadPath
+  commentId: T:Dropbox.Api.Sharing.ShareFolderErrorBase.BadPath
+  id: ShareFolderErrorBase.BadPath
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.ShareFolderErrorBase.BadPath.#ctor(Dropbox.Api.Sharing.SharePathError)
+  - Dropbox.Api.Sharing.ShareFolderErrorBase.BadPath.Value
+  langs:
+  - csharp
+  - vb
+  name: ShareFolderErrorBase.BadPath
+  nameWithType: ShareFolderErrorBase.BadPath
+  fullName: Dropbox.Api.Sharing.ShareFolderErrorBase.BadPath
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ShareFolderErrorBase.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: BadPath
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ShareFolderErrorBase.cs
+    startLine: 317
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p><see cref=\"!:Dropbox.Api.Sharing.ShareFolderArg.Path\"></see> is invalid.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class BadPath : ShareFolderErrorBase'
+    content.vb: >-
+      Public NotInheritable Class BadPath
+          Inherits ShareFolderErrorBase
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Sharing.ShareFolderErrorBase
+  inheritedMembers:
+  - Dropbox.Api.Sharing.ShareFolderErrorBase.IsEmailUnverified
+  - Dropbox.Api.Sharing.ShareFolderErrorBase.AsEmailUnverified
+  - Dropbox.Api.Sharing.ShareFolderErrorBase.IsBadPath
+  - Dropbox.Api.Sharing.ShareFolderErrorBase.AsBadPath
+  - Dropbox.Api.Sharing.ShareFolderErrorBase.IsTeamPolicyDisallowsMemberPolicy
+  - Dropbox.Api.Sharing.ShareFolderErrorBase.AsTeamPolicyDisallowsMemberPolicy
+  - Dropbox.Api.Sharing.ShareFolderErrorBase.IsDisallowedSharedLinkPolicy
+  - Dropbox.Api.Sharing.ShareFolderErrorBase.AsDisallowedSharedLinkPolicy
+  - Dropbox.Api.Sharing.ShareFolderErrorBase.IsOther
+  - Dropbox.Api.Sharing.ShareFolderErrorBase.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Sharing.ShareFolderErrorBase.BadPath.#ctor(Dropbox.Api.Sharing.SharePathError)
+  commentId: M:Dropbox.Api.Sharing.ShareFolderErrorBase.BadPath.#ctor(Dropbox.Api.Sharing.SharePathError)
+  id: '#ctor(Dropbox.Api.Sharing.SharePathError)'
+  parent: Dropbox.Api.Sharing.ShareFolderErrorBase.BadPath
+  langs:
+  - csharp
+  - vb
+  name: BadPath(SharePathError)
+  nameWithType: ShareFolderErrorBase.BadPath.BadPath(SharePathError)
+  fullName: Dropbox.Api.Sharing.ShareFolderErrorBase.BadPath.BadPath(Dropbox.Api.Sharing.SharePathError)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ShareFolderErrorBase.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ShareFolderErrorBase.cs
+    startLine: 335
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.ShareFolderErrorBase.BadPath\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public BadPath(SharePathError value)
+    parameters:
+    - id: value
+      type: Dropbox.Api.Sharing.SharePathError
+      description: The value
+    content.vb: Public Sub New(value As SharePathError)
+  overload: Dropbox.Api.Sharing.ShareFolderErrorBase.BadPath.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.ShareFolderErrorBase.BadPath.Value
+  commentId: P:Dropbox.Api.Sharing.ShareFolderErrorBase.BadPath.Value
+  id: Value
+  parent: Dropbox.Api.Sharing.ShareFolderErrorBase.BadPath
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: ShareFolderErrorBase.BadPath.Value
+  fullName: Dropbox.Api.Sharing.ShareFolderErrorBase.BadPath.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ShareFolderErrorBase.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ShareFolderErrorBase.cs
+    startLine: 349
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public SharePathError Value { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.SharePathError
+    content.vb: Public ReadOnly Property Value As SharePathError
+  overload: Dropbox.Api.Sharing.ShareFolderErrorBase.BadPath.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.ShareFolderErrorBase
+  commentId: T:Dropbox.Api.Sharing.ShareFolderErrorBase
+  parent: Dropbox.Api.Sharing
+  name: ShareFolderErrorBase
+  nameWithType: ShareFolderErrorBase
+  fullName: Dropbox.Api.Sharing.ShareFolderErrorBase
+- uid: Dropbox.Api.Sharing.ShareFolderErrorBase.IsEmailUnverified
+  commentId: P:Dropbox.Api.Sharing.ShareFolderErrorBase.IsEmailUnverified
+  parent: Dropbox.Api.Sharing.ShareFolderErrorBase
+  name: IsEmailUnverified
+  nameWithType: ShareFolderErrorBase.IsEmailUnverified
+  fullName: Dropbox.Api.Sharing.ShareFolderErrorBase.IsEmailUnverified
+- uid: Dropbox.Api.Sharing.ShareFolderErrorBase.AsEmailUnverified
+  commentId: P:Dropbox.Api.Sharing.ShareFolderErrorBase.AsEmailUnverified
+  parent: Dropbox.Api.Sharing.ShareFolderErrorBase
+  name: AsEmailUnverified
+  nameWithType: ShareFolderErrorBase.AsEmailUnverified
+  fullName: Dropbox.Api.Sharing.ShareFolderErrorBase.AsEmailUnverified
+- uid: Dropbox.Api.Sharing.ShareFolderErrorBase.IsBadPath
+  commentId: P:Dropbox.Api.Sharing.ShareFolderErrorBase.IsBadPath
+  parent: Dropbox.Api.Sharing.ShareFolderErrorBase
+  name: IsBadPath
+  nameWithType: ShareFolderErrorBase.IsBadPath
+  fullName: Dropbox.Api.Sharing.ShareFolderErrorBase.IsBadPath
+- uid: Dropbox.Api.Sharing.ShareFolderErrorBase.AsBadPath
+  commentId: P:Dropbox.Api.Sharing.ShareFolderErrorBase.AsBadPath
+  parent: Dropbox.Api.Sharing.ShareFolderErrorBase
+  name: AsBadPath
+  nameWithType: ShareFolderErrorBase.AsBadPath
+  fullName: Dropbox.Api.Sharing.ShareFolderErrorBase.AsBadPath
+- uid: Dropbox.Api.Sharing.ShareFolderErrorBase.IsTeamPolicyDisallowsMemberPolicy
+  commentId: P:Dropbox.Api.Sharing.ShareFolderErrorBase.IsTeamPolicyDisallowsMemberPolicy
+  parent: Dropbox.Api.Sharing.ShareFolderErrorBase
+  name: IsTeamPolicyDisallowsMemberPolicy
+  nameWithType: ShareFolderErrorBase.IsTeamPolicyDisallowsMemberPolicy
+  fullName: Dropbox.Api.Sharing.ShareFolderErrorBase.IsTeamPolicyDisallowsMemberPolicy
+- uid: Dropbox.Api.Sharing.ShareFolderErrorBase.AsTeamPolicyDisallowsMemberPolicy
+  commentId: P:Dropbox.Api.Sharing.ShareFolderErrorBase.AsTeamPolicyDisallowsMemberPolicy
+  parent: Dropbox.Api.Sharing.ShareFolderErrorBase
+  name: AsTeamPolicyDisallowsMemberPolicy
+  nameWithType: ShareFolderErrorBase.AsTeamPolicyDisallowsMemberPolicy
+  fullName: Dropbox.Api.Sharing.ShareFolderErrorBase.AsTeamPolicyDisallowsMemberPolicy
+- uid: Dropbox.Api.Sharing.ShareFolderErrorBase.IsDisallowedSharedLinkPolicy
+  commentId: P:Dropbox.Api.Sharing.ShareFolderErrorBase.IsDisallowedSharedLinkPolicy
+  parent: Dropbox.Api.Sharing.ShareFolderErrorBase
+  name: IsDisallowedSharedLinkPolicy
+  nameWithType: ShareFolderErrorBase.IsDisallowedSharedLinkPolicy
+  fullName: Dropbox.Api.Sharing.ShareFolderErrorBase.IsDisallowedSharedLinkPolicy
+- uid: Dropbox.Api.Sharing.ShareFolderErrorBase.AsDisallowedSharedLinkPolicy
+  commentId: P:Dropbox.Api.Sharing.ShareFolderErrorBase.AsDisallowedSharedLinkPolicy
+  parent: Dropbox.Api.Sharing.ShareFolderErrorBase
+  name: AsDisallowedSharedLinkPolicy
+  nameWithType: ShareFolderErrorBase.AsDisallowedSharedLinkPolicy
+  fullName: Dropbox.Api.Sharing.ShareFolderErrorBase.AsDisallowedSharedLinkPolicy
+- uid: Dropbox.Api.Sharing.ShareFolderErrorBase.IsOther
+  commentId: P:Dropbox.Api.Sharing.ShareFolderErrorBase.IsOther
+  parent: Dropbox.Api.Sharing.ShareFolderErrorBase
+  name: IsOther
+  nameWithType: ShareFolderErrorBase.IsOther
+  fullName: Dropbox.Api.Sharing.ShareFolderErrorBase.IsOther
+- uid: Dropbox.Api.Sharing.ShareFolderErrorBase.AsOther
+  commentId: P:Dropbox.Api.Sharing.ShareFolderErrorBase.AsOther
+  parent: Dropbox.Api.Sharing.ShareFolderErrorBase
+  name: AsOther
+  nameWithType: ShareFolderErrorBase.AsOther
+  fullName: Dropbox.Api.Sharing.ShareFolderErrorBase.AsOther
+- uid: Dropbox.Api.Sharing.ShareFolderErrorBase.BadPath
+  commentId: T:Dropbox.Api.Sharing.ShareFolderErrorBase.BadPath
+  parent: Dropbox.Api.Sharing
+  name: ShareFolderErrorBase.BadPath
+  nameWithType: ShareFolderErrorBase.BadPath
+  fullName: Dropbox.Api.Sharing.ShareFolderErrorBase.BadPath
+- uid: Dropbox.Api.Sharing.ShareFolderErrorBase.BadPath.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.ShareFolderErrorBase.BadPath.#ctor
+  name: BadPath
+  nameWithType: ShareFolderErrorBase.BadPath.BadPath
+  fullName: Dropbox.Api.Sharing.ShareFolderErrorBase.BadPath.BadPath
+- uid: Dropbox.Api.Sharing.SharePathError
+  commentId: T:Dropbox.Api.Sharing.SharePathError
+  parent: Dropbox.Api.Sharing
+  name: SharePathError
+  nameWithType: SharePathError
+  fullName: Dropbox.Api.Sharing.SharePathError
+- uid: Dropbox.Api.Sharing.ShareFolderErrorBase.BadPath.Value*
+  commentId: Overload:Dropbox.Api.Sharing.ShareFolderErrorBase.BadPath.Value
+  name: Value
+  nameWithType: ShareFolderErrorBase.BadPath.Value
+  fullName: Dropbox.Api.Sharing.ShareFolderErrorBase.BadPath.Value
+shouldSkipMarkup: true

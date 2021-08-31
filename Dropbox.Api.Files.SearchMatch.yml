@@ -1,0 +1,241 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.SearchMatch
+  commentId: T:Dropbox.Api.Files.SearchMatch
+  id: SearchMatch
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.SearchMatch.#ctor
+  - Dropbox.Api.Files.SearchMatch.#ctor(Dropbox.Api.Files.SearchMatchType,Dropbox.Api.Files.Metadata)
+  - Dropbox.Api.Files.SearchMatch.MatchType
+  - Dropbox.Api.Files.SearchMatch.Metadata
+  langs:
+  - csharp
+  - vb
+  name: SearchMatch
+  nameWithType: SearchMatch
+  fullName: Dropbox.Api.Files.SearchMatch
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchMatch.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SearchMatch
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchMatch.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The search match object</p>\n"
+  example: []
+  syntax:
+    content: 'public class SearchMatch : object'
+    content.vb: >-
+      Public Class SearchMatch
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.SearchMatch.#ctor(Dropbox.Api.Files.SearchMatchType,Dropbox.Api.Files.Metadata)
+  commentId: M:Dropbox.Api.Files.SearchMatch.#ctor(Dropbox.Api.Files.SearchMatchType,Dropbox.Api.Files.Metadata)
+  id: '#ctor(Dropbox.Api.Files.SearchMatchType,Dropbox.Api.Files.Metadata)'
+  parent: Dropbox.Api.Files.SearchMatch
+  langs:
+  - csharp
+  - vb
+  name: SearchMatch(SearchMatchType, Metadata)
+  nameWithType: SearchMatch.SearchMatch(SearchMatchType, Metadata)
+  fullName: Dropbox.Api.Files.SearchMatch.SearchMatch(Dropbox.Api.Files.SearchMatchType, Dropbox.Api.Files.Metadata)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchMatch.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchMatch.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.SearchMatch\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public SearchMatch(SearchMatchType matchType, Metadata metadata)
+    parameters:
+    - id: matchType
+      type: Dropbox.Api.Files.SearchMatchType
+      description: The type of the match.
+    - id: metadata
+      type: Dropbox.Api.Files.Metadata
+      description: The metadata for the matched file or folder.
+    content.vb: Public Sub New(matchType As SearchMatchType, metadata As Metadata)
+  overload: Dropbox.Api.Files.SearchMatch.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.SearchMatch.#ctor
+  commentId: M:Dropbox.Api.Files.SearchMatch.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.SearchMatch
+  langs:
+  - csharp
+  - vb
+  name: SearchMatch()
+  nameWithType: SearchMatch.SearchMatch()
+  fullName: Dropbox.Api.Files.SearchMatch.SearchMatch()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchMatch.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchMatch.cs
+    startLine: 56
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.SearchMatch\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public SearchMatch()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.SearchMatch.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.SearchMatch.MatchType
+  commentId: P:Dropbox.Api.Files.SearchMatch.MatchType
+  id: MatchType
+  parent: Dropbox.Api.Files.SearchMatch
+  langs:
+  - csharp
+  - vb
+  name: MatchType
+  nameWithType: SearchMatch.MatchType
+  fullName: Dropbox.Api.Files.SearchMatch.MatchType
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchMatch.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: MatchType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchMatch.cs
+    startLine: 64
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The type of the match.</p>\n"
+  example: []
+  syntax:
+    content: public SearchMatchType MatchType { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.SearchMatchType
+    content.vb: Public Property MatchType As SearchMatchType
+  overload: Dropbox.Api.Files.SearchMatch.MatchType*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.SearchMatch.Metadata
+  commentId: P:Dropbox.Api.Files.SearchMatch.Metadata
+  id: Metadata
+  parent: Dropbox.Api.Files.SearchMatch
+  langs:
+  - csharp
+  - vb
+  name: Metadata
+  nameWithType: SearchMatch.Metadata
+  fullName: Dropbox.Api.Files.SearchMatch.Metadata
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchMatch.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Metadata
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchMatch.cs
+    startLine: 69
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The metadata for the matched file or folder.</p>\n"
+  example: []
+  syntax:
+    content: public Metadata Metadata { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.Metadata
+    content.vb: Public Property Metadata As Metadata
+  overload: Dropbox.Api.Files.SearchMatch.Metadata*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.SearchMatch
+  commentId: T:Dropbox.Api.Files.SearchMatch
+  name: SearchMatch
+  nameWithType: SearchMatch
+  fullName: Dropbox.Api.Files.SearchMatch
+- uid: Dropbox.Api.Files.SearchMatch.#ctor*
+  commentId: Overload:Dropbox.Api.Files.SearchMatch.#ctor
+  name: SearchMatch
+  nameWithType: SearchMatch.SearchMatch
+  fullName: Dropbox.Api.Files.SearchMatch.SearchMatch
+- uid: Dropbox.Api.Files.SearchMatchType
+  commentId: T:Dropbox.Api.Files.SearchMatchType
+  parent: Dropbox.Api.Files
+  name: SearchMatchType
+  nameWithType: SearchMatchType
+  fullName: Dropbox.Api.Files.SearchMatchType
+- uid: Dropbox.Api.Files.Metadata
+  commentId: T:Dropbox.Api.Files.Metadata
+  parent: Dropbox.Api.Files
+  name: Metadata
+  nameWithType: Metadata
+  fullName: Dropbox.Api.Files.Metadata
+- uid: Dropbox.Api.Files.SearchMatch.MatchType*
+  commentId: Overload:Dropbox.Api.Files.SearchMatch.MatchType
+  name: MatchType
+  nameWithType: SearchMatch.MatchType
+  fullName: Dropbox.Api.Files.SearchMatch.MatchType
+- uid: Dropbox.Api.Files.SearchMatch.Metadata*
+  commentId: Overload:Dropbox.Api.Files.SearchMatch.Metadata
+  name: Metadata
+  nameWithType: SearchMatch.Metadata
+  fullName: Dropbox.Api.Files.SearchMatch.Metadata
+shouldSkipMarkup: true

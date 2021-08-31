@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.FileTransfersFileAddDetails
+  commentId: T:Dropbox.Api.TeamLog.FileTransfersFileAddDetails
+  id: FileTransfersFileAddDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.FileTransfersFileAddDetails.#ctor
+  - Dropbox.Api.TeamLog.FileTransfersFileAddDetails.#ctor(System.String)
+  - Dropbox.Api.TeamLog.FileTransfersFileAddDetails.FileTransferId
+  langs:
+  - csharp
+  - vb
+  name: FileTransfersFileAddDetails
+  nameWithType: FileTransfersFileAddDetails
+  fullName: Dropbox.Api.TeamLog.FileTransfersFileAddDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileTransfersFileAddDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: FileTransfersFileAddDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileTransfersFileAddDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Transfer files added.</p>\n"
+  example: []
+  syntax:
+    content: 'public class FileTransfersFileAddDetails : object'
+    content.vb: >-
+      Public Class FileTransfersFileAddDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.FileTransfersFileAddDetails.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.FileTransfersFileAddDetails.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.FileTransfersFileAddDetails
+  langs:
+  - csharp
+  - vb
+  name: FileTransfersFileAddDetails(String)
+  nameWithType: FileTransfersFileAddDetails.FileTransfersFileAddDetails(String)
+  fullName: Dropbox.Api.TeamLog.FileTransfersFileAddDetails.FileTransfersFileAddDetails(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileTransfersFileAddDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileTransfersFileAddDetails.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.FileTransfersFileAddDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public FileTransfersFileAddDetails(string fileTransferId)
+    parameters:
+    - id: fileTransferId
+      type: System.String
+      description: Transfer id.
+    content.vb: Public Sub New(fileTransferId As String)
+  overload: Dropbox.Api.TeamLog.FileTransfersFileAddDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.FileTransfersFileAddDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.FileTransfersFileAddDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.FileTransfersFileAddDetails
+  langs:
+  - csharp
+  - vb
+  name: FileTransfersFileAddDetails()
+  nameWithType: FileTransfersFileAddDetails.FileTransfersFileAddDetails()
+  fullName: Dropbox.Api.TeamLog.FileTransfersFileAddDetails.FileTransfersFileAddDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileTransfersFileAddDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileTransfersFileAddDetails.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.FileTransfersFileAddDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public FileTransfersFileAddDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.FileTransfersFileAddDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.FileTransfersFileAddDetails.FileTransferId
+  commentId: P:Dropbox.Api.TeamLog.FileTransfersFileAddDetails.FileTransferId
+  id: FileTransferId
+  parent: Dropbox.Api.TeamLog.FileTransfersFileAddDetails
+  langs:
+  - csharp
+  - vb
+  name: FileTransferId
+  nameWithType: FileTransfersFileAddDetails.FileTransferId
+  fullName: Dropbox.Api.TeamLog.FileTransfersFileAddDetails.FileTransferId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileTransfersFileAddDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: FileTransferId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileTransfersFileAddDetails.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Transfer id.</p>\n"
+  example: []
+  syntax:
+    content: public string FileTransferId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property FileTransferId As String
+  overload: Dropbox.Api.TeamLog.FileTransfersFileAddDetails.FileTransferId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.FileTransfersFileAddDetails
+  commentId: T:Dropbox.Api.TeamLog.FileTransfersFileAddDetails
+  parent: Dropbox.Api.TeamLog
+  name: FileTransfersFileAddDetails
+  nameWithType: FileTransfersFileAddDetails
+  fullName: Dropbox.Api.TeamLog.FileTransfersFileAddDetails
+- uid: Dropbox.Api.TeamLog.FileTransfersFileAddDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.FileTransfersFileAddDetails.#ctor
+  name: FileTransfersFileAddDetails
+  nameWithType: FileTransfersFileAddDetails.FileTransfersFileAddDetails
+  fullName: Dropbox.Api.TeamLog.FileTransfersFileAddDetails.FileTransfersFileAddDetails
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.FileTransfersFileAddDetails.FileTransferId*
+  commentId: Overload:Dropbox.Api.TeamLog.FileTransfersFileAddDetails.FileTransferId
+  name: FileTransferId
+  nameWithType: FileTransfersFileAddDetails.FileTransferId
+  fullName: Dropbox.Api.TeamLog.FileTransfersFileAddDetails.FileTransferId
+shouldSkipMarkup: true

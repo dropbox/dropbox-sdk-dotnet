@@ -1,0 +1,96 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.DeviceManagementDisabledDetails
+  commentId: T:Dropbox.Api.TeamLog.DeviceManagementDisabledDetails
+  id: DeviceManagementDisabledDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.DeviceManagementDisabledDetails.#ctor
+  langs:
+  - csharp
+  - vb
+  name: DeviceManagementDisabledDetails
+  nameWithType: DeviceManagementDisabledDetails
+  fullName: Dropbox.Api.TeamLog.DeviceManagementDisabledDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceManagementDisabledDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: DeviceManagementDisabledDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceManagementDisabledDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Disabled device management.</p>\n"
+  example: []
+  syntax:
+    content: 'public class DeviceManagementDisabledDetails : object'
+    content.vb: >-
+      Public Class DeviceManagementDisabledDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.DeviceManagementDisabledDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.DeviceManagementDisabledDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.DeviceManagementDisabledDetails
+  langs:
+  - csharp
+  - vb
+  name: DeviceManagementDisabledDetails()
+  nameWithType: DeviceManagementDisabledDetails.DeviceManagementDisabledDetails()
+  fullName: Dropbox.Api.TeamLog.DeviceManagementDisabledDetails.DeviceManagementDisabledDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceManagementDisabledDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceManagementDisabledDetails.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.DeviceManagementDisabledDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public DeviceManagementDisabledDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.DeviceManagementDisabledDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.DeviceManagementDisabledDetails
+  commentId: T:Dropbox.Api.TeamLog.DeviceManagementDisabledDetails
+  parent: Dropbox.Api.TeamLog
+  name: DeviceManagementDisabledDetails
+  nameWithType: DeviceManagementDisabledDetails
+  fullName: Dropbox.Api.TeamLog.DeviceManagementDisabledDetails
+- uid: Dropbox.Api.TeamLog.DeviceManagementDisabledDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.DeviceManagementDisabledDetails.#ctor
+  name: DeviceManagementDisabledDetails
+  nameWithType: DeviceManagementDisabledDetails.DeviceManagementDisabledDetails
+  fullName: Dropbox.Api.TeamLog.DeviceManagementDisabledDetails.DeviceManagementDisabledDetails
+shouldSkipMarkup: true

@@ -1,0 +1,296 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.SharedLinkFileInfo
+  commentId: T:Dropbox.Api.Files.SharedLinkFileInfo
+  id: SharedLinkFileInfo
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.SharedLinkFileInfo.#ctor
+  - Dropbox.Api.Files.SharedLinkFileInfo.#ctor(System.String,System.String,System.String)
+  - Dropbox.Api.Files.SharedLinkFileInfo.Password
+  - Dropbox.Api.Files.SharedLinkFileInfo.Path
+  - Dropbox.Api.Files.SharedLinkFileInfo.Url
+  langs:
+  - csharp
+  - vb
+  name: SharedLinkFileInfo
+  nameWithType: SharedLinkFileInfo
+  fullName: Dropbox.Api.Files.SharedLinkFileInfo
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SharedLinkFileInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SharedLinkFileInfo
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SharedLinkFileInfo.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The shared link file info object</p>\n"
+  example: []
+  syntax:
+    content: 'public class SharedLinkFileInfo : object'
+    content.vb: >-
+      Public Class SharedLinkFileInfo
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.SharedLinkFileInfo.#ctor(System.String,System.String,System.String)
+  commentId: M:Dropbox.Api.Files.SharedLinkFileInfo.#ctor(System.String,System.String,System.String)
+  id: '#ctor(System.String,System.String,System.String)'
+  parent: Dropbox.Api.Files.SharedLinkFileInfo
+  langs:
+  - csharp
+  - vb
+  name: SharedLinkFileInfo(String, String, String)
+  nameWithType: SharedLinkFileInfo.SharedLinkFileInfo(String, String, String)
+  fullName: Dropbox.Api.Files.SharedLinkFileInfo.SharedLinkFileInfo(System.String, System.String, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SharedLinkFileInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SharedLinkFileInfo.cs
+    startLine: 41
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.SharedLinkFileInfo\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public SharedLinkFileInfo(string url, string path = null, string password = null)
+    parameters:
+    - id: url
+      type: System.String
+      description: >-
+        The shared link corresponding to either a file or shared link to
+
+        a folder. If it is for a folder shared link, we use the path param to determine for
+
+        which file in the folder the view is for.
+    - id: path
+      type: System.String
+      description: >-
+        The path corresponding to a file in a shared link to a folder.
+
+        Required for shared links to folders.
+    - id: password
+      type: System.String
+      description: >-
+        Password for the shared link. Required for
+
+        password-protected shared links to files  unless it can be read from a
+
+        cookie.
+    content.vb: Public Sub New(url As String, path As String = Nothing, password As String = Nothing)
+  overload: Dropbox.Api.Files.SharedLinkFileInfo.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.SharedLinkFileInfo.#ctor
+  commentId: M:Dropbox.Api.Files.SharedLinkFileInfo.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.SharedLinkFileInfo
+  langs:
+  - csharp
+  - vb
+  name: SharedLinkFileInfo()
+  nameWithType: SharedLinkFileInfo.SharedLinkFileInfo()
+  fullName: Dropbox.Api.Files.SharedLinkFileInfo.SharedLinkFileInfo()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SharedLinkFileInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SharedLinkFileInfo.cs
+    startLine: 61
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.SharedLinkFileInfo\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public SharedLinkFileInfo()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.SharedLinkFileInfo.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.SharedLinkFileInfo.Url
+  commentId: P:Dropbox.Api.Files.SharedLinkFileInfo.Url
+  id: Url
+  parent: Dropbox.Api.Files.SharedLinkFileInfo
+  langs:
+  - csharp
+  - vb
+  name: Url
+  nameWithType: SharedLinkFileInfo.Url
+  fullName: Dropbox.Api.Files.SharedLinkFileInfo.Url
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SharedLinkFileInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Url
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SharedLinkFileInfo.cs
+    startLine: 71
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The shared link corresponding to either a file or shared link to a folder. If\nit is for a folder shared link, we use the path param to determine for which file\nin the folder the view is for.</p>\n"
+  example: []
+  syntax:
+    content: public string Url { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Url As String
+  overload: Dropbox.Api.Files.SharedLinkFileInfo.Url*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.SharedLinkFileInfo.Path
+  commentId: P:Dropbox.Api.Files.SharedLinkFileInfo.Path
+  id: Path
+  parent: Dropbox.Api.Files.SharedLinkFileInfo
+  langs:
+  - csharp
+  - vb
+  name: Path
+  nameWithType: SharedLinkFileInfo.Path
+  fullName: Dropbox.Api.Files.SharedLinkFileInfo.Path
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SharedLinkFileInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Path
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SharedLinkFileInfo.cs
+    startLine: 77
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The path corresponding to a file in a shared link to a folder. Required for\nshared links to folders.</p>\n"
+  example: []
+  syntax:
+    content: public string Path { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Path As String
+  overload: Dropbox.Api.Files.SharedLinkFileInfo.Path*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.SharedLinkFileInfo.Password
+  commentId: P:Dropbox.Api.Files.SharedLinkFileInfo.Password
+  id: Password
+  parent: Dropbox.Api.Files.SharedLinkFileInfo
+  langs:
+  - csharp
+  - vb
+  name: Password
+  nameWithType: SharedLinkFileInfo.Password
+  fullName: Dropbox.Api.Files.SharedLinkFileInfo.Password
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SharedLinkFileInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Password
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SharedLinkFileInfo.cs
+    startLine: 83
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Password for the shared link. Required for password-protected shared links to\nfiles  unless it can be read from a cookie.</p>\n"
+  example: []
+  syntax:
+    content: public string Password { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Password As String
+  overload: Dropbox.Api.Files.SharedLinkFileInfo.Password*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.SharedLinkFileInfo
+  commentId: T:Dropbox.Api.Files.SharedLinkFileInfo
+  parent: Dropbox.Api.Files
+  name: SharedLinkFileInfo
+  nameWithType: SharedLinkFileInfo
+  fullName: Dropbox.Api.Files.SharedLinkFileInfo
+- uid: Dropbox.Api.Files.SharedLinkFileInfo.#ctor*
+  commentId: Overload:Dropbox.Api.Files.SharedLinkFileInfo.#ctor
+  name: SharedLinkFileInfo
+  nameWithType: SharedLinkFileInfo.SharedLinkFileInfo
+  fullName: Dropbox.Api.Files.SharedLinkFileInfo.SharedLinkFileInfo
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Files.SharedLinkFileInfo.Url*
+  commentId: Overload:Dropbox.Api.Files.SharedLinkFileInfo.Url
+  name: Url
+  nameWithType: SharedLinkFileInfo.Url
+  fullName: Dropbox.Api.Files.SharedLinkFileInfo.Url
+- uid: Dropbox.Api.Files.SharedLinkFileInfo.Path*
+  commentId: Overload:Dropbox.Api.Files.SharedLinkFileInfo.Path
+  name: Path
+  nameWithType: SharedLinkFileInfo.Path
+  fullName: Dropbox.Api.Files.SharedLinkFileInfo.Path
+- uid: Dropbox.Api.Files.SharedLinkFileInfo.Password*
+  commentId: Overload:Dropbox.Api.Files.SharedLinkFileInfo.Password
+  name: Password
+  nameWithType: SharedLinkFileInfo.Password
+  fullName: Dropbox.Api.Files.SharedLinkFileInfo.Password
+shouldSkipMarkup: true

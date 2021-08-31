@@ -1,0 +1,195 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.MembersListError
+  commentId: T:Dropbox.Api.Team.MembersListError
+  id: MembersListError
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.MembersListError.#ctor
+  - Dropbox.Api.Team.MembersListError.AsOther
+  - Dropbox.Api.Team.MembersListError.IsOther
+  langs:
+  - csharp
+  - vb
+  name: MembersListError
+  nameWithType: MembersListError
+  fullName: Dropbox.Api.Team.MembersListError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersListError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: MembersListError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersListError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The members list error object</p>\n"
+  example: []
+  syntax:
+    content: 'public class MembersListError : object'
+    content.vb: >-
+      Public Class MembersListError
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Team.MembersListError.Other
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.MembersListError.#ctor
+  commentId: M:Dropbox.Api.Team.MembersListError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.MembersListError
+  langs:
+  - csharp
+  - vb
+  name: MembersListError()
+  nameWithType: MembersListError.MembersListError()
+  fullName: Dropbox.Api.Team.MembersListError.MembersListError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersListError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersListError.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.MembersListError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public MembersListError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.MembersListError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.MembersListError.IsOther
+  commentId: P:Dropbox.Api.Team.MembersListError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Team.MembersListError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: MembersListError.IsOther
+  fullName: Dropbox.Api.Team.MembersListError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersListError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersListError.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Team.MembersListError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersListError.AsOther
+  commentId: P:Dropbox.Api.Team.MembersListError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Team.MembersListError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: MembersListError.AsOther
+  fullName: Dropbox.Api.Team.MembersListError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersListError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersListError.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MembersListError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.MembersListError.Other
+    content.vb: Public ReadOnly Property AsOther As MembersListError.Other
+  overload: Dropbox.Api.Team.MembersListError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.MembersListError
+  commentId: T:Dropbox.Api.Team.MembersListError
+  parent: Dropbox.Api.Team
+  name: MembersListError
+  nameWithType: MembersListError
+  fullName: Dropbox.Api.Team.MembersListError
+- uid: Dropbox.Api.Team.MembersListError.#ctor*
+  commentId: Overload:Dropbox.Api.Team.MembersListError.#ctor
+  name: MembersListError
+  nameWithType: MembersListError.MembersListError
+  fullName: Dropbox.Api.Team.MembersListError.MembersListError
+- uid: Dropbox.Api.Team.MembersListError.IsOther*
+  commentId: Overload:Dropbox.Api.Team.MembersListError.IsOther
+  name: IsOther
+  nameWithType: MembersListError.IsOther
+  fullName: Dropbox.Api.Team.MembersListError.IsOther
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Team.MembersListError.AsOther*
+  commentId: Overload:Dropbox.Api.Team.MembersListError.AsOther
+  name: AsOther
+  nameWithType: MembersListError.AsOther
+  fullName: Dropbox.Api.Team.MembersListError.AsOther
+- uid: Dropbox.Api.Team.MembersListError.Other
+  commentId: T:Dropbox.Api.Team.MembersListError.Other
+  parent: Dropbox.Api.Team
+  name: MembersListError.Other
+  nameWithType: MembersListError.Other
+  fullName: Dropbox.Api.Team.MembersListError.Other
+shouldSkipMarkup: true

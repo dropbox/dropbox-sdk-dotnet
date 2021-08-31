@@ -1,0 +1,556 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.GovernancePolicyCreateDetails
+  commentId: T:Dropbox.Api.TeamLog.GovernancePolicyCreateDetails
+  id: GovernancePolicyCreateDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.GovernancePolicyCreateDetails.#ctor
+  - Dropbox.Api.TeamLog.GovernancePolicyCreateDetails.#ctor(System.String,System.String,Dropbox.Api.TeamLog.DurationLogInfo,Dropbox.Api.TeamLog.PolicyType,System.Collections.Generic.IEnumerable{System.String})
+  - Dropbox.Api.TeamLog.GovernancePolicyCreateDetails.Duration
+  - Dropbox.Api.TeamLog.GovernancePolicyCreateDetails.Folders
+  - Dropbox.Api.TeamLog.GovernancePolicyCreateDetails.GovernancePolicyId
+  - Dropbox.Api.TeamLog.GovernancePolicyCreateDetails.Name
+  - Dropbox.Api.TeamLog.GovernancePolicyCreateDetails.PolicyType
+  langs:
+  - csharp
+  - vb
+  name: GovernancePolicyCreateDetails
+  nameWithType: GovernancePolicyCreateDetails
+  fullName: Dropbox.Api.TeamLog.GovernancePolicyCreateDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GovernancePolicyCreateDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GovernancePolicyCreateDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GovernancePolicyCreateDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Activated a new policy.</p>\n"
+  example: []
+  syntax:
+    content: 'public class GovernancePolicyCreateDetails : object'
+    content.vb: >-
+      Public Class GovernancePolicyCreateDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.GovernancePolicyCreateDetails.#ctor(System.String,System.String,Dropbox.Api.TeamLog.DurationLogInfo,Dropbox.Api.TeamLog.PolicyType,System.Collections.Generic.IEnumerable{System.String})
+  commentId: M:Dropbox.Api.TeamLog.GovernancePolicyCreateDetails.#ctor(System.String,System.String,Dropbox.Api.TeamLog.DurationLogInfo,Dropbox.Api.TeamLog.PolicyType,System.Collections.Generic.IEnumerable{System.String})
+  id: '#ctor(System.String,System.String,Dropbox.Api.TeamLog.DurationLogInfo,Dropbox.Api.TeamLog.PolicyType,System.Collections.Generic.IEnumerable{System.String})'
+  parent: Dropbox.Api.TeamLog.GovernancePolicyCreateDetails
+  langs:
+  - csharp
+  - vb
+  name: GovernancePolicyCreateDetails(String, String, DurationLogInfo, PolicyType, System.Collections.Generic.IEnumerable<String>)
+  nameWithType: GovernancePolicyCreateDetails.GovernancePolicyCreateDetails(String, String, DurationLogInfo, PolicyType, System.Collections.Generic.IEnumerable<String>)
+  fullName: Dropbox.Api.TeamLog.GovernancePolicyCreateDetails.GovernancePolicyCreateDetails(System.String, System.String, Dropbox.Api.TeamLog.DurationLogInfo, Dropbox.Api.TeamLog.PolicyType, System.Collections.Generic.IEnumerable<System.String>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GovernancePolicyCreateDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GovernancePolicyCreateDetails.cs
+    startLine: 38
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.GovernancePolicyCreateDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public GovernancePolicyCreateDetails(string governancePolicyId, string name, DurationLogInfo duration, PolicyType policyType = null, System.Collections.Generic.IEnumerable<string> folders = null)
+    parameters:
+    - id: governancePolicyId
+      type: System.String
+      description: Policy ID.
+    - id: name
+      type: System.String
+      description: Policy name.
+    - id: duration
+      type: Dropbox.Api.TeamLog.DurationLogInfo
+      description: Duration in days.
+    - id: policyType
+      type: Dropbox.Api.TeamLog.PolicyType
+      description: Policy type.
+    - id: folders
+      type: System.Collections.Generic.IEnumerable{System.String}
+      description: Folders.
+    content.vb: Public Sub New(governancePolicyId As String, name As String, duration As DurationLogInfo, policyType As PolicyType = Nothing, folders As System.Collections.Generic.IEnumerable(Of String) = Nothing)
+  overload: Dropbox.Api.TeamLog.GovernancePolicyCreateDetails.#ctor*
+  nameWithType.vb: GovernancePolicyCreateDetails.GovernancePolicyCreateDetails(String, String, DurationLogInfo, PolicyType, System.Collections.Generic.IEnumerable(Of String))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.TeamLog.GovernancePolicyCreateDetails.GovernancePolicyCreateDetails(System.String, System.String, Dropbox.Api.TeamLog.DurationLogInfo, Dropbox.Api.TeamLog.PolicyType, System.Collections.Generic.IEnumerable(Of System.String))
+  name.vb: GovernancePolicyCreateDetails(String, String, DurationLogInfo, PolicyType, System.Collections.Generic.IEnumerable(Of String))
+- uid: Dropbox.Api.TeamLog.GovernancePolicyCreateDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.GovernancePolicyCreateDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.GovernancePolicyCreateDetails
+  langs:
+  - csharp
+  - vb
+  name: GovernancePolicyCreateDetails()
+  nameWithType: GovernancePolicyCreateDetails.GovernancePolicyCreateDetails()
+  fullName: Dropbox.Api.TeamLog.GovernancePolicyCreateDetails.GovernancePolicyCreateDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GovernancePolicyCreateDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GovernancePolicyCreateDetails.cs
+    startLine: 74
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.GovernancePolicyCreateDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public GovernancePolicyCreateDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.GovernancePolicyCreateDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.GovernancePolicyCreateDetails.GovernancePolicyId
+  commentId: P:Dropbox.Api.TeamLog.GovernancePolicyCreateDetails.GovernancePolicyId
+  id: GovernancePolicyId
+  parent: Dropbox.Api.TeamLog.GovernancePolicyCreateDetails
+  langs:
+  - csharp
+  - vb
+  name: GovernancePolicyId
+  nameWithType: GovernancePolicyCreateDetails.GovernancePolicyId
+  fullName: Dropbox.Api.TeamLog.GovernancePolicyCreateDetails.GovernancePolicyId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GovernancePolicyCreateDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GovernancePolicyId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GovernancePolicyCreateDetails.cs
+    startLine: 82
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Policy ID.</p>\n"
+  example: []
+  syntax:
+    content: public string GovernancePolicyId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property GovernancePolicyId As String
+  overload: Dropbox.Api.TeamLog.GovernancePolicyCreateDetails.GovernancePolicyId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.GovernancePolicyCreateDetails.Name
+  commentId: P:Dropbox.Api.TeamLog.GovernancePolicyCreateDetails.Name
+  id: Name
+  parent: Dropbox.Api.TeamLog.GovernancePolicyCreateDetails
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: GovernancePolicyCreateDetails.Name
+  fullName: Dropbox.Api.TeamLog.GovernancePolicyCreateDetails.Name
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GovernancePolicyCreateDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Name
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GovernancePolicyCreateDetails.cs
+    startLine: 87
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Policy name.</p>\n"
+  example: []
+  syntax:
+    content: public string Name { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: Dropbox.Api.TeamLog.GovernancePolicyCreateDetails.Name*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.GovernancePolicyCreateDetails.Duration
+  commentId: P:Dropbox.Api.TeamLog.GovernancePolicyCreateDetails.Duration
+  id: Duration
+  parent: Dropbox.Api.TeamLog.GovernancePolicyCreateDetails
+  langs:
+  - csharp
+  - vb
+  name: Duration
+  nameWithType: GovernancePolicyCreateDetails.Duration
+  fullName: Dropbox.Api.TeamLog.GovernancePolicyCreateDetails.Duration
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GovernancePolicyCreateDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Duration
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GovernancePolicyCreateDetails.cs
+    startLine: 92
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Duration in days.</p>\n"
+  example: []
+  syntax:
+    content: public DurationLogInfo Duration { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.DurationLogInfo
+    content.vb: Public Property Duration As DurationLogInfo
+  overload: Dropbox.Api.TeamLog.GovernancePolicyCreateDetails.Duration*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.GovernancePolicyCreateDetails.PolicyType
+  commentId: P:Dropbox.Api.TeamLog.GovernancePolicyCreateDetails.PolicyType
+  id: PolicyType
+  parent: Dropbox.Api.TeamLog.GovernancePolicyCreateDetails
+  langs:
+  - csharp
+  - vb
+  name: PolicyType
+  nameWithType: GovernancePolicyCreateDetails.PolicyType
+  fullName: Dropbox.Api.TeamLog.GovernancePolicyCreateDetails.PolicyType
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GovernancePolicyCreateDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PolicyType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GovernancePolicyCreateDetails.cs
+    startLine: 97
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Policy type.</p>\n"
+  example: []
+  syntax:
+    content: public PolicyType PolicyType { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.PolicyType
+    content.vb: Public Property PolicyType As PolicyType
+  overload: Dropbox.Api.TeamLog.GovernancePolicyCreateDetails.PolicyType*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.GovernancePolicyCreateDetails.Folders
+  commentId: P:Dropbox.Api.TeamLog.GovernancePolicyCreateDetails.Folders
+  id: Folders
+  parent: Dropbox.Api.TeamLog.GovernancePolicyCreateDetails
+  langs:
+  - csharp
+  - vb
+  name: Folders
+  nameWithType: GovernancePolicyCreateDetails.Folders
+  fullName: Dropbox.Api.TeamLog.GovernancePolicyCreateDetails.Folders
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GovernancePolicyCreateDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Folders
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GovernancePolicyCreateDetails.cs
+    startLine: 102
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Folders.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<string> Folders { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{System.String}
+    content.vb: Public Property Folders As System.Collections.Generic.IList(Of String)
+  overload: Dropbox.Api.TeamLog.GovernancePolicyCreateDetails.Folders*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.GovernancePolicyCreateDetails
+  commentId: T:Dropbox.Api.TeamLog.GovernancePolicyCreateDetails
+  parent: Dropbox.Api.TeamLog
+  name: GovernancePolicyCreateDetails
+  nameWithType: GovernancePolicyCreateDetails
+  fullName: Dropbox.Api.TeamLog.GovernancePolicyCreateDetails
+- uid: Dropbox.Api.TeamLog.GovernancePolicyCreateDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.GovernancePolicyCreateDetails.#ctor
+  name: GovernancePolicyCreateDetails
+  nameWithType: GovernancePolicyCreateDetails.GovernancePolicyCreateDetails
+  fullName: Dropbox.Api.TeamLog.GovernancePolicyCreateDetails.GovernancePolicyCreateDetails
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.DurationLogInfo
+  commentId: T:Dropbox.Api.TeamLog.DurationLogInfo
+  parent: Dropbox.Api.TeamLog
+  name: DurationLogInfo
+  nameWithType: DurationLogInfo
+  fullName: Dropbox.Api.TeamLog.DurationLogInfo
+- uid: Dropbox.Api.TeamLog.PolicyType
+  commentId: T:Dropbox.Api.TeamLog.PolicyType
+  parent: Dropbox.Api.TeamLog
+  name: PolicyType
+  nameWithType: PolicyType
+  fullName: Dropbox.Api.TeamLog.PolicyType
+- uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: '!:System.Collections.Generic.IEnumerable{System.String}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<String>
+  nameWithType: System.Collections.Generic.IEnumerable<String>
+  fullName: System.Collections.Generic.IEnumerable<System.String>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of String)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.String)
+  name.vb: System.Collections.Generic.IEnumerable(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: System.Collections.Generic.IEnumerable<>
+  nameWithType: System.Collections.Generic.IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: System.Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.TeamLog.GovernancePolicyCreateDetails.GovernancePolicyId*
+  commentId: Overload:Dropbox.Api.TeamLog.GovernancePolicyCreateDetails.GovernancePolicyId
+  name: GovernancePolicyId
+  nameWithType: GovernancePolicyCreateDetails.GovernancePolicyId
+  fullName: Dropbox.Api.TeamLog.GovernancePolicyCreateDetails.GovernancePolicyId
+- uid: Dropbox.Api.TeamLog.GovernancePolicyCreateDetails.Name*
+  commentId: Overload:Dropbox.Api.TeamLog.GovernancePolicyCreateDetails.Name
+  name: Name
+  nameWithType: GovernancePolicyCreateDetails.Name
+  fullName: Dropbox.Api.TeamLog.GovernancePolicyCreateDetails.Name
+- uid: Dropbox.Api.TeamLog.GovernancePolicyCreateDetails.Duration*
+  commentId: Overload:Dropbox.Api.TeamLog.GovernancePolicyCreateDetails.Duration
+  name: Duration
+  nameWithType: GovernancePolicyCreateDetails.Duration
+  fullName: Dropbox.Api.TeamLog.GovernancePolicyCreateDetails.Duration
+- uid: Dropbox.Api.TeamLog.GovernancePolicyCreateDetails.PolicyType*
+  commentId: Overload:Dropbox.Api.TeamLog.GovernancePolicyCreateDetails.PolicyType
+  name: PolicyType
+  nameWithType: GovernancePolicyCreateDetails.PolicyType
+  fullName: Dropbox.Api.TeamLog.GovernancePolicyCreateDetails.PolicyType
+- uid: Dropbox.Api.TeamLog.GovernancePolicyCreateDetails.Folders*
+  commentId: Overload:Dropbox.Api.TeamLog.GovernancePolicyCreateDetails.Folders
+  name: Folders
+  nameWithType: GovernancePolicyCreateDetails.Folders
+  fullName: Dropbox.Api.TeamLog.GovernancePolicyCreateDetails.Folders
+- uid: System.Collections.Generic.IList{System.String}
+  commentId: '!:System.Collections.Generic.IList{System.String}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<String>
+  nameWithType: System.Collections.Generic.IList<String>
+  fullName: System.Collections.Generic.IList<System.String>
+  nameWithType.vb: System.Collections.Generic.IList(Of String)
+  fullName.vb: System.Collections.Generic.IList(Of System.String)
+  name.vb: System.Collections.Generic.IList(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  isExternal: true
+  name: System.Collections.Generic.IList<>
+  nameWithType: System.Collections.Generic.IList<>
+  fullName: System.Collections.Generic.IList<>
+  nameWithType.vb: System.Collections.Generic.IList(Of )
+  fullName.vb: System.Collections.Generic.IList(Of )
+  name.vb: System.Collections.Generic.IList(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+shouldSkipMarkup: true

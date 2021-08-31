@@ -1,0 +1,1763 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Users.Routes.UsersUserRoutes
+  commentId: T:Dropbox.Api.Users.Routes.UsersUserRoutes
+  id: UsersUserRoutes
+  parent: Dropbox.Api.Users.Routes
+  children:
+  - Dropbox.Api.Users.Routes.UsersUserRoutes.BeginFeaturesGetValues(Dropbox.Api.Users.UserFeaturesGetValuesBatchArg,System.AsyncCallback,System.Object)
+  - Dropbox.Api.Users.Routes.UsersUserRoutes.BeginFeaturesGetValues(System.Collections.Generic.IEnumerable{Dropbox.Api.Users.UserFeature},System.AsyncCallback,System.Object)
+  - Dropbox.Api.Users.Routes.UsersUserRoutes.BeginGetAccount(Dropbox.Api.Users.GetAccountArg,System.AsyncCallback,System.Object)
+  - Dropbox.Api.Users.Routes.UsersUserRoutes.BeginGetAccount(System.String,System.AsyncCallback,System.Object)
+  - Dropbox.Api.Users.Routes.UsersUserRoutes.BeginGetAccountBatch(Dropbox.Api.Users.GetAccountBatchArg,System.AsyncCallback,System.Object)
+  - Dropbox.Api.Users.Routes.UsersUserRoutes.BeginGetAccountBatch(System.Collections.Generic.IEnumerable{System.String},System.AsyncCallback,System.Object)
+  - Dropbox.Api.Users.Routes.UsersUserRoutes.BeginGetCurrentAccount(System.AsyncCallback,System.Object)
+  - Dropbox.Api.Users.Routes.UsersUserRoutes.BeginGetSpaceUsage(System.AsyncCallback,System.Object)
+  - Dropbox.Api.Users.Routes.UsersUserRoutes.EndFeaturesGetValues(System.IAsyncResult)
+  - Dropbox.Api.Users.Routes.UsersUserRoutes.EndGetAccount(System.IAsyncResult)
+  - Dropbox.Api.Users.Routes.UsersUserRoutes.EndGetAccountBatch(System.IAsyncResult)
+  - Dropbox.Api.Users.Routes.UsersUserRoutes.EndGetCurrentAccount(System.IAsyncResult)
+  - Dropbox.Api.Users.Routes.UsersUserRoutes.EndGetSpaceUsage(System.IAsyncResult)
+  - Dropbox.Api.Users.Routes.UsersUserRoutes.FeaturesGetValuesAsync(Dropbox.Api.Users.UserFeaturesGetValuesBatchArg)
+  - Dropbox.Api.Users.Routes.UsersUserRoutes.FeaturesGetValuesAsync(System.Collections.Generic.IEnumerable{Dropbox.Api.Users.UserFeature})
+  - Dropbox.Api.Users.Routes.UsersUserRoutes.GetAccountAsync(Dropbox.Api.Users.GetAccountArg)
+  - Dropbox.Api.Users.Routes.UsersUserRoutes.GetAccountAsync(System.String)
+  - Dropbox.Api.Users.Routes.UsersUserRoutes.GetAccountBatchAsync(Dropbox.Api.Users.GetAccountBatchArg)
+  - Dropbox.Api.Users.Routes.UsersUserRoutes.GetAccountBatchAsync(System.Collections.Generic.IEnumerable{System.String})
+  - Dropbox.Api.Users.Routes.UsersUserRoutes.GetCurrentAccountAsync
+  - Dropbox.Api.Users.Routes.UsersUserRoutes.GetSpaceUsageAsync
+  langs:
+  - csharp
+  - vb
+  name: UsersUserRoutes
+  nameWithType: UsersUserRoutes
+  fullName: Dropbox.Api.Users.Routes.UsersUserRoutes
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/UsersUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: UsersUserRoutes
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/UsersUserRoutes.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users.Routes
+  summary: "\n<p>The routes for the <xref href=\"Dropbox.Api.Users\" data-throw-if-not-resolved=\"false\"></xref> namespace</p>\n"
+  example: []
+  syntax:
+    content: 'public class UsersUserRoutes : object'
+    content.vb: >-
+      Public Class UsersUserRoutes
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Users.Routes.UsersUserRoutes.FeaturesGetValuesAsync(Dropbox.Api.Users.UserFeaturesGetValuesBatchArg)
+  commentId: M:Dropbox.Api.Users.Routes.UsersUserRoutes.FeaturesGetValuesAsync(Dropbox.Api.Users.UserFeaturesGetValuesBatchArg)
+  id: FeaturesGetValuesAsync(Dropbox.Api.Users.UserFeaturesGetValuesBatchArg)
+  parent: Dropbox.Api.Users.Routes.UsersUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: FeaturesGetValuesAsync(UserFeaturesGetValuesBatchArg)
+  nameWithType: UsersUserRoutes.FeaturesGetValuesAsync(UserFeaturesGetValuesBatchArg)
+  fullName: Dropbox.Api.Users.Routes.UsersUserRoutes.FeaturesGetValuesAsync(Dropbox.Api.Users.UserFeaturesGetValuesBatchArg)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/UsersUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: FeaturesGetValuesAsync
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/UsersUserRoutes.cs
+    startLine: 42
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users.Routes
+  summary: "\n<p>Get a list of feature values that may be configured for the current\naccount.</p>\n"
+  example: []
+  syntax:
+    content: public System.Threading.Tasks.Task<UserFeaturesGetValuesBatchResult> FeaturesGetValuesAsync(UserFeaturesGetValuesBatchArg userFeaturesGetValuesBatchArg)
+    parameters:
+    - id: userFeaturesGetValuesBatchArg
+      type: Dropbox.Api.Users.UserFeaturesGetValuesBatchArg
+      description: The request parameters
+    return:
+      type: System.Threading.Tasks.Task{Dropbox.Api.Users.UserFeaturesGetValuesBatchResult}
+      description: >-
+        The task that represents the asynchronous send operation. The TResult
+
+        parameter contains the response from the server.
+    content.vb: Public Function FeaturesGetValuesAsync(userFeaturesGetValuesBatchArg As UserFeaturesGetValuesBatchArg) As System.Threading.Tasks.Task(Of UserFeaturesGetValuesBatchResult)
+  overload: Dropbox.Api.Users.Routes.UsersUserRoutes.FeaturesGetValuesAsync*
+  exceptions:
+  - type: Dropbox.Api.ApiException`1
+    commentId: T:Dropbox.Api.ApiException`1
+    description: >-
+      Thrown if there is an error
+
+      processing the request; This will contain a <xref href="Dropbox.Api.Users.UserFeaturesGetValuesBatchError" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Users.Routes.UsersUserRoutes.BeginFeaturesGetValues(Dropbox.Api.Users.UserFeaturesGetValuesBatchArg,System.AsyncCallback,System.Object)
+  commentId: M:Dropbox.Api.Users.Routes.UsersUserRoutes.BeginFeaturesGetValues(Dropbox.Api.Users.UserFeaturesGetValuesBatchArg,System.AsyncCallback,System.Object)
+  id: BeginFeaturesGetValues(Dropbox.Api.Users.UserFeaturesGetValuesBatchArg,System.AsyncCallback,System.Object)
+  parent: Dropbox.Api.Users.Routes.UsersUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: BeginFeaturesGetValues(UserFeaturesGetValuesBatchArg, System.AsyncCallback, Object)
+  nameWithType: UsersUserRoutes.BeginFeaturesGetValues(UserFeaturesGetValuesBatchArg, System.AsyncCallback, Object)
+  fullName: Dropbox.Api.Users.Routes.UsersUserRoutes.BeginFeaturesGetValues(Dropbox.Api.Users.UserFeaturesGetValuesBatchArg, System.AsyncCallback, System.Object)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/UsersUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: BeginFeaturesGetValues
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/UsersUserRoutes.cs
+    startLine: 56
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users.Routes
+  summary: "\n<p>Begins an asynchronous send to the features get values route.</p>\n"
+  example: []
+  syntax:
+    content: public System.IAsyncResult BeginFeaturesGetValues(UserFeaturesGetValuesBatchArg userFeaturesGetValuesBatchArg, System.AsyncCallback callback, object state = null)
+    parameters:
+    - id: userFeaturesGetValuesBatchArg
+      type: Dropbox.Api.Users.UserFeaturesGetValuesBatchArg
+      description: The request parameters.
+    - id: callback
+      type: System.AsyncCallback
+      description: >-
+        The method to be called when the asynchronous send is
+
+        completed.
+    - id: state
+      type: System.Object
+      description: >-
+        A user provided object that distinguished this send from other
+
+        send requests.
+    return:
+      type: System.IAsyncResult
+      description: An object that represents the asynchronous send request.
+    content.vb: Public Function BeginFeaturesGetValues(userFeaturesGetValuesBatchArg As UserFeaturesGetValuesBatchArg, callback As System.AsyncCallback, state As Object = Nothing) As System.IAsyncResult
+  overload: Dropbox.Api.Users.Routes.UsersUserRoutes.BeginFeaturesGetValues*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Users.Routes.UsersUserRoutes.FeaturesGetValuesAsync(System.Collections.Generic.IEnumerable{Dropbox.Api.Users.UserFeature})
+  commentId: M:Dropbox.Api.Users.Routes.UsersUserRoutes.FeaturesGetValuesAsync(System.Collections.Generic.IEnumerable{Dropbox.Api.Users.UserFeature})
+  id: FeaturesGetValuesAsync(System.Collections.Generic.IEnumerable{Dropbox.Api.Users.UserFeature})
+  parent: Dropbox.Api.Users.Routes.UsersUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: FeaturesGetValuesAsync(System.Collections.Generic.IEnumerable<UserFeature>)
+  nameWithType: UsersUserRoutes.FeaturesGetValuesAsync(System.Collections.Generic.IEnumerable<UserFeature>)
+  fullName: Dropbox.Api.Users.Routes.UsersUserRoutes.FeaturesGetValuesAsync(System.Collections.Generic.IEnumerable<Dropbox.Api.Users.UserFeature>)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/UsersUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: FeaturesGetValuesAsync
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/UsersUserRoutes.cs
+    startLine: 75
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users.Routes
+  summary: "\n<p>Get a list of feature values that may be configured for the current\naccount.</p>\n"
+  example: []
+  syntax:
+    content: public System.Threading.Tasks.Task<UserFeaturesGetValuesBatchResult> FeaturesGetValuesAsync(System.Collections.Generic.IEnumerable<UserFeature> features)
+    parameters:
+    - id: features
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.Users.UserFeature}
+      description: >-
+        A list of features in <xref href="Dropbox.Api.Users.UserFeature" data-throw-if-not-resolved="false"></xref>. If the
+
+        list is empty, this route will return <xref href="Dropbox.Api.Users.UserFeaturesGetValuesBatchError" data-throw-if-not-resolved="false"></xref>.
+    return:
+      type: System.Threading.Tasks.Task{Dropbox.Api.Users.UserFeaturesGetValuesBatchResult}
+      description: >-
+        The task that represents the asynchronous send operation. The TResult
+
+        parameter contains the response from the server.
+    content.vb: Public Function FeaturesGetValuesAsync(features As System.Collections.Generic.IEnumerable(Of UserFeature)) As System.Threading.Tasks.Task(Of UserFeaturesGetValuesBatchResult)
+  overload: Dropbox.Api.Users.Routes.UsersUserRoutes.FeaturesGetValuesAsync*
+  exceptions:
+  - type: Dropbox.Api.ApiException`1
+    commentId: T:Dropbox.Api.ApiException`1
+    description: >-
+      Thrown if there is an error
+
+      processing the request; This will contain a <xref href="Dropbox.Api.Users.UserFeaturesGetValuesBatchError" data-throw-if-not-resolved="false"></xref>.
+  nameWithType.vb: UsersUserRoutes.FeaturesGetValuesAsync(System.Collections.Generic.IEnumerable(Of UserFeature))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Users.Routes.UsersUserRoutes.FeaturesGetValuesAsync(System.Collections.Generic.IEnumerable(Of Dropbox.Api.Users.UserFeature))
+  name.vb: FeaturesGetValuesAsync(System.Collections.Generic.IEnumerable(Of UserFeature))
+- uid: Dropbox.Api.Users.Routes.UsersUserRoutes.BeginFeaturesGetValues(System.Collections.Generic.IEnumerable{Dropbox.Api.Users.UserFeature},System.AsyncCallback,System.Object)
+  commentId: M:Dropbox.Api.Users.Routes.UsersUserRoutes.BeginFeaturesGetValues(System.Collections.Generic.IEnumerable{Dropbox.Api.Users.UserFeature},System.AsyncCallback,System.Object)
+  id: BeginFeaturesGetValues(System.Collections.Generic.IEnumerable{Dropbox.Api.Users.UserFeature},System.AsyncCallback,System.Object)
+  parent: Dropbox.Api.Users.Routes.UsersUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: BeginFeaturesGetValues(System.Collections.Generic.IEnumerable<UserFeature>, System.AsyncCallback, Object)
+  nameWithType: UsersUserRoutes.BeginFeaturesGetValues(System.Collections.Generic.IEnumerable<UserFeature>, System.AsyncCallback, Object)
+  fullName: Dropbox.Api.Users.Routes.UsersUserRoutes.BeginFeaturesGetValues(System.Collections.Generic.IEnumerable<Dropbox.Api.Users.UserFeature>, System.AsyncCallback, System.Object)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/UsersUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: BeginFeaturesGetValues
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/UsersUserRoutes.cs
+    startLine: 93
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users.Routes
+  summary: "\n<p>Begins an asynchronous send to the features get values route.</p>\n"
+  example: []
+  syntax:
+    content: public System.IAsyncResult BeginFeaturesGetValues(System.Collections.Generic.IEnumerable<UserFeature> features, System.AsyncCallback callback, object callbackState = null)
+    parameters:
+    - id: features
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.Users.UserFeature}
+      description: >-
+        A list of features in <xref href="Dropbox.Api.Users.UserFeature" data-throw-if-not-resolved="false"></xref>. If the
+
+        list is empty, this route will return <xref href="Dropbox.Api.Users.UserFeaturesGetValuesBatchError" data-throw-if-not-resolved="false"></xref>.
+    - id: callback
+      type: System.AsyncCallback
+      description: >-
+        The method to be called when the asynchronous send is
+
+        completed.
+    - id: callbackState
+      type: System.Object
+      description: >-
+        A user provided object that distinguished this send
+
+        from other send requests.
+    return:
+      type: System.IAsyncResult
+      description: An object that represents the asynchronous send request.
+    content.vb: Public Function BeginFeaturesGetValues(features As System.Collections.Generic.IEnumerable(Of UserFeature), callback As System.AsyncCallback, callbackState As Object = Nothing) As System.IAsyncResult
+  overload: Dropbox.Api.Users.Routes.UsersUserRoutes.BeginFeaturesGetValues*
+  nameWithType.vb: UsersUserRoutes.BeginFeaturesGetValues(System.Collections.Generic.IEnumerable(Of UserFeature), System.AsyncCallback, Object)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Users.Routes.UsersUserRoutes.BeginFeaturesGetValues(System.Collections.Generic.IEnumerable(Of Dropbox.Api.Users.UserFeature), System.AsyncCallback, System.Object)
+  name.vb: BeginFeaturesGetValues(System.Collections.Generic.IEnumerable(Of UserFeature), System.AsyncCallback, Object)
+- uid: Dropbox.Api.Users.Routes.UsersUserRoutes.EndFeaturesGetValues(System.IAsyncResult)
+  commentId: M:Dropbox.Api.Users.Routes.UsersUserRoutes.EndFeaturesGetValues(System.IAsyncResult)
+  id: EndFeaturesGetValues(System.IAsyncResult)
+  parent: Dropbox.Api.Users.Routes.UsersUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: EndFeaturesGetValues(System.IAsyncResult)
+  nameWithType: UsersUserRoutes.EndFeaturesGetValues(System.IAsyncResult)
+  fullName: Dropbox.Api.Users.Routes.UsersUserRoutes.EndFeaturesGetValues(System.IAsyncResult)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/UsersUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: EndFeaturesGetValues
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/UsersUserRoutes.cs
+    startLine: 112
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users.Routes
+  summary: "\n<p>Waits for the pending asynchronous send to the features get values route to\ncomplete</p>\n"
+  example: []
+  syntax:
+    content: public UserFeaturesGetValuesBatchResult EndFeaturesGetValues(System.IAsyncResult asyncResult)
+    parameters:
+    - id: asyncResult
+      type: System.IAsyncResult
+      description: >-
+        The reference to the pending asynchronous send
+
+        request
+    return:
+      type: Dropbox.Api.Users.UserFeaturesGetValuesBatchResult
+      description: The response to the send request
+    content.vb: Public Function EndFeaturesGetValues(asyncResult As System.IAsyncResult) As UserFeaturesGetValuesBatchResult
+  overload: Dropbox.Api.Users.Routes.UsersUserRoutes.EndFeaturesGetValues*
+  exceptions:
+  - type: Dropbox.Api.ApiException`1
+    commentId: T:Dropbox.Api.ApiException`1
+    description: >-
+      Thrown if there is an error
+
+      processing the request; This will contain a <xref href="Dropbox.Api.Users.UserFeaturesGetValuesBatchError" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Users.Routes.UsersUserRoutes.GetAccountAsync(Dropbox.Api.Users.GetAccountArg)
+  commentId: M:Dropbox.Api.Users.Routes.UsersUserRoutes.GetAccountAsync(Dropbox.Api.Users.GetAccountArg)
+  id: GetAccountAsync(Dropbox.Api.Users.GetAccountArg)
+  parent: Dropbox.Api.Users.Routes.UsersUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: GetAccountAsync(GetAccountArg)
+  nameWithType: UsersUserRoutes.GetAccountAsync(GetAccountArg)
+  fullName: Dropbox.Api.Users.Routes.UsersUserRoutes.GetAccountAsync(Dropbox.Api.Users.GetAccountArg)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/UsersUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GetAccountAsync
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/UsersUserRoutes.cs
+    startLine: 132
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users.Routes
+  summary: "\n<p>Get information about a user&apos;s account.</p>\n"
+  example: []
+  syntax:
+    content: public System.Threading.Tasks.Task<BasicAccount> GetAccountAsync(GetAccountArg getAccountArg)
+    parameters:
+    - id: getAccountArg
+      type: Dropbox.Api.Users.GetAccountArg
+      description: The request parameters
+    return:
+      type: System.Threading.Tasks.Task{Dropbox.Api.Users.BasicAccount}
+      description: >-
+        The task that represents the asynchronous send operation. The TResult
+
+        parameter contains the response from the server.
+    content.vb: Public Function GetAccountAsync(getAccountArg As GetAccountArg) As System.Threading.Tasks.Task(Of BasicAccount)
+  overload: Dropbox.Api.Users.Routes.UsersUserRoutes.GetAccountAsync*
+  exceptions:
+  - type: Dropbox.Api.ApiException`1
+    commentId: T:Dropbox.Api.ApiException`1
+    description: >-
+      Thrown if there is an error
+
+      processing the request; This will contain a <xref href="Dropbox.Api.Users.GetAccountError" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Users.Routes.UsersUserRoutes.BeginGetAccount(Dropbox.Api.Users.GetAccountArg,System.AsyncCallback,System.Object)
+  commentId: M:Dropbox.Api.Users.Routes.UsersUserRoutes.BeginGetAccount(Dropbox.Api.Users.GetAccountArg,System.AsyncCallback,System.Object)
+  id: BeginGetAccount(Dropbox.Api.Users.GetAccountArg,System.AsyncCallback,System.Object)
+  parent: Dropbox.Api.Users.Routes.UsersUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: BeginGetAccount(GetAccountArg, System.AsyncCallback, Object)
+  nameWithType: UsersUserRoutes.BeginGetAccount(GetAccountArg, System.AsyncCallback, Object)
+  fullName: Dropbox.Api.Users.Routes.UsersUserRoutes.BeginGetAccount(Dropbox.Api.Users.GetAccountArg, System.AsyncCallback, System.Object)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/UsersUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: BeginGetAccount
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/UsersUserRoutes.cs
+    startLine: 146
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users.Routes
+  summary: "\n<p>Begins an asynchronous send to the get account route.</p>\n"
+  example: []
+  syntax:
+    content: public System.IAsyncResult BeginGetAccount(GetAccountArg getAccountArg, System.AsyncCallback callback, object state = null)
+    parameters:
+    - id: getAccountArg
+      type: Dropbox.Api.Users.GetAccountArg
+      description: The request parameters.
+    - id: callback
+      type: System.AsyncCallback
+      description: >-
+        The method to be called when the asynchronous send is
+
+        completed.
+    - id: state
+      type: System.Object
+      description: >-
+        A user provided object that distinguished this send from other
+
+        send requests.
+    return:
+      type: System.IAsyncResult
+      description: An object that represents the asynchronous send request.
+    content.vb: Public Function BeginGetAccount(getAccountArg As GetAccountArg, callback As System.AsyncCallback, state As Object = Nothing) As System.IAsyncResult
+  overload: Dropbox.Api.Users.Routes.UsersUserRoutes.BeginGetAccount*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Users.Routes.UsersUserRoutes.GetAccountAsync(System.String)
+  commentId: M:Dropbox.Api.Users.Routes.UsersUserRoutes.GetAccountAsync(System.String)
+  id: GetAccountAsync(System.String)
+  parent: Dropbox.Api.Users.Routes.UsersUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: GetAccountAsync(String)
+  nameWithType: UsersUserRoutes.GetAccountAsync(String)
+  fullName: Dropbox.Api.Users.Routes.UsersUserRoutes.GetAccountAsync(System.String)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/UsersUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GetAccountAsync
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/UsersUserRoutes.cs
+    startLine: 162
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users.Routes
+  summary: "\n<p>Get information about a user&apos;s account.</p>\n"
+  example: []
+  syntax:
+    content: public System.Threading.Tasks.Task<BasicAccount> GetAccountAsync(string accountId)
+    parameters:
+    - id: accountId
+      type: System.String
+      description: A user&apos;s account identifier.
+    return:
+      type: System.Threading.Tasks.Task{Dropbox.Api.Users.BasicAccount}
+      description: >-
+        The task that represents the asynchronous send operation. The TResult
+
+        parameter contains the response from the server.
+    content.vb: Public Function GetAccountAsync(accountId As String) As System.Threading.Tasks.Task(Of BasicAccount)
+  overload: Dropbox.Api.Users.Routes.UsersUserRoutes.GetAccountAsync*
+  exceptions:
+  - type: Dropbox.Api.ApiException`1
+    commentId: T:Dropbox.Api.ApiException`1
+    description: >-
+      Thrown if there is an error
+
+      processing the request; This will contain a <xref href="Dropbox.Api.Users.GetAccountError" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Users.Routes.UsersUserRoutes.BeginGetAccount(System.String,System.AsyncCallback,System.Object)
+  commentId: M:Dropbox.Api.Users.Routes.UsersUserRoutes.BeginGetAccount(System.String,System.AsyncCallback,System.Object)
+  id: BeginGetAccount(System.String,System.AsyncCallback,System.Object)
+  parent: Dropbox.Api.Users.Routes.UsersUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: BeginGetAccount(String, System.AsyncCallback, Object)
+  nameWithType: UsersUserRoutes.BeginGetAccount(String, System.AsyncCallback, Object)
+  fullName: Dropbox.Api.Users.Routes.UsersUserRoutes.BeginGetAccount(System.String, System.AsyncCallback, System.Object)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/UsersUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: BeginGetAccount
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/UsersUserRoutes.cs
+    startLine: 178
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users.Routes
+  summary: "\n<p>Begins an asynchronous send to the get account route.</p>\n"
+  example: []
+  syntax:
+    content: public System.IAsyncResult BeginGetAccount(string accountId, System.AsyncCallback callback, object callbackState = null)
+    parameters:
+    - id: accountId
+      type: System.String
+      description: A user&apos;s account identifier.
+    - id: callback
+      type: System.AsyncCallback
+      description: >-
+        The method to be called when the asynchronous send is
+
+        completed.
+    - id: callbackState
+      type: System.Object
+      description: >-
+        A user provided object that distinguished this send
+
+        from other send requests.
+    return:
+      type: System.IAsyncResult
+      description: An object that represents the asynchronous send request.
+    content.vb: Public Function BeginGetAccount(accountId As String, callback As System.AsyncCallback, callbackState As Object = Nothing) As System.IAsyncResult
+  overload: Dropbox.Api.Users.Routes.UsersUserRoutes.BeginGetAccount*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Users.Routes.UsersUserRoutes.EndGetAccount(System.IAsyncResult)
+  commentId: M:Dropbox.Api.Users.Routes.UsersUserRoutes.EndGetAccount(System.IAsyncResult)
+  id: EndGetAccount(System.IAsyncResult)
+  parent: Dropbox.Api.Users.Routes.UsersUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: EndGetAccount(System.IAsyncResult)
+  nameWithType: UsersUserRoutes.EndGetAccount(System.IAsyncResult)
+  fullName: Dropbox.Api.Users.Routes.UsersUserRoutes.EndGetAccount(System.IAsyncResult)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/UsersUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: EndGetAccount
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/UsersUserRoutes.cs
+    startLine: 197
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users.Routes
+  summary: "\n<p>Waits for the pending asynchronous send to the get account route to\ncomplete</p>\n"
+  example: []
+  syntax:
+    content: public BasicAccount EndGetAccount(System.IAsyncResult asyncResult)
+    parameters:
+    - id: asyncResult
+      type: System.IAsyncResult
+      description: >-
+        The reference to the pending asynchronous send
+
+        request
+    return:
+      type: Dropbox.Api.Users.BasicAccount
+      description: The response to the send request
+    content.vb: Public Function EndGetAccount(asyncResult As System.IAsyncResult) As BasicAccount
+  overload: Dropbox.Api.Users.Routes.UsersUserRoutes.EndGetAccount*
+  exceptions:
+  - type: Dropbox.Api.ApiException`1
+    commentId: T:Dropbox.Api.ApiException`1
+    description: >-
+      Thrown if there is an error
+
+      processing the request; This will contain a <xref href="Dropbox.Api.Users.GetAccountError" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Users.Routes.UsersUserRoutes.GetAccountBatchAsync(Dropbox.Api.Users.GetAccountBatchArg)
+  commentId: M:Dropbox.Api.Users.Routes.UsersUserRoutes.GetAccountBatchAsync(Dropbox.Api.Users.GetAccountBatchArg)
+  id: GetAccountBatchAsync(Dropbox.Api.Users.GetAccountBatchArg)
+  parent: Dropbox.Api.Users.Routes.UsersUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: GetAccountBatchAsync(GetAccountBatchArg)
+  nameWithType: UsersUserRoutes.GetAccountBatchAsync(GetAccountBatchArg)
+  fullName: Dropbox.Api.Users.Routes.UsersUserRoutes.GetAccountBatchAsync(Dropbox.Api.Users.GetAccountBatchArg)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/UsersUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GetAccountBatchAsync
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/UsersUserRoutes.cs
+    startLine: 218
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users.Routes
+  summary: "\n<p>Get information about multiple user accounts.  At most 300 accounts may be\nqueried per request.</p>\n"
+  example: []
+  syntax:
+    content: public System.Threading.Tasks.Task<System.Collections.Generic.List<BasicAccount>> GetAccountBatchAsync(GetAccountBatchArg getAccountBatchArg)
+    parameters:
+    - id: getAccountBatchArg
+      type: Dropbox.Api.Users.GetAccountBatchArg
+      description: The request parameters
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.List{Dropbox.Api.Users.BasicAccount}}
+      description: >-
+        The task that represents the asynchronous send operation. The TResult
+
+        parameter contains the response from the server.
+    content.vb: Public Function GetAccountBatchAsync(getAccountBatchArg As GetAccountBatchArg) As System.Threading.Tasks.Task(Of System.Collections.Generic.List(Of BasicAccount))
+  overload: Dropbox.Api.Users.Routes.UsersUserRoutes.GetAccountBatchAsync*
+  exceptions:
+  - type: Dropbox.Api.ApiException`1
+    commentId: T:Dropbox.Api.ApiException`1
+    description: >-
+      Thrown if there is an error
+
+      processing the request; This will contain a <xref href="Dropbox.Api.Users.GetAccountBatchError" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Users.Routes.UsersUserRoutes.BeginGetAccountBatch(Dropbox.Api.Users.GetAccountBatchArg,System.AsyncCallback,System.Object)
+  commentId: M:Dropbox.Api.Users.Routes.UsersUserRoutes.BeginGetAccountBatch(Dropbox.Api.Users.GetAccountBatchArg,System.AsyncCallback,System.Object)
+  id: BeginGetAccountBatch(Dropbox.Api.Users.GetAccountBatchArg,System.AsyncCallback,System.Object)
+  parent: Dropbox.Api.Users.Routes.UsersUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: BeginGetAccountBatch(GetAccountBatchArg, System.AsyncCallback, Object)
+  nameWithType: UsersUserRoutes.BeginGetAccountBatch(GetAccountBatchArg, System.AsyncCallback, Object)
+  fullName: Dropbox.Api.Users.Routes.UsersUserRoutes.BeginGetAccountBatch(Dropbox.Api.Users.GetAccountBatchArg, System.AsyncCallback, System.Object)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/UsersUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: BeginGetAccountBatch
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/UsersUserRoutes.cs
+    startLine: 232
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users.Routes
+  summary: "\n<p>Begins an asynchronous send to the get account batch route.</p>\n"
+  example: []
+  syntax:
+    content: public System.IAsyncResult BeginGetAccountBatch(GetAccountBatchArg getAccountBatchArg, System.AsyncCallback callback, object state = null)
+    parameters:
+    - id: getAccountBatchArg
+      type: Dropbox.Api.Users.GetAccountBatchArg
+      description: The request parameters.
+    - id: callback
+      type: System.AsyncCallback
+      description: >-
+        The method to be called when the asynchronous send is
+
+        completed.
+    - id: state
+      type: System.Object
+      description: >-
+        A user provided object that distinguished this send from other
+
+        send requests.
+    return:
+      type: System.IAsyncResult
+      description: An object that represents the asynchronous send request.
+    content.vb: Public Function BeginGetAccountBatch(getAccountBatchArg As GetAccountBatchArg, callback As System.AsyncCallback, state As Object = Nothing) As System.IAsyncResult
+  overload: Dropbox.Api.Users.Routes.UsersUserRoutes.BeginGetAccountBatch*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Users.Routes.UsersUserRoutes.GetAccountBatchAsync(System.Collections.Generic.IEnumerable{System.String})
+  commentId: M:Dropbox.Api.Users.Routes.UsersUserRoutes.GetAccountBatchAsync(System.Collections.Generic.IEnumerable{System.String})
+  id: GetAccountBatchAsync(System.Collections.Generic.IEnumerable{System.String})
+  parent: Dropbox.Api.Users.Routes.UsersUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: GetAccountBatchAsync(System.Collections.Generic.IEnumerable<String>)
+  nameWithType: UsersUserRoutes.GetAccountBatchAsync(System.Collections.Generic.IEnumerable<String>)
+  fullName: Dropbox.Api.Users.Routes.UsersUserRoutes.GetAccountBatchAsync(System.Collections.Generic.IEnumerable<System.String>)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/UsersUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GetAccountBatchAsync
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/UsersUserRoutes.cs
+    startLine: 250
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users.Routes
+  summary: "\n<p>Get information about multiple user accounts.  At most 300 accounts may be\nqueried per request.</p>\n"
+  example: []
+  syntax:
+    content: public System.Threading.Tasks.Task<System.Collections.Generic.List<BasicAccount>> GetAccountBatchAsync(System.Collections.Generic.IEnumerable<string> accountIds)
+    parameters:
+    - id: accountIds
+      type: System.Collections.Generic.IEnumerable{System.String}
+      description: >-
+        List of user account identifiers.  Should not contain any
+
+        duplicate account IDs.
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.List{Dropbox.Api.Users.BasicAccount}}
+      description: >-
+        The task that represents the asynchronous send operation. The TResult
+
+        parameter contains the response from the server.
+    content.vb: Public Function GetAccountBatchAsync(accountIds As System.Collections.Generic.IEnumerable(Of String)) As System.Threading.Tasks.Task(Of System.Collections.Generic.List(Of BasicAccount))
+  overload: Dropbox.Api.Users.Routes.UsersUserRoutes.GetAccountBatchAsync*
+  exceptions:
+  - type: Dropbox.Api.ApiException`1
+    commentId: T:Dropbox.Api.ApiException`1
+    description: >-
+      Thrown if there is an error
+
+      processing the request; This will contain a <xref href="Dropbox.Api.Users.GetAccountBatchError" data-throw-if-not-resolved="false"></xref>.
+  nameWithType.vb: UsersUserRoutes.GetAccountBatchAsync(System.Collections.Generic.IEnumerable(Of String))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Users.Routes.UsersUserRoutes.GetAccountBatchAsync(System.Collections.Generic.IEnumerable(Of System.String))
+  name.vb: GetAccountBatchAsync(System.Collections.Generic.IEnumerable(Of String))
+- uid: Dropbox.Api.Users.Routes.UsersUserRoutes.BeginGetAccountBatch(System.Collections.Generic.IEnumerable{System.String},System.AsyncCallback,System.Object)
+  commentId: M:Dropbox.Api.Users.Routes.UsersUserRoutes.BeginGetAccountBatch(System.Collections.Generic.IEnumerable{System.String},System.AsyncCallback,System.Object)
+  id: BeginGetAccountBatch(System.Collections.Generic.IEnumerable{System.String},System.AsyncCallback,System.Object)
+  parent: Dropbox.Api.Users.Routes.UsersUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: BeginGetAccountBatch(System.Collections.Generic.IEnumerable<String>, System.AsyncCallback, Object)
+  nameWithType: UsersUserRoutes.BeginGetAccountBatch(System.Collections.Generic.IEnumerable<String>, System.AsyncCallback, Object)
+  fullName: Dropbox.Api.Users.Routes.UsersUserRoutes.BeginGetAccountBatch(System.Collections.Generic.IEnumerable<System.String>, System.AsyncCallback, System.Object)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/UsersUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: BeginGetAccountBatch
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/UsersUserRoutes.cs
+    startLine: 267
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users.Routes
+  summary: "\n<p>Begins an asynchronous send to the get account batch route.</p>\n"
+  example: []
+  syntax:
+    content: public System.IAsyncResult BeginGetAccountBatch(System.Collections.Generic.IEnumerable<string> accountIds, System.AsyncCallback callback, object callbackState = null)
+    parameters:
+    - id: accountIds
+      type: System.Collections.Generic.IEnumerable{System.String}
+      description: >-
+        List of user account identifiers.  Should not contain any
+
+        duplicate account IDs.
+    - id: callback
+      type: System.AsyncCallback
+      description: >-
+        The method to be called when the asynchronous send is
+
+        completed.
+    - id: callbackState
+      type: System.Object
+      description: >-
+        A user provided object that distinguished this send
+
+        from other send requests.
+    return:
+      type: System.IAsyncResult
+      description: An object that represents the asynchronous send request.
+    content.vb: Public Function BeginGetAccountBatch(accountIds As System.Collections.Generic.IEnumerable(Of String), callback As System.AsyncCallback, callbackState As Object = Nothing) As System.IAsyncResult
+  overload: Dropbox.Api.Users.Routes.UsersUserRoutes.BeginGetAccountBatch*
+  nameWithType.vb: UsersUserRoutes.BeginGetAccountBatch(System.Collections.Generic.IEnumerable(Of String), System.AsyncCallback, Object)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Users.Routes.UsersUserRoutes.BeginGetAccountBatch(System.Collections.Generic.IEnumerable(Of System.String), System.AsyncCallback, System.Object)
+  name.vb: BeginGetAccountBatch(System.Collections.Generic.IEnumerable(Of String), System.AsyncCallback, Object)
+- uid: Dropbox.Api.Users.Routes.UsersUserRoutes.EndGetAccountBatch(System.IAsyncResult)
+  commentId: M:Dropbox.Api.Users.Routes.UsersUserRoutes.EndGetAccountBatch(System.IAsyncResult)
+  id: EndGetAccountBatch(System.IAsyncResult)
+  parent: Dropbox.Api.Users.Routes.UsersUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: EndGetAccountBatch(System.IAsyncResult)
+  nameWithType: UsersUserRoutes.EndGetAccountBatch(System.IAsyncResult)
+  fullName: Dropbox.Api.Users.Routes.UsersUserRoutes.EndGetAccountBatch(System.IAsyncResult)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/UsersUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: EndGetAccountBatch
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/UsersUserRoutes.cs
+    startLine: 286
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users.Routes
+  summary: "\n<p>Waits for the pending asynchronous send to the get account batch route to\ncomplete</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.List<BasicAccount> EndGetAccountBatch(System.IAsyncResult asyncResult)
+    parameters:
+    - id: asyncResult
+      type: System.IAsyncResult
+      description: >-
+        The reference to the pending asynchronous send
+
+        request
+    return:
+      type: System.Collections.Generic.List{Dropbox.Api.Users.BasicAccount}
+      description: The response to the send request
+    content.vb: Public Function EndGetAccountBatch(asyncResult As System.IAsyncResult) As System.Collections.Generic.List(Of BasicAccount)
+  overload: Dropbox.Api.Users.Routes.UsersUserRoutes.EndGetAccountBatch*
+  exceptions:
+  - type: Dropbox.Api.ApiException`1
+    commentId: T:Dropbox.Api.ApiException`1
+    description: >-
+      Thrown if there is an error
+
+      processing the request; This will contain a <xref href="Dropbox.Api.Users.GetAccountBatchError" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Users.Routes.UsersUserRoutes.GetCurrentAccountAsync
+  commentId: M:Dropbox.Api.Users.Routes.UsersUserRoutes.GetCurrentAccountAsync
+  id: GetCurrentAccountAsync
+  parent: Dropbox.Api.Users.Routes.UsersUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: GetCurrentAccountAsync()
+  nameWithType: UsersUserRoutes.GetCurrentAccountAsync()
+  fullName: Dropbox.Api.Users.Routes.UsersUserRoutes.GetCurrentAccountAsync()
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/UsersUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GetCurrentAccountAsync
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/UsersUserRoutes.cs
+    startLine: 302
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users.Routes
+  summary: "\n<p>Get information about the current user&apos;s account.</p>\n"
+  example: []
+  syntax:
+    content: public System.Threading.Tasks.Task<FullAccount> GetCurrentAccountAsync()
+    return:
+      type: System.Threading.Tasks.Task{Dropbox.Api.Users.FullAccount}
+      description: >-
+        The task that represents the asynchronous send operation. The TResult
+
+        parameter contains the response from the server.
+    content.vb: Public Function GetCurrentAccountAsync As System.Threading.Tasks.Task(Of FullAccount)
+  overload: Dropbox.Api.Users.Routes.UsersUserRoutes.GetCurrentAccountAsync*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Users.Routes.UsersUserRoutes.BeginGetCurrentAccount(System.AsyncCallback,System.Object)
+  commentId: M:Dropbox.Api.Users.Routes.UsersUserRoutes.BeginGetCurrentAccount(System.AsyncCallback,System.Object)
+  id: BeginGetCurrentAccount(System.AsyncCallback,System.Object)
+  parent: Dropbox.Api.Users.Routes.UsersUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: BeginGetCurrentAccount(System.AsyncCallback, Object)
+  nameWithType: UsersUserRoutes.BeginGetCurrentAccount(System.AsyncCallback, Object)
+  fullName: Dropbox.Api.Users.Routes.UsersUserRoutes.BeginGetCurrentAccount(System.AsyncCallback, System.Object)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/UsersUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: BeginGetCurrentAccount
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/UsersUserRoutes.cs
+    startLine: 315
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users.Routes
+  summary: "\n<p>Begins an asynchronous send to the get current account route.</p>\n"
+  example: []
+  syntax:
+    content: public System.IAsyncResult BeginGetCurrentAccount(System.AsyncCallback callback, object state = null)
+    parameters:
+    - id: callback
+      type: System.AsyncCallback
+      description: >-
+        The method to be called when the asynchronous send is
+
+        completed.
+    - id: state
+      type: System.Object
+      description: >-
+        A user provided object that distinguished this send from other
+
+        send requests.
+    return:
+      type: System.IAsyncResult
+      description: An object that represents the asynchronous send request.
+    content.vb: Public Function BeginGetCurrentAccount(callback As System.AsyncCallback, state As Object = Nothing) As System.IAsyncResult
+  overload: Dropbox.Api.Users.Routes.UsersUserRoutes.BeginGetCurrentAccount*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Users.Routes.UsersUserRoutes.EndGetCurrentAccount(System.IAsyncResult)
+  commentId: M:Dropbox.Api.Users.Routes.UsersUserRoutes.EndGetCurrentAccount(System.IAsyncResult)
+  id: EndGetCurrentAccount(System.IAsyncResult)
+  parent: Dropbox.Api.Users.Routes.UsersUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: EndGetCurrentAccount(System.IAsyncResult)
+  nameWithType: UsersUserRoutes.EndGetCurrentAccount(System.IAsyncResult)
+  fullName: Dropbox.Api.Users.Routes.UsersUserRoutes.EndGetCurrentAccount(System.IAsyncResult)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/UsersUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: EndGetCurrentAccount
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/UsersUserRoutes.cs
+    startLine: 329
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users.Routes
+  summary: "\n<p>Waits for the pending asynchronous send to the get current account route to\ncomplete</p>\n"
+  example: []
+  syntax:
+    content: public FullAccount EndGetCurrentAccount(System.IAsyncResult asyncResult)
+    parameters:
+    - id: asyncResult
+      type: System.IAsyncResult
+      description: >-
+        The reference to the pending asynchronous send
+
+        request
+    return:
+      type: Dropbox.Api.Users.FullAccount
+      description: The response to the send request
+    content.vb: Public Function EndGetCurrentAccount(asyncResult As System.IAsyncResult) As FullAccount
+  overload: Dropbox.Api.Users.Routes.UsersUserRoutes.EndGetCurrentAccount*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Users.Routes.UsersUserRoutes.GetSpaceUsageAsync
+  commentId: M:Dropbox.Api.Users.Routes.UsersUserRoutes.GetSpaceUsageAsync
+  id: GetSpaceUsageAsync
+  parent: Dropbox.Api.Users.Routes.UsersUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: GetSpaceUsageAsync()
+  nameWithType: UsersUserRoutes.GetSpaceUsageAsync()
+  fullName: Dropbox.Api.Users.Routes.UsersUserRoutes.GetSpaceUsageAsync()
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/UsersUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GetSpaceUsageAsync
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/UsersUserRoutes.cs
+    startLine: 345
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users.Routes
+  summary: "\n<p>Get the space usage information for the current user&apos;s account.</p>\n"
+  example: []
+  syntax:
+    content: public System.Threading.Tasks.Task<SpaceUsage> GetSpaceUsageAsync()
+    return:
+      type: System.Threading.Tasks.Task{Dropbox.Api.Users.SpaceUsage}
+      description: >-
+        The task that represents the asynchronous send operation. The TResult
+
+        parameter contains the response from the server.
+    content.vb: Public Function GetSpaceUsageAsync As System.Threading.Tasks.Task(Of SpaceUsage)
+  overload: Dropbox.Api.Users.Routes.UsersUserRoutes.GetSpaceUsageAsync*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Users.Routes.UsersUserRoutes.BeginGetSpaceUsage(System.AsyncCallback,System.Object)
+  commentId: M:Dropbox.Api.Users.Routes.UsersUserRoutes.BeginGetSpaceUsage(System.AsyncCallback,System.Object)
+  id: BeginGetSpaceUsage(System.AsyncCallback,System.Object)
+  parent: Dropbox.Api.Users.Routes.UsersUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: BeginGetSpaceUsage(System.AsyncCallback, Object)
+  nameWithType: UsersUserRoutes.BeginGetSpaceUsage(System.AsyncCallback, Object)
+  fullName: Dropbox.Api.Users.Routes.UsersUserRoutes.BeginGetSpaceUsage(System.AsyncCallback, System.Object)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/UsersUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: BeginGetSpaceUsage
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/UsersUserRoutes.cs
+    startLine: 358
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users.Routes
+  summary: "\n<p>Begins an asynchronous send to the get space usage route.</p>\n"
+  example: []
+  syntax:
+    content: public System.IAsyncResult BeginGetSpaceUsage(System.AsyncCallback callback, object state = null)
+    parameters:
+    - id: callback
+      type: System.AsyncCallback
+      description: >-
+        The method to be called when the asynchronous send is
+
+        completed.
+    - id: state
+      type: System.Object
+      description: >-
+        A user provided object that distinguished this send from other
+
+        send requests.
+    return:
+      type: System.IAsyncResult
+      description: An object that represents the asynchronous send request.
+    content.vb: Public Function BeginGetSpaceUsage(callback As System.AsyncCallback, state As Object = Nothing) As System.IAsyncResult
+  overload: Dropbox.Api.Users.Routes.UsersUserRoutes.BeginGetSpaceUsage*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Users.Routes.UsersUserRoutes.EndGetSpaceUsage(System.IAsyncResult)
+  commentId: M:Dropbox.Api.Users.Routes.UsersUserRoutes.EndGetSpaceUsage(System.IAsyncResult)
+  id: EndGetSpaceUsage(System.IAsyncResult)
+  parent: Dropbox.Api.Users.Routes.UsersUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: EndGetSpaceUsage(System.IAsyncResult)
+  nameWithType: UsersUserRoutes.EndGetSpaceUsage(System.IAsyncResult)
+  fullName: Dropbox.Api.Users.Routes.UsersUserRoutes.EndGetSpaceUsage(System.IAsyncResult)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/UsersUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: EndGetSpaceUsage
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/UsersUserRoutes.cs
+    startLine: 372
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users.Routes
+  summary: "\n<p>Waits for the pending asynchronous send to the get space usage route to\ncomplete</p>\n"
+  example: []
+  syntax:
+    content: public SpaceUsage EndGetSpaceUsage(System.IAsyncResult asyncResult)
+    parameters:
+    - id: asyncResult
+      type: System.IAsyncResult
+      description: >-
+        The reference to the pending asynchronous send
+
+        request
+    return:
+      type: Dropbox.Api.Users.SpaceUsage
+      description: The response to the send request
+    content.vb: Public Function EndGetSpaceUsage(asyncResult As System.IAsyncResult) As SpaceUsage
+  overload: Dropbox.Api.Users.Routes.UsersUserRoutes.EndGetSpaceUsage*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Dropbox.Api.Users
+  commentId: N:Dropbox.Api.Users
+  name: Dropbox.Api.Users
+  nameWithType: Dropbox.Api.Users
+  fullName: Dropbox.Api.Users
+- uid: Dropbox.Api.Users.Routes
+  commentId: N:Dropbox.Api.Users.Routes
+  name: Dropbox.Api.Users.Routes
+  nameWithType: Dropbox.Api.Users.Routes
+  fullName: Dropbox.Api.Users.Routes
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Users.UserFeaturesGetValuesBatchError
+  commentId: T:Dropbox.Api.Users.UserFeaturesGetValuesBatchError
+  parent: Dropbox.Api.Users
+  name: UserFeaturesGetValuesBatchError
+  nameWithType: UserFeaturesGetValuesBatchError
+  fullName: Dropbox.Api.Users.UserFeaturesGetValuesBatchError
+- uid: Dropbox.Api.ApiException`1
+  commentId: T:Dropbox.Api.ApiException`1
+  name: ApiException<TError>
+  nameWithType: ApiException<TError>
+  fullName: Dropbox.Api.ApiException<TError>
+  nameWithType.vb: ApiException(Of TError)
+  fullName.vb: Dropbox.Api.ApiException(Of TError)
+  name.vb: ApiException(Of TError)
+  spec.csharp:
+  - uid: Dropbox.Api.ApiException`1
+    name: ApiException
+    nameWithType: ApiException
+    fullName: Dropbox.Api.ApiException
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TError
+    nameWithType: TError
+    fullName: TError
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Dropbox.Api.ApiException`1
+    name: ApiException
+    nameWithType: ApiException
+    fullName: Dropbox.Api.ApiException
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TError
+    nameWithType: TError
+    fullName: TError
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Users.Routes.UsersUserRoutes.FeaturesGetValuesAsync*
+  commentId: Overload:Dropbox.Api.Users.Routes.UsersUserRoutes.FeaturesGetValuesAsync
+  name: FeaturesGetValuesAsync
+  nameWithType: UsersUserRoutes.FeaturesGetValuesAsync
+  fullName: Dropbox.Api.Users.Routes.UsersUserRoutes.FeaturesGetValuesAsync
+- uid: Dropbox.Api.Users.UserFeaturesGetValuesBatchArg
+  commentId: T:Dropbox.Api.Users.UserFeaturesGetValuesBatchArg
+  parent: Dropbox.Api.Users
+  name: UserFeaturesGetValuesBatchArg
+  nameWithType: UserFeaturesGetValuesBatchArg
+  fullName: Dropbox.Api.Users.UserFeaturesGetValuesBatchArg
+- uid: System.Threading.Tasks.Task{Dropbox.Api.Users.UserFeaturesGetValuesBatchResult}
+  commentId: '!:System.Threading.Tasks.Task{Dropbox.Api.Users.UserFeaturesGetValuesBatchResult}'
+  definition: System.Threading.Tasks.Task`1
+  name: System.Threading.Tasks.Task<UserFeaturesGetValuesBatchResult>
+  nameWithType: System.Threading.Tasks.Task<UserFeaturesGetValuesBatchResult>
+  fullName: System.Threading.Tasks.Task<Dropbox.Api.Users.UserFeaturesGetValuesBatchResult>
+  nameWithType.vb: System.Threading.Tasks.Task(Of UserFeaturesGetValuesBatchResult)
+  fullName.vb: System.Threading.Tasks.Task(Of Dropbox.Api.Users.UserFeaturesGetValuesBatchResult)
+  name.vb: System.Threading.Tasks.Task(Of UserFeaturesGetValuesBatchResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: System.Threading.Tasks.Task
+    nameWithType: System.Threading.Tasks.Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Users.UserFeaturesGetValuesBatchResult
+    name: UserFeaturesGetValuesBatchResult
+    nameWithType: UserFeaturesGetValuesBatchResult
+    fullName: Dropbox.Api.Users.UserFeaturesGetValuesBatchResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: System.Threading.Tasks.Task
+    nameWithType: System.Threading.Tasks.Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Users.UserFeaturesGetValuesBatchResult
+    name: UserFeaturesGetValuesBatchResult
+    nameWithType: UserFeaturesGetValuesBatchResult
+    fullName: Dropbox.Api.Users.UserFeaturesGetValuesBatchResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks.Task`1
+  isExternal: true
+  name: System.Threading.Tasks.Task<>
+  nameWithType: System.Threading.Tasks.Task<>
+  fullName: System.Threading.Tasks.Task<>
+  nameWithType.vb: System.Threading.Tasks.Task(Of )
+  fullName.vb: System.Threading.Tasks.Task(Of )
+  name.vb: System.Threading.Tasks.Task(Of )
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: System.Threading.Tasks.Task
+    nameWithType: System.Threading.Tasks.Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: System.Threading.Tasks.Task
+    nameWithType: System.Threading.Tasks.Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Users.Routes.UsersUserRoutes.BeginFeaturesGetValues*
+  commentId: Overload:Dropbox.Api.Users.Routes.UsersUserRoutes.BeginFeaturesGetValues
+  name: BeginFeaturesGetValues
+  nameWithType: UsersUserRoutes.BeginFeaturesGetValues
+  fullName: Dropbox.Api.Users.Routes.UsersUserRoutes.BeginFeaturesGetValues
+- uid: System.AsyncCallback
+  isExternal: true
+  name: System.AsyncCallback
+  nameWithType: System.AsyncCallback
+  fullName: System.AsyncCallback
+- uid: System.IAsyncResult
+  isExternal: true
+  name: System.IAsyncResult
+  nameWithType: System.IAsyncResult
+  fullName: System.IAsyncResult
+- uid: Dropbox.Api.Users.UserFeature
+  commentId: T:Dropbox.Api.Users.UserFeature
+  parent: Dropbox.Api.Users
+  name: UserFeature
+  nameWithType: UserFeature
+  fullName: Dropbox.Api.Users.UserFeature
+- uid: System.Collections.Generic.IEnumerable{Dropbox.Api.Users.UserFeature}
+  commentId: '!:System.Collections.Generic.IEnumerable{Dropbox.Api.Users.UserFeature}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<UserFeature>
+  nameWithType: System.Collections.Generic.IEnumerable<UserFeature>
+  fullName: System.Collections.Generic.IEnumerable<Dropbox.Api.Users.UserFeature>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of UserFeature)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Dropbox.Api.Users.UserFeature)
+  name.vb: System.Collections.Generic.IEnumerable(Of UserFeature)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Users.UserFeature
+    name: UserFeature
+    nameWithType: UserFeature
+    fullName: Dropbox.Api.Users.UserFeature
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Users.UserFeature
+    name: UserFeature
+    nameWithType: UserFeature
+    fullName: Dropbox.Api.Users.UserFeature
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: System.Collections.Generic.IEnumerable<>
+  nameWithType: System.Collections.Generic.IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: System.Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Users.Routes.UsersUserRoutes.EndFeaturesGetValues*
+  commentId: Overload:Dropbox.Api.Users.Routes.UsersUserRoutes.EndFeaturesGetValues
+  name: EndFeaturesGetValues
+  nameWithType: UsersUserRoutes.EndFeaturesGetValues
+  fullName: Dropbox.Api.Users.Routes.UsersUserRoutes.EndFeaturesGetValues
+- uid: Dropbox.Api.Users.UserFeaturesGetValuesBatchResult
+  commentId: T:Dropbox.Api.Users.UserFeaturesGetValuesBatchResult
+  parent: Dropbox.Api.Users
+  name: UserFeaturesGetValuesBatchResult
+  nameWithType: UserFeaturesGetValuesBatchResult
+  fullName: Dropbox.Api.Users.UserFeaturesGetValuesBatchResult
+- uid: Dropbox.Api.Users.GetAccountError
+  commentId: T:Dropbox.Api.Users.GetAccountError
+  parent: Dropbox.Api.Users
+  name: GetAccountError
+  nameWithType: GetAccountError
+  fullName: Dropbox.Api.Users.GetAccountError
+- uid: Dropbox.Api.Users.Routes.UsersUserRoutes.GetAccountAsync*
+  commentId: Overload:Dropbox.Api.Users.Routes.UsersUserRoutes.GetAccountAsync
+  name: GetAccountAsync
+  nameWithType: UsersUserRoutes.GetAccountAsync
+  fullName: Dropbox.Api.Users.Routes.UsersUserRoutes.GetAccountAsync
+- uid: Dropbox.Api.Users.GetAccountArg
+  commentId: T:Dropbox.Api.Users.GetAccountArg
+  parent: Dropbox.Api.Users
+  name: GetAccountArg
+  nameWithType: GetAccountArg
+  fullName: Dropbox.Api.Users.GetAccountArg
+- uid: System.Threading.Tasks.Task{Dropbox.Api.Users.BasicAccount}
+  commentId: '!:System.Threading.Tasks.Task{Dropbox.Api.Users.BasicAccount}'
+  definition: System.Threading.Tasks.Task`1
+  name: System.Threading.Tasks.Task<BasicAccount>
+  nameWithType: System.Threading.Tasks.Task<BasicAccount>
+  fullName: System.Threading.Tasks.Task<Dropbox.Api.Users.BasicAccount>
+  nameWithType.vb: System.Threading.Tasks.Task(Of BasicAccount)
+  fullName.vb: System.Threading.Tasks.Task(Of Dropbox.Api.Users.BasicAccount)
+  name.vb: System.Threading.Tasks.Task(Of BasicAccount)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: System.Threading.Tasks.Task
+    nameWithType: System.Threading.Tasks.Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Users.BasicAccount
+    name: BasicAccount
+    nameWithType: BasicAccount
+    fullName: Dropbox.Api.Users.BasicAccount
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: System.Threading.Tasks.Task
+    nameWithType: System.Threading.Tasks.Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Users.BasicAccount
+    name: BasicAccount
+    nameWithType: BasicAccount
+    fullName: Dropbox.Api.Users.BasicAccount
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Users.Routes.UsersUserRoutes.BeginGetAccount*
+  commentId: Overload:Dropbox.Api.Users.Routes.UsersUserRoutes.BeginGetAccount
+  name: BeginGetAccount
+  nameWithType: UsersUserRoutes.BeginGetAccount
+  fullName: Dropbox.Api.Users.Routes.UsersUserRoutes.BeginGetAccount
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Users.Routes.UsersUserRoutes.EndGetAccount*
+  commentId: Overload:Dropbox.Api.Users.Routes.UsersUserRoutes.EndGetAccount
+  name: EndGetAccount
+  nameWithType: UsersUserRoutes.EndGetAccount
+  fullName: Dropbox.Api.Users.Routes.UsersUserRoutes.EndGetAccount
+- uid: Dropbox.Api.Users.BasicAccount
+  commentId: T:Dropbox.Api.Users.BasicAccount
+  parent: Dropbox.Api.Users
+  name: BasicAccount
+  nameWithType: BasicAccount
+  fullName: Dropbox.Api.Users.BasicAccount
+- uid: Dropbox.Api.Users.GetAccountBatchError
+  commentId: T:Dropbox.Api.Users.GetAccountBatchError
+  parent: Dropbox.Api.Users
+  name: GetAccountBatchError
+  nameWithType: GetAccountBatchError
+  fullName: Dropbox.Api.Users.GetAccountBatchError
+- uid: Dropbox.Api.Users.Routes.UsersUserRoutes.GetAccountBatchAsync*
+  commentId: Overload:Dropbox.Api.Users.Routes.UsersUserRoutes.GetAccountBatchAsync
+  name: GetAccountBatchAsync
+  nameWithType: UsersUserRoutes.GetAccountBatchAsync
+  fullName: Dropbox.Api.Users.Routes.UsersUserRoutes.GetAccountBatchAsync
+- uid: Dropbox.Api.Users.GetAccountBatchArg
+  commentId: T:Dropbox.Api.Users.GetAccountBatchArg
+  parent: Dropbox.Api.Users
+  name: GetAccountBatchArg
+  nameWithType: GetAccountBatchArg
+  fullName: Dropbox.Api.Users.GetAccountBatchArg
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.List{Dropbox.Api.Users.BasicAccount}}
+  commentId: '!:System.Threading.Tasks.Task{System.Collections.Generic.List{Dropbox.Api.Users.BasicAccount}}'
+  definition: System.Threading.Tasks.Task`1
+  name: System.Threading.Tasks.Task<System.Collections.Generic.List<BasicAccount>>
+  nameWithType: System.Threading.Tasks.Task<System.Collections.Generic.List<BasicAccount>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.List<Dropbox.Api.Users.BasicAccount>>
+  nameWithType.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.List(Of BasicAccount))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.List(Of Dropbox.Api.Users.BasicAccount))
+  name.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.List(Of BasicAccount))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: System.Threading.Tasks.Task
+    nameWithType: System.Threading.Tasks.Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Collections.Generic.List`1
+    name: System.Collections.Generic.List
+    nameWithType: System.Collections.Generic.List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Users.BasicAccount
+    name: BasicAccount
+    nameWithType: BasicAccount
+    fullName: Dropbox.Api.Users.BasicAccount
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: System.Threading.Tasks.Task
+    nameWithType: System.Threading.Tasks.Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Collections.Generic.List`1
+    name: System.Collections.Generic.List
+    nameWithType: System.Collections.Generic.List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Users.BasicAccount
+    name: BasicAccount
+    nameWithType: BasicAccount
+    fullName: Dropbox.Api.Users.BasicAccount
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Users.Routes.UsersUserRoutes.BeginGetAccountBatch*
+  commentId: Overload:Dropbox.Api.Users.Routes.UsersUserRoutes.BeginGetAccountBatch
+  name: BeginGetAccountBatch
+  nameWithType: UsersUserRoutes.BeginGetAccountBatch
+  fullName: Dropbox.Api.Users.Routes.UsersUserRoutes.BeginGetAccountBatch
+- uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: '!:System.Collections.Generic.IEnumerable{System.String}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<String>
+  nameWithType: System.Collections.Generic.IEnumerable<String>
+  fullName: System.Collections.Generic.IEnumerable<System.String>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of String)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.String)
+  name.vb: System.Collections.Generic.IEnumerable(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Users.Routes.UsersUserRoutes.EndGetAccountBatch*
+  commentId: Overload:Dropbox.Api.Users.Routes.UsersUserRoutes.EndGetAccountBatch
+  name: EndGetAccountBatch
+  nameWithType: UsersUserRoutes.EndGetAccountBatch
+  fullName: Dropbox.Api.Users.Routes.UsersUserRoutes.EndGetAccountBatch
+- uid: System.Collections.Generic.List{Dropbox.Api.Users.BasicAccount}
+  commentId: '!:System.Collections.Generic.List{Dropbox.Api.Users.BasicAccount}'
+  definition: System.Collections.Generic.List`1
+  name: System.Collections.Generic.List<BasicAccount>
+  nameWithType: System.Collections.Generic.List<BasicAccount>
+  fullName: System.Collections.Generic.List<Dropbox.Api.Users.BasicAccount>
+  nameWithType.vb: System.Collections.Generic.List(Of BasicAccount)
+  fullName.vb: System.Collections.Generic.List(Of Dropbox.Api.Users.BasicAccount)
+  name.vb: System.Collections.Generic.List(Of BasicAccount)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: System.Collections.Generic.List
+    nameWithType: System.Collections.Generic.List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Users.BasicAccount
+    name: BasicAccount
+    nameWithType: BasicAccount
+    fullName: Dropbox.Api.Users.BasicAccount
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: System.Collections.Generic.List
+    nameWithType: System.Collections.Generic.List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Users.BasicAccount
+    name: BasicAccount
+    nameWithType: BasicAccount
+    fullName: Dropbox.Api.Users.BasicAccount
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  isExternal: true
+  name: System.Collections.Generic.List<>
+  nameWithType: System.Collections.Generic.List<>
+  fullName: System.Collections.Generic.List<>
+  nameWithType.vb: System.Collections.Generic.List(Of )
+  fullName.vb: System.Collections.Generic.List(Of )
+  name.vb: System.Collections.Generic.List(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: System.Collections.Generic.List
+    nameWithType: System.Collections.Generic.List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: System.Collections.Generic.List
+    nameWithType: System.Collections.Generic.List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Users.Routes.UsersUserRoutes.GetCurrentAccountAsync*
+  commentId: Overload:Dropbox.Api.Users.Routes.UsersUserRoutes.GetCurrentAccountAsync
+  name: GetCurrentAccountAsync
+  nameWithType: UsersUserRoutes.GetCurrentAccountAsync
+  fullName: Dropbox.Api.Users.Routes.UsersUserRoutes.GetCurrentAccountAsync
+- uid: System.Threading.Tasks.Task{Dropbox.Api.Users.FullAccount}
+  commentId: '!:System.Threading.Tasks.Task{Dropbox.Api.Users.FullAccount}'
+  definition: System.Threading.Tasks.Task`1
+  name: System.Threading.Tasks.Task<FullAccount>
+  nameWithType: System.Threading.Tasks.Task<FullAccount>
+  fullName: System.Threading.Tasks.Task<Dropbox.Api.Users.FullAccount>
+  nameWithType.vb: System.Threading.Tasks.Task(Of FullAccount)
+  fullName.vb: System.Threading.Tasks.Task(Of Dropbox.Api.Users.FullAccount)
+  name.vb: System.Threading.Tasks.Task(Of FullAccount)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: System.Threading.Tasks.Task
+    nameWithType: System.Threading.Tasks.Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Users.FullAccount
+    name: FullAccount
+    nameWithType: FullAccount
+    fullName: Dropbox.Api.Users.FullAccount
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: System.Threading.Tasks.Task
+    nameWithType: System.Threading.Tasks.Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Users.FullAccount
+    name: FullAccount
+    nameWithType: FullAccount
+    fullName: Dropbox.Api.Users.FullAccount
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Users.Routes.UsersUserRoutes.BeginGetCurrentAccount*
+  commentId: Overload:Dropbox.Api.Users.Routes.UsersUserRoutes.BeginGetCurrentAccount
+  name: BeginGetCurrentAccount
+  nameWithType: UsersUserRoutes.BeginGetCurrentAccount
+  fullName: Dropbox.Api.Users.Routes.UsersUserRoutes.BeginGetCurrentAccount
+- uid: Dropbox.Api.Users.Routes.UsersUserRoutes.EndGetCurrentAccount*
+  commentId: Overload:Dropbox.Api.Users.Routes.UsersUserRoutes.EndGetCurrentAccount
+  name: EndGetCurrentAccount
+  nameWithType: UsersUserRoutes.EndGetCurrentAccount
+  fullName: Dropbox.Api.Users.Routes.UsersUserRoutes.EndGetCurrentAccount
+- uid: Dropbox.Api.Users.FullAccount
+  commentId: T:Dropbox.Api.Users.FullAccount
+  parent: Dropbox.Api.Users
+  name: FullAccount
+  nameWithType: FullAccount
+  fullName: Dropbox.Api.Users.FullAccount
+- uid: Dropbox.Api.Users.Routes.UsersUserRoutes.GetSpaceUsageAsync*
+  commentId: Overload:Dropbox.Api.Users.Routes.UsersUserRoutes.GetSpaceUsageAsync
+  name: GetSpaceUsageAsync
+  nameWithType: UsersUserRoutes.GetSpaceUsageAsync
+  fullName: Dropbox.Api.Users.Routes.UsersUserRoutes.GetSpaceUsageAsync
+- uid: System.Threading.Tasks.Task{Dropbox.Api.Users.SpaceUsage}
+  commentId: '!:System.Threading.Tasks.Task{Dropbox.Api.Users.SpaceUsage}'
+  definition: System.Threading.Tasks.Task`1
+  name: System.Threading.Tasks.Task<SpaceUsage>
+  nameWithType: System.Threading.Tasks.Task<SpaceUsage>
+  fullName: System.Threading.Tasks.Task<Dropbox.Api.Users.SpaceUsage>
+  nameWithType.vb: System.Threading.Tasks.Task(Of SpaceUsage)
+  fullName.vb: System.Threading.Tasks.Task(Of Dropbox.Api.Users.SpaceUsage)
+  name.vb: System.Threading.Tasks.Task(Of SpaceUsage)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: System.Threading.Tasks.Task
+    nameWithType: System.Threading.Tasks.Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Users.SpaceUsage
+    name: SpaceUsage
+    nameWithType: SpaceUsage
+    fullName: Dropbox.Api.Users.SpaceUsage
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: System.Threading.Tasks.Task
+    nameWithType: System.Threading.Tasks.Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Users.SpaceUsage
+    name: SpaceUsage
+    nameWithType: SpaceUsage
+    fullName: Dropbox.Api.Users.SpaceUsage
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Users.Routes.UsersUserRoutes.BeginGetSpaceUsage*
+  commentId: Overload:Dropbox.Api.Users.Routes.UsersUserRoutes.BeginGetSpaceUsage
+  name: BeginGetSpaceUsage
+  nameWithType: UsersUserRoutes.BeginGetSpaceUsage
+  fullName: Dropbox.Api.Users.Routes.UsersUserRoutes.BeginGetSpaceUsage
+- uid: Dropbox.Api.Users.Routes.UsersUserRoutes.EndGetSpaceUsage*
+  commentId: Overload:Dropbox.Api.Users.Routes.UsersUserRoutes.EndGetSpaceUsage
+  name: EndGetSpaceUsage
+  nameWithType: UsersUserRoutes.EndGetSpaceUsage
+  fullName: Dropbox.Api.Users.Routes.UsersUserRoutes.EndGetSpaceUsage
+- uid: Dropbox.Api.Users.SpaceUsage
+  commentId: T:Dropbox.Api.Users.SpaceUsage
+  parent: Dropbox.Api.Users
+  name: SpaceUsage
+  nameWithType: SpaceUsage
+  fullName: Dropbox.Api.Users.SpaceUsage
+shouldSkipMarkup: true

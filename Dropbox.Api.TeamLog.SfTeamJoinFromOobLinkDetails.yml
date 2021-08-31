@@ -1,0 +1,336 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.SfTeamJoinFromOobLinkDetails
+  commentId: T:Dropbox.Api.TeamLog.SfTeamJoinFromOobLinkDetails
+  id: SfTeamJoinFromOobLinkDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.SfTeamJoinFromOobLinkDetails.#ctor
+  - Dropbox.Api.TeamLog.SfTeamJoinFromOobLinkDetails.#ctor(System.UInt64,System.String,System.String,System.String)
+  - Dropbox.Api.TeamLog.SfTeamJoinFromOobLinkDetails.OriginalFolderName
+  - Dropbox.Api.TeamLog.SfTeamJoinFromOobLinkDetails.SharingPermission
+  - Dropbox.Api.TeamLog.SfTeamJoinFromOobLinkDetails.TargetAssetIndex
+  - Dropbox.Api.TeamLog.SfTeamJoinFromOobLinkDetails.TokenKey
+  langs:
+  - csharp
+  - vb
+  name: SfTeamJoinFromOobLinkDetails
+  nameWithType: SfTeamJoinFromOobLinkDetails
+  fullName: Dropbox.Api.TeamLog.SfTeamJoinFromOobLinkDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SfTeamJoinFromOobLinkDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SfTeamJoinFromOobLinkDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SfTeamJoinFromOobLinkDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Joined team member&apos;s shared folder from link.</p>\n"
+  example: []
+  syntax:
+    content: 'public class SfTeamJoinFromOobLinkDetails : object'
+    content.vb: >-
+      Public Class SfTeamJoinFromOobLinkDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.SfTeamJoinFromOobLinkDetails.#ctor(System.UInt64,System.String,System.String,System.String)
+  commentId: M:Dropbox.Api.TeamLog.SfTeamJoinFromOobLinkDetails.#ctor(System.UInt64,System.String,System.String,System.String)
+  id: '#ctor(System.UInt64,System.String,System.String,System.String)'
+  parent: Dropbox.Api.TeamLog.SfTeamJoinFromOobLinkDetails
+  langs:
+  - csharp
+  - vb
+  name: SfTeamJoinFromOobLinkDetails(UInt64, String, String, String)
+  nameWithType: SfTeamJoinFromOobLinkDetails.SfTeamJoinFromOobLinkDetails(UInt64, String, String, String)
+  fullName: Dropbox.Api.TeamLog.SfTeamJoinFromOobLinkDetails.SfTeamJoinFromOobLinkDetails(System.UInt64, System.String, System.String, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SfTeamJoinFromOobLinkDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SfTeamJoinFromOobLinkDetails.cs
+    startLine: 37
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SfTeamJoinFromOobLinkDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public SfTeamJoinFromOobLinkDetails(ulong targetAssetIndex, string originalFolderName, string tokenKey = null, string sharingPermission = null)
+    parameters:
+    - id: targetAssetIndex
+      type: System.UInt64
+      description: Target asset position in the Assets list.
+    - id: originalFolderName
+      type: System.String
+      description: Original shared folder name.
+    - id: tokenKey
+      type: System.String
+      description: Shared link token key.
+    - id: sharingPermission
+      type: System.String
+      description: Sharing permission.
+    content.vb: Public Sub New(targetAssetIndex As ULong, originalFolderName As String, tokenKey As String = Nothing, sharingPermission As String = Nothing)
+  overload: Dropbox.Api.TeamLog.SfTeamJoinFromOobLinkDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SfTeamJoinFromOobLinkDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.SfTeamJoinFromOobLinkDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.SfTeamJoinFromOobLinkDetails
+  langs:
+  - csharp
+  - vb
+  name: SfTeamJoinFromOobLinkDetails()
+  nameWithType: SfTeamJoinFromOobLinkDetails.SfTeamJoinFromOobLinkDetails()
+  fullName: Dropbox.Api.TeamLog.SfTeamJoinFromOobLinkDetails.SfTeamJoinFromOobLinkDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SfTeamJoinFromOobLinkDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SfTeamJoinFromOobLinkDetails.cs
+    startLine: 59
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SfTeamJoinFromOobLinkDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public SfTeamJoinFromOobLinkDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.SfTeamJoinFromOobLinkDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SfTeamJoinFromOobLinkDetails.TargetAssetIndex
+  commentId: P:Dropbox.Api.TeamLog.SfTeamJoinFromOobLinkDetails.TargetAssetIndex
+  id: TargetAssetIndex
+  parent: Dropbox.Api.TeamLog.SfTeamJoinFromOobLinkDetails
+  langs:
+  - csharp
+  - vb
+  name: TargetAssetIndex
+  nameWithType: SfTeamJoinFromOobLinkDetails.TargetAssetIndex
+  fullName: Dropbox.Api.TeamLog.SfTeamJoinFromOobLinkDetails.TargetAssetIndex
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SfTeamJoinFromOobLinkDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TargetAssetIndex
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SfTeamJoinFromOobLinkDetails.cs
+    startLine: 67
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Target asset position in the Assets list.</p>\n"
+  example: []
+  syntax:
+    content: public ulong TargetAssetIndex { get; protected set; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: Public Property TargetAssetIndex As ULong
+  overload: Dropbox.Api.TeamLog.SfTeamJoinFromOobLinkDetails.TargetAssetIndex*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.SfTeamJoinFromOobLinkDetails.OriginalFolderName
+  commentId: P:Dropbox.Api.TeamLog.SfTeamJoinFromOobLinkDetails.OriginalFolderName
+  id: OriginalFolderName
+  parent: Dropbox.Api.TeamLog.SfTeamJoinFromOobLinkDetails
+  langs:
+  - csharp
+  - vb
+  name: OriginalFolderName
+  nameWithType: SfTeamJoinFromOobLinkDetails.OriginalFolderName
+  fullName: Dropbox.Api.TeamLog.SfTeamJoinFromOobLinkDetails.OriginalFolderName
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SfTeamJoinFromOobLinkDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: OriginalFolderName
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SfTeamJoinFromOobLinkDetails.cs
+    startLine: 72
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Original shared folder name.</p>\n"
+  example: []
+  syntax:
+    content: public string OriginalFolderName { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property OriginalFolderName As String
+  overload: Dropbox.Api.TeamLog.SfTeamJoinFromOobLinkDetails.OriginalFolderName*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.SfTeamJoinFromOobLinkDetails.TokenKey
+  commentId: P:Dropbox.Api.TeamLog.SfTeamJoinFromOobLinkDetails.TokenKey
+  id: TokenKey
+  parent: Dropbox.Api.TeamLog.SfTeamJoinFromOobLinkDetails
+  langs:
+  - csharp
+  - vb
+  name: TokenKey
+  nameWithType: SfTeamJoinFromOobLinkDetails.TokenKey
+  fullName: Dropbox.Api.TeamLog.SfTeamJoinFromOobLinkDetails.TokenKey
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SfTeamJoinFromOobLinkDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TokenKey
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SfTeamJoinFromOobLinkDetails.cs
+    startLine: 77
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Shared link token key.</p>\n"
+  example: []
+  syntax:
+    content: public string TokenKey { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property TokenKey As String
+  overload: Dropbox.Api.TeamLog.SfTeamJoinFromOobLinkDetails.TokenKey*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.SfTeamJoinFromOobLinkDetails.SharingPermission
+  commentId: P:Dropbox.Api.TeamLog.SfTeamJoinFromOobLinkDetails.SharingPermission
+  id: SharingPermission
+  parent: Dropbox.Api.TeamLog.SfTeamJoinFromOobLinkDetails
+  langs:
+  - csharp
+  - vb
+  name: SharingPermission
+  nameWithType: SfTeamJoinFromOobLinkDetails.SharingPermission
+  fullName: Dropbox.Api.TeamLog.SfTeamJoinFromOobLinkDetails.SharingPermission
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SfTeamJoinFromOobLinkDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SharingPermission
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SfTeamJoinFromOobLinkDetails.cs
+    startLine: 82
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Sharing permission.</p>\n"
+  example: []
+  syntax:
+    content: public string SharingPermission { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SharingPermission As String
+  overload: Dropbox.Api.TeamLog.SfTeamJoinFromOobLinkDetails.SharingPermission*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.SfTeamJoinFromOobLinkDetails
+  commentId: T:Dropbox.Api.TeamLog.SfTeamJoinFromOobLinkDetails
+  parent: Dropbox.Api.TeamLog
+  name: SfTeamJoinFromOobLinkDetails
+  nameWithType: SfTeamJoinFromOobLinkDetails
+  fullName: Dropbox.Api.TeamLog.SfTeamJoinFromOobLinkDetails
+- uid: Dropbox.Api.TeamLog.SfTeamJoinFromOobLinkDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.SfTeamJoinFromOobLinkDetails.#ctor
+  name: SfTeamJoinFromOobLinkDetails
+  nameWithType: SfTeamJoinFromOobLinkDetails.SfTeamJoinFromOobLinkDetails
+  fullName: Dropbox.Api.TeamLog.SfTeamJoinFromOobLinkDetails.SfTeamJoinFromOobLinkDetails
+- uid: System.UInt64
+  isExternal: true
+  name: UInt64
+  nameWithType: UInt64
+  fullName: System.UInt64
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.SfTeamJoinFromOobLinkDetails.TargetAssetIndex*
+  commentId: Overload:Dropbox.Api.TeamLog.SfTeamJoinFromOobLinkDetails.TargetAssetIndex
+  name: TargetAssetIndex
+  nameWithType: SfTeamJoinFromOobLinkDetails.TargetAssetIndex
+  fullName: Dropbox.Api.TeamLog.SfTeamJoinFromOobLinkDetails.TargetAssetIndex
+- uid: Dropbox.Api.TeamLog.SfTeamJoinFromOobLinkDetails.OriginalFolderName*
+  commentId: Overload:Dropbox.Api.TeamLog.SfTeamJoinFromOobLinkDetails.OriginalFolderName
+  name: OriginalFolderName
+  nameWithType: SfTeamJoinFromOobLinkDetails.OriginalFolderName
+  fullName: Dropbox.Api.TeamLog.SfTeamJoinFromOobLinkDetails.OriginalFolderName
+- uid: Dropbox.Api.TeamLog.SfTeamJoinFromOobLinkDetails.TokenKey*
+  commentId: Overload:Dropbox.Api.TeamLog.SfTeamJoinFromOobLinkDetails.TokenKey
+  name: TokenKey
+  nameWithType: SfTeamJoinFromOobLinkDetails.TokenKey
+  fullName: Dropbox.Api.TeamLog.SfTeamJoinFromOobLinkDetails.TokenKey
+- uid: Dropbox.Api.TeamLog.SfTeamJoinFromOobLinkDetails.SharingPermission*
+  commentId: Overload:Dropbox.Api.TeamLog.SfTeamJoinFromOobLinkDetails.SharingPermission
+  name: SharingPermission
+  nameWithType: SfTeamJoinFromOobLinkDetails.SharingPermission
+  fullName: Dropbox.Api.TeamLog.SfTeamJoinFromOobLinkDetails.SharingPermission
+shouldSkipMarkup: true

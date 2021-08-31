@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.AccountCaptureMigrateAccountType
+  commentId: T:Dropbox.Api.TeamLog.AccountCaptureMigrateAccountType
+  id: AccountCaptureMigrateAccountType
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.AccountCaptureMigrateAccountType.#ctor
+  - Dropbox.Api.TeamLog.AccountCaptureMigrateAccountType.#ctor(System.String)
+  - Dropbox.Api.TeamLog.AccountCaptureMigrateAccountType.Description
+  langs:
+  - csharp
+  - vb
+  name: AccountCaptureMigrateAccountType
+  nameWithType: AccountCaptureMigrateAccountType
+  fullName: Dropbox.Api.TeamLog.AccountCaptureMigrateAccountType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AccountCaptureMigrateAccountType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AccountCaptureMigrateAccountType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AccountCaptureMigrateAccountType.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The account capture migrate account type object</p>\n"
+  example: []
+  syntax:
+    content: 'public class AccountCaptureMigrateAccountType : object'
+    content.vb: >-
+      Public Class AccountCaptureMigrateAccountType
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.AccountCaptureMigrateAccountType.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.AccountCaptureMigrateAccountType.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.AccountCaptureMigrateAccountType
+  langs:
+  - csharp
+  - vb
+  name: AccountCaptureMigrateAccountType(String)
+  nameWithType: AccountCaptureMigrateAccountType.AccountCaptureMigrateAccountType(String)
+  fullName: Dropbox.Api.TeamLog.AccountCaptureMigrateAccountType.AccountCaptureMigrateAccountType(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AccountCaptureMigrateAccountType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AccountCaptureMigrateAccountType.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.AccountCaptureMigrateAccountType\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public AccountCaptureMigrateAccountType(string description)
+    parameters:
+    - id: description
+      type: System.String
+      description: The description
+    content.vb: Public Sub New(description As String)
+  overload: Dropbox.Api.TeamLog.AccountCaptureMigrateAccountType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.AccountCaptureMigrateAccountType.#ctor
+  commentId: M:Dropbox.Api.TeamLog.AccountCaptureMigrateAccountType.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.AccountCaptureMigrateAccountType
+  langs:
+  - csharp
+  - vb
+  name: AccountCaptureMigrateAccountType()
+  nameWithType: AccountCaptureMigrateAccountType.AccountCaptureMigrateAccountType()
+  fullName: Dropbox.Api.TeamLog.AccountCaptureMigrateAccountType.AccountCaptureMigrateAccountType()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AccountCaptureMigrateAccountType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AccountCaptureMigrateAccountType.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.AccountCaptureMigrateAccountType\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public AccountCaptureMigrateAccountType()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.AccountCaptureMigrateAccountType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.AccountCaptureMigrateAccountType.Description
+  commentId: P:Dropbox.Api.TeamLog.AccountCaptureMigrateAccountType.Description
+  id: Description
+  parent: Dropbox.Api.TeamLog.AccountCaptureMigrateAccountType
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: AccountCaptureMigrateAccountType.Description
+  fullName: Dropbox.Api.TeamLog.AccountCaptureMigrateAccountType.Description
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AccountCaptureMigrateAccountType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Description
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AccountCaptureMigrateAccountType.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets the description of the account capture migrate account type</p>\n"
+  example: []
+  syntax:
+    content: public string Description { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Dropbox.Api.TeamLog.AccountCaptureMigrateAccountType.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.AccountCaptureMigrateAccountType
+  commentId: T:Dropbox.Api.TeamLog.AccountCaptureMigrateAccountType
+  parent: Dropbox.Api.TeamLog
+  name: AccountCaptureMigrateAccountType
+  nameWithType: AccountCaptureMigrateAccountType
+  fullName: Dropbox.Api.TeamLog.AccountCaptureMigrateAccountType
+- uid: Dropbox.Api.TeamLog.AccountCaptureMigrateAccountType.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.AccountCaptureMigrateAccountType.#ctor
+  name: AccountCaptureMigrateAccountType
+  nameWithType: AccountCaptureMigrateAccountType.AccountCaptureMigrateAccountType
+  fullName: Dropbox.Api.TeamLog.AccountCaptureMigrateAccountType.AccountCaptureMigrateAccountType
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.AccountCaptureMigrateAccountType.Description*
+  commentId: Overload:Dropbox.Api.TeamLog.AccountCaptureMigrateAccountType.Description
+  name: Description
+  nameWithType: AccountCaptureMigrateAccountType.Description
+  fullName: Dropbox.Api.TeamLog.AccountCaptureMigrateAccountType.Description
+shouldSkipMarkup: true

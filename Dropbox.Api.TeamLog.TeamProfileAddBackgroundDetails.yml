@@ -1,0 +1,96 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.TeamProfileAddBackgroundDetails
+  commentId: T:Dropbox.Api.TeamLog.TeamProfileAddBackgroundDetails
+  id: TeamProfileAddBackgroundDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.TeamProfileAddBackgroundDetails.#ctor
+  langs:
+  - csharp
+  - vb
+  name: TeamProfileAddBackgroundDetails
+  nameWithType: TeamProfileAddBackgroundDetails
+  fullName: Dropbox.Api.TeamLog.TeamProfileAddBackgroundDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamProfileAddBackgroundDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TeamProfileAddBackgroundDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamProfileAddBackgroundDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Added team background to display on shared link headers.</p>\n"
+  example: []
+  syntax:
+    content: 'public class TeamProfileAddBackgroundDetails : object'
+    content.vb: >-
+      Public Class TeamProfileAddBackgroundDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.TeamProfileAddBackgroundDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.TeamProfileAddBackgroundDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.TeamProfileAddBackgroundDetails
+  langs:
+  - csharp
+  - vb
+  name: TeamProfileAddBackgroundDetails()
+  nameWithType: TeamProfileAddBackgroundDetails.TeamProfileAddBackgroundDetails()
+  fullName: Dropbox.Api.TeamLog.TeamProfileAddBackgroundDetails.TeamProfileAddBackgroundDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamProfileAddBackgroundDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamProfileAddBackgroundDetails.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.TeamProfileAddBackgroundDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public TeamProfileAddBackgroundDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.TeamProfileAddBackgroundDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.TeamProfileAddBackgroundDetails
+  commentId: T:Dropbox.Api.TeamLog.TeamProfileAddBackgroundDetails
+  parent: Dropbox.Api.TeamLog
+  name: TeamProfileAddBackgroundDetails
+  nameWithType: TeamProfileAddBackgroundDetails
+  fullName: Dropbox.Api.TeamLog.TeamProfileAddBackgroundDetails
+- uid: Dropbox.Api.TeamLog.TeamProfileAddBackgroundDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.TeamProfileAddBackgroundDetails.#ctor
+  name: TeamProfileAddBackgroundDetails
+  nameWithType: TeamProfileAddBackgroundDetails.TeamProfileAddBackgroundDetails
+  fullName: Dropbox.Api.TeamLog.TeamProfileAddBackgroundDetails.TeamProfileAddBackgroundDetails
+shouldSkipMarkup: true

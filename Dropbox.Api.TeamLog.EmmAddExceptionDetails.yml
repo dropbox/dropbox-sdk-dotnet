@@ -1,0 +1,96 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.EmmAddExceptionDetails
+  commentId: T:Dropbox.Api.TeamLog.EmmAddExceptionDetails
+  id: EmmAddExceptionDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.EmmAddExceptionDetails.#ctor
+  langs:
+  - csharp
+  - vb
+  name: EmmAddExceptionDetails
+  nameWithType: EmmAddExceptionDetails
+  fullName: Dropbox.Api.TeamLog.EmmAddExceptionDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EmmAddExceptionDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: EmmAddExceptionDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EmmAddExceptionDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Added members to EMM exception list.</p>\n"
+  example: []
+  syntax:
+    content: 'public class EmmAddExceptionDetails : object'
+    content.vb: >-
+      Public Class EmmAddExceptionDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.EmmAddExceptionDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.EmmAddExceptionDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.EmmAddExceptionDetails
+  langs:
+  - csharp
+  - vb
+  name: EmmAddExceptionDetails()
+  nameWithType: EmmAddExceptionDetails.EmmAddExceptionDetails()
+  fullName: Dropbox.Api.TeamLog.EmmAddExceptionDetails.EmmAddExceptionDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EmmAddExceptionDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EmmAddExceptionDetails.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.EmmAddExceptionDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public EmmAddExceptionDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.EmmAddExceptionDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.EmmAddExceptionDetails
+  commentId: T:Dropbox.Api.TeamLog.EmmAddExceptionDetails
+  parent: Dropbox.Api.TeamLog
+  name: EmmAddExceptionDetails
+  nameWithType: EmmAddExceptionDetails
+  fullName: Dropbox.Api.TeamLog.EmmAddExceptionDetails
+- uid: Dropbox.Api.TeamLog.EmmAddExceptionDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.EmmAddExceptionDetails.#ctor
+  name: EmmAddExceptionDetails
+  nameWithType: EmmAddExceptionDetails.EmmAddExceptionDetails
+  fullName: Dropbox.Api.TeamLog.EmmAddExceptionDetails.EmmAddExceptionDetails
+shouldSkipMarkup: true

@@ -1,0 +1,288 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Async.LaunchEmptyResult
+  commentId: T:Dropbox.Api.Async.LaunchEmptyResult
+  id: LaunchEmptyResult
+  parent: Dropbox.Api.Async
+  children:
+  - Dropbox.Api.Async.LaunchEmptyResult.#ctor
+  - Dropbox.Api.Async.LaunchEmptyResult.AsAsyncJobId
+  - Dropbox.Api.Async.LaunchEmptyResult.AsComplete
+  - Dropbox.Api.Async.LaunchEmptyResult.IsAsyncJobId
+  - Dropbox.Api.Async.LaunchEmptyResult.IsComplete
+  langs:
+  - csharp
+  - vb
+  name: LaunchEmptyResult
+  nameWithType: LaunchEmptyResult
+  fullName: Dropbox.Api.Async.LaunchEmptyResult
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Async/LaunchEmptyResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: LaunchEmptyResult
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Async/LaunchEmptyResult.cs
+    startLine: 17
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Async
+  summary: "\n<p>Result returned by methods that may either launch an asynchronous job or complete\nsynchronously. Upon synchronous completion of the job, no additional information is\nreturned.</p>\n"
+  example: []
+  syntax:
+    content: 'public class LaunchEmptyResult : object'
+    content.vb: >-
+      Public Class LaunchEmptyResult
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Async.LaunchEmptyResult.AsyncJobId
+  - Dropbox.Api.Async.LaunchEmptyResult.Complete
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Async.LaunchEmptyResult.#ctor
+  commentId: M:Dropbox.Api.Async.LaunchEmptyResult.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Async.LaunchEmptyResult
+  langs:
+  - csharp
+  - vb
+  name: LaunchEmptyResult()
+  nameWithType: LaunchEmptyResult.LaunchEmptyResult()
+  fullName: Dropbox.Api.Async.LaunchEmptyResult.LaunchEmptyResult()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Async/LaunchEmptyResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Async/LaunchEmptyResult.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Async
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Async.LaunchEmptyResult\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public LaunchEmptyResult()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Async.LaunchEmptyResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Async.LaunchEmptyResult.IsComplete
+  commentId: P:Dropbox.Api.Async.LaunchEmptyResult.IsComplete
+  id: IsComplete
+  parent: Dropbox.Api.Async.LaunchEmptyResult
+  langs:
+  - csharp
+  - vb
+  name: IsComplete
+  nameWithType: LaunchEmptyResult.IsComplete
+  fullName: Dropbox.Api.Async.LaunchEmptyResult.IsComplete
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Async/LaunchEmptyResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsComplete
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Async/LaunchEmptyResult.cs
+    startLine: 42
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Async
+  summary: "\n<p>Gets a value indicating whether this instance is Complete</p>\n"
+  example: []
+  syntax:
+    content: public bool IsComplete { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsComplete As Boolean
+  overload: Dropbox.Api.Async.LaunchEmptyResult.IsComplete*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Async.LaunchEmptyResult.AsComplete
+  commentId: P:Dropbox.Api.Async.LaunchEmptyResult.AsComplete
+  id: AsComplete
+  parent: Dropbox.Api.Async.LaunchEmptyResult
+  langs:
+  - csharp
+  - vb
+  name: AsComplete
+  nameWithType: LaunchEmptyResult.AsComplete
+  fullName: Dropbox.Api.Async.LaunchEmptyResult.AsComplete
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Async/LaunchEmptyResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsComplete
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Async/LaunchEmptyResult.cs
+    startLine: 53
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Async
+  summary: "\n<p>Gets this instance as a Complete, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public LaunchEmptyResult.Complete AsComplete { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Async.LaunchEmptyResult.Complete
+    content.vb: Public ReadOnly Property AsComplete As LaunchEmptyResult.Complete
+  overload: Dropbox.Api.Async.LaunchEmptyResult.AsComplete*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Async.LaunchEmptyResult.IsAsyncJobId
+  commentId: P:Dropbox.Api.Async.LaunchEmptyResult.IsAsyncJobId
+  id: IsAsyncJobId
+  parent: Dropbox.Api.Async.LaunchEmptyResult
+  langs:
+  - csharp
+  - vb
+  name: IsAsyncJobId
+  nameWithType: LaunchEmptyResult.IsAsyncJobId
+  fullName: Dropbox.Api.Async.LaunchEmptyResult.IsAsyncJobId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Async/LaunchEmptyResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsAsyncJobId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Async/LaunchEmptyResult.cs
+    startLine: 64
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Async
+  summary: "\n<p>Gets a value indicating whether this instance is AsyncJobId</p>\n"
+  example: []
+  syntax:
+    content: public bool IsAsyncJobId { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsAsyncJobId As Boolean
+  overload: Dropbox.Api.Async.LaunchEmptyResult.IsAsyncJobId*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Async.LaunchEmptyResult.AsAsyncJobId
+  commentId: P:Dropbox.Api.Async.LaunchEmptyResult.AsAsyncJobId
+  id: AsAsyncJobId
+  parent: Dropbox.Api.Async.LaunchEmptyResult
+  langs:
+  - csharp
+  - vb
+  name: AsAsyncJobId
+  nameWithType: LaunchEmptyResult.AsAsyncJobId
+  fullName: Dropbox.Api.Async.LaunchEmptyResult.AsAsyncJobId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Async/LaunchEmptyResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsAsyncJobId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Async/LaunchEmptyResult.cs
+    startLine: 75
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Async
+  summary: "\n<p>Gets this instance as a AsyncJobId, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public LaunchEmptyResult.AsyncJobId AsAsyncJobId { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Async.LaunchEmptyResult.AsyncJobId
+    content.vb: Public ReadOnly Property AsAsyncJobId As LaunchEmptyResult.AsyncJobId
+  overload: Dropbox.Api.Async.LaunchEmptyResult.AsAsyncJobId*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Async
+  commentId: N:Dropbox.Api.Async
+  name: Dropbox.Api.Async
+  nameWithType: Dropbox.Api.Async
+  fullName: Dropbox.Api.Async
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Async.LaunchEmptyResult
+  commentId: T:Dropbox.Api.Async.LaunchEmptyResult
+  parent: Dropbox.Api.Async
+  name: LaunchEmptyResult
+  nameWithType: LaunchEmptyResult
+  fullName: Dropbox.Api.Async.LaunchEmptyResult
+- uid: Dropbox.Api.Async.LaunchEmptyResult.#ctor*
+  commentId: Overload:Dropbox.Api.Async.LaunchEmptyResult.#ctor
+  name: LaunchEmptyResult
+  nameWithType: LaunchEmptyResult.LaunchEmptyResult
+  fullName: Dropbox.Api.Async.LaunchEmptyResult.LaunchEmptyResult
+- uid: Dropbox.Api.Async.LaunchEmptyResult.IsComplete*
+  commentId: Overload:Dropbox.Api.Async.LaunchEmptyResult.IsComplete
+  name: IsComplete
+  nameWithType: LaunchEmptyResult.IsComplete
+  fullName: Dropbox.Api.Async.LaunchEmptyResult.IsComplete
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Async.LaunchEmptyResult.AsComplete*
+  commentId: Overload:Dropbox.Api.Async.LaunchEmptyResult.AsComplete
+  name: AsComplete
+  nameWithType: LaunchEmptyResult.AsComplete
+  fullName: Dropbox.Api.Async.LaunchEmptyResult.AsComplete
+- uid: Dropbox.Api.Async.LaunchEmptyResult.Complete
+  commentId: T:Dropbox.Api.Async.LaunchEmptyResult.Complete
+  parent: Dropbox.Api.Async
+  name: LaunchEmptyResult.Complete
+  nameWithType: LaunchEmptyResult.Complete
+  fullName: Dropbox.Api.Async.LaunchEmptyResult.Complete
+- uid: Dropbox.Api.Async.LaunchEmptyResult.IsAsyncJobId*
+  commentId: Overload:Dropbox.Api.Async.LaunchEmptyResult.IsAsyncJobId
+  name: IsAsyncJobId
+  nameWithType: LaunchEmptyResult.IsAsyncJobId
+  fullName: Dropbox.Api.Async.LaunchEmptyResult.IsAsyncJobId
+- uid: Dropbox.Api.Async.LaunchEmptyResult.AsAsyncJobId*
+  commentId: Overload:Dropbox.Api.Async.LaunchEmptyResult.AsAsyncJobId
+  name: AsAsyncJobId
+  nameWithType: LaunchEmptyResult.AsAsyncJobId
+  fullName: Dropbox.Api.Async.LaunchEmptyResult.AsAsyncJobId
+- uid: Dropbox.Api.Async.LaunchEmptyResult.AsyncJobId
+  commentId: T:Dropbox.Api.Async.LaunchEmptyResult.AsyncJobId
+  parent: Dropbox.Api.Async
+  name: LaunchEmptyResult.AsyncJobId
+  nameWithType: LaunchEmptyResult.AsyncJobId
+  fullName: Dropbox.Api.Async.LaunchEmptyResult.AsyncJobId
+shouldSkipMarkup: true

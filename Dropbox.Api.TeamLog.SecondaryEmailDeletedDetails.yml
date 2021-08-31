@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.SecondaryEmailDeletedDetails
+  commentId: T:Dropbox.Api.TeamLog.SecondaryEmailDeletedDetails
+  id: SecondaryEmailDeletedDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.SecondaryEmailDeletedDetails.#ctor
+  - Dropbox.Api.TeamLog.SecondaryEmailDeletedDetails.#ctor(System.String)
+  - Dropbox.Api.TeamLog.SecondaryEmailDeletedDetails.SecondaryEmail
+  langs:
+  - csharp
+  - vb
+  name: SecondaryEmailDeletedDetails
+  nameWithType: SecondaryEmailDeletedDetails
+  fullName: Dropbox.Api.TeamLog.SecondaryEmailDeletedDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SecondaryEmailDeletedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SecondaryEmailDeletedDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SecondaryEmailDeletedDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Deleted secondary email.</p>\n"
+  example: []
+  syntax:
+    content: 'public class SecondaryEmailDeletedDetails : object'
+    content.vb: >-
+      Public Class SecondaryEmailDeletedDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.SecondaryEmailDeletedDetails.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.SecondaryEmailDeletedDetails.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.SecondaryEmailDeletedDetails
+  langs:
+  - csharp
+  - vb
+  name: SecondaryEmailDeletedDetails(String)
+  nameWithType: SecondaryEmailDeletedDetails.SecondaryEmailDeletedDetails(String)
+  fullName: Dropbox.Api.TeamLog.SecondaryEmailDeletedDetails.SecondaryEmailDeletedDetails(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SecondaryEmailDeletedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SecondaryEmailDeletedDetails.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SecondaryEmailDeletedDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public SecondaryEmailDeletedDetails(string secondaryEmail)
+    parameters:
+    - id: secondaryEmail
+      type: System.String
+      description: Deleted secondary email.
+    content.vb: Public Sub New(secondaryEmail As String)
+  overload: Dropbox.Api.TeamLog.SecondaryEmailDeletedDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SecondaryEmailDeletedDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.SecondaryEmailDeletedDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.SecondaryEmailDeletedDetails
+  langs:
+  - csharp
+  - vb
+  name: SecondaryEmailDeletedDetails()
+  nameWithType: SecondaryEmailDeletedDetails.SecondaryEmailDeletedDetails()
+  fullName: Dropbox.Api.TeamLog.SecondaryEmailDeletedDetails.SecondaryEmailDeletedDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SecondaryEmailDeletedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SecondaryEmailDeletedDetails.cs
+    startLine: 54
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SecondaryEmailDeletedDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public SecondaryEmailDeletedDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.SecondaryEmailDeletedDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SecondaryEmailDeletedDetails.SecondaryEmail
+  commentId: P:Dropbox.Api.TeamLog.SecondaryEmailDeletedDetails.SecondaryEmail
+  id: SecondaryEmail
+  parent: Dropbox.Api.TeamLog.SecondaryEmailDeletedDetails
+  langs:
+  - csharp
+  - vb
+  name: SecondaryEmail
+  nameWithType: SecondaryEmailDeletedDetails.SecondaryEmail
+  fullName: Dropbox.Api.TeamLog.SecondaryEmailDeletedDetails.SecondaryEmail
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SecondaryEmailDeletedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SecondaryEmail
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SecondaryEmailDeletedDetails.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Deleted secondary email.</p>\n"
+  example: []
+  syntax:
+    content: public string SecondaryEmail { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SecondaryEmail As String
+  overload: Dropbox.Api.TeamLog.SecondaryEmailDeletedDetails.SecondaryEmail*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.SecondaryEmailDeletedDetails
+  commentId: T:Dropbox.Api.TeamLog.SecondaryEmailDeletedDetails
+  parent: Dropbox.Api.TeamLog
+  name: SecondaryEmailDeletedDetails
+  nameWithType: SecondaryEmailDeletedDetails
+  fullName: Dropbox.Api.TeamLog.SecondaryEmailDeletedDetails
+- uid: Dropbox.Api.TeamLog.SecondaryEmailDeletedDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.SecondaryEmailDeletedDetails.#ctor
+  name: SecondaryEmailDeletedDetails
+  nameWithType: SecondaryEmailDeletedDetails.SecondaryEmailDeletedDetails
+  fullName: Dropbox.Api.TeamLog.SecondaryEmailDeletedDetails.SecondaryEmailDeletedDetails
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.SecondaryEmailDeletedDetails.SecondaryEmail*
+  commentId: Overload:Dropbox.Api.TeamLog.SecondaryEmailDeletedDetails.SecondaryEmail
+  name: SecondaryEmail
+  nameWithType: SecondaryEmailDeletedDetails.SecondaryEmail
+  fullName: Dropbox.Api.TeamLog.SecondaryEmailDeletedDetails.SecondaryEmail
+shouldSkipMarkup: true

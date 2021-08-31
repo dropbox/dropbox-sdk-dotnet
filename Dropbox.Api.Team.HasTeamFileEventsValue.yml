@@ -1,0 +1,294 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.HasTeamFileEventsValue
+  commentId: T:Dropbox.Api.Team.HasTeamFileEventsValue
+  id: HasTeamFileEventsValue
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.HasTeamFileEventsValue.#ctor
+  - Dropbox.Api.Team.HasTeamFileEventsValue.AsEnabled
+  - Dropbox.Api.Team.HasTeamFileEventsValue.AsOther
+  - Dropbox.Api.Team.HasTeamFileEventsValue.IsEnabled
+  - Dropbox.Api.Team.HasTeamFileEventsValue.IsOther
+  langs:
+  - csharp
+  - vb
+  name: HasTeamFileEventsValue
+  nameWithType: HasTeamFileEventsValue
+  fullName: Dropbox.Api.Team.HasTeamFileEventsValue
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/HasTeamFileEventsValue.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: HasTeamFileEventsValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/HasTeamFileEventsValue.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The value for <xref href=\"Dropbox.Api.Team.Feature.HasTeamFileEvents\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+  example: []
+  syntax:
+    content: 'public class HasTeamFileEventsValue : object'
+    content.vb: >-
+      Public Class HasTeamFileEventsValue
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Team.HasTeamFileEventsValue.Enabled
+  - Dropbox.Api.Team.HasTeamFileEventsValue.Other
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.HasTeamFileEventsValue.#ctor
+  commentId: M:Dropbox.Api.Team.HasTeamFileEventsValue.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.HasTeamFileEventsValue
+  langs:
+  - csharp
+  - vb
+  name: HasTeamFileEventsValue()
+  nameWithType: HasTeamFileEventsValue.HasTeamFileEventsValue()
+  fullName: Dropbox.Api.Team.HasTeamFileEventsValue.HasTeamFileEventsValue()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/HasTeamFileEventsValue.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/HasTeamFileEventsValue.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.HasTeamFileEventsValue\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public HasTeamFileEventsValue()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.HasTeamFileEventsValue.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.HasTeamFileEventsValue.IsEnabled
+  commentId: P:Dropbox.Api.Team.HasTeamFileEventsValue.IsEnabled
+  id: IsEnabled
+  parent: Dropbox.Api.Team.HasTeamFileEventsValue
+  langs:
+  - csharp
+  - vb
+  name: IsEnabled
+  nameWithType: HasTeamFileEventsValue.IsEnabled
+  fullName: Dropbox.Api.Team.HasTeamFileEventsValue.IsEnabled
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/HasTeamFileEventsValue.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsEnabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/HasTeamFileEventsValue.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is Enabled</p>\n"
+  example: []
+  syntax:
+    content: public bool IsEnabled { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsEnabled As Boolean
+  overload: Dropbox.Api.Team.HasTeamFileEventsValue.IsEnabled*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.HasTeamFileEventsValue.AsEnabled
+  commentId: P:Dropbox.Api.Team.HasTeamFileEventsValue.AsEnabled
+  id: AsEnabled
+  parent: Dropbox.Api.Team.HasTeamFileEventsValue
+  langs:
+  - csharp
+  - vb
+  name: AsEnabled
+  nameWithType: HasTeamFileEventsValue.AsEnabled
+  fullName: Dropbox.Api.Team.HasTeamFileEventsValue.AsEnabled
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/HasTeamFileEventsValue.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsEnabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/HasTeamFileEventsValue.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a Enabled, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public HasTeamFileEventsValue.Enabled AsEnabled { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.HasTeamFileEventsValue.Enabled
+    content.vb: Public ReadOnly Property AsEnabled As HasTeamFileEventsValue.Enabled
+  overload: Dropbox.Api.Team.HasTeamFileEventsValue.AsEnabled*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.HasTeamFileEventsValue.IsOther
+  commentId: P:Dropbox.Api.Team.HasTeamFileEventsValue.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Team.HasTeamFileEventsValue
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: HasTeamFileEventsValue.IsOther
+  fullName: Dropbox.Api.Team.HasTeamFileEventsValue.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/HasTeamFileEventsValue.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/HasTeamFileEventsValue.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Team.HasTeamFileEventsValue.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.HasTeamFileEventsValue.AsOther
+  commentId: P:Dropbox.Api.Team.HasTeamFileEventsValue.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Team.HasTeamFileEventsValue
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: HasTeamFileEventsValue.AsOther
+  fullName: Dropbox.Api.Team.HasTeamFileEventsValue.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/HasTeamFileEventsValue.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/HasTeamFileEventsValue.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public HasTeamFileEventsValue.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.HasTeamFileEventsValue.Other
+    content.vb: Public ReadOnly Property AsOther As HasTeamFileEventsValue.Other
+  overload: Dropbox.Api.Team.HasTeamFileEventsValue.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team.Feature.HasTeamFileEvents
+  commentId: T:Dropbox.Api.Team.Feature.HasTeamFileEvents
+  parent: Dropbox.Api.Team
+  name: Feature.HasTeamFileEvents
+  nameWithType: Feature.HasTeamFileEvents
+  fullName: Dropbox.Api.Team.Feature.HasTeamFileEvents
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.HasTeamFileEventsValue
+  commentId: T:Dropbox.Api.Team.HasTeamFileEventsValue
+  parent: Dropbox.Api.Team
+  name: HasTeamFileEventsValue
+  nameWithType: HasTeamFileEventsValue
+  fullName: Dropbox.Api.Team.HasTeamFileEventsValue
+- uid: Dropbox.Api.Team.HasTeamFileEventsValue.#ctor*
+  commentId: Overload:Dropbox.Api.Team.HasTeamFileEventsValue.#ctor
+  name: HasTeamFileEventsValue
+  nameWithType: HasTeamFileEventsValue.HasTeamFileEventsValue
+  fullName: Dropbox.Api.Team.HasTeamFileEventsValue.HasTeamFileEventsValue
+- uid: Dropbox.Api.Team.HasTeamFileEventsValue.IsEnabled*
+  commentId: Overload:Dropbox.Api.Team.HasTeamFileEventsValue.IsEnabled
+  name: IsEnabled
+  nameWithType: HasTeamFileEventsValue.IsEnabled
+  fullName: Dropbox.Api.Team.HasTeamFileEventsValue.IsEnabled
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Team.HasTeamFileEventsValue.AsEnabled*
+  commentId: Overload:Dropbox.Api.Team.HasTeamFileEventsValue.AsEnabled
+  name: AsEnabled
+  nameWithType: HasTeamFileEventsValue.AsEnabled
+  fullName: Dropbox.Api.Team.HasTeamFileEventsValue.AsEnabled
+- uid: Dropbox.Api.Team.HasTeamFileEventsValue.Enabled
+  commentId: T:Dropbox.Api.Team.HasTeamFileEventsValue.Enabled
+  parent: Dropbox.Api.Team
+  name: HasTeamFileEventsValue.Enabled
+  nameWithType: HasTeamFileEventsValue.Enabled
+  fullName: Dropbox.Api.Team.HasTeamFileEventsValue.Enabled
+- uid: Dropbox.Api.Team.HasTeamFileEventsValue.IsOther*
+  commentId: Overload:Dropbox.Api.Team.HasTeamFileEventsValue.IsOther
+  name: IsOther
+  nameWithType: HasTeamFileEventsValue.IsOther
+  fullName: Dropbox.Api.Team.HasTeamFileEventsValue.IsOther
+- uid: Dropbox.Api.Team.HasTeamFileEventsValue.AsOther*
+  commentId: Overload:Dropbox.Api.Team.HasTeamFileEventsValue.AsOther
+  name: AsOther
+  nameWithType: HasTeamFileEventsValue.AsOther
+  fullName: Dropbox.Api.Team.HasTeamFileEventsValue.AsOther
+- uid: Dropbox.Api.Team.HasTeamFileEventsValue.Other
+  commentId: T:Dropbox.Api.Team.HasTeamFileEventsValue.Other
+  parent: Dropbox.Api.Team
+  name: HasTeamFileEventsValue.Other
+  nameWithType: HasTeamFileEventsValue.Other
+  fullName: Dropbox.Api.Team.HasTeamFileEventsValue.Other
+shouldSkipMarkup: true

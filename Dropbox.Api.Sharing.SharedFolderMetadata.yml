@@ -1,0 +1,899 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.SharedFolderMetadata
+  commentId: T:Dropbox.Api.Sharing.SharedFolderMetadata
+  id: SharedFolderMetadata
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.SharedFolderMetadata.#ctor
+  - Dropbox.Api.Sharing.SharedFolderMetadata.#ctor(Dropbox.Api.Sharing.AccessLevel,System.Boolean,System.Boolean,System.String,Dropbox.Api.Sharing.FolderPolicy,System.String,System.String,System.DateTime,System.Collections.Generic.IEnumerable{System.String},Dropbox.Api.Users.Team,System.String,System.String,System.String,Dropbox.Api.Sharing.SharedContentLinkMetadata,System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.FolderPermission},Dropbox.Api.Sharing.AccessInheritance)
+  - Dropbox.Api.Sharing.SharedFolderMetadata.AccessInheritance
+  - Dropbox.Api.Sharing.SharedFolderMetadata.LinkMetadata
+  - Dropbox.Api.Sharing.SharedFolderMetadata.Name
+  - Dropbox.Api.Sharing.SharedFolderMetadata.Permissions
+  - Dropbox.Api.Sharing.SharedFolderMetadata.Policy
+  - Dropbox.Api.Sharing.SharedFolderMetadata.PreviewUrl
+  - Dropbox.Api.Sharing.SharedFolderMetadata.SharedFolderId
+  - Dropbox.Api.Sharing.SharedFolderMetadata.TimeInvited
+  langs:
+  - csharp
+  - vb
+  name: SharedFolderMetadata
+  nameWithType: SharedFolderMetadata
+  fullName: Dropbox.Api.Sharing.SharedFolderMetadata
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedFolderMetadata.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SharedFolderMetadata
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedFolderMetadata.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The metadata which includes basic information about the shared folder.</p>\n"
+  example: []
+  syntax:
+    content: 'public class SharedFolderMetadata : SharedFolderMetadataBase'
+    content.vb: >-
+      Public Class SharedFolderMetadata
+          Inherits SharedFolderMetadataBase
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Sharing.SharedFolderMetadataBase
+  inheritedMembers:
+  - Dropbox.Api.Sharing.SharedFolderMetadataBase.AccessType
+  - Dropbox.Api.Sharing.SharedFolderMetadataBase.IsInsideTeamFolder
+  - Dropbox.Api.Sharing.SharedFolderMetadataBase.IsTeamFolder
+  - Dropbox.Api.Sharing.SharedFolderMetadataBase.OwnerDisplayNames
+  - Dropbox.Api.Sharing.SharedFolderMetadataBase.OwnerTeam
+  - Dropbox.Api.Sharing.SharedFolderMetadataBase.ParentSharedFolderId
+  - Dropbox.Api.Sharing.SharedFolderMetadataBase.PathLower
+  - Dropbox.Api.Sharing.SharedFolderMetadataBase.ParentFolderName
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Sharing.SharedFolderMetadata.#ctor(Dropbox.Api.Sharing.AccessLevel,System.Boolean,System.Boolean,System.String,Dropbox.Api.Sharing.FolderPolicy,System.String,System.String,System.DateTime,System.Collections.Generic.IEnumerable{System.String},Dropbox.Api.Users.Team,System.String,System.String,System.String,Dropbox.Api.Sharing.SharedContentLinkMetadata,System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.FolderPermission},Dropbox.Api.Sharing.AccessInheritance)
+  commentId: M:Dropbox.Api.Sharing.SharedFolderMetadata.#ctor(Dropbox.Api.Sharing.AccessLevel,System.Boolean,System.Boolean,System.String,Dropbox.Api.Sharing.FolderPolicy,System.String,System.String,System.DateTime,System.Collections.Generic.IEnumerable{System.String},Dropbox.Api.Users.Team,System.String,System.String,System.String,Dropbox.Api.Sharing.SharedContentLinkMetadata,System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.FolderPermission},Dropbox.Api.Sharing.AccessInheritance)
+  id: '#ctor(Dropbox.Api.Sharing.AccessLevel,System.Boolean,System.Boolean,System.String,Dropbox.Api.Sharing.FolderPolicy,System.String,System.String,System.DateTime,System.Collections.Generic.IEnumerable{System.String},Dropbox.Api.Users.Team,System.String,System.String,System.String,Dropbox.Api.Sharing.SharedContentLinkMetadata,System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.FolderPermission},Dropbox.Api.Sharing.AccessInheritance)'
+  parent: Dropbox.Api.Sharing.SharedFolderMetadata
+  langs:
+  - csharp
+  - vb
+  name: SharedFolderMetadata(AccessLevel, Boolean, Boolean, String, FolderPolicy, String, String, System.DateTime, System.Collections.Generic.IEnumerable<String>, Team, String, String, String, SharedContentLinkMetadata, System.Collections.Generic.IEnumerable<FolderPermission>, AccessInheritance)
+  nameWithType: SharedFolderMetadata.SharedFolderMetadata(AccessLevel, Boolean, Boolean, String, FolderPolicy, String, String, System.DateTime, System.Collections.Generic.IEnumerable<String>, Team, String, String, String, SharedContentLinkMetadata, System.Collections.Generic.IEnumerable<FolderPermission>, AccessInheritance)
+  fullName: Dropbox.Api.Sharing.SharedFolderMetadata.SharedFolderMetadata(Dropbox.Api.Sharing.AccessLevel, System.Boolean, System.Boolean, System.String, Dropbox.Api.Sharing.FolderPolicy, System.String, System.String, System.DateTime, System.Collections.Generic.IEnumerable<System.String>, Dropbox.Api.Users.Team, System.String, System.String, System.String, Dropbox.Api.Sharing.SharedContentLinkMetadata, System.Collections.Generic.IEnumerable<Dropbox.Api.Sharing.FolderPermission>, Dropbox.Api.Sharing.AccessInheritance)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedFolderMetadata.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedFolderMetadata.cs
+    startLine: 65
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.SharedFolderMetadata\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public SharedFolderMetadata(AccessLevel accessType, bool isInsideTeamFolder, bool isTeamFolder, string name, FolderPolicy policy, string previewUrl, string sharedFolderId, System.DateTime timeInvited, System.Collections.Generic.IEnumerable<string> ownerDisplayNames = null, Team ownerTeam = null, string parentSharedFolderId = null, string pathLower = null, string parentFolderName = null, SharedContentLinkMetadata linkMetadata = null, System.Collections.Generic.IEnumerable<FolderPermission> permissions = null, AccessInheritance accessInheritance = null)
+    parameters:
+    - id: accessType
+      type: Dropbox.Api.Sharing.AccessLevel
+      description: >-
+        The current user&apos;s access level for this shared
+
+        folder.
+    - id: isInsideTeamFolder
+      type: System.Boolean
+      description: >-
+        Whether this folder is inside of a team
+
+        folder.
+    - id: isTeamFolder
+      type: System.Boolean
+      description: Whether this folder is a <a href="https://www.dropbox.com/en/help/986">team folder</a>.
+    - id: name
+      type: System.String
+      description: The name of the this shared folder.
+    - id: policy
+      type: Dropbox.Api.Sharing.FolderPolicy
+      description: Policies governing this shared folder.
+    - id: previewUrl
+      type: System.String
+      description: >-
+        URL for displaying a web preview of the shared
+
+        folder.
+    - id: sharedFolderId
+      type: System.String
+      description: The ID of the shared folder.
+    - id: timeInvited
+      type: System.DateTime
+      description: >-
+        Timestamp indicating when the current user was invited to
+
+        this shared folder.
+    - id: ownerDisplayNames
+      type: System.Collections.Generic.IEnumerable{System.String}
+      description: >-
+        The display names of the users that own the folder.
+
+        If the folder is part of a team folder, the display names of the team admins are
+
+        also included. Absent if the owner display names cannot be fetched.
+    - id: ownerTeam
+      type: Dropbox.Api.Users.Team
+      description: >-
+        The team that owns the folder. This field is not present if
+
+        the folder is not owned by a team.
+    - id: parentSharedFolderId
+      type: System.String
+      description: >-
+        The ID of the parent shared folder. This field
+
+        is present only if the folder is contained within another shared folder.
+    - id: pathLower
+      type: System.String
+      description: >-
+        The lower-cased full path of this shared folder. Absent for
+
+        unmounted folders.
+    - id: parentFolderName
+      type: System.String
+      description: Display name for the parent folder.
+    - id: linkMetadata
+      type: Dropbox.Api.Sharing.SharedContentLinkMetadata
+      description: >-
+        The metadata of the shared content link to this shared
+
+        folder. Absent if there is no link on the folder. This is for an unreleased feature
+
+        so it may not be returned yet.
+    - id: permissions
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.FolderPermission}
+      description: >-
+        Actions the current user may perform on the folder and
+
+        its contents. The set of permissions corresponds to the FolderActions in the
+
+        request.
+    - id: accessInheritance
+      type: Dropbox.Api.Sharing.AccessInheritance
+      description: >-
+        Whether the folder inherits its members from its
+
+        parent.
+    content.vb: Public Sub New(accessType As AccessLevel, isInsideTeamFolder As Boolean, isTeamFolder As Boolean, name As String, policy As FolderPolicy, previewUrl As String, sharedFolderId As String, timeInvited As System.DateTime, ownerDisplayNames As System.Collections.Generic.IEnumerable(Of String) = Nothing, ownerTeam As Team = Nothing, parentSharedFolderId As String = Nothing, pathLower As String = Nothing, parentFolderName As String = Nothing, linkMetadata As SharedContentLinkMetadata = Nothing, permissions As System.Collections.Generic.IEnumerable(Of FolderPermission) = Nothing, accessInheritance As AccessInheritance = Nothing)
+  overload: Dropbox.Api.Sharing.SharedFolderMetadata.#ctor*
+  nameWithType.vb: SharedFolderMetadata.SharedFolderMetadata(AccessLevel, Boolean, Boolean, String, FolderPolicy, String, String, System.DateTime, System.Collections.Generic.IEnumerable(Of String), Team, String, String, String, SharedContentLinkMetadata, System.Collections.Generic.IEnumerable(Of FolderPermission), AccessInheritance)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Sharing.SharedFolderMetadata.SharedFolderMetadata(Dropbox.Api.Sharing.AccessLevel, System.Boolean, System.Boolean, System.String, Dropbox.Api.Sharing.FolderPolicy, System.String, System.String, System.DateTime, System.Collections.Generic.IEnumerable(Of System.String), Dropbox.Api.Users.Team, System.String, System.String, System.String, Dropbox.Api.Sharing.SharedContentLinkMetadata, System.Collections.Generic.IEnumerable(Of Dropbox.Api.Sharing.FolderPermission), Dropbox.Api.Sharing.AccessInheritance)
+  name.vb: SharedFolderMetadata(AccessLevel, Boolean, Boolean, String, FolderPolicy, String, String, System.DateTime, System.Collections.Generic.IEnumerable(Of String), Team, String, String, String, SharedContentLinkMetadata, System.Collections.Generic.IEnumerable(Of FolderPermission), AccessInheritance)
+- uid: Dropbox.Api.Sharing.SharedFolderMetadata.#ctor
+  commentId: M:Dropbox.Api.Sharing.SharedFolderMetadata.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Sharing.SharedFolderMetadata
+  langs:
+  - csharp
+  - vb
+  name: SharedFolderMetadata()
+  nameWithType: SharedFolderMetadata.SharedFolderMetadata()
+  fullName: Dropbox.Api.Sharing.SharedFolderMetadata.SharedFolderMetadata()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedFolderMetadata.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedFolderMetadata.cs
+    startLine: 129
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.SharedFolderMetadata\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public SharedFolderMetadata()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Sharing.SharedFolderMetadata.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.SharedFolderMetadata.Name
+  commentId: P:Dropbox.Api.Sharing.SharedFolderMetadata.Name
+  id: Name
+  parent: Dropbox.Api.Sharing.SharedFolderMetadata
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: SharedFolderMetadata.Name
+  fullName: Dropbox.Api.Sharing.SharedFolderMetadata.Name
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedFolderMetadata.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Name
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedFolderMetadata.cs
+    startLine: 138
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The name of the this shared folder.</p>\n"
+  example: []
+  syntax:
+    content: public string Name { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: Dropbox.Api.Sharing.SharedFolderMetadata.Name*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.SharedFolderMetadata.Policy
+  commentId: P:Dropbox.Api.Sharing.SharedFolderMetadata.Policy
+  id: Policy
+  parent: Dropbox.Api.Sharing.SharedFolderMetadata
+  langs:
+  - csharp
+  - vb
+  name: Policy
+  nameWithType: SharedFolderMetadata.Policy
+  fullName: Dropbox.Api.Sharing.SharedFolderMetadata.Policy
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedFolderMetadata.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Policy
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedFolderMetadata.cs
+    startLine: 143
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Policies governing this shared folder.</p>\n"
+  example: []
+  syntax:
+    content: public FolderPolicy Policy { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.FolderPolicy
+    content.vb: Public Property Policy As FolderPolicy
+  overload: Dropbox.Api.Sharing.SharedFolderMetadata.Policy*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.SharedFolderMetadata.PreviewUrl
+  commentId: P:Dropbox.Api.Sharing.SharedFolderMetadata.PreviewUrl
+  id: PreviewUrl
+  parent: Dropbox.Api.Sharing.SharedFolderMetadata
+  langs:
+  - csharp
+  - vb
+  name: PreviewUrl
+  nameWithType: SharedFolderMetadata.PreviewUrl
+  fullName: Dropbox.Api.Sharing.SharedFolderMetadata.PreviewUrl
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedFolderMetadata.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PreviewUrl
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedFolderMetadata.cs
+    startLine: 148
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>URL for displaying a web preview of the shared folder.</p>\n"
+  example: []
+  syntax:
+    content: public string PreviewUrl { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property PreviewUrl As String
+  overload: Dropbox.Api.Sharing.SharedFolderMetadata.PreviewUrl*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.SharedFolderMetadata.SharedFolderId
+  commentId: P:Dropbox.Api.Sharing.SharedFolderMetadata.SharedFolderId
+  id: SharedFolderId
+  parent: Dropbox.Api.Sharing.SharedFolderMetadata
+  langs:
+  - csharp
+  - vb
+  name: SharedFolderId
+  nameWithType: SharedFolderMetadata.SharedFolderId
+  fullName: Dropbox.Api.Sharing.SharedFolderMetadata.SharedFolderId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedFolderMetadata.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SharedFolderId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedFolderMetadata.cs
+    startLine: 153
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The ID of the shared folder.</p>\n"
+  example: []
+  syntax:
+    content: public string SharedFolderId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SharedFolderId As String
+  overload: Dropbox.Api.Sharing.SharedFolderMetadata.SharedFolderId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.SharedFolderMetadata.TimeInvited
+  commentId: P:Dropbox.Api.Sharing.SharedFolderMetadata.TimeInvited
+  id: TimeInvited
+  parent: Dropbox.Api.Sharing.SharedFolderMetadata
+  langs:
+  - csharp
+  - vb
+  name: TimeInvited
+  nameWithType: SharedFolderMetadata.TimeInvited
+  fullName: Dropbox.Api.Sharing.SharedFolderMetadata.TimeInvited
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedFolderMetadata.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TimeInvited
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedFolderMetadata.cs
+    startLine: 159
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Timestamp indicating when the current user was invited to this shared\nfolder.</p>\n"
+  example: []
+  syntax:
+    content: public System.DateTime TimeInvited { get; protected set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Property TimeInvited As System.DateTime
+  overload: Dropbox.Api.Sharing.SharedFolderMetadata.TimeInvited*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.SharedFolderMetadata.LinkMetadata
+  commentId: P:Dropbox.Api.Sharing.SharedFolderMetadata.LinkMetadata
+  id: LinkMetadata
+  parent: Dropbox.Api.Sharing.SharedFolderMetadata
+  langs:
+  - csharp
+  - vb
+  name: LinkMetadata
+  nameWithType: SharedFolderMetadata.LinkMetadata
+  fullName: Dropbox.Api.Sharing.SharedFolderMetadata.LinkMetadata
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedFolderMetadata.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: LinkMetadata
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedFolderMetadata.cs
+    startLine: 166
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The metadata of the shared content link to this shared folder. Absent if\nthere is no link on the folder. This is for an unreleased feature so it may not be\nreturned yet.</p>\n"
+  example: []
+  syntax:
+    content: public SharedContentLinkMetadata LinkMetadata { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.SharedContentLinkMetadata
+    content.vb: Public Property LinkMetadata As SharedContentLinkMetadata
+  overload: Dropbox.Api.Sharing.SharedFolderMetadata.LinkMetadata*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.SharedFolderMetadata.Permissions
+  commentId: P:Dropbox.Api.Sharing.SharedFolderMetadata.Permissions
+  id: Permissions
+  parent: Dropbox.Api.Sharing.SharedFolderMetadata
+  langs:
+  - csharp
+  - vb
+  name: Permissions
+  nameWithType: SharedFolderMetadata.Permissions
+  fullName: Dropbox.Api.Sharing.SharedFolderMetadata.Permissions
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedFolderMetadata.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Permissions
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedFolderMetadata.cs
+    startLine: 172
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Actions the current user may perform on the folder and its contents. The set\nof permissions corresponds to the FolderActions in the request.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<FolderPermission> Permissions { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{Dropbox.Api.Sharing.FolderPermission}
+    content.vb: Public Property Permissions As System.Collections.Generic.IList(Of FolderPermission)
+  overload: Dropbox.Api.Sharing.SharedFolderMetadata.Permissions*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.SharedFolderMetadata.AccessInheritance
+  commentId: P:Dropbox.Api.Sharing.SharedFolderMetadata.AccessInheritance
+  id: AccessInheritance
+  parent: Dropbox.Api.Sharing.SharedFolderMetadata
+  langs:
+  - csharp
+  - vb
+  name: AccessInheritance
+  nameWithType: SharedFolderMetadata.AccessInheritance
+  fullName: Dropbox.Api.Sharing.SharedFolderMetadata.AccessInheritance
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedFolderMetadata.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AccessInheritance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedFolderMetadata.cs
+    startLine: 177
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Whether the folder inherits its members from its parent.</p>\n"
+  example: []
+  syntax:
+    content: public AccessInheritance AccessInheritance { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.AccessInheritance
+    content.vb: Public Property AccessInheritance As AccessInheritance
+  overload: Dropbox.Api.Sharing.SharedFolderMetadata.AccessInheritance*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.SharedFolderMetadataBase
+  commentId: T:Dropbox.Api.Sharing.SharedFolderMetadataBase
+  parent: Dropbox.Api.Sharing
+  name: SharedFolderMetadataBase
+  nameWithType: SharedFolderMetadataBase
+  fullName: Dropbox.Api.Sharing.SharedFolderMetadataBase
+- uid: Dropbox.Api.Sharing.SharedFolderMetadataBase.AccessType
+  commentId: P:Dropbox.Api.Sharing.SharedFolderMetadataBase.AccessType
+  parent: Dropbox.Api.Sharing.SharedFolderMetadataBase
+  name: AccessType
+  nameWithType: SharedFolderMetadataBase.AccessType
+  fullName: Dropbox.Api.Sharing.SharedFolderMetadataBase.AccessType
+- uid: Dropbox.Api.Sharing.SharedFolderMetadataBase.IsInsideTeamFolder
+  commentId: P:Dropbox.Api.Sharing.SharedFolderMetadataBase.IsInsideTeamFolder
+  parent: Dropbox.Api.Sharing.SharedFolderMetadataBase
+  name: IsInsideTeamFolder
+  nameWithType: SharedFolderMetadataBase.IsInsideTeamFolder
+  fullName: Dropbox.Api.Sharing.SharedFolderMetadataBase.IsInsideTeamFolder
+- uid: Dropbox.Api.Sharing.SharedFolderMetadataBase.IsTeamFolder
+  commentId: P:Dropbox.Api.Sharing.SharedFolderMetadataBase.IsTeamFolder
+  parent: Dropbox.Api.Sharing.SharedFolderMetadataBase
+  name: IsTeamFolder
+  nameWithType: SharedFolderMetadataBase.IsTeamFolder
+  fullName: Dropbox.Api.Sharing.SharedFolderMetadataBase.IsTeamFolder
+- uid: Dropbox.Api.Sharing.SharedFolderMetadataBase.OwnerDisplayNames
+  commentId: P:Dropbox.Api.Sharing.SharedFolderMetadataBase.OwnerDisplayNames
+  parent: Dropbox.Api.Sharing.SharedFolderMetadataBase
+  name: OwnerDisplayNames
+  nameWithType: SharedFolderMetadataBase.OwnerDisplayNames
+  fullName: Dropbox.Api.Sharing.SharedFolderMetadataBase.OwnerDisplayNames
+- uid: Dropbox.Api.Sharing.SharedFolderMetadataBase.OwnerTeam
+  commentId: P:Dropbox.Api.Sharing.SharedFolderMetadataBase.OwnerTeam
+  parent: Dropbox.Api.Sharing.SharedFolderMetadataBase
+  name: OwnerTeam
+  nameWithType: SharedFolderMetadataBase.OwnerTeam
+  fullName: Dropbox.Api.Sharing.SharedFolderMetadataBase.OwnerTeam
+- uid: Dropbox.Api.Sharing.SharedFolderMetadataBase.ParentSharedFolderId
+  commentId: P:Dropbox.Api.Sharing.SharedFolderMetadataBase.ParentSharedFolderId
+  parent: Dropbox.Api.Sharing.SharedFolderMetadataBase
+  name: ParentSharedFolderId
+  nameWithType: SharedFolderMetadataBase.ParentSharedFolderId
+  fullName: Dropbox.Api.Sharing.SharedFolderMetadataBase.ParentSharedFolderId
+- uid: Dropbox.Api.Sharing.SharedFolderMetadataBase.PathLower
+  commentId: P:Dropbox.Api.Sharing.SharedFolderMetadataBase.PathLower
+  parent: Dropbox.Api.Sharing.SharedFolderMetadataBase
+  name: PathLower
+  nameWithType: SharedFolderMetadataBase.PathLower
+  fullName: Dropbox.Api.Sharing.SharedFolderMetadataBase.PathLower
+- uid: Dropbox.Api.Sharing.SharedFolderMetadataBase.ParentFolderName
+  commentId: P:Dropbox.Api.Sharing.SharedFolderMetadataBase.ParentFolderName
+  parent: Dropbox.Api.Sharing.SharedFolderMetadataBase
+  name: ParentFolderName
+  nameWithType: SharedFolderMetadataBase.ParentFolderName
+  fullName: Dropbox.Api.Sharing.SharedFolderMetadataBase.ParentFolderName
+- uid: Dropbox.Api.Sharing.SharedFolderMetadata
+  commentId: T:Dropbox.Api.Sharing.SharedFolderMetadata
+  parent: Dropbox.Api.Sharing
+  name: SharedFolderMetadata
+  nameWithType: SharedFolderMetadata
+  fullName: Dropbox.Api.Sharing.SharedFolderMetadata
+- uid: Dropbox.Api.Sharing.SharedFolderMetadata.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.SharedFolderMetadata.#ctor
+  name: SharedFolderMetadata
+  nameWithType: SharedFolderMetadata.SharedFolderMetadata
+  fullName: Dropbox.Api.Sharing.SharedFolderMetadata.SharedFolderMetadata
+- uid: Dropbox.Api.Sharing.AccessLevel
+  commentId: T:Dropbox.Api.Sharing.AccessLevel
+  parent: Dropbox.Api.Sharing
+  name: AccessLevel
+  nameWithType: AccessLevel
+  fullName: Dropbox.Api.Sharing.AccessLevel
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Sharing.FolderPolicy
+  commentId: T:Dropbox.Api.Sharing.FolderPolicy
+  parent: Dropbox.Api.Sharing
+  name: FolderPolicy
+  nameWithType: FolderPolicy
+  fullName: Dropbox.Api.Sharing.FolderPolicy
+- uid: System.DateTime
+  isExternal: true
+  name: System.DateTime
+  nameWithType: System.DateTime
+  fullName: System.DateTime
+- uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: '!:System.Collections.Generic.IEnumerable{System.String}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<String>
+  nameWithType: System.Collections.Generic.IEnumerable<String>
+  fullName: System.Collections.Generic.IEnumerable<System.String>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of String)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.String)
+  name.vb: System.Collections.Generic.IEnumerable(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Users.Team
+  commentId: T:Dropbox.Api.Users.Team
+  parent: Dropbox.Api.Users
+  name: Team
+  nameWithType: Team
+  fullName: Dropbox.Api.Users.Team
+- uid: Dropbox.Api.Sharing.SharedContentLinkMetadata
+  commentId: T:Dropbox.Api.Sharing.SharedContentLinkMetadata
+  parent: Dropbox.Api.Sharing
+  name: SharedContentLinkMetadata
+  nameWithType: SharedContentLinkMetadata
+  fullName: Dropbox.Api.Sharing.SharedContentLinkMetadata
+- uid: System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.FolderPermission}
+  commentId: '!:System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.FolderPermission}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<FolderPermission>
+  nameWithType: System.Collections.Generic.IEnumerable<FolderPermission>
+  fullName: System.Collections.Generic.IEnumerable<Dropbox.Api.Sharing.FolderPermission>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of FolderPermission)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Dropbox.Api.Sharing.FolderPermission)
+  name.vb: System.Collections.Generic.IEnumerable(Of FolderPermission)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Sharing.FolderPermission
+    name: FolderPermission
+    nameWithType: FolderPermission
+    fullName: Dropbox.Api.Sharing.FolderPermission
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Sharing.FolderPermission
+    name: FolderPermission
+    nameWithType: FolderPermission
+    fullName: Dropbox.Api.Sharing.FolderPermission
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Sharing.AccessInheritance
+  commentId: T:Dropbox.Api.Sharing.AccessInheritance
+  parent: Dropbox.Api.Sharing
+  name: AccessInheritance
+  nameWithType: AccessInheritance
+  fullName: Dropbox.Api.Sharing.AccessInheritance
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: System.Collections.Generic.IEnumerable<>
+  nameWithType: System.Collections.Generic.IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: System.Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Users
+  commentId: N:Dropbox.Api.Users
+  name: Dropbox.Api.Users
+  nameWithType: Dropbox.Api.Users
+  fullName: Dropbox.Api.Users
+- uid: Dropbox.Api.Sharing.SharedFolderMetadata.Name*
+  commentId: Overload:Dropbox.Api.Sharing.SharedFolderMetadata.Name
+  name: Name
+  nameWithType: SharedFolderMetadata.Name
+  fullName: Dropbox.Api.Sharing.SharedFolderMetadata.Name
+- uid: Dropbox.Api.Sharing.SharedFolderMetadata.Policy*
+  commentId: Overload:Dropbox.Api.Sharing.SharedFolderMetadata.Policy
+  name: Policy
+  nameWithType: SharedFolderMetadata.Policy
+  fullName: Dropbox.Api.Sharing.SharedFolderMetadata.Policy
+- uid: Dropbox.Api.Sharing.SharedFolderMetadata.PreviewUrl*
+  commentId: Overload:Dropbox.Api.Sharing.SharedFolderMetadata.PreviewUrl
+  name: PreviewUrl
+  nameWithType: SharedFolderMetadata.PreviewUrl
+  fullName: Dropbox.Api.Sharing.SharedFolderMetadata.PreviewUrl
+- uid: Dropbox.Api.Sharing.SharedFolderMetadata.SharedFolderId*
+  commentId: Overload:Dropbox.Api.Sharing.SharedFolderMetadata.SharedFolderId
+  name: SharedFolderId
+  nameWithType: SharedFolderMetadata.SharedFolderId
+  fullName: Dropbox.Api.Sharing.SharedFolderMetadata.SharedFolderId
+- uid: Dropbox.Api.Sharing.SharedFolderMetadata.TimeInvited*
+  commentId: Overload:Dropbox.Api.Sharing.SharedFolderMetadata.TimeInvited
+  name: TimeInvited
+  nameWithType: SharedFolderMetadata.TimeInvited
+  fullName: Dropbox.Api.Sharing.SharedFolderMetadata.TimeInvited
+- uid: Dropbox.Api.Sharing.SharedFolderMetadata.LinkMetadata*
+  commentId: Overload:Dropbox.Api.Sharing.SharedFolderMetadata.LinkMetadata
+  name: LinkMetadata
+  nameWithType: SharedFolderMetadata.LinkMetadata
+  fullName: Dropbox.Api.Sharing.SharedFolderMetadata.LinkMetadata
+- uid: Dropbox.Api.Sharing.SharedFolderMetadata.Permissions*
+  commentId: Overload:Dropbox.Api.Sharing.SharedFolderMetadata.Permissions
+  name: Permissions
+  nameWithType: SharedFolderMetadata.Permissions
+  fullName: Dropbox.Api.Sharing.SharedFolderMetadata.Permissions
+- uid: System.Collections.Generic.IList{Dropbox.Api.Sharing.FolderPermission}
+  commentId: '!:System.Collections.Generic.IList{Dropbox.Api.Sharing.FolderPermission}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<FolderPermission>
+  nameWithType: System.Collections.Generic.IList<FolderPermission>
+  fullName: System.Collections.Generic.IList<Dropbox.Api.Sharing.FolderPermission>
+  nameWithType.vb: System.Collections.Generic.IList(Of FolderPermission)
+  fullName.vb: System.Collections.Generic.IList(Of Dropbox.Api.Sharing.FolderPermission)
+  name.vb: System.Collections.Generic.IList(Of FolderPermission)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Sharing.FolderPermission
+    name: FolderPermission
+    nameWithType: FolderPermission
+    fullName: Dropbox.Api.Sharing.FolderPermission
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Sharing.FolderPermission
+    name: FolderPermission
+    nameWithType: FolderPermission
+    fullName: Dropbox.Api.Sharing.FolderPermission
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  isExternal: true
+  name: System.Collections.Generic.IList<>
+  nameWithType: System.Collections.Generic.IList<>
+  fullName: System.Collections.Generic.IList<>
+  nameWithType.vb: System.Collections.Generic.IList(Of )
+  fullName.vb: System.Collections.Generic.IList(Of )
+  name.vb: System.Collections.Generic.IList(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Sharing.SharedFolderMetadata.AccessInheritance*
+  commentId: Overload:Dropbox.Api.Sharing.SharedFolderMetadata.AccessInheritance
+  name: AccessInheritance
+  nameWithType: SharedFolderMetadata.AccessInheritance
+  fullName: Dropbox.Api.Sharing.SharedFolderMetadata.AccessInheritance
+shouldSkipMarkup: true

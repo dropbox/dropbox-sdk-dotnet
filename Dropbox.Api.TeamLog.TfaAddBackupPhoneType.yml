@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.TfaAddBackupPhoneType
+  commentId: T:Dropbox.Api.TeamLog.TfaAddBackupPhoneType
+  id: TfaAddBackupPhoneType
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.TfaAddBackupPhoneType.#ctor
+  - Dropbox.Api.TeamLog.TfaAddBackupPhoneType.#ctor(System.String)
+  - Dropbox.Api.TeamLog.TfaAddBackupPhoneType.Description
+  langs:
+  - csharp
+  - vb
+  name: TfaAddBackupPhoneType
+  nameWithType: TfaAddBackupPhoneType
+  fullName: Dropbox.Api.TeamLog.TfaAddBackupPhoneType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaAddBackupPhoneType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TfaAddBackupPhoneType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaAddBackupPhoneType.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The tfa add backup phone type object</p>\n"
+  example: []
+  syntax:
+    content: 'public class TfaAddBackupPhoneType : object'
+    content.vb: >-
+      Public Class TfaAddBackupPhoneType
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.TfaAddBackupPhoneType.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.TfaAddBackupPhoneType.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.TfaAddBackupPhoneType
+  langs:
+  - csharp
+  - vb
+  name: TfaAddBackupPhoneType(String)
+  nameWithType: TfaAddBackupPhoneType.TfaAddBackupPhoneType(String)
+  fullName: Dropbox.Api.TeamLog.TfaAddBackupPhoneType.TfaAddBackupPhoneType(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaAddBackupPhoneType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaAddBackupPhoneType.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.TfaAddBackupPhoneType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public TfaAddBackupPhoneType(string description)
+    parameters:
+    - id: description
+      type: System.String
+      description: The description
+    content.vb: Public Sub New(description As String)
+  overload: Dropbox.Api.TeamLog.TfaAddBackupPhoneType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.TfaAddBackupPhoneType.#ctor
+  commentId: M:Dropbox.Api.TeamLog.TfaAddBackupPhoneType.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.TfaAddBackupPhoneType
+  langs:
+  - csharp
+  - vb
+  name: TfaAddBackupPhoneType()
+  nameWithType: TfaAddBackupPhoneType.TfaAddBackupPhoneType()
+  fullName: Dropbox.Api.TeamLog.TfaAddBackupPhoneType.TfaAddBackupPhoneType()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaAddBackupPhoneType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaAddBackupPhoneType.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.TfaAddBackupPhoneType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public TfaAddBackupPhoneType()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.TfaAddBackupPhoneType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.TfaAddBackupPhoneType.Description
+  commentId: P:Dropbox.Api.TeamLog.TfaAddBackupPhoneType.Description
+  id: Description
+  parent: Dropbox.Api.TeamLog.TfaAddBackupPhoneType
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: TfaAddBackupPhoneType.Description
+  fullName: Dropbox.Api.TeamLog.TfaAddBackupPhoneType.Description
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaAddBackupPhoneType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Description
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaAddBackupPhoneType.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets the description of the tfa add backup phone type</p>\n"
+  example: []
+  syntax:
+    content: public string Description { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Dropbox.Api.TeamLog.TfaAddBackupPhoneType.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.TfaAddBackupPhoneType
+  commentId: T:Dropbox.Api.TeamLog.TfaAddBackupPhoneType
+  parent: Dropbox.Api.TeamLog
+  name: TfaAddBackupPhoneType
+  nameWithType: TfaAddBackupPhoneType
+  fullName: Dropbox.Api.TeamLog.TfaAddBackupPhoneType
+- uid: Dropbox.Api.TeamLog.TfaAddBackupPhoneType.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.TfaAddBackupPhoneType.#ctor
+  name: TfaAddBackupPhoneType
+  nameWithType: TfaAddBackupPhoneType.TfaAddBackupPhoneType
+  fullName: Dropbox.Api.TeamLog.TfaAddBackupPhoneType.TfaAddBackupPhoneType
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.TfaAddBackupPhoneType.Description*
+  commentId: Overload:Dropbox.Api.TeamLog.TfaAddBackupPhoneType.Description
+  name: Description
+  nameWithType: TfaAddBackupPhoneType.Description
+  fullName: Dropbox.Api.TeamLog.TfaAddBackupPhoneType.Description
+shouldSkipMarkup: true

@@ -1,0 +1,201 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Auth.AccessError.InvalidAccountType
+  commentId: T:Dropbox.Api.Auth.AccessError.InvalidAccountType
+  id: AccessError.InvalidAccountType
+  parent: Dropbox.Api.Auth
+  children:
+  - Dropbox.Api.Auth.AccessError.InvalidAccountType.#ctor(Dropbox.Api.Auth.InvalidAccountTypeError)
+  - Dropbox.Api.Auth.AccessError.InvalidAccountType.Value
+  langs:
+  - csharp
+  - vb
+  name: AccessError.InvalidAccountType
+  nameWithType: AccessError.InvalidAccountType
+  fullName: Dropbox.Api.Auth.AccessError.InvalidAccountType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AccessError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: InvalidAccountType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AccessError.cs
+    startLine: 182
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth
+  summary: "\n<p>Current account type cannot access the resource.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class InvalidAccountType : AccessError'
+    content.vb: >-
+      Public NotInheritable Class InvalidAccountType
+          Inherits AccessError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Auth.AccessError
+  inheritedMembers:
+  - Dropbox.Api.Auth.AccessError.IsInvalidAccountType
+  - Dropbox.Api.Auth.AccessError.AsInvalidAccountType
+  - Dropbox.Api.Auth.AccessError.IsPaperAccessDenied
+  - Dropbox.Api.Auth.AccessError.AsPaperAccessDenied
+  - Dropbox.Api.Auth.AccessError.IsOther
+  - Dropbox.Api.Auth.AccessError.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Auth.AccessError.InvalidAccountType.#ctor(Dropbox.Api.Auth.InvalidAccountTypeError)
+  commentId: M:Dropbox.Api.Auth.AccessError.InvalidAccountType.#ctor(Dropbox.Api.Auth.InvalidAccountTypeError)
+  id: '#ctor(Dropbox.Api.Auth.InvalidAccountTypeError)'
+  parent: Dropbox.Api.Auth.AccessError.InvalidAccountType
+  langs:
+  - csharp
+  - vb
+  name: InvalidAccountType(InvalidAccountTypeError)
+  nameWithType: AccessError.InvalidAccountType.InvalidAccountType(InvalidAccountTypeError)
+  fullName: Dropbox.Api.Auth.AccessError.InvalidAccountType.InvalidAccountType(Dropbox.Api.Auth.InvalidAccountTypeError)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AccessError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AccessError.cs
+    startLine: 201
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Auth.AccessError.InvalidAccountType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public InvalidAccountType(InvalidAccountTypeError value)
+    parameters:
+    - id: value
+      type: Dropbox.Api.Auth.InvalidAccountTypeError
+      description: The value
+    content.vb: Public Sub New(value As InvalidAccountTypeError)
+  overload: Dropbox.Api.Auth.AccessError.InvalidAccountType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Auth.AccessError.InvalidAccountType.Value
+  commentId: P:Dropbox.Api.Auth.AccessError.InvalidAccountType.Value
+  id: Value
+  parent: Dropbox.Api.Auth.AccessError.InvalidAccountType
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: AccessError.InvalidAccountType.Value
+  fullName: Dropbox.Api.Auth.AccessError.InvalidAccountType.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AccessError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AccessError.cs
+    startLine: 216
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public InvalidAccountTypeError Value { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Auth.InvalidAccountTypeError
+    content.vb: Public ReadOnly Property Value As InvalidAccountTypeError
+  overload: Dropbox.Api.Auth.AccessError.InvalidAccountType.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Auth
+  commentId: N:Dropbox.Api.Auth
+  name: Dropbox.Api.Auth
+  nameWithType: Dropbox.Api.Auth
+  fullName: Dropbox.Api.Auth
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Auth.AccessError
+  commentId: T:Dropbox.Api.Auth.AccessError
+  parent: Dropbox.Api.Auth
+  name: AccessError
+  nameWithType: AccessError
+  fullName: Dropbox.Api.Auth.AccessError
+- uid: Dropbox.Api.Auth.AccessError.IsInvalidAccountType
+  commentId: P:Dropbox.Api.Auth.AccessError.IsInvalidAccountType
+  parent: Dropbox.Api.Auth.AccessError
+  name: IsInvalidAccountType
+  nameWithType: AccessError.IsInvalidAccountType
+  fullName: Dropbox.Api.Auth.AccessError.IsInvalidAccountType
+- uid: Dropbox.Api.Auth.AccessError.AsInvalidAccountType
+  commentId: P:Dropbox.Api.Auth.AccessError.AsInvalidAccountType
+  parent: Dropbox.Api.Auth.AccessError
+  name: AsInvalidAccountType
+  nameWithType: AccessError.AsInvalidAccountType
+  fullName: Dropbox.Api.Auth.AccessError.AsInvalidAccountType
+- uid: Dropbox.Api.Auth.AccessError.IsPaperAccessDenied
+  commentId: P:Dropbox.Api.Auth.AccessError.IsPaperAccessDenied
+  parent: Dropbox.Api.Auth.AccessError
+  name: IsPaperAccessDenied
+  nameWithType: AccessError.IsPaperAccessDenied
+  fullName: Dropbox.Api.Auth.AccessError.IsPaperAccessDenied
+- uid: Dropbox.Api.Auth.AccessError.AsPaperAccessDenied
+  commentId: P:Dropbox.Api.Auth.AccessError.AsPaperAccessDenied
+  parent: Dropbox.Api.Auth.AccessError
+  name: AsPaperAccessDenied
+  nameWithType: AccessError.AsPaperAccessDenied
+  fullName: Dropbox.Api.Auth.AccessError.AsPaperAccessDenied
+- uid: Dropbox.Api.Auth.AccessError.IsOther
+  commentId: P:Dropbox.Api.Auth.AccessError.IsOther
+  parent: Dropbox.Api.Auth.AccessError
+  name: IsOther
+  nameWithType: AccessError.IsOther
+  fullName: Dropbox.Api.Auth.AccessError.IsOther
+- uid: Dropbox.Api.Auth.AccessError.AsOther
+  commentId: P:Dropbox.Api.Auth.AccessError.AsOther
+  parent: Dropbox.Api.Auth.AccessError
+  name: AsOther
+  nameWithType: AccessError.AsOther
+  fullName: Dropbox.Api.Auth.AccessError.AsOther
+- uid: Dropbox.Api.Auth.AccessError.InvalidAccountType
+  commentId: T:Dropbox.Api.Auth.AccessError.InvalidAccountType
+  parent: Dropbox.Api.Auth
+  name: AccessError.InvalidAccountType
+  nameWithType: AccessError.InvalidAccountType
+  fullName: Dropbox.Api.Auth.AccessError.InvalidAccountType
+- uid: Dropbox.Api.Auth.AccessError.InvalidAccountType.#ctor*
+  commentId: Overload:Dropbox.Api.Auth.AccessError.InvalidAccountType.#ctor
+  name: InvalidAccountType
+  nameWithType: AccessError.InvalidAccountType.InvalidAccountType
+  fullName: Dropbox.Api.Auth.AccessError.InvalidAccountType.InvalidAccountType
+- uid: Dropbox.Api.Auth.InvalidAccountTypeError
+  commentId: T:Dropbox.Api.Auth.InvalidAccountTypeError
+  parent: Dropbox.Api.Auth
+  name: InvalidAccountTypeError
+  nameWithType: InvalidAccountTypeError
+  fullName: Dropbox.Api.Auth.InvalidAccountTypeError
+- uid: Dropbox.Api.Auth.AccessError.InvalidAccountType.Value*
+  commentId: Overload:Dropbox.Api.Auth.AccessError.InvalidAccountType.Value
+  name: Value
+  nameWithType: AccessError.InvalidAccountType.Value
+  fullName: Dropbox.Api.Auth.AccessError.InvalidAccountType.Value
+shouldSkipMarkup: true

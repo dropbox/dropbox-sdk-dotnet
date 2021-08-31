@@ -1,0 +1,632 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.Routes.FilesAppRoutes
+  commentId: T:Dropbox.Api.Files.Routes.FilesAppRoutes
+  id: FilesAppRoutes
+  parent: Dropbox.Api.Files.Routes
+  children:
+  - Dropbox.Api.Files.Routes.FilesAppRoutes.BeginGetThumbnailV2(Dropbox.Api.Files.PathOrLink,Dropbox.Api.Files.ThumbnailFormat,Dropbox.Api.Files.ThumbnailSize,Dropbox.Api.Files.ThumbnailMode,System.AsyncCallback,System.Object)
+  - Dropbox.Api.Files.Routes.FilesAppRoutes.BeginGetThumbnailV2(Dropbox.Api.Files.ThumbnailV2Arg,System.AsyncCallback,System.Object)
+  - Dropbox.Api.Files.Routes.FilesAppRoutes.EndGetThumbnailV2(System.IAsyncResult)
+  - Dropbox.Api.Files.Routes.FilesAppRoutes.GetThumbnailV2Async(Dropbox.Api.Files.PathOrLink,Dropbox.Api.Files.ThumbnailFormat,Dropbox.Api.Files.ThumbnailSize,Dropbox.Api.Files.ThumbnailMode)
+  - Dropbox.Api.Files.Routes.FilesAppRoutes.GetThumbnailV2Async(Dropbox.Api.Files.ThumbnailV2Arg)
+  langs:
+  - csharp
+  - vb
+  name: FilesAppRoutes
+  nameWithType: FilesAppRoutes
+  fullName: Dropbox.Api.Files.Routes.FilesAppRoutes
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FilesAppRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: FilesAppRoutes
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FilesAppRoutes.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files.Routes
+  summary: "\n<p>The routes for the <xref href=\"Dropbox.Api.Files\" data-throw-if-not-resolved=\"false\"></xref> namespace</p>\n"
+  example: []
+  syntax:
+    content: 'public class FilesAppRoutes : object'
+    content.vb: >-
+      Public Class FilesAppRoutes
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.Routes.FilesAppRoutes.GetThumbnailV2Async(Dropbox.Api.Files.ThumbnailV2Arg)
+  commentId: M:Dropbox.Api.Files.Routes.FilesAppRoutes.GetThumbnailV2Async(Dropbox.Api.Files.ThumbnailV2Arg)
+  id: GetThumbnailV2Async(Dropbox.Api.Files.ThumbnailV2Arg)
+  parent: Dropbox.Api.Files.Routes.FilesAppRoutes
+  langs:
+  - csharp
+  - vb
+  name: GetThumbnailV2Async(ThumbnailV2Arg)
+  nameWithType: FilesAppRoutes.GetThumbnailV2Async(ThumbnailV2Arg)
+  fullName: Dropbox.Api.Files.Routes.FilesAppRoutes.GetThumbnailV2Async(Dropbox.Api.Files.ThumbnailV2Arg)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FilesAppRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GetThumbnailV2Async
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FilesAppRoutes.cs
+    startLine: 43
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files.Routes
+  summary: "\n<p>Get a thumbnail for an image.</p>\n<p>This method currently supports files with the following file extensions: jpg,\njpeg, png, tiff, tif, gif, webp, ppm and bmp. Photos that are larger than 20MB in\nsize won&apos;t be converted to a thumbnail.</p>\n"
+  example: []
+  syntax:
+    content: public System.Threading.Tasks.Task<IDownloadResponse<PreviewResult>> GetThumbnailV2Async(ThumbnailV2Arg thumbnailV2Arg)
+    parameters:
+    - id: thumbnailV2Arg
+      type: Dropbox.Api.Files.ThumbnailV2Arg
+      description: The request parameters
+    return:
+      type: System.Threading.Tasks.Task{Dropbox.Api.Stone.IDownloadResponse{Dropbox.Api.Files.PreviewResult}}
+      description: >-
+        The task that represents the asynchronous send operation. The TResult
+
+        parameter contains the response from the server.
+    content.vb: Public Function GetThumbnailV2Async(thumbnailV2Arg As ThumbnailV2Arg) As System.Threading.Tasks.Task(Of IDownloadResponse(Of PreviewResult))
+  overload: Dropbox.Api.Files.Routes.FilesAppRoutes.GetThumbnailV2Async*
+  exceptions:
+  - type: Dropbox.Api.ApiException`1
+    commentId: T:Dropbox.Api.ApiException`1
+    description: >-
+      Thrown if there is an error
+
+      processing the request; This will contain a <xref href="Dropbox.Api.Files.ThumbnailV2Error" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.Routes.FilesAppRoutes.BeginGetThumbnailV2(Dropbox.Api.Files.ThumbnailV2Arg,System.AsyncCallback,System.Object)
+  commentId: M:Dropbox.Api.Files.Routes.FilesAppRoutes.BeginGetThumbnailV2(Dropbox.Api.Files.ThumbnailV2Arg,System.AsyncCallback,System.Object)
+  id: BeginGetThumbnailV2(Dropbox.Api.Files.ThumbnailV2Arg,System.AsyncCallback,System.Object)
+  parent: Dropbox.Api.Files.Routes.FilesAppRoutes
+  langs:
+  - csharp
+  - vb
+  name: BeginGetThumbnailV2(ThumbnailV2Arg, System.AsyncCallback, Object)
+  nameWithType: FilesAppRoutes.BeginGetThumbnailV2(ThumbnailV2Arg, System.AsyncCallback, Object)
+  fullName: Dropbox.Api.Files.Routes.FilesAppRoutes.BeginGetThumbnailV2(Dropbox.Api.Files.ThumbnailV2Arg, System.AsyncCallback, System.Object)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FilesAppRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: BeginGetThumbnailV2
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FilesAppRoutes.cs
+    startLine: 57
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files.Routes
+  summary: "\n<p>Begins an asynchronous send to the get thumbnail route.</p>\n"
+  example: []
+  syntax:
+    content: public System.IAsyncResult BeginGetThumbnailV2(ThumbnailV2Arg thumbnailV2Arg, System.AsyncCallback callback, object state = null)
+    parameters:
+    - id: thumbnailV2Arg
+      type: Dropbox.Api.Files.ThumbnailV2Arg
+      description: The request parameters.
+    - id: callback
+      type: System.AsyncCallback
+      description: >-
+        The method to be called when the asynchronous send is
+
+        completed.
+    - id: state
+      type: System.Object
+      description: >-
+        A user provided object that distinguished this send from other
+
+        send requests.
+    return:
+      type: System.IAsyncResult
+      description: An object that represents the asynchronous send request.
+    content.vb: Public Function BeginGetThumbnailV2(thumbnailV2Arg As ThumbnailV2Arg, callback As System.AsyncCallback, state As Object = Nothing) As System.IAsyncResult
+  overload: Dropbox.Api.Files.Routes.FilesAppRoutes.BeginGetThumbnailV2*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.Routes.FilesAppRoutes.GetThumbnailV2Async(Dropbox.Api.Files.PathOrLink,Dropbox.Api.Files.ThumbnailFormat,Dropbox.Api.Files.ThumbnailSize,Dropbox.Api.Files.ThumbnailMode)
+  commentId: M:Dropbox.Api.Files.Routes.FilesAppRoutes.GetThumbnailV2Async(Dropbox.Api.Files.PathOrLink,Dropbox.Api.Files.ThumbnailFormat,Dropbox.Api.Files.ThumbnailSize,Dropbox.Api.Files.ThumbnailMode)
+  id: GetThumbnailV2Async(Dropbox.Api.Files.PathOrLink,Dropbox.Api.Files.ThumbnailFormat,Dropbox.Api.Files.ThumbnailSize,Dropbox.Api.Files.ThumbnailMode)
+  parent: Dropbox.Api.Files.Routes.FilesAppRoutes
+  langs:
+  - csharp
+  - vb
+  name: GetThumbnailV2Async(PathOrLink, ThumbnailFormat, ThumbnailSize, ThumbnailMode)
+  nameWithType: FilesAppRoutes.GetThumbnailV2Async(PathOrLink, ThumbnailFormat, ThumbnailSize, ThumbnailMode)
+  fullName: Dropbox.Api.Files.Routes.FilesAppRoutes.GetThumbnailV2Async(Dropbox.Api.Files.PathOrLink, Dropbox.Api.Files.ThumbnailFormat, Dropbox.Api.Files.ThumbnailSize, Dropbox.Api.Files.ThumbnailMode)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FilesAppRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GetThumbnailV2Async
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FilesAppRoutes.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files.Routes
+  summary: "\n<p>Get a thumbnail for an image.</p>\n<p>This method currently supports files with the following file extensions: jpg,\njpeg, png, tiff, tif, gif, webp, ppm and bmp. Photos that are larger than 20MB in\nsize won&apos;t be converted to a thumbnail.</p>\n"
+  example: []
+  syntax:
+    content: public System.Threading.Tasks.Task<IDownloadResponse<PreviewResult>> GetThumbnailV2Async(PathOrLink resource, ThumbnailFormat format = null, ThumbnailSize size = null, ThumbnailMode mode = null)
+    parameters:
+    - id: resource
+      type: Dropbox.Api.Files.PathOrLink
+      description: >-
+        Information specifying which file to preview. This could be
+
+        a path to a file, a shared link pointing to a file, or a shared link pointing to a
+
+        folder, with a relative path.
+    - id: format
+      type: Dropbox.Api.Files.ThumbnailFormat
+      description: >-
+        The format for the thumbnail image, jpeg (default) or png. For
+
+        images that are photos, jpeg should be preferred, while png is  better for
+
+        screenshots and digital arts.
+    - id: size
+      type: Dropbox.Api.Files.ThumbnailSize
+      description: The size for the thumbnail image.
+    - id: mode
+      type: Dropbox.Api.Files.ThumbnailMode
+      description: >-
+        How to resize and crop the image to achieve the desired
+
+        size.
+    return:
+      type: System.Threading.Tasks.Task{Dropbox.Api.Stone.IDownloadResponse{Dropbox.Api.Files.PreviewResult}}
+      description: >-
+        The task that represents the asynchronous send operation. The TResult
+
+        parameter contains the response from the server.
+    content.vb: Public Function GetThumbnailV2Async(resource As PathOrLink, format As ThumbnailFormat = Nothing, size As ThumbnailSize = Nothing, mode As ThumbnailMode = Nothing) As System.Threading.Tasks.Task(Of IDownloadResponse(Of PreviewResult))
+  overload: Dropbox.Api.Files.Routes.FilesAppRoutes.GetThumbnailV2Async*
+  exceptions:
+  - type: Dropbox.Api.ApiException`1
+    commentId: T:Dropbox.Api.ApiException`1
+    description: >-
+      Thrown if there is an error
+
+      processing the request; This will contain a <xref href="Dropbox.Api.Files.ThumbnailV2Error" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.Routes.FilesAppRoutes.BeginGetThumbnailV2(Dropbox.Api.Files.PathOrLink,Dropbox.Api.Files.ThumbnailFormat,Dropbox.Api.Files.ThumbnailSize,Dropbox.Api.Files.ThumbnailMode,System.AsyncCallback,System.Object)
+  commentId: M:Dropbox.Api.Files.Routes.FilesAppRoutes.BeginGetThumbnailV2(Dropbox.Api.Files.PathOrLink,Dropbox.Api.Files.ThumbnailFormat,Dropbox.Api.Files.ThumbnailSize,Dropbox.Api.Files.ThumbnailMode,System.AsyncCallback,System.Object)
+  id: BeginGetThumbnailV2(Dropbox.Api.Files.PathOrLink,Dropbox.Api.Files.ThumbnailFormat,Dropbox.Api.Files.ThumbnailSize,Dropbox.Api.Files.ThumbnailMode,System.AsyncCallback,System.Object)
+  parent: Dropbox.Api.Files.Routes.FilesAppRoutes
+  langs:
+  - csharp
+  - vb
+  name: BeginGetThumbnailV2(PathOrLink, ThumbnailFormat, ThumbnailSize, ThumbnailMode, System.AsyncCallback, Object)
+  nameWithType: FilesAppRoutes.BeginGetThumbnailV2(PathOrLink, ThumbnailFormat, ThumbnailSize, ThumbnailMode, System.AsyncCallback, Object)
+  fullName: Dropbox.Api.Files.Routes.FilesAppRoutes.BeginGetThumbnailV2(Dropbox.Api.Files.PathOrLink, Dropbox.Api.Files.ThumbnailFormat, Dropbox.Api.Files.ThumbnailSize, Dropbox.Api.Files.ThumbnailMode, System.AsyncCallback, System.Object)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FilesAppRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: BeginGetThumbnailV2
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FilesAppRoutes.cs
+    startLine: 114
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files.Routes
+  summary: "\n<p>Begins an asynchronous send to the get thumbnail route.</p>\n"
+  example: []
+  syntax:
+    content: public System.IAsyncResult BeginGetThumbnailV2(PathOrLink resource, ThumbnailFormat format = null, ThumbnailSize size = null, ThumbnailMode mode = null, System.AsyncCallback callback = null, object callbackState = null)
+    parameters:
+    - id: resource
+      type: Dropbox.Api.Files.PathOrLink
+      description: >-
+        Information specifying which file to preview. This could be
+
+        a path to a file, a shared link pointing to a file, or a shared link pointing to a
+
+        folder, with a relative path.
+    - id: format
+      type: Dropbox.Api.Files.ThumbnailFormat
+      description: >-
+        The format for the thumbnail image, jpeg (default) or png. For
+
+        images that are photos, jpeg should be preferred, while png is  better for
+
+        screenshots and digital arts.
+    - id: size
+      type: Dropbox.Api.Files.ThumbnailSize
+      description: The size for the thumbnail image.
+    - id: mode
+      type: Dropbox.Api.Files.ThumbnailMode
+      description: >-
+        How to resize and crop the image to achieve the desired
+
+        size.
+    - id: callback
+      type: System.AsyncCallback
+      description: >-
+        The method to be called when the asynchronous send is
+
+        completed.
+    - id: callbackState
+      type: System.Object
+      description: >-
+        A user provided object that distinguished this send
+
+        from other send requests.
+    return:
+      type: System.IAsyncResult
+      description: An object that represents the asynchronous send request.
+    content.vb: Public Function BeginGetThumbnailV2(resource As PathOrLink, format As ThumbnailFormat = Nothing, size As ThumbnailSize = Nothing, mode As ThumbnailMode = Nothing, callback As System.AsyncCallback = Nothing, callbackState As Object = Nothing) As System.IAsyncResult
+  overload: Dropbox.Api.Files.Routes.FilesAppRoutes.BeginGetThumbnailV2*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.Routes.FilesAppRoutes.EndGetThumbnailV2(System.IAsyncResult)
+  commentId: M:Dropbox.Api.Files.Routes.FilesAppRoutes.EndGetThumbnailV2(System.IAsyncResult)
+  id: EndGetThumbnailV2(System.IAsyncResult)
+  parent: Dropbox.Api.Files.Routes.FilesAppRoutes
+  langs:
+  - csharp
+  - vb
+  name: EndGetThumbnailV2(System.IAsyncResult)
+  nameWithType: FilesAppRoutes.EndGetThumbnailV2(System.IAsyncResult)
+  fullName: Dropbox.Api.Files.Routes.FilesAppRoutes.EndGetThumbnailV2(System.IAsyncResult)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FilesAppRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: EndGetThumbnailV2
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FilesAppRoutes.cs
+    startLine: 139
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files.Routes
+  summary: "\n<p>Waits for the pending asynchronous send to the get thumbnail route to\ncomplete</p>\n"
+  example: []
+  syntax:
+    content: public IDownloadResponse<PreviewResult> EndGetThumbnailV2(System.IAsyncResult asyncResult)
+    parameters:
+    - id: asyncResult
+      type: System.IAsyncResult
+      description: >-
+        The reference to the pending asynchronous send
+
+        request
+    return:
+      type: Dropbox.Api.Stone.IDownloadResponse{Dropbox.Api.Files.PreviewResult}
+      description: The response to the send request
+    content.vb: Public Function EndGetThumbnailV2(asyncResult As System.IAsyncResult) As IDownloadResponse(Of PreviewResult)
+  overload: Dropbox.Api.Files.Routes.FilesAppRoutes.EndGetThumbnailV2*
+  exceptions:
+  - type: Dropbox.Api.ApiException`1
+    commentId: T:Dropbox.Api.ApiException`1
+    description: >-
+      Thrown if there is an error
+
+      processing the request; This will contain a <xref href="Dropbox.Api.Files.ThumbnailV2Error" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: Dropbox.Api.Files.Routes
+  commentId: N:Dropbox.Api.Files.Routes
+  name: Dropbox.Api.Files.Routes
+  nameWithType: Dropbox.Api.Files.Routes
+  fullName: Dropbox.Api.Files.Routes
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.ThumbnailV2Error
+  commentId: T:Dropbox.Api.Files.ThumbnailV2Error
+  parent: Dropbox.Api.Files
+  name: ThumbnailV2Error
+  nameWithType: ThumbnailV2Error
+  fullName: Dropbox.Api.Files.ThumbnailV2Error
+- uid: Dropbox.Api.ApiException`1
+  commentId: T:Dropbox.Api.ApiException`1
+  name: ApiException<TError>
+  nameWithType: ApiException<TError>
+  fullName: Dropbox.Api.ApiException<TError>
+  nameWithType.vb: ApiException(Of TError)
+  fullName.vb: Dropbox.Api.ApiException(Of TError)
+  name.vb: ApiException(Of TError)
+  spec.csharp:
+  - uid: Dropbox.Api.ApiException`1
+    name: ApiException
+    nameWithType: ApiException
+    fullName: Dropbox.Api.ApiException
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TError
+    nameWithType: TError
+    fullName: TError
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Dropbox.Api.ApiException`1
+    name: ApiException
+    nameWithType: ApiException
+    fullName: Dropbox.Api.ApiException
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TError
+    nameWithType: TError
+    fullName: TError
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Files.Routes.FilesAppRoutes.GetThumbnailV2Async*
+  commentId: Overload:Dropbox.Api.Files.Routes.FilesAppRoutes.GetThumbnailV2Async
+  name: GetThumbnailV2Async
+  nameWithType: FilesAppRoutes.GetThumbnailV2Async
+  fullName: Dropbox.Api.Files.Routes.FilesAppRoutes.GetThumbnailV2Async
+- uid: Dropbox.Api.Files.ThumbnailV2Arg
+  commentId: T:Dropbox.Api.Files.ThumbnailV2Arg
+  parent: Dropbox.Api.Files
+  name: ThumbnailV2Arg
+  nameWithType: ThumbnailV2Arg
+  fullName: Dropbox.Api.Files.ThumbnailV2Arg
+- uid: System.Threading.Tasks.Task{Dropbox.Api.Stone.IDownloadResponse{Dropbox.Api.Files.PreviewResult}}
+  commentId: '!:System.Threading.Tasks.Task{Dropbox.Api.Stone.IDownloadResponse{Dropbox.Api.Files.PreviewResult}}'
+  definition: System.Threading.Tasks.Task`1
+  name: System.Threading.Tasks.Task<IDownloadResponse<PreviewResult>>
+  nameWithType: System.Threading.Tasks.Task<IDownloadResponse<PreviewResult>>
+  fullName: System.Threading.Tasks.Task<Dropbox.Api.Stone.IDownloadResponse<Dropbox.Api.Files.PreviewResult>>
+  nameWithType.vb: System.Threading.Tasks.Task(Of IDownloadResponse(Of PreviewResult))
+  fullName.vb: System.Threading.Tasks.Task(Of Dropbox.Api.Stone.IDownloadResponse(Of Dropbox.Api.Files.PreviewResult))
+  name.vb: System.Threading.Tasks.Task(Of IDownloadResponse(Of PreviewResult))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: System.Threading.Tasks.Task
+    nameWithType: System.Threading.Tasks.Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Stone.IDownloadResponse`1
+    name: IDownloadResponse
+    nameWithType: IDownloadResponse
+    fullName: Dropbox.Api.Stone.IDownloadResponse
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Files.PreviewResult
+    name: PreviewResult
+    nameWithType: PreviewResult
+    fullName: Dropbox.Api.Files.PreviewResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: System.Threading.Tasks.Task
+    nameWithType: System.Threading.Tasks.Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Stone.IDownloadResponse`1
+    name: IDownloadResponse
+    nameWithType: IDownloadResponse
+    fullName: Dropbox.Api.Stone.IDownloadResponse
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Files.PreviewResult
+    name: PreviewResult
+    nameWithType: PreviewResult
+    fullName: Dropbox.Api.Files.PreviewResult
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks.Task`1
+  isExternal: true
+  name: System.Threading.Tasks.Task<>
+  nameWithType: System.Threading.Tasks.Task<>
+  fullName: System.Threading.Tasks.Task<>
+  nameWithType.vb: System.Threading.Tasks.Task(Of )
+  fullName.vb: System.Threading.Tasks.Task(Of )
+  name.vb: System.Threading.Tasks.Task(Of )
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: System.Threading.Tasks.Task
+    nameWithType: System.Threading.Tasks.Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: System.Threading.Tasks.Task
+    nameWithType: System.Threading.Tasks.Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Files.Routes.FilesAppRoutes.BeginGetThumbnailV2*
+  commentId: Overload:Dropbox.Api.Files.Routes.FilesAppRoutes.BeginGetThumbnailV2
+  name: BeginGetThumbnailV2
+  nameWithType: FilesAppRoutes.BeginGetThumbnailV2
+  fullName: Dropbox.Api.Files.Routes.FilesAppRoutes.BeginGetThumbnailV2
+- uid: System.AsyncCallback
+  isExternal: true
+  name: System.AsyncCallback
+  nameWithType: System.AsyncCallback
+  fullName: System.AsyncCallback
+- uid: System.IAsyncResult
+  isExternal: true
+  name: System.IAsyncResult
+  nameWithType: System.IAsyncResult
+  fullName: System.IAsyncResult
+- uid: Dropbox.Api.Files.PathOrLink
+  commentId: T:Dropbox.Api.Files.PathOrLink
+  parent: Dropbox.Api.Files
+  name: PathOrLink
+  nameWithType: PathOrLink
+  fullName: Dropbox.Api.Files.PathOrLink
+- uid: Dropbox.Api.Files.ThumbnailFormat
+  commentId: T:Dropbox.Api.Files.ThumbnailFormat
+  parent: Dropbox.Api.Files
+  name: ThumbnailFormat
+  nameWithType: ThumbnailFormat
+  fullName: Dropbox.Api.Files.ThumbnailFormat
+- uid: Dropbox.Api.Files.ThumbnailSize
+  commentId: T:Dropbox.Api.Files.ThumbnailSize
+  parent: Dropbox.Api.Files
+  name: ThumbnailSize
+  nameWithType: ThumbnailSize
+  fullName: Dropbox.Api.Files.ThumbnailSize
+- uid: Dropbox.Api.Files.ThumbnailMode
+  commentId: T:Dropbox.Api.Files.ThumbnailMode
+  parent: Dropbox.Api.Files
+  name: ThumbnailMode
+  nameWithType: ThumbnailMode
+  fullName: Dropbox.Api.Files.ThumbnailMode
+- uid: Dropbox.Api.Files.Routes.FilesAppRoutes.EndGetThumbnailV2*
+  commentId: Overload:Dropbox.Api.Files.Routes.FilesAppRoutes.EndGetThumbnailV2
+  name: EndGetThumbnailV2
+  nameWithType: FilesAppRoutes.EndGetThumbnailV2
+  fullName: Dropbox.Api.Files.Routes.FilesAppRoutes.EndGetThumbnailV2
+- uid: Dropbox.Api.Stone.IDownloadResponse{Dropbox.Api.Files.PreviewResult}
+  commentId: T:Dropbox.Api.Stone.IDownloadResponse{Dropbox.Api.Files.PreviewResult}
+  parent: Dropbox.Api.Stone
+  definition: Dropbox.Api.Stone.IDownloadResponse`1
+  name: IDownloadResponse<PreviewResult>
+  nameWithType: IDownloadResponse<PreviewResult>
+  fullName: Dropbox.Api.Stone.IDownloadResponse<Dropbox.Api.Files.PreviewResult>
+  nameWithType.vb: IDownloadResponse(Of PreviewResult)
+  fullName.vb: Dropbox.Api.Stone.IDownloadResponse(Of Dropbox.Api.Files.PreviewResult)
+  name.vb: IDownloadResponse(Of PreviewResult)
+  spec.csharp:
+  - uid: Dropbox.Api.Stone.IDownloadResponse`1
+    name: IDownloadResponse
+    nameWithType: IDownloadResponse
+    fullName: Dropbox.Api.Stone.IDownloadResponse
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Files.PreviewResult
+    name: PreviewResult
+    nameWithType: PreviewResult
+    fullName: Dropbox.Api.Files.PreviewResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Dropbox.Api.Stone.IDownloadResponse`1
+    name: IDownloadResponse
+    nameWithType: IDownloadResponse
+    fullName: Dropbox.Api.Stone.IDownloadResponse
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Files.PreviewResult
+    name: PreviewResult
+    nameWithType: PreviewResult
+    fullName: Dropbox.Api.Files.PreviewResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Stone.IDownloadResponse`1
+  commentId: T:Dropbox.Api.Stone.IDownloadResponse`1
+  name: IDownloadResponse<TResponse>
+  nameWithType: IDownloadResponse<TResponse>
+  fullName: Dropbox.Api.Stone.IDownloadResponse<TResponse>
+  nameWithType.vb: IDownloadResponse(Of TResponse)
+  fullName.vb: Dropbox.Api.Stone.IDownloadResponse(Of TResponse)
+  name.vb: IDownloadResponse(Of TResponse)
+  spec.csharp:
+  - uid: Dropbox.Api.Stone.IDownloadResponse`1
+    name: IDownloadResponse
+    nameWithType: IDownloadResponse
+    fullName: Dropbox.Api.Stone.IDownloadResponse
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TResponse
+    nameWithType: TResponse
+    fullName: TResponse
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Dropbox.Api.Stone.IDownloadResponse`1
+    name: IDownloadResponse
+    nameWithType: IDownloadResponse
+    fullName: Dropbox.Api.Stone.IDownloadResponse
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TResponse
+    nameWithType: TResponse
+    fullName: TResponse
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Stone
+  commentId: N:Dropbox.Api.Stone
+  name: Dropbox.Api.Stone
+  nameWithType: Dropbox.Api.Stone
+  fullName: Dropbox.Api.Stone
+shouldSkipMarkup: true

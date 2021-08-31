@@ -1,0 +1,162 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.RequestedLinkAccessLevel.Viewer
+  commentId: T:Dropbox.Api.Sharing.RequestedLinkAccessLevel.Viewer
+  id: RequestedLinkAccessLevel.Viewer
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.RequestedLinkAccessLevel.Viewer.Instance
+  langs:
+  - csharp
+  - vb
+  name: RequestedLinkAccessLevel.Viewer
+  nameWithType: RequestedLinkAccessLevel.Viewer
+  fullName: Dropbox.Api.Sharing.RequestedLinkAccessLevel.Viewer
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RequestedLinkAccessLevel.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Viewer
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RequestedLinkAccessLevel.cs
+    startLine: 213
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Users who use the link can view and comment on the content.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Viewer : RequestedLinkAccessLevel'
+    content.vb: >-
+      Public NotInheritable Class Viewer
+          Inherits RequestedLinkAccessLevel
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Sharing.RequestedLinkAccessLevel
+  inheritedMembers:
+  - Dropbox.Api.Sharing.RequestedLinkAccessLevel.IsViewer
+  - Dropbox.Api.Sharing.RequestedLinkAccessLevel.AsViewer
+  - Dropbox.Api.Sharing.RequestedLinkAccessLevel.IsEditor
+  - Dropbox.Api.Sharing.RequestedLinkAccessLevel.AsEditor
+  - Dropbox.Api.Sharing.RequestedLinkAccessLevel.IsMax
+  - Dropbox.Api.Sharing.RequestedLinkAccessLevel.AsMax
+  - Dropbox.Api.Sharing.RequestedLinkAccessLevel.IsOther
+  - Dropbox.Api.Sharing.RequestedLinkAccessLevel.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Sharing.RequestedLinkAccessLevel.Viewer.Instance
+  commentId: F:Dropbox.Api.Sharing.RequestedLinkAccessLevel.Viewer.Instance
+  id: Instance
+  parent: Dropbox.Api.Sharing.RequestedLinkAccessLevel.Viewer
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: RequestedLinkAccessLevel.Viewer.Instance
+  fullName: Dropbox.Api.Sharing.RequestedLinkAccessLevel.Viewer.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RequestedLinkAccessLevel.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RequestedLinkAccessLevel.cs
+    startLine: 237
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>A singleton instance of Viewer</p>\n"
+  example: []
+  syntax:
+    content: public static readonly RequestedLinkAccessLevel.Viewer Instance
+    return:
+      type: Dropbox.Api.Sharing.RequestedLinkAccessLevel.Viewer
+    content.vb: Public Shared ReadOnly Instance As RequestedLinkAccessLevel.Viewer
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.RequestedLinkAccessLevel
+  commentId: T:Dropbox.Api.Sharing.RequestedLinkAccessLevel
+  parent: Dropbox.Api.Sharing
+  name: RequestedLinkAccessLevel
+  nameWithType: RequestedLinkAccessLevel
+  fullName: Dropbox.Api.Sharing.RequestedLinkAccessLevel
+- uid: Dropbox.Api.Sharing.RequestedLinkAccessLevel.IsViewer
+  commentId: P:Dropbox.Api.Sharing.RequestedLinkAccessLevel.IsViewer
+  parent: Dropbox.Api.Sharing.RequestedLinkAccessLevel
+  name: IsViewer
+  nameWithType: RequestedLinkAccessLevel.IsViewer
+  fullName: Dropbox.Api.Sharing.RequestedLinkAccessLevel.IsViewer
+- uid: Dropbox.Api.Sharing.RequestedLinkAccessLevel.AsViewer
+  commentId: P:Dropbox.Api.Sharing.RequestedLinkAccessLevel.AsViewer
+  parent: Dropbox.Api.Sharing.RequestedLinkAccessLevel
+  name: AsViewer
+  nameWithType: RequestedLinkAccessLevel.AsViewer
+  fullName: Dropbox.Api.Sharing.RequestedLinkAccessLevel.AsViewer
+- uid: Dropbox.Api.Sharing.RequestedLinkAccessLevel.IsEditor
+  commentId: P:Dropbox.Api.Sharing.RequestedLinkAccessLevel.IsEditor
+  parent: Dropbox.Api.Sharing.RequestedLinkAccessLevel
+  name: IsEditor
+  nameWithType: RequestedLinkAccessLevel.IsEditor
+  fullName: Dropbox.Api.Sharing.RequestedLinkAccessLevel.IsEditor
+- uid: Dropbox.Api.Sharing.RequestedLinkAccessLevel.AsEditor
+  commentId: P:Dropbox.Api.Sharing.RequestedLinkAccessLevel.AsEditor
+  parent: Dropbox.Api.Sharing.RequestedLinkAccessLevel
+  name: AsEditor
+  nameWithType: RequestedLinkAccessLevel.AsEditor
+  fullName: Dropbox.Api.Sharing.RequestedLinkAccessLevel.AsEditor
+- uid: Dropbox.Api.Sharing.RequestedLinkAccessLevel.IsMax
+  commentId: P:Dropbox.Api.Sharing.RequestedLinkAccessLevel.IsMax
+  parent: Dropbox.Api.Sharing.RequestedLinkAccessLevel
+  name: IsMax
+  nameWithType: RequestedLinkAccessLevel.IsMax
+  fullName: Dropbox.Api.Sharing.RequestedLinkAccessLevel.IsMax
+- uid: Dropbox.Api.Sharing.RequestedLinkAccessLevel.AsMax
+  commentId: P:Dropbox.Api.Sharing.RequestedLinkAccessLevel.AsMax
+  parent: Dropbox.Api.Sharing.RequestedLinkAccessLevel
+  name: AsMax
+  nameWithType: RequestedLinkAccessLevel.AsMax
+  fullName: Dropbox.Api.Sharing.RequestedLinkAccessLevel.AsMax
+- uid: Dropbox.Api.Sharing.RequestedLinkAccessLevel.IsOther
+  commentId: P:Dropbox.Api.Sharing.RequestedLinkAccessLevel.IsOther
+  parent: Dropbox.Api.Sharing.RequestedLinkAccessLevel
+  name: IsOther
+  nameWithType: RequestedLinkAccessLevel.IsOther
+  fullName: Dropbox.Api.Sharing.RequestedLinkAccessLevel.IsOther
+- uid: Dropbox.Api.Sharing.RequestedLinkAccessLevel.AsOther
+  commentId: P:Dropbox.Api.Sharing.RequestedLinkAccessLevel.AsOther
+  parent: Dropbox.Api.Sharing.RequestedLinkAccessLevel
+  name: AsOther
+  nameWithType: RequestedLinkAccessLevel.AsOther
+  fullName: Dropbox.Api.Sharing.RequestedLinkAccessLevel.AsOther
+- uid: Dropbox.Api.Sharing.RequestedLinkAccessLevel.Viewer
+  commentId: T:Dropbox.Api.Sharing.RequestedLinkAccessLevel.Viewer
+  parent: Dropbox.Api.Sharing
+  name: RequestedLinkAccessLevel.Viewer
+  nameWithType: RequestedLinkAccessLevel.Viewer
+  fullName: Dropbox.Api.Sharing.RequestedLinkAccessLevel.Viewer
+shouldSkipMarkup: true

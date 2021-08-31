@@ -1,0 +1,214 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.ResendSecondaryEmailResult.Success
+  commentId: T:Dropbox.Api.Team.ResendSecondaryEmailResult.Success
+  id: ResendSecondaryEmailResult.Success
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.ResendSecondaryEmailResult.Success.#ctor(System.String)
+  - Dropbox.Api.Team.ResendSecondaryEmailResult.Success.Value
+  langs:
+  - csharp
+  - vb
+  name: ResendSecondaryEmailResult.Success
+  nameWithType: ResendSecondaryEmailResult.Success
+  fullName: Dropbox.Api.Team.ResendSecondaryEmailResult.Success
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ResendSecondaryEmailResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Success
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ResendSecondaryEmailResult.cs
+    startLine: 217
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>A verification email was successfully sent to the secondary email\naddress.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Success : ResendSecondaryEmailResult'
+    content.vb: >-
+      Public NotInheritable Class Success
+          Inherits ResendSecondaryEmailResult
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.ResendSecondaryEmailResult
+  inheritedMembers:
+  - Dropbox.Api.Team.ResendSecondaryEmailResult.IsSuccess
+  - Dropbox.Api.Team.ResendSecondaryEmailResult.AsSuccess
+  - Dropbox.Api.Team.ResendSecondaryEmailResult.IsNotPending
+  - Dropbox.Api.Team.ResendSecondaryEmailResult.AsNotPending
+  - Dropbox.Api.Team.ResendSecondaryEmailResult.IsRateLimited
+  - Dropbox.Api.Team.ResendSecondaryEmailResult.AsRateLimited
+  - Dropbox.Api.Team.ResendSecondaryEmailResult.IsOther
+  - Dropbox.Api.Team.ResendSecondaryEmailResult.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Team.ResendSecondaryEmailResult.Success.#ctor(System.String)
+  commentId: M:Dropbox.Api.Team.ResendSecondaryEmailResult.Success.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.Team.ResendSecondaryEmailResult.Success
+  langs:
+  - csharp
+  - vb
+  name: Success(String)
+  nameWithType: ResendSecondaryEmailResult.Success.Success(String)
+  fullName: Dropbox.Api.Team.ResendSecondaryEmailResult.Success.Success(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ResendSecondaryEmailResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ResendSecondaryEmailResult.cs
+    startLine: 235
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.ResendSecondaryEmailResult.Success\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public Success(string value)
+    parameters:
+    - id: value
+      type: System.String
+      description: The value
+    content.vb: Public Sub New(value As String)
+  overload: Dropbox.Api.Team.ResendSecondaryEmailResult.Success.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.ResendSecondaryEmailResult.Success.Value
+  commentId: P:Dropbox.Api.Team.ResendSecondaryEmailResult.Success.Value
+  id: Value
+  parent: Dropbox.Api.Team.ResendSecondaryEmailResult.Success
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: ResendSecondaryEmailResult.Success.Value
+  fullName: Dropbox.Api.Team.ResendSecondaryEmailResult.Success.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ResendSecondaryEmailResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ResendSecondaryEmailResult.cs
+    startLine: 249
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public string Value { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Value As String
+  overload: Dropbox.Api.Team.ResendSecondaryEmailResult.Success.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.ResendSecondaryEmailResult
+  commentId: T:Dropbox.Api.Team.ResendSecondaryEmailResult
+  parent: Dropbox.Api.Team
+  name: ResendSecondaryEmailResult
+  nameWithType: ResendSecondaryEmailResult
+  fullName: Dropbox.Api.Team.ResendSecondaryEmailResult
+- uid: Dropbox.Api.Team.ResendSecondaryEmailResult.IsSuccess
+  commentId: P:Dropbox.Api.Team.ResendSecondaryEmailResult.IsSuccess
+  parent: Dropbox.Api.Team.ResendSecondaryEmailResult
+  name: IsSuccess
+  nameWithType: ResendSecondaryEmailResult.IsSuccess
+  fullName: Dropbox.Api.Team.ResendSecondaryEmailResult.IsSuccess
+- uid: Dropbox.Api.Team.ResendSecondaryEmailResult.AsSuccess
+  commentId: P:Dropbox.Api.Team.ResendSecondaryEmailResult.AsSuccess
+  parent: Dropbox.Api.Team.ResendSecondaryEmailResult
+  name: AsSuccess
+  nameWithType: ResendSecondaryEmailResult.AsSuccess
+  fullName: Dropbox.Api.Team.ResendSecondaryEmailResult.AsSuccess
+- uid: Dropbox.Api.Team.ResendSecondaryEmailResult.IsNotPending
+  commentId: P:Dropbox.Api.Team.ResendSecondaryEmailResult.IsNotPending
+  parent: Dropbox.Api.Team.ResendSecondaryEmailResult
+  name: IsNotPending
+  nameWithType: ResendSecondaryEmailResult.IsNotPending
+  fullName: Dropbox.Api.Team.ResendSecondaryEmailResult.IsNotPending
+- uid: Dropbox.Api.Team.ResendSecondaryEmailResult.AsNotPending
+  commentId: P:Dropbox.Api.Team.ResendSecondaryEmailResult.AsNotPending
+  parent: Dropbox.Api.Team.ResendSecondaryEmailResult
+  name: AsNotPending
+  nameWithType: ResendSecondaryEmailResult.AsNotPending
+  fullName: Dropbox.Api.Team.ResendSecondaryEmailResult.AsNotPending
+- uid: Dropbox.Api.Team.ResendSecondaryEmailResult.IsRateLimited
+  commentId: P:Dropbox.Api.Team.ResendSecondaryEmailResult.IsRateLimited
+  parent: Dropbox.Api.Team.ResendSecondaryEmailResult
+  name: IsRateLimited
+  nameWithType: ResendSecondaryEmailResult.IsRateLimited
+  fullName: Dropbox.Api.Team.ResendSecondaryEmailResult.IsRateLimited
+- uid: Dropbox.Api.Team.ResendSecondaryEmailResult.AsRateLimited
+  commentId: P:Dropbox.Api.Team.ResendSecondaryEmailResult.AsRateLimited
+  parent: Dropbox.Api.Team.ResendSecondaryEmailResult
+  name: AsRateLimited
+  nameWithType: ResendSecondaryEmailResult.AsRateLimited
+  fullName: Dropbox.Api.Team.ResendSecondaryEmailResult.AsRateLimited
+- uid: Dropbox.Api.Team.ResendSecondaryEmailResult.IsOther
+  commentId: P:Dropbox.Api.Team.ResendSecondaryEmailResult.IsOther
+  parent: Dropbox.Api.Team.ResendSecondaryEmailResult
+  name: IsOther
+  nameWithType: ResendSecondaryEmailResult.IsOther
+  fullName: Dropbox.Api.Team.ResendSecondaryEmailResult.IsOther
+- uid: Dropbox.Api.Team.ResendSecondaryEmailResult.AsOther
+  commentId: P:Dropbox.Api.Team.ResendSecondaryEmailResult.AsOther
+  parent: Dropbox.Api.Team.ResendSecondaryEmailResult
+  name: AsOther
+  nameWithType: ResendSecondaryEmailResult.AsOther
+  fullName: Dropbox.Api.Team.ResendSecondaryEmailResult.AsOther
+- uid: Dropbox.Api.Team.ResendSecondaryEmailResult.Success
+  commentId: T:Dropbox.Api.Team.ResendSecondaryEmailResult.Success
+  parent: Dropbox.Api.Team
+  name: ResendSecondaryEmailResult.Success
+  nameWithType: ResendSecondaryEmailResult.Success
+  fullName: Dropbox.Api.Team.ResendSecondaryEmailResult.Success
+- uid: Dropbox.Api.Team.ResendSecondaryEmailResult.Success.#ctor*
+  commentId: Overload:Dropbox.Api.Team.ResendSecondaryEmailResult.Success.#ctor
+  name: Success
+  nameWithType: ResendSecondaryEmailResult.Success.Success
+  fullName: Dropbox.Api.Team.ResendSecondaryEmailResult.Success.Success
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Team.ResendSecondaryEmailResult.Success.Value*
+  commentId: Overload:Dropbox.Api.Team.ResendSecondaryEmailResult.Success.Value
+  name: Value
+  nameWithType: ResendSecondaryEmailResult.Success.Value
+  fullName: Dropbox.Api.Team.ResendSecondaryEmailResult.Success.Value
+shouldSkipMarkup: true

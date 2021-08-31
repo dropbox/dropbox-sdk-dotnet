@@ -1,0 +1,148 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.UsersCommon.AccountType.Basic
+  commentId: T:Dropbox.Api.UsersCommon.AccountType.Basic
+  id: AccountType.Basic
+  parent: Dropbox.Api.UsersCommon
+  children:
+  - Dropbox.Api.UsersCommon.AccountType.Basic.Instance
+  langs:
+  - csharp
+  - vb
+  name: AccountType.Basic
+  nameWithType: AccountType.Basic
+  fullName: Dropbox.Api.UsersCommon.AccountType.Basic
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/UsersCommon/AccountType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Basic
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/UsersCommon/AccountType.cs
+    startLine: 183
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.UsersCommon
+  summary: "\n<p>The basic account type.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Basic : AccountType'
+    content.vb: >-
+      Public NotInheritable Class Basic
+          Inherits AccountType
+  inheritance:
+  - System.Object
+  - Dropbox.Api.UsersCommon.AccountType
+  inheritedMembers:
+  - Dropbox.Api.UsersCommon.AccountType.IsBasic
+  - Dropbox.Api.UsersCommon.AccountType.AsBasic
+  - Dropbox.Api.UsersCommon.AccountType.IsPro
+  - Dropbox.Api.UsersCommon.AccountType.AsPro
+  - Dropbox.Api.UsersCommon.AccountType.IsBusiness
+  - Dropbox.Api.UsersCommon.AccountType.AsBusiness
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.UsersCommon.AccountType.Basic.Instance
+  commentId: F:Dropbox.Api.UsersCommon.AccountType.Basic.Instance
+  id: Instance
+  parent: Dropbox.Api.UsersCommon.AccountType.Basic
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: AccountType.Basic.Instance
+  fullName: Dropbox.Api.UsersCommon.AccountType.Basic.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/UsersCommon/AccountType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/UsersCommon/AccountType.cs
+    startLine: 207
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.UsersCommon
+  summary: "\n<p>A singleton instance of Basic</p>\n"
+  example: []
+  syntax:
+    content: public static readonly AccountType.Basic Instance
+    return:
+      type: Dropbox.Api.UsersCommon.AccountType.Basic
+    content.vb: Public Shared ReadOnly Instance As AccountType.Basic
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.UsersCommon
+  commentId: N:Dropbox.Api.UsersCommon
+  name: Dropbox.Api.UsersCommon
+  nameWithType: Dropbox.Api.UsersCommon
+  fullName: Dropbox.Api.UsersCommon
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.UsersCommon.AccountType
+  commentId: T:Dropbox.Api.UsersCommon.AccountType
+  parent: Dropbox.Api.UsersCommon
+  name: AccountType
+  nameWithType: AccountType
+  fullName: Dropbox.Api.UsersCommon.AccountType
+- uid: Dropbox.Api.UsersCommon.AccountType.IsBasic
+  commentId: P:Dropbox.Api.UsersCommon.AccountType.IsBasic
+  parent: Dropbox.Api.UsersCommon.AccountType
+  name: IsBasic
+  nameWithType: AccountType.IsBasic
+  fullName: Dropbox.Api.UsersCommon.AccountType.IsBasic
+- uid: Dropbox.Api.UsersCommon.AccountType.AsBasic
+  commentId: P:Dropbox.Api.UsersCommon.AccountType.AsBasic
+  parent: Dropbox.Api.UsersCommon.AccountType
+  name: AsBasic
+  nameWithType: AccountType.AsBasic
+  fullName: Dropbox.Api.UsersCommon.AccountType.AsBasic
+- uid: Dropbox.Api.UsersCommon.AccountType.IsPro
+  commentId: P:Dropbox.Api.UsersCommon.AccountType.IsPro
+  parent: Dropbox.Api.UsersCommon.AccountType
+  name: IsPro
+  nameWithType: AccountType.IsPro
+  fullName: Dropbox.Api.UsersCommon.AccountType.IsPro
+- uid: Dropbox.Api.UsersCommon.AccountType.AsPro
+  commentId: P:Dropbox.Api.UsersCommon.AccountType.AsPro
+  parent: Dropbox.Api.UsersCommon.AccountType
+  name: AsPro
+  nameWithType: AccountType.AsPro
+  fullName: Dropbox.Api.UsersCommon.AccountType.AsPro
+- uid: Dropbox.Api.UsersCommon.AccountType.IsBusiness
+  commentId: P:Dropbox.Api.UsersCommon.AccountType.IsBusiness
+  parent: Dropbox.Api.UsersCommon.AccountType
+  name: IsBusiness
+  nameWithType: AccountType.IsBusiness
+  fullName: Dropbox.Api.UsersCommon.AccountType.IsBusiness
+- uid: Dropbox.Api.UsersCommon.AccountType.AsBusiness
+  commentId: P:Dropbox.Api.UsersCommon.AccountType.AsBusiness
+  parent: Dropbox.Api.UsersCommon.AccountType
+  name: AsBusiness
+  nameWithType: AccountType.AsBusiness
+  fullName: Dropbox.Api.UsersCommon.AccountType.AsBusiness
+- uid: Dropbox.Api.UsersCommon.AccountType.Basic
+  commentId: T:Dropbox.Api.UsersCommon.AccountType.Basic
+  parent: Dropbox.Api.UsersCommon
+  name: AccountType.Basic
+  nameWithType: AccountType.Basic
+  fullName: Dropbox.Api.UsersCommon.AccountType.Basic
+shouldSkipMarkup: true

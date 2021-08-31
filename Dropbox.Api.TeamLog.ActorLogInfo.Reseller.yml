@@ -1,0 +1,257 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.ActorLogInfo.Reseller
+  commentId: T:Dropbox.Api.TeamLog.ActorLogInfo.Reseller
+  id: ActorLogInfo.Reseller
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.ActorLogInfo.Reseller.#ctor(Dropbox.Api.TeamLog.ResellerLogInfo)
+  - Dropbox.Api.TeamLog.ActorLogInfo.Reseller.Value
+  langs:
+  - csharp
+  - vb
+  name: ActorLogInfo.Reseller
+  nameWithType: ActorLogInfo.Reseller
+  fullName: Dropbox.Api.TeamLog.ActorLogInfo.Reseller
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ActorLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Reseller
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ActorLogInfo.cs
+    startLine: 631
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Action done by reseller.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Reseller : ActorLogInfo'
+    content.vb: >-
+      Public NotInheritable Class Reseller
+          Inherits ActorLogInfo
+  inheritance:
+  - System.Object
+  - Dropbox.Api.TeamLog.ActorLogInfo
+  inheritedMembers:
+  - Dropbox.Api.TeamLog.ActorLogInfo.IsAdmin
+  - Dropbox.Api.TeamLog.ActorLogInfo.AsAdmin
+  - Dropbox.Api.TeamLog.ActorLogInfo.IsAnonymous
+  - Dropbox.Api.TeamLog.ActorLogInfo.AsAnonymous
+  - Dropbox.Api.TeamLog.ActorLogInfo.IsApp
+  - Dropbox.Api.TeamLog.ActorLogInfo.AsApp
+  - Dropbox.Api.TeamLog.ActorLogInfo.IsDropbox
+  - Dropbox.Api.TeamLog.ActorLogInfo.AsDropbox
+  - Dropbox.Api.TeamLog.ActorLogInfo.IsReseller
+  - Dropbox.Api.TeamLog.ActorLogInfo.AsReseller
+  - Dropbox.Api.TeamLog.ActorLogInfo.IsUser
+  - Dropbox.Api.TeamLog.ActorLogInfo.AsUser
+  - Dropbox.Api.TeamLog.ActorLogInfo.IsOther
+  - Dropbox.Api.TeamLog.ActorLogInfo.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.TeamLog.ActorLogInfo.Reseller.#ctor(Dropbox.Api.TeamLog.ResellerLogInfo)
+  commentId: M:Dropbox.Api.TeamLog.ActorLogInfo.Reseller.#ctor(Dropbox.Api.TeamLog.ResellerLogInfo)
+  id: '#ctor(Dropbox.Api.TeamLog.ResellerLogInfo)'
+  parent: Dropbox.Api.TeamLog.ActorLogInfo.Reseller
+  langs:
+  - csharp
+  - vb
+  name: Reseller(ResellerLogInfo)
+  nameWithType: ActorLogInfo.Reseller.Reseller(ResellerLogInfo)
+  fullName: Dropbox.Api.TeamLog.ActorLogInfo.Reseller.Reseller(Dropbox.Api.TeamLog.ResellerLogInfo)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ActorLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ActorLogInfo.cs
+    startLine: 649
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.ActorLogInfo.Reseller\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public Reseller(ResellerLogInfo value)
+    parameters:
+    - id: value
+      type: Dropbox.Api.TeamLog.ResellerLogInfo
+      description: The value
+    content.vb: Public Sub New(value As ResellerLogInfo)
+  overload: Dropbox.Api.TeamLog.ActorLogInfo.Reseller.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.ActorLogInfo.Reseller.Value
+  commentId: P:Dropbox.Api.TeamLog.ActorLogInfo.Reseller.Value
+  id: Value
+  parent: Dropbox.Api.TeamLog.ActorLogInfo.Reseller
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: ActorLogInfo.Reseller.Value
+  fullName: Dropbox.Api.TeamLog.ActorLogInfo.Reseller.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ActorLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ActorLogInfo.cs
+    startLine: 663
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public ResellerLogInfo Value { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.ResellerLogInfo
+    content.vb: Public ReadOnly Property Value As ResellerLogInfo
+  overload: Dropbox.Api.TeamLog.ActorLogInfo.Reseller.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.ActorLogInfo
+  commentId: T:Dropbox.Api.TeamLog.ActorLogInfo
+  parent: Dropbox.Api.TeamLog
+  name: ActorLogInfo
+  nameWithType: ActorLogInfo
+  fullName: Dropbox.Api.TeamLog.ActorLogInfo
+- uid: Dropbox.Api.TeamLog.ActorLogInfo.IsAdmin
+  commentId: P:Dropbox.Api.TeamLog.ActorLogInfo.IsAdmin
+  parent: Dropbox.Api.TeamLog.ActorLogInfo
+  name: IsAdmin
+  nameWithType: ActorLogInfo.IsAdmin
+  fullName: Dropbox.Api.TeamLog.ActorLogInfo.IsAdmin
+- uid: Dropbox.Api.TeamLog.ActorLogInfo.AsAdmin
+  commentId: P:Dropbox.Api.TeamLog.ActorLogInfo.AsAdmin
+  parent: Dropbox.Api.TeamLog.ActorLogInfo
+  name: AsAdmin
+  nameWithType: ActorLogInfo.AsAdmin
+  fullName: Dropbox.Api.TeamLog.ActorLogInfo.AsAdmin
+- uid: Dropbox.Api.TeamLog.ActorLogInfo.IsAnonymous
+  commentId: P:Dropbox.Api.TeamLog.ActorLogInfo.IsAnonymous
+  parent: Dropbox.Api.TeamLog.ActorLogInfo
+  name: IsAnonymous
+  nameWithType: ActorLogInfo.IsAnonymous
+  fullName: Dropbox.Api.TeamLog.ActorLogInfo.IsAnonymous
+- uid: Dropbox.Api.TeamLog.ActorLogInfo.AsAnonymous
+  commentId: P:Dropbox.Api.TeamLog.ActorLogInfo.AsAnonymous
+  parent: Dropbox.Api.TeamLog.ActorLogInfo
+  name: AsAnonymous
+  nameWithType: ActorLogInfo.AsAnonymous
+  fullName: Dropbox.Api.TeamLog.ActorLogInfo.AsAnonymous
+- uid: Dropbox.Api.TeamLog.ActorLogInfo.IsApp
+  commentId: P:Dropbox.Api.TeamLog.ActorLogInfo.IsApp
+  parent: Dropbox.Api.TeamLog.ActorLogInfo
+  name: IsApp
+  nameWithType: ActorLogInfo.IsApp
+  fullName: Dropbox.Api.TeamLog.ActorLogInfo.IsApp
+- uid: Dropbox.Api.TeamLog.ActorLogInfo.AsApp
+  commentId: P:Dropbox.Api.TeamLog.ActorLogInfo.AsApp
+  parent: Dropbox.Api.TeamLog.ActorLogInfo
+  name: AsApp
+  nameWithType: ActorLogInfo.AsApp
+  fullName: Dropbox.Api.TeamLog.ActorLogInfo.AsApp
+- uid: Dropbox.Api.TeamLog.ActorLogInfo.IsDropbox
+  commentId: P:Dropbox.Api.TeamLog.ActorLogInfo.IsDropbox
+  parent: Dropbox.Api.TeamLog.ActorLogInfo
+  name: IsDropbox
+  nameWithType: ActorLogInfo.IsDropbox
+  fullName: Dropbox.Api.TeamLog.ActorLogInfo.IsDropbox
+- uid: Dropbox.Api.TeamLog.ActorLogInfo.AsDropbox
+  commentId: P:Dropbox.Api.TeamLog.ActorLogInfo.AsDropbox
+  parent: Dropbox.Api.TeamLog.ActorLogInfo
+  name: AsDropbox
+  nameWithType: ActorLogInfo.AsDropbox
+  fullName: Dropbox.Api.TeamLog.ActorLogInfo.AsDropbox
+- uid: Dropbox.Api.TeamLog.ActorLogInfo.IsReseller
+  commentId: P:Dropbox.Api.TeamLog.ActorLogInfo.IsReseller
+  parent: Dropbox.Api.TeamLog.ActorLogInfo
+  name: IsReseller
+  nameWithType: ActorLogInfo.IsReseller
+  fullName: Dropbox.Api.TeamLog.ActorLogInfo.IsReseller
+- uid: Dropbox.Api.TeamLog.ActorLogInfo.AsReseller
+  commentId: P:Dropbox.Api.TeamLog.ActorLogInfo.AsReseller
+  parent: Dropbox.Api.TeamLog.ActorLogInfo
+  name: AsReseller
+  nameWithType: ActorLogInfo.AsReseller
+  fullName: Dropbox.Api.TeamLog.ActorLogInfo.AsReseller
+- uid: Dropbox.Api.TeamLog.ActorLogInfo.IsUser
+  commentId: P:Dropbox.Api.TeamLog.ActorLogInfo.IsUser
+  parent: Dropbox.Api.TeamLog.ActorLogInfo
+  name: IsUser
+  nameWithType: ActorLogInfo.IsUser
+  fullName: Dropbox.Api.TeamLog.ActorLogInfo.IsUser
+- uid: Dropbox.Api.TeamLog.ActorLogInfo.AsUser
+  commentId: P:Dropbox.Api.TeamLog.ActorLogInfo.AsUser
+  parent: Dropbox.Api.TeamLog.ActorLogInfo
+  name: AsUser
+  nameWithType: ActorLogInfo.AsUser
+  fullName: Dropbox.Api.TeamLog.ActorLogInfo.AsUser
+- uid: Dropbox.Api.TeamLog.ActorLogInfo.IsOther
+  commentId: P:Dropbox.Api.TeamLog.ActorLogInfo.IsOther
+  parent: Dropbox.Api.TeamLog.ActorLogInfo
+  name: IsOther
+  nameWithType: ActorLogInfo.IsOther
+  fullName: Dropbox.Api.TeamLog.ActorLogInfo.IsOther
+- uid: Dropbox.Api.TeamLog.ActorLogInfo.AsOther
+  commentId: P:Dropbox.Api.TeamLog.ActorLogInfo.AsOther
+  parent: Dropbox.Api.TeamLog.ActorLogInfo
+  name: AsOther
+  nameWithType: ActorLogInfo.AsOther
+  fullName: Dropbox.Api.TeamLog.ActorLogInfo.AsOther
+- uid: Dropbox.Api.TeamLog.ActorLogInfo.Reseller
+  commentId: T:Dropbox.Api.TeamLog.ActorLogInfo.Reseller
+  parent: Dropbox.Api.TeamLog
+  name: ActorLogInfo.Reseller
+  nameWithType: ActorLogInfo.Reseller
+  fullName: Dropbox.Api.TeamLog.ActorLogInfo.Reseller
+- uid: Dropbox.Api.TeamLog.ActorLogInfo.Reseller.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.ActorLogInfo.Reseller.#ctor
+  name: Reseller
+  nameWithType: ActorLogInfo.Reseller.Reseller
+  fullName: Dropbox.Api.TeamLog.ActorLogInfo.Reseller.Reseller
+- uid: Dropbox.Api.TeamLog.ResellerLogInfo
+  commentId: T:Dropbox.Api.TeamLog.ResellerLogInfo
+  parent: Dropbox.Api.TeamLog
+  name: ResellerLogInfo
+  nameWithType: ResellerLogInfo
+  fullName: Dropbox.Api.TeamLog.ResellerLogInfo
+- uid: Dropbox.Api.TeamLog.ActorLogInfo.Reseller.Value*
+  commentId: Overload:Dropbox.Api.TeamLog.ActorLogInfo.Reseller.Value
+  name: Value
+  nameWithType: ActorLogInfo.Reseller.Value
+  fullName: Dropbox.Api.TeamLog.ActorLogInfo.Reseller.Value
+shouldSkipMarkup: true

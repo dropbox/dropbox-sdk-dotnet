@@ -1,0 +1,186 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.UnlockFileArg
+  commentId: T:Dropbox.Api.Files.UnlockFileArg
+  id: UnlockFileArg
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.UnlockFileArg.#ctor
+  - Dropbox.Api.Files.UnlockFileArg.#ctor(System.String)
+  - Dropbox.Api.Files.UnlockFileArg.Path
+  langs:
+  - csharp
+  - vb
+  name: UnlockFileArg
+  nameWithType: UnlockFileArg
+  fullName: Dropbox.Api.Files.UnlockFileArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UnlockFileArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: UnlockFileArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UnlockFileArg.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The unlock file arg object</p>\n"
+  example: []
+  syntax:
+    content: 'public class UnlockFileArg : object'
+    content.vb: >-
+      Public Class UnlockFileArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.UnlockFileArg.#ctor(System.String)
+  commentId: M:Dropbox.Api.Files.UnlockFileArg.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.Files.UnlockFileArg
+  langs:
+  - csharp
+  - vb
+  name: UnlockFileArg(String)
+  nameWithType: UnlockFileArg.UnlockFileArg(String)
+  fullName: Dropbox.Api.Files.UnlockFileArg.UnlockFileArg(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UnlockFileArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UnlockFileArg.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.UnlockFileArg\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public UnlockFileArg(string path)
+    parameters:
+    - id: path
+      type: System.String
+      description: Path in the user&apos;s Dropbox to a file.
+    content.vb: Public Sub New(path As String)
+  overload: Dropbox.Api.Files.UnlockFileArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.UnlockFileArg.#ctor
+  commentId: M:Dropbox.Api.Files.UnlockFileArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.UnlockFileArg
+  langs:
+  - csharp
+  - vb
+  name: UnlockFileArg()
+  nameWithType: UnlockFileArg.UnlockFileArg()
+  fullName: Dropbox.Api.Files.UnlockFileArg.UnlockFileArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UnlockFileArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UnlockFileArg.cs
+    startLine: 52
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.UnlockFileArg\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public UnlockFileArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.UnlockFileArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.UnlockFileArg.Path
+  commentId: P:Dropbox.Api.Files.UnlockFileArg.Path
+  id: Path
+  parent: Dropbox.Api.Files.UnlockFileArg
+  langs:
+  - csharp
+  - vb
+  name: Path
+  nameWithType: UnlockFileArg.Path
+  fullName: Dropbox.Api.Files.UnlockFileArg.Path
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UnlockFileArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Path
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UnlockFileArg.cs
+    startLine: 60
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Path in the user&apos;s Dropbox to a file.</p>\n"
+  example: []
+  syntax:
+    content: public string Path { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Path As String
+  overload: Dropbox.Api.Files.UnlockFileArg.Path*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.UnlockFileArg
+  commentId: T:Dropbox.Api.Files.UnlockFileArg
+  name: UnlockFileArg
+  nameWithType: UnlockFileArg
+  fullName: Dropbox.Api.Files.UnlockFileArg
+- uid: Dropbox.Api.Files.UnlockFileArg.#ctor*
+  commentId: Overload:Dropbox.Api.Files.UnlockFileArg.#ctor
+  name: UnlockFileArg
+  nameWithType: UnlockFileArg.UnlockFileArg
+  fullName: Dropbox.Api.Files.UnlockFileArg.UnlockFileArg
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Files.UnlockFileArg.Path*
+  commentId: Overload:Dropbox.Api.Files.UnlockFileArg.Path
+  name: Path
+  nameWithType: UnlockFileArg.Path
+  fullName: Dropbox.Api.Files.UnlockFileArg.Path
+shouldSkipMarkup: true

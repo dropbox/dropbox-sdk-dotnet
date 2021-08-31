@@ -1,0 +1,239 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.MemberChangeNameDetails
+  commentId: T:Dropbox.Api.TeamLog.MemberChangeNameDetails
+  id: MemberChangeNameDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.MemberChangeNameDetails.#ctor
+  - Dropbox.Api.TeamLog.MemberChangeNameDetails.#ctor(Dropbox.Api.TeamLog.UserNameLogInfo,Dropbox.Api.TeamLog.UserNameLogInfo)
+  - Dropbox.Api.TeamLog.MemberChangeNameDetails.NewValue
+  - Dropbox.Api.TeamLog.MemberChangeNameDetails.PreviousValue
+  langs:
+  - csharp
+  - vb
+  name: MemberChangeNameDetails
+  nameWithType: MemberChangeNameDetails
+  fullName: Dropbox.Api.TeamLog.MemberChangeNameDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberChangeNameDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: MemberChangeNameDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberChangeNameDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Changed team member name.</p>\n"
+  example: []
+  syntax:
+    content: 'public class MemberChangeNameDetails : object'
+    content.vb: >-
+      Public Class MemberChangeNameDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.MemberChangeNameDetails.#ctor(Dropbox.Api.TeamLog.UserNameLogInfo,Dropbox.Api.TeamLog.UserNameLogInfo)
+  commentId: M:Dropbox.Api.TeamLog.MemberChangeNameDetails.#ctor(Dropbox.Api.TeamLog.UserNameLogInfo,Dropbox.Api.TeamLog.UserNameLogInfo)
+  id: '#ctor(Dropbox.Api.TeamLog.UserNameLogInfo,Dropbox.Api.TeamLog.UserNameLogInfo)'
+  parent: Dropbox.Api.TeamLog.MemberChangeNameDetails
+  langs:
+  - csharp
+  - vb
+  name: MemberChangeNameDetails(UserNameLogInfo, UserNameLogInfo)
+  nameWithType: MemberChangeNameDetails.MemberChangeNameDetails(UserNameLogInfo, UserNameLogInfo)
+  fullName: Dropbox.Api.TeamLog.MemberChangeNameDetails.MemberChangeNameDetails(Dropbox.Api.TeamLog.UserNameLogInfo, Dropbox.Api.TeamLog.UserNameLogInfo)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberChangeNameDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberChangeNameDetails.cs
+    startLine: 36
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.MemberChangeNameDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public MemberChangeNameDetails(UserNameLogInfo newValue, UserNameLogInfo previousValue = null)
+    parameters:
+    - id: newValue
+      type: Dropbox.Api.TeamLog.UserNameLogInfo
+      description: New user&apos;s name.
+    - id: previousValue
+      type: Dropbox.Api.TeamLog.UserNameLogInfo
+      description: >-
+        Previous user&apos;s name. Might be missing due to
+
+        historical data gap.
+    content.vb: Public Sub New(newValue As UserNameLogInfo, previousValue As UserNameLogInfo = Nothing)
+  overload: Dropbox.Api.TeamLog.MemberChangeNameDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.MemberChangeNameDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.MemberChangeNameDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.MemberChangeNameDetails
+  langs:
+  - csharp
+  - vb
+  name: MemberChangeNameDetails()
+  nameWithType: MemberChangeNameDetails.MemberChangeNameDetails()
+  fullName: Dropbox.Api.TeamLog.MemberChangeNameDetails.MemberChangeNameDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberChangeNameDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberChangeNameDetails.cs
+    startLine: 54
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.MemberChangeNameDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public MemberChangeNameDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.MemberChangeNameDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.MemberChangeNameDetails.NewValue
+  commentId: P:Dropbox.Api.TeamLog.MemberChangeNameDetails.NewValue
+  id: NewValue
+  parent: Dropbox.Api.TeamLog.MemberChangeNameDetails
+  langs:
+  - csharp
+  - vb
+  name: NewValue
+  nameWithType: MemberChangeNameDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.MemberChangeNameDetails.NewValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberChangeNameDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NewValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberChangeNameDetails.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>New user&apos;s name.</p>\n"
+  example: []
+  syntax:
+    content: public UserNameLogInfo NewValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.UserNameLogInfo
+    content.vb: Public Property NewValue As UserNameLogInfo
+  overload: Dropbox.Api.TeamLog.MemberChangeNameDetails.NewValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.MemberChangeNameDetails.PreviousValue
+  commentId: P:Dropbox.Api.TeamLog.MemberChangeNameDetails.PreviousValue
+  id: PreviousValue
+  parent: Dropbox.Api.TeamLog.MemberChangeNameDetails
+  langs:
+  - csharp
+  - vb
+  name: PreviousValue
+  nameWithType: MemberChangeNameDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.MemberChangeNameDetails.PreviousValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberChangeNameDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PreviousValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberChangeNameDetails.cs
+    startLine: 67
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Previous user&apos;s name. Might be missing due to historical data gap.</p>\n"
+  example: []
+  syntax:
+    content: public UserNameLogInfo PreviousValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.UserNameLogInfo
+    content.vb: Public Property PreviousValue As UserNameLogInfo
+  overload: Dropbox.Api.TeamLog.MemberChangeNameDetails.PreviousValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.MemberChangeNameDetails
+  commentId: T:Dropbox.Api.TeamLog.MemberChangeNameDetails
+  parent: Dropbox.Api.TeamLog
+  name: MemberChangeNameDetails
+  nameWithType: MemberChangeNameDetails
+  fullName: Dropbox.Api.TeamLog.MemberChangeNameDetails
+- uid: Dropbox.Api.TeamLog.MemberChangeNameDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberChangeNameDetails.#ctor
+  name: MemberChangeNameDetails
+  nameWithType: MemberChangeNameDetails.MemberChangeNameDetails
+  fullName: Dropbox.Api.TeamLog.MemberChangeNameDetails.MemberChangeNameDetails
+- uid: Dropbox.Api.TeamLog.UserNameLogInfo
+  commentId: T:Dropbox.Api.TeamLog.UserNameLogInfo
+  parent: Dropbox.Api.TeamLog
+  name: UserNameLogInfo
+  nameWithType: UserNameLogInfo
+  fullName: Dropbox.Api.TeamLog.UserNameLogInfo
+- uid: Dropbox.Api.TeamLog.MemberChangeNameDetails.NewValue*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberChangeNameDetails.NewValue
+  name: NewValue
+  nameWithType: MemberChangeNameDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.MemberChangeNameDetails.NewValue
+- uid: Dropbox.Api.TeamLog.MemberChangeNameDetails.PreviousValue*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberChangeNameDetails.PreviousValue
+  name: PreviousValue
+  nameWithType: MemberChangeNameDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.MemberChangeNameDetails.PreviousValue
+shouldSkipMarkup: true

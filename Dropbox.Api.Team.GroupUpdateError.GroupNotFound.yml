@@ -1,0 +1,190 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.GroupUpdateError.GroupNotFound
+  commentId: T:Dropbox.Api.Team.GroupUpdateError.GroupNotFound
+  id: GroupUpdateError.GroupNotFound
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.GroupUpdateError.GroupNotFound.Instance
+  langs:
+  - csharp
+  - vb
+  name: GroupUpdateError.GroupNotFound
+  nameWithType: GroupUpdateError.GroupNotFound
+  fullName: Dropbox.Api.Team.GroupUpdateError.GroupNotFound
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupUpdateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GroupNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupUpdateError.cs
+    startLine: 559
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>No matching group found. No groups match the specified group ID.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class GroupNotFound : GroupUpdateError'
+    content.vb: >-
+      Public NotInheritable Class GroupNotFound
+          Inherits GroupUpdateError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.GroupUpdateError
+  inheritedMembers:
+  - Dropbox.Api.Team.GroupUpdateError.IsGroupNameAlreadyUsed
+  - Dropbox.Api.Team.GroupUpdateError.AsGroupNameAlreadyUsed
+  - Dropbox.Api.Team.GroupUpdateError.IsGroupNameInvalid
+  - Dropbox.Api.Team.GroupUpdateError.AsGroupNameInvalid
+  - Dropbox.Api.Team.GroupUpdateError.IsExternalIdAlreadyInUse
+  - Dropbox.Api.Team.GroupUpdateError.AsExternalIdAlreadyInUse
+  - Dropbox.Api.Team.GroupUpdateError.IsSystemManagedGroupDisallowed
+  - Dropbox.Api.Team.GroupUpdateError.AsSystemManagedGroupDisallowed
+  - Dropbox.Api.Team.GroupUpdateError.IsGroupNotFound
+  - Dropbox.Api.Team.GroupUpdateError.AsGroupNotFound
+  - Dropbox.Api.Team.GroupUpdateError.IsOther
+  - Dropbox.Api.Team.GroupUpdateError.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Team.GroupUpdateError.GroupNotFound.Instance
+  commentId: F:Dropbox.Api.Team.GroupUpdateError.GroupNotFound.Instance
+  id: Instance
+  parent: Dropbox.Api.Team.GroupUpdateError.GroupNotFound
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: GroupUpdateError.GroupNotFound.Instance
+  fullName: Dropbox.Api.Team.GroupUpdateError.GroupNotFound.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupUpdateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupUpdateError.cs
+    startLine: 584
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>A singleton instance of GroupNotFound</p>\n"
+  example: []
+  syntax:
+    content: public static readonly GroupUpdateError.GroupNotFound Instance
+    return:
+      type: Dropbox.Api.Team.GroupUpdateError.GroupNotFound
+    content.vb: Public Shared ReadOnly Instance As GroupUpdateError.GroupNotFound
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.GroupUpdateError
+  commentId: T:Dropbox.Api.Team.GroupUpdateError
+  parent: Dropbox.Api.Team
+  name: GroupUpdateError
+  nameWithType: GroupUpdateError
+  fullName: Dropbox.Api.Team.GroupUpdateError
+- uid: Dropbox.Api.Team.GroupUpdateError.IsGroupNameAlreadyUsed
+  commentId: P:Dropbox.Api.Team.GroupUpdateError.IsGroupNameAlreadyUsed
+  parent: Dropbox.Api.Team.GroupUpdateError
+  name: IsGroupNameAlreadyUsed
+  nameWithType: GroupUpdateError.IsGroupNameAlreadyUsed
+  fullName: Dropbox.Api.Team.GroupUpdateError.IsGroupNameAlreadyUsed
+- uid: Dropbox.Api.Team.GroupUpdateError.AsGroupNameAlreadyUsed
+  commentId: P:Dropbox.Api.Team.GroupUpdateError.AsGroupNameAlreadyUsed
+  parent: Dropbox.Api.Team.GroupUpdateError
+  name: AsGroupNameAlreadyUsed
+  nameWithType: GroupUpdateError.AsGroupNameAlreadyUsed
+  fullName: Dropbox.Api.Team.GroupUpdateError.AsGroupNameAlreadyUsed
+- uid: Dropbox.Api.Team.GroupUpdateError.IsGroupNameInvalid
+  commentId: P:Dropbox.Api.Team.GroupUpdateError.IsGroupNameInvalid
+  parent: Dropbox.Api.Team.GroupUpdateError
+  name: IsGroupNameInvalid
+  nameWithType: GroupUpdateError.IsGroupNameInvalid
+  fullName: Dropbox.Api.Team.GroupUpdateError.IsGroupNameInvalid
+- uid: Dropbox.Api.Team.GroupUpdateError.AsGroupNameInvalid
+  commentId: P:Dropbox.Api.Team.GroupUpdateError.AsGroupNameInvalid
+  parent: Dropbox.Api.Team.GroupUpdateError
+  name: AsGroupNameInvalid
+  nameWithType: GroupUpdateError.AsGroupNameInvalid
+  fullName: Dropbox.Api.Team.GroupUpdateError.AsGroupNameInvalid
+- uid: Dropbox.Api.Team.GroupUpdateError.IsExternalIdAlreadyInUse
+  commentId: P:Dropbox.Api.Team.GroupUpdateError.IsExternalIdAlreadyInUse
+  parent: Dropbox.Api.Team.GroupUpdateError
+  name: IsExternalIdAlreadyInUse
+  nameWithType: GroupUpdateError.IsExternalIdAlreadyInUse
+  fullName: Dropbox.Api.Team.GroupUpdateError.IsExternalIdAlreadyInUse
+- uid: Dropbox.Api.Team.GroupUpdateError.AsExternalIdAlreadyInUse
+  commentId: P:Dropbox.Api.Team.GroupUpdateError.AsExternalIdAlreadyInUse
+  parent: Dropbox.Api.Team.GroupUpdateError
+  name: AsExternalIdAlreadyInUse
+  nameWithType: GroupUpdateError.AsExternalIdAlreadyInUse
+  fullName: Dropbox.Api.Team.GroupUpdateError.AsExternalIdAlreadyInUse
+- uid: Dropbox.Api.Team.GroupUpdateError.IsSystemManagedGroupDisallowed
+  commentId: P:Dropbox.Api.Team.GroupUpdateError.IsSystemManagedGroupDisallowed
+  parent: Dropbox.Api.Team.GroupUpdateError
+  name: IsSystemManagedGroupDisallowed
+  nameWithType: GroupUpdateError.IsSystemManagedGroupDisallowed
+  fullName: Dropbox.Api.Team.GroupUpdateError.IsSystemManagedGroupDisallowed
+- uid: Dropbox.Api.Team.GroupUpdateError.AsSystemManagedGroupDisallowed
+  commentId: P:Dropbox.Api.Team.GroupUpdateError.AsSystemManagedGroupDisallowed
+  parent: Dropbox.Api.Team.GroupUpdateError
+  name: AsSystemManagedGroupDisallowed
+  nameWithType: GroupUpdateError.AsSystemManagedGroupDisallowed
+  fullName: Dropbox.Api.Team.GroupUpdateError.AsSystemManagedGroupDisallowed
+- uid: Dropbox.Api.Team.GroupUpdateError.IsGroupNotFound
+  commentId: P:Dropbox.Api.Team.GroupUpdateError.IsGroupNotFound
+  parent: Dropbox.Api.Team.GroupUpdateError
+  name: IsGroupNotFound
+  nameWithType: GroupUpdateError.IsGroupNotFound
+  fullName: Dropbox.Api.Team.GroupUpdateError.IsGroupNotFound
+- uid: Dropbox.Api.Team.GroupUpdateError.AsGroupNotFound
+  commentId: P:Dropbox.Api.Team.GroupUpdateError.AsGroupNotFound
+  parent: Dropbox.Api.Team.GroupUpdateError
+  name: AsGroupNotFound
+  nameWithType: GroupUpdateError.AsGroupNotFound
+  fullName: Dropbox.Api.Team.GroupUpdateError.AsGroupNotFound
+- uid: Dropbox.Api.Team.GroupUpdateError.IsOther
+  commentId: P:Dropbox.Api.Team.GroupUpdateError.IsOther
+  parent: Dropbox.Api.Team.GroupUpdateError
+  name: IsOther
+  nameWithType: GroupUpdateError.IsOther
+  fullName: Dropbox.Api.Team.GroupUpdateError.IsOther
+- uid: Dropbox.Api.Team.GroupUpdateError.AsOther
+  commentId: P:Dropbox.Api.Team.GroupUpdateError.AsOther
+  parent: Dropbox.Api.Team.GroupUpdateError
+  name: AsOther
+  nameWithType: GroupUpdateError.AsOther
+  fullName: Dropbox.Api.Team.GroupUpdateError.AsOther
+- uid: Dropbox.Api.Team.GroupUpdateError.GroupNotFound
+  commentId: T:Dropbox.Api.Team.GroupUpdateError.GroupNotFound
+  parent: Dropbox.Api.Team
+  name: GroupUpdateError.GroupNotFound
+  nameWithType: GroupUpdateError.GroupNotFound
+  fullName: Dropbox.Api.Team.GroupUpdateError.GroupNotFound
+shouldSkipMarkup: true

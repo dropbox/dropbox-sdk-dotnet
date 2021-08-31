@@ -1,0 +1,188 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.LockConflictError
+  commentId: T:Dropbox.Api.Files.LockConflictError
+  id: LockConflictError
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.LockConflictError.#ctor
+  - Dropbox.Api.Files.LockConflictError.#ctor(Dropbox.Api.Files.FileLock)
+  - Dropbox.Api.Files.LockConflictError.Lock
+  langs:
+  - csharp
+  - vb
+  name: LockConflictError
+  nameWithType: LockConflictError
+  fullName: Dropbox.Api.Files.LockConflictError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockConflictError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: LockConflictError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockConflictError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The lock conflict error object</p>\n"
+  example: []
+  syntax:
+    content: 'public class LockConflictError : object'
+    content.vb: >-
+      Public Class LockConflictError
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.LockConflictError.#ctor(Dropbox.Api.Files.FileLock)
+  commentId: M:Dropbox.Api.Files.LockConflictError.#ctor(Dropbox.Api.Files.FileLock)
+  id: '#ctor(Dropbox.Api.Files.FileLock)'
+  parent: Dropbox.Api.Files.LockConflictError
+  langs:
+  - csharp
+  - vb
+  name: LockConflictError(FileLock)
+  nameWithType: LockConflictError.LockConflictError(FileLock)
+  fullName: Dropbox.Api.Files.LockConflictError.LockConflictError(Dropbox.Api.Files.FileLock)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockConflictError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockConflictError.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.LockConflictError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public LockConflictError(FileLock lock)
+    parameters:
+    - id: lock
+      type: Dropbox.Api.Files.FileLock
+      description: The lock that caused the conflict.
+    content.vb: Public Sub New(lock As FileLock)
+  overload: Dropbox.Api.Files.LockConflictError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.LockConflictError.#ctor
+  commentId: M:Dropbox.Api.Files.LockConflictError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.LockConflictError
+  langs:
+  - csharp
+  - vb
+  name: LockConflictError()
+  nameWithType: LockConflictError.LockConflictError()
+  fullName: Dropbox.Api.Files.LockConflictError.LockConflictError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockConflictError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockConflictError.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.LockConflictError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public LockConflictError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.LockConflictError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.LockConflictError.Lock
+  commentId: P:Dropbox.Api.Files.LockConflictError.Lock
+  id: Lock
+  parent: Dropbox.Api.Files.LockConflictError
+  langs:
+  - csharp
+  - vb
+  name: Lock
+  nameWithType: LockConflictError.Lock
+  fullName: Dropbox.Api.Files.LockConflictError.Lock
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockConflictError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Lock
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockConflictError.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The lock that caused the conflict.</p>\n"
+  example: []
+  syntax:
+    content: public FileLock Lock { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.FileLock
+    content.vb: Public Property Lock As FileLock
+  overload: Dropbox.Api.Files.LockConflictError.Lock*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.LockConflictError
+  commentId: T:Dropbox.Api.Files.LockConflictError
+  parent: Dropbox.Api.Files
+  name: LockConflictError
+  nameWithType: LockConflictError
+  fullName: Dropbox.Api.Files.LockConflictError
+- uid: Dropbox.Api.Files.LockConflictError.#ctor*
+  commentId: Overload:Dropbox.Api.Files.LockConflictError.#ctor
+  name: LockConflictError
+  nameWithType: LockConflictError.LockConflictError
+  fullName: Dropbox.Api.Files.LockConflictError.LockConflictError
+- uid: Dropbox.Api.Files.FileLock
+  commentId: T:Dropbox.Api.Files.FileLock
+  parent: Dropbox.Api.Files
+  name: FileLock
+  nameWithType: FileLock
+  fullName: Dropbox.Api.Files.FileLock
+- uid: Dropbox.Api.Files.LockConflictError.Lock*
+  commentId: Overload:Dropbox.Api.Files.LockConflictError.Lock
+  name: Lock
+  nameWithType: LockConflictError.Lock
+  fullName: Dropbox.Api.Files.LockConflictError.Lock
+shouldSkipMarkup: true

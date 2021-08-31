@@ -1,0 +1,236 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.TeamSelectiveSyncPolicyChangedDetails
+  commentId: T:Dropbox.Api.TeamLog.TeamSelectiveSyncPolicyChangedDetails
+  id: TeamSelectiveSyncPolicyChangedDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.TeamSelectiveSyncPolicyChangedDetails.#ctor
+  - Dropbox.Api.TeamLog.TeamSelectiveSyncPolicyChangedDetails.#ctor(Dropbox.Api.TeamLog.TeamSelectiveSyncPolicy,Dropbox.Api.TeamLog.TeamSelectiveSyncPolicy)
+  - Dropbox.Api.TeamLog.TeamSelectiveSyncPolicyChangedDetails.NewValue
+  - Dropbox.Api.TeamLog.TeamSelectiveSyncPolicyChangedDetails.PreviousValue
+  langs:
+  - csharp
+  - vb
+  name: TeamSelectiveSyncPolicyChangedDetails
+  nameWithType: TeamSelectiveSyncPolicyChangedDetails
+  fullName: Dropbox.Api.TeamLog.TeamSelectiveSyncPolicyChangedDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamSelectiveSyncPolicyChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TeamSelectiveSyncPolicyChangedDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamSelectiveSyncPolicyChangedDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Enabled/disabled Team Selective Sync for team.</p>\n"
+  example: []
+  syntax:
+    content: 'public class TeamSelectiveSyncPolicyChangedDetails : object'
+    content.vb: >-
+      Public Class TeamSelectiveSyncPolicyChangedDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.TeamSelectiveSyncPolicyChangedDetails.#ctor(Dropbox.Api.TeamLog.TeamSelectiveSyncPolicy,Dropbox.Api.TeamLog.TeamSelectiveSyncPolicy)
+  commentId: M:Dropbox.Api.TeamLog.TeamSelectiveSyncPolicyChangedDetails.#ctor(Dropbox.Api.TeamLog.TeamSelectiveSyncPolicy,Dropbox.Api.TeamLog.TeamSelectiveSyncPolicy)
+  id: '#ctor(Dropbox.Api.TeamLog.TeamSelectiveSyncPolicy,Dropbox.Api.TeamLog.TeamSelectiveSyncPolicy)'
+  parent: Dropbox.Api.TeamLog.TeamSelectiveSyncPolicyChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: TeamSelectiveSyncPolicyChangedDetails(TeamSelectiveSyncPolicy, TeamSelectiveSyncPolicy)
+  nameWithType: TeamSelectiveSyncPolicyChangedDetails.TeamSelectiveSyncPolicyChangedDetails(TeamSelectiveSyncPolicy, TeamSelectiveSyncPolicy)
+  fullName: Dropbox.Api.TeamLog.TeamSelectiveSyncPolicyChangedDetails.TeamSelectiveSyncPolicyChangedDetails(Dropbox.Api.TeamLog.TeamSelectiveSyncPolicy, Dropbox.Api.TeamLog.TeamSelectiveSyncPolicy)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamSelectiveSyncPolicyChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamSelectiveSyncPolicyChangedDetails.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.TeamSelectiveSyncPolicyChangedDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public TeamSelectiveSyncPolicyChangedDetails(TeamSelectiveSyncPolicy newValue, TeamSelectiveSyncPolicy previousValue)
+    parameters:
+    - id: newValue
+      type: Dropbox.Api.TeamLog.TeamSelectiveSyncPolicy
+      description: New Team Selective Sync policy.
+    - id: previousValue
+      type: Dropbox.Api.TeamLog.TeamSelectiveSyncPolicy
+      description: Previous Team Selective Sync policy.
+    content.vb: Public Sub New(newValue As TeamSelectiveSyncPolicy, previousValue As TeamSelectiveSyncPolicy)
+  overload: Dropbox.Api.TeamLog.TeamSelectiveSyncPolicyChangedDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.TeamSelectiveSyncPolicyChangedDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.TeamSelectiveSyncPolicyChangedDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.TeamSelectiveSyncPolicyChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: TeamSelectiveSyncPolicyChangedDetails()
+  nameWithType: TeamSelectiveSyncPolicyChangedDetails.TeamSelectiveSyncPolicyChangedDetails()
+  fullName: Dropbox.Api.TeamLog.TeamSelectiveSyncPolicyChangedDetails.TeamSelectiveSyncPolicyChangedDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamSelectiveSyncPolicyChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamSelectiveSyncPolicyChangedDetails.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.TeamSelectiveSyncPolicyChangedDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public TeamSelectiveSyncPolicyChangedDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.TeamSelectiveSyncPolicyChangedDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.TeamSelectiveSyncPolicyChangedDetails.NewValue
+  commentId: P:Dropbox.Api.TeamLog.TeamSelectiveSyncPolicyChangedDetails.NewValue
+  id: NewValue
+  parent: Dropbox.Api.TeamLog.TeamSelectiveSyncPolicyChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: NewValue
+  nameWithType: TeamSelectiveSyncPolicyChangedDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.TeamSelectiveSyncPolicyChangedDetails.NewValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamSelectiveSyncPolicyChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NewValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamSelectiveSyncPolicyChangedDetails.cs
+    startLine: 66
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>New Team Selective Sync policy.</p>\n"
+  example: []
+  syntax:
+    content: public TeamSelectiveSyncPolicy NewValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.TeamSelectiveSyncPolicy
+    content.vb: Public Property NewValue As TeamSelectiveSyncPolicy
+  overload: Dropbox.Api.TeamLog.TeamSelectiveSyncPolicyChangedDetails.NewValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.TeamSelectiveSyncPolicyChangedDetails.PreviousValue
+  commentId: P:Dropbox.Api.TeamLog.TeamSelectiveSyncPolicyChangedDetails.PreviousValue
+  id: PreviousValue
+  parent: Dropbox.Api.TeamLog.TeamSelectiveSyncPolicyChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: PreviousValue
+  nameWithType: TeamSelectiveSyncPolicyChangedDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.TeamSelectiveSyncPolicyChangedDetails.PreviousValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamSelectiveSyncPolicyChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PreviousValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamSelectiveSyncPolicyChangedDetails.cs
+    startLine: 71
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Previous Team Selective Sync policy.</p>\n"
+  example: []
+  syntax:
+    content: public TeamSelectiveSyncPolicy PreviousValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.TeamSelectiveSyncPolicy
+    content.vb: Public Property PreviousValue As TeamSelectiveSyncPolicy
+  overload: Dropbox.Api.TeamLog.TeamSelectiveSyncPolicyChangedDetails.PreviousValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.TeamSelectiveSyncPolicyChangedDetails
+  commentId: T:Dropbox.Api.TeamLog.TeamSelectiveSyncPolicyChangedDetails
+  parent: Dropbox.Api.TeamLog
+  name: TeamSelectiveSyncPolicyChangedDetails
+  nameWithType: TeamSelectiveSyncPolicyChangedDetails
+  fullName: Dropbox.Api.TeamLog.TeamSelectiveSyncPolicyChangedDetails
+- uid: Dropbox.Api.TeamLog.TeamSelectiveSyncPolicyChangedDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.TeamSelectiveSyncPolicyChangedDetails.#ctor
+  name: TeamSelectiveSyncPolicyChangedDetails
+  nameWithType: TeamSelectiveSyncPolicyChangedDetails.TeamSelectiveSyncPolicyChangedDetails
+  fullName: Dropbox.Api.TeamLog.TeamSelectiveSyncPolicyChangedDetails.TeamSelectiveSyncPolicyChangedDetails
+- uid: Dropbox.Api.TeamLog.TeamSelectiveSyncPolicy
+  commentId: T:Dropbox.Api.TeamLog.TeamSelectiveSyncPolicy
+  parent: Dropbox.Api.TeamLog
+  name: TeamSelectiveSyncPolicy
+  nameWithType: TeamSelectiveSyncPolicy
+  fullName: Dropbox.Api.TeamLog.TeamSelectiveSyncPolicy
+- uid: Dropbox.Api.TeamLog.TeamSelectiveSyncPolicyChangedDetails.NewValue*
+  commentId: Overload:Dropbox.Api.TeamLog.TeamSelectiveSyncPolicyChangedDetails.NewValue
+  name: NewValue
+  nameWithType: TeamSelectiveSyncPolicyChangedDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.TeamSelectiveSyncPolicyChangedDetails.NewValue
+- uid: Dropbox.Api.TeamLog.TeamSelectiveSyncPolicyChangedDetails.PreviousValue*
+  commentId: Overload:Dropbox.Api.TeamLog.TeamSelectiveSyncPolicyChangedDetails.PreviousValue
+  name: PreviousValue
+  nameWithType: TeamSelectiveSyncPolicyChangedDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.TeamSelectiveSyncPolicyChangedDetails.PreviousValue
+shouldSkipMarkup: true

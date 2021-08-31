@@ -1,0 +1,314 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamCommon.TimeRange
+  commentId: T:Dropbox.Api.TeamCommon.TimeRange
+  id: TimeRange
+  parent: Dropbox.Api.TeamCommon
+  children:
+  - Dropbox.Api.TeamCommon.TimeRange.#ctor
+  - Dropbox.Api.TeamCommon.TimeRange.#ctor(System.Nullable{System.DateTime},System.Nullable{System.DateTime})
+  - Dropbox.Api.TeamCommon.TimeRange.EndTime
+  - Dropbox.Api.TeamCommon.TimeRange.StartTime
+  langs:
+  - csharp
+  - vb
+  name: TimeRange
+  nameWithType: TimeRange
+  fullName: Dropbox.Api.TeamCommon.TimeRange
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamCommon/TimeRange.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TimeRange
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamCommon/TimeRange.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamCommon
+  summary: "\n<p>Time range.</p>\n"
+  example: []
+  syntax:
+    content: 'public class TimeRange : object'
+    content.vb: >-
+      Public Class TimeRange
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamCommon.TimeRange.#ctor(System.Nullable{System.DateTime},System.Nullable{System.DateTime})
+  commentId: M:Dropbox.Api.TeamCommon.TimeRange.#ctor(System.Nullable{System.DateTime},System.Nullable{System.DateTime})
+  id: '#ctor(System.Nullable{System.DateTime},System.Nullable{System.DateTime})'
+  parent: Dropbox.Api.TeamCommon.TimeRange
+  langs:
+  - csharp
+  - vb
+  name: TimeRange(Nullable<System.DateTime>, Nullable<System.DateTime>)
+  nameWithType: TimeRange.TimeRange(Nullable<System.DateTime>, Nullable<System.DateTime>)
+  fullName: Dropbox.Api.TeamCommon.TimeRange.TimeRange(System.Nullable<System.DateTime>, System.Nullable<System.DateTime>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamCommon/TimeRange.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamCommon/TimeRange.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamCommon
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamCommon.TimeRange\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public TimeRange(System.DateTime? startTime = null, System.DateTime? endTime = null)
+    parameters:
+    - id: startTime
+      type: System.Nullable{System.DateTime}
+      description: Optional starting time (inclusive).
+    - id: endTime
+      type: System.Nullable{System.DateTime}
+      description: Optional ending time (exclusive).
+    content.vb: Public Sub New(startTime As System.DateTime? = Nothing, endTime As System.DateTime? = Nothing)
+  overload: Dropbox.Api.TeamCommon.TimeRange.#ctor*
+  nameWithType.vb: TimeRange.TimeRange(Nullable(Of System.DateTime), Nullable(Of System.DateTime))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.TeamCommon.TimeRange.TimeRange(System.Nullable(Of System.DateTime), System.Nullable(Of System.DateTime))
+  name.vb: TimeRange(Nullable(Of System.DateTime), Nullable(Of System.DateTime))
+- uid: Dropbox.Api.TeamCommon.TimeRange.#ctor
+  commentId: M:Dropbox.Api.TeamCommon.TimeRange.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamCommon.TimeRange
+  langs:
+  - csharp
+  - vb
+  name: TimeRange()
+  nameWithType: TimeRange.TimeRange()
+  fullName: Dropbox.Api.TeamCommon.TimeRange.TimeRange()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamCommon/TimeRange.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamCommon/TimeRange.cs
+    startLine: 46
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamCommon
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamCommon.TimeRange\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public TimeRange()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamCommon.TimeRange.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamCommon.TimeRange.StartTime
+  commentId: P:Dropbox.Api.TeamCommon.TimeRange.StartTime
+  id: StartTime
+  parent: Dropbox.Api.TeamCommon.TimeRange
+  langs:
+  - csharp
+  - vb
+  name: StartTime
+  nameWithType: TimeRange.StartTime
+  fullName: Dropbox.Api.TeamCommon.TimeRange.StartTime
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamCommon/TimeRange.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: StartTime
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamCommon/TimeRange.cs
+    startLine: 54
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamCommon
+  summary: "\n<p>Optional starting time (inclusive).</p>\n"
+  example: []
+  syntax:
+    content: public System.DateTime? StartTime { get; protected set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property StartTime As System.DateTime?
+  overload: Dropbox.Api.TeamCommon.TimeRange.StartTime*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamCommon.TimeRange.EndTime
+  commentId: P:Dropbox.Api.TeamCommon.TimeRange.EndTime
+  id: EndTime
+  parent: Dropbox.Api.TeamCommon.TimeRange
+  langs:
+  - csharp
+  - vb
+  name: EndTime
+  nameWithType: TimeRange.EndTime
+  fullName: Dropbox.Api.TeamCommon.TimeRange.EndTime
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamCommon/TimeRange.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: EndTime
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamCommon/TimeRange.cs
+    startLine: 59
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamCommon
+  summary: "\n<p>Optional ending time (exclusive).</p>\n"
+  example: []
+  syntax:
+    content: public System.DateTime? EndTime { get; protected set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property EndTime As System.DateTime?
+  overload: Dropbox.Api.TeamCommon.TimeRange.EndTime*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamCommon
+  commentId: N:Dropbox.Api.TeamCommon
+  name: Dropbox.Api.TeamCommon
+  nameWithType: Dropbox.Api.TeamCommon
+  fullName: Dropbox.Api.TeamCommon
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamCommon.TimeRange
+  commentId: T:Dropbox.Api.TeamCommon.TimeRange
+  parent: Dropbox.Api.TeamCommon
+  name: TimeRange
+  nameWithType: TimeRange
+  fullName: Dropbox.Api.TeamCommon.TimeRange
+- uid: Dropbox.Api.TeamCommon.TimeRange.#ctor*
+  commentId: Overload:Dropbox.Api.TeamCommon.TimeRange.#ctor
+  name: TimeRange
+  nameWithType: TimeRange.TimeRange
+  fullName: Dropbox.Api.TeamCommon.TimeRange.TimeRange
+- uid: System.Nullable{System.DateTime}
+  commentId: '!:System.Nullable{System.DateTime}'
+  definition: System.Nullable`1
+  name: Nullable<System.DateTime>
+  nameWithType: Nullable<System.DateTime>
+  fullName: System.Nullable<System.DateTime>
+  nameWithType.vb: Nullable(Of System.DateTime)
+  fullName.vb: System.Nullable(Of System.DateTime)
+  name.vb: Nullable(Of System.DateTime)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.DateTime
+    name: System.DateTime
+    nameWithType: System.DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.DateTime
+    name: System.DateTime
+    nameWithType: System.DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  isExternal: true
+  name: Nullable<>
+  nameWithType: Nullable<>
+  fullName: System.Nullable<>
+  nameWithType.vb: Nullable(Of )
+  fullName.vb: System.Nullable(Of )
+  name.vb: Nullable(Of )
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.TeamCommon.TimeRange.StartTime*
+  commentId: Overload:Dropbox.Api.TeamCommon.TimeRange.StartTime
+  name: StartTime
+  nameWithType: TimeRange.StartTime
+  fullName: Dropbox.Api.TeamCommon.TimeRange.StartTime
+- uid: Dropbox.Api.TeamCommon.TimeRange.EndTime*
+  commentId: Overload:Dropbox.Api.TeamCommon.TimeRange.EndTime
+  name: EndTime
+  nameWithType: TimeRange.EndTime
+  fullName: Dropbox.Api.TeamCommon.TimeRange.EndTime
+shouldSkipMarkup: true

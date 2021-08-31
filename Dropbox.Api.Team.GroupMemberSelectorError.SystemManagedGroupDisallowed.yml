@@ -1,0 +1,162 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.GroupMemberSelectorError.SystemManagedGroupDisallowed
+  commentId: T:Dropbox.Api.Team.GroupMemberSelectorError.SystemManagedGroupDisallowed
+  id: GroupMemberSelectorError.SystemManagedGroupDisallowed
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.GroupMemberSelectorError.SystemManagedGroupDisallowed.Instance
+  langs:
+  - csharp
+  - vb
+  name: GroupMemberSelectorError.SystemManagedGroupDisallowed
+  nameWithType: GroupMemberSelectorError.SystemManagedGroupDisallowed
+  fullName: Dropbox.Api.Team.GroupMemberSelectorError.SystemManagedGroupDisallowed
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupMemberSelectorError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SystemManagedGroupDisallowed
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupMemberSelectorError.cs
+    startLine: 287
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>This operation is not supported on system-managed groups.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class SystemManagedGroupDisallowed : GroupMemberSelectorError'
+    content.vb: >-
+      Public NotInheritable Class SystemManagedGroupDisallowed
+          Inherits GroupMemberSelectorError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.GroupMemberSelectorError
+  inheritedMembers:
+  - Dropbox.Api.Team.GroupMemberSelectorError.IsMemberNotInGroup
+  - Dropbox.Api.Team.GroupMemberSelectorError.AsMemberNotInGroup
+  - Dropbox.Api.Team.GroupMemberSelectorError.IsSystemManagedGroupDisallowed
+  - Dropbox.Api.Team.GroupMemberSelectorError.AsSystemManagedGroupDisallowed
+  - Dropbox.Api.Team.GroupMemberSelectorError.IsGroupNotFound
+  - Dropbox.Api.Team.GroupMemberSelectorError.AsGroupNotFound
+  - Dropbox.Api.Team.GroupMemberSelectorError.IsOther
+  - Dropbox.Api.Team.GroupMemberSelectorError.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Team.GroupMemberSelectorError.SystemManagedGroupDisallowed.Instance
+  commentId: F:Dropbox.Api.Team.GroupMemberSelectorError.SystemManagedGroupDisallowed.Instance
+  id: Instance
+  parent: Dropbox.Api.Team.GroupMemberSelectorError.SystemManagedGroupDisallowed
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: GroupMemberSelectorError.SystemManagedGroupDisallowed.Instance
+  fullName: Dropbox.Api.Team.GroupMemberSelectorError.SystemManagedGroupDisallowed.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupMemberSelectorError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupMemberSelectorError.cs
+    startLine: 312
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>A singleton instance of SystemManagedGroupDisallowed</p>\n"
+  example: []
+  syntax:
+    content: public static readonly GroupMemberSelectorError.SystemManagedGroupDisallowed Instance
+    return:
+      type: Dropbox.Api.Team.GroupMemberSelectorError.SystemManagedGroupDisallowed
+    content.vb: Public Shared ReadOnly Instance As GroupMemberSelectorError.SystemManagedGroupDisallowed
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.GroupMemberSelectorError
+  commentId: T:Dropbox.Api.Team.GroupMemberSelectorError
+  parent: Dropbox.Api.Team
+  name: GroupMemberSelectorError
+  nameWithType: GroupMemberSelectorError
+  fullName: Dropbox.Api.Team.GroupMemberSelectorError
+- uid: Dropbox.Api.Team.GroupMemberSelectorError.IsMemberNotInGroup
+  commentId: P:Dropbox.Api.Team.GroupMemberSelectorError.IsMemberNotInGroup
+  parent: Dropbox.Api.Team.GroupMemberSelectorError
+  name: IsMemberNotInGroup
+  nameWithType: GroupMemberSelectorError.IsMemberNotInGroup
+  fullName: Dropbox.Api.Team.GroupMemberSelectorError.IsMemberNotInGroup
+- uid: Dropbox.Api.Team.GroupMemberSelectorError.AsMemberNotInGroup
+  commentId: P:Dropbox.Api.Team.GroupMemberSelectorError.AsMemberNotInGroup
+  parent: Dropbox.Api.Team.GroupMemberSelectorError
+  name: AsMemberNotInGroup
+  nameWithType: GroupMemberSelectorError.AsMemberNotInGroup
+  fullName: Dropbox.Api.Team.GroupMemberSelectorError.AsMemberNotInGroup
+- uid: Dropbox.Api.Team.GroupMemberSelectorError.IsSystemManagedGroupDisallowed
+  commentId: P:Dropbox.Api.Team.GroupMemberSelectorError.IsSystemManagedGroupDisallowed
+  parent: Dropbox.Api.Team.GroupMemberSelectorError
+  name: IsSystemManagedGroupDisallowed
+  nameWithType: GroupMemberSelectorError.IsSystemManagedGroupDisallowed
+  fullName: Dropbox.Api.Team.GroupMemberSelectorError.IsSystemManagedGroupDisallowed
+- uid: Dropbox.Api.Team.GroupMemberSelectorError.AsSystemManagedGroupDisallowed
+  commentId: P:Dropbox.Api.Team.GroupMemberSelectorError.AsSystemManagedGroupDisallowed
+  parent: Dropbox.Api.Team.GroupMemberSelectorError
+  name: AsSystemManagedGroupDisallowed
+  nameWithType: GroupMemberSelectorError.AsSystemManagedGroupDisallowed
+  fullName: Dropbox.Api.Team.GroupMemberSelectorError.AsSystemManagedGroupDisallowed
+- uid: Dropbox.Api.Team.GroupMemberSelectorError.IsGroupNotFound
+  commentId: P:Dropbox.Api.Team.GroupMemberSelectorError.IsGroupNotFound
+  parent: Dropbox.Api.Team.GroupMemberSelectorError
+  name: IsGroupNotFound
+  nameWithType: GroupMemberSelectorError.IsGroupNotFound
+  fullName: Dropbox.Api.Team.GroupMemberSelectorError.IsGroupNotFound
+- uid: Dropbox.Api.Team.GroupMemberSelectorError.AsGroupNotFound
+  commentId: P:Dropbox.Api.Team.GroupMemberSelectorError.AsGroupNotFound
+  parent: Dropbox.Api.Team.GroupMemberSelectorError
+  name: AsGroupNotFound
+  nameWithType: GroupMemberSelectorError.AsGroupNotFound
+  fullName: Dropbox.Api.Team.GroupMemberSelectorError.AsGroupNotFound
+- uid: Dropbox.Api.Team.GroupMemberSelectorError.IsOther
+  commentId: P:Dropbox.Api.Team.GroupMemberSelectorError.IsOther
+  parent: Dropbox.Api.Team.GroupMemberSelectorError
+  name: IsOther
+  nameWithType: GroupMemberSelectorError.IsOther
+  fullName: Dropbox.Api.Team.GroupMemberSelectorError.IsOther
+- uid: Dropbox.Api.Team.GroupMemberSelectorError.AsOther
+  commentId: P:Dropbox.Api.Team.GroupMemberSelectorError.AsOther
+  parent: Dropbox.Api.Team.GroupMemberSelectorError
+  name: AsOther
+  nameWithType: GroupMemberSelectorError.AsOther
+  fullName: Dropbox.Api.Team.GroupMemberSelectorError.AsOther
+- uid: Dropbox.Api.Team.GroupMemberSelectorError.SystemManagedGroupDisallowed
+  commentId: T:Dropbox.Api.Team.GroupMemberSelectorError.SystemManagedGroupDisallowed
+  parent: Dropbox.Api.Team
+  name: GroupMemberSelectorError.SystemManagedGroupDisallowed
+  nameWithType: GroupMemberSelectorError.SystemManagedGroupDisallowed
+  fullName: Dropbox.Api.Team.GroupMemberSelectorError.SystemManagedGroupDisallowed
+shouldSkipMarkup: true

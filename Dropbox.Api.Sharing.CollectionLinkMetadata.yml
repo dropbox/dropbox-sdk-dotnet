@@ -1,0 +1,298 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.CollectionLinkMetadata
+  commentId: T:Dropbox.Api.Sharing.CollectionLinkMetadata
+  id: CollectionLinkMetadata
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.CollectionLinkMetadata.#ctor
+  - Dropbox.Api.Sharing.CollectionLinkMetadata.#ctor(System.String,Dropbox.Api.Sharing.Visibility,System.Nullable{System.DateTime})
+  langs:
+  - csharp
+  - vb
+  name: CollectionLinkMetadata
+  nameWithType: CollectionLinkMetadata
+  fullName: Dropbox.Api.Sharing.CollectionLinkMetadata
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/CollectionLinkMetadata.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: CollectionLinkMetadata
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/CollectionLinkMetadata.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Metadata for a collection-based shared link.</p>\n"
+  example: []
+  syntax:
+    content: 'public class CollectionLinkMetadata : LinkMetadata'
+    content.vb: >-
+      Public Class CollectionLinkMetadata
+          Inherits LinkMetadata
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Sharing.LinkMetadata
+  inheritedMembers:
+  - Dropbox.Api.Sharing.LinkMetadata.IsPath
+  - Dropbox.Api.Sharing.LinkMetadata.AsPath
+  - Dropbox.Api.Sharing.LinkMetadata.IsCollection
+  - Dropbox.Api.Sharing.LinkMetadata.AsCollection
+  - Dropbox.Api.Sharing.LinkMetadata.Url
+  - Dropbox.Api.Sharing.LinkMetadata.Visibility
+  - Dropbox.Api.Sharing.LinkMetadata.Expires
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Sharing.CollectionLinkMetadata.#ctor(System.String,Dropbox.Api.Sharing.Visibility,System.Nullable{System.DateTime})
+  commentId: M:Dropbox.Api.Sharing.CollectionLinkMetadata.#ctor(System.String,Dropbox.Api.Sharing.Visibility,System.Nullable{System.DateTime})
+  id: '#ctor(System.String,Dropbox.Api.Sharing.Visibility,System.Nullable{System.DateTime})'
+  parent: Dropbox.Api.Sharing.CollectionLinkMetadata
+  langs:
+  - csharp
+  - vb
+  name: CollectionLinkMetadata(String, Visibility, Nullable<System.DateTime>)
+  nameWithType: CollectionLinkMetadata.CollectionLinkMetadata(String, Visibility, Nullable<System.DateTime>)
+  fullName: Dropbox.Api.Sharing.CollectionLinkMetadata.CollectionLinkMetadata(System.String, Dropbox.Api.Sharing.Visibility, System.Nullable<System.DateTime>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/CollectionLinkMetadata.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/CollectionLinkMetadata.cs
+    startLine: 38
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.CollectionLinkMetadata\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public CollectionLinkMetadata(string url, Visibility visibility, System.DateTime? expires = null)
+    parameters:
+    - id: url
+      type: System.String
+      description: URL of the shared link.
+    - id: visibility
+      type: Dropbox.Api.Sharing.Visibility
+      description: Who can access the link.
+    - id: expires
+      type: System.Nullable{System.DateTime}
+      description: >-
+        Expiration time, if set. By default the link won&apos;t
+
+        expire.
+    content.vb: Public Sub New(url As String, visibility As Visibility, expires As System.DateTime? = Nothing)
+  overload: Dropbox.Api.Sharing.CollectionLinkMetadata.#ctor*
+  nameWithType.vb: CollectionLinkMetadata.CollectionLinkMetadata(String, Visibility, Nullable(Of System.DateTime))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Sharing.CollectionLinkMetadata.CollectionLinkMetadata(System.String, Dropbox.Api.Sharing.Visibility, System.Nullable(Of System.DateTime))
+  name.vb: CollectionLinkMetadata(String, Visibility, Nullable(Of System.DateTime))
+- uid: Dropbox.Api.Sharing.CollectionLinkMetadata.#ctor
+  commentId: M:Dropbox.Api.Sharing.CollectionLinkMetadata.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Sharing.CollectionLinkMetadata
+  langs:
+  - csharp
+  - vb
+  name: CollectionLinkMetadata()
+  nameWithType: CollectionLinkMetadata.CollectionLinkMetadata()
+  fullName: Dropbox.Api.Sharing.CollectionLinkMetadata.CollectionLinkMetadata()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/CollectionLinkMetadata.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/CollectionLinkMetadata.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.CollectionLinkMetadata\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public CollectionLinkMetadata()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Sharing.CollectionLinkMetadata.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.LinkMetadata
+  commentId: T:Dropbox.Api.Sharing.LinkMetadata
+  parent: Dropbox.Api.Sharing
+  name: LinkMetadata
+  nameWithType: LinkMetadata
+  fullName: Dropbox.Api.Sharing.LinkMetadata
+- uid: Dropbox.Api.Sharing.LinkMetadata.IsPath
+  commentId: P:Dropbox.Api.Sharing.LinkMetadata.IsPath
+  parent: Dropbox.Api.Sharing.LinkMetadata
+  name: IsPath
+  nameWithType: LinkMetadata.IsPath
+  fullName: Dropbox.Api.Sharing.LinkMetadata.IsPath
+- uid: Dropbox.Api.Sharing.LinkMetadata.AsPath
+  commentId: P:Dropbox.Api.Sharing.LinkMetadata.AsPath
+  parent: Dropbox.Api.Sharing.LinkMetadata
+  name: AsPath
+  nameWithType: LinkMetadata.AsPath
+  fullName: Dropbox.Api.Sharing.LinkMetadata.AsPath
+- uid: Dropbox.Api.Sharing.LinkMetadata.IsCollection
+  commentId: P:Dropbox.Api.Sharing.LinkMetadata.IsCollection
+  parent: Dropbox.Api.Sharing.LinkMetadata
+  name: IsCollection
+  nameWithType: LinkMetadata.IsCollection
+  fullName: Dropbox.Api.Sharing.LinkMetadata.IsCollection
+- uid: Dropbox.Api.Sharing.LinkMetadata.AsCollection
+  commentId: P:Dropbox.Api.Sharing.LinkMetadata.AsCollection
+  parent: Dropbox.Api.Sharing.LinkMetadata
+  name: AsCollection
+  nameWithType: LinkMetadata.AsCollection
+  fullName: Dropbox.Api.Sharing.LinkMetadata.AsCollection
+- uid: Dropbox.Api.Sharing.LinkMetadata.Url
+  commentId: P:Dropbox.Api.Sharing.LinkMetadata.Url
+  parent: Dropbox.Api.Sharing.LinkMetadata
+  name: Url
+  nameWithType: LinkMetadata.Url
+  fullName: Dropbox.Api.Sharing.LinkMetadata.Url
+- uid: Dropbox.Api.Sharing.LinkMetadata.Visibility
+  commentId: P:Dropbox.Api.Sharing.LinkMetadata.Visibility
+  parent: Dropbox.Api.Sharing.LinkMetadata
+  name: Visibility
+  nameWithType: LinkMetadata.Visibility
+  fullName: Dropbox.Api.Sharing.LinkMetadata.Visibility
+- uid: Dropbox.Api.Sharing.LinkMetadata.Expires
+  commentId: P:Dropbox.Api.Sharing.LinkMetadata.Expires
+  parent: Dropbox.Api.Sharing.LinkMetadata
+  name: Expires
+  nameWithType: LinkMetadata.Expires
+  fullName: Dropbox.Api.Sharing.LinkMetadata.Expires
+- uid: Dropbox.Api.Sharing.CollectionLinkMetadata
+  commentId: T:Dropbox.Api.Sharing.CollectionLinkMetadata
+  parent: Dropbox.Api.Sharing
+  name: CollectionLinkMetadata
+  nameWithType: CollectionLinkMetadata
+  fullName: Dropbox.Api.Sharing.CollectionLinkMetadata
+- uid: Dropbox.Api.Sharing.CollectionLinkMetadata.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.CollectionLinkMetadata.#ctor
+  name: CollectionLinkMetadata
+  nameWithType: CollectionLinkMetadata.CollectionLinkMetadata
+  fullName: Dropbox.Api.Sharing.CollectionLinkMetadata.CollectionLinkMetadata
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Sharing.Visibility
+  commentId: T:Dropbox.Api.Sharing.Visibility
+  parent: Dropbox.Api.Sharing
+  name: Visibility
+  nameWithType: Visibility
+  fullName: Dropbox.Api.Sharing.Visibility
+- uid: System.Nullable{System.DateTime}
+  commentId: '!:System.Nullable{System.DateTime}'
+  definition: System.Nullable`1
+  name: Nullable<System.DateTime>
+  nameWithType: Nullable<System.DateTime>
+  fullName: System.Nullable<System.DateTime>
+  nameWithType.vb: Nullable(Of System.DateTime)
+  fullName.vb: System.Nullable(Of System.DateTime)
+  name.vb: Nullable(Of System.DateTime)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.DateTime
+    name: System.DateTime
+    nameWithType: System.DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.DateTime
+    name: System.DateTime
+    nameWithType: System.DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  isExternal: true
+  name: Nullable<>
+  nameWithType: Nullable<>
+  fullName: System.Nullable<>
+  nameWithType.vb: Nullable(Of )
+  fullName.vb: System.Nullable(Of )
+  name.vb: Nullable(Of )
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+shouldSkipMarkup: true

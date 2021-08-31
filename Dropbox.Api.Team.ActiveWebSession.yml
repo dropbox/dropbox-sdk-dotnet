@@ -1,0 +1,478 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.ActiveWebSession
+  commentId: T:Dropbox.Api.Team.ActiveWebSession
+  id: ActiveWebSession
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.ActiveWebSession.#ctor
+  - Dropbox.Api.Team.ActiveWebSession.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.DateTime})
+  - Dropbox.Api.Team.ActiveWebSession.Browser
+  - Dropbox.Api.Team.ActiveWebSession.Expires
+  - Dropbox.Api.Team.ActiveWebSession.Os
+  - Dropbox.Api.Team.ActiveWebSession.UserAgent
+  langs:
+  - csharp
+  - vb
+  name: ActiveWebSession
+  nameWithType: ActiveWebSession
+  fullName: Dropbox.Api.Team.ActiveWebSession
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ActiveWebSession.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ActiveWebSession
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ActiveWebSession.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Information on active web sessions.</p>\n"
+  example: []
+  syntax:
+    content: 'public class ActiveWebSession : DeviceSession'
+    content.vb: >-
+      Public Class ActiveWebSession
+          Inherits DeviceSession
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.DeviceSession
+  inheritedMembers:
+  - Dropbox.Api.Team.DeviceSession.SessionId
+  - Dropbox.Api.Team.DeviceSession.IpAddress
+  - Dropbox.Api.Team.DeviceSession.Country
+  - Dropbox.Api.Team.DeviceSession.Created
+  - Dropbox.Api.Team.DeviceSession.Updated
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.ActiveWebSession.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.DateTime})
+  commentId: M:Dropbox.Api.Team.ActiveWebSession.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.DateTime})
+  id: '#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.Nullable{System.DateTime})'
+  parent: Dropbox.Api.Team.ActiveWebSession
+  langs:
+  - csharp
+  - vb
+  name: ActiveWebSession(String, String, String, String, String, String, Nullable<System.DateTime>, Nullable<System.DateTime>, Nullable<System.DateTime>)
+  nameWithType: ActiveWebSession.ActiveWebSession(String, String, String, String, String, String, Nullable<System.DateTime>, Nullable<System.DateTime>, Nullable<System.DateTime>)
+  fullName: Dropbox.Api.Team.ActiveWebSession.ActiveWebSession(System.String, System.String, System.String, System.String, System.String, System.String, System.Nullable<System.DateTime>, System.Nullable<System.DateTime>, System.Nullable<System.DateTime>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ActiveWebSession.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ActiveWebSession.cs
+    startLine: 45
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.ActiveWebSession\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public ActiveWebSession(string sessionId, string userAgent, string os, string browser, string ipAddress = null, string country = null, System.DateTime? created = null, System.DateTime? updated = null, System.DateTime? expires = null)
+    parameters:
+    - id: sessionId
+      type: System.String
+      description: The session id.
+    - id: userAgent
+      type: System.String
+      description: Information on the hosting device.
+    - id: os
+      type: System.String
+      description: Information on the hosting operating system.
+    - id: browser
+      type: System.String
+      description: Information on the browser used for this web session.
+    - id: ipAddress
+      type: System.String
+      description: >-
+        The IP address of the last activity from this
+
+        session.
+    - id: country
+      type: System.String
+      description: >-
+        The country from which the last activity from this session
+
+        was made.
+    - id: created
+      type: System.Nullable{System.DateTime}
+      description: The time this session was created.
+    - id: updated
+      type: System.Nullable{System.DateTime}
+      description: The time of the last activity from this session.
+    - id: expires
+      type: System.Nullable{System.DateTime}
+      description: The time this session expires.
+    content.vb: Public Sub New(sessionId As String, userAgent As String, os As String, browser As String, ipAddress As String = Nothing, country As String = Nothing, created As System.DateTime? = Nothing, updated As System.DateTime? = Nothing, expires As System.DateTime? = Nothing)
+  overload: Dropbox.Api.Team.ActiveWebSession.#ctor*
+  nameWithType.vb: ActiveWebSession.ActiveWebSession(String, String, String, String, String, String, Nullable(Of System.DateTime), Nullable(Of System.DateTime), Nullable(Of System.DateTime))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Team.ActiveWebSession.ActiveWebSession(System.String, System.String, System.String, System.String, System.String, System.String, System.Nullable(Of System.DateTime), System.Nullable(Of System.DateTime), System.Nullable(Of System.DateTime))
+  name.vb: ActiveWebSession(String, String, String, String, String, String, Nullable(Of System.DateTime), Nullable(Of System.DateTime), Nullable(Of System.DateTime))
+- uid: Dropbox.Api.Team.ActiveWebSession.#ctor
+  commentId: M:Dropbox.Api.Team.ActiveWebSession.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.ActiveWebSession
+  langs:
+  - csharp
+  - vb
+  name: ActiveWebSession()
+  nameWithType: ActiveWebSession.ActiveWebSession()
+  fullName: Dropbox.Api.Team.ActiveWebSession.ActiveWebSession()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ActiveWebSession.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ActiveWebSession.cs
+    startLine: 83
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.ActiveWebSession\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public ActiveWebSession()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.ActiveWebSession.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.ActiveWebSession.UserAgent
+  commentId: P:Dropbox.Api.Team.ActiveWebSession.UserAgent
+  id: UserAgent
+  parent: Dropbox.Api.Team.ActiveWebSession
+  langs:
+  - csharp
+  - vb
+  name: UserAgent
+  nameWithType: ActiveWebSession.UserAgent
+  fullName: Dropbox.Api.Team.ActiveWebSession.UserAgent
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ActiveWebSession.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: UserAgent
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ActiveWebSession.cs
+    startLine: 91
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Information on the hosting device.</p>\n"
+  example: []
+  syntax:
+    content: public string UserAgent { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property UserAgent As String
+  overload: Dropbox.Api.Team.ActiveWebSession.UserAgent*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.ActiveWebSession.Os
+  commentId: P:Dropbox.Api.Team.ActiveWebSession.Os
+  id: Os
+  parent: Dropbox.Api.Team.ActiveWebSession
+  langs:
+  - csharp
+  - vb
+  name: Os
+  nameWithType: ActiveWebSession.Os
+  fullName: Dropbox.Api.Team.ActiveWebSession.Os
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ActiveWebSession.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Os
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ActiveWebSession.cs
+    startLine: 96
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Information on the hosting operating system.</p>\n"
+  example: []
+  syntax:
+    content: public string Os { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Os As String
+  overload: Dropbox.Api.Team.ActiveWebSession.Os*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.ActiveWebSession.Browser
+  commentId: P:Dropbox.Api.Team.ActiveWebSession.Browser
+  id: Browser
+  parent: Dropbox.Api.Team.ActiveWebSession
+  langs:
+  - csharp
+  - vb
+  name: Browser
+  nameWithType: ActiveWebSession.Browser
+  fullName: Dropbox.Api.Team.ActiveWebSession.Browser
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ActiveWebSession.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Browser
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ActiveWebSession.cs
+    startLine: 101
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Information on the browser used for this web session.</p>\n"
+  example: []
+  syntax:
+    content: public string Browser { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Browser As String
+  overload: Dropbox.Api.Team.ActiveWebSession.Browser*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.ActiveWebSession.Expires
+  commentId: P:Dropbox.Api.Team.ActiveWebSession.Expires
+  id: Expires
+  parent: Dropbox.Api.Team.ActiveWebSession
+  langs:
+  - csharp
+  - vb
+  name: Expires
+  nameWithType: ActiveWebSession.Expires
+  fullName: Dropbox.Api.Team.ActiveWebSession.Expires
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ActiveWebSession.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Expires
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ActiveWebSession.cs
+    startLine: 106
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The time this session expires.</p>\n"
+  example: []
+  syntax:
+    content: public System.DateTime? Expires { get; protected set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property Expires As System.DateTime?
+  overload: Dropbox.Api.Team.ActiveWebSession.Expires*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.DeviceSession
+  commentId: T:Dropbox.Api.Team.DeviceSession
+  parent: Dropbox.Api.Team
+  name: DeviceSession
+  nameWithType: DeviceSession
+  fullName: Dropbox.Api.Team.DeviceSession
+- uid: Dropbox.Api.Team.DeviceSession.SessionId
+  commentId: P:Dropbox.Api.Team.DeviceSession.SessionId
+  parent: Dropbox.Api.Team.DeviceSession
+  name: SessionId
+  nameWithType: DeviceSession.SessionId
+  fullName: Dropbox.Api.Team.DeviceSession.SessionId
+- uid: Dropbox.Api.Team.DeviceSession.IpAddress
+  commentId: P:Dropbox.Api.Team.DeviceSession.IpAddress
+  parent: Dropbox.Api.Team.DeviceSession
+  name: IpAddress
+  nameWithType: DeviceSession.IpAddress
+  fullName: Dropbox.Api.Team.DeviceSession.IpAddress
+- uid: Dropbox.Api.Team.DeviceSession.Country
+  commentId: P:Dropbox.Api.Team.DeviceSession.Country
+  parent: Dropbox.Api.Team.DeviceSession
+  name: Country
+  nameWithType: DeviceSession.Country
+  fullName: Dropbox.Api.Team.DeviceSession.Country
+- uid: Dropbox.Api.Team.DeviceSession.Created
+  commentId: P:Dropbox.Api.Team.DeviceSession.Created
+  parent: Dropbox.Api.Team.DeviceSession
+  name: Created
+  nameWithType: DeviceSession.Created
+  fullName: Dropbox.Api.Team.DeviceSession.Created
+- uid: Dropbox.Api.Team.DeviceSession.Updated
+  commentId: P:Dropbox.Api.Team.DeviceSession.Updated
+  parent: Dropbox.Api.Team.DeviceSession
+  name: Updated
+  nameWithType: DeviceSession.Updated
+  fullName: Dropbox.Api.Team.DeviceSession.Updated
+- uid: Dropbox.Api.Team.ActiveWebSession
+  commentId: T:Dropbox.Api.Team.ActiveWebSession
+  name: ActiveWebSession
+  nameWithType: ActiveWebSession
+  fullName: Dropbox.Api.Team.ActiveWebSession
+- uid: Dropbox.Api.Team.ActiveWebSession.#ctor*
+  commentId: Overload:Dropbox.Api.Team.ActiveWebSession.#ctor
+  name: ActiveWebSession
+  nameWithType: ActiveWebSession.ActiveWebSession
+  fullName: Dropbox.Api.Team.ActiveWebSession.ActiveWebSession
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Nullable{System.DateTime}
+  commentId: '!:System.Nullable{System.DateTime}'
+  definition: System.Nullable`1
+  name: Nullable<System.DateTime>
+  nameWithType: Nullable<System.DateTime>
+  fullName: System.Nullable<System.DateTime>
+  nameWithType.vb: Nullable(Of System.DateTime)
+  fullName.vb: System.Nullable(Of System.DateTime)
+  name.vb: Nullable(Of System.DateTime)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.DateTime
+    name: System.DateTime
+    nameWithType: System.DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.DateTime
+    name: System.DateTime
+    nameWithType: System.DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  isExternal: true
+  name: Nullable<>
+  nameWithType: Nullable<>
+  fullName: System.Nullable<>
+  nameWithType.vb: Nullable(Of )
+  fullName.vb: System.Nullable(Of )
+  name.vb: Nullable(Of )
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Team.ActiveWebSession.UserAgent*
+  commentId: Overload:Dropbox.Api.Team.ActiveWebSession.UserAgent
+  name: UserAgent
+  nameWithType: ActiveWebSession.UserAgent
+  fullName: Dropbox.Api.Team.ActiveWebSession.UserAgent
+- uid: Dropbox.Api.Team.ActiveWebSession.Os*
+  commentId: Overload:Dropbox.Api.Team.ActiveWebSession.Os
+  name: Os
+  nameWithType: ActiveWebSession.Os
+  fullName: Dropbox.Api.Team.ActiveWebSession.Os
+- uid: Dropbox.Api.Team.ActiveWebSession.Browser*
+  commentId: Overload:Dropbox.Api.Team.ActiveWebSession.Browser
+  name: Browser
+  nameWithType: ActiveWebSession.Browser
+  fullName: Dropbox.Api.Team.ActiveWebSession.Browser
+- uid: Dropbox.Api.Team.ActiveWebSession.Expires*
+  commentId: Overload:Dropbox.Api.Team.ActiveWebSession.Expires
+  name: Expires
+  nameWithType: ActiveWebSession.Expires
+  fullName: Dropbox.Api.Team.ActiveWebSession.Expires
+shouldSkipMarkup: true

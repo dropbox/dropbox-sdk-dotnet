@@ -1,0 +1,381 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.PaperDesktopPolicy
+  commentId: T:Dropbox.Api.TeamLog.PaperDesktopPolicy
+  id: PaperDesktopPolicy
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.PaperDesktopPolicy.#ctor
+  - Dropbox.Api.TeamLog.PaperDesktopPolicy.AsDisabled
+  - Dropbox.Api.TeamLog.PaperDesktopPolicy.AsEnabled
+  - Dropbox.Api.TeamLog.PaperDesktopPolicy.AsOther
+  - Dropbox.Api.TeamLog.PaperDesktopPolicy.IsDisabled
+  - Dropbox.Api.TeamLog.PaperDesktopPolicy.IsEnabled
+  - Dropbox.Api.TeamLog.PaperDesktopPolicy.IsOther
+  langs:
+  - csharp
+  - vb
+  name: PaperDesktopPolicy
+  nameWithType: PaperDesktopPolicy
+  fullName: Dropbox.Api.TeamLog.PaperDesktopPolicy
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDesktopPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PaperDesktopPolicy
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDesktopPolicy.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Policy for controlling if team members can use Paper Desktop</p>\n"
+  example: []
+  syntax:
+    content: 'public class PaperDesktopPolicy : object'
+    content.vb: >-
+      Public Class PaperDesktopPolicy
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.TeamLog.PaperDesktopPolicy.Disabled
+  - Dropbox.Api.TeamLog.PaperDesktopPolicy.Enabled
+  - Dropbox.Api.TeamLog.PaperDesktopPolicy.Other
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.PaperDesktopPolicy.#ctor
+  commentId: M:Dropbox.Api.TeamLog.PaperDesktopPolicy.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.PaperDesktopPolicy
+  langs:
+  - csharp
+  - vb
+  name: PaperDesktopPolicy()
+  nameWithType: PaperDesktopPolicy.PaperDesktopPolicy()
+  fullName: Dropbox.Api.TeamLog.PaperDesktopPolicy.PaperDesktopPolicy()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDesktopPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDesktopPolicy.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.PaperDesktopPolicy\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public PaperDesktopPolicy()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.PaperDesktopPolicy.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.PaperDesktopPolicy.IsDisabled
+  commentId: P:Dropbox.Api.TeamLog.PaperDesktopPolicy.IsDisabled
+  id: IsDisabled
+  parent: Dropbox.Api.TeamLog.PaperDesktopPolicy
+  langs:
+  - csharp
+  - vb
+  name: IsDisabled
+  nameWithType: PaperDesktopPolicy.IsDisabled
+  fullName: Dropbox.Api.TeamLog.PaperDesktopPolicy.IsDisabled
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDesktopPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsDisabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDesktopPolicy.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Disabled</p>\n"
+  example: []
+  syntax:
+    content: public bool IsDisabled { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsDisabled As Boolean
+  overload: Dropbox.Api.TeamLog.PaperDesktopPolicy.IsDisabled*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.PaperDesktopPolicy.AsDisabled
+  commentId: P:Dropbox.Api.TeamLog.PaperDesktopPolicy.AsDisabled
+  id: AsDisabled
+  parent: Dropbox.Api.TeamLog.PaperDesktopPolicy
+  langs:
+  - csharp
+  - vb
+  name: AsDisabled
+  nameWithType: PaperDesktopPolicy.AsDisabled
+  fullName: Dropbox.Api.TeamLog.PaperDesktopPolicy.AsDisabled
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDesktopPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsDisabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDesktopPolicy.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Disabled, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PaperDesktopPolicy.Disabled AsDisabled { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.PaperDesktopPolicy.Disabled
+    content.vb: Public ReadOnly Property AsDisabled As PaperDesktopPolicy.Disabled
+  overload: Dropbox.Api.TeamLog.PaperDesktopPolicy.AsDisabled*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.PaperDesktopPolicy.IsEnabled
+  commentId: P:Dropbox.Api.TeamLog.PaperDesktopPolicy.IsEnabled
+  id: IsEnabled
+  parent: Dropbox.Api.TeamLog.PaperDesktopPolicy
+  langs:
+  - csharp
+  - vb
+  name: IsEnabled
+  nameWithType: PaperDesktopPolicy.IsEnabled
+  fullName: Dropbox.Api.TeamLog.PaperDesktopPolicy.IsEnabled
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDesktopPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsEnabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDesktopPolicy.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Enabled</p>\n"
+  example: []
+  syntax:
+    content: public bool IsEnabled { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsEnabled As Boolean
+  overload: Dropbox.Api.TeamLog.PaperDesktopPolicy.IsEnabled*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.PaperDesktopPolicy.AsEnabled
+  commentId: P:Dropbox.Api.TeamLog.PaperDesktopPolicy.AsEnabled
+  id: AsEnabled
+  parent: Dropbox.Api.TeamLog.PaperDesktopPolicy
+  langs:
+  - csharp
+  - vb
+  name: AsEnabled
+  nameWithType: PaperDesktopPolicy.AsEnabled
+  fullName: Dropbox.Api.TeamLog.PaperDesktopPolicy.AsEnabled
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDesktopPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsEnabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDesktopPolicy.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Enabled, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PaperDesktopPolicy.Enabled AsEnabled { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.PaperDesktopPolicy.Enabled
+    content.vb: Public ReadOnly Property AsEnabled As PaperDesktopPolicy.Enabled
+  overload: Dropbox.Api.TeamLog.PaperDesktopPolicy.AsEnabled*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.PaperDesktopPolicy.IsOther
+  commentId: P:Dropbox.Api.TeamLog.PaperDesktopPolicy.IsOther
+  id: IsOther
+  parent: Dropbox.Api.TeamLog.PaperDesktopPolicy
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: PaperDesktopPolicy.IsOther
+  fullName: Dropbox.Api.TeamLog.PaperDesktopPolicy.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDesktopPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDesktopPolicy.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.TeamLog.PaperDesktopPolicy.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.PaperDesktopPolicy.AsOther
+  commentId: P:Dropbox.Api.TeamLog.PaperDesktopPolicy.AsOther
+  id: AsOther
+  parent: Dropbox.Api.TeamLog.PaperDesktopPolicy
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: PaperDesktopPolicy.AsOther
+  fullName: Dropbox.Api.TeamLog.PaperDesktopPolicy.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDesktopPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDesktopPolicy.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PaperDesktopPolicy.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.PaperDesktopPolicy.Other
+    content.vb: Public ReadOnly Property AsOther As PaperDesktopPolicy.Other
+  overload: Dropbox.Api.TeamLog.PaperDesktopPolicy.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.PaperDesktopPolicy
+  commentId: T:Dropbox.Api.TeamLog.PaperDesktopPolicy
+  parent: Dropbox.Api.TeamLog
+  name: PaperDesktopPolicy
+  nameWithType: PaperDesktopPolicy
+  fullName: Dropbox.Api.TeamLog.PaperDesktopPolicy
+- uid: Dropbox.Api.TeamLog.PaperDesktopPolicy.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.PaperDesktopPolicy.#ctor
+  name: PaperDesktopPolicy
+  nameWithType: PaperDesktopPolicy.PaperDesktopPolicy
+  fullName: Dropbox.Api.TeamLog.PaperDesktopPolicy.PaperDesktopPolicy
+- uid: Dropbox.Api.TeamLog.PaperDesktopPolicy.IsDisabled*
+  commentId: Overload:Dropbox.Api.TeamLog.PaperDesktopPolicy.IsDisabled
+  name: IsDisabled
+  nameWithType: PaperDesktopPolicy.IsDisabled
+  fullName: Dropbox.Api.TeamLog.PaperDesktopPolicy.IsDisabled
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.TeamLog.PaperDesktopPolicy.AsDisabled*
+  commentId: Overload:Dropbox.Api.TeamLog.PaperDesktopPolicy.AsDisabled
+  name: AsDisabled
+  nameWithType: PaperDesktopPolicy.AsDisabled
+  fullName: Dropbox.Api.TeamLog.PaperDesktopPolicy.AsDisabled
+- uid: Dropbox.Api.TeamLog.PaperDesktopPolicy.Disabled
+  commentId: T:Dropbox.Api.TeamLog.PaperDesktopPolicy.Disabled
+  parent: Dropbox.Api.TeamLog
+  name: PaperDesktopPolicy.Disabled
+  nameWithType: PaperDesktopPolicy.Disabled
+  fullName: Dropbox.Api.TeamLog.PaperDesktopPolicy.Disabled
+- uid: Dropbox.Api.TeamLog.PaperDesktopPolicy.IsEnabled*
+  commentId: Overload:Dropbox.Api.TeamLog.PaperDesktopPolicy.IsEnabled
+  name: IsEnabled
+  nameWithType: PaperDesktopPolicy.IsEnabled
+  fullName: Dropbox.Api.TeamLog.PaperDesktopPolicy.IsEnabled
+- uid: Dropbox.Api.TeamLog.PaperDesktopPolicy.AsEnabled*
+  commentId: Overload:Dropbox.Api.TeamLog.PaperDesktopPolicy.AsEnabled
+  name: AsEnabled
+  nameWithType: PaperDesktopPolicy.AsEnabled
+  fullName: Dropbox.Api.TeamLog.PaperDesktopPolicy.AsEnabled
+- uid: Dropbox.Api.TeamLog.PaperDesktopPolicy.Enabled
+  commentId: T:Dropbox.Api.TeamLog.PaperDesktopPolicy.Enabled
+  parent: Dropbox.Api.TeamLog
+  name: PaperDesktopPolicy.Enabled
+  nameWithType: PaperDesktopPolicy.Enabled
+  fullName: Dropbox.Api.TeamLog.PaperDesktopPolicy.Enabled
+- uid: Dropbox.Api.TeamLog.PaperDesktopPolicy.IsOther*
+  commentId: Overload:Dropbox.Api.TeamLog.PaperDesktopPolicy.IsOther
+  name: IsOther
+  nameWithType: PaperDesktopPolicy.IsOther
+  fullName: Dropbox.Api.TeamLog.PaperDesktopPolicy.IsOther
+- uid: Dropbox.Api.TeamLog.PaperDesktopPolicy.AsOther*
+  commentId: Overload:Dropbox.Api.TeamLog.PaperDesktopPolicy.AsOther
+  name: AsOther
+  nameWithType: PaperDesktopPolicy.AsOther
+  fullName: Dropbox.Api.TeamLog.PaperDesktopPolicy.AsOther
+- uid: Dropbox.Api.TeamLog.PaperDesktopPolicy.Other
+  commentId: T:Dropbox.Api.TeamLog.PaperDesktopPolicy.Other
+  parent: Dropbox.Api.TeamLog
+  name: PaperDesktopPolicy.Other
+  nameWithType: PaperDesktopPolicy.Other
+  fullName: Dropbox.Api.TeamLog.PaperDesktopPolicy.Other
+shouldSkipMarkup: true

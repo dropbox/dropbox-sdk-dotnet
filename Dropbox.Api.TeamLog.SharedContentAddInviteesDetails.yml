@@ -1,0 +1,406 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.SharedContentAddInviteesDetails
+  commentId: T:Dropbox.Api.TeamLog.SharedContentAddInviteesDetails
+  id: SharedContentAddInviteesDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.SharedContentAddInviteesDetails.#ctor
+  - Dropbox.Api.TeamLog.SharedContentAddInviteesDetails.#ctor(Dropbox.Api.Sharing.AccessLevel,System.Collections.Generic.IEnumerable{System.String})
+  - Dropbox.Api.TeamLog.SharedContentAddInviteesDetails.Invitees
+  - Dropbox.Api.TeamLog.SharedContentAddInviteesDetails.SharedContentAccessLevel
+  langs:
+  - csharp
+  - vb
+  name: SharedContentAddInviteesDetails
+  nameWithType: SharedContentAddInviteesDetails
+  fullName: Dropbox.Api.TeamLog.SharedContentAddInviteesDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentAddInviteesDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SharedContentAddInviteesDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentAddInviteesDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Invited user to Dropbox and added them to shared file/folder.</p>\n"
+  example: []
+  syntax:
+    content: 'public class SharedContentAddInviteesDetails : object'
+    content.vb: >-
+      Public Class SharedContentAddInviteesDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.SharedContentAddInviteesDetails.#ctor(Dropbox.Api.Sharing.AccessLevel,System.Collections.Generic.IEnumerable{System.String})
+  commentId: M:Dropbox.Api.TeamLog.SharedContentAddInviteesDetails.#ctor(Dropbox.Api.Sharing.AccessLevel,System.Collections.Generic.IEnumerable{System.String})
+  id: '#ctor(Dropbox.Api.Sharing.AccessLevel,System.Collections.Generic.IEnumerable{System.String})'
+  parent: Dropbox.Api.TeamLog.SharedContentAddInviteesDetails
+  langs:
+  - csharp
+  - vb
+  name: SharedContentAddInviteesDetails(AccessLevel, System.Collections.Generic.IEnumerable<String>)
+  nameWithType: SharedContentAddInviteesDetails.SharedContentAddInviteesDetails(AccessLevel, System.Collections.Generic.IEnumerable<String>)
+  fullName: Dropbox.Api.TeamLog.SharedContentAddInviteesDetails.SharedContentAddInviteesDetails(Dropbox.Api.Sharing.AccessLevel, System.Collections.Generic.IEnumerable<System.String>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentAddInviteesDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentAddInviteesDetails.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SharedContentAddInviteesDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public SharedContentAddInviteesDetails(AccessLevel sharedContentAccessLevel, System.Collections.Generic.IEnumerable<string> invitees)
+    parameters:
+    - id: sharedContentAccessLevel
+      type: Dropbox.Api.Sharing.AccessLevel
+      description: Shared content access level.
+    - id: invitees
+      type: System.Collections.Generic.IEnumerable{System.String}
+      description: A list of invitees.
+    content.vb: Public Sub New(sharedContentAccessLevel As AccessLevel, invitees As System.Collections.Generic.IEnumerable(Of String))
+  overload: Dropbox.Api.TeamLog.SharedContentAddInviteesDetails.#ctor*
+  nameWithType.vb: SharedContentAddInviteesDetails.SharedContentAddInviteesDetails(AccessLevel, System.Collections.Generic.IEnumerable(Of String))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.TeamLog.SharedContentAddInviteesDetails.SharedContentAddInviteesDetails(Dropbox.Api.Sharing.AccessLevel, System.Collections.Generic.IEnumerable(Of System.String))
+  name.vb: SharedContentAddInviteesDetails(AccessLevel, System.Collections.Generic.IEnumerable(Of String))
+- uid: Dropbox.Api.TeamLog.SharedContentAddInviteesDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.SharedContentAddInviteesDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.SharedContentAddInviteesDetails
+  langs:
+  - csharp
+  - vb
+  name: SharedContentAddInviteesDetails()
+  nameWithType: SharedContentAddInviteesDetails.SharedContentAddInviteesDetails()
+  fullName: Dropbox.Api.TeamLog.SharedContentAddInviteesDetails.SharedContentAddInviteesDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentAddInviteesDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentAddInviteesDetails.cs
+    startLine: 60
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SharedContentAddInviteesDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public SharedContentAddInviteesDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.SharedContentAddInviteesDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SharedContentAddInviteesDetails.SharedContentAccessLevel
+  commentId: P:Dropbox.Api.TeamLog.SharedContentAddInviteesDetails.SharedContentAccessLevel
+  id: SharedContentAccessLevel
+  parent: Dropbox.Api.TeamLog.SharedContentAddInviteesDetails
+  langs:
+  - csharp
+  - vb
+  name: SharedContentAccessLevel
+  nameWithType: SharedContentAddInviteesDetails.SharedContentAccessLevel
+  fullName: Dropbox.Api.TeamLog.SharedContentAddInviteesDetails.SharedContentAccessLevel
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentAddInviteesDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SharedContentAccessLevel
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentAddInviteesDetails.cs
+    startLine: 68
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Shared content access level.</p>\n"
+  example: []
+  syntax:
+    content: public AccessLevel SharedContentAccessLevel { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.AccessLevel
+    content.vb: Public Property SharedContentAccessLevel As AccessLevel
+  overload: Dropbox.Api.TeamLog.SharedContentAddInviteesDetails.SharedContentAccessLevel*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.SharedContentAddInviteesDetails.Invitees
+  commentId: P:Dropbox.Api.TeamLog.SharedContentAddInviteesDetails.Invitees
+  id: Invitees
+  parent: Dropbox.Api.TeamLog.SharedContentAddInviteesDetails
+  langs:
+  - csharp
+  - vb
+  name: Invitees
+  nameWithType: SharedContentAddInviteesDetails.Invitees
+  fullName: Dropbox.Api.TeamLog.SharedContentAddInviteesDetails.Invitees
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentAddInviteesDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Invitees
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentAddInviteesDetails.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>A list of invitees.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<string> Invitees { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{System.String}
+    content.vb: Public Property Invitees As System.Collections.Generic.IList(Of String)
+  overload: Dropbox.Api.TeamLog.SharedContentAddInviteesDetails.Invitees*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.SharedContentAddInviteesDetails
+  commentId: T:Dropbox.Api.TeamLog.SharedContentAddInviteesDetails
+  parent: Dropbox.Api.TeamLog
+  name: SharedContentAddInviteesDetails
+  nameWithType: SharedContentAddInviteesDetails
+  fullName: Dropbox.Api.TeamLog.SharedContentAddInviteesDetails
+- uid: Dropbox.Api.TeamLog.SharedContentAddInviteesDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedContentAddInviteesDetails.#ctor
+  name: SharedContentAddInviteesDetails
+  nameWithType: SharedContentAddInviteesDetails.SharedContentAddInviteesDetails
+  fullName: Dropbox.Api.TeamLog.SharedContentAddInviteesDetails.SharedContentAddInviteesDetails
+- uid: Dropbox.Api.Sharing.AccessLevel
+  commentId: T:Dropbox.Api.Sharing.AccessLevel
+  parent: Dropbox.Api.Sharing
+  name: AccessLevel
+  nameWithType: AccessLevel
+  fullName: Dropbox.Api.Sharing.AccessLevel
+- uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: '!:System.Collections.Generic.IEnumerable{System.String}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<String>
+  nameWithType: System.Collections.Generic.IEnumerable<String>
+  fullName: System.Collections.Generic.IEnumerable<System.String>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of String)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.String)
+  name.vb: System.Collections.Generic.IEnumerable(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: System.Collections.Generic.IEnumerable<>
+  nameWithType: System.Collections.Generic.IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: System.Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.TeamLog.SharedContentAddInviteesDetails.SharedContentAccessLevel*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedContentAddInviteesDetails.SharedContentAccessLevel
+  name: SharedContentAccessLevel
+  nameWithType: SharedContentAddInviteesDetails.SharedContentAccessLevel
+  fullName: Dropbox.Api.TeamLog.SharedContentAddInviteesDetails.SharedContentAccessLevel
+- uid: Dropbox.Api.TeamLog.SharedContentAddInviteesDetails.Invitees*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedContentAddInviteesDetails.Invitees
+  name: Invitees
+  nameWithType: SharedContentAddInviteesDetails.Invitees
+  fullName: Dropbox.Api.TeamLog.SharedContentAddInviteesDetails.Invitees
+- uid: System.Collections.Generic.IList{System.String}
+  commentId: '!:System.Collections.Generic.IList{System.String}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<String>
+  nameWithType: System.Collections.Generic.IList<String>
+  fullName: System.Collections.Generic.IList<System.String>
+  nameWithType.vb: System.Collections.Generic.IList(Of String)
+  fullName.vb: System.Collections.Generic.IList(Of System.String)
+  name.vb: System.Collections.Generic.IList(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  isExternal: true
+  name: System.Collections.Generic.IList<>
+  nameWithType: System.Collections.Generic.IList<>
+  fullName: System.Collections.Generic.IList<>
+  nameWithType.vb: System.Collections.Generic.IList(Of )
+  fullName.vb: System.Collections.Generic.IList(Of )
+  name.vb: System.Collections.Generic.IList(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+shouldSkipMarkup: true

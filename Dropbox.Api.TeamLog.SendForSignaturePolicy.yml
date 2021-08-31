@@ -1,0 +1,381 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.SendForSignaturePolicy
+  commentId: T:Dropbox.Api.TeamLog.SendForSignaturePolicy
+  id: SendForSignaturePolicy
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.SendForSignaturePolicy.#ctor
+  - Dropbox.Api.TeamLog.SendForSignaturePolicy.AsDisabled
+  - Dropbox.Api.TeamLog.SendForSignaturePolicy.AsEnabled
+  - Dropbox.Api.TeamLog.SendForSignaturePolicy.AsOther
+  - Dropbox.Api.TeamLog.SendForSignaturePolicy.IsDisabled
+  - Dropbox.Api.TeamLog.SendForSignaturePolicy.IsEnabled
+  - Dropbox.Api.TeamLog.SendForSignaturePolicy.IsOther
+  langs:
+  - csharp
+  - vb
+  name: SendForSignaturePolicy
+  nameWithType: SendForSignaturePolicy
+  fullName: Dropbox.Api.TeamLog.SendForSignaturePolicy
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SendForSignaturePolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SendForSignaturePolicy
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SendForSignaturePolicy.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Policy for controlling team access to send for signature feature</p>\n"
+  example: []
+  syntax:
+    content: 'public class SendForSignaturePolicy : object'
+    content.vb: >-
+      Public Class SendForSignaturePolicy
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.TeamLog.SendForSignaturePolicy.Disabled
+  - Dropbox.Api.TeamLog.SendForSignaturePolicy.Enabled
+  - Dropbox.Api.TeamLog.SendForSignaturePolicy.Other
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.SendForSignaturePolicy.#ctor
+  commentId: M:Dropbox.Api.TeamLog.SendForSignaturePolicy.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.SendForSignaturePolicy
+  langs:
+  - csharp
+  - vb
+  name: SendForSignaturePolicy()
+  nameWithType: SendForSignaturePolicy.SendForSignaturePolicy()
+  fullName: Dropbox.Api.TeamLog.SendForSignaturePolicy.SendForSignaturePolicy()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SendForSignaturePolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SendForSignaturePolicy.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SendForSignaturePolicy\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public SendForSignaturePolicy()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.SendForSignaturePolicy.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SendForSignaturePolicy.IsDisabled
+  commentId: P:Dropbox.Api.TeamLog.SendForSignaturePolicy.IsDisabled
+  id: IsDisabled
+  parent: Dropbox.Api.TeamLog.SendForSignaturePolicy
+  langs:
+  - csharp
+  - vb
+  name: IsDisabled
+  nameWithType: SendForSignaturePolicy.IsDisabled
+  fullName: Dropbox.Api.TeamLog.SendForSignaturePolicy.IsDisabled
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SendForSignaturePolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsDisabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SendForSignaturePolicy.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Disabled</p>\n"
+  example: []
+  syntax:
+    content: public bool IsDisabled { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsDisabled As Boolean
+  overload: Dropbox.Api.TeamLog.SendForSignaturePolicy.IsDisabled*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.SendForSignaturePolicy.AsDisabled
+  commentId: P:Dropbox.Api.TeamLog.SendForSignaturePolicy.AsDisabled
+  id: AsDisabled
+  parent: Dropbox.Api.TeamLog.SendForSignaturePolicy
+  langs:
+  - csharp
+  - vb
+  name: AsDisabled
+  nameWithType: SendForSignaturePolicy.AsDisabled
+  fullName: Dropbox.Api.TeamLog.SendForSignaturePolicy.AsDisabled
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SendForSignaturePolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsDisabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SendForSignaturePolicy.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Disabled, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SendForSignaturePolicy.Disabled AsDisabled { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.SendForSignaturePolicy.Disabled
+    content.vb: Public ReadOnly Property AsDisabled As SendForSignaturePolicy.Disabled
+  overload: Dropbox.Api.TeamLog.SendForSignaturePolicy.AsDisabled*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.SendForSignaturePolicy.IsEnabled
+  commentId: P:Dropbox.Api.TeamLog.SendForSignaturePolicy.IsEnabled
+  id: IsEnabled
+  parent: Dropbox.Api.TeamLog.SendForSignaturePolicy
+  langs:
+  - csharp
+  - vb
+  name: IsEnabled
+  nameWithType: SendForSignaturePolicy.IsEnabled
+  fullName: Dropbox.Api.TeamLog.SendForSignaturePolicy.IsEnabled
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SendForSignaturePolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsEnabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SendForSignaturePolicy.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Enabled</p>\n"
+  example: []
+  syntax:
+    content: public bool IsEnabled { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsEnabled As Boolean
+  overload: Dropbox.Api.TeamLog.SendForSignaturePolicy.IsEnabled*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.SendForSignaturePolicy.AsEnabled
+  commentId: P:Dropbox.Api.TeamLog.SendForSignaturePolicy.AsEnabled
+  id: AsEnabled
+  parent: Dropbox.Api.TeamLog.SendForSignaturePolicy
+  langs:
+  - csharp
+  - vb
+  name: AsEnabled
+  nameWithType: SendForSignaturePolicy.AsEnabled
+  fullName: Dropbox.Api.TeamLog.SendForSignaturePolicy.AsEnabled
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SendForSignaturePolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsEnabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SendForSignaturePolicy.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Enabled, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SendForSignaturePolicy.Enabled AsEnabled { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.SendForSignaturePolicy.Enabled
+    content.vb: Public ReadOnly Property AsEnabled As SendForSignaturePolicy.Enabled
+  overload: Dropbox.Api.TeamLog.SendForSignaturePolicy.AsEnabled*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.SendForSignaturePolicy.IsOther
+  commentId: P:Dropbox.Api.TeamLog.SendForSignaturePolicy.IsOther
+  id: IsOther
+  parent: Dropbox.Api.TeamLog.SendForSignaturePolicy
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: SendForSignaturePolicy.IsOther
+  fullName: Dropbox.Api.TeamLog.SendForSignaturePolicy.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SendForSignaturePolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SendForSignaturePolicy.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.TeamLog.SendForSignaturePolicy.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.SendForSignaturePolicy.AsOther
+  commentId: P:Dropbox.Api.TeamLog.SendForSignaturePolicy.AsOther
+  id: AsOther
+  parent: Dropbox.Api.TeamLog.SendForSignaturePolicy
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: SendForSignaturePolicy.AsOther
+  fullName: Dropbox.Api.TeamLog.SendForSignaturePolicy.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SendForSignaturePolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SendForSignaturePolicy.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SendForSignaturePolicy.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.SendForSignaturePolicy.Other
+    content.vb: Public ReadOnly Property AsOther As SendForSignaturePolicy.Other
+  overload: Dropbox.Api.TeamLog.SendForSignaturePolicy.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.SendForSignaturePolicy
+  commentId: T:Dropbox.Api.TeamLog.SendForSignaturePolicy
+  parent: Dropbox.Api.TeamLog
+  name: SendForSignaturePolicy
+  nameWithType: SendForSignaturePolicy
+  fullName: Dropbox.Api.TeamLog.SendForSignaturePolicy
+- uid: Dropbox.Api.TeamLog.SendForSignaturePolicy.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.SendForSignaturePolicy.#ctor
+  name: SendForSignaturePolicy
+  nameWithType: SendForSignaturePolicy.SendForSignaturePolicy
+  fullName: Dropbox.Api.TeamLog.SendForSignaturePolicy.SendForSignaturePolicy
+- uid: Dropbox.Api.TeamLog.SendForSignaturePolicy.IsDisabled*
+  commentId: Overload:Dropbox.Api.TeamLog.SendForSignaturePolicy.IsDisabled
+  name: IsDisabled
+  nameWithType: SendForSignaturePolicy.IsDisabled
+  fullName: Dropbox.Api.TeamLog.SendForSignaturePolicy.IsDisabled
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.TeamLog.SendForSignaturePolicy.AsDisabled*
+  commentId: Overload:Dropbox.Api.TeamLog.SendForSignaturePolicy.AsDisabled
+  name: AsDisabled
+  nameWithType: SendForSignaturePolicy.AsDisabled
+  fullName: Dropbox.Api.TeamLog.SendForSignaturePolicy.AsDisabled
+- uid: Dropbox.Api.TeamLog.SendForSignaturePolicy.Disabled
+  commentId: T:Dropbox.Api.TeamLog.SendForSignaturePolicy.Disabled
+  parent: Dropbox.Api.TeamLog
+  name: SendForSignaturePolicy.Disabled
+  nameWithType: SendForSignaturePolicy.Disabled
+  fullName: Dropbox.Api.TeamLog.SendForSignaturePolicy.Disabled
+- uid: Dropbox.Api.TeamLog.SendForSignaturePolicy.IsEnabled*
+  commentId: Overload:Dropbox.Api.TeamLog.SendForSignaturePolicy.IsEnabled
+  name: IsEnabled
+  nameWithType: SendForSignaturePolicy.IsEnabled
+  fullName: Dropbox.Api.TeamLog.SendForSignaturePolicy.IsEnabled
+- uid: Dropbox.Api.TeamLog.SendForSignaturePolicy.AsEnabled*
+  commentId: Overload:Dropbox.Api.TeamLog.SendForSignaturePolicy.AsEnabled
+  name: AsEnabled
+  nameWithType: SendForSignaturePolicy.AsEnabled
+  fullName: Dropbox.Api.TeamLog.SendForSignaturePolicy.AsEnabled
+- uid: Dropbox.Api.TeamLog.SendForSignaturePolicy.Enabled
+  commentId: T:Dropbox.Api.TeamLog.SendForSignaturePolicy.Enabled
+  parent: Dropbox.Api.TeamLog
+  name: SendForSignaturePolicy.Enabled
+  nameWithType: SendForSignaturePolicy.Enabled
+  fullName: Dropbox.Api.TeamLog.SendForSignaturePolicy.Enabled
+- uid: Dropbox.Api.TeamLog.SendForSignaturePolicy.IsOther*
+  commentId: Overload:Dropbox.Api.TeamLog.SendForSignaturePolicy.IsOther
+  name: IsOther
+  nameWithType: SendForSignaturePolicy.IsOther
+  fullName: Dropbox.Api.TeamLog.SendForSignaturePolicy.IsOther
+- uid: Dropbox.Api.TeamLog.SendForSignaturePolicy.AsOther*
+  commentId: Overload:Dropbox.Api.TeamLog.SendForSignaturePolicy.AsOther
+  name: AsOther
+  nameWithType: SendForSignaturePolicy.AsOther
+  fullName: Dropbox.Api.TeamLog.SendForSignaturePolicy.AsOther
+- uid: Dropbox.Api.TeamLog.SendForSignaturePolicy.Other
+  commentId: T:Dropbox.Api.TeamLog.SendForSignaturePolicy.Other
+  parent: Dropbox.Api.TeamLog
+  name: SendForSignaturePolicy.Other
+  nameWithType: SendForSignaturePolicy.Other
+  fullName: Dropbox.Api.TeamLog.SendForSignaturePolicy.Other
+shouldSkipMarkup: true

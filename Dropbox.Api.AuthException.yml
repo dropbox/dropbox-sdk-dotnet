@@ -1,0 +1,300 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.AuthException
+  commentId: T:Dropbox.Api.AuthException
+  id: AuthException
+  parent: Dropbox.Api
+  children:
+  - Dropbox.Api.AuthException.RequestUri
+  - Dropbox.Api.AuthException.StatusCode
+  langs:
+  - csharp
+  - vb
+  name: AuthException
+  nameWithType: AuthException
+  fullName: Dropbox.Api.AuthException
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/AuthException.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AuthException
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/AuthException.cs
+    startLine: 14
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api
+  summary: "\nAn exception that is caused by the server reporting an authentication problem.\n"
+  example: []
+  syntax:
+    content: 'public sealed class AuthException : StructuredException<AuthError>'
+    content.vb: >-
+      Public NotInheritable Class AuthException
+          Inherits StructuredException(Of AuthError)
+  inheritance:
+  - System.Object
+  - Dropbox.Api.DropboxException
+  - Dropbox.Api.StructuredException{Dropbox.Api.Auth.AuthError}
+  inheritedMembers:
+  - Dropbox.Api.StructuredException{Dropbox.Api.Auth.AuthError}.ErrorResponse
+  - Dropbox.Api.StructuredException{Dropbox.Api.Auth.AuthError}.Message
+  - Dropbox.Api.DropboxException.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.AuthException.StatusCode
+  commentId: P:Dropbox.Api.AuthException.StatusCode
+  id: StatusCode
+  parent: Dropbox.Api.AuthException
+  langs:
+  - csharp
+  - vb
+  name: StatusCode
+  nameWithType: AuthException.StatusCode
+  fullName: Dropbox.Api.AuthException.StatusCode
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/DropboxException.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: StatusCode
+    path: dropbox-sdk-dotnet/Dropbox.Api/DropboxException.cs
+    startLine: 127
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api
+  summary: "\nGets the HTTP status code that prompted this exception.\n"
+  example: []
+  syntax:
+    content: public int StatusCode { get; }
+    parameters: []
+    return:
+      type: System.Int32
+      description: "\nThe status code.\n"
+    content.vb: Public ReadOnly Property StatusCode As Integer
+  overload: Dropbox.Api.AuthException.StatusCode*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.AuthException.RequestUri
+  commentId: P:Dropbox.Api.AuthException.RequestUri
+  id: RequestUri
+  parent: Dropbox.Api.AuthException
+  langs:
+  - csharp
+  - vb
+  name: RequestUri
+  nameWithType: AuthException.RequestUri
+  fullName: Dropbox.Api.AuthException.RequestUri
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/DropboxException.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: RequestUri
+    path: dropbox-sdk-dotnet/Dropbox.Api/DropboxException.cs
+    startLine: 136
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api
+  summary: "\nGets the URI for the request that prompted this exception.\n"
+  example: []
+  syntax:
+    content: public Uri RequestUri { get; }
+    parameters: []
+    return:
+      type: Uri
+      description: "\nThe request URI.\n"
+    content.vb: Public ReadOnly Property RequestUri As Uri
+  overload: Dropbox.Api.AuthException.RequestUri*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api
+  commentId: N:Dropbox.Api
+  name: Dropbox.Api
+  nameWithType: Dropbox.Api
+  fullName: Dropbox.Api
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.DropboxException
+  commentId: T:Dropbox.Api.DropboxException
+  parent: Dropbox.Api
+  name: DropboxException
+  nameWithType: DropboxException
+  fullName: Dropbox.Api.DropboxException
+- uid: Dropbox.Api.StructuredException{Dropbox.Api.Auth.AuthError}
+  commentId: T:Dropbox.Api.StructuredException{Dropbox.Api.Auth.AuthError}
+  parent: Dropbox.Api
+  definition: Dropbox.Api.StructuredException`1
+  name: StructuredException<AuthError>
+  nameWithType: StructuredException<AuthError>
+  fullName: Dropbox.Api.StructuredException<Dropbox.Api.Auth.AuthError>
+  nameWithType.vb: StructuredException(Of AuthError)
+  fullName.vb: Dropbox.Api.StructuredException(Of Dropbox.Api.Auth.AuthError)
+  name.vb: StructuredException(Of AuthError)
+  spec.csharp:
+  - uid: Dropbox.Api.StructuredException`1
+    name: StructuredException
+    nameWithType: StructuredException
+    fullName: Dropbox.Api.StructuredException
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Auth.AuthError
+    name: AuthError
+    nameWithType: AuthError
+    fullName: Dropbox.Api.Auth.AuthError
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Dropbox.Api.StructuredException`1
+    name: StructuredException
+    nameWithType: StructuredException
+    fullName: Dropbox.Api.StructuredException
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Auth.AuthError
+    name: AuthError
+    nameWithType: AuthError
+    fullName: Dropbox.Api.Auth.AuthError
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.StructuredException{Dropbox.Api.Auth.AuthError}.ErrorResponse
+  commentId: P:Dropbox.Api.StructuredException{Dropbox.Api.Auth.AuthError}.ErrorResponse
+  parent: Dropbox.Api.StructuredException{Dropbox.Api.Auth.AuthError}
+  definition: Dropbox.Api.StructuredException`1.ErrorResponse
+  name: ErrorResponse
+  nameWithType: StructuredException<AuthError>.ErrorResponse
+  fullName: Dropbox.Api.StructuredException<Dropbox.Api.Auth.AuthError>.ErrorResponse
+  nameWithType.vb: StructuredException(Of AuthError).ErrorResponse
+  fullName.vb: Dropbox.Api.StructuredException(Of Dropbox.Api.Auth.AuthError).ErrorResponse
+- uid: Dropbox.Api.StructuredException{Dropbox.Api.Auth.AuthError}.Message
+  commentId: P:Dropbox.Api.StructuredException{Dropbox.Api.Auth.AuthError}.Message
+  parent: Dropbox.Api.StructuredException{Dropbox.Api.Auth.AuthError}
+  definition: Dropbox.Api.StructuredException`1.Message
+  name: Message
+  nameWithType: StructuredException<AuthError>.Message
+  fullName: Dropbox.Api.StructuredException<Dropbox.Api.Auth.AuthError>.Message
+  nameWithType.vb: StructuredException(Of AuthError).Message
+  fullName.vb: Dropbox.Api.StructuredException(Of Dropbox.Api.Auth.AuthError).Message
+- uid: Dropbox.Api.DropboxException.ToString
+  commentId: M:Dropbox.Api.DropboxException.ToString
+  parent: Dropbox.Api.DropboxException
+  name: ToString()
+  nameWithType: DropboxException.ToString()
+  fullName: Dropbox.Api.DropboxException.ToString()
+  spec.csharp:
+  - uid: Dropbox.Api.DropboxException.ToString
+    name: ToString
+    nameWithType: DropboxException.ToString
+    fullName: Dropbox.Api.DropboxException.ToString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Dropbox.Api.DropboxException.ToString
+    name: ToString
+    nameWithType: DropboxException.ToString
+    fullName: Dropbox.Api.DropboxException.ToString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.StructuredException`1
+  commentId: T:Dropbox.Api.StructuredException`1
+  name: StructuredException<TError>
+  nameWithType: StructuredException<TError>
+  fullName: Dropbox.Api.StructuredException<TError>
+  nameWithType.vb: StructuredException(Of TError)
+  fullName.vb: Dropbox.Api.StructuredException(Of TError)
+  name.vb: StructuredException(Of TError)
+  spec.csharp:
+  - uid: Dropbox.Api.StructuredException`1
+    name: StructuredException
+    nameWithType: StructuredException
+    fullName: Dropbox.Api.StructuredException
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TError
+    nameWithType: TError
+    fullName: TError
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Dropbox.Api.StructuredException`1
+    name: StructuredException
+    nameWithType: StructuredException
+    fullName: Dropbox.Api.StructuredException
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TError
+    nameWithType: TError
+    fullName: TError
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.StructuredException`1.ErrorResponse
+  commentId: P:Dropbox.Api.StructuredException`1.ErrorResponse
+  name: ErrorResponse
+  nameWithType: StructuredException<TError>.ErrorResponse
+  fullName: Dropbox.Api.StructuredException<TError>.ErrorResponse
+  nameWithType.vb: StructuredException(Of TError).ErrorResponse
+  fullName.vb: Dropbox.Api.StructuredException(Of TError).ErrorResponse
+- uid: Dropbox.Api.StructuredException`1.Message
+  commentId: P:Dropbox.Api.StructuredException`1.Message
+  name: Message
+  nameWithType: StructuredException<TError>.Message
+  fullName: Dropbox.Api.StructuredException<TError>.Message
+  nameWithType.vb: StructuredException(Of TError).Message
+  fullName.vb: Dropbox.Api.StructuredException(Of TError).Message
+- uid: Dropbox.Api.AuthException.StatusCode*
+  commentId: Overload:Dropbox.Api.AuthException.StatusCode
+  name: StatusCode
+  nameWithType: AuthException.StatusCode
+  fullName: Dropbox.Api.AuthException.StatusCode
+- uid: System.Int32
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Dropbox.Api.AuthException.RequestUri*
+  commentId: Overload:Dropbox.Api.AuthException.RequestUri
+  name: RequestUri
+  nameWithType: AuthException.RequestUri
+  fullName: Dropbox.Api.AuthException.RequestUri
+- uid: Uri
+  isExternal: true
+  name: Uri
+  nameWithType: Uri
+  fullName: Uri
+shouldSkipMarkup: true

@@ -1,0 +1,219 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.NonTeamMemberLogInfo
+  commentId: T:Dropbox.Api.TeamLog.NonTeamMemberLogInfo
+  id: NonTeamMemberLogInfo
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.NonTeamMemberLogInfo.#ctor
+  - Dropbox.Api.TeamLog.NonTeamMemberLogInfo.#ctor(System.String,System.String,System.String)
+  langs:
+  - csharp
+  - vb
+  name: NonTeamMemberLogInfo
+  nameWithType: NonTeamMemberLogInfo
+  fullName: Dropbox.Api.TeamLog.NonTeamMemberLogInfo
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/NonTeamMemberLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NonTeamMemberLogInfo
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/NonTeamMemberLogInfo.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Non team member&apos;s logged information.</p>\n"
+  example: []
+  syntax:
+    content: 'public class NonTeamMemberLogInfo : UserLogInfo'
+    content.vb: >-
+      Public Class NonTeamMemberLogInfo
+          Inherits UserLogInfo
+  inheritance:
+  - System.Object
+  - Dropbox.Api.TeamLog.UserLogInfo
+  inheritedMembers:
+  - Dropbox.Api.TeamLog.UserLogInfo.IsTeamMember
+  - Dropbox.Api.TeamLog.UserLogInfo.AsTeamMember
+  - Dropbox.Api.TeamLog.UserLogInfo.IsTrustedNonTeamMember
+  - Dropbox.Api.TeamLog.UserLogInfo.AsTrustedNonTeamMember
+  - Dropbox.Api.TeamLog.UserLogInfo.IsNonTeamMember
+  - Dropbox.Api.TeamLog.UserLogInfo.AsNonTeamMember
+  - Dropbox.Api.TeamLog.UserLogInfo.AccountId
+  - Dropbox.Api.TeamLog.UserLogInfo.DisplayName
+  - Dropbox.Api.TeamLog.UserLogInfo.Email
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.NonTeamMemberLogInfo.#ctor(System.String,System.String,System.String)
+  commentId: M:Dropbox.Api.TeamLog.NonTeamMemberLogInfo.#ctor(System.String,System.String,System.String)
+  id: '#ctor(System.String,System.String,System.String)'
+  parent: Dropbox.Api.TeamLog.NonTeamMemberLogInfo
+  langs:
+  - csharp
+  - vb
+  name: NonTeamMemberLogInfo(String, String, String)
+  nameWithType: NonTeamMemberLogInfo.NonTeamMemberLogInfo(String, String, String)
+  fullName: Dropbox.Api.TeamLog.NonTeamMemberLogInfo.NonTeamMemberLogInfo(System.String, System.String, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/NonTeamMemberLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/NonTeamMemberLogInfo.cs
+    startLine: 37
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.NonTeamMemberLogInfo\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public NonTeamMemberLogInfo(string accountId = null, string displayName = null, string email = null)
+    parameters:
+    - id: accountId
+      type: System.String
+      description: User unique ID.
+    - id: displayName
+      type: System.String
+      description: User display name.
+    - id: email
+      type: System.String
+      description: User email address.
+    content.vb: Public Sub New(accountId As String = Nothing, displayName As String = Nothing, email As String = Nothing)
+  overload: Dropbox.Api.TeamLog.NonTeamMemberLogInfo.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.NonTeamMemberLogInfo.#ctor
+  commentId: M:Dropbox.Api.TeamLog.NonTeamMemberLogInfo.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.NonTeamMemberLogInfo
+  langs:
+  - csharp
+  - vb
+  name: NonTeamMemberLogInfo()
+  nameWithType: NonTeamMemberLogInfo.NonTeamMemberLogInfo()
+  fullName: Dropbox.Api.TeamLog.NonTeamMemberLogInfo.NonTeamMemberLogInfo()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/NonTeamMemberLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/NonTeamMemberLogInfo.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.NonTeamMemberLogInfo\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public NonTeamMemberLogInfo()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.NonTeamMemberLogInfo.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.UserLogInfo
+  commentId: T:Dropbox.Api.TeamLog.UserLogInfo
+  parent: Dropbox.Api.TeamLog
+  name: UserLogInfo
+  nameWithType: UserLogInfo
+  fullName: Dropbox.Api.TeamLog.UserLogInfo
+- uid: Dropbox.Api.TeamLog.UserLogInfo.IsTeamMember
+  commentId: P:Dropbox.Api.TeamLog.UserLogInfo.IsTeamMember
+  parent: Dropbox.Api.TeamLog.UserLogInfo
+  name: IsTeamMember
+  nameWithType: UserLogInfo.IsTeamMember
+  fullName: Dropbox.Api.TeamLog.UserLogInfo.IsTeamMember
+- uid: Dropbox.Api.TeamLog.UserLogInfo.AsTeamMember
+  commentId: P:Dropbox.Api.TeamLog.UserLogInfo.AsTeamMember
+  parent: Dropbox.Api.TeamLog.UserLogInfo
+  name: AsTeamMember
+  nameWithType: UserLogInfo.AsTeamMember
+  fullName: Dropbox.Api.TeamLog.UserLogInfo.AsTeamMember
+- uid: Dropbox.Api.TeamLog.UserLogInfo.IsTrustedNonTeamMember
+  commentId: P:Dropbox.Api.TeamLog.UserLogInfo.IsTrustedNonTeamMember
+  parent: Dropbox.Api.TeamLog.UserLogInfo
+  name: IsTrustedNonTeamMember
+  nameWithType: UserLogInfo.IsTrustedNonTeamMember
+  fullName: Dropbox.Api.TeamLog.UserLogInfo.IsTrustedNonTeamMember
+- uid: Dropbox.Api.TeamLog.UserLogInfo.AsTrustedNonTeamMember
+  commentId: P:Dropbox.Api.TeamLog.UserLogInfo.AsTrustedNonTeamMember
+  parent: Dropbox.Api.TeamLog.UserLogInfo
+  name: AsTrustedNonTeamMember
+  nameWithType: UserLogInfo.AsTrustedNonTeamMember
+  fullName: Dropbox.Api.TeamLog.UserLogInfo.AsTrustedNonTeamMember
+- uid: Dropbox.Api.TeamLog.UserLogInfo.IsNonTeamMember
+  commentId: P:Dropbox.Api.TeamLog.UserLogInfo.IsNonTeamMember
+  parent: Dropbox.Api.TeamLog.UserLogInfo
+  name: IsNonTeamMember
+  nameWithType: UserLogInfo.IsNonTeamMember
+  fullName: Dropbox.Api.TeamLog.UserLogInfo.IsNonTeamMember
+- uid: Dropbox.Api.TeamLog.UserLogInfo.AsNonTeamMember
+  commentId: P:Dropbox.Api.TeamLog.UserLogInfo.AsNonTeamMember
+  parent: Dropbox.Api.TeamLog.UserLogInfo
+  name: AsNonTeamMember
+  nameWithType: UserLogInfo.AsNonTeamMember
+  fullName: Dropbox.Api.TeamLog.UserLogInfo.AsNonTeamMember
+- uid: Dropbox.Api.TeamLog.UserLogInfo.AccountId
+  commentId: P:Dropbox.Api.TeamLog.UserLogInfo.AccountId
+  parent: Dropbox.Api.TeamLog.UserLogInfo
+  name: AccountId
+  nameWithType: UserLogInfo.AccountId
+  fullName: Dropbox.Api.TeamLog.UserLogInfo.AccountId
+- uid: Dropbox.Api.TeamLog.UserLogInfo.DisplayName
+  commentId: P:Dropbox.Api.TeamLog.UserLogInfo.DisplayName
+  parent: Dropbox.Api.TeamLog.UserLogInfo
+  name: DisplayName
+  nameWithType: UserLogInfo.DisplayName
+  fullName: Dropbox.Api.TeamLog.UserLogInfo.DisplayName
+- uid: Dropbox.Api.TeamLog.UserLogInfo.Email
+  commentId: P:Dropbox.Api.TeamLog.UserLogInfo.Email
+  parent: Dropbox.Api.TeamLog.UserLogInfo
+  name: Email
+  nameWithType: UserLogInfo.Email
+  fullName: Dropbox.Api.TeamLog.UserLogInfo.Email
+- uid: Dropbox.Api.TeamLog.NonTeamMemberLogInfo
+  commentId: T:Dropbox.Api.TeamLog.NonTeamMemberLogInfo
+  parent: Dropbox.Api.TeamLog
+  name: NonTeamMemberLogInfo
+  nameWithType: NonTeamMemberLogInfo
+  fullName: Dropbox.Api.TeamLog.NonTeamMemberLogInfo
+- uid: Dropbox.Api.TeamLog.NonTeamMemberLogInfo.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.NonTeamMemberLogInfo.#ctor
+  name: NonTeamMemberLogInfo
+  nameWithType: NonTeamMemberLogInfo.NonTeamMemberLogInfo
+  fullName: Dropbox.Api.TeamLog.NonTeamMemberLogInfo.NonTeamMemberLogInfo
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+shouldSkipMarkup: true

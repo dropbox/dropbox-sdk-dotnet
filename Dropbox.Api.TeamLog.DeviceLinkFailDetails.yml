@@ -1,0 +1,247 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.DeviceLinkFailDetails
+  commentId: T:Dropbox.Api.TeamLog.DeviceLinkFailDetails
+  id: DeviceLinkFailDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.DeviceLinkFailDetails.#ctor
+  - Dropbox.Api.TeamLog.DeviceLinkFailDetails.#ctor(Dropbox.Api.TeamLog.DeviceType,System.String)
+  - Dropbox.Api.TeamLog.DeviceLinkFailDetails.DeviceType
+  - Dropbox.Api.TeamLog.DeviceLinkFailDetails.IpAddress
+  langs:
+  - csharp
+  - vb
+  name: DeviceLinkFailDetails
+  nameWithType: DeviceLinkFailDetails
+  fullName: Dropbox.Api.TeamLog.DeviceLinkFailDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceLinkFailDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: DeviceLinkFailDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceLinkFailDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Failed to link device.</p>\n"
+  example: []
+  syntax:
+    content: 'public class DeviceLinkFailDetails : object'
+    content.vb: >-
+      Public Class DeviceLinkFailDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.DeviceLinkFailDetails.#ctor(Dropbox.Api.TeamLog.DeviceType,System.String)
+  commentId: M:Dropbox.Api.TeamLog.DeviceLinkFailDetails.#ctor(Dropbox.Api.TeamLog.DeviceType,System.String)
+  id: '#ctor(Dropbox.Api.TeamLog.DeviceType,System.String)'
+  parent: Dropbox.Api.TeamLog.DeviceLinkFailDetails
+  langs:
+  - csharp
+  - vb
+  name: DeviceLinkFailDetails(DeviceType, String)
+  nameWithType: DeviceLinkFailDetails.DeviceLinkFailDetails(DeviceType, String)
+  fullName: Dropbox.Api.TeamLog.DeviceLinkFailDetails.DeviceLinkFailDetails(Dropbox.Api.TeamLog.DeviceType, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceLinkFailDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceLinkFailDetails.cs
+    startLine: 37
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.DeviceLinkFailDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public DeviceLinkFailDetails(DeviceType deviceType, string ipAddress = null)
+    parameters:
+    - id: deviceType
+      type: Dropbox.Api.TeamLog.DeviceType
+      description: >-
+        A description of the device used while user approval
+
+        blocked.
+    - id: ipAddress
+      type: System.String
+      description: >-
+        IP address. Might be missing due to historical data
+
+        gap.
+    content.vb: Public Sub New(deviceType As DeviceType, ipAddress As String = Nothing)
+  overload: Dropbox.Api.TeamLog.DeviceLinkFailDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.DeviceLinkFailDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.DeviceLinkFailDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.DeviceLinkFailDetails
+  langs:
+  - csharp
+  - vb
+  name: DeviceLinkFailDetails()
+  nameWithType: DeviceLinkFailDetails.DeviceLinkFailDetails()
+  fullName: Dropbox.Api.TeamLog.DeviceLinkFailDetails.DeviceLinkFailDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceLinkFailDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceLinkFailDetails.cs
+    startLine: 55
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.DeviceLinkFailDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public DeviceLinkFailDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.DeviceLinkFailDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.DeviceLinkFailDetails.DeviceType
+  commentId: P:Dropbox.Api.TeamLog.DeviceLinkFailDetails.DeviceType
+  id: DeviceType
+  parent: Dropbox.Api.TeamLog.DeviceLinkFailDetails
+  langs:
+  - csharp
+  - vb
+  name: DeviceType
+  nameWithType: DeviceLinkFailDetails.DeviceType
+  fullName: Dropbox.Api.TeamLog.DeviceLinkFailDetails.DeviceType
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceLinkFailDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: DeviceType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceLinkFailDetails.cs
+    startLine: 63
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>A description of the device used while user approval blocked.</p>\n"
+  example: []
+  syntax:
+    content: public DeviceType DeviceType { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.DeviceType
+    content.vb: Public Property DeviceType As DeviceType
+  overload: Dropbox.Api.TeamLog.DeviceLinkFailDetails.DeviceType*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.DeviceLinkFailDetails.IpAddress
+  commentId: P:Dropbox.Api.TeamLog.DeviceLinkFailDetails.IpAddress
+  id: IpAddress
+  parent: Dropbox.Api.TeamLog.DeviceLinkFailDetails
+  langs:
+  - csharp
+  - vb
+  name: IpAddress
+  nameWithType: DeviceLinkFailDetails.IpAddress
+  fullName: Dropbox.Api.TeamLog.DeviceLinkFailDetails.IpAddress
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceLinkFailDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IpAddress
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceLinkFailDetails.cs
+    startLine: 68
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>IP address. Might be missing due to historical data gap.</p>\n"
+  example: []
+  syntax:
+    content: public string IpAddress { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property IpAddress As String
+  overload: Dropbox.Api.TeamLog.DeviceLinkFailDetails.IpAddress*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.DeviceLinkFailDetails
+  commentId: T:Dropbox.Api.TeamLog.DeviceLinkFailDetails
+  parent: Dropbox.Api.TeamLog
+  name: DeviceLinkFailDetails
+  nameWithType: DeviceLinkFailDetails
+  fullName: Dropbox.Api.TeamLog.DeviceLinkFailDetails
+- uid: Dropbox.Api.TeamLog.DeviceLinkFailDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.DeviceLinkFailDetails.#ctor
+  name: DeviceLinkFailDetails
+  nameWithType: DeviceLinkFailDetails.DeviceLinkFailDetails
+  fullName: Dropbox.Api.TeamLog.DeviceLinkFailDetails.DeviceLinkFailDetails
+- uid: Dropbox.Api.TeamLog.DeviceType
+  commentId: T:Dropbox.Api.TeamLog.DeviceType
+  parent: Dropbox.Api.TeamLog
+  name: DeviceType
+  nameWithType: DeviceType
+  fullName: Dropbox.Api.TeamLog.DeviceType
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.DeviceLinkFailDetails.DeviceType*
+  commentId: Overload:Dropbox.Api.TeamLog.DeviceLinkFailDetails.DeviceType
+  name: DeviceType
+  nameWithType: DeviceLinkFailDetails.DeviceType
+  fullName: Dropbox.Api.TeamLog.DeviceLinkFailDetails.DeviceType
+- uid: Dropbox.Api.TeamLog.DeviceLinkFailDetails.IpAddress*
+  commentId: Overload:Dropbox.Api.TeamLog.DeviceLinkFailDetails.IpAddress
+  name: IpAddress
+  nameWithType: DeviceLinkFailDetails.IpAddress
+  fullName: Dropbox.Api.TeamLog.DeviceLinkFailDetails.IpAddress
+shouldSkipMarkup: true

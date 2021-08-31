@@ -1,0 +1,232 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.Day30
+  commentId: T:Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.Day30
+  id: DefaultLinkExpirationDaysPolicy.Day30
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.Day30.Instance
+  langs:
+  - csharp
+  - vb
+  name: DefaultLinkExpirationDaysPolicy.Day30
+  nameWithType: DefaultLinkExpirationDaysPolicy.Day30
+  fullName: Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.Day30
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DefaultLinkExpirationDaysPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Day30
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DefaultLinkExpirationDaysPolicy.cs
+    startLine: 571
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The day 30 object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Day30 : DefaultLinkExpirationDaysPolicy'
+    content.vb: >-
+      Public NotInheritable Class Day30
+          Inherits DefaultLinkExpirationDaysPolicy
+  inheritance:
+  - System.Object
+  - Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy
+  inheritedMembers:
+  - Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.IsDay1
+  - Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.AsDay1
+  - Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.IsDay180
+  - Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.AsDay180
+  - Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.IsDay3
+  - Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.AsDay3
+  - Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.IsDay30
+  - Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.AsDay30
+  - Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.IsDay7
+  - Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.AsDay7
+  - Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.IsDay90
+  - Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.AsDay90
+  - Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.IsNone
+  - Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.AsNone
+  - Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.IsYear1
+  - Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.AsYear1
+  - Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.IsOther
+  - Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.Day30.Instance
+  commentId: F:Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.Day30.Instance
+  id: Instance
+  parent: Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.Day30
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: DefaultLinkExpirationDaysPolicy.Day30.Instance
+  fullName: Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.Day30.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DefaultLinkExpirationDaysPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DefaultLinkExpirationDaysPolicy.cs
+    startLine: 595
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>A singleton instance of Day30</p>\n"
+  example: []
+  syntax:
+    content: public static readonly DefaultLinkExpirationDaysPolicy.Day30 Instance
+    return:
+      type: Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.Day30
+    content.vb: Public Shared ReadOnly Instance As DefaultLinkExpirationDaysPolicy.Day30
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy
+  commentId: T:Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy
+  parent: Dropbox.Api.TeamLog
+  name: DefaultLinkExpirationDaysPolicy
+  nameWithType: DefaultLinkExpirationDaysPolicy
+  fullName: Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy
+- uid: Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.IsDay1
+  commentId: P:Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.IsDay1
+  parent: Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy
+  name: IsDay1
+  nameWithType: DefaultLinkExpirationDaysPolicy.IsDay1
+  fullName: Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.IsDay1
+- uid: Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.AsDay1
+  commentId: P:Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.AsDay1
+  parent: Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy
+  name: AsDay1
+  nameWithType: DefaultLinkExpirationDaysPolicy.AsDay1
+  fullName: Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.AsDay1
+- uid: Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.IsDay180
+  commentId: P:Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.IsDay180
+  parent: Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy
+  name: IsDay180
+  nameWithType: DefaultLinkExpirationDaysPolicy.IsDay180
+  fullName: Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.IsDay180
+- uid: Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.AsDay180
+  commentId: P:Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.AsDay180
+  parent: Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy
+  name: AsDay180
+  nameWithType: DefaultLinkExpirationDaysPolicy.AsDay180
+  fullName: Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.AsDay180
+- uid: Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.IsDay3
+  commentId: P:Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.IsDay3
+  parent: Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy
+  name: IsDay3
+  nameWithType: DefaultLinkExpirationDaysPolicy.IsDay3
+  fullName: Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.IsDay3
+- uid: Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.AsDay3
+  commentId: P:Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.AsDay3
+  parent: Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy
+  name: AsDay3
+  nameWithType: DefaultLinkExpirationDaysPolicy.AsDay3
+  fullName: Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.AsDay3
+- uid: Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.IsDay30
+  commentId: P:Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.IsDay30
+  parent: Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy
+  name: IsDay30
+  nameWithType: DefaultLinkExpirationDaysPolicy.IsDay30
+  fullName: Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.IsDay30
+- uid: Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.AsDay30
+  commentId: P:Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.AsDay30
+  parent: Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy
+  name: AsDay30
+  nameWithType: DefaultLinkExpirationDaysPolicy.AsDay30
+  fullName: Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.AsDay30
+- uid: Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.IsDay7
+  commentId: P:Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.IsDay7
+  parent: Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy
+  name: IsDay7
+  nameWithType: DefaultLinkExpirationDaysPolicy.IsDay7
+  fullName: Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.IsDay7
+- uid: Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.AsDay7
+  commentId: P:Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.AsDay7
+  parent: Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy
+  name: AsDay7
+  nameWithType: DefaultLinkExpirationDaysPolicy.AsDay7
+  fullName: Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.AsDay7
+- uid: Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.IsDay90
+  commentId: P:Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.IsDay90
+  parent: Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy
+  name: IsDay90
+  nameWithType: DefaultLinkExpirationDaysPolicy.IsDay90
+  fullName: Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.IsDay90
+- uid: Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.AsDay90
+  commentId: P:Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.AsDay90
+  parent: Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy
+  name: AsDay90
+  nameWithType: DefaultLinkExpirationDaysPolicy.AsDay90
+  fullName: Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.AsDay90
+- uid: Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.IsNone
+  commentId: P:Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.IsNone
+  parent: Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy
+  name: IsNone
+  nameWithType: DefaultLinkExpirationDaysPolicy.IsNone
+  fullName: Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.IsNone
+- uid: Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.AsNone
+  commentId: P:Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.AsNone
+  parent: Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy
+  name: AsNone
+  nameWithType: DefaultLinkExpirationDaysPolicy.AsNone
+  fullName: Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.AsNone
+- uid: Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.IsYear1
+  commentId: P:Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.IsYear1
+  parent: Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy
+  name: IsYear1
+  nameWithType: DefaultLinkExpirationDaysPolicy.IsYear1
+  fullName: Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.IsYear1
+- uid: Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.AsYear1
+  commentId: P:Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.AsYear1
+  parent: Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy
+  name: AsYear1
+  nameWithType: DefaultLinkExpirationDaysPolicy.AsYear1
+  fullName: Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.AsYear1
+- uid: Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.IsOther
+  commentId: P:Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.IsOther
+  parent: Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy
+  name: IsOther
+  nameWithType: DefaultLinkExpirationDaysPolicy.IsOther
+  fullName: Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.IsOther
+- uid: Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.AsOther
+  commentId: P:Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.AsOther
+  parent: Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy
+  name: AsOther
+  nameWithType: DefaultLinkExpirationDaysPolicy.AsOther
+  fullName: Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.AsOther
+- uid: Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.Day30
+  commentId: T:Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.Day30
+  parent: Dropbox.Api.TeamLog
+  name: DefaultLinkExpirationDaysPolicy.Day30
+  nameWithType: DefaultLinkExpirationDaysPolicy.Day30
+  fullName: Dropbox.Api.TeamLog.DefaultLinkExpirationDaysPolicy.Day30
+shouldSkipMarkup: true

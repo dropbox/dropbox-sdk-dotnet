@@ -1,0 +1,238 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.SaveCopyReferenceArg
+  commentId: T:Dropbox.Api.Files.SaveCopyReferenceArg
+  id: SaveCopyReferenceArg
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.SaveCopyReferenceArg.#ctor
+  - Dropbox.Api.Files.SaveCopyReferenceArg.#ctor(System.String,System.String)
+  - Dropbox.Api.Files.SaveCopyReferenceArg.CopyReference
+  - Dropbox.Api.Files.SaveCopyReferenceArg.Path
+  langs:
+  - csharp
+  - vb
+  name: SaveCopyReferenceArg
+  nameWithType: SaveCopyReferenceArg
+  fullName: Dropbox.Api.Files.SaveCopyReferenceArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SaveCopyReferenceArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SaveCopyReferenceArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SaveCopyReferenceArg.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The save copy reference arg object</p>\n"
+  example: []
+  syntax:
+    content: 'public class SaveCopyReferenceArg : object'
+    content.vb: >-
+      Public Class SaveCopyReferenceArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.SaveCopyReferenceArg.#ctor(System.String,System.String)
+  commentId: M:Dropbox.Api.Files.SaveCopyReferenceArg.#ctor(System.String,System.String)
+  id: '#ctor(System.String,System.String)'
+  parent: Dropbox.Api.Files.SaveCopyReferenceArg
+  langs:
+  - csharp
+  - vb
+  name: SaveCopyReferenceArg(String, String)
+  nameWithType: SaveCopyReferenceArg.SaveCopyReferenceArg(String, String)
+  fullName: Dropbox.Api.Files.SaveCopyReferenceArg.SaveCopyReferenceArg(System.String, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SaveCopyReferenceArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SaveCopyReferenceArg.cs
+    startLine: 36
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.SaveCopyReferenceArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public SaveCopyReferenceArg(string copyReference, string path)
+    parameters:
+    - id: copyReference
+      type: System.String
+      description: A copy reference returned by <xref href="Dropbox.Api.Files.Routes.FilesUserRoutes.CopyReferenceGetAsync(Dropbox.Api.Files.GetCopyReferenceArg)" data-throw-if-not-resolved="false"></xref>.
+    - id: path
+      type: System.String
+      description: Path in the user&apos;s Dropbox that is the destination.
+    content.vb: Public Sub New(copyReference As String, path As String)
+  overload: Dropbox.Api.Files.SaveCopyReferenceArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.SaveCopyReferenceArg.#ctor
+  commentId: M:Dropbox.Api.Files.SaveCopyReferenceArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.SaveCopyReferenceArg
+  langs:
+  - csharp
+  - vb
+  name: SaveCopyReferenceArg()
+  nameWithType: SaveCopyReferenceArg.SaveCopyReferenceArg()
+  fullName: Dropbox.Api.Files.SaveCopyReferenceArg.SaveCopyReferenceArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SaveCopyReferenceArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SaveCopyReferenceArg.cs
+    startLine: 63
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.SaveCopyReferenceArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public SaveCopyReferenceArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.SaveCopyReferenceArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.SaveCopyReferenceArg.CopyReference
+  commentId: P:Dropbox.Api.Files.SaveCopyReferenceArg.CopyReference
+  id: CopyReference
+  parent: Dropbox.Api.Files.SaveCopyReferenceArg
+  langs:
+  - csharp
+  - vb
+  name: CopyReference
+  nameWithType: SaveCopyReferenceArg.CopyReference
+  fullName: Dropbox.Api.Files.SaveCopyReferenceArg.CopyReference
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SaveCopyReferenceArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: CopyReference
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SaveCopyReferenceArg.cs
+    startLine: 72
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>A copy reference returned by <xref href=\"Dropbox.Api.Files.Routes.FilesUserRoutes.CopyReferenceGetAsync(Dropbox.Api.Files.GetCopyReferenceArg)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+  example: []
+  syntax:
+    content: public string CopyReference { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property CopyReference As String
+  overload: Dropbox.Api.Files.SaveCopyReferenceArg.CopyReference*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.SaveCopyReferenceArg.Path
+  commentId: P:Dropbox.Api.Files.SaveCopyReferenceArg.Path
+  id: Path
+  parent: Dropbox.Api.Files.SaveCopyReferenceArg
+  langs:
+  - csharp
+  - vb
+  name: Path
+  nameWithType: SaveCopyReferenceArg.Path
+  fullName: Dropbox.Api.Files.SaveCopyReferenceArg.Path
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SaveCopyReferenceArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Path
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SaveCopyReferenceArg.cs
+    startLine: 77
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Path in the user&apos;s Dropbox that is the destination.</p>\n"
+  example: []
+  syntax:
+    content: public string Path { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Path As String
+  overload: Dropbox.Api.Files.SaveCopyReferenceArg.Path*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.SaveCopyReferenceArg
+  commentId: T:Dropbox.Api.Files.SaveCopyReferenceArg
+  parent: Dropbox.Api.Files
+  name: SaveCopyReferenceArg
+  nameWithType: SaveCopyReferenceArg
+  fullName: Dropbox.Api.Files.SaveCopyReferenceArg
+- uid: Dropbox.Api.Files.Routes.FilesUserRoutes.CopyReferenceGetAsync(Dropbox.Api.Files.GetCopyReferenceArg)
+  commentId: M:Dropbox.Api.Files.Routes.FilesUserRoutes.CopyReferenceGetAsync(Dropbox.Api.Files.GetCopyReferenceArg)
+  isExternal: true
+- uid: Dropbox.Api.Files.SaveCopyReferenceArg.#ctor*
+  commentId: Overload:Dropbox.Api.Files.SaveCopyReferenceArg.#ctor
+  name: SaveCopyReferenceArg
+  nameWithType: SaveCopyReferenceArg.SaveCopyReferenceArg
+  fullName: Dropbox.Api.Files.SaveCopyReferenceArg.SaveCopyReferenceArg
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Files.SaveCopyReferenceArg.CopyReference*
+  commentId: Overload:Dropbox.Api.Files.SaveCopyReferenceArg.CopyReference
+  name: CopyReference
+  nameWithType: SaveCopyReferenceArg.CopyReference
+  fullName: Dropbox.Api.Files.SaveCopyReferenceArg.CopyReference
+- uid: Dropbox.Api.Files.SaveCopyReferenceArg.Path*
+  commentId: Overload:Dropbox.Api.Files.SaveCopyReferenceArg.Path
+  name: Path
+  nameWithType: SaveCopyReferenceArg.Path
+  fullName: Dropbox.Api.Files.SaveCopyReferenceArg.Path
+shouldSkipMarkup: true

@@ -1,0 +1,96 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDetails
+  commentId: T:Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDetails
+  id: EndedEnterpriseAdminSessionDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDetails.#ctor
+  langs:
+  - csharp
+  - vb
+  name: EndedEnterpriseAdminSessionDetails
+  nameWithType: EndedEnterpriseAdminSessionDetails
+  fullName: Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EndedEnterpriseAdminSessionDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: EndedEnterpriseAdminSessionDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EndedEnterpriseAdminSessionDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Ended enterprise admin session.</p>\n"
+  example: []
+  syntax:
+    content: 'public class EndedEnterpriseAdminSessionDetails : object'
+    content.vb: >-
+      Public Class EndedEnterpriseAdminSessionDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDetails
+  langs:
+  - csharp
+  - vb
+  name: EndedEnterpriseAdminSessionDetails()
+  nameWithType: EndedEnterpriseAdminSessionDetails.EndedEnterpriseAdminSessionDetails()
+  fullName: Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDetails.EndedEnterpriseAdminSessionDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EndedEnterpriseAdminSessionDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EndedEnterpriseAdminSessionDetails.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public EndedEnterpriseAdminSessionDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDetails
+  commentId: T:Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDetails
+  parent: Dropbox.Api.TeamLog
+  name: EndedEnterpriseAdminSessionDetails
+  nameWithType: EndedEnterpriseAdminSessionDetails
+  fullName: Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDetails
+- uid: Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDetails.#ctor
+  name: EndedEnterpriseAdminSessionDetails
+  nameWithType: EndedEnterpriseAdminSessionDetails.EndedEnterpriseAdminSessionDetails
+  fullName: Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDetails.EndedEnterpriseAdminSessionDetails
+shouldSkipMarkup: true

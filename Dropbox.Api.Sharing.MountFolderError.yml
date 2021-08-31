@@ -1,0 +1,753 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.MountFolderError
+  commentId: T:Dropbox.Api.Sharing.MountFolderError
+  id: MountFolderError
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.MountFolderError.#ctor
+  - Dropbox.Api.Sharing.MountFolderError.AsAccessError
+  - Dropbox.Api.Sharing.MountFolderError.AsAlreadyMounted
+  - Dropbox.Api.Sharing.MountFolderError.AsInsideSharedFolder
+  - Dropbox.Api.Sharing.MountFolderError.AsInsufficientQuota
+  - Dropbox.Api.Sharing.MountFolderError.AsNoPermission
+  - Dropbox.Api.Sharing.MountFolderError.AsNotMountable
+  - Dropbox.Api.Sharing.MountFolderError.AsOther
+  - Dropbox.Api.Sharing.MountFolderError.IsAccessError
+  - Dropbox.Api.Sharing.MountFolderError.IsAlreadyMounted
+  - Dropbox.Api.Sharing.MountFolderError.IsInsideSharedFolder
+  - Dropbox.Api.Sharing.MountFolderError.IsInsufficientQuota
+  - Dropbox.Api.Sharing.MountFolderError.IsNoPermission
+  - Dropbox.Api.Sharing.MountFolderError.IsNotMountable
+  - Dropbox.Api.Sharing.MountFolderError.IsOther
+  langs:
+  - csharp
+  - vb
+  name: MountFolderError
+  nameWithType: MountFolderError
+  fullName: Dropbox.Api.Sharing.MountFolderError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MountFolderError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: MountFolderError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MountFolderError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The mount folder error object</p>\n"
+  example: []
+  syntax:
+    content: 'public class MountFolderError : object'
+    content.vb: >-
+      Public Class MountFolderError
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Sharing.MountFolderError.AccessError
+  - Dropbox.Api.Sharing.MountFolderError.AlreadyMounted
+  - Dropbox.Api.Sharing.MountFolderError.InsideSharedFolder
+  - Dropbox.Api.Sharing.MountFolderError.InsufficientQuota
+  - Dropbox.Api.Sharing.MountFolderError.NoPermission
+  - Dropbox.Api.Sharing.MountFolderError.NotMountable
+  - Dropbox.Api.Sharing.MountFolderError.Other
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Sharing.MountFolderError.#ctor
+  commentId: M:Dropbox.Api.Sharing.MountFolderError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Sharing.MountFolderError
+  langs:
+  - csharp
+  - vb
+  name: MountFolderError()
+  nameWithType: MountFolderError.MountFolderError()
+  fullName: Dropbox.Api.Sharing.MountFolderError.MountFolderError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MountFolderError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MountFolderError.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.MountFolderError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public MountFolderError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Sharing.MountFolderError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.MountFolderError.IsAccessError
+  commentId: P:Dropbox.Api.Sharing.MountFolderError.IsAccessError
+  id: IsAccessError
+  parent: Dropbox.Api.Sharing.MountFolderError
+  langs:
+  - csharp
+  - vb
+  name: IsAccessError
+  nameWithType: MountFolderError.IsAccessError
+  fullName: Dropbox.Api.Sharing.MountFolderError.IsAccessError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MountFolderError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsAccessError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MountFolderError.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is AccessError</p>\n"
+  example: []
+  syntax:
+    content: public bool IsAccessError { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsAccessError As Boolean
+  overload: Dropbox.Api.Sharing.MountFolderError.IsAccessError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.MountFolderError.AsAccessError
+  commentId: P:Dropbox.Api.Sharing.MountFolderError.AsAccessError
+  id: AsAccessError
+  parent: Dropbox.Api.Sharing.MountFolderError
+  langs:
+  - csharp
+  - vb
+  name: AsAccessError
+  nameWithType: MountFolderError.AsAccessError
+  fullName: Dropbox.Api.Sharing.MountFolderError.AsAccessError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MountFolderError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsAccessError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MountFolderError.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a AccessError, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MountFolderError.AccessError AsAccessError { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.MountFolderError.AccessError
+    content.vb: Public ReadOnly Property AsAccessError As MountFolderError.AccessError
+  overload: Dropbox.Api.Sharing.MountFolderError.AsAccessError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.MountFolderError.IsInsideSharedFolder
+  commentId: P:Dropbox.Api.Sharing.MountFolderError.IsInsideSharedFolder
+  id: IsInsideSharedFolder
+  parent: Dropbox.Api.Sharing.MountFolderError
+  langs:
+  - csharp
+  - vb
+  name: IsInsideSharedFolder
+  nameWithType: MountFolderError.IsInsideSharedFolder
+  fullName: Dropbox.Api.Sharing.MountFolderError.IsInsideSharedFolder
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MountFolderError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsInsideSharedFolder
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MountFolderError.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is InsideSharedFolder</p>\n"
+  example: []
+  syntax:
+    content: public bool IsInsideSharedFolder { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsInsideSharedFolder As Boolean
+  overload: Dropbox.Api.Sharing.MountFolderError.IsInsideSharedFolder*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.MountFolderError.AsInsideSharedFolder
+  commentId: P:Dropbox.Api.Sharing.MountFolderError.AsInsideSharedFolder
+  id: AsInsideSharedFolder
+  parent: Dropbox.Api.Sharing.MountFolderError
+  langs:
+  - csharp
+  - vb
+  name: AsInsideSharedFolder
+  nameWithType: MountFolderError.AsInsideSharedFolder
+  fullName: Dropbox.Api.Sharing.MountFolderError.AsInsideSharedFolder
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MountFolderError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsInsideSharedFolder
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MountFolderError.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a InsideSharedFolder, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MountFolderError.InsideSharedFolder AsInsideSharedFolder { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.MountFolderError.InsideSharedFolder
+    content.vb: Public ReadOnly Property AsInsideSharedFolder As MountFolderError.InsideSharedFolder
+  overload: Dropbox.Api.Sharing.MountFolderError.AsInsideSharedFolder*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.MountFolderError.IsInsufficientQuota
+  commentId: P:Dropbox.Api.Sharing.MountFolderError.IsInsufficientQuota
+  id: IsInsufficientQuota
+  parent: Dropbox.Api.Sharing.MountFolderError
+  langs:
+  - csharp
+  - vb
+  name: IsInsufficientQuota
+  nameWithType: MountFolderError.IsInsufficientQuota
+  fullName: Dropbox.Api.Sharing.MountFolderError.IsInsufficientQuota
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MountFolderError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsInsufficientQuota
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MountFolderError.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is InsufficientQuota</p>\n"
+  example: []
+  syntax:
+    content: public bool IsInsufficientQuota { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsInsufficientQuota As Boolean
+  overload: Dropbox.Api.Sharing.MountFolderError.IsInsufficientQuota*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.MountFolderError.AsInsufficientQuota
+  commentId: P:Dropbox.Api.Sharing.MountFolderError.AsInsufficientQuota
+  id: AsInsufficientQuota
+  parent: Dropbox.Api.Sharing.MountFolderError
+  langs:
+  - csharp
+  - vb
+  name: AsInsufficientQuota
+  nameWithType: MountFolderError.AsInsufficientQuota
+  fullName: Dropbox.Api.Sharing.MountFolderError.AsInsufficientQuota
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MountFolderError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsInsufficientQuota
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MountFolderError.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a InsufficientQuota, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MountFolderError.InsufficientQuota AsInsufficientQuota { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.MountFolderError.InsufficientQuota
+    content.vb: Public ReadOnly Property AsInsufficientQuota As MountFolderError.InsufficientQuota
+  overload: Dropbox.Api.Sharing.MountFolderError.AsInsufficientQuota*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.MountFolderError.IsAlreadyMounted
+  commentId: P:Dropbox.Api.Sharing.MountFolderError.IsAlreadyMounted
+  id: IsAlreadyMounted
+  parent: Dropbox.Api.Sharing.MountFolderError
+  langs:
+  - csharp
+  - vb
+  name: IsAlreadyMounted
+  nameWithType: MountFolderError.IsAlreadyMounted
+  fullName: Dropbox.Api.Sharing.MountFolderError.IsAlreadyMounted
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MountFolderError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsAlreadyMounted
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MountFolderError.cs
+    startLine: 106
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is AlreadyMounted</p>\n"
+  example: []
+  syntax:
+    content: public bool IsAlreadyMounted { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsAlreadyMounted As Boolean
+  overload: Dropbox.Api.Sharing.MountFolderError.IsAlreadyMounted*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.MountFolderError.AsAlreadyMounted
+  commentId: P:Dropbox.Api.Sharing.MountFolderError.AsAlreadyMounted
+  id: AsAlreadyMounted
+  parent: Dropbox.Api.Sharing.MountFolderError
+  langs:
+  - csharp
+  - vb
+  name: AsAlreadyMounted
+  nameWithType: MountFolderError.AsAlreadyMounted
+  fullName: Dropbox.Api.Sharing.MountFolderError.AsAlreadyMounted
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MountFolderError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsAlreadyMounted
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MountFolderError.cs
+    startLine: 117
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a AlreadyMounted, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MountFolderError.AlreadyMounted AsAlreadyMounted { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.MountFolderError.AlreadyMounted
+    content.vb: Public ReadOnly Property AsAlreadyMounted As MountFolderError.AlreadyMounted
+  overload: Dropbox.Api.Sharing.MountFolderError.AsAlreadyMounted*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.MountFolderError.IsNoPermission
+  commentId: P:Dropbox.Api.Sharing.MountFolderError.IsNoPermission
+  id: IsNoPermission
+  parent: Dropbox.Api.Sharing.MountFolderError
+  langs:
+  - csharp
+  - vb
+  name: IsNoPermission
+  nameWithType: MountFolderError.IsNoPermission
+  fullName: Dropbox.Api.Sharing.MountFolderError.IsNoPermission
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MountFolderError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsNoPermission
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MountFolderError.cs
+    startLine: 128
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is NoPermission</p>\n"
+  example: []
+  syntax:
+    content: public bool IsNoPermission { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsNoPermission As Boolean
+  overload: Dropbox.Api.Sharing.MountFolderError.IsNoPermission*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.MountFolderError.AsNoPermission
+  commentId: P:Dropbox.Api.Sharing.MountFolderError.AsNoPermission
+  id: AsNoPermission
+  parent: Dropbox.Api.Sharing.MountFolderError
+  langs:
+  - csharp
+  - vb
+  name: AsNoPermission
+  nameWithType: MountFolderError.AsNoPermission
+  fullName: Dropbox.Api.Sharing.MountFolderError.AsNoPermission
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MountFolderError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsNoPermission
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MountFolderError.cs
+    startLine: 139
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a NoPermission, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MountFolderError.NoPermission AsNoPermission { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.MountFolderError.NoPermission
+    content.vb: Public ReadOnly Property AsNoPermission As MountFolderError.NoPermission
+  overload: Dropbox.Api.Sharing.MountFolderError.AsNoPermission*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.MountFolderError.IsNotMountable
+  commentId: P:Dropbox.Api.Sharing.MountFolderError.IsNotMountable
+  id: IsNotMountable
+  parent: Dropbox.Api.Sharing.MountFolderError
+  langs:
+  - csharp
+  - vb
+  name: IsNotMountable
+  nameWithType: MountFolderError.IsNotMountable
+  fullName: Dropbox.Api.Sharing.MountFolderError.IsNotMountable
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MountFolderError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsNotMountable
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MountFolderError.cs
+    startLine: 150
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is NotMountable</p>\n"
+  example: []
+  syntax:
+    content: public bool IsNotMountable { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsNotMountable As Boolean
+  overload: Dropbox.Api.Sharing.MountFolderError.IsNotMountable*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.MountFolderError.AsNotMountable
+  commentId: P:Dropbox.Api.Sharing.MountFolderError.AsNotMountable
+  id: AsNotMountable
+  parent: Dropbox.Api.Sharing.MountFolderError
+  langs:
+  - csharp
+  - vb
+  name: AsNotMountable
+  nameWithType: MountFolderError.AsNotMountable
+  fullName: Dropbox.Api.Sharing.MountFolderError.AsNotMountable
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MountFolderError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsNotMountable
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MountFolderError.cs
+    startLine: 161
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a NotMountable, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MountFolderError.NotMountable AsNotMountable { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.MountFolderError.NotMountable
+    content.vb: Public ReadOnly Property AsNotMountable As MountFolderError.NotMountable
+  overload: Dropbox.Api.Sharing.MountFolderError.AsNotMountable*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.MountFolderError.IsOther
+  commentId: P:Dropbox.Api.Sharing.MountFolderError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Sharing.MountFolderError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: MountFolderError.IsOther
+  fullName: Dropbox.Api.Sharing.MountFolderError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MountFolderError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MountFolderError.cs
+    startLine: 172
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Sharing.MountFolderError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.MountFolderError.AsOther
+  commentId: P:Dropbox.Api.Sharing.MountFolderError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Sharing.MountFolderError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: MountFolderError.AsOther
+  fullName: Dropbox.Api.Sharing.MountFolderError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MountFolderError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MountFolderError.cs
+    startLine: 183
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MountFolderError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.MountFolderError.Other
+    content.vb: Public ReadOnly Property AsOther As MountFolderError.Other
+  overload: Dropbox.Api.Sharing.MountFolderError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.MountFolderError
+  commentId: T:Dropbox.Api.Sharing.MountFolderError
+  parent: Dropbox.Api.Sharing
+  name: MountFolderError
+  nameWithType: MountFolderError
+  fullName: Dropbox.Api.Sharing.MountFolderError
+- uid: Dropbox.Api.Sharing.MountFolderError.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.MountFolderError.#ctor
+  name: MountFolderError
+  nameWithType: MountFolderError.MountFolderError
+  fullName: Dropbox.Api.Sharing.MountFolderError.MountFolderError
+- uid: Dropbox.Api.Sharing.MountFolderError.IsAccessError*
+  commentId: Overload:Dropbox.Api.Sharing.MountFolderError.IsAccessError
+  name: IsAccessError
+  nameWithType: MountFolderError.IsAccessError
+  fullName: Dropbox.Api.Sharing.MountFolderError.IsAccessError
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Sharing.MountFolderError.AsAccessError*
+  commentId: Overload:Dropbox.Api.Sharing.MountFolderError.AsAccessError
+  name: AsAccessError
+  nameWithType: MountFolderError.AsAccessError
+  fullName: Dropbox.Api.Sharing.MountFolderError.AsAccessError
+- uid: Dropbox.Api.Sharing.MountFolderError.AccessError
+  commentId: T:Dropbox.Api.Sharing.MountFolderError.AccessError
+  parent: Dropbox.Api.Sharing
+  name: MountFolderError.AccessError
+  nameWithType: MountFolderError.AccessError
+  fullName: Dropbox.Api.Sharing.MountFolderError.AccessError
+- uid: Dropbox.Api.Sharing.MountFolderError.IsInsideSharedFolder*
+  commentId: Overload:Dropbox.Api.Sharing.MountFolderError.IsInsideSharedFolder
+  name: IsInsideSharedFolder
+  nameWithType: MountFolderError.IsInsideSharedFolder
+  fullName: Dropbox.Api.Sharing.MountFolderError.IsInsideSharedFolder
+- uid: Dropbox.Api.Sharing.MountFolderError.AsInsideSharedFolder*
+  commentId: Overload:Dropbox.Api.Sharing.MountFolderError.AsInsideSharedFolder
+  name: AsInsideSharedFolder
+  nameWithType: MountFolderError.AsInsideSharedFolder
+  fullName: Dropbox.Api.Sharing.MountFolderError.AsInsideSharedFolder
+- uid: Dropbox.Api.Sharing.MountFolderError.InsideSharedFolder
+  commentId: T:Dropbox.Api.Sharing.MountFolderError.InsideSharedFolder
+  parent: Dropbox.Api.Sharing
+  name: MountFolderError.InsideSharedFolder
+  nameWithType: MountFolderError.InsideSharedFolder
+  fullName: Dropbox.Api.Sharing.MountFolderError.InsideSharedFolder
+- uid: Dropbox.Api.Sharing.MountFolderError.IsInsufficientQuota*
+  commentId: Overload:Dropbox.Api.Sharing.MountFolderError.IsInsufficientQuota
+  name: IsInsufficientQuota
+  nameWithType: MountFolderError.IsInsufficientQuota
+  fullName: Dropbox.Api.Sharing.MountFolderError.IsInsufficientQuota
+- uid: Dropbox.Api.Sharing.MountFolderError.AsInsufficientQuota*
+  commentId: Overload:Dropbox.Api.Sharing.MountFolderError.AsInsufficientQuota
+  name: AsInsufficientQuota
+  nameWithType: MountFolderError.AsInsufficientQuota
+  fullName: Dropbox.Api.Sharing.MountFolderError.AsInsufficientQuota
+- uid: Dropbox.Api.Sharing.MountFolderError.InsufficientQuota
+  commentId: T:Dropbox.Api.Sharing.MountFolderError.InsufficientQuota
+  parent: Dropbox.Api.Sharing
+  name: MountFolderError.InsufficientQuota
+  nameWithType: MountFolderError.InsufficientQuota
+  fullName: Dropbox.Api.Sharing.MountFolderError.InsufficientQuota
+- uid: Dropbox.Api.Sharing.MountFolderError.IsAlreadyMounted*
+  commentId: Overload:Dropbox.Api.Sharing.MountFolderError.IsAlreadyMounted
+  name: IsAlreadyMounted
+  nameWithType: MountFolderError.IsAlreadyMounted
+  fullName: Dropbox.Api.Sharing.MountFolderError.IsAlreadyMounted
+- uid: Dropbox.Api.Sharing.MountFolderError.AsAlreadyMounted*
+  commentId: Overload:Dropbox.Api.Sharing.MountFolderError.AsAlreadyMounted
+  name: AsAlreadyMounted
+  nameWithType: MountFolderError.AsAlreadyMounted
+  fullName: Dropbox.Api.Sharing.MountFolderError.AsAlreadyMounted
+- uid: Dropbox.Api.Sharing.MountFolderError.AlreadyMounted
+  commentId: T:Dropbox.Api.Sharing.MountFolderError.AlreadyMounted
+  parent: Dropbox.Api.Sharing
+  name: MountFolderError.AlreadyMounted
+  nameWithType: MountFolderError.AlreadyMounted
+  fullName: Dropbox.Api.Sharing.MountFolderError.AlreadyMounted
+- uid: Dropbox.Api.Sharing.MountFolderError.IsNoPermission*
+  commentId: Overload:Dropbox.Api.Sharing.MountFolderError.IsNoPermission
+  name: IsNoPermission
+  nameWithType: MountFolderError.IsNoPermission
+  fullName: Dropbox.Api.Sharing.MountFolderError.IsNoPermission
+- uid: Dropbox.Api.Sharing.MountFolderError.AsNoPermission*
+  commentId: Overload:Dropbox.Api.Sharing.MountFolderError.AsNoPermission
+  name: AsNoPermission
+  nameWithType: MountFolderError.AsNoPermission
+  fullName: Dropbox.Api.Sharing.MountFolderError.AsNoPermission
+- uid: Dropbox.Api.Sharing.MountFolderError.NoPermission
+  commentId: T:Dropbox.Api.Sharing.MountFolderError.NoPermission
+  parent: Dropbox.Api.Sharing
+  name: MountFolderError.NoPermission
+  nameWithType: MountFolderError.NoPermission
+  fullName: Dropbox.Api.Sharing.MountFolderError.NoPermission
+- uid: Dropbox.Api.Sharing.MountFolderError.IsNotMountable*
+  commentId: Overload:Dropbox.Api.Sharing.MountFolderError.IsNotMountable
+  name: IsNotMountable
+  nameWithType: MountFolderError.IsNotMountable
+  fullName: Dropbox.Api.Sharing.MountFolderError.IsNotMountable
+- uid: Dropbox.Api.Sharing.MountFolderError.AsNotMountable*
+  commentId: Overload:Dropbox.Api.Sharing.MountFolderError.AsNotMountable
+  name: AsNotMountable
+  nameWithType: MountFolderError.AsNotMountable
+  fullName: Dropbox.Api.Sharing.MountFolderError.AsNotMountable
+- uid: Dropbox.Api.Sharing.MountFolderError.NotMountable
+  commentId: T:Dropbox.Api.Sharing.MountFolderError.NotMountable
+  parent: Dropbox.Api.Sharing
+  name: MountFolderError.NotMountable
+  nameWithType: MountFolderError.NotMountable
+  fullName: Dropbox.Api.Sharing.MountFolderError.NotMountable
+- uid: Dropbox.Api.Sharing.MountFolderError.IsOther*
+  commentId: Overload:Dropbox.Api.Sharing.MountFolderError.IsOther
+  name: IsOther
+  nameWithType: MountFolderError.IsOther
+  fullName: Dropbox.Api.Sharing.MountFolderError.IsOther
+- uid: Dropbox.Api.Sharing.MountFolderError.AsOther*
+  commentId: Overload:Dropbox.Api.Sharing.MountFolderError.AsOther
+  name: AsOther
+  nameWithType: MountFolderError.AsOther
+  fullName: Dropbox.Api.Sharing.MountFolderError.AsOther
+- uid: Dropbox.Api.Sharing.MountFolderError.Other
+  commentId: T:Dropbox.Api.Sharing.MountFolderError.Other
+  parent: Dropbox.Api.Sharing
+  name: MountFolderError.Other
+  nameWithType: MountFolderError.Other
+  fullName: Dropbox.Api.Sharing.MountFolderError.Other
+shouldSkipMarkup: true

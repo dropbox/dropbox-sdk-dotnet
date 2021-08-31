@@ -1,0 +1,201 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Auth.AccessError.PaperAccessDenied
+  commentId: T:Dropbox.Api.Auth.AccessError.PaperAccessDenied
+  id: AccessError.PaperAccessDenied
+  parent: Dropbox.Api.Auth
+  children:
+  - Dropbox.Api.Auth.AccessError.PaperAccessDenied.#ctor(Dropbox.Api.Auth.PaperAccessError)
+  - Dropbox.Api.Auth.AccessError.PaperAccessDenied.Value
+  langs:
+  - csharp
+  - vb
+  name: AccessError.PaperAccessDenied
+  nameWithType: AccessError.PaperAccessDenied
+  fullName: Dropbox.Api.Auth.AccessError.PaperAccessDenied
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AccessError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PaperAccessDenied
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AccessError.cs
+    startLine: 281
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth
+  summary: "\n<p>Current account cannot access Paper.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class PaperAccessDenied : AccessError'
+    content.vb: >-
+      Public NotInheritable Class PaperAccessDenied
+          Inherits AccessError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Auth.AccessError
+  inheritedMembers:
+  - Dropbox.Api.Auth.AccessError.IsInvalidAccountType
+  - Dropbox.Api.Auth.AccessError.AsInvalidAccountType
+  - Dropbox.Api.Auth.AccessError.IsPaperAccessDenied
+  - Dropbox.Api.Auth.AccessError.AsPaperAccessDenied
+  - Dropbox.Api.Auth.AccessError.IsOther
+  - Dropbox.Api.Auth.AccessError.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Auth.AccessError.PaperAccessDenied.#ctor(Dropbox.Api.Auth.PaperAccessError)
+  commentId: M:Dropbox.Api.Auth.AccessError.PaperAccessDenied.#ctor(Dropbox.Api.Auth.PaperAccessError)
+  id: '#ctor(Dropbox.Api.Auth.PaperAccessError)'
+  parent: Dropbox.Api.Auth.AccessError.PaperAccessDenied
+  langs:
+  - csharp
+  - vb
+  name: PaperAccessDenied(PaperAccessError)
+  nameWithType: AccessError.PaperAccessDenied.PaperAccessDenied(PaperAccessError)
+  fullName: Dropbox.Api.Auth.AccessError.PaperAccessDenied.PaperAccessDenied(Dropbox.Api.Auth.PaperAccessError)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AccessError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AccessError.cs
+    startLine: 300
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Auth.AccessError.PaperAccessDenied\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public PaperAccessDenied(PaperAccessError value)
+    parameters:
+    - id: value
+      type: Dropbox.Api.Auth.PaperAccessError
+      description: The value
+    content.vb: Public Sub New(value As PaperAccessError)
+  overload: Dropbox.Api.Auth.AccessError.PaperAccessDenied.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Auth.AccessError.PaperAccessDenied.Value
+  commentId: P:Dropbox.Api.Auth.AccessError.PaperAccessDenied.Value
+  id: Value
+  parent: Dropbox.Api.Auth.AccessError.PaperAccessDenied
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: AccessError.PaperAccessDenied.Value
+  fullName: Dropbox.Api.Auth.AccessError.PaperAccessDenied.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AccessError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AccessError.cs
+    startLine: 315
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public PaperAccessError Value { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Auth.PaperAccessError
+    content.vb: Public ReadOnly Property Value As PaperAccessError
+  overload: Dropbox.Api.Auth.AccessError.PaperAccessDenied.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Auth
+  commentId: N:Dropbox.Api.Auth
+  name: Dropbox.Api.Auth
+  nameWithType: Dropbox.Api.Auth
+  fullName: Dropbox.Api.Auth
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Auth.AccessError
+  commentId: T:Dropbox.Api.Auth.AccessError
+  parent: Dropbox.Api.Auth
+  name: AccessError
+  nameWithType: AccessError
+  fullName: Dropbox.Api.Auth.AccessError
+- uid: Dropbox.Api.Auth.AccessError.IsInvalidAccountType
+  commentId: P:Dropbox.Api.Auth.AccessError.IsInvalidAccountType
+  parent: Dropbox.Api.Auth.AccessError
+  name: IsInvalidAccountType
+  nameWithType: AccessError.IsInvalidAccountType
+  fullName: Dropbox.Api.Auth.AccessError.IsInvalidAccountType
+- uid: Dropbox.Api.Auth.AccessError.AsInvalidAccountType
+  commentId: P:Dropbox.Api.Auth.AccessError.AsInvalidAccountType
+  parent: Dropbox.Api.Auth.AccessError
+  name: AsInvalidAccountType
+  nameWithType: AccessError.AsInvalidAccountType
+  fullName: Dropbox.Api.Auth.AccessError.AsInvalidAccountType
+- uid: Dropbox.Api.Auth.AccessError.IsPaperAccessDenied
+  commentId: P:Dropbox.Api.Auth.AccessError.IsPaperAccessDenied
+  parent: Dropbox.Api.Auth.AccessError
+  name: IsPaperAccessDenied
+  nameWithType: AccessError.IsPaperAccessDenied
+  fullName: Dropbox.Api.Auth.AccessError.IsPaperAccessDenied
+- uid: Dropbox.Api.Auth.AccessError.AsPaperAccessDenied
+  commentId: P:Dropbox.Api.Auth.AccessError.AsPaperAccessDenied
+  parent: Dropbox.Api.Auth.AccessError
+  name: AsPaperAccessDenied
+  nameWithType: AccessError.AsPaperAccessDenied
+  fullName: Dropbox.Api.Auth.AccessError.AsPaperAccessDenied
+- uid: Dropbox.Api.Auth.AccessError.IsOther
+  commentId: P:Dropbox.Api.Auth.AccessError.IsOther
+  parent: Dropbox.Api.Auth.AccessError
+  name: IsOther
+  nameWithType: AccessError.IsOther
+  fullName: Dropbox.Api.Auth.AccessError.IsOther
+- uid: Dropbox.Api.Auth.AccessError.AsOther
+  commentId: P:Dropbox.Api.Auth.AccessError.AsOther
+  parent: Dropbox.Api.Auth.AccessError
+  name: AsOther
+  nameWithType: AccessError.AsOther
+  fullName: Dropbox.Api.Auth.AccessError.AsOther
+- uid: Dropbox.Api.Auth.AccessError.PaperAccessDenied
+  commentId: T:Dropbox.Api.Auth.AccessError.PaperAccessDenied
+  parent: Dropbox.Api.Auth
+  name: AccessError.PaperAccessDenied
+  nameWithType: AccessError.PaperAccessDenied
+  fullName: Dropbox.Api.Auth.AccessError.PaperAccessDenied
+- uid: Dropbox.Api.Auth.AccessError.PaperAccessDenied.#ctor*
+  commentId: Overload:Dropbox.Api.Auth.AccessError.PaperAccessDenied.#ctor
+  name: PaperAccessDenied
+  nameWithType: AccessError.PaperAccessDenied.PaperAccessDenied
+  fullName: Dropbox.Api.Auth.AccessError.PaperAccessDenied.PaperAccessDenied
+- uid: Dropbox.Api.Auth.PaperAccessError
+  commentId: T:Dropbox.Api.Auth.PaperAccessError
+  parent: Dropbox.Api.Auth
+  name: PaperAccessError
+  nameWithType: PaperAccessError
+  fullName: Dropbox.Api.Auth.PaperAccessError
+- uid: Dropbox.Api.Auth.AccessError.PaperAccessDenied.Value*
+  commentId: Overload:Dropbox.Api.Auth.AccessError.PaperAccessDenied.Value
+  name: Value
+  nameWithType: AccessError.PaperAccessDenied.Value
+  fullName: Dropbox.Api.Auth.AccessError.PaperAccessDenied.Value
+shouldSkipMarkup: true

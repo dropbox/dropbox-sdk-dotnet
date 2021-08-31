@@ -1,0 +1,176 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.Other
+  commentId: T:Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.Other
+  id: ExtendedVersionHistoryPolicy.Other
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.Other.Instance
+  langs:
+  - csharp
+  - vb
+  name: ExtendedVersionHistoryPolicy.Other
+  nameWithType: ExtendedVersionHistoryPolicy.Other
+  fullName: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.Other
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ExtendedVersionHistoryPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Other
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ExtendedVersionHistoryPolicy.cs
+    startLine: 527
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The other object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Other : ExtendedVersionHistoryPolicy'
+    content.vb: >-
+      Public NotInheritable Class Other
+          Inherits ExtendedVersionHistoryPolicy
+  inheritance:
+  - System.Object
+  - Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy
+  inheritedMembers:
+  - Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.IsExplicitlyLimited
+  - Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.AsExplicitlyLimited
+  - Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.IsExplicitlyUnlimited
+  - Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.AsExplicitlyUnlimited
+  - Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.IsImplicitlyLimited
+  - Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.AsImplicitlyLimited
+  - Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.IsImplicitlyUnlimited
+  - Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.AsImplicitlyUnlimited
+  - Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.IsOther
+  - Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.Other.Instance
+  commentId: F:Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.Other.Instance
+  id: Instance
+  parent: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.Other
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: ExtendedVersionHistoryPolicy.Other.Instance
+  fullName: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.Other.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ExtendedVersionHistoryPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ExtendedVersionHistoryPolicy.cs
+    startLine: 551
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>A singleton instance of Other</p>\n"
+  example: []
+  syntax:
+    content: public static readonly ExtendedVersionHistoryPolicy.Other Instance
+    return:
+      type: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.Other
+    content.vb: Public Shared ReadOnly Instance As ExtendedVersionHistoryPolicy.Other
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy
+  commentId: T:Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy
+  parent: Dropbox.Api.TeamLog
+  name: ExtendedVersionHistoryPolicy
+  nameWithType: ExtendedVersionHistoryPolicy
+  fullName: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy
+- uid: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.IsExplicitlyLimited
+  commentId: P:Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.IsExplicitlyLimited
+  parent: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy
+  name: IsExplicitlyLimited
+  nameWithType: ExtendedVersionHistoryPolicy.IsExplicitlyLimited
+  fullName: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.IsExplicitlyLimited
+- uid: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.AsExplicitlyLimited
+  commentId: P:Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.AsExplicitlyLimited
+  parent: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy
+  name: AsExplicitlyLimited
+  nameWithType: ExtendedVersionHistoryPolicy.AsExplicitlyLimited
+  fullName: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.AsExplicitlyLimited
+- uid: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.IsExplicitlyUnlimited
+  commentId: P:Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.IsExplicitlyUnlimited
+  parent: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy
+  name: IsExplicitlyUnlimited
+  nameWithType: ExtendedVersionHistoryPolicy.IsExplicitlyUnlimited
+  fullName: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.IsExplicitlyUnlimited
+- uid: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.AsExplicitlyUnlimited
+  commentId: P:Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.AsExplicitlyUnlimited
+  parent: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy
+  name: AsExplicitlyUnlimited
+  nameWithType: ExtendedVersionHistoryPolicy.AsExplicitlyUnlimited
+  fullName: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.AsExplicitlyUnlimited
+- uid: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.IsImplicitlyLimited
+  commentId: P:Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.IsImplicitlyLimited
+  parent: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy
+  name: IsImplicitlyLimited
+  nameWithType: ExtendedVersionHistoryPolicy.IsImplicitlyLimited
+  fullName: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.IsImplicitlyLimited
+- uid: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.AsImplicitlyLimited
+  commentId: P:Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.AsImplicitlyLimited
+  parent: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy
+  name: AsImplicitlyLimited
+  nameWithType: ExtendedVersionHistoryPolicy.AsImplicitlyLimited
+  fullName: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.AsImplicitlyLimited
+- uid: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.IsImplicitlyUnlimited
+  commentId: P:Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.IsImplicitlyUnlimited
+  parent: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy
+  name: IsImplicitlyUnlimited
+  nameWithType: ExtendedVersionHistoryPolicy.IsImplicitlyUnlimited
+  fullName: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.IsImplicitlyUnlimited
+- uid: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.AsImplicitlyUnlimited
+  commentId: P:Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.AsImplicitlyUnlimited
+  parent: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy
+  name: AsImplicitlyUnlimited
+  nameWithType: ExtendedVersionHistoryPolicy.AsImplicitlyUnlimited
+  fullName: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.AsImplicitlyUnlimited
+- uid: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.IsOther
+  commentId: P:Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.IsOther
+  parent: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy
+  name: IsOther
+  nameWithType: ExtendedVersionHistoryPolicy.IsOther
+  fullName: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.IsOther
+- uid: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.AsOther
+  commentId: P:Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.AsOther
+  parent: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy
+  name: AsOther
+  nameWithType: ExtendedVersionHistoryPolicy.AsOther
+  fullName: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.AsOther
+- uid: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.Other
+  commentId: T:Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.Other
+  parent: Dropbox.Api.TeamLog
+  name: ExtendedVersionHistoryPolicy.Other
+  nameWithType: ExtendedVersionHistoryPolicy.Other
+  fullName: Dropbox.Api.TeamLog.ExtendedVersionHistoryPolicy.Other
+shouldSkipMarkup: true

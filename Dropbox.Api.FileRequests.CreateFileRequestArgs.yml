@@ -1,0 +1,406 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.FileRequests.CreateFileRequestArgs
+  commentId: T:Dropbox.Api.FileRequests.CreateFileRequestArgs
+  id: CreateFileRequestArgs
+  parent: Dropbox.Api.FileRequests
+  children:
+  - Dropbox.Api.FileRequests.CreateFileRequestArgs.#ctor
+  - Dropbox.Api.FileRequests.CreateFileRequestArgs.#ctor(System.String,System.String,Dropbox.Api.FileRequests.FileRequestDeadline,System.Boolean,System.String)
+  - Dropbox.Api.FileRequests.CreateFileRequestArgs.Deadline
+  - Dropbox.Api.FileRequests.CreateFileRequestArgs.Description
+  - Dropbox.Api.FileRequests.CreateFileRequestArgs.Destination
+  - Dropbox.Api.FileRequests.CreateFileRequestArgs.Open
+  - Dropbox.Api.FileRequests.CreateFileRequestArgs.Title
+  langs:
+  - csharp
+  - vb
+  name: CreateFileRequestArgs
+  nameWithType: CreateFileRequestArgs
+  fullName: Dropbox.Api.FileRequests.CreateFileRequestArgs
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/CreateFileRequestArgs.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: CreateFileRequestArgs
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/CreateFileRequestArgs.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Arguments for <xref href=\"Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.CreateAsync(Dropbox.Api.FileRequests.CreateFileRequestArgs)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+  example: []
+  syntax:
+    content: 'public class CreateFileRequestArgs : object'
+    content.vb: >-
+      Public Class CreateFileRequestArgs
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.FileRequests.CreateFileRequestArgs.#ctor(System.String,System.String,Dropbox.Api.FileRequests.FileRequestDeadline,System.Boolean,System.String)
+  commentId: M:Dropbox.Api.FileRequests.CreateFileRequestArgs.#ctor(System.String,System.String,Dropbox.Api.FileRequests.FileRequestDeadline,System.Boolean,System.String)
+  id: '#ctor(System.String,System.String,Dropbox.Api.FileRequests.FileRequestDeadline,System.Boolean,System.String)'
+  parent: Dropbox.Api.FileRequests.CreateFileRequestArgs
+  langs:
+  - csharp
+  - vb
+  name: CreateFileRequestArgs(String, String, FileRequestDeadline, Boolean, String)
+  nameWithType: CreateFileRequestArgs.CreateFileRequestArgs(String, String, FileRequestDeadline, Boolean, String)
+  fullName: Dropbox.Api.FileRequests.CreateFileRequestArgs.CreateFileRequestArgs(System.String, System.String, Dropbox.Api.FileRequests.FileRequestDeadline, System.Boolean, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/CreateFileRequestArgs.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/CreateFileRequestArgs.cs
+    startLine: 44
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.FileRequests.CreateFileRequestArgs\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public CreateFileRequestArgs(string title, string destination, FileRequestDeadline deadline = null, bool open = true, string description = null)
+    parameters:
+    - id: title
+      type: System.String
+      description: The title of the file request. Must not be empty.
+    - id: destination
+      type: System.String
+      description: >-
+        The path of the folder in the Dropbox where uploaded
+
+        files will be sent. For apps with the app folder permission, this will be relative
+
+        to the app folder.
+    - id: deadline
+      type: Dropbox.Api.FileRequests.FileRequestDeadline
+      description: >-
+        The deadline for the file request. Deadlines can only be set
+
+        by Professional and Business accounts.
+    - id: open
+      type: System.Boolean
+      description: >-
+        Whether or not the file request should be open. If the file
+
+        request is closed, it will not accept any file submissions, but it can be opened
+
+        later.
+    - id: description
+      type: System.String
+      description: A description of the file request.
+    content.vb: Public Sub New(title As String, destination As String, deadline As FileRequestDeadline = Nothing, open As Boolean = True, description As String = Nothing)
+  overload: Dropbox.Api.FileRequests.CreateFileRequestArgs.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileRequests.CreateFileRequestArgs.#ctor
+  commentId: M:Dropbox.Api.FileRequests.CreateFileRequestArgs.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.FileRequests.CreateFileRequestArgs
+  langs:
+  - csharp
+  - vb
+  name: CreateFileRequestArgs()
+  nameWithType: CreateFileRequestArgs.CreateFileRequestArgs()
+  fullName: Dropbox.Api.FileRequests.CreateFileRequestArgs.CreateFileRequestArgs()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/CreateFileRequestArgs.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/CreateFileRequestArgs.cs
+    startLine: 81
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.FileRequests.CreateFileRequestArgs\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public CreateFileRequestArgs()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.FileRequests.CreateFileRequestArgs.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileRequests.CreateFileRequestArgs.Title
+  commentId: P:Dropbox.Api.FileRequests.CreateFileRequestArgs.Title
+  id: Title
+  parent: Dropbox.Api.FileRequests.CreateFileRequestArgs
+  langs:
+  - csharp
+  - vb
+  name: Title
+  nameWithType: CreateFileRequestArgs.Title
+  fullName: Dropbox.Api.FileRequests.CreateFileRequestArgs.Title
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/CreateFileRequestArgs.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Title
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/CreateFileRequestArgs.cs
+    startLine: 90
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>The title of the file request. Must not be empty.</p>\n"
+  example: []
+  syntax:
+    content: public string Title { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Title As String
+  overload: Dropbox.Api.FileRequests.CreateFileRequestArgs.Title*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.FileRequests.CreateFileRequestArgs.Destination
+  commentId: P:Dropbox.Api.FileRequests.CreateFileRequestArgs.Destination
+  id: Destination
+  parent: Dropbox.Api.FileRequests.CreateFileRequestArgs
+  langs:
+  - csharp
+  - vb
+  name: Destination
+  nameWithType: CreateFileRequestArgs.Destination
+  fullName: Dropbox.Api.FileRequests.CreateFileRequestArgs.Destination
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/CreateFileRequestArgs.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Destination
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/CreateFileRequestArgs.cs
+    startLine: 97
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>The path of the folder in the Dropbox where uploaded files will be sent. For\napps with the app folder permission, this will be relative to the app\nfolder.</p>\n"
+  example: []
+  syntax:
+    content: public string Destination { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Destination As String
+  overload: Dropbox.Api.FileRequests.CreateFileRequestArgs.Destination*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.FileRequests.CreateFileRequestArgs.Deadline
+  commentId: P:Dropbox.Api.FileRequests.CreateFileRequestArgs.Deadline
+  id: Deadline
+  parent: Dropbox.Api.FileRequests.CreateFileRequestArgs
+  langs:
+  - csharp
+  - vb
+  name: Deadline
+  nameWithType: CreateFileRequestArgs.Deadline
+  fullName: Dropbox.Api.FileRequests.CreateFileRequestArgs.Deadline
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/CreateFileRequestArgs.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Deadline
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/CreateFileRequestArgs.cs
+    startLine: 103
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>The deadline for the file request. Deadlines can only be set by Professional\nand Business accounts.</p>\n"
+  example: []
+  syntax:
+    content: public FileRequestDeadline Deadline { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.FileRequests.FileRequestDeadline
+    content.vb: Public Property Deadline As FileRequestDeadline
+  overload: Dropbox.Api.FileRequests.CreateFileRequestArgs.Deadline*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.FileRequests.CreateFileRequestArgs.Open
+  commentId: P:Dropbox.Api.FileRequests.CreateFileRequestArgs.Open
+  id: Open
+  parent: Dropbox.Api.FileRequests.CreateFileRequestArgs
+  langs:
+  - csharp
+  - vb
+  name: Open
+  nameWithType: CreateFileRequestArgs.Open
+  fullName: Dropbox.Api.FileRequests.CreateFileRequestArgs.Open
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/CreateFileRequestArgs.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Open
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/CreateFileRequestArgs.cs
+    startLine: 109
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Whether or not the file request should be open. If the file request is\nclosed, it will not accept any file submissions, but it can be opened later.</p>\n"
+  example: []
+  syntax:
+    content: public bool Open { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property Open As Boolean
+  overload: Dropbox.Api.FileRequests.CreateFileRequestArgs.Open*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.FileRequests.CreateFileRequestArgs.Description
+  commentId: P:Dropbox.Api.FileRequests.CreateFileRequestArgs.Description
+  id: Description
+  parent: Dropbox.Api.FileRequests.CreateFileRequestArgs
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: CreateFileRequestArgs.Description
+  fullName: Dropbox.Api.FileRequests.CreateFileRequestArgs.Description
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/CreateFileRequestArgs.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Description
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/CreateFileRequestArgs.cs
+    startLine: 114
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>A description of the file request.</p>\n"
+  example: []
+  syntax:
+    content: public string Description { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Dropbox.Api.FileRequests.CreateFileRequestArgs.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.CreateAsync(Dropbox.Api.FileRequests.CreateFileRequestArgs)
+  commentId: M:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.CreateAsync(Dropbox.Api.FileRequests.CreateFileRequestArgs)
+  isExternal: true
+- uid: Dropbox.Api.FileRequests
+  commentId: N:Dropbox.Api.FileRequests
+  name: Dropbox.Api.FileRequests
+  nameWithType: Dropbox.Api.FileRequests
+  fullName: Dropbox.Api.FileRequests
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.FileRequests.CreateFileRequestArgs
+  commentId: T:Dropbox.Api.FileRequests.CreateFileRequestArgs
+  parent: Dropbox.Api.FileRequests
+  name: CreateFileRequestArgs
+  nameWithType: CreateFileRequestArgs
+  fullName: Dropbox.Api.FileRequests.CreateFileRequestArgs
+- uid: Dropbox.Api.FileRequests.CreateFileRequestArgs.#ctor*
+  commentId: Overload:Dropbox.Api.FileRequests.CreateFileRequestArgs.#ctor
+  name: CreateFileRequestArgs
+  nameWithType: CreateFileRequestArgs.CreateFileRequestArgs
+  fullName: Dropbox.Api.FileRequests.CreateFileRequestArgs.CreateFileRequestArgs
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.FileRequests.FileRequestDeadline
+  commentId: T:Dropbox.Api.FileRequests.FileRequestDeadline
+  parent: Dropbox.Api.FileRequests
+  name: FileRequestDeadline
+  nameWithType: FileRequestDeadline
+  fullName: Dropbox.Api.FileRequests.FileRequestDeadline
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.FileRequests.CreateFileRequestArgs.Title*
+  commentId: Overload:Dropbox.Api.FileRequests.CreateFileRequestArgs.Title
+  name: Title
+  nameWithType: CreateFileRequestArgs.Title
+  fullName: Dropbox.Api.FileRequests.CreateFileRequestArgs.Title
+- uid: Dropbox.Api.FileRequests.CreateFileRequestArgs.Destination*
+  commentId: Overload:Dropbox.Api.FileRequests.CreateFileRequestArgs.Destination
+  name: Destination
+  nameWithType: CreateFileRequestArgs.Destination
+  fullName: Dropbox.Api.FileRequests.CreateFileRequestArgs.Destination
+- uid: Dropbox.Api.FileRequests.CreateFileRequestArgs.Deadline*
+  commentId: Overload:Dropbox.Api.FileRequests.CreateFileRequestArgs.Deadline
+  name: Deadline
+  nameWithType: CreateFileRequestArgs.Deadline
+  fullName: Dropbox.Api.FileRequests.CreateFileRequestArgs.Deadline
+- uid: Dropbox.Api.FileRequests.CreateFileRequestArgs.Open*
+  commentId: Overload:Dropbox.Api.FileRequests.CreateFileRequestArgs.Open
+  name: Open
+  nameWithType: CreateFileRequestArgs.Open
+  fullName: Dropbox.Api.FileRequests.CreateFileRequestArgs.Open
+- uid: Dropbox.Api.FileRequests.CreateFileRequestArgs.Description*
+  commentId: Overload:Dropbox.Api.FileRequests.CreateFileRequestArgs.Description
+  name: Description
+  nameWithType: CreateFileRequestArgs.Description
+  fullName: Dropbox.Api.FileRequests.CreateFileRequestArgs.Description
+shouldSkipMarkup: true

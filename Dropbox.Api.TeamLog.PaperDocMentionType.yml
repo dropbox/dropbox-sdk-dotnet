@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.PaperDocMentionType
+  commentId: T:Dropbox.Api.TeamLog.PaperDocMentionType
+  id: PaperDocMentionType
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.PaperDocMentionType.#ctor
+  - Dropbox.Api.TeamLog.PaperDocMentionType.#ctor(System.String)
+  - Dropbox.Api.TeamLog.PaperDocMentionType.Description
+  langs:
+  - csharp
+  - vb
+  name: PaperDocMentionType
+  nameWithType: PaperDocMentionType
+  fullName: Dropbox.Api.TeamLog.PaperDocMentionType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDocMentionType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PaperDocMentionType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDocMentionType.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The paper doc mention type object</p>\n"
+  example: []
+  syntax:
+    content: 'public class PaperDocMentionType : object'
+    content.vb: >-
+      Public Class PaperDocMentionType
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.PaperDocMentionType.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.PaperDocMentionType.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.PaperDocMentionType
+  langs:
+  - csharp
+  - vb
+  name: PaperDocMentionType(String)
+  nameWithType: PaperDocMentionType.PaperDocMentionType(String)
+  fullName: Dropbox.Api.TeamLog.PaperDocMentionType.PaperDocMentionType(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDocMentionType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDocMentionType.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.PaperDocMentionType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public PaperDocMentionType(string description)
+    parameters:
+    - id: description
+      type: System.String
+      description: The description
+    content.vb: Public Sub New(description As String)
+  overload: Dropbox.Api.TeamLog.PaperDocMentionType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.PaperDocMentionType.#ctor
+  commentId: M:Dropbox.Api.TeamLog.PaperDocMentionType.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.PaperDocMentionType
+  langs:
+  - csharp
+  - vb
+  name: PaperDocMentionType()
+  nameWithType: PaperDocMentionType.PaperDocMentionType()
+  fullName: Dropbox.Api.TeamLog.PaperDocMentionType.PaperDocMentionType()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDocMentionType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDocMentionType.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.PaperDocMentionType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public PaperDocMentionType()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.PaperDocMentionType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.PaperDocMentionType.Description
+  commentId: P:Dropbox.Api.TeamLog.PaperDocMentionType.Description
+  id: Description
+  parent: Dropbox.Api.TeamLog.PaperDocMentionType
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: PaperDocMentionType.Description
+  fullName: Dropbox.Api.TeamLog.PaperDocMentionType.Description
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDocMentionType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Description
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDocMentionType.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets the description of the paper doc mention type</p>\n"
+  example: []
+  syntax:
+    content: public string Description { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Dropbox.Api.TeamLog.PaperDocMentionType.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.PaperDocMentionType
+  commentId: T:Dropbox.Api.TeamLog.PaperDocMentionType
+  parent: Dropbox.Api.TeamLog
+  name: PaperDocMentionType
+  nameWithType: PaperDocMentionType
+  fullName: Dropbox.Api.TeamLog.PaperDocMentionType
+- uid: Dropbox.Api.TeamLog.PaperDocMentionType.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.PaperDocMentionType.#ctor
+  name: PaperDocMentionType
+  nameWithType: PaperDocMentionType.PaperDocMentionType
+  fullName: Dropbox.Api.TeamLog.PaperDocMentionType.PaperDocMentionType
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.PaperDocMentionType.Description*
+  commentId: Overload:Dropbox.Api.TeamLog.PaperDocMentionType.Description
+  name: Description
+  nameWithType: PaperDocMentionType.Description
+  fullName: Dropbox.Api.TeamLog.PaperDocMentionType.Description
+shouldSkipMarkup: true

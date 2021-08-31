@@ -1,0 +1,460 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.ListFolderResult
+  commentId: T:Dropbox.Api.Files.ListFolderResult
+  id: ListFolderResult
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.ListFolderResult.#ctor
+  - Dropbox.Api.Files.ListFolderResult.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Files.Metadata},System.String,System.Boolean)
+  - Dropbox.Api.Files.ListFolderResult.Cursor
+  - Dropbox.Api.Files.ListFolderResult.Entries
+  - Dropbox.Api.Files.ListFolderResult.HasMore
+  langs:
+  - csharp
+  - vb
+  name: ListFolderResult
+  nameWithType: ListFolderResult
+  fullName: Dropbox.Api.Files.ListFolderResult
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ListFolderResult
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderResult.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The list folder result object</p>\n"
+  example: []
+  syntax:
+    content: 'public class ListFolderResult : object'
+    content.vb: >-
+      Public Class ListFolderResult
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.ListFolderResult.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Files.Metadata},System.String,System.Boolean)
+  commentId: M:Dropbox.Api.Files.ListFolderResult.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Files.Metadata},System.String,System.Boolean)
+  id: '#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Files.Metadata},System.String,System.Boolean)'
+  parent: Dropbox.Api.Files.ListFolderResult
+  langs:
+  - csharp
+  - vb
+  name: ListFolderResult(System.Collections.Generic.IEnumerable<Metadata>, String, Boolean)
+  nameWithType: ListFolderResult.ListFolderResult(System.Collections.Generic.IEnumerable<Metadata>, String, Boolean)
+  fullName: Dropbox.Api.Files.ListFolderResult.ListFolderResult(System.Collections.Generic.IEnumerable<Dropbox.Api.Files.Metadata>, System.String, System.Boolean)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderResult.cs
+    startLine: 41
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.ListFolderResult\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public ListFolderResult(System.Collections.Generic.IEnumerable<Metadata> entries, string cursor, bool hasMore)
+    parameters:
+    - id: entries
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.Files.Metadata}
+      description: The files and (direct) subfolders in the folder.
+    - id: cursor
+      type: System.String
+      description: >-
+        Pass the cursor into <xref href="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync(Dropbox.Api.Files.ListFolderContinueArg)" data-throw-if-not-resolved="false"></xref> to see
+
+        what&apos;s changed in the folder since your previous query.
+    - id: hasMore
+      type: System.Boolean
+      description: >-
+        If true, then there are more entries available. Pass the
+
+        cursor to <xref href="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync(Dropbox.Api.Files.ListFolderContinueArg)" data-throw-if-not-resolved="false"></xref> to
+
+        retrieve the rest.
+    content.vb: Public Sub New(entries As System.Collections.Generic.IEnumerable(Of Metadata), cursor As String, hasMore As Boolean)
+  overload: Dropbox.Api.Files.ListFolderResult.#ctor*
+  nameWithType.vb: ListFolderResult.ListFolderResult(System.Collections.Generic.IEnumerable(Of Metadata), String, Boolean)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Files.ListFolderResult.ListFolderResult(System.Collections.Generic.IEnumerable(Of Dropbox.Api.Files.Metadata), System.String, System.Boolean)
+  name.vb: ListFolderResult(System.Collections.Generic.IEnumerable(Of Metadata), String, Boolean)
+- uid: Dropbox.Api.Files.ListFolderResult.#ctor
+  commentId: M:Dropbox.Api.Files.ListFolderResult.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.ListFolderResult
+  langs:
+  - csharp
+  - vb
+  name: ListFolderResult()
+  nameWithType: ListFolderResult.ListFolderResult()
+  fullName: Dropbox.Api.Files.ListFolderResult.ListFolderResult()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderResult.cs
+    startLine: 72
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.ListFolderResult\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public ListFolderResult()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.ListFolderResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.ListFolderResult.Entries
+  commentId: P:Dropbox.Api.Files.ListFolderResult.Entries
+  id: Entries
+  parent: Dropbox.Api.Files.ListFolderResult
+  langs:
+  - csharp
+  - vb
+  name: Entries
+  nameWithType: ListFolderResult.Entries
+  fullName: Dropbox.Api.Files.ListFolderResult.Entries
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Entries
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderResult.cs
+    startLine: 80
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The files and (direct) subfolders in the folder.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<Metadata> Entries { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{Dropbox.Api.Files.Metadata}
+    content.vb: Public Property Entries As System.Collections.Generic.IList(Of Metadata)
+  overload: Dropbox.Api.Files.ListFolderResult.Entries*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.ListFolderResult.Cursor
+  commentId: P:Dropbox.Api.Files.ListFolderResult.Cursor
+  id: Cursor
+  parent: Dropbox.Api.Files.ListFolderResult
+  langs:
+  - csharp
+  - vb
+  name: Cursor
+  nameWithType: ListFolderResult.Cursor
+  fullName: Dropbox.Api.Files.ListFolderResult.Cursor
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Cursor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderResult.cs
+    startLine: 87
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Pass the cursor into <xref href=\"Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync(Dropbox.Api.Files.ListFolderContinueArg)\" data-throw-if-not-resolved=\"false\"></xref> to see\nwhat&apos;s changed in the folder since your previous query.</p>\n"
+  example: []
+  syntax:
+    content: public string Cursor { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Cursor As String
+  overload: Dropbox.Api.Files.ListFolderResult.Cursor*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.ListFolderResult.HasMore
+  commentId: P:Dropbox.Api.Files.ListFolderResult.HasMore
+  id: HasMore
+  parent: Dropbox.Api.Files.ListFolderResult
+  langs:
+  - csharp
+  - vb
+  name: HasMore
+  nameWithType: ListFolderResult.HasMore
+  fullName: Dropbox.Api.Files.ListFolderResult.HasMore
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: HasMore
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderResult.cs
+    startLine: 94
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>If true, then there are more entries available. Pass the cursor to <xref href=\"Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync(Dropbox.Api.Files.ListFolderContinueArg)\" data-throw-if-not-resolved=\"false\"></xref> to\nretrieve the rest.</p>\n"
+  example: []
+  syntax:
+    content: public bool HasMore { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property HasMore As Boolean
+  overload: Dropbox.Api.Files.ListFolderResult.HasMore*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.ListFolderResult
+  commentId: T:Dropbox.Api.Files.ListFolderResult
+  parent: Dropbox.Api.Files
+  name: ListFolderResult
+  nameWithType: ListFolderResult
+  fullName: Dropbox.Api.Files.ListFolderResult
+- uid: Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync(Dropbox.Api.Files.ListFolderContinueArg)
+  commentId: M:Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync(Dropbox.Api.Files.ListFolderContinueArg)
+  isExternal: true
+- uid: Dropbox.Api.Files.ListFolderResult.#ctor*
+  commentId: Overload:Dropbox.Api.Files.ListFolderResult.#ctor
+  name: ListFolderResult
+  nameWithType: ListFolderResult.ListFolderResult
+  fullName: Dropbox.Api.Files.ListFolderResult.ListFolderResult
+- uid: System.Collections.Generic.IEnumerable{Dropbox.Api.Files.Metadata}
+  commentId: '!:System.Collections.Generic.IEnumerable{Dropbox.Api.Files.Metadata}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<Metadata>
+  nameWithType: System.Collections.Generic.IEnumerable<Metadata>
+  fullName: System.Collections.Generic.IEnumerable<Dropbox.Api.Files.Metadata>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of Metadata)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Dropbox.Api.Files.Metadata)
+  name.vb: System.Collections.Generic.IEnumerable(Of Metadata)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Files.Metadata
+    name: Metadata
+    nameWithType: Metadata
+    fullName: Dropbox.Api.Files.Metadata
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Files.Metadata
+    name: Metadata
+    nameWithType: Metadata
+    fullName: Dropbox.Api.Files.Metadata
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: System.Collections.Generic.IEnumerable<>
+  nameWithType: System.Collections.Generic.IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: System.Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Files.ListFolderResult.Entries*
+  commentId: Overload:Dropbox.Api.Files.ListFolderResult.Entries
+  name: Entries
+  nameWithType: ListFolderResult.Entries
+  fullName: Dropbox.Api.Files.ListFolderResult.Entries
+- uid: System.Collections.Generic.IList{Dropbox.Api.Files.Metadata}
+  commentId: '!:System.Collections.Generic.IList{Dropbox.Api.Files.Metadata}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<Metadata>
+  nameWithType: System.Collections.Generic.IList<Metadata>
+  fullName: System.Collections.Generic.IList<Dropbox.Api.Files.Metadata>
+  nameWithType.vb: System.Collections.Generic.IList(Of Metadata)
+  fullName.vb: System.Collections.Generic.IList(Of Dropbox.Api.Files.Metadata)
+  name.vb: System.Collections.Generic.IList(Of Metadata)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Files.Metadata
+    name: Metadata
+    nameWithType: Metadata
+    fullName: Dropbox.Api.Files.Metadata
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Files.Metadata
+    name: Metadata
+    nameWithType: Metadata
+    fullName: Dropbox.Api.Files.Metadata
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  isExternal: true
+  name: System.Collections.Generic.IList<>
+  nameWithType: System.Collections.Generic.IList<>
+  fullName: System.Collections.Generic.IList<>
+  nameWithType.vb: System.Collections.Generic.IList(Of )
+  fullName.vb: System.Collections.Generic.IList(Of )
+  name.vb: System.Collections.Generic.IList(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Files.ListFolderResult.Cursor*
+  commentId: Overload:Dropbox.Api.Files.ListFolderResult.Cursor
+  name: Cursor
+  nameWithType: ListFolderResult.Cursor
+  fullName: Dropbox.Api.Files.ListFolderResult.Cursor
+- uid: Dropbox.Api.Files.ListFolderResult.HasMore*
+  commentId: Overload:Dropbox.Api.Files.ListFolderResult.HasMore
+  name: HasMore
+  nameWithType: ListFolderResult.HasMore
+  fullName: Dropbox.Api.Files.ListFolderResult.HasMore
+shouldSkipMarkup: true

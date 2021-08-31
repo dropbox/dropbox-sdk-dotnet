@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.FileUnlikeCommentDetails
+  commentId: T:Dropbox.Api.TeamLog.FileUnlikeCommentDetails
+  id: FileUnlikeCommentDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.FileUnlikeCommentDetails.#ctor
+  - Dropbox.Api.TeamLog.FileUnlikeCommentDetails.#ctor(System.String)
+  - Dropbox.Api.TeamLog.FileUnlikeCommentDetails.CommentText
+  langs:
+  - csharp
+  - vb
+  name: FileUnlikeCommentDetails
+  nameWithType: FileUnlikeCommentDetails
+  fullName: Dropbox.Api.TeamLog.FileUnlikeCommentDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileUnlikeCommentDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: FileUnlikeCommentDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileUnlikeCommentDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Unliked file comment.</p>\n"
+  example: []
+  syntax:
+    content: 'public class FileUnlikeCommentDetails : object'
+    content.vb: >-
+      Public Class FileUnlikeCommentDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.FileUnlikeCommentDetails.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.FileUnlikeCommentDetails.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.FileUnlikeCommentDetails
+  langs:
+  - csharp
+  - vb
+  name: FileUnlikeCommentDetails(String)
+  nameWithType: FileUnlikeCommentDetails.FileUnlikeCommentDetails(String)
+  fullName: Dropbox.Api.TeamLog.FileUnlikeCommentDetails.FileUnlikeCommentDetails(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileUnlikeCommentDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileUnlikeCommentDetails.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.FileUnlikeCommentDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public FileUnlikeCommentDetails(string commentText = null)
+    parameters:
+    - id: commentText
+      type: System.String
+      description: Comment text.
+    content.vb: Public Sub New(commentText As String = Nothing)
+  overload: Dropbox.Api.TeamLog.FileUnlikeCommentDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.FileUnlikeCommentDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.FileUnlikeCommentDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.FileUnlikeCommentDetails
+  langs:
+  - csharp
+  - vb
+  name: FileUnlikeCommentDetails()
+  nameWithType: FileUnlikeCommentDetails.FileUnlikeCommentDetails()
+  fullName: Dropbox.Api.TeamLog.FileUnlikeCommentDetails.FileUnlikeCommentDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileUnlikeCommentDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileUnlikeCommentDetails.cs
+    startLine: 45
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.FileUnlikeCommentDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public FileUnlikeCommentDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.FileUnlikeCommentDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.FileUnlikeCommentDetails.CommentText
+  commentId: P:Dropbox.Api.TeamLog.FileUnlikeCommentDetails.CommentText
+  id: CommentText
+  parent: Dropbox.Api.TeamLog.FileUnlikeCommentDetails
+  langs:
+  - csharp
+  - vb
+  name: CommentText
+  nameWithType: FileUnlikeCommentDetails.CommentText
+  fullName: Dropbox.Api.TeamLog.FileUnlikeCommentDetails.CommentText
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileUnlikeCommentDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: CommentText
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileUnlikeCommentDetails.cs
+    startLine: 53
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Comment text.</p>\n"
+  example: []
+  syntax:
+    content: public string CommentText { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property CommentText As String
+  overload: Dropbox.Api.TeamLog.FileUnlikeCommentDetails.CommentText*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.FileUnlikeCommentDetails
+  commentId: T:Dropbox.Api.TeamLog.FileUnlikeCommentDetails
+  parent: Dropbox.Api.TeamLog
+  name: FileUnlikeCommentDetails
+  nameWithType: FileUnlikeCommentDetails
+  fullName: Dropbox.Api.TeamLog.FileUnlikeCommentDetails
+- uid: Dropbox.Api.TeamLog.FileUnlikeCommentDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.FileUnlikeCommentDetails.#ctor
+  name: FileUnlikeCommentDetails
+  nameWithType: FileUnlikeCommentDetails.FileUnlikeCommentDetails
+  fullName: Dropbox.Api.TeamLog.FileUnlikeCommentDetails.FileUnlikeCommentDetails
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.FileUnlikeCommentDetails.CommentText*
+  commentId: Overload:Dropbox.Api.TeamLog.FileUnlikeCommentDetails.CommentText
+  name: CommentText
+  nameWithType: FileUnlikeCommentDetails.CommentText
+  fullName: Dropbox.Api.TeamLog.FileUnlikeCommentDetails.CommentText
+shouldSkipMarkup: true

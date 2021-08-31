@@ -1,0 +1,425 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.RelocationBatchArgBase
+  commentId: T:Dropbox.Api.Files.RelocationBatchArgBase
+  id: RelocationBatchArgBase
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.RelocationBatchArgBase.#ctor
+  - Dropbox.Api.Files.RelocationBatchArgBase.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Files.RelocationPath},System.Boolean)
+  - Dropbox.Api.Files.RelocationBatchArgBase.Autorename
+  - Dropbox.Api.Files.RelocationBatchArgBase.Entries
+  langs:
+  - csharp
+  - vb
+  name: RelocationBatchArgBase
+  nameWithType: RelocationBatchArgBase
+  fullName: Dropbox.Api.Files.RelocationBatchArgBase
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchArgBase.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: RelocationBatchArgBase
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchArgBase.cs
+    startLine: 17
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The relocation batch arg base object</p>\n"
+  example: []
+  syntax:
+    content: 'public class RelocationBatchArgBase : object'
+    content.vb: >-
+      Public Class RelocationBatchArgBase
+          Inherits Object
+  seealso:
+  - linkId: Dropbox.Api.Files.MoveBatchArg
+    commentId: T:Dropbox.Api.Files.MoveBatchArg
+  - linkId: Dropbox.Api.Files.RelocationBatchArg
+    commentId: T:Dropbox.Api.Files.RelocationBatchArg
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Files.MoveBatchArg
+  - Dropbox.Api.Files.RelocationBatchArg
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.RelocationBatchArgBase.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Files.RelocationPath},System.Boolean)
+  commentId: M:Dropbox.Api.Files.RelocationBatchArgBase.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Files.RelocationPath},System.Boolean)
+  id: '#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Files.RelocationPath},System.Boolean)'
+  parent: Dropbox.Api.Files.RelocationBatchArgBase
+  langs:
+  - csharp
+  - vb
+  name: RelocationBatchArgBase(System.Collections.Generic.IEnumerable<RelocationPath>, Boolean)
+  nameWithType: RelocationBatchArgBase.RelocationBatchArgBase(System.Collections.Generic.IEnumerable<RelocationPath>, Boolean)
+  fullName: Dropbox.Api.Files.RelocationBatchArgBase.RelocationBatchArgBase(System.Collections.Generic.IEnumerable<Dropbox.Api.Files.RelocationPath>, System.Boolean)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchArgBase.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchArgBase.cs
+    startLine: 39
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.RelocationBatchArgBase\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public RelocationBatchArgBase(System.Collections.Generic.IEnumerable<RelocationPath> entries, bool autorename = false)
+    parameters:
+    - id: entries
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.Files.RelocationPath}
+      description: List of entries to be moved or copied. Each entry is <xref href="Dropbox.Api.Files.RelocationPath" data-throw-if-not-resolved="false"></xref>.
+    - id: autorename
+      type: System.Boolean
+      description: >-
+        If there&apos;s a conflict with any file, have the Dropbox
+
+        server try to autorename that file to avoid the conflict.
+    content.vb: Public Sub New(entries As System.Collections.Generic.IEnumerable(Of RelocationPath), autorename As Boolean = False)
+  overload: Dropbox.Api.Files.RelocationBatchArgBase.#ctor*
+  nameWithType.vb: RelocationBatchArgBase.RelocationBatchArgBase(System.Collections.Generic.IEnumerable(Of RelocationPath), Boolean)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Files.RelocationBatchArgBase.RelocationBatchArgBase(System.Collections.Generic.IEnumerable(Of Dropbox.Api.Files.RelocationPath), System.Boolean)
+  name.vb: RelocationBatchArgBase(System.Collections.Generic.IEnumerable(Of RelocationPath), Boolean)
+- uid: Dropbox.Api.Files.RelocationBatchArgBase.#ctor
+  commentId: M:Dropbox.Api.Files.RelocationBatchArgBase.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.RelocationBatchArgBase
+  langs:
+  - csharp
+  - vb
+  name: RelocationBatchArgBase()
+  nameWithType: RelocationBatchArgBase.RelocationBatchArgBase()
+  fullName: Dropbox.Api.Files.RelocationBatchArgBase.RelocationBatchArgBase()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchArgBase.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchArgBase.cs
+    startLine: 63
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.RelocationBatchArgBase\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public RelocationBatchArgBase()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.RelocationBatchArgBase.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.RelocationBatchArgBase.Entries
+  commentId: P:Dropbox.Api.Files.RelocationBatchArgBase.Entries
+  id: Entries
+  parent: Dropbox.Api.Files.RelocationBatchArgBase
+  langs:
+  - csharp
+  - vb
+  name: Entries
+  nameWithType: RelocationBatchArgBase.Entries
+  fullName: Dropbox.Api.Files.RelocationBatchArgBase.Entries
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchArgBase.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Entries
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchArgBase.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>List of entries to be moved or copied. Each entry is <xref href=\"Dropbox.Api.Files.RelocationPath\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<RelocationPath> Entries { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{Dropbox.Api.Files.RelocationPath}
+    content.vb: Public Property Entries As System.Collections.Generic.IList(Of RelocationPath)
+  overload: Dropbox.Api.Files.RelocationBatchArgBase.Entries*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.RelocationBatchArgBase.Autorename
+  commentId: P:Dropbox.Api.Files.RelocationBatchArgBase.Autorename
+  id: Autorename
+  parent: Dropbox.Api.Files.RelocationBatchArgBase
+  langs:
+  - csharp
+  - vb
+  name: Autorename
+  nameWithType: RelocationBatchArgBase.Autorename
+  fullName: Dropbox.Api.Files.RelocationBatchArgBase.Autorename
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchArgBase.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Autorename
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchArgBase.cs
+    startLine: 79
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>If there&apos;s a conflict with any file, have the Dropbox server try to\nautorename that file to avoid the conflict.</p>\n"
+  example: []
+  syntax:
+    content: public bool Autorename { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property Autorename As Boolean
+  overload: Dropbox.Api.Files.RelocationBatchArgBase.Autorename*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Files.MoveBatchArg
+  commentId: T:Dropbox.Api.Files.MoveBatchArg
+  parent: Dropbox.Api.Files
+  name: MoveBatchArg
+  nameWithType: MoveBatchArg
+  fullName: Dropbox.Api.Files.MoveBatchArg
+- uid: Dropbox.Api.Files.RelocationBatchArg
+  commentId: T:Dropbox.Api.Files.RelocationBatchArg
+  parent: Dropbox.Api.Files
+  name: RelocationBatchArg
+  nameWithType: RelocationBatchArg
+  fullName: Dropbox.Api.Files.RelocationBatchArg
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.RelocationBatchArgBase
+  commentId: T:Dropbox.Api.Files.RelocationBatchArgBase
+  parent: Dropbox.Api.Files
+  name: RelocationBatchArgBase
+  nameWithType: RelocationBatchArgBase
+  fullName: Dropbox.Api.Files.RelocationBatchArgBase
+- uid: Dropbox.Api.Files.RelocationPath
+  commentId: T:Dropbox.Api.Files.RelocationPath
+  parent: Dropbox.Api.Files
+  name: RelocationPath
+  nameWithType: RelocationPath
+  fullName: Dropbox.Api.Files.RelocationPath
+- uid: Dropbox.Api.Files.RelocationBatchArgBase.#ctor*
+  commentId: Overload:Dropbox.Api.Files.RelocationBatchArgBase.#ctor
+  name: RelocationBatchArgBase
+  nameWithType: RelocationBatchArgBase.RelocationBatchArgBase
+  fullName: Dropbox.Api.Files.RelocationBatchArgBase.RelocationBatchArgBase
+- uid: System.Collections.Generic.IEnumerable{Dropbox.Api.Files.RelocationPath}
+  commentId: '!:System.Collections.Generic.IEnumerable{Dropbox.Api.Files.RelocationPath}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<RelocationPath>
+  nameWithType: System.Collections.Generic.IEnumerable<RelocationPath>
+  fullName: System.Collections.Generic.IEnumerable<Dropbox.Api.Files.RelocationPath>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of RelocationPath)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Dropbox.Api.Files.RelocationPath)
+  name.vb: System.Collections.Generic.IEnumerable(Of RelocationPath)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Files.RelocationPath
+    name: RelocationPath
+    nameWithType: RelocationPath
+    fullName: Dropbox.Api.Files.RelocationPath
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Files.RelocationPath
+    name: RelocationPath
+    nameWithType: RelocationPath
+    fullName: Dropbox.Api.Files.RelocationPath
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: System.Collections.Generic.IEnumerable<>
+  nameWithType: System.Collections.Generic.IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: System.Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Files.RelocationBatchArgBase.Entries*
+  commentId: Overload:Dropbox.Api.Files.RelocationBatchArgBase.Entries
+  name: Entries
+  nameWithType: RelocationBatchArgBase.Entries
+  fullName: Dropbox.Api.Files.RelocationBatchArgBase.Entries
+- uid: System.Collections.Generic.IList{Dropbox.Api.Files.RelocationPath}
+  commentId: '!:System.Collections.Generic.IList{Dropbox.Api.Files.RelocationPath}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<RelocationPath>
+  nameWithType: System.Collections.Generic.IList<RelocationPath>
+  fullName: System.Collections.Generic.IList<Dropbox.Api.Files.RelocationPath>
+  nameWithType.vb: System.Collections.Generic.IList(Of RelocationPath)
+  fullName.vb: System.Collections.Generic.IList(Of Dropbox.Api.Files.RelocationPath)
+  name.vb: System.Collections.Generic.IList(Of RelocationPath)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Files.RelocationPath
+    name: RelocationPath
+    nameWithType: RelocationPath
+    fullName: Dropbox.Api.Files.RelocationPath
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Files.RelocationPath
+    name: RelocationPath
+    nameWithType: RelocationPath
+    fullName: Dropbox.Api.Files.RelocationPath
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  isExternal: true
+  name: System.Collections.Generic.IList<>
+  nameWithType: System.Collections.Generic.IList<>
+  fullName: System.Collections.Generic.IList<>
+  nameWithType.vb: System.Collections.Generic.IList(Of )
+  fullName.vb: System.Collections.Generic.IList(Of )
+  name.vb: System.Collections.Generic.IList(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Files.RelocationBatchArgBase.Autorename*
+  commentId: Overload:Dropbox.Api.Files.RelocationBatchArgBase.Autorename
+  name: Autorename
+  nameWithType: RelocationBatchArgBase.Autorename
+  fullName: Dropbox.Api.Files.RelocationBatchArgBase.Autorename
+shouldSkipMarkup: true

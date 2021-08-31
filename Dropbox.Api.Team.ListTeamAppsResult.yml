@@ -1,0 +1,460 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.ListTeamAppsResult
+  commentId: T:Dropbox.Api.Team.ListTeamAppsResult
+  id: ListTeamAppsResult
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.ListTeamAppsResult.#ctor
+  - Dropbox.Api.Team.ListTeamAppsResult.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Team.MemberLinkedApps},System.Boolean,System.String)
+  - Dropbox.Api.Team.ListTeamAppsResult.Apps
+  - Dropbox.Api.Team.ListTeamAppsResult.Cursor
+  - Dropbox.Api.Team.ListTeamAppsResult.HasMore
+  langs:
+  - csharp
+  - vb
+  name: ListTeamAppsResult
+  nameWithType: ListTeamAppsResult
+  fullName: Dropbox.Api.Team.ListTeamAppsResult
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListTeamAppsResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ListTeamAppsResult
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListTeamAppsResult.cs
+    startLine: 17
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Information returned by <xref href=\"Dropbox.Api.Team.Routes.TeamTeamRoutes.LinkedAppsListTeamLinkedAppsAsync(Dropbox.Api.Team.ListTeamAppsArg)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+  example: []
+  syntax:
+    content: 'public class ListTeamAppsResult : object'
+    content.vb: >-
+      Public Class ListTeamAppsResult
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.ListTeamAppsResult.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Team.MemberLinkedApps},System.Boolean,System.String)
+  commentId: M:Dropbox.Api.Team.ListTeamAppsResult.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Team.MemberLinkedApps},System.Boolean,System.String)
+  id: '#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Team.MemberLinkedApps},System.Boolean,System.String)'
+  parent: Dropbox.Api.Team.ListTeamAppsResult
+  langs:
+  - csharp
+  - vb
+  name: ListTeamAppsResult(System.Collections.Generic.IEnumerable<MemberLinkedApps>, Boolean, String)
+  nameWithType: ListTeamAppsResult.ListTeamAppsResult(System.Collections.Generic.IEnumerable<MemberLinkedApps>, Boolean, String)
+  fullName: Dropbox.Api.Team.ListTeamAppsResult.ListTeamAppsResult(System.Collections.Generic.IEnumerable<Dropbox.Api.Team.MemberLinkedApps>, System.Boolean, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListTeamAppsResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListTeamAppsResult.cs
+    startLine: 43
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.ListTeamAppsResult\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public ListTeamAppsResult(System.Collections.Generic.IEnumerable<MemberLinkedApps> apps, bool hasMore, string cursor = null)
+    parameters:
+    - id: apps
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.Team.MemberLinkedApps}
+      description: The linked applications of each member of the team.
+    - id: hasMore
+      type: System.Boolean
+      description: >-
+        If true, then there are more apps available. Pass the cursor
+
+        to <xref href="Dropbox.Api.Team.Routes.TeamTeamRoutes.LinkedAppsListTeamLinkedAppsAsync(Dropbox.Api.Team.ListTeamAppsArg)" data-throw-if-not-resolved="false"></xref>
+
+        to retrieve the rest.
+    - id: cursor
+      type: System.String
+      description: >-
+        Pass the cursor into <xref href="Dropbox.Api.Team.Routes.TeamTeamRoutes.LinkedAppsListTeamLinkedAppsAsync(Dropbox.Api.Team.ListTeamAppsArg)" data-throw-if-not-resolved="false"></xref>
+
+        to receive the next sub list of team&apos;s applications.
+    content.vb: Public Sub New(apps As System.Collections.Generic.IEnumerable(Of MemberLinkedApps), hasMore As Boolean, cursor As String = Nothing)
+  overload: Dropbox.Api.Team.ListTeamAppsResult.#ctor*
+  nameWithType.vb: ListTeamAppsResult.ListTeamAppsResult(System.Collections.Generic.IEnumerable(Of MemberLinkedApps), Boolean, String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Team.ListTeamAppsResult.ListTeamAppsResult(System.Collections.Generic.IEnumerable(Of Dropbox.Api.Team.MemberLinkedApps), System.Boolean, System.String)
+  name.vb: ListTeamAppsResult(System.Collections.Generic.IEnumerable(Of MemberLinkedApps), Boolean, String)
+- uid: Dropbox.Api.Team.ListTeamAppsResult.#ctor
+  commentId: M:Dropbox.Api.Team.ListTeamAppsResult.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.ListTeamAppsResult
+  langs:
+  - csharp
+  - vb
+  name: ListTeamAppsResult()
+  nameWithType: ListTeamAppsResult.ListTeamAppsResult()
+  fullName: Dropbox.Api.Team.ListTeamAppsResult.ListTeamAppsResult()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListTeamAppsResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListTeamAppsResult.cs
+    startLine: 65
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.ListTeamAppsResult\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public ListTeamAppsResult()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.ListTeamAppsResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.ListTeamAppsResult.Apps
+  commentId: P:Dropbox.Api.Team.ListTeamAppsResult.Apps
+  id: Apps
+  parent: Dropbox.Api.Team.ListTeamAppsResult
+  langs:
+  - csharp
+  - vb
+  name: Apps
+  nameWithType: ListTeamAppsResult.Apps
+  fullName: Dropbox.Api.Team.ListTeamAppsResult.Apps
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListTeamAppsResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Apps
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListTeamAppsResult.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The linked applications of each member of the team.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<MemberLinkedApps> Apps { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{Dropbox.Api.Team.MemberLinkedApps}
+    content.vb: Public Property Apps As System.Collections.Generic.IList(Of MemberLinkedApps)
+  overload: Dropbox.Api.Team.ListTeamAppsResult.Apps*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.ListTeamAppsResult.HasMore
+  commentId: P:Dropbox.Api.Team.ListTeamAppsResult.HasMore
+  id: HasMore
+  parent: Dropbox.Api.Team.ListTeamAppsResult
+  langs:
+  - csharp
+  - vb
+  name: HasMore
+  nameWithType: ListTeamAppsResult.HasMore
+  fullName: Dropbox.Api.Team.ListTeamAppsResult.HasMore
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListTeamAppsResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: HasMore
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListTeamAppsResult.cs
+    startLine: 80
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>If true, then there are more apps available. Pass the cursor to <xref href=\"Dropbox.Api.Team.Routes.TeamTeamRoutes.LinkedAppsListTeamLinkedAppsAsync(Dropbox.Api.Team.ListTeamAppsArg)\" data-throw-if-not-resolved=\"false\"></xref>\nto retrieve the rest.</p>\n"
+  example: []
+  syntax:
+    content: public bool HasMore { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property HasMore As Boolean
+  overload: Dropbox.Api.Team.ListTeamAppsResult.HasMore*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.ListTeamAppsResult.Cursor
+  commentId: P:Dropbox.Api.Team.ListTeamAppsResult.Cursor
+  id: Cursor
+  parent: Dropbox.Api.Team.ListTeamAppsResult
+  langs:
+  - csharp
+  - vb
+  name: Cursor
+  nameWithType: ListTeamAppsResult.Cursor
+  fullName: Dropbox.Api.Team.ListTeamAppsResult.Cursor
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListTeamAppsResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Cursor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListTeamAppsResult.cs
+    startLine: 87
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Pass the cursor into <xref href=\"Dropbox.Api.Team.Routes.TeamTeamRoutes.LinkedAppsListTeamLinkedAppsAsync(Dropbox.Api.Team.ListTeamAppsArg)\" data-throw-if-not-resolved=\"false\"></xref>\nto receive the next sub list of team&apos;s applications.</p>\n"
+  example: []
+  syntax:
+    content: public string Cursor { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Cursor As String
+  overload: Dropbox.Api.Team.ListTeamAppsResult.Cursor*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Team.Routes.TeamTeamRoutes.LinkedAppsListTeamLinkedAppsAsync(Dropbox.Api.Team.ListTeamAppsArg)
+  commentId: M:Dropbox.Api.Team.Routes.TeamTeamRoutes.LinkedAppsListTeamLinkedAppsAsync(Dropbox.Api.Team.ListTeamAppsArg)
+  isExternal: true
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.ListTeamAppsResult
+  commentId: T:Dropbox.Api.Team.ListTeamAppsResult
+  parent: Dropbox.Api.Team
+  name: ListTeamAppsResult
+  nameWithType: ListTeamAppsResult
+  fullName: Dropbox.Api.Team.ListTeamAppsResult
+- uid: Dropbox.Api.Team.ListTeamAppsResult.#ctor*
+  commentId: Overload:Dropbox.Api.Team.ListTeamAppsResult.#ctor
+  name: ListTeamAppsResult
+  nameWithType: ListTeamAppsResult.ListTeamAppsResult
+  fullName: Dropbox.Api.Team.ListTeamAppsResult.ListTeamAppsResult
+- uid: System.Collections.Generic.IEnumerable{Dropbox.Api.Team.MemberLinkedApps}
+  commentId: '!:System.Collections.Generic.IEnumerable{Dropbox.Api.Team.MemberLinkedApps}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<MemberLinkedApps>
+  nameWithType: System.Collections.Generic.IEnumerable<MemberLinkedApps>
+  fullName: System.Collections.Generic.IEnumerable<Dropbox.Api.Team.MemberLinkedApps>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of MemberLinkedApps)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Dropbox.Api.Team.MemberLinkedApps)
+  name.vb: System.Collections.Generic.IEnumerable(Of MemberLinkedApps)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Team.MemberLinkedApps
+    name: MemberLinkedApps
+    nameWithType: MemberLinkedApps
+    fullName: Dropbox.Api.Team.MemberLinkedApps
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Team.MemberLinkedApps
+    name: MemberLinkedApps
+    nameWithType: MemberLinkedApps
+    fullName: Dropbox.Api.Team.MemberLinkedApps
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: System.Collections.Generic.IEnumerable<>
+  nameWithType: System.Collections.Generic.IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: System.Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Team.ListTeamAppsResult.Apps*
+  commentId: Overload:Dropbox.Api.Team.ListTeamAppsResult.Apps
+  name: Apps
+  nameWithType: ListTeamAppsResult.Apps
+  fullName: Dropbox.Api.Team.ListTeamAppsResult.Apps
+- uid: System.Collections.Generic.IList{Dropbox.Api.Team.MemberLinkedApps}
+  commentId: '!:System.Collections.Generic.IList{Dropbox.Api.Team.MemberLinkedApps}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<MemberLinkedApps>
+  nameWithType: System.Collections.Generic.IList<MemberLinkedApps>
+  fullName: System.Collections.Generic.IList<Dropbox.Api.Team.MemberLinkedApps>
+  nameWithType.vb: System.Collections.Generic.IList(Of MemberLinkedApps)
+  fullName.vb: System.Collections.Generic.IList(Of Dropbox.Api.Team.MemberLinkedApps)
+  name.vb: System.Collections.Generic.IList(Of MemberLinkedApps)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Team.MemberLinkedApps
+    name: MemberLinkedApps
+    nameWithType: MemberLinkedApps
+    fullName: Dropbox.Api.Team.MemberLinkedApps
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Team.MemberLinkedApps
+    name: MemberLinkedApps
+    nameWithType: MemberLinkedApps
+    fullName: Dropbox.Api.Team.MemberLinkedApps
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  isExternal: true
+  name: System.Collections.Generic.IList<>
+  nameWithType: System.Collections.Generic.IList<>
+  fullName: System.Collections.Generic.IList<>
+  nameWithType.vb: System.Collections.Generic.IList(Of )
+  fullName.vb: System.Collections.Generic.IList(Of )
+  name.vb: System.Collections.Generic.IList(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Team.ListTeamAppsResult.HasMore*
+  commentId: Overload:Dropbox.Api.Team.ListTeamAppsResult.HasMore
+  name: HasMore
+  nameWithType: ListTeamAppsResult.HasMore
+  fullName: Dropbox.Api.Team.ListTeamAppsResult.HasMore
+- uid: Dropbox.Api.Team.ListTeamAppsResult.Cursor*
+  commentId: Overload:Dropbox.Api.Team.ListTeamAppsResult.Cursor
+  name: Cursor
+  nameWithType: ListTeamAppsResult.Cursor
+  fullName: Dropbox.Api.Team.ListTeamAppsResult.Cursor
+shouldSkipMarkup: true

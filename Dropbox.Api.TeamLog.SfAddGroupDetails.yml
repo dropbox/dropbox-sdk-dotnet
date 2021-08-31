@@ -1,0 +1,336 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.SfAddGroupDetails
+  commentId: T:Dropbox.Api.TeamLog.SfAddGroupDetails
+  id: SfAddGroupDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.SfAddGroupDetails.#ctor
+  - Dropbox.Api.TeamLog.SfAddGroupDetails.#ctor(System.UInt64,System.String,System.String,System.String)
+  - Dropbox.Api.TeamLog.SfAddGroupDetails.OriginalFolderName
+  - Dropbox.Api.TeamLog.SfAddGroupDetails.SharingPermission
+  - Dropbox.Api.TeamLog.SfAddGroupDetails.TargetAssetIndex
+  - Dropbox.Api.TeamLog.SfAddGroupDetails.TeamName
+  langs:
+  - csharp
+  - vb
+  name: SfAddGroupDetails
+  nameWithType: SfAddGroupDetails
+  fullName: Dropbox.Api.TeamLog.SfAddGroupDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SfAddGroupDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SfAddGroupDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SfAddGroupDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Added team to shared folder.</p>\n"
+  example: []
+  syntax:
+    content: 'public class SfAddGroupDetails : object'
+    content.vb: >-
+      Public Class SfAddGroupDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.SfAddGroupDetails.#ctor(System.UInt64,System.String,System.String,System.String)
+  commentId: M:Dropbox.Api.TeamLog.SfAddGroupDetails.#ctor(System.UInt64,System.String,System.String,System.String)
+  id: '#ctor(System.UInt64,System.String,System.String,System.String)'
+  parent: Dropbox.Api.TeamLog.SfAddGroupDetails
+  langs:
+  - csharp
+  - vb
+  name: SfAddGroupDetails(UInt64, String, String, String)
+  nameWithType: SfAddGroupDetails.SfAddGroupDetails(UInt64, String, String, String)
+  fullName: Dropbox.Api.TeamLog.SfAddGroupDetails.SfAddGroupDetails(System.UInt64, System.String, System.String, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SfAddGroupDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SfAddGroupDetails.cs
+    startLine: 37
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SfAddGroupDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public SfAddGroupDetails(ulong targetAssetIndex, string originalFolderName, string teamName, string sharingPermission = null)
+    parameters:
+    - id: targetAssetIndex
+      type: System.UInt64
+      description: Target asset position in the Assets list.
+    - id: originalFolderName
+      type: System.String
+      description: Original shared folder name.
+    - id: teamName
+      type: System.String
+      description: Team name.
+    - id: sharingPermission
+      type: System.String
+      description: Sharing permission.
+    content.vb: Public Sub New(targetAssetIndex As ULong, originalFolderName As String, teamName As String, sharingPermission As String = Nothing)
+  overload: Dropbox.Api.TeamLog.SfAddGroupDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SfAddGroupDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.SfAddGroupDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.SfAddGroupDetails
+  langs:
+  - csharp
+  - vb
+  name: SfAddGroupDetails()
+  nameWithType: SfAddGroupDetails.SfAddGroupDetails()
+  fullName: Dropbox.Api.TeamLog.SfAddGroupDetails.SfAddGroupDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SfAddGroupDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SfAddGroupDetails.cs
+    startLine: 64
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SfAddGroupDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public SfAddGroupDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.SfAddGroupDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SfAddGroupDetails.TargetAssetIndex
+  commentId: P:Dropbox.Api.TeamLog.SfAddGroupDetails.TargetAssetIndex
+  id: TargetAssetIndex
+  parent: Dropbox.Api.TeamLog.SfAddGroupDetails
+  langs:
+  - csharp
+  - vb
+  name: TargetAssetIndex
+  nameWithType: SfAddGroupDetails.TargetAssetIndex
+  fullName: Dropbox.Api.TeamLog.SfAddGroupDetails.TargetAssetIndex
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SfAddGroupDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TargetAssetIndex
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SfAddGroupDetails.cs
+    startLine: 72
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Target asset position in the Assets list.</p>\n"
+  example: []
+  syntax:
+    content: public ulong TargetAssetIndex { get; protected set; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: Public Property TargetAssetIndex As ULong
+  overload: Dropbox.Api.TeamLog.SfAddGroupDetails.TargetAssetIndex*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.SfAddGroupDetails.OriginalFolderName
+  commentId: P:Dropbox.Api.TeamLog.SfAddGroupDetails.OriginalFolderName
+  id: OriginalFolderName
+  parent: Dropbox.Api.TeamLog.SfAddGroupDetails
+  langs:
+  - csharp
+  - vb
+  name: OriginalFolderName
+  nameWithType: SfAddGroupDetails.OriginalFolderName
+  fullName: Dropbox.Api.TeamLog.SfAddGroupDetails.OriginalFolderName
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SfAddGroupDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: OriginalFolderName
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SfAddGroupDetails.cs
+    startLine: 77
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Original shared folder name.</p>\n"
+  example: []
+  syntax:
+    content: public string OriginalFolderName { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property OriginalFolderName As String
+  overload: Dropbox.Api.TeamLog.SfAddGroupDetails.OriginalFolderName*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.SfAddGroupDetails.TeamName
+  commentId: P:Dropbox.Api.TeamLog.SfAddGroupDetails.TeamName
+  id: TeamName
+  parent: Dropbox.Api.TeamLog.SfAddGroupDetails
+  langs:
+  - csharp
+  - vb
+  name: TeamName
+  nameWithType: SfAddGroupDetails.TeamName
+  fullName: Dropbox.Api.TeamLog.SfAddGroupDetails.TeamName
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SfAddGroupDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TeamName
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SfAddGroupDetails.cs
+    startLine: 82
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Team name.</p>\n"
+  example: []
+  syntax:
+    content: public string TeamName { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property TeamName As String
+  overload: Dropbox.Api.TeamLog.SfAddGroupDetails.TeamName*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.SfAddGroupDetails.SharingPermission
+  commentId: P:Dropbox.Api.TeamLog.SfAddGroupDetails.SharingPermission
+  id: SharingPermission
+  parent: Dropbox.Api.TeamLog.SfAddGroupDetails
+  langs:
+  - csharp
+  - vb
+  name: SharingPermission
+  nameWithType: SfAddGroupDetails.SharingPermission
+  fullName: Dropbox.Api.TeamLog.SfAddGroupDetails.SharingPermission
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SfAddGroupDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SharingPermission
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SfAddGroupDetails.cs
+    startLine: 87
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Sharing permission.</p>\n"
+  example: []
+  syntax:
+    content: public string SharingPermission { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SharingPermission As String
+  overload: Dropbox.Api.TeamLog.SfAddGroupDetails.SharingPermission*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.SfAddGroupDetails
+  commentId: T:Dropbox.Api.TeamLog.SfAddGroupDetails
+  parent: Dropbox.Api.TeamLog
+  name: SfAddGroupDetails
+  nameWithType: SfAddGroupDetails
+  fullName: Dropbox.Api.TeamLog.SfAddGroupDetails
+- uid: Dropbox.Api.TeamLog.SfAddGroupDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.SfAddGroupDetails.#ctor
+  name: SfAddGroupDetails
+  nameWithType: SfAddGroupDetails.SfAddGroupDetails
+  fullName: Dropbox.Api.TeamLog.SfAddGroupDetails.SfAddGroupDetails
+- uid: System.UInt64
+  isExternal: true
+  name: UInt64
+  nameWithType: UInt64
+  fullName: System.UInt64
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.SfAddGroupDetails.TargetAssetIndex*
+  commentId: Overload:Dropbox.Api.TeamLog.SfAddGroupDetails.TargetAssetIndex
+  name: TargetAssetIndex
+  nameWithType: SfAddGroupDetails.TargetAssetIndex
+  fullName: Dropbox.Api.TeamLog.SfAddGroupDetails.TargetAssetIndex
+- uid: Dropbox.Api.TeamLog.SfAddGroupDetails.OriginalFolderName*
+  commentId: Overload:Dropbox.Api.TeamLog.SfAddGroupDetails.OriginalFolderName
+  name: OriginalFolderName
+  nameWithType: SfAddGroupDetails.OriginalFolderName
+  fullName: Dropbox.Api.TeamLog.SfAddGroupDetails.OriginalFolderName
+- uid: Dropbox.Api.TeamLog.SfAddGroupDetails.TeamName*
+  commentId: Overload:Dropbox.Api.TeamLog.SfAddGroupDetails.TeamName
+  name: TeamName
+  nameWithType: SfAddGroupDetails.TeamName
+  fullName: Dropbox.Api.TeamLog.SfAddGroupDetails.TeamName
+- uid: Dropbox.Api.TeamLog.SfAddGroupDetails.SharingPermission*
+  commentId: Overload:Dropbox.Api.TeamLog.SfAddGroupDetails.SharingPermission
+  name: SharingPermission
+  nameWithType: SfAddGroupDetails.SharingPermission
+  fullName: Dropbox.Api.TeamLog.SfAddGroupDetails.SharingPermission
+shouldSkipMarkup: true

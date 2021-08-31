@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.ShowcaseViewType
+  commentId: T:Dropbox.Api.TeamLog.ShowcaseViewType
+  id: ShowcaseViewType
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.ShowcaseViewType.#ctor
+  - Dropbox.Api.TeamLog.ShowcaseViewType.#ctor(System.String)
+  - Dropbox.Api.TeamLog.ShowcaseViewType.Description
+  langs:
+  - csharp
+  - vb
+  name: ShowcaseViewType
+  nameWithType: ShowcaseViewType
+  fullName: Dropbox.Api.TeamLog.ShowcaseViewType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseViewType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ShowcaseViewType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseViewType.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The showcase view type object</p>\n"
+  example: []
+  syntax:
+    content: 'public class ShowcaseViewType : object'
+    content.vb: >-
+      Public Class ShowcaseViewType
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.ShowcaseViewType.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.ShowcaseViewType.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.ShowcaseViewType
+  langs:
+  - csharp
+  - vb
+  name: ShowcaseViewType(String)
+  nameWithType: ShowcaseViewType.ShowcaseViewType(String)
+  fullName: Dropbox.Api.TeamLog.ShowcaseViewType.ShowcaseViewType(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseViewType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseViewType.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.ShowcaseViewType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public ShowcaseViewType(string description)
+    parameters:
+    - id: description
+      type: System.String
+      description: The description
+    content.vb: Public Sub New(description As String)
+  overload: Dropbox.Api.TeamLog.ShowcaseViewType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.ShowcaseViewType.#ctor
+  commentId: M:Dropbox.Api.TeamLog.ShowcaseViewType.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.ShowcaseViewType
+  langs:
+  - csharp
+  - vb
+  name: ShowcaseViewType()
+  nameWithType: ShowcaseViewType.ShowcaseViewType()
+  fullName: Dropbox.Api.TeamLog.ShowcaseViewType.ShowcaseViewType()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseViewType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseViewType.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.ShowcaseViewType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public ShowcaseViewType()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.ShowcaseViewType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.ShowcaseViewType.Description
+  commentId: P:Dropbox.Api.TeamLog.ShowcaseViewType.Description
+  id: Description
+  parent: Dropbox.Api.TeamLog.ShowcaseViewType
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: ShowcaseViewType.Description
+  fullName: Dropbox.Api.TeamLog.ShowcaseViewType.Description
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseViewType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Description
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseViewType.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets the description of the showcase view type</p>\n"
+  example: []
+  syntax:
+    content: public string Description { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Dropbox.Api.TeamLog.ShowcaseViewType.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.ShowcaseViewType
+  commentId: T:Dropbox.Api.TeamLog.ShowcaseViewType
+  parent: Dropbox.Api.TeamLog
+  name: ShowcaseViewType
+  nameWithType: ShowcaseViewType
+  fullName: Dropbox.Api.TeamLog.ShowcaseViewType
+- uid: Dropbox.Api.TeamLog.ShowcaseViewType.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.ShowcaseViewType.#ctor
+  name: ShowcaseViewType
+  nameWithType: ShowcaseViewType.ShowcaseViewType
+  fullName: Dropbox.Api.TeamLog.ShowcaseViewType.ShowcaseViewType
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.ShowcaseViewType.Description*
+  commentId: Overload:Dropbox.Api.TeamLog.ShowcaseViewType.Description
+  name: Description
+  nameWithType: ShowcaseViewType.Description
+  fullName: Dropbox.Api.TeamLog.ShowcaseViewType.Description
+shouldSkipMarkup: true

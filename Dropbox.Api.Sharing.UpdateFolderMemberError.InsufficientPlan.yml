@@ -1,0 +1,190 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.UpdateFolderMemberError.InsufficientPlan
+  commentId: T:Dropbox.Api.Sharing.UpdateFolderMemberError.InsufficientPlan
+  id: UpdateFolderMemberError.InsufficientPlan
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.UpdateFolderMemberError.InsufficientPlan.Instance
+  langs:
+  - csharp
+  - vb
+  name: UpdateFolderMemberError.InsufficientPlan
+  nameWithType: UpdateFolderMemberError.InsufficientPlan
+  fullName: Dropbox.Api.Sharing.UpdateFolderMemberError.InsufficientPlan
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UpdateFolderMemberError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: InsufficientPlan
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UpdateFolderMemberError.cs
+    startLine: 570
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The current user&apos;s account doesn&apos;t support this action. An example of this is\nwhen downgrading a member from editor to viewer. This action can only be performed\nby users that have upgraded to a Pro or Business plan.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class InsufficientPlan : UpdateFolderMemberError'
+    content.vb: >-
+      Public NotInheritable Class InsufficientPlan
+          Inherits UpdateFolderMemberError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Sharing.UpdateFolderMemberError
+  inheritedMembers:
+  - Dropbox.Api.Sharing.UpdateFolderMemberError.IsAccessError
+  - Dropbox.Api.Sharing.UpdateFolderMemberError.AsAccessError
+  - Dropbox.Api.Sharing.UpdateFolderMemberError.IsMemberError
+  - Dropbox.Api.Sharing.UpdateFolderMemberError.AsMemberError
+  - Dropbox.Api.Sharing.UpdateFolderMemberError.IsNoExplicitAccess
+  - Dropbox.Api.Sharing.UpdateFolderMemberError.AsNoExplicitAccess
+  - Dropbox.Api.Sharing.UpdateFolderMemberError.IsInsufficientPlan
+  - Dropbox.Api.Sharing.UpdateFolderMemberError.AsInsufficientPlan
+  - Dropbox.Api.Sharing.UpdateFolderMemberError.IsNoPermission
+  - Dropbox.Api.Sharing.UpdateFolderMemberError.AsNoPermission
+  - Dropbox.Api.Sharing.UpdateFolderMemberError.IsOther
+  - Dropbox.Api.Sharing.UpdateFolderMemberError.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Sharing.UpdateFolderMemberError.InsufficientPlan.Instance
+  commentId: F:Dropbox.Api.Sharing.UpdateFolderMemberError.InsufficientPlan.Instance
+  id: Instance
+  parent: Dropbox.Api.Sharing.UpdateFolderMemberError.InsufficientPlan
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: UpdateFolderMemberError.InsufficientPlan.Instance
+  fullName: Dropbox.Api.Sharing.UpdateFolderMemberError.InsufficientPlan.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UpdateFolderMemberError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UpdateFolderMemberError.cs
+    startLine: 595
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>A singleton instance of InsufficientPlan</p>\n"
+  example: []
+  syntax:
+    content: public static readonly UpdateFolderMemberError.InsufficientPlan Instance
+    return:
+      type: Dropbox.Api.Sharing.UpdateFolderMemberError.InsufficientPlan
+    content.vb: Public Shared ReadOnly Instance As UpdateFolderMemberError.InsufficientPlan
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.UpdateFolderMemberError
+  commentId: T:Dropbox.Api.Sharing.UpdateFolderMemberError
+  parent: Dropbox.Api.Sharing
+  name: UpdateFolderMemberError
+  nameWithType: UpdateFolderMemberError
+  fullName: Dropbox.Api.Sharing.UpdateFolderMemberError
+- uid: Dropbox.Api.Sharing.UpdateFolderMemberError.IsAccessError
+  commentId: P:Dropbox.Api.Sharing.UpdateFolderMemberError.IsAccessError
+  parent: Dropbox.Api.Sharing.UpdateFolderMemberError
+  name: IsAccessError
+  nameWithType: UpdateFolderMemberError.IsAccessError
+  fullName: Dropbox.Api.Sharing.UpdateFolderMemberError.IsAccessError
+- uid: Dropbox.Api.Sharing.UpdateFolderMemberError.AsAccessError
+  commentId: P:Dropbox.Api.Sharing.UpdateFolderMemberError.AsAccessError
+  parent: Dropbox.Api.Sharing.UpdateFolderMemberError
+  name: AsAccessError
+  nameWithType: UpdateFolderMemberError.AsAccessError
+  fullName: Dropbox.Api.Sharing.UpdateFolderMemberError.AsAccessError
+- uid: Dropbox.Api.Sharing.UpdateFolderMemberError.IsMemberError
+  commentId: P:Dropbox.Api.Sharing.UpdateFolderMemberError.IsMemberError
+  parent: Dropbox.Api.Sharing.UpdateFolderMemberError
+  name: IsMemberError
+  nameWithType: UpdateFolderMemberError.IsMemberError
+  fullName: Dropbox.Api.Sharing.UpdateFolderMemberError.IsMemberError
+- uid: Dropbox.Api.Sharing.UpdateFolderMemberError.AsMemberError
+  commentId: P:Dropbox.Api.Sharing.UpdateFolderMemberError.AsMemberError
+  parent: Dropbox.Api.Sharing.UpdateFolderMemberError
+  name: AsMemberError
+  nameWithType: UpdateFolderMemberError.AsMemberError
+  fullName: Dropbox.Api.Sharing.UpdateFolderMemberError.AsMemberError
+- uid: Dropbox.Api.Sharing.UpdateFolderMemberError.IsNoExplicitAccess
+  commentId: P:Dropbox.Api.Sharing.UpdateFolderMemberError.IsNoExplicitAccess
+  parent: Dropbox.Api.Sharing.UpdateFolderMemberError
+  name: IsNoExplicitAccess
+  nameWithType: UpdateFolderMemberError.IsNoExplicitAccess
+  fullName: Dropbox.Api.Sharing.UpdateFolderMemberError.IsNoExplicitAccess
+- uid: Dropbox.Api.Sharing.UpdateFolderMemberError.AsNoExplicitAccess
+  commentId: P:Dropbox.Api.Sharing.UpdateFolderMemberError.AsNoExplicitAccess
+  parent: Dropbox.Api.Sharing.UpdateFolderMemberError
+  name: AsNoExplicitAccess
+  nameWithType: UpdateFolderMemberError.AsNoExplicitAccess
+  fullName: Dropbox.Api.Sharing.UpdateFolderMemberError.AsNoExplicitAccess
+- uid: Dropbox.Api.Sharing.UpdateFolderMemberError.IsInsufficientPlan
+  commentId: P:Dropbox.Api.Sharing.UpdateFolderMemberError.IsInsufficientPlan
+  parent: Dropbox.Api.Sharing.UpdateFolderMemberError
+  name: IsInsufficientPlan
+  nameWithType: UpdateFolderMemberError.IsInsufficientPlan
+  fullName: Dropbox.Api.Sharing.UpdateFolderMemberError.IsInsufficientPlan
+- uid: Dropbox.Api.Sharing.UpdateFolderMemberError.AsInsufficientPlan
+  commentId: P:Dropbox.Api.Sharing.UpdateFolderMemberError.AsInsufficientPlan
+  parent: Dropbox.Api.Sharing.UpdateFolderMemberError
+  name: AsInsufficientPlan
+  nameWithType: UpdateFolderMemberError.AsInsufficientPlan
+  fullName: Dropbox.Api.Sharing.UpdateFolderMemberError.AsInsufficientPlan
+- uid: Dropbox.Api.Sharing.UpdateFolderMemberError.IsNoPermission
+  commentId: P:Dropbox.Api.Sharing.UpdateFolderMemberError.IsNoPermission
+  parent: Dropbox.Api.Sharing.UpdateFolderMemberError
+  name: IsNoPermission
+  nameWithType: UpdateFolderMemberError.IsNoPermission
+  fullName: Dropbox.Api.Sharing.UpdateFolderMemberError.IsNoPermission
+- uid: Dropbox.Api.Sharing.UpdateFolderMemberError.AsNoPermission
+  commentId: P:Dropbox.Api.Sharing.UpdateFolderMemberError.AsNoPermission
+  parent: Dropbox.Api.Sharing.UpdateFolderMemberError
+  name: AsNoPermission
+  nameWithType: UpdateFolderMemberError.AsNoPermission
+  fullName: Dropbox.Api.Sharing.UpdateFolderMemberError.AsNoPermission
+- uid: Dropbox.Api.Sharing.UpdateFolderMemberError.IsOther
+  commentId: P:Dropbox.Api.Sharing.UpdateFolderMemberError.IsOther
+  parent: Dropbox.Api.Sharing.UpdateFolderMemberError
+  name: IsOther
+  nameWithType: UpdateFolderMemberError.IsOther
+  fullName: Dropbox.Api.Sharing.UpdateFolderMemberError.IsOther
+- uid: Dropbox.Api.Sharing.UpdateFolderMemberError.AsOther
+  commentId: P:Dropbox.Api.Sharing.UpdateFolderMemberError.AsOther
+  parent: Dropbox.Api.Sharing.UpdateFolderMemberError
+  name: AsOther
+  nameWithType: UpdateFolderMemberError.AsOther
+  fullName: Dropbox.Api.Sharing.UpdateFolderMemberError.AsOther
+- uid: Dropbox.Api.Sharing.UpdateFolderMemberError.InsufficientPlan
+  commentId: T:Dropbox.Api.Sharing.UpdateFolderMemberError.InsufficientPlan
+  parent: Dropbox.Api.Sharing
+  name: UpdateFolderMemberError.InsufficientPlan
+  nameWithType: UpdateFolderMemberError.InsufficientPlan
+  fullName: Dropbox.Api.Sharing.UpdateFolderMemberError.InsufficientPlan
+shouldSkipMarkup: true

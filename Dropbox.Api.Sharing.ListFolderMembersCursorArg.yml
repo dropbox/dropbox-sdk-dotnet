@@ -1,0 +1,420 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.ListFolderMembersCursorArg
+  commentId: T:Dropbox.Api.Sharing.ListFolderMembersCursorArg
+  id: ListFolderMembersCursorArg
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.ListFolderMembersCursorArg.#ctor
+  - Dropbox.Api.Sharing.ListFolderMembersCursorArg.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.MemberAction},System.UInt32)
+  - Dropbox.Api.Sharing.ListFolderMembersCursorArg.Actions
+  - Dropbox.Api.Sharing.ListFolderMembersCursorArg.Limit
+  langs:
+  - csharp
+  - vb
+  name: ListFolderMembersCursorArg
+  nameWithType: ListFolderMembersCursorArg
+  fullName: Dropbox.Api.Sharing.ListFolderMembersCursorArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFolderMembersCursorArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ListFolderMembersCursorArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFolderMembersCursorArg.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The list folder members cursor arg object</p>\n"
+  example: []
+  syntax:
+    content: 'public class ListFolderMembersCursorArg : object'
+    content.vb: >-
+      Public Class ListFolderMembersCursorArg
+          Inherits Object
+  seealso:
+  - linkId: Dropbox.Api.Sharing.ListFolderMembersArgs
+    commentId: T:Dropbox.Api.Sharing.ListFolderMembersArgs
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Sharing.ListFolderMembersArgs
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Sharing.ListFolderMembersCursorArg.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.MemberAction},System.UInt32)
+  commentId: M:Dropbox.Api.Sharing.ListFolderMembersCursorArg.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.MemberAction},System.UInt32)
+  id: '#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.MemberAction},System.UInt32)'
+  parent: Dropbox.Api.Sharing.ListFolderMembersCursorArg
+  langs:
+  - csharp
+  - vb
+  name: ListFolderMembersCursorArg(System.Collections.Generic.IEnumerable<MemberAction>, UInt32)
+  nameWithType: ListFolderMembersCursorArg.ListFolderMembersCursorArg(System.Collections.Generic.IEnumerable<MemberAction>, UInt32)
+  fullName: Dropbox.Api.Sharing.ListFolderMembersCursorArg.ListFolderMembersCursorArg(System.Collections.Generic.IEnumerable<Dropbox.Api.Sharing.MemberAction>, System.UInt32)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFolderMembersCursorArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFolderMembersCursorArg.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.ListFolderMembersCursorArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public ListFolderMembersCursorArg(System.Collections.Generic.IEnumerable<MemberAction> actions = null, uint limit = null)
+    parameters:
+    - id: actions
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.MemberAction}
+      description: >-
+        This is a list indicating whether each returned member will
+
+        include a boolean value <xref href="Dropbox.Api.Sharing.MemberPermission.Allow" data-throw-if-not-resolved="false"></xref>
+
+        that describes whether the current user can perform the MemberAction on the
+
+        member.
+    - id: limit
+      type: System.UInt32
+      description: >-
+        The maximum number of results that include members, groups and
+
+        invitees to return per request.
+    content.vb: Public Sub New(actions As System.Collections.Generic.IEnumerable(Of MemberAction) = Nothing, limit As UInteger = Nothing)
+  overload: Dropbox.Api.Sharing.ListFolderMembersCursorArg.#ctor*
+  nameWithType.vb: ListFolderMembersCursorArg.ListFolderMembersCursorArg(System.Collections.Generic.IEnumerable(Of MemberAction), UInt32)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Sharing.ListFolderMembersCursorArg.ListFolderMembersCursorArg(System.Collections.Generic.IEnumerable(Of Dropbox.Api.Sharing.MemberAction), System.UInt32)
+  name.vb: ListFolderMembersCursorArg(System.Collections.Generic.IEnumerable(Of MemberAction), UInt32)
+- uid: Dropbox.Api.Sharing.ListFolderMembersCursorArg.#ctor
+  commentId: M:Dropbox.Api.Sharing.ListFolderMembersCursorArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Sharing.ListFolderMembersCursorArg
+  langs:
+  - csharp
+  - vb
+  name: ListFolderMembersCursorArg()
+  nameWithType: ListFolderMembersCursorArg.ListFolderMembersCursorArg()
+  fullName: Dropbox.Api.Sharing.ListFolderMembersCursorArg.ListFolderMembersCursorArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFolderMembersCursorArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFolderMembersCursorArg.cs
+    startLine: 64
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.ListFolderMembersCursorArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public ListFolderMembersCursorArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Sharing.ListFolderMembersCursorArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.ListFolderMembersCursorArg.Actions
+  commentId: P:Dropbox.Api.Sharing.ListFolderMembersCursorArg.Actions
+  id: Actions
+  parent: Dropbox.Api.Sharing.ListFolderMembersCursorArg
+  langs:
+  - csharp
+  - vb
+  name: Actions
+  nameWithType: ListFolderMembersCursorArg.Actions
+  fullName: Dropbox.Api.Sharing.ListFolderMembersCursorArg.Actions
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFolderMembersCursorArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Actions
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFolderMembersCursorArg.cs
+    startLine: 75
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>This is a list indicating whether each returned member will include a boolean\nvalue <xref href=\"Dropbox.Api.Sharing.MemberPermission.Allow\" data-throw-if-not-resolved=\"false\"></xref> that describes\nwhether the current user can perform the MemberAction on the member.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<MemberAction> Actions { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{Dropbox.Api.Sharing.MemberAction}
+    content.vb: Public Property Actions As System.Collections.Generic.IList(Of MemberAction)
+  overload: Dropbox.Api.Sharing.ListFolderMembersCursorArg.Actions*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.ListFolderMembersCursorArg.Limit
+  commentId: P:Dropbox.Api.Sharing.ListFolderMembersCursorArg.Limit
+  id: Limit
+  parent: Dropbox.Api.Sharing.ListFolderMembersCursorArg
+  langs:
+  - csharp
+  - vb
+  name: Limit
+  nameWithType: ListFolderMembersCursorArg.Limit
+  fullName: Dropbox.Api.Sharing.ListFolderMembersCursorArg.Limit
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFolderMembersCursorArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Limit
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFolderMembersCursorArg.cs
+    startLine: 81
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The maximum number of results that include members, groups and invitees to\nreturn per request.</p>\n"
+  example: []
+  syntax:
+    content: public uint Limit { get; protected set; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public Property Limit As UInteger
+  overload: Dropbox.Api.Sharing.ListFolderMembersCursorArg.Limit*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Sharing.ListFolderMembersArgs
+  commentId: T:Dropbox.Api.Sharing.ListFolderMembersArgs
+  parent: Dropbox.Api.Sharing
+  name: ListFolderMembersArgs
+  nameWithType: ListFolderMembersArgs
+  fullName: Dropbox.Api.Sharing.ListFolderMembersArgs
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.ListFolderMembersCursorArg
+  commentId: T:Dropbox.Api.Sharing.ListFolderMembersCursorArg
+  parent: Dropbox.Api.Sharing
+  name: ListFolderMembersCursorArg
+  nameWithType: ListFolderMembersCursorArg
+  fullName: Dropbox.Api.Sharing.ListFolderMembersCursorArg
+- uid: Dropbox.Api.Sharing.MemberPermission.Allow
+  commentId: P:Dropbox.Api.Sharing.MemberPermission.Allow
+  isExternal: true
+- uid: Dropbox.Api.Sharing.ListFolderMembersCursorArg.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.ListFolderMembersCursorArg.#ctor
+  name: ListFolderMembersCursorArg
+  nameWithType: ListFolderMembersCursorArg.ListFolderMembersCursorArg
+  fullName: Dropbox.Api.Sharing.ListFolderMembersCursorArg.ListFolderMembersCursorArg
+- uid: System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.MemberAction}
+  commentId: '!:System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.MemberAction}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<MemberAction>
+  nameWithType: System.Collections.Generic.IEnumerable<MemberAction>
+  fullName: System.Collections.Generic.IEnumerable<Dropbox.Api.Sharing.MemberAction>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of MemberAction)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Dropbox.Api.Sharing.MemberAction)
+  name.vb: System.Collections.Generic.IEnumerable(Of MemberAction)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Sharing.MemberAction
+    name: MemberAction
+    nameWithType: MemberAction
+    fullName: Dropbox.Api.Sharing.MemberAction
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Sharing.MemberAction
+    name: MemberAction
+    nameWithType: MemberAction
+    fullName: Dropbox.Api.Sharing.MemberAction
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.UInt32
+  isExternal: true
+  name: UInt32
+  nameWithType: UInt32
+  fullName: System.UInt32
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: System.Collections.Generic.IEnumerable<>
+  nameWithType: System.Collections.Generic.IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: System.Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Sharing.ListFolderMembersCursorArg.Actions*
+  commentId: Overload:Dropbox.Api.Sharing.ListFolderMembersCursorArg.Actions
+  name: Actions
+  nameWithType: ListFolderMembersCursorArg.Actions
+  fullName: Dropbox.Api.Sharing.ListFolderMembersCursorArg.Actions
+- uid: System.Collections.Generic.IList{Dropbox.Api.Sharing.MemberAction}
+  commentId: '!:System.Collections.Generic.IList{Dropbox.Api.Sharing.MemberAction}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<MemberAction>
+  nameWithType: System.Collections.Generic.IList<MemberAction>
+  fullName: System.Collections.Generic.IList<Dropbox.Api.Sharing.MemberAction>
+  nameWithType.vb: System.Collections.Generic.IList(Of MemberAction)
+  fullName.vb: System.Collections.Generic.IList(Of Dropbox.Api.Sharing.MemberAction)
+  name.vb: System.Collections.Generic.IList(Of MemberAction)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Sharing.MemberAction
+    name: MemberAction
+    nameWithType: MemberAction
+    fullName: Dropbox.Api.Sharing.MemberAction
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Sharing.MemberAction
+    name: MemberAction
+    nameWithType: MemberAction
+    fullName: Dropbox.Api.Sharing.MemberAction
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  isExternal: true
+  name: System.Collections.Generic.IList<>
+  nameWithType: System.Collections.Generic.IList<>
+  fullName: System.Collections.Generic.IList<>
+  nameWithType.vb: System.Collections.Generic.IList(Of )
+  fullName.vb: System.Collections.Generic.IList(Of )
+  name.vb: System.Collections.Generic.IList(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Sharing.ListFolderMembersCursorArg.Limit*
+  commentId: Overload:Dropbox.Api.Sharing.ListFolderMembersCursorArg.Limit
+  name: Limit
+  nameWithType: ListFolderMembersCursorArg.Limit
+  fullName: Dropbox.Api.Sharing.ListFolderMembersCursorArg.Limit
+shouldSkipMarkup: true

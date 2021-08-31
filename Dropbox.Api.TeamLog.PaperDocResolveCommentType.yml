@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.PaperDocResolveCommentType
+  commentId: T:Dropbox.Api.TeamLog.PaperDocResolveCommentType
+  id: PaperDocResolveCommentType
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.PaperDocResolveCommentType.#ctor
+  - Dropbox.Api.TeamLog.PaperDocResolveCommentType.#ctor(System.String)
+  - Dropbox.Api.TeamLog.PaperDocResolveCommentType.Description
+  langs:
+  - csharp
+  - vb
+  name: PaperDocResolveCommentType
+  nameWithType: PaperDocResolveCommentType
+  fullName: Dropbox.Api.TeamLog.PaperDocResolveCommentType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDocResolveCommentType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PaperDocResolveCommentType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDocResolveCommentType.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The paper doc resolve comment type object</p>\n"
+  example: []
+  syntax:
+    content: 'public class PaperDocResolveCommentType : object'
+    content.vb: >-
+      Public Class PaperDocResolveCommentType
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.PaperDocResolveCommentType.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.PaperDocResolveCommentType.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.PaperDocResolveCommentType
+  langs:
+  - csharp
+  - vb
+  name: PaperDocResolveCommentType(String)
+  nameWithType: PaperDocResolveCommentType.PaperDocResolveCommentType(String)
+  fullName: Dropbox.Api.TeamLog.PaperDocResolveCommentType.PaperDocResolveCommentType(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDocResolveCommentType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDocResolveCommentType.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.PaperDocResolveCommentType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public PaperDocResolveCommentType(string description)
+    parameters:
+    - id: description
+      type: System.String
+      description: The description
+    content.vb: Public Sub New(description As String)
+  overload: Dropbox.Api.TeamLog.PaperDocResolveCommentType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.PaperDocResolveCommentType.#ctor
+  commentId: M:Dropbox.Api.TeamLog.PaperDocResolveCommentType.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.PaperDocResolveCommentType
+  langs:
+  - csharp
+  - vb
+  name: PaperDocResolveCommentType()
+  nameWithType: PaperDocResolveCommentType.PaperDocResolveCommentType()
+  fullName: Dropbox.Api.TeamLog.PaperDocResolveCommentType.PaperDocResolveCommentType()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDocResolveCommentType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDocResolveCommentType.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.PaperDocResolveCommentType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public PaperDocResolveCommentType()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.PaperDocResolveCommentType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.PaperDocResolveCommentType.Description
+  commentId: P:Dropbox.Api.TeamLog.PaperDocResolveCommentType.Description
+  id: Description
+  parent: Dropbox.Api.TeamLog.PaperDocResolveCommentType
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: PaperDocResolveCommentType.Description
+  fullName: Dropbox.Api.TeamLog.PaperDocResolveCommentType.Description
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDocResolveCommentType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Description
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDocResolveCommentType.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets the description of the paper doc resolve comment type</p>\n"
+  example: []
+  syntax:
+    content: public string Description { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Dropbox.Api.TeamLog.PaperDocResolveCommentType.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.PaperDocResolveCommentType
+  commentId: T:Dropbox.Api.TeamLog.PaperDocResolveCommentType
+  parent: Dropbox.Api.TeamLog
+  name: PaperDocResolveCommentType
+  nameWithType: PaperDocResolveCommentType
+  fullName: Dropbox.Api.TeamLog.PaperDocResolveCommentType
+- uid: Dropbox.Api.TeamLog.PaperDocResolveCommentType.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.PaperDocResolveCommentType.#ctor
+  name: PaperDocResolveCommentType
+  nameWithType: PaperDocResolveCommentType.PaperDocResolveCommentType
+  fullName: Dropbox.Api.TeamLog.PaperDocResolveCommentType.PaperDocResolveCommentType
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.PaperDocResolveCommentType.Description*
+  commentId: Overload:Dropbox.Api.TeamLog.PaperDocResolveCommentType.Description
+  name: Description
+  nameWithType: PaperDocResolveCommentType.Description
+  fullName: Dropbox.Api.TeamLog.PaperDocResolveCommentType.Description
+shouldSkipMarkup: true

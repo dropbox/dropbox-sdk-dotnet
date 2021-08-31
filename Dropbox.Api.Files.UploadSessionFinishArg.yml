@@ -1,0 +1,245 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.UploadSessionFinishArg
+  commentId: T:Dropbox.Api.Files.UploadSessionFinishArg
+  id: UploadSessionFinishArg
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.UploadSessionFinishArg.#ctor
+  - Dropbox.Api.Files.UploadSessionFinishArg.#ctor(Dropbox.Api.Files.UploadSessionCursor,Dropbox.Api.Files.CommitInfo)
+  - Dropbox.Api.Files.UploadSessionFinishArg.Commit
+  - Dropbox.Api.Files.UploadSessionFinishArg.Cursor
+  langs:
+  - csharp
+  - vb
+  name: UploadSessionFinishArg
+  nameWithType: UploadSessionFinishArg
+  fullName: Dropbox.Api.Files.UploadSessionFinishArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionFinishArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: UploadSessionFinishArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionFinishArg.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The upload session finish arg object</p>\n"
+  example: []
+  syntax:
+    content: 'public class UploadSessionFinishArg : object'
+    content.vb: >-
+      Public Class UploadSessionFinishArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.UploadSessionFinishArg.#ctor(Dropbox.Api.Files.UploadSessionCursor,Dropbox.Api.Files.CommitInfo)
+  commentId: M:Dropbox.Api.Files.UploadSessionFinishArg.#ctor(Dropbox.Api.Files.UploadSessionCursor,Dropbox.Api.Files.CommitInfo)
+  id: '#ctor(Dropbox.Api.Files.UploadSessionCursor,Dropbox.Api.Files.CommitInfo)'
+  parent: Dropbox.Api.Files.UploadSessionFinishArg
+  langs:
+  - csharp
+  - vb
+  name: UploadSessionFinishArg(UploadSessionCursor, CommitInfo)
+  nameWithType: UploadSessionFinishArg.UploadSessionFinishArg(UploadSessionCursor, CommitInfo)
+  fullName: Dropbox.Api.Files.UploadSessionFinishArg.UploadSessionFinishArg(Dropbox.Api.Files.UploadSessionCursor, Dropbox.Api.Files.CommitInfo)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionFinishArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionFinishArg.cs
+    startLine: 36
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.UploadSessionFinishArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public UploadSessionFinishArg(UploadSessionCursor cursor, CommitInfo commit)
+    parameters:
+    - id: cursor
+      type: Dropbox.Api.Files.UploadSessionCursor
+      description: Contains the upload session ID and the offset.
+    - id: commit
+      type: Dropbox.Api.Files.CommitInfo
+      description: >-
+        Contains the path and other optional modifiers for the
+
+        commit.
+    content.vb: Public Sub New(cursor As UploadSessionCursor, commit As CommitInfo)
+  overload: Dropbox.Api.Files.UploadSessionFinishArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.UploadSessionFinishArg.#ctor
+  commentId: M:Dropbox.Api.Files.UploadSessionFinishArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.UploadSessionFinishArg
+  langs:
+  - csharp
+  - vb
+  name: UploadSessionFinishArg()
+  nameWithType: UploadSessionFinishArg.UploadSessionFinishArg()
+  fullName: Dropbox.Api.Files.UploadSessionFinishArg.UploadSessionFinishArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionFinishArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionFinishArg.cs
+    startLine: 59
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.UploadSessionFinishArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public UploadSessionFinishArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.UploadSessionFinishArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.UploadSessionFinishArg.Cursor
+  commentId: P:Dropbox.Api.Files.UploadSessionFinishArg.Cursor
+  id: Cursor
+  parent: Dropbox.Api.Files.UploadSessionFinishArg
+  langs:
+  - csharp
+  - vb
+  name: Cursor
+  nameWithType: UploadSessionFinishArg.Cursor
+  fullName: Dropbox.Api.Files.UploadSessionFinishArg.Cursor
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionFinishArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Cursor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionFinishArg.cs
+    startLine: 67
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Contains the upload session ID and the offset.</p>\n"
+  example: []
+  syntax:
+    content: public UploadSessionCursor Cursor { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.UploadSessionCursor
+    content.vb: Public Property Cursor As UploadSessionCursor
+  overload: Dropbox.Api.Files.UploadSessionFinishArg.Cursor*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.UploadSessionFinishArg.Commit
+  commentId: P:Dropbox.Api.Files.UploadSessionFinishArg.Commit
+  id: Commit
+  parent: Dropbox.Api.Files.UploadSessionFinishArg
+  langs:
+  - csharp
+  - vb
+  name: Commit
+  nameWithType: UploadSessionFinishArg.Commit
+  fullName: Dropbox.Api.Files.UploadSessionFinishArg.Commit
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionFinishArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Commit
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionFinishArg.cs
+    startLine: 72
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Contains the path and other optional modifiers for the commit.</p>\n"
+  example: []
+  syntax:
+    content: public CommitInfo Commit { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.CommitInfo
+    content.vb: Public Property Commit As CommitInfo
+  overload: Dropbox.Api.Files.UploadSessionFinishArg.Commit*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.UploadSessionFinishArg
+  commentId: T:Dropbox.Api.Files.UploadSessionFinishArg
+  parent: Dropbox.Api.Files
+  name: UploadSessionFinishArg
+  nameWithType: UploadSessionFinishArg
+  fullName: Dropbox.Api.Files.UploadSessionFinishArg
+- uid: Dropbox.Api.Files.UploadSessionFinishArg.#ctor*
+  commentId: Overload:Dropbox.Api.Files.UploadSessionFinishArg.#ctor
+  name: UploadSessionFinishArg
+  nameWithType: UploadSessionFinishArg.UploadSessionFinishArg
+  fullName: Dropbox.Api.Files.UploadSessionFinishArg.UploadSessionFinishArg
+- uid: Dropbox.Api.Files.UploadSessionCursor
+  commentId: T:Dropbox.Api.Files.UploadSessionCursor
+  parent: Dropbox.Api.Files
+  name: UploadSessionCursor
+  nameWithType: UploadSessionCursor
+  fullName: Dropbox.Api.Files.UploadSessionCursor
+- uid: Dropbox.Api.Files.CommitInfo
+  commentId: T:Dropbox.Api.Files.CommitInfo
+  parent: Dropbox.Api.Files
+  name: CommitInfo
+  nameWithType: CommitInfo
+  fullName: Dropbox.Api.Files.CommitInfo
+- uid: Dropbox.Api.Files.UploadSessionFinishArg.Cursor*
+  commentId: Overload:Dropbox.Api.Files.UploadSessionFinishArg.Cursor
+  name: Cursor
+  nameWithType: UploadSessionFinishArg.Cursor
+  fullName: Dropbox.Api.Files.UploadSessionFinishArg.Cursor
+- uid: Dropbox.Api.Files.UploadSessionFinishArg.Commit*
+  commentId: Overload:Dropbox.Api.Files.UploadSessionFinishArg.Commit
+  name: Commit
+  nameWithType: UploadSessionFinishArg.Commit
+  fullName: Dropbox.Api.Files.UploadSessionFinishArg.Commit
+shouldSkipMarkup: true

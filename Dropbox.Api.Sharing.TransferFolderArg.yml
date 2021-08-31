@@ -1,0 +1,238 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.TransferFolderArg
+  commentId: T:Dropbox.Api.Sharing.TransferFolderArg
+  id: TransferFolderArg
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.TransferFolderArg.#ctor
+  - Dropbox.Api.Sharing.TransferFolderArg.#ctor(System.String,System.String)
+  - Dropbox.Api.Sharing.TransferFolderArg.SharedFolderId
+  - Dropbox.Api.Sharing.TransferFolderArg.ToDropboxId
+  langs:
+  - csharp
+  - vb
+  name: TransferFolderArg
+  nameWithType: TransferFolderArg
+  fullName: Dropbox.Api.Sharing.TransferFolderArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/TransferFolderArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TransferFolderArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/TransferFolderArg.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The transfer folder arg object</p>\n"
+  example: []
+  syntax:
+    content: 'public class TransferFolderArg : object'
+    content.vb: >-
+      Public Class TransferFolderArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Sharing.TransferFolderArg.#ctor(System.String,System.String)
+  commentId: M:Dropbox.Api.Sharing.TransferFolderArg.#ctor(System.String,System.String)
+  id: '#ctor(System.String,System.String)'
+  parent: Dropbox.Api.Sharing.TransferFolderArg
+  langs:
+  - csharp
+  - vb
+  name: TransferFolderArg(String, String)
+  nameWithType: TransferFolderArg.TransferFolderArg(String, String)
+  fullName: Dropbox.Api.Sharing.TransferFolderArg.TransferFolderArg(System.String, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/TransferFolderArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/TransferFolderArg.cs
+    startLine: 36
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.TransferFolderArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public TransferFolderArg(string sharedFolderId, string toDropboxId)
+    parameters:
+    - id: sharedFolderId
+      type: System.String
+      description: The ID for the shared folder.
+    - id: toDropboxId
+      type: System.String
+      description: >-
+        A account or team member ID to transfer ownership
+
+        to.
+    content.vb: Public Sub New(sharedFolderId As String, toDropboxId As String)
+  overload: Dropbox.Api.Sharing.TransferFolderArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.TransferFolderArg.#ctor
+  commentId: M:Dropbox.Api.Sharing.TransferFolderArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Sharing.TransferFolderArg
+  langs:
+  - csharp
+  - vb
+  name: TransferFolderArg()
+  nameWithType: TransferFolderArg.TransferFolderArg()
+  fullName: Dropbox.Api.Sharing.TransferFolderArg.TransferFolderArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/TransferFolderArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/TransferFolderArg.cs
+    startLine: 67
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.TransferFolderArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public TransferFolderArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Sharing.TransferFolderArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.TransferFolderArg.SharedFolderId
+  commentId: P:Dropbox.Api.Sharing.TransferFolderArg.SharedFolderId
+  id: SharedFolderId
+  parent: Dropbox.Api.Sharing.TransferFolderArg
+  langs:
+  - csharp
+  - vb
+  name: SharedFolderId
+  nameWithType: TransferFolderArg.SharedFolderId
+  fullName: Dropbox.Api.Sharing.TransferFolderArg.SharedFolderId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/TransferFolderArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SharedFolderId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/TransferFolderArg.cs
+    startLine: 75
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The ID for the shared folder.</p>\n"
+  example: []
+  syntax:
+    content: public string SharedFolderId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SharedFolderId As String
+  overload: Dropbox.Api.Sharing.TransferFolderArg.SharedFolderId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.TransferFolderArg.ToDropboxId
+  commentId: P:Dropbox.Api.Sharing.TransferFolderArg.ToDropboxId
+  id: ToDropboxId
+  parent: Dropbox.Api.Sharing.TransferFolderArg
+  langs:
+  - csharp
+  - vb
+  name: ToDropboxId
+  nameWithType: TransferFolderArg.ToDropboxId
+  fullName: Dropbox.Api.Sharing.TransferFolderArg.ToDropboxId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/TransferFolderArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ToDropboxId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/TransferFolderArg.cs
+    startLine: 80
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>A account or team member ID to transfer ownership to.</p>\n"
+  example: []
+  syntax:
+    content: public string ToDropboxId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ToDropboxId As String
+  overload: Dropbox.Api.Sharing.TransferFolderArg.ToDropboxId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.TransferFolderArg
+  commentId: T:Dropbox.Api.Sharing.TransferFolderArg
+  parent: Dropbox.Api.Sharing
+  name: TransferFolderArg
+  nameWithType: TransferFolderArg
+  fullName: Dropbox.Api.Sharing.TransferFolderArg
+- uid: Dropbox.Api.Sharing.TransferFolderArg.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.TransferFolderArg.#ctor
+  name: TransferFolderArg
+  nameWithType: TransferFolderArg.TransferFolderArg
+  fullName: Dropbox.Api.Sharing.TransferFolderArg.TransferFolderArg
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Sharing.TransferFolderArg.SharedFolderId*
+  commentId: Overload:Dropbox.Api.Sharing.TransferFolderArg.SharedFolderId
+  name: SharedFolderId
+  nameWithType: TransferFolderArg.SharedFolderId
+  fullName: Dropbox.Api.Sharing.TransferFolderArg.SharedFolderId
+- uid: Dropbox.Api.Sharing.TransferFolderArg.ToDropboxId*
+  commentId: Overload:Dropbox.Api.Sharing.TransferFolderArg.ToDropboxId
+  name: ToDropboxId
+  nameWithType: TransferFolderArg.ToDropboxId
+  fullName: Dropbox.Api.Sharing.TransferFolderArg.ToDropboxId
+shouldSkipMarkup: true

@@ -1,0 +1,625 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.LegalHoldsPolicyCreateArg
+  commentId: T:Dropbox.Api.Team.LegalHoldsPolicyCreateArg
+  id: LegalHoldsPolicyCreateArg
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.LegalHoldsPolicyCreateArg.#ctor
+  - Dropbox.Api.Team.LegalHoldsPolicyCreateArg.#ctor(System.String,System.Collections.Generic.IEnumerable{System.String},System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime})
+  - Dropbox.Api.Team.LegalHoldsPolicyCreateArg.Description
+  - Dropbox.Api.Team.LegalHoldsPolicyCreateArg.EndDate
+  - Dropbox.Api.Team.LegalHoldsPolicyCreateArg.Members
+  - Dropbox.Api.Team.LegalHoldsPolicyCreateArg.Name
+  - Dropbox.Api.Team.LegalHoldsPolicyCreateArg.StartDate
+  langs:
+  - csharp
+  - vb
+  name: LegalHoldsPolicyCreateArg
+  nameWithType: LegalHoldsPolicyCreateArg
+  fullName: Dropbox.Api.Team.LegalHoldsPolicyCreateArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsPolicyCreateArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: LegalHoldsPolicyCreateArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsPolicyCreateArg.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The legal holds policy create arg object</p>\n"
+  example: []
+  syntax:
+    content: 'public class LegalHoldsPolicyCreateArg : object'
+    content.vb: >-
+      Public Class LegalHoldsPolicyCreateArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.LegalHoldsPolicyCreateArg.#ctor(System.String,System.Collections.Generic.IEnumerable{System.String},System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime})
+  commentId: M:Dropbox.Api.Team.LegalHoldsPolicyCreateArg.#ctor(System.String,System.Collections.Generic.IEnumerable{System.String},System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime})
+  id: '#ctor(System.String,System.Collections.Generic.IEnumerable{System.String},System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime})'
+  parent: Dropbox.Api.Team.LegalHoldsPolicyCreateArg
+  langs:
+  - csharp
+  - vb
+  name: LegalHoldsPolicyCreateArg(String, System.Collections.Generic.IEnumerable<String>, String, Nullable<System.DateTime>, Nullable<System.DateTime>)
+  nameWithType: LegalHoldsPolicyCreateArg.LegalHoldsPolicyCreateArg(String, System.Collections.Generic.IEnumerable<String>, String, Nullable<System.DateTime>, Nullable<System.DateTime>)
+  fullName: Dropbox.Api.Team.LegalHoldsPolicyCreateArg.LegalHoldsPolicyCreateArg(System.String, System.Collections.Generic.IEnumerable<System.String>, System.String, System.Nullable<System.DateTime>, System.Nullable<System.DateTime>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsPolicyCreateArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsPolicyCreateArg.cs
+    startLine: 38
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.LegalHoldsPolicyCreateArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public LegalHoldsPolicyCreateArg(string name, System.Collections.Generic.IEnumerable<string> members, string description = null, System.DateTime? startDate = null, System.DateTime? endDate = null)
+    parameters:
+    - id: name
+      type: System.String
+      description: Policy name.
+    - id: members
+      type: System.Collections.Generic.IEnumerable{System.String}
+      description: List of team member IDs added to the hold.
+    - id: description
+      type: System.String
+      description: A description of the legal hold policy.
+    - id: startDate
+      type: System.Nullable{System.DateTime}
+      description: start date of the legal hold policy.
+    - id: endDate
+      type: System.Nullable{System.DateTime}
+      description: end date of the legal hold policy.
+    content.vb: Public Sub New(name As String, members As System.Collections.Generic.IEnumerable(Of String), description As String = Nothing, startDate As System.DateTime? = Nothing, endDate As System.DateTime? = Nothing)
+  overload: Dropbox.Api.Team.LegalHoldsPolicyCreateArg.#ctor*
+  nameWithType.vb: LegalHoldsPolicyCreateArg.LegalHoldsPolicyCreateArg(String, System.Collections.Generic.IEnumerable(Of String), String, Nullable(Of System.DateTime), Nullable(Of System.DateTime))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Team.LegalHoldsPolicyCreateArg.LegalHoldsPolicyCreateArg(System.String, System.Collections.Generic.IEnumerable(Of System.String), System.String, System.Nullable(Of System.DateTime), System.Nullable(Of System.DateTime))
+  name.vb: LegalHoldsPolicyCreateArg(String, System.Collections.Generic.IEnumerable(Of String), String, Nullable(Of System.DateTime), Nullable(Of System.DateTime))
+- uid: Dropbox.Api.Team.LegalHoldsPolicyCreateArg.#ctor
+  commentId: M:Dropbox.Api.Team.LegalHoldsPolicyCreateArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.LegalHoldsPolicyCreateArg
+  langs:
+  - csharp
+  - vb
+  name: LegalHoldsPolicyCreateArg()
+  nameWithType: LegalHoldsPolicyCreateArg.LegalHoldsPolicyCreateArg()
+  fullName: Dropbox.Api.Team.LegalHoldsPolicyCreateArg.LegalHoldsPolicyCreateArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsPolicyCreateArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsPolicyCreateArg.cs
+    startLine: 81
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.LegalHoldsPolicyCreateArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public LegalHoldsPolicyCreateArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.LegalHoldsPolicyCreateArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.LegalHoldsPolicyCreateArg.Name
+  commentId: P:Dropbox.Api.Team.LegalHoldsPolicyCreateArg.Name
+  id: Name
+  parent: Dropbox.Api.Team.LegalHoldsPolicyCreateArg
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: LegalHoldsPolicyCreateArg.Name
+  fullName: Dropbox.Api.Team.LegalHoldsPolicyCreateArg.Name
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsPolicyCreateArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Name
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsPolicyCreateArg.cs
+    startLine: 89
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Policy name.</p>\n"
+  example: []
+  syntax:
+    content: public string Name { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: Dropbox.Api.Team.LegalHoldsPolicyCreateArg.Name*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.LegalHoldsPolicyCreateArg.Members
+  commentId: P:Dropbox.Api.Team.LegalHoldsPolicyCreateArg.Members
+  id: Members
+  parent: Dropbox.Api.Team.LegalHoldsPolicyCreateArg
+  langs:
+  - csharp
+  - vb
+  name: Members
+  nameWithType: LegalHoldsPolicyCreateArg.Members
+  fullName: Dropbox.Api.Team.LegalHoldsPolicyCreateArg.Members
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsPolicyCreateArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Members
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsPolicyCreateArg.cs
+    startLine: 94
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>List of team member IDs added to the hold.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<string> Members { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{System.String}
+    content.vb: Public Property Members As System.Collections.Generic.IList(Of String)
+  overload: Dropbox.Api.Team.LegalHoldsPolicyCreateArg.Members*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.LegalHoldsPolicyCreateArg.Description
+  commentId: P:Dropbox.Api.Team.LegalHoldsPolicyCreateArg.Description
+  id: Description
+  parent: Dropbox.Api.Team.LegalHoldsPolicyCreateArg
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: LegalHoldsPolicyCreateArg.Description
+  fullName: Dropbox.Api.Team.LegalHoldsPolicyCreateArg.Description
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsPolicyCreateArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Description
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsPolicyCreateArg.cs
+    startLine: 99
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>A description of the legal hold policy.</p>\n"
+  example: []
+  syntax:
+    content: public string Description { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Dropbox.Api.Team.LegalHoldsPolicyCreateArg.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.LegalHoldsPolicyCreateArg.StartDate
+  commentId: P:Dropbox.Api.Team.LegalHoldsPolicyCreateArg.StartDate
+  id: StartDate
+  parent: Dropbox.Api.Team.LegalHoldsPolicyCreateArg
+  langs:
+  - csharp
+  - vb
+  name: StartDate
+  nameWithType: LegalHoldsPolicyCreateArg.StartDate
+  fullName: Dropbox.Api.Team.LegalHoldsPolicyCreateArg.StartDate
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsPolicyCreateArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: StartDate
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsPolicyCreateArg.cs
+    startLine: 104
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>start date of the legal hold policy.</p>\n"
+  example: []
+  syntax:
+    content: public System.DateTime? StartDate { get; protected set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property StartDate As System.DateTime?
+  overload: Dropbox.Api.Team.LegalHoldsPolicyCreateArg.StartDate*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.LegalHoldsPolicyCreateArg.EndDate
+  commentId: P:Dropbox.Api.Team.LegalHoldsPolicyCreateArg.EndDate
+  id: EndDate
+  parent: Dropbox.Api.Team.LegalHoldsPolicyCreateArg
+  langs:
+  - csharp
+  - vb
+  name: EndDate
+  nameWithType: LegalHoldsPolicyCreateArg.EndDate
+  fullName: Dropbox.Api.Team.LegalHoldsPolicyCreateArg.EndDate
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsPolicyCreateArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: EndDate
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsPolicyCreateArg.cs
+    startLine: 109
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>end date of the legal hold policy.</p>\n"
+  example: []
+  syntax:
+    content: public System.DateTime? EndDate { get; protected set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property EndDate As System.DateTime?
+  overload: Dropbox.Api.Team.LegalHoldsPolicyCreateArg.EndDate*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.LegalHoldsPolicyCreateArg
+  commentId: T:Dropbox.Api.Team.LegalHoldsPolicyCreateArg
+  parent: Dropbox.Api.Team
+  name: LegalHoldsPolicyCreateArg
+  nameWithType: LegalHoldsPolicyCreateArg
+  fullName: Dropbox.Api.Team.LegalHoldsPolicyCreateArg
+- uid: Dropbox.Api.Team.LegalHoldsPolicyCreateArg.#ctor*
+  commentId: Overload:Dropbox.Api.Team.LegalHoldsPolicyCreateArg.#ctor
+  name: LegalHoldsPolicyCreateArg
+  nameWithType: LegalHoldsPolicyCreateArg.LegalHoldsPolicyCreateArg
+  fullName: Dropbox.Api.Team.LegalHoldsPolicyCreateArg.LegalHoldsPolicyCreateArg
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: '!:System.Collections.Generic.IEnumerable{System.String}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<String>
+  nameWithType: System.Collections.Generic.IEnumerable<String>
+  fullName: System.Collections.Generic.IEnumerable<System.String>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of String)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.String)
+  name.vb: System.Collections.Generic.IEnumerable(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable{System.DateTime}
+  commentId: '!:System.Nullable{System.DateTime}'
+  definition: System.Nullable`1
+  name: Nullable<System.DateTime>
+  nameWithType: Nullable<System.DateTime>
+  fullName: System.Nullable<System.DateTime>
+  nameWithType.vb: Nullable(Of System.DateTime)
+  fullName.vb: System.Nullable(Of System.DateTime)
+  name.vb: Nullable(Of System.DateTime)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.DateTime
+    name: System.DateTime
+    nameWithType: System.DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.DateTime
+    name: System.DateTime
+    nameWithType: System.DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: System.Collections.Generic.IEnumerable<>
+  nameWithType: System.Collections.Generic.IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: System.Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  isExternal: true
+  name: Nullable<>
+  nameWithType: Nullable<>
+  fullName: System.Nullable<>
+  nameWithType.vb: Nullable(Of )
+  fullName.vb: System.Nullable(Of )
+  name.vb: Nullable(Of )
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Team.LegalHoldsPolicyCreateArg.Name*
+  commentId: Overload:Dropbox.Api.Team.LegalHoldsPolicyCreateArg.Name
+  name: Name
+  nameWithType: LegalHoldsPolicyCreateArg.Name
+  fullName: Dropbox.Api.Team.LegalHoldsPolicyCreateArg.Name
+- uid: Dropbox.Api.Team.LegalHoldsPolicyCreateArg.Members*
+  commentId: Overload:Dropbox.Api.Team.LegalHoldsPolicyCreateArg.Members
+  name: Members
+  nameWithType: LegalHoldsPolicyCreateArg.Members
+  fullName: Dropbox.Api.Team.LegalHoldsPolicyCreateArg.Members
+- uid: System.Collections.Generic.IList{System.String}
+  commentId: '!:System.Collections.Generic.IList{System.String}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<String>
+  nameWithType: System.Collections.Generic.IList<String>
+  fullName: System.Collections.Generic.IList<System.String>
+  nameWithType.vb: System.Collections.Generic.IList(Of String)
+  fullName.vb: System.Collections.Generic.IList(Of System.String)
+  name.vb: System.Collections.Generic.IList(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  isExternal: true
+  name: System.Collections.Generic.IList<>
+  nameWithType: System.Collections.Generic.IList<>
+  fullName: System.Collections.Generic.IList<>
+  nameWithType.vb: System.Collections.Generic.IList(Of )
+  fullName.vb: System.Collections.Generic.IList(Of )
+  name.vb: System.Collections.Generic.IList(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Team.LegalHoldsPolicyCreateArg.Description*
+  commentId: Overload:Dropbox.Api.Team.LegalHoldsPolicyCreateArg.Description
+  name: Description
+  nameWithType: LegalHoldsPolicyCreateArg.Description
+  fullName: Dropbox.Api.Team.LegalHoldsPolicyCreateArg.Description
+- uid: Dropbox.Api.Team.LegalHoldsPolicyCreateArg.StartDate*
+  commentId: Overload:Dropbox.Api.Team.LegalHoldsPolicyCreateArg.StartDate
+  name: StartDate
+  nameWithType: LegalHoldsPolicyCreateArg.StartDate
+  fullName: Dropbox.Api.Team.LegalHoldsPolicyCreateArg.StartDate
+- uid: Dropbox.Api.Team.LegalHoldsPolicyCreateArg.EndDate*
+  commentId: Overload:Dropbox.Api.Team.LegalHoldsPolicyCreateArg.EndDate
+  name: EndDate
+  nameWithType: LegalHoldsPolicyCreateArg.EndDate
+  fullName: Dropbox.Api.Team.LegalHoldsPolicyCreateArg.EndDate
+shouldSkipMarkup: true

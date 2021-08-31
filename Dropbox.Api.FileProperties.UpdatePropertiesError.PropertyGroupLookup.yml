@@ -1,0 +1,285 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.FileProperties.UpdatePropertiesError.PropertyGroupLookup
+  commentId: T:Dropbox.Api.FileProperties.UpdatePropertiesError.PropertyGroupLookup
+  id: UpdatePropertiesError.PropertyGroupLookup
+  parent: Dropbox.Api.FileProperties
+  children:
+  - Dropbox.Api.FileProperties.UpdatePropertiesError.PropertyGroupLookup.#ctor(Dropbox.Api.FileProperties.LookUpPropertiesError)
+  - Dropbox.Api.FileProperties.UpdatePropertiesError.PropertyGroupLookup.Value
+  langs:
+  - csharp
+  - vb
+  name: UpdatePropertiesError.PropertyGroupLookup
+  nameWithType: UpdatePropertiesError.PropertyGroupLookup
+  fullName: Dropbox.Api.FileProperties.UpdatePropertiesError.PropertyGroupLookup
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/UpdatePropertiesError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PropertyGroupLookup
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/UpdatePropertiesError.cs
+    startLine: 366
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>The property group lookup object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class PropertyGroupLookup : UpdatePropertiesError'
+    content.vb: >-
+      Public NotInheritable Class PropertyGroupLookup
+          Inherits UpdatePropertiesError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.FileProperties.UpdatePropertiesError
+  inheritedMembers:
+  - Dropbox.Api.FileProperties.UpdatePropertiesError.IsPropertyGroupLookup
+  - Dropbox.Api.FileProperties.UpdatePropertiesError.AsPropertyGroupLookup
+  - Dropbox.Api.FileProperties.UpdatePropertiesError.IsPropertyFieldTooLarge
+  - Dropbox.Api.FileProperties.UpdatePropertiesError.AsPropertyFieldTooLarge
+  - Dropbox.Api.FileProperties.UpdatePropertiesError.IsDoesNotFitTemplate
+  - Dropbox.Api.FileProperties.UpdatePropertiesError.AsDoesNotFitTemplate
+  - Dropbox.Api.FileProperties.UpdatePropertiesError.IsDuplicatePropertyGroups
+  - Dropbox.Api.FileProperties.UpdatePropertiesError.AsDuplicatePropertyGroups
+  - Dropbox.Api.FileProperties.UpdatePropertiesError.IsPath
+  - Dropbox.Api.FileProperties.UpdatePropertiesError.AsPath
+  - Dropbox.Api.FileProperties.UpdatePropertiesError.IsUnsupportedFolder
+  - Dropbox.Api.FileProperties.UpdatePropertiesError.AsUnsupportedFolder
+  - Dropbox.Api.FileProperties.UpdatePropertiesError.IsTemplateNotFound
+  - Dropbox.Api.FileProperties.UpdatePropertiesError.AsTemplateNotFound
+  - Dropbox.Api.FileProperties.UpdatePropertiesError.IsRestrictedContent
+  - Dropbox.Api.FileProperties.UpdatePropertiesError.AsRestrictedContent
+  - Dropbox.Api.FileProperties.UpdatePropertiesError.IsOther
+  - Dropbox.Api.FileProperties.UpdatePropertiesError.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.FileProperties.UpdatePropertiesError.PropertyGroupLookup.#ctor(Dropbox.Api.FileProperties.LookUpPropertiesError)
+  commentId: M:Dropbox.Api.FileProperties.UpdatePropertiesError.PropertyGroupLookup.#ctor(Dropbox.Api.FileProperties.LookUpPropertiesError)
+  id: '#ctor(Dropbox.Api.FileProperties.LookUpPropertiesError)'
+  parent: Dropbox.Api.FileProperties.UpdatePropertiesError.PropertyGroupLookup
+  langs:
+  - csharp
+  - vb
+  name: PropertyGroupLookup(LookUpPropertiesError)
+  nameWithType: UpdatePropertiesError.PropertyGroupLookup.PropertyGroupLookup(LookUpPropertiesError)
+  fullName: Dropbox.Api.FileProperties.UpdatePropertiesError.PropertyGroupLookup.PropertyGroupLookup(Dropbox.Api.FileProperties.LookUpPropertiesError)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/UpdatePropertiesError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/UpdatePropertiesError.cs
+    startLine: 385
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.FileProperties.UpdatePropertiesError.PropertyGroupLookup\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public PropertyGroupLookup(LookUpPropertiesError value)
+    parameters:
+    - id: value
+      type: Dropbox.Api.FileProperties.LookUpPropertiesError
+      description: The value
+    content.vb: Public Sub New(value As LookUpPropertiesError)
+  overload: Dropbox.Api.FileProperties.UpdatePropertiesError.PropertyGroupLookup.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileProperties.UpdatePropertiesError.PropertyGroupLookup.Value
+  commentId: P:Dropbox.Api.FileProperties.UpdatePropertiesError.PropertyGroupLookup.Value
+  id: Value
+  parent: Dropbox.Api.FileProperties.UpdatePropertiesError.PropertyGroupLookup
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: UpdatePropertiesError.PropertyGroupLookup.Value
+  fullName: Dropbox.Api.FileProperties.UpdatePropertiesError.PropertyGroupLookup.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/UpdatePropertiesError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/UpdatePropertiesError.cs
+    startLine: 400
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public LookUpPropertiesError Value { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.FileProperties.LookUpPropertiesError
+    content.vb: Public ReadOnly Property Value As LookUpPropertiesError
+  overload: Dropbox.Api.FileProperties.UpdatePropertiesError.PropertyGroupLookup.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.FileProperties
+  commentId: N:Dropbox.Api.FileProperties
+  name: Dropbox.Api.FileProperties
+  nameWithType: Dropbox.Api.FileProperties
+  fullName: Dropbox.Api.FileProperties
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.FileProperties.UpdatePropertiesError
+  commentId: T:Dropbox.Api.FileProperties.UpdatePropertiesError
+  parent: Dropbox.Api.FileProperties
+  name: UpdatePropertiesError
+  nameWithType: UpdatePropertiesError
+  fullName: Dropbox.Api.FileProperties.UpdatePropertiesError
+- uid: Dropbox.Api.FileProperties.UpdatePropertiesError.IsPropertyGroupLookup
+  commentId: P:Dropbox.Api.FileProperties.UpdatePropertiesError.IsPropertyGroupLookup
+  parent: Dropbox.Api.FileProperties.UpdatePropertiesError
+  name: IsPropertyGroupLookup
+  nameWithType: UpdatePropertiesError.IsPropertyGroupLookup
+  fullName: Dropbox.Api.FileProperties.UpdatePropertiesError.IsPropertyGroupLookup
+- uid: Dropbox.Api.FileProperties.UpdatePropertiesError.AsPropertyGroupLookup
+  commentId: P:Dropbox.Api.FileProperties.UpdatePropertiesError.AsPropertyGroupLookup
+  parent: Dropbox.Api.FileProperties.UpdatePropertiesError
+  name: AsPropertyGroupLookup
+  nameWithType: UpdatePropertiesError.AsPropertyGroupLookup
+  fullName: Dropbox.Api.FileProperties.UpdatePropertiesError.AsPropertyGroupLookup
+- uid: Dropbox.Api.FileProperties.UpdatePropertiesError.IsPropertyFieldTooLarge
+  commentId: P:Dropbox.Api.FileProperties.UpdatePropertiesError.IsPropertyFieldTooLarge
+  parent: Dropbox.Api.FileProperties.UpdatePropertiesError
+  name: IsPropertyFieldTooLarge
+  nameWithType: UpdatePropertiesError.IsPropertyFieldTooLarge
+  fullName: Dropbox.Api.FileProperties.UpdatePropertiesError.IsPropertyFieldTooLarge
+- uid: Dropbox.Api.FileProperties.UpdatePropertiesError.AsPropertyFieldTooLarge
+  commentId: P:Dropbox.Api.FileProperties.UpdatePropertiesError.AsPropertyFieldTooLarge
+  parent: Dropbox.Api.FileProperties.UpdatePropertiesError
+  name: AsPropertyFieldTooLarge
+  nameWithType: UpdatePropertiesError.AsPropertyFieldTooLarge
+  fullName: Dropbox.Api.FileProperties.UpdatePropertiesError.AsPropertyFieldTooLarge
+- uid: Dropbox.Api.FileProperties.UpdatePropertiesError.IsDoesNotFitTemplate
+  commentId: P:Dropbox.Api.FileProperties.UpdatePropertiesError.IsDoesNotFitTemplate
+  parent: Dropbox.Api.FileProperties.UpdatePropertiesError
+  name: IsDoesNotFitTemplate
+  nameWithType: UpdatePropertiesError.IsDoesNotFitTemplate
+  fullName: Dropbox.Api.FileProperties.UpdatePropertiesError.IsDoesNotFitTemplate
+- uid: Dropbox.Api.FileProperties.UpdatePropertiesError.AsDoesNotFitTemplate
+  commentId: P:Dropbox.Api.FileProperties.UpdatePropertiesError.AsDoesNotFitTemplate
+  parent: Dropbox.Api.FileProperties.UpdatePropertiesError
+  name: AsDoesNotFitTemplate
+  nameWithType: UpdatePropertiesError.AsDoesNotFitTemplate
+  fullName: Dropbox.Api.FileProperties.UpdatePropertiesError.AsDoesNotFitTemplate
+- uid: Dropbox.Api.FileProperties.UpdatePropertiesError.IsDuplicatePropertyGroups
+  commentId: P:Dropbox.Api.FileProperties.UpdatePropertiesError.IsDuplicatePropertyGroups
+  parent: Dropbox.Api.FileProperties.UpdatePropertiesError
+  name: IsDuplicatePropertyGroups
+  nameWithType: UpdatePropertiesError.IsDuplicatePropertyGroups
+  fullName: Dropbox.Api.FileProperties.UpdatePropertiesError.IsDuplicatePropertyGroups
+- uid: Dropbox.Api.FileProperties.UpdatePropertiesError.AsDuplicatePropertyGroups
+  commentId: P:Dropbox.Api.FileProperties.UpdatePropertiesError.AsDuplicatePropertyGroups
+  parent: Dropbox.Api.FileProperties.UpdatePropertiesError
+  name: AsDuplicatePropertyGroups
+  nameWithType: UpdatePropertiesError.AsDuplicatePropertyGroups
+  fullName: Dropbox.Api.FileProperties.UpdatePropertiesError.AsDuplicatePropertyGroups
+- uid: Dropbox.Api.FileProperties.UpdatePropertiesError.IsPath
+  commentId: P:Dropbox.Api.FileProperties.UpdatePropertiesError.IsPath
+  parent: Dropbox.Api.FileProperties.UpdatePropertiesError
+  name: IsPath
+  nameWithType: UpdatePropertiesError.IsPath
+  fullName: Dropbox.Api.FileProperties.UpdatePropertiesError.IsPath
+- uid: Dropbox.Api.FileProperties.UpdatePropertiesError.AsPath
+  commentId: P:Dropbox.Api.FileProperties.UpdatePropertiesError.AsPath
+  parent: Dropbox.Api.FileProperties.UpdatePropertiesError
+  name: AsPath
+  nameWithType: UpdatePropertiesError.AsPath
+  fullName: Dropbox.Api.FileProperties.UpdatePropertiesError.AsPath
+- uid: Dropbox.Api.FileProperties.UpdatePropertiesError.IsUnsupportedFolder
+  commentId: P:Dropbox.Api.FileProperties.UpdatePropertiesError.IsUnsupportedFolder
+  parent: Dropbox.Api.FileProperties.UpdatePropertiesError
+  name: IsUnsupportedFolder
+  nameWithType: UpdatePropertiesError.IsUnsupportedFolder
+  fullName: Dropbox.Api.FileProperties.UpdatePropertiesError.IsUnsupportedFolder
+- uid: Dropbox.Api.FileProperties.UpdatePropertiesError.AsUnsupportedFolder
+  commentId: P:Dropbox.Api.FileProperties.UpdatePropertiesError.AsUnsupportedFolder
+  parent: Dropbox.Api.FileProperties.UpdatePropertiesError
+  name: AsUnsupportedFolder
+  nameWithType: UpdatePropertiesError.AsUnsupportedFolder
+  fullName: Dropbox.Api.FileProperties.UpdatePropertiesError.AsUnsupportedFolder
+- uid: Dropbox.Api.FileProperties.UpdatePropertiesError.IsTemplateNotFound
+  commentId: P:Dropbox.Api.FileProperties.UpdatePropertiesError.IsTemplateNotFound
+  parent: Dropbox.Api.FileProperties.UpdatePropertiesError
+  name: IsTemplateNotFound
+  nameWithType: UpdatePropertiesError.IsTemplateNotFound
+  fullName: Dropbox.Api.FileProperties.UpdatePropertiesError.IsTemplateNotFound
+- uid: Dropbox.Api.FileProperties.UpdatePropertiesError.AsTemplateNotFound
+  commentId: P:Dropbox.Api.FileProperties.UpdatePropertiesError.AsTemplateNotFound
+  parent: Dropbox.Api.FileProperties.UpdatePropertiesError
+  name: AsTemplateNotFound
+  nameWithType: UpdatePropertiesError.AsTemplateNotFound
+  fullName: Dropbox.Api.FileProperties.UpdatePropertiesError.AsTemplateNotFound
+- uid: Dropbox.Api.FileProperties.UpdatePropertiesError.IsRestrictedContent
+  commentId: P:Dropbox.Api.FileProperties.UpdatePropertiesError.IsRestrictedContent
+  parent: Dropbox.Api.FileProperties.UpdatePropertiesError
+  name: IsRestrictedContent
+  nameWithType: UpdatePropertiesError.IsRestrictedContent
+  fullName: Dropbox.Api.FileProperties.UpdatePropertiesError.IsRestrictedContent
+- uid: Dropbox.Api.FileProperties.UpdatePropertiesError.AsRestrictedContent
+  commentId: P:Dropbox.Api.FileProperties.UpdatePropertiesError.AsRestrictedContent
+  parent: Dropbox.Api.FileProperties.UpdatePropertiesError
+  name: AsRestrictedContent
+  nameWithType: UpdatePropertiesError.AsRestrictedContent
+  fullName: Dropbox.Api.FileProperties.UpdatePropertiesError.AsRestrictedContent
+- uid: Dropbox.Api.FileProperties.UpdatePropertiesError.IsOther
+  commentId: P:Dropbox.Api.FileProperties.UpdatePropertiesError.IsOther
+  parent: Dropbox.Api.FileProperties.UpdatePropertiesError
+  name: IsOther
+  nameWithType: UpdatePropertiesError.IsOther
+  fullName: Dropbox.Api.FileProperties.UpdatePropertiesError.IsOther
+- uid: Dropbox.Api.FileProperties.UpdatePropertiesError.AsOther
+  commentId: P:Dropbox.Api.FileProperties.UpdatePropertiesError.AsOther
+  parent: Dropbox.Api.FileProperties.UpdatePropertiesError
+  name: AsOther
+  nameWithType: UpdatePropertiesError.AsOther
+  fullName: Dropbox.Api.FileProperties.UpdatePropertiesError.AsOther
+- uid: Dropbox.Api.FileProperties.UpdatePropertiesError.PropertyGroupLookup
+  commentId: T:Dropbox.Api.FileProperties.UpdatePropertiesError.PropertyGroupLookup
+  parent: Dropbox.Api.FileProperties
+  name: UpdatePropertiesError.PropertyGroupLookup
+  nameWithType: UpdatePropertiesError.PropertyGroupLookup
+  fullName: Dropbox.Api.FileProperties.UpdatePropertiesError.PropertyGroupLookup
+- uid: Dropbox.Api.FileProperties.UpdatePropertiesError.PropertyGroupLookup.#ctor*
+  commentId: Overload:Dropbox.Api.FileProperties.UpdatePropertiesError.PropertyGroupLookup.#ctor
+  name: PropertyGroupLookup
+  nameWithType: UpdatePropertiesError.PropertyGroupLookup.PropertyGroupLookup
+  fullName: Dropbox.Api.FileProperties.UpdatePropertiesError.PropertyGroupLookup.PropertyGroupLookup
+- uid: Dropbox.Api.FileProperties.LookUpPropertiesError
+  commentId: T:Dropbox.Api.FileProperties.LookUpPropertiesError
+  parent: Dropbox.Api.FileProperties
+  name: LookUpPropertiesError
+  nameWithType: LookUpPropertiesError
+  fullName: Dropbox.Api.FileProperties.LookUpPropertiesError
+- uid: Dropbox.Api.FileProperties.UpdatePropertiesError.PropertyGroupLookup.Value*
+  commentId: Overload:Dropbox.Api.FileProperties.UpdatePropertiesError.PropertyGroupLookup.Value
+  name: Value
+  nameWithType: UpdatePropertiesError.PropertyGroupLookup.Value
+  fullName: Dropbox.Api.FileProperties.UpdatePropertiesError.PropertyGroupLookup.Value
+shouldSkipMarkup: true

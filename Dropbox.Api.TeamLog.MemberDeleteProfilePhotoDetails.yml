@@ -1,0 +1,96 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.MemberDeleteProfilePhotoDetails
+  commentId: T:Dropbox.Api.TeamLog.MemberDeleteProfilePhotoDetails
+  id: MemberDeleteProfilePhotoDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.MemberDeleteProfilePhotoDetails.#ctor
+  langs:
+  - csharp
+  - vb
+  name: MemberDeleteProfilePhotoDetails
+  nameWithType: MemberDeleteProfilePhotoDetails
+  fullName: Dropbox.Api.TeamLog.MemberDeleteProfilePhotoDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberDeleteProfilePhotoDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: MemberDeleteProfilePhotoDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberDeleteProfilePhotoDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Deleted team member profile photo.</p>\n"
+  example: []
+  syntax:
+    content: 'public class MemberDeleteProfilePhotoDetails : object'
+    content.vb: >-
+      Public Class MemberDeleteProfilePhotoDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.MemberDeleteProfilePhotoDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.MemberDeleteProfilePhotoDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.MemberDeleteProfilePhotoDetails
+  langs:
+  - csharp
+  - vb
+  name: MemberDeleteProfilePhotoDetails()
+  nameWithType: MemberDeleteProfilePhotoDetails.MemberDeleteProfilePhotoDetails()
+  fullName: Dropbox.Api.TeamLog.MemberDeleteProfilePhotoDetails.MemberDeleteProfilePhotoDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberDeleteProfilePhotoDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberDeleteProfilePhotoDetails.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.MemberDeleteProfilePhotoDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public MemberDeleteProfilePhotoDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.MemberDeleteProfilePhotoDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.MemberDeleteProfilePhotoDetails
+  commentId: T:Dropbox.Api.TeamLog.MemberDeleteProfilePhotoDetails
+  parent: Dropbox.Api.TeamLog
+  name: MemberDeleteProfilePhotoDetails
+  nameWithType: MemberDeleteProfilePhotoDetails
+  fullName: Dropbox.Api.TeamLog.MemberDeleteProfilePhotoDetails
+- uid: Dropbox.Api.TeamLog.MemberDeleteProfilePhotoDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberDeleteProfilePhotoDetails.#ctor
+  name: MemberDeleteProfilePhotoDetails
+  nameWithType: MemberDeleteProfilePhotoDetails.MemberDeleteProfilePhotoDetails
+  fullName: Dropbox.Api.TeamLog.MemberDeleteProfilePhotoDetails.MemberDeleteProfilePhotoDetails
+shouldSkipMarkup: true

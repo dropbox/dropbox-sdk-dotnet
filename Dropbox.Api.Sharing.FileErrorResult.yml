@@ -1,0 +1,474 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.FileErrorResult
+  commentId: T:Dropbox.Api.Sharing.FileErrorResult
+  id: FileErrorResult
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.FileErrorResult.#ctor
+  - Dropbox.Api.Sharing.FileErrorResult.AsFileNotFoundError
+  - Dropbox.Api.Sharing.FileErrorResult.AsInvalidFileActionError
+  - Dropbox.Api.Sharing.FileErrorResult.AsOther
+  - Dropbox.Api.Sharing.FileErrorResult.AsPermissionDeniedError
+  - Dropbox.Api.Sharing.FileErrorResult.IsFileNotFoundError
+  - Dropbox.Api.Sharing.FileErrorResult.IsInvalidFileActionError
+  - Dropbox.Api.Sharing.FileErrorResult.IsOther
+  - Dropbox.Api.Sharing.FileErrorResult.IsPermissionDeniedError
+  langs:
+  - csharp
+  - vb
+  name: FileErrorResult
+  nameWithType: FileErrorResult
+  fullName: Dropbox.Api.Sharing.FileErrorResult
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FileErrorResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: FileErrorResult
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FileErrorResult.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The file error result object</p>\n"
+  example: []
+  syntax:
+    content: 'public class FileErrorResult : object'
+    content.vb: >-
+      Public Class FileErrorResult
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Sharing.FileErrorResult.FileNotFoundError
+  - Dropbox.Api.Sharing.FileErrorResult.InvalidFileActionError
+  - Dropbox.Api.Sharing.FileErrorResult.Other
+  - Dropbox.Api.Sharing.FileErrorResult.PermissionDeniedError
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Sharing.FileErrorResult.#ctor
+  commentId: M:Dropbox.Api.Sharing.FileErrorResult.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Sharing.FileErrorResult
+  langs:
+  - csharp
+  - vb
+  name: FileErrorResult()
+  nameWithType: FileErrorResult.FileErrorResult()
+  fullName: Dropbox.Api.Sharing.FileErrorResult.FileErrorResult()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FileErrorResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FileErrorResult.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.FileErrorResult\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public FileErrorResult()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Sharing.FileErrorResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.FileErrorResult.IsFileNotFoundError
+  commentId: P:Dropbox.Api.Sharing.FileErrorResult.IsFileNotFoundError
+  id: IsFileNotFoundError
+  parent: Dropbox.Api.Sharing.FileErrorResult
+  langs:
+  - csharp
+  - vb
+  name: IsFileNotFoundError
+  nameWithType: FileErrorResult.IsFileNotFoundError
+  fullName: Dropbox.Api.Sharing.FileErrorResult.IsFileNotFoundError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FileErrorResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsFileNotFoundError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FileErrorResult.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is FileNotFoundError</p>\n"
+  example: []
+  syntax:
+    content: public bool IsFileNotFoundError { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsFileNotFoundError As Boolean
+  overload: Dropbox.Api.Sharing.FileErrorResult.IsFileNotFoundError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.FileErrorResult.AsFileNotFoundError
+  commentId: P:Dropbox.Api.Sharing.FileErrorResult.AsFileNotFoundError
+  id: AsFileNotFoundError
+  parent: Dropbox.Api.Sharing.FileErrorResult
+  langs:
+  - csharp
+  - vb
+  name: AsFileNotFoundError
+  nameWithType: FileErrorResult.AsFileNotFoundError
+  fullName: Dropbox.Api.Sharing.FileErrorResult.AsFileNotFoundError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FileErrorResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsFileNotFoundError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FileErrorResult.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a FileNotFoundError, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public FileErrorResult.FileNotFoundError AsFileNotFoundError { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.FileErrorResult.FileNotFoundError
+    content.vb: Public ReadOnly Property AsFileNotFoundError As FileErrorResult.FileNotFoundError
+  overload: Dropbox.Api.Sharing.FileErrorResult.AsFileNotFoundError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.FileErrorResult.IsInvalidFileActionError
+  commentId: P:Dropbox.Api.Sharing.FileErrorResult.IsInvalidFileActionError
+  id: IsInvalidFileActionError
+  parent: Dropbox.Api.Sharing.FileErrorResult
+  langs:
+  - csharp
+  - vb
+  name: IsInvalidFileActionError
+  nameWithType: FileErrorResult.IsInvalidFileActionError
+  fullName: Dropbox.Api.Sharing.FileErrorResult.IsInvalidFileActionError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FileErrorResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsInvalidFileActionError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FileErrorResult.cs
+    startLine: 63
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is\nInvalidFileActionError</p>\n"
+  example: []
+  syntax:
+    content: public bool IsInvalidFileActionError { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsInvalidFileActionError As Boolean
+  overload: Dropbox.Api.Sharing.FileErrorResult.IsInvalidFileActionError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.FileErrorResult.AsInvalidFileActionError
+  commentId: P:Dropbox.Api.Sharing.FileErrorResult.AsInvalidFileActionError
+  id: AsInvalidFileActionError
+  parent: Dropbox.Api.Sharing.FileErrorResult
+  langs:
+  - csharp
+  - vb
+  name: AsInvalidFileActionError
+  nameWithType: FileErrorResult.AsInvalidFileActionError
+  fullName: Dropbox.Api.Sharing.FileErrorResult.AsInvalidFileActionError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FileErrorResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsInvalidFileActionError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FileErrorResult.cs
+    startLine: 74
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a InvalidFileActionError, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public FileErrorResult.InvalidFileActionError AsInvalidFileActionError { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.FileErrorResult.InvalidFileActionError
+    content.vb: Public ReadOnly Property AsInvalidFileActionError As FileErrorResult.InvalidFileActionError
+  overload: Dropbox.Api.Sharing.FileErrorResult.AsInvalidFileActionError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.FileErrorResult.IsPermissionDeniedError
+  commentId: P:Dropbox.Api.Sharing.FileErrorResult.IsPermissionDeniedError
+  id: IsPermissionDeniedError
+  parent: Dropbox.Api.Sharing.FileErrorResult
+  langs:
+  - csharp
+  - vb
+  name: IsPermissionDeniedError
+  nameWithType: FileErrorResult.IsPermissionDeniedError
+  fullName: Dropbox.Api.Sharing.FileErrorResult.IsPermissionDeniedError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FileErrorResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsPermissionDeniedError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FileErrorResult.cs
+    startLine: 85
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is PermissionDeniedError</p>\n"
+  example: []
+  syntax:
+    content: public bool IsPermissionDeniedError { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsPermissionDeniedError As Boolean
+  overload: Dropbox.Api.Sharing.FileErrorResult.IsPermissionDeniedError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.FileErrorResult.AsPermissionDeniedError
+  commentId: P:Dropbox.Api.Sharing.FileErrorResult.AsPermissionDeniedError
+  id: AsPermissionDeniedError
+  parent: Dropbox.Api.Sharing.FileErrorResult
+  langs:
+  - csharp
+  - vb
+  name: AsPermissionDeniedError
+  nameWithType: FileErrorResult.AsPermissionDeniedError
+  fullName: Dropbox.Api.Sharing.FileErrorResult.AsPermissionDeniedError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FileErrorResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsPermissionDeniedError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FileErrorResult.cs
+    startLine: 96
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a PermissionDeniedError, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public FileErrorResult.PermissionDeniedError AsPermissionDeniedError { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.FileErrorResult.PermissionDeniedError
+    content.vb: Public ReadOnly Property AsPermissionDeniedError As FileErrorResult.PermissionDeniedError
+  overload: Dropbox.Api.Sharing.FileErrorResult.AsPermissionDeniedError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.FileErrorResult.IsOther
+  commentId: P:Dropbox.Api.Sharing.FileErrorResult.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Sharing.FileErrorResult
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: FileErrorResult.IsOther
+  fullName: Dropbox.Api.Sharing.FileErrorResult.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FileErrorResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FileErrorResult.cs
+    startLine: 107
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Sharing.FileErrorResult.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.FileErrorResult.AsOther
+  commentId: P:Dropbox.Api.Sharing.FileErrorResult.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Sharing.FileErrorResult
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: FileErrorResult.AsOther
+  fullName: Dropbox.Api.Sharing.FileErrorResult.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FileErrorResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FileErrorResult.cs
+    startLine: 118
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public FileErrorResult.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.FileErrorResult.Other
+    content.vb: Public ReadOnly Property AsOther As FileErrorResult.Other
+  overload: Dropbox.Api.Sharing.FileErrorResult.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.FileErrorResult
+  commentId: T:Dropbox.Api.Sharing.FileErrorResult
+  parent: Dropbox.Api.Sharing
+  name: FileErrorResult
+  nameWithType: FileErrorResult
+  fullName: Dropbox.Api.Sharing.FileErrorResult
+- uid: Dropbox.Api.Sharing.FileErrorResult.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.FileErrorResult.#ctor
+  name: FileErrorResult
+  nameWithType: FileErrorResult.FileErrorResult
+  fullName: Dropbox.Api.Sharing.FileErrorResult.FileErrorResult
+- uid: Dropbox.Api.Sharing.FileErrorResult.IsFileNotFoundError*
+  commentId: Overload:Dropbox.Api.Sharing.FileErrorResult.IsFileNotFoundError
+  name: IsFileNotFoundError
+  nameWithType: FileErrorResult.IsFileNotFoundError
+  fullName: Dropbox.Api.Sharing.FileErrorResult.IsFileNotFoundError
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Sharing.FileErrorResult.AsFileNotFoundError*
+  commentId: Overload:Dropbox.Api.Sharing.FileErrorResult.AsFileNotFoundError
+  name: AsFileNotFoundError
+  nameWithType: FileErrorResult.AsFileNotFoundError
+  fullName: Dropbox.Api.Sharing.FileErrorResult.AsFileNotFoundError
+- uid: Dropbox.Api.Sharing.FileErrorResult.FileNotFoundError
+  commentId: T:Dropbox.Api.Sharing.FileErrorResult.FileNotFoundError
+  parent: Dropbox.Api.Sharing
+  name: FileErrorResult.FileNotFoundError
+  nameWithType: FileErrorResult.FileNotFoundError
+  fullName: Dropbox.Api.Sharing.FileErrorResult.FileNotFoundError
+- uid: Dropbox.Api.Sharing.FileErrorResult.IsInvalidFileActionError*
+  commentId: Overload:Dropbox.Api.Sharing.FileErrorResult.IsInvalidFileActionError
+  name: IsInvalidFileActionError
+  nameWithType: FileErrorResult.IsInvalidFileActionError
+  fullName: Dropbox.Api.Sharing.FileErrorResult.IsInvalidFileActionError
+- uid: Dropbox.Api.Sharing.FileErrorResult.AsInvalidFileActionError*
+  commentId: Overload:Dropbox.Api.Sharing.FileErrorResult.AsInvalidFileActionError
+  name: AsInvalidFileActionError
+  nameWithType: FileErrorResult.AsInvalidFileActionError
+  fullName: Dropbox.Api.Sharing.FileErrorResult.AsInvalidFileActionError
+- uid: Dropbox.Api.Sharing.FileErrorResult.InvalidFileActionError
+  commentId: T:Dropbox.Api.Sharing.FileErrorResult.InvalidFileActionError
+  parent: Dropbox.Api.Sharing
+  name: FileErrorResult.InvalidFileActionError
+  nameWithType: FileErrorResult.InvalidFileActionError
+  fullName: Dropbox.Api.Sharing.FileErrorResult.InvalidFileActionError
+- uid: Dropbox.Api.Sharing.FileErrorResult.IsPermissionDeniedError*
+  commentId: Overload:Dropbox.Api.Sharing.FileErrorResult.IsPermissionDeniedError
+  name: IsPermissionDeniedError
+  nameWithType: FileErrorResult.IsPermissionDeniedError
+  fullName: Dropbox.Api.Sharing.FileErrorResult.IsPermissionDeniedError
+- uid: Dropbox.Api.Sharing.FileErrorResult.AsPermissionDeniedError*
+  commentId: Overload:Dropbox.Api.Sharing.FileErrorResult.AsPermissionDeniedError
+  name: AsPermissionDeniedError
+  nameWithType: FileErrorResult.AsPermissionDeniedError
+  fullName: Dropbox.Api.Sharing.FileErrorResult.AsPermissionDeniedError
+- uid: Dropbox.Api.Sharing.FileErrorResult.PermissionDeniedError
+  commentId: T:Dropbox.Api.Sharing.FileErrorResult.PermissionDeniedError
+  parent: Dropbox.Api.Sharing
+  name: FileErrorResult.PermissionDeniedError
+  nameWithType: FileErrorResult.PermissionDeniedError
+  fullName: Dropbox.Api.Sharing.FileErrorResult.PermissionDeniedError
+- uid: Dropbox.Api.Sharing.FileErrorResult.IsOther*
+  commentId: Overload:Dropbox.Api.Sharing.FileErrorResult.IsOther
+  name: IsOther
+  nameWithType: FileErrorResult.IsOther
+  fullName: Dropbox.Api.Sharing.FileErrorResult.IsOther
+- uid: Dropbox.Api.Sharing.FileErrorResult.AsOther*
+  commentId: Overload:Dropbox.Api.Sharing.FileErrorResult.AsOther
+  name: AsOther
+  nameWithType: FileErrorResult.AsOther
+  fullName: Dropbox.Api.Sharing.FileErrorResult.AsOther
+- uid: Dropbox.Api.Sharing.FileErrorResult.Other
+  commentId: T:Dropbox.Api.Sharing.FileErrorResult.Other
+  parent: Dropbox.Api.Sharing
+  name: FileErrorResult.Other
+  nameWithType: FileErrorResult.Other
+  fullName: Dropbox.Api.Sharing.FileErrorResult.Other
+shouldSkipMarkup: true

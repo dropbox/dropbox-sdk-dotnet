@@ -1,0 +1,193 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.SearchV2ContinueArg
+  commentId: T:Dropbox.Api.Files.SearchV2ContinueArg
+  id: SearchV2ContinueArg
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.SearchV2ContinueArg.#ctor
+  - Dropbox.Api.Files.SearchV2ContinueArg.#ctor(System.String)
+  - Dropbox.Api.Files.SearchV2ContinueArg.Cursor
+  langs:
+  - csharp
+  - vb
+  name: SearchV2ContinueArg
+  nameWithType: SearchV2ContinueArg
+  fullName: Dropbox.Api.Files.SearchV2ContinueArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchV2ContinueArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SearchV2ContinueArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchV2ContinueArg.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The search v2 continue arg object</p>\n"
+  example: []
+  syntax:
+    content: 'public class SearchV2ContinueArg : object'
+    content.vb: >-
+      Public Class SearchV2ContinueArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.SearchV2ContinueArg.#ctor(System.String)
+  commentId: M:Dropbox.Api.Files.SearchV2ContinueArg.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.Files.SearchV2ContinueArg
+  langs:
+  - csharp
+  - vb
+  name: SearchV2ContinueArg(String)
+  nameWithType: SearchV2ContinueArg.SearchV2ContinueArg(String)
+  fullName: Dropbox.Api.Files.SearchV2ContinueArg.SearchV2ContinueArg(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchV2ContinueArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchV2ContinueArg.cs
+    startLine: 36
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.SearchV2ContinueArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public SearchV2ContinueArg(string cursor)
+    parameters:
+    - id: cursor
+      type: System.String
+      description: >-
+        The cursor returned by your last call to <xref href="Dropbox.Api.Files.Routes.FilesUserRoutes.SearchV2Async(Dropbox.Api.Files.SearchV2Arg)" data-throw-if-not-resolved="false"></xref>. Used to fetch the
+
+        next page of results.
+    content.vb: Public Sub New(cursor As String)
+  overload: Dropbox.Api.Files.SearchV2ContinueArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.SearchV2ContinueArg.#ctor
+  commentId: M:Dropbox.Api.Files.SearchV2ContinueArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.SearchV2ContinueArg
+  langs:
+  - csharp
+  - vb
+  name: SearchV2ContinueArg()
+  nameWithType: SearchV2ContinueArg.SearchV2ContinueArg()
+  fullName: Dropbox.Api.Files.SearchV2ContinueArg.SearchV2ContinueArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchV2ContinueArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchV2ContinueArg.cs
+    startLine: 56
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.SearchV2ContinueArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public SearchV2ContinueArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.SearchV2ContinueArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.SearchV2ContinueArg.Cursor
+  commentId: P:Dropbox.Api.Files.SearchV2ContinueArg.Cursor
+  id: Cursor
+  parent: Dropbox.Api.Files.SearchV2ContinueArg
+  langs:
+  - csharp
+  - vb
+  name: Cursor
+  nameWithType: SearchV2ContinueArg.Cursor
+  fullName: Dropbox.Api.Files.SearchV2ContinueArg.Cursor
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchV2ContinueArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Cursor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchV2ContinueArg.cs
+    startLine: 66
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The cursor returned by your last call to <xref href=\"Dropbox.Api.Files.Routes.FilesUserRoutes.SearchV2Async(Dropbox.Api.Files.SearchV2Arg)\" data-throw-if-not-resolved=\"false\"></xref>. Used to fetch the\nnext page of results.</p>\n"
+  example: []
+  syntax:
+    content: public string Cursor { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Cursor As String
+  overload: Dropbox.Api.Files.SearchV2ContinueArg.Cursor*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.SearchV2ContinueArg
+  commentId: T:Dropbox.Api.Files.SearchV2ContinueArg
+  parent: Dropbox.Api.Files
+  name: SearchV2ContinueArg
+  nameWithType: SearchV2ContinueArg
+  fullName: Dropbox.Api.Files.SearchV2ContinueArg
+- uid: Dropbox.Api.Files.Routes.FilesUserRoutes.SearchV2Async(Dropbox.Api.Files.SearchV2Arg)
+  commentId: M:Dropbox.Api.Files.Routes.FilesUserRoutes.SearchV2Async(Dropbox.Api.Files.SearchV2Arg)
+  isExternal: true
+- uid: Dropbox.Api.Files.SearchV2ContinueArg.#ctor*
+  commentId: Overload:Dropbox.Api.Files.SearchV2ContinueArg.#ctor
+  name: SearchV2ContinueArg
+  nameWithType: SearchV2ContinueArg.SearchV2ContinueArg
+  fullName: Dropbox.Api.Files.SearchV2ContinueArg.SearchV2ContinueArg
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Files.SearchV2ContinueArg.Cursor*
+  commentId: Overload:Dropbox.Api.Files.SearchV2ContinueArg.Cursor
+  name: Cursor
+  nameWithType: SearchV2ContinueArg.Cursor
+  fullName: Dropbox.Api.Files.SearchV2ContinueArg.Cursor
+shouldSkipMarkup: true

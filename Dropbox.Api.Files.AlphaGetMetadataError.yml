@@ -1,0 +1,288 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.AlphaGetMetadataError
+  commentId: T:Dropbox.Api.Files.AlphaGetMetadataError
+  id: AlphaGetMetadataError
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.AlphaGetMetadataError.#ctor
+  - Dropbox.Api.Files.AlphaGetMetadataError.AsPath
+  - Dropbox.Api.Files.AlphaGetMetadataError.AsPropertiesError
+  - Dropbox.Api.Files.AlphaGetMetadataError.IsPath
+  - Dropbox.Api.Files.AlphaGetMetadataError.IsPropertiesError
+  langs:
+  - csharp
+  - vb
+  name: AlphaGetMetadataError
+  nameWithType: AlphaGetMetadataError
+  fullName: Dropbox.Api.Files.AlphaGetMetadataError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/AlphaGetMetadataError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AlphaGetMetadataError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/AlphaGetMetadataError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The alpha get metadata error object</p>\n"
+  example: []
+  syntax:
+    content: 'public class AlphaGetMetadataError : object'
+    content.vb: >-
+      Public Class AlphaGetMetadataError
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Files.AlphaGetMetadataError.Path
+  - Dropbox.Api.Files.AlphaGetMetadataError.PropertiesError
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.AlphaGetMetadataError.#ctor
+  commentId: M:Dropbox.Api.Files.AlphaGetMetadataError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.AlphaGetMetadataError
+  langs:
+  - csharp
+  - vb
+  name: AlphaGetMetadataError()
+  nameWithType: AlphaGetMetadataError.AlphaGetMetadataError()
+  fullName: Dropbox.Api.Files.AlphaGetMetadataError.AlphaGetMetadataError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/AlphaGetMetadataError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/AlphaGetMetadataError.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.AlphaGetMetadataError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public AlphaGetMetadataError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.AlphaGetMetadataError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.AlphaGetMetadataError.IsPropertiesError
+  commentId: P:Dropbox.Api.Files.AlphaGetMetadataError.IsPropertiesError
+  id: IsPropertiesError
+  parent: Dropbox.Api.Files.AlphaGetMetadataError
+  langs:
+  - csharp
+  - vb
+  name: IsPropertiesError
+  nameWithType: AlphaGetMetadataError.IsPropertiesError
+  fullName: Dropbox.Api.Files.AlphaGetMetadataError.IsPropertiesError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/AlphaGetMetadataError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsPropertiesError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/AlphaGetMetadataError.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is PropertiesError</p>\n"
+  example: []
+  syntax:
+    content: public bool IsPropertiesError { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsPropertiesError As Boolean
+  overload: Dropbox.Api.Files.AlphaGetMetadataError.IsPropertiesError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.AlphaGetMetadataError.AsPropertiesError
+  commentId: P:Dropbox.Api.Files.AlphaGetMetadataError.AsPropertiesError
+  id: AsPropertiesError
+  parent: Dropbox.Api.Files.AlphaGetMetadataError
+  langs:
+  - csharp
+  - vb
+  name: AsPropertiesError
+  nameWithType: AlphaGetMetadataError.AsPropertiesError
+  fullName: Dropbox.Api.Files.AlphaGetMetadataError.AsPropertiesError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/AlphaGetMetadataError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsPropertiesError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/AlphaGetMetadataError.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a PropertiesError, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public AlphaGetMetadataError.PropertiesError AsPropertiesError { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.AlphaGetMetadataError.PropertiesError
+    content.vb: Public ReadOnly Property AsPropertiesError As AlphaGetMetadataError.PropertiesError
+  overload: Dropbox.Api.Files.AlphaGetMetadataError.AsPropertiesError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.AlphaGetMetadataError.IsPath
+  commentId: P:Dropbox.Api.Files.AlphaGetMetadataError.IsPath
+  id: IsPath
+  parent: Dropbox.Api.Files.AlphaGetMetadataError
+  langs:
+  - csharp
+  - vb
+  name: IsPath
+  nameWithType: AlphaGetMetadataError.IsPath
+  fullName: Dropbox.Api.Files.AlphaGetMetadataError.IsPath
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/AlphaGetMetadataError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsPath
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/AlphaGetMetadataError.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is Path</p>\n"
+  example: []
+  syntax:
+    content: public bool IsPath { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsPath As Boolean
+  overload: Dropbox.Api.Files.AlphaGetMetadataError.IsPath*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.AlphaGetMetadataError.AsPath
+  commentId: P:Dropbox.Api.Files.AlphaGetMetadataError.AsPath
+  id: AsPath
+  parent: Dropbox.Api.Files.AlphaGetMetadataError
+  langs:
+  - csharp
+  - vb
+  name: AsPath
+  nameWithType: AlphaGetMetadataError.AsPath
+  fullName: Dropbox.Api.Files.AlphaGetMetadataError.AsPath
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/AlphaGetMetadataError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsPath
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/AlphaGetMetadataError.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a Path, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public AlphaGetMetadataError.Path AsPath { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.AlphaGetMetadataError.Path
+    content.vb: Public ReadOnly Property AsPath As AlphaGetMetadataError.Path
+  overload: Dropbox.Api.Files.AlphaGetMetadataError.AsPath*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.AlphaGetMetadataError
+  commentId: T:Dropbox.Api.Files.AlphaGetMetadataError
+  parent: Dropbox.Api.Files
+  name: AlphaGetMetadataError
+  nameWithType: AlphaGetMetadataError
+  fullName: Dropbox.Api.Files.AlphaGetMetadataError
+- uid: Dropbox.Api.Files.AlphaGetMetadataError.#ctor*
+  commentId: Overload:Dropbox.Api.Files.AlphaGetMetadataError.#ctor
+  name: AlphaGetMetadataError
+  nameWithType: AlphaGetMetadataError.AlphaGetMetadataError
+  fullName: Dropbox.Api.Files.AlphaGetMetadataError.AlphaGetMetadataError
+- uid: Dropbox.Api.Files.AlphaGetMetadataError.IsPropertiesError*
+  commentId: Overload:Dropbox.Api.Files.AlphaGetMetadataError.IsPropertiesError
+  name: IsPropertiesError
+  nameWithType: AlphaGetMetadataError.IsPropertiesError
+  fullName: Dropbox.Api.Files.AlphaGetMetadataError.IsPropertiesError
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Files.AlphaGetMetadataError.AsPropertiesError*
+  commentId: Overload:Dropbox.Api.Files.AlphaGetMetadataError.AsPropertiesError
+  name: AsPropertiesError
+  nameWithType: AlphaGetMetadataError.AsPropertiesError
+  fullName: Dropbox.Api.Files.AlphaGetMetadataError.AsPropertiesError
+- uid: Dropbox.Api.Files.AlphaGetMetadataError.PropertiesError
+  commentId: T:Dropbox.Api.Files.AlphaGetMetadataError.PropertiesError
+  parent: Dropbox.Api.Files
+  name: AlphaGetMetadataError.PropertiesError
+  nameWithType: AlphaGetMetadataError.PropertiesError
+  fullName: Dropbox.Api.Files.AlphaGetMetadataError.PropertiesError
+- uid: Dropbox.Api.Files.AlphaGetMetadataError.IsPath*
+  commentId: Overload:Dropbox.Api.Files.AlphaGetMetadataError.IsPath
+  name: IsPath
+  nameWithType: AlphaGetMetadataError.IsPath
+  fullName: Dropbox.Api.Files.AlphaGetMetadataError.IsPath
+- uid: Dropbox.Api.Files.AlphaGetMetadataError.AsPath*
+  commentId: Overload:Dropbox.Api.Files.AlphaGetMetadataError.AsPath
+  name: AsPath
+  nameWithType: AlphaGetMetadataError.AsPath
+  fullName: Dropbox.Api.Files.AlphaGetMetadataError.AsPath
+- uid: Dropbox.Api.Files.AlphaGetMetadataError.Path
+  commentId: T:Dropbox.Api.Files.AlphaGetMetadataError.Path
+  parent: Dropbox.Api.Files
+  name: AlphaGetMetadataError.Path
+  nameWithType: AlphaGetMetadataError.Path
+  fullName: Dropbox.Api.Files.AlphaGetMetadataError.Path
+shouldSkipMarkup: true

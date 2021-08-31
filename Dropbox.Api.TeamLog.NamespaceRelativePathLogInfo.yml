@@ -1,0 +1,376 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.NamespaceRelativePathLogInfo
+  commentId: T:Dropbox.Api.TeamLog.NamespaceRelativePathLogInfo
+  id: NamespaceRelativePathLogInfo
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.NamespaceRelativePathLogInfo.#ctor
+  - Dropbox.Api.TeamLog.NamespaceRelativePathLogInfo.#ctor(System.String,System.String,System.Nullable{System.Boolean})
+  - Dropbox.Api.TeamLog.NamespaceRelativePathLogInfo.IsSharedNamespace
+  - Dropbox.Api.TeamLog.NamespaceRelativePathLogInfo.NsId
+  - Dropbox.Api.TeamLog.NamespaceRelativePathLogInfo.RelativePath
+  langs:
+  - csharp
+  - vb
+  name: NamespaceRelativePathLogInfo
+  nameWithType: NamespaceRelativePathLogInfo
+  fullName: Dropbox.Api.TeamLog.NamespaceRelativePathLogInfo
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/NamespaceRelativePathLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NamespaceRelativePathLogInfo
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/NamespaceRelativePathLogInfo.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Namespace relative path details.</p>\n"
+  example: []
+  syntax:
+    content: 'public class NamespaceRelativePathLogInfo : object'
+    content.vb: >-
+      Public Class NamespaceRelativePathLogInfo
+          Inherits Object
+  seealso:
+  - linkId: Dropbox.Api.TeamLog.PathLogInfo
+    commentId: T:Dropbox.Api.TeamLog.PathLogInfo
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.NamespaceRelativePathLogInfo.#ctor(System.String,System.String,System.Nullable{System.Boolean})
+  commentId: M:Dropbox.Api.TeamLog.NamespaceRelativePathLogInfo.#ctor(System.String,System.String,System.Nullable{System.Boolean})
+  id: '#ctor(System.String,System.String,System.Nullable{System.Boolean})'
+  parent: Dropbox.Api.TeamLog.NamespaceRelativePathLogInfo
+  langs:
+  - csharp
+  - vb
+  name: NamespaceRelativePathLogInfo(String, String, Nullable<Boolean>)
+  nameWithType: NamespaceRelativePathLogInfo.NamespaceRelativePathLogInfo(String, String, Nullable<Boolean>)
+  fullName: Dropbox.Api.TeamLog.NamespaceRelativePathLogInfo.NamespaceRelativePathLogInfo(System.String, System.String, System.Nullable<System.Boolean>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/NamespaceRelativePathLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/NamespaceRelativePathLogInfo.cs
+    startLine: 37
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.NamespaceRelativePathLogInfo\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public NamespaceRelativePathLogInfo(string nsId = null, string relativePath = null, bool? isSharedNamespace = null)
+    parameters:
+    - id: nsId
+      type: System.String
+      description: Namespace ID.
+    - id: relativePath
+      type: System.String
+      description: A path relative to the specified namespace ID.
+    - id: isSharedNamespace
+      type: System.Nullable{System.Boolean}
+      description: True if the namespace is shared.
+    content.vb: Public Sub New(nsId As String = Nothing, relativePath As String = Nothing, isSharedNamespace As Boolean? = Nothing)
+  overload: Dropbox.Api.TeamLog.NamespaceRelativePathLogInfo.#ctor*
+  nameWithType.vb: NamespaceRelativePathLogInfo.NamespaceRelativePathLogInfo(String, String, Nullable(Of Boolean))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.TeamLog.NamespaceRelativePathLogInfo.NamespaceRelativePathLogInfo(System.String, System.String, System.Nullable(Of System.Boolean))
+  name.vb: NamespaceRelativePathLogInfo(String, String, Nullable(Of Boolean))
+- uid: Dropbox.Api.TeamLog.NamespaceRelativePathLogInfo.#ctor
+  commentId: M:Dropbox.Api.TeamLog.NamespaceRelativePathLogInfo.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.NamespaceRelativePathLogInfo
+  langs:
+  - csharp
+  - vb
+  name: NamespaceRelativePathLogInfo()
+  nameWithType: NamespaceRelativePathLogInfo.NamespaceRelativePathLogInfo()
+  fullName: Dropbox.Api.TeamLog.NamespaceRelativePathLogInfo.NamespaceRelativePathLogInfo()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/NamespaceRelativePathLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/NamespaceRelativePathLogInfo.cs
+    startLine: 52
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.NamespaceRelativePathLogInfo\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public NamespaceRelativePathLogInfo()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.NamespaceRelativePathLogInfo.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.NamespaceRelativePathLogInfo.NsId
+  commentId: P:Dropbox.Api.TeamLog.NamespaceRelativePathLogInfo.NsId
+  id: NsId
+  parent: Dropbox.Api.TeamLog.NamespaceRelativePathLogInfo
+  langs:
+  - csharp
+  - vb
+  name: NsId
+  nameWithType: NamespaceRelativePathLogInfo.NsId
+  fullName: Dropbox.Api.TeamLog.NamespaceRelativePathLogInfo.NsId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/NamespaceRelativePathLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NsId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/NamespaceRelativePathLogInfo.cs
+    startLine: 60
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Namespace ID.</p>\n"
+  example: []
+  syntax:
+    content: public string NsId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property NsId As String
+  overload: Dropbox.Api.TeamLog.NamespaceRelativePathLogInfo.NsId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.NamespaceRelativePathLogInfo.RelativePath
+  commentId: P:Dropbox.Api.TeamLog.NamespaceRelativePathLogInfo.RelativePath
+  id: RelativePath
+  parent: Dropbox.Api.TeamLog.NamespaceRelativePathLogInfo
+  langs:
+  - csharp
+  - vb
+  name: RelativePath
+  nameWithType: NamespaceRelativePathLogInfo.RelativePath
+  fullName: Dropbox.Api.TeamLog.NamespaceRelativePathLogInfo.RelativePath
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/NamespaceRelativePathLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: RelativePath
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/NamespaceRelativePathLogInfo.cs
+    startLine: 65
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>A path relative to the specified namespace ID.</p>\n"
+  example: []
+  syntax:
+    content: public string RelativePath { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property RelativePath As String
+  overload: Dropbox.Api.TeamLog.NamespaceRelativePathLogInfo.RelativePath*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.NamespaceRelativePathLogInfo.IsSharedNamespace
+  commentId: P:Dropbox.Api.TeamLog.NamespaceRelativePathLogInfo.IsSharedNamespace
+  id: IsSharedNamespace
+  parent: Dropbox.Api.TeamLog.NamespaceRelativePathLogInfo
+  langs:
+  - csharp
+  - vb
+  name: IsSharedNamespace
+  nameWithType: NamespaceRelativePathLogInfo.IsSharedNamespace
+  fullName: Dropbox.Api.TeamLog.NamespaceRelativePathLogInfo.IsSharedNamespace
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/NamespaceRelativePathLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsSharedNamespace
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/NamespaceRelativePathLogInfo.cs
+    startLine: 70
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>True if the namespace is shared.</p>\n"
+  example: []
+  syntax:
+    content: public bool? IsSharedNamespace { get; protected set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: Public Property IsSharedNamespace As Boolean?
+  overload: Dropbox.Api.TeamLog.NamespaceRelativePathLogInfo.IsSharedNamespace*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog.PathLogInfo
+  commentId: T:Dropbox.Api.TeamLog.PathLogInfo
+  parent: Dropbox.Api.TeamLog
+  name: PathLogInfo
+  nameWithType: PathLogInfo
+  fullName: Dropbox.Api.TeamLog.PathLogInfo
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.NamespaceRelativePathLogInfo
+  commentId: T:Dropbox.Api.TeamLog.NamespaceRelativePathLogInfo
+  parent: Dropbox.Api.TeamLog
+  name: NamespaceRelativePathLogInfo
+  nameWithType: NamespaceRelativePathLogInfo
+  fullName: Dropbox.Api.TeamLog.NamespaceRelativePathLogInfo
+- uid: Dropbox.Api.TeamLog.NamespaceRelativePathLogInfo.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.NamespaceRelativePathLogInfo.#ctor
+  name: NamespaceRelativePathLogInfo
+  nameWithType: NamespaceRelativePathLogInfo.NamespaceRelativePathLogInfo
+  fullName: Dropbox.Api.TeamLog.NamespaceRelativePathLogInfo.NamespaceRelativePathLogInfo
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Nullable{System.Boolean}
+  commentId: '!:System.Nullable{System.Boolean}'
+  definition: System.Nullable`1
+  name: Nullable<Boolean>
+  nameWithType: Nullable<Boolean>
+  fullName: System.Nullable<System.Boolean>
+  nameWithType.vb: Nullable(Of Boolean)
+  fullName.vb: System.Nullable(Of System.Boolean)
+  name.vb: Nullable(Of Boolean)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  isExternal: true
+  name: Nullable<>
+  nameWithType: Nullable<>
+  fullName: System.Nullable<>
+  nameWithType.vb: Nullable(Of )
+  fullName.vb: System.Nullable(Of )
+  name.vb: Nullable(Of )
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.TeamLog.NamespaceRelativePathLogInfo.NsId*
+  commentId: Overload:Dropbox.Api.TeamLog.NamespaceRelativePathLogInfo.NsId
+  name: NsId
+  nameWithType: NamespaceRelativePathLogInfo.NsId
+  fullName: Dropbox.Api.TeamLog.NamespaceRelativePathLogInfo.NsId
+- uid: Dropbox.Api.TeamLog.NamespaceRelativePathLogInfo.RelativePath*
+  commentId: Overload:Dropbox.Api.TeamLog.NamespaceRelativePathLogInfo.RelativePath
+  name: RelativePath
+  nameWithType: NamespaceRelativePathLogInfo.RelativePath
+  fullName: Dropbox.Api.TeamLog.NamespaceRelativePathLogInfo.RelativePath
+- uid: Dropbox.Api.TeamLog.NamespaceRelativePathLogInfo.IsSharedNamespace*
+  commentId: Overload:Dropbox.Api.TeamLog.NamespaceRelativePathLogInfo.IsSharedNamespace
+  name: IsSharedNamespace
+  nameWithType: NamespaceRelativePathLogInfo.IsSharedNamespace
+  fullName: Dropbox.Api.TeamLog.NamespaceRelativePathLogInfo.IsSharedNamespace
+shouldSkipMarkup: true

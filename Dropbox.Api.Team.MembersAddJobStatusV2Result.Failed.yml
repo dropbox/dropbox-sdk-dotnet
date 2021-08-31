@@ -1,0 +1,214 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.MembersAddJobStatusV2Result.Failed
+  commentId: T:Dropbox.Api.Team.MembersAddJobStatusV2Result.Failed
+  id: MembersAddJobStatusV2Result.Failed
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.MembersAddJobStatusV2Result.Failed.#ctor(System.String)
+  - Dropbox.Api.Team.MembersAddJobStatusV2Result.Failed.Value
+  langs:
+  - csharp
+  - vb
+  name: MembersAddJobStatusV2Result.Failed
+  nameWithType: MembersAddJobStatusV2Result.Failed
+  fullName: Dropbox.Api.Team.MembersAddJobStatusV2Result.Failed
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersAddJobStatusV2Result.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Failed
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersAddJobStatusV2Result.cs
+    startLine: 313
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The asynchronous job returned an error. The string contains an error\nmessage.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Failed : MembersAddJobStatusV2Result'
+    content.vb: >-
+      Public NotInheritable Class Failed
+          Inherits MembersAddJobStatusV2Result
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.MembersAddJobStatusV2Result
+  inheritedMembers:
+  - Dropbox.Api.Team.MembersAddJobStatusV2Result.IsComplete
+  - Dropbox.Api.Team.MembersAddJobStatusV2Result.AsComplete
+  - Dropbox.Api.Team.MembersAddJobStatusV2Result.IsFailed
+  - Dropbox.Api.Team.MembersAddJobStatusV2Result.AsFailed
+  - Dropbox.Api.Team.MembersAddJobStatusV2Result.IsOther
+  - Dropbox.Api.Team.MembersAddJobStatusV2Result.AsOther
+  - Dropbox.Api.Team.MembersAddJobStatusV2Result.IsInProgress
+  - Dropbox.Api.Team.MembersAddJobStatusV2Result.AsInProgress
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Team.MembersAddJobStatusV2Result.Failed.#ctor(System.String)
+  commentId: M:Dropbox.Api.Team.MembersAddJobStatusV2Result.Failed.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.Team.MembersAddJobStatusV2Result.Failed
+  langs:
+  - csharp
+  - vb
+  name: Failed(String)
+  nameWithType: MembersAddJobStatusV2Result.Failed.Failed(String)
+  fullName: Dropbox.Api.Team.MembersAddJobStatusV2Result.Failed.Failed(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersAddJobStatusV2Result.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersAddJobStatusV2Result.cs
+    startLine: 331
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.MembersAddJobStatusV2Result.Failed\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public Failed(string value)
+    parameters:
+    - id: value
+      type: System.String
+      description: The value
+    content.vb: Public Sub New(value As String)
+  overload: Dropbox.Api.Team.MembersAddJobStatusV2Result.Failed.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.MembersAddJobStatusV2Result.Failed.Value
+  commentId: P:Dropbox.Api.Team.MembersAddJobStatusV2Result.Failed.Value
+  id: Value
+  parent: Dropbox.Api.Team.MembersAddJobStatusV2Result.Failed
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: MembersAddJobStatusV2Result.Failed.Value
+  fullName: Dropbox.Api.Team.MembersAddJobStatusV2Result.Failed.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersAddJobStatusV2Result.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersAddJobStatusV2Result.cs
+    startLine: 345
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public string Value { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Value As String
+  overload: Dropbox.Api.Team.MembersAddJobStatusV2Result.Failed.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.MembersAddJobStatusV2Result
+  commentId: T:Dropbox.Api.Team.MembersAddJobStatusV2Result
+  parent: Dropbox.Api.Team
+  name: MembersAddJobStatusV2Result
+  nameWithType: MembersAddJobStatusV2Result
+  fullName: Dropbox.Api.Team.MembersAddJobStatusV2Result
+- uid: Dropbox.Api.Team.MembersAddJobStatusV2Result.IsComplete
+  commentId: P:Dropbox.Api.Team.MembersAddJobStatusV2Result.IsComplete
+  parent: Dropbox.Api.Team.MembersAddJobStatusV2Result
+  name: IsComplete
+  nameWithType: MembersAddJobStatusV2Result.IsComplete
+  fullName: Dropbox.Api.Team.MembersAddJobStatusV2Result.IsComplete
+- uid: Dropbox.Api.Team.MembersAddJobStatusV2Result.AsComplete
+  commentId: P:Dropbox.Api.Team.MembersAddJobStatusV2Result.AsComplete
+  parent: Dropbox.Api.Team.MembersAddJobStatusV2Result
+  name: AsComplete
+  nameWithType: MembersAddJobStatusV2Result.AsComplete
+  fullName: Dropbox.Api.Team.MembersAddJobStatusV2Result.AsComplete
+- uid: Dropbox.Api.Team.MembersAddJobStatusV2Result.IsFailed
+  commentId: P:Dropbox.Api.Team.MembersAddJobStatusV2Result.IsFailed
+  parent: Dropbox.Api.Team.MembersAddJobStatusV2Result
+  name: IsFailed
+  nameWithType: MembersAddJobStatusV2Result.IsFailed
+  fullName: Dropbox.Api.Team.MembersAddJobStatusV2Result.IsFailed
+- uid: Dropbox.Api.Team.MembersAddJobStatusV2Result.AsFailed
+  commentId: P:Dropbox.Api.Team.MembersAddJobStatusV2Result.AsFailed
+  parent: Dropbox.Api.Team.MembersAddJobStatusV2Result
+  name: AsFailed
+  nameWithType: MembersAddJobStatusV2Result.AsFailed
+  fullName: Dropbox.Api.Team.MembersAddJobStatusV2Result.AsFailed
+- uid: Dropbox.Api.Team.MembersAddJobStatusV2Result.IsOther
+  commentId: P:Dropbox.Api.Team.MembersAddJobStatusV2Result.IsOther
+  parent: Dropbox.Api.Team.MembersAddJobStatusV2Result
+  name: IsOther
+  nameWithType: MembersAddJobStatusV2Result.IsOther
+  fullName: Dropbox.Api.Team.MembersAddJobStatusV2Result.IsOther
+- uid: Dropbox.Api.Team.MembersAddJobStatusV2Result.AsOther
+  commentId: P:Dropbox.Api.Team.MembersAddJobStatusV2Result.AsOther
+  parent: Dropbox.Api.Team.MembersAddJobStatusV2Result
+  name: AsOther
+  nameWithType: MembersAddJobStatusV2Result.AsOther
+  fullName: Dropbox.Api.Team.MembersAddJobStatusV2Result.AsOther
+- uid: Dropbox.Api.Team.MembersAddJobStatusV2Result.IsInProgress
+  commentId: P:Dropbox.Api.Team.MembersAddJobStatusV2Result.IsInProgress
+  parent: Dropbox.Api.Team.MembersAddJobStatusV2Result
+  name: IsInProgress
+  nameWithType: MembersAddJobStatusV2Result.IsInProgress
+  fullName: Dropbox.Api.Team.MembersAddJobStatusV2Result.IsInProgress
+- uid: Dropbox.Api.Team.MembersAddJobStatusV2Result.AsInProgress
+  commentId: P:Dropbox.Api.Team.MembersAddJobStatusV2Result.AsInProgress
+  parent: Dropbox.Api.Team.MembersAddJobStatusV2Result
+  name: AsInProgress
+  nameWithType: MembersAddJobStatusV2Result.AsInProgress
+  fullName: Dropbox.Api.Team.MembersAddJobStatusV2Result.AsInProgress
+- uid: Dropbox.Api.Team.MembersAddJobStatusV2Result.Failed
+  commentId: T:Dropbox.Api.Team.MembersAddJobStatusV2Result.Failed
+  parent: Dropbox.Api.Team
+  name: MembersAddJobStatusV2Result.Failed
+  nameWithType: MembersAddJobStatusV2Result.Failed
+  fullName: Dropbox.Api.Team.MembersAddJobStatusV2Result.Failed
+- uid: Dropbox.Api.Team.MembersAddJobStatusV2Result.Failed.#ctor*
+  commentId: Overload:Dropbox.Api.Team.MembersAddJobStatusV2Result.Failed.#ctor
+  name: Failed
+  nameWithType: MembersAddJobStatusV2Result.Failed.Failed
+  fullName: Dropbox.Api.Team.MembersAddJobStatusV2Result.Failed.Failed
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Team.MembersAddJobStatusV2Result.Failed.Value*
+  commentId: Overload:Dropbox.Api.Team.MembersAddJobStatusV2Result.Failed.Value
+  name: Value
+  nameWithType: MembersAddJobStatusV2Result.Failed.Value
+  fullName: Dropbox.Api.Team.MembersAddJobStatusV2Result.Failed.Value
+shouldSkipMarkup: true

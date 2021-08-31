@@ -1,0 +1,162 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamPolicies.EmmState.Disabled
+  commentId: T:Dropbox.Api.TeamPolicies.EmmState.Disabled
+  id: EmmState.Disabled
+  parent: Dropbox.Api.TeamPolicies
+  children:
+  - Dropbox.Api.TeamPolicies.EmmState.Disabled.Instance
+  langs:
+  - csharp
+  - vb
+  name: EmmState.Disabled
+  nameWithType: EmmState.Disabled
+  fullName: Dropbox.Api.TeamPolicies.EmmState.Disabled
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/EmmState.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Disabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/EmmState.cs
+    startLine: 211
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Emm token is disabled.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Disabled : EmmState'
+    content.vb: >-
+      Public NotInheritable Class Disabled
+          Inherits EmmState
+  inheritance:
+  - System.Object
+  - Dropbox.Api.TeamPolicies.EmmState
+  inheritedMembers:
+  - Dropbox.Api.TeamPolicies.EmmState.IsDisabled
+  - Dropbox.Api.TeamPolicies.EmmState.AsDisabled
+  - Dropbox.Api.TeamPolicies.EmmState.IsOptional
+  - Dropbox.Api.TeamPolicies.EmmState.AsOptional
+  - Dropbox.Api.TeamPolicies.EmmState.IsRequired
+  - Dropbox.Api.TeamPolicies.EmmState.AsRequired
+  - Dropbox.Api.TeamPolicies.EmmState.IsOther
+  - Dropbox.Api.TeamPolicies.EmmState.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.TeamPolicies.EmmState.Disabled.Instance
+  commentId: F:Dropbox.Api.TeamPolicies.EmmState.Disabled.Instance
+  id: Instance
+  parent: Dropbox.Api.TeamPolicies.EmmState.Disabled
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: EmmState.Disabled.Instance
+  fullName: Dropbox.Api.TeamPolicies.EmmState.Disabled.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/EmmState.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/EmmState.cs
+    startLine: 235
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>A singleton instance of Disabled</p>\n"
+  example: []
+  syntax:
+    content: public static readonly EmmState.Disabled Instance
+    return:
+      type: Dropbox.Api.TeamPolicies.EmmState.Disabled
+    content.vb: Public Shared ReadOnly Instance As EmmState.Disabled
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamPolicies
+  commentId: N:Dropbox.Api.TeamPolicies
+  name: Dropbox.Api.TeamPolicies
+  nameWithType: Dropbox.Api.TeamPolicies
+  fullName: Dropbox.Api.TeamPolicies
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamPolicies.EmmState
+  commentId: T:Dropbox.Api.TeamPolicies.EmmState
+  parent: Dropbox.Api.TeamPolicies
+  name: EmmState
+  nameWithType: EmmState
+  fullName: Dropbox.Api.TeamPolicies.EmmState
+- uid: Dropbox.Api.TeamPolicies.EmmState.IsDisabled
+  commentId: P:Dropbox.Api.TeamPolicies.EmmState.IsDisabled
+  parent: Dropbox.Api.TeamPolicies.EmmState
+  name: IsDisabled
+  nameWithType: EmmState.IsDisabled
+  fullName: Dropbox.Api.TeamPolicies.EmmState.IsDisabled
+- uid: Dropbox.Api.TeamPolicies.EmmState.AsDisabled
+  commentId: P:Dropbox.Api.TeamPolicies.EmmState.AsDisabled
+  parent: Dropbox.Api.TeamPolicies.EmmState
+  name: AsDisabled
+  nameWithType: EmmState.AsDisabled
+  fullName: Dropbox.Api.TeamPolicies.EmmState.AsDisabled
+- uid: Dropbox.Api.TeamPolicies.EmmState.IsOptional
+  commentId: P:Dropbox.Api.TeamPolicies.EmmState.IsOptional
+  parent: Dropbox.Api.TeamPolicies.EmmState
+  name: IsOptional
+  nameWithType: EmmState.IsOptional
+  fullName: Dropbox.Api.TeamPolicies.EmmState.IsOptional
+- uid: Dropbox.Api.TeamPolicies.EmmState.AsOptional
+  commentId: P:Dropbox.Api.TeamPolicies.EmmState.AsOptional
+  parent: Dropbox.Api.TeamPolicies.EmmState
+  name: AsOptional
+  nameWithType: EmmState.AsOptional
+  fullName: Dropbox.Api.TeamPolicies.EmmState.AsOptional
+- uid: Dropbox.Api.TeamPolicies.EmmState.IsRequired
+  commentId: P:Dropbox.Api.TeamPolicies.EmmState.IsRequired
+  parent: Dropbox.Api.TeamPolicies.EmmState
+  name: IsRequired
+  nameWithType: EmmState.IsRequired
+  fullName: Dropbox.Api.TeamPolicies.EmmState.IsRequired
+- uid: Dropbox.Api.TeamPolicies.EmmState.AsRequired
+  commentId: P:Dropbox.Api.TeamPolicies.EmmState.AsRequired
+  parent: Dropbox.Api.TeamPolicies.EmmState
+  name: AsRequired
+  nameWithType: EmmState.AsRequired
+  fullName: Dropbox.Api.TeamPolicies.EmmState.AsRequired
+- uid: Dropbox.Api.TeamPolicies.EmmState.IsOther
+  commentId: P:Dropbox.Api.TeamPolicies.EmmState.IsOther
+  parent: Dropbox.Api.TeamPolicies.EmmState
+  name: IsOther
+  nameWithType: EmmState.IsOther
+  fullName: Dropbox.Api.TeamPolicies.EmmState.IsOther
+- uid: Dropbox.Api.TeamPolicies.EmmState.AsOther
+  commentId: P:Dropbox.Api.TeamPolicies.EmmState.AsOther
+  parent: Dropbox.Api.TeamPolicies.EmmState
+  name: AsOther
+  nameWithType: EmmState.AsOther
+  fullName: Dropbox.Api.TeamPolicies.EmmState.AsOther
+- uid: Dropbox.Api.TeamPolicies.EmmState.Disabled
+  commentId: T:Dropbox.Api.TeamPolicies.EmmState.Disabled
+  parent: Dropbox.Api.TeamPolicies
+  name: EmmState.Disabled
+  nameWithType: EmmState.Disabled
+  fullName: Dropbox.Api.TeamPolicies.EmmState.Disabled
+shouldSkipMarkup: true

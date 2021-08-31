@@ -1,0 +1,225 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.RevokeDesktopClientArg
+  commentId: T:Dropbox.Api.Team.RevokeDesktopClientArg
+  id: RevokeDesktopClientArg
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.RevokeDesktopClientArg.#ctor
+  - Dropbox.Api.Team.RevokeDesktopClientArg.#ctor(System.String,System.String,System.Boolean)
+  - Dropbox.Api.Team.RevokeDesktopClientArg.DeleteOnUnlink
+  langs:
+  - csharp
+  - vb
+  name: RevokeDesktopClientArg
+  nameWithType: RevokeDesktopClientArg
+  fullName: Dropbox.Api.Team.RevokeDesktopClientArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeDesktopClientArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: RevokeDesktopClientArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeDesktopClientArg.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The revoke desktop client arg object</p>\n"
+  example: []
+  syntax:
+    content: 'public class RevokeDesktopClientArg : DeviceSessionArg'
+    content.vb: >-
+      Public Class RevokeDesktopClientArg
+          Inherits DeviceSessionArg
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.DeviceSessionArg
+  inheritedMembers:
+  - Dropbox.Api.Team.DeviceSessionArg.SessionId
+  - Dropbox.Api.Team.DeviceSessionArg.TeamMemberId
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.RevokeDesktopClientArg.#ctor(System.String,System.String,System.Boolean)
+  commentId: M:Dropbox.Api.Team.RevokeDesktopClientArg.#ctor(System.String,System.String,System.Boolean)
+  id: '#ctor(System.String,System.String,System.Boolean)'
+  parent: Dropbox.Api.Team.RevokeDesktopClientArg
+  langs:
+  - csharp
+  - vb
+  name: RevokeDesktopClientArg(String, String, Boolean)
+  nameWithType: RevokeDesktopClientArg.RevokeDesktopClientArg(String, String, Boolean)
+  fullName: Dropbox.Api.Team.RevokeDesktopClientArg.RevokeDesktopClientArg(System.String, System.String, System.Boolean)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeDesktopClientArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeDesktopClientArg.cs
+    startLine: 39
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.RevokeDesktopClientArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public RevokeDesktopClientArg(string sessionId, string teamMemberId, bool deleteOnUnlink = false)
+    parameters:
+    - id: sessionId
+      type: System.String
+      description: The session id.
+    - id: teamMemberId
+      type: System.String
+      description: The unique id of the member owning the device.
+    - id: deleteOnUnlink
+      type: System.Boolean
+      description: >-
+        Whether to delete all files of the account (this is
+
+        possible only if supported by the desktop client and  will be made the next time
+
+        the client access the account).
+    content.vb: Public Sub New(sessionId As String, teamMemberId As String, deleteOnUnlink As Boolean = False)
+  overload: Dropbox.Api.Team.RevokeDesktopClientArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.RevokeDesktopClientArg.#ctor
+  commentId: M:Dropbox.Api.Team.RevokeDesktopClientArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.RevokeDesktopClientArg
+  langs:
+  - csharp
+  - vb
+  name: RevokeDesktopClientArg()
+  nameWithType: RevokeDesktopClientArg.RevokeDesktopClientArg()
+  fullName: Dropbox.Api.Team.RevokeDesktopClientArg.RevokeDesktopClientArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeDesktopClientArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeDesktopClientArg.cs
+    startLine: 53
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.RevokeDesktopClientArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public RevokeDesktopClientArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.RevokeDesktopClientArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.RevokeDesktopClientArg.DeleteOnUnlink
+  commentId: P:Dropbox.Api.Team.RevokeDesktopClientArg.DeleteOnUnlink
+  id: DeleteOnUnlink
+  parent: Dropbox.Api.Team.RevokeDesktopClientArg
+  langs:
+  - csharp
+  - vb
+  name: DeleteOnUnlink
+  nameWithType: RevokeDesktopClientArg.DeleteOnUnlink
+  fullName: Dropbox.Api.Team.RevokeDesktopClientArg.DeleteOnUnlink
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeDesktopClientArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: DeleteOnUnlink
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeDesktopClientArg.cs
+    startLine: 64
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Whether to delete all files of the account (this is possible only if\nsupported by the desktop client and  will be made the next time the client access\nthe account).</p>\n"
+  example: []
+  syntax:
+    content: public bool DeleteOnUnlink { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property DeleteOnUnlink As Boolean
+  overload: Dropbox.Api.Team.RevokeDesktopClientArg.DeleteOnUnlink*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.DeviceSessionArg
+  commentId: T:Dropbox.Api.Team.DeviceSessionArg
+  parent: Dropbox.Api.Team
+  name: DeviceSessionArg
+  nameWithType: DeviceSessionArg
+  fullName: Dropbox.Api.Team.DeviceSessionArg
+- uid: Dropbox.Api.Team.DeviceSessionArg.SessionId
+  commentId: P:Dropbox.Api.Team.DeviceSessionArg.SessionId
+  parent: Dropbox.Api.Team.DeviceSessionArg
+  name: SessionId
+  nameWithType: DeviceSessionArg.SessionId
+  fullName: Dropbox.Api.Team.DeviceSessionArg.SessionId
+- uid: Dropbox.Api.Team.DeviceSessionArg.TeamMemberId
+  commentId: P:Dropbox.Api.Team.DeviceSessionArg.TeamMemberId
+  parent: Dropbox.Api.Team.DeviceSessionArg
+  name: TeamMemberId
+  nameWithType: DeviceSessionArg.TeamMemberId
+  fullName: Dropbox.Api.Team.DeviceSessionArg.TeamMemberId
+- uid: Dropbox.Api.Team.RevokeDesktopClientArg
+  commentId: T:Dropbox.Api.Team.RevokeDesktopClientArg
+  parent: Dropbox.Api.Team
+  name: RevokeDesktopClientArg
+  nameWithType: RevokeDesktopClientArg
+  fullName: Dropbox.Api.Team.RevokeDesktopClientArg
+- uid: Dropbox.Api.Team.RevokeDesktopClientArg.#ctor*
+  commentId: Overload:Dropbox.Api.Team.RevokeDesktopClientArg.#ctor
+  name: RevokeDesktopClientArg
+  nameWithType: RevokeDesktopClientArg.RevokeDesktopClientArg
+  fullName: Dropbox.Api.Team.RevokeDesktopClientArg.RevokeDesktopClientArg
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Team.RevokeDesktopClientArg.DeleteOnUnlink*
+  commentId: Overload:Dropbox.Api.Team.RevokeDesktopClientArg.DeleteOnUnlink
+  name: DeleteOnUnlink
+  nameWithType: RevokeDesktopClientArg.DeleteOnUnlink
+  fullName: Dropbox.Api.Team.RevokeDesktopClientArg.DeleteOnUnlink
+shouldSkipMarkup: true

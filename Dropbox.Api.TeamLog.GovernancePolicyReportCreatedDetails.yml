@@ -1,0 +1,289 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.GovernancePolicyReportCreatedDetails
+  commentId: T:Dropbox.Api.TeamLog.GovernancePolicyReportCreatedDetails
+  id: GovernancePolicyReportCreatedDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.GovernancePolicyReportCreatedDetails.#ctor
+  - Dropbox.Api.TeamLog.GovernancePolicyReportCreatedDetails.#ctor(System.String,System.String,Dropbox.Api.TeamLog.PolicyType)
+  - Dropbox.Api.TeamLog.GovernancePolicyReportCreatedDetails.GovernancePolicyId
+  - Dropbox.Api.TeamLog.GovernancePolicyReportCreatedDetails.Name
+  - Dropbox.Api.TeamLog.GovernancePolicyReportCreatedDetails.PolicyType
+  langs:
+  - csharp
+  - vb
+  name: GovernancePolicyReportCreatedDetails
+  nameWithType: GovernancePolicyReportCreatedDetails
+  fullName: Dropbox.Api.TeamLog.GovernancePolicyReportCreatedDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GovernancePolicyReportCreatedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GovernancePolicyReportCreatedDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GovernancePolicyReportCreatedDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Created a summary report for a policy.</p>\n"
+  example: []
+  syntax:
+    content: 'public class GovernancePolicyReportCreatedDetails : object'
+    content.vb: >-
+      Public Class GovernancePolicyReportCreatedDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.GovernancePolicyReportCreatedDetails.#ctor(System.String,System.String,Dropbox.Api.TeamLog.PolicyType)
+  commentId: M:Dropbox.Api.TeamLog.GovernancePolicyReportCreatedDetails.#ctor(System.String,System.String,Dropbox.Api.TeamLog.PolicyType)
+  id: '#ctor(System.String,System.String,Dropbox.Api.TeamLog.PolicyType)'
+  parent: Dropbox.Api.TeamLog.GovernancePolicyReportCreatedDetails
+  langs:
+  - csharp
+  - vb
+  name: GovernancePolicyReportCreatedDetails(String, String, PolicyType)
+  nameWithType: GovernancePolicyReportCreatedDetails.GovernancePolicyReportCreatedDetails(String, String, PolicyType)
+  fullName: Dropbox.Api.TeamLog.GovernancePolicyReportCreatedDetails.GovernancePolicyReportCreatedDetails(System.String, System.String, Dropbox.Api.TeamLog.PolicyType)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GovernancePolicyReportCreatedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GovernancePolicyReportCreatedDetails.cs
+    startLine: 36
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.GovernancePolicyReportCreatedDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public GovernancePolicyReportCreatedDetails(string governancePolicyId, string name, PolicyType policyType = null)
+    parameters:
+    - id: governancePolicyId
+      type: System.String
+      description: Policy ID.
+    - id: name
+      type: System.String
+      description: Policy name.
+    - id: policyType
+      type: Dropbox.Api.TeamLog.PolicyType
+      description: Policy type.
+    content.vb: Public Sub New(governancePolicyId As String, name As String, policyType As PolicyType = Nothing)
+  overload: Dropbox.Api.TeamLog.GovernancePolicyReportCreatedDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.GovernancePolicyReportCreatedDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.GovernancePolicyReportCreatedDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.GovernancePolicyReportCreatedDetails
+  langs:
+  - csharp
+  - vb
+  name: GovernancePolicyReportCreatedDetails()
+  nameWithType: GovernancePolicyReportCreatedDetails.GovernancePolicyReportCreatedDetails()
+  fullName: Dropbox.Api.TeamLog.GovernancePolicyReportCreatedDetails.GovernancePolicyReportCreatedDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GovernancePolicyReportCreatedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GovernancePolicyReportCreatedDetails.cs
+    startLine: 61
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.GovernancePolicyReportCreatedDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public GovernancePolicyReportCreatedDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.GovernancePolicyReportCreatedDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.GovernancePolicyReportCreatedDetails.GovernancePolicyId
+  commentId: P:Dropbox.Api.TeamLog.GovernancePolicyReportCreatedDetails.GovernancePolicyId
+  id: GovernancePolicyId
+  parent: Dropbox.Api.TeamLog.GovernancePolicyReportCreatedDetails
+  langs:
+  - csharp
+  - vb
+  name: GovernancePolicyId
+  nameWithType: GovernancePolicyReportCreatedDetails.GovernancePolicyId
+  fullName: Dropbox.Api.TeamLog.GovernancePolicyReportCreatedDetails.GovernancePolicyId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GovernancePolicyReportCreatedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GovernancePolicyId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GovernancePolicyReportCreatedDetails.cs
+    startLine: 69
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Policy ID.</p>\n"
+  example: []
+  syntax:
+    content: public string GovernancePolicyId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property GovernancePolicyId As String
+  overload: Dropbox.Api.TeamLog.GovernancePolicyReportCreatedDetails.GovernancePolicyId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.GovernancePolicyReportCreatedDetails.Name
+  commentId: P:Dropbox.Api.TeamLog.GovernancePolicyReportCreatedDetails.Name
+  id: Name
+  parent: Dropbox.Api.TeamLog.GovernancePolicyReportCreatedDetails
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: GovernancePolicyReportCreatedDetails.Name
+  fullName: Dropbox.Api.TeamLog.GovernancePolicyReportCreatedDetails.Name
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GovernancePolicyReportCreatedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Name
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GovernancePolicyReportCreatedDetails.cs
+    startLine: 74
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Policy name.</p>\n"
+  example: []
+  syntax:
+    content: public string Name { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: Dropbox.Api.TeamLog.GovernancePolicyReportCreatedDetails.Name*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.GovernancePolicyReportCreatedDetails.PolicyType
+  commentId: P:Dropbox.Api.TeamLog.GovernancePolicyReportCreatedDetails.PolicyType
+  id: PolicyType
+  parent: Dropbox.Api.TeamLog.GovernancePolicyReportCreatedDetails
+  langs:
+  - csharp
+  - vb
+  name: PolicyType
+  nameWithType: GovernancePolicyReportCreatedDetails.PolicyType
+  fullName: Dropbox.Api.TeamLog.GovernancePolicyReportCreatedDetails.PolicyType
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GovernancePolicyReportCreatedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PolicyType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GovernancePolicyReportCreatedDetails.cs
+    startLine: 79
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Policy type.</p>\n"
+  example: []
+  syntax:
+    content: public PolicyType PolicyType { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.PolicyType
+    content.vb: Public Property PolicyType As PolicyType
+  overload: Dropbox.Api.TeamLog.GovernancePolicyReportCreatedDetails.PolicyType*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.GovernancePolicyReportCreatedDetails
+  commentId: T:Dropbox.Api.TeamLog.GovernancePolicyReportCreatedDetails
+  parent: Dropbox.Api.TeamLog
+  name: GovernancePolicyReportCreatedDetails
+  nameWithType: GovernancePolicyReportCreatedDetails
+  fullName: Dropbox.Api.TeamLog.GovernancePolicyReportCreatedDetails
+- uid: Dropbox.Api.TeamLog.GovernancePolicyReportCreatedDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.GovernancePolicyReportCreatedDetails.#ctor
+  name: GovernancePolicyReportCreatedDetails
+  nameWithType: GovernancePolicyReportCreatedDetails.GovernancePolicyReportCreatedDetails
+  fullName: Dropbox.Api.TeamLog.GovernancePolicyReportCreatedDetails.GovernancePolicyReportCreatedDetails
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.PolicyType
+  commentId: T:Dropbox.Api.TeamLog.PolicyType
+  parent: Dropbox.Api.TeamLog
+  name: PolicyType
+  nameWithType: PolicyType
+  fullName: Dropbox.Api.TeamLog.PolicyType
+- uid: Dropbox.Api.TeamLog.GovernancePolicyReportCreatedDetails.GovernancePolicyId*
+  commentId: Overload:Dropbox.Api.TeamLog.GovernancePolicyReportCreatedDetails.GovernancePolicyId
+  name: GovernancePolicyId
+  nameWithType: GovernancePolicyReportCreatedDetails.GovernancePolicyId
+  fullName: Dropbox.Api.TeamLog.GovernancePolicyReportCreatedDetails.GovernancePolicyId
+- uid: Dropbox.Api.TeamLog.GovernancePolicyReportCreatedDetails.Name*
+  commentId: Overload:Dropbox.Api.TeamLog.GovernancePolicyReportCreatedDetails.Name
+  name: Name
+  nameWithType: GovernancePolicyReportCreatedDetails.Name
+  fullName: Dropbox.Api.TeamLog.GovernancePolicyReportCreatedDetails.Name
+- uid: Dropbox.Api.TeamLog.GovernancePolicyReportCreatedDetails.PolicyType*
+  commentId: Overload:Dropbox.Api.TeamLog.GovernancePolicyReportCreatedDetails.PolicyType
+  name: PolicyType
+  nameWithType: GovernancePolicyReportCreatedDetails.PolicyType
+  fullName: Dropbox.Api.TeamLog.GovernancePolicyReportCreatedDetails.PolicyType
+shouldSkipMarkup: true

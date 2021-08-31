@@ -1,0 +1,176 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.UnshareFolderError.TeamFolder
+  commentId: T:Dropbox.Api.Sharing.UnshareFolderError.TeamFolder
+  id: UnshareFolderError.TeamFolder
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.UnshareFolderError.TeamFolder.Instance
+  langs:
+  - csharp
+  - vb
+  name: UnshareFolderError.TeamFolder
+  nameWithType: UnshareFolderError.TeamFolder
+  fullName: Dropbox.Api.Sharing.UnshareFolderError.TeamFolder
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UnshareFolderError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TeamFolder
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UnshareFolderError.cs
+    startLine: 340
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>This action cannot be performed on a team shared folder.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class TeamFolder : UnshareFolderError'
+    content.vb: >-
+      Public NotInheritable Class TeamFolder
+          Inherits UnshareFolderError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Sharing.UnshareFolderError
+  inheritedMembers:
+  - Dropbox.Api.Sharing.UnshareFolderError.IsAccessError
+  - Dropbox.Api.Sharing.UnshareFolderError.AsAccessError
+  - Dropbox.Api.Sharing.UnshareFolderError.IsTeamFolder
+  - Dropbox.Api.Sharing.UnshareFolderError.AsTeamFolder
+  - Dropbox.Api.Sharing.UnshareFolderError.IsNoPermission
+  - Dropbox.Api.Sharing.UnshareFolderError.AsNoPermission
+  - Dropbox.Api.Sharing.UnshareFolderError.IsTooManyFiles
+  - Dropbox.Api.Sharing.UnshareFolderError.AsTooManyFiles
+  - Dropbox.Api.Sharing.UnshareFolderError.IsOther
+  - Dropbox.Api.Sharing.UnshareFolderError.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Sharing.UnshareFolderError.TeamFolder.Instance
+  commentId: F:Dropbox.Api.Sharing.UnshareFolderError.TeamFolder.Instance
+  id: Instance
+  parent: Dropbox.Api.Sharing.UnshareFolderError.TeamFolder
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: UnshareFolderError.TeamFolder.Instance
+  fullName: Dropbox.Api.Sharing.UnshareFolderError.TeamFolder.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UnshareFolderError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UnshareFolderError.cs
+    startLine: 364
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>A singleton instance of TeamFolder</p>\n"
+  example: []
+  syntax:
+    content: public static readonly UnshareFolderError.TeamFolder Instance
+    return:
+      type: Dropbox.Api.Sharing.UnshareFolderError.TeamFolder
+    content.vb: Public Shared ReadOnly Instance As UnshareFolderError.TeamFolder
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.UnshareFolderError
+  commentId: T:Dropbox.Api.Sharing.UnshareFolderError
+  parent: Dropbox.Api.Sharing
+  name: UnshareFolderError
+  nameWithType: UnshareFolderError
+  fullName: Dropbox.Api.Sharing.UnshareFolderError
+- uid: Dropbox.Api.Sharing.UnshareFolderError.IsAccessError
+  commentId: P:Dropbox.Api.Sharing.UnshareFolderError.IsAccessError
+  parent: Dropbox.Api.Sharing.UnshareFolderError
+  name: IsAccessError
+  nameWithType: UnshareFolderError.IsAccessError
+  fullName: Dropbox.Api.Sharing.UnshareFolderError.IsAccessError
+- uid: Dropbox.Api.Sharing.UnshareFolderError.AsAccessError
+  commentId: P:Dropbox.Api.Sharing.UnshareFolderError.AsAccessError
+  parent: Dropbox.Api.Sharing.UnshareFolderError
+  name: AsAccessError
+  nameWithType: UnshareFolderError.AsAccessError
+  fullName: Dropbox.Api.Sharing.UnshareFolderError.AsAccessError
+- uid: Dropbox.Api.Sharing.UnshareFolderError.IsTeamFolder
+  commentId: P:Dropbox.Api.Sharing.UnshareFolderError.IsTeamFolder
+  parent: Dropbox.Api.Sharing.UnshareFolderError
+  name: IsTeamFolder
+  nameWithType: UnshareFolderError.IsTeamFolder
+  fullName: Dropbox.Api.Sharing.UnshareFolderError.IsTeamFolder
+- uid: Dropbox.Api.Sharing.UnshareFolderError.AsTeamFolder
+  commentId: P:Dropbox.Api.Sharing.UnshareFolderError.AsTeamFolder
+  parent: Dropbox.Api.Sharing.UnshareFolderError
+  name: AsTeamFolder
+  nameWithType: UnshareFolderError.AsTeamFolder
+  fullName: Dropbox.Api.Sharing.UnshareFolderError.AsTeamFolder
+- uid: Dropbox.Api.Sharing.UnshareFolderError.IsNoPermission
+  commentId: P:Dropbox.Api.Sharing.UnshareFolderError.IsNoPermission
+  parent: Dropbox.Api.Sharing.UnshareFolderError
+  name: IsNoPermission
+  nameWithType: UnshareFolderError.IsNoPermission
+  fullName: Dropbox.Api.Sharing.UnshareFolderError.IsNoPermission
+- uid: Dropbox.Api.Sharing.UnshareFolderError.AsNoPermission
+  commentId: P:Dropbox.Api.Sharing.UnshareFolderError.AsNoPermission
+  parent: Dropbox.Api.Sharing.UnshareFolderError
+  name: AsNoPermission
+  nameWithType: UnshareFolderError.AsNoPermission
+  fullName: Dropbox.Api.Sharing.UnshareFolderError.AsNoPermission
+- uid: Dropbox.Api.Sharing.UnshareFolderError.IsTooManyFiles
+  commentId: P:Dropbox.Api.Sharing.UnshareFolderError.IsTooManyFiles
+  parent: Dropbox.Api.Sharing.UnshareFolderError
+  name: IsTooManyFiles
+  nameWithType: UnshareFolderError.IsTooManyFiles
+  fullName: Dropbox.Api.Sharing.UnshareFolderError.IsTooManyFiles
+- uid: Dropbox.Api.Sharing.UnshareFolderError.AsTooManyFiles
+  commentId: P:Dropbox.Api.Sharing.UnshareFolderError.AsTooManyFiles
+  parent: Dropbox.Api.Sharing.UnshareFolderError
+  name: AsTooManyFiles
+  nameWithType: UnshareFolderError.AsTooManyFiles
+  fullName: Dropbox.Api.Sharing.UnshareFolderError.AsTooManyFiles
+- uid: Dropbox.Api.Sharing.UnshareFolderError.IsOther
+  commentId: P:Dropbox.Api.Sharing.UnshareFolderError.IsOther
+  parent: Dropbox.Api.Sharing.UnshareFolderError
+  name: IsOther
+  nameWithType: UnshareFolderError.IsOther
+  fullName: Dropbox.Api.Sharing.UnshareFolderError.IsOther
+- uid: Dropbox.Api.Sharing.UnshareFolderError.AsOther
+  commentId: P:Dropbox.Api.Sharing.UnshareFolderError.AsOther
+  parent: Dropbox.Api.Sharing.UnshareFolderError
+  name: AsOther
+  nameWithType: UnshareFolderError.AsOther
+  fullName: Dropbox.Api.Sharing.UnshareFolderError.AsOther
+- uid: Dropbox.Api.Sharing.UnshareFolderError.TeamFolder
+  commentId: T:Dropbox.Api.Sharing.UnshareFolderError.TeamFolder
+  parent: Dropbox.Api.Sharing
+  name: UnshareFolderError.TeamFolder
+  nameWithType: UnshareFolderError.TeamFolder
+  fullName: Dropbox.Api.Sharing.UnshareFolderError.TeamFolder
+shouldSkipMarkup: true

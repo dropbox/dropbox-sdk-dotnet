@@ -1,0 +1,550 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersDetails
+  commentId: T:Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersDetails
+  id: GovernancePolicyRemoveFoldersDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersDetails.#ctor
+  - Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersDetails.#ctor(System.String,System.String,Dropbox.Api.TeamLog.PolicyType,System.Collections.Generic.IEnumerable{System.String},System.String)
+  - Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersDetails.Folders
+  - Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersDetails.GovernancePolicyId
+  - Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersDetails.Name
+  - Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersDetails.PolicyType
+  - Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersDetails.Reason
+  langs:
+  - csharp
+  - vb
+  name: GovernancePolicyRemoveFoldersDetails
+  nameWithType: GovernancePolicyRemoveFoldersDetails
+  fullName: Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GovernancePolicyRemoveFoldersDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GovernancePolicyRemoveFoldersDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GovernancePolicyRemoveFoldersDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Removed folders from policy.</p>\n"
+  example: []
+  syntax:
+    content: 'public class GovernancePolicyRemoveFoldersDetails : object'
+    content.vb: >-
+      Public Class GovernancePolicyRemoveFoldersDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersDetails.#ctor(System.String,System.String,Dropbox.Api.TeamLog.PolicyType,System.Collections.Generic.IEnumerable{System.String},System.String)
+  commentId: M:Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersDetails.#ctor(System.String,System.String,Dropbox.Api.TeamLog.PolicyType,System.Collections.Generic.IEnumerable{System.String},System.String)
+  id: '#ctor(System.String,System.String,Dropbox.Api.TeamLog.PolicyType,System.Collections.Generic.IEnumerable{System.String},System.String)'
+  parent: Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersDetails
+  langs:
+  - csharp
+  - vb
+  name: GovernancePolicyRemoveFoldersDetails(String, String, PolicyType, System.Collections.Generic.IEnumerable<String>, String)
+  nameWithType: GovernancePolicyRemoveFoldersDetails.GovernancePolicyRemoveFoldersDetails(String, String, PolicyType, System.Collections.Generic.IEnumerable<String>, String)
+  fullName: Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersDetails.GovernancePolicyRemoveFoldersDetails(System.String, System.String, Dropbox.Api.TeamLog.PolicyType, System.Collections.Generic.IEnumerable<System.String>, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GovernancePolicyRemoveFoldersDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GovernancePolicyRemoveFoldersDetails.cs
+    startLine: 38
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public GovernancePolicyRemoveFoldersDetails(string governancePolicyId, string name, PolicyType policyType = null, System.Collections.Generic.IEnumerable<string> folders = null, string reason = null)
+    parameters:
+    - id: governancePolicyId
+      type: System.String
+      description: Policy ID.
+    - id: name
+      type: System.String
+      description: Policy name.
+    - id: policyType
+      type: Dropbox.Api.TeamLog.PolicyType
+      description: Policy type.
+    - id: folders
+      type: System.Collections.Generic.IEnumerable{System.String}
+      description: Folders.
+    - id: reason
+      type: System.String
+      description: Reason.
+    content.vb: Public Sub New(governancePolicyId As String, name As String, policyType As PolicyType = Nothing, folders As System.Collections.Generic.IEnumerable(Of String) = Nothing, reason As String = Nothing)
+  overload: Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersDetails.#ctor*
+  nameWithType.vb: GovernancePolicyRemoveFoldersDetails.GovernancePolicyRemoveFoldersDetails(String, String, PolicyType, System.Collections.Generic.IEnumerable(Of String), String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersDetails.GovernancePolicyRemoveFoldersDetails(System.String, System.String, Dropbox.Api.TeamLog.PolicyType, System.Collections.Generic.IEnumerable(Of System.String), System.String)
+  name.vb: GovernancePolicyRemoveFoldersDetails(String, String, PolicyType, System.Collections.Generic.IEnumerable(Of String), String)
+- uid: Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersDetails
+  langs:
+  - csharp
+  - vb
+  name: GovernancePolicyRemoveFoldersDetails()
+  nameWithType: GovernancePolicyRemoveFoldersDetails.GovernancePolicyRemoveFoldersDetails()
+  fullName: Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersDetails.GovernancePolicyRemoveFoldersDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GovernancePolicyRemoveFoldersDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GovernancePolicyRemoveFoldersDetails.cs
+    startLine: 69
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public GovernancePolicyRemoveFoldersDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersDetails.GovernancePolicyId
+  commentId: P:Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersDetails.GovernancePolicyId
+  id: GovernancePolicyId
+  parent: Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersDetails
+  langs:
+  - csharp
+  - vb
+  name: GovernancePolicyId
+  nameWithType: GovernancePolicyRemoveFoldersDetails.GovernancePolicyId
+  fullName: Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersDetails.GovernancePolicyId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GovernancePolicyRemoveFoldersDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GovernancePolicyId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GovernancePolicyRemoveFoldersDetails.cs
+    startLine: 77
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Policy ID.</p>\n"
+  example: []
+  syntax:
+    content: public string GovernancePolicyId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property GovernancePolicyId As String
+  overload: Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersDetails.GovernancePolicyId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersDetails.Name
+  commentId: P:Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersDetails.Name
+  id: Name
+  parent: Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersDetails
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: GovernancePolicyRemoveFoldersDetails.Name
+  fullName: Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersDetails.Name
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GovernancePolicyRemoveFoldersDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Name
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GovernancePolicyRemoveFoldersDetails.cs
+    startLine: 82
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Policy name.</p>\n"
+  example: []
+  syntax:
+    content: public string Name { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersDetails.Name*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersDetails.PolicyType
+  commentId: P:Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersDetails.PolicyType
+  id: PolicyType
+  parent: Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersDetails
+  langs:
+  - csharp
+  - vb
+  name: PolicyType
+  nameWithType: GovernancePolicyRemoveFoldersDetails.PolicyType
+  fullName: Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersDetails.PolicyType
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GovernancePolicyRemoveFoldersDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PolicyType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GovernancePolicyRemoveFoldersDetails.cs
+    startLine: 87
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Policy type.</p>\n"
+  example: []
+  syntax:
+    content: public PolicyType PolicyType { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.PolicyType
+    content.vb: Public Property PolicyType As PolicyType
+  overload: Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersDetails.PolicyType*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersDetails.Folders
+  commentId: P:Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersDetails.Folders
+  id: Folders
+  parent: Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersDetails
+  langs:
+  - csharp
+  - vb
+  name: Folders
+  nameWithType: GovernancePolicyRemoveFoldersDetails.Folders
+  fullName: Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersDetails.Folders
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GovernancePolicyRemoveFoldersDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Folders
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GovernancePolicyRemoveFoldersDetails.cs
+    startLine: 92
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Folders.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<string> Folders { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{System.String}
+    content.vb: Public Property Folders As System.Collections.Generic.IList(Of String)
+  overload: Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersDetails.Folders*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersDetails.Reason
+  commentId: P:Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersDetails.Reason
+  id: Reason
+  parent: Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersDetails
+  langs:
+  - csharp
+  - vb
+  name: Reason
+  nameWithType: GovernancePolicyRemoveFoldersDetails.Reason
+  fullName: Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersDetails.Reason
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GovernancePolicyRemoveFoldersDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Reason
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GovernancePolicyRemoveFoldersDetails.cs
+    startLine: 97
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Reason.</p>\n"
+  example: []
+  syntax:
+    content: public string Reason { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Reason As String
+  overload: Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersDetails.Reason*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersDetails
+  commentId: T:Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersDetails
+  parent: Dropbox.Api.TeamLog
+  name: GovernancePolicyRemoveFoldersDetails
+  nameWithType: GovernancePolicyRemoveFoldersDetails
+  fullName: Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersDetails
+- uid: Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersDetails.#ctor
+  name: GovernancePolicyRemoveFoldersDetails
+  nameWithType: GovernancePolicyRemoveFoldersDetails.GovernancePolicyRemoveFoldersDetails
+  fullName: Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersDetails.GovernancePolicyRemoveFoldersDetails
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.PolicyType
+  commentId: T:Dropbox.Api.TeamLog.PolicyType
+  parent: Dropbox.Api.TeamLog
+  name: PolicyType
+  nameWithType: PolicyType
+  fullName: Dropbox.Api.TeamLog.PolicyType
+- uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: '!:System.Collections.Generic.IEnumerable{System.String}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<String>
+  nameWithType: System.Collections.Generic.IEnumerable<String>
+  fullName: System.Collections.Generic.IEnumerable<System.String>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of String)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.String)
+  name.vb: System.Collections.Generic.IEnumerable(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: System.Collections.Generic.IEnumerable<>
+  nameWithType: System.Collections.Generic.IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: System.Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersDetails.GovernancePolicyId*
+  commentId: Overload:Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersDetails.GovernancePolicyId
+  name: GovernancePolicyId
+  nameWithType: GovernancePolicyRemoveFoldersDetails.GovernancePolicyId
+  fullName: Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersDetails.GovernancePolicyId
+- uid: Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersDetails.Name*
+  commentId: Overload:Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersDetails.Name
+  name: Name
+  nameWithType: GovernancePolicyRemoveFoldersDetails.Name
+  fullName: Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersDetails.Name
+- uid: Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersDetails.PolicyType*
+  commentId: Overload:Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersDetails.PolicyType
+  name: PolicyType
+  nameWithType: GovernancePolicyRemoveFoldersDetails.PolicyType
+  fullName: Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersDetails.PolicyType
+- uid: Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersDetails.Folders*
+  commentId: Overload:Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersDetails.Folders
+  name: Folders
+  nameWithType: GovernancePolicyRemoveFoldersDetails.Folders
+  fullName: Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersDetails.Folders
+- uid: System.Collections.Generic.IList{System.String}
+  commentId: '!:System.Collections.Generic.IList{System.String}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<String>
+  nameWithType: System.Collections.Generic.IList<String>
+  fullName: System.Collections.Generic.IList<System.String>
+  nameWithType.vb: System.Collections.Generic.IList(Of String)
+  fullName.vb: System.Collections.Generic.IList(Of System.String)
+  name.vb: System.Collections.Generic.IList(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  isExternal: true
+  name: System.Collections.Generic.IList<>
+  nameWithType: System.Collections.Generic.IList<>
+  fullName: System.Collections.Generic.IList<>
+  nameWithType.vb: System.Collections.Generic.IList(Of )
+  fullName.vb: System.Collections.Generic.IList(Of )
+  name.vb: System.Collections.Generic.IList(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersDetails.Reason*
+  commentId: Overload:Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersDetails.Reason
+  name: Reason
+  nameWithType: GovernancePolicyRemoveFoldersDetails.Reason
+  fullName: Dropbox.Api.TeamLog.GovernancePolicyRemoveFoldersDetails.Reason
+shouldSkipMarkup: true

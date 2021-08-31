@@ -1,0 +1,246 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.PaperCreateArg
+  commentId: T:Dropbox.Api.Files.PaperCreateArg
+  id: PaperCreateArg
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.PaperCreateArg.#ctor
+  - Dropbox.Api.Files.PaperCreateArg.#ctor(System.String,Dropbox.Api.Files.ImportFormat)
+  - Dropbox.Api.Files.PaperCreateArg.ImportFormat
+  - Dropbox.Api.Files.PaperCreateArg.Path
+  langs:
+  - csharp
+  - vb
+  name: PaperCreateArg
+  nameWithType: PaperCreateArg
+  fullName: Dropbox.Api.Files.PaperCreateArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperCreateArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PaperCreateArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperCreateArg.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The paper create arg object</p>\n"
+  example: []
+  syntax:
+    content: 'public class PaperCreateArg : object'
+    content.vb: >-
+      Public Class PaperCreateArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.PaperCreateArg.#ctor(System.String,Dropbox.Api.Files.ImportFormat)
+  commentId: M:Dropbox.Api.Files.PaperCreateArg.#ctor(System.String,Dropbox.Api.Files.ImportFormat)
+  id: '#ctor(System.String,Dropbox.Api.Files.ImportFormat)'
+  parent: Dropbox.Api.Files.PaperCreateArg
+  langs:
+  - csharp
+  - vb
+  name: PaperCreateArg(String, ImportFormat)
+  nameWithType: PaperCreateArg.PaperCreateArg(String, ImportFormat)
+  fullName: Dropbox.Api.Files.PaperCreateArg.PaperCreateArg(System.String, Dropbox.Api.Files.ImportFormat)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperCreateArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperCreateArg.cs
+    startLine: 36
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.PaperCreateArg\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public PaperCreateArg(string path, ImportFormat importFormat)
+    parameters:
+    - id: path
+      type: System.String
+      description: >-
+        The fully qualified path to the location in the user&apos;s Dropbox
+
+        where the Paper Doc should be created. This should include the document&apos;s title and
+
+        end with .paper.
+    - id: importFormat
+      type: Dropbox.Api.Files.ImportFormat
+      description: The format of the provided data.
+    content.vb: Public Sub New(path As String, importFormat As ImportFormat)
+  overload: Dropbox.Api.Files.PaperCreateArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.PaperCreateArg.#ctor
+  commentId: M:Dropbox.Api.Files.PaperCreateArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.PaperCreateArg
+  langs:
+  - csharp
+  - vb
+  name: PaperCreateArg()
+  nameWithType: PaperCreateArg.PaperCreateArg()
+  fullName: Dropbox.Api.Files.PaperCreateArg.PaperCreateArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperCreateArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperCreateArg.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.PaperCreateArg\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public PaperCreateArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.PaperCreateArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.PaperCreateArg.Path
+  commentId: P:Dropbox.Api.Files.PaperCreateArg.Path
+  id: Path
+  parent: Dropbox.Api.Files.PaperCreateArg
+  langs:
+  - csharp
+  - vb
+  name: Path
+  nameWithType: PaperCreateArg.Path
+  fullName: Dropbox.Api.Files.PaperCreateArg.Path
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperCreateArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Path
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperCreateArg.cs
+    startLine: 72
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The fully qualified path to the location in the user&apos;s Dropbox where the\nPaper Doc should be created. This should include the document&apos;s title and end with\n.paper.</p>\n"
+  example: []
+  syntax:
+    content: public string Path { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Path As String
+  overload: Dropbox.Api.Files.PaperCreateArg.Path*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.PaperCreateArg.ImportFormat
+  commentId: P:Dropbox.Api.Files.PaperCreateArg.ImportFormat
+  id: ImportFormat
+  parent: Dropbox.Api.Files.PaperCreateArg
+  langs:
+  - csharp
+  - vb
+  name: ImportFormat
+  nameWithType: PaperCreateArg.ImportFormat
+  fullName: Dropbox.Api.Files.PaperCreateArg.ImportFormat
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperCreateArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ImportFormat
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperCreateArg.cs
+    startLine: 77
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The format of the provided data.</p>\n"
+  example: []
+  syntax:
+    content: public ImportFormat ImportFormat { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.ImportFormat
+    content.vb: Public Property ImportFormat As ImportFormat
+  overload: Dropbox.Api.Files.PaperCreateArg.ImportFormat*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.PaperCreateArg
+  commentId: T:Dropbox.Api.Files.PaperCreateArg
+  parent: Dropbox.Api.Files
+  name: PaperCreateArg
+  nameWithType: PaperCreateArg
+  fullName: Dropbox.Api.Files.PaperCreateArg
+- uid: Dropbox.Api.Files.PaperCreateArg.#ctor*
+  commentId: Overload:Dropbox.Api.Files.PaperCreateArg.#ctor
+  name: PaperCreateArg
+  nameWithType: PaperCreateArg.PaperCreateArg
+  fullName: Dropbox.Api.Files.PaperCreateArg.PaperCreateArg
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Files.ImportFormat
+  commentId: T:Dropbox.Api.Files.ImportFormat
+  parent: Dropbox.Api.Files
+  name: ImportFormat
+  nameWithType: ImportFormat
+  fullName: Dropbox.Api.Files.ImportFormat
+- uid: Dropbox.Api.Files.PaperCreateArg.Path*
+  commentId: Overload:Dropbox.Api.Files.PaperCreateArg.Path
+  name: Path
+  nameWithType: PaperCreateArg.Path
+  fullName: Dropbox.Api.Files.PaperCreateArg.Path
+- uid: Dropbox.Api.Files.PaperCreateArg.ImportFormat*
+  commentId: Overload:Dropbox.Api.Files.PaperCreateArg.ImportFormat
+  name: ImportFormat
+  nameWithType: PaperCreateArg.ImportFormat
+  fullName: Dropbox.Api.Files.PaperCreateArg.ImportFormat
+shouldSkipMarkup: true

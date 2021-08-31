@@ -1,0 +1,621 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.GetMembershipReport
+  commentId: T:Dropbox.Api.Team.GetMembershipReport
+  id: GetMembershipReport
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.GetMembershipReport.#ctor
+  - Dropbox.Api.Team.GetMembershipReport.#ctor(System.String,System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}},System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}},System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}},System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}},System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}})
+  - Dropbox.Api.Team.GetMembershipReport.Licenses
+  - Dropbox.Api.Team.GetMembershipReport.MembersJoined
+  - Dropbox.Api.Team.GetMembershipReport.PendingInvites
+  - Dropbox.Api.Team.GetMembershipReport.SuspendedMembers
+  - Dropbox.Api.Team.GetMembershipReport.TeamSize
+  langs:
+  - csharp
+  - vb
+  name: GetMembershipReport
+  nameWithType: GetMembershipReport
+  fullName: Dropbox.Api.Team.GetMembershipReport
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GetMembershipReport.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GetMembershipReport
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GetMembershipReport.cs
+    startLine: 18
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Membership Report Result. Each of the items in the storage report is an array of\nvalues, one value per day. If there is no data for a day, then the value will be\nNone.</p>\n"
+  example: []
+  syntax:
+    content: 'public class GetMembershipReport : BaseDfbReport'
+    content.vb: >-
+      Public Class GetMembershipReport
+          Inherits BaseDfbReport
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.BaseDfbReport
+  inheritedMembers:
+  - Dropbox.Api.Team.BaseDfbReport.StartDate
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.GetMembershipReport.#ctor(System.String,System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}},System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}},System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}},System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}},System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}})
+  commentId: M:Dropbox.Api.Team.GetMembershipReport.#ctor(System.String,System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}},System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}},System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}},System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}},System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}})
+  id: '#ctor(System.String,System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}},System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}},System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}},System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}},System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}})'
+  parent: Dropbox.Api.Team.GetMembershipReport
+  langs:
+  - csharp
+  - vb
+  name: GetMembershipReport(String, System.Collections.Generic.IEnumerable<Nullable<UInt64>>, System.Collections.Generic.IEnumerable<Nullable<UInt64>>, System.Collections.Generic.IEnumerable<Nullable<UInt64>>, System.Collections.Generic.IEnumerable<Nullable<UInt64>>, System.Collections.Generic.IEnumerable<Nullable<UInt64>>)
+  nameWithType: GetMembershipReport.GetMembershipReport(String, System.Collections.Generic.IEnumerable<Nullable<UInt64>>, System.Collections.Generic.IEnumerable<Nullable<UInt64>>, System.Collections.Generic.IEnumerable<Nullable<UInt64>>, System.Collections.Generic.IEnumerable<Nullable<UInt64>>, System.Collections.Generic.IEnumerable<Nullable<UInt64>>)
+  fullName: Dropbox.Api.Team.GetMembershipReport.GetMembershipReport(System.String, System.Collections.Generic.IEnumerable<System.Nullable<System.UInt64>>, System.Collections.Generic.IEnumerable<System.Nullable<System.UInt64>>, System.Collections.Generic.IEnumerable<System.Nullable<System.UInt64>>, System.Collections.Generic.IEnumerable<System.Nullable<System.UInt64>>, System.Collections.Generic.IEnumerable<System.Nullable<System.UInt64>>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GetMembershipReport.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GetMembershipReport.cs
+    startLine: 47
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.GetMembershipReport\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public GetMembershipReport(string startDate, System.Collections.Generic.IEnumerable<ulong?> teamSize, System.Collections.Generic.IEnumerable<ulong?> pendingInvites, System.Collections.Generic.IEnumerable<ulong?> membersJoined, System.Collections.Generic.IEnumerable<ulong?> suspendedMembers, System.Collections.Generic.IEnumerable<ulong?> licenses)
+    parameters:
+    - id: startDate
+      type: System.String
+      description: >-
+        First date present in the results as &apos;YYYY-MM-DD&apos; or
+
+        None.
+    - id: teamSize
+      type: System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}}
+      description: Team size, for each day.
+    - id: pendingInvites
+      type: System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}}
+      description: >-
+        The number of pending invites to the team, for each
+
+        day.
+    - id: membersJoined
+      type: System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}}
+      description: >-
+        The number of members that joined the team, for each
+
+        day.
+    - id: suspendedMembers
+      type: System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}}
+      description: >-
+        The number of suspended team members, for each
+
+        day.
+    - id: licenses
+      type: System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}}
+      description: >-
+        The total number of licenses the team has, for each
+
+        day.
+    content.vb: Public Sub New(startDate As String, teamSize As System.Collections.Generic.IEnumerable(Of ULong?), pendingInvites As System.Collections.Generic.IEnumerable(Of ULong?), membersJoined As System.Collections.Generic.IEnumerable(Of ULong?), suspendedMembers As System.Collections.Generic.IEnumerable(Of ULong?), licenses As System.Collections.Generic.IEnumerable(Of ULong?))
+  overload: Dropbox.Api.Team.GetMembershipReport.#ctor*
+  nameWithType.vb: GetMembershipReport.GetMembershipReport(String, System.Collections.Generic.IEnumerable(Of Nullable(Of UInt64)), System.Collections.Generic.IEnumerable(Of Nullable(Of UInt64)), System.Collections.Generic.IEnumerable(Of Nullable(Of UInt64)), System.Collections.Generic.IEnumerable(Of Nullable(Of UInt64)), System.Collections.Generic.IEnumerable(Of Nullable(Of UInt64)))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Team.GetMembershipReport.GetMembershipReport(System.String, System.Collections.Generic.IEnumerable(Of System.Nullable(Of System.UInt64)), System.Collections.Generic.IEnumerable(Of System.Nullable(Of System.UInt64)), System.Collections.Generic.IEnumerable(Of System.Nullable(Of System.UInt64)), System.Collections.Generic.IEnumerable(Of System.Nullable(Of System.UInt64)), System.Collections.Generic.IEnumerable(Of System.Nullable(Of System.UInt64)))
+  name.vb: GetMembershipReport(String, System.Collections.Generic.IEnumerable(Of Nullable(Of UInt64)), System.Collections.Generic.IEnumerable(Of Nullable(Of UInt64)), System.Collections.Generic.IEnumerable(Of Nullable(Of UInt64)), System.Collections.Generic.IEnumerable(Of Nullable(Of UInt64)), System.Collections.Generic.IEnumerable(Of Nullable(Of UInt64)))
+- uid: Dropbox.Api.Team.GetMembershipReport.#ctor
+  commentId: M:Dropbox.Api.Team.GetMembershipReport.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.GetMembershipReport
+  langs:
+  - csharp
+  - vb
+  name: GetMembershipReport()
+  nameWithType: GetMembershipReport.GetMembershipReport()
+  fullName: Dropbox.Api.Team.GetMembershipReport.GetMembershipReport()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GetMembershipReport.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GetMembershipReport.cs
+    startLine: 103
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.GetMembershipReport\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public GetMembershipReport()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.GetMembershipReport.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.GetMembershipReport.TeamSize
+  commentId: P:Dropbox.Api.Team.GetMembershipReport.TeamSize
+  id: TeamSize
+  parent: Dropbox.Api.Team.GetMembershipReport
+  langs:
+  - csharp
+  - vb
+  name: TeamSize
+  nameWithType: GetMembershipReport.TeamSize
+  fullName: Dropbox.Api.Team.GetMembershipReport.TeamSize
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GetMembershipReport.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TeamSize
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GetMembershipReport.cs
+    startLine: 111
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Team size, for each day.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<ulong?> TeamSize { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{System.Nullable{System.UInt64}}
+    content.vb: Public Property TeamSize As System.Collections.Generic.IList(Of ULong?)
+  overload: Dropbox.Api.Team.GetMembershipReport.TeamSize*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.GetMembershipReport.PendingInvites
+  commentId: P:Dropbox.Api.Team.GetMembershipReport.PendingInvites
+  id: PendingInvites
+  parent: Dropbox.Api.Team.GetMembershipReport
+  langs:
+  - csharp
+  - vb
+  name: PendingInvites
+  nameWithType: GetMembershipReport.PendingInvites
+  fullName: Dropbox.Api.Team.GetMembershipReport.PendingInvites
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GetMembershipReport.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PendingInvites
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GetMembershipReport.cs
+    startLine: 116
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The number of pending invites to the team, for each day.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<ulong?> PendingInvites { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{System.Nullable{System.UInt64}}
+    content.vb: Public Property PendingInvites As System.Collections.Generic.IList(Of ULong?)
+  overload: Dropbox.Api.Team.GetMembershipReport.PendingInvites*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.GetMembershipReport.MembersJoined
+  commentId: P:Dropbox.Api.Team.GetMembershipReport.MembersJoined
+  id: MembersJoined
+  parent: Dropbox.Api.Team.GetMembershipReport
+  langs:
+  - csharp
+  - vb
+  name: MembersJoined
+  nameWithType: GetMembershipReport.MembersJoined
+  fullName: Dropbox.Api.Team.GetMembershipReport.MembersJoined
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GetMembershipReport.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: MembersJoined
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GetMembershipReport.cs
+    startLine: 121
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The number of members that joined the team, for each day.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<ulong?> MembersJoined { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{System.Nullable{System.UInt64}}
+    content.vb: Public Property MembersJoined As System.Collections.Generic.IList(Of ULong?)
+  overload: Dropbox.Api.Team.GetMembershipReport.MembersJoined*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.GetMembershipReport.SuspendedMembers
+  commentId: P:Dropbox.Api.Team.GetMembershipReport.SuspendedMembers
+  id: SuspendedMembers
+  parent: Dropbox.Api.Team.GetMembershipReport
+  langs:
+  - csharp
+  - vb
+  name: SuspendedMembers
+  nameWithType: GetMembershipReport.SuspendedMembers
+  fullName: Dropbox.Api.Team.GetMembershipReport.SuspendedMembers
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GetMembershipReport.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SuspendedMembers
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GetMembershipReport.cs
+    startLine: 126
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The number of suspended team members, for each day.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<ulong?> SuspendedMembers { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{System.Nullable{System.UInt64}}
+    content.vb: Public Property SuspendedMembers As System.Collections.Generic.IList(Of ULong?)
+  overload: Dropbox.Api.Team.GetMembershipReport.SuspendedMembers*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.GetMembershipReport.Licenses
+  commentId: P:Dropbox.Api.Team.GetMembershipReport.Licenses
+  id: Licenses
+  parent: Dropbox.Api.Team.GetMembershipReport
+  langs:
+  - csharp
+  - vb
+  name: Licenses
+  nameWithType: GetMembershipReport.Licenses
+  fullName: Dropbox.Api.Team.GetMembershipReport.Licenses
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GetMembershipReport.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Licenses
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GetMembershipReport.cs
+    startLine: 131
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The total number of licenses the team has, for each day.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<ulong?> Licenses { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{System.Nullable{System.UInt64}}
+    content.vb: Public Property Licenses As System.Collections.Generic.IList(Of ULong?)
+  overload: Dropbox.Api.Team.GetMembershipReport.Licenses*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.BaseDfbReport
+  commentId: T:Dropbox.Api.Team.BaseDfbReport
+  parent: Dropbox.Api.Team
+  name: BaseDfbReport
+  nameWithType: BaseDfbReport
+  fullName: Dropbox.Api.Team.BaseDfbReport
+- uid: Dropbox.Api.Team.BaseDfbReport.StartDate
+  commentId: P:Dropbox.Api.Team.BaseDfbReport.StartDate
+  parent: Dropbox.Api.Team.BaseDfbReport
+  name: StartDate
+  nameWithType: BaseDfbReport.StartDate
+  fullName: Dropbox.Api.Team.BaseDfbReport.StartDate
+- uid: Dropbox.Api.Team.GetMembershipReport
+  commentId: T:Dropbox.Api.Team.GetMembershipReport
+  parent: Dropbox.Api.Team
+  name: GetMembershipReport
+  nameWithType: GetMembershipReport
+  fullName: Dropbox.Api.Team.GetMembershipReport
+- uid: Dropbox.Api.Team.GetMembershipReport.#ctor*
+  commentId: Overload:Dropbox.Api.Team.GetMembershipReport.#ctor
+  name: GetMembershipReport
+  nameWithType: GetMembershipReport.GetMembershipReport
+  fullName: Dropbox.Api.Team.GetMembershipReport.GetMembershipReport
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}}
+  commentId: '!:System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<Nullable<UInt64>>
+  nameWithType: System.Collections.Generic.IEnumerable<Nullable<UInt64>>
+  fullName: System.Collections.Generic.IEnumerable<System.Nullable<System.UInt64>>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of Nullable(Of UInt64))
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.Nullable(Of System.UInt64))
+  name.vb: System.Collections.Generic.IEnumerable(Of Nullable(Of UInt64))
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.UInt64
+    name: UInt64
+    nameWithType: UInt64
+    fullName: System.UInt64
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.UInt64
+    name: UInt64
+    nameWithType: UInt64
+    fullName: System.UInt64
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: System.Collections.Generic.IEnumerable<>
+  nameWithType: System.Collections.Generic.IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: System.Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Team.GetMembershipReport.TeamSize*
+  commentId: Overload:Dropbox.Api.Team.GetMembershipReport.TeamSize
+  name: TeamSize
+  nameWithType: GetMembershipReport.TeamSize
+  fullName: Dropbox.Api.Team.GetMembershipReport.TeamSize
+- uid: System.Collections.Generic.IList{System.Nullable{System.UInt64}}
+  commentId: '!:System.Collections.Generic.IList{System.Nullable{System.UInt64}}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<Nullable<UInt64>>
+  nameWithType: System.Collections.Generic.IList<Nullable<UInt64>>
+  fullName: System.Collections.Generic.IList<System.Nullable<System.UInt64>>
+  nameWithType.vb: System.Collections.Generic.IList(Of Nullable(Of UInt64))
+  fullName.vb: System.Collections.Generic.IList(Of System.Nullable(Of System.UInt64))
+  name.vb: System.Collections.Generic.IList(Of Nullable(Of UInt64))
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.UInt64
+    name: UInt64
+    nameWithType: UInt64
+    fullName: System.UInt64
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.UInt64
+    name: UInt64
+    nameWithType: UInt64
+    fullName: System.UInt64
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  isExternal: true
+  name: System.Collections.Generic.IList<>
+  nameWithType: System.Collections.Generic.IList<>
+  fullName: System.Collections.Generic.IList<>
+  nameWithType.vb: System.Collections.Generic.IList(Of )
+  fullName.vb: System.Collections.Generic.IList(Of )
+  name.vb: System.Collections.Generic.IList(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Team.GetMembershipReport.PendingInvites*
+  commentId: Overload:Dropbox.Api.Team.GetMembershipReport.PendingInvites
+  name: PendingInvites
+  nameWithType: GetMembershipReport.PendingInvites
+  fullName: Dropbox.Api.Team.GetMembershipReport.PendingInvites
+- uid: Dropbox.Api.Team.GetMembershipReport.MembersJoined*
+  commentId: Overload:Dropbox.Api.Team.GetMembershipReport.MembersJoined
+  name: MembersJoined
+  nameWithType: GetMembershipReport.MembersJoined
+  fullName: Dropbox.Api.Team.GetMembershipReport.MembersJoined
+- uid: Dropbox.Api.Team.GetMembershipReport.SuspendedMembers*
+  commentId: Overload:Dropbox.Api.Team.GetMembershipReport.SuspendedMembers
+  name: SuspendedMembers
+  nameWithType: GetMembershipReport.SuspendedMembers
+  fullName: Dropbox.Api.Team.GetMembershipReport.SuspendedMembers
+- uid: Dropbox.Api.Team.GetMembershipReport.Licenses*
+  commentId: Overload:Dropbox.Api.Team.GetMembershipReport.Licenses
+  name: Licenses
+  nameWithType: GetMembershipReport.Licenses
+  fullName: Dropbox.Api.Team.GetMembershipReport.Licenses
+shouldSkipMarkup: true

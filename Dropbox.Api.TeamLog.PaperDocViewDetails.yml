@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.PaperDocViewDetails
+  commentId: T:Dropbox.Api.TeamLog.PaperDocViewDetails
+  id: PaperDocViewDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.PaperDocViewDetails.#ctor
+  - Dropbox.Api.TeamLog.PaperDocViewDetails.#ctor(System.String)
+  - Dropbox.Api.TeamLog.PaperDocViewDetails.EventUuid
+  langs:
+  - csharp
+  - vb
+  name: PaperDocViewDetails
+  nameWithType: PaperDocViewDetails
+  fullName: Dropbox.Api.TeamLog.PaperDocViewDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDocViewDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PaperDocViewDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDocViewDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Viewed Paper doc.</p>\n"
+  example: []
+  syntax:
+    content: 'public class PaperDocViewDetails : object'
+    content.vb: >-
+      Public Class PaperDocViewDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.PaperDocViewDetails.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.PaperDocViewDetails.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.PaperDocViewDetails
+  langs:
+  - csharp
+  - vb
+  name: PaperDocViewDetails(String)
+  nameWithType: PaperDocViewDetails.PaperDocViewDetails(String)
+  fullName: Dropbox.Api.TeamLog.PaperDocViewDetails.PaperDocViewDetails(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDocViewDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDocViewDetails.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.PaperDocViewDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public PaperDocViewDetails(string eventUuid)
+    parameters:
+    - id: eventUuid
+      type: System.String
+      description: Event unique identifier.
+    content.vb: Public Sub New(eventUuid As String)
+  overload: Dropbox.Api.TeamLog.PaperDocViewDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.PaperDocViewDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.PaperDocViewDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.PaperDocViewDetails
+  langs:
+  - csharp
+  - vb
+  name: PaperDocViewDetails()
+  nameWithType: PaperDocViewDetails.PaperDocViewDetails()
+  fullName: Dropbox.Api.TeamLog.PaperDocViewDetails.PaperDocViewDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDocViewDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDocViewDetails.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.PaperDocViewDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public PaperDocViewDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.PaperDocViewDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.PaperDocViewDetails.EventUuid
+  commentId: P:Dropbox.Api.TeamLog.PaperDocViewDetails.EventUuid
+  id: EventUuid
+  parent: Dropbox.Api.TeamLog.PaperDocViewDetails
+  langs:
+  - csharp
+  - vb
+  name: EventUuid
+  nameWithType: PaperDocViewDetails.EventUuid
+  fullName: Dropbox.Api.TeamLog.PaperDocViewDetails.EventUuid
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDocViewDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: EventUuid
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDocViewDetails.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Event unique identifier.</p>\n"
+  example: []
+  syntax:
+    content: public string EventUuid { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property EventUuid As String
+  overload: Dropbox.Api.TeamLog.PaperDocViewDetails.EventUuid*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.PaperDocViewDetails
+  commentId: T:Dropbox.Api.TeamLog.PaperDocViewDetails
+  parent: Dropbox.Api.TeamLog
+  name: PaperDocViewDetails
+  nameWithType: PaperDocViewDetails
+  fullName: Dropbox.Api.TeamLog.PaperDocViewDetails
+- uid: Dropbox.Api.TeamLog.PaperDocViewDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.PaperDocViewDetails.#ctor
+  name: PaperDocViewDetails
+  nameWithType: PaperDocViewDetails.PaperDocViewDetails
+  fullName: Dropbox.Api.TeamLog.PaperDocViewDetails.PaperDocViewDetails
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.PaperDocViewDetails.EventUuid*
+  commentId: Overload:Dropbox.Api.TeamLog.PaperDocViewDetails.EventUuid
+  name: EventUuid
+  nameWithType: PaperDocViewDetails.EventUuid
+  fullName: Dropbox.Api.TeamLog.PaperDocViewDetails.EventUuid
+shouldSkipMarkup: true

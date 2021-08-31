@@ -1,0 +1,215 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.NonTrustedTeamDetails
+  commentId: T:Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.NonTrustedTeamDetails
+  id: FederationStatusChangeAdditionalInfo.NonTrustedTeamDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.NonTrustedTeamDetails.#ctor(Dropbox.Api.TeamLog.NonTrustedTeamDetails)
+  - Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.NonTrustedTeamDetails.Value
+  langs:
+  - csharp
+  - vb
+  name: FederationStatusChangeAdditionalInfo.NonTrustedTeamDetails
+  nameWithType: FederationStatusChangeAdditionalInfo.NonTrustedTeamDetails
+  fullName: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.NonTrustedTeamDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FederationStatusChangeAdditionalInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NonTrustedTeamDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FederationStatusChangeAdditionalInfo.cs
+    startLine: 303
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The email to which the request was sent.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class NonTrustedTeamDetails : FederationStatusChangeAdditionalInfo'
+    content.vb: >-
+      Public NotInheritable Class NonTrustedTeamDetails
+          Inherits FederationStatusChangeAdditionalInfo
+  inheritance:
+  - System.Object
+  - Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo
+  inheritedMembers:
+  - Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.IsConnectedTeamName
+  - Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.AsConnectedTeamName
+  - Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.IsNonTrustedTeamDetails
+  - Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.AsNonTrustedTeamDetails
+  - Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.IsOrganizationName
+  - Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.AsOrganizationName
+  - Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.IsOther
+  - Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.NonTrustedTeamDetails.#ctor(Dropbox.Api.TeamLog.NonTrustedTeamDetails)
+  commentId: M:Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.NonTrustedTeamDetails.#ctor(Dropbox.Api.TeamLog.NonTrustedTeamDetails)
+  id: '#ctor(Dropbox.Api.TeamLog.NonTrustedTeamDetails)'
+  parent: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.NonTrustedTeamDetails
+  langs:
+  - csharp
+  - vb
+  name: NonTrustedTeamDetails(NonTrustedTeamDetails)
+  nameWithType: FederationStatusChangeAdditionalInfo.NonTrustedTeamDetails.NonTrustedTeamDetails(NonTrustedTeamDetails)
+  fullName: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.NonTrustedTeamDetails.NonTrustedTeamDetails(Dropbox.Api.TeamLog.NonTrustedTeamDetails)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FederationStatusChangeAdditionalInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FederationStatusChangeAdditionalInfo.cs
+    startLine: 322
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.NonTrustedTeamDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public NonTrustedTeamDetails(NonTrustedTeamDetails value)
+    parameters:
+    - id: value
+      type: Dropbox.Api.TeamLog.NonTrustedTeamDetails
+      description: The value
+    content.vb: Public Sub New(value As NonTrustedTeamDetails)
+  overload: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.NonTrustedTeamDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.NonTrustedTeamDetails.Value
+  commentId: P:Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.NonTrustedTeamDetails.Value
+  id: Value
+  parent: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.NonTrustedTeamDetails
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: FederationStatusChangeAdditionalInfo.NonTrustedTeamDetails.Value
+  fullName: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.NonTrustedTeamDetails.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FederationStatusChangeAdditionalInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FederationStatusChangeAdditionalInfo.cs
+    startLine: 337
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public NonTrustedTeamDetails Value { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.NonTrustedTeamDetails
+    content.vb: Public ReadOnly Property Value As NonTrustedTeamDetails
+  overload: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.NonTrustedTeamDetails.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo
+  commentId: T:Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo
+  parent: Dropbox.Api.TeamLog
+  name: FederationStatusChangeAdditionalInfo
+  nameWithType: FederationStatusChangeAdditionalInfo
+  fullName: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo
+- uid: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.IsConnectedTeamName
+  commentId: P:Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.IsConnectedTeamName
+  parent: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo
+  name: IsConnectedTeamName
+  nameWithType: FederationStatusChangeAdditionalInfo.IsConnectedTeamName
+  fullName: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.IsConnectedTeamName
+- uid: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.AsConnectedTeamName
+  commentId: P:Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.AsConnectedTeamName
+  parent: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo
+  name: AsConnectedTeamName
+  nameWithType: FederationStatusChangeAdditionalInfo.AsConnectedTeamName
+  fullName: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.AsConnectedTeamName
+- uid: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.IsNonTrustedTeamDetails
+  commentId: P:Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.IsNonTrustedTeamDetails
+  parent: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo
+  name: IsNonTrustedTeamDetails
+  nameWithType: FederationStatusChangeAdditionalInfo.IsNonTrustedTeamDetails
+  fullName: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.IsNonTrustedTeamDetails
+- uid: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.AsNonTrustedTeamDetails
+  commentId: P:Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.AsNonTrustedTeamDetails
+  parent: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo
+  name: AsNonTrustedTeamDetails
+  nameWithType: FederationStatusChangeAdditionalInfo.AsNonTrustedTeamDetails
+  fullName: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.AsNonTrustedTeamDetails
+- uid: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.IsOrganizationName
+  commentId: P:Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.IsOrganizationName
+  parent: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo
+  name: IsOrganizationName
+  nameWithType: FederationStatusChangeAdditionalInfo.IsOrganizationName
+  fullName: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.IsOrganizationName
+- uid: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.AsOrganizationName
+  commentId: P:Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.AsOrganizationName
+  parent: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo
+  name: AsOrganizationName
+  nameWithType: FederationStatusChangeAdditionalInfo.AsOrganizationName
+  fullName: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.AsOrganizationName
+- uid: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.IsOther
+  commentId: P:Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.IsOther
+  parent: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo
+  name: IsOther
+  nameWithType: FederationStatusChangeAdditionalInfo.IsOther
+  fullName: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.IsOther
+- uid: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.AsOther
+  commentId: P:Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.AsOther
+  parent: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo
+  name: AsOther
+  nameWithType: FederationStatusChangeAdditionalInfo.AsOther
+  fullName: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.AsOther
+- uid: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.NonTrustedTeamDetails
+  commentId: T:Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.NonTrustedTeamDetails
+  parent: Dropbox.Api.TeamLog
+  name: FederationStatusChangeAdditionalInfo.NonTrustedTeamDetails
+  nameWithType: FederationStatusChangeAdditionalInfo.NonTrustedTeamDetails
+  fullName: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.NonTrustedTeamDetails
+- uid: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.NonTrustedTeamDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.NonTrustedTeamDetails.#ctor
+  name: NonTrustedTeamDetails
+  nameWithType: FederationStatusChangeAdditionalInfo.NonTrustedTeamDetails.NonTrustedTeamDetails
+  fullName: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.NonTrustedTeamDetails.NonTrustedTeamDetails
+- uid: Dropbox.Api.TeamLog.NonTrustedTeamDetails
+  commentId: T:Dropbox.Api.TeamLog.NonTrustedTeamDetails
+  parent: Dropbox.Api.TeamLog
+  name: NonTrustedTeamDetails
+  nameWithType: NonTrustedTeamDetails
+  fullName: Dropbox.Api.TeamLog.NonTrustedTeamDetails
+- uid: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.NonTrustedTeamDetails.Value*
+  commentId: Overload:Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.NonTrustedTeamDetails.Value
+  name: Value
+  nameWithType: FederationStatusChangeAdditionalInfo.NonTrustedTeamDetails.Value
+  fullName: Dropbox.Api.TeamLog.FederationStatusChangeAdditionalInfo.NonTrustedTeamDetails.Value
+shouldSkipMarkup: true

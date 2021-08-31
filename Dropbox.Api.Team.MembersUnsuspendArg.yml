@@ -1,0 +1,188 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.MembersUnsuspendArg
+  commentId: T:Dropbox.Api.Team.MembersUnsuspendArg
+  id: MembersUnsuspendArg
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.MembersUnsuspendArg.#ctor
+  - Dropbox.Api.Team.MembersUnsuspendArg.#ctor(Dropbox.Api.Team.UserSelectorArg)
+  - Dropbox.Api.Team.MembersUnsuspendArg.User
+  langs:
+  - csharp
+  - vb
+  name: MembersUnsuspendArg
+  nameWithType: MembersUnsuspendArg
+  fullName: Dropbox.Api.Team.MembersUnsuspendArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersUnsuspendArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: MembersUnsuspendArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersUnsuspendArg.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Exactly one of team_member_id, email, or external_id must be provided to identify\nthe user account.</p>\n"
+  example: []
+  syntax:
+    content: 'public class MembersUnsuspendArg : object'
+    content.vb: >-
+      Public Class MembersUnsuspendArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.MembersUnsuspendArg.#ctor(Dropbox.Api.Team.UserSelectorArg)
+  commentId: M:Dropbox.Api.Team.MembersUnsuspendArg.#ctor(Dropbox.Api.Team.UserSelectorArg)
+  id: '#ctor(Dropbox.Api.Team.UserSelectorArg)'
+  parent: Dropbox.Api.Team.MembersUnsuspendArg
+  langs:
+  - csharp
+  - vb
+  name: MembersUnsuspendArg(UserSelectorArg)
+  nameWithType: MembersUnsuspendArg.MembersUnsuspendArg(UserSelectorArg)
+  fullName: Dropbox.Api.Team.MembersUnsuspendArg.MembersUnsuspendArg(Dropbox.Api.Team.UserSelectorArg)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersUnsuspendArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersUnsuspendArg.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.MembersUnsuspendArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public MembersUnsuspendArg(UserSelectorArg user)
+    parameters:
+    - id: user
+      type: Dropbox.Api.Team.UserSelectorArg
+      description: Identity of user to unsuspend.
+    content.vb: Public Sub New(user As UserSelectorArg)
+  overload: Dropbox.Api.Team.MembersUnsuspendArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.MembersUnsuspendArg.#ctor
+  commentId: M:Dropbox.Api.Team.MembersUnsuspendArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.MembersUnsuspendArg
+  langs:
+  - csharp
+  - vb
+  name: MembersUnsuspendArg()
+  nameWithType: MembersUnsuspendArg.MembersUnsuspendArg()
+  fullName: Dropbox.Api.Team.MembersUnsuspendArg.MembersUnsuspendArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersUnsuspendArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersUnsuspendArg.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.MembersUnsuspendArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public MembersUnsuspendArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.MembersUnsuspendArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.MembersUnsuspendArg.User
+  commentId: P:Dropbox.Api.Team.MembersUnsuspendArg.User
+  id: User
+  parent: Dropbox.Api.Team.MembersUnsuspendArg
+  langs:
+  - csharp
+  - vb
+  name: User
+  nameWithType: MembersUnsuspendArg.User
+  fullName: Dropbox.Api.Team.MembersUnsuspendArg.User
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersUnsuspendArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: User
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersUnsuspendArg.cs
+    startLine: 59
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Identity of user to unsuspend.</p>\n"
+  example: []
+  syntax:
+    content: public UserSelectorArg User { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.UserSelectorArg
+    content.vb: Public Property User As UserSelectorArg
+  overload: Dropbox.Api.Team.MembersUnsuspendArg.User*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.MembersUnsuspendArg
+  commentId: T:Dropbox.Api.Team.MembersUnsuspendArg
+  parent: Dropbox.Api.Team
+  name: MembersUnsuspendArg
+  nameWithType: MembersUnsuspendArg
+  fullName: Dropbox.Api.Team.MembersUnsuspendArg
+- uid: Dropbox.Api.Team.MembersUnsuspendArg.#ctor*
+  commentId: Overload:Dropbox.Api.Team.MembersUnsuspendArg.#ctor
+  name: MembersUnsuspendArg
+  nameWithType: MembersUnsuspendArg.MembersUnsuspendArg
+  fullName: Dropbox.Api.Team.MembersUnsuspendArg.MembersUnsuspendArg
+- uid: Dropbox.Api.Team.UserSelectorArg
+  commentId: T:Dropbox.Api.Team.UserSelectorArg
+  parent: Dropbox.Api.Team
+  name: UserSelectorArg
+  nameWithType: UserSelectorArg
+  fullName: Dropbox.Api.Team.UserSelectorArg
+- uid: Dropbox.Api.Team.MembersUnsuspendArg.User*
+  commentId: Overload:Dropbox.Api.Team.MembersUnsuspendArg.User
+  name: User
+  nameWithType: MembersUnsuspendArg.User
+  fullName: Dropbox.Api.Team.MembersUnsuspendArg.User
+shouldSkipMarkup: true

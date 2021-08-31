@@ -1,0 +1,201 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.UploadSessionFinishBatchLaunch.Complete
+  commentId: T:Dropbox.Api.Files.UploadSessionFinishBatchLaunch.Complete
+  id: UploadSessionFinishBatchLaunch.Complete
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.UploadSessionFinishBatchLaunch.Complete.#ctor(Dropbox.Api.Files.UploadSessionFinishBatchResult)
+  - Dropbox.Api.Files.UploadSessionFinishBatchLaunch.Complete.Value
+  langs:
+  - csharp
+  - vb
+  name: UploadSessionFinishBatchLaunch.Complete
+  nameWithType: UploadSessionFinishBatchLaunch.Complete
+  fullName: Dropbox.Api.Files.UploadSessionFinishBatchLaunch.Complete
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionFinishBatchLaunch.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Complete
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionFinishBatchLaunch.cs
+    startLine: 185
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The complete object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Complete : UploadSessionFinishBatchLaunch'
+    content.vb: >-
+      Public NotInheritable Class Complete
+          Inherits UploadSessionFinishBatchLaunch
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Files.UploadSessionFinishBatchLaunch
+  inheritedMembers:
+  - Dropbox.Api.Files.UploadSessionFinishBatchLaunch.IsComplete
+  - Dropbox.Api.Files.UploadSessionFinishBatchLaunch.AsComplete
+  - Dropbox.Api.Files.UploadSessionFinishBatchLaunch.IsOther
+  - Dropbox.Api.Files.UploadSessionFinishBatchLaunch.AsOther
+  - Dropbox.Api.Files.UploadSessionFinishBatchLaunch.IsAsyncJobId
+  - Dropbox.Api.Files.UploadSessionFinishBatchLaunch.AsAsyncJobId
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Files.UploadSessionFinishBatchLaunch.Complete.#ctor(Dropbox.Api.Files.UploadSessionFinishBatchResult)
+  commentId: M:Dropbox.Api.Files.UploadSessionFinishBatchLaunch.Complete.#ctor(Dropbox.Api.Files.UploadSessionFinishBatchResult)
+  id: '#ctor(Dropbox.Api.Files.UploadSessionFinishBatchResult)'
+  parent: Dropbox.Api.Files.UploadSessionFinishBatchLaunch.Complete
+  langs:
+  - csharp
+  - vb
+  name: Complete(UploadSessionFinishBatchResult)
+  nameWithType: UploadSessionFinishBatchLaunch.Complete.Complete(UploadSessionFinishBatchResult)
+  fullName: Dropbox.Api.Files.UploadSessionFinishBatchLaunch.Complete.Complete(Dropbox.Api.Files.UploadSessionFinishBatchResult)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionFinishBatchLaunch.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionFinishBatchLaunch.cs
+    startLine: 203
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.UploadSessionFinishBatchLaunch.Complete\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public Complete(UploadSessionFinishBatchResult value)
+    parameters:
+    - id: value
+      type: Dropbox.Api.Files.UploadSessionFinishBatchResult
+      description: The value
+    content.vb: Public Sub New(value As UploadSessionFinishBatchResult)
+  overload: Dropbox.Api.Files.UploadSessionFinishBatchLaunch.Complete.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.UploadSessionFinishBatchLaunch.Complete.Value
+  commentId: P:Dropbox.Api.Files.UploadSessionFinishBatchLaunch.Complete.Value
+  id: Value
+  parent: Dropbox.Api.Files.UploadSessionFinishBatchLaunch.Complete
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: UploadSessionFinishBatchLaunch.Complete.Value
+  fullName: Dropbox.Api.Files.UploadSessionFinishBatchLaunch.Complete.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionFinishBatchLaunch.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionFinishBatchLaunch.cs
+    startLine: 217
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public UploadSessionFinishBatchResult Value { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.UploadSessionFinishBatchResult
+    content.vb: Public ReadOnly Property Value As UploadSessionFinishBatchResult
+  overload: Dropbox.Api.Files.UploadSessionFinishBatchLaunch.Complete.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.UploadSessionFinishBatchLaunch
+  commentId: T:Dropbox.Api.Files.UploadSessionFinishBatchLaunch
+  parent: Dropbox.Api.Files
+  name: UploadSessionFinishBatchLaunch
+  nameWithType: UploadSessionFinishBatchLaunch
+  fullName: Dropbox.Api.Files.UploadSessionFinishBatchLaunch
+- uid: Dropbox.Api.Files.UploadSessionFinishBatchLaunch.IsComplete
+  commentId: P:Dropbox.Api.Files.UploadSessionFinishBatchLaunch.IsComplete
+  parent: Dropbox.Api.Files.UploadSessionFinishBatchLaunch
+  name: IsComplete
+  nameWithType: UploadSessionFinishBatchLaunch.IsComplete
+  fullName: Dropbox.Api.Files.UploadSessionFinishBatchLaunch.IsComplete
+- uid: Dropbox.Api.Files.UploadSessionFinishBatchLaunch.AsComplete
+  commentId: P:Dropbox.Api.Files.UploadSessionFinishBatchLaunch.AsComplete
+  parent: Dropbox.Api.Files.UploadSessionFinishBatchLaunch
+  name: AsComplete
+  nameWithType: UploadSessionFinishBatchLaunch.AsComplete
+  fullName: Dropbox.Api.Files.UploadSessionFinishBatchLaunch.AsComplete
+- uid: Dropbox.Api.Files.UploadSessionFinishBatchLaunch.IsOther
+  commentId: P:Dropbox.Api.Files.UploadSessionFinishBatchLaunch.IsOther
+  parent: Dropbox.Api.Files.UploadSessionFinishBatchLaunch
+  name: IsOther
+  nameWithType: UploadSessionFinishBatchLaunch.IsOther
+  fullName: Dropbox.Api.Files.UploadSessionFinishBatchLaunch.IsOther
+- uid: Dropbox.Api.Files.UploadSessionFinishBatchLaunch.AsOther
+  commentId: P:Dropbox.Api.Files.UploadSessionFinishBatchLaunch.AsOther
+  parent: Dropbox.Api.Files.UploadSessionFinishBatchLaunch
+  name: AsOther
+  nameWithType: UploadSessionFinishBatchLaunch.AsOther
+  fullName: Dropbox.Api.Files.UploadSessionFinishBatchLaunch.AsOther
+- uid: Dropbox.Api.Files.UploadSessionFinishBatchLaunch.IsAsyncJobId
+  commentId: P:Dropbox.Api.Files.UploadSessionFinishBatchLaunch.IsAsyncJobId
+  parent: Dropbox.Api.Files.UploadSessionFinishBatchLaunch
+  name: IsAsyncJobId
+  nameWithType: UploadSessionFinishBatchLaunch.IsAsyncJobId
+  fullName: Dropbox.Api.Files.UploadSessionFinishBatchLaunch.IsAsyncJobId
+- uid: Dropbox.Api.Files.UploadSessionFinishBatchLaunch.AsAsyncJobId
+  commentId: P:Dropbox.Api.Files.UploadSessionFinishBatchLaunch.AsAsyncJobId
+  parent: Dropbox.Api.Files.UploadSessionFinishBatchLaunch
+  name: AsAsyncJobId
+  nameWithType: UploadSessionFinishBatchLaunch.AsAsyncJobId
+  fullName: Dropbox.Api.Files.UploadSessionFinishBatchLaunch.AsAsyncJobId
+- uid: Dropbox.Api.Files.UploadSessionFinishBatchLaunch.Complete
+  commentId: T:Dropbox.Api.Files.UploadSessionFinishBatchLaunch.Complete
+  parent: Dropbox.Api.Files
+  name: UploadSessionFinishBatchLaunch.Complete
+  nameWithType: UploadSessionFinishBatchLaunch.Complete
+  fullName: Dropbox.Api.Files.UploadSessionFinishBatchLaunch.Complete
+- uid: Dropbox.Api.Files.UploadSessionFinishBatchLaunch.Complete.#ctor*
+  commentId: Overload:Dropbox.Api.Files.UploadSessionFinishBatchLaunch.Complete.#ctor
+  name: Complete
+  nameWithType: UploadSessionFinishBatchLaunch.Complete.Complete
+  fullName: Dropbox.Api.Files.UploadSessionFinishBatchLaunch.Complete.Complete
+- uid: Dropbox.Api.Files.UploadSessionFinishBatchResult
+  commentId: T:Dropbox.Api.Files.UploadSessionFinishBatchResult
+  parent: Dropbox.Api.Files
+  name: UploadSessionFinishBatchResult
+  nameWithType: UploadSessionFinishBatchResult
+  fullName: Dropbox.Api.Files.UploadSessionFinishBatchResult
+- uid: Dropbox.Api.Files.UploadSessionFinishBatchLaunch.Complete.Value*
+  commentId: Overload:Dropbox.Api.Files.UploadSessionFinishBatchLaunch.Complete.Value
+  name: Value
+  nameWithType: UploadSessionFinishBatchLaunch.Complete.Value
+  fullName: Dropbox.Api.Files.UploadSessionFinishBatchLaunch.Complete.Value
+shouldSkipMarkup: true

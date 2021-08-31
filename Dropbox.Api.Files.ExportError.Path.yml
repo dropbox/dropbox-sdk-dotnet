@@ -1,0 +1,229 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.ExportError.Path
+  commentId: T:Dropbox.Api.Files.ExportError.Path
+  id: ExportError.Path
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.ExportError.Path.#ctor(Dropbox.Api.Files.LookupError)
+  - Dropbox.Api.Files.ExportError.Path.Value
+  langs:
+  - csharp
+  - vb
+  name: ExportError.Path
+  nameWithType: ExportError.Path
+  fullName: Dropbox.Api.Files.ExportError.Path
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ExportError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Path
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ExportError.cs
+    startLine: 241
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The path object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Path : ExportError'
+    content.vb: >-
+      Public NotInheritable Class Path
+          Inherits ExportError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Files.ExportError
+  inheritedMembers:
+  - Dropbox.Api.Files.ExportError.IsPath
+  - Dropbox.Api.Files.ExportError.AsPath
+  - Dropbox.Api.Files.ExportError.IsNonExportable
+  - Dropbox.Api.Files.ExportError.AsNonExportable
+  - Dropbox.Api.Files.ExportError.IsInvalidExportFormat
+  - Dropbox.Api.Files.ExportError.AsInvalidExportFormat
+  - Dropbox.Api.Files.ExportError.IsRetryError
+  - Dropbox.Api.Files.ExportError.AsRetryError
+  - Dropbox.Api.Files.ExportError.IsOther
+  - Dropbox.Api.Files.ExportError.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Files.ExportError.Path.#ctor(Dropbox.Api.Files.LookupError)
+  commentId: M:Dropbox.Api.Files.ExportError.Path.#ctor(Dropbox.Api.Files.LookupError)
+  id: '#ctor(Dropbox.Api.Files.LookupError)'
+  parent: Dropbox.Api.Files.ExportError.Path
+  langs:
+  - csharp
+  - vb
+  name: Path(LookupError)
+  nameWithType: ExportError.Path.Path(LookupError)
+  fullName: Dropbox.Api.Files.ExportError.Path.Path(Dropbox.Api.Files.LookupError)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ExportError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ExportError.cs
+    startLine: 259
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.ExportError.Path\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public Path(LookupError value)
+    parameters:
+    - id: value
+      type: Dropbox.Api.Files.LookupError
+      description: The value
+    content.vb: Public Sub New(value As LookupError)
+  overload: Dropbox.Api.Files.ExportError.Path.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.ExportError.Path.Value
+  commentId: P:Dropbox.Api.Files.ExportError.Path.Value
+  id: Value
+  parent: Dropbox.Api.Files.ExportError.Path
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: ExportError.Path.Value
+  fullName: Dropbox.Api.Files.ExportError.Path.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ExportError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ExportError.cs
+    startLine: 273
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public LookupError Value { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.LookupError
+    content.vb: Public ReadOnly Property Value As LookupError
+  overload: Dropbox.Api.Files.ExportError.Path.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.ExportError
+  commentId: T:Dropbox.Api.Files.ExportError
+  parent: Dropbox.Api.Files
+  name: ExportError
+  nameWithType: ExportError
+  fullName: Dropbox.Api.Files.ExportError
+- uid: Dropbox.Api.Files.ExportError.IsPath
+  commentId: P:Dropbox.Api.Files.ExportError.IsPath
+  parent: Dropbox.Api.Files.ExportError
+  name: IsPath
+  nameWithType: ExportError.IsPath
+  fullName: Dropbox.Api.Files.ExportError.IsPath
+- uid: Dropbox.Api.Files.ExportError.AsPath
+  commentId: P:Dropbox.Api.Files.ExportError.AsPath
+  parent: Dropbox.Api.Files.ExportError
+  name: AsPath
+  nameWithType: ExportError.AsPath
+  fullName: Dropbox.Api.Files.ExportError.AsPath
+- uid: Dropbox.Api.Files.ExportError.IsNonExportable
+  commentId: P:Dropbox.Api.Files.ExportError.IsNonExportable
+  parent: Dropbox.Api.Files.ExportError
+  name: IsNonExportable
+  nameWithType: ExportError.IsNonExportable
+  fullName: Dropbox.Api.Files.ExportError.IsNonExportable
+- uid: Dropbox.Api.Files.ExportError.AsNonExportable
+  commentId: P:Dropbox.Api.Files.ExportError.AsNonExportable
+  parent: Dropbox.Api.Files.ExportError
+  name: AsNonExportable
+  nameWithType: ExportError.AsNonExportable
+  fullName: Dropbox.Api.Files.ExportError.AsNonExportable
+- uid: Dropbox.Api.Files.ExportError.IsInvalidExportFormat
+  commentId: P:Dropbox.Api.Files.ExportError.IsInvalidExportFormat
+  parent: Dropbox.Api.Files.ExportError
+  name: IsInvalidExportFormat
+  nameWithType: ExportError.IsInvalidExportFormat
+  fullName: Dropbox.Api.Files.ExportError.IsInvalidExportFormat
+- uid: Dropbox.Api.Files.ExportError.AsInvalidExportFormat
+  commentId: P:Dropbox.Api.Files.ExportError.AsInvalidExportFormat
+  parent: Dropbox.Api.Files.ExportError
+  name: AsInvalidExportFormat
+  nameWithType: ExportError.AsInvalidExportFormat
+  fullName: Dropbox.Api.Files.ExportError.AsInvalidExportFormat
+- uid: Dropbox.Api.Files.ExportError.IsRetryError
+  commentId: P:Dropbox.Api.Files.ExportError.IsRetryError
+  parent: Dropbox.Api.Files.ExportError
+  name: IsRetryError
+  nameWithType: ExportError.IsRetryError
+  fullName: Dropbox.Api.Files.ExportError.IsRetryError
+- uid: Dropbox.Api.Files.ExportError.AsRetryError
+  commentId: P:Dropbox.Api.Files.ExportError.AsRetryError
+  parent: Dropbox.Api.Files.ExportError
+  name: AsRetryError
+  nameWithType: ExportError.AsRetryError
+  fullName: Dropbox.Api.Files.ExportError.AsRetryError
+- uid: Dropbox.Api.Files.ExportError.IsOther
+  commentId: P:Dropbox.Api.Files.ExportError.IsOther
+  parent: Dropbox.Api.Files.ExportError
+  name: IsOther
+  nameWithType: ExportError.IsOther
+  fullName: Dropbox.Api.Files.ExportError.IsOther
+- uid: Dropbox.Api.Files.ExportError.AsOther
+  commentId: P:Dropbox.Api.Files.ExportError.AsOther
+  parent: Dropbox.Api.Files.ExportError
+  name: AsOther
+  nameWithType: ExportError.AsOther
+  fullName: Dropbox.Api.Files.ExportError.AsOther
+- uid: Dropbox.Api.Files.ExportError.Path
+  commentId: T:Dropbox.Api.Files.ExportError.Path
+  parent: Dropbox.Api.Files
+  name: ExportError.Path
+  nameWithType: ExportError.Path
+  fullName: Dropbox.Api.Files.ExportError.Path
+- uid: Dropbox.Api.Files.ExportError.Path.#ctor*
+  commentId: Overload:Dropbox.Api.Files.ExportError.Path.#ctor
+  name: Path
+  nameWithType: ExportError.Path.Path
+  fullName: Dropbox.Api.Files.ExportError.Path.Path
+- uid: Dropbox.Api.Files.LookupError
+  commentId: T:Dropbox.Api.Files.LookupError
+  parent: Dropbox.Api.Files
+  name: LookupError
+  nameWithType: LookupError
+  fullName: Dropbox.Api.Files.LookupError
+- uid: Dropbox.Api.Files.ExportError.Path.Value*
+  commentId: Overload:Dropbox.Api.Files.ExportError.Path.Value
+  name: Value
+  nameWithType: ExportError.Path.Value
+  fullName: Dropbox.Api.Files.ExportError.Path.Value
+shouldSkipMarkup: true

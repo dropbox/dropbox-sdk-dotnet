@@ -1,0 +1,162 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamPolicies.SsoPolicy.Disabled
+  commentId: T:Dropbox.Api.TeamPolicies.SsoPolicy.Disabled
+  id: SsoPolicy.Disabled
+  parent: Dropbox.Api.TeamPolicies
+  children:
+  - Dropbox.Api.TeamPolicies.SsoPolicy.Disabled.Instance
+  langs:
+  - csharp
+  - vb
+  name: SsoPolicy.Disabled
+  nameWithType: SsoPolicy.Disabled
+  fullName: Dropbox.Api.TeamPolicies.SsoPolicy.Disabled
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SsoPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Disabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SsoPolicy.cs
+    startLine: 211
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Users will be able to sign in with their Dropbox credentials.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Disabled : SsoPolicy'
+    content.vb: >-
+      Public NotInheritable Class Disabled
+          Inherits SsoPolicy
+  inheritance:
+  - System.Object
+  - Dropbox.Api.TeamPolicies.SsoPolicy
+  inheritedMembers:
+  - Dropbox.Api.TeamPolicies.SsoPolicy.IsDisabled
+  - Dropbox.Api.TeamPolicies.SsoPolicy.AsDisabled
+  - Dropbox.Api.TeamPolicies.SsoPolicy.IsOptional
+  - Dropbox.Api.TeamPolicies.SsoPolicy.AsOptional
+  - Dropbox.Api.TeamPolicies.SsoPolicy.IsRequired
+  - Dropbox.Api.TeamPolicies.SsoPolicy.AsRequired
+  - Dropbox.Api.TeamPolicies.SsoPolicy.IsOther
+  - Dropbox.Api.TeamPolicies.SsoPolicy.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.TeamPolicies.SsoPolicy.Disabled.Instance
+  commentId: F:Dropbox.Api.TeamPolicies.SsoPolicy.Disabled.Instance
+  id: Instance
+  parent: Dropbox.Api.TeamPolicies.SsoPolicy.Disabled
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: SsoPolicy.Disabled.Instance
+  fullName: Dropbox.Api.TeamPolicies.SsoPolicy.Disabled.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SsoPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SsoPolicy.cs
+    startLine: 235
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>A singleton instance of Disabled</p>\n"
+  example: []
+  syntax:
+    content: public static readonly SsoPolicy.Disabled Instance
+    return:
+      type: Dropbox.Api.TeamPolicies.SsoPolicy.Disabled
+    content.vb: Public Shared ReadOnly Instance As SsoPolicy.Disabled
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamPolicies
+  commentId: N:Dropbox.Api.TeamPolicies
+  name: Dropbox.Api.TeamPolicies
+  nameWithType: Dropbox.Api.TeamPolicies
+  fullName: Dropbox.Api.TeamPolicies
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamPolicies.SsoPolicy
+  commentId: T:Dropbox.Api.TeamPolicies.SsoPolicy
+  parent: Dropbox.Api.TeamPolicies
+  name: SsoPolicy
+  nameWithType: SsoPolicy
+  fullName: Dropbox.Api.TeamPolicies.SsoPolicy
+- uid: Dropbox.Api.TeamPolicies.SsoPolicy.IsDisabled
+  commentId: P:Dropbox.Api.TeamPolicies.SsoPolicy.IsDisabled
+  parent: Dropbox.Api.TeamPolicies.SsoPolicy
+  name: IsDisabled
+  nameWithType: SsoPolicy.IsDisabled
+  fullName: Dropbox.Api.TeamPolicies.SsoPolicy.IsDisabled
+- uid: Dropbox.Api.TeamPolicies.SsoPolicy.AsDisabled
+  commentId: P:Dropbox.Api.TeamPolicies.SsoPolicy.AsDisabled
+  parent: Dropbox.Api.TeamPolicies.SsoPolicy
+  name: AsDisabled
+  nameWithType: SsoPolicy.AsDisabled
+  fullName: Dropbox.Api.TeamPolicies.SsoPolicy.AsDisabled
+- uid: Dropbox.Api.TeamPolicies.SsoPolicy.IsOptional
+  commentId: P:Dropbox.Api.TeamPolicies.SsoPolicy.IsOptional
+  parent: Dropbox.Api.TeamPolicies.SsoPolicy
+  name: IsOptional
+  nameWithType: SsoPolicy.IsOptional
+  fullName: Dropbox.Api.TeamPolicies.SsoPolicy.IsOptional
+- uid: Dropbox.Api.TeamPolicies.SsoPolicy.AsOptional
+  commentId: P:Dropbox.Api.TeamPolicies.SsoPolicy.AsOptional
+  parent: Dropbox.Api.TeamPolicies.SsoPolicy
+  name: AsOptional
+  nameWithType: SsoPolicy.AsOptional
+  fullName: Dropbox.Api.TeamPolicies.SsoPolicy.AsOptional
+- uid: Dropbox.Api.TeamPolicies.SsoPolicy.IsRequired
+  commentId: P:Dropbox.Api.TeamPolicies.SsoPolicy.IsRequired
+  parent: Dropbox.Api.TeamPolicies.SsoPolicy
+  name: IsRequired
+  nameWithType: SsoPolicy.IsRequired
+  fullName: Dropbox.Api.TeamPolicies.SsoPolicy.IsRequired
+- uid: Dropbox.Api.TeamPolicies.SsoPolicy.AsRequired
+  commentId: P:Dropbox.Api.TeamPolicies.SsoPolicy.AsRequired
+  parent: Dropbox.Api.TeamPolicies.SsoPolicy
+  name: AsRequired
+  nameWithType: SsoPolicy.AsRequired
+  fullName: Dropbox.Api.TeamPolicies.SsoPolicy.AsRequired
+- uid: Dropbox.Api.TeamPolicies.SsoPolicy.IsOther
+  commentId: P:Dropbox.Api.TeamPolicies.SsoPolicy.IsOther
+  parent: Dropbox.Api.TeamPolicies.SsoPolicy
+  name: IsOther
+  nameWithType: SsoPolicy.IsOther
+  fullName: Dropbox.Api.TeamPolicies.SsoPolicy.IsOther
+- uid: Dropbox.Api.TeamPolicies.SsoPolicy.AsOther
+  commentId: P:Dropbox.Api.TeamPolicies.SsoPolicy.AsOther
+  parent: Dropbox.Api.TeamPolicies.SsoPolicy
+  name: AsOther
+  nameWithType: SsoPolicy.AsOther
+  fullName: Dropbox.Api.TeamPolicies.SsoPolicy.AsOther
+- uid: Dropbox.Api.TeamPolicies.SsoPolicy.Disabled
+  commentId: T:Dropbox.Api.TeamPolicies.SsoPolicy.Disabled
+  parent: Dropbox.Api.TeamPolicies
+  name: SsoPolicy.Disabled
+  nameWithType: SsoPolicy.Disabled
+  fullName: Dropbox.Api.TeamPolicies.SsoPolicy.Disabled
+shouldSkipMarkup: true

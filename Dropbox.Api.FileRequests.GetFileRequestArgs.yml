@@ -1,0 +1,190 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.FileRequests.GetFileRequestArgs
+  commentId: T:Dropbox.Api.FileRequests.GetFileRequestArgs
+  id: GetFileRequestArgs
+  parent: Dropbox.Api.FileRequests
+  children:
+  - Dropbox.Api.FileRequests.GetFileRequestArgs.#ctor
+  - Dropbox.Api.FileRequests.GetFileRequestArgs.#ctor(System.String)
+  - Dropbox.Api.FileRequests.GetFileRequestArgs.Id
+  langs:
+  - csharp
+  - vb
+  name: GetFileRequestArgs
+  nameWithType: GetFileRequestArgs
+  fullName: Dropbox.Api.FileRequests.GetFileRequestArgs
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/GetFileRequestArgs.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GetFileRequestArgs
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/GetFileRequestArgs.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Arguments for <xref href=\"Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.GetAsync(Dropbox.Api.FileRequests.GetFileRequestArgs)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+  example: []
+  syntax:
+    content: 'public class GetFileRequestArgs : object'
+    content.vb: >-
+      Public Class GetFileRequestArgs
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.FileRequests.GetFileRequestArgs.#ctor(System.String)
+  commentId: M:Dropbox.Api.FileRequests.GetFileRequestArgs.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.FileRequests.GetFileRequestArgs
+  langs:
+  - csharp
+  - vb
+  name: GetFileRequestArgs(String)
+  nameWithType: GetFileRequestArgs.GetFileRequestArgs(String)
+  fullName: Dropbox.Api.FileRequests.GetFileRequestArgs.GetFileRequestArgs(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/GetFileRequestArgs.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/GetFileRequestArgs.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.FileRequests.GetFileRequestArgs\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public GetFileRequestArgs(string id)
+    parameters:
+    - id: id
+      type: System.String
+      description: The ID of the file request to retrieve.
+    content.vb: Public Sub New(id As String)
+  overload: Dropbox.Api.FileRequests.GetFileRequestArgs.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileRequests.GetFileRequestArgs.#ctor
+  commentId: M:Dropbox.Api.FileRequests.GetFileRequestArgs.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.FileRequests.GetFileRequestArgs
+  langs:
+  - csharp
+  - vb
+  name: GetFileRequestArgs()
+  nameWithType: GetFileRequestArgs.GetFileRequestArgs()
+  fullName: Dropbox.Api.FileRequests.GetFileRequestArgs.GetFileRequestArgs()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/GetFileRequestArgs.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/GetFileRequestArgs.cs
+    startLine: 59
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.FileRequests.GetFileRequestArgs\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public GetFileRequestArgs()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.FileRequests.GetFileRequestArgs.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileRequests.GetFileRequestArgs.Id
+  commentId: P:Dropbox.Api.FileRequests.GetFileRequestArgs.Id
+  id: Id
+  parent: Dropbox.Api.FileRequests.GetFileRequestArgs
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: GetFileRequestArgs.Id
+  fullName: Dropbox.Api.FileRequests.GetFileRequestArgs.Id
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/GetFileRequestArgs.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Id
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/GetFileRequestArgs.cs
+    startLine: 67
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>The ID of the file request to retrieve.</p>\n"
+  example: []
+  syntax:
+    content: public string Id { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Id As String
+  overload: Dropbox.Api.FileRequests.GetFileRequestArgs.Id*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.GetAsync(Dropbox.Api.FileRequests.GetFileRequestArgs)
+  commentId: M:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.GetAsync(Dropbox.Api.FileRequests.GetFileRequestArgs)
+  isExternal: true
+- uid: Dropbox.Api.FileRequests
+  commentId: N:Dropbox.Api.FileRequests
+  name: Dropbox.Api.FileRequests
+  nameWithType: Dropbox.Api.FileRequests
+  fullName: Dropbox.Api.FileRequests
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.FileRequests.GetFileRequestArgs
+  commentId: T:Dropbox.Api.FileRequests.GetFileRequestArgs
+  parent: Dropbox.Api.FileRequests
+  name: GetFileRequestArgs
+  nameWithType: GetFileRequestArgs
+  fullName: Dropbox.Api.FileRequests.GetFileRequestArgs
+- uid: Dropbox.Api.FileRequests.GetFileRequestArgs.#ctor*
+  commentId: Overload:Dropbox.Api.FileRequests.GetFileRequestArgs.#ctor
+  name: GetFileRequestArgs
+  nameWithType: GetFileRequestArgs.GetFileRequestArgs
+  fullName: Dropbox.Api.FileRequests.GetFileRequestArgs.GetFileRequestArgs
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.FileRequests.GetFileRequestArgs.Id*
+  commentId: Overload:Dropbox.Api.FileRequests.GetFileRequestArgs.Id
+  name: Id
+  nameWithType: GetFileRequestArgs.Id
+  fullName: Dropbox.Api.FileRequests.GetFileRequestArgs.Id
+shouldSkipMarkup: true

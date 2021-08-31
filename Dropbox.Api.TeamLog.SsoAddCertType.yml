@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.SsoAddCertType
+  commentId: T:Dropbox.Api.TeamLog.SsoAddCertType
+  id: SsoAddCertType
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.SsoAddCertType.#ctor
+  - Dropbox.Api.TeamLog.SsoAddCertType.#ctor(System.String)
+  - Dropbox.Api.TeamLog.SsoAddCertType.Description
+  langs:
+  - csharp
+  - vb
+  name: SsoAddCertType
+  nameWithType: SsoAddCertType
+  fullName: Dropbox.Api.TeamLog.SsoAddCertType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SsoAddCertType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SsoAddCertType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SsoAddCertType.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The sso add cert type object</p>\n"
+  example: []
+  syntax:
+    content: 'public class SsoAddCertType : object'
+    content.vb: >-
+      Public Class SsoAddCertType
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.SsoAddCertType.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.SsoAddCertType.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.SsoAddCertType
+  langs:
+  - csharp
+  - vb
+  name: SsoAddCertType(String)
+  nameWithType: SsoAddCertType.SsoAddCertType(String)
+  fullName: Dropbox.Api.TeamLog.SsoAddCertType.SsoAddCertType(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SsoAddCertType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SsoAddCertType.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SsoAddCertType\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public SsoAddCertType(string description)
+    parameters:
+    - id: description
+      type: System.String
+      description: The description
+    content.vb: Public Sub New(description As String)
+  overload: Dropbox.Api.TeamLog.SsoAddCertType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SsoAddCertType.#ctor
+  commentId: M:Dropbox.Api.TeamLog.SsoAddCertType.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.SsoAddCertType
+  langs:
+  - csharp
+  - vb
+  name: SsoAddCertType()
+  nameWithType: SsoAddCertType.SsoAddCertType()
+  fullName: Dropbox.Api.TeamLog.SsoAddCertType.SsoAddCertType()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SsoAddCertType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SsoAddCertType.cs
+    startLine: 48
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SsoAddCertType\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public SsoAddCertType()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.SsoAddCertType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SsoAddCertType.Description
+  commentId: P:Dropbox.Api.TeamLog.SsoAddCertType.Description
+  id: Description
+  parent: Dropbox.Api.TeamLog.SsoAddCertType
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: SsoAddCertType.Description
+  fullName: Dropbox.Api.TeamLog.SsoAddCertType.Description
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SsoAddCertType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Description
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SsoAddCertType.cs
+    startLine: 56
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets the description of the sso add cert type</p>\n"
+  example: []
+  syntax:
+    content: public string Description { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Dropbox.Api.TeamLog.SsoAddCertType.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.SsoAddCertType
+  commentId: T:Dropbox.Api.TeamLog.SsoAddCertType
+  parent: Dropbox.Api.TeamLog
+  name: SsoAddCertType
+  nameWithType: SsoAddCertType
+  fullName: Dropbox.Api.TeamLog.SsoAddCertType
+- uid: Dropbox.Api.TeamLog.SsoAddCertType.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.SsoAddCertType.#ctor
+  name: SsoAddCertType
+  nameWithType: SsoAddCertType.SsoAddCertType
+  fullName: Dropbox.Api.TeamLog.SsoAddCertType.SsoAddCertType
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.SsoAddCertType.Description*
+  commentId: Overload:Dropbox.Api.TeamLog.SsoAddCertType.Description
+  name: Description
+  nameWithType: SsoAddCertType.Description
+  fullName: Dropbox.Api.TeamLog.SsoAddCertType.Description
+shouldSkipMarkup: true

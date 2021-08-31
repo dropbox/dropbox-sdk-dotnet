@@ -1,0 +1,567 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.Feature
+  commentId: T:Dropbox.Api.Team.Feature
+  id: Feature
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.Feature.#ctor
+  - Dropbox.Api.Team.Feature.AsHasTeamFileEvents
+  - Dropbox.Api.Team.Feature.AsHasTeamSelectiveSync
+  - Dropbox.Api.Team.Feature.AsHasTeamSharedDropbox
+  - Dropbox.Api.Team.Feature.AsOther
+  - Dropbox.Api.Team.Feature.AsUploadApiRateLimit
+  - Dropbox.Api.Team.Feature.IsHasTeamFileEvents
+  - Dropbox.Api.Team.Feature.IsHasTeamSelectiveSync
+  - Dropbox.Api.Team.Feature.IsHasTeamSharedDropbox
+  - Dropbox.Api.Team.Feature.IsOther
+  - Dropbox.Api.Team.Feature.IsUploadApiRateLimit
+  langs:
+  - csharp
+  - vb
+  name: Feature
+  nameWithType: Feature
+  fullName: Dropbox.Api.Team.Feature
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/Feature.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Feature
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/Feature.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>A set of features that a Dropbox Business account may support.</p>\n"
+  example: []
+  syntax:
+    content: 'public class Feature : object'
+    content.vb: >-
+      Public Class Feature
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Team.Feature.HasTeamFileEvents
+  - Dropbox.Api.Team.Feature.HasTeamSelectiveSync
+  - Dropbox.Api.Team.Feature.HasTeamSharedDropbox
+  - Dropbox.Api.Team.Feature.Other
+  - Dropbox.Api.Team.Feature.UploadApiRateLimit
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.Feature.#ctor
+  commentId: M:Dropbox.Api.Team.Feature.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.Feature
+  langs:
+  - csharp
+  - vb
+  name: Feature()
+  nameWithType: Feature.Feature()
+  fullName: Dropbox.Api.Team.Feature.Feature()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/Feature.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/Feature.cs
+    startLine: 32
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.Feature\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public Feature()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.Feature.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.Feature.IsUploadApiRateLimit
+  commentId: P:Dropbox.Api.Team.Feature.IsUploadApiRateLimit
+  id: IsUploadApiRateLimit
+  parent: Dropbox.Api.Team.Feature
+  langs:
+  - csharp
+  - vb
+  name: IsUploadApiRateLimit
+  nameWithType: Feature.IsUploadApiRateLimit
+  fullName: Dropbox.Api.Team.Feature.IsUploadApiRateLimit
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/Feature.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsUploadApiRateLimit
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/Feature.cs
+    startLine: 39
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is UploadApiRateLimit</p>\n"
+  example: []
+  syntax:
+    content: public bool IsUploadApiRateLimit { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsUploadApiRateLimit As Boolean
+  overload: Dropbox.Api.Team.Feature.IsUploadApiRateLimit*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.Feature.AsUploadApiRateLimit
+  commentId: P:Dropbox.Api.Team.Feature.AsUploadApiRateLimit
+  id: AsUploadApiRateLimit
+  parent: Dropbox.Api.Team.Feature
+  langs:
+  - csharp
+  - vb
+  name: AsUploadApiRateLimit
+  nameWithType: Feature.AsUploadApiRateLimit
+  fullName: Dropbox.Api.Team.Feature.AsUploadApiRateLimit
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/Feature.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsUploadApiRateLimit
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/Feature.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a UploadApiRateLimit, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public Feature.UploadApiRateLimit AsUploadApiRateLimit { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.Feature.UploadApiRateLimit
+    content.vb: Public ReadOnly Property AsUploadApiRateLimit As Feature.UploadApiRateLimit
+  overload: Dropbox.Api.Team.Feature.AsUploadApiRateLimit*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.Feature.IsHasTeamSharedDropbox
+  commentId: P:Dropbox.Api.Team.Feature.IsHasTeamSharedDropbox
+  id: IsHasTeamSharedDropbox
+  parent: Dropbox.Api.Team.Feature
+  langs:
+  - csharp
+  - vb
+  name: IsHasTeamSharedDropbox
+  nameWithType: Feature.IsHasTeamSharedDropbox
+  fullName: Dropbox.Api.Team.Feature.IsHasTeamSharedDropbox
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/Feature.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsHasTeamSharedDropbox
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/Feature.cs
+    startLine: 61
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is HasTeamSharedDropbox</p>\n"
+  example: []
+  syntax:
+    content: public bool IsHasTeamSharedDropbox { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsHasTeamSharedDropbox As Boolean
+  overload: Dropbox.Api.Team.Feature.IsHasTeamSharedDropbox*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.Feature.AsHasTeamSharedDropbox
+  commentId: P:Dropbox.Api.Team.Feature.AsHasTeamSharedDropbox
+  id: AsHasTeamSharedDropbox
+  parent: Dropbox.Api.Team.Feature
+  langs:
+  - csharp
+  - vb
+  name: AsHasTeamSharedDropbox
+  nameWithType: Feature.AsHasTeamSharedDropbox
+  fullName: Dropbox.Api.Team.Feature.AsHasTeamSharedDropbox
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/Feature.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsHasTeamSharedDropbox
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/Feature.cs
+    startLine: 72
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a HasTeamSharedDropbox, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public Feature.HasTeamSharedDropbox AsHasTeamSharedDropbox { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.Feature.HasTeamSharedDropbox
+    content.vb: Public ReadOnly Property AsHasTeamSharedDropbox As Feature.HasTeamSharedDropbox
+  overload: Dropbox.Api.Team.Feature.AsHasTeamSharedDropbox*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.Feature.IsHasTeamFileEvents
+  commentId: P:Dropbox.Api.Team.Feature.IsHasTeamFileEvents
+  id: IsHasTeamFileEvents
+  parent: Dropbox.Api.Team.Feature
+  langs:
+  - csharp
+  - vb
+  name: IsHasTeamFileEvents
+  nameWithType: Feature.IsHasTeamFileEvents
+  fullName: Dropbox.Api.Team.Feature.IsHasTeamFileEvents
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/Feature.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsHasTeamFileEvents
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/Feature.cs
+    startLine: 83
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is HasTeamFileEvents</p>\n"
+  example: []
+  syntax:
+    content: public bool IsHasTeamFileEvents { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsHasTeamFileEvents As Boolean
+  overload: Dropbox.Api.Team.Feature.IsHasTeamFileEvents*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.Feature.AsHasTeamFileEvents
+  commentId: P:Dropbox.Api.Team.Feature.AsHasTeamFileEvents
+  id: AsHasTeamFileEvents
+  parent: Dropbox.Api.Team.Feature
+  langs:
+  - csharp
+  - vb
+  name: AsHasTeamFileEvents
+  nameWithType: Feature.AsHasTeamFileEvents
+  fullName: Dropbox.Api.Team.Feature.AsHasTeamFileEvents
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/Feature.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsHasTeamFileEvents
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/Feature.cs
+    startLine: 94
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a HasTeamFileEvents, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public Feature.HasTeamFileEvents AsHasTeamFileEvents { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.Feature.HasTeamFileEvents
+    content.vb: Public ReadOnly Property AsHasTeamFileEvents As Feature.HasTeamFileEvents
+  overload: Dropbox.Api.Team.Feature.AsHasTeamFileEvents*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.Feature.IsHasTeamSelectiveSync
+  commentId: P:Dropbox.Api.Team.Feature.IsHasTeamSelectiveSync
+  id: IsHasTeamSelectiveSync
+  parent: Dropbox.Api.Team.Feature
+  langs:
+  - csharp
+  - vb
+  name: IsHasTeamSelectiveSync
+  nameWithType: Feature.IsHasTeamSelectiveSync
+  fullName: Dropbox.Api.Team.Feature.IsHasTeamSelectiveSync
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/Feature.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsHasTeamSelectiveSync
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/Feature.cs
+    startLine: 105
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is HasTeamSelectiveSync</p>\n"
+  example: []
+  syntax:
+    content: public bool IsHasTeamSelectiveSync { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsHasTeamSelectiveSync As Boolean
+  overload: Dropbox.Api.Team.Feature.IsHasTeamSelectiveSync*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.Feature.AsHasTeamSelectiveSync
+  commentId: P:Dropbox.Api.Team.Feature.AsHasTeamSelectiveSync
+  id: AsHasTeamSelectiveSync
+  parent: Dropbox.Api.Team.Feature
+  langs:
+  - csharp
+  - vb
+  name: AsHasTeamSelectiveSync
+  nameWithType: Feature.AsHasTeamSelectiveSync
+  fullName: Dropbox.Api.Team.Feature.AsHasTeamSelectiveSync
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/Feature.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsHasTeamSelectiveSync
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/Feature.cs
+    startLine: 116
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a HasTeamSelectiveSync, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public Feature.HasTeamSelectiveSync AsHasTeamSelectiveSync { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.Feature.HasTeamSelectiveSync
+    content.vb: Public ReadOnly Property AsHasTeamSelectiveSync As Feature.HasTeamSelectiveSync
+  overload: Dropbox.Api.Team.Feature.AsHasTeamSelectiveSync*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.Feature.IsOther
+  commentId: P:Dropbox.Api.Team.Feature.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Team.Feature
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: Feature.IsOther
+  fullName: Dropbox.Api.Team.Feature.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/Feature.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/Feature.cs
+    startLine: 127
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Team.Feature.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.Feature.AsOther
+  commentId: P:Dropbox.Api.Team.Feature.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Team.Feature
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: Feature.AsOther
+  fullName: Dropbox.Api.Team.Feature.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/Feature.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/Feature.cs
+    startLine: 138
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public Feature.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.Feature.Other
+    content.vb: Public ReadOnly Property AsOther As Feature.Other
+  overload: Dropbox.Api.Team.Feature.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.Feature
+  commentId: T:Dropbox.Api.Team.Feature
+  parent: Dropbox.Api.Team
+  name: Feature
+  nameWithType: Feature
+  fullName: Dropbox.Api.Team.Feature
+- uid: Dropbox.Api.Team.Feature.#ctor*
+  commentId: Overload:Dropbox.Api.Team.Feature.#ctor
+  name: Feature
+  nameWithType: Feature.Feature
+  fullName: Dropbox.Api.Team.Feature.Feature
+- uid: Dropbox.Api.Team.Feature.IsUploadApiRateLimit*
+  commentId: Overload:Dropbox.Api.Team.Feature.IsUploadApiRateLimit
+  name: IsUploadApiRateLimit
+  nameWithType: Feature.IsUploadApiRateLimit
+  fullName: Dropbox.Api.Team.Feature.IsUploadApiRateLimit
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Team.Feature.AsUploadApiRateLimit*
+  commentId: Overload:Dropbox.Api.Team.Feature.AsUploadApiRateLimit
+  name: AsUploadApiRateLimit
+  nameWithType: Feature.AsUploadApiRateLimit
+  fullName: Dropbox.Api.Team.Feature.AsUploadApiRateLimit
+- uid: Dropbox.Api.Team.Feature.UploadApiRateLimit
+  commentId: T:Dropbox.Api.Team.Feature.UploadApiRateLimit
+  parent: Dropbox.Api.Team
+  name: Feature.UploadApiRateLimit
+  nameWithType: Feature.UploadApiRateLimit
+  fullName: Dropbox.Api.Team.Feature.UploadApiRateLimit
+- uid: Dropbox.Api.Team.Feature.IsHasTeamSharedDropbox*
+  commentId: Overload:Dropbox.Api.Team.Feature.IsHasTeamSharedDropbox
+  name: IsHasTeamSharedDropbox
+  nameWithType: Feature.IsHasTeamSharedDropbox
+  fullName: Dropbox.Api.Team.Feature.IsHasTeamSharedDropbox
+- uid: Dropbox.Api.Team.Feature.AsHasTeamSharedDropbox*
+  commentId: Overload:Dropbox.Api.Team.Feature.AsHasTeamSharedDropbox
+  name: AsHasTeamSharedDropbox
+  nameWithType: Feature.AsHasTeamSharedDropbox
+  fullName: Dropbox.Api.Team.Feature.AsHasTeamSharedDropbox
+- uid: Dropbox.Api.Team.Feature.HasTeamSharedDropbox
+  commentId: T:Dropbox.Api.Team.Feature.HasTeamSharedDropbox
+  parent: Dropbox.Api.Team
+  name: Feature.HasTeamSharedDropbox
+  nameWithType: Feature.HasTeamSharedDropbox
+  fullName: Dropbox.Api.Team.Feature.HasTeamSharedDropbox
+- uid: Dropbox.Api.Team.Feature.IsHasTeamFileEvents*
+  commentId: Overload:Dropbox.Api.Team.Feature.IsHasTeamFileEvents
+  name: IsHasTeamFileEvents
+  nameWithType: Feature.IsHasTeamFileEvents
+  fullName: Dropbox.Api.Team.Feature.IsHasTeamFileEvents
+- uid: Dropbox.Api.Team.Feature.AsHasTeamFileEvents*
+  commentId: Overload:Dropbox.Api.Team.Feature.AsHasTeamFileEvents
+  name: AsHasTeamFileEvents
+  nameWithType: Feature.AsHasTeamFileEvents
+  fullName: Dropbox.Api.Team.Feature.AsHasTeamFileEvents
+- uid: Dropbox.Api.Team.Feature.HasTeamFileEvents
+  commentId: T:Dropbox.Api.Team.Feature.HasTeamFileEvents
+  parent: Dropbox.Api.Team
+  name: Feature.HasTeamFileEvents
+  nameWithType: Feature.HasTeamFileEvents
+  fullName: Dropbox.Api.Team.Feature.HasTeamFileEvents
+- uid: Dropbox.Api.Team.Feature.IsHasTeamSelectiveSync*
+  commentId: Overload:Dropbox.Api.Team.Feature.IsHasTeamSelectiveSync
+  name: IsHasTeamSelectiveSync
+  nameWithType: Feature.IsHasTeamSelectiveSync
+  fullName: Dropbox.Api.Team.Feature.IsHasTeamSelectiveSync
+- uid: Dropbox.Api.Team.Feature.AsHasTeamSelectiveSync*
+  commentId: Overload:Dropbox.Api.Team.Feature.AsHasTeamSelectiveSync
+  name: AsHasTeamSelectiveSync
+  nameWithType: Feature.AsHasTeamSelectiveSync
+  fullName: Dropbox.Api.Team.Feature.AsHasTeamSelectiveSync
+- uid: Dropbox.Api.Team.Feature.HasTeamSelectiveSync
+  commentId: T:Dropbox.Api.Team.Feature.HasTeamSelectiveSync
+  parent: Dropbox.Api.Team
+  name: Feature.HasTeamSelectiveSync
+  nameWithType: Feature.HasTeamSelectiveSync
+  fullName: Dropbox.Api.Team.Feature.HasTeamSelectiveSync
+- uid: Dropbox.Api.Team.Feature.IsOther*
+  commentId: Overload:Dropbox.Api.Team.Feature.IsOther
+  name: IsOther
+  nameWithType: Feature.IsOther
+  fullName: Dropbox.Api.Team.Feature.IsOther
+- uid: Dropbox.Api.Team.Feature.AsOther*
+  commentId: Overload:Dropbox.Api.Team.Feature.AsOther
+  name: AsOther
+  nameWithType: Feature.AsOther
+  fullName: Dropbox.Api.Team.Feature.AsOther
+- uid: Dropbox.Api.Team.Feature.Other
+  commentId: T:Dropbox.Api.Team.Feature.Other
+  parent: Dropbox.Api.Team
+  name: Feature.Other
+  nameWithType: Feature.Other
+  fullName: Dropbox.Api.Team.Feature.Other
+shouldSkipMarkup: true

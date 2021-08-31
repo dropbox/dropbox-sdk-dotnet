@@ -1,0 +1,134 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.GroupsListContinueError.InvalidCursor
+  commentId: T:Dropbox.Api.Team.GroupsListContinueError.InvalidCursor
+  id: GroupsListContinueError.InvalidCursor
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.GroupsListContinueError.InvalidCursor.Instance
+  langs:
+  - csharp
+  - vb
+  name: GroupsListContinueError.InvalidCursor
+  nameWithType: GroupsListContinueError.InvalidCursor
+  fullName: Dropbox.Api.Team.GroupsListContinueError.InvalidCursor
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsListContinueError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: InvalidCursor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsListContinueError.cs
+    startLine: 153
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The cursor is invalid.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class InvalidCursor : GroupsListContinueError'
+    content.vb: >-
+      Public NotInheritable Class InvalidCursor
+          Inherits GroupsListContinueError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.GroupsListContinueError
+  inheritedMembers:
+  - Dropbox.Api.Team.GroupsListContinueError.IsInvalidCursor
+  - Dropbox.Api.Team.GroupsListContinueError.AsInvalidCursor
+  - Dropbox.Api.Team.GroupsListContinueError.IsOther
+  - Dropbox.Api.Team.GroupsListContinueError.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Team.GroupsListContinueError.InvalidCursor.Instance
+  commentId: F:Dropbox.Api.Team.GroupsListContinueError.InvalidCursor.Instance
+  id: Instance
+  parent: Dropbox.Api.Team.GroupsListContinueError.InvalidCursor
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: GroupsListContinueError.InvalidCursor.Instance
+  fullName: Dropbox.Api.Team.GroupsListContinueError.InvalidCursor.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsListContinueError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsListContinueError.cs
+    startLine: 178
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>A singleton instance of InvalidCursor</p>\n"
+  example: []
+  syntax:
+    content: public static readonly GroupsListContinueError.InvalidCursor Instance
+    return:
+      type: Dropbox.Api.Team.GroupsListContinueError.InvalidCursor
+    content.vb: Public Shared ReadOnly Instance As GroupsListContinueError.InvalidCursor
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.GroupsListContinueError
+  commentId: T:Dropbox.Api.Team.GroupsListContinueError
+  parent: Dropbox.Api.Team
+  name: GroupsListContinueError
+  nameWithType: GroupsListContinueError
+  fullName: Dropbox.Api.Team.GroupsListContinueError
+- uid: Dropbox.Api.Team.GroupsListContinueError.IsInvalidCursor
+  commentId: P:Dropbox.Api.Team.GroupsListContinueError.IsInvalidCursor
+  parent: Dropbox.Api.Team.GroupsListContinueError
+  name: IsInvalidCursor
+  nameWithType: GroupsListContinueError.IsInvalidCursor
+  fullName: Dropbox.Api.Team.GroupsListContinueError.IsInvalidCursor
+- uid: Dropbox.Api.Team.GroupsListContinueError.AsInvalidCursor
+  commentId: P:Dropbox.Api.Team.GroupsListContinueError.AsInvalidCursor
+  parent: Dropbox.Api.Team.GroupsListContinueError
+  name: AsInvalidCursor
+  nameWithType: GroupsListContinueError.AsInvalidCursor
+  fullName: Dropbox.Api.Team.GroupsListContinueError.AsInvalidCursor
+- uid: Dropbox.Api.Team.GroupsListContinueError.IsOther
+  commentId: P:Dropbox.Api.Team.GroupsListContinueError.IsOther
+  parent: Dropbox.Api.Team.GroupsListContinueError
+  name: IsOther
+  nameWithType: GroupsListContinueError.IsOther
+  fullName: Dropbox.Api.Team.GroupsListContinueError.IsOther
+- uid: Dropbox.Api.Team.GroupsListContinueError.AsOther
+  commentId: P:Dropbox.Api.Team.GroupsListContinueError.AsOther
+  parent: Dropbox.Api.Team.GroupsListContinueError
+  name: AsOther
+  nameWithType: GroupsListContinueError.AsOther
+  fullName: Dropbox.Api.Team.GroupsListContinueError.AsOther
+- uid: Dropbox.Api.Team.GroupsListContinueError.InvalidCursor
+  commentId: T:Dropbox.Api.Team.GroupsListContinueError.InvalidCursor
+  parent: Dropbox.Api.Team
+  name: GroupsListContinueError.InvalidCursor
+  nameWithType: GroupsListContinueError.InvalidCursor
+  fullName: Dropbox.Api.Team.GroupsListContinueError.InvalidCursor
+shouldSkipMarkup: true

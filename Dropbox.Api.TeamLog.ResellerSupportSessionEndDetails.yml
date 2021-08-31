@@ -1,0 +1,96 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.ResellerSupportSessionEndDetails
+  commentId: T:Dropbox.Api.TeamLog.ResellerSupportSessionEndDetails
+  id: ResellerSupportSessionEndDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.ResellerSupportSessionEndDetails.#ctor
+  langs:
+  - csharp
+  - vb
+  name: ResellerSupportSessionEndDetails
+  nameWithType: ResellerSupportSessionEndDetails
+  fullName: Dropbox.Api.TeamLog.ResellerSupportSessionEndDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ResellerSupportSessionEndDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ResellerSupportSessionEndDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ResellerSupportSessionEndDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Ended reseller support session.</p>\n"
+  example: []
+  syntax:
+    content: 'public class ResellerSupportSessionEndDetails : object'
+    content.vb: >-
+      Public Class ResellerSupportSessionEndDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.ResellerSupportSessionEndDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.ResellerSupportSessionEndDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.ResellerSupportSessionEndDetails
+  langs:
+  - csharp
+  - vb
+  name: ResellerSupportSessionEndDetails()
+  nameWithType: ResellerSupportSessionEndDetails.ResellerSupportSessionEndDetails()
+  fullName: Dropbox.Api.TeamLog.ResellerSupportSessionEndDetails.ResellerSupportSessionEndDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ResellerSupportSessionEndDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ResellerSupportSessionEndDetails.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.ResellerSupportSessionEndDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public ResellerSupportSessionEndDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.ResellerSupportSessionEndDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.ResellerSupportSessionEndDetails
+  commentId: T:Dropbox.Api.TeamLog.ResellerSupportSessionEndDetails
+  parent: Dropbox.Api.TeamLog
+  name: ResellerSupportSessionEndDetails
+  nameWithType: ResellerSupportSessionEndDetails
+  fullName: Dropbox.Api.TeamLog.ResellerSupportSessionEndDetails
+- uid: Dropbox.Api.TeamLog.ResellerSupportSessionEndDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.ResellerSupportSessionEndDetails.#ctor
+  name: ResellerSupportSessionEndDetails
+  nameWithType: ResellerSupportSessionEndDetails.ResellerSupportSessionEndDetails
+  fullName: Dropbox.Api.TeamLog.ResellerSupportSessionEndDetails.ResellerSupportSessionEndDetails
+shouldSkipMarkup: true

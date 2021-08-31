@@ -1,0 +1,619 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.AddFileMemberArgs
+  commentId: T:Dropbox.Api.Sharing.AddFileMemberArgs
+  id: AddFileMemberArgs
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.AddFileMemberArgs.#ctor
+  - Dropbox.Api.Sharing.AddFileMemberArgs.#ctor(System.String,System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.MemberSelector},System.String,System.Boolean,Dropbox.Api.Sharing.AccessLevel,System.Boolean)
+  - Dropbox.Api.Sharing.AddFileMemberArgs.AccessLevel
+  - Dropbox.Api.Sharing.AddFileMemberArgs.AddMessageAsComment
+  - Dropbox.Api.Sharing.AddFileMemberArgs.CustomMessage
+  - Dropbox.Api.Sharing.AddFileMemberArgs.File
+  - Dropbox.Api.Sharing.AddFileMemberArgs.Members
+  - Dropbox.Api.Sharing.AddFileMemberArgs.Quiet
+  langs:
+  - csharp
+  - vb
+  name: AddFileMemberArgs
+  nameWithType: AddFileMemberArgs
+  fullName: Dropbox.Api.Sharing.AddFileMemberArgs
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AddFileMemberArgs.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AddFileMemberArgs
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AddFileMemberArgs.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Arguments for <xref href=\"Dropbox.Api.Sharing.Routes.SharingUserRoutes.AddFileMemberAsync(Dropbox.Api.Sharing.AddFileMemberArgs)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+  example: []
+  syntax:
+    content: 'public class AddFileMemberArgs : object'
+    content.vb: >-
+      Public Class AddFileMemberArgs
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Sharing.AddFileMemberArgs.#ctor(System.String,System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.MemberSelector},System.String,System.Boolean,Dropbox.Api.Sharing.AccessLevel,System.Boolean)
+  commentId: M:Dropbox.Api.Sharing.AddFileMemberArgs.#ctor(System.String,System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.MemberSelector},System.String,System.Boolean,Dropbox.Api.Sharing.AccessLevel,System.Boolean)
+  id: '#ctor(System.String,System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.MemberSelector},System.String,System.Boolean,Dropbox.Api.Sharing.AccessLevel,System.Boolean)'
+  parent: Dropbox.Api.Sharing.AddFileMemberArgs
+  langs:
+  - csharp
+  - vb
+  name: AddFileMemberArgs(String, System.Collections.Generic.IEnumerable<MemberSelector>, String, Boolean, AccessLevel, Boolean)
+  nameWithType: AddFileMemberArgs.AddFileMemberArgs(String, System.Collections.Generic.IEnumerable<MemberSelector>, String, Boolean, AccessLevel, Boolean)
+  fullName: Dropbox.Api.Sharing.AddFileMemberArgs.AddFileMemberArgs(System.String, System.Collections.Generic.IEnumerable<Dropbox.Api.Sharing.MemberSelector>, System.String, System.Boolean, Dropbox.Api.Sharing.AccessLevel, System.Boolean)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AddFileMemberArgs.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AddFileMemberArgs.cs
+    startLine: 46
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.AddFileMemberArgs\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public AddFileMemberArgs(string file, System.Collections.Generic.IEnumerable<MemberSelector> members, string customMessage = null, bool quiet = false, AccessLevel accessLevel = null, bool addMessageAsComment = false)
+    parameters:
+    - id: file
+      type: System.String
+      description: File to which to add members.
+    - id: members
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.MemberSelector}
+      description: >-
+        Members to add. Note that even an email address is given,
+
+        this may result in a user being directly added to the membership if that email is
+
+        the user&apos;s main account email.
+    - id: customMessage
+      type: System.String
+      description: >-
+        Message to send to added members in their
+
+        invitation.
+    - id: quiet
+      type: System.Boolean
+      description: >-
+        Whether added members should be notified via device
+
+        notifications of their invitation.
+    - id: accessLevel
+      type: Dropbox.Api.Sharing.AccessLevel
+      description: >-
+        AccessLevel union object, describing what access level we
+
+        want to give new members.
+    - id: addMessageAsComment
+      type: System.Boolean
+      description: >-
+        If the custom message should be added as a
+
+        comment on the file.
+    content.vb: Public Sub New(file As String, members As System.Collections.Generic.IEnumerable(Of MemberSelector), customMessage As String = Nothing, quiet As Boolean = False, accessLevel As AccessLevel = Nothing, addMessageAsComment As Boolean = False)
+  overload: Dropbox.Api.Sharing.AddFileMemberArgs.#ctor*
+  nameWithType.vb: AddFileMemberArgs.AddFileMemberArgs(String, System.Collections.Generic.IEnumerable(Of MemberSelector), String, Boolean, AccessLevel, Boolean)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Sharing.AddFileMemberArgs.AddFileMemberArgs(System.String, System.Collections.Generic.IEnumerable(Of Dropbox.Api.Sharing.MemberSelector), System.String, System.Boolean, Dropbox.Api.Sharing.AccessLevel, System.Boolean)
+  name.vb: AddFileMemberArgs(String, System.Collections.Generic.IEnumerable(Of MemberSelector), String, Boolean, AccessLevel, Boolean)
+- uid: Dropbox.Api.Sharing.AddFileMemberArgs.#ctor
+  commentId: M:Dropbox.Api.Sharing.AddFileMemberArgs.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Sharing.AddFileMemberArgs
+  langs:
+  - csharp
+  - vb
+  name: AddFileMemberArgs()
+  nameWithType: AddFileMemberArgs.AddFileMemberArgs()
+  fullName: Dropbox.Api.Sharing.AddFileMemberArgs.AddFileMemberArgs()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AddFileMemberArgs.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AddFileMemberArgs.cs
+    startLine: 91
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.AddFileMemberArgs\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public AddFileMemberArgs()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Sharing.AddFileMemberArgs.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.AddFileMemberArgs.File
+  commentId: P:Dropbox.Api.Sharing.AddFileMemberArgs.File
+  id: File
+  parent: Dropbox.Api.Sharing.AddFileMemberArgs
+  langs:
+  - csharp
+  - vb
+  name: File
+  nameWithType: AddFileMemberArgs.File
+  fullName: Dropbox.Api.Sharing.AddFileMemberArgs.File
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AddFileMemberArgs.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: File
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AddFileMemberArgs.cs
+    startLine: 102
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>File to which to add members.</p>\n"
+  example: []
+  syntax:
+    content: public string File { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property File As String
+  overload: Dropbox.Api.Sharing.AddFileMemberArgs.File*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.AddFileMemberArgs.Members
+  commentId: P:Dropbox.Api.Sharing.AddFileMemberArgs.Members
+  id: Members
+  parent: Dropbox.Api.Sharing.AddFileMemberArgs
+  langs:
+  - csharp
+  - vb
+  name: Members
+  nameWithType: AddFileMemberArgs.Members
+  fullName: Dropbox.Api.Sharing.AddFileMemberArgs.Members
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AddFileMemberArgs.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Members
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AddFileMemberArgs.cs
+    startLine: 109
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Members to add. Note that even an email address is given, this may result in\na user being directly added to the membership if that email is the user&apos;s main\naccount email.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<MemberSelector> Members { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{Dropbox.Api.Sharing.MemberSelector}
+    content.vb: Public Property Members As System.Collections.Generic.IList(Of MemberSelector)
+  overload: Dropbox.Api.Sharing.AddFileMemberArgs.Members*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.AddFileMemberArgs.CustomMessage
+  commentId: P:Dropbox.Api.Sharing.AddFileMemberArgs.CustomMessage
+  id: CustomMessage
+  parent: Dropbox.Api.Sharing.AddFileMemberArgs
+  langs:
+  - csharp
+  - vb
+  name: CustomMessage
+  nameWithType: AddFileMemberArgs.CustomMessage
+  fullName: Dropbox.Api.Sharing.AddFileMemberArgs.CustomMessage
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AddFileMemberArgs.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: CustomMessage
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AddFileMemberArgs.cs
+    startLine: 114
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Message to send to added members in their invitation.</p>\n"
+  example: []
+  syntax:
+    content: public string CustomMessage { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property CustomMessage As String
+  overload: Dropbox.Api.Sharing.AddFileMemberArgs.CustomMessage*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.AddFileMemberArgs.Quiet
+  commentId: P:Dropbox.Api.Sharing.AddFileMemberArgs.Quiet
+  id: Quiet
+  parent: Dropbox.Api.Sharing.AddFileMemberArgs
+  langs:
+  - csharp
+  - vb
+  name: Quiet
+  nameWithType: AddFileMemberArgs.Quiet
+  fullName: Dropbox.Api.Sharing.AddFileMemberArgs.Quiet
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AddFileMemberArgs.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Quiet
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AddFileMemberArgs.cs
+    startLine: 120
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Whether added members should be notified via device notifications of their\ninvitation.</p>\n"
+  example: []
+  syntax:
+    content: public bool Quiet { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property Quiet As Boolean
+  overload: Dropbox.Api.Sharing.AddFileMemberArgs.Quiet*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.AddFileMemberArgs.AccessLevel
+  commentId: P:Dropbox.Api.Sharing.AddFileMemberArgs.AccessLevel
+  id: AccessLevel
+  parent: Dropbox.Api.Sharing.AddFileMemberArgs
+  langs:
+  - csharp
+  - vb
+  name: AccessLevel
+  nameWithType: AddFileMemberArgs.AccessLevel
+  fullName: Dropbox.Api.Sharing.AddFileMemberArgs.AccessLevel
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AddFileMemberArgs.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AccessLevel
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AddFileMemberArgs.cs
+    startLine: 126
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>AccessLevel union object, describing what access level we want to give new\nmembers.</p>\n"
+  example: []
+  syntax:
+    content: public AccessLevel AccessLevel { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.AccessLevel
+    content.vb: Public Property AccessLevel As AccessLevel
+  overload: Dropbox.Api.Sharing.AddFileMemberArgs.AccessLevel*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.AddFileMemberArgs.AddMessageAsComment
+  commentId: P:Dropbox.Api.Sharing.AddFileMemberArgs.AddMessageAsComment
+  id: AddMessageAsComment
+  parent: Dropbox.Api.Sharing.AddFileMemberArgs
+  langs:
+  - csharp
+  - vb
+  name: AddMessageAsComment
+  nameWithType: AddFileMemberArgs.AddMessageAsComment
+  fullName: Dropbox.Api.Sharing.AddFileMemberArgs.AddMessageAsComment
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AddFileMemberArgs.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AddMessageAsComment
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AddFileMemberArgs.cs
+    startLine: 131
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>If the custom message should be added as a comment on the file.</p>\n"
+  example: []
+  syntax:
+    content: public bool AddMessageAsComment { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property AddMessageAsComment As Boolean
+  overload: Dropbox.Api.Sharing.AddFileMemberArgs.AddMessageAsComment*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Sharing.Routes.SharingUserRoutes.AddFileMemberAsync(Dropbox.Api.Sharing.AddFileMemberArgs)
+  commentId: M:Dropbox.Api.Sharing.Routes.SharingUserRoutes.AddFileMemberAsync(Dropbox.Api.Sharing.AddFileMemberArgs)
+  isExternal: true
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.AddFileMemberArgs
+  commentId: T:Dropbox.Api.Sharing.AddFileMemberArgs
+  parent: Dropbox.Api.Sharing
+  name: AddFileMemberArgs
+  nameWithType: AddFileMemberArgs
+  fullName: Dropbox.Api.Sharing.AddFileMemberArgs
+- uid: Dropbox.Api.Sharing.AddFileMemberArgs.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.AddFileMemberArgs.#ctor
+  name: AddFileMemberArgs
+  nameWithType: AddFileMemberArgs.AddFileMemberArgs
+  fullName: Dropbox.Api.Sharing.AddFileMemberArgs.AddFileMemberArgs
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.MemberSelector}
+  commentId: '!:System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.MemberSelector}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<MemberSelector>
+  nameWithType: System.Collections.Generic.IEnumerable<MemberSelector>
+  fullName: System.Collections.Generic.IEnumerable<Dropbox.Api.Sharing.MemberSelector>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of MemberSelector)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Dropbox.Api.Sharing.MemberSelector)
+  name.vb: System.Collections.Generic.IEnumerable(Of MemberSelector)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Sharing.MemberSelector
+    name: MemberSelector
+    nameWithType: MemberSelector
+    fullName: Dropbox.Api.Sharing.MemberSelector
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Sharing.MemberSelector
+    name: MemberSelector
+    nameWithType: MemberSelector
+    fullName: Dropbox.Api.Sharing.MemberSelector
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Sharing.AccessLevel
+  commentId: T:Dropbox.Api.Sharing.AccessLevel
+  parent: Dropbox.Api.Sharing
+  name: AccessLevel
+  nameWithType: AccessLevel
+  fullName: Dropbox.Api.Sharing.AccessLevel
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: System.Collections.Generic.IEnumerable<>
+  nameWithType: System.Collections.Generic.IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: System.Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Sharing.AddFileMemberArgs.File*
+  commentId: Overload:Dropbox.Api.Sharing.AddFileMemberArgs.File
+  name: File
+  nameWithType: AddFileMemberArgs.File
+  fullName: Dropbox.Api.Sharing.AddFileMemberArgs.File
+- uid: Dropbox.Api.Sharing.AddFileMemberArgs.Members*
+  commentId: Overload:Dropbox.Api.Sharing.AddFileMemberArgs.Members
+  name: Members
+  nameWithType: AddFileMemberArgs.Members
+  fullName: Dropbox.Api.Sharing.AddFileMemberArgs.Members
+- uid: System.Collections.Generic.IList{Dropbox.Api.Sharing.MemberSelector}
+  commentId: '!:System.Collections.Generic.IList{Dropbox.Api.Sharing.MemberSelector}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<MemberSelector>
+  nameWithType: System.Collections.Generic.IList<MemberSelector>
+  fullName: System.Collections.Generic.IList<Dropbox.Api.Sharing.MemberSelector>
+  nameWithType.vb: System.Collections.Generic.IList(Of MemberSelector)
+  fullName.vb: System.Collections.Generic.IList(Of Dropbox.Api.Sharing.MemberSelector)
+  name.vb: System.Collections.Generic.IList(Of MemberSelector)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Sharing.MemberSelector
+    name: MemberSelector
+    nameWithType: MemberSelector
+    fullName: Dropbox.Api.Sharing.MemberSelector
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Sharing.MemberSelector
+    name: MemberSelector
+    nameWithType: MemberSelector
+    fullName: Dropbox.Api.Sharing.MemberSelector
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  isExternal: true
+  name: System.Collections.Generic.IList<>
+  nameWithType: System.Collections.Generic.IList<>
+  fullName: System.Collections.Generic.IList<>
+  nameWithType.vb: System.Collections.Generic.IList(Of )
+  fullName.vb: System.Collections.Generic.IList(Of )
+  name.vb: System.Collections.Generic.IList(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Sharing.AddFileMemberArgs.CustomMessage*
+  commentId: Overload:Dropbox.Api.Sharing.AddFileMemberArgs.CustomMessage
+  name: CustomMessage
+  nameWithType: AddFileMemberArgs.CustomMessage
+  fullName: Dropbox.Api.Sharing.AddFileMemberArgs.CustomMessage
+- uid: Dropbox.Api.Sharing.AddFileMemberArgs.Quiet*
+  commentId: Overload:Dropbox.Api.Sharing.AddFileMemberArgs.Quiet
+  name: Quiet
+  nameWithType: AddFileMemberArgs.Quiet
+  fullName: Dropbox.Api.Sharing.AddFileMemberArgs.Quiet
+- uid: Dropbox.Api.Sharing.AddFileMemberArgs.AccessLevel*
+  commentId: Overload:Dropbox.Api.Sharing.AddFileMemberArgs.AccessLevel
+  name: AccessLevel
+  nameWithType: AddFileMemberArgs.AccessLevel
+  fullName: Dropbox.Api.Sharing.AddFileMemberArgs.AccessLevel
+- uid: Dropbox.Api.Sharing.AddFileMemberArgs.AddMessageAsComment*
+  commentId: Overload:Dropbox.Api.Sharing.AddFileMemberArgs.AddMessageAsComment
+  name: AddMessageAsComment
+  nameWithType: AddFileMemberArgs.AddMessageAsComment
+  fullName: Dropbox.Api.Sharing.AddFileMemberArgs.AddMessageAsComment
+shouldSkipMarkup: true

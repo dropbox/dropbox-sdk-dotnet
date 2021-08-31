@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.FileEditCommentType
+  commentId: T:Dropbox.Api.TeamLog.FileEditCommentType
+  id: FileEditCommentType
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.FileEditCommentType.#ctor
+  - Dropbox.Api.TeamLog.FileEditCommentType.#ctor(System.String)
+  - Dropbox.Api.TeamLog.FileEditCommentType.Description
+  langs:
+  - csharp
+  - vb
+  name: FileEditCommentType
+  nameWithType: FileEditCommentType
+  fullName: Dropbox.Api.TeamLog.FileEditCommentType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileEditCommentType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: FileEditCommentType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileEditCommentType.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The file edit comment type object</p>\n"
+  example: []
+  syntax:
+    content: 'public class FileEditCommentType : object'
+    content.vb: >-
+      Public Class FileEditCommentType
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.FileEditCommentType.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.FileEditCommentType.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.FileEditCommentType
+  langs:
+  - csharp
+  - vb
+  name: FileEditCommentType(String)
+  nameWithType: FileEditCommentType.FileEditCommentType(String)
+  fullName: Dropbox.Api.TeamLog.FileEditCommentType.FileEditCommentType(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileEditCommentType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileEditCommentType.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.FileEditCommentType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public FileEditCommentType(string description)
+    parameters:
+    - id: description
+      type: System.String
+      description: The description
+    content.vb: Public Sub New(description As String)
+  overload: Dropbox.Api.TeamLog.FileEditCommentType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.FileEditCommentType.#ctor
+  commentId: M:Dropbox.Api.TeamLog.FileEditCommentType.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.FileEditCommentType
+  langs:
+  - csharp
+  - vb
+  name: FileEditCommentType()
+  nameWithType: FileEditCommentType.FileEditCommentType()
+  fullName: Dropbox.Api.TeamLog.FileEditCommentType.FileEditCommentType()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileEditCommentType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileEditCommentType.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.FileEditCommentType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public FileEditCommentType()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.FileEditCommentType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.FileEditCommentType.Description
+  commentId: P:Dropbox.Api.TeamLog.FileEditCommentType.Description
+  id: Description
+  parent: Dropbox.Api.TeamLog.FileEditCommentType
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: FileEditCommentType.Description
+  fullName: Dropbox.Api.TeamLog.FileEditCommentType.Description
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileEditCommentType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Description
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileEditCommentType.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets the description of the file edit comment type</p>\n"
+  example: []
+  syntax:
+    content: public string Description { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Dropbox.Api.TeamLog.FileEditCommentType.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.FileEditCommentType
+  commentId: T:Dropbox.Api.TeamLog.FileEditCommentType
+  parent: Dropbox.Api.TeamLog
+  name: FileEditCommentType
+  nameWithType: FileEditCommentType
+  fullName: Dropbox.Api.TeamLog.FileEditCommentType
+- uid: Dropbox.Api.TeamLog.FileEditCommentType.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.FileEditCommentType.#ctor
+  name: FileEditCommentType
+  nameWithType: FileEditCommentType.FileEditCommentType
+  fullName: Dropbox.Api.TeamLog.FileEditCommentType.FileEditCommentType
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.FileEditCommentType.Description*
+  commentId: Overload:Dropbox.Api.TeamLog.FileEditCommentType.Description
+  name: Description
+  nameWithType: FileEditCommentType.Description
+  fullName: Dropbox.Api.TeamLog.FileEditCommentType.Description
+shouldSkipMarkup: true

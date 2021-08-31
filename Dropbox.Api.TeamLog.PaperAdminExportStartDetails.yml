@@ -1,0 +1,96 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.PaperAdminExportStartDetails
+  commentId: T:Dropbox.Api.TeamLog.PaperAdminExportStartDetails
+  id: PaperAdminExportStartDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.PaperAdminExportStartDetails.#ctor
+  langs:
+  - csharp
+  - vb
+  name: PaperAdminExportStartDetails
+  nameWithType: PaperAdminExportStartDetails
+  fullName: Dropbox.Api.TeamLog.PaperAdminExportStartDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperAdminExportStartDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PaperAdminExportStartDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperAdminExportStartDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Exported all team Paper docs.</p>\n"
+  example: []
+  syntax:
+    content: 'public class PaperAdminExportStartDetails : object'
+    content.vb: >-
+      Public Class PaperAdminExportStartDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.PaperAdminExportStartDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.PaperAdminExportStartDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.PaperAdminExportStartDetails
+  langs:
+  - csharp
+  - vb
+  name: PaperAdminExportStartDetails()
+  nameWithType: PaperAdminExportStartDetails.PaperAdminExportStartDetails()
+  fullName: Dropbox.Api.TeamLog.PaperAdminExportStartDetails.PaperAdminExportStartDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperAdminExportStartDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperAdminExportStartDetails.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.PaperAdminExportStartDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public PaperAdminExportStartDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.PaperAdminExportStartDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.PaperAdminExportStartDetails
+  commentId: T:Dropbox.Api.TeamLog.PaperAdminExportStartDetails
+  parent: Dropbox.Api.TeamLog
+  name: PaperAdminExportStartDetails
+  nameWithType: PaperAdminExportStartDetails
+  fullName: Dropbox.Api.TeamLog.PaperAdminExportStartDetails
+- uid: Dropbox.Api.TeamLog.PaperAdminExportStartDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.PaperAdminExportStartDetails.#ctor
+  name: PaperAdminExportStartDetails
+  nameWithType: PaperAdminExportStartDetails.PaperAdminExportStartDetails
+  fullName: Dropbox.Api.TeamLog.PaperAdminExportStartDetails.PaperAdminExportStartDetails
+shouldSkipMarkup: true

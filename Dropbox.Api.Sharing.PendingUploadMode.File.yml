@@ -1,0 +1,134 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.PendingUploadMode.File
+  commentId: T:Dropbox.Api.Sharing.PendingUploadMode.File
+  id: PendingUploadMode.File
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.PendingUploadMode.File.Instance
+  langs:
+  - csharp
+  - vb
+  name: PendingUploadMode.File
+  nameWithType: PendingUploadMode.File
+  fullName: Dropbox.Api.Sharing.PendingUploadMode.File
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PendingUploadMode.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: File
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PendingUploadMode.cs
+    startLine: 155
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Assume pending uploads are files.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class File : PendingUploadMode'
+    content.vb: >-
+      Public NotInheritable Class File
+          Inherits PendingUploadMode
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Sharing.PendingUploadMode
+  inheritedMembers:
+  - Dropbox.Api.Sharing.PendingUploadMode.IsFile
+  - Dropbox.Api.Sharing.PendingUploadMode.AsFile
+  - Dropbox.Api.Sharing.PendingUploadMode.IsFolder
+  - Dropbox.Api.Sharing.PendingUploadMode.AsFolder
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Sharing.PendingUploadMode.File.Instance
+  commentId: F:Dropbox.Api.Sharing.PendingUploadMode.File.Instance
+  id: Instance
+  parent: Dropbox.Api.Sharing.PendingUploadMode.File
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: PendingUploadMode.File.Instance
+  fullName: Dropbox.Api.Sharing.PendingUploadMode.File.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PendingUploadMode.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PendingUploadMode.cs
+    startLine: 179
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>A singleton instance of File</p>\n"
+  example: []
+  syntax:
+    content: public static readonly PendingUploadMode.File Instance
+    return:
+      type: Dropbox.Api.Sharing.PendingUploadMode.File
+    content.vb: Public Shared ReadOnly Instance As PendingUploadMode.File
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.PendingUploadMode
+  commentId: T:Dropbox.Api.Sharing.PendingUploadMode
+  parent: Dropbox.Api.Sharing
+  name: PendingUploadMode
+  nameWithType: PendingUploadMode
+  fullName: Dropbox.Api.Sharing.PendingUploadMode
+- uid: Dropbox.Api.Sharing.PendingUploadMode.IsFile
+  commentId: P:Dropbox.Api.Sharing.PendingUploadMode.IsFile
+  parent: Dropbox.Api.Sharing.PendingUploadMode
+  name: IsFile
+  nameWithType: PendingUploadMode.IsFile
+  fullName: Dropbox.Api.Sharing.PendingUploadMode.IsFile
+- uid: Dropbox.Api.Sharing.PendingUploadMode.AsFile
+  commentId: P:Dropbox.Api.Sharing.PendingUploadMode.AsFile
+  parent: Dropbox.Api.Sharing.PendingUploadMode
+  name: AsFile
+  nameWithType: PendingUploadMode.AsFile
+  fullName: Dropbox.Api.Sharing.PendingUploadMode.AsFile
+- uid: Dropbox.Api.Sharing.PendingUploadMode.IsFolder
+  commentId: P:Dropbox.Api.Sharing.PendingUploadMode.IsFolder
+  parent: Dropbox.Api.Sharing.PendingUploadMode
+  name: IsFolder
+  nameWithType: PendingUploadMode.IsFolder
+  fullName: Dropbox.Api.Sharing.PendingUploadMode.IsFolder
+- uid: Dropbox.Api.Sharing.PendingUploadMode.AsFolder
+  commentId: P:Dropbox.Api.Sharing.PendingUploadMode.AsFolder
+  parent: Dropbox.Api.Sharing.PendingUploadMode
+  name: AsFolder
+  nameWithType: PendingUploadMode.AsFolder
+  fullName: Dropbox.Api.Sharing.PendingUploadMode.AsFolder
+- uid: Dropbox.Api.Sharing.PendingUploadMode.File
+  commentId: T:Dropbox.Api.Sharing.PendingUploadMode.File
+  parent: Dropbox.Api.Sharing
+  name: PendingUploadMode.File
+  nameWithType: PendingUploadMode.File
+  fullName: Dropbox.Api.Sharing.PendingUploadMode.File
+shouldSkipMarkup: true

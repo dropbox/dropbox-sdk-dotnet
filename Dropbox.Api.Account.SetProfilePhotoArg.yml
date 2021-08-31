@@ -1,0 +1,188 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Account.SetProfilePhotoArg
+  commentId: T:Dropbox.Api.Account.SetProfilePhotoArg
+  id: SetProfilePhotoArg
+  parent: Dropbox.Api.Account
+  children:
+  - Dropbox.Api.Account.SetProfilePhotoArg.#ctor
+  - Dropbox.Api.Account.SetProfilePhotoArg.#ctor(Dropbox.Api.Account.PhotoSourceArg)
+  - Dropbox.Api.Account.SetProfilePhotoArg.Photo
+  langs:
+  - csharp
+  - vb
+  name: SetProfilePhotoArg
+  nameWithType: SetProfilePhotoArg
+  fullName: Dropbox.Api.Account.SetProfilePhotoArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Account/SetProfilePhotoArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SetProfilePhotoArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Account/SetProfilePhotoArg.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Account
+  summary: "\n<p>The set profile photo arg object</p>\n"
+  example: []
+  syntax:
+    content: 'public class SetProfilePhotoArg : object'
+    content.vb: >-
+      Public Class SetProfilePhotoArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Account.SetProfilePhotoArg.#ctor(Dropbox.Api.Account.PhotoSourceArg)
+  commentId: M:Dropbox.Api.Account.SetProfilePhotoArg.#ctor(Dropbox.Api.Account.PhotoSourceArg)
+  id: '#ctor(Dropbox.Api.Account.PhotoSourceArg)'
+  parent: Dropbox.Api.Account.SetProfilePhotoArg
+  langs:
+  - csharp
+  - vb
+  name: SetProfilePhotoArg(PhotoSourceArg)
+  nameWithType: SetProfilePhotoArg.SetProfilePhotoArg(PhotoSourceArg)
+  fullName: Dropbox.Api.Account.SetProfilePhotoArg.SetProfilePhotoArg(Dropbox.Api.Account.PhotoSourceArg)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Account/SetProfilePhotoArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Account/SetProfilePhotoArg.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Account
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Account.SetProfilePhotoArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public SetProfilePhotoArg(PhotoSourceArg photo)
+    parameters:
+    - id: photo
+      type: Dropbox.Api.Account.PhotoSourceArg
+      description: Image to set as the user&apos;s new profile photo.
+    content.vb: Public Sub New(photo As PhotoSourceArg)
+  overload: Dropbox.Api.Account.SetProfilePhotoArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Account.SetProfilePhotoArg.#ctor
+  commentId: M:Dropbox.Api.Account.SetProfilePhotoArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Account.SetProfilePhotoArg
+  langs:
+  - csharp
+  - vb
+  name: SetProfilePhotoArg()
+  nameWithType: SetProfilePhotoArg.SetProfilePhotoArg()
+  fullName: Dropbox.Api.Account.SetProfilePhotoArg.SetProfilePhotoArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Account/SetProfilePhotoArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Account/SetProfilePhotoArg.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Account
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Account.SetProfilePhotoArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public SetProfilePhotoArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Account.SetProfilePhotoArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Account.SetProfilePhotoArg.Photo
+  commentId: P:Dropbox.Api.Account.SetProfilePhotoArg.Photo
+  id: Photo
+  parent: Dropbox.Api.Account.SetProfilePhotoArg
+  langs:
+  - csharp
+  - vb
+  name: Photo
+  nameWithType: SetProfilePhotoArg.Photo
+  fullName: Dropbox.Api.Account.SetProfilePhotoArg.Photo
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Account/SetProfilePhotoArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Photo
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Account/SetProfilePhotoArg.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Account
+  summary: "\n<p>Image to set as the user&apos;s new profile photo.</p>\n"
+  example: []
+  syntax:
+    content: public PhotoSourceArg Photo { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Account.PhotoSourceArg
+    content.vb: Public Property Photo As PhotoSourceArg
+  overload: Dropbox.Api.Account.SetProfilePhotoArg.Photo*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Account
+  commentId: N:Dropbox.Api.Account
+  name: Dropbox.Api.Account
+  nameWithType: Dropbox.Api.Account
+  fullName: Dropbox.Api.Account
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Account.SetProfilePhotoArg
+  commentId: T:Dropbox.Api.Account.SetProfilePhotoArg
+  parent: Dropbox.Api.Account
+  name: SetProfilePhotoArg
+  nameWithType: SetProfilePhotoArg
+  fullName: Dropbox.Api.Account.SetProfilePhotoArg
+- uid: Dropbox.Api.Account.SetProfilePhotoArg.#ctor*
+  commentId: Overload:Dropbox.Api.Account.SetProfilePhotoArg.#ctor
+  name: SetProfilePhotoArg
+  nameWithType: SetProfilePhotoArg.SetProfilePhotoArg
+  fullName: Dropbox.Api.Account.SetProfilePhotoArg.SetProfilePhotoArg
+- uid: Dropbox.Api.Account.PhotoSourceArg
+  commentId: T:Dropbox.Api.Account.PhotoSourceArg
+  parent: Dropbox.Api.Account
+  name: PhotoSourceArg
+  nameWithType: PhotoSourceArg
+  fullName: Dropbox.Api.Account.PhotoSourceArg
+- uid: Dropbox.Api.Account.SetProfilePhotoArg.Photo*
+  commentId: Overload:Dropbox.Api.Account.SetProfilePhotoArg.Photo
+  name: Photo
+  nameWithType: SetProfilePhotoArg.Photo
+  fullName: Dropbox.Api.Account.SetProfilePhotoArg.Photo
+shouldSkipMarkup: true

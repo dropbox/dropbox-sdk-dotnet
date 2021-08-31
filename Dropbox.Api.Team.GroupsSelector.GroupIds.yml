@@ -1,0 +1,346 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.GroupsSelector.GroupIds
+  commentId: T:Dropbox.Api.Team.GroupsSelector.GroupIds
+  id: GroupsSelector.GroupIds
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.GroupsSelector.GroupIds.#ctor(System.Collections.Generic.IEnumerable{System.String})
+  - Dropbox.Api.Team.GroupsSelector.GroupIds.Value
+  langs:
+  - csharp
+  - vb
+  name: GroupsSelector.GroupIds
+  nameWithType: GroupsSelector.GroupIds
+  fullName: Dropbox.Api.Team.GroupsSelector.GroupIds
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsSelector.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GroupIds
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsSelector.cs
+    startLine: 154
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>List of group IDs.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class GroupIds : GroupsSelector'
+    content.vb: >-
+      Public NotInheritable Class GroupIds
+          Inherits GroupsSelector
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.GroupsSelector
+  inheritedMembers:
+  - Dropbox.Api.Team.GroupsSelector.IsGroupIds
+  - Dropbox.Api.Team.GroupsSelector.AsGroupIds
+  - Dropbox.Api.Team.GroupsSelector.IsGroupExternalIds
+  - Dropbox.Api.Team.GroupsSelector.AsGroupExternalIds
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Team.GroupsSelector.GroupIds.#ctor(System.Collections.Generic.IEnumerable{System.String})
+  commentId: M:Dropbox.Api.Team.GroupsSelector.GroupIds.#ctor(System.Collections.Generic.IEnumerable{System.String})
+  id: '#ctor(System.Collections.Generic.IEnumerable{System.String})'
+  parent: Dropbox.Api.Team.GroupsSelector.GroupIds
+  langs:
+  - csharp
+  - vb
+  name: GroupIds(System.Collections.Generic.IEnumerable<String>)
+  nameWithType: GroupsSelector.GroupIds.GroupIds(System.Collections.Generic.IEnumerable<String>)
+  fullName: Dropbox.Api.Team.GroupsSelector.GroupIds.GroupIds(System.Collections.Generic.IEnumerable<System.String>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsSelector.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsSelector.cs
+    startLine: 172
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.GroupsSelector.GroupIds\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public GroupIds(System.Collections.Generic.IEnumerable<string> value)
+    parameters:
+    - id: value
+      type: System.Collections.Generic.IEnumerable{System.String}
+      description: The value
+    content.vb: Public Sub New(value As System.Collections.Generic.IEnumerable(Of String))
+  overload: Dropbox.Api.Team.GroupsSelector.GroupIds.#ctor*
+  nameWithType.vb: GroupsSelector.GroupIds.GroupIds(System.Collections.Generic.IEnumerable(Of String))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Team.GroupsSelector.GroupIds.GroupIds(System.Collections.Generic.IEnumerable(Of System.String))
+  name.vb: GroupIds(System.Collections.Generic.IEnumerable(Of String))
+- uid: Dropbox.Api.Team.GroupsSelector.GroupIds.Value
+  commentId: P:Dropbox.Api.Team.GroupsSelector.GroupIds.Value
+  id: Value
+  parent: Dropbox.Api.Team.GroupsSelector.GroupIds
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: GroupsSelector.GroupIds.Value
+  fullName: Dropbox.Api.Team.GroupsSelector.GroupIds.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsSelector.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsSelector.cs
+    startLine: 186
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<string> Value { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{System.String}
+    content.vb: Public ReadOnly Property Value As System.Collections.Generic.IList(Of String)
+  overload: Dropbox.Api.Team.GroupsSelector.GroupIds.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.GroupsSelector
+  commentId: T:Dropbox.Api.Team.GroupsSelector
+  parent: Dropbox.Api.Team
+  name: GroupsSelector
+  nameWithType: GroupsSelector
+  fullName: Dropbox.Api.Team.GroupsSelector
+- uid: Dropbox.Api.Team.GroupsSelector.IsGroupIds
+  commentId: P:Dropbox.Api.Team.GroupsSelector.IsGroupIds
+  parent: Dropbox.Api.Team.GroupsSelector
+  name: IsGroupIds
+  nameWithType: GroupsSelector.IsGroupIds
+  fullName: Dropbox.Api.Team.GroupsSelector.IsGroupIds
+- uid: Dropbox.Api.Team.GroupsSelector.AsGroupIds
+  commentId: P:Dropbox.Api.Team.GroupsSelector.AsGroupIds
+  parent: Dropbox.Api.Team.GroupsSelector
+  name: AsGroupIds
+  nameWithType: GroupsSelector.AsGroupIds
+  fullName: Dropbox.Api.Team.GroupsSelector.AsGroupIds
+- uid: Dropbox.Api.Team.GroupsSelector.IsGroupExternalIds
+  commentId: P:Dropbox.Api.Team.GroupsSelector.IsGroupExternalIds
+  parent: Dropbox.Api.Team.GroupsSelector
+  name: IsGroupExternalIds
+  nameWithType: GroupsSelector.IsGroupExternalIds
+  fullName: Dropbox.Api.Team.GroupsSelector.IsGroupExternalIds
+- uid: Dropbox.Api.Team.GroupsSelector.AsGroupExternalIds
+  commentId: P:Dropbox.Api.Team.GroupsSelector.AsGroupExternalIds
+  parent: Dropbox.Api.Team.GroupsSelector
+  name: AsGroupExternalIds
+  nameWithType: GroupsSelector.AsGroupExternalIds
+  fullName: Dropbox.Api.Team.GroupsSelector.AsGroupExternalIds
+- uid: Dropbox.Api.Team.GroupsSelector.GroupIds
+  commentId: T:Dropbox.Api.Team.GroupsSelector.GroupIds
+  parent: Dropbox.Api.Team
+  name: GroupsSelector.GroupIds
+  nameWithType: GroupsSelector.GroupIds
+  fullName: Dropbox.Api.Team.GroupsSelector.GroupIds
+- uid: Dropbox.Api.Team.GroupsSelector.GroupIds.#ctor*
+  commentId: Overload:Dropbox.Api.Team.GroupsSelector.GroupIds.#ctor
+  name: GroupIds
+  nameWithType: GroupsSelector.GroupIds.GroupIds
+  fullName: Dropbox.Api.Team.GroupsSelector.GroupIds.GroupIds
+- uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: '!:System.Collections.Generic.IEnumerable{System.String}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<String>
+  nameWithType: System.Collections.Generic.IEnumerable<String>
+  fullName: System.Collections.Generic.IEnumerable<System.String>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of String)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.String)
+  name.vb: System.Collections.Generic.IEnumerable(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: System.Collections.Generic.IEnumerable<>
+  nameWithType: System.Collections.Generic.IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: System.Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Team.GroupsSelector.GroupIds.Value*
+  commentId: Overload:Dropbox.Api.Team.GroupsSelector.GroupIds.Value
+  name: Value
+  nameWithType: GroupsSelector.GroupIds.Value
+  fullName: Dropbox.Api.Team.GroupsSelector.GroupIds.Value
+- uid: System.Collections.Generic.IList{System.String}
+  commentId: '!:System.Collections.Generic.IList{System.String}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<String>
+  nameWithType: System.Collections.Generic.IList<String>
+  fullName: System.Collections.Generic.IList<System.String>
+  nameWithType.vb: System.Collections.Generic.IList(Of String)
+  fullName.vb: System.Collections.Generic.IList(Of System.String)
+  name.vb: System.Collections.Generic.IList(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  isExternal: true
+  name: System.Collections.Generic.IList<>
+  nameWithType: System.Collections.Generic.IList<>
+  fullName: System.Collections.Generic.IList<>
+  nameWithType.vb: System.Collections.Generic.IList(Of )
+  fullName.vb: System.Collections.Generic.IList(Of )
+  name.vb: System.Collections.Generic.IList(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+shouldSkipMarkup: true

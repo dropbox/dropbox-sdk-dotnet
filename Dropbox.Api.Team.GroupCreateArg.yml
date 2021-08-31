@@ -1,0 +1,353 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.GroupCreateArg
+  commentId: T:Dropbox.Api.Team.GroupCreateArg
+  id: GroupCreateArg
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.GroupCreateArg.#ctor
+  - Dropbox.Api.Team.GroupCreateArg.#ctor(System.String,System.Boolean,System.String,Dropbox.Api.TeamCommon.GroupManagementType)
+  - Dropbox.Api.Team.GroupCreateArg.AddCreatorAsOwner
+  - Dropbox.Api.Team.GroupCreateArg.GroupExternalId
+  - Dropbox.Api.Team.GroupCreateArg.GroupManagementType
+  - Dropbox.Api.Team.GroupCreateArg.GroupName
+  langs:
+  - csharp
+  - vb
+  name: GroupCreateArg
+  nameWithType: GroupCreateArg
+  fullName: Dropbox.Api.Team.GroupCreateArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupCreateArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GroupCreateArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupCreateArg.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The group create arg object</p>\n"
+  example: []
+  syntax:
+    content: 'public class GroupCreateArg : object'
+    content.vb: >-
+      Public Class GroupCreateArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.GroupCreateArg.#ctor(System.String,System.Boolean,System.String,Dropbox.Api.TeamCommon.GroupManagementType)
+  commentId: M:Dropbox.Api.Team.GroupCreateArg.#ctor(System.String,System.Boolean,System.String,Dropbox.Api.TeamCommon.GroupManagementType)
+  id: '#ctor(System.String,System.Boolean,System.String,Dropbox.Api.TeamCommon.GroupManagementType)'
+  parent: Dropbox.Api.Team.GroupCreateArg
+  langs:
+  - csharp
+  - vb
+  name: GroupCreateArg(String, Boolean, String, GroupManagementType)
+  nameWithType: GroupCreateArg.GroupCreateArg(String, Boolean, String, GroupManagementType)
+  fullName: Dropbox.Api.Team.GroupCreateArg.GroupCreateArg(System.String, System.Boolean, System.String, Dropbox.Api.TeamCommon.GroupManagementType)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupCreateArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupCreateArg.cs
+    startLine: 38
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.GroupCreateArg\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public GroupCreateArg(string groupName, bool addCreatorAsOwner = false, string groupExternalId = null, GroupManagementType groupManagementType = null)
+    parameters:
+    - id: groupName
+      type: System.String
+      description: Group name.
+    - id: addCreatorAsOwner
+      type: System.Boolean
+      description: Automatically add the creator of the group.
+    - id: groupExternalId
+      type: System.String
+      description: >-
+        The creator of a team can associate an arbitrary
+
+        external ID to the group.
+    - id: groupManagementType
+      type: Dropbox.Api.TeamCommon.GroupManagementType
+      description: >-
+        Whether the team can be managed by selected
+
+        users, or only by team admins.
+    content.vb: Public Sub New(groupName As String, addCreatorAsOwner As Boolean = False, groupExternalId As String = Nothing, groupManagementType As GroupManagementType = Nothing)
+  overload: Dropbox.Api.Team.GroupCreateArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.GroupCreateArg.#ctor
+  commentId: M:Dropbox.Api.Team.GroupCreateArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.GroupCreateArg
+  langs:
+  - csharp
+  - vb
+  name: GroupCreateArg()
+  nameWithType: GroupCreateArg.GroupCreateArg()
+  fullName: Dropbox.Api.Team.GroupCreateArg.GroupCreateArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupCreateArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupCreateArg.cs
+    startLine: 59
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.GroupCreateArg\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public GroupCreateArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.GroupCreateArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.GroupCreateArg.GroupName
+  commentId: P:Dropbox.Api.Team.GroupCreateArg.GroupName
+  id: GroupName
+  parent: Dropbox.Api.Team.GroupCreateArg
+  langs:
+  - csharp
+  - vb
+  name: GroupName
+  nameWithType: GroupCreateArg.GroupName
+  fullName: Dropbox.Api.Team.GroupCreateArg.GroupName
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupCreateArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GroupName
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupCreateArg.cs
+    startLine: 68
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Group name.</p>\n"
+  example: []
+  syntax:
+    content: public string GroupName { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property GroupName As String
+  overload: Dropbox.Api.Team.GroupCreateArg.GroupName*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.GroupCreateArg.AddCreatorAsOwner
+  commentId: P:Dropbox.Api.Team.GroupCreateArg.AddCreatorAsOwner
+  id: AddCreatorAsOwner
+  parent: Dropbox.Api.Team.GroupCreateArg
+  langs:
+  - csharp
+  - vb
+  name: AddCreatorAsOwner
+  nameWithType: GroupCreateArg.AddCreatorAsOwner
+  fullName: Dropbox.Api.Team.GroupCreateArg.AddCreatorAsOwner
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupCreateArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AddCreatorAsOwner
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupCreateArg.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Automatically add the creator of the group.</p>\n"
+  example: []
+  syntax:
+    content: public bool AddCreatorAsOwner { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property AddCreatorAsOwner As Boolean
+  overload: Dropbox.Api.Team.GroupCreateArg.AddCreatorAsOwner*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.GroupCreateArg.GroupExternalId
+  commentId: P:Dropbox.Api.Team.GroupCreateArg.GroupExternalId
+  id: GroupExternalId
+  parent: Dropbox.Api.Team.GroupCreateArg
+  langs:
+  - csharp
+  - vb
+  name: GroupExternalId
+  nameWithType: GroupCreateArg.GroupExternalId
+  fullName: Dropbox.Api.Team.GroupCreateArg.GroupExternalId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupCreateArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GroupExternalId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupCreateArg.cs
+    startLine: 79
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The creator of a team can associate an arbitrary external ID to the\ngroup.</p>\n"
+  example: []
+  syntax:
+    content: public string GroupExternalId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property GroupExternalId As String
+  overload: Dropbox.Api.Team.GroupCreateArg.GroupExternalId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.GroupCreateArg.GroupManagementType
+  commentId: P:Dropbox.Api.Team.GroupCreateArg.GroupManagementType
+  id: GroupManagementType
+  parent: Dropbox.Api.Team.GroupCreateArg
+  langs:
+  - csharp
+  - vb
+  name: GroupManagementType
+  nameWithType: GroupCreateArg.GroupManagementType
+  fullName: Dropbox.Api.Team.GroupCreateArg.GroupManagementType
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupCreateArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GroupManagementType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupCreateArg.cs
+    startLine: 85
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Whether the team can be managed by selected users, or only by team\nadmins.</p>\n"
+  example: []
+  syntax:
+    content: public GroupManagementType GroupManagementType { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamCommon.GroupManagementType
+    content.vb: Public Property GroupManagementType As GroupManagementType
+  overload: Dropbox.Api.Team.GroupCreateArg.GroupManagementType*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.GroupCreateArg
+  commentId: T:Dropbox.Api.Team.GroupCreateArg
+  parent: Dropbox.Api.Team
+  name: GroupCreateArg
+  nameWithType: GroupCreateArg
+  fullName: Dropbox.Api.Team.GroupCreateArg
+- uid: Dropbox.Api.Team.GroupCreateArg.#ctor*
+  commentId: Overload:Dropbox.Api.Team.GroupCreateArg.#ctor
+  name: GroupCreateArg
+  nameWithType: GroupCreateArg.GroupCreateArg
+  fullName: Dropbox.Api.Team.GroupCreateArg.GroupCreateArg
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.TeamCommon.GroupManagementType
+  commentId: T:Dropbox.Api.TeamCommon.GroupManagementType
+  parent: Dropbox.Api.TeamCommon
+  name: GroupManagementType
+  nameWithType: GroupManagementType
+  fullName: Dropbox.Api.TeamCommon.GroupManagementType
+- uid: Dropbox.Api.TeamCommon
+  commentId: N:Dropbox.Api.TeamCommon
+  name: Dropbox.Api.TeamCommon
+  nameWithType: Dropbox.Api.TeamCommon
+  fullName: Dropbox.Api.TeamCommon
+- uid: Dropbox.Api.Team.GroupCreateArg.GroupName*
+  commentId: Overload:Dropbox.Api.Team.GroupCreateArg.GroupName
+  name: GroupName
+  nameWithType: GroupCreateArg.GroupName
+  fullName: Dropbox.Api.Team.GroupCreateArg.GroupName
+- uid: Dropbox.Api.Team.GroupCreateArg.AddCreatorAsOwner*
+  commentId: Overload:Dropbox.Api.Team.GroupCreateArg.AddCreatorAsOwner
+  name: AddCreatorAsOwner
+  nameWithType: GroupCreateArg.AddCreatorAsOwner
+  fullName: Dropbox.Api.Team.GroupCreateArg.AddCreatorAsOwner
+- uid: Dropbox.Api.Team.GroupCreateArg.GroupExternalId*
+  commentId: Overload:Dropbox.Api.Team.GroupCreateArg.GroupExternalId
+  name: GroupExternalId
+  nameWithType: GroupCreateArg.GroupExternalId
+  fullName: Dropbox.Api.Team.GroupCreateArg.GroupExternalId
+- uid: Dropbox.Api.Team.GroupCreateArg.GroupManagementType*
+  commentId: Overload:Dropbox.Api.Team.GroupCreateArg.GroupManagementType
+  name: GroupManagementType
+  nameWithType: GroupCreateArg.GroupManagementType
+  fullName: Dropbox.Api.Team.GroupCreateArg.GroupManagementType
+shouldSkipMarkup: true

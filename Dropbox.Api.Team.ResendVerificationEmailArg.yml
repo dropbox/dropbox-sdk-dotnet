@@ -1,0 +1,346 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.ResendVerificationEmailArg
+  commentId: T:Dropbox.Api.Team.ResendVerificationEmailArg
+  id: ResendVerificationEmailArg
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.ResendVerificationEmailArg.#ctor
+  - Dropbox.Api.Team.ResendVerificationEmailArg.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Team.UserSecondaryEmailsArg})
+  - Dropbox.Api.Team.ResendVerificationEmailArg.EmailsToResend
+  langs:
+  - csharp
+  - vb
+  name: ResendVerificationEmailArg
+  nameWithType: ResendVerificationEmailArg
+  fullName: Dropbox.Api.Team.ResendVerificationEmailArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ResendVerificationEmailArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ResendVerificationEmailArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ResendVerificationEmailArg.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The resend verification email arg object</p>\n"
+  example: []
+  syntax:
+    content: 'public class ResendVerificationEmailArg : object'
+    content.vb: >-
+      Public Class ResendVerificationEmailArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.ResendVerificationEmailArg.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Team.UserSecondaryEmailsArg})
+  commentId: M:Dropbox.Api.Team.ResendVerificationEmailArg.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Team.UserSecondaryEmailsArg})
+  id: '#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Team.UserSecondaryEmailsArg})'
+  parent: Dropbox.Api.Team.ResendVerificationEmailArg
+  langs:
+  - csharp
+  - vb
+  name: ResendVerificationEmailArg(System.Collections.Generic.IEnumerable<UserSecondaryEmailsArg>)
+  nameWithType: ResendVerificationEmailArg.ResendVerificationEmailArg(System.Collections.Generic.IEnumerable<UserSecondaryEmailsArg>)
+  fullName: Dropbox.Api.Team.ResendVerificationEmailArg.ResendVerificationEmailArg(System.Collections.Generic.IEnumerable<Dropbox.Api.Team.UserSecondaryEmailsArg>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ResendVerificationEmailArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ResendVerificationEmailArg.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.ResendVerificationEmailArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public ResendVerificationEmailArg(System.Collections.Generic.IEnumerable<UserSecondaryEmailsArg> emailsToResend)
+    parameters:
+    - id: emailsToResend
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.Team.UserSecondaryEmailsArg}
+      description: >-
+        List of users and secondary emails to resend
+
+        verification emails to.
+    content.vb: Public Sub New(emailsToResend As System.Collections.Generic.IEnumerable(Of UserSecondaryEmailsArg))
+  overload: Dropbox.Api.Team.ResendVerificationEmailArg.#ctor*
+  nameWithType.vb: ResendVerificationEmailArg.ResendVerificationEmailArg(System.Collections.Generic.IEnumerable(Of UserSecondaryEmailsArg))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Team.ResendVerificationEmailArg.ResendVerificationEmailArg(System.Collections.Generic.IEnumerable(Of Dropbox.Api.Team.UserSecondaryEmailsArg))
+  name.vb: ResendVerificationEmailArg(System.Collections.Generic.IEnumerable(Of UserSecondaryEmailsArg))
+- uid: Dropbox.Api.Team.ResendVerificationEmailArg.#ctor
+  commentId: M:Dropbox.Api.Team.ResendVerificationEmailArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.ResendVerificationEmailArg
+  langs:
+  - csharp
+  - vb
+  name: ResendVerificationEmailArg()
+  nameWithType: ResendVerificationEmailArg.ResendVerificationEmailArg()
+  fullName: Dropbox.Api.Team.ResendVerificationEmailArg.ResendVerificationEmailArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ResendVerificationEmailArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ResendVerificationEmailArg.cs
+    startLine: 53
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.ResendVerificationEmailArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public ResendVerificationEmailArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.ResendVerificationEmailArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.ResendVerificationEmailArg.EmailsToResend
+  commentId: P:Dropbox.Api.Team.ResendVerificationEmailArg.EmailsToResend
+  id: EmailsToResend
+  parent: Dropbox.Api.Team.ResendVerificationEmailArg
+  langs:
+  - csharp
+  - vb
+  name: EmailsToResend
+  nameWithType: ResendVerificationEmailArg.EmailsToResend
+  fullName: Dropbox.Api.Team.ResendVerificationEmailArg.EmailsToResend
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ResendVerificationEmailArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: EmailsToResend
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ResendVerificationEmailArg.cs
+    startLine: 61
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>List of users and secondary emails to resend verification emails to.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<UserSecondaryEmailsArg> EmailsToResend { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{Dropbox.Api.Team.UserSecondaryEmailsArg}
+    content.vb: Public Property EmailsToResend As System.Collections.Generic.IList(Of UserSecondaryEmailsArg)
+  overload: Dropbox.Api.Team.ResendVerificationEmailArg.EmailsToResend*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.ResendVerificationEmailArg
+  commentId: T:Dropbox.Api.Team.ResendVerificationEmailArg
+  parent: Dropbox.Api.Team
+  name: ResendVerificationEmailArg
+  nameWithType: ResendVerificationEmailArg
+  fullName: Dropbox.Api.Team.ResendVerificationEmailArg
+- uid: Dropbox.Api.Team.ResendVerificationEmailArg.#ctor*
+  commentId: Overload:Dropbox.Api.Team.ResendVerificationEmailArg.#ctor
+  name: ResendVerificationEmailArg
+  nameWithType: ResendVerificationEmailArg.ResendVerificationEmailArg
+  fullName: Dropbox.Api.Team.ResendVerificationEmailArg.ResendVerificationEmailArg
+- uid: System.Collections.Generic.IEnumerable{Dropbox.Api.Team.UserSecondaryEmailsArg}
+  commentId: '!:System.Collections.Generic.IEnumerable{Dropbox.Api.Team.UserSecondaryEmailsArg}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<UserSecondaryEmailsArg>
+  nameWithType: System.Collections.Generic.IEnumerable<UserSecondaryEmailsArg>
+  fullName: System.Collections.Generic.IEnumerable<Dropbox.Api.Team.UserSecondaryEmailsArg>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of UserSecondaryEmailsArg)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Dropbox.Api.Team.UserSecondaryEmailsArg)
+  name.vb: System.Collections.Generic.IEnumerable(Of UserSecondaryEmailsArg)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Team.UserSecondaryEmailsArg
+    name: UserSecondaryEmailsArg
+    nameWithType: UserSecondaryEmailsArg
+    fullName: Dropbox.Api.Team.UserSecondaryEmailsArg
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Team.UserSecondaryEmailsArg
+    name: UserSecondaryEmailsArg
+    nameWithType: UserSecondaryEmailsArg
+    fullName: Dropbox.Api.Team.UserSecondaryEmailsArg
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: System.Collections.Generic.IEnumerable<>
+  nameWithType: System.Collections.Generic.IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: System.Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Team.ResendVerificationEmailArg.EmailsToResend*
+  commentId: Overload:Dropbox.Api.Team.ResendVerificationEmailArg.EmailsToResend
+  name: EmailsToResend
+  nameWithType: ResendVerificationEmailArg.EmailsToResend
+  fullName: Dropbox.Api.Team.ResendVerificationEmailArg.EmailsToResend
+- uid: System.Collections.Generic.IList{Dropbox.Api.Team.UserSecondaryEmailsArg}
+  commentId: '!:System.Collections.Generic.IList{Dropbox.Api.Team.UserSecondaryEmailsArg}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<UserSecondaryEmailsArg>
+  nameWithType: System.Collections.Generic.IList<UserSecondaryEmailsArg>
+  fullName: System.Collections.Generic.IList<Dropbox.Api.Team.UserSecondaryEmailsArg>
+  nameWithType.vb: System.Collections.Generic.IList(Of UserSecondaryEmailsArg)
+  fullName.vb: System.Collections.Generic.IList(Of Dropbox.Api.Team.UserSecondaryEmailsArg)
+  name.vb: System.Collections.Generic.IList(Of UserSecondaryEmailsArg)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Team.UserSecondaryEmailsArg
+    name: UserSecondaryEmailsArg
+    nameWithType: UserSecondaryEmailsArg
+    fullName: Dropbox.Api.Team.UserSecondaryEmailsArg
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Team.UserSecondaryEmailsArg
+    name: UserSecondaryEmailsArg
+    nameWithType: UserSecondaryEmailsArg
+    fullName: Dropbox.Api.Team.UserSecondaryEmailsArg
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  isExternal: true
+  name: System.Collections.Generic.IList<>
+  nameWithType: System.Collections.Generic.IList<>
+  fullName: System.Collections.Generic.IList<>
+  nameWithType.vb: System.Collections.Generic.IList(Of )
+  fullName.vb: System.Collections.Generic.IList(Of )
+  name.vb: System.Collections.Generic.IList(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+shouldSkipMarkup: true

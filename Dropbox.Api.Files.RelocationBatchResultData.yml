@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.RelocationBatchResultData
+  commentId: T:Dropbox.Api.Files.RelocationBatchResultData
+  id: RelocationBatchResultData
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.RelocationBatchResultData.#ctor
+  - Dropbox.Api.Files.RelocationBatchResultData.#ctor(Dropbox.Api.Files.Metadata)
+  - Dropbox.Api.Files.RelocationBatchResultData.Metadata
+  langs:
+  - csharp
+  - vb
+  name: RelocationBatchResultData
+  nameWithType: RelocationBatchResultData
+  fullName: Dropbox.Api.Files.RelocationBatchResultData
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchResultData.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: RelocationBatchResultData
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchResultData.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The relocation batch result data object</p>\n"
+  example: []
+  syntax:
+    content: 'public class RelocationBatchResultData : object'
+    content.vb: >-
+      Public Class RelocationBatchResultData
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.RelocationBatchResultData.#ctor(Dropbox.Api.Files.Metadata)
+  commentId: M:Dropbox.Api.Files.RelocationBatchResultData.#ctor(Dropbox.Api.Files.Metadata)
+  id: '#ctor(Dropbox.Api.Files.Metadata)'
+  parent: Dropbox.Api.Files.RelocationBatchResultData
+  langs:
+  - csharp
+  - vb
+  name: RelocationBatchResultData(Metadata)
+  nameWithType: RelocationBatchResultData.RelocationBatchResultData(Metadata)
+  fullName: Dropbox.Api.Files.RelocationBatchResultData.RelocationBatchResultData(Dropbox.Api.Files.Metadata)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchResultData.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchResultData.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.RelocationBatchResultData\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public RelocationBatchResultData(Metadata metadata)
+    parameters:
+    - id: metadata
+      type: Dropbox.Api.Files.Metadata
+      description: Metadata of the relocated object.
+    content.vb: Public Sub New(metadata As Metadata)
+  overload: Dropbox.Api.Files.RelocationBatchResultData.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.RelocationBatchResultData.#ctor
+  commentId: M:Dropbox.Api.Files.RelocationBatchResultData.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.RelocationBatchResultData
+  langs:
+  - csharp
+  - vb
+  name: RelocationBatchResultData()
+  nameWithType: RelocationBatchResultData.RelocationBatchResultData()
+  fullName: Dropbox.Api.Files.RelocationBatchResultData.RelocationBatchResultData()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchResultData.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchResultData.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.RelocationBatchResultData\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public RelocationBatchResultData()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.RelocationBatchResultData.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.RelocationBatchResultData.Metadata
+  commentId: P:Dropbox.Api.Files.RelocationBatchResultData.Metadata
+  id: Metadata
+  parent: Dropbox.Api.Files.RelocationBatchResultData
+  langs:
+  - csharp
+  - vb
+  name: Metadata
+  nameWithType: RelocationBatchResultData.Metadata
+  fullName: Dropbox.Api.Files.RelocationBatchResultData.Metadata
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchResultData.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Metadata
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchResultData.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Metadata of the relocated object.</p>\n"
+  example: []
+  syntax:
+    content: public Metadata Metadata { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.Metadata
+    content.vb: Public Property Metadata As Metadata
+  overload: Dropbox.Api.Files.RelocationBatchResultData.Metadata*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.RelocationBatchResultData
+  commentId: T:Dropbox.Api.Files.RelocationBatchResultData
+  name: RelocationBatchResultData
+  nameWithType: RelocationBatchResultData
+  fullName: Dropbox.Api.Files.RelocationBatchResultData
+- uid: Dropbox.Api.Files.RelocationBatchResultData.#ctor*
+  commentId: Overload:Dropbox.Api.Files.RelocationBatchResultData.#ctor
+  name: RelocationBatchResultData
+  nameWithType: RelocationBatchResultData.RelocationBatchResultData
+  fullName: Dropbox.Api.Files.RelocationBatchResultData.RelocationBatchResultData
+- uid: Dropbox.Api.Files.Metadata
+  commentId: T:Dropbox.Api.Files.Metadata
+  parent: Dropbox.Api.Files
+  name: Metadata
+  nameWithType: Metadata
+  fullName: Dropbox.Api.Files.Metadata
+- uid: Dropbox.Api.Files.RelocationBatchResultData.Metadata*
+  commentId: Overload:Dropbox.Api.Files.RelocationBatchResultData.Metadata
+  name: Metadata
+  nameWithType: RelocationBatchResultData.Metadata
+  fullName: Dropbox.Api.Files.RelocationBatchResultData.Metadata
+shouldSkipMarkup: true

@@ -1,0 +1,96 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.SignInAsSessionEndDetails
+  commentId: T:Dropbox.Api.TeamLog.SignInAsSessionEndDetails
+  id: SignInAsSessionEndDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.SignInAsSessionEndDetails.#ctor
+  langs:
+  - csharp
+  - vb
+  name: SignInAsSessionEndDetails
+  nameWithType: SignInAsSessionEndDetails
+  fullName: Dropbox.Api.TeamLog.SignInAsSessionEndDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SignInAsSessionEndDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SignInAsSessionEndDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SignInAsSessionEndDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Ended admin sign-in-as session.</p>\n"
+  example: []
+  syntax:
+    content: 'public class SignInAsSessionEndDetails : object'
+    content.vb: >-
+      Public Class SignInAsSessionEndDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.SignInAsSessionEndDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.SignInAsSessionEndDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.SignInAsSessionEndDetails
+  langs:
+  - csharp
+  - vb
+  name: SignInAsSessionEndDetails()
+  nameWithType: SignInAsSessionEndDetails.SignInAsSessionEndDetails()
+  fullName: Dropbox.Api.TeamLog.SignInAsSessionEndDetails.SignInAsSessionEndDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SignInAsSessionEndDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SignInAsSessionEndDetails.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SignInAsSessionEndDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public SignInAsSessionEndDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.SignInAsSessionEndDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.SignInAsSessionEndDetails
+  commentId: T:Dropbox.Api.TeamLog.SignInAsSessionEndDetails
+  parent: Dropbox.Api.TeamLog
+  name: SignInAsSessionEndDetails
+  nameWithType: SignInAsSessionEndDetails
+  fullName: Dropbox.Api.TeamLog.SignInAsSessionEndDetails
+- uid: Dropbox.Api.TeamLog.SignInAsSessionEndDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.SignInAsSessionEndDetails.#ctor
+  name: SignInAsSessionEndDetails
+  nameWithType: SignInAsSessionEndDetails.SignInAsSessionEndDetails
+  fullName: Dropbox.Api.TeamLog.SignInAsSessionEndDetails.SignInAsSessionEndDetails
+shouldSkipMarkup: true

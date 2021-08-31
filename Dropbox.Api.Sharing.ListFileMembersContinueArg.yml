@@ -1,0 +1,196 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.ListFileMembersContinueArg
+  commentId: T:Dropbox.Api.Sharing.ListFileMembersContinueArg
+  id: ListFileMembersContinueArg
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.ListFileMembersContinueArg.#ctor
+  - Dropbox.Api.Sharing.ListFileMembersContinueArg.#ctor(System.String)
+  - Dropbox.Api.Sharing.ListFileMembersContinueArg.Cursor
+  langs:
+  - csharp
+  - vb
+  name: ListFileMembersContinueArg
+  nameWithType: ListFileMembersContinueArg
+  fullName: Dropbox.Api.Sharing.ListFileMembersContinueArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersContinueArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ListFileMembersContinueArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersContinueArg.cs
+    startLine: 17
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Arguments for <xref href=\"Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListFileMembersContinueAsync(Dropbox.Api.Sharing.ListFileMembersContinueArg)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+  example: []
+  syntax:
+    content: 'public class ListFileMembersContinueArg : object'
+    content.vb: >-
+      Public Class ListFileMembersContinueArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Sharing.ListFileMembersContinueArg.#ctor(System.String)
+  commentId: M:Dropbox.Api.Sharing.ListFileMembersContinueArg.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.Sharing.ListFileMembersContinueArg
+  langs:
+  - csharp
+  - vb
+  name: ListFileMembersContinueArg(String)
+  nameWithType: ListFileMembersContinueArg.ListFileMembersContinueArg(String)
+  fullName: Dropbox.Api.Sharing.ListFileMembersContinueArg.ListFileMembersContinueArg(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersContinueArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersContinueArg.cs
+    startLine: 41
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.ListFileMembersContinueArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public ListFileMembersContinueArg(string cursor)
+    parameters:
+    - id: cursor
+      type: System.String
+      description: The cursor returned by your last call to <xref href="Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListFileMembersAsync(Dropbox.Api.Sharing.ListFileMembersArg)" data-throw-if-not-resolved="false"></xref>, <xref href="Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListFileMembersContinueAsync(Dropbox.Api.Sharing.ListFileMembersContinueArg)" data-throw-if-not-resolved="false"></xref>, or <xref href="Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListFileMembersBatchAsync(Dropbox.Api.Sharing.ListFileMembersBatchArg)" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Sub New(cursor As String)
+  overload: Dropbox.Api.Sharing.ListFileMembersContinueArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.ListFileMembersContinueArg.#ctor
+  commentId: M:Dropbox.Api.Sharing.ListFileMembersContinueArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Sharing.ListFileMembersContinueArg
+  langs:
+  - csharp
+  - vb
+  name: ListFileMembersContinueArg()
+  nameWithType: ListFileMembersContinueArg.ListFileMembersContinueArg()
+  fullName: Dropbox.Api.Sharing.ListFileMembersContinueArg.ListFileMembersContinueArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersContinueArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersContinueArg.cs
+    startLine: 57
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.ListFileMembersContinueArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public ListFileMembersContinueArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Sharing.ListFileMembersContinueArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.ListFileMembersContinueArg.Cursor
+  commentId: P:Dropbox.Api.Sharing.ListFileMembersContinueArg.Cursor
+  id: Cursor
+  parent: Dropbox.Api.Sharing.ListFileMembersContinueArg
+  langs:
+  - csharp
+  - vb
+  name: Cursor
+  nameWithType: ListFileMembersContinueArg.Cursor
+  fullName: Dropbox.Api.Sharing.ListFileMembersContinueArg.Cursor
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersContinueArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Cursor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersContinueArg.cs
+    startLine: 70
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The cursor returned by your last call to <xref href=\"Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListFileMembersAsync(Dropbox.Api.Sharing.ListFileMembersArg)\" data-throw-if-not-resolved=\"false\"></xref>, <xref href=\"Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListFileMembersContinueAsync(Dropbox.Api.Sharing.ListFileMembersContinueArg)\" data-throw-if-not-resolved=\"false\"></xref>, or <xref href=\"Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListFileMembersBatchAsync(Dropbox.Api.Sharing.ListFileMembersBatchArg)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+  example: []
+  syntax:
+    content: public string Cursor { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Cursor As String
+  overload: Dropbox.Api.Sharing.ListFileMembersContinueArg.Cursor*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListFileMembersContinueAsync(Dropbox.Api.Sharing.ListFileMembersContinueArg)
+  commentId: M:Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListFileMembersContinueAsync(Dropbox.Api.Sharing.ListFileMembersContinueArg)
+  isExternal: true
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.ListFileMembersContinueArg
+  commentId: T:Dropbox.Api.Sharing.ListFileMembersContinueArg
+  parent: Dropbox.Api.Sharing
+  name: ListFileMembersContinueArg
+  nameWithType: ListFileMembersContinueArg
+  fullName: Dropbox.Api.Sharing.ListFileMembersContinueArg
+- uid: Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListFileMembersAsync(Dropbox.Api.Sharing.ListFileMembersArg)
+  commentId: M:Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListFileMembersAsync(Dropbox.Api.Sharing.ListFileMembersArg)
+  isExternal: true
+- uid: Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListFileMembersBatchAsync(Dropbox.Api.Sharing.ListFileMembersBatchArg)
+  commentId: M:Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListFileMembersBatchAsync(Dropbox.Api.Sharing.ListFileMembersBatchArg)
+  isExternal: true
+- uid: Dropbox.Api.Sharing.ListFileMembersContinueArg.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.ListFileMembersContinueArg.#ctor
+  name: ListFileMembersContinueArg
+  nameWithType: ListFileMembersContinueArg.ListFileMembersContinueArg
+  fullName: Dropbox.Api.Sharing.ListFileMembersContinueArg.ListFileMembersContinueArg
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Sharing.ListFileMembersContinueArg.Cursor*
+  commentId: Overload:Dropbox.Api.Sharing.ListFileMembersContinueArg.Cursor
+  name: Cursor
+  nameWithType: ListFileMembersContinueArg.Cursor
+  fullName: Dropbox.Api.Sharing.ListFileMembersContinueArg.Cursor
+shouldSkipMarkup: true

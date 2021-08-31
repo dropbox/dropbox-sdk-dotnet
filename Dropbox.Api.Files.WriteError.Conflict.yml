@@ -1,0 +1,285 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.WriteError.Conflict
+  commentId: T:Dropbox.Api.Files.WriteError.Conflict
+  id: WriteError.Conflict
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.WriteError.Conflict.#ctor(Dropbox.Api.Files.WriteConflictError)
+  - Dropbox.Api.Files.WriteError.Conflict.Value
+  langs:
+  - csharp
+  - vb
+  name: WriteError.Conflict
+  nameWithType: WriteError.Conflict
+  fullName: Dropbox.Api.Files.WriteError.Conflict
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/WriteError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Conflict
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/WriteError.cs
+    startLine: 467
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Couldn&apos;t write to the target path because there was something in the\nway.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Conflict : WriteError'
+    content.vb: >-
+      Public NotInheritable Class Conflict
+          Inherits WriteError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Files.WriteError
+  inheritedMembers:
+  - Dropbox.Api.Files.WriteError.IsMalformedPath
+  - Dropbox.Api.Files.WriteError.AsMalformedPath
+  - Dropbox.Api.Files.WriteError.IsConflict
+  - Dropbox.Api.Files.WriteError.AsConflict
+  - Dropbox.Api.Files.WriteError.IsNoWritePermission
+  - Dropbox.Api.Files.WriteError.AsNoWritePermission
+  - Dropbox.Api.Files.WriteError.IsInsufficientSpace
+  - Dropbox.Api.Files.WriteError.AsInsufficientSpace
+  - Dropbox.Api.Files.WriteError.IsDisallowedName
+  - Dropbox.Api.Files.WriteError.AsDisallowedName
+  - Dropbox.Api.Files.WriteError.IsTeamFolder
+  - Dropbox.Api.Files.WriteError.AsTeamFolder
+  - Dropbox.Api.Files.WriteError.IsOperationSuppressed
+  - Dropbox.Api.Files.WriteError.AsOperationSuppressed
+  - Dropbox.Api.Files.WriteError.IsTooManyWriteOperations
+  - Dropbox.Api.Files.WriteError.AsTooManyWriteOperations
+  - Dropbox.Api.Files.WriteError.IsOther
+  - Dropbox.Api.Files.WriteError.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Files.WriteError.Conflict.#ctor(Dropbox.Api.Files.WriteConflictError)
+  commentId: M:Dropbox.Api.Files.WriteError.Conflict.#ctor(Dropbox.Api.Files.WriteConflictError)
+  id: '#ctor(Dropbox.Api.Files.WriteConflictError)'
+  parent: Dropbox.Api.Files.WriteError.Conflict
+  langs:
+  - csharp
+  - vb
+  name: Conflict(WriteConflictError)
+  nameWithType: WriteError.Conflict.Conflict(WriteConflictError)
+  fullName: Dropbox.Api.Files.WriteError.Conflict.Conflict(Dropbox.Api.Files.WriteConflictError)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/WriteError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/WriteError.cs
+    startLine: 485
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.WriteError.Conflict\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public Conflict(WriteConflictError value)
+    parameters:
+    - id: value
+      type: Dropbox.Api.Files.WriteConflictError
+      description: The value
+    content.vb: Public Sub New(value As WriteConflictError)
+  overload: Dropbox.Api.Files.WriteError.Conflict.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.WriteError.Conflict.Value
+  commentId: P:Dropbox.Api.Files.WriteError.Conflict.Value
+  id: Value
+  parent: Dropbox.Api.Files.WriteError.Conflict
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: WriteError.Conflict.Value
+  fullName: Dropbox.Api.Files.WriteError.Conflict.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/WriteError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/WriteError.cs
+    startLine: 499
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public WriteConflictError Value { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.WriteConflictError
+    content.vb: Public ReadOnly Property Value As WriteConflictError
+  overload: Dropbox.Api.Files.WriteError.Conflict.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.WriteError
+  commentId: T:Dropbox.Api.Files.WriteError
+  parent: Dropbox.Api.Files
+  name: WriteError
+  nameWithType: WriteError
+  fullName: Dropbox.Api.Files.WriteError
+- uid: Dropbox.Api.Files.WriteError.IsMalformedPath
+  commentId: P:Dropbox.Api.Files.WriteError.IsMalformedPath
+  parent: Dropbox.Api.Files.WriteError
+  name: IsMalformedPath
+  nameWithType: WriteError.IsMalformedPath
+  fullName: Dropbox.Api.Files.WriteError.IsMalformedPath
+- uid: Dropbox.Api.Files.WriteError.AsMalformedPath
+  commentId: P:Dropbox.Api.Files.WriteError.AsMalformedPath
+  parent: Dropbox.Api.Files.WriteError
+  name: AsMalformedPath
+  nameWithType: WriteError.AsMalformedPath
+  fullName: Dropbox.Api.Files.WriteError.AsMalformedPath
+- uid: Dropbox.Api.Files.WriteError.IsConflict
+  commentId: P:Dropbox.Api.Files.WriteError.IsConflict
+  parent: Dropbox.Api.Files.WriteError
+  name: IsConflict
+  nameWithType: WriteError.IsConflict
+  fullName: Dropbox.Api.Files.WriteError.IsConflict
+- uid: Dropbox.Api.Files.WriteError.AsConflict
+  commentId: P:Dropbox.Api.Files.WriteError.AsConflict
+  parent: Dropbox.Api.Files.WriteError
+  name: AsConflict
+  nameWithType: WriteError.AsConflict
+  fullName: Dropbox.Api.Files.WriteError.AsConflict
+- uid: Dropbox.Api.Files.WriteError.IsNoWritePermission
+  commentId: P:Dropbox.Api.Files.WriteError.IsNoWritePermission
+  parent: Dropbox.Api.Files.WriteError
+  name: IsNoWritePermission
+  nameWithType: WriteError.IsNoWritePermission
+  fullName: Dropbox.Api.Files.WriteError.IsNoWritePermission
+- uid: Dropbox.Api.Files.WriteError.AsNoWritePermission
+  commentId: P:Dropbox.Api.Files.WriteError.AsNoWritePermission
+  parent: Dropbox.Api.Files.WriteError
+  name: AsNoWritePermission
+  nameWithType: WriteError.AsNoWritePermission
+  fullName: Dropbox.Api.Files.WriteError.AsNoWritePermission
+- uid: Dropbox.Api.Files.WriteError.IsInsufficientSpace
+  commentId: P:Dropbox.Api.Files.WriteError.IsInsufficientSpace
+  parent: Dropbox.Api.Files.WriteError
+  name: IsInsufficientSpace
+  nameWithType: WriteError.IsInsufficientSpace
+  fullName: Dropbox.Api.Files.WriteError.IsInsufficientSpace
+- uid: Dropbox.Api.Files.WriteError.AsInsufficientSpace
+  commentId: P:Dropbox.Api.Files.WriteError.AsInsufficientSpace
+  parent: Dropbox.Api.Files.WriteError
+  name: AsInsufficientSpace
+  nameWithType: WriteError.AsInsufficientSpace
+  fullName: Dropbox.Api.Files.WriteError.AsInsufficientSpace
+- uid: Dropbox.Api.Files.WriteError.IsDisallowedName
+  commentId: P:Dropbox.Api.Files.WriteError.IsDisallowedName
+  parent: Dropbox.Api.Files.WriteError
+  name: IsDisallowedName
+  nameWithType: WriteError.IsDisallowedName
+  fullName: Dropbox.Api.Files.WriteError.IsDisallowedName
+- uid: Dropbox.Api.Files.WriteError.AsDisallowedName
+  commentId: P:Dropbox.Api.Files.WriteError.AsDisallowedName
+  parent: Dropbox.Api.Files.WriteError
+  name: AsDisallowedName
+  nameWithType: WriteError.AsDisallowedName
+  fullName: Dropbox.Api.Files.WriteError.AsDisallowedName
+- uid: Dropbox.Api.Files.WriteError.IsTeamFolder
+  commentId: P:Dropbox.Api.Files.WriteError.IsTeamFolder
+  parent: Dropbox.Api.Files.WriteError
+  name: IsTeamFolder
+  nameWithType: WriteError.IsTeamFolder
+  fullName: Dropbox.Api.Files.WriteError.IsTeamFolder
+- uid: Dropbox.Api.Files.WriteError.AsTeamFolder
+  commentId: P:Dropbox.Api.Files.WriteError.AsTeamFolder
+  parent: Dropbox.Api.Files.WriteError
+  name: AsTeamFolder
+  nameWithType: WriteError.AsTeamFolder
+  fullName: Dropbox.Api.Files.WriteError.AsTeamFolder
+- uid: Dropbox.Api.Files.WriteError.IsOperationSuppressed
+  commentId: P:Dropbox.Api.Files.WriteError.IsOperationSuppressed
+  parent: Dropbox.Api.Files.WriteError
+  name: IsOperationSuppressed
+  nameWithType: WriteError.IsOperationSuppressed
+  fullName: Dropbox.Api.Files.WriteError.IsOperationSuppressed
+- uid: Dropbox.Api.Files.WriteError.AsOperationSuppressed
+  commentId: P:Dropbox.Api.Files.WriteError.AsOperationSuppressed
+  parent: Dropbox.Api.Files.WriteError
+  name: AsOperationSuppressed
+  nameWithType: WriteError.AsOperationSuppressed
+  fullName: Dropbox.Api.Files.WriteError.AsOperationSuppressed
+- uid: Dropbox.Api.Files.WriteError.IsTooManyWriteOperations
+  commentId: P:Dropbox.Api.Files.WriteError.IsTooManyWriteOperations
+  parent: Dropbox.Api.Files.WriteError
+  name: IsTooManyWriteOperations
+  nameWithType: WriteError.IsTooManyWriteOperations
+  fullName: Dropbox.Api.Files.WriteError.IsTooManyWriteOperations
+- uid: Dropbox.Api.Files.WriteError.AsTooManyWriteOperations
+  commentId: P:Dropbox.Api.Files.WriteError.AsTooManyWriteOperations
+  parent: Dropbox.Api.Files.WriteError
+  name: AsTooManyWriteOperations
+  nameWithType: WriteError.AsTooManyWriteOperations
+  fullName: Dropbox.Api.Files.WriteError.AsTooManyWriteOperations
+- uid: Dropbox.Api.Files.WriteError.IsOther
+  commentId: P:Dropbox.Api.Files.WriteError.IsOther
+  parent: Dropbox.Api.Files.WriteError
+  name: IsOther
+  nameWithType: WriteError.IsOther
+  fullName: Dropbox.Api.Files.WriteError.IsOther
+- uid: Dropbox.Api.Files.WriteError.AsOther
+  commentId: P:Dropbox.Api.Files.WriteError.AsOther
+  parent: Dropbox.Api.Files.WriteError
+  name: AsOther
+  nameWithType: WriteError.AsOther
+  fullName: Dropbox.Api.Files.WriteError.AsOther
+- uid: Dropbox.Api.Files.WriteError.Conflict
+  commentId: T:Dropbox.Api.Files.WriteError.Conflict
+  parent: Dropbox.Api.Files
+  name: WriteError.Conflict
+  nameWithType: WriteError.Conflict
+  fullName: Dropbox.Api.Files.WriteError.Conflict
+- uid: Dropbox.Api.Files.WriteError.Conflict.#ctor*
+  commentId: Overload:Dropbox.Api.Files.WriteError.Conflict.#ctor
+  name: Conflict
+  nameWithType: WriteError.Conflict.Conflict
+  fullName: Dropbox.Api.Files.WriteError.Conflict.Conflict
+- uid: Dropbox.Api.Files.WriteConflictError
+  commentId: T:Dropbox.Api.Files.WriteConflictError
+  parent: Dropbox.Api.Files
+  name: WriteConflictError
+  nameWithType: WriteConflictError
+  fullName: Dropbox.Api.Files.WriteConflictError
+- uid: Dropbox.Api.Files.WriteError.Conflict.Value*
+  commentId: Overload:Dropbox.Api.Files.WriteError.Conflict.Value
+  name: Value
+  nameWithType: WriteError.Conflict.Value
+  fullName: Dropbox.Api.Files.WriteError.Conflict.Value
+shouldSkipMarkup: true

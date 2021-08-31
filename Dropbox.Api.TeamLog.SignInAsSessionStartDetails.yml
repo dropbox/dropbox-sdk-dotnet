@@ -1,0 +1,96 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.SignInAsSessionStartDetails
+  commentId: T:Dropbox.Api.TeamLog.SignInAsSessionStartDetails
+  id: SignInAsSessionStartDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.SignInAsSessionStartDetails.#ctor
+  langs:
+  - csharp
+  - vb
+  name: SignInAsSessionStartDetails
+  nameWithType: SignInAsSessionStartDetails
+  fullName: Dropbox.Api.TeamLog.SignInAsSessionStartDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SignInAsSessionStartDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SignInAsSessionStartDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SignInAsSessionStartDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Started admin sign-in-as session.</p>\n"
+  example: []
+  syntax:
+    content: 'public class SignInAsSessionStartDetails : object'
+    content.vb: >-
+      Public Class SignInAsSessionStartDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.SignInAsSessionStartDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.SignInAsSessionStartDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.SignInAsSessionStartDetails
+  langs:
+  - csharp
+  - vb
+  name: SignInAsSessionStartDetails()
+  nameWithType: SignInAsSessionStartDetails.SignInAsSessionStartDetails()
+  fullName: Dropbox.Api.TeamLog.SignInAsSessionStartDetails.SignInAsSessionStartDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SignInAsSessionStartDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SignInAsSessionStartDetails.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SignInAsSessionStartDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public SignInAsSessionStartDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.SignInAsSessionStartDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.SignInAsSessionStartDetails
+  commentId: T:Dropbox.Api.TeamLog.SignInAsSessionStartDetails
+  parent: Dropbox.Api.TeamLog
+  name: SignInAsSessionStartDetails
+  nameWithType: SignInAsSessionStartDetails
+  fullName: Dropbox.Api.TeamLog.SignInAsSessionStartDetails
+- uid: Dropbox.Api.TeamLog.SignInAsSessionStartDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.SignInAsSessionStartDetails.#ctor
+  name: SignInAsSessionStartDetails
+  nameWithType: SignInAsSessionStartDetails.SignInAsSessionStartDetails
+  fullName: Dropbox.Api.TeamLog.SignInAsSessionStartDetails.SignInAsSessionStartDetails
+shouldSkipMarkup: true

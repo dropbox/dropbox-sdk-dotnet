@@ -1,0 +1,201 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.ListFileMembersIndividualResult.AccessError
+  commentId: T:Dropbox.Api.Sharing.ListFileMembersIndividualResult.AccessError
+  id: ListFileMembersIndividualResult.AccessError
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.ListFileMembersIndividualResult.AccessError.#ctor(Dropbox.Api.Sharing.SharingFileAccessError)
+  - Dropbox.Api.Sharing.ListFileMembersIndividualResult.AccessError.Value
+  langs:
+  - csharp
+  - vb
+  name: ListFileMembersIndividualResult.AccessError
+  nameWithType: ListFileMembersIndividualResult.AccessError
+  fullName: Dropbox.Api.Sharing.ListFileMembersIndividualResult.AccessError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersIndividualResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AccessError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersIndividualResult.cs
+    startLine: 270
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The result of the query for this file if it was an error.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class AccessError : ListFileMembersIndividualResult'
+    content.vb: >-
+      Public NotInheritable Class AccessError
+          Inherits ListFileMembersIndividualResult
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Sharing.ListFileMembersIndividualResult
+  inheritedMembers:
+  - Dropbox.Api.Sharing.ListFileMembersIndividualResult.IsResult
+  - Dropbox.Api.Sharing.ListFileMembersIndividualResult.AsResult
+  - Dropbox.Api.Sharing.ListFileMembersIndividualResult.IsAccessError
+  - Dropbox.Api.Sharing.ListFileMembersIndividualResult.AsAccessError
+  - Dropbox.Api.Sharing.ListFileMembersIndividualResult.IsOther
+  - Dropbox.Api.Sharing.ListFileMembersIndividualResult.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Sharing.ListFileMembersIndividualResult.AccessError.#ctor(Dropbox.Api.Sharing.SharingFileAccessError)
+  commentId: M:Dropbox.Api.Sharing.ListFileMembersIndividualResult.AccessError.#ctor(Dropbox.Api.Sharing.SharingFileAccessError)
+  id: '#ctor(Dropbox.Api.Sharing.SharingFileAccessError)'
+  parent: Dropbox.Api.Sharing.ListFileMembersIndividualResult.AccessError
+  langs:
+  - csharp
+  - vb
+  name: AccessError(SharingFileAccessError)
+  nameWithType: ListFileMembersIndividualResult.AccessError.AccessError(SharingFileAccessError)
+  fullName: Dropbox.Api.Sharing.ListFileMembersIndividualResult.AccessError.AccessError(Dropbox.Api.Sharing.SharingFileAccessError)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersIndividualResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersIndividualResult.cs
+    startLine: 289
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.ListFileMembersIndividualResult.AccessError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public AccessError(SharingFileAccessError value)
+    parameters:
+    - id: value
+      type: Dropbox.Api.Sharing.SharingFileAccessError
+      description: The value
+    content.vb: Public Sub New(value As SharingFileAccessError)
+  overload: Dropbox.Api.Sharing.ListFileMembersIndividualResult.AccessError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.ListFileMembersIndividualResult.AccessError.Value
+  commentId: P:Dropbox.Api.Sharing.ListFileMembersIndividualResult.AccessError.Value
+  id: Value
+  parent: Dropbox.Api.Sharing.ListFileMembersIndividualResult.AccessError
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: ListFileMembersIndividualResult.AccessError.Value
+  fullName: Dropbox.Api.Sharing.ListFileMembersIndividualResult.AccessError.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersIndividualResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersIndividualResult.cs
+    startLine: 304
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public SharingFileAccessError Value { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.SharingFileAccessError
+    content.vb: Public ReadOnly Property Value As SharingFileAccessError
+  overload: Dropbox.Api.Sharing.ListFileMembersIndividualResult.AccessError.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.ListFileMembersIndividualResult
+  commentId: T:Dropbox.Api.Sharing.ListFileMembersIndividualResult
+  parent: Dropbox.Api.Sharing
+  name: ListFileMembersIndividualResult
+  nameWithType: ListFileMembersIndividualResult
+  fullName: Dropbox.Api.Sharing.ListFileMembersIndividualResult
+- uid: Dropbox.Api.Sharing.ListFileMembersIndividualResult.IsResult
+  commentId: P:Dropbox.Api.Sharing.ListFileMembersIndividualResult.IsResult
+  parent: Dropbox.Api.Sharing.ListFileMembersIndividualResult
+  name: IsResult
+  nameWithType: ListFileMembersIndividualResult.IsResult
+  fullName: Dropbox.Api.Sharing.ListFileMembersIndividualResult.IsResult
+- uid: Dropbox.Api.Sharing.ListFileMembersIndividualResult.AsResult
+  commentId: P:Dropbox.Api.Sharing.ListFileMembersIndividualResult.AsResult
+  parent: Dropbox.Api.Sharing.ListFileMembersIndividualResult
+  name: AsResult
+  nameWithType: ListFileMembersIndividualResult.AsResult
+  fullName: Dropbox.Api.Sharing.ListFileMembersIndividualResult.AsResult
+- uid: Dropbox.Api.Sharing.ListFileMembersIndividualResult.IsAccessError
+  commentId: P:Dropbox.Api.Sharing.ListFileMembersIndividualResult.IsAccessError
+  parent: Dropbox.Api.Sharing.ListFileMembersIndividualResult
+  name: IsAccessError
+  nameWithType: ListFileMembersIndividualResult.IsAccessError
+  fullName: Dropbox.Api.Sharing.ListFileMembersIndividualResult.IsAccessError
+- uid: Dropbox.Api.Sharing.ListFileMembersIndividualResult.AsAccessError
+  commentId: P:Dropbox.Api.Sharing.ListFileMembersIndividualResult.AsAccessError
+  parent: Dropbox.Api.Sharing.ListFileMembersIndividualResult
+  name: AsAccessError
+  nameWithType: ListFileMembersIndividualResult.AsAccessError
+  fullName: Dropbox.Api.Sharing.ListFileMembersIndividualResult.AsAccessError
+- uid: Dropbox.Api.Sharing.ListFileMembersIndividualResult.IsOther
+  commentId: P:Dropbox.Api.Sharing.ListFileMembersIndividualResult.IsOther
+  parent: Dropbox.Api.Sharing.ListFileMembersIndividualResult
+  name: IsOther
+  nameWithType: ListFileMembersIndividualResult.IsOther
+  fullName: Dropbox.Api.Sharing.ListFileMembersIndividualResult.IsOther
+- uid: Dropbox.Api.Sharing.ListFileMembersIndividualResult.AsOther
+  commentId: P:Dropbox.Api.Sharing.ListFileMembersIndividualResult.AsOther
+  parent: Dropbox.Api.Sharing.ListFileMembersIndividualResult
+  name: AsOther
+  nameWithType: ListFileMembersIndividualResult.AsOther
+  fullName: Dropbox.Api.Sharing.ListFileMembersIndividualResult.AsOther
+- uid: Dropbox.Api.Sharing.ListFileMembersIndividualResult.AccessError
+  commentId: T:Dropbox.Api.Sharing.ListFileMembersIndividualResult.AccessError
+  parent: Dropbox.Api.Sharing
+  name: ListFileMembersIndividualResult.AccessError
+  nameWithType: ListFileMembersIndividualResult.AccessError
+  fullName: Dropbox.Api.Sharing.ListFileMembersIndividualResult.AccessError
+- uid: Dropbox.Api.Sharing.ListFileMembersIndividualResult.AccessError.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.ListFileMembersIndividualResult.AccessError.#ctor
+  name: AccessError
+  nameWithType: ListFileMembersIndividualResult.AccessError.AccessError
+  fullName: Dropbox.Api.Sharing.ListFileMembersIndividualResult.AccessError.AccessError
+- uid: Dropbox.Api.Sharing.SharingFileAccessError
+  commentId: T:Dropbox.Api.Sharing.SharingFileAccessError
+  parent: Dropbox.Api.Sharing
+  name: SharingFileAccessError
+  nameWithType: SharingFileAccessError
+  fullName: Dropbox.Api.Sharing.SharingFileAccessError
+- uid: Dropbox.Api.Sharing.ListFileMembersIndividualResult.AccessError.Value*
+  commentId: Overload:Dropbox.Api.Sharing.ListFileMembersIndividualResult.AccessError.Value
+  name: Value
+  nameWithType: ListFileMembersIndividualResult.AccessError.Value
+  fullName: Dropbox.Api.Sharing.ListFileMembersIndividualResult.AccessError.Value
+shouldSkipMarkup: true

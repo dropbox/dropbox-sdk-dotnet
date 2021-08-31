@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.TfaRemoveExceptionType
+  commentId: T:Dropbox.Api.TeamLog.TfaRemoveExceptionType
+  id: TfaRemoveExceptionType
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.TfaRemoveExceptionType.#ctor
+  - Dropbox.Api.TeamLog.TfaRemoveExceptionType.#ctor(System.String)
+  - Dropbox.Api.TeamLog.TfaRemoveExceptionType.Description
+  langs:
+  - csharp
+  - vb
+  name: TfaRemoveExceptionType
+  nameWithType: TfaRemoveExceptionType
+  fullName: Dropbox.Api.TeamLog.TfaRemoveExceptionType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaRemoveExceptionType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TfaRemoveExceptionType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaRemoveExceptionType.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The tfa remove exception type object</p>\n"
+  example: []
+  syntax:
+    content: 'public class TfaRemoveExceptionType : object'
+    content.vb: >-
+      Public Class TfaRemoveExceptionType
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.TfaRemoveExceptionType.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.TfaRemoveExceptionType.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.TfaRemoveExceptionType
+  langs:
+  - csharp
+  - vb
+  name: TfaRemoveExceptionType(String)
+  nameWithType: TfaRemoveExceptionType.TfaRemoveExceptionType(String)
+  fullName: Dropbox.Api.TeamLog.TfaRemoveExceptionType.TfaRemoveExceptionType(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaRemoveExceptionType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaRemoveExceptionType.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.TfaRemoveExceptionType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public TfaRemoveExceptionType(string description)
+    parameters:
+    - id: description
+      type: System.String
+      description: The description
+    content.vb: Public Sub New(description As String)
+  overload: Dropbox.Api.TeamLog.TfaRemoveExceptionType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.TfaRemoveExceptionType.#ctor
+  commentId: M:Dropbox.Api.TeamLog.TfaRemoveExceptionType.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.TfaRemoveExceptionType
+  langs:
+  - csharp
+  - vb
+  name: TfaRemoveExceptionType()
+  nameWithType: TfaRemoveExceptionType.TfaRemoveExceptionType()
+  fullName: Dropbox.Api.TeamLog.TfaRemoveExceptionType.TfaRemoveExceptionType()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaRemoveExceptionType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaRemoveExceptionType.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.TfaRemoveExceptionType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public TfaRemoveExceptionType()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.TfaRemoveExceptionType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.TfaRemoveExceptionType.Description
+  commentId: P:Dropbox.Api.TeamLog.TfaRemoveExceptionType.Description
+  id: Description
+  parent: Dropbox.Api.TeamLog.TfaRemoveExceptionType
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: TfaRemoveExceptionType.Description
+  fullName: Dropbox.Api.TeamLog.TfaRemoveExceptionType.Description
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaRemoveExceptionType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Description
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaRemoveExceptionType.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets the description of the tfa remove exception type</p>\n"
+  example: []
+  syntax:
+    content: public string Description { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Dropbox.Api.TeamLog.TfaRemoveExceptionType.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.TfaRemoveExceptionType
+  commentId: T:Dropbox.Api.TeamLog.TfaRemoveExceptionType
+  parent: Dropbox.Api.TeamLog
+  name: TfaRemoveExceptionType
+  nameWithType: TfaRemoveExceptionType
+  fullName: Dropbox.Api.TeamLog.TfaRemoveExceptionType
+- uid: Dropbox.Api.TeamLog.TfaRemoveExceptionType.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.TfaRemoveExceptionType.#ctor
+  name: TfaRemoveExceptionType
+  nameWithType: TfaRemoveExceptionType.TfaRemoveExceptionType
+  fullName: Dropbox.Api.TeamLog.TfaRemoveExceptionType.TfaRemoveExceptionType
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.TfaRemoveExceptionType.Description*
+  commentId: Overload:Dropbox.Api.TeamLog.TfaRemoveExceptionType.Description
+  name: Description
+  nameWithType: TfaRemoveExceptionType.Description
+  fullName: Dropbox.Api.TeamLog.TfaRemoveExceptionType.Description
+shouldSkipMarkup: true

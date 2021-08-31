@@ -1,0 +1,288 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.InviteeInfo
+  commentId: T:Dropbox.Api.Sharing.InviteeInfo
+  id: InviteeInfo
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.InviteeInfo.#ctor
+  - Dropbox.Api.Sharing.InviteeInfo.AsEmail
+  - Dropbox.Api.Sharing.InviteeInfo.AsOther
+  - Dropbox.Api.Sharing.InviteeInfo.IsEmail
+  - Dropbox.Api.Sharing.InviteeInfo.IsOther
+  langs:
+  - csharp
+  - vb
+  name: InviteeInfo
+  nameWithType: InviteeInfo
+  fullName: Dropbox.Api.Sharing.InviteeInfo
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/InviteeInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: InviteeInfo
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/InviteeInfo.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Information about the recipient of a shared content invitation.</p>\n"
+  example: []
+  syntax:
+    content: 'public class InviteeInfo : object'
+    content.vb: >-
+      Public Class InviteeInfo
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Sharing.InviteeInfo.Email
+  - Dropbox.Api.Sharing.InviteeInfo.Other
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Sharing.InviteeInfo.#ctor
+  commentId: M:Dropbox.Api.Sharing.InviteeInfo.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Sharing.InviteeInfo
+  langs:
+  - csharp
+  - vb
+  name: InviteeInfo()
+  nameWithType: InviteeInfo.InviteeInfo()
+  fullName: Dropbox.Api.Sharing.InviteeInfo.InviteeInfo()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/InviteeInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/InviteeInfo.cs
+    startLine: 32
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.InviteeInfo\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public InviteeInfo()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Sharing.InviteeInfo.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.InviteeInfo.IsEmail
+  commentId: P:Dropbox.Api.Sharing.InviteeInfo.IsEmail
+  id: IsEmail
+  parent: Dropbox.Api.Sharing.InviteeInfo
+  langs:
+  - csharp
+  - vb
+  name: IsEmail
+  nameWithType: InviteeInfo.IsEmail
+  fullName: Dropbox.Api.Sharing.InviteeInfo.IsEmail
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/InviteeInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsEmail
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/InviteeInfo.cs
+    startLine: 39
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is Email</p>\n"
+  example: []
+  syntax:
+    content: public bool IsEmail { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsEmail As Boolean
+  overload: Dropbox.Api.Sharing.InviteeInfo.IsEmail*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.InviteeInfo.AsEmail
+  commentId: P:Dropbox.Api.Sharing.InviteeInfo.AsEmail
+  id: AsEmail
+  parent: Dropbox.Api.Sharing.InviteeInfo
+  langs:
+  - csharp
+  - vb
+  name: AsEmail
+  nameWithType: InviteeInfo.AsEmail
+  fullName: Dropbox.Api.Sharing.InviteeInfo.AsEmail
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/InviteeInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsEmail
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/InviteeInfo.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a Email, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public InviteeInfo.Email AsEmail { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.InviteeInfo.Email
+    content.vb: Public ReadOnly Property AsEmail As InviteeInfo.Email
+  overload: Dropbox.Api.Sharing.InviteeInfo.AsEmail*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.InviteeInfo.IsOther
+  commentId: P:Dropbox.Api.Sharing.InviteeInfo.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Sharing.InviteeInfo
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: InviteeInfo.IsOther
+  fullName: Dropbox.Api.Sharing.InviteeInfo.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/InviteeInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/InviteeInfo.cs
+    startLine: 61
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Sharing.InviteeInfo.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.InviteeInfo.AsOther
+  commentId: P:Dropbox.Api.Sharing.InviteeInfo.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Sharing.InviteeInfo
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: InviteeInfo.AsOther
+  fullName: Dropbox.Api.Sharing.InviteeInfo.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/InviteeInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/InviteeInfo.cs
+    startLine: 72
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public InviteeInfo.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.InviteeInfo.Other
+    content.vb: Public ReadOnly Property AsOther As InviteeInfo.Other
+  overload: Dropbox.Api.Sharing.InviteeInfo.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.InviteeInfo
+  commentId: T:Dropbox.Api.Sharing.InviteeInfo
+  parent: Dropbox.Api.Sharing
+  name: InviteeInfo
+  nameWithType: InviteeInfo
+  fullName: Dropbox.Api.Sharing.InviteeInfo
+- uid: Dropbox.Api.Sharing.InviteeInfo.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.InviteeInfo.#ctor
+  name: InviteeInfo
+  nameWithType: InviteeInfo.InviteeInfo
+  fullName: Dropbox.Api.Sharing.InviteeInfo.InviteeInfo
+- uid: Dropbox.Api.Sharing.InviteeInfo.IsEmail*
+  commentId: Overload:Dropbox.Api.Sharing.InviteeInfo.IsEmail
+  name: IsEmail
+  nameWithType: InviteeInfo.IsEmail
+  fullName: Dropbox.Api.Sharing.InviteeInfo.IsEmail
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Sharing.InviteeInfo.AsEmail*
+  commentId: Overload:Dropbox.Api.Sharing.InviteeInfo.AsEmail
+  name: AsEmail
+  nameWithType: InviteeInfo.AsEmail
+  fullName: Dropbox.Api.Sharing.InviteeInfo.AsEmail
+- uid: Dropbox.Api.Sharing.InviteeInfo.Email
+  commentId: T:Dropbox.Api.Sharing.InviteeInfo.Email
+  parent: Dropbox.Api.Sharing
+  name: InviteeInfo.Email
+  nameWithType: InviteeInfo.Email
+  fullName: Dropbox.Api.Sharing.InviteeInfo.Email
+- uid: Dropbox.Api.Sharing.InviteeInfo.IsOther*
+  commentId: Overload:Dropbox.Api.Sharing.InviteeInfo.IsOther
+  name: IsOther
+  nameWithType: InviteeInfo.IsOther
+  fullName: Dropbox.Api.Sharing.InviteeInfo.IsOther
+- uid: Dropbox.Api.Sharing.InviteeInfo.AsOther*
+  commentId: Overload:Dropbox.Api.Sharing.InviteeInfo.AsOther
+  name: AsOther
+  nameWithType: InviteeInfo.AsOther
+  fullName: Dropbox.Api.Sharing.InviteeInfo.AsOther
+- uid: Dropbox.Api.Sharing.InviteeInfo.Other
+  commentId: T:Dropbox.Api.Sharing.InviteeInfo.Other
+  parent: Dropbox.Api.Sharing
+  name: InviteeInfo.Other
+  nameWithType: InviteeInfo.Other
+  fullName: Dropbox.Api.Sharing.InviteeInfo.Other
+shouldSkipMarkup: true

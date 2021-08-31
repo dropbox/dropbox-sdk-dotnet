@@ -1,0 +1,239 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.TwoAccountChangePolicyDetails
+  commentId: T:Dropbox.Api.TeamLog.TwoAccountChangePolicyDetails
+  id: TwoAccountChangePolicyDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.TwoAccountChangePolicyDetails.#ctor
+  - Dropbox.Api.TeamLog.TwoAccountChangePolicyDetails.#ctor(Dropbox.Api.TeamLog.TwoAccountPolicy,Dropbox.Api.TeamLog.TwoAccountPolicy)
+  - Dropbox.Api.TeamLog.TwoAccountChangePolicyDetails.NewValue
+  - Dropbox.Api.TeamLog.TwoAccountChangePolicyDetails.PreviousValue
+  langs:
+  - csharp
+  - vb
+  name: TwoAccountChangePolicyDetails
+  nameWithType: TwoAccountChangePolicyDetails
+  fullName: Dropbox.Api.TeamLog.TwoAccountChangePolicyDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TwoAccountChangePolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TwoAccountChangePolicyDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TwoAccountChangePolicyDetails.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Enabled/disabled option for members to link personal Dropbox account and team\naccount to same computer.</p>\n"
+  example: []
+  syntax:
+    content: 'public class TwoAccountChangePolicyDetails : object'
+    content.vb: >-
+      Public Class TwoAccountChangePolicyDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.TwoAccountChangePolicyDetails.#ctor(Dropbox.Api.TeamLog.TwoAccountPolicy,Dropbox.Api.TeamLog.TwoAccountPolicy)
+  commentId: M:Dropbox.Api.TeamLog.TwoAccountChangePolicyDetails.#ctor(Dropbox.Api.TeamLog.TwoAccountPolicy,Dropbox.Api.TeamLog.TwoAccountPolicy)
+  id: '#ctor(Dropbox.Api.TeamLog.TwoAccountPolicy,Dropbox.Api.TeamLog.TwoAccountPolicy)'
+  parent: Dropbox.Api.TeamLog.TwoAccountChangePolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: TwoAccountChangePolicyDetails(TwoAccountPolicy, TwoAccountPolicy)
+  nameWithType: TwoAccountChangePolicyDetails.TwoAccountChangePolicyDetails(TwoAccountPolicy, TwoAccountPolicy)
+  fullName: Dropbox.Api.TeamLog.TwoAccountChangePolicyDetails.TwoAccountChangePolicyDetails(Dropbox.Api.TeamLog.TwoAccountPolicy, Dropbox.Api.TeamLog.TwoAccountPolicy)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TwoAccountChangePolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TwoAccountChangePolicyDetails.cs
+    startLine: 37
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.TwoAccountChangePolicyDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public TwoAccountChangePolicyDetails(TwoAccountPolicy newValue, TwoAccountPolicy previousValue = null)
+    parameters:
+    - id: newValue
+      type: Dropbox.Api.TeamLog.TwoAccountPolicy
+      description: New two account policy.
+    - id: previousValue
+      type: Dropbox.Api.TeamLog.TwoAccountPolicy
+      description: >-
+        Previous two account policy. Might be missing due to
+
+        historical data gap.
+    content.vb: Public Sub New(newValue As TwoAccountPolicy, previousValue As TwoAccountPolicy = Nothing)
+  overload: Dropbox.Api.TeamLog.TwoAccountChangePolicyDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.TwoAccountChangePolicyDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.TwoAccountChangePolicyDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.TwoAccountChangePolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: TwoAccountChangePolicyDetails()
+  nameWithType: TwoAccountChangePolicyDetails.TwoAccountChangePolicyDetails()
+  fullName: Dropbox.Api.TeamLog.TwoAccountChangePolicyDetails.TwoAccountChangePolicyDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TwoAccountChangePolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TwoAccountChangePolicyDetails.cs
+    startLine: 55
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.TwoAccountChangePolicyDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public TwoAccountChangePolicyDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.TwoAccountChangePolicyDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.TwoAccountChangePolicyDetails.NewValue
+  commentId: P:Dropbox.Api.TeamLog.TwoAccountChangePolicyDetails.NewValue
+  id: NewValue
+  parent: Dropbox.Api.TeamLog.TwoAccountChangePolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: NewValue
+  nameWithType: TwoAccountChangePolicyDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.TwoAccountChangePolicyDetails.NewValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TwoAccountChangePolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NewValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TwoAccountChangePolicyDetails.cs
+    startLine: 63
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>New two account policy.</p>\n"
+  example: []
+  syntax:
+    content: public TwoAccountPolicy NewValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.TwoAccountPolicy
+    content.vb: Public Property NewValue As TwoAccountPolicy
+  overload: Dropbox.Api.TeamLog.TwoAccountChangePolicyDetails.NewValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.TwoAccountChangePolicyDetails.PreviousValue
+  commentId: P:Dropbox.Api.TeamLog.TwoAccountChangePolicyDetails.PreviousValue
+  id: PreviousValue
+  parent: Dropbox.Api.TeamLog.TwoAccountChangePolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: PreviousValue
+  nameWithType: TwoAccountChangePolicyDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.TwoAccountChangePolicyDetails.PreviousValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TwoAccountChangePolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PreviousValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TwoAccountChangePolicyDetails.cs
+    startLine: 69
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Previous two account policy. Might be missing due to historical data\ngap.</p>\n"
+  example: []
+  syntax:
+    content: public TwoAccountPolicy PreviousValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.TwoAccountPolicy
+    content.vb: Public Property PreviousValue As TwoAccountPolicy
+  overload: Dropbox.Api.TeamLog.TwoAccountChangePolicyDetails.PreviousValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.TwoAccountChangePolicyDetails
+  commentId: T:Dropbox.Api.TeamLog.TwoAccountChangePolicyDetails
+  parent: Dropbox.Api.TeamLog
+  name: TwoAccountChangePolicyDetails
+  nameWithType: TwoAccountChangePolicyDetails
+  fullName: Dropbox.Api.TeamLog.TwoAccountChangePolicyDetails
+- uid: Dropbox.Api.TeamLog.TwoAccountChangePolicyDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.TwoAccountChangePolicyDetails.#ctor
+  name: TwoAccountChangePolicyDetails
+  nameWithType: TwoAccountChangePolicyDetails.TwoAccountChangePolicyDetails
+  fullName: Dropbox.Api.TeamLog.TwoAccountChangePolicyDetails.TwoAccountChangePolicyDetails
+- uid: Dropbox.Api.TeamLog.TwoAccountPolicy
+  commentId: T:Dropbox.Api.TeamLog.TwoAccountPolicy
+  parent: Dropbox.Api.TeamLog
+  name: TwoAccountPolicy
+  nameWithType: TwoAccountPolicy
+  fullName: Dropbox.Api.TeamLog.TwoAccountPolicy
+- uid: Dropbox.Api.TeamLog.TwoAccountChangePolicyDetails.NewValue*
+  commentId: Overload:Dropbox.Api.TeamLog.TwoAccountChangePolicyDetails.NewValue
+  name: NewValue
+  nameWithType: TwoAccountChangePolicyDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.TwoAccountChangePolicyDetails.NewValue
+- uid: Dropbox.Api.TeamLog.TwoAccountChangePolicyDetails.PreviousValue*
+  commentId: Overload:Dropbox.Api.TeamLog.TwoAccountChangePolicyDetails.PreviousValue
+  name: PreviousValue
+  nameWithType: TwoAccountChangePolicyDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.TwoAccountChangePolicyDetails.PreviousValue
+shouldSkipMarkup: true

@@ -1,0 +1,134 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.MemberSelectorError.UserNotInTeam
+  commentId: T:Dropbox.Api.Team.MemberSelectorError.UserNotInTeam
+  id: MemberSelectorError.UserNotInTeam
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.MemberSelectorError.UserNotInTeam.Instance
+  langs:
+  - csharp
+  - vb
+  name: MemberSelectorError.UserNotInTeam
+  nameWithType: MemberSelectorError.UserNotInTeam
+  fullName: Dropbox.Api.Team.MemberSelectorError.UserNotInTeam
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MemberSelectorError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: UserNotInTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MemberSelectorError.cs
+    startLine: 154
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The user is not a member of the team.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class UserNotInTeam : MemberSelectorError'
+    content.vb: >-
+      Public NotInheritable Class UserNotInTeam
+          Inherits MemberSelectorError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.MemberSelectorError
+  inheritedMembers:
+  - Dropbox.Api.Team.MemberSelectorError.IsUserNotInTeam
+  - Dropbox.Api.Team.MemberSelectorError.AsUserNotInTeam
+  - Dropbox.Api.Team.MemberSelectorError.IsUserNotFound
+  - Dropbox.Api.Team.MemberSelectorError.AsUserNotFound
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Team.MemberSelectorError.UserNotInTeam.Instance
+  commentId: F:Dropbox.Api.Team.MemberSelectorError.UserNotInTeam.Instance
+  id: Instance
+  parent: Dropbox.Api.Team.MemberSelectorError.UserNotInTeam
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: MemberSelectorError.UserNotInTeam.Instance
+  fullName: Dropbox.Api.Team.MemberSelectorError.UserNotInTeam.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MemberSelectorError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MemberSelectorError.cs
+    startLine: 179
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>A singleton instance of UserNotInTeam</p>\n"
+  example: []
+  syntax:
+    content: public static readonly MemberSelectorError.UserNotInTeam Instance
+    return:
+      type: Dropbox.Api.Team.MemberSelectorError.UserNotInTeam
+    content.vb: Public Shared ReadOnly Instance As MemberSelectorError.UserNotInTeam
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.MemberSelectorError
+  commentId: T:Dropbox.Api.Team.MemberSelectorError
+  parent: Dropbox.Api.Team
+  name: MemberSelectorError
+  nameWithType: MemberSelectorError
+  fullName: Dropbox.Api.Team.MemberSelectorError
+- uid: Dropbox.Api.Team.MemberSelectorError.IsUserNotInTeam
+  commentId: P:Dropbox.Api.Team.MemberSelectorError.IsUserNotInTeam
+  parent: Dropbox.Api.Team.MemberSelectorError
+  name: IsUserNotInTeam
+  nameWithType: MemberSelectorError.IsUserNotInTeam
+  fullName: Dropbox.Api.Team.MemberSelectorError.IsUserNotInTeam
+- uid: Dropbox.Api.Team.MemberSelectorError.AsUserNotInTeam
+  commentId: P:Dropbox.Api.Team.MemberSelectorError.AsUserNotInTeam
+  parent: Dropbox.Api.Team.MemberSelectorError
+  name: AsUserNotInTeam
+  nameWithType: MemberSelectorError.AsUserNotInTeam
+  fullName: Dropbox.Api.Team.MemberSelectorError.AsUserNotInTeam
+- uid: Dropbox.Api.Team.MemberSelectorError.IsUserNotFound
+  commentId: P:Dropbox.Api.Team.MemberSelectorError.IsUserNotFound
+  parent: Dropbox.Api.Team.MemberSelectorError
+  name: IsUserNotFound
+  nameWithType: MemberSelectorError.IsUserNotFound
+  fullName: Dropbox.Api.Team.MemberSelectorError.IsUserNotFound
+- uid: Dropbox.Api.Team.MemberSelectorError.AsUserNotFound
+  commentId: P:Dropbox.Api.Team.MemberSelectorError.AsUserNotFound
+  parent: Dropbox.Api.Team.MemberSelectorError
+  name: AsUserNotFound
+  nameWithType: MemberSelectorError.AsUserNotFound
+  fullName: Dropbox.Api.Team.MemberSelectorError.AsUserNotFound
+- uid: Dropbox.Api.Team.MemberSelectorError.UserNotInTeam
+  commentId: T:Dropbox.Api.Team.MemberSelectorError.UserNotInTeam
+  parent: Dropbox.Api.Team
+  name: MemberSelectorError.UserNotInTeam
+  nameWithType: MemberSelectorError.UserNotInTeam
+  fullName: Dropbox.Api.Team.MemberSelectorError.UserNotInTeam
+shouldSkipMarkup: true

@@ -1,0 +1,96 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.SharedContentUnshareDetails
+  commentId: T:Dropbox.Api.TeamLog.SharedContentUnshareDetails
+  id: SharedContentUnshareDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.SharedContentUnshareDetails.#ctor
+  langs:
+  - csharp
+  - vb
+  name: SharedContentUnshareDetails
+  nameWithType: SharedContentUnshareDetails
+  fullName: Dropbox.Api.TeamLog.SharedContentUnshareDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentUnshareDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SharedContentUnshareDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentUnshareDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Unshared file/folder by clearing membership.</p>\n"
+  example: []
+  syntax:
+    content: 'public class SharedContentUnshareDetails : object'
+    content.vb: >-
+      Public Class SharedContentUnshareDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.SharedContentUnshareDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.SharedContentUnshareDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.SharedContentUnshareDetails
+  langs:
+  - csharp
+  - vb
+  name: SharedContentUnshareDetails()
+  nameWithType: SharedContentUnshareDetails.SharedContentUnshareDetails()
+  fullName: Dropbox.Api.TeamLog.SharedContentUnshareDetails.SharedContentUnshareDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentUnshareDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentUnshareDetails.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SharedContentUnshareDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public SharedContentUnshareDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.SharedContentUnshareDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.SharedContentUnshareDetails
+  commentId: T:Dropbox.Api.TeamLog.SharedContentUnshareDetails
+  parent: Dropbox.Api.TeamLog
+  name: SharedContentUnshareDetails
+  nameWithType: SharedContentUnshareDetails
+  fullName: Dropbox.Api.TeamLog.SharedContentUnshareDetails
+- uid: Dropbox.Api.TeamLog.SharedContentUnshareDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedContentUnshareDetails.#ctor
+  name: SharedContentUnshareDetails
+  nameWithType: SharedContentUnshareDetails.SharedContentUnshareDetails
+  fullName: Dropbox.Api.TeamLog.SharedContentUnshareDetails.SharedContentUnshareDetails
+shouldSkipMarkup: true

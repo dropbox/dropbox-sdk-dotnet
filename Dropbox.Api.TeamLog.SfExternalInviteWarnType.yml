@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.SfExternalInviteWarnType
+  commentId: T:Dropbox.Api.TeamLog.SfExternalInviteWarnType
+  id: SfExternalInviteWarnType
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.SfExternalInviteWarnType.#ctor
+  - Dropbox.Api.TeamLog.SfExternalInviteWarnType.#ctor(System.String)
+  - Dropbox.Api.TeamLog.SfExternalInviteWarnType.Description
+  langs:
+  - csharp
+  - vb
+  name: SfExternalInviteWarnType
+  nameWithType: SfExternalInviteWarnType
+  fullName: Dropbox.Api.TeamLog.SfExternalInviteWarnType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SfExternalInviteWarnType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SfExternalInviteWarnType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SfExternalInviteWarnType.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The sf external invite warn type object</p>\n"
+  example: []
+  syntax:
+    content: 'public class SfExternalInviteWarnType : object'
+    content.vb: >-
+      Public Class SfExternalInviteWarnType
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.SfExternalInviteWarnType.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.SfExternalInviteWarnType.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.SfExternalInviteWarnType
+  langs:
+  - csharp
+  - vb
+  name: SfExternalInviteWarnType(String)
+  nameWithType: SfExternalInviteWarnType.SfExternalInviteWarnType(String)
+  fullName: Dropbox.Api.TeamLog.SfExternalInviteWarnType.SfExternalInviteWarnType(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SfExternalInviteWarnType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SfExternalInviteWarnType.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SfExternalInviteWarnType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public SfExternalInviteWarnType(string description)
+    parameters:
+    - id: description
+      type: System.String
+      description: The description
+    content.vb: Public Sub New(description As String)
+  overload: Dropbox.Api.TeamLog.SfExternalInviteWarnType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SfExternalInviteWarnType.#ctor
+  commentId: M:Dropbox.Api.TeamLog.SfExternalInviteWarnType.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.SfExternalInviteWarnType
+  langs:
+  - csharp
+  - vb
+  name: SfExternalInviteWarnType()
+  nameWithType: SfExternalInviteWarnType.SfExternalInviteWarnType()
+  fullName: Dropbox.Api.TeamLog.SfExternalInviteWarnType.SfExternalInviteWarnType()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SfExternalInviteWarnType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SfExternalInviteWarnType.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SfExternalInviteWarnType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public SfExternalInviteWarnType()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.SfExternalInviteWarnType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SfExternalInviteWarnType.Description
+  commentId: P:Dropbox.Api.TeamLog.SfExternalInviteWarnType.Description
+  id: Description
+  parent: Dropbox.Api.TeamLog.SfExternalInviteWarnType
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: SfExternalInviteWarnType.Description
+  fullName: Dropbox.Api.TeamLog.SfExternalInviteWarnType.Description
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SfExternalInviteWarnType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Description
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SfExternalInviteWarnType.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets the description of the sf external invite warn type</p>\n"
+  example: []
+  syntax:
+    content: public string Description { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Dropbox.Api.TeamLog.SfExternalInviteWarnType.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.SfExternalInviteWarnType
+  commentId: T:Dropbox.Api.TeamLog.SfExternalInviteWarnType
+  parent: Dropbox.Api.TeamLog
+  name: SfExternalInviteWarnType
+  nameWithType: SfExternalInviteWarnType
+  fullName: Dropbox.Api.TeamLog.SfExternalInviteWarnType
+- uid: Dropbox.Api.TeamLog.SfExternalInviteWarnType.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.SfExternalInviteWarnType.#ctor
+  name: SfExternalInviteWarnType
+  nameWithType: SfExternalInviteWarnType.SfExternalInviteWarnType
+  fullName: Dropbox.Api.TeamLog.SfExternalInviteWarnType.SfExternalInviteWarnType
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.SfExternalInviteWarnType.Description*
+  commentId: Overload:Dropbox.Api.TeamLog.SfExternalInviteWarnType.Description
+  name: Description
+  nameWithType: SfExternalInviteWarnType.Description
+  fullName: Dropbox.Api.TeamLog.SfExternalInviteWarnType.Description
+shouldSkipMarkup: true

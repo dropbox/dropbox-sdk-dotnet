@@ -1,0 +1,215 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.TeamMemberStatus.Removed
+  commentId: T:Dropbox.Api.Team.TeamMemberStatus.Removed
+  id: TeamMemberStatus.Removed
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.TeamMemberStatus.Removed.#ctor(Dropbox.Api.Team.RemovedStatus)
+  - Dropbox.Api.Team.TeamMemberStatus.Removed.Value
+  langs:
+  - csharp
+  - vb
+  name: TeamMemberStatus.Removed
+  nameWithType: TeamMemberStatus.Removed
+  fullName: Dropbox.Api.Team.TeamMemberStatus.Removed
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamMemberStatus.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Removed
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamMemberStatus.cs
+    startLine: 423
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>User is no longer a member of the team. Removed users are only listed when\ninclude_removed is true in members/list.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Removed : TeamMemberStatus'
+    content.vb: >-
+      Public NotInheritable Class Removed
+          Inherits TeamMemberStatus
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.TeamMemberStatus
+  inheritedMembers:
+  - Dropbox.Api.Team.TeamMemberStatus.IsActive
+  - Dropbox.Api.Team.TeamMemberStatus.AsActive
+  - Dropbox.Api.Team.TeamMemberStatus.IsInvited
+  - Dropbox.Api.Team.TeamMemberStatus.AsInvited
+  - Dropbox.Api.Team.TeamMemberStatus.IsSuspended
+  - Dropbox.Api.Team.TeamMemberStatus.AsSuspended
+  - Dropbox.Api.Team.TeamMemberStatus.IsRemoved
+  - Dropbox.Api.Team.TeamMemberStatus.AsRemoved
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Team.TeamMemberStatus.Removed.#ctor(Dropbox.Api.Team.RemovedStatus)
+  commentId: M:Dropbox.Api.Team.TeamMemberStatus.Removed.#ctor(Dropbox.Api.Team.RemovedStatus)
+  id: '#ctor(Dropbox.Api.Team.RemovedStatus)'
+  parent: Dropbox.Api.Team.TeamMemberStatus.Removed
+  langs:
+  - csharp
+  - vb
+  name: Removed(RemovedStatus)
+  nameWithType: TeamMemberStatus.Removed.Removed(RemovedStatus)
+  fullName: Dropbox.Api.Team.TeamMemberStatus.Removed.Removed(Dropbox.Api.Team.RemovedStatus)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamMemberStatus.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamMemberStatus.cs
+    startLine: 441
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.TeamMemberStatus.Removed\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public Removed(RemovedStatus value)
+    parameters:
+    - id: value
+      type: Dropbox.Api.Team.RemovedStatus
+      description: The value
+    content.vb: Public Sub New(value As RemovedStatus)
+  overload: Dropbox.Api.Team.TeamMemberStatus.Removed.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.TeamMemberStatus.Removed.Value
+  commentId: P:Dropbox.Api.Team.TeamMemberStatus.Removed.Value
+  id: Value
+  parent: Dropbox.Api.Team.TeamMemberStatus.Removed
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: TeamMemberStatus.Removed.Value
+  fullName: Dropbox.Api.Team.TeamMemberStatus.Removed.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamMemberStatus.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamMemberStatus.cs
+    startLine: 455
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public RemovedStatus Value { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.RemovedStatus
+    content.vb: Public ReadOnly Property Value As RemovedStatus
+  overload: Dropbox.Api.Team.TeamMemberStatus.Removed.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.TeamMemberStatus
+  commentId: T:Dropbox.Api.Team.TeamMemberStatus
+  parent: Dropbox.Api.Team
+  name: TeamMemberStatus
+  nameWithType: TeamMemberStatus
+  fullName: Dropbox.Api.Team.TeamMemberStatus
+- uid: Dropbox.Api.Team.TeamMemberStatus.IsActive
+  commentId: P:Dropbox.Api.Team.TeamMemberStatus.IsActive
+  parent: Dropbox.Api.Team.TeamMemberStatus
+  name: IsActive
+  nameWithType: TeamMemberStatus.IsActive
+  fullName: Dropbox.Api.Team.TeamMemberStatus.IsActive
+- uid: Dropbox.Api.Team.TeamMemberStatus.AsActive
+  commentId: P:Dropbox.Api.Team.TeamMemberStatus.AsActive
+  parent: Dropbox.Api.Team.TeamMemberStatus
+  name: AsActive
+  nameWithType: TeamMemberStatus.AsActive
+  fullName: Dropbox.Api.Team.TeamMemberStatus.AsActive
+- uid: Dropbox.Api.Team.TeamMemberStatus.IsInvited
+  commentId: P:Dropbox.Api.Team.TeamMemberStatus.IsInvited
+  parent: Dropbox.Api.Team.TeamMemberStatus
+  name: IsInvited
+  nameWithType: TeamMemberStatus.IsInvited
+  fullName: Dropbox.Api.Team.TeamMemberStatus.IsInvited
+- uid: Dropbox.Api.Team.TeamMemberStatus.AsInvited
+  commentId: P:Dropbox.Api.Team.TeamMemberStatus.AsInvited
+  parent: Dropbox.Api.Team.TeamMemberStatus
+  name: AsInvited
+  nameWithType: TeamMemberStatus.AsInvited
+  fullName: Dropbox.Api.Team.TeamMemberStatus.AsInvited
+- uid: Dropbox.Api.Team.TeamMemberStatus.IsSuspended
+  commentId: P:Dropbox.Api.Team.TeamMemberStatus.IsSuspended
+  parent: Dropbox.Api.Team.TeamMemberStatus
+  name: IsSuspended
+  nameWithType: TeamMemberStatus.IsSuspended
+  fullName: Dropbox.Api.Team.TeamMemberStatus.IsSuspended
+- uid: Dropbox.Api.Team.TeamMemberStatus.AsSuspended
+  commentId: P:Dropbox.Api.Team.TeamMemberStatus.AsSuspended
+  parent: Dropbox.Api.Team.TeamMemberStatus
+  name: AsSuspended
+  nameWithType: TeamMemberStatus.AsSuspended
+  fullName: Dropbox.Api.Team.TeamMemberStatus.AsSuspended
+- uid: Dropbox.Api.Team.TeamMemberStatus.IsRemoved
+  commentId: P:Dropbox.Api.Team.TeamMemberStatus.IsRemoved
+  parent: Dropbox.Api.Team.TeamMemberStatus
+  name: IsRemoved
+  nameWithType: TeamMemberStatus.IsRemoved
+  fullName: Dropbox.Api.Team.TeamMemberStatus.IsRemoved
+- uid: Dropbox.Api.Team.TeamMemberStatus.AsRemoved
+  commentId: P:Dropbox.Api.Team.TeamMemberStatus.AsRemoved
+  parent: Dropbox.Api.Team.TeamMemberStatus
+  name: AsRemoved
+  nameWithType: TeamMemberStatus.AsRemoved
+  fullName: Dropbox.Api.Team.TeamMemberStatus.AsRemoved
+- uid: Dropbox.Api.Team.TeamMemberStatus.Removed
+  commentId: T:Dropbox.Api.Team.TeamMemberStatus.Removed
+  parent: Dropbox.Api.Team
+  name: TeamMemberStatus.Removed
+  nameWithType: TeamMemberStatus.Removed
+  fullName: Dropbox.Api.Team.TeamMemberStatus.Removed
+- uid: Dropbox.Api.Team.TeamMemberStatus.Removed.#ctor*
+  commentId: Overload:Dropbox.Api.Team.TeamMemberStatus.Removed.#ctor
+  name: Removed
+  nameWithType: TeamMemberStatus.Removed.Removed
+  fullName: Dropbox.Api.Team.TeamMemberStatus.Removed.Removed
+- uid: Dropbox.Api.Team.RemovedStatus
+  commentId: T:Dropbox.Api.Team.RemovedStatus
+  parent: Dropbox.Api.Team
+  name: RemovedStatus
+  nameWithType: RemovedStatus
+  fullName: Dropbox.Api.Team.RemovedStatus
+- uid: Dropbox.Api.Team.TeamMemberStatus.Removed.Value*
+  commentId: Overload:Dropbox.Api.Team.TeamMemberStatus.Removed.Value
+  name: Value
+  nameWithType: TeamMemberStatus.Removed.Value
+  fullName: Dropbox.Api.Team.TeamMemberStatus.Removed.Value
+shouldSkipMarkup: true

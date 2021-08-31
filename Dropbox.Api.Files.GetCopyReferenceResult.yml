@@ -1,0 +1,299 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.GetCopyReferenceResult
+  commentId: T:Dropbox.Api.Files.GetCopyReferenceResult
+  id: GetCopyReferenceResult
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.GetCopyReferenceResult.#ctor
+  - Dropbox.Api.Files.GetCopyReferenceResult.#ctor(Dropbox.Api.Files.Metadata,System.String,System.DateTime)
+  - Dropbox.Api.Files.GetCopyReferenceResult.CopyReference
+  - Dropbox.Api.Files.GetCopyReferenceResult.Expires
+  - Dropbox.Api.Files.GetCopyReferenceResult.Metadata
+  langs:
+  - csharp
+  - vb
+  name: GetCopyReferenceResult
+  nameWithType: GetCopyReferenceResult
+  fullName: Dropbox.Api.Files.GetCopyReferenceResult
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetCopyReferenceResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GetCopyReferenceResult
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetCopyReferenceResult.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The get copy reference result object</p>\n"
+  example: []
+  syntax:
+    content: 'public class GetCopyReferenceResult : object'
+    content.vb: >-
+      Public Class GetCopyReferenceResult
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.GetCopyReferenceResult.#ctor(Dropbox.Api.Files.Metadata,System.String,System.DateTime)
+  commentId: M:Dropbox.Api.Files.GetCopyReferenceResult.#ctor(Dropbox.Api.Files.Metadata,System.String,System.DateTime)
+  id: '#ctor(Dropbox.Api.Files.Metadata,System.String,System.DateTime)'
+  parent: Dropbox.Api.Files.GetCopyReferenceResult
+  langs:
+  - csharp
+  - vb
+  name: GetCopyReferenceResult(Metadata, String, System.DateTime)
+  nameWithType: GetCopyReferenceResult.GetCopyReferenceResult(Metadata, String, System.DateTime)
+  fullName: Dropbox.Api.Files.GetCopyReferenceResult.GetCopyReferenceResult(Dropbox.Api.Files.Metadata, System.String, System.DateTime)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetCopyReferenceResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetCopyReferenceResult.cs
+    startLine: 38
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.GetCopyReferenceResult\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public GetCopyReferenceResult(Metadata metadata, string copyReference, System.DateTime expires)
+    parameters:
+    - id: metadata
+      type: Dropbox.Api.Files.Metadata
+      description: Metadata of the file or folder.
+    - id: copyReference
+      type: System.String
+      description: A copy reference to the file or folder.
+    - id: expires
+      type: System.DateTime
+      description: >-
+        The expiration date of the copy reference. This value is
+
+        currently set to be far enough in the future so that expiration is effectively not
+
+        an issue.
+    content.vb: Public Sub New(metadata As Metadata, copyReference As String, expires As System.DateTime)
+  overload: Dropbox.Api.Files.GetCopyReferenceResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.GetCopyReferenceResult.#ctor
+  commentId: M:Dropbox.Api.Files.GetCopyReferenceResult.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.GetCopyReferenceResult
+  langs:
+  - csharp
+  - vb
+  name: GetCopyReferenceResult()
+  nameWithType: GetCopyReferenceResult.GetCopyReferenceResult()
+  fullName: Dropbox.Api.Files.GetCopyReferenceResult.GetCopyReferenceResult()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetCopyReferenceResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetCopyReferenceResult.cs
+    startLine: 63
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.GetCopyReferenceResult\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public GetCopyReferenceResult()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.GetCopyReferenceResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.GetCopyReferenceResult.Metadata
+  commentId: P:Dropbox.Api.Files.GetCopyReferenceResult.Metadata
+  id: Metadata
+  parent: Dropbox.Api.Files.GetCopyReferenceResult
+  langs:
+  - csharp
+  - vb
+  name: Metadata
+  nameWithType: GetCopyReferenceResult.Metadata
+  fullName: Dropbox.Api.Files.GetCopyReferenceResult.Metadata
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetCopyReferenceResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Metadata
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetCopyReferenceResult.cs
+    startLine: 71
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Metadata of the file or folder.</p>\n"
+  example: []
+  syntax:
+    content: public Metadata Metadata { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.Metadata
+    content.vb: Public Property Metadata As Metadata
+  overload: Dropbox.Api.Files.GetCopyReferenceResult.Metadata*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.GetCopyReferenceResult.CopyReference
+  commentId: P:Dropbox.Api.Files.GetCopyReferenceResult.CopyReference
+  id: CopyReference
+  parent: Dropbox.Api.Files.GetCopyReferenceResult
+  langs:
+  - csharp
+  - vb
+  name: CopyReference
+  nameWithType: GetCopyReferenceResult.CopyReference
+  fullName: Dropbox.Api.Files.GetCopyReferenceResult.CopyReference
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetCopyReferenceResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: CopyReference
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetCopyReferenceResult.cs
+    startLine: 76
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>A copy reference to the file or folder.</p>\n"
+  example: []
+  syntax:
+    content: public string CopyReference { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property CopyReference As String
+  overload: Dropbox.Api.Files.GetCopyReferenceResult.CopyReference*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.GetCopyReferenceResult.Expires
+  commentId: P:Dropbox.Api.Files.GetCopyReferenceResult.Expires
+  id: Expires
+  parent: Dropbox.Api.Files.GetCopyReferenceResult
+  langs:
+  - csharp
+  - vb
+  name: Expires
+  nameWithType: GetCopyReferenceResult.Expires
+  fullName: Dropbox.Api.Files.GetCopyReferenceResult.Expires
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetCopyReferenceResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Expires
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetCopyReferenceResult.cs
+    startLine: 82
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The expiration date of the copy reference. This value is currently set to be\nfar enough in the future so that expiration is effectively not an issue.</p>\n"
+  example: []
+  syntax:
+    content: public System.DateTime Expires { get; protected set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Property Expires As System.DateTime
+  overload: Dropbox.Api.Files.GetCopyReferenceResult.Expires*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.GetCopyReferenceResult
+  commentId: T:Dropbox.Api.Files.GetCopyReferenceResult
+  parent: Dropbox.Api.Files
+  name: GetCopyReferenceResult
+  nameWithType: GetCopyReferenceResult
+  fullName: Dropbox.Api.Files.GetCopyReferenceResult
+- uid: Dropbox.Api.Files.GetCopyReferenceResult.#ctor*
+  commentId: Overload:Dropbox.Api.Files.GetCopyReferenceResult.#ctor
+  name: GetCopyReferenceResult
+  nameWithType: GetCopyReferenceResult.GetCopyReferenceResult
+  fullName: Dropbox.Api.Files.GetCopyReferenceResult.GetCopyReferenceResult
+- uid: Dropbox.Api.Files.Metadata
+  commentId: T:Dropbox.Api.Files.Metadata
+  parent: Dropbox.Api.Files
+  name: Metadata
+  nameWithType: Metadata
+  fullName: Dropbox.Api.Files.Metadata
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.DateTime
+  isExternal: true
+  name: System.DateTime
+  nameWithType: System.DateTime
+  fullName: System.DateTime
+- uid: Dropbox.Api.Files.GetCopyReferenceResult.Metadata*
+  commentId: Overload:Dropbox.Api.Files.GetCopyReferenceResult.Metadata
+  name: Metadata
+  nameWithType: GetCopyReferenceResult.Metadata
+  fullName: Dropbox.Api.Files.GetCopyReferenceResult.Metadata
+- uid: Dropbox.Api.Files.GetCopyReferenceResult.CopyReference*
+  commentId: Overload:Dropbox.Api.Files.GetCopyReferenceResult.CopyReference
+  name: CopyReference
+  nameWithType: GetCopyReferenceResult.CopyReference
+  fullName: Dropbox.Api.Files.GetCopyReferenceResult.CopyReference
+- uid: Dropbox.Api.Files.GetCopyReferenceResult.Expires*
+  commentId: Overload:Dropbox.Api.Files.GetCopyReferenceResult.Expires
+  name: Expires
+  nameWithType: GetCopyReferenceResult.Expires
+  fullName: Dropbox.Api.Files.GetCopyReferenceResult.Expires
+shouldSkipMarkup: true

@@ -1,0 +1,190 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.MobileClientPlatform.Android
+  commentId: T:Dropbox.Api.Team.MobileClientPlatform.Android
+  id: MobileClientPlatform.Android
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.MobileClientPlatform.Android.Instance
+  langs:
+  - csharp
+  - vb
+  name: MobileClientPlatform.Android
+  nameWithType: MobileClientPlatform.Android
+  fullName: Dropbox.Api.Team.MobileClientPlatform.Android
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MobileClientPlatform.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Android
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MobileClientPlatform.cs
+    startLine: 410
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Official Dropbox Android client.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Android : MobileClientPlatform'
+    content.vb: >-
+      Public NotInheritable Class Android
+          Inherits MobileClientPlatform
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.MobileClientPlatform
+  inheritedMembers:
+  - Dropbox.Api.Team.MobileClientPlatform.IsIphone
+  - Dropbox.Api.Team.MobileClientPlatform.AsIphone
+  - Dropbox.Api.Team.MobileClientPlatform.IsIpad
+  - Dropbox.Api.Team.MobileClientPlatform.AsIpad
+  - Dropbox.Api.Team.MobileClientPlatform.IsAndroid
+  - Dropbox.Api.Team.MobileClientPlatform.AsAndroid
+  - Dropbox.Api.Team.MobileClientPlatform.IsWindowsPhone
+  - Dropbox.Api.Team.MobileClientPlatform.AsWindowsPhone
+  - Dropbox.Api.Team.MobileClientPlatform.IsBlackberry
+  - Dropbox.Api.Team.MobileClientPlatform.AsBlackberry
+  - Dropbox.Api.Team.MobileClientPlatform.IsOther
+  - Dropbox.Api.Team.MobileClientPlatform.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Team.MobileClientPlatform.Android.Instance
+  commentId: F:Dropbox.Api.Team.MobileClientPlatform.Android.Instance
+  id: Instance
+  parent: Dropbox.Api.Team.MobileClientPlatform.Android
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: MobileClientPlatform.Android.Instance
+  fullName: Dropbox.Api.Team.MobileClientPlatform.Android.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MobileClientPlatform.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MobileClientPlatform.cs
+    startLine: 434
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>A singleton instance of Android</p>\n"
+  example: []
+  syntax:
+    content: public static readonly MobileClientPlatform.Android Instance
+    return:
+      type: Dropbox.Api.Team.MobileClientPlatform.Android
+    content.vb: Public Shared ReadOnly Instance As MobileClientPlatform.Android
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.MobileClientPlatform
+  commentId: T:Dropbox.Api.Team.MobileClientPlatform
+  parent: Dropbox.Api.Team
+  name: MobileClientPlatform
+  nameWithType: MobileClientPlatform
+  fullName: Dropbox.Api.Team.MobileClientPlatform
+- uid: Dropbox.Api.Team.MobileClientPlatform.IsIphone
+  commentId: P:Dropbox.Api.Team.MobileClientPlatform.IsIphone
+  parent: Dropbox.Api.Team.MobileClientPlatform
+  name: IsIphone
+  nameWithType: MobileClientPlatform.IsIphone
+  fullName: Dropbox.Api.Team.MobileClientPlatform.IsIphone
+- uid: Dropbox.Api.Team.MobileClientPlatform.AsIphone
+  commentId: P:Dropbox.Api.Team.MobileClientPlatform.AsIphone
+  parent: Dropbox.Api.Team.MobileClientPlatform
+  name: AsIphone
+  nameWithType: MobileClientPlatform.AsIphone
+  fullName: Dropbox.Api.Team.MobileClientPlatform.AsIphone
+- uid: Dropbox.Api.Team.MobileClientPlatform.IsIpad
+  commentId: P:Dropbox.Api.Team.MobileClientPlatform.IsIpad
+  parent: Dropbox.Api.Team.MobileClientPlatform
+  name: IsIpad
+  nameWithType: MobileClientPlatform.IsIpad
+  fullName: Dropbox.Api.Team.MobileClientPlatform.IsIpad
+- uid: Dropbox.Api.Team.MobileClientPlatform.AsIpad
+  commentId: P:Dropbox.Api.Team.MobileClientPlatform.AsIpad
+  parent: Dropbox.Api.Team.MobileClientPlatform
+  name: AsIpad
+  nameWithType: MobileClientPlatform.AsIpad
+  fullName: Dropbox.Api.Team.MobileClientPlatform.AsIpad
+- uid: Dropbox.Api.Team.MobileClientPlatform.IsAndroid
+  commentId: P:Dropbox.Api.Team.MobileClientPlatform.IsAndroid
+  parent: Dropbox.Api.Team.MobileClientPlatform
+  name: IsAndroid
+  nameWithType: MobileClientPlatform.IsAndroid
+  fullName: Dropbox.Api.Team.MobileClientPlatform.IsAndroid
+- uid: Dropbox.Api.Team.MobileClientPlatform.AsAndroid
+  commentId: P:Dropbox.Api.Team.MobileClientPlatform.AsAndroid
+  parent: Dropbox.Api.Team.MobileClientPlatform
+  name: AsAndroid
+  nameWithType: MobileClientPlatform.AsAndroid
+  fullName: Dropbox.Api.Team.MobileClientPlatform.AsAndroid
+- uid: Dropbox.Api.Team.MobileClientPlatform.IsWindowsPhone
+  commentId: P:Dropbox.Api.Team.MobileClientPlatform.IsWindowsPhone
+  parent: Dropbox.Api.Team.MobileClientPlatform
+  name: IsWindowsPhone
+  nameWithType: MobileClientPlatform.IsWindowsPhone
+  fullName: Dropbox.Api.Team.MobileClientPlatform.IsWindowsPhone
+- uid: Dropbox.Api.Team.MobileClientPlatform.AsWindowsPhone
+  commentId: P:Dropbox.Api.Team.MobileClientPlatform.AsWindowsPhone
+  parent: Dropbox.Api.Team.MobileClientPlatform
+  name: AsWindowsPhone
+  nameWithType: MobileClientPlatform.AsWindowsPhone
+  fullName: Dropbox.Api.Team.MobileClientPlatform.AsWindowsPhone
+- uid: Dropbox.Api.Team.MobileClientPlatform.IsBlackberry
+  commentId: P:Dropbox.Api.Team.MobileClientPlatform.IsBlackberry
+  parent: Dropbox.Api.Team.MobileClientPlatform
+  name: IsBlackberry
+  nameWithType: MobileClientPlatform.IsBlackberry
+  fullName: Dropbox.Api.Team.MobileClientPlatform.IsBlackberry
+- uid: Dropbox.Api.Team.MobileClientPlatform.AsBlackberry
+  commentId: P:Dropbox.Api.Team.MobileClientPlatform.AsBlackberry
+  parent: Dropbox.Api.Team.MobileClientPlatform
+  name: AsBlackberry
+  nameWithType: MobileClientPlatform.AsBlackberry
+  fullName: Dropbox.Api.Team.MobileClientPlatform.AsBlackberry
+- uid: Dropbox.Api.Team.MobileClientPlatform.IsOther
+  commentId: P:Dropbox.Api.Team.MobileClientPlatform.IsOther
+  parent: Dropbox.Api.Team.MobileClientPlatform
+  name: IsOther
+  nameWithType: MobileClientPlatform.IsOther
+  fullName: Dropbox.Api.Team.MobileClientPlatform.IsOther
+- uid: Dropbox.Api.Team.MobileClientPlatform.AsOther
+  commentId: P:Dropbox.Api.Team.MobileClientPlatform.AsOther
+  parent: Dropbox.Api.Team.MobileClientPlatform
+  name: AsOther
+  nameWithType: MobileClientPlatform.AsOther
+  fullName: Dropbox.Api.Team.MobileClientPlatform.AsOther
+- uid: Dropbox.Api.Team.MobileClientPlatform.Android
+  commentId: T:Dropbox.Api.Team.MobileClientPlatform.Android
+  parent: Dropbox.Api.Team
+  name: MobileClientPlatform.Android
+  nameWithType: MobileClientPlatform.Android
+  fullName: Dropbox.Api.Team.MobileClientPlatform.Android
+shouldSkipMarkup: true

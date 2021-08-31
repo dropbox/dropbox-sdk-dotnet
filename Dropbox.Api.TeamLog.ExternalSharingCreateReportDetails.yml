@@ -1,0 +1,96 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.ExternalSharingCreateReportDetails
+  commentId: T:Dropbox.Api.TeamLog.ExternalSharingCreateReportDetails
+  id: ExternalSharingCreateReportDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.ExternalSharingCreateReportDetails.#ctor
+  langs:
+  - csharp
+  - vb
+  name: ExternalSharingCreateReportDetails
+  nameWithType: ExternalSharingCreateReportDetails
+  fullName: Dropbox.Api.TeamLog.ExternalSharingCreateReportDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ExternalSharingCreateReportDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ExternalSharingCreateReportDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ExternalSharingCreateReportDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Created External sharing report.</p>\n"
+  example: []
+  syntax:
+    content: 'public class ExternalSharingCreateReportDetails : object'
+    content.vb: >-
+      Public Class ExternalSharingCreateReportDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.ExternalSharingCreateReportDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.ExternalSharingCreateReportDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.ExternalSharingCreateReportDetails
+  langs:
+  - csharp
+  - vb
+  name: ExternalSharingCreateReportDetails()
+  nameWithType: ExternalSharingCreateReportDetails.ExternalSharingCreateReportDetails()
+  fullName: Dropbox.Api.TeamLog.ExternalSharingCreateReportDetails.ExternalSharingCreateReportDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ExternalSharingCreateReportDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ExternalSharingCreateReportDetails.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.ExternalSharingCreateReportDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public ExternalSharingCreateReportDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.ExternalSharingCreateReportDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.ExternalSharingCreateReportDetails
+  commentId: T:Dropbox.Api.TeamLog.ExternalSharingCreateReportDetails
+  parent: Dropbox.Api.TeamLog
+  name: ExternalSharingCreateReportDetails
+  nameWithType: ExternalSharingCreateReportDetails
+  fullName: Dropbox.Api.TeamLog.ExternalSharingCreateReportDetails
+- uid: Dropbox.Api.TeamLog.ExternalSharingCreateReportDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.ExternalSharingCreateReportDetails.#ctor
+  name: ExternalSharingCreateReportDetails
+  nameWithType: ExternalSharingCreateReportDetails.ExternalSharingCreateReportDetails
+  fullName: Dropbox.Api.TeamLog.ExternalSharingCreateReportDetails.ExternalSharingCreateReportDetails
+shouldSkipMarkup: true

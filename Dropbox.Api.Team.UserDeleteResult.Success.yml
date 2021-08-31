@@ -1,0 +1,201 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.UserDeleteResult.Success
+  commentId: T:Dropbox.Api.Team.UserDeleteResult.Success
+  id: UserDeleteResult.Success
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.UserDeleteResult.Success.#ctor(Dropbox.Api.Team.UserDeleteEmailsResult)
+  - Dropbox.Api.Team.UserDeleteResult.Success.Value
+  langs:
+  - csharp
+  - vb
+  name: UserDeleteResult.Success
+  nameWithType: UserDeleteResult.Success
+  fullName: Dropbox.Api.Team.UserDeleteResult.Success
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserDeleteResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Success
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserDeleteResult.cs
+    startLine: 186
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Describes a user and the results for each attempt to delete a secondary\nemail.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Success : UserDeleteResult'
+    content.vb: >-
+      Public NotInheritable Class Success
+          Inherits UserDeleteResult
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.UserDeleteResult
+  inheritedMembers:
+  - Dropbox.Api.Team.UserDeleteResult.IsSuccess
+  - Dropbox.Api.Team.UserDeleteResult.AsSuccess
+  - Dropbox.Api.Team.UserDeleteResult.IsInvalidUser
+  - Dropbox.Api.Team.UserDeleteResult.AsInvalidUser
+  - Dropbox.Api.Team.UserDeleteResult.IsOther
+  - Dropbox.Api.Team.UserDeleteResult.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Team.UserDeleteResult.Success.#ctor(Dropbox.Api.Team.UserDeleteEmailsResult)
+  commentId: M:Dropbox.Api.Team.UserDeleteResult.Success.#ctor(Dropbox.Api.Team.UserDeleteEmailsResult)
+  id: '#ctor(Dropbox.Api.Team.UserDeleteEmailsResult)'
+  parent: Dropbox.Api.Team.UserDeleteResult.Success
+  langs:
+  - csharp
+  - vb
+  name: Success(UserDeleteEmailsResult)
+  nameWithType: UserDeleteResult.Success.Success(UserDeleteEmailsResult)
+  fullName: Dropbox.Api.Team.UserDeleteResult.Success.Success(Dropbox.Api.Team.UserDeleteEmailsResult)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserDeleteResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserDeleteResult.cs
+    startLine: 204
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.UserDeleteResult.Success\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public Success(UserDeleteEmailsResult value)
+    parameters:
+    - id: value
+      type: Dropbox.Api.Team.UserDeleteEmailsResult
+      description: The value
+    content.vb: Public Sub New(value As UserDeleteEmailsResult)
+  overload: Dropbox.Api.Team.UserDeleteResult.Success.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.UserDeleteResult.Success.Value
+  commentId: P:Dropbox.Api.Team.UserDeleteResult.Success.Value
+  id: Value
+  parent: Dropbox.Api.Team.UserDeleteResult.Success
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: UserDeleteResult.Success.Value
+  fullName: Dropbox.Api.Team.UserDeleteResult.Success.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserDeleteResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserDeleteResult.cs
+    startLine: 218
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public UserDeleteEmailsResult Value { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.UserDeleteEmailsResult
+    content.vb: Public ReadOnly Property Value As UserDeleteEmailsResult
+  overload: Dropbox.Api.Team.UserDeleteResult.Success.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.UserDeleteResult
+  commentId: T:Dropbox.Api.Team.UserDeleteResult
+  parent: Dropbox.Api.Team
+  name: UserDeleteResult
+  nameWithType: UserDeleteResult
+  fullName: Dropbox.Api.Team.UserDeleteResult
+- uid: Dropbox.Api.Team.UserDeleteResult.IsSuccess
+  commentId: P:Dropbox.Api.Team.UserDeleteResult.IsSuccess
+  parent: Dropbox.Api.Team.UserDeleteResult
+  name: IsSuccess
+  nameWithType: UserDeleteResult.IsSuccess
+  fullName: Dropbox.Api.Team.UserDeleteResult.IsSuccess
+- uid: Dropbox.Api.Team.UserDeleteResult.AsSuccess
+  commentId: P:Dropbox.Api.Team.UserDeleteResult.AsSuccess
+  parent: Dropbox.Api.Team.UserDeleteResult
+  name: AsSuccess
+  nameWithType: UserDeleteResult.AsSuccess
+  fullName: Dropbox.Api.Team.UserDeleteResult.AsSuccess
+- uid: Dropbox.Api.Team.UserDeleteResult.IsInvalidUser
+  commentId: P:Dropbox.Api.Team.UserDeleteResult.IsInvalidUser
+  parent: Dropbox.Api.Team.UserDeleteResult
+  name: IsInvalidUser
+  nameWithType: UserDeleteResult.IsInvalidUser
+  fullName: Dropbox.Api.Team.UserDeleteResult.IsInvalidUser
+- uid: Dropbox.Api.Team.UserDeleteResult.AsInvalidUser
+  commentId: P:Dropbox.Api.Team.UserDeleteResult.AsInvalidUser
+  parent: Dropbox.Api.Team.UserDeleteResult
+  name: AsInvalidUser
+  nameWithType: UserDeleteResult.AsInvalidUser
+  fullName: Dropbox.Api.Team.UserDeleteResult.AsInvalidUser
+- uid: Dropbox.Api.Team.UserDeleteResult.IsOther
+  commentId: P:Dropbox.Api.Team.UserDeleteResult.IsOther
+  parent: Dropbox.Api.Team.UserDeleteResult
+  name: IsOther
+  nameWithType: UserDeleteResult.IsOther
+  fullName: Dropbox.Api.Team.UserDeleteResult.IsOther
+- uid: Dropbox.Api.Team.UserDeleteResult.AsOther
+  commentId: P:Dropbox.Api.Team.UserDeleteResult.AsOther
+  parent: Dropbox.Api.Team.UserDeleteResult
+  name: AsOther
+  nameWithType: UserDeleteResult.AsOther
+  fullName: Dropbox.Api.Team.UserDeleteResult.AsOther
+- uid: Dropbox.Api.Team.UserDeleteResult.Success
+  commentId: T:Dropbox.Api.Team.UserDeleteResult.Success
+  parent: Dropbox.Api.Team
+  name: UserDeleteResult.Success
+  nameWithType: UserDeleteResult.Success
+  fullName: Dropbox.Api.Team.UserDeleteResult.Success
+- uid: Dropbox.Api.Team.UserDeleteResult.Success.#ctor*
+  commentId: Overload:Dropbox.Api.Team.UserDeleteResult.Success.#ctor
+  name: Success
+  nameWithType: UserDeleteResult.Success.Success
+  fullName: Dropbox.Api.Team.UserDeleteResult.Success.Success
+- uid: Dropbox.Api.Team.UserDeleteEmailsResult
+  commentId: T:Dropbox.Api.Team.UserDeleteEmailsResult
+  parent: Dropbox.Api.Team
+  name: UserDeleteEmailsResult
+  nameWithType: UserDeleteEmailsResult
+  fullName: Dropbox.Api.Team.UserDeleteEmailsResult
+- uid: Dropbox.Api.Team.UserDeleteResult.Success.Value*
+  commentId: Overload:Dropbox.Api.Team.UserDeleteResult.Success.Value
+  name: Value
+  nameWithType: UserDeleteResult.Success.Value
+  fullName: Dropbox.Api.Team.UserDeleteResult.Success.Value
+shouldSkipMarkup: true

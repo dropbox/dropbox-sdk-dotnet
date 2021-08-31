@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.TeamFolderListError
+  commentId: T:Dropbox.Api.Team.TeamFolderListError
+  id: TeamFolderListError
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.TeamFolderListError.#ctor
+  - Dropbox.Api.Team.TeamFolderListError.#ctor(Dropbox.Api.Team.TeamFolderAccessError)
+  - Dropbox.Api.Team.TeamFolderListError.AccessError
+  langs:
+  - csharp
+  - vb
+  name: TeamFolderListError
+  nameWithType: TeamFolderListError
+  fullName: Dropbox.Api.Team.TeamFolderListError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderListError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TeamFolderListError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderListError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The team folder list error object</p>\n"
+  example: []
+  syntax:
+    content: 'public class TeamFolderListError : object'
+    content.vb: >-
+      Public Class TeamFolderListError
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.TeamFolderListError.#ctor(Dropbox.Api.Team.TeamFolderAccessError)
+  commentId: M:Dropbox.Api.Team.TeamFolderListError.#ctor(Dropbox.Api.Team.TeamFolderAccessError)
+  id: '#ctor(Dropbox.Api.Team.TeamFolderAccessError)'
+  parent: Dropbox.Api.Team.TeamFolderListError
+  langs:
+  - csharp
+  - vb
+  name: TeamFolderListError(TeamFolderAccessError)
+  nameWithType: TeamFolderListError.TeamFolderListError(TeamFolderAccessError)
+  fullName: Dropbox.Api.Team.TeamFolderListError.TeamFolderListError(Dropbox.Api.Team.TeamFolderAccessError)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderListError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderListError.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.TeamFolderListError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public TeamFolderListError(TeamFolderAccessError accessError)
+    parameters:
+    - id: accessError
+      type: Dropbox.Api.Team.TeamFolderAccessError
+      description: The access error
+    content.vb: Public Sub New(accessError As TeamFolderAccessError)
+  overload: Dropbox.Api.Team.TeamFolderListError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.TeamFolderListError.#ctor
+  commentId: M:Dropbox.Api.Team.TeamFolderListError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.TeamFolderListError
+  langs:
+  - csharp
+  - vb
+  name: TeamFolderListError()
+  nameWithType: TeamFolderListError.TeamFolderListError()
+  fullName: Dropbox.Api.Team.TeamFolderListError.TeamFolderListError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderListError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderListError.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.TeamFolderListError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public TeamFolderListError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.TeamFolderListError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.TeamFolderListError.AccessError
+  commentId: P:Dropbox.Api.Team.TeamFolderListError.AccessError
+  id: AccessError
+  parent: Dropbox.Api.Team.TeamFolderListError
+  langs:
+  - csharp
+  - vb
+  name: AccessError
+  nameWithType: TeamFolderListError.AccessError
+  fullName: Dropbox.Api.Team.TeamFolderListError.AccessError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderListError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AccessError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderListError.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets the access error of the team folder list error</p>\n"
+  example: []
+  syntax:
+    content: public TeamFolderAccessError AccessError { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.TeamFolderAccessError
+    content.vb: Public Property AccessError As TeamFolderAccessError
+  overload: Dropbox.Api.Team.TeamFolderListError.AccessError*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.TeamFolderListError
+  commentId: T:Dropbox.Api.Team.TeamFolderListError
+  name: TeamFolderListError
+  nameWithType: TeamFolderListError
+  fullName: Dropbox.Api.Team.TeamFolderListError
+- uid: Dropbox.Api.Team.TeamFolderListError.#ctor*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderListError.#ctor
+  name: TeamFolderListError
+  nameWithType: TeamFolderListError.TeamFolderListError
+  fullName: Dropbox.Api.Team.TeamFolderListError.TeamFolderListError
+- uid: Dropbox.Api.Team.TeamFolderAccessError
+  commentId: T:Dropbox.Api.Team.TeamFolderAccessError
+  parent: Dropbox.Api.Team
+  name: TeamFolderAccessError
+  nameWithType: TeamFolderAccessError
+  fullName: Dropbox.Api.Team.TeamFolderAccessError
+- uid: Dropbox.Api.Team.TeamFolderListError.AccessError*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderListError.AccessError
+  name: AccessError
+  nameWithType: TeamFolderListError.AccessError
+  fullName: Dropbox.Api.Team.TeamFolderListError.AccessError
+shouldSkipMarkup: true

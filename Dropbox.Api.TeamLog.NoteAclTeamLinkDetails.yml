@@ -1,0 +1,96 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.NoteAclTeamLinkDetails
+  commentId: T:Dropbox.Api.TeamLog.NoteAclTeamLinkDetails
+  id: NoteAclTeamLinkDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.NoteAclTeamLinkDetails.#ctor
+  langs:
+  - csharp
+  - vb
+  name: NoteAclTeamLinkDetails
+  nameWithType: NoteAclTeamLinkDetails
+  fullName: Dropbox.Api.TeamLog.NoteAclTeamLinkDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/NoteAclTeamLinkDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NoteAclTeamLinkDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/NoteAclTeamLinkDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Changed Paper doc to link-accessible for team.</p>\n"
+  example: []
+  syntax:
+    content: 'public class NoteAclTeamLinkDetails : object'
+    content.vb: >-
+      Public Class NoteAclTeamLinkDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.NoteAclTeamLinkDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.NoteAclTeamLinkDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.NoteAclTeamLinkDetails
+  langs:
+  - csharp
+  - vb
+  name: NoteAclTeamLinkDetails()
+  nameWithType: NoteAclTeamLinkDetails.NoteAclTeamLinkDetails()
+  fullName: Dropbox.Api.TeamLog.NoteAclTeamLinkDetails.NoteAclTeamLinkDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/NoteAclTeamLinkDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/NoteAclTeamLinkDetails.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.NoteAclTeamLinkDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public NoteAclTeamLinkDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.NoteAclTeamLinkDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.NoteAclTeamLinkDetails
+  commentId: T:Dropbox.Api.TeamLog.NoteAclTeamLinkDetails
+  parent: Dropbox.Api.TeamLog
+  name: NoteAclTeamLinkDetails
+  nameWithType: NoteAclTeamLinkDetails
+  fullName: Dropbox.Api.TeamLog.NoteAclTeamLinkDetails
+- uid: Dropbox.Api.TeamLog.NoteAclTeamLinkDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.NoteAclTeamLinkDetails.#ctor
+  name: NoteAclTeamLinkDetails
+  nameWithType: NoteAclTeamLinkDetails.NoteAclTeamLinkDetails
+  fullName: Dropbox.Api.TeamLog.NoteAclTeamLinkDetails.NoteAclTeamLinkDetails
+shouldSkipMarkup: true

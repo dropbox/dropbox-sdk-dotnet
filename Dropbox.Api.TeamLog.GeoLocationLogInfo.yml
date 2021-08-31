@@ -1,0 +1,331 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.GeoLocationLogInfo
+  commentId: T:Dropbox.Api.TeamLog.GeoLocationLogInfo
+  id: GeoLocationLogInfo
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.GeoLocationLogInfo.#ctor
+  - Dropbox.Api.TeamLog.GeoLocationLogInfo.#ctor(System.String,System.String,System.String,System.String)
+  - Dropbox.Api.TeamLog.GeoLocationLogInfo.City
+  - Dropbox.Api.TeamLog.GeoLocationLogInfo.Country
+  - Dropbox.Api.TeamLog.GeoLocationLogInfo.IpAddress
+  - Dropbox.Api.TeamLog.GeoLocationLogInfo.Region
+  langs:
+  - csharp
+  - vb
+  name: GeoLocationLogInfo
+  nameWithType: GeoLocationLogInfo
+  fullName: Dropbox.Api.TeamLog.GeoLocationLogInfo
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GeoLocationLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GeoLocationLogInfo
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GeoLocationLogInfo.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Geographic location details.</p>\n"
+  example: []
+  syntax:
+    content: 'public class GeoLocationLogInfo : object'
+    content.vb: >-
+      Public Class GeoLocationLogInfo
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.GeoLocationLogInfo.#ctor(System.String,System.String,System.String,System.String)
+  commentId: M:Dropbox.Api.TeamLog.GeoLocationLogInfo.#ctor(System.String,System.String,System.String,System.String)
+  id: '#ctor(System.String,System.String,System.String,System.String)'
+  parent: Dropbox.Api.TeamLog.GeoLocationLogInfo
+  langs:
+  - csharp
+  - vb
+  name: GeoLocationLogInfo(String, String, String, String)
+  nameWithType: GeoLocationLogInfo.GeoLocationLogInfo(String, String, String, String)
+  fullName: Dropbox.Api.TeamLog.GeoLocationLogInfo.GeoLocationLogInfo(System.String, System.String, System.String, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GeoLocationLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GeoLocationLogInfo.cs
+    startLine: 37
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.GeoLocationLogInfo\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public GeoLocationLogInfo(string ipAddress, string city = null, string region = null, string country = null)
+    parameters:
+    - id: ipAddress
+      type: System.String
+      description: IP address.
+    - id: city
+      type: System.String
+      description: City name.
+    - id: region
+      type: System.String
+      description: Region name.
+    - id: country
+      type: System.String
+      description: Country code.
+    content.vb: Public Sub New(ipAddress As String, city As String = Nothing, region As String = Nothing, country As String = Nothing)
+  overload: Dropbox.Api.TeamLog.GeoLocationLogInfo.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.GeoLocationLogInfo.#ctor
+  commentId: M:Dropbox.Api.TeamLog.GeoLocationLogInfo.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.GeoLocationLogInfo
+  langs:
+  - csharp
+  - vb
+  name: GeoLocationLogInfo()
+  nameWithType: GeoLocationLogInfo.GeoLocationLogInfo()
+  fullName: Dropbox.Api.TeamLog.GeoLocationLogInfo.GeoLocationLogInfo()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GeoLocationLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GeoLocationLogInfo.cs
+    startLine: 59
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.GeoLocationLogInfo\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public GeoLocationLogInfo()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.GeoLocationLogInfo.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.GeoLocationLogInfo.IpAddress
+  commentId: P:Dropbox.Api.TeamLog.GeoLocationLogInfo.IpAddress
+  id: IpAddress
+  parent: Dropbox.Api.TeamLog.GeoLocationLogInfo
+  langs:
+  - csharp
+  - vb
+  name: IpAddress
+  nameWithType: GeoLocationLogInfo.IpAddress
+  fullName: Dropbox.Api.TeamLog.GeoLocationLogInfo.IpAddress
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GeoLocationLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IpAddress
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GeoLocationLogInfo.cs
+    startLine: 67
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>IP address.</p>\n"
+  example: []
+  syntax:
+    content: public string IpAddress { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property IpAddress As String
+  overload: Dropbox.Api.TeamLog.GeoLocationLogInfo.IpAddress*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.GeoLocationLogInfo.City
+  commentId: P:Dropbox.Api.TeamLog.GeoLocationLogInfo.City
+  id: City
+  parent: Dropbox.Api.TeamLog.GeoLocationLogInfo
+  langs:
+  - csharp
+  - vb
+  name: City
+  nameWithType: GeoLocationLogInfo.City
+  fullName: Dropbox.Api.TeamLog.GeoLocationLogInfo.City
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GeoLocationLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: City
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GeoLocationLogInfo.cs
+    startLine: 72
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>City name.</p>\n"
+  example: []
+  syntax:
+    content: public string City { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property City As String
+  overload: Dropbox.Api.TeamLog.GeoLocationLogInfo.City*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.GeoLocationLogInfo.Region
+  commentId: P:Dropbox.Api.TeamLog.GeoLocationLogInfo.Region
+  id: Region
+  parent: Dropbox.Api.TeamLog.GeoLocationLogInfo
+  langs:
+  - csharp
+  - vb
+  name: Region
+  nameWithType: GeoLocationLogInfo.Region
+  fullName: Dropbox.Api.TeamLog.GeoLocationLogInfo.Region
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GeoLocationLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Region
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GeoLocationLogInfo.cs
+    startLine: 77
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Region name.</p>\n"
+  example: []
+  syntax:
+    content: public string Region { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Region As String
+  overload: Dropbox.Api.TeamLog.GeoLocationLogInfo.Region*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.GeoLocationLogInfo.Country
+  commentId: P:Dropbox.Api.TeamLog.GeoLocationLogInfo.Country
+  id: Country
+  parent: Dropbox.Api.TeamLog.GeoLocationLogInfo
+  langs:
+  - csharp
+  - vb
+  name: Country
+  nameWithType: GeoLocationLogInfo.Country
+  fullName: Dropbox.Api.TeamLog.GeoLocationLogInfo.Country
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GeoLocationLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Country
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GeoLocationLogInfo.cs
+    startLine: 82
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Country code.</p>\n"
+  example: []
+  syntax:
+    content: public string Country { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Country As String
+  overload: Dropbox.Api.TeamLog.GeoLocationLogInfo.Country*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.GeoLocationLogInfo
+  commentId: T:Dropbox.Api.TeamLog.GeoLocationLogInfo
+  parent: Dropbox.Api.TeamLog
+  name: GeoLocationLogInfo
+  nameWithType: GeoLocationLogInfo
+  fullName: Dropbox.Api.TeamLog.GeoLocationLogInfo
+- uid: Dropbox.Api.TeamLog.GeoLocationLogInfo.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.GeoLocationLogInfo.#ctor
+  name: GeoLocationLogInfo
+  nameWithType: GeoLocationLogInfo.GeoLocationLogInfo
+  fullName: Dropbox.Api.TeamLog.GeoLocationLogInfo.GeoLocationLogInfo
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.GeoLocationLogInfo.IpAddress*
+  commentId: Overload:Dropbox.Api.TeamLog.GeoLocationLogInfo.IpAddress
+  name: IpAddress
+  nameWithType: GeoLocationLogInfo.IpAddress
+  fullName: Dropbox.Api.TeamLog.GeoLocationLogInfo.IpAddress
+- uid: Dropbox.Api.TeamLog.GeoLocationLogInfo.City*
+  commentId: Overload:Dropbox.Api.TeamLog.GeoLocationLogInfo.City
+  name: City
+  nameWithType: GeoLocationLogInfo.City
+  fullName: Dropbox.Api.TeamLog.GeoLocationLogInfo.City
+- uid: Dropbox.Api.TeamLog.GeoLocationLogInfo.Region*
+  commentId: Overload:Dropbox.Api.TeamLog.GeoLocationLogInfo.Region
+  name: Region
+  nameWithType: GeoLocationLogInfo.Region
+  fullName: Dropbox.Api.TeamLog.GeoLocationLogInfo.Region
+- uid: Dropbox.Api.TeamLog.GeoLocationLogInfo.Country*
+  commentId: Overload:Dropbox.Api.TeamLog.GeoLocationLogInfo.Country
+  name: Country
+  nameWithType: GeoLocationLogInfo.Country
+  fullName: Dropbox.Api.TeamLog.GeoLocationLogInfo.Country
+shouldSkipMarkup: true

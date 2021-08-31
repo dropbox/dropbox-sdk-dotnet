@@ -1,0 +1,381 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy
+  commentId: T:Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy
+  id: ShowcaseExternalSharingPolicy
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.#ctor
+  - Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.AsDisabled
+  - Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.AsEnabled
+  - Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.AsOther
+  - Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.IsDisabled
+  - Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.IsEnabled
+  - Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.IsOther
+  langs:
+  - csharp
+  - vb
+  name: ShowcaseExternalSharingPolicy
+  nameWithType: ShowcaseExternalSharingPolicy
+  fullName: Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseExternalSharingPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ShowcaseExternalSharingPolicy
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseExternalSharingPolicy.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Policy for controlling if team members can share Showcases externally.</p>\n"
+  example: []
+  syntax:
+    content: 'public class ShowcaseExternalSharingPolicy : object'
+    content.vb: >-
+      Public Class ShowcaseExternalSharingPolicy
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.Disabled
+  - Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.Enabled
+  - Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.Other
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.#ctor
+  commentId: M:Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy
+  langs:
+  - csharp
+  - vb
+  name: ShowcaseExternalSharingPolicy()
+  nameWithType: ShowcaseExternalSharingPolicy.ShowcaseExternalSharingPolicy()
+  fullName: Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.ShowcaseExternalSharingPolicy()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseExternalSharingPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseExternalSharingPolicy.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public ShowcaseExternalSharingPolicy()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.IsDisabled
+  commentId: P:Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.IsDisabled
+  id: IsDisabled
+  parent: Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy
+  langs:
+  - csharp
+  - vb
+  name: IsDisabled
+  nameWithType: ShowcaseExternalSharingPolicy.IsDisabled
+  fullName: Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.IsDisabled
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseExternalSharingPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsDisabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseExternalSharingPolicy.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Disabled</p>\n"
+  example: []
+  syntax:
+    content: public bool IsDisabled { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsDisabled As Boolean
+  overload: Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.IsDisabled*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.AsDisabled
+  commentId: P:Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.AsDisabled
+  id: AsDisabled
+  parent: Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy
+  langs:
+  - csharp
+  - vb
+  name: AsDisabled
+  nameWithType: ShowcaseExternalSharingPolicy.AsDisabled
+  fullName: Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.AsDisabled
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseExternalSharingPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsDisabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseExternalSharingPolicy.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Disabled, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ShowcaseExternalSharingPolicy.Disabled AsDisabled { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.Disabled
+    content.vb: Public ReadOnly Property AsDisabled As ShowcaseExternalSharingPolicy.Disabled
+  overload: Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.AsDisabled*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.IsEnabled
+  commentId: P:Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.IsEnabled
+  id: IsEnabled
+  parent: Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy
+  langs:
+  - csharp
+  - vb
+  name: IsEnabled
+  nameWithType: ShowcaseExternalSharingPolicy.IsEnabled
+  fullName: Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.IsEnabled
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseExternalSharingPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsEnabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseExternalSharingPolicy.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Enabled</p>\n"
+  example: []
+  syntax:
+    content: public bool IsEnabled { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsEnabled As Boolean
+  overload: Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.IsEnabled*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.AsEnabled
+  commentId: P:Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.AsEnabled
+  id: AsEnabled
+  parent: Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy
+  langs:
+  - csharp
+  - vb
+  name: AsEnabled
+  nameWithType: ShowcaseExternalSharingPolicy.AsEnabled
+  fullName: Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.AsEnabled
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseExternalSharingPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsEnabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseExternalSharingPolicy.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Enabled, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ShowcaseExternalSharingPolicy.Enabled AsEnabled { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.Enabled
+    content.vb: Public ReadOnly Property AsEnabled As ShowcaseExternalSharingPolicy.Enabled
+  overload: Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.AsEnabled*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.IsOther
+  commentId: P:Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.IsOther
+  id: IsOther
+  parent: Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: ShowcaseExternalSharingPolicy.IsOther
+  fullName: Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseExternalSharingPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseExternalSharingPolicy.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.AsOther
+  commentId: P:Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.AsOther
+  id: AsOther
+  parent: Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: ShowcaseExternalSharingPolicy.AsOther
+  fullName: Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseExternalSharingPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseExternalSharingPolicy.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ShowcaseExternalSharingPolicy.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.Other
+    content.vb: Public ReadOnly Property AsOther As ShowcaseExternalSharingPolicy.Other
+  overload: Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy
+  commentId: T:Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy
+  parent: Dropbox.Api.TeamLog
+  name: ShowcaseExternalSharingPolicy
+  nameWithType: ShowcaseExternalSharingPolicy
+  fullName: Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy
+- uid: Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.#ctor
+  name: ShowcaseExternalSharingPolicy
+  nameWithType: ShowcaseExternalSharingPolicy.ShowcaseExternalSharingPolicy
+  fullName: Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.ShowcaseExternalSharingPolicy
+- uid: Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.IsDisabled*
+  commentId: Overload:Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.IsDisabled
+  name: IsDisabled
+  nameWithType: ShowcaseExternalSharingPolicy.IsDisabled
+  fullName: Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.IsDisabled
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.AsDisabled*
+  commentId: Overload:Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.AsDisabled
+  name: AsDisabled
+  nameWithType: ShowcaseExternalSharingPolicy.AsDisabled
+  fullName: Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.AsDisabled
+- uid: Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.Disabled
+  commentId: T:Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.Disabled
+  parent: Dropbox.Api.TeamLog
+  name: ShowcaseExternalSharingPolicy.Disabled
+  nameWithType: ShowcaseExternalSharingPolicy.Disabled
+  fullName: Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.Disabled
+- uid: Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.IsEnabled*
+  commentId: Overload:Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.IsEnabled
+  name: IsEnabled
+  nameWithType: ShowcaseExternalSharingPolicy.IsEnabled
+  fullName: Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.IsEnabled
+- uid: Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.AsEnabled*
+  commentId: Overload:Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.AsEnabled
+  name: AsEnabled
+  nameWithType: ShowcaseExternalSharingPolicy.AsEnabled
+  fullName: Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.AsEnabled
+- uid: Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.Enabled
+  commentId: T:Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.Enabled
+  parent: Dropbox.Api.TeamLog
+  name: ShowcaseExternalSharingPolicy.Enabled
+  nameWithType: ShowcaseExternalSharingPolicy.Enabled
+  fullName: Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.Enabled
+- uid: Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.IsOther*
+  commentId: Overload:Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.IsOther
+  name: IsOther
+  nameWithType: ShowcaseExternalSharingPolicy.IsOther
+  fullName: Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.IsOther
+- uid: Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.AsOther*
+  commentId: Overload:Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.AsOther
+  name: AsOther
+  nameWithType: ShowcaseExternalSharingPolicy.AsOther
+  fullName: Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.AsOther
+- uid: Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.Other
+  commentId: T:Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.Other
+  parent: Dropbox.Api.TeamLog
+  name: ShowcaseExternalSharingPolicy.Other
+  nameWithType: ShowcaseExternalSharingPolicy.Other
+  fullName: Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy.Other
+shouldSkipMarkup: true

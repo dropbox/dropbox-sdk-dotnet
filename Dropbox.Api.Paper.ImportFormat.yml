@@ -1,0 +1,474 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Paper.ImportFormat
+  commentId: T:Dropbox.Api.Paper.ImportFormat
+  id: ImportFormat
+  parent: Dropbox.Api.Paper
+  children:
+  - Dropbox.Api.Paper.ImportFormat.#ctor
+  - Dropbox.Api.Paper.ImportFormat.AsHtml
+  - Dropbox.Api.Paper.ImportFormat.AsMarkdown
+  - Dropbox.Api.Paper.ImportFormat.AsOther
+  - Dropbox.Api.Paper.ImportFormat.AsPlainText
+  - Dropbox.Api.Paper.ImportFormat.IsHtml
+  - Dropbox.Api.Paper.ImportFormat.IsMarkdown
+  - Dropbox.Api.Paper.ImportFormat.IsOther
+  - Dropbox.Api.Paper.ImportFormat.IsPlainText
+  langs:
+  - csharp
+  - vb
+  name: ImportFormat
+  nameWithType: ImportFormat
+  fullName: Dropbox.Api.Paper.ImportFormat
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/ImportFormat.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ImportFormat
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/ImportFormat.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>The import format of the incoming data.</p>\n"
+  example: []
+  syntax:
+    content: 'public class ImportFormat : object'
+    content.vb: >-
+      Public Class ImportFormat
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Paper.ImportFormat.Html
+  - Dropbox.Api.Paper.ImportFormat.Markdown
+  - Dropbox.Api.Paper.ImportFormat.Other
+  - Dropbox.Api.Paper.ImportFormat.PlainText
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Paper.ImportFormat.#ctor
+  commentId: M:Dropbox.Api.Paper.ImportFormat.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Paper.ImportFormat
+  langs:
+  - csharp
+  - vb
+  name: ImportFormat()
+  nameWithType: ImportFormat.ImportFormat()
+  fullName: Dropbox.Api.Paper.ImportFormat.ImportFormat()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/ImportFormat.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/ImportFormat.cs
+    startLine: 32
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Paper.ImportFormat\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public ImportFormat()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Paper.ImportFormat.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Paper.ImportFormat.IsHtml
+  commentId: P:Dropbox.Api.Paper.ImportFormat.IsHtml
+  id: IsHtml
+  parent: Dropbox.Api.Paper.ImportFormat
+  langs:
+  - csharp
+  - vb
+  name: IsHtml
+  nameWithType: ImportFormat.IsHtml
+  fullName: Dropbox.Api.Paper.ImportFormat.IsHtml
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/ImportFormat.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsHtml
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/ImportFormat.cs
+    startLine: 39
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets a value indicating whether this instance is Html</p>\n"
+  example: []
+  syntax:
+    content: public bool IsHtml { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsHtml As Boolean
+  overload: Dropbox.Api.Paper.ImportFormat.IsHtml*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Paper.ImportFormat.AsHtml
+  commentId: P:Dropbox.Api.Paper.ImportFormat.AsHtml
+  id: AsHtml
+  parent: Dropbox.Api.Paper.ImportFormat
+  langs:
+  - csharp
+  - vb
+  name: AsHtml
+  nameWithType: ImportFormat.AsHtml
+  fullName: Dropbox.Api.Paper.ImportFormat.AsHtml
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/ImportFormat.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsHtml
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/ImportFormat.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets this instance as a Html, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ImportFormat.Html AsHtml { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Paper.ImportFormat.Html
+    content.vb: Public ReadOnly Property AsHtml As ImportFormat.Html
+  overload: Dropbox.Api.Paper.ImportFormat.AsHtml*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Paper.ImportFormat.IsMarkdown
+  commentId: P:Dropbox.Api.Paper.ImportFormat.IsMarkdown
+  id: IsMarkdown
+  parent: Dropbox.Api.Paper.ImportFormat
+  langs:
+  - csharp
+  - vb
+  name: IsMarkdown
+  nameWithType: ImportFormat.IsMarkdown
+  fullName: Dropbox.Api.Paper.ImportFormat.IsMarkdown
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/ImportFormat.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsMarkdown
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/ImportFormat.cs
+    startLine: 61
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets a value indicating whether this instance is Markdown</p>\n"
+  example: []
+  syntax:
+    content: public bool IsMarkdown { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsMarkdown As Boolean
+  overload: Dropbox.Api.Paper.ImportFormat.IsMarkdown*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Paper.ImportFormat.AsMarkdown
+  commentId: P:Dropbox.Api.Paper.ImportFormat.AsMarkdown
+  id: AsMarkdown
+  parent: Dropbox.Api.Paper.ImportFormat
+  langs:
+  - csharp
+  - vb
+  name: AsMarkdown
+  nameWithType: ImportFormat.AsMarkdown
+  fullName: Dropbox.Api.Paper.ImportFormat.AsMarkdown
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/ImportFormat.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsMarkdown
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/ImportFormat.cs
+    startLine: 72
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets this instance as a Markdown, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ImportFormat.Markdown AsMarkdown { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Paper.ImportFormat.Markdown
+    content.vb: Public ReadOnly Property AsMarkdown As ImportFormat.Markdown
+  overload: Dropbox.Api.Paper.ImportFormat.AsMarkdown*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Paper.ImportFormat.IsPlainText
+  commentId: P:Dropbox.Api.Paper.ImportFormat.IsPlainText
+  id: IsPlainText
+  parent: Dropbox.Api.Paper.ImportFormat
+  langs:
+  - csharp
+  - vb
+  name: IsPlainText
+  nameWithType: ImportFormat.IsPlainText
+  fullName: Dropbox.Api.Paper.ImportFormat.IsPlainText
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/ImportFormat.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsPlainText
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/ImportFormat.cs
+    startLine: 83
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets a value indicating whether this instance is PlainText</p>\n"
+  example: []
+  syntax:
+    content: public bool IsPlainText { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsPlainText As Boolean
+  overload: Dropbox.Api.Paper.ImportFormat.IsPlainText*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Paper.ImportFormat.AsPlainText
+  commentId: P:Dropbox.Api.Paper.ImportFormat.AsPlainText
+  id: AsPlainText
+  parent: Dropbox.Api.Paper.ImportFormat
+  langs:
+  - csharp
+  - vb
+  name: AsPlainText
+  nameWithType: ImportFormat.AsPlainText
+  fullName: Dropbox.Api.Paper.ImportFormat.AsPlainText
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/ImportFormat.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsPlainText
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/ImportFormat.cs
+    startLine: 94
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets this instance as a PlainText, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ImportFormat.PlainText AsPlainText { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Paper.ImportFormat.PlainText
+    content.vb: Public ReadOnly Property AsPlainText As ImportFormat.PlainText
+  overload: Dropbox.Api.Paper.ImportFormat.AsPlainText*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Paper.ImportFormat.IsOther
+  commentId: P:Dropbox.Api.Paper.ImportFormat.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Paper.ImportFormat
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: ImportFormat.IsOther
+  fullName: Dropbox.Api.Paper.ImportFormat.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/ImportFormat.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/ImportFormat.cs
+    startLine: 105
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Paper.ImportFormat.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Paper.ImportFormat.AsOther
+  commentId: P:Dropbox.Api.Paper.ImportFormat.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Paper.ImportFormat
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: ImportFormat.AsOther
+  fullName: Dropbox.Api.Paper.ImportFormat.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/ImportFormat.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/ImportFormat.cs
+    startLine: 116
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ImportFormat.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Paper.ImportFormat.Other
+    content.vb: Public ReadOnly Property AsOther As ImportFormat.Other
+  overload: Dropbox.Api.Paper.ImportFormat.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Paper
+  commentId: N:Dropbox.Api.Paper
+  name: Dropbox.Api.Paper
+  nameWithType: Dropbox.Api.Paper
+  fullName: Dropbox.Api.Paper
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Paper.ImportFormat
+  commentId: T:Dropbox.Api.Paper.ImportFormat
+  parent: Dropbox.Api.Paper
+  name: ImportFormat
+  nameWithType: ImportFormat
+  fullName: Dropbox.Api.Paper.ImportFormat
+- uid: Dropbox.Api.Paper.ImportFormat.#ctor*
+  commentId: Overload:Dropbox.Api.Paper.ImportFormat.#ctor
+  name: ImportFormat
+  nameWithType: ImportFormat.ImportFormat
+  fullName: Dropbox.Api.Paper.ImportFormat.ImportFormat
+- uid: Dropbox.Api.Paper.ImportFormat.IsHtml*
+  commentId: Overload:Dropbox.Api.Paper.ImportFormat.IsHtml
+  name: IsHtml
+  nameWithType: ImportFormat.IsHtml
+  fullName: Dropbox.Api.Paper.ImportFormat.IsHtml
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Paper.ImportFormat.AsHtml*
+  commentId: Overload:Dropbox.Api.Paper.ImportFormat.AsHtml
+  name: AsHtml
+  nameWithType: ImportFormat.AsHtml
+  fullName: Dropbox.Api.Paper.ImportFormat.AsHtml
+- uid: Dropbox.Api.Paper.ImportFormat.Html
+  commentId: T:Dropbox.Api.Paper.ImportFormat.Html
+  parent: Dropbox.Api.Paper
+  name: ImportFormat.Html
+  nameWithType: ImportFormat.Html
+  fullName: Dropbox.Api.Paper.ImportFormat.Html
+- uid: Dropbox.Api.Paper.ImportFormat.IsMarkdown*
+  commentId: Overload:Dropbox.Api.Paper.ImportFormat.IsMarkdown
+  name: IsMarkdown
+  nameWithType: ImportFormat.IsMarkdown
+  fullName: Dropbox.Api.Paper.ImportFormat.IsMarkdown
+- uid: Dropbox.Api.Paper.ImportFormat.AsMarkdown*
+  commentId: Overload:Dropbox.Api.Paper.ImportFormat.AsMarkdown
+  name: AsMarkdown
+  nameWithType: ImportFormat.AsMarkdown
+  fullName: Dropbox.Api.Paper.ImportFormat.AsMarkdown
+- uid: Dropbox.Api.Paper.ImportFormat.Markdown
+  commentId: T:Dropbox.Api.Paper.ImportFormat.Markdown
+  parent: Dropbox.Api.Paper
+  name: ImportFormat.Markdown
+  nameWithType: ImportFormat.Markdown
+  fullName: Dropbox.Api.Paper.ImportFormat.Markdown
+- uid: Dropbox.Api.Paper.ImportFormat.IsPlainText*
+  commentId: Overload:Dropbox.Api.Paper.ImportFormat.IsPlainText
+  name: IsPlainText
+  nameWithType: ImportFormat.IsPlainText
+  fullName: Dropbox.Api.Paper.ImportFormat.IsPlainText
+- uid: Dropbox.Api.Paper.ImportFormat.AsPlainText*
+  commentId: Overload:Dropbox.Api.Paper.ImportFormat.AsPlainText
+  name: AsPlainText
+  nameWithType: ImportFormat.AsPlainText
+  fullName: Dropbox.Api.Paper.ImportFormat.AsPlainText
+- uid: Dropbox.Api.Paper.ImportFormat.PlainText
+  commentId: T:Dropbox.Api.Paper.ImportFormat.PlainText
+  parent: Dropbox.Api.Paper
+  name: ImportFormat.PlainText
+  nameWithType: ImportFormat.PlainText
+  fullName: Dropbox.Api.Paper.ImportFormat.PlainText
+- uid: Dropbox.Api.Paper.ImportFormat.IsOther*
+  commentId: Overload:Dropbox.Api.Paper.ImportFormat.IsOther
+  name: IsOther
+  nameWithType: ImportFormat.IsOther
+  fullName: Dropbox.Api.Paper.ImportFormat.IsOther
+- uid: Dropbox.Api.Paper.ImportFormat.AsOther*
+  commentId: Overload:Dropbox.Api.Paper.ImportFormat.AsOther
+  name: AsOther
+  nameWithType: ImportFormat.AsOther
+  fullName: Dropbox.Api.Paper.ImportFormat.AsOther
+- uid: Dropbox.Api.Paper.ImportFormat.Other
+  commentId: T:Dropbox.Api.Paper.ImportFormat.Other
+  parent: Dropbox.Api.Paper
+  name: ImportFormat.Other
+  nameWithType: ImportFormat.Other
+  fullName: Dropbox.Api.Paper.ImportFormat.Other
+shouldSkipMarkup: true

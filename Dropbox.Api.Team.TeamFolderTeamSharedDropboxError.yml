@@ -1,0 +1,288 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.TeamFolderTeamSharedDropboxError
+  commentId: T:Dropbox.Api.Team.TeamFolderTeamSharedDropboxError
+  id: TeamFolderTeamSharedDropboxError
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.TeamFolderTeamSharedDropboxError.#ctor
+  - Dropbox.Api.Team.TeamFolderTeamSharedDropboxError.AsDisallowed
+  - Dropbox.Api.Team.TeamFolderTeamSharedDropboxError.AsOther
+  - Dropbox.Api.Team.TeamFolderTeamSharedDropboxError.IsDisallowed
+  - Dropbox.Api.Team.TeamFolderTeamSharedDropboxError.IsOther
+  langs:
+  - csharp
+  - vb
+  name: TeamFolderTeamSharedDropboxError
+  nameWithType: TeamFolderTeamSharedDropboxError
+  fullName: Dropbox.Api.Team.TeamFolderTeamSharedDropboxError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderTeamSharedDropboxError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TeamFolderTeamSharedDropboxError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderTeamSharedDropboxError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The team folder team shared dropbox error object</p>\n"
+  example: []
+  syntax:
+    content: 'public class TeamFolderTeamSharedDropboxError : object'
+    content.vb: >-
+      Public Class TeamFolderTeamSharedDropboxError
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Team.TeamFolderTeamSharedDropboxError.Disallowed
+  - Dropbox.Api.Team.TeamFolderTeamSharedDropboxError.Other
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.TeamFolderTeamSharedDropboxError.#ctor
+  commentId: M:Dropbox.Api.Team.TeamFolderTeamSharedDropboxError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.TeamFolderTeamSharedDropboxError
+  langs:
+  - csharp
+  - vb
+  name: TeamFolderTeamSharedDropboxError()
+  nameWithType: TeamFolderTeamSharedDropboxError.TeamFolderTeamSharedDropboxError()
+  fullName: Dropbox.Api.Team.TeamFolderTeamSharedDropboxError.TeamFolderTeamSharedDropboxError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderTeamSharedDropboxError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderTeamSharedDropboxError.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.TeamFolderTeamSharedDropboxError\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public TeamFolderTeamSharedDropboxError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.TeamFolderTeamSharedDropboxError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.TeamFolderTeamSharedDropboxError.IsDisallowed
+  commentId: P:Dropbox.Api.Team.TeamFolderTeamSharedDropboxError.IsDisallowed
+  id: IsDisallowed
+  parent: Dropbox.Api.Team.TeamFolderTeamSharedDropboxError
+  langs:
+  - csharp
+  - vb
+  name: IsDisallowed
+  nameWithType: TeamFolderTeamSharedDropboxError.IsDisallowed
+  fullName: Dropbox.Api.Team.TeamFolderTeamSharedDropboxError.IsDisallowed
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderTeamSharedDropboxError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsDisallowed
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderTeamSharedDropboxError.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is Disallowed</p>\n"
+  example: []
+  syntax:
+    content: public bool IsDisallowed { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsDisallowed As Boolean
+  overload: Dropbox.Api.Team.TeamFolderTeamSharedDropboxError.IsDisallowed*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.TeamFolderTeamSharedDropboxError.AsDisallowed
+  commentId: P:Dropbox.Api.Team.TeamFolderTeamSharedDropboxError.AsDisallowed
+  id: AsDisallowed
+  parent: Dropbox.Api.Team.TeamFolderTeamSharedDropboxError
+  langs:
+  - csharp
+  - vb
+  name: AsDisallowed
+  nameWithType: TeamFolderTeamSharedDropboxError.AsDisallowed
+  fullName: Dropbox.Api.Team.TeamFolderTeamSharedDropboxError.AsDisallowed
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderTeamSharedDropboxError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsDisallowed
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderTeamSharedDropboxError.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a Disallowed, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public TeamFolderTeamSharedDropboxError.Disallowed AsDisallowed { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.TeamFolderTeamSharedDropboxError.Disallowed
+    content.vb: Public ReadOnly Property AsDisallowed As TeamFolderTeamSharedDropboxError.Disallowed
+  overload: Dropbox.Api.Team.TeamFolderTeamSharedDropboxError.AsDisallowed*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.TeamFolderTeamSharedDropboxError.IsOther
+  commentId: P:Dropbox.Api.Team.TeamFolderTeamSharedDropboxError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Team.TeamFolderTeamSharedDropboxError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: TeamFolderTeamSharedDropboxError.IsOther
+  fullName: Dropbox.Api.Team.TeamFolderTeamSharedDropboxError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderTeamSharedDropboxError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderTeamSharedDropboxError.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Team.TeamFolderTeamSharedDropboxError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.TeamFolderTeamSharedDropboxError.AsOther
+  commentId: P:Dropbox.Api.Team.TeamFolderTeamSharedDropboxError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Team.TeamFolderTeamSharedDropboxError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: TeamFolderTeamSharedDropboxError.AsOther
+  fullName: Dropbox.Api.Team.TeamFolderTeamSharedDropboxError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderTeamSharedDropboxError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderTeamSharedDropboxError.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public TeamFolderTeamSharedDropboxError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.TeamFolderTeamSharedDropboxError.Other
+    content.vb: Public ReadOnly Property AsOther As TeamFolderTeamSharedDropboxError.Other
+  overload: Dropbox.Api.Team.TeamFolderTeamSharedDropboxError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.TeamFolderTeamSharedDropboxError
+  commentId: T:Dropbox.Api.Team.TeamFolderTeamSharedDropboxError
+  parent: Dropbox.Api.Team
+  name: TeamFolderTeamSharedDropboxError
+  nameWithType: TeamFolderTeamSharedDropboxError
+  fullName: Dropbox.Api.Team.TeamFolderTeamSharedDropboxError
+- uid: Dropbox.Api.Team.TeamFolderTeamSharedDropboxError.#ctor*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderTeamSharedDropboxError.#ctor
+  name: TeamFolderTeamSharedDropboxError
+  nameWithType: TeamFolderTeamSharedDropboxError.TeamFolderTeamSharedDropboxError
+  fullName: Dropbox.Api.Team.TeamFolderTeamSharedDropboxError.TeamFolderTeamSharedDropboxError
+- uid: Dropbox.Api.Team.TeamFolderTeamSharedDropboxError.IsDisallowed*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderTeamSharedDropboxError.IsDisallowed
+  name: IsDisallowed
+  nameWithType: TeamFolderTeamSharedDropboxError.IsDisallowed
+  fullName: Dropbox.Api.Team.TeamFolderTeamSharedDropboxError.IsDisallowed
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Team.TeamFolderTeamSharedDropboxError.AsDisallowed*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderTeamSharedDropboxError.AsDisallowed
+  name: AsDisallowed
+  nameWithType: TeamFolderTeamSharedDropboxError.AsDisallowed
+  fullName: Dropbox.Api.Team.TeamFolderTeamSharedDropboxError.AsDisallowed
+- uid: Dropbox.Api.Team.TeamFolderTeamSharedDropboxError.Disallowed
+  commentId: T:Dropbox.Api.Team.TeamFolderTeamSharedDropboxError.Disallowed
+  parent: Dropbox.Api.Team
+  name: TeamFolderTeamSharedDropboxError.Disallowed
+  nameWithType: TeamFolderTeamSharedDropboxError.Disallowed
+  fullName: Dropbox.Api.Team.TeamFolderTeamSharedDropboxError.Disallowed
+- uid: Dropbox.Api.Team.TeamFolderTeamSharedDropboxError.IsOther*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderTeamSharedDropboxError.IsOther
+  name: IsOther
+  nameWithType: TeamFolderTeamSharedDropboxError.IsOther
+  fullName: Dropbox.Api.Team.TeamFolderTeamSharedDropboxError.IsOther
+- uid: Dropbox.Api.Team.TeamFolderTeamSharedDropboxError.AsOther*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderTeamSharedDropboxError.AsOther
+  name: AsOther
+  nameWithType: TeamFolderTeamSharedDropboxError.AsOther
+  fullName: Dropbox.Api.Team.TeamFolderTeamSharedDropboxError.AsOther
+- uid: Dropbox.Api.Team.TeamFolderTeamSharedDropboxError.Other
+  commentId: T:Dropbox.Api.Team.TeamFolderTeamSharedDropboxError.Other
+  parent: Dropbox.Api.Team
+  name: TeamFolderTeamSharedDropboxError.Other
+  nameWithType: TeamFolderTeamSharedDropboxError.Other
+  fullName: Dropbox.Api.Team.TeamFolderTeamSharedDropboxError.Other
+shouldSkipMarkup: true

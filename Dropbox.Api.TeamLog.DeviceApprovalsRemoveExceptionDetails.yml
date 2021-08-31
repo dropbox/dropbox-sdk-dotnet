@@ -1,0 +1,96 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.DeviceApprovalsRemoveExceptionDetails
+  commentId: T:Dropbox.Api.TeamLog.DeviceApprovalsRemoveExceptionDetails
+  id: DeviceApprovalsRemoveExceptionDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.DeviceApprovalsRemoveExceptionDetails.#ctor
+  langs:
+  - csharp
+  - vb
+  name: DeviceApprovalsRemoveExceptionDetails
+  nameWithType: DeviceApprovalsRemoveExceptionDetails
+  fullName: Dropbox.Api.TeamLog.DeviceApprovalsRemoveExceptionDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceApprovalsRemoveExceptionDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: DeviceApprovalsRemoveExceptionDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceApprovalsRemoveExceptionDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Removed members from device approvals exception list.</p>\n"
+  example: []
+  syntax:
+    content: 'public class DeviceApprovalsRemoveExceptionDetails : object'
+    content.vb: >-
+      Public Class DeviceApprovalsRemoveExceptionDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.DeviceApprovalsRemoveExceptionDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.DeviceApprovalsRemoveExceptionDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.DeviceApprovalsRemoveExceptionDetails
+  langs:
+  - csharp
+  - vb
+  name: DeviceApprovalsRemoveExceptionDetails()
+  nameWithType: DeviceApprovalsRemoveExceptionDetails.DeviceApprovalsRemoveExceptionDetails()
+  fullName: Dropbox.Api.TeamLog.DeviceApprovalsRemoveExceptionDetails.DeviceApprovalsRemoveExceptionDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceApprovalsRemoveExceptionDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceApprovalsRemoveExceptionDetails.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.DeviceApprovalsRemoveExceptionDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public DeviceApprovalsRemoveExceptionDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.DeviceApprovalsRemoveExceptionDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.DeviceApprovalsRemoveExceptionDetails
+  commentId: T:Dropbox.Api.TeamLog.DeviceApprovalsRemoveExceptionDetails
+  parent: Dropbox.Api.TeamLog
+  name: DeviceApprovalsRemoveExceptionDetails
+  nameWithType: DeviceApprovalsRemoveExceptionDetails
+  fullName: Dropbox.Api.TeamLog.DeviceApprovalsRemoveExceptionDetails
+- uid: Dropbox.Api.TeamLog.DeviceApprovalsRemoveExceptionDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.DeviceApprovalsRemoveExceptionDetails.#ctor
+  name: DeviceApprovalsRemoveExceptionDetails
+  nameWithType: DeviceApprovalsRemoveExceptionDetails.DeviceApprovalsRemoveExceptionDetails
+  fullName: Dropbox.Api.TeamLog.DeviceApprovalsRemoveExceptionDetails.DeviceApprovalsRemoveExceptionDetails
+shouldSkipMarkup: true

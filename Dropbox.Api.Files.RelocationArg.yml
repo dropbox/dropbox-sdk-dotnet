@@ -1,0 +1,324 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.RelocationArg
+  commentId: T:Dropbox.Api.Files.RelocationArg
+  id: RelocationArg
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.RelocationArg.#ctor
+  - Dropbox.Api.Files.RelocationArg.#ctor(System.String,System.String,System.Boolean,System.Boolean,System.Boolean)
+  - Dropbox.Api.Files.RelocationArg.AllowOwnershipTransfer
+  - Dropbox.Api.Files.RelocationArg.AllowSharedFolder
+  - Dropbox.Api.Files.RelocationArg.Autorename
+  langs:
+  - csharp
+  - vb
+  name: RelocationArg
+  nameWithType: RelocationArg
+  fullName: Dropbox.Api.Files.RelocationArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: RelocationArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationArg.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The relocation arg object</p>\n"
+  example: []
+  syntax:
+    content: 'public class RelocationArg : RelocationPath'
+    content.vb: >-
+      Public Class RelocationArg
+          Inherits RelocationPath
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Files.RelocationPath
+  inheritedMembers:
+  - Dropbox.Api.Files.RelocationPath.FromPath
+  - Dropbox.Api.Files.RelocationPath.ToPath
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.RelocationArg.#ctor(System.String,System.String,System.Boolean,System.Boolean,System.Boolean)
+  commentId: M:Dropbox.Api.Files.RelocationArg.#ctor(System.String,System.String,System.Boolean,System.Boolean,System.Boolean)
+  id: '#ctor(System.String,System.String,System.Boolean,System.Boolean,System.Boolean)'
+  parent: Dropbox.Api.Files.RelocationArg
+  langs:
+  - csharp
+  - vb
+  name: RelocationArg(String, String, Boolean, Boolean, Boolean)
+  nameWithType: RelocationArg.RelocationArg(String, String, Boolean, Boolean, Boolean)
+  fullName: Dropbox.Api.Files.RelocationArg.RelocationArg(System.String, System.String, System.Boolean, System.Boolean, System.Boolean)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationArg.cs
+    startLine: 41
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.RelocationArg\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public RelocationArg(string fromPath, string toPath, bool allowSharedFolder = false, bool autorename = false, bool allowOwnershipTransfer = false)
+    parameters:
+    - id: fromPath
+      type: System.String
+      description: Path in the user&apos;s Dropbox to be copied or moved.
+    - id: toPath
+      type: System.String
+      description: Path in the user&apos;s Dropbox that is the destination.
+    - id: allowSharedFolder
+      type: System.Boolean
+      description: This flag has no effect.
+    - id: autorename
+      type: System.Boolean
+      description: >-
+        If there&apos;s a conflict, have the Dropbox server try to
+
+        autorename the file to avoid the conflict.
+    - id: allowOwnershipTransfer
+      type: System.Boolean
+      description: >-
+        Allow moves by owner even if it would result
+
+        in an ownership transfer for the content being moved. This does not apply to
+
+        copies.
+    content.vb: Public Sub New(fromPath As String, toPath As String, allowSharedFolder As Boolean = False, autorename As Boolean = False, allowOwnershipTransfer As Boolean = False)
+  overload: Dropbox.Api.Files.RelocationArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.RelocationArg.#ctor
+  commentId: M:Dropbox.Api.Files.RelocationArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.RelocationArg
+  langs:
+  - csharp
+  - vb
+  name: RelocationArg()
+  nameWithType: RelocationArg.RelocationArg()
+  fullName: Dropbox.Api.Files.RelocationArg.RelocationArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationArg.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.RelocationArg\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public RelocationArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.RelocationArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.RelocationArg.AllowSharedFolder
+  commentId: P:Dropbox.Api.Files.RelocationArg.AllowSharedFolder
+  id: AllowSharedFolder
+  parent: Dropbox.Api.Files.RelocationArg
+  langs:
+  - csharp
+  - vb
+  name: AllowSharedFolder
+  nameWithType: RelocationArg.AllowSharedFolder
+  fullName: Dropbox.Api.Files.RelocationArg.AllowSharedFolder
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AllowSharedFolder
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationArg.cs
+    startLine: 69
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>This flag has no effect.</p>\n"
+  example: []
+  syntax:
+    content: public bool AllowSharedFolder { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property AllowSharedFolder As Boolean
+  overload: Dropbox.Api.Files.RelocationArg.AllowSharedFolder*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.RelocationArg.Autorename
+  commentId: P:Dropbox.Api.Files.RelocationArg.Autorename
+  id: Autorename
+  parent: Dropbox.Api.Files.RelocationArg
+  langs:
+  - csharp
+  - vb
+  name: Autorename
+  nameWithType: RelocationArg.Autorename
+  fullName: Dropbox.Api.Files.RelocationArg.Autorename
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Autorename
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationArg.cs
+    startLine: 75
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>If there&apos;s a conflict, have the Dropbox server try to autorename the file to\navoid the conflict.</p>\n"
+  example: []
+  syntax:
+    content: public bool Autorename { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property Autorename As Boolean
+  overload: Dropbox.Api.Files.RelocationArg.Autorename*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.RelocationArg.AllowOwnershipTransfer
+  commentId: P:Dropbox.Api.Files.RelocationArg.AllowOwnershipTransfer
+  id: AllowOwnershipTransfer
+  parent: Dropbox.Api.Files.RelocationArg
+  langs:
+  - csharp
+  - vb
+  name: AllowOwnershipTransfer
+  nameWithType: RelocationArg.AllowOwnershipTransfer
+  fullName: Dropbox.Api.Files.RelocationArg.AllowOwnershipTransfer
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AllowOwnershipTransfer
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationArg.cs
+    startLine: 81
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Allow moves by owner even if it would result in an ownership transfer for the\ncontent being moved. This does not apply to copies.</p>\n"
+  example: []
+  syntax:
+    content: public bool AllowOwnershipTransfer { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property AllowOwnershipTransfer As Boolean
+  overload: Dropbox.Api.Files.RelocationArg.AllowOwnershipTransfer*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.RelocationPath
+  commentId: T:Dropbox.Api.Files.RelocationPath
+  parent: Dropbox.Api.Files
+  name: RelocationPath
+  nameWithType: RelocationPath
+  fullName: Dropbox.Api.Files.RelocationPath
+- uid: Dropbox.Api.Files.RelocationPath.FromPath
+  commentId: P:Dropbox.Api.Files.RelocationPath.FromPath
+  parent: Dropbox.Api.Files.RelocationPath
+  name: FromPath
+  nameWithType: RelocationPath.FromPath
+  fullName: Dropbox.Api.Files.RelocationPath.FromPath
+- uid: Dropbox.Api.Files.RelocationPath.ToPath
+  commentId: P:Dropbox.Api.Files.RelocationPath.ToPath
+  parent: Dropbox.Api.Files.RelocationPath
+  name: ToPath
+  nameWithType: RelocationPath.ToPath
+  fullName: Dropbox.Api.Files.RelocationPath.ToPath
+- uid: Dropbox.Api.Files.RelocationArg
+  commentId: T:Dropbox.Api.Files.RelocationArg
+  parent: Dropbox.Api.Files
+  name: RelocationArg
+  nameWithType: RelocationArg
+  fullName: Dropbox.Api.Files.RelocationArg
+- uid: Dropbox.Api.Files.RelocationArg.#ctor*
+  commentId: Overload:Dropbox.Api.Files.RelocationArg.#ctor
+  name: RelocationArg
+  nameWithType: RelocationArg.RelocationArg
+  fullName: Dropbox.Api.Files.RelocationArg.RelocationArg
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Files.RelocationArg.AllowSharedFolder*
+  commentId: Overload:Dropbox.Api.Files.RelocationArg.AllowSharedFolder
+  name: AllowSharedFolder
+  nameWithType: RelocationArg.AllowSharedFolder
+  fullName: Dropbox.Api.Files.RelocationArg.AllowSharedFolder
+- uid: Dropbox.Api.Files.RelocationArg.Autorename*
+  commentId: Overload:Dropbox.Api.Files.RelocationArg.Autorename
+  name: Autorename
+  nameWithType: RelocationArg.Autorename
+  fullName: Dropbox.Api.Files.RelocationArg.Autorename
+- uid: Dropbox.Api.Files.RelocationArg.AllowOwnershipTransfer*
+  commentId: Overload:Dropbox.Api.Files.RelocationArg.AllowOwnershipTransfer
+  name: AllowOwnershipTransfer
+  nameWithType: RelocationArg.AllowOwnershipTransfer
+  fullName: Dropbox.Api.Files.RelocationArg.AllowOwnershipTransfer
+shouldSkipMarkup: true

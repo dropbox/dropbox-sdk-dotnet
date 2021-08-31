@@ -1,0 +1,96 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.DomainInvitesSetInviteNewUserPrefToNoDetails
+  commentId: T:Dropbox.Api.TeamLog.DomainInvitesSetInviteNewUserPrefToNoDetails
+  id: DomainInvitesSetInviteNewUserPrefToNoDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.DomainInvitesSetInviteNewUserPrefToNoDetails.#ctor
+  langs:
+  - csharp
+  - vb
+  name: DomainInvitesSetInviteNewUserPrefToNoDetails
+  nameWithType: DomainInvitesSetInviteNewUserPrefToNoDetails
+  fullName: Dropbox.Api.TeamLog.DomainInvitesSetInviteNewUserPrefToNoDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DomainInvitesSetInviteNewUserPrefToNoDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: DomainInvitesSetInviteNewUserPrefToNoDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DomainInvitesSetInviteNewUserPrefToNoDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Disabled &quot;Automatically invite new users&quot;.</p>\n"
+  example: []
+  syntax:
+    content: 'public class DomainInvitesSetInviteNewUserPrefToNoDetails : object'
+    content.vb: >-
+      Public Class DomainInvitesSetInviteNewUserPrefToNoDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.DomainInvitesSetInviteNewUserPrefToNoDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.DomainInvitesSetInviteNewUserPrefToNoDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.DomainInvitesSetInviteNewUserPrefToNoDetails
+  langs:
+  - csharp
+  - vb
+  name: DomainInvitesSetInviteNewUserPrefToNoDetails()
+  nameWithType: DomainInvitesSetInviteNewUserPrefToNoDetails.DomainInvitesSetInviteNewUserPrefToNoDetails()
+  fullName: Dropbox.Api.TeamLog.DomainInvitesSetInviteNewUserPrefToNoDetails.DomainInvitesSetInviteNewUserPrefToNoDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DomainInvitesSetInviteNewUserPrefToNoDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DomainInvitesSetInviteNewUserPrefToNoDetails.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.DomainInvitesSetInviteNewUserPrefToNoDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public DomainInvitesSetInviteNewUserPrefToNoDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.DomainInvitesSetInviteNewUserPrefToNoDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.DomainInvitesSetInviteNewUserPrefToNoDetails
+  commentId: T:Dropbox.Api.TeamLog.DomainInvitesSetInviteNewUserPrefToNoDetails
+  parent: Dropbox.Api.TeamLog
+  name: DomainInvitesSetInviteNewUserPrefToNoDetails
+  nameWithType: DomainInvitesSetInviteNewUserPrefToNoDetails
+  fullName: Dropbox.Api.TeamLog.DomainInvitesSetInviteNewUserPrefToNoDetails
+- uid: Dropbox.Api.TeamLog.DomainInvitesSetInviteNewUserPrefToNoDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.DomainInvitesSetInviteNewUserPrefToNoDetails.#ctor
+  name: DomainInvitesSetInviteNewUserPrefToNoDetails
+  nameWithType: DomainInvitesSetInviteNewUserPrefToNoDetails.DomainInvitesSetInviteNewUserPrefToNoDetails
+  fullName: Dropbox.Api.TeamLog.DomainInvitesSetInviteNewUserPrefToNoDetails.DomainInvitesSetInviteNewUserPrefToNoDetails
+shouldSkipMarkup: true

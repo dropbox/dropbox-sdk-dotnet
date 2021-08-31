@@ -1,0 +1,191 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDeprecatedDetails
+  commentId: T:Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDeprecatedDetails
+  id: EndedEnterpriseAdminSessionDeprecatedDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDeprecatedDetails.#ctor
+  - Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDeprecatedDetails.#ctor(Dropbox.Api.TeamLog.FedExtraDetails)
+  - Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDeprecatedDetails.FederationExtraDetails
+  langs:
+  - csharp
+  - vb
+  name: EndedEnterpriseAdminSessionDeprecatedDetails
+  nameWithType: EndedEnterpriseAdminSessionDeprecatedDetails
+  fullName: Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDeprecatedDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EndedEnterpriseAdminSessionDeprecatedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: EndedEnterpriseAdminSessionDeprecatedDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EndedEnterpriseAdminSessionDeprecatedDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Ended enterprise admin session.</p>\n"
+  example: []
+  syntax:
+    content: 'public class EndedEnterpriseAdminSessionDeprecatedDetails : object'
+    content.vb: >-
+      Public Class EndedEnterpriseAdminSessionDeprecatedDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDeprecatedDetails.#ctor(Dropbox.Api.TeamLog.FedExtraDetails)
+  commentId: M:Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDeprecatedDetails.#ctor(Dropbox.Api.TeamLog.FedExtraDetails)
+  id: '#ctor(Dropbox.Api.TeamLog.FedExtraDetails)'
+  parent: Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDeprecatedDetails
+  langs:
+  - csharp
+  - vb
+  name: EndedEnterpriseAdminSessionDeprecatedDetails(FedExtraDetails)
+  nameWithType: EndedEnterpriseAdminSessionDeprecatedDetails.EndedEnterpriseAdminSessionDeprecatedDetails(FedExtraDetails)
+  fullName: Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDeprecatedDetails.EndedEnterpriseAdminSessionDeprecatedDetails(Dropbox.Api.TeamLog.FedExtraDetails)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EndedEnterpriseAdminSessionDeprecatedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EndedEnterpriseAdminSessionDeprecatedDetails.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDeprecatedDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public EndedEnterpriseAdminSessionDeprecatedDetails(FedExtraDetails federationExtraDetails)
+    parameters:
+    - id: federationExtraDetails
+      type: Dropbox.Api.TeamLog.FedExtraDetails
+      description: >-
+        More information about the organization or
+
+        team.
+    content.vb: Public Sub New(federationExtraDetails As FedExtraDetails)
+  overload: Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDeprecatedDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDeprecatedDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDeprecatedDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDeprecatedDetails
+  langs:
+  - csharp
+  - vb
+  name: EndedEnterpriseAdminSessionDeprecatedDetails()
+  nameWithType: EndedEnterpriseAdminSessionDeprecatedDetails.EndedEnterpriseAdminSessionDeprecatedDetails()
+  fullName: Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDeprecatedDetails.EndedEnterpriseAdminSessionDeprecatedDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EndedEnterpriseAdminSessionDeprecatedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EndedEnterpriseAdminSessionDeprecatedDetails.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDeprecatedDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public EndedEnterpriseAdminSessionDeprecatedDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDeprecatedDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDeprecatedDetails.FederationExtraDetails
+  commentId: P:Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDeprecatedDetails.FederationExtraDetails
+  id: FederationExtraDetails
+  parent: Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDeprecatedDetails
+  langs:
+  - csharp
+  - vb
+  name: FederationExtraDetails
+  nameWithType: EndedEnterpriseAdminSessionDeprecatedDetails.FederationExtraDetails
+  fullName: Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDeprecatedDetails.FederationExtraDetails
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EndedEnterpriseAdminSessionDeprecatedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: FederationExtraDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EndedEnterpriseAdminSessionDeprecatedDetails.cs
+    startLine: 59
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>More information about the organization or team.</p>\n"
+  example: []
+  syntax:
+    content: public FedExtraDetails FederationExtraDetails { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.FedExtraDetails
+    content.vb: Public Property FederationExtraDetails As FedExtraDetails
+  overload: Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDeprecatedDetails.FederationExtraDetails*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDeprecatedDetails
+  commentId: T:Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDeprecatedDetails
+  parent: Dropbox.Api.TeamLog
+  name: EndedEnterpriseAdminSessionDeprecatedDetails
+  nameWithType: EndedEnterpriseAdminSessionDeprecatedDetails
+  fullName: Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDeprecatedDetails
+- uid: Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDeprecatedDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDeprecatedDetails.#ctor
+  name: EndedEnterpriseAdminSessionDeprecatedDetails
+  nameWithType: EndedEnterpriseAdminSessionDeprecatedDetails.EndedEnterpriseAdminSessionDeprecatedDetails
+  fullName: Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDeprecatedDetails.EndedEnterpriseAdminSessionDeprecatedDetails
+- uid: Dropbox.Api.TeamLog.FedExtraDetails
+  commentId: T:Dropbox.Api.TeamLog.FedExtraDetails
+  parent: Dropbox.Api.TeamLog
+  name: FedExtraDetails
+  nameWithType: FedExtraDetails
+  fullName: Dropbox.Api.TeamLog.FedExtraDetails
+- uid: Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDeprecatedDetails.FederationExtraDetails*
+  commentId: Overload:Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDeprecatedDetails.FederationExtraDetails
+  name: FederationExtraDetails
+  nameWithType: EndedEnterpriseAdminSessionDeprecatedDetails.FederationExtraDetails
+  fullName: Dropbox.Api.TeamLog.EndedEnterpriseAdminSessionDeprecatedDetails.FederationExtraDetails
+shouldSkipMarkup: true

@@ -1,0 +1,120 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.RevokeDeviceSessionBatchError.Other
+  commentId: T:Dropbox.Api.Team.RevokeDeviceSessionBatchError.Other
+  id: RevokeDeviceSessionBatchError.Other
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.RevokeDeviceSessionBatchError.Other.Instance
+  langs:
+  - csharp
+  - vb
+  name: RevokeDeviceSessionBatchError.Other
+  nameWithType: RevokeDeviceSessionBatchError.Other
+  fullName: Dropbox.Api.Team.RevokeDeviceSessionBatchError.Other
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeDeviceSessionBatchError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Other
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeDeviceSessionBatchError.cs
+    startLine: 123
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The other object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Other : RevokeDeviceSessionBatchError'
+    content.vb: >-
+      Public NotInheritable Class Other
+          Inherits RevokeDeviceSessionBatchError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.RevokeDeviceSessionBatchError
+  inheritedMembers:
+  - Dropbox.Api.Team.RevokeDeviceSessionBatchError.IsOther
+  - Dropbox.Api.Team.RevokeDeviceSessionBatchError.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Team.RevokeDeviceSessionBatchError.Other.Instance
+  commentId: F:Dropbox.Api.Team.RevokeDeviceSessionBatchError.Other.Instance
+  id: Instance
+  parent: Dropbox.Api.Team.RevokeDeviceSessionBatchError.Other
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: RevokeDeviceSessionBatchError.Other.Instance
+  fullName: Dropbox.Api.Team.RevokeDeviceSessionBatchError.Other.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeDeviceSessionBatchError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeDeviceSessionBatchError.cs
+    startLine: 147
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>A singleton instance of Other</p>\n"
+  example: []
+  syntax:
+    content: public static readonly RevokeDeviceSessionBatchError.Other Instance
+    return:
+      type: Dropbox.Api.Team.RevokeDeviceSessionBatchError.Other
+    content.vb: Public Shared ReadOnly Instance As RevokeDeviceSessionBatchError.Other
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.RevokeDeviceSessionBatchError
+  commentId: T:Dropbox.Api.Team.RevokeDeviceSessionBatchError
+  parent: Dropbox.Api.Team
+  name: RevokeDeviceSessionBatchError
+  nameWithType: RevokeDeviceSessionBatchError
+  fullName: Dropbox.Api.Team.RevokeDeviceSessionBatchError
+- uid: Dropbox.Api.Team.RevokeDeviceSessionBatchError.IsOther
+  commentId: P:Dropbox.Api.Team.RevokeDeviceSessionBatchError.IsOther
+  parent: Dropbox.Api.Team.RevokeDeviceSessionBatchError
+  name: IsOther
+  nameWithType: RevokeDeviceSessionBatchError.IsOther
+  fullName: Dropbox.Api.Team.RevokeDeviceSessionBatchError.IsOther
+- uid: Dropbox.Api.Team.RevokeDeviceSessionBatchError.AsOther
+  commentId: P:Dropbox.Api.Team.RevokeDeviceSessionBatchError.AsOther
+  parent: Dropbox.Api.Team.RevokeDeviceSessionBatchError
+  name: AsOther
+  nameWithType: RevokeDeviceSessionBatchError.AsOther
+  fullName: Dropbox.Api.Team.RevokeDeviceSessionBatchError.AsOther
+- uid: Dropbox.Api.Team.RevokeDeviceSessionBatchError.Other
+  commentId: T:Dropbox.Api.Team.RevokeDeviceSessionBatchError.Other
+  parent: Dropbox.Api.Team
+  name: RevokeDeviceSessionBatchError.Other
+  nameWithType: RevokeDeviceSessionBatchError.Other
+  fullName: Dropbox.Api.Team.RevokeDeviceSessionBatchError.Other
+shouldSkipMarkup: true

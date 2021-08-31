@@ -1,0 +1,188 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.MembersRecoverArg
+  commentId: T:Dropbox.Api.Team.MembersRecoverArg
+  id: MembersRecoverArg
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.MembersRecoverArg.#ctor
+  - Dropbox.Api.Team.MembersRecoverArg.#ctor(Dropbox.Api.Team.UserSelectorArg)
+  - Dropbox.Api.Team.MembersRecoverArg.User
+  langs:
+  - csharp
+  - vb
+  name: MembersRecoverArg
+  nameWithType: MembersRecoverArg
+  fullName: Dropbox.Api.Team.MembersRecoverArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersRecoverArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: MembersRecoverArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersRecoverArg.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Exactly one of team_member_id, email, or external_id must be provided to identify\nthe user account.</p>\n"
+  example: []
+  syntax:
+    content: 'public class MembersRecoverArg : object'
+    content.vb: >-
+      Public Class MembersRecoverArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.MembersRecoverArg.#ctor(Dropbox.Api.Team.UserSelectorArg)
+  commentId: M:Dropbox.Api.Team.MembersRecoverArg.#ctor(Dropbox.Api.Team.UserSelectorArg)
+  id: '#ctor(Dropbox.Api.Team.UserSelectorArg)'
+  parent: Dropbox.Api.Team.MembersRecoverArg
+  langs:
+  - csharp
+  - vb
+  name: MembersRecoverArg(UserSelectorArg)
+  nameWithType: MembersRecoverArg.MembersRecoverArg(UserSelectorArg)
+  fullName: Dropbox.Api.Team.MembersRecoverArg.MembersRecoverArg(Dropbox.Api.Team.UserSelectorArg)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersRecoverArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersRecoverArg.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.MembersRecoverArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public MembersRecoverArg(UserSelectorArg user)
+    parameters:
+    - id: user
+      type: Dropbox.Api.Team.UserSelectorArg
+      description: Identity of user to recover.
+    content.vb: Public Sub New(user As UserSelectorArg)
+  overload: Dropbox.Api.Team.MembersRecoverArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.MembersRecoverArg.#ctor
+  commentId: M:Dropbox.Api.Team.MembersRecoverArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.MembersRecoverArg
+  langs:
+  - csharp
+  - vb
+  name: MembersRecoverArg()
+  nameWithType: MembersRecoverArg.MembersRecoverArg()
+  fullName: Dropbox.Api.Team.MembersRecoverArg.MembersRecoverArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersRecoverArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersRecoverArg.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.MembersRecoverArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public MembersRecoverArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.MembersRecoverArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.MembersRecoverArg.User
+  commentId: P:Dropbox.Api.Team.MembersRecoverArg.User
+  id: User
+  parent: Dropbox.Api.Team.MembersRecoverArg
+  langs:
+  - csharp
+  - vb
+  name: User
+  nameWithType: MembersRecoverArg.User
+  fullName: Dropbox.Api.Team.MembersRecoverArg.User
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersRecoverArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: User
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersRecoverArg.cs
+    startLine: 59
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Identity of user to recover.</p>\n"
+  example: []
+  syntax:
+    content: public UserSelectorArg User { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.UserSelectorArg
+    content.vb: Public Property User As UserSelectorArg
+  overload: Dropbox.Api.Team.MembersRecoverArg.User*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.MembersRecoverArg
+  commentId: T:Dropbox.Api.Team.MembersRecoverArg
+  parent: Dropbox.Api.Team
+  name: MembersRecoverArg
+  nameWithType: MembersRecoverArg
+  fullName: Dropbox.Api.Team.MembersRecoverArg
+- uid: Dropbox.Api.Team.MembersRecoverArg.#ctor*
+  commentId: Overload:Dropbox.Api.Team.MembersRecoverArg.#ctor
+  name: MembersRecoverArg
+  nameWithType: MembersRecoverArg.MembersRecoverArg
+  fullName: Dropbox.Api.Team.MembersRecoverArg.MembersRecoverArg
+- uid: Dropbox.Api.Team.UserSelectorArg
+  commentId: T:Dropbox.Api.Team.UserSelectorArg
+  parent: Dropbox.Api.Team
+  name: UserSelectorArg
+  nameWithType: UserSelectorArg
+  fullName: Dropbox.Api.Team.UserSelectorArg
+- uid: Dropbox.Api.Team.MembersRecoverArg.User*
+  commentId: Overload:Dropbox.Api.Team.MembersRecoverArg.User
+  name: User
+  nameWithType: MembersRecoverArg.User
+  fullName: Dropbox.Api.Team.MembersRecoverArg.User
+shouldSkipMarkup: true

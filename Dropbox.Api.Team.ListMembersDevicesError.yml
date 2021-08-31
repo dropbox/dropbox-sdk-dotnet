@@ -1,0 +1,288 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.ListMembersDevicesError
+  commentId: T:Dropbox.Api.Team.ListMembersDevicesError
+  id: ListMembersDevicesError
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.ListMembersDevicesError.#ctor
+  - Dropbox.Api.Team.ListMembersDevicesError.AsOther
+  - Dropbox.Api.Team.ListMembersDevicesError.AsReset
+  - Dropbox.Api.Team.ListMembersDevicesError.IsOther
+  - Dropbox.Api.Team.ListMembersDevicesError.IsReset
+  langs:
+  - csharp
+  - vb
+  name: ListMembersDevicesError
+  nameWithType: ListMembersDevicesError
+  fullName: Dropbox.Api.Team.ListMembersDevicesError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListMembersDevicesError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ListMembersDevicesError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListMembersDevicesError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The list members devices error object</p>\n"
+  example: []
+  syntax:
+    content: 'public class ListMembersDevicesError : object'
+    content.vb: >-
+      Public Class ListMembersDevicesError
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Team.ListMembersDevicesError.Other
+  - Dropbox.Api.Team.ListMembersDevicesError.Reset
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.ListMembersDevicesError.#ctor
+  commentId: M:Dropbox.Api.Team.ListMembersDevicesError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.ListMembersDevicesError
+  langs:
+  - csharp
+  - vb
+  name: ListMembersDevicesError()
+  nameWithType: ListMembersDevicesError.ListMembersDevicesError()
+  fullName: Dropbox.Api.Team.ListMembersDevicesError.ListMembersDevicesError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListMembersDevicesError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListMembersDevicesError.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.ListMembersDevicesError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public ListMembersDevicesError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.ListMembersDevicesError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.ListMembersDevicesError.IsReset
+  commentId: P:Dropbox.Api.Team.ListMembersDevicesError.IsReset
+  id: IsReset
+  parent: Dropbox.Api.Team.ListMembersDevicesError
+  langs:
+  - csharp
+  - vb
+  name: IsReset
+  nameWithType: ListMembersDevicesError.IsReset
+  fullName: Dropbox.Api.Team.ListMembersDevicesError.IsReset
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListMembersDevicesError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsReset
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListMembersDevicesError.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is Reset</p>\n"
+  example: []
+  syntax:
+    content: public bool IsReset { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsReset As Boolean
+  overload: Dropbox.Api.Team.ListMembersDevicesError.IsReset*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.ListMembersDevicesError.AsReset
+  commentId: P:Dropbox.Api.Team.ListMembersDevicesError.AsReset
+  id: AsReset
+  parent: Dropbox.Api.Team.ListMembersDevicesError
+  langs:
+  - csharp
+  - vb
+  name: AsReset
+  nameWithType: ListMembersDevicesError.AsReset
+  fullName: Dropbox.Api.Team.ListMembersDevicesError.AsReset
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListMembersDevicesError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsReset
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListMembersDevicesError.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a Reset, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ListMembersDevicesError.Reset AsReset { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.ListMembersDevicesError.Reset
+    content.vb: Public ReadOnly Property AsReset As ListMembersDevicesError.Reset
+  overload: Dropbox.Api.Team.ListMembersDevicesError.AsReset*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.ListMembersDevicesError.IsOther
+  commentId: P:Dropbox.Api.Team.ListMembersDevicesError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Team.ListMembersDevicesError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: ListMembersDevicesError.IsOther
+  fullName: Dropbox.Api.Team.ListMembersDevicesError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListMembersDevicesError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListMembersDevicesError.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Team.ListMembersDevicesError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.ListMembersDevicesError.AsOther
+  commentId: P:Dropbox.Api.Team.ListMembersDevicesError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Team.ListMembersDevicesError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: ListMembersDevicesError.AsOther
+  fullName: Dropbox.Api.Team.ListMembersDevicesError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListMembersDevicesError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListMembersDevicesError.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ListMembersDevicesError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.ListMembersDevicesError.Other
+    content.vb: Public ReadOnly Property AsOther As ListMembersDevicesError.Other
+  overload: Dropbox.Api.Team.ListMembersDevicesError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.ListMembersDevicesError
+  commentId: T:Dropbox.Api.Team.ListMembersDevicesError
+  parent: Dropbox.Api.Team
+  name: ListMembersDevicesError
+  nameWithType: ListMembersDevicesError
+  fullName: Dropbox.Api.Team.ListMembersDevicesError
+- uid: Dropbox.Api.Team.ListMembersDevicesError.#ctor*
+  commentId: Overload:Dropbox.Api.Team.ListMembersDevicesError.#ctor
+  name: ListMembersDevicesError
+  nameWithType: ListMembersDevicesError.ListMembersDevicesError
+  fullName: Dropbox.Api.Team.ListMembersDevicesError.ListMembersDevicesError
+- uid: Dropbox.Api.Team.ListMembersDevicesError.IsReset*
+  commentId: Overload:Dropbox.Api.Team.ListMembersDevicesError.IsReset
+  name: IsReset
+  nameWithType: ListMembersDevicesError.IsReset
+  fullName: Dropbox.Api.Team.ListMembersDevicesError.IsReset
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Team.ListMembersDevicesError.AsReset*
+  commentId: Overload:Dropbox.Api.Team.ListMembersDevicesError.AsReset
+  name: AsReset
+  nameWithType: ListMembersDevicesError.AsReset
+  fullName: Dropbox.Api.Team.ListMembersDevicesError.AsReset
+- uid: Dropbox.Api.Team.ListMembersDevicesError.Reset
+  commentId: T:Dropbox.Api.Team.ListMembersDevicesError.Reset
+  parent: Dropbox.Api.Team
+  name: ListMembersDevicesError.Reset
+  nameWithType: ListMembersDevicesError.Reset
+  fullName: Dropbox.Api.Team.ListMembersDevicesError.Reset
+- uid: Dropbox.Api.Team.ListMembersDevicesError.IsOther*
+  commentId: Overload:Dropbox.Api.Team.ListMembersDevicesError.IsOther
+  name: IsOther
+  nameWithType: ListMembersDevicesError.IsOther
+  fullName: Dropbox.Api.Team.ListMembersDevicesError.IsOther
+- uid: Dropbox.Api.Team.ListMembersDevicesError.AsOther*
+  commentId: Overload:Dropbox.Api.Team.ListMembersDevicesError.AsOther
+  name: AsOther
+  nameWithType: ListMembersDevicesError.AsOther
+  fullName: Dropbox.Api.Team.ListMembersDevicesError.AsOther
+- uid: Dropbox.Api.Team.ListMembersDevicesError.Other
+  commentId: T:Dropbox.Api.Team.ListMembersDevicesError.Other
+  parent: Dropbox.Api.Team
+  name: ListMembersDevicesError.Other
+  nameWithType: ListMembersDevicesError.Other
+  fullName: Dropbox.Api.Team.ListMembersDevicesError.Other
+shouldSkipMarkup: true

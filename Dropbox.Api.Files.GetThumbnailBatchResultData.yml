@@ -1,0 +1,244 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.GetThumbnailBatchResultData
+  commentId: T:Dropbox.Api.Files.GetThumbnailBatchResultData
+  id: GetThumbnailBatchResultData
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.GetThumbnailBatchResultData.#ctor
+  - Dropbox.Api.Files.GetThumbnailBatchResultData.#ctor(Dropbox.Api.Files.FileMetadata,System.String)
+  - Dropbox.Api.Files.GetThumbnailBatchResultData.Metadata
+  - Dropbox.Api.Files.GetThumbnailBatchResultData.Thumbnail
+  langs:
+  - csharp
+  - vb
+  name: GetThumbnailBatchResultData
+  nameWithType: GetThumbnailBatchResultData
+  fullName: Dropbox.Api.Files.GetThumbnailBatchResultData
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetThumbnailBatchResultData.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GetThumbnailBatchResultData
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetThumbnailBatchResultData.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The get thumbnail batch result data object</p>\n"
+  example: []
+  syntax:
+    content: 'public class GetThumbnailBatchResultData : object'
+    content.vb: >-
+      Public Class GetThumbnailBatchResultData
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.GetThumbnailBatchResultData.#ctor(Dropbox.Api.Files.FileMetadata,System.String)
+  commentId: M:Dropbox.Api.Files.GetThumbnailBatchResultData.#ctor(Dropbox.Api.Files.FileMetadata,System.String)
+  id: '#ctor(Dropbox.Api.Files.FileMetadata,System.String)'
+  parent: Dropbox.Api.Files.GetThumbnailBatchResultData
+  langs:
+  - csharp
+  - vb
+  name: GetThumbnailBatchResultData(FileMetadata, String)
+  nameWithType: GetThumbnailBatchResultData.GetThumbnailBatchResultData(FileMetadata, String)
+  fullName: Dropbox.Api.Files.GetThumbnailBatchResultData.GetThumbnailBatchResultData(Dropbox.Api.Files.FileMetadata, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetThumbnailBatchResultData.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetThumbnailBatchResultData.cs
+    startLine: 36
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.GetThumbnailBatchResultData\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public GetThumbnailBatchResultData(FileMetadata metadata, string thumbnail)
+    parameters:
+    - id: metadata
+      type: Dropbox.Api.Files.FileMetadata
+      description: The metadata
+    - id: thumbnail
+      type: System.String
+      description: >-
+        A string containing the base64-encoded thumbnail data for
+
+        this file.
+    content.vb: Public Sub New(metadata As FileMetadata, thumbnail As String)
+  overload: Dropbox.Api.Files.GetThumbnailBatchResultData.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.GetThumbnailBatchResultData.#ctor
+  commentId: M:Dropbox.Api.Files.GetThumbnailBatchResultData.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.GetThumbnailBatchResultData
+  langs:
+  - csharp
+  - vb
+  name: GetThumbnailBatchResultData()
+  nameWithType: GetThumbnailBatchResultData.GetThumbnailBatchResultData()
+  fullName: Dropbox.Api.Files.GetThumbnailBatchResultData.GetThumbnailBatchResultData()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetThumbnailBatchResultData.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetThumbnailBatchResultData.cs
+    startLine: 59
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.GetThumbnailBatchResultData\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public GetThumbnailBatchResultData()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.GetThumbnailBatchResultData.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.GetThumbnailBatchResultData.Metadata
+  commentId: P:Dropbox.Api.Files.GetThumbnailBatchResultData.Metadata
+  id: Metadata
+  parent: Dropbox.Api.Files.GetThumbnailBatchResultData
+  langs:
+  - csharp
+  - vb
+  name: Metadata
+  nameWithType: GetThumbnailBatchResultData.Metadata
+  fullName: Dropbox.Api.Files.GetThumbnailBatchResultData.Metadata
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetThumbnailBatchResultData.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Metadata
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetThumbnailBatchResultData.cs
+    startLine: 67
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets the metadata of the get thumbnail batch result data</p>\n"
+  example: []
+  syntax:
+    content: public FileMetadata Metadata { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.FileMetadata
+    content.vb: Public Property Metadata As FileMetadata
+  overload: Dropbox.Api.Files.GetThumbnailBatchResultData.Metadata*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.GetThumbnailBatchResultData.Thumbnail
+  commentId: P:Dropbox.Api.Files.GetThumbnailBatchResultData.Thumbnail
+  id: Thumbnail
+  parent: Dropbox.Api.Files.GetThumbnailBatchResultData
+  langs:
+  - csharp
+  - vb
+  name: Thumbnail
+  nameWithType: GetThumbnailBatchResultData.Thumbnail
+  fullName: Dropbox.Api.Files.GetThumbnailBatchResultData.Thumbnail
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetThumbnailBatchResultData.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Thumbnail
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetThumbnailBatchResultData.cs
+    startLine: 72
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>A string containing the base64-encoded thumbnail data for this file.</p>\n"
+  example: []
+  syntax:
+    content: public string Thumbnail { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Thumbnail As String
+  overload: Dropbox.Api.Files.GetThumbnailBatchResultData.Thumbnail*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.GetThumbnailBatchResultData
+  commentId: T:Dropbox.Api.Files.GetThumbnailBatchResultData
+  parent: Dropbox.Api.Files
+  name: GetThumbnailBatchResultData
+  nameWithType: GetThumbnailBatchResultData
+  fullName: Dropbox.Api.Files.GetThumbnailBatchResultData
+- uid: Dropbox.Api.Files.GetThumbnailBatchResultData.#ctor*
+  commentId: Overload:Dropbox.Api.Files.GetThumbnailBatchResultData.#ctor
+  name: GetThumbnailBatchResultData
+  nameWithType: GetThumbnailBatchResultData.GetThumbnailBatchResultData
+  fullName: Dropbox.Api.Files.GetThumbnailBatchResultData.GetThumbnailBatchResultData
+- uid: Dropbox.Api.Files.FileMetadata
+  commentId: T:Dropbox.Api.Files.FileMetadata
+  parent: Dropbox.Api.Files
+  name: FileMetadata
+  nameWithType: FileMetadata
+  fullName: Dropbox.Api.Files.FileMetadata
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Files.GetThumbnailBatchResultData.Metadata*
+  commentId: Overload:Dropbox.Api.Files.GetThumbnailBatchResultData.Metadata
+  name: Metadata
+  nameWithType: GetThumbnailBatchResultData.Metadata
+  fullName: Dropbox.Api.Files.GetThumbnailBatchResultData.Metadata
+- uid: Dropbox.Api.Files.GetThumbnailBatchResultData.Thumbnail*
+  commentId: Overload:Dropbox.Api.Files.GetThumbnailBatchResultData.Thumbnail
+  name: Thumbnail
+  nameWithType: GetThumbnailBatchResultData.Thumbnail
+  fullName: Dropbox.Api.Files.GetThumbnailBatchResultData.Thumbnail
+shouldSkipMarkup: true

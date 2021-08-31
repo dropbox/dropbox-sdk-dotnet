@@ -1,0 +1,369 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.VisibilityPolicy
+  commentId: T:Dropbox.Api.Sharing.VisibilityPolicy
+  id: VisibilityPolicy
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.VisibilityPolicy.#ctor
+  - Dropbox.Api.Sharing.VisibilityPolicy.#ctor(Dropbox.Api.Sharing.RequestedVisibility,Dropbox.Api.Sharing.AlphaResolvedVisibility,System.Boolean,Dropbox.Api.Sharing.VisibilityPolicyDisallowedReason)
+  - Dropbox.Api.Sharing.VisibilityPolicy.Allowed
+  - Dropbox.Api.Sharing.VisibilityPolicy.DisallowedReason
+  - Dropbox.Api.Sharing.VisibilityPolicy.Policy
+  - Dropbox.Api.Sharing.VisibilityPolicy.ResolvedPolicy
+  langs:
+  - csharp
+  - vb
+  name: VisibilityPolicy
+  nameWithType: VisibilityPolicy
+  fullName: Dropbox.Api.Sharing.VisibilityPolicy
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/VisibilityPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: VisibilityPolicy
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/VisibilityPolicy.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The visibility policy object</p>\n"
+  example: []
+  syntax:
+    content: 'public class VisibilityPolicy : object'
+    content.vb: >-
+      Public Class VisibilityPolicy
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Sharing.VisibilityPolicy.#ctor(Dropbox.Api.Sharing.RequestedVisibility,Dropbox.Api.Sharing.AlphaResolvedVisibility,System.Boolean,Dropbox.Api.Sharing.VisibilityPolicyDisallowedReason)
+  commentId: M:Dropbox.Api.Sharing.VisibilityPolicy.#ctor(Dropbox.Api.Sharing.RequestedVisibility,Dropbox.Api.Sharing.AlphaResolvedVisibility,System.Boolean,Dropbox.Api.Sharing.VisibilityPolicyDisallowedReason)
+  id: '#ctor(Dropbox.Api.Sharing.RequestedVisibility,Dropbox.Api.Sharing.AlphaResolvedVisibility,System.Boolean,Dropbox.Api.Sharing.VisibilityPolicyDisallowedReason)'
+  parent: Dropbox.Api.Sharing.VisibilityPolicy
+  langs:
+  - csharp
+  - vb
+  name: VisibilityPolicy(RequestedVisibility, AlphaResolvedVisibility, Boolean, VisibilityPolicyDisallowedReason)
+  nameWithType: VisibilityPolicy.VisibilityPolicy(RequestedVisibility, AlphaResolvedVisibility, Boolean, VisibilityPolicyDisallowedReason)
+  fullName: Dropbox.Api.Sharing.VisibilityPolicy.VisibilityPolicy(Dropbox.Api.Sharing.RequestedVisibility, Dropbox.Api.Sharing.AlphaResolvedVisibility, System.Boolean, Dropbox.Api.Sharing.VisibilityPolicyDisallowedReason)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/VisibilityPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/VisibilityPolicy.cs
+    startLine: 44
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.VisibilityPolicy\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public VisibilityPolicy(RequestedVisibility policy, AlphaResolvedVisibility resolvedPolicy, bool allowed, VisibilityPolicyDisallowedReason disallowedReason = null)
+    parameters:
+    - id: policy
+      type: Dropbox.Api.Sharing.RequestedVisibility
+      description: >-
+        This is the value to submit when saving the visibility
+
+        setting.
+    - id: resolvedPolicy
+      type: Dropbox.Api.Sharing.AlphaResolvedVisibility
+      description: >-
+        This is what the effective policy would be, if you
+
+        selected this option. The resolved policy is obtained after considering external
+
+        effects such as shared folder settings and team policy. This value is guaranteed to
+
+        be provided.
+    - id: allowed
+      type: System.Boolean
+      description: >-
+        Whether the user is permitted to set the visibility to this
+
+        policy.
+    - id: disallowedReason
+      type: Dropbox.Api.Sharing.VisibilityPolicyDisallowedReason
+      description: >-
+        If <code data-dev-comment-type="paramref" class="paramref">allowed</code> is <code>false</code>, this
+
+        will provide the reason that the user is not permitted to set the visibility to
+
+        this policy.
+    content.vb: Public Sub New(policy As RequestedVisibility, resolvedPolicy As AlphaResolvedVisibility, allowed As Boolean, disallowedReason As VisibilityPolicyDisallowedReason = Nothing)
+  overload: Dropbox.Api.Sharing.VisibilityPolicy.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.VisibilityPolicy.#ctor
+  commentId: M:Dropbox.Api.Sharing.VisibilityPolicy.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Sharing.VisibilityPolicy
+  langs:
+  - csharp
+  - vb
+  name: VisibilityPolicy()
+  nameWithType: VisibilityPolicy.VisibilityPolicy()
+  fullName: Dropbox.Api.Sharing.VisibilityPolicy.VisibilityPolicy()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/VisibilityPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/VisibilityPolicy.cs
+    startLine: 71
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.VisibilityPolicy\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public VisibilityPolicy()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Sharing.VisibilityPolicy.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.VisibilityPolicy.Policy
+  commentId: P:Dropbox.Api.Sharing.VisibilityPolicy.Policy
+  id: Policy
+  parent: Dropbox.Api.Sharing.VisibilityPolicy
+  langs:
+  - csharp
+  - vb
+  name: Policy
+  nameWithType: VisibilityPolicy.Policy
+  fullName: Dropbox.Api.Sharing.VisibilityPolicy.Policy
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/VisibilityPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Policy
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/VisibilityPolicy.cs
+    startLine: 79
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>This is the value to submit when saving the visibility setting.</p>\n"
+  example: []
+  syntax:
+    content: public RequestedVisibility Policy { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.RequestedVisibility
+    content.vb: Public Property Policy As RequestedVisibility
+  overload: Dropbox.Api.Sharing.VisibilityPolicy.Policy*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.VisibilityPolicy.ResolvedPolicy
+  commentId: P:Dropbox.Api.Sharing.VisibilityPolicy.ResolvedPolicy
+  id: ResolvedPolicy
+  parent: Dropbox.Api.Sharing.VisibilityPolicy
+  langs:
+  - csharp
+  - vb
+  name: ResolvedPolicy
+  nameWithType: VisibilityPolicy.ResolvedPolicy
+  fullName: Dropbox.Api.Sharing.VisibilityPolicy.ResolvedPolicy
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/VisibilityPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ResolvedPolicy
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/VisibilityPolicy.cs
+    startLine: 86
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>This is what the effective policy would be, if you selected this option. The\nresolved policy is obtained after considering external effects such as shared\nfolder settings and team policy. This value is guaranteed to be provided.</p>\n"
+  example: []
+  syntax:
+    content: public AlphaResolvedVisibility ResolvedPolicy { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.AlphaResolvedVisibility
+    content.vb: Public Property ResolvedPolicy As AlphaResolvedVisibility
+  overload: Dropbox.Api.Sharing.VisibilityPolicy.ResolvedPolicy*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.VisibilityPolicy.Allowed
+  commentId: P:Dropbox.Api.Sharing.VisibilityPolicy.Allowed
+  id: Allowed
+  parent: Dropbox.Api.Sharing.VisibilityPolicy
+  langs:
+  - csharp
+  - vb
+  name: Allowed
+  nameWithType: VisibilityPolicy.Allowed
+  fullName: Dropbox.Api.Sharing.VisibilityPolicy.Allowed
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/VisibilityPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Allowed
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/VisibilityPolicy.cs
+    startLine: 91
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Whether the user is permitted to set the visibility to this policy.</p>\n"
+  example: []
+  syntax:
+    content: public bool Allowed { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property Allowed As Boolean
+  overload: Dropbox.Api.Sharing.VisibilityPolicy.Allowed*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.VisibilityPolicy.DisallowedReason
+  commentId: P:Dropbox.Api.Sharing.VisibilityPolicy.DisallowedReason
+  id: DisallowedReason
+  parent: Dropbox.Api.Sharing.VisibilityPolicy
+  langs:
+  - csharp
+  - vb
+  name: DisallowedReason
+  nameWithType: VisibilityPolicy.DisallowedReason
+  fullName: Dropbox.Api.Sharing.VisibilityPolicy.DisallowedReason
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/VisibilityPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: DisallowedReason
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/VisibilityPolicy.cs
+    startLine: 97
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>If <xref href=\"Dropbox.Api.Sharing.VisibilityPolicy.Allowed\" data-throw-if-not-resolved=\"false\"></xref> is <code>false</code>, this will provide the reason that\nthe user is not permitted to set the visibility to this policy.</p>\n"
+  example: []
+  syntax:
+    content: public VisibilityPolicyDisallowedReason DisallowedReason { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.VisibilityPolicyDisallowedReason
+    content.vb: Public Property DisallowedReason As VisibilityPolicyDisallowedReason
+  overload: Dropbox.Api.Sharing.VisibilityPolicy.DisallowedReason*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.VisibilityPolicy
+  commentId: T:Dropbox.Api.Sharing.VisibilityPolicy
+  name: VisibilityPolicy
+  nameWithType: VisibilityPolicy
+  fullName: Dropbox.Api.Sharing.VisibilityPolicy
+- uid: Dropbox.Api.Sharing.VisibilityPolicy.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.VisibilityPolicy.#ctor
+  name: VisibilityPolicy
+  nameWithType: VisibilityPolicy.VisibilityPolicy
+  fullName: Dropbox.Api.Sharing.VisibilityPolicy.VisibilityPolicy
+- uid: Dropbox.Api.Sharing.RequestedVisibility
+  commentId: T:Dropbox.Api.Sharing.RequestedVisibility
+  parent: Dropbox.Api.Sharing
+  name: RequestedVisibility
+  nameWithType: RequestedVisibility
+  fullName: Dropbox.Api.Sharing.RequestedVisibility
+- uid: Dropbox.Api.Sharing.AlphaResolvedVisibility
+  commentId: T:Dropbox.Api.Sharing.AlphaResolvedVisibility
+  parent: Dropbox.Api.Sharing
+  name: AlphaResolvedVisibility
+  nameWithType: AlphaResolvedVisibility
+  fullName: Dropbox.Api.Sharing.AlphaResolvedVisibility
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Sharing.VisibilityPolicyDisallowedReason
+  commentId: T:Dropbox.Api.Sharing.VisibilityPolicyDisallowedReason
+  parent: Dropbox.Api.Sharing
+  name: VisibilityPolicyDisallowedReason
+  nameWithType: VisibilityPolicyDisallowedReason
+  fullName: Dropbox.Api.Sharing.VisibilityPolicyDisallowedReason
+- uid: Dropbox.Api.Sharing.VisibilityPolicy.Policy*
+  commentId: Overload:Dropbox.Api.Sharing.VisibilityPolicy.Policy
+  name: Policy
+  nameWithType: VisibilityPolicy.Policy
+  fullName: Dropbox.Api.Sharing.VisibilityPolicy.Policy
+- uid: Dropbox.Api.Sharing.VisibilityPolicy.ResolvedPolicy*
+  commentId: Overload:Dropbox.Api.Sharing.VisibilityPolicy.ResolvedPolicy
+  name: ResolvedPolicy
+  nameWithType: VisibilityPolicy.ResolvedPolicy
+  fullName: Dropbox.Api.Sharing.VisibilityPolicy.ResolvedPolicy
+- uid: Dropbox.Api.Sharing.VisibilityPolicy.Allowed*
+  commentId: Overload:Dropbox.Api.Sharing.VisibilityPolicy.Allowed
+  name: Allowed
+  nameWithType: VisibilityPolicy.Allowed
+  fullName: Dropbox.Api.Sharing.VisibilityPolicy.Allowed
+- uid: Dropbox.Api.Sharing.VisibilityPolicy.Allowed
+  commentId: P:Dropbox.Api.Sharing.VisibilityPolicy.Allowed
+  isExternal: true
+- uid: Dropbox.Api.Sharing.VisibilityPolicy.DisallowedReason*
+  commentId: Overload:Dropbox.Api.Sharing.VisibilityPolicy.DisallowedReason
+  name: DisallowedReason
+  nameWithType: VisibilityPolicy.DisallowedReason
+  fullName: Dropbox.Api.Sharing.VisibilityPolicy.DisallowedReason
+shouldSkipMarkup: true

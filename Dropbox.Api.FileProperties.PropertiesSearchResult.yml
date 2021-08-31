@@ -1,0 +1,402 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.FileProperties.PropertiesSearchResult
+  commentId: T:Dropbox.Api.FileProperties.PropertiesSearchResult
+  id: PropertiesSearchResult
+  parent: Dropbox.Api.FileProperties
+  children:
+  - Dropbox.Api.FileProperties.PropertiesSearchResult.#ctor
+  - Dropbox.Api.FileProperties.PropertiesSearchResult.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.FileProperties.PropertiesSearchMatch},System.String)
+  - Dropbox.Api.FileProperties.PropertiesSearchResult.Cursor
+  - Dropbox.Api.FileProperties.PropertiesSearchResult.Matches
+  langs:
+  - csharp
+  - vb
+  name: PropertiesSearchResult
+  nameWithType: PropertiesSearchResult
+  fullName: Dropbox.Api.FileProperties.PropertiesSearchResult
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertiesSearchResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PropertiesSearchResult
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertiesSearchResult.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>The properties search result object</p>\n"
+  example: []
+  syntax:
+    content: 'public class PropertiesSearchResult : object'
+    content.vb: >-
+      Public Class PropertiesSearchResult
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.FileProperties.PropertiesSearchResult.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.FileProperties.PropertiesSearchMatch},System.String)
+  commentId: M:Dropbox.Api.FileProperties.PropertiesSearchResult.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.FileProperties.PropertiesSearchMatch},System.String)
+  id: '#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.FileProperties.PropertiesSearchMatch},System.String)'
+  parent: Dropbox.Api.FileProperties.PropertiesSearchResult
+  langs:
+  - csharp
+  - vb
+  name: PropertiesSearchResult(System.Collections.Generic.IEnumerable<PropertiesSearchMatch>, String)
+  nameWithType: PropertiesSearchResult.PropertiesSearchResult(System.Collections.Generic.IEnumerable<PropertiesSearchMatch>, String)
+  fullName: Dropbox.Api.FileProperties.PropertiesSearchResult.PropertiesSearchResult(System.Collections.Generic.IEnumerable<Dropbox.Api.FileProperties.PropertiesSearchMatch>, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertiesSearchResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertiesSearchResult.cs
+    startLine: 38
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.FileProperties.PropertiesSearchResult\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public PropertiesSearchResult(System.Collections.Generic.IEnumerable<PropertiesSearchMatch> matches, string cursor = null)
+    parameters:
+    - id: matches
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.FileProperties.PropertiesSearchMatch}
+      description: A list (possibly empty) of matches for the query.
+    - id: cursor
+      type: System.String
+      description: >-
+        Pass the cursor into <xref href="Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.PropertiesSearchContinueAsync(Dropbox.Api.FileProperties.PropertiesSearchContinueArg)" data-throw-if-not-resolved="false"></xref> to continue to receive search results. Cursor will be null when there are no
+
+        more results.
+    content.vb: Public Sub New(matches As System.Collections.Generic.IEnumerable(Of PropertiesSearchMatch), cursor As String = Nothing)
+  overload: Dropbox.Api.FileProperties.PropertiesSearchResult.#ctor*
+  nameWithType.vb: PropertiesSearchResult.PropertiesSearchResult(System.Collections.Generic.IEnumerable(Of PropertiesSearchMatch), String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.FileProperties.PropertiesSearchResult.PropertiesSearchResult(System.Collections.Generic.IEnumerable(Of Dropbox.Api.FileProperties.PropertiesSearchMatch), System.String)
+  name.vb: PropertiesSearchResult(System.Collections.Generic.IEnumerable(Of PropertiesSearchMatch), String)
+- uid: Dropbox.Api.FileProperties.PropertiesSearchResult.#ctor
+  commentId: M:Dropbox.Api.FileProperties.PropertiesSearchResult.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.FileProperties.PropertiesSearchResult
+  langs:
+  - csharp
+  - vb
+  name: PropertiesSearchResult()
+  nameWithType: PropertiesSearchResult.PropertiesSearchResult()
+  fullName: Dropbox.Api.FileProperties.PropertiesSearchResult.PropertiesSearchResult()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertiesSearchResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertiesSearchResult.cs
+    startLine: 66
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.FileProperties.PropertiesSearchResult\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public PropertiesSearchResult()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.FileProperties.PropertiesSearchResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileProperties.PropertiesSearchResult.Matches
+  commentId: P:Dropbox.Api.FileProperties.PropertiesSearchResult.Matches
+  id: Matches
+  parent: Dropbox.Api.FileProperties.PropertiesSearchResult
+  langs:
+  - csharp
+  - vb
+  name: Matches
+  nameWithType: PropertiesSearchResult.Matches
+  fullName: Dropbox.Api.FileProperties.PropertiesSearchResult.Matches
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertiesSearchResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Matches
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertiesSearchResult.cs
+    startLine: 74
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>A list (possibly empty) of matches for the query.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<PropertiesSearchMatch> Matches { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{Dropbox.Api.FileProperties.PropertiesSearchMatch}
+    content.vb: Public Property Matches As System.Collections.Generic.IList(Of PropertiesSearchMatch)
+  overload: Dropbox.Api.FileProperties.PropertiesSearchResult.Matches*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.FileProperties.PropertiesSearchResult.Cursor
+  commentId: P:Dropbox.Api.FileProperties.PropertiesSearchResult.Cursor
+  id: Cursor
+  parent: Dropbox.Api.FileProperties.PropertiesSearchResult
+  langs:
+  - csharp
+  - vb
+  name: Cursor
+  nameWithType: PropertiesSearchResult.Cursor
+  fullName: Dropbox.Api.FileProperties.PropertiesSearchResult.Cursor
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertiesSearchResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Cursor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertiesSearchResult.cs
+    startLine: 82
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Pass the cursor into <xref href=\"Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.PropertiesSearchContinueAsync(Dropbox.Api.FileProperties.PropertiesSearchContinueArg)\" data-throw-if-not-resolved=\"false\"></xref> to continue to receive search results. Cursor will be null when there are no\nmore results.</p>\n"
+  example: []
+  syntax:
+    content: public string Cursor { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Cursor As String
+  overload: Dropbox.Api.FileProperties.PropertiesSearchResult.Cursor*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.FileProperties
+  commentId: N:Dropbox.Api.FileProperties
+  name: Dropbox.Api.FileProperties
+  nameWithType: Dropbox.Api.FileProperties
+  fullName: Dropbox.Api.FileProperties
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.FileProperties.PropertiesSearchResult
+  commentId: T:Dropbox.Api.FileProperties.PropertiesSearchResult
+  parent: Dropbox.Api.FileProperties
+  name: PropertiesSearchResult
+  nameWithType: PropertiesSearchResult
+  fullName: Dropbox.Api.FileProperties.PropertiesSearchResult
+- uid: Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.PropertiesSearchContinueAsync(Dropbox.Api.FileProperties.PropertiesSearchContinueArg)
+  commentId: M:Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.PropertiesSearchContinueAsync(Dropbox.Api.FileProperties.PropertiesSearchContinueArg)
+  isExternal: true
+- uid: Dropbox.Api.FileProperties.PropertiesSearchResult.#ctor*
+  commentId: Overload:Dropbox.Api.FileProperties.PropertiesSearchResult.#ctor
+  name: PropertiesSearchResult
+  nameWithType: PropertiesSearchResult.PropertiesSearchResult
+  fullName: Dropbox.Api.FileProperties.PropertiesSearchResult.PropertiesSearchResult
+- uid: System.Collections.Generic.IEnumerable{Dropbox.Api.FileProperties.PropertiesSearchMatch}
+  commentId: '!:System.Collections.Generic.IEnumerable{Dropbox.Api.FileProperties.PropertiesSearchMatch}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<PropertiesSearchMatch>
+  nameWithType: System.Collections.Generic.IEnumerable<PropertiesSearchMatch>
+  fullName: System.Collections.Generic.IEnumerable<Dropbox.Api.FileProperties.PropertiesSearchMatch>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of PropertiesSearchMatch)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Dropbox.Api.FileProperties.PropertiesSearchMatch)
+  name.vb: System.Collections.Generic.IEnumerable(Of PropertiesSearchMatch)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.FileProperties.PropertiesSearchMatch
+    name: PropertiesSearchMatch
+    nameWithType: PropertiesSearchMatch
+    fullName: Dropbox.Api.FileProperties.PropertiesSearchMatch
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.FileProperties.PropertiesSearchMatch
+    name: PropertiesSearchMatch
+    nameWithType: PropertiesSearchMatch
+    fullName: Dropbox.Api.FileProperties.PropertiesSearchMatch
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: System.Collections.Generic.IEnumerable<>
+  nameWithType: System.Collections.Generic.IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: System.Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.FileProperties.PropertiesSearchResult.Matches*
+  commentId: Overload:Dropbox.Api.FileProperties.PropertiesSearchResult.Matches
+  name: Matches
+  nameWithType: PropertiesSearchResult.Matches
+  fullName: Dropbox.Api.FileProperties.PropertiesSearchResult.Matches
+- uid: System.Collections.Generic.IList{Dropbox.Api.FileProperties.PropertiesSearchMatch}
+  commentId: '!:System.Collections.Generic.IList{Dropbox.Api.FileProperties.PropertiesSearchMatch}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<PropertiesSearchMatch>
+  nameWithType: System.Collections.Generic.IList<PropertiesSearchMatch>
+  fullName: System.Collections.Generic.IList<Dropbox.Api.FileProperties.PropertiesSearchMatch>
+  nameWithType.vb: System.Collections.Generic.IList(Of PropertiesSearchMatch)
+  fullName.vb: System.Collections.Generic.IList(Of Dropbox.Api.FileProperties.PropertiesSearchMatch)
+  name.vb: System.Collections.Generic.IList(Of PropertiesSearchMatch)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.FileProperties.PropertiesSearchMatch
+    name: PropertiesSearchMatch
+    nameWithType: PropertiesSearchMatch
+    fullName: Dropbox.Api.FileProperties.PropertiesSearchMatch
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.FileProperties.PropertiesSearchMatch
+    name: PropertiesSearchMatch
+    nameWithType: PropertiesSearchMatch
+    fullName: Dropbox.Api.FileProperties.PropertiesSearchMatch
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  isExternal: true
+  name: System.Collections.Generic.IList<>
+  nameWithType: System.Collections.Generic.IList<>
+  fullName: System.Collections.Generic.IList<>
+  nameWithType.vb: System.Collections.Generic.IList(Of )
+  fullName.vb: System.Collections.Generic.IList(Of )
+  name.vb: System.Collections.Generic.IList(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.FileProperties.PropertiesSearchResult.Cursor*
+  commentId: Overload:Dropbox.Api.FileProperties.PropertiesSearchResult.Cursor
+  name: Cursor
+  nameWithType: PropertiesSearchResult.Cursor
+  fullName: Dropbox.Api.FileProperties.PropertiesSearchResult.Cursor
+shouldSkipMarkup: true

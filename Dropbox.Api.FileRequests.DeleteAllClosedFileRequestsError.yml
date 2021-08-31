@@ -1,0 +1,846 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError
+  commentId: T:Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError
+  id: DeleteAllClosedFileRequestsError
+  parent: Dropbox.Api.FileRequests
+  children:
+  - Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.#ctor
+  - Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsAppLacksAccess
+  - Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsDisabledForTeam
+  - Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsEmailUnverified
+  - Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsNoPermission
+  - Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsNotAFolder
+  - Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsNotFound
+  - Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsOther
+  - Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsValidationError
+  - Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsAppLacksAccess
+  - Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsDisabledForTeam
+  - Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsEmailUnverified
+  - Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsNoPermission
+  - Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsNotAFolder
+  - Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsNotFound
+  - Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsOther
+  - Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsValidationError
+  langs:
+  - csharp
+  - vb
+  name: DeleteAllClosedFileRequestsError
+  nameWithType: DeleteAllClosedFileRequestsError
+  fullName: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteAllClosedFileRequestsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: DeleteAllClosedFileRequestsError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteAllClosedFileRequestsError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>There was an error deleting all closed file requests.</p>\n"
+  example: []
+  syntax:
+    content: 'public class DeleteAllClosedFileRequestsError : object'
+    content.vb: >-
+      Public Class DeleteAllClosedFileRequestsError
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AppLacksAccess
+  - Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.DisabledForTeam
+  - Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.EmailUnverified
+  - Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.NoPermission
+  - Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.NotAFolder
+  - Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.NotFound
+  - Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.Other
+  - Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.ValidationError
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.#ctor
+  commentId: M:Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError
+  langs:
+  - csharp
+  - vb
+  name: DeleteAllClosedFileRequestsError()
+  nameWithType: DeleteAllClosedFileRequestsError.DeleteAllClosedFileRequestsError()
+  fullName: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.DeleteAllClosedFileRequestsError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteAllClosedFileRequestsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteAllClosedFileRequestsError.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public DeleteAllClosedFileRequestsError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsNotFound
+  commentId: P:Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsNotFound
+  id: IsNotFound
+  parent: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError
+  langs:
+  - csharp
+  - vb
+  name: IsNotFound
+  nameWithType: DeleteAllClosedFileRequestsError.IsNotFound
+  fullName: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsNotFound
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteAllClosedFileRequestsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteAllClosedFileRequestsError.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Gets a value indicating whether this instance is NotFound</p>\n"
+  example: []
+  syntax:
+    content: public bool IsNotFound { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsNotFound As Boolean
+  overload: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsNotFound*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsNotFound
+  commentId: P:Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsNotFound
+  id: AsNotFound
+  parent: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError
+  langs:
+  - csharp
+  - vb
+  name: AsNotFound
+  nameWithType: DeleteAllClosedFileRequestsError.AsNotFound
+  fullName: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsNotFound
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteAllClosedFileRequestsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteAllClosedFileRequestsError.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Gets this instance as a NotFound, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public DeleteAllClosedFileRequestsError.NotFound AsNotFound { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.NotFound
+    content.vb: Public ReadOnly Property AsNotFound As DeleteAllClosedFileRequestsError.NotFound
+  overload: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsNotFound*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsNotAFolder
+  commentId: P:Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsNotAFolder
+  id: IsNotAFolder
+  parent: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError
+  langs:
+  - csharp
+  - vb
+  name: IsNotAFolder
+  nameWithType: DeleteAllClosedFileRequestsError.IsNotAFolder
+  fullName: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsNotAFolder
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteAllClosedFileRequestsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsNotAFolder
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteAllClosedFileRequestsError.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Gets a value indicating whether this instance is NotAFolder</p>\n"
+  example: []
+  syntax:
+    content: public bool IsNotAFolder { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsNotAFolder As Boolean
+  overload: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsNotAFolder*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsNotAFolder
+  commentId: P:Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsNotAFolder
+  id: AsNotAFolder
+  parent: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError
+  langs:
+  - csharp
+  - vb
+  name: AsNotAFolder
+  nameWithType: DeleteAllClosedFileRequestsError.AsNotAFolder
+  fullName: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsNotAFolder
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteAllClosedFileRequestsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsNotAFolder
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteAllClosedFileRequestsError.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Gets this instance as a NotAFolder, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public DeleteAllClosedFileRequestsError.NotAFolder AsNotAFolder { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.NotAFolder
+    content.vb: Public ReadOnly Property AsNotAFolder As DeleteAllClosedFileRequestsError.NotAFolder
+  overload: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsNotAFolder*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsAppLacksAccess
+  commentId: P:Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsAppLacksAccess
+  id: IsAppLacksAccess
+  parent: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError
+  langs:
+  - csharp
+  - vb
+  name: IsAppLacksAccess
+  nameWithType: DeleteAllClosedFileRequestsError.IsAppLacksAccess
+  fullName: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsAppLacksAccess
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteAllClosedFileRequestsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsAppLacksAccess
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteAllClosedFileRequestsError.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Gets a value indicating whether this instance is AppLacksAccess</p>\n"
+  example: []
+  syntax:
+    content: public bool IsAppLacksAccess { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsAppLacksAccess As Boolean
+  overload: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsAppLacksAccess*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsAppLacksAccess
+  commentId: P:Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsAppLacksAccess
+  id: AsAppLacksAccess
+  parent: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError
+  langs:
+  - csharp
+  - vb
+  name: AsAppLacksAccess
+  nameWithType: DeleteAllClosedFileRequestsError.AsAppLacksAccess
+  fullName: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsAppLacksAccess
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteAllClosedFileRequestsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsAppLacksAccess
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteAllClosedFileRequestsError.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Gets this instance as a AppLacksAccess, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public DeleteAllClosedFileRequestsError.AppLacksAccess AsAppLacksAccess { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AppLacksAccess
+    content.vb: Public ReadOnly Property AsAppLacksAccess As DeleteAllClosedFileRequestsError.AppLacksAccess
+  overload: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsAppLacksAccess*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsNoPermission
+  commentId: P:Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsNoPermission
+  id: IsNoPermission
+  parent: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError
+  langs:
+  - csharp
+  - vb
+  name: IsNoPermission
+  nameWithType: DeleteAllClosedFileRequestsError.IsNoPermission
+  fullName: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsNoPermission
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteAllClosedFileRequestsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsNoPermission
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteAllClosedFileRequestsError.cs
+    startLine: 106
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Gets a value indicating whether this instance is NoPermission</p>\n"
+  example: []
+  syntax:
+    content: public bool IsNoPermission { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsNoPermission As Boolean
+  overload: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsNoPermission*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsNoPermission
+  commentId: P:Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsNoPermission
+  id: AsNoPermission
+  parent: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError
+  langs:
+  - csharp
+  - vb
+  name: AsNoPermission
+  nameWithType: DeleteAllClosedFileRequestsError.AsNoPermission
+  fullName: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsNoPermission
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteAllClosedFileRequestsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsNoPermission
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteAllClosedFileRequestsError.cs
+    startLine: 117
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Gets this instance as a NoPermission, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public DeleteAllClosedFileRequestsError.NoPermission AsNoPermission { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.NoPermission
+    content.vb: Public ReadOnly Property AsNoPermission As DeleteAllClosedFileRequestsError.NoPermission
+  overload: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsNoPermission*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsEmailUnverified
+  commentId: P:Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsEmailUnverified
+  id: IsEmailUnverified
+  parent: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError
+  langs:
+  - csharp
+  - vb
+  name: IsEmailUnverified
+  nameWithType: DeleteAllClosedFileRequestsError.IsEmailUnverified
+  fullName: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsEmailUnverified
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteAllClosedFileRequestsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsEmailUnverified
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteAllClosedFileRequestsError.cs
+    startLine: 128
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Gets a value indicating whether this instance is EmailUnverified</p>\n"
+  example: []
+  syntax:
+    content: public bool IsEmailUnverified { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsEmailUnverified As Boolean
+  overload: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsEmailUnverified*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsEmailUnverified
+  commentId: P:Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsEmailUnverified
+  id: AsEmailUnverified
+  parent: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError
+  langs:
+  - csharp
+  - vb
+  name: AsEmailUnverified
+  nameWithType: DeleteAllClosedFileRequestsError.AsEmailUnverified
+  fullName: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsEmailUnverified
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteAllClosedFileRequestsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsEmailUnverified
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteAllClosedFileRequestsError.cs
+    startLine: 139
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Gets this instance as a EmailUnverified, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public DeleteAllClosedFileRequestsError.EmailUnverified AsEmailUnverified { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.EmailUnverified
+    content.vb: Public ReadOnly Property AsEmailUnverified As DeleteAllClosedFileRequestsError.EmailUnverified
+  overload: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsEmailUnverified*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsValidationError
+  commentId: P:Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsValidationError
+  id: IsValidationError
+  parent: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError
+  langs:
+  - csharp
+  - vb
+  name: IsValidationError
+  nameWithType: DeleteAllClosedFileRequestsError.IsValidationError
+  fullName: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsValidationError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteAllClosedFileRequestsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsValidationError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteAllClosedFileRequestsError.cs
+    startLine: 150
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Gets a value indicating whether this instance is ValidationError</p>\n"
+  example: []
+  syntax:
+    content: public bool IsValidationError { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsValidationError As Boolean
+  overload: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsValidationError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsValidationError
+  commentId: P:Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsValidationError
+  id: AsValidationError
+  parent: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError
+  langs:
+  - csharp
+  - vb
+  name: AsValidationError
+  nameWithType: DeleteAllClosedFileRequestsError.AsValidationError
+  fullName: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsValidationError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteAllClosedFileRequestsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsValidationError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteAllClosedFileRequestsError.cs
+    startLine: 161
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Gets this instance as a ValidationError, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public DeleteAllClosedFileRequestsError.ValidationError AsValidationError { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.ValidationError
+    content.vb: Public ReadOnly Property AsValidationError As DeleteAllClosedFileRequestsError.ValidationError
+  overload: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsValidationError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsDisabledForTeam
+  commentId: P:Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsDisabledForTeam
+  id: IsDisabledForTeam
+  parent: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError
+  langs:
+  - csharp
+  - vb
+  name: IsDisabledForTeam
+  nameWithType: DeleteAllClosedFileRequestsError.IsDisabledForTeam
+  fullName: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsDisabledForTeam
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteAllClosedFileRequestsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsDisabledForTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteAllClosedFileRequestsError.cs
+    startLine: 172
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Gets a value indicating whether this instance is DisabledForTeam</p>\n"
+  example: []
+  syntax:
+    content: public bool IsDisabledForTeam { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsDisabledForTeam As Boolean
+  overload: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsDisabledForTeam*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsDisabledForTeam
+  commentId: P:Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsDisabledForTeam
+  id: AsDisabledForTeam
+  parent: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError
+  langs:
+  - csharp
+  - vb
+  name: AsDisabledForTeam
+  nameWithType: DeleteAllClosedFileRequestsError.AsDisabledForTeam
+  fullName: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsDisabledForTeam
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteAllClosedFileRequestsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsDisabledForTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteAllClosedFileRequestsError.cs
+    startLine: 183
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Gets this instance as a DisabledForTeam, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public DeleteAllClosedFileRequestsError.DisabledForTeam AsDisabledForTeam { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.DisabledForTeam
+    content.vb: Public ReadOnly Property AsDisabledForTeam As DeleteAllClosedFileRequestsError.DisabledForTeam
+  overload: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsDisabledForTeam*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsOther
+  commentId: P:Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: DeleteAllClosedFileRequestsError.IsOther
+  fullName: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteAllClosedFileRequestsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteAllClosedFileRequestsError.cs
+    startLine: 194
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsOther
+  commentId: P:Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: DeleteAllClosedFileRequestsError.AsOther
+  fullName: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteAllClosedFileRequestsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteAllClosedFileRequestsError.cs
+    startLine: 205
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public DeleteAllClosedFileRequestsError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.Other
+    content.vb: Public ReadOnly Property AsOther As DeleteAllClosedFileRequestsError.Other
+  overload: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.FileRequests
+  commentId: N:Dropbox.Api.FileRequests
+  name: Dropbox.Api.FileRequests
+  nameWithType: Dropbox.Api.FileRequests
+  fullName: Dropbox.Api.FileRequests
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError
+  commentId: T:Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError
+  parent: Dropbox.Api.FileRequests
+  name: DeleteAllClosedFileRequestsError
+  nameWithType: DeleteAllClosedFileRequestsError
+  fullName: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError
+- uid: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.#ctor*
+  commentId: Overload:Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.#ctor
+  name: DeleteAllClosedFileRequestsError
+  nameWithType: DeleteAllClosedFileRequestsError.DeleteAllClosedFileRequestsError
+  fullName: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.DeleteAllClosedFileRequestsError
+- uid: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsNotFound*
+  commentId: Overload:Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsNotFound
+  name: IsNotFound
+  nameWithType: DeleteAllClosedFileRequestsError.IsNotFound
+  fullName: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsNotFound
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsNotFound*
+  commentId: Overload:Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsNotFound
+  name: AsNotFound
+  nameWithType: DeleteAllClosedFileRequestsError.AsNotFound
+  fullName: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsNotFound
+- uid: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.NotFound
+  commentId: T:Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.NotFound
+  parent: Dropbox.Api.FileRequests
+  name: DeleteAllClosedFileRequestsError.NotFound
+  nameWithType: DeleteAllClosedFileRequestsError.NotFound
+  fullName: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.NotFound
+- uid: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsNotAFolder*
+  commentId: Overload:Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsNotAFolder
+  name: IsNotAFolder
+  nameWithType: DeleteAllClosedFileRequestsError.IsNotAFolder
+  fullName: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsNotAFolder
+- uid: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsNotAFolder*
+  commentId: Overload:Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsNotAFolder
+  name: AsNotAFolder
+  nameWithType: DeleteAllClosedFileRequestsError.AsNotAFolder
+  fullName: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsNotAFolder
+- uid: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.NotAFolder
+  commentId: T:Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.NotAFolder
+  parent: Dropbox.Api.FileRequests
+  name: DeleteAllClosedFileRequestsError.NotAFolder
+  nameWithType: DeleteAllClosedFileRequestsError.NotAFolder
+  fullName: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.NotAFolder
+- uid: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsAppLacksAccess*
+  commentId: Overload:Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsAppLacksAccess
+  name: IsAppLacksAccess
+  nameWithType: DeleteAllClosedFileRequestsError.IsAppLacksAccess
+  fullName: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsAppLacksAccess
+- uid: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsAppLacksAccess*
+  commentId: Overload:Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsAppLacksAccess
+  name: AsAppLacksAccess
+  nameWithType: DeleteAllClosedFileRequestsError.AsAppLacksAccess
+  fullName: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsAppLacksAccess
+- uid: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AppLacksAccess
+  commentId: T:Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AppLacksAccess
+  parent: Dropbox.Api.FileRequests
+  name: DeleteAllClosedFileRequestsError.AppLacksAccess
+  nameWithType: DeleteAllClosedFileRequestsError.AppLacksAccess
+  fullName: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AppLacksAccess
+- uid: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsNoPermission*
+  commentId: Overload:Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsNoPermission
+  name: IsNoPermission
+  nameWithType: DeleteAllClosedFileRequestsError.IsNoPermission
+  fullName: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsNoPermission
+- uid: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsNoPermission*
+  commentId: Overload:Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsNoPermission
+  name: AsNoPermission
+  nameWithType: DeleteAllClosedFileRequestsError.AsNoPermission
+  fullName: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsNoPermission
+- uid: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.NoPermission
+  commentId: T:Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.NoPermission
+  parent: Dropbox.Api.FileRequests
+  name: DeleteAllClosedFileRequestsError.NoPermission
+  nameWithType: DeleteAllClosedFileRequestsError.NoPermission
+  fullName: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.NoPermission
+- uid: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsEmailUnverified*
+  commentId: Overload:Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsEmailUnverified
+  name: IsEmailUnverified
+  nameWithType: DeleteAllClosedFileRequestsError.IsEmailUnverified
+  fullName: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsEmailUnverified
+- uid: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsEmailUnverified*
+  commentId: Overload:Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsEmailUnverified
+  name: AsEmailUnverified
+  nameWithType: DeleteAllClosedFileRequestsError.AsEmailUnverified
+  fullName: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsEmailUnverified
+- uid: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.EmailUnverified
+  commentId: T:Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.EmailUnverified
+  parent: Dropbox.Api.FileRequests
+  name: DeleteAllClosedFileRequestsError.EmailUnverified
+  nameWithType: DeleteAllClosedFileRequestsError.EmailUnverified
+  fullName: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.EmailUnverified
+- uid: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsValidationError*
+  commentId: Overload:Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsValidationError
+  name: IsValidationError
+  nameWithType: DeleteAllClosedFileRequestsError.IsValidationError
+  fullName: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsValidationError
+- uid: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsValidationError*
+  commentId: Overload:Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsValidationError
+  name: AsValidationError
+  nameWithType: DeleteAllClosedFileRequestsError.AsValidationError
+  fullName: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsValidationError
+- uid: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.ValidationError
+  commentId: T:Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.ValidationError
+  parent: Dropbox.Api.FileRequests
+  name: DeleteAllClosedFileRequestsError.ValidationError
+  nameWithType: DeleteAllClosedFileRequestsError.ValidationError
+  fullName: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.ValidationError
+- uid: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsDisabledForTeam*
+  commentId: Overload:Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsDisabledForTeam
+  name: IsDisabledForTeam
+  nameWithType: DeleteAllClosedFileRequestsError.IsDisabledForTeam
+  fullName: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsDisabledForTeam
+- uid: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsDisabledForTeam*
+  commentId: Overload:Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsDisabledForTeam
+  name: AsDisabledForTeam
+  nameWithType: DeleteAllClosedFileRequestsError.AsDisabledForTeam
+  fullName: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsDisabledForTeam
+- uid: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.DisabledForTeam
+  commentId: T:Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.DisabledForTeam
+  parent: Dropbox.Api.FileRequests
+  name: DeleteAllClosedFileRequestsError.DisabledForTeam
+  nameWithType: DeleteAllClosedFileRequestsError.DisabledForTeam
+  fullName: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.DisabledForTeam
+- uid: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsOther*
+  commentId: Overload:Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsOther
+  name: IsOther
+  nameWithType: DeleteAllClosedFileRequestsError.IsOther
+  fullName: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsOther
+- uid: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsOther*
+  commentId: Overload:Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsOther
+  name: AsOther
+  nameWithType: DeleteAllClosedFileRequestsError.AsOther
+  fullName: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsOther
+- uid: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.Other
+  commentId: T:Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.Other
+  parent: Dropbox.Api.FileRequests
+  name: DeleteAllClosedFileRequestsError.Other
+  nameWithType: DeleteAllClosedFileRequestsError.Other
+  fullName: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.Other
+shouldSkipMarkup: true

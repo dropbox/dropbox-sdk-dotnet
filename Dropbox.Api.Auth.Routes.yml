@@ -1,0 +1,36 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Auth.Routes
+  commentId: N:Dropbox.Api.Auth.Routes
+  id: Dropbox.Api.Auth.Routes
+  children:
+  - Dropbox.Api.Auth.Routes.AuthAppRoutes
+  - Dropbox.Api.Auth.Routes.AuthUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: Dropbox.Api.Auth.Routes
+  nameWithType: Dropbox.Api.Auth.Routes
+  fullName: Dropbox.Api.Auth.Routes
+  type: Namespace
+  assemblies:
+  - Dropbox.Api
+references:
+- uid: Dropbox.Api.Auth.Routes.AuthAppRoutes
+  commentId: T:Dropbox.Api.Auth.Routes.AuthAppRoutes
+  parent: Dropbox.Api.Auth.Routes
+  name: AuthAppRoutes
+  nameWithType: AuthAppRoutes
+  fullName: Dropbox.Api.Auth.Routes.AuthAppRoutes
+- uid: Dropbox.Api.Auth.Routes.AuthUserRoutes
+  commentId: T:Dropbox.Api.Auth.Routes.AuthUserRoutes
+  parent: Dropbox.Api.Auth.Routes
+  name: AuthUserRoutes
+  nameWithType: AuthUserRoutes
+  fullName: Dropbox.Api.Auth.Routes.AuthUserRoutes
+- uid: Dropbox.Api.Auth.Routes
+  commentId: N:Dropbox.Api.Auth.Routes
+  name: Dropbox.Api.Auth.Routes
+  nameWithType: Dropbox.Api.Auth.Routes
+  fullName: Dropbox.Api.Auth.Routes
+shouldSkipMarkup: true

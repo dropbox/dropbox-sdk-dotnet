@@ -1,0 +1,140 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.DropboxClientBase
+  commentId: T:Dropbox.Api.DropboxClientBase
+  id: DropboxClientBase
+  parent: Dropbox.Api
+  children:
+  - Dropbox.Api.DropboxClientBase.Dispose
+  - Dropbox.Api.DropboxClientBase.Dispose(System.Boolean)
+  langs:
+  - csharp
+  - vb
+  name: DropboxClientBase
+  nameWithType: DropboxClientBase
+  fullName: Dropbox.Api.DropboxClientBase
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/DropboxClientBase.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: DropboxClientBase
+    path: dropbox-sdk-dotnet/Dropbox.Api/DropboxClientBase.cs
+    startLine: 14
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api
+  summary: "\nThe base class for all Dropbox clients.\n"
+  example: []
+  syntax:
+    content: 'public abstract class DropboxClientBase : IDisposable'
+    content.vb: >-
+      Public MustInherit Class DropboxClientBase
+          Inherits IDisposable
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.DropboxAppClient
+  - Dropbox.Api.DropboxClient
+  - Dropbox.Api.DropboxTeamClient
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
+- uid: Dropbox.Api.DropboxClientBase.Dispose
+  commentId: M:Dropbox.Api.DropboxClientBase.Dispose
+  id: Dispose
+  parent: Dropbox.Api.DropboxClientBase
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: DropboxClientBase.Dispose()
+  fullName: Dropbox.Api.DropboxClientBase.Dispose()
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/DropboxClientBase.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Dispose
+    path: dropbox-sdk-dotnet/Dropbox.Api/DropboxClientBase.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api
+  summary: "\nThe public dispose.\n"
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose
+  overload: Dropbox.Api.DropboxClientBase.Dispose*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.DropboxClientBase.Dispose(System.Boolean)
+  commentId: M:Dropbox.Api.DropboxClientBase.Dispose(System.Boolean)
+  id: Dispose(System.Boolean)
+  parent: Dropbox.Api.DropboxClientBase
+  langs:
+  - csharp
+  - vb
+  name: Dispose(Boolean)
+  nameWithType: DropboxClientBase.Dispose(Boolean)
+  fullName: Dropbox.Api.DropboxClientBase.Dispose(System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/DropboxClientBase.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Dispose
+    path: dropbox-sdk-dotnet/Dropbox.Api/DropboxClientBase.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api
+  summary: "\nThe actual disposing logic.\n"
+  example: []
+  syntax:
+    content: protected virtual void Dispose(bool disposing)
+    parameters:
+    - id: disposing
+      type: System.Boolean
+      description: If is disposing.
+    content.vb: Protected Overridable Sub Dispose(disposing As Boolean)
+  overload: Dropbox.Api.DropboxClientBase.Dispose*
+  modifiers.csharp:
+  - protected
+  - virtual
+  modifiers.vb:
+  - Protected
+  - Overridable
+references:
+- uid: Dropbox.Api
+  commentId: N:Dropbox.Api
+  name: Dropbox.Api
+  nameWithType: Dropbox.Api
+  fullName: Dropbox.Api
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.DropboxClientBase.Dispose*
+  commentId: Overload:Dropbox.Api.DropboxClientBase.Dispose
+  name: Dispose
+  nameWithType: DropboxClientBase.Dispose
+  fullName: Dropbox.Api.DropboxClientBase.Dispose
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+shouldSkipMarkup: true

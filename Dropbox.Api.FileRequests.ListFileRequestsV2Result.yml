@@ -1,0 +1,466 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.FileRequests.ListFileRequestsV2Result
+  commentId: T:Dropbox.Api.FileRequests.ListFileRequestsV2Result
+  id: ListFileRequestsV2Result
+  parent: Dropbox.Api.FileRequests
+  children:
+  - Dropbox.Api.FileRequests.ListFileRequestsV2Result.#ctor
+  - Dropbox.Api.FileRequests.ListFileRequestsV2Result.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.FileRequests.FileRequest},System.String,System.Boolean)
+  - Dropbox.Api.FileRequests.ListFileRequestsV2Result.Cursor
+  - Dropbox.Api.FileRequests.ListFileRequestsV2Result.FileRequests
+  - Dropbox.Api.FileRequests.ListFileRequestsV2Result.HasMore
+  langs:
+  - csharp
+  - vb
+  name: ListFileRequestsV2Result
+  nameWithType: ListFileRequestsV2Result
+  fullName: Dropbox.Api.FileRequests.ListFileRequestsV2Result
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/ListFileRequestsV2Result.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ListFileRequestsV2Result
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/ListFileRequestsV2Result.cs
+    startLine: 18
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Result for <xref href=\"Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListV2Async(Dropbox.Api.FileRequests.ListFileRequestsArg)\" data-throw-if-not-resolved=\"false\"></xref> and <xref href=\"Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListContinueAsync(Dropbox.Api.FileRequests.ListFileRequestsContinueArg)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+  example: []
+  syntax:
+    content: 'public class ListFileRequestsV2Result : object'
+    content.vb: >-
+      Public Class ListFileRequestsV2Result
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.FileRequests.ListFileRequestsV2Result.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.FileRequests.FileRequest},System.String,System.Boolean)
+  commentId: M:Dropbox.Api.FileRequests.ListFileRequestsV2Result.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.FileRequests.FileRequest},System.String,System.Boolean)
+  id: '#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.FileRequests.FileRequest},System.String,System.Boolean)'
+  parent: Dropbox.Api.FileRequests.ListFileRequestsV2Result
+  langs:
+  - csharp
+  - vb
+  name: ListFileRequestsV2Result(System.Collections.Generic.IEnumerable<FileRequest>, String, Boolean)
+  nameWithType: ListFileRequestsV2Result.ListFileRequestsV2Result(System.Collections.Generic.IEnumerable<FileRequest>, String, Boolean)
+  fullName: Dropbox.Api.FileRequests.ListFileRequestsV2Result.ListFileRequestsV2Result(System.Collections.Generic.IEnumerable<Dropbox.Api.FileRequests.FileRequest>, System.String, System.Boolean)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/ListFileRequestsV2Result.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/ListFileRequestsV2Result.cs
+    startLine: 44
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.FileRequests.ListFileRequestsV2Result\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public ListFileRequestsV2Result(System.Collections.Generic.IEnumerable<FileRequest> fileRequests, string cursor, bool hasMore)
+    parameters:
+    - id: fileRequests
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.FileRequests.FileRequest}
+      description: >-
+        The file requests owned by this user. Apps with the app
+
+        folder permission will only see file requests in their app folder.
+    - id: cursor
+      type: System.String
+      description: >-
+        Pass the cursor into <xref href="Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListContinueAsync(Dropbox.Api.FileRequests.ListFileRequestsContinueArg)" data-throw-if-not-resolved="false"></xref>
+
+        to obtain additional file requests.
+    - id: hasMore
+      type: System.Boolean
+      description: >-
+        Is true if there are additional file requests that have not
+
+        been returned yet. An additional call to :route:list/continue` can retrieve
+
+        them.
+    content.vb: Public Sub New(fileRequests As System.Collections.Generic.IEnumerable(Of FileRequest), cursor As String, hasMore As Boolean)
+  overload: Dropbox.Api.FileRequests.ListFileRequestsV2Result.#ctor*
+  nameWithType.vb: ListFileRequestsV2Result.ListFileRequestsV2Result(System.Collections.Generic.IEnumerable(Of FileRequest), String, Boolean)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.FileRequests.ListFileRequestsV2Result.ListFileRequestsV2Result(System.Collections.Generic.IEnumerable(Of Dropbox.Api.FileRequests.FileRequest), System.String, System.Boolean)
+  name.vb: ListFileRequestsV2Result(System.Collections.Generic.IEnumerable(Of FileRequest), String, Boolean)
+- uid: Dropbox.Api.FileRequests.ListFileRequestsV2Result.#ctor
+  commentId: M:Dropbox.Api.FileRequests.ListFileRequestsV2Result.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.FileRequests.ListFileRequestsV2Result
+  langs:
+  - csharp
+  - vb
+  name: ListFileRequestsV2Result()
+  nameWithType: ListFileRequestsV2Result.ListFileRequestsV2Result()
+  fullName: Dropbox.Api.FileRequests.ListFileRequestsV2Result.ListFileRequestsV2Result()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/ListFileRequestsV2Result.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/ListFileRequestsV2Result.cs
+    startLine: 71
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.FileRequests.ListFileRequestsV2Result\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public ListFileRequestsV2Result()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.FileRequests.ListFileRequestsV2Result.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileRequests.ListFileRequestsV2Result.FileRequests
+  commentId: P:Dropbox.Api.FileRequests.ListFileRequestsV2Result.FileRequests
+  id: FileRequests
+  parent: Dropbox.Api.FileRequests.ListFileRequestsV2Result
+  langs:
+  - csharp
+  - vb
+  name: FileRequests
+  nameWithType: ListFileRequestsV2Result.FileRequests
+  fullName: Dropbox.Api.FileRequests.ListFileRequestsV2Result.FileRequests
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/ListFileRequestsV2Result.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: FileRequests
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/ListFileRequestsV2Result.cs
+    startLine: 80
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>The file requests owned by this user. Apps with the app folder permission\nwill only see file requests in their app folder.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<FileRequest> FileRequests { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{Dropbox.Api.FileRequests.FileRequest}
+    content.vb: Public Property FileRequests As System.Collections.Generic.IList(Of FileRequest)
+  overload: Dropbox.Api.FileRequests.ListFileRequestsV2Result.FileRequests*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.FileRequests.ListFileRequestsV2Result.Cursor
+  commentId: P:Dropbox.Api.FileRequests.ListFileRequestsV2Result.Cursor
+  id: Cursor
+  parent: Dropbox.Api.FileRequests.ListFileRequestsV2Result
+  langs:
+  - csharp
+  - vb
+  name: Cursor
+  nameWithType: ListFileRequestsV2Result.Cursor
+  fullName: Dropbox.Api.FileRequests.ListFileRequestsV2Result.Cursor
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/ListFileRequestsV2Result.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Cursor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/ListFileRequestsV2Result.cs
+    startLine: 87
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Pass the cursor into <xref href=\"Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListContinueAsync(Dropbox.Api.FileRequests.ListFileRequestsContinueArg)\" data-throw-if-not-resolved=\"false\"></xref>\nto obtain additional file requests.</p>\n"
+  example: []
+  syntax:
+    content: public string Cursor { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Cursor As String
+  overload: Dropbox.Api.FileRequests.ListFileRequestsV2Result.Cursor*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.FileRequests.ListFileRequestsV2Result.HasMore
+  commentId: P:Dropbox.Api.FileRequests.ListFileRequestsV2Result.HasMore
+  id: HasMore
+  parent: Dropbox.Api.FileRequests.ListFileRequestsV2Result
+  langs:
+  - csharp
+  - vb
+  name: HasMore
+  nameWithType: ListFileRequestsV2Result.HasMore
+  fullName: Dropbox.Api.FileRequests.ListFileRequestsV2Result.HasMore
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/ListFileRequestsV2Result.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: HasMore
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/ListFileRequestsV2Result.cs
+    startLine: 93
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Is true if there are additional file requests that have not been returned\nyet. An additional call to :route:list/continue` can retrieve them.</p>\n"
+  example: []
+  syntax:
+    content: public bool HasMore { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property HasMore As Boolean
+  overload: Dropbox.Api.FileRequests.ListFileRequestsV2Result.HasMore*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListV2Async(Dropbox.Api.FileRequests.ListFileRequestsArg)
+  commentId: M:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListV2Async(Dropbox.Api.FileRequests.ListFileRequestsArg)
+  isExternal: true
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListContinueAsync(Dropbox.Api.FileRequests.ListFileRequestsContinueArg)
+  commentId: M:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListContinueAsync(Dropbox.Api.FileRequests.ListFileRequestsContinueArg)
+  isExternal: true
+- uid: Dropbox.Api.FileRequests
+  commentId: N:Dropbox.Api.FileRequests
+  name: Dropbox.Api.FileRequests
+  nameWithType: Dropbox.Api.FileRequests
+  fullName: Dropbox.Api.FileRequests
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.FileRequests.ListFileRequestsV2Result
+  commentId: T:Dropbox.Api.FileRequests.ListFileRequestsV2Result
+  parent: Dropbox.Api.FileRequests
+  name: ListFileRequestsV2Result
+  nameWithType: ListFileRequestsV2Result
+  fullName: Dropbox.Api.FileRequests.ListFileRequestsV2Result
+- uid: Dropbox.Api.FileRequests.ListFileRequestsV2Result.#ctor*
+  commentId: Overload:Dropbox.Api.FileRequests.ListFileRequestsV2Result.#ctor
+  name: ListFileRequestsV2Result
+  nameWithType: ListFileRequestsV2Result.ListFileRequestsV2Result
+  fullName: Dropbox.Api.FileRequests.ListFileRequestsV2Result.ListFileRequestsV2Result
+- uid: System.Collections.Generic.IEnumerable{Dropbox.Api.FileRequests.FileRequest}
+  commentId: '!:System.Collections.Generic.IEnumerable{Dropbox.Api.FileRequests.FileRequest}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<FileRequest>
+  nameWithType: System.Collections.Generic.IEnumerable<FileRequest>
+  fullName: System.Collections.Generic.IEnumerable<Dropbox.Api.FileRequests.FileRequest>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of FileRequest)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Dropbox.Api.FileRequests.FileRequest)
+  name.vb: System.Collections.Generic.IEnumerable(Of FileRequest)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.FileRequests.FileRequest
+    name: FileRequest
+    nameWithType: FileRequest
+    fullName: Dropbox.Api.FileRequests.FileRequest
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.FileRequests.FileRequest
+    name: FileRequest
+    nameWithType: FileRequest
+    fullName: Dropbox.Api.FileRequests.FileRequest
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: System.Collections.Generic.IEnumerable<>
+  nameWithType: System.Collections.Generic.IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: System.Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.FileRequests.ListFileRequestsV2Result.FileRequests*
+  commentId: Overload:Dropbox.Api.FileRequests.ListFileRequestsV2Result.FileRequests
+  name: FileRequests
+  nameWithType: ListFileRequestsV2Result.FileRequests
+  fullName: Dropbox.Api.FileRequests.ListFileRequestsV2Result.FileRequests
+- uid: System.Collections.Generic.IList{Dropbox.Api.FileRequests.FileRequest}
+  commentId: '!:System.Collections.Generic.IList{Dropbox.Api.FileRequests.FileRequest}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<FileRequest>
+  nameWithType: System.Collections.Generic.IList<FileRequest>
+  fullName: System.Collections.Generic.IList<Dropbox.Api.FileRequests.FileRequest>
+  nameWithType.vb: System.Collections.Generic.IList(Of FileRequest)
+  fullName.vb: System.Collections.Generic.IList(Of Dropbox.Api.FileRequests.FileRequest)
+  name.vb: System.Collections.Generic.IList(Of FileRequest)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.FileRequests.FileRequest
+    name: FileRequest
+    nameWithType: FileRequest
+    fullName: Dropbox.Api.FileRequests.FileRequest
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.FileRequests.FileRequest
+    name: FileRequest
+    nameWithType: FileRequest
+    fullName: Dropbox.Api.FileRequests.FileRequest
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  isExternal: true
+  name: System.Collections.Generic.IList<>
+  nameWithType: System.Collections.Generic.IList<>
+  fullName: System.Collections.Generic.IList<>
+  nameWithType.vb: System.Collections.Generic.IList(Of )
+  fullName.vb: System.Collections.Generic.IList(Of )
+  name.vb: System.Collections.Generic.IList(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.FileRequests.ListFileRequestsV2Result.Cursor*
+  commentId: Overload:Dropbox.Api.FileRequests.ListFileRequestsV2Result.Cursor
+  name: Cursor
+  nameWithType: ListFileRequestsV2Result.Cursor
+  fullName: Dropbox.Api.FileRequests.ListFileRequestsV2Result.Cursor
+- uid: Dropbox.Api.FileRequests.ListFileRequestsV2Result.HasMore*
+  commentId: Overload:Dropbox.Api.FileRequests.ListFileRequestsV2Result.HasMore
+  name: HasMore
+  nameWithType: ListFileRequestsV2Result.HasMore
+  fullName: Dropbox.Api.FileRequests.ListFileRequestsV2Result.HasMore
+shouldSkipMarkup: true

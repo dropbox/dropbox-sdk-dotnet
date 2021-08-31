@@ -1,0 +1,294 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.HasTeamSelectiveSyncValue
+  commentId: T:Dropbox.Api.Team.HasTeamSelectiveSyncValue
+  id: HasTeamSelectiveSyncValue
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.HasTeamSelectiveSyncValue.#ctor
+  - Dropbox.Api.Team.HasTeamSelectiveSyncValue.AsHasTeamSelectiveSync
+  - Dropbox.Api.Team.HasTeamSelectiveSyncValue.AsOther
+  - Dropbox.Api.Team.HasTeamSelectiveSyncValue.IsHasTeamSelectiveSync
+  - Dropbox.Api.Team.HasTeamSelectiveSyncValue.IsOther
+  langs:
+  - csharp
+  - vb
+  name: HasTeamSelectiveSyncValue
+  nameWithType: HasTeamSelectiveSyncValue
+  fullName: Dropbox.Api.Team.HasTeamSelectiveSyncValue
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/HasTeamSelectiveSyncValue.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: HasTeamSelectiveSyncValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/HasTeamSelectiveSyncValue.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The value for <xref href=\"Dropbox.Api.Team.Feature.HasTeamSelectiveSync\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+  example: []
+  syntax:
+    content: 'public class HasTeamSelectiveSyncValue : object'
+    content.vb: >-
+      Public Class HasTeamSelectiveSyncValue
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Team.HasTeamSelectiveSyncValue.HasTeamSelectiveSync
+  - Dropbox.Api.Team.HasTeamSelectiveSyncValue.Other
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.HasTeamSelectiveSyncValue.#ctor
+  commentId: M:Dropbox.Api.Team.HasTeamSelectiveSyncValue.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.HasTeamSelectiveSyncValue
+  langs:
+  - csharp
+  - vb
+  name: HasTeamSelectiveSyncValue()
+  nameWithType: HasTeamSelectiveSyncValue.HasTeamSelectiveSyncValue()
+  fullName: Dropbox.Api.Team.HasTeamSelectiveSyncValue.HasTeamSelectiveSyncValue()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/HasTeamSelectiveSyncValue.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/HasTeamSelectiveSyncValue.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.HasTeamSelectiveSyncValue\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public HasTeamSelectiveSyncValue()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.HasTeamSelectiveSyncValue.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.HasTeamSelectiveSyncValue.IsHasTeamSelectiveSync
+  commentId: P:Dropbox.Api.Team.HasTeamSelectiveSyncValue.IsHasTeamSelectiveSync
+  id: IsHasTeamSelectiveSync
+  parent: Dropbox.Api.Team.HasTeamSelectiveSyncValue
+  langs:
+  - csharp
+  - vb
+  name: IsHasTeamSelectiveSync
+  nameWithType: HasTeamSelectiveSyncValue.IsHasTeamSelectiveSync
+  fullName: Dropbox.Api.Team.HasTeamSelectiveSyncValue.IsHasTeamSelectiveSync
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/HasTeamSelectiveSyncValue.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsHasTeamSelectiveSync
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/HasTeamSelectiveSyncValue.cs
+    startLine: 41
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is HasTeamSelectiveSync</p>\n"
+  example: []
+  syntax:
+    content: public bool IsHasTeamSelectiveSync { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsHasTeamSelectiveSync As Boolean
+  overload: Dropbox.Api.Team.HasTeamSelectiveSyncValue.IsHasTeamSelectiveSync*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.HasTeamSelectiveSyncValue.AsHasTeamSelectiveSync
+  commentId: P:Dropbox.Api.Team.HasTeamSelectiveSyncValue.AsHasTeamSelectiveSync
+  id: AsHasTeamSelectiveSync
+  parent: Dropbox.Api.Team.HasTeamSelectiveSyncValue
+  langs:
+  - csharp
+  - vb
+  name: AsHasTeamSelectiveSync
+  nameWithType: HasTeamSelectiveSyncValue.AsHasTeamSelectiveSync
+  fullName: Dropbox.Api.Team.HasTeamSelectiveSyncValue.AsHasTeamSelectiveSync
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/HasTeamSelectiveSyncValue.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsHasTeamSelectiveSync
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/HasTeamSelectiveSyncValue.cs
+    startLine: 52
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a HasTeamSelectiveSync, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public HasTeamSelectiveSyncValue.HasTeamSelectiveSync AsHasTeamSelectiveSync { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.HasTeamSelectiveSyncValue.HasTeamSelectiveSync
+    content.vb: Public ReadOnly Property AsHasTeamSelectiveSync As HasTeamSelectiveSyncValue.HasTeamSelectiveSync
+  overload: Dropbox.Api.Team.HasTeamSelectiveSyncValue.AsHasTeamSelectiveSync*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.HasTeamSelectiveSyncValue.IsOther
+  commentId: P:Dropbox.Api.Team.HasTeamSelectiveSyncValue.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Team.HasTeamSelectiveSyncValue
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: HasTeamSelectiveSyncValue.IsOther
+  fullName: Dropbox.Api.Team.HasTeamSelectiveSyncValue.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/HasTeamSelectiveSyncValue.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/HasTeamSelectiveSyncValue.cs
+    startLine: 63
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Team.HasTeamSelectiveSyncValue.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.HasTeamSelectiveSyncValue.AsOther
+  commentId: P:Dropbox.Api.Team.HasTeamSelectiveSyncValue.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Team.HasTeamSelectiveSyncValue
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: HasTeamSelectiveSyncValue.AsOther
+  fullName: Dropbox.Api.Team.HasTeamSelectiveSyncValue.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/HasTeamSelectiveSyncValue.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/HasTeamSelectiveSyncValue.cs
+    startLine: 74
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public HasTeamSelectiveSyncValue.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.HasTeamSelectiveSyncValue.Other
+    content.vb: Public ReadOnly Property AsOther As HasTeamSelectiveSyncValue.Other
+  overload: Dropbox.Api.Team.HasTeamSelectiveSyncValue.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team.Feature.HasTeamSelectiveSync
+  commentId: T:Dropbox.Api.Team.Feature.HasTeamSelectiveSync
+  parent: Dropbox.Api.Team
+  name: Feature.HasTeamSelectiveSync
+  nameWithType: Feature.HasTeamSelectiveSync
+  fullName: Dropbox.Api.Team.Feature.HasTeamSelectiveSync
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.HasTeamSelectiveSyncValue
+  commentId: T:Dropbox.Api.Team.HasTeamSelectiveSyncValue
+  parent: Dropbox.Api.Team
+  name: HasTeamSelectiveSyncValue
+  nameWithType: HasTeamSelectiveSyncValue
+  fullName: Dropbox.Api.Team.HasTeamSelectiveSyncValue
+- uid: Dropbox.Api.Team.HasTeamSelectiveSyncValue.#ctor*
+  commentId: Overload:Dropbox.Api.Team.HasTeamSelectiveSyncValue.#ctor
+  name: HasTeamSelectiveSyncValue
+  nameWithType: HasTeamSelectiveSyncValue.HasTeamSelectiveSyncValue
+  fullName: Dropbox.Api.Team.HasTeamSelectiveSyncValue.HasTeamSelectiveSyncValue
+- uid: Dropbox.Api.Team.HasTeamSelectiveSyncValue.IsHasTeamSelectiveSync*
+  commentId: Overload:Dropbox.Api.Team.HasTeamSelectiveSyncValue.IsHasTeamSelectiveSync
+  name: IsHasTeamSelectiveSync
+  nameWithType: HasTeamSelectiveSyncValue.IsHasTeamSelectiveSync
+  fullName: Dropbox.Api.Team.HasTeamSelectiveSyncValue.IsHasTeamSelectiveSync
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Team.HasTeamSelectiveSyncValue.AsHasTeamSelectiveSync*
+  commentId: Overload:Dropbox.Api.Team.HasTeamSelectiveSyncValue.AsHasTeamSelectiveSync
+  name: AsHasTeamSelectiveSync
+  nameWithType: HasTeamSelectiveSyncValue.AsHasTeamSelectiveSync
+  fullName: Dropbox.Api.Team.HasTeamSelectiveSyncValue.AsHasTeamSelectiveSync
+- uid: Dropbox.Api.Team.HasTeamSelectiveSyncValue.HasTeamSelectiveSync
+  commentId: T:Dropbox.Api.Team.HasTeamSelectiveSyncValue.HasTeamSelectiveSync
+  parent: Dropbox.Api.Team
+  name: HasTeamSelectiveSyncValue.HasTeamSelectiveSync
+  nameWithType: HasTeamSelectiveSyncValue.HasTeamSelectiveSync
+  fullName: Dropbox.Api.Team.HasTeamSelectiveSyncValue.HasTeamSelectiveSync
+- uid: Dropbox.Api.Team.HasTeamSelectiveSyncValue.IsOther*
+  commentId: Overload:Dropbox.Api.Team.HasTeamSelectiveSyncValue.IsOther
+  name: IsOther
+  nameWithType: HasTeamSelectiveSyncValue.IsOther
+  fullName: Dropbox.Api.Team.HasTeamSelectiveSyncValue.IsOther
+- uid: Dropbox.Api.Team.HasTeamSelectiveSyncValue.AsOther*
+  commentId: Overload:Dropbox.Api.Team.HasTeamSelectiveSyncValue.AsOther
+  name: AsOther
+  nameWithType: HasTeamSelectiveSyncValue.AsOther
+  fullName: Dropbox.Api.Team.HasTeamSelectiveSyncValue.AsOther
+- uid: Dropbox.Api.Team.HasTeamSelectiveSyncValue.Other
+  commentId: T:Dropbox.Api.Team.HasTeamSelectiveSyncValue.Other
+  parent: Dropbox.Api.Team
+  name: HasTeamSelectiveSyncValue.Other
+  nameWithType: HasTeamSelectiveSyncValue.Other
+  fullName: Dropbox.Api.Team.HasTeamSelectiveSyncValue.Other
+shouldSkipMarkup: true

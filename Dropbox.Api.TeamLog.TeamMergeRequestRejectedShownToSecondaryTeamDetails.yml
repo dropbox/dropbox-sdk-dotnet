@@ -1,0 +1,190 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestRejectedShownToSecondaryTeamDetails
+  commentId: T:Dropbox.Api.TeamLog.TeamMergeRequestRejectedShownToSecondaryTeamDetails
+  id: TeamMergeRequestRejectedShownToSecondaryTeamDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.TeamMergeRequestRejectedShownToSecondaryTeamDetails.#ctor
+  - Dropbox.Api.TeamLog.TeamMergeRequestRejectedShownToSecondaryTeamDetails.#ctor(System.String)
+  - Dropbox.Api.TeamLog.TeamMergeRequestRejectedShownToSecondaryTeamDetails.SentBy
+  langs:
+  - csharp
+  - vb
+  name: TeamMergeRequestRejectedShownToSecondaryTeamDetails
+  nameWithType: TeamMergeRequestRejectedShownToSecondaryTeamDetails
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestRejectedShownToSecondaryTeamDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestRejectedShownToSecondaryTeamDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TeamMergeRequestRejectedShownToSecondaryTeamDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestRejectedShownToSecondaryTeamDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Rejected a team merge request.</p>\n"
+  example: []
+  syntax:
+    content: 'public class TeamMergeRequestRejectedShownToSecondaryTeamDetails : object'
+    content.vb: >-
+      Public Class TeamMergeRequestRejectedShownToSecondaryTeamDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestRejectedShownToSecondaryTeamDetails.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.TeamMergeRequestRejectedShownToSecondaryTeamDetails.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.TeamMergeRequestRejectedShownToSecondaryTeamDetails
+  langs:
+  - csharp
+  - vb
+  name: TeamMergeRequestRejectedShownToSecondaryTeamDetails(String)
+  nameWithType: TeamMergeRequestRejectedShownToSecondaryTeamDetails.TeamMergeRequestRejectedShownToSecondaryTeamDetails(String)
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestRejectedShownToSecondaryTeamDetails.TeamMergeRequestRejectedShownToSecondaryTeamDetails(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestRejectedShownToSecondaryTeamDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestRejectedShownToSecondaryTeamDetails.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.TeamMergeRequestRejectedShownToSecondaryTeamDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public TeamMergeRequestRejectedShownToSecondaryTeamDetails(string sentBy)
+    parameters:
+    - id: sentBy
+      type: System.String
+      description: >-
+        The name of the secondary team admin who sent the request
+
+        originally.
+    content.vb: Public Sub New(sentBy As String)
+  overload: Dropbox.Api.TeamLog.TeamMergeRequestRejectedShownToSecondaryTeamDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestRejectedShownToSecondaryTeamDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.TeamMergeRequestRejectedShownToSecondaryTeamDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.TeamMergeRequestRejectedShownToSecondaryTeamDetails
+  langs:
+  - csharp
+  - vb
+  name: TeamMergeRequestRejectedShownToSecondaryTeamDetails()
+  nameWithType: TeamMergeRequestRejectedShownToSecondaryTeamDetails.TeamMergeRequestRejectedShownToSecondaryTeamDetails()
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestRejectedShownToSecondaryTeamDetails.TeamMergeRequestRejectedShownToSecondaryTeamDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestRejectedShownToSecondaryTeamDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestRejectedShownToSecondaryTeamDetails.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.TeamMergeRequestRejectedShownToSecondaryTeamDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public TeamMergeRequestRejectedShownToSecondaryTeamDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.TeamMergeRequestRejectedShownToSecondaryTeamDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestRejectedShownToSecondaryTeamDetails.SentBy
+  commentId: P:Dropbox.Api.TeamLog.TeamMergeRequestRejectedShownToSecondaryTeamDetails.SentBy
+  id: SentBy
+  parent: Dropbox.Api.TeamLog.TeamMergeRequestRejectedShownToSecondaryTeamDetails
+  langs:
+  - csharp
+  - vb
+  name: SentBy
+  nameWithType: TeamMergeRequestRejectedShownToSecondaryTeamDetails.SentBy
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestRejectedShownToSecondaryTeamDetails.SentBy
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestRejectedShownToSecondaryTeamDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SentBy
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestRejectedShownToSecondaryTeamDetails.cs
+    startLine: 59
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The name of the secondary team admin who sent the request originally.</p>\n"
+  example: []
+  syntax:
+    content: public string SentBy { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SentBy As String
+  overload: Dropbox.Api.TeamLog.TeamMergeRequestRejectedShownToSecondaryTeamDetails.SentBy*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestRejectedShownToSecondaryTeamDetails
+  commentId: T:Dropbox.Api.TeamLog.TeamMergeRequestRejectedShownToSecondaryTeamDetails
+  parent: Dropbox.Api.TeamLog
+  name: TeamMergeRequestRejectedShownToSecondaryTeamDetails
+  nameWithType: TeamMergeRequestRejectedShownToSecondaryTeamDetails
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestRejectedShownToSecondaryTeamDetails
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestRejectedShownToSecondaryTeamDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.TeamMergeRequestRejectedShownToSecondaryTeamDetails.#ctor
+  name: TeamMergeRequestRejectedShownToSecondaryTeamDetails
+  nameWithType: TeamMergeRequestRejectedShownToSecondaryTeamDetails.TeamMergeRequestRejectedShownToSecondaryTeamDetails
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestRejectedShownToSecondaryTeamDetails.TeamMergeRequestRejectedShownToSecondaryTeamDetails
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestRejectedShownToSecondaryTeamDetails.SentBy*
+  commentId: Overload:Dropbox.Api.TeamLog.TeamMergeRequestRejectedShownToSecondaryTeamDetails.SentBy
+  name: SentBy
+  nameWithType: TeamMergeRequestRejectedShownToSecondaryTeamDetails.SentBy
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestRejectedShownToSecondaryTeamDetails.SentBy
+shouldSkipMarkup: true

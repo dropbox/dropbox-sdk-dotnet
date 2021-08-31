@@ -1,0 +1,325 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.FileRequestDeadline
+  commentId: T:Dropbox.Api.TeamLog.FileRequestDeadline
+  id: FileRequestDeadline
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.FileRequestDeadline.#ctor
+  - Dropbox.Api.TeamLog.FileRequestDeadline.#ctor(System.Nullable{System.DateTime},System.String)
+  - Dropbox.Api.TeamLog.FileRequestDeadline.AllowLateUploads
+  - Dropbox.Api.TeamLog.FileRequestDeadline.Deadline
+  langs:
+  - csharp
+  - vb
+  name: FileRequestDeadline
+  nameWithType: FileRequestDeadline
+  fullName: Dropbox.Api.TeamLog.FileRequestDeadline
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestDeadline.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: FileRequestDeadline
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestDeadline.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>File request deadline</p>\n"
+  example: []
+  syntax:
+    content: 'public class FileRequestDeadline : object'
+    content.vb: >-
+      Public Class FileRequestDeadline
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.FileRequestDeadline.#ctor(System.Nullable{System.DateTime},System.String)
+  commentId: M:Dropbox.Api.TeamLog.FileRequestDeadline.#ctor(System.Nullable{System.DateTime},System.String)
+  id: '#ctor(System.Nullable{System.DateTime},System.String)'
+  parent: Dropbox.Api.TeamLog.FileRequestDeadline
+  langs:
+  - csharp
+  - vb
+  name: FileRequestDeadline(Nullable<System.DateTime>, String)
+  nameWithType: FileRequestDeadline.FileRequestDeadline(Nullable<System.DateTime>, String)
+  fullName: Dropbox.Api.TeamLog.FileRequestDeadline.FileRequestDeadline(System.Nullable<System.DateTime>, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestDeadline.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestDeadline.cs
+    startLine: 37
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.FileRequestDeadline\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public FileRequestDeadline(System.DateTime? deadline = null, string allowLateUploads = null)
+    parameters:
+    - id: deadline
+      type: System.Nullable{System.DateTime}
+      description: >-
+        The deadline for this file request. Might be missing due to
+
+        historical data gap.
+    - id: allowLateUploads
+      type: System.String
+      description: >-
+        If set, allow uploads after the deadline has
+
+        passed.
+    content.vb: Public Sub New(deadline As System.DateTime? = Nothing, allowLateUploads As String = Nothing)
+  overload: Dropbox.Api.TeamLog.FileRequestDeadline.#ctor*
+  nameWithType.vb: FileRequestDeadline.FileRequestDeadline(Nullable(Of System.DateTime), String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.TeamLog.FileRequestDeadline.FileRequestDeadline(System.Nullable(Of System.DateTime), System.String)
+  name.vb: FileRequestDeadline(Nullable(Of System.DateTime), String)
+- uid: Dropbox.Api.TeamLog.FileRequestDeadline.#ctor
+  commentId: M:Dropbox.Api.TeamLog.FileRequestDeadline.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.FileRequestDeadline
+  langs:
+  - csharp
+  - vb
+  name: FileRequestDeadline()
+  nameWithType: FileRequestDeadline.FileRequestDeadline()
+  fullName: Dropbox.Api.TeamLog.FileRequestDeadline.FileRequestDeadline()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestDeadline.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestDeadline.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.FileRequestDeadline\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public FileRequestDeadline()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.FileRequestDeadline.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.FileRequestDeadline.Deadline
+  commentId: P:Dropbox.Api.TeamLog.FileRequestDeadline.Deadline
+  id: Deadline
+  parent: Dropbox.Api.TeamLog.FileRequestDeadline
+  langs:
+  - csharp
+  - vb
+  name: Deadline
+  nameWithType: FileRequestDeadline.Deadline
+  fullName: Dropbox.Api.TeamLog.FileRequestDeadline.Deadline
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestDeadline.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Deadline
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestDeadline.cs
+    startLine: 59
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The deadline for this file request. Might be missing due to historical data\ngap.</p>\n"
+  example: []
+  syntax:
+    content: public System.DateTime? Deadline { get; protected set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property Deadline As System.DateTime?
+  overload: Dropbox.Api.TeamLog.FileRequestDeadline.Deadline*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.FileRequestDeadline.AllowLateUploads
+  commentId: P:Dropbox.Api.TeamLog.FileRequestDeadline.AllowLateUploads
+  id: AllowLateUploads
+  parent: Dropbox.Api.TeamLog.FileRequestDeadline
+  langs:
+  - csharp
+  - vb
+  name: AllowLateUploads
+  nameWithType: FileRequestDeadline.AllowLateUploads
+  fullName: Dropbox.Api.TeamLog.FileRequestDeadline.AllowLateUploads
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestDeadline.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AllowLateUploads
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestDeadline.cs
+    startLine: 64
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>If set, allow uploads after the deadline has passed.</p>\n"
+  example: []
+  syntax:
+    content: public string AllowLateUploads { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property AllowLateUploads As String
+  overload: Dropbox.Api.TeamLog.FileRequestDeadline.AllowLateUploads*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.FileRequestDeadline
+  commentId: T:Dropbox.Api.TeamLog.FileRequestDeadline
+  parent: Dropbox.Api.TeamLog
+  name: FileRequestDeadline
+  nameWithType: FileRequestDeadline
+  fullName: Dropbox.Api.TeamLog.FileRequestDeadline
+- uid: Dropbox.Api.TeamLog.FileRequestDeadline.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.FileRequestDeadline.#ctor
+  name: FileRequestDeadline
+  nameWithType: FileRequestDeadline.FileRequestDeadline
+  fullName: Dropbox.Api.TeamLog.FileRequestDeadline.FileRequestDeadline
+- uid: System.Nullable{System.DateTime}
+  commentId: '!:System.Nullable{System.DateTime}'
+  definition: System.Nullable`1
+  name: Nullable<System.DateTime>
+  nameWithType: Nullable<System.DateTime>
+  fullName: System.Nullable<System.DateTime>
+  nameWithType.vb: Nullable(Of System.DateTime)
+  fullName.vb: System.Nullable(Of System.DateTime)
+  name.vb: Nullable(Of System.DateTime)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.DateTime
+    name: System.DateTime
+    nameWithType: System.DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.DateTime
+    name: System.DateTime
+    nameWithType: System.DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Nullable`1
+  isExternal: true
+  name: Nullable<>
+  nameWithType: Nullable<>
+  fullName: System.Nullable<>
+  nameWithType.vb: Nullable(Of )
+  fullName.vb: System.Nullable(Of )
+  name.vb: Nullable(Of )
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.TeamLog.FileRequestDeadline.Deadline*
+  commentId: Overload:Dropbox.Api.TeamLog.FileRequestDeadline.Deadline
+  name: Deadline
+  nameWithType: FileRequestDeadline.Deadline
+  fullName: Dropbox.Api.TeamLog.FileRequestDeadline.Deadline
+- uid: Dropbox.Api.TeamLog.FileRequestDeadline.AllowLateUploads*
+  commentId: Overload:Dropbox.Api.TeamLog.FileRequestDeadline.AllowLateUploads
+  name: AllowLateUploads
+  nameWithType: FileRequestDeadline.AllowLateUploads
+  fullName: Dropbox.Api.TeamLog.FileRequestDeadline.AllowLateUploads
+shouldSkipMarkup: true

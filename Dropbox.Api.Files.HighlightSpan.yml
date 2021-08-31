@@ -1,0 +1,242 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.HighlightSpan
+  commentId: T:Dropbox.Api.Files.HighlightSpan
+  id: HighlightSpan
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.HighlightSpan.#ctor
+  - Dropbox.Api.Files.HighlightSpan.#ctor(System.String,System.Boolean)
+  - Dropbox.Api.Files.HighlightSpan.HighlightStr
+  - Dropbox.Api.Files.HighlightSpan.IsHighlighted
+  langs:
+  - csharp
+  - vb
+  name: HighlightSpan
+  nameWithType: HighlightSpan
+  fullName: Dropbox.Api.Files.HighlightSpan
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/HighlightSpan.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: HighlightSpan
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/HighlightSpan.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The highlight span object</p>\n"
+  example: []
+  syntax:
+    content: 'public class HighlightSpan : object'
+    content.vb: >-
+      Public Class HighlightSpan
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.HighlightSpan.#ctor(System.String,System.Boolean)
+  commentId: M:Dropbox.Api.Files.HighlightSpan.#ctor(System.String,System.Boolean)
+  id: '#ctor(System.String,System.Boolean)'
+  parent: Dropbox.Api.Files.HighlightSpan
+  langs:
+  - csharp
+  - vb
+  name: HighlightSpan(String, Boolean)
+  nameWithType: HighlightSpan.HighlightSpan(String, Boolean)
+  fullName: Dropbox.Api.Files.HighlightSpan.HighlightSpan(System.String, System.Boolean)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/HighlightSpan.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/HighlightSpan.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.HighlightSpan\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public HighlightSpan(string highlightStr, bool isHighlighted)
+    parameters:
+    - id: highlightStr
+      type: System.String
+      description: >-
+        String to be determined whether it should be highlighted
+
+        or not.
+    - id: isHighlighted
+      type: System.Boolean
+      description: The string should be highlighted or not.
+    content.vb: Public Sub New(highlightStr As String, isHighlighted As Boolean)
+  overload: Dropbox.Api.Files.HighlightSpan.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.HighlightSpan.#ctor
+  commentId: M:Dropbox.Api.Files.HighlightSpan.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.HighlightSpan
+  langs:
+  - csharp
+  - vb
+  name: HighlightSpan()
+  nameWithType: HighlightSpan.HighlightSpan()
+  fullName: Dropbox.Api.Files.HighlightSpan.HighlightSpan()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/HighlightSpan.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/HighlightSpan.cs
+    startLine: 52
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.HighlightSpan\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public HighlightSpan()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.HighlightSpan.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.HighlightSpan.HighlightStr
+  commentId: P:Dropbox.Api.Files.HighlightSpan.HighlightStr
+  id: HighlightStr
+  parent: Dropbox.Api.Files.HighlightSpan
+  langs:
+  - csharp
+  - vb
+  name: HighlightStr
+  nameWithType: HighlightSpan.HighlightStr
+  fullName: Dropbox.Api.Files.HighlightSpan.HighlightStr
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/HighlightSpan.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: HighlightStr
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/HighlightSpan.cs
+    startLine: 60
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>String to be determined whether it should be highlighted or not.</p>\n"
+  example: []
+  syntax:
+    content: public string HighlightStr { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property HighlightStr As String
+  overload: Dropbox.Api.Files.HighlightSpan.HighlightStr*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.HighlightSpan.IsHighlighted
+  commentId: P:Dropbox.Api.Files.HighlightSpan.IsHighlighted
+  id: IsHighlighted
+  parent: Dropbox.Api.Files.HighlightSpan
+  langs:
+  - csharp
+  - vb
+  name: IsHighlighted
+  nameWithType: HighlightSpan.IsHighlighted
+  fullName: Dropbox.Api.Files.HighlightSpan.IsHighlighted
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/HighlightSpan.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsHighlighted
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/HighlightSpan.cs
+    startLine: 65
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The string should be highlighted or not.</p>\n"
+  example: []
+  syntax:
+    content: public bool IsHighlighted { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsHighlighted As Boolean
+  overload: Dropbox.Api.Files.HighlightSpan.IsHighlighted*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.HighlightSpan
+  commentId: T:Dropbox.Api.Files.HighlightSpan
+  name: HighlightSpan
+  nameWithType: HighlightSpan
+  fullName: Dropbox.Api.Files.HighlightSpan
+- uid: Dropbox.Api.Files.HighlightSpan.#ctor*
+  commentId: Overload:Dropbox.Api.Files.HighlightSpan.#ctor
+  name: HighlightSpan
+  nameWithType: HighlightSpan.HighlightSpan
+  fullName: Dropbox.Api.Files.HighlightSpan.HighlightSpan
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Files.HighlightSpan.HighlightStr*
+  commentId: Overload:Dropbox.Api.Files.HighlightSpan.HighlightStr
+  name: HighlightStr
+  nameWithType: HighlightSpan.HighlightStr
+  fullName: Dropbox.Api.Files.HighlightSpan.HighlightStr
+- uid: Dropbox.Api.Files.HighlightSpan.IsHighlighted*
+  commentId: Overload:Dropbox.Api.Files.HighlightSpan.IsHighlighted
+  name: IsHighlighted
+  nameWithType: HighlightSpan.IsHighlighted
+  fullName: Dropbox.Api.Files.HighlightSpan.IsHighlighted
+shouldSkipMarkup: true

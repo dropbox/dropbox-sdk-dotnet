@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.SecondaryEmailVerifiedDetails
+  commentId: T:Dropbox.Api.TeamLog.SecondaryEmailVerifiedDetails
+  id: SecondaryEmailVerifiedDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.SecondaryEmailVerifiedDetails.#ctor
+  - Dropbox.Api.TeamLog.SecondaryEmailVerifiedDetails.#ctor(System.String)
+  - Dropbox.Api.TeamLog.SecondaryEmailVerifiedDetails.SecondaryEmail
+  langs:
+  - csharp
+  - vb
+  name: SecondaryEmailVerifiedDetails
+  nameWithType: SecondaryEmailVerifiedDetails
+  fullName: Dropbox.Api.TeamLog.SecondaryEmailVerifiedDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SecondaryEmailVerifiedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SecondaryEmailVerifiedDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SecondaryEmailVerifiedDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Verified secondary email.</p>\n"
+  example: []
+  syntax:
+    content: 'public class SecondaryEmailVerifiedDetails : object'
+    content.vb: >-
+      Public Class SecondaryEmailVerifiedDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.SecondaryEmailVerifiedDetails.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.SecondaryEmailVerifiedDetails.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.SecondaryEmailVerifiedDetails
+  langs:
+  - csharp
+  - vb
+  name: SecondaryEmailVerifiedDetails(String)
+  nameWithType: SecondaryEmailVerifiedDetails.SecondaryEmailVerifiedDetails(String)
+  fullName: Dropbox.Api.TeamLog.SecondaryEmailVerifiedDetails.SecondaryEmailVerifiedDetails(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SecondaryEmailVerifiedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SecondaryEmailVerifiedDetails.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SecondaryEmailVerifiedDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public SecondaryEmailVerifiedDetails(string secondaryEmail)
+    parameters:
+    - id: secondaryEmail
+      type: System.String
+      description: Verified secondary email.
+    content.vb: Public Sub New(secondaryEmail As String)
+  overload: Dropbox.Api.TeamLog.SecondaryEmailVerifiedDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SecondaryEmailVerifiedDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.SecondaryEmailVerifiedDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.SecondaryEmailVerifiedDetails
+  langs:
+  - csharp
+  - vb
+  name: SecondaryEmailVerifiedDetails()
+  nameWithType: SecondaryEmailVerifiedDetails.SecondaryEmailVerifiedDetails()
+  fullName: Dropbox.Api.TeamLog.SecondaryEmailVerifiedDetails.SecondaryEmailVerifiedDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SecondaryEmailVerifiedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SecondaryEmailVerifiedDetails.cs
+    startLine: 54
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SecondaryEmailVerifiedDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public SecondaryEmailVerifiedDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.SecondaryEmailVerifiedDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SecondaryEmailVerifiedDetails.SecondaryEmail
+  commentId: P:Dropbox.Api.TeamLog.SecondaryEmailVerifiedDetails.SecondaryEmail
+  id: SecondaryEmail
+  parent: Dropbox.Api.TeamLog.SecondaryEmailVerifiedDetails
+  langs:
+  - csharp
+  - vb
+  name: SecondaryEmail
+  nameWithType: SecondaryEmailVerifiedDetails.SecondaryEmail
+  fullName: Dropbox.Api.TeamLog.SecondaryEmailVerifiedDetails.SecondaryEmail
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SecondaryEmailVerifiedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SecondaryEmail
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SecondaryEmailVerifiedDetails.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Verified secondary email.</p>\n"
+  example: []
+  syntax:
+    content: public string SecondaryEmail { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SecondaryEmail As String
+  overload: Dropbox.Api.TeamLog.SecondaryEmailVerifiedDetails.SecondaryEmail*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.SecondaryEmailVerifiedDetails
+  commentId: T:Dropbox.Api.TeamLog.SecondaryEmailVerifiedDetails
+  parent: Dropbox.Api.TeamLog
+  name: SecondaryEmailVerifiedDetails
+  nameWithType: SecondaryEmailVerifiedDetails
+  fullName: Dropbox.Api.TeamLog.SecondaryEmailVerifiedDetails
+- uid: Dropbox.Api.TeamLog.SecondaryEmailVerifiedDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.SecondaryEmailVerifiedDetails.#ctor
+  name: SecondaryEmailVerifiedDetails
+  nameWithType: SecondaryEmailVerifiedDetails.SecondaryEmailVerifiedDetails
+  fullName: Dropbox.Api.TeamLog.SecondaryEmailVerifiedDetails.SecondaryEmailVerifiedDetails
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.SecondaryEmailVerifiedDetails.SecondaryEmail*
+  commentId: Overload:Dropbox.Api.TeamLog.SecondaryEmailVerifiedDetails.SecondaryEmail
+  name: SecondaryEmail
+  nameWithType: SecondaryEmailVerifiedDetails.SecondaryEmail
+  fullName: Dropbox.Api.TeamLog.SecondaryEmailVerifiedDetails.SecondaryEmail
+shouldSkipMarkup: true

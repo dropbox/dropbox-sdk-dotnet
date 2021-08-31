@@ -1,0 +1,162 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.CreateFolderBatchJobStatus.InProgress
+  commentId: T:Dropbox.Api.Files.CreateFolderBatchJobStatus.InProgress
+  id: CreateFolderBatchJobStatus.InProgress
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.CreateFolderBatchJobStatus.InProgress.Instance
+  langs:
+  - csharp
+  - vb
+  name: CreateFolderBatchJobStatus.InProgress
+  nameWithType: CreateFolderBatchJobStatus.InProgress
+  fullName: Dropbox.Api.Files.CreateFolderBatchJobStatus.InProgress
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/CreateFolderBatchJobStatus.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: InProgress
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/CreateFolderBatchJobStatus.cs
+    startLine: 465
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The asynchronous job is still in progress.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class InProgress : CreateFolderBatchJobStatus'
+    content.vb: >-
+      Public NotInheritable Class InProgress
+          Inherits CreateFolderBatchJobStatus
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Files.CreateFolderBatchJobStatus
+  inheritedMembers:
+  - Dropbox.Api.Files.CreateFolderBatchJobStatus.IsComplete
+  - Dropbox.Api.Files.CreateFolderBatchJobStatus.AsComplete
+  - Dropbox.Api.Files.CreateFolderBatchJobStatus.IsFailed
+  - Dropbox.Api.Files.CreateFolderBatchJobStatus.AsFailed
+  - Dropbox.Api.Files.CreateFolderBatchJobStatus.IsOther
+  - Dropbox.Api.Files.CreateFolderBatchJobStatus.AsOther
+  - Dropbox.Api.Files.CreateFolderBatchJobStatus.IsInProgress
+  - Dropbox.Api.Files.CreateFolderBatchJobStatus.AsInProgress
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Files.CreateFolderBatchJobStatus.InProgress.Instance
+  commentId: F:Dropbox.Api.Files.CreateFolderBatchJobStatus.InProgress.Instance
+  id: Instance
+  parent: Dropbox.Api.Files.CreateFolderBatchJobStatus.InProgress
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: CreateFolderBatchJobStatus.InProgress.Instance
+  fullName: Dropbox.Api.Files.CreateFolderBatchJobStatus.InProgress.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/CreateFolderBatchJobStatus.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/CreateFolderBatchJobStatus.cs
+    startLine: 489
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>A singleton instance of InProgress</p>\n"
+  example: []
+  syntax:
+    content: public static readonly CreateFolderBatchJobStatus.InProgress Instance
+    return:
+      type: Dropbox.Api.Files.CreateFolderBatchJobStatus.InProgress
+    content.vb: Public Shared ReadOnly Instance As CreateFolderBatchJobStatus.InProgress
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.CreateFolderBatchJobStatus
+  commentId: T:Dropbox.Api.Files.CreateFolderBatchJobStatus
+  parent: Dropbox.Api.Files
+  name: CreateFolderBatchJobStatus
+  nameWithType: CreateFolderBatchJobStatus
+  fullName: Dropbox.Api.Files.CreateFolderBatchJobStatus
+- uid: Dropbox.Api.Files.CreateFolderBatchJobStatus.IsComplete
+  commentId: P:Dropbox.Api.Files.CreateFolderBatchJobStatus.IsComplete
+  parent: Dropbox.Api.Files.CreateFolderBatchJobStatus
+  name: IsComplete
+  nameWithType: CreateFolderBatchJobStatus.IsComplete
+  fullName: Dropbox.Api.Files.CreateFolderBatchJobStatus.IsComplete
+- uid: Dropbox.Api.Files.CreateFolderBatchJobStatus.AsComplete
+  commentId: P:Dropbox.Api.Files.CreateFolderBatchJobStatus.AsComplete
+  parent: Dropbox.Api.Files.CreateFolderBatchJobStatus
+  name: AsComplete
+  nameWithType: CreateFolderBatchJobStatus.AsComplete
+  fullName: Dropbox.Api.Files.CreateFolderBatchJobStatus.AsComplete
+- uid: Dropbox.Api.Files.CreateFolderBatchJobStatus.IsFailed
+  commentId: P:Dropbox.Api.Files.CreateFolderBatchJobStatus.IsFailed
+  parent: Dropbox.Api.Files.CreateFolderBatchJobStatus
+  name: IsFailed
+  nameWithType: CreateFolderBatchJobStatus.IsFailed
+  fullName: Dropbox.Api.Files.CreateFolderBatchJobStatus.IsFailed
+- uid: Dropbox.Api.Files.CreateFolderBatchJobStatus.AsFailed
+  commentId: P:Dropbox.Api.Files.CreateFolderBatchJobStatus.AsFailed
+  parent: Dropbox.Api.Files.CreateFolderBatchJobStatus
+  name: AsFailed
+  nameWithType: CreateFolderBatchJobStatus.AsFailed
+  fullName: Dropbox.Api.Files.CreateFolderBatchJobStatus.AsFailed
+- uid: Dropbox.Api.Files.CreateFolderBatchJobStatus.IsOther
+  commentId: P:Dropbox.Api.Files.CreateFolderBatchJobStatus.IsOther
+  parent: Dropbox.Api.Files.CreateFolderBatchJobStatus
+  name: IsOther
+  nameWithType: CreateFolderBatchJobStatus.IsOther
+  fullName: Dropbox.Api.Files.CreateFolderBatchJobStatus.IsOther
+- uid: Dropbox.Api.Files.CreateFolderBatchJobStatus.AsOther
+  commentId: P:Dropbox.Api.Files.CreateFolderBatchJobStatus.AsOther
+  parent: Dropbox.Api.Files.CreateFolderBatchJobStatus
+  name: AsOther
+  nameWithType: CreateFolderBatchJobStatus.AsOther
+  fullName: Dropbox.Api.Files.CreateFolderBatchJobStatus.AsOther
+- uid: Dropbox.Api.Files.CreateFolderBatchJobStatus.IsInProgress
+  commentId: P:Dropbox.Api.Files.CreateFolderBatchJobStatus.IsInProgress
+  parent: Dropbox.Api.Files.CreateFolderBatchJobStatus
+  name: IsInProgress
+  nameWithType: CreateFolderBatchJobStatus.IsInProgress
+  fullName: Dropbox.Api.Files.CreateFolderBatchJobStatus.IsInProgress
+- uid: Dropbox.Api.Files.CreateFolderBatchJobStatus.AsInProgress
+  commentId: P:Dropbox.Api.Files.CreateFolderBatchJobStatus.AsInProgress
+  parent: Dropbox.Api.Files.CreateFolderBatchJobStatus
+  name: AsInProgress
+  nameWithType: CreateFolderBatchJobStatus.AsInProgress
+  fullName: Dropbox.Api.Files.CreateFolderBatchJobStatus.AsInProgress
+- uid: Dropbox.Api.Files.CreateFolderBatchJobStatus.InProgress
+  commentId: T:Dropbox.Api.Files.CreateFolderBatchJobStatus.InProgress
+  parent: Dropbox.Api.Files
+  name: CreateFolderBatchJobStatus.InProgress
+  nameWithType: CreateFolderBatchJobStatus.InProgress
+  fullName: Dropbox.Api.Files.CreateFolderBatchJobStatus.InProgress
+shouldSkipMarkup: true

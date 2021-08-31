@@ -1,0 +1,96 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.FileAddDetails
+  commentId: T:Dropbox.Api.TeamLog.FileAddDetails
+  id: FileAddDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.FileAddDetails.#ctor
+  langs:
+  - csharp
+  - vb
+  name: FileAddDetails
+  nameWithType: FileAddDetails
+  fullName: Dropbox.Api.TeamLog.FileAddDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileAddDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: FileAddDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileAddDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Added files and/or folders.</p>\n"
+  example: []
+  syntax:
+    content: 'public class FileAddDetails : object'
+    content.vb: >-
+      Public Class FileAddDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.FileAddDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.FileAddDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.FileAddDetails
+  langs:
+  - csharp
+  - vb
+  name: FileAddDetails()
+  nameWithType: FileAddDetails.FileAddDetails()
+  fullName: Dropbox.Api.TeamLog.FileAddDetails.FileAddDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileAddDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileAddDetails.cs
+    startLine: 32
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.FileAddDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public FileAddDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.FileAddDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.FileAddDetails
+  commentId: T:Dropbox.Api.TeamLog.FileAddDetails
+  parent: Dropbox.Api.TeamLog
+  name: FileAddDetails
+  nameWithType: FileAddDetails
+  fullName: Dropbox.Api.TeamLog.FileAddDetails
+- uid: Dropbox.Api.TeamLog.FileAddDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.FileAddDetails.#ctor
+  name: FileAddDetails
+  nameWithType: FileAddDetails.FileAddDetails
+  fullName: Dropbox.Api.TeamLog.FileAddDetails.FileAddDetails
+shouldSkipMarkup: true

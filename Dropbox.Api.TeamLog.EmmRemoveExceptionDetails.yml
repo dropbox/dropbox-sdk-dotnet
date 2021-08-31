@@ -1,0 +1,96 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.EmmRemoveExceptionDetails
+  commentId: T:Dropbox.Api.TeamLog.EmmRemoveExceptionDetails
+  id: EmmRemoveExceptionDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.EmmRemoveExceptionDetails.#ctor
+  langs:
+  - csharp
+  - vb
+  name: EmmRemoveExceptionDetails
+  nameWithType: EmmRemoveExceptionDetails
+  fullName: Dropbox.Api.TeamLog.EmmRemoveExceptionDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EmmRemoveExceptionDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: EmmRemoveExceptionDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EmmRemoveExceptionDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Removed members from EMM exception list.</p>\n"
+  example: []
+  syntax:
+    content: 'public class EmmRemoveExceptionDetails : object'
+    content.vb: >-
+      Public Class EmmRemoveExceptionDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.EmmRemoveExceptionDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.EmmRemoveExceptionDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.EmmRemoveExceptionDetails
+  langs:
+  - csharp
+  - vb
+  name: EmmRemoveExceptionDetails()
+  nameWithType: EmmRemoveExceptionDetails.EmmRemoveExceptionDetails()
+  fullName: Dropbox.Api.TeamLog.EmmRemoveExceptionDetails.EmmRemoveExceptionDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EmmRemoveExceptionDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EmmRemoveExceptionDetails.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.EmmRemoveExceptionDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public EmmRemoveExceptionDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.EmmRemoveExceptionDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.EmmRemoveExceptionDetails
+  commentId: T:Dropbox.Api.TeamLog.EmmRemoveExceptionDetails
+  parent: Dropbox.Api.TeamLog
+  name: EmmRemoveExceptionDetails
+  nameWithType: EmmRemoveExceptionDetails
+  fullName: Dropbox.Api.TeamLog.EmmRemoveExceptionDetails
+- uid: Dropbox.Api.TeamLog.EmmRemoveExceptionDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.EmmRemoveExceptionDetails.#ctor
+  name: EmmRemoveExceptionDetails
+  nameWithType: EmmRemoveExceptionDetails.EmmRemoveExceptionDetails
+  fullName: Dropbox.Api.TeamLog.EmmRemoveExceptionDetails.EmmRemoveExceptionDetails
+shouldSkipMarkup: true

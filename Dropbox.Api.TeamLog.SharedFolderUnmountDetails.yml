@@ -1,0 +1,96 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.SharedFolderUnmountDetails
+  commentId: T:Dropbox.Api.TeamLog.SharedFolderUnmountDetails
+  id: SharedFolderUnmountDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.SharedFolderUnmountDetails.#ctor
+  langs:
+  - csharp
+  - vb
+  name: SharedFolderUnmountDetails
+  nameWithType: SharedFolderUnmountDetails
+  fullName: Dropbox.Api.TeamLog.SharedFolderUnmountDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderUnmountDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SharedFolderUnmountDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderUnmountDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Deleted shared folder from Dropbox.</p>\n"
+  example: []
+  syntax:
+    content: 'public class SharedFolderUnmountDetails : object'
+    content.vb: >-
+      Public Class SharedFolderUnmountDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.SharedFolderUnmountDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.SharedFolderUnmountDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.SharedFolderUnmountDetails
+  langs:
+  - csharp
+  - vb
+  name: SharedFolderUnmountDetails()
+  nameWithType: SharedFolderUnmountDetails.SharedFolderUnmountDetails()
+  fullName: Dropbox.Api.TeamLog.SharedFolderUnmountDetails.SharedFolderUnmountDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderUnmountDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderUnmountDetails.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SharedFolderUnmountDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public SharedFolderUnmountDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.SharedFolderUnmountDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.SharedFolderUnmountDetails
+  commentId: T:Dropbox.Api.TeamLog.SharedFolderUnmountDetails
+  parent: Dropbox.Api.TeamLog
+  name: SharedFolderUnmountDetails
+  nameWithType: SharedFolderUnmountDetails
+  fullName: Dropbox.Api.TeamLog.SharedFolderUnmountDetails
+- uid: Dropbox.Api.TeamLog.SharedFolderUnmountDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedFolderUnmountDetails.#ctor
+  name: SharedFolderUnmountDetails
+  nameWithType: SharedFolderUnmountDetails.SharedFolderUnmountDetails
+  fullName: Dropbox.Api.TeamLog.SharedFolderUnmountDetails.SharedFolderUnmountDetails
+shouldSkipMarkup: true

@@ -1,0 +1,257 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.TeamFolderRenameError.StatusError
+  commentId: T:Dropbox.Api.Team.TeamFolderRenameError.StatusError
+  id: TeamFolderRenameError.StatusError
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.TeamFolderRenameError.StatusError.#ctor(Dropbox.Api.Team.TeamFolderInvalidStatusError)
+  - Dropbox.Api.Team.TeamFolderRenameError.StatusError.Value
+  langs:
+  - csharp
+  - vb
+  name: TeamFolderRenameError.StatusError
+  nameWithType: TeamFolderRenameError.StatusError
+  fullName: Dropbox.Api.Team.TeamFolderRenameError.StatusError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderRenameError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: StatusError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderRenameError.cs
+    startLine: 617
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The status error object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class StatusError : TeamFolderRenameError'
+    content.vb: >-
+      Public NotInheritable Class StatusError
+          Inherits TeamFolderRenameError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.TeamFolderRenameError
+  inheritedMembers:
+  - Dropbox.Api.Team.TeamFolderRenameError.IsInvalidFolderName
+  - Dropbox.Api.Team.TeamFolderRenameError.AsInvalidFolderName
+  - Dropbox.Api.Team.TeamFolderRenameError.IsFolderNameAlreadyUsed
+  - Dropbox.Api.Team.TeamFolderRenameError.AsFolderNameAlreadyUsed
+  - Dropbox.Api.Team.TeamFolderRenameError.IsFolderNameReserved
+  - Dropbox.Api.Team.TeamFolderRenameError.AsFolderNameReserved
+  - Dropbox.Api.Team.TeamFolderRenameError.IsAccessError
+  - Dropbox.Api.Team.TeamFolderRenameError.AsAccessError
+  - Dropbox.Api.Team.TeamFolderRenameError.IsStatusError
+  - Dropbox.Api.Team.TeamFolderRenameError.AsStatusError
+  - Dropbox.Api.Team.TeamFolderRenameError.IsTeamSharedDropboxError
+  - Dropbox.Api.Team.TeamFolderRenameError.AsTeamSharedDropboxError
+  - Dropbox.Api.Team.TeamFolderRenameError.IsOther
+  - Dropbox.Api.Team.TeamFolderRenameError.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Team.TeamFolderRenameError.StatusError.#ctor(Dropbox.Api.Team.TeamFolderInvalidStatusError)
+  commentId: M:Dropbox.Api.Team.TeamFolderRenameError.StatusError.#ctor(Dropbox.Api.Team.TeamFolderInvalidStatusError)
+  id: '#ctor(Dropbox.Api.Team.TeamFolderInvalidStatusError)'
+  parent: Dropbox.Api.Team.TeamFolderRenameError.StatusError
+  langs:
+  - csharp
+  - vb
+  name: StatusError(TeamFolderInvalidStatusError)
+  nameWithType: TeamFolderRenameError.StatusError.StatusError(TeamFolderInvalidStatusError)
+  fullName: Dropbox.Api.Team.TeamFolderRenameError.StatusError.StatusError(Dropbox.Api.Team.TeamFolderInvalidStatusError)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderRenameError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderRenameError.cs
+    startLine: 636
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.TeamFolderRenameError.StatusError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public StatusError(TeamFolderInvalidStatusError value)
+    parameters:
+    - id: value
+      type: Dropbox.Api.Team.TeamFolderInvalidStatusError
+      description: The value
+    content.vb: Public Sub New(value As TeamFolderInvalidStatusError)
+  overload: Dropbox.Api.Team.TeamFolderRenameError.StatusError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.TeamFolderRenameError.StatusError.Value
+  commentId: P:Dropbox.Api.Team.TeamFolderRenameError.StatusError.Value
+  id: Value
+  parent: Dropbox.Api.Team.TeamFolderRenameError.StatusError
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: TeamFolderRenameError.StatusError.Value
+  fullName: Dropbox.Api.Team.TeamFolderRenameError.StatusError.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderRenameError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderRenameError.cs
+    startLine: 651
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public TeamFolderInvalidStatusError Value { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.TeamFolderInvalidStatusError
+    content.vb: Public ReadOnly Property Value As TeamFolderInvalidStatusError
+  overload: Dropbox.Api.Team.TeamFolderRenameError.StatusError.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.TeamFolderRenameError
+  commentId: T:Dropbox.Api.Team.TeamFolderRenameError
+  parent: Dropbox.Api.Team
+  name: TeamFolderRenameError
+  nameWithType: TeamFolderRenameError
+  fullName: Dropbox.Api.Team.TeamFolderRenameError
+- uid: Dropbox.Api.Team.TeamFolderRenameError.IsInvalidFolderName
+  commentId: P:Dropbox.Api.Team.TeamFolderRenameError.IsInvalidFolderName
+  parent: Dropbox.Api.Team.TeamFolderRenameError
+  name: IsInvalidFolderName
+  nameWithType: TeamFolderRenameError.IsInvalidFolderName
+  fullName: Dropbox.Api.Team.TeamFolderRenameError.IsInvalidFolderName
+- uid: Dropbox.Api.Team.TeamFolderRenameError.AsInvalidFolderName
+  commentId: P:Dropbox.Api.Team.TeamFolderRenameError.AsInvalidFolderName
+  parent: Dropbox.Api.Team.TeamFolderRenameError
+  name: AsInvalidFolderName
+  nameWithType: TeamFolderRenameError.AsInvalidFolderName
+  fullName: Dropbox.Api.Team.TeamFolderRenameError.AsInvalidFolderName
+- uid: Dropbox.Api.Team.TeamFolderRenameError.IsFolderNameAlreadyUsed
+  commentId: P:Dropbox.Api.Team.TeamFolderRenameError.IsFolderNameAlreadyUsed
+  parent: Dropbox.Api.Team.TeamFolderRenameError
+  name: IsFolderNameAlreadyUsed
+  nameWithType: TeamFolderRenameError.IsFolderNameAlreadyUsed
+  fullName: Dropbox.Api.Team.TeamFolderRenameError.IsFolderNameAlreadyUsed
+- uid: Dropbox.Api.Team.TeamFolderRenameError.AsFolderNameAlreadyUsed
+  commentId: P:Dropbox.Api.Team.TeamFolderRenameError.AsFolderNameAlreadyUsed
+  parent: Dropbox.Api.Team.TeamFolderRenameError
+  name: AsFolderNameAlreadyUsed
+  nameWithType: TeamFolderRenameError.AsFolderNameAlreadyUsed
+  fullName: Dropbox.Api.Team.TeamFolderRenameError.AsFolderNameAlreadyUsed
+- uid: Dropbox.Api.Team.TeamFolderRenameError.IsFolderNameReserved
+  commentId: P:Dropbox.Api.Team.TeamFolderRenameError.IsFolderNameReserved
+  parent: Dropbox.Api.Team.TeamFolderRenameError
+  name: IsFolderNameReserved
+  nameWithType: TeamFolderRenameError.IsFolderNameReserved
+  fullName: Dropbox.Api.Team.TeamFolderRenameError.IsFolderNameReserved
+- uid: Dropbox.Api.Team.TeamFolderRenameError.AsFolderNameReserved
+  commentId: P:Dropbox.Api.Team.TeamFolderRenameError.AsFolderNameReserved
+  parent: Dropbox.Api.Team.TeamFolderRenameError
+  name: AsFolderNameReserved
+  nameWithType: TeamFolderRenameError.AsFolderNameReserved
+  fullName: Dropbox.Api.Team.TeamFolderRenameError.AsFolderNameReserved
+- uid: Dropbox.Api.Team.TeamFolderRenameError.IsAccessError
+  commentId: P:Dropbox.Api.Team.TeamFolderRenameError.IsAccessError
+  parent: Dropbox.Api.Team.TeamFolderRenameError
+  name: IsAccessError
+  nameWithType: TeamFolderRenameError.IsAccessError
+  fullName: Dropbox.Api.Team.TeamFolderRenameError.IsAccessError
+- uid: Dropbox.Api.Team.TeamFolderRenameError.AsAccessError
+  commentId: P:Dropbox.Api.Team.TeamFolderRenameError.AsAccessError
+  parent: Dropbox.Api.Team.TeamFolderRenameError
+  name: AsAccessError
+  nameWithType: TeamFolderRenameError.AsAccessError
+  fullName: Dropbox.Api.Team.TeamFolderRenameError.AsAccessError
+- uid: Dropbox.Api.Team.TeamFolderRenameError.IsStatusError
+  commentId: P:Dropbox.Api.Team.TeamFolderRenameError.IsStatusError
+  parent: Dropbox.Api.Team.TeamFolderRenameError
+  name: IsStatusError
+  nameWithType: TeamFolderRenameError.IsStatusError
+  fullName: Dropbox.Api.Team.TeamFolderRenameError.IsStatusError
+- uid: Dropbox.Api.Team.TeamFolderRenameError.AsStatusError
+  commentId: P:Dropbox.Api.Team.TeamFolderRenameError.AsStatusError
+  parent: Dropbox.Api.Team.TeamFolderRenameError
+  name: AsStatusError
+  nameWithType: TeamFolderRenameError.AsStatusError
+  fullName: Dropbox.Api.Team.TeamFolderRenameError.AsStatusError
+- uid: Dropbox.Api.Team.TeamFolderRenameError.IsTeamSharedDropboxError
+  commentId: P:Dropbox.Api.Team.TeamFolderRenameError.IsTeamSharedDropboxError
+  parent: Dropbox.Api.Team.TeamFolderRenameError
+  name: IsTeamSharedDropboxError
+  nameWithType: TeamFolderRenameError.IsTeamSharedDropboxError
+  fullName: Dropbox.Api.Team.TeamFolderRenameError.IsTeamSharedDropboxError
+- uid: Dropbox.Api.Team.TeamFolderRenameError.AsTeamSharedDropboxError
+  commentId: P:Dropbox.Api.Team.TeamFolderRenameError.AsTeamSharedDropboxError
+  parent: Dropbox.Api.Team.TeamFolderRenameError
+  name: AsTeamSharedDropboxError
+  nameWithType: TeamFolderRenameError.AsTeamSharedDropboxError
+  fullName: Dropbox.Api.Team.TeamFolderRenameError.AsTeamSharedDropboxError
+- uid: Dropbox.Api.Team.TeamFolderRenameError.IsOther
+  commentId: P:Dropbox.Api.Team.TeamFolderRenameError.IsOther
+  parent: Dropbox.Api.Team.TeamFolderRenameError
+  name: IsOther
+  nameWithType: TeamFolderRenameError.IsOther
+  fullName: Dropbox.Api.Team.TeamFolderRenameError.IsOther
+- uid: Dropbox.Api.Team.TeamFolderRenameError.AsOther
+  commentId: P:Dropbox.Api.Team.TeamFolderRenameError.AsOther
+  parent: Dropbox.Api.Team.TeamFolderRenameError
+  name: AsOther
+  nameWithType: TeamFolderRenameError.AsOther
+  fullName: Dropbox.Api.Team.TeamFolderRenameError.AsOther
+- uid: Dropbox.Api.Team.TeamFolderRenameError.StatusError
+  commentId: T:Dropbox.Api.Team.TeamFolderRenameError.StatusError
+  parent: Dropbox.Api.Team
+  name: TeamFolderRenameError.StatusError
+  nameWithType: TeamFolderRenameError.StatusError
+  fullName: Dropbox.Api.Team.TeamFolderRenameError.StatusError
+- uid: Dropbox.Api.Team.TeamFolderRenameError.StatusError.#ctor*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderRenameError.StatusError.#ctor
+  name: StatusError
+  nameWithType: TeamFolderRenameError.StatusError.StatusError
+  fullName: Dropbox.Api.Team.TeamFolderRenameError.StatusError.StatusError
+- uid: Dropbox.Api.Team.TeamFolderInvalidStatusError
+  commentId: T:Dropbox.Api.Team.TeamFolderInvalidStatusError
+  parent: Dropbox.Api.Team
+  name: TeamFolderInvalidStatusError
+  nameWithType: TeamFolderInvalidStatusError
+  fullName: Dropbox.Api.Team.TeamFolderInvalidStatusError
+- uid: Dropbox.Api.Team.TeamFolderRenameError.StatusError.Value*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderRenameError.StatusError.Value
+  name: Value
+  nameWithType: TeamFolderRenameError.StatusError.Value
+  fullName: Dropbox.Api.Team.TeamFolderRenameError.StatusError.Value
+shouldSkipMarkup: true

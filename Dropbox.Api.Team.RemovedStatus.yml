@@ -1,0 +1,238 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.RemovedStatus
+  commentId: T:Dropbox.Api.Team.RemovedStatus
+  id: RemovedStatus
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.RemovedStatus.#ctor
+  - Dropbox.Api.Team.RemovedStatus.#ctor(System.Boolean,System.Boolean)
+  - Dropbox.Api.Team.RemovedStatus.IsDisconnected
+  - Dropbox.Api.Team.RemovedStatus.IsRecoverable
+  langs:
+  - csharp
+  - vb
+  name: RemovedStatus
+  nameWithType: RemovedStatus
+  fullName: Dropbox.Api.Team.RemovedStatus
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RemovedStatus.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: RemovedStatus
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RemovedStatus.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The removed status object</p>\n"
+  example: []
+  syntax:
+    content: 'public class RemovedStatus : object'
+    content.vb: >-
+      Public Class RemovedStatus
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.RemovedStatus.#ctor(System.Boolean,System.Boolean)
+  commentId: M:Dropbox.Api.Team.RemovedStatus.#ctor(System.Boolean,System.Boolean)
+  id: '#ctor(System.Boolean,System.Boolean)'
+  parent: Dropbox.Api.Team.RemovedStatus
+  langs:
+  - csharp
+  - vb
+  name: RemovedStatus(Boolean, Boolean)
+  nameWithType: RemovedStatus.RemovedStatus(Boolean, Boolean)
+  fullName: Dropbox.Api.Team.RemovedStatus.RemovedStatus(System.Boolean, System.Boolean)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RemovedStatus.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RemovedStatus.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.RemovedStatus\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public RemovedStatus(bool isRecoverable, bool isDisconnected)
+    parameters:
+    - id: isRecoverable
+      type: System.Boolean
+      description: True if the removed team member is recoverable.
+    - id: isDisconnected
+      type: System.Boolean
+      description: >-
+        True if the team member&apos;s account was converted to
+
+        individual account.
+    content.vb: Public Sub New(isRecoverable As Boolean, isDisconnected As Boolean)
+  overload: Dropbox.Api.Team.RemovedStatus.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.RemovedStatus.#ctor
+  commentId: M:Dropbox.Api.Team.RemovedStatus.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.RemovedStatus
+  langs:
+  - csharp
+  - vb
+  name: RemovedStatus()
+  nameWithType: RemovedStatus.RemovedStatus()
+  fullName: Dropbox.Api.Team.RemovedStatus.RemovedStatus()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RemovedStatus.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RemovedStatus.cs
+    startLine: 47
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.RemovedStatus\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public RemovedStatus()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.RemovedStatus.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.RemovedStatus.IsRecoverable
+  commentId: P:Dropbox.Api.Team.RemovedStatus.IsRecoverable
+  id: IsRecoverable
+  parent: Dropbox.Api.Team.RemovedStatus
+  langs:
+  - csharp
+  - vb
+  name: IsRecoverable
+  nameWithType: RemovedStatus.IsRecoverable
+  fullName: Dropbox.Api.Team.RemovedStatus.IsRecoverable
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RemovedStatus.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsRecoverable
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RemovedStatus.cs
+    startLine: 55
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>True if the removed team member is recoverable.</p>\n"
+  example: []
+  syntax:
+    content: public bool IsRecoverable { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsRecoverable As Boolean
+  overload: Dropbox.Api.Team.RemovedStatus.IsRecoverable*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.RemovedStatus.IsDisconnected
+  commentId: P:Dropbox.Api.Team.RemovedStatus.IsDisconnected
+  id: IsDisconnected
+  parent: Dropbox.Api.Team.RemovedStatus
+  langs:
+  - csharp
+  - vb
+  name: IsDisconnected
+  nameWithType: RemovedStatus.IsDisconnected
+  fullName: Dropbox.Api.Team.RemovedStatus.IsDisconnected
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RemovedStatus.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsDisconnected
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RemovedStatus.cs
+    startLine: 60
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>True if the team member&apos;s account was converted to individual account.</p>\n"
+  example: []
+  syntax:
+    content: public bool IsDisconnected { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsDisconnected As Boolean
+  overload: Dropbox.Api.Team.RemovedStatus.IsDisconnected*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.RemovedStatus
+  commentId: T:Dropbox.Api.Team.RemovedStatus
+  parent: Dropbox.Api.Team
+  name: RemovedStatus
+  nameWithType: RemovedStatus
+  fullName: Dropbox.Api.Team.RemovedStatus
+- uid: Dropbox.Api.Team.RemovedStatus.#ctor*
+  commentId: Overload:Dropbox.Api.Team.RemovedStatus.#ctor
+  name: RemovedStatus
+  nameWithType: RemovedStatus.RemovedStatus
+  fullName: Dropbox.Api.Team.RemovedStatus.RemovedStatus
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Team.RemovedStatus.IsRecoverable*
+  commentId: Overload:Dropbox.Api.Team.RemovedStatus.IsRecoverable
+  name: IsRecoverable
+  nameWithType: RemovedStatus.IsRecoverable
+  fullName: Dropbox.Api.Team.RemovedStatus.IsRecoverable
+- uid: Dropbox.Api.Team.RemovedStatus.IsDisconnected*
+  commentId: Overload:Dropbox.Api.Team.RemovedStatus.IsDisconnected
+  name: IsDisconnected
+  nameWithType: RemovedStatus.IsDisconnected
+  fullName: Dropbox.Api.Team.RemovedStatus.IsDisconnected
+shouldSkipMarkup: true

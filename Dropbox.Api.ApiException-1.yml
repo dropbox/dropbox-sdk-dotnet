@@ -1,0 +1,209 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.ApiException`1
+  commentId: T:Dropbox.Api.ApiException`1
+  id: ApiException`1
+  parent: Dropbox.Api
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: ApiException<TError>
+  nameWithType: ApiException<TError>
+  fullName: Dropbox.Api.ApiException<TError>
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/ApiException.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ApiException
+    path: dropbox-sdk-dotnet/Dropbox.Api/ApiException.cs
+    startLine: 18
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api
+  summary: "\nThe exception type that will be raised by an <xref href=\"Dropbox.Api.Stone.ITransport\" data-throw-if-not-resolved=\"false\"></xref>\nimplementation if there is an error processing the request which is caused by\nfailure in API route.\n"
+  example: []
+  syntax:
+    content: 'public sealed class ApiException<TError> : StructuredException<TError>'
+    typeParameters:
+    - id: TError
+      description: The type of the error.
+    content.vb: >-
+      Public NotInheritable Class ApiException(Of TError)
+          Inherits StructuredException(Of TError)
+  inheritance:
+  - System.Object
+  - Dropbox.Api.DropboxException
+  - Dropbox.Api.StructuredException{{TError}}
+  inheritedMembers:
+  - Dropbox.Api.StructuredException{{TError}}.ErrorResponse
+  - Dropbox.Api.StructuredException{{TError}}.Message
+  - Dropbox.Api.DropboxException.ToString
+  nameWithType.vb: ApiException(Of TError)
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+  fullName.vb: Dropbox.Api.ApiException(Of TError)
+  name.vb: ApiException(Of TError)
+references:
+- uid: Dropbox.Api.Stone.ITransport
+  commentId: T:Dropbox.Api.Stone.ITransport
+  isExternal: true
+- uid: Dropbox.Api
+  commentId: N:Dropbox.Api
+  name: Dropbox.Api
+  nameWithType: Dropbox.Api
+  fullName: Dropbox.Api
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.DropboxException
+  commentId: T:Dropbox.Api.DropboxException
+  parent: Dropbox.Api
+  name: DropboxException
+  nameWithType: DropboxException
+  fullName: Dropbox.Api.DropboxException
+- uid: Dropbox.Api.StructuredException{{TError}}
+  commentId: T:Dropbox.Api.StructuredException{`0}
+  parent: Dropbox.Api
+  definition: Dropbox.Api.StructuredException`1
+  name: StructuredException<TError>
+  nameWithType: StructuredException<TError>
+  fullName: Dropbox.Api.StructuredException<TError>
+  nameWithType.vb: StructuredException(Of TError)
+  fullName.vb: Dropbox.Api.StructuredException(Of TError)
+  name.vb: StructuredException(Of TError)
+  spec.csharp:
+  - uid: Dropbox.Api.StructuredException`1
+    name: StructuredException
+    nameWithType: StructuredException
+    fullName: Dropbox.Api.StructuredException
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TError
+    nameWithType: TError
+    fullName: TError
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Dropbox.Api.StructuredException`1
+    name: StructuredException
+    nameWithType: StructuredException
+    fullName: Dropbox.Api.StructuredException
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TError
+    nameWithType: TError
+    fullName: TError
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.StructuredException{{TError}}.ErrorResponse
+  commentId: P:Dropbox.Api.StructuredException{`0}.ErrorResponse
+  parent: Dropbox.Api.StructuredException{{TError}}
+  definition: Dropbox.Api.StructuredException`1.ErrorResponse
+  name: ErrorResponse
+  nameWithType: StructuredException<TError>.ErrorResponse
+  fullName: Dropbox.Api.StructuredException<TError>.ErrorResponse
+  nameWithType.vb: StructuredException(Of TError).ErrorResponse
+  fullName.vb: Dropbox.Api.StructuredException(Of TError).ErrorResponse
+- uid: Dropbox.Api.StructuredException{{TError}}.Message
+  commentId: P:Dropbox.Api.StructuredException{`0}.Message
+  parent: Dropbox.Api.StructuredException{{TError}}
+  definition: Dropbox.Api.StructuredException`1.Message
+  name: Message
+  nameWithType: StructuredException<TError>.Message
+  fullName: Dropbox.Api.StructuredException<TError>.Message
+  nameWithType.vb: StructuredException(Of TError).Message
+  fullName.vb: Dropbox.Api.StructuredException(Of TError).Message
+- uid: Dropbox.Api.DropboxException.ToString
+  commentId: M:Dropbox.Api.DropboxException.ToString
+  parent: Dropbox.Api.DropboxException
+  name: ToString()
+  nameWithType: DropboxException.ToString()
+  fullName: Dropbox.Api.DropboxException.ToString()
+  spec.csharp:
+  - uid: Dropbox.Api.DropboxException.ToString
+    name: ToString
+    nameWithType: DropboxException.ToString
+    fullName: Dropbox.Api.DropboxException.ToString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Dropbox.Api.DropboxException.ToString
+    name: ToString
+    nameWithType: DropboxException.ToString
+    fullName: Dropbox.Api.DropboxException.ToString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.StructuredException`1
+  commentId: T:Dropbox.Api.StructuredException`1
+  name: StructuredException<TError>
+  nameWithType: StructuredException<TError>
+  fullName: Dropbox.Api.StructuredException<TError>
+  nameWithType.vb: StructuredException(Of TError)
+  fullName.vb: Dropbox.Api.StructuredException(Of TError)
+  name.vb: StructuredException(Of TError)
+  spec.csharp:
+  - uid: Dropbox.Api.StructuredException`1
+    name: StructuredException
+    nameWithType: StructuredException
+    fullName: Dropbox.Api.StructuredException
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TError
+    nameWithType: TError
+    fullName: TError
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Dropbox.Api.StructuredException`1
+    name: StructuredException
+    nameWithType: StructuredException
+    fullName: Dropbox.Api.StructuredException
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TError
+    nameWithType: TError
+    fullName: TError
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.StructuredException`1.ErrorResponse
+  commentId: P:Dropbox.Api.StructuredException`1.ErrorResponse
+  name: ErrorResponse
+  nameWithType: StructuredException<TError>.ErrorResponse
+  fullName: Dropbox.Api.StructuredException<TError>.ErrorResponse
+  nameWithType.vb: StructuredException(Of TError).ErrorResponse
+  fullName.vb: Dropbox.Api.StructuredException(Of TError).ErrorResponse
+- uid: Dropbox.Api.StructuredException`1.Message
+  commentId: P:Dropbox.Api.StructuredException`1.Message
+  name: Message
+  nameWithType: StructuredException<TError>.Message
+  fullName: Dropbox.Api.StructuredException<TError>.Message
+  nameWithType.vb: StructuredException(Of TError).Message
+  fullName.vb: Dropbox.Api.StructuredException(Of TError).Message
+shouldSkipMarkup: true

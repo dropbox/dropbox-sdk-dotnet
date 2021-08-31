@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.SfTeamInviteChangeRoleType
+  commentId: T:Dropbox.Api.TeamLog.SfTeamInviteChangeRoleType
+  id: SfTeamInviteChangeRoleType
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.SfTeamInviteChangeRoleType.#ctor
+  - Dropbox.Api.TeamLog.SfTeamInviteChangeRoleType.#ctor(System.String)
+  - Dropbox.Api.TeamLog.SfTeamInviteChangeRoleType.Description
+  langs:
+  - csharp
+  - vb
+  name: SfTeamInviteChangeRoleType
+  nameWithType: SfTeamInviteChangeRoleType
+  fullName: Dropbox.Api.TeamLog.SfTeamInviteChangeRoleType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SfTeamInviteChangeRoleType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SfTeamInviteChangeRoleType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SfTeamInviteChangeRoleType.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The sf team invite change role type object</p>\n"
+  example: []
+  syntax:
+    content: 'public class SfTeamInviteChangeRoleType : object'
+    content.vb: >-
+      Public Class SfTeamInviteChangeRoleType
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.SfTeamInviteChangeRoleType.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.SfTeamInviteChangeRoleType.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.SfTeamInviteChangeRoleType
+  langs:
+  - csharp
+  - vb
+  name: SfTeamInviteChangeRoleType(String)
+  nameWithType: SfTeamInviteChangeRoleType.SfTeamInviteChangeRoleType(String)
+  fullName: Dropbox.Api.TeamLog.SfTeamInviteChangeRoleType.SfTeamInviteChangeRoleType(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SfTeamInviteChangeRoleType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SfTeamInviteChangeRoleType.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SfTeamInviteChangeRoleType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public SfTeamInviteChangeRoleType(string description)
+    parameters:
+    - id: description
+      type: System.String
+      description: The description
+    content.vb: Public Sub New(description As String)
+  overload: Dropbox.Api.TeamLog.SfTeamInviteChangeRoleType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SfTeamInviteChangeRoleType.#ctor
+  commentId: M:Dropbox.Api.TeamLog.SfTeamInviteChangeRoleType.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.SfTeamInviteChangeRoleType
+  langs:
+  - csharp
+  - vb
+  name: SfTeamInviteChangeRoleType()
+  nameWithType: SfTeamInviteChangeRoleType.SfTeamInviteChangeRoleType()
+  fullName: Dropbox.Api.TeamLog.SfTeamInviteChangeRoleType.SfTeamInviteChangeRoleType()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SfTeamInviteChangeRoleType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SfTeamInviteChangeRoleType.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SfTeamInviteChangeRoleType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public SfTeamInviteChangeRoleType()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.SfTeamInviteChangeRoleType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SfTeamInviteChangeRoleType.Description
+  commentId: P:Dropbox.Api.TeamLog.SfTeamInviteChangeRoleType.Description
+  id: Description
+  parent: Dropbox.Api.TeamLog.SfTeamInviteChangeRoleType
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: SfTeamInviteChangeRoleType.Description
+  fullName: Dropbox.Api.TeamLog.SfTeamInviteChangeRoleType.Description
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SfTeamInviteChangeRoleType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Description
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SfTeamInviteChangeRoleType.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets the description of the sf team invite change role type</p>\n"
+  example: []
+  syntax:
+    content: public string Description { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Dropbox.Api.TeamLog.SfTeamInviteChangeRoleType.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.SfTeamInviteChangeRoleType
+  commentId: T:Dropbox.Api.TeamLog.SfTeamInviteChangeRoleType
+  parent: Dropbox.Api.TeamLog
+  name: SfTeamInviteChangeRoleType
+  nameWithType: SfTeamInviteChangeRoleType
+  fullName: Dropbox.Api.TeamLog.SfTeamInviteChangeRoleType
+- uid: Dropbox.Api.TeamLog.SfTeamInviteChangeRoleType.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.SfTeamInviteChangeRoleType.#ctor
+  name: SfTeamInviteChangeRoleType
+  nameWithType: SfTeamInviteChangeRoleType.SfTeamInviteChangeRoleType
+  fullName: Dropbox.Api.TeamLog.SfTeamInviteChangeRoleType.SfTeamInviteChangeRoleType
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.SfTeamInviteChangeRoleType.Description*
+  commentId: Overload:Dropbox.Api.TeamLog.SfTeamInviteChangeRoleType.Description
+  name: Description
+  nameWithType: SfTeamInviteChangeRoleType.Description
+  fullName: Dropbox.Api.TeamLog.SfTeamInviteChangeRoleType.Description
+shouldSkipMarkup: true

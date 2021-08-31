@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.GroupRemoveExternalIdDetails
+  commentId: T:Dropbox.Api.TeamLog.GroupRemoveExternalIdDetails
+  id: GroupRemoveExternalIdDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.GroupRemoveExternalIdDetails.#ctor
+  - Dropbox.Api.TeamLog.GroupRemoveExternalIdDetails.#ctor(System.String)
+  - Dropbox.Api.TeamLog.GroupRemoveExternalIdDetails.PreviousValue
+  langs:
+  - csharp
+  - vb
+  name: GroupRemoveExternalIdDetails
+  nameWithType: GroupRemoveExternalIdDetails
+  fullName: Dropbox.Api.TeamLog.GroupRemoveExternalIdDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupRemoveExternalIdDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GroupRemoveExternalIdDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupRemoveExternalIdDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Removed external ID for group.</p>\n"
+  example: []
+  syntax:
+    content: 'public class GroupRemoveExternalIdDetails : object'
+    content.vb: >-
+      Public Class GroupRemoveExternalIdDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.GroupRemoveExternalIdDetails.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.GroupRemoveExternalIdDetails.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.GroupRemoveExternalIdDetails
+  langs:
+  - csharp
+  - vb
+  name: GroupRemoveExternalIdDetails(String)
+  nameWithType: GroupRemoveExternalIdDetails.GroupRemoveExternalIdDetails(String)
+  fullName: Dropbox.Api.TeamLog.GroupRemoveExternalIdDetails.GroupRemoveExternalIdDetails(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupRemoveExternalIdDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupRemoveExternalIdDetails.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.GroupRemoveExternalIdDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public GroupRemoveExternalIdDetails(string previousValue)
+    parameters:
+    - id: previousValue
+      type: System.String
+      description: Old external id.
+    content.vb: Public Sub New(previousValue As String)
+  overload: Dropbox.Api.TeamLog.GroupRemoveExternalIdDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.GroupRemoveExternalIdDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.GroupRemoveExternalIdDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.GroupRemoveExternalIdDetails
+  langs:
+  - csharp
+  - vb
+  name: GroupRemoveExternalIdDetails()
+  nameWithType: GroupRemoveExternalIdDetails.GroupRemoveExternalIdDetails()
+  fullName: Dropbox.Api.TeamLog.GroupRemoveExternalIdDetails.GroupRemoveExternalIdDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupRemoveExternalIdDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupRemoveExternalIdDetails.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.GroupRemoveExternalIdDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public GroupRemoveExternalIdDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.GroupRemoveExternalIdDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.GroupRemoveExternalIdDetails.PreviousValue
+  commentId: P:Dropbox.Api.TeamLog.GroupRemoveExternalIdDetails.PreviousValue
+  id: PreviousValue
+  parent: Dropbox.Api.TeamLog.GroupRemoveExternalIdDetails
+  langs:
+  - csharp
+  - vb
+  name: PreviousValue
+  nameWithType: GroupRemoveExternalIdDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.GroupRemoveExternalIdDetails.PreviousValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupRemoveExternalIdDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PreviousValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupRemoveExternalIdDetails.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Old external id.</p>\n"
+  example: []
+  syntax:
+    content: public string PreviousValue { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property PreviousValue As String
+  overload: Dropbox.Api.TeamLog.GroupRemoveExternalIdDetails.PreviousValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.GroupRemoveExternalIdDetails
+  commentId: T:Dropbox.Api.TeamLog.GroupRemoveExternalIdDetails
+  parent: Dropbox.Api.TeamLog
+  name: GroupRemoveExternalIdDetails
+  nameWithType: GroupRemoveExternalIdDetails
+  fullName: Dropbox.Api.TeamLog.GroupRemoveExternalIdDetails
+- uid: Dropbox.Api.TeamLog.GroupRemoveExternalIdDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.GroupRemoveExternalIdDetails.#ctor
+  name: GroupRemoveExternalIdDetails
+  nameWithType: GroupRemoveExternalIdDetails.GroupRemoveExternalIdDetails
+  fullName: Dropbox.Api.TeamLog.GroupRemoveExternalIdDetails.GroupRemoveExternalIdDetails
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.GroupRemoveExternalIdDetails.PreviousValue*
+  commentId: Overload:Dropbox.Api.TeamLog.GroupRemoveExternalIdDetails.PreviousValue
+  name: PreviousValue
+  nameWithType: GroupRemoveExternalIdDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.GroupRemoveExternalIdDetails.PreviousValue
+shouldSkipMarkup: true

@@ -1,0 +1,474 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Paper.SharingPublicPolicyType
+  commentId: T:Dropbox.Api.Paper.SharingPublicPolicyType
+  id: SharingPublicPolicyType
+  parent: Dropbox.Api.Paper
+  children:
+  - Dropbox.Api.Paper.SharingPublicPolicyType.#ctor
+  - Dropbox.Api.Paper.SharingPublicPolicyType.AsDisabled
+  - Dropbox.Api.Paper.SharingPublicPolicyType.AsInviteOnly
+  - Dropbox.Api.Paper.SharingPublicPolicyType.AsPeopleWithLinkCanEdit
+  - Dropbox.Api.Paper.SharingPublicPolicyType.AsPeopleWithLinkCanViewAndComment
+  - Dropbox.Api.Paper.SharingPublicPolicyType.IsDisabled
+  - Dropbox.Api.Paper.SharingPublicPolicyType.IsInviteOnly
+  - Dropbox.Api.Paper.SharingPublicPolicyType.IsPeopleWithLinkCanEdit
+  - Dropbox.Api.Paper.SharingPublicPolicyType.IsPeopleWithLinkCanViewAndComment
+  langs:
+  - csharp
+  - vb
+  name: SharingPublicPolicyType
+  nameWithType: SharingPublicPolicyType
+  fullName: Dropbox.Api.Paper.SharingPublicPolicyType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/SharingPublicPolicyType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SharingPublicPolicyType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/SharingPublicPolicyType.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>The sharing public policy type object</p>\n"
+  example: []
+  syntax:
+    content: 'public class SharingPublicPolicyType : object'
+    content.vb: >-
+      Public Class SharingPublicPolicyType
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Paper.SharingPublicPolicyType.Disabled
+  - Dropbox.Api.Paper.SharingPublicPolicyType.InviteOnly
+  - Dropbox.Api.Paper.SharingPublicPolicyType.PeopleWithLinkCanEdit
+  - Dropbox.Api.Paper.SharingPublicPolicyType.PeopleWithLinkCanViewAndComment
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Paper.SharingPublicPolicyType.#ctor
+  commentId: M:Dropbox.Api.Paper.SharingPublicPolicyType.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Paper.SharingPublicPolicyType
+  langs:
+  - csharp
+  - vb
+  name: SharingPublicPolicyType()
+  nameWithType: SharingPublicPolicyType.SharingPublicPolicyType()
+  fullName: Dropbox.Api.Paper.SharingPublicPolicyType.SharingPublicPolicyType()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/SharingPublicPolicyType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/SharingPublicPolicyType.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Paper.SharingPublicPolicyType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public SharingPublicPolicyType()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Paper.SharingPublicPolicyType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Paper.SharingPublicPolicyType.IsDisabled
+  commentId: P:Dropbox.Api.Paper.SharingPublicPolicyType.IsDisabled
+  id: IsDisabled
+  parent: Dropbox.Api.Paper.SharingPublicPolicyType
+  langs:
+  - csharp
+  - vb
+  name: IsDisabled
+  nameWithType: SharingPublicPolicyType.IsDisabled
+  fullName: Dropbox.Api.Paper.SharingPublicPolicyType.IsDisabled
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/SharingPublicPolicyType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsDisabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/SharingPublicPolicyType.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets a value indicating whether this instance is Disabled</p>\n"
+  example: []
+  syntax:
+    content: public bool IsDisabled { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsDisabled As Boolean
+  overload: Dropbox.Api.Paper.SharingPublicPolicyType.IsDisabled*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Paper.SharingPublicPolicyType.AsDisabled
+  commentId: P:Dropbox.Api.Paper.SharingPublicPolicyType.AsDisabled
+  id: AsDisabled
+  parent: Dropbox.Api.Paper.SharingPublicPolicyType
+  langs:
+  - csharp
+  - vb
+  name: AsDisabled
+  nameWithType: SharingPublicPolicyType.AsDisabled
+  fullName: Dropbox.Api.Paper.SharingPublicPolicyType.AsDisabled
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/SharingPublicPolicyType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsDisabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/SharingPublicPolicyType.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets this instance as a Disabled, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SharingPublicPolicyType.Disabled AsDisabled { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Paper.SharingPublicPolicyType.Disabled
+    content.vb: Public ReadOnly Property AsDisabled As SharingPublicPolicyType.Disabled
+  overload: Dropbox.Api.Paper.SharingPublicPolicyType.AsDisabled*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Paper.SharingPublicPolicyType.IsPeopleWithLinkCanEdit
+  commentId: P:Dropbox.Api.Paper.SharingPublicPolicyType.IsPeopleWithLinkCanEdit
+  id: IsPeopleWithLinkCanEdit
+  parent: Dropbox.Api.Paper.SharingPublicPolicyType
+  langs:
+  - csharp
+  - vb
+  name: IsPeopleWithLinkCanEdit
+  nameWithType: SharingPublicPolicyType.IsPeopleWithLinkCanEdit
+  fullName: Dropbox.Api.Paper.SharingPublicPolicyType.IsPeopleWithLinkCanEdit
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/SharingPublicPolicyType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsPeopleWithLinkCanEdit
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/SharingPublicPolicyType.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets a value indicating whether this instance is PeopleWithLinkCanEdit</p>\n"
+  example: []
+  syntax:
+    content: public bool IsPeopleWithLinkCanEdit { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsPeopleWithLinkCanEdit As Boolean
+  overload: Dropbox.Api.Paper.SharingPublicPolicyType.IsPeopleWithLinkCanEdit*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Paper.SharingPublicPolicyType.AsPeopleWithLinkCanEdit
+  commentId: P:Dropbox.Api.Paper.SharingPublicPolicyType.AsPeopleWithLinkCanEdit
+  id: AsPeopleWithLinkCanEdit
+  parent: Dropbox.Api.Paper.SharingPublicPolicyType
+  langs:
+  - csharp
+  - vb
+  name: AsPeopleWithLinkCanEdit
+  nameWithType: SharingPublicPolicyType.AsPeopleWithLinkCanEdit
+  fullName: Dropbox.Api.Paper.SharingPublicPolicyType.AsPeopleWithLinkCanEdit
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/SharingPublicPolicyType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsPeopleWithLinkCanEdit
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/SharingPublicPolicyType.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets this instance as a PeopleWithLinkCanEdit, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SharingPublicPolicyType.PeopleWithLinkCanEdit AsPeopleWithLinkCanEdit { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Paper.SharingPublicPolicyType.PeopleWithLinkCanEdit
+    content.vb: Public ReadOnly Property AsPeopleWithLinkCanEdit As SharingPublicPolicyType.PeopleWithLinkCanEdit
+  overload: Dropbox.Api.Paper.SharingPublicPolicyType.AsPeopleWithLinkCanEdit*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Paper.SharingPublicPolicyType.IsPeopleWithLinkCanViewAndComment
+  commentId: P:Dropbox.Api.Paper.SharingPublicPolicyType.IsPeopleWithLinkCanViewAndComment
+  id: IsPeopleWithLinkCanViewAndComment
+  parent: Dropbox.Api.Paper.SharingPublicPolicyType
+  langs:
+  - csharp
+  - vb
+  name: IsPeopleWithLinkCanViewAndComment
+  nameWithType: SharingPublicPolicyType.IsPeopleWithLinkCanViewAndComment
+  fullName: Dropbox.Api.Paper.SharingPublicPolicyType.IsPeopleWithLinkCanViewAndComment
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/SharingPublicPolicyType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsPeopleWithLinkCanViewAndComment
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/SharingPublicPolicyType.cs
+    startLine: 85
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets a value indicating whether this instance is\nPeopleWithLinkCanViewAndComment</p>\n"
+  example: []
+  syntax:
+    content: public bool IsPeopleWithLinkCanViewAndComment { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsPeopleWithLinkCanViewAndComment As Boolean
+  overload: Dropbox.Api.Paper.SharingPublicPolicyType.IsPeopleWithLinkCanViewAndComment*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Paper.SharingPublicPolicyType.AsPeopleWithLinkCanViewAndComment
+  commentId: P:Dropbox.Api.Paper.SharingPublicPolicyType.AsPeopleWithLinkCanViewAndComment
+  id: AsPeopleWithLinkCanViewAndComment
+  parent: Dropbox.Api.Paper.SharingPublicPolicyType
+  langs:
+  - csharp
+  - vb
+  name: AsPeopleWithLinkCanViewAndComment
+  nameWithType: SharingPublicPolicyType.AsPeopleWithLinkCanViewAndComment
+  fullName: Dropbox.Api.Paper.SharingPublicPolicyType.AsPeopleWithLinkCanViewAndComment
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/SharingPublicPolicyType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsPeopleWithLinkCanViewAndComment
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/SharingPublicPolicyType.cs
+    startLine: 97
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets this instance as a PeopleWithLinkCanViewAndComment, or\n<code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SharingPublicPolicyType.PeopleWithLinkCanViewAndComment AsPeopleWithLinkCanViewAndComment { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Paper.SharingPublicPolicyType.PeopleWithLinkCanViewAndComment
+    content.vb: Public ReadOnly Property AsPeopleWithLinkCanViewAndComment As SharingPublicPolicyType.PeopleWithLinkCanViewAndComment
+  overload: Dropbox.Api.Paper.SharingPublicPolicyType.AsPeopleWithLinkCanViewAndComment*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Paper.SharingPublicPolicyType.IsInviteOnly
+  commentId: P:Dropbox.Api.Paper.SharingPublicPolicyType.IsInviteOnly
+  id: IsInviteOnly
+  parent: Dropbox.Api.Paper.SharingPublicPolicyType
+  langs:
+  - csharp
+  - vb
+  name: IsInviteOnly
+  nameWithType: SharingPublicPolicyType.IsInviteOnly
+  fullName: Dropbox.Api.Paper.SharingPublicPolicyType.IsInviteOnly
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/SharingPublicPolicyType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsInviteOnly
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/SharingPublicPolicyType.cs
+    startLine: 108
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets a value indicating whether this instance is InviteOnly</p>\n"
+  example: []
+  syntax:
+    content: public bool IsInviteOnly { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsInviteOnly As Boolean
+  overload: Dropbox.Api.Paper.SharingPublicPolicyType.IsInviteOnly*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Paper.SharingPublicPolicyType.AsInviteOnly
+  commentId: P:Dropbox.Api.Paper.SharingPublicPolicyType.AsInviteOnly
+  id: AsInviteOnly
+  parent: Dropbox.Api.Paper.SharingPublicPolicyType
+  langs:
+  - csharp
+  - vb
+  name: AsInviteOnly
+  nameWithType: SharingPublicPolicyType.AsInviteOnly
+  fullName: Dropbox.Api.Paper.SharingPublicPolicyType.AsInviteOnly
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/SharingPublicPolicyType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsInviteOnly
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/SharingPublicPolicyType.cs
+    startLine: 119
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets this instance as a InviteOnly, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SharingPublicPolicyType.InviteOnly AsInviteOnly { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Paper.SharingPublicPolicyType.InviteOnly
+    content.vb: Public ReadOnly Property AsInviteOnly As SharingPublicPolicyType.InviteOnly
+  overload: Dropbox.Api.Paper.SharingPublicPolicyType.AsInviteOnly*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Paper
+  commentId: N:Dropbox.Api.Paper
+  name: Dropbox.Api.Paper
+  nameWithType: Dropbox.Api.Paper
+  fullName: Dropbox.Api.Paper
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Paper.SharingPublicPolicyType
+  commentId: T:Dropbox.Api.Paper.SharingPublicPolicyType
+  parent: Dropbox.Api.Paper
+  name: SharingPublicPolicyType
+  nameWithType: SharingPublicPolicyType
+  fullName: Dropbox.Api.Paper.SharingPublicPolicyType
+- uid: Dropbox.Api.Paper.SharingPublicPolicyType.#ctor*
+  commentId: Overload:Dropbox.Api.Paper.SharingPublicPolicyType.#ctor
+  name: SharingPublicPolicyType
+  nameWithType: SharingPublicPolicyType.SharingPublicPolicyType
+  fullName: Dropbox.Api.Paper.SharingPublicPolicyType.SharingPublicPolicyType
+- uid: Dropbox.Api.Paper.SharingPublicPolicyType.IsDisabled*
+  commentId: Overload:Dropbox.Api.Paper.SharingPublicPolicyType.IsDisabled
+  name: IsDisabled
+  nameWithType: SharingPublicPolicyType.IsDisabled
+  fullName: Dropbox.Api.Paper.SharingPublicPolicyType.IsDisabled
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Paper.SharingPublicPolicyType.AsDisabled*
+  commentId: Overload:Dropbox.Api.Paper.SharingPublicPolicyType.AsDisabled
+  name: AsDisabled
+  nameWithType: SharingPublicPolicyType.AsDisabled
+  fullName: Dropbox.Api.Paper.SharingPublicPolicyType.AsDisabled
+- uid: Dropbox.Api.Paper.SharingPublicPolicyType.Disabled
+  commentId: T:Dropbox.Api.Paper.SharingPublicPolicyType.Disabled
+  parent: Dropbox.Api.Paper
+  name: SharingPublicPolicyType.Disabled
+  nameWithType: SharingPublicPolicyType.Disabled
+  fullName: Dropbox.Api.Paper.SharingPublicPolicyType.Disabled
+- uid: Dropbox.Api.Paper.SharingPublicPolicyType.IsPeopleWithLinkCanEdit*
+  commentId: Overload:Dropbox.Api.Paper.SharingPublicPolicyType.IsPeopleWithLinkCanEdit
+  name: IsPeopleWithLinkCanEdit
+  nameWithType: SharingPublicPolicyType.IsPeopleWithLinkCanEdit
+  fullName: Dropbox.Api.Paper.SharingPublicPolicyType.IsPeopleWithLinkCanEdit
+- uid: Dropbox.Api.Paper.SharingPublicPolicyType.AsPeopleWithLinkCanEdit*
+  commentId: Overload:Dropbox.Api.Paper.SharingPublicPolicyType.AsPeopleWithLinkCanEdit
+  name: AsPeopleWithLinkCanEdit
+  nameWithType: SharingPublicPolicyType.AsPeopleWithLinkCanEdit
+  fullName: Dropbox.Api.Paper.SharingPublicPolicyType.AsPeopleWithLinkCanEdit
+- uid: Dropbox.Api.Paper.SharingPublicPolicyType.PeopleWithLinkCanEdit
+  commentId: T:Dropbox.Api.Paper.SharingPublicPolicyType.PeopleWithLinkCanEdit
+  parent: Dropbox.Api.Paper
+  name: SharingPublicPolicyType.PeopleWithLinkCanEdit
+  nameWithType: SharingPublicPolicyType.PeopleWithLinkCanEdit
+  fullName: Dropbox.Api.Paper.SharingPublicPolicyType.PeopleWithLinkCanEdit
+- uid: Dropbox.Api.Paper.SharingPublicPolicyType.IsPeopleWithLinkCanViewAndComment*
+  commentId: Overload:Dropbox.Api.Paper.SharingPublicPolicyType.IsPeopleWithLinkCanViewAndComment
+  name: IsPeopleWithLinkCanViewAndComment
+  nameWithType: SharingPublicPolicyType.IsPeopleWithLinkCanViewAndComment
+  fullName: Dropbox.Api.Paper.SharingPublicPolicyType.IsPeopleWithLinkCanViewAndComment
+- uid: Dropbox.Api.Paper.SharingPublicPolicyType.AsPeopleWithLinkCanViewAndComment*
+  commentId: Overload:Dropbox.Api.Paper.SharingPublicPolicyType.AsPeopleWithLinkCanViewAndComment
+  name: AsPeopleWithLinkCanViewAndComment
+  nameWithType: SharingPublicPolicyType.AsPeopleWithLinkCanViewAndComment
+  fullName: Dropbox.Api.Paper.SharingPublicPolicyType.AsPeopleWithLinkCanViewAndComment
+- uid: Dropbox.Api.Paper.SharingPublicPolicyType.PeopleWithLinkCanViewAndComment
+  commentId: T:Dropbox.Api.Paper.SharingPublicPolicyType.PeopleWithLinkCanViewAndComment
+  parent: Dropbox.Api.Paper
+  name: SharingPublicPolicyType.PeopleWithLinkCanViewAndComment
+  nameWithType: SharingPublicPolicyType.PeopleWithLinkCanViewAndComment
+  fullName: Dropbox.Api.Paper.SharingPublicPolicyType.PeopleWithLinkCanViewAndComment
+- uid: Dropbox.Api.Paper.SharingPublicPolicyType.IsInviteOnly*
+  commentId: Overload:Dropbox.Api.Paper.SharingPublicPolicyType.IsInviteOnly
+  name: IsInviteOnly
+  nameWithType: SharingPublicPolicyType.IsInviteOnly
+  fullName: Dropbox.Api.Paper.SharingPublicPolicyType.IsInviteOnly
+- uid: Dropbox.Api.Paper.SharingPublicPolicyType.AsInviteOnly*
+  commentId: Overload:Dropbox.Api.Paper.SharingPublicPolicyType.AsInviteOnly
+  name: AsInviteOnly
+  nameWithType: SharingPublicPolicyType.AsInviteOnly
+  fullName: Dropbox.Api.Paper.SharingPublicPolicyType.AsInviteOnly
+- uid: Dropbox.Api.Paper.SharingPublicPolicyType.InviteOnly
+  commentId: T:Dropbox.Api.Paper.SharingPublicPolicyType.InviteOnly
+  parent: Dropbox.Api.Paper
+  name: SharingPublicPolicyType.InviteOnly
+  nameWithType: SharingPublicPolicyType.InviteOnly
+  fullName: Dropbox.Api.Paper.SharingPublicPolicyType.InviteOnly
+shouldSkipMarkup: true

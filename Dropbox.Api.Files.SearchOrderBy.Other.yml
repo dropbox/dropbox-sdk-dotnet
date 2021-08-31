@@ -1,0 +1,148 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.SearchOrderBy.Other
+  commentId: T:Dropbox.Api.Files.SearchOrderBy.Other
+  id: SearchOrderBy.Other
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.SearchOrderBy.Other.Instance
+  langs:
+  - csharp
+  - vb
+  name: SearchOrderBy.Other
+  nameWithType: SearchOrderBy.Other
+  fullName: Dropbox.Api.Files.SearchOrderBy.Other
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchOrderBy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Other
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchOrderBy.cs
+    startLine: 320
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The other object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Other : SearchOrderBy'
+    content.vb: >-
+      Public NotInheritable Class Other
+          Inherits SearchOrderBy
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Files.SearchOrderBy
+  inheritedMembers:
+  - Dropbox.Api.Files.SearchOrderBy.IsRelevance
+  - Dropbox.Api.Files.SearchOrderBy.AsRelevance
+  - Dropbox.Api.Files.SearchOrderBy.IsLastModifiedTime
+  - Dropbox.Api.Files.SearchOrderBy.AsLastModifiedTime
+  - Dropbox.Api.Files.SearchOrderBy.IsOther
+  - Dropbox.Api.Files.SearchOrderBy.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Files.SearchOrderBy.Other.Instance
+  commentId: F:Dropbox.Api.Files.SearchOrderBy.Other.Instance
+  id: Instance
+  parent: Dropbox.Api.Files.SearchOrderBy.Other
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: SearchOrderBy.Other.Instance
+  fullName: Dropbox.Api.Files.SearchOrderBy.Other.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchOrderBy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchOrderBy.cs
+    startLine: 344
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>A singleton instance of Other</p>\n"
+  example: []
+  syntax:
+    content: public static readonly SearchOrderBy.Other Instance
+    return:
+      type: Dropbox.Api.Files.SearchOrderBy.Other
+    content.vb: Public Shared ReadOnly Instance As SearchOrderBy.Other
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.SearchOrderBy
+  commentId: T:Dropbox.Api.Files.SearchOrderBy
+  parent: Dropbox.Api.Files
+  name: SearchOrderBy
+  nameWithType: SearchOrderBy
+  fullName: Dropbox.Api.Files.SearchOrderBy
+- uid: Dropbox.Api.Files.SearchOrderBy.IsRelevance
+  commentId: P:Dropbox.Api.Files.SearchOrderBy.IsRelevance
+  parent: Dropbox.Api.Files.SearchOrderBy
+  name: IsRelevance
+  nameWithType: SearchOrderBy.IsRelevance
+  fullName: Dropbox.Api.Files.SearchOrderBy.IsRelevance
+- uid: Dropbox.Api.Files.SearchOrderBy.AsRelevance
+  commentId: P:Dropbox.Api.Files.SearchOrderBy.AsRelevance
+  parent: Dropbox.Api.Files.SearchOrderBy
+  name: AsRelevance
+  nameWithType: SearchOrderBy.AsRelevance
+  fullName: Dropbox.Api.Files.SearchOrderBy.AsRelevance
+- uid: Dropbox.Api.Files.SearchOrderBy.IsLastModifiedTime
+  commentId: P:Dropbox.Api.Files.SearchOrderBy.IsLastModifiedTime
+  parent: Dropbox.Api.Files.SearchOrderBy
+  name: IsLastModifiedTime
+  nameWithType: SearchOrderBy.IsLastModifiedTime
+  fullName: Dropbox.Api.Files.SearchOrderBy.IsLastModifiedTime
+- uid: Dropbox.Api.Files.SearchOrderBy.AsLastModifiedTime
+  commentId: P:Dropbox.Api.Files.SearchOrderBy.AsLastModifiedTime
+  parent: Dropbox.Api.Files.SearchOrderBy
+  name: AsLastModifiedTime
+  nameWithType: SearchOrderBy.AsLastModifiedTime
+  fullName: Dropbox.Api.Files.SearchOrderBy.AsLastModifiedTime
+- uid: Dropbox.Api.Files.SearchOrderBy.IsOther
+  commentId: P:Dropbox.Api.Files.SearchOrderBy.IsOther
+  parent: Dropbox.Api.Files.SearchOrderBy
+  name: IsOther
+  nameWithType: SearchOrderBy.IsOther
+  fullName: Dropbox.Api.Files.SearchOrderBy.IsOther
+- uid: Dropbox.Api.Files.SearchOrderBy.AsOther
+  commentId: P:Dropbox.Api.Files.SearchOrderBy.AsOther
+  parent: Dropbox.Api.Files.SearchOrderBy
+  name: AsOther
+  nameWithType: SearchOrderBy.AsOther
+  fullName: Dropbox.Api.Files.SearchOrderBy.AsOther
+- uid: Dropbox.Api.Files.SearchOrderBy.Other
+  commentId: T:Dropbox.Api.Files.SearchOrderBy.Other
+  parent: Dropbox.Api.Files
+  name: SearchOrderBy.Other
+  nameWithType: SearchOrderBy.Other
+  fullName: Dropbox.Api.Files.SearchOrderBy.Other
+shouldSkipMarkup: true

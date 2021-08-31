@@ -1,0 +1,1404 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.RelocationError
+  commentId: T:Dropbox.Api.Files.RelocationError
+  id: RelocationError
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.RelocationError.#ctor
+  - Dropbox.Api.Files.RelocationError.AsCantCopySharedFolder
+  - Dropbox.Api.Files.RelocationError.AsCantMoveFolderIntoItself
+  - Dropbox.Api.Files.RelocationError.AsCantMoveIntoVault
+  - Dropbox.Api.Files.RelocationError.AsCantMoveSharedFolder
+  - Dropbox.Api.Files.RelocationError.AsCantNestSharedFolder
+  - Dropbox.Api.Files.RelocationError.AsCantTransferOwnership
+  - Dropbox.Api.Files.RelocationError.AsDuplicatedOrNestedPaths
+  - Dropbox.Api.Files.RelocationError.AsFromLookup
+  - Dropbox.Api.Files.RelocationError.AsFromWrite
+  - Dropbox.Api.Files.RelocationError.AsInsufficientQuota
+  - Dropbox.Api.Files.RelocationError.AsInternalError
+  - Dropbox.Api.Files.RelocationError.AsOther
+  - Dropbox.Api.Files.RelocationError.AsTo
+  - Dropbox.Api.Files.RelocationError.AsTooManyFiles
+  - Dropbox.Api.Files.RelocationError.IsCantCopySharedFolder
+  - Dropbox.Api.Files.RelocationError.IsCantMoveFolderIntoItself
+  - Dropbox.Api.Files.RelocationError.IsCantMoveIntoVault
+  - Dropbox.Api.Files.RelocationError.IsCantMoveSharedFolder
+  - Dropbox.Api.Files.RelocationError.IsCantNestSharedFolder
+  - Dropbox.Api.Files.RelocationError.IsCantTransferOwnership
+  - Dropbox.Api.Files.RelocationError.IsDuplicatedOrNestedPaths
+  - Dropbox.Api.Files.RelocationError.IsFromLookup
+  - Dropbox.Api.Files.RelocationError.IsFromWrite
+  - Dropbox.Api.Files.RelocationError.IsInsufficientQuota
+  - Dropbox.Api.Files.RelocationError.IsInternalError
+  - Dropbox.Api.Files.RelocationError.IsOther
+  - Dropbox.Api.Files.RelocationError.IsTo
+  - Dropbox.Api.Files.RelocationError.IsTooManyFiles
+  langs:
+  - csharp
+  - vb
+  name: RelocationError
+  nameWithType: RelocationError
+  fullName: Dropbox.Api.Files.RelocationError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: RelocationError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The relocation error object</p>\n"
+  example: []
+  syntax:
+    content: 'public class RelocationError : object'
+    content.vb: >-
+      Public Class RelocationError
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Files.RelocationError.CantCopySharedFolder
+  - Dropbox.Api.Files.RelocationError.CantMoveFolderIntoItself
+  - Dropbox.Api.Files.RelocationError.CantMoveIntoVault
+  - Dropbox.Api.Files.RelocationError.CantMoveSharedFolder
+  - Dropbox.Api.Files.RelocationError.CantNestSharedFolder
+  - Dropbox.Api.Files.RelocationError.CantTransferOwnership
+  - Dropbox.Api.Files.RelocationError.DuplicatedOrNestedPaths
+  - Dropbox.Api.Files.RelocationError.FromLookup
+  - Dropbox.Api.Files.RelocationError.FromWrite
+  - Dropbox.Api.Files.RelocationError.InsufficientQuota
+  - Dropbox.Api.Files.RelocationError.InternalError
+  - Dropbox.Api.Files.RelocationError.Other
+  - Dropbox.Api.Files.RelocationError.To
+  - Dropbox.Api.Files.RelocationError.TooManyFiles
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.RelocationError.#ctor
+  commentId: M:Dropbox.Api.Files.RelocationError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.RelocationError
+  langs:
+  - csharp
+  - vb
+  name: RelocationError()
+  nameWithType: RelocationError.RelocationError()
+  fullName: Dropbox.Api.Files.RelocationError.RelocationError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationError.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.RelocationError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public RelocationError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.RelocationError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.RelocationError.IsFromLookup
+  commentId: P:Dropbox.Api.Files.RelocationError.IsFromLookup
+  id: IsFromLookup
+  parent: Dropbox.Api.Files.RelocationError
+  langs:
+  - csharp
+  - vb
+  name: IsFromLookup
+  nameWithType: RelocationError.IsFromLookup
+  fullName: Dropbox.Api.Files.RelocationError.IsFromLookup
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsFromLookup
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationError.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is FromLookup</p>\n"
+  example: []
+  syntax:
+    content: public bool IsFromLookup { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsFromLookup As Boolean
+  overload: Dropbox.Api.Files.RelocationError.IsFromLookup*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.RelocationError.AsFromLookup
+  commentId: P:Dropbox.Api.Files.RelocationError.AsFromLookup
+  id: AsFromLookup
+  parent: Dropbox.Api.Files.RelocationError
+  langs:
+  - csharp
+  - vb
+  name: AsFromLookup
+  nameWithType: RelocationError.AsFromLookup
+  fullName: Dropbox.Api.Files.RelocationError.AsFromLookup
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsFromLookup
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationError.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a FromLookup, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public RelocationError.FromLookup AsFromLookup { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.RelocationError.FromLookup
+    content.vb: Public ReadOnly Property AsFromLookup As RelocationError.FromLookup
+  overload: Dropbox.Api.Files.RelocationError.AsFromLookup*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.RelocationError.IsFromWrite
+  commentId: P:Dropbox.Api.Files.RelocationError.IsFromWrite
+  id: IsFromWrite
+  parent: Dropbox.Api.Files.RelocationError
+  langs:
+  - csharp
+  - vb
+  name: IsFromWrite
+  nameWithType: RelocationError.IsFromWrite
+  fullName: Dropbox.Api.Files.RelocationError.IsFromWrite
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsFromWrite
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationError.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is FromWrite</p>\n"
+  example: []
+  syntax:
+    content: public bool IsFromWrite { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsFromWrite As Boolean
+  overload: Dropbox.Api.Files.RelocationError.IsFromWrite*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.RelocationError.AsFromWrite
+  commentId: P:Dropbox.Api.Files.RelocationError.AsFromWrite
+  id: AsFromWrite
+  parent: Dropbox.Api.Files.RelocationError
+  langs:
+  - csharp
+  - vb
+  name: AsFromWrite
+  nameWithType: RelocationError.AsFromWrite
+  fullName: Dropbox.Api.Files.RelocationError.AsFromWrite
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsFromWrite
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationError.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a FromWrite, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public RelocationError.FromWrite AsFromWrite { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.RelocationError.FromWrite
+    content.vb: Public ReadOnly Property AsFromWrite As RelocationError.FromWrite
+  overload: Dropbox.Api.Files.RelocationError.AsFromWrite*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.RelocationError.IsTo
+  commentId: P:Dropbox.Api.Files.RelocationError.IsTo
+  id: IsTo
+  parent: Dropbox.Api.Files.RelocationError
+  langs:
+  - csharp
+  - vb
+  name: IsTo
+  nameWithType: RelocationError.IsTo
+  fullName: Dropbox.Api.Files.RelocationError.IsTo
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsTo
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationError.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is To</p>\n"
+  example: []
+  syntax:
+    content: public bool IsTo { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsTo As Boolean
+  overload: Dropbox.Api.Files.RelocationError.IsTo*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.RelocationError.AsTo
+  commentId: P:Dropbox.Api.Files.RelocationError.AsTo
+  id: AsTo
+  parent: Dropbox.Api.Files.RelocationError
+  langs:
+  - csharp
+  - vb
+  name: AsTo
+  nameWithType: RelocationError.AsTo
+  fullName: Dropbox.Api.Files.RelocationError.AsTo
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsTo
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationError.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a To, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public RelocationError.To AsTo { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.RelocationError.To
+    content.vb: Public ReadOnly Property AsTo As RelocationError.To
+  overload: Dropbox.Api.Files.RelocationError.AsTo*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.RelocationError.IsCantCopySharedFolder
+  commentId: P:Dropbox.Api.Files.RelocationError.IsCantCopySharedFolder
+  id: IsCantCopySharedFolder
+  parent: Dropbox.Api.Files.RelocationError
+  langs:
+  - csharp
+  - vb
+  name: IsCantCopySharedFolder
+  nameWithType: RelocationError.IsCantCopySharedFolder
+  fullName: Dropbox.Api.Files.RelocationError.IsCantCopySharedFolder
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsCantCopySharedFolder
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationError.cs
+    startLine: 106
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is CantCopySharedFolder</p>\n"
+  example: []
+  syntax:
+    content: public bool IsCantCopySharedFolder { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsCantCopySharedFolder As Boolean
+  overload: Dropbox.Api.Files.RelocationError.IsCantCopySharedFolder*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.RelocationError.AsCantCopySharedFolder
+  commentId: P:Dropbox.Api.Files.RelocationError.AsCantCopySharedFolder
+  id: AsCantCopySharedFolder
+  parent: Dropbox.Api.Files.RelocationError
+  langs:
+  - csharp
+  - vb
+  name: AsCantCopySharedFolder
+  nameWithType: RelocationError.AsCantCopySharedFolder
+  fullName: Dropbox.Api.Files.RelocationError.AsCantCopySharedFolder
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsCantCopySharedFolder
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationError.cs
+    startLine: 117
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a CantCopySharedFolder, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public RelocationError.CantCopySharedFolder AsCantCopySharedFolder { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.RelocationError.CantCopySharedFolder
+    content.vb: Public ReadOnly Property AsCantCopySharedFolder As RelocationError.CantCopySharedFolder
+  overload: Dropbox.Api.Files.RelocationError.AsCantCopySharedFolder*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.RelocationError.IsCantNestSharedFolder
+  commentId: P:Dropbox.Api.Files.RelocationError.IsCantNestSharedFolder
+  id: IsCantNestSharedFolder
+  parent: Dropbox.Api.Files.RelocationError
+  langs:
+  - csharp
+  - vb
+  name: IsCantNestSharedFolder
+  nameWithType: RelocationError.IsCantNestSharedFolder
+  fullName: Dropbox.Api.Files.RelocationError.IsCantNestSharedFolder
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsCantNestSharedFolder
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationError.cs
+    startLine: 128
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is CantNestSharedFolder</p>\n"
+  example: []
+  syntax:
+    content: public bool IsCantNestSharedFolder { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsCantNestSharedFolder As Boolean
+  overload: Dropbox.Api.Files.RelocationError.IsCantNestSharedFolder*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.RelocationError.AsCantNestSharedFolder
+  commentId: P:Dropbox.Api.Files.RelocationError.AsCantNestSharedFolder
+  id: AsCantNestSharedFolder
+  parent: Dropbox.Api.Files.RelocationError
+  langs:
+  - csharp
+  - vb
+  name: AsCantNestSharedFolder
+  nameWithType: RelocationError.AsCantNestSharedFolder
+  fullName: Dropbox.Api.Files.RelocationError.AsCantNestSharedFolder
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsCantNestSharedFolder
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationError.cs
+    startLine: 139
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a CantNestSharedFolder, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public RelocationError.CantNestSharedFolder AsCantNestSharedFolder { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.RelocationError.CantNestSharedFolder
+    content.vb: Public ReadOnly Property AsCantNestSharedFolder As RelocationError.CantNestSharedFolder
+  overload: Dropbox.Api.Files.RelocationError.AsCantNestSharedFolder*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.RelocationError.IsCantMoveFolderIntoItself
+  commentId: P:Dropbox.Api.Files.RelocationError.IsCantMoveFolderIntoItself
+  id: IsCantMoveFolderIntoItself
+  parent: Dropbox.Api.Files.RelocationError
+  langs:
+  - csharp
+  - vb
+  name: IsCantMoveFolderIntoItself
+  nameWithType: RelocationError.IsCantMoveFolderIntoItself
+  fullName: Dropbox.Api.Files.RelocationError.IsCantMoveFolderIntoItself
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsCantMoveFolderIntoItself
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationError.cs
+    startLine: 151
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is\nCantMoveFolderIntoItself</p>\n"
+  example: []
+  syntax:
+    content: public bool IsCantMoveFolderIntoItself { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsCantMoveFolderIntoItself As Boolean
+  overload: Dropbox.Api.Files.RelocationError.IsCantMoveFolderIntoItself*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.RelocationError.AsCantMoveFolderIntoItself
+  commentId: P:Dropbox.Api.Files.RelocationError.AsCantMoveFolderIntoItself
+  id: AsCantMoveFolderIntoItself
+  parent: Dropbox.Api.Files.RelocationError
+  langs:
+  - csharp
+  - vb
+  name: AsCantMoveFolderIntoItself
+  nameWithType: RelocationError.AsCantMoveFolderIntoItself
+  fullName: Dropbox.Api.Files.RelocationError.AsCantMoveFolderIntoItself
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsCantMoveFolderIntoItself
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationError.cs
+    startLine: 162
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a CantMoveFolderIntoItself, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public RelocationError.CantMoveFolderIntoItself AsCantMoveFolderIntoItself { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.RelocationError.CantMoveFolderIntoItself
+    content.vb: Public ReadOnly Property AsCantMoveFolderIntoItself As RelocationError.CantMoveFolderIntoItself
+  overload: Dropbox.Api.Files.RelocationError.AsCantMoveFolderIntoItself*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.RelocationError.IsTooManyFiles
+  commentId: P:Dropbox.Api.Files.RelocationError.IsTooManyFiles
+  id: IsTooManyFiles
+  parent: Dropbox.Api.Files.RelocationError
+  langs:
+  - csharp
+  - vb
+  name: IsTooManyFiles
+  nameWithType: RelocationError.IsTooManyFiles
+  fullName: Dropbox.Api.Files.RelocationError.IsTooManyFiles
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsTooManyFiles
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationError.cs
+    startLine: 173
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is TooManyFiles</p>\n"
+  example: []
+  syntax:
+    content: public bool IsTooManyFiles { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsTooManyFiles As Boolean
+  overload: Dropbox.Api.Files.RelocationError.IsTooManyFiles*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.RelocationError.AsTooManyFiles
+  commentId: P:Dropbox.Api.Files.RelocationError.AsTooManyFiles
+  id: AsTooManyFiles
+  parent: Dropbox.Api.Files.RelocationError
+  langs:
+  - csharp
+  - vb
+  name: AsTooManyFiles
+  nameWithType: RelocationError.AsTooManyFiles
+  fullName: Dropbox.Api.Files.RelocationError.AsTooManyFiles
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsTooManyFiles
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationError.cs
+    startLine: 184
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a TooManyFiles, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public RelocationError.TooManyFiles AsTooManyFiles { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.RelocationError.TooManyFiles
+    content.vb: Public ReadOnly Property AsTooManyFiles As RelocationError.TooManyFiles
+  overload: Dropbox.Api.Files.RelocationError.AsTooManyFiles*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.RelocationError.IsDuplicatedOrNestedPaths
+  commentId: P:Dropbox.Api.Files.RelocationError.IsDuplicatedOrNestedPaths
+  id: IsDuplicatedOrNestedPaths
+  parent: Dropbox.Api.Files.RelocationError
+  langs:
+  - csharp
+  - vb
+  name: IsDuplicatedOrNestedPaths
+  nameWithType: RelocationError.IsDuplicatedOrNestedPaths
+  fullName: Dropbox.Api.Files.RelocationError.IsDuplicatedOrNestedPaths
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsDuplicatedOrNestedPaths
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationError.cs
+    startLine: 196
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is\nDuplicatedOrNestedPaths</p>\n"
+  example: []
+  syntax:
+    content: public bool IsDuplicatedOrNestedPaths { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsDuplicatedOrNestedPaths As Boolean
+  overload: Dropbox.Api.Files.RelocationError.IsDuplicatedOrNestedPaths*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.RelocationError.AsDuplicatedOrNestedPaths
+  commentId: P:Dropbox.Api.Files.RelocationError.AsDuplicatedOrNestedPaths
+  id: AsDuplicatedOrNestedPaths
+  parent: Dropbox.Api.Files.RelocationError
+  langs:
+  - csharp
+  - vb
+  name: AsDuplicatedOrNestedPaths
+  nameWithType: RelocationError.AsDuplicatedOrNestedPaths
+  fullName: Dropbox.Api.Files.RelocationError.AsDuplicatedOrNestedPaths
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsDuplicatedOrNestedPaths
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationError.cs
+    startLine: 207
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a DuplicatedOrNestedPaths, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public RelocationError.DuplicatedOrNestedPaths AsDuplicatedOrNestedPaths { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.RelocationError.DuplicatedOrNestedPaths
+    content.vb: Public ReadOnly Property AsDuplicatedOrNestedPaths As RelocationError.DuplicatedOrNestedPaths
+  overload: Dropbox.Api.Files.RelocationError.AsDuplicatedOrNestedPaths*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.RelocationError.IsCantTransferOwnership
+  commentId: P:Dropbox.Api.Files.RelocationError.IsCantTransferOwnership
+  id: IsCantTransferOwnership
+  parent: Dropbox.Api.Files.RelocationError
+  langs:
+  - csharp
+  - vb
+  name: IsCantTransferOwnership
+  nameWithType: RelocationError.IsCantTransferOwnership
+  fullName: Dropbox.Api.Files.RelocationError.IsCantTransferOwnership
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsCantTransferOwnership
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationError.cs
+    startLine: 218
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is CantTransferOwnership</p>\n"
+  example: []
+  syntax:
+    content: public bool IsCantTransferOwnership { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsCantTransferOwnership As Boolean
+  overload: Dropbox.Api.Files.RelocationError.IsCantTransferOwnership*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.RelocationError.AsCantTransferOwnership
+  commentId: P:Dropbox.Api.Files.RelocationError.AsCantTransferOwnership
+  id: AsCantTransferOwnership
+  parent: Dropbox.Api.Files.RelocationError
+  langs:
+  - csharp
+  - vb
+  name: AsCantTransferOwnership
+  nameWithType: RelocationError.AsCantTransferOwnership
+  fullName: Dropbox.Api.Files.RelocationError.AsCantTransferOwnership
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsCantTransferOwnership
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationError.cs
+    startLine: 229
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a CantTransferOwnership, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public RelocationError.CantTransferOwnership AsCantTransferOwnership { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.RelocationError.CantTransferOwnership
+    content.vb: Public ReadOnly Property AsCantTransferOwnership As RelocationError.CantTransferOwnership
+  overload: Dropbox.Api.Files.RelocationError.AsCantTransferOwnership*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.RelocationError.IsInsufficientQuota
+  commentId: P:Dropbox.Api.Files.RelocationError.IsInsufficientQuota
+  id: IsInsufficientQuota
+  parent: Dropbox.Api.Files.RelocationError
+  langs:
+  - csharp
+  - vb
+  name: IsInsufficientQuota
+  nameWithType: RelocationError.IsInsufficientQuota
+  fullName: Dropbox.Api.Files.RelocationError.IsInsufficientQuota
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsInsufficientQuota
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationError.cs
+    startLine: 240
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is InsufficientQuota</p>\n"
+  example: []
+  syntax:
+    content: public bool IsInsufficientQuota { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsInsufficientQuota As Boolean
+  overload: Dropbox.Api.Files.RelocationError.IsInsufficientQuota*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.RelocationError.AsInsufficientQuota
+  commentId: P:Dropbox.Api.Files.RelocationError.AsInsufficientQuota
+  id: AsInsufficientQuota
+  parent: Dropbox.Api.Files.RelocationError
+  langs:
+  - csharp
+  - vb
+  name: AsInsufficientQuota
+  nameWithType: RelocationError.AsInsufficientQuota
+  fullName: Dropbox.Api.Files.RelocationError.AsInsufficientQuota
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsInsufficientQuota
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationError.cs
+    startLine: 251
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a InsufficientQuota, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public RelocationError.InsufficientQuota AsInsufficientQuota { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.RelocationError.InsufficientQuota
+    content.vb: Public ReadOnly Property AsInsufficientQuota As RelocationError.InsufficientQuota
+  overload: Dropbox.Api.Files.RelocationError.AsInsufficientQuota*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.RelocationError.IsInternalError
+  commentId: P:Dropbox.Api.Files.RelocationError.IsInternalError
+  id: IsInternalError
+  parent: Dropbox.Api.Files.RelocationError
+  langs:
+  - csharp
+  - vb
+  name: IsInternalError
+  nameWithType: RelocationError.IsInternalError
+  fullName: Dropbox.Api.Files.RelocationError.IsInternalError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsInternalError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationError.cs
+    startLine: 262
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is InternalError</p>\n"
+  example: []
+  syntax:
+    content: public bool IsInternalError { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsInternalError As Boolean
+  overload: Dropbox.Api.Files.RelocationError.IsInternalError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.RelocationError.AsInternalError
+  commentId: P:Dropbox.Api.Files.RelocationError.AsInternalError
+  id: AsInternalError
+  parent: Dropbox.Api.Files.RelocationError
+  langs:
+  - csharp
+  - vb
+  name: AsInternalError
+  nameWithType: RelocationError.AsInternalError
+  fullName: Dropbox.Api.Files.RelocationError.AsInternalError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsInternalError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationError.cs
+    startLine: 273
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a InternalError, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public RelocationError.InternalError AsInternalError { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.RelocationError.InternalError
+    content.vb: Public ReadOnly Property AsInternalError As RelocationError.InternalError
+  overload: Dropbox.Api.Files.RelocationError.AsInternalError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.RelocationError.IsCantMoveSharedFolder
+  commentId: P:Dropbox.Api.Files.RelocationError.IsCantMoveSharedFolder
+  id: IsCantMoveSharedFolder
+  parent: Dropbox.Api.Files.RelocationError
+  langs:
+  - csharp
+  - vb
+  name: IsCantMoveSharedFolder
+  nameWithType: RelocationError.IsCantMoveSharedFolder
+  fullName: Dropbox.Api.Files.RelocationError.IsCantMoveSharedFolder
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsCantMoveSharedFolder
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationError.cs
+    startLine: 284
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is CantMoveSharedFolder</p>\n"
+  example: []
+  syntax:
+    content: public bool IsCantMoveSharedFolder { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsCantMoveSharedFolder As Boolean
+  overload: Dropbox.Api.Files.RelocationError.IsCantMoveSharedFolder*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.RelocationError.AsCantMoveSharedFolder
+  commentId: P:Dropbox.Api.Files.RelocationError.AsCantMoveSharedFolder
+  id: AsCantMoveSharedFolder
+  parent: Dropbox.Api.Files.RelocationError
+  langs:
+  - csharp
+  - vb
+  name: AsCantMoveSharedFolder
+  nameWithType: RelocationError.AsCantMoveSharedFolder
+  fullName: Dropbox.Api.Files.RelocationError.AsCantMoveSharedFolder
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsCantMoveSharedFolder
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationError.cs
+    startLine: 295
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a CantMoveSharedFolder, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public RelocationError.CantMoveSharedFolder AsCantMoveSharedFolder { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.RelocationError.CantMoveSharedFolder
+    content.vb: Public ReadOnly Property AsCantMoveSharedFolder As RelocationError.CantMoveSharedFolder
+  overload: Dropbox.Api.Files.RelocationError.AsCantMoveSharedFolder*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.RelocationError.IsCantMoveIntoVault
+  commentId: P:Dropbox.Api.Files.RelocationError.IsCantMoveIntoVault
+  id: IsCantMoveIntoVault
+  parent: Dropbox.Api.Files.RelocationError
+  langs:
+  - csharp
+  - vb
+  name: IsCantMoveIntoVault
+  nameWithType: RelocationError.IsCantMoveIntoVault
+  fullName: Dropbox.Api.Files.RelocationError.IsCantMoveIntoVault
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsCantMoveIntoVault
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationError.cs
+    startLine: 306
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is CantMoveIntoVault</p>\n"
+  example: []
+  syntax:
+    content: public bool IsCantMoveIntoVault { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsCantMoveIntoVault As Boolean
+  overload: Dropbox.Api.Files.RelocationError.IsCantMoveIntoVault*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.RelocationError.AsCantMoveIntoVault
+  commentId: P:Dropbox.Api.Files.RelocationError.AsCantMoveIntoVault
+  id: AsCantMoveIntoVault
+  parent: Dropbox.Api.Files.RelocationError
+  langs:
+  - csharp
+  - vb
+  name: AsCantMoveIntoVault
+  nameWithType: RelocationError.AsCantMoveIntoVault
+  fullName: Dropbox.Api.Files.RelocationError.AsCantMoveIntoVault
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsCantMoveIntoVault
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationError.cs
+    startLine: 317
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a CantMoveIntoVault, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public RelocationError.CantMoveIntoVault AsCantMoveIntoVault { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.RelocationError.CantMoveIntoVault
+    content.vb: Public ReadOnly Property AsCantMoveIntoVault As RelocationError.CantMoveIntoVault
+  overload: Dropbox.Api.Files.RelocationError.AsCantMoveIntoVault*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.RelocationError.IsOther
+  commentId: P:Dropbox.Api.Files.RelocationError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Files.RelocationError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: RelocationError.IsOther
+  fullName: Dropbox.Api.Files.RelocationError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationError.cs
+    startLine: 328
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Files.RelocationError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.RelocationError.AsOther
+  commentId: P:Dropbox.Api.Files.RelocationError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Files.RelocationError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: RelocationError.AsOther
+  fullName: Dropbox.Api.Files.RelocationError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationError.cs
+    startLine: 339
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public RelocationError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.RelocationError.Other
+    content.vb: Public ReadOnly Property AsOther As RelocationError.Other
+  overload: Dropbox.Api.Files.RelocationError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.RelocationError
+  commentId: T:Dropbox.Api.Files.RelocationError
+  parent: Dropbox.Api.Files
+  name: RelocationError
+  nameWithType: RelocationError
+  fullName: Dropbox.Api.Files.RelocationError
+- uid: Dropbox.Api.Files.RelocationError.#ctor*
+  commentId: Overload:Dropbox.Api.Files.RelocationError.#ctor
+  name: RelocationError
+  nameWithType: RelocationError.RelocationError
+  fullName: Dropbox.Api.Files.RelocationError.RelocationError
+- uid: Dropbox.Api.Files.RelocationError.IsFromLookup*
+  commentId: Overload:Dropbox.Api.Files.RelocationError.IsFromLookup
+  name: IsFromLookup
+  nameWithType: RelocationError.IsFromLookup
+  fullName: Dropbox.Api.Files.RelocationError.IsFromLookup
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Files.RelocationError.AsFromLookup*
+  commentId: Overload:Dropbox.Api.Files.RelocationError.AsFromLookup
+  name: AsFromLookup
+  nameWithType: RelocationError.AsFromLookup
+  fullName: Dropbox.Api.Files.RelocationError.AsFromLookup
+- uid: Dropbox.Api.Files.RelocationError.FromLookup
+  commentId: T:Dropbox.Api.Files.RelocationError.FromLookup
+  parent: Dropbox.Api.Files
+  name: RelocationError.FromLookup
+  nameWithType: RelocationError.FromLookup
+  fullName: Dropbox.Api.Files.RelocationError.FromLookup
+- uid: Dropbox.Api.Files.RelocationError.IsFromWrite*
+  commentId: Overload:Dropbox.Api.Files.RelocationError.IsFromWrite
+  name: IsFromWrite
+  nameWithType: RelocationError.IsFromWrite
+  fullName: Dropbox.Api.Files.RelocationError.IsFromWrite
+- uid: Dropbox.Api.Files.RelocationError.AsFromWrite*
+  commentId: Overload:Dropbox.Api.Files.RelocationError.AsFromWrite
+  name: AsFromWrite
+  nameWithType: RelocationError.AsFromWrite
+  fullName: Dropbox.Api.Files.RelocationError.AsFromWrite
+- uid: Dropbox.Api.Files.RelocationError.FromWrite
+  commentId: T:Dropbox.Api.Files.RelocationError.FromWrite
+  parent: Dropbox.Api.Files
+  name: RelocationError.FromWrite
+  nameWithType: RelocationError.FromWrite
+  fullName: Dropbox.Api.Files.RelocationError.FromWrite
+- uid: Dropbox.Api.Files.RelocationError.IsTo*
+  commentId: Overload:Dropbox.Api.Files.RelocationError.IsTo
+  name: IsTo
+  nameWithType: RelocationError.IsTo
+  fullName: Dropbox.Api.Files.RelocationError.IsTo
+- uid: Dropbox.Api.Files.RelocationError.AsTo*
+  commentId: Overload:Dropbox.Api.Files.RelocationError.AsTo
+  name: AsTo
+  nameWithType: RelocationError.AsTo
+  fullName: Dropbox.Api.Files.RelocationError.AsTo
+- uid: Dropbox.Api.Files.RelocationError.To
+  commentId: T:Dropbox.Api.Files.RelocationError.To
+  parent: Dropbox.Api.Files
+  name: RelocationError.To
+  nameWithType: RelocationError.To
+  fullName: Dropbox.Api.Files.RelocationError.To
+- uid: Dropbox.Api.Files.RelocationError.IsCantCopySharedFolder*
+  commentId: Overload:Dropbox.Api.Files.RelocationError.IsCantCopySharedFolder
+  name: IsCantCopySharedFolder
+  nameWithType: RelocationError.IsCantCopySharedFolder
+  fullName: Dropbox.Api.Files.RelocationError.IsCantCopySharedFolder
+- uid: Dropbox.Api.Files.RelocationError.AsCantCopySharedFolder*
+  commentId: Overload:Dropbox.Api.Files.RelocationError.AsCantCopySharedFolder
+  name: AsCantCopySharedFolder
+  nameWithType: RelocationError.AsCantCopySharedFolder
+  fullName: Dropbox.Api.Files.RelocationError.AsCantCopySharedFolder
+- uid: Dropbox.Api.Files.RelocationError.CantCopySharedFolder
+  commentId: T:Dropbox.Api.Files.RelocationError.CantCopySharedFolder
+  parent: Dropbox.Api.Files
+  name: RelocationError.CantCopySharedFolder
+  nameWithType: RelocationError.CantCopySharedFolder
+  fullName: Dropbox.Api.Files.RelocationError.CantCopySharedFolder
+- uid: Dropbox.Api.Files.RelocationError.IsCantNestSharedFolder*
+  commentId: Overload:Dropbox.Api.Files.RelocationError.IsCantNestSharedFolder
+  name: IsCantNestSharedFolder
+  nameWithType: RelocationError.IsCantNestSharedFolder
+  fullName: Dropbox.Api.Files.RelocationError.IsCantNestSharedFolder
+- uid: Dropbox.Api.Files.RelocationError.AsCantNestSharedFolder*
+  commentId: Overload:Dropbox.Api.Files.RelocationError.AsCantNestSharedFolder
+  name: AsCantNestSharedFolder
+  nameWithType: RelocationError.AsCantNestSharedFolder
+  fullName: Dropbox.Api.Files.RelocationError.AsCantNestSharedFolder
+- uid: Dropbox.Api.Files.RelocationError.CantNestSharedFolder
+  commentId: T:Dropbox.Api.Files.RelocationError.CantNestSharedFolder
+  parent: Dropbox.Api.Files
+  name: RelocationError.CantNestSharedFolder
+  nameWithType: RelocationError.CantNestSharedFolder
+  fullName: Dropbox.Api.Files.RelocationError.CantNestSharedFolder
+- uid: Dropbox.Api.Files.RelocationError.IsCantMoveFolderIntoItself*
+  commentId: Overload:Dropbox.Api.Files.RelocationError.IsCantMoveFolderIntoItself
+  name: IsCantMoveFolderIntoItself
+  nameWithType: RelocationError.IsCantMoveFolderIntoItself
+  fullName: Dropbox.Api.Files.RelocationError.IsCantMoveFolderIntoItself
+- uid: Dropbox.Api.Files.RelocationError.AsCantMoveFolderIntoItself*
+  commentId: Overload:Dropbox.Api.Files.RelocationError.AsCantMoveFolderIntoItself
+  name: AsCantMoveFolderIntoItself
+  nameWithType: RelocationError.AsCantMoveFolderIntoItself
+  fullName: Dropbox.Api.Files.RelocationError.AsCantMoveFolderIntoItself
+- uid: Dropbox.Api.Files.RelocationError.CantMoveFolderIntoItself
+  commentId: T:Dropbox.Api.Files.RelocationError.CantMoveFolderIntoItself
+  parent: Dropbox.Api.Files
+  name: RelocationError.CantMoveFolderIntoItself
+  nameWithType: RelocationError.CantMoveFolderIntoItself
+  fullName: Dropbox.Api.Files.RelocationError.CantMoveFolderIntoItself
+- uid: Dropbox.Api.Files.RelocationError.IsTooManyFiles*
+  commentId: Overload:Dropbox.Api.Files.RelocationError.IsTooManyFiles
+  name: IsTooManyFiles
+  nameWithType: RelocationError.IsTooManyFiles
+  fullName: Dropbox.Api.Files.RelocationError.IsTooManyFiles
+- uid: Dropbox.Api.Files.RelocationError.AsTooManyFiles*
+  commentId: Overload:Dropbox.Api.Files.RelocationError.AsTooManyFiles
+  name: AsTooManyFiles
+  nameWithType: RelocationError.AsTooManyFiles
+  fullName: Dropbox.Api.Files.RelocationError.AsTooManyFiles
+- uid: Dropbox.Api.Files.RelocationError.TooManyFiles
+  commentId: T:Dropbox.Api.Files.RelocationError.TooManyFiles
+  parent: Dropbox.Api.Files
+  name: RelocationError.TooManyFiles
+  nameWithType: RelocationError.TooManyFiles
+  fullName: Dropbox.Api.Files.RelocationError.TooManyFiles
+- uid: Dropbox.Api.Files.RelocationError.IsDuplicatedOrNestedPaths*
+  commentId: Overload:Dropbox.Api.Files.RelocationError.IsDuplicatedOrNestedPaths
+  name: IsDuplicatedOrNestedPaths
+  nameWithType: RelocationError.IsDuplicatedOrNestedPaths
+  fullName: Dropbox.Api.Files.RelocationError.IsDuplicatedOrNestedPaths
+- uid: Dropbox.Api.Files.RelocationError.AsDuplicatedOrNestedPaths*
+  commentId: Overload:Dropbox.Api.Files.RelocationError.AsDuplicatedOrNestedPaths
+  name: AsDuplicatedOrNestedPaths
+  nameWithType: RelocationError.AsDuplicatedOrNestedPaths
+  fullName: Dropbox.Api.Files.RelocationError.AsDuplicatedOrNestedPaths
+- uid: Dropbox.Api.Files.RelocationError.DuplicatedOrNestedPaths
+  commentId: T:Dropbox.Api.Files.RelocationError.DuplicatedOrNestedPaths
+  parent: Dropbox.Api.Files
+  name: RelocationError.DuplicatedOrNestedPaths
+  nameWithType: RelocationError.DuplicatedOrNestedPaths
+  fullName: Dropbox.Api.Files.RelocationError.DuplicatedOrNestedPaths
+- uid: Dropbox.Api.Files.RelocationError.IsCantTransferOwnership*
+  commentId: Overload:Dropbox.Api.Files.RelocationError.IsCantTransferOwnership
+  name: IsCantTransferOwnership
+  nameWithType: RelocationError.IsCantTransferOwnership
+  fullName: Dropbox.Api.Files.RelocationError.IsCantTransferOwnership
+- uid: Dropbox.Api.Files.RelocationError.AsCantTransferOwnership*
+  commentId: Overload:Dropbox.Api.Files.RelocationError.AsCantTransferOwnership
+  name: AsCantTransferOwnership
+  nameWithType: RelocationError.AsCantTransferOwnership
+  fullName: Dropbox.Api.Files.RelocationError.AsCantTransferOwnership
+- uid: Dropbox.Api.Files.RelocationError.CantTransferOwnership
+  commentId: T:Dropbox.Api.Files.RelocationError.CantTransferOwnership
+  parent: Dropbox.Api.Files
+  name: RelocationError.CantTransferOwnership
+  nameWithType: RelocationError.CantTransferOwnership
+  fullName: Dropbox.Api.Files.RelocationError.CantTransferOwnership
+- uid: Dropbox.Api.Files.RelocationError.IsInsufficientQuota*
+  commentId: Overload:Dropbox.Api.Files.RelocationError.IsInsufficientQuota
+  name: IsInsufficientQuota
+  nameWithType: RelocationError.IsInsufficientQuota
+  fullName: Dropbox.Api.Files.RelocationError.IsInsufficientQuota
+- uid: Dropbox.Api.Files.RelocationError.AsInsufficientQuota*
+  commentId: Overload:Dropbox.Api.Files.RelocationError.AsInsufficientQuota
+  name: AsInsufficientQuota
+  nameWithType: RelocationError.AsInsufficientQuota
+  fullName: Dropbox.Api.Files.RelocationError.AsInsufficientQuota
+- uid: Dropbox.Api.Files.RelocationError.InsufficientQuota
+  commentId: T:Dropbox.Api.Files.RelocationError.InsufficientQuota
+  parent: Dropbox.Api.Files
+  name: RelocationError.InsufficientQuota
+  nameWithType: RelocationError.InsufficientQuota
+  fullName: Dropbox.Api.Files.RelocationError.InsufficientQuota
+- uid: Dropbox.Api.Files.RelocationError.IsInternalError*
+  commentId: Overload:Dropbox.Api.Files.RelocationError.IsInternalError
+  name: IsInternalError
+  nameWithType: RelocationError.IsInternalError
+  fullName: Dropbox.Api.Files.RelocationError.IsInternalError
+- uid: Dropbox.Api.Files.RelocationError.AsInternalError*
+  commentId: Overload:Dropbox.Api.Files.RelocationError.AsInternalError
+  name: AsInternalError
+  nameWithType: RelocationError.AsInternalError
+  fullName: Dropbox.Api.Files.RelocationError.AsInternalError
+- uid: Dropbox.Api.Files.RelocationError.InternalError
+  commentId: T:Dropbox.Api.Files.RelocationError.InternalError
+  parent: Dropbox.Api.Files
+  name: RelocationError.InternalError
+  nameWithType: RelocationError.InternalError
+  fullName: Dropbox.Api.Files.RelocationError.InternalError
+- uid: Dropbox.Api.Files.RelocationError.IsCantMoveSharedFolder*
+  commentId: Overload:Dropbox.Api.Files.RelocationError.IsCantMoveSharedFolder
+  name: IsCantMoveSharedFolder
+  nameWithType: RelocationError.IsCantMoveSharedFolder
+  fullName: Dropbox.Api.Files.RelocationError.IsCantMoveSharedFolder
+- uid: Dropbox.Api.Files.RelocationError.AsCantMoveSharedFolder*
+  commentId: Overload:Dropbox.Api.Files.RelocationError.AsCantMoveSharedFolder
+  name: AsCantMoveSharedFolder
+  nameWithType: RelocationError.AsCantMoveSharedFolder
+  fullName: Dropbox.Api.Files.RelocationError.AsCantMoveSharedFolder
+- uid: Dropbox.Api.Files.RelocationError.CantMoveSharedFolder
+  commentId: T:Dropbox.Api.Files.RelocationError.CantMoveSharedFolder
+  parent: Dropbox.Api.Files
+  name: RelocationError.CantMoveSharedFolder
+  nameWithType: RelocationError.CantMoveSharedFolder
+  fullName: Dropbox.Api.Files.RelocationError.CantMoveSharedFolder
+- uid: Dropbox.Api.Files.RelocationError.IsCantMoveIntoVault*
+  commentId: Overload:Dropbox.Api.Files.RelocationError.IsCantMoveIntoVault
+  name: IsCantMoveIntoVault
+  nameWithType: RelocationError.IsCantMoveIntoVault
+  fullName: Dropbox.Api.Files.RelocationError.IsCantMoveIntoVault
+- uid: Dropbox.Api.Files.RelocationError.AsCantMoveIntoVault*
+  commentId: Overload:Dropbox.Api.Files.RelocationError.AsCantMoveIntoVault
+  name: AsCantMoveIntoVault
+  nameWithType: RelocationError.AsCantMoveIntoVault
+  fullName: Dropbox.Api.Files.RelocationError.AsCantMoveIntoVault
+- uid: Dropbox.Api.Files.RelocationError.CantMoveIntoVault
+  commentId: T:Dropbox.Api.Files.RelocationError.CantMoveIntoVault
+  parent: Dropbox.Api.Files
+  name: RelocationError.CantMoveIntoVault
+  nameWithType: RelocationError.CantMoveIntoVault
+  fullName: Dropbox.Api.Files.RelocationError.CantMoveIntoVault
+- uid: Dropbox.Api.Files.RelocationError.IsOther*
+  commentId: Overload:Dropbox.Api.Files.RelocationError.IsOther
+  name: IsOther
+  nameWithType: RelocationError.IsOther
+  fullName: Dropbox.Api.Files.RelocationError.IsOther
+- uid: Dropbox.Api.Files.RelocationError.AsOther*
+  commentId: Overload:Dropbox.Api.Files.RelocationError.AsOther
+  name: AsOther
+  nameWithType: RelocationError.AsOther
+  fullName: Dropbox.Api.Files.RelocationError.AsOther
+- uid: Dropbox.Api.Files.RelocationError.Other
+  commentId: T:Dropbox.Api.Files.RelocationError.Other
+  parent: Dropbox.Api.Files
+  name: RelocationError.Other
+  nameWithType: RelocationError.Other
+  fullName: Dropbox.Api.Files.RelocationError.Other
+shouldSkipMarkup: true

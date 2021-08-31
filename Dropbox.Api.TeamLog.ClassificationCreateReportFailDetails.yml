@@ -1,0 +1,193 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.ClassificationCreateReportFailDetails
+  commentId: T:Dropbox.Api.TeamLog.ClassificationCreateReportFailDetails
+  id: ClassificationCreateReportFailDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.ClassificationCreateReportFailDetails.#ctor
+  - Dropbox.Api.TeamLog.ClassificationCreateReportFailDetails.#ctor(Dropbox.Api.Team.TeamReportFailureReason)
+  - Dropbox.Api.TeamLog.ClassificationCreateReportFailDetails.FailureReason
+  langs:
+  - csharp
+  - vb
+  name: ClassificationCreateReportFailDetails
+  nameWithType: ClassificationCreateReportFailDetails
+  fullName: Dropbox.Api.TeamLog.ClassificationCreateReportFailDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ClassificationCreateReportFailDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ClassificationCreateReportFailDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ClassificationCreateReportFailDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Couldn&apos;t create Classification report.</p>\n"
+  example: []
+  syntax:
+    content: 'public class ClassificationCreateReportFailDetails : object'
+    content.vb: >-
+      Public Class ClassificationCreateReportFailDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.ClassificationCreateReportFailDetails.#ctor(Dropbox.Api.Team.TeamReportFailureReason)
+  commentId: M:Dropbox.Api.TeamLog.ClassificationCreateReportFailDetails.#ctor(Dropbox.Api.Team.TeamReportFailureReason)
+  id: '#ctor(Dropbox.Api.Team.TeamReportFailureReason)'
+  parent: Dropbox.Api.TeamLog.ClassificationCreateReportFailDetails
+  langs:
+  - csharp
+  - vb
+  name: ClassificationCreateReportFailDetails(TeamReportFailureReason)
+  nameWithType: ClassificationCreateReportFailDetails.ClassificationCreateReportFailDetails(TeamReportFailureReason)
+  fullName: Dropbox.Api.TeamLog.ClassificationCreateReportFailDetails.ClassificationCreateReportFailDetails(Dropbox.Api.Team.TeamReportFailureReason)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ClassificationCreateReportFailDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ClassificationCreateReportFailDetails.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.ClassificationCreateReportFailDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public ClassificationCreateReportFailDetails(TeamReportFailureReason failureReason)
+    parameters:
+    - id: failureReason
+      type: Dropbox.Api.Team.TeamReportFailureReason
+      description: Failure reason.
+    content.vb: Public Sub New(failureReason As TeamReportFailureReason)
+  overload: Dropbox.Api.TeamLog.ClassificationCreateReportFailDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.ClassificationCreateReportFailDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.ClassificationCreateReportFailDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.ClassificationCreateReportFailDetails
+  langs:
+  - csharp
+  - vb
+  name: ClassificationCreateReportFailDetails()
+  nameWithType: ClassificationCreateReportFailDetails.ClassificationCreateReportFailDetails()
+  fullName: Dropbox.Api.TeamLog.ClassificationCreateReportFailDetails.ClassificationCreateReportFailDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ClassificationCreateReportFailDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ClassificationCreateReportFailDetails.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.ClassificationCreateReportFailDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public ClassificationCreateReportFailDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.ClassificationCreateReportFailDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.ClassificationCreateReportFailDetails.FailureReason
+  commentId: P:Dropbox.Api.TeamLog.ClassificationCreateReportFailDetails.FailureReason
+  id: FailureReason
+  parent: Dropbox.Api.TeamLog.ClassificationCreateReportFailDetails
+  langs:
+  - csharp
+  - vb
+  name: FailureReason
+  nameWithType: ClassificationCreateReportFailDetails.FailureReason
+  fullName: Dropbox.Api.TeamLog.ClassificationCreateReportFailDetails.FailureReason
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ClassificationCreateReportFailDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: FailureReason
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ClassificationCreateReportFailDetails.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Failure reason.</p>\n"
+  example: []
+  syntax:
+    content: public TeamReportFailureReason FailureReason { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.TeamReportFailureReason
+    content.vb: Public Property FailureReason As TeamReportFailureReason
+  overload: Dropbox.Api.TeamLog.ClassificationCreateReportFailDetails.FailureReason*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.ClassificationCreateReportFailDetails
+  commentId: T:Dropbox.Api.TeamLog.ClassificationCreateReportFailDetails
+  parent: Dropbox.Api.TeamLog
+  name: ClassificationCreateReportFailDetails
+  nameWithType: ClassificationCreateReportFailDetails
+  fullName: Dropbox.Api.TeamLog.ClassificationCreateReportFailDetails
+- uid: Dropbox.Api.TeamLog.ClassificationCreateReportFailDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.ClassificationCreateReportFailDetails.#ctor
+  name: ClassificationCreateReportFailDetails
+  nameWithType: ClassificationCreateReportFailDetails.ClassificationCreateReportFailDetails
+  fullName: Dropbox.Api.TeamLog.ClassificationCreateReportFailDetails.ClassificationCreateReportFailDetails
+- uid: Dropbox.Api.Team.TeamReportFailureReason
+  commentId: T:Dropbox.Api.Team.TeamReportFailureReason
+  parent: Dropbox.Api.Team
+  name: TeamReportFailureReason
+  nameWithType: TeamReportFailureReason
+  fullName: Dropbox.Api.Team.TeamReportFailureReason
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: Dropbox.Api.TeamLog.ClassificationCreateReportFailDetails.FailureReason*
+  commentId: Overload:Dropbox.Api.TeamLog.ClassificationCreateReportFailDetails.FailureReason
+  name: FailureReason
+  nameWithType: ClassificationCreateReportFailDetails.FailureReason
+  fullName: Dropbox.Api.TeamLog.ClassificationCreateReportFailDetails.FailureReason
+shouldSkipMarkup: true

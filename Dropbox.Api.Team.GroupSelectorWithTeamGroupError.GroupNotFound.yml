@@ -1,0 +1,148 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.GroupSelectorWithTeamGroupError.GroupNotFound
+  commentId: T:Dropbox.Api.Team.GroupSelectorWithTeamGroupError.GroupNotFound
+  id: GroupSelectorWithTeamGroupError.GroupNotFound
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.GroupSelectorWithTeamGroupError.GroupNotFound.Instance
+  langs:
+  - csharp
+  - vb
+  name: GroupSelectorWithTeamGroupError.GroupNotFound
+  nameWithType: GroupSelectorWithTeamGroupError.GroupNotFound
+  fullName: Dropbox.Api.Team.GroupSelectorWithTeamGroupError.GroupNotFound
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupSelectorWithTeamGroupError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GroupNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupSelectorWithTeamGroupError.cs
+    startLine: 258
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>No matching group found. No groups match the specified group ID.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class GroupNotFound : GroupSelectorWithTeamGroupError'
+    content.vb: >-
+      Public NotInheritable Class GroupNotFound
+          Inherits GroupSelectorWithTeamGroupError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.GroupSelectorWithTeamGroupError
+  inheritedMembers:
+  - Dropbox.Api.Team.GroupSelectorWithTeamGroupError.IsSystemManagedGroupDisallowed
+  - Dropbox.Api.Team.GroupSelectorWithTeamGroupError.AsSystemManagedGroupDisallowed
+  - Dropbox.Api.Team.GroupSelectorWithTeamGroupError.IsGroupNotFound
+  - Dropbox.Api.Team.GroupSelectorWithTeamGroupError.AsGroupNotFound
+  - Dropbox.Api.Team.GroupSelectorWithTeamGroupError.IsOther
+  - Dropbox.Api.Team.GroupSelectorWithTeamGroupError.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Team.GroupSelectorWithTeamGroupError.GroupNotFound.Instance
+  commentId: F:Dropbox.Api.Team.GroupSelectorWithTeamGroupError.GroupNotFound.Instance
+  id: Instance
+  parent: Dropbox.Api.Team.GroupSelectorWithTeamGroupError.GroupNotFound
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: GroupSelectorWithTeamGroupError.GroupNotFound.Instance
+  fullName: Dropbox.Api.Team.GroupSelectorWithTeamGroupError.GroupNotFound.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupSelectorWithTeamGroupError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupSelectorWithTeamGroupError.cs
+    startLine: 283
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>A singleton instance of GroupNotFound</p>\n"
+  example: []
+  syntax:
+    content: public static readonly GroupSelectorWithTeamGroupError.GroupNotFound Instance
+    return:
+      type: Dropbox.Api.Team.GroupSelectorWithTeamGroupError.GroupNotFound
+    content.vb: Public Shared ReadOnly Instance As GroupSelectorWithTeamGroupError.GroupNotFound
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.GroupSelectorWithTeamGroupError
+  commentId: T:Dropbox.Api.Team.GroupSelectorWithTeamGroupError
+  parent: Dropbox.Api.Team
+  name: GroupSelectorWithTeamGroupError
+  nameWithType: GroupSelectorWithTeamGroupError
+  fullName: Dropbox.Api.Team.GroupSelectorWithTeamGroupError
+- uid: Dropbox.Api.Team.GroupSelectorWithTeamGroupError.IsSystemManagedGroupDisallowed
+  commentId: P:Dropbox.Api.Team.GroupSelectorWithTeamGroupError.IsSystemManagedGroupDisallowed
+  parent: Dropbox.Api.Team.GroupSelectorWithTeamGroupError
+  name: IsSystemManagedGroupDisallowed
+  nameWithType: GroupSelectorWithTeamGroupError.IsSystemManagedGroupDisallowed
+  fullName: Dropbox.Api.Team.GroupSelectorWithTeamGroupError.IsSystemManagedGroupDisallowed
+- uid: Dropbox.Api.Team.GroupSelectorWithTeamGroupError.AsSystemManagedGroupDisallowed
+  commentId: P:Dropbox.Api.Team.GroupSelectorWithTeamGroupError.AsSystemManagedGroupDisallowed
+  parent: Dropbox.Api.Team.GroupSelectorWithTeamGroupError
+  name: AsSystemManagedGroupDisallowed
+  nameWithType: GroupSelectorWithTeamGroupError.AsSystemManagedGroupDisallowed
+  fullName: Dropbox.Api.Team.GroupSelectorWithTeamGroupError.AsSystemManagedGroupDisallowed
+- uid: Dropbox.Api.Team.GroupSelectorWithTeamGroupError.IsGroupNotFound
+  commentId: P:Dropbox.Api.Team.GroupSelectorWithTeamGroupError.IsGroupNotFound
+  parent: Dropbox.Api.Team.GroupSelectorWithTeamGroupError
+  name: IsGroupNotFound
+  nameWithType: GroupSelectorWithTeamGroupError.IsGroupNotFound
+  fullName: Dropbox.Api.Team.GroupSelectorWithTeamGroupError.IsGroupNotFound
+- uid: Dropbox.Api.Team.GroupSelectorWithTeamGroupError.AsGroupNotFound
+  commentId: P:Dropbox.Api.Team.GroupSelectorWithTeamGroupError.AsGroupNotFound
+  parent: Dropbox.Api.Team.GroupSelectorWithTeamGroupError
+  name: AsGroupNotFound
+  nameWithType: GroupSelectorWithTeamGroupError.AsGroupNotFound
+  fullName: Dropbox.Api.Team.GroupSelectorWithTeamGroupError.AsGroupNotFound
+- uid: Dropbox.Api.Team.GroupSelectorWithTeamGroupError.IsOther
+  commentId: P:Dropbox.Api.Team.GroupSelectorWithTeamGroupError.IsOther
+  parent: Dropbox.Api.Team.GroupSelectorWithTeamGroupError
+  name: IsOther
+  nameWithType: GroupSelectorWithTeamGroupError.IsOther
+  fullName: Dropbox.Api.Team.GroupSelectorWithTeamGroupError.IsOther
+- uid: Dropbox.Api.Team.GroupSelectorWithTeamGroupError.AsOther
+  commentId: P:Dropbox.Api.Team.GroupSelectorWithTeamGroupError.AsOther
+  parent: Dropbox.Api.Team.GroupSelectorWithTeamGroupError
+  name: AsOther
+  nameWithType: GroupSelectorWithTeamGroupError.AsOther
+  fullName: Dropbox.Api.Team.GroupSelectorWithTeamGroupError.AsOther
+- uid: Dropbox.Api.Team.GroupSelectorWithTeamGroupError.GroupNotFound
+  commentId: T:Dropbox.Api.Team.GroupSelectorWithTeamGroupError.GroupNotFound
+  parent: Dropbox.Api.Team
+  name: GroupSelectorWithTeamGroupError.GroupNotFound
+  nameWithType: GroupSelectorWithTeamGroupError.GroupNotFound
+  fullName: Dropbox.Api.Team.GroupSelectorWithTeamGroupError.GroupNotFound
+shouldSkipMarkup: true

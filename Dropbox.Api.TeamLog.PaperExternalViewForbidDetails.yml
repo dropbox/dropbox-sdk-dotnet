@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.PaperExternalViewForbidDetails
+  commentId: T:Dropbox.Api.TeamLog.PaperExternalViewForbidDetails
+  id: PaperExternalViewForbidDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.PaperExternalViewForbidDetails.#ctor
+  - Dropbox.Api.TeamLog.PaperExternalViewForbidDetails.#ctor(System.String)
+  - Dropbox.Api.TeamLog.PaperExternalViewForbidDetails.EventUuid
+  langs:
+  - csharp
+  - vb
+  name: PaperExternalViewForbidDetails
+  nameWithType: PaperExternalViewForbidDetails
+  fullName: Dropbox.Api.TeamLog.PaperExternalViewForbidDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperExternalViewForbidDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PaperExternalViewForbidDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperExternalViewForbidDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Changed Paper external sharing setting to team-only.</p>\n"
+  example: []
+  syntax:
+    content: 'public class PaperExternalViewForbidDetails : object'
+    content.vb: >-
+      Public Class PaperExternalViewForbidDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.PaperExternalViewForbidDetails.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.PaperExternalViewForbidDetails.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.PaperExternalViewForbidDetails
+  langs:
+  - csharp
+  - vb
+  name: PaperExternalViewForbidDetails(String)
+  nameWithType: PaperExternalViewForbidDetails.PaperExternalViewForbidDetails(String)
+  fullName: Dropbox.Api.TeamLog.PaperExternalViewForbidDetails.PaperExternalViewForbidDetails(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperExternalViewForbidDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperExternalViewForbidDetails.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.PaperExternalViewForbidDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public PaperExternalViewForbidDetails(string eventUuid)
+    parameters:
+    - id: eventUuid
+      type: System.String
+      description: Event unique identifier.
+    content.vb: Public Sub New(eventUuid As String)
+  overload: Dropbox.Api.TeamLog.PaperExternalViewForbidDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.PaperExternalViewForbidDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.PaperExternalViewForbidDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.PaperExternalViewForbidDetails
+  langs:
+  - csharp
+  - vb
+  name: PaperExternalViewForbidDetails()
+  nameWithType: PaperExternalViewForbidDetails.PaperExternalViewForbidDetails()
+  fullName: Dropbox.Api.TeamLog.PaperExternalViewForbidDetails.PaperExternalViewForbidDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperExternalViewForbidDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperExternalViewForbidDetails.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.PaperExternalViewForbidDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public PaperExternalViewForbidDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.PaperExternalViewForbidDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.PaperExternalViewForbidDetails.EventUuid
+  commentId: P:Dropbox.Api.TeamLog.PaperExternalViewForbidDetails.EventUuid
+  id: EventUuid
+  parent: Dropbox.Api.TeamLog.PaperExternalViewForbidDetails
+  langs:
+  - csharp
+  - vb
+  name: EventUuid
+  nameWithType: PaperExternalViewForbidDetails.EventUuid
+  fullName: Dropbox.Api.TeamLog.PaperExternalViewForbidDetails.EventUuid
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperExternalViewForbidDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: EventUuid
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperExternalViewForbidDetails.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Event unique identifier.</p>\n"
+  example: []
+  syntax:
+    content: public string EventUuid { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property EventUuid As String
+  overload: Dropbox.Api.TeamLog.PaperExternalViewForbidDetails.EventUuid*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.PaperExternalViewForbidDetails
+  commentId: T:Dropbox.Api.TeamLog.PaperExternalViewForbidDetails
+  parent: Dropbox.Api.TeamLog
+  name: PaperExternalViewForbidDetails
+  nameWithType: PaperExternalViewForbidDetails
+  fullName: Dropbox.Api.TeamLog.PaperExternalViewForbidDetails
+- uid: Dropbox.Api.TeamLog.PaperExternalViewForbidDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.PaperExternalViewForbidDetails.#ctor
+  name: PaperExternalViewForbidDetails
+  nameWithType: PaperExternalViewForbidDetails.PaperExternalViewForbidDetails
+  fullName: Dropbox.Api.TeamLog.PaperExternalViewForbidDetails.PaperExternalViewForbidDetails
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.PaperExternalViewForbidDetails.EventUuid*
+  commentId: Overload:Dropbox.Api.TeamLog.PaperExternalViewForbidDetails.EventUuid
+  name: EventUuid
+  nameWithType: PaperExternalViewForbidDetails.EventUuid
+  fullName: Dropbox.Api.TeamLog.PaperExternalViewForbidDetails.EventUuid
+shouldSkipMarkup: true

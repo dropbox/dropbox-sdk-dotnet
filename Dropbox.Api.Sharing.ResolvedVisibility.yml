@@ -1,0 +1,852 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.ResolvedVisibility
+  commentId: T:Dropbox.Api.Sharing.ResolvedVisibility
+  id: ResolvedVisibility
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.ResolvedVisibility.#ctor
+  - Dropbox.Api.Sharing.ResolvedVisibility.AsNoOne
+  - Dropbox.Api.Sharing.ResolvedVisibility.AsOnlyYou
+  - Dropbox.Api.Sharing.ResolvedVisibility.AsOther
+  - Dropbox.Api.Sharing.ResolvedVisibility.AsPassword
+  - Dropbox.Api.Sharing.ResolvedVisibility.AsPublic
+  - Dropbox.Api.Sharing.ResolvedVisibility.AsSharedFolderOnly
+  - Dropbox.Api.Sharing.ResolvedVisibility.AsTeamAndPassword
+  - Dropbox.Api.Sharing.ResolvedVisibility.AsTeamOnly
+  - Dropbox.Api.Sharing.ResolvedVisibility.IsNoOne
+  - Dropbox.Api.Sharing.ResolvedVisibility.IsOnlyYou
+  - Dropbox.Api.Sharing.ResolvedVisibility.IsOther
+  - Dropbox.Api.Sharing.ResolvedVisibility.IsPassword
+  - Dropbox.Api.Sharing.ResolvedVisibility.IsPublic
+  - Dropbox.Api.Sharing.ResolvedVisibility.IsSharedFolderOnly
+  - Dropbox.Api.Sharing.ResolvedVisibility.IsTeamAndPassword
+  - Dropbox.Api.Sharing.ResolvedVisibility.IsTeamOnly
+  langs:
+  - csharp
+  - vb
+  name: ResolvedVisibility
+  nameWithType: ResolvedVisibility
+  fullName: Dropbox.Api.Sharing.ResolvedVisibility
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ResolvedVisibility.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ResolvedVisibility
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ResolvedVisibility.cs
+    startLine: 18
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The actual access permissions values of shared links after taking into account\nuser preferences and the team and shared folder settings. Check the <xref href=\"Dropbox.Api.Sharing.RequestedVisibility\" data-throw-if-not-resolved=\"false\"></xref> for more info on the possible visibility values that can\nbe set by the shared link&apos;s owner.</p>\n"
+  example: []
+  syntax:
+    content: 'public class ResolvedVisibility : object'
+    content.vb: >-
+      Public Class ResolvedVisibility
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Sharing.ResolvedVisibility.NoOne
+  - Dropbox.Api.Sharing.ResolvedVisibility.OnlyYou
+  - Dropbox.Api.Sharing.ResolvedVisibility.Other
+  - Dropbox.Api.Sharing.ResolvedVisibility.Password
+  - Dropbox.Api.Sharing.ResolvedVisibility.Public
+  - Dropbox.Api.Sharing.ResolvedVisibility.SharedFolderOnly
+  - Dropbox.Api.Sharing.ResolvedVisibility.TeamAndPassword
+  - Dropbox.Api.Sharing.ResolvedVisibility.TeamOnly
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Sharing.ResolvedVisibility.#ctor
+  commentId: M:Dropbox.Api.Sharing.ResolvedVisibility.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Sharing.ResolvedVisibility
+  langs:
+  - csharp
+  - vb
+  name: ResolvedVisibility()
+  nameWithType: ResolvedVisibility.ResolvedVisibility()
+  fullName: Dropbox.Api.Sharing.ResolvedVisibility.ResolvedVisibility()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ResolvedVisibility.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ResolvedVisibility.cs
+    startLine: 36
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.ResolvedVisibility\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public ResolvedVisibility()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Sharing.ResolvedVisibility.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.ResolvedVisibility.IsTeamAndPassword
+  commentId: P:Dropbox.Api.Sharing.ResolvedVisibility.IsTeamAndPassword
+  id: IsTeamAndPassword
+  parent: Dropbox.Api.Sharing.ResolvedVisibility
+  langs:
+  - csharp
+  - vb
+  name: IsTeamAndPassword
+  nameWithType: ResolvedVisibility.IsTeamAndPassword
+  fullName: Dropbox.Api.Sharing.ResolvedVisibility.IsTeamAndPassword
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ResolvedVisibility.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsTeamAndPassword
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ResolvedVisibility.cs
+    startLine: 43
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is TeamAndPassword</p>\n"
+  example: []
+  syntax:
+    content: public bool IsTeamAndPassword { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsTeamAndPassword As Boolean
+  overload: Dropbox.Api.Sharing.ResolvedVisibility.IsTeamAndPassword*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.ResolvedVisibility.AsTeamAndPassword
+  commentId: P:Dropbox.Api.Sharing.ResolvedVisibility.AsTeamAndPassword
+  id: AsTeamAndPassword
+  parent: Dropbox.Api.Sharing.ResolvedVisibility
+  langs:
+  - csharp
+  - vb
+  name: AsTeamAndPassword
+  nameWithType: ResolvedVisibility.AsTeamAndPassword
+  fullName: Dropbox.Api.Sharing.ResolvedVisibility.AsTeamAndPassword
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ResolvedVisibility.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsTeamAndPassword
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ResolvedVisibility.cs
+    startLine: 54
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a TeamAndPassword, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ResolvedVisibility.TeamAndPassword AsTeamAndPassword { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.ResolvedVisibility.TeamAndPassword
+    content.vb: Public ReadOnly Property AsTeamAndPassword As ResolvedVisibility.TeamAndPassword
+  overload: Dropbox.Api.Sharing.ResolvedVisibility.AsTeamAndPassword*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.ResolvedVisibility.IsSharedFolderOnly
+  commentId: P:Dropbox.Api.Sharing.ResolvedVisibility.IsSharedFolderOnly
+  id: IsSharedFolderOnly
+  parent: Dropbox.Api.Sharing.ResolvedVisibility
+  langs:
+  - csharp
+  - vb
+  name: IsSharedFolderOnly
+  nameWithType: ResolvedVisibility.IsSharedFolderOnly
+  fullName: Dropbox.Api.Sharing.ResolvedVisibility.IsSharedFolderOnly
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ResolvedVisibility.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsSharedFolderOnly
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ResolvedVisibility.cs
+    startLine: 65
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is SharedFolderOnly</p>\n"
+  example: []
+  syntax:
+    content: public bool IsSharedFolderOnly { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsSharedFolderOnly As Boolean
+  overload: Dropbox.Api.Sharing.ResolvedVisibility.IsSharedFolderOnly*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.ResolvedVisibility.AsSharedFolderOnly
+  commentId: P:Dropbox.Api.Sharing.ResolvedVisibility.AsSharedFolderOnly
+  id: AsSharedFolderOnly
+  parent: Dropbox.Api.Sharing.ResolvedVisibility
+  langs:
+  - csharp
+  - vb
+  name: AsSharedFolderOnly
+  nameWithType: ResolvedVisibility.AsSharedFolderOnly
+  fullName: Dropbox.Api.Sharing.ResolvedVisibility.AsSharedFolderOnly
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ResolvedVisibility.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsSharedFolderOnly
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ResolvedVisibility.cs
+    startLine: 76
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a SharedFolderOnly, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ResolvedVisibility.SharedFolderOnly AsSharedFolderOnly { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.ResolvedVisibility.SharedFolderOnly
+    content.vb: Public ReadOnly Property AsSharedFolderOnly As ResolvedVisibility.SharedFolderOnly
+  overload: Dropbox.Api.Sharing.ResolvedVisibility.AsSharedFolderOnly*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.ResolvedVisibility.IsNoOne
+  commentId: P:Dropbox.Api.Sharing.ResolvedVisibility.IsNoOne
+  id: IsNoOne
+  parent: Dropbox.Api.Sharing.ResolvedVisibility
+  langs:
+  - csharp
+  - vb
+  name: IsNoOne
+  nameWithType: ResolvedVisibility.IsNoOne
+  fullName: Dropbox.Api.Sharing.ResolvedVisibility.IsNoOne
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ResolvedVisibility.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsNoOne
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ResolvedVisibility.cs
+    startLine: 87
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is NoOne</p>\n"
+  example: []
+  syntax:
+    content: public bool IsNoOne { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsNoOne As Boolean
+  overload: Dropbox.Api.Sharing.ResolvedVisibility.IsNoOne*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.ResolvedVisibility.AsNoOne
+  commentId: P:Dropbox.Api.Sharing.ResolvedVisibility.AsNoOne
+  id: AsNoOne
+  parent: Dropbox.Api.Sharing.ResolvedVisibility
+  langs:
+  - csharp
+  - vb
+  name: AsNoOne
+  nameWithType: ResolvedVisibility.AsNoOne
+  fullName: Dropbox.Api.Sharing.ResolvedVisibility.AsNoOne
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ResolvedVisibility.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsNoOne
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ResolvedVisibility.cs
+    startLine: 98
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a NoOne, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ResolvedVisibility.NoOne AsNoOne { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.ResolvedVisibility.NoOne
+    content.vb: Public ReadOnly Property AsNoOne As ResolvedVisibility.NoOne
+  overload: Dropbox.Api.Sharing.ResolvedVisibility.AsNoOne*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.ResolvedVisibility.IsOnlyYou
+  commentId: P:Dropbox.Api.Sharing.ResolvedVisibility.IsOnlyYou
+  id: IsOnlyYou
+  parent: Dropbox.Api.Sharing.ResolvedVisibility
+  langs:
+  - csharp
+  - vb
+  name: IsOnlyYou
+  nameWithType: ResolvedVisibility.IsOnlyYou
+  fullName: Dropbox.Api.Sharing.ResolvedVisibility.IsOnlyYou
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ResolvedVisibility.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOnlyYou
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ResolvedVisibility.cs
+    startLine: 109
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is OnlyYou</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOnlyYou { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOnlyYou As Boolean
+  overload: Dropbox.Api.Sharing.ResolvedVisibility.IsOnlyYou*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.ResolvedVisibility.AsOnlyYou
+  commentId: P:Dropbox.Api.Sharing.ResolvedVisibility.AsOnlyYou
+  id: AsOnlyYou
+  parent: Dropbox.Api.Sharing.ResolvedVisibility
+  langs:
+  - csharp
+  - vb
+  name: AsOnlyYou
+  nameWithType: ResolvedVisibility.AsOnlyYou
+  fullName: Dropbox.Api.Sharing.ResolvedVisibility.AsOnlyYou
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ResolvedVisibility.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOnlyYou
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ResolvedVisibility.cs
+    startLine: 120
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a OnlyYou, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ResolvedVisibility.OnlyYou AsOnlyYou { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.ResolvedVisibility.OnlyYou
+    content.vb: Public ReadOnly Property AsOnlyYou As ResolvedVisibility.OnlyYou
+  overload: Dropbox.Api.Sharing.ResolvedVisibility.AsOnlyYou*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.ResolvedVisibility.IsOther
+  commentId: P:Dropbox.Api.Sharing.ResolvedVisibility.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Sharing.ResolvedVisibility
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: ResolvedVisibility.IsOther
+  fullName: Dropbox.Api.Sharing.ResolvedVisibility.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ResolvedVisibility.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ResolvedVisibility.cs
+    startLine: 131
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Sharing.ResolvedVisibility.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.ResolvedVisibility.AsOther
+  commentId: P:Dropbox.Api.Sharing.ResolvedVisibility.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Sharing.ResolvedVisibility
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: ResolvedVisibility.AsOther
+  fullName: Dropbox.Api.Sharing.ResolvedVisibility.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ResolvedVisibility.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ResolvedVisibility.cs
+    startLine: 142
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ResolvedVisibility.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.ResolvedVisibility.Other
+    content.vb: Public ReadOnly Property AsOther As ResolvedVisibility.Other
+  overload: Dropbox.Api.Sharing.ResolvedVisibility.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.ResolvedVisibility.IsPublic
+  commentId: P:Dropbox.Api.Sharing.ResolvedVisibility.IsPublic
+  id: IsPublic
+  parent: Dropbox.Api.Sharing.ResolvedVisibility
+  langs:
+  - csharp
+  - vb
+  name: IsPublic
+  nameWithType: ResolvedVisibility.IsPublic
+  fullName: Dropbox.Api.Sharing.ResolvedVisibility.IsPublic
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ResolvedVisibility.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsPublic
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ResolvedVisibility.cs
+    startLine: 153
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is Public</p>\n"
+  example: []
+  syntax:
+    content: public bool IsPublic { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsPublic As Boolean
+  overload: Dropbox.Api.Sharing.ResolvedVisibility.IsPublic*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.ResolvedVisibility.AsPublic
+  commentId: P:Dropbox.Api.Sharing.ResolvedVisibility.AsPublic
+  id: AsPublic
+  parent: Dropbox.Api.Sharing.ResolvedVisibility
+  langs:
+  - csharp
+  - vb
+  name: AsPublic
+  nameWithType: ResolvedVisibility.AsPublic
+  fullName: Dropbox.Api.Sharing.ResolvedVisibility.AsPublic
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ResolvedVisibility.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsPublic
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ResolvedVisibility.cs
+    startLine: 164
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a Public, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ResolvedVisibility.Public AsPublic { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.ResolvedVisibility.Public
+    content.vb: Public ReadOnly Property AsPublic As ResolvedVisibility.Public
+  overload: Dropbox.Api.Sharing.ResolvedVisibility.AsPublic*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.ResolvedVisibility.IsTeamOnly
+  commentId: P:Dropbox.Api.Sharing.ResolvedVisibility.IsTeamOnly
+  id: IsTeamOnly
+  parent: Dropbox.Api.Sharing.ResolvedVisibility
+  langs:
+  - csharp
+  - vb
+  name: IsTeamOnly
+  nameWithType: ResolvedVisibility.IsTeamOnly
+  fullName: Dropbox.Api.Sharing.ResolvedVisibility.IsTeamOnly
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ResolvedVisibility.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsTeamOnly
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ResolvedVisibility.cs
+    startLine: 175
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is TeamOnly</p>\n"
+  example: []
+  syntax:
+    content: public bool IsTeamOnly { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsTeamOnly As Boolean
+  overload: Dropbox.Api.Sharing.ResolvedVisibility.IsTeamOnly*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.ResolvedVisibility.AsTeamOnly
+  commentId: P:Dropbox.Api.Sharing.ResolvedVisibility.AsTeamOnly
+  id: AsTeamOnly
+  parent: Dropbox.Api.Sharing.ResolvedVisibility
+  langs:
+  - csharp
+  - vb
+  name: AsTeamOnly
+  nameWithType: ResolvedVisibility.AsTeamOnly
+  fullName: Dropbox.Api.Sharing.ResolvedVisibility.AsTeamOnly
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ResolvedVisibility.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsTeamOnly
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ResolvedVisibility.cs
+    startLine: 186
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a TeamOnly, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ResolvedVisibility.TeamOnly AsTeamOnly { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.ResolvedVisibility.TeamOnly
+    content.vb: Public ReadOnly Property AsTeamOnly As ResolvedVisibility.TeamOnly
+  overload: Dropbox.Api.Sharing.ResolvedVisibility.AsTeamOnly*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.ResolvedVisibility.IsPassword
+  commentId: P:Dropbox.Api.Sharing.ResolvedVisibility.IsPassword
+  id: IsPassword
+  parent: Dropbox.Api.Sharing.ResolvedVisibility
+  langs:
+  - csharp
+  - vb
+  name: IsPassword
+  nameWithType: ResolvedVisibility.IsPassword
+  fullName: Dropbox.Api.Sharing.ResolvedVisibility.IsPassword
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ResolvedVisibility.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsPassword
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ResolvedVisibility.cs
+    startLine: 197
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is Password</p>\n"
+  example: []
+  syntax:
+    content: public bool IsPassword { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsPassword As Boolean
+  overload: Dropbox.Api.Sharing.ResolvedVisibility.IsPassword*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.ResolvedVisibility.AsPassword
+  commentId: P:Dropbox.Api.Sharing.ResolvedVisibility.AsPassword
+  id: AsPassword
+  parent: Dropbox.Api.Sharing.ResolvedVisibility
+  langs:
+  - csharp
+  - vb
+  name: AsPassword
+  nameWithType: ResolvedVisibility.AsPassword
+  fullName: Dropbox.Api.Sharing.ResolvedVisibility.AsPassword
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ResolvedVisibility.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsPassword
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ResolvedVisibility.cs
+    startLine: 208
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a Password, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ResolvedVisibility.Password AsPassword { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.ResolvedVisibility.Password
+    content.vb: Public ReadOnly Property AsPassword As ResolvedVisibility.Password
+  overload: Dropbox.Api.Sharing.ResolvedVisibility.AsPassword*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Sharing.RequestedVisibility
+  commentId: T:Dropbox.Api.Sharing.RequestedVisibility
+  parent: Dropbox.Api.Sharing
+  name: RequestedVisibility
+  nameWithType: RequestedVisibility
+  fullName: Dropbox.Api.Sharing.RequestedVisibility
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.ResolvedVisibility
+  commentId: T:Dropbox.Api.Sharing.ResolvedVisibility
+  parent: Dropbox.Api.Sharing
+  name: ResolvedVisibility
+  nameWithType: ResolvedVisibility
+  fullName: Dropbox.Api.Sharing.ResolvedVisibility
+- uid: Dropbox.Api.Sharing.ResolvedVisibility.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.ResolvedVisibility.#ctor
+  name: ResolvedVisibility
+  nameWithType: ResolvedVisibility.ResolvedVisibility
+  fullName: Dropbox.Api.Sharing.ResolvedVisibility.ResolvedVisibility
+- uid: Dropbox.Api.Sharing.ResolvedVisibility.IsTeamAndPassword*
+  commentId: Overload:Dropbox.Api.Sharing.ResolvedVisibility.IsTeamAndPassword
+  name: IsTeamAndPassword
+  nameWithType: ResolvedVisibility.IsTeamAndPassword
+  fullName: Dropbox.Api.Sharing.ResolvedVisibility.IsTeamAndPassword
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Sharing.ResolvedVisibility.AsTeamAndPassword*
+  commentId: Overload:Dropbox.Api.Sharing.ResolvedVisibility.AsTeamAndPassword
+  name: AsTeamAndPassword
+  nameWithType: ResolvedVisibility.AsTeamAndPassword
+  fullName: Dropbox.Api.Sharing.ResolvedVisibility.AsTeamAndPassword
+- uid: Dropbox.Api.Sharing.ResolvedVisibility.TeamAndPassword
+  commentId: T:Dropbox.Api.Sharing.ResolvedVisibility.TeamAndPassword
+  parent: Dropbox.Api.Sharing
+  name: ResolvedVisibility.TeamAndPassword
+  nameWithType: ResolvedVisibility.TeamAndPassword
+  fullName: Dropbox.Api.Sharing.ResolvedVisibility.TeamAndPassword
+- uid: Dropbox.Api.Sharing.ResolvedVisibility.IsSharedFolderOnly*
+  commentId: Overload:Dropbox.Api.Sharing.ResolvedVisibility.IsSharedFolderOnly
+  name: IsSharedFolderOnly
+  nameWithType: ResolvedVisibility.IsSharedFolderOnly
+  fullName: Dropbox.Api.Sharing.ResolvedVisibility.IsSharedFolderOnly
+- uid: Dropbox.Api.Sharing.ResolvedVisibility.AsSharedFolderOnly*
+  commentId: Overload:Dropbox.Api.Sharing.ResolvedVisibility.AsSharedFolderOnly
+  name: AsSharedFolderOnly
+  nameWithType: ResolvedVisibility.AsSharedFolderOnly
+  fullName: Dropbox.Api.Sharing.ResolvedVisibility.AsSharedFolderOnly
+- uid: Dropbox.Api.Sharing.ResolvedVisibility.SharedFolderOnly
+  commentId: T:Dropbox.Api.Sharing.ResolvedVisibility.SharedFolderOnly
+  parent: Dropbox.Api.Sharing
+  name: ResolvedVisibility.SharedFolderOnly
+  nameWithType: ResolvedVisibility.SharedFolderOnly
+  fullName: Dropbox.Api.Sharing.ResolvedVisibility.SharedFolderOnly
+- uid: Dropbox.Api.Sharing.ResolvedVisibility.IsNoOne*
+  commentId: Overload:Dropbox.Api.Sharing.ResolvedVisibility.IsNoOne
+  name: IsNoOne
+  nameWithType: ResolvedVisibility.IsNoOne
+  fullName: Dropbox.Api.Sharing.ResolvedVisibility.IsNoOne
+- uid: Dropbox.Api.Sharing.ResolvedVisibility.AsNoOne*
+  commentId: Overload:Dropbox.Api.Sharing.ResolvedVisibility.AsNoOne
+  name: AsNoOne
+  nameWithType: ResolvedVisibility.AsNoOne
+  fullName: Dropbox.Api.Sharing.ResolvedVisibility.AsNoOne
+- uid: Dropbox.Api.Sharing.ResolvedVisibility.NoOne
+  commentId: T:Dropbox.Api.Sharing.ResolvedVisibility.NoOne
+  parent: Dropbox.Api.Sharing
+  name: ResolvedVisibility.NoOne
+  nameWithType: ResolvedVisibility.NoOne
+  fullName: Dropbox.Api.Sharing.ResolvedVisibility.NoOne
+- uid: Dropbox.Api.Sharing.ResolvedVisibility.IsOnlyYou*
+  commentId: Overload:Dropbox.Api.Sharing.ResolvedVisibility.IsOnlyYou
+  name: IsOnlyYou
+  nameWithType: ResolvedVisibility.IsOnlyYou
+  fullName: Dropbox.Api.Sharing.ResolvedVisibility.IsOnlyYou
+- uid: Dropbox.Api.Sharing.ResolvedVisibility.AsOnlyYou*
+  commentId: Overload:Dropbox.Api.Sharing.ResolvedVisibility.AsOnlyYou
+  name: AsOnlyYou
+  nameWithType: ResolvedVisibility.AsOnlyYou
+  fullName: Dropbox.Api.Sharing.ResolvedVisibility.AsOnlyYou
+- uid: Dropbox.Api.Sharing.ResolvedVisibility.OnlyYou
+  commentId: T:Dropbox.Api.Sharing.ResolvedVisibility.OnlyYou
+  parent: Dropbox.Api.Sharing
+  name: ResolvedVisibility.OnlyYou
+  nameWithType: ResolvedVisibility.OnlyYou
+  fullName: Dropbox.Api.Sharing.ResolvedVisibility.OnlyYou
+- uid: Dropbox.Api.Sharing.ResolvedVisibility.IsOther*
+  commentId: Overload:Dropbox.Api.Sharing.ResolvedVisibility.IsOther
+  name: IsOther
+  nameWithType: ResolvedVisibility.IsOther
+  fullName: Dropbox.Api.Sharing.ResolvedVisibility.IsOther
+- uid: Dropbox.Api.Sharing.ResolvedVisibility.AsOther*
+  commentId: Overload:Dropbox.Api.Sharing.ResolvedVisibility.AsOther
+  name: AsOther
+  nameWithType: ResolvedVisibility.AsOther
+  fullName: Dropbox.Api.Sharing.ResolvedVisibility.AsOther
+- uid: Dropbox.Api.Sharing.ResolvedVisibility.Other
+  commentId: T:Dropbox.Api.Sharing.ResolvedVisibility.Other
+  parent: Dropbox.Api.Sharing
+  name: ResolvedVisibility.Other
+  nameWithType: ResolvedVisibility.Other
+  fullName: Dropbox.Api.Sharing.ResolvedVisibility.Other
+- uid: Dropbox.Api.Sharing.ResolvedVisibility.IsPublic*
+  commentId: Overload:Dropbox.Api.Sharing.ResolvedVisibility.IsPublic
+  name: IsPublic
+  nameWithType: ResolvedVisibility.IsPublic
+  fullName: Dropbox.Api.Sharing.ResolvedVisibility.IsPublic
+- uid: Dropbox.Api.Sharing.ResolvedVisibility.AsPublic*
+  commentId: Overload:Dropbox.Api.Sharing.ResolvedVisibility.AsPublic
+  name: AsPublic
+  nameWithType: ResolvedVisibility.AsPublic
+  fullName: Dropbox.Api.Sharing.ResolvedVisibility.AsPublic
+- uid: Dropbox.Api.Sharing.ResolvedVisibility.Public
+  commentId: T:Dropbox.Api.Sharing.ResolvedVisibility.Public
+  parent: Dropbox.Api.Sharing
+  name: ResolvedVisibility.Public
+  nameWithType: ResolvedVisibility.Public
+  fullName: Dropbox.Api.Sharing.ResolvedVisibility.Public
+- uid: Dropbox.Api.Sharing.ResolvedVisibility.IsTeamOnly*
+  commentId: Overload:Dropbox.Api.Sharing.ResolvedVisibility.IsTeamOnly
+  name: IsTeamOnly
+  nameWithType: ResolvedVisibility.IsTeamOnly
+  fullName: Dropbox.Api.Sharing.ResolvedVisibility.IsTeamOnly
+- uid: Dropbox.Api.Sharing.ResolvedVisibility.AsTeamOnly*
+  commentId: Overload:Dropbox.Api.Sharing.ResolvedVisibility.AsTeamOnly
+  name: AsTeamOnly
+  nameWithType: ResolvedVisibility.AsTeamOnly
+  fullName: Dropbox.Api.Sharing.ResolvedVisibility.AsTeamOnly
+- uid: Dropbox.Api.Sharing.ResolvedVisibility.TeamOnly
+  commentId: T:Dropbox.Api.Sharing.ResolvedVisibility.TeamOnly
+  parent: Dropbox.Api.Sharing
+  name: ResolvedVisibility.TeamOnly
+  nameWithType: ResolvedVisibility.TeamOnly
+  fullName: Dropbox.Api.Sharing.ResolvedVisibility.TeamOnly
+- uid: Dropbox.Api.Sharing.ResolvedVisibility.IsPassword*
+  commentId: Overload:Dropbox.Api.Sharing.ResolvedVisibility.IsPassword
+  name: IsPassword
+  nameWithType: ResolvedVisibility.IsPassword
+  fullName: Dropbox.Api.Sharing.ResolvedVisibility.IsPassword
+- uid: Dropbox.Api.Sharing.ResolvedVisibility.AsPassword*
+  commentId: Overload:Dropbox.Api.Sharing.ResolvedVisibility.AsPassword
+  name: AsPassword
+  nameWithType: ResolvedVisibility.AsPassword
+  fullName: Dropbox.Api.Sharing.ResolvedVisibility.AsPassword
+- uid: Dropbox.Api.Sharing.ResolvedVisibility.Password
+  commentId: T:Dropbox.Api.Sharing.ResolvedVisibility.Password
+  parent: Dropbox.Api.Sharing
+  name: ResolvedVisibility.Password
+  nameWithType: ResolvedVisibility.Password
+  fullName: Dropbox.Api.Sharing.ResolvedVisibility.Password
+shouldSkipMarkup: true

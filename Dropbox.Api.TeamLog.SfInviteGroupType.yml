@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.SfInviteGroupType
+  commentId: T:Dropbox.Api.TeamLog.SfInviteGroupType
+  id: SfInviteGroupType
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.SfInviteGroupType.#ctor
+  - Dropbox.Api.TeamLog.SfInviteGroupType.#ctor(System.String)
+  - Dropbox.Api.TeamLog.SfInviteGroupType.Description
+  langs:
+  - csharp
+  - vb
+  name: SfInviteGroupType
+  nameWithType: SfInviteGroupType
+  fullName: Dropbox.Api.TeamLog.SfInviteGroupType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SfInviteGroupType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SfInviteGroupType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SfInviteGroupType.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The sf invite group type object</p>\n"
+  example: []
+  syntax:
+    content: 'public class SfInviteGroupType : object'
+    content.vb: >-
+      Public Class SfInviteGroupType
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.SfInviteGroupType.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.SfInviteGroupType.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.SfInviteGroupType
+  langs:
+  - csharp
+  - vb
+  name: SfInviteGroupType(String)
+  nameWithType: SfInviteGroupType.SfInviteGroupType(String)
+  fullName: Dropbox.Api.TeamLog.SfInviteGroupType.SfInviteGroupType(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SfInviteGroupType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SfInviteGroupType.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SfInviteGroupType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public SfInviteGroupType(string description)
+    parameters:
+    - id: description
+      type: System.String
+      description: The description
+    content.vb: Public Sub New(description As String)
+  overload: Dropbox.Api.TeamLog.SfInviteGroupType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SfInviteGroupType.#ctor
+  commentId: M:Dropbox.Api.TeamLog.SfInviteGroupType.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.SfInviteGroupType
+  langs:
+  - csharp
+  - vb
+  name: SfInviteGroupType()
+  nameWithType: SfInviteGroupType.SfInviteGroupType()
+  fullName: Dropbox.Api.TeamLog.SfInviteGroupType.SfInviteGroupType()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SfInviteGroupType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SfInviteGroupType.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SfInviteGroupType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public SfInviteGroupType()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.SfInviteGroupType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SfInviteGroupType.Description
+  commentId: P:Dropbox.Api.TeamLog.SfInviteGroupType.Description
+  id: Description
+  parent: Dropbox.Api.TeamLog.SfInviteGroupType
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: SfInviteGroupType.Description
+  fullName: Dropbox.Api.TeamLog.SfInviteGroupType.Description
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SfInviteGroupType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Description
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SfInviteGroupType.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets the description of the sf invite group type</p>\n"
+  example: []
+  syntax:
+    content: public string Description { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Dropbox.Api.TeamLog.SfInviteGroupType.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.SfInviteGroupType
+  commentId: T:Dropbox.Api.TeamLog.SfInviteGroupType
+  parent: Dropbox.Api.TeamLog
+  name: SfInviteGroupType
+  nameWithType: SfInviteGroupType
+  fullName: Dropbox.Api.TeamLog.SfInviteGroupType
+- uid: Dropbox.Api.TeamLog.SfInviteGroupType.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.SfInviteGroupType.#ctor
+  name: SfInviteGroupType
+  nameWithType: SfInviteGroupType.SfInviteGroupType
+  fullName: Dropbox.Api.TeamLog.SfInviteGroupType.SfInviteGroupType
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.SfInviteGroupType.Description*
+  commentId: Overload:Dropbox.Api.TeamLog.SfInviteGroupType.Description
+  name: Description
+  nameWithType: SfInviteGroupType.Description
+  fullName: Dropbox.Api.TeamLog.SfInviteGroupType.Description
+shouldSkipMarkup: true

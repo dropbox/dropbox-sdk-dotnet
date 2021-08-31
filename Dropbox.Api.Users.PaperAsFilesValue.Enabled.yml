@@ -1,0 +1,186 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Users.PaperAsFilesValue.Enabled
+  commentId: T:Dropbox.Api.Users.PaperAsFilesValue.Enabled
+  id: PaperAsFilesValue.Enabled
+  parent: Dropbox.Api.Users
+  children:
+  - Dropbox.Api.Users.PaperAsFilesValue.Enabled.#ctor(System.Boolean)
+  - Dropbox.Api.Users.PaperAsFilesValue.Enabled.Value
+  langs:
+  - csharp
+  - vb
+  name: PaperAsFilesValue.Enabled
+  nameWithType: PaperAsFilesValue.Enabled
+  fullName: Dropbox.Api.Users.PaperAsFilesValue.Enabled
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/PaperAsFilesValue.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Enabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/PaperAsFilesValue.cs
+    startLine: 155
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users
+  summary: "\n<p>When this value is true, the user&apos;s Paper docs are accessible in Dropbox with\nthe .paper extension and must be accessed via the /files endpoints.  When this\nvalue is false, the user&apos;s Paper docs are stored separate from Dropbox files and\nfolders and should be accessed via the /paper endpoints.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Enabled : PaperAsFilesValue'
+    content.vb: >-
+      Public NotInheritable Class Enabled
+          Inherits PaperAsFilesValue
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Users.PaperAsFilesValue
+  inheritedMembers:
+  - Dropbox.Api.Users.PaperAsFilesValue.IsEnabled
+  - Dropbox.Api.Users.PaperAsFilesValue.AsEnabled
+  - Dropbox.Api.Users.PaperAsFilesValue.IsOther
+  - Dropbox.Api.Users.PaperAsFilesValue.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Users.PaperAsFilesValue.Enabled.#ctor(System.Boolean)
+  commentId: M:Dropbox.Api.Users.PaperAsFilesValue.Enabled.#ctor(System.Boolean)
+  id: '#ctor(System.Boolean)'
+  parent: Dropbox.Api.Users.PaperAsFilesValue.Enabled
+  langs:
+  - csharp
+  - vb
+  name: Enabled(Boolean)
+  nameWithType: PaperAsFilesValue.Enabled.Enabled(Boolean)
+  fullName: Dropbox.Api.Users.PaperAsFilesValue.Enabled.Enabled(System.Boolean)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/PaperAsFilesValue.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/PaperAsFilesValue.cs
+    startLine: 173
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Users.PaperAsFilesValue.Enabled\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public Enabled(bool value)
+    parameters:
+    - id: value
+      type: System.Boolean
+      description: The value
+    content.vb: Public Sub New(value As Boolean)
+  overload: Dropbox.Api.Users.PaperAsFilesValue.Enabled.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Users.PaperAsFilesValue.Enabled.Value
+  commentId: P:Dropbox.Api.Users.PaperAsFilesValue.Enabled.Value
+  id: Value
+  parent: Dropbox.Api.Users.PaperAsFilesValue.Enabled
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: PaperAsFilesValue.Enabled.Value
+  fullName: Dropbox.Api.Users.PaperAsFilesValue.Enabled.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/PaperAsFilesValue.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/PaperAsFilesValue.cs
+    startLine: 187
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public bool Value { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property Value As Boolean
+  overload: Dropbox.Api.Users.PaperAsFilesValue.Enabled.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Users
+  commentId: N:Dropbox.Api.Users
+  name: Dropbox.Api.Users
+  nameWithType: Dropbox.Api.Users
+  fullName: Dropbox.Api.Users
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Users.PaperAsFilesValue
+  commentId: T:Dropbox.Api.Users.PaperAsFilesValue
+  parent: Dropbox.Api.Users
+  name: PaperAsFilesValue
+  nameWithType: PaperAsFilesValue
+  fullName: Dropbox.Api.Users.PaperAsFilesValue
+- uid: Dropbox.Api.Users.PaperAsFilesValue.IsEnabled
+  commentId: P:Dropbox.Api.Users.PaperAsFilesValue.IsEnabled
+  parent: Dropbox.Api.Users.PaperAsFilesValue
+  name: IsEnabled
+  nameWithType: PaperAsFilesValue.IsEnabled
+  fullName: Dropbox.Api.Users.PaperAsFilesValue.IsEnabled
+- uid: Dropbox.Api.Users.PaperAsFilesValue.AsEnabled
+  commentId: P:Dropbox.Api.Users.PaperAsFilesValue.AsEnabled
+  parent: Dropbox.Api.Users.PaperAsFilesValue
+  name: AsEnabled
+  nameWithType: PaperAsFilesValue.AsEnabled
+  fullName: Dropbox.Api.Users.PaperAsFilesValue.AsEnabled
+- uid: Dropbox.Api.Users.PaperAsFilesValue.IsOther
+  commentId: P:Dropbox.Api.Users.PaperAsFilesValue.IsOther
+  parent: Dropbox.Api.Users.PaperAsFilesValue
+  name: IsOther
+  nameWithType: PaperAsFilesValue.IsOther
+  fullName: Dropbox.Api.Users.PaperAsFilesValue.IsOther
+- uid: Dropbox.Api.Users.PaperAsFilesValue.AsOther
+  commentId: P:Dropbox.Api.Users.PaperAsFilesValue.AsOther
+  parent: Dropbox.Api.Users.PaperAsFilesValue
+  name: AsOther
+  nameWithType: PaperAsFilesValue.AsOther
+  fullName: Dropbox.Api.Users.PaperAsFilesValue.AsOther
+- uid: Dropbox.Api.Users.PaperAsFilesValue.Enabled
+  commentId: T:Dropbox.Api.Users.PaperAsFilesValue.Enabled
+  parent: Dropbox.Api.Users
+  name: PaperAsFilesValue.Enabled
+  nameWithType: PaperAsFilesValue.Enabled
+  fullName: Dropbox.Api.Users.PaperAsFilesValue.Enabled
+- uid: Dropbox.Api.Users.PaperAsFilesValue.Enabled.#ctor*
+  commentId: Overload:Dropbox.Api.Users.PaperAsFilesValue.Enabled.#ctor
+  name: Enabled
+  nameWithType: PaperAsFilesValue.Enabled.Enabled
+  fullName: Dropbox.Api.Users.PaperAsFilesValue.Enabled.Enabled
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Users.PaperAsFilesValue.Enabled.Value*
+  commentId: Overload:Dropbox.Api.Users.PaperAsFilesValue.Enabled.Value
+  name: Value
+  nameWithType: PaperAsFilesValue.Enabled.Value
+  fullName: Dropbox.Api.Users.PaperAsFilesValue.Enabled.Value
+shouldSkipMarkup: true

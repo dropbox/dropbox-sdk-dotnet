@@ -1,0 +1,190 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.Visibility.TeamOnly
+  commentId: T:Dropbox.Api.Sharing.Visibility.TeamOnly
+  id: Visibility.TeamOnly
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.Visibility.TeamOnly.Instance
+  langs:
+  - csharp
+  - vb
+  name: Visibility.TeamOnly
+  nameWithType: Visibility.TeamOnly
+  fullName: Dropbox.Api.Sharing.Visibility.TeamOnly
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/Visibility.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TeamOnly
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/Visibility.cs
+    startLine: 342
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Only members of the same team can access the link. Login is required.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class TeamOnly : Visibility'
+    content.vb: >-
+      Public NotInheritable Class TeamOnly
+          Inherits Visibility
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Sharing.Visibility
+  inheritedMembers:
+  - Dropbox.Api.Sharing.Visibility.IsPublic
+  - Dropbox.Api.Sharing.Visibility.AsPublic
+  - Dropbox.Api.Sharing.Visibility.IsTeamOnly
+  - Dropbox.Api.Sharing.Visibility.AsTeamOnly
+  - Dropbox.Api.Sharing.Visibility.IsPassword
+  - Dropbox.Api.Sharing.Visibility.AsPassword
+  - Dropbox.Api.Sharing.Visibility.IsTeamAndPassword
+  - Dropbox.Api.Sharing.Visibility.AsTeamAndPassword
+  - Dropbox.Api.Sharing.Visibility.IsSharedFolderOnly
+  - Dropbox.Api.Sharing.Visibility.AsSharedFolderOnly
+  - Dropbox.Api.Sharing.Visibility.IsOther
+  - Dropbox.Api.Sharing.Visibility.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Sharing.Visibility.TeamOnly.Instance
+  commentId: F:Dropbox.Api.Sharing.Visibility.TeamOnly.Instance
+  id: Instance
+  parent: Dropbox.Api.Sharing.Visibility.TeamOnly
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: Visibility.TeamOnly.Instance
+  fullName: Dropbox.Api.Sharing.Visibility.TeamOnly.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/Visibility.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/Visibility.cs
+    startLine: 366
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>A singleton instance of TeamOnly</p>\n"
+  example: []
+  syntax:
+    content: public static readonly Visibility.TeamOnly Instance
+    return:
+      type: Dropbox.Api.Sharing.Visibility.TeamOnly
+    content.vb: Public Shared ReadOnly Instance As Visibility.TeamOnly
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.Visibility
+  commentId: T:Dropbox.Api.Sharing.Visibility
+  parent: Dropbox.Api.Sharing
+  name: Visibility
+  nameWithType: Visibility
+  fullName: Dropbox.Api.Sharing.Visibility
+- uid: Dropbox.Api.Sharing.Visibility.IsPublic
+  commentId: P:Dropbox.Api.Sharing.Visibility.IsPublic
+  parent: Dropbox.Api.Sharing.Visibility
+  name: IsPublic
+  nameWithType: Visibility.IsPublic
+  fullName: Dropbox.Api.Sharing.Visibility.IsPublic
+- uid: Dropbox.Api.Sharing.Visibility.AsPublic
+  commentId: P:Dropbox.Api.Sharing.Visibility.AsPublic
+  parent: Dropbox.Api.Sharing.Visibility
+  name: AsPublic
+  nameWithType: Visibility.AsPublic
+  fullName: Dropbox.Api.Sharing.Visibility.AsPublic
+- uid: Dropbox.Api.Sharing.Visibility.IsTeamOnly
+  commentId: P:Dropbox.Api.Sharing.Visibility.IsTeamOnly
+  parent: Dropbox.Api.Sharing.Visibility
+  name: IsTeamOnly
+  nameWithType: Visibility.IsTeamOnly
+  fullName: Dropbox.Api.Sharing.Visibility.IsTeamOnly
+- uid: Dropbox.Api.Sharing.Visibility.AsTeamOnly
+  commentId: P:Dropbox.Api.Sharing.Visibility.AsTeamOnly
+  parent: Dropbox.Api.Sharing.Visibility
+  name: AsTeamOnly
+  nameWithType: Visibility.AsTeamOnly
+  fullName: Dropbox.Api.Sharing.Visibility.AsTeamOnly
+- uid: Dropbox.Api.Sharing.Visibility.IsPassword
+  commentId: P:Dropbox.Api.Sharing.Visibility.IsPassword
+  parent: Dropbox.Api.Sharing.Visibility
+  name: IsPassword
+  nameWithType: Visibility.IsPassword
+  fullName: Dropbox.Api.Sharing.Visibility.IsPassword
+- uid: Dropbox.Api.Sharing.Visibility.AsPassword
+  commentId: P:Dropbox.Api.Sharing.Visibility.AsPassword
+  parent: Dropbox.Api.Sharing.Visibility
+  name: AsPassword
+  nameWithType: Visibility.AsPassword
+  fullName: Dropbox.Api.Sharing.Visibility.AsPassword
+- uid: Dropbox.Api.Sharing.Visibility.IsTeamAndPassword
+  commentId: P:Dropbox.Api.Sharing.Visibility.IsTeamAndPassword
+  parent: Dropbox.Api.Sharing.Visibility
+  name: IsTeamAndPassword
+  nameWithType: Visibility.IsTeamAndPassword
+  fullName: Dropbox.Api.Sharing.Visibility.IsTeamAndPassword
+- uid: Dropbox.Api.Sharing.Visibility.AsTeamAndPassword
+  commentId: P:Dropbox.Api.Sharing.Visibility.AsTeamAndPassword
+  parent: Dropbox.Api.Sharing.Visibility
+  name: AsTeamAndPassword
+  nameWithType: Visibility.AsTeamAndPassword
+  fullName: Dropbox.Api.Sharing.Visibility.AsTeamAndPassword
+- uid: Dropbox.Api.Sharing.Visibility.IsSharedFolderOnly
+  commentId: P:Dropbox.Api.Sharing.Visibility.IsSharedFolderOnly
+  parent: Dropbox.Api.Sharing.Visibility
+  name: IsSharedFolderOnly
+  nameWithType: Visibility.IsSharedFolderOnly
+  fullName: Dropbox.Api.Sharing.Visibility.IsSharedFolderOnly
+- uid: Dropbox.Api.Sharing.Visibility.AsSharedFolderOnly
+  commentId: P:Dropbox.Api.Sharing.Visibility.AsSharedFolderOnly
+  parent: Dropbox.Api.Sharing.Visibility
+  name: AsSharedFolderOnly
+  nameWithType: Visibility.AsSharedFolderOnly
+  fullName: Dropbox.Api.Sharing.Visibility.AsSharedFolderOnly
+- uid: Dropbox.Api.Sharing.Visibility.IsOther
+  commentId: P:Dropbox.Api.Sharing.Visibility.IsOther
+  parent: Dropbox.Api.Sharing.Visibility
+  name: IsOther
+  nameWithType: Visibility.IsOther
+  fullName: Dropbox.Api.Sharing.Visibility.IsOther
+- uid: Dropbox.Api.Sharing.Visibility.AsOther
+  commentId: P:Dropbox.Api.Sharing.Visibility.AsOther
+  parent: Dropbox.Api.Sharing.Visibility
+  name: AsOther
+  nameWithType: Visibility.AsOther
+  fullName: Dropbox.Api.Sharing.Visibility.AsOther
+- uid: Dropbox.Api.Sharing.Visibility.TeamOnly
+  commentId: T:Dropbox.Api.Sharing.Visibility.TeamOnly
+  parent: Dropbox.Api.Sharing
+  name: Visibility.TeamOnly
+  nameWithType: Visibility.TeamOnly
+  fullName: Dropbox.Api.Sharing.Visibility.TeamOnly
+shouldSkipMarkup: true

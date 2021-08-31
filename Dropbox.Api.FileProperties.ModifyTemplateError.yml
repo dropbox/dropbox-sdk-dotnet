@@ -1,0 +1,753 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.FileProperties.ModifyTemplateError
+  commentId: T:Dropbox.Api.FileProperties.ModifyTemplateError
+  id: ModifyTemplateError
+  parent: Dropbox.Api.FileProperties
+  children:
+  - Dropbox.Api.FileProperties.ModifyTemplateError.#ctor
+  - Dropbox.Api.FileProperties.ModifyTemplateError.AsConflictingPropertyNames
+  - Dropbox.Api.FileProperties.ModifyTemplateError.AsOther
+  - Dropbox.Api.FileProperties.ModifyTemplateError.AsRestrictedContent
+  - Dropbox.Api.FileProperties.ModifyTemplateError.AsTemplateAttributeTooLarge
+  - Dropbox.Api.FileProperties.ModifyTemplateError.AsTemplateNotFound
+  - Dropbox.Api.FileProperties.ModifyTemplateError.AsTooManyProperties
+  - Dropbox.Api.FileProperties.ModifyTemplateError.AsTooManyTemplates
+  - Dropbox.Api.FileProperties.ModifyTemplateError.IsConflictingPropertyNames
+  - Dropbox.Api.FileProperties.ModifyTemplateError.IsOther
+  - Dropbox.Api.FileProperties.ModifyTemplateError.IsRestrictedContent
+  - Dropbox.Api.FileProperties.ModifyTemplateError.IsTemplateAttributeTooLarge
+  - Dropbox.Api.FileProperties.ModifyTemplateError.IsTemplateNotFound
+  - Dropbox.Api.FileProperties.ModifyTemplateError.IsTooManyProperties
+  - Dropbox.Api.FileProperties.ModifyTemplateError.IsTooManyTemplates
+  langs:
+  - csharp
+  - vb
+  name: ModifyTemplateError
+  nameWithType: ModifyTemplateError
+  fullName: Dropbox.Api.FileProperties.ModifyTemplateError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/ModifyTemplateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ModifyTemplateError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/ModifyTemplateError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>The modify template error object</p>\n"
+  example: []
+  syntax:
+    content: 'public class ModifyTemplateError : object'
+    content.vb: >-
+      Public Class ModifyTemplateError
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.FileProperties.ModifyTemplateError.ConflictingPropertyNames
+  - Dropbox.Api.FileProperties.ModifyTemplateError.Other
+  - Dropbox.Api.FileProperties.ModifyTemplateError.RestrictedContent
+  - Dropbox.Api.FileProperties.ModifyTemplateError.TemplateAttributeTooLarge
+  - Dropbox.Api.FileProperties.ModifyTemplateError.TemplateNotFound
+  - Dropbox.Api.FileProperties.ModifyTemplateError.TooManyProperties
+  - Dropbox.Api.FileProperties.ModifyTemplateError.TooManyTemplates
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.FileProperties.ModifyTemplateError.#ctor
+  commentId: M:Dropbox.Api.FileProperties.ModifyTemplateError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.FileProperties.ModifyTemplateError
+  langs:
+  - csharp
+  - vb
+  name: ModifyTemplateError()
+  nameWithType: ModifyTemplateError.ModifyTemplateError()
+  fullName: Dropbox.Api.FileProperties.ModifyTemplateError.ModifyTemplateError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/ModifyTemplateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/ModifyTemplateError.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.FileProperties.ModifyTemplateError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public ModifyTemplateError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.FileProperties.ModifyTemplateError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileProperties.ModifyTemplateError.IsConflictingPropertyNames
+  commentId: P:Dropbox.Api.FileProperties.ModifyTemplateError.IsConflictingPropertyNames
+  id: IsConflictingPropertyNames
+  parent: Dropbox.Api.FileProperties.ModifyTemplateError
+  langs:
+  - csharp
+  - vb
+  name: IsConflictingPropertyNames
+  nameWithType: ModifyTemplateError.IsConflictingPropertyNames
+  fullName: Dropbox.Api.FileProperties.ModifyTemplateError.IsConflictingPropertyNames
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/ModifyTemplateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsConflictingPropertyNames
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/ModifyTemplateError.cs
+    startLine: 41
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Gets a value indicating whether this instance is\nConflictingPropertyNames</p>\n"
+  example: []
+  syntax:
+    content: public bool IsConflictingPropertyNames { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsConflictingPropertyNames As Boolean
+  overload: Dropbox.Api.FileProperties.ModifyTemplateError.IsConflictingPropertyNames*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileProperties.ModifyTemplateError.AsConflictingPropertyNames
+  commentId: P:Dropbox.Api.FileProperties.ModifyTemplateError.AsConflictingPropertyNames
+  id: AsConflictingPropertyNames
+  parent: Dropbox.Api.FileProperties.ModifyTemplateError
+  langs:
+  - csharp
+  - vb
+  name: AsConflictingPropertyNames
+  nameWithType: ModifyTemplateError.AsConflictingPropertyNames
+  fullName: Dropbox.Api.FileProperties.ModifyTemplateError.AsConflictingPropertyNames
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/ModifyTemplateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsConflictingPropertyNames
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/ModifyTemplateError.cs
+    startLine: 52
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Gets this instance as a ConflictingPropertyNames, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ModifyTemplateError.ConflictingPropertyNames AsConflictingPropertyNames { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.FileProperties.ModifyTemplateError.ConflictingPropertyNames
+    content.vb: Public ReadOnly Property AsConflictingPropertyNames As ModifyTemplateError.ConflictingPropertyNames
+  overload: Dropbox.Api.FileProperties.ModifyTemplateError.AsConflictingPropertyNames*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileProperties.ModifyTemplateError.IsTooManyProperties
+  commentId: P:Dropbox.Api.FileProperties.ModifyTemplateError.IsTooManyProperties
+  id: IsTooManyProperties
+  parent: Dropbox.Api.FileProperties.ModifyTemplateError
+  langs:
+  - csharp
+  - vb
+  name: IsTooManyProperties
+  nameWithType: ModifyTemplateError.IsTooManyProperties
+  fullName: Dropbox.Api.FileProperties.ModifyTemplateError.IsTooManyProperties
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/ModifyTemplateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsTooManyProperties
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/ModifyTemplateError.cs
+    startLine: 63
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Gets a value indicating whether this instance is TooManyProperties</p>\n"
+  example: []
+  syntax:
+    content: public bool IsTooManyProperties { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsTooManyProperties As Boolean
+  overload: Dropbox.Api.FileProperties.ModifyTemplateError.IsTooManyProperties*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileProperties.ModifyTemplateError.AsTooManyProperties
+  commentId: P:Dropbox.Api.FileProperties.ModifyTemplateError.AsTooManyProperties
+  id: AsTooManyProperties
+  parent: Dropbox.Api.FileProperties.ModifyTemplateError
+  langs:
+  - csharp
+  - vb
+  name: AsTooManyProperties
+  nameWithType: ModifyTemplateError.AsTooManyProperties
+  fullName: Dropbox.Api.FileProperties.ModifyTemplateError.AsTooManyProperties
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/ModifyTemplateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsTooManyProperties
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/ModifyTemplateError.cs
+    startLine: 74
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Gets this instance as a TooManyProperties, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ModifyTemplateError.TooManyProperties AsTooManyProperties { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.FileProperties.ModifyTemplateError.TooManyProperties
+    content.vb: Public ReadOnly Property AsTooManyProperties As ModifyTemplateError.TooManyProperties
+  overload: Dropbox.Api.FileProperties.ModifyTemplateError.AsTooManyProperties*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileProperties.ModifyTemplateError.IsTooManyTemplates
+  commentId: P:Dropbox.Api.FileProperties.ModifyTemplateError.IsTooManyTemplates
+  id: IsTooManyTemplates
+  parent: Dropbox.Api.FileProperties.ModifyTemplateError
+  langs:
+  - csharp
+  - vb
+  name: IsTooManyTemplates
+  nameWithType: ModifyTemplateError.IsTooManyTemplates
+  fullName: Dropbox.Api.FileProperties.ModifyTemplateError.IsTooManyTemplates
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/ModifyTemplateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsTooManyTemplates
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/ModifyTemplateError.cs
+    startLine: 85
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Gets a value indicating whether this instance is TooManyTemplates</p>\n"
+  example: []
+  syntax:
+    content: public bool IsTooManyTemplates { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsTooManyTemplates As Boolean
+  overload: Dropbox.Api.FileProperties.ModifyTemplateError.IsTooManyTemplates*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileProperties.ModifyTemplateError.AsTooManyTemplates
+  commentId: P:Dropbox.Api.FileProperties.ModifyTemplateError.AsTooManyTemplates
+  id: AsTooManyTemplates
+  parent: Dropbox.Api.FileProperties.ModifyTemplateError
+  langs:
+  - csharp
+  - vb
+  name: AsTooManyTemplates
+  nameWithType: ModifyTemplateError.AsTooManyTemplates
+  fullName: Dropbox.Api.FileProperties.ModifyTemplateError.AsTooManyTemplates
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/ModifyTemplateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsTooManyTemplates
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/ModifyTemplateError.cs
+    startLine: 96
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Gets this instance as a TooManyTemplates, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ModifyTemplateError.TooManyTemplates AsTooManyTemplates { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.FileProperties.ModifyTemplateError.TooManyTemplates
+    content.vb: Public ReadOnly Property AsTooManyTemplates As ModifyTemplateError.TooManyTemplates
+  overload: Dropbox.Api.FileProperties.ModifyTemplateError.AsTooManyTemplates*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileProperties.ModifyTemplateError.IsTemplateAttributeTooLarge
+  commentId: P:Dropbox.Api.FileProperties.ModifyTemplateError.IsTemplateAttributeTooLarge
+  id: IsTemplateAttributeTooLarge
+  parent: Dropbox.Api.FileProperties.ModifyTemplateError
+  langs:
+  - csharp
+  - vb
+  name: IsTemplateAttributeTooLarge
+  nameWithType: ModifyTemplateError.IsTemplateAttributeTooLarge
+  fullName: Dropbox.Api.FileProperties.ModifyTemplateError.IsTemplateAttributeTooLarge
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/ModifyTemplateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsTemplateAttributeTooLarge
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/ModifyTemplateError.cs
+    startLine: 108
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Gets a value indicating whether this instance is\nTemplateAttributeTooLarge</p>\n"
+  example: []
+  syntax:
+    content: public bool IsTemplateAttributeTooLarge { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsTemplateAttributeTooLarge As Boolean
+  overload: Dropbox.Api.FileProperties.ModifyTemplateError.IsTemplateAttributeTooLarge*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileProperties.ModifyTemplateError.AsTemplateAttributeTooLarge
+  commentId: P:Dropbox.Api.FileProperties.ModifyTemplateError.AsTemplateAttributeTooLarge
+  id: AsTemplateAttributeTooLarge
+  parent: Dropbox.Api.FileProperties.ModifyTemplateError
+  langs:
+  - csharp
+  - vb
+  name: AsTemplateAttributeTooLarge
+  nameWithType: ModifyTemplateError.AsTemplateAttributeTooLarge
+  fullName: Dropbox.Api.FileProperties.ModifyTemplateError.AsTemplateAttributeTooLarge
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/ModifyTemplateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsTemplateAttributeTooLarge
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/ModifyTemplateError.cs
+    startLine: 119
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Gets this instance as a TemplateAttributeTooLarge, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ModifyTemplateError.TemplateAttributeTooLarge AsTemplateAttributeTooLarge { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.FileProperties.ModifyTemplateError.TemplateAttributeTooLarge
+    content.vb: Public ReadOnly Property AsTemplateAttributeTooLarge As ModifyTemplateError.TemplateAttributeTooLarge
+  overload: Dropbox.Api.FileProperties.ModifyTemplateError.AsTemplateAttributeTooLarge*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileProperties.ModifyTemplateError.IsTemplateNotFound
+  commentId: P:Dropbox.Api.FileProperties.ModifyTemplateError.IsTemplateNotFound
+  id: IsTemplateNotFound
+  parent: Dropbox.Api.FileProperties.ModifyTemplateError
+  langs:
+  - csharp
+  - vb
+  name: IsTemplateNotFound
+  nameWithType: ModifyTemplateError.IsTemplateNotFound
+  fullName: Dropbox.Api.FileProperties.ModifyTemplateError.IsTemplateNotFound
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/ModifyTemplateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsTemplateNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/ModifyTemplateError.cs
+    startLine: 130
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Gets a value indicating whether this instance is TemplateNotFound</p>\n"
+  example: []
+  syntax:
+    content: public bool IsTemplateNotFound { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsTemplateNotFound As Boolean
+  overload: Dropbox.Api.FileProperties.ModifyTemplateError.IsTemplateNotFound*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileProperties.ModifyTemplateError.AsTemplateNotFound
+  commentId: P:Dropbox.Api.FileProperties.ModifyTemplateError.AsTemplateNotFound
+  id: AsTemplateNotFound
+  parent: Dropbox.Api.FileProperties.ModifyTemplateError
+  langs:
+  - csharp
+  - vb
+  name: AsTemplateNotFound
+  nameWithType: ModifyTemplateError.AsTemplateNotFound
+  fullName: Dropbox.Api.FileProperties.ModifyTemplateError.AsTemplateNotFound
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/ModifyTemplateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsTemplateNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/ModifyTemplateError.cs
+    startLine: 141
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Gets this instance as a TemplateNotFound, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ModifyTemplateError.TemplateNotFound AsTemplateNotFound { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.FileProperties.ModifyTemplateError.TemplateNotFound
+    content.vb: Public ReadOnly Property AsTemplateNotFound As ModifyTemplateError.TemplateNotFound
+  overload: Dropbox.Api.FileProperties.ModifyTemplateError.AsTemplateNotFound*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileProperties.ModifyTemplateError.IsRestrictedContent
+  commentId: P:Dropbox.Api.FileProperties.ModifyTemplateError.IsRestrictedContent
+  id: IsRestrictedContent
+  parent: Dropbox.Api.FileProperties.ModifyTemplateError
+  langs:
+  - csharp
+  - vb
+  name: IsRestrictedContent
+  nameWithType: ModifyTemplateError.IsRestrictedContent
+  fullName: Dropbox.Api.FileProperties.ModifyTemplateError.IsRestrictedContent
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/ModifyTemplateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsRestrictedContent
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/ModifyTemplateError.cs
+    startLine: 152
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Gets a value indicating whether this instance is RestrictedContent</p>\n"
+  example: []
+  syntax:
+    content: public bool IsRestrictedContent { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsRestrictedContent As Boolean
+  overload: Dropbox.Api.FileProperties.ModifyTemplateError.IsRestrictedContent*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileProperties.ModifyTemplateError.AsRestrictedContent
+  commentId: P:Dropbox.Api.FileProperties.ModifyTemplateError.AsRestrictedContent
+  id: AsRestrictedContent
+  parent: Dropbox.Api.FileProperties.ModifyTemplateError
+  langs:
+  - csharp
+  - vb
+  name: AsRestrictedContent
+  nameWithType: ModifyTemplateError.AsRestrictedContent
+  fullName: Dropbox.Api.FileProperties.ModifyTemplateError.AsRestrictedContent
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/ModifyTemplateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsRestrictedContent
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/ModifyTemplateError.cs
+    startLine: 163
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Gets this instance as a RestrictedContent, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ModifyTemplateError.RestrictedContent AsRestrictedContent { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.FileProperties.ModifyTemplateError.RestrictedContent
+    content.vb: Public ReadOnly Property AsRestrictedContent As ModifyTemplateError.RestrictedContent
+  overload: Dropbox.Api.FileProperties.ModifyTemplateError.AsRestrictedContent*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileProperties.ModifyTemplateError.IsOther
+  commentId: P:Dropbox.Api.FileProperties.ModifyTemplateError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.FileProperties.ModifyTemplateError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: ModifyTemplateError.IsOther
+  fullName: Dropbox.Api.FileProperties.ModifyTemplateError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/ModifyTemplateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/ModifyTemplateError.cs
+    startLine: 174
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.FileProperties.ModifyTemplateError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileProperties.ModifyTemplateError.AsOther
+  commentId: P:Dropbox.Api.FileProperties.ModifyTemplateError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.FileProperties.ModifyTemplateError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: ModifyTemplateError.AsOther
+  fullName: Dropbox.Api.FileProperties.ModifyTemplateError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/ModifyTemplateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/ModifyTemplateError.cs
+    startLine: 185
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ModifyTemplateError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.FileProperties.ModifyTemplateError.Other
+    content.vb: Public ReadOnly Property AsOther As ModifyTemplateError.Other
+  overload: Dropbox.Api.FileProperties.ModifyTemplateError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.FileProperties
+  commentId: N:Dropbox.Api.FileProperties
+  name: Dropbox.Api.FileProperties
+  nameWithType: Dropbox.Api.FileProperties
+  fullName: Dropbox.Api.FileProperties
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.FileProperties.ModifyTemplateError
+  commentId: T:Dropbox.Api.FileProperties.ModifyTemplateError
+  parent: Dropbox.Api.FileProperties
+  name: ModifyTemplateError
+  nameWithType: ModifyTemplateError
+  fullName: Dropbox.Api.FileProperties.ModifyTemplateError
+- uid: Dropbox.Api.FileProperties.ModifyTemplateError.#ctor*
+  commentId: Overload:Dropbox.Api.FileProperties.ModifyTemplateError.#ctor
+  name: ModifyTemplateError
+  nameWithType: ModifyTemplateError.ModifyTemplateError
+  fullName: Dropbox.Api.FileProperties.ModifyTemplateError.ModifyTemplateError
+- uid: Dropbox.Api.FileProperties.ModifyTemplateError.IsConflictingPropertyNames*
+  commentId: Overload:Dropbox.Api.FileProperties.ModifyTemplateError.IsConflictingPropertyNames
+  name: IsConflictingPropertyNames
+  nameWithType: ModifyTemplateError.IsConflictingPropertyNames
+  fullName: Dropbox.Api.FileProperties.ModifyTemplateError.IsConflictingPropertyNames
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.FileProperties.ModifyTemplateError.AsConflictingPropertyNames*
+  commentId: Overload:Dropbox.Api.FileProperties.ModifyTemplateError.AsConflictingPropertyNames
+  name: AsConflictingPropertyNames
+  nameWithType: ModifyTemplateError.AsConflictingPropertyNames
+  fullName: Dropbox.Api.FileProperties.ModifyTemplateError.AsConflictingPropertyNames
+- uid: Dropbox.Api.FileProperties.ModifyTemplateError.ConflictingPropertyNames
+  commentId: T:Dropbox.Api.FileProperties.ModifyTemplateError.ConflictingPropertyNames
+  parent: Dropbox.Api.FileProperties
+  name: ModifyTemplateError.ConflictingPropertyNames
+  nameWithType: ModifyTemplateError.ConflictingPropertyNames
+  fullName: Dropbox.Api.FileProperties.ModifyTemplateError.ConflictingPropertyNames
+- uid: Dropbox.Api.FileProperties.ModifyTemplateError.IsTooManyProperties*
+  commentId: Overload:Dropbox.Api.FileProperties.ModifyTemplateError.IsTooManyProperties
+  name: IsTooManyProperties
+  nameWithType: ModifyTemplateError.IsTooManyProperties
+  fullName: Dropbox.Api.FileProperties.ModifyTemplateError.IsTooManyProperties
+- uid: Dropbox.Api.FileProperties.ModifyTemplateError.AsTooManyProperties*
+  commentId: Overload:Dropbox.Api.FileProperties.ModifyTemplateError.AsTooManyProperties
+  name: AsTooManyProperties
+  nameWithType: ModifyTemplateError.AsTooManyProperties
+  fullName: Dropbox.Api.FileProperties.ModifyTemplateError.AsTooManyProperties
+- uid: Dropbox.Api.FileProperties.ModifyTemplateError.TooManyProperties
+  commentId: T:Dropbox.Api.FileProperties.ModifyTemplateError.TooManyProperties
+  parent: Dropbox.Api.FileProperties
+  name: ModifyTemplateError.TooManyProperties
+  nameWithType: ModifyTemplateError.TooManyProperties
+  fullName: Dropbox.Api.FileProperties.ModifyTemplateError.TooManyProperties
+- uid: Dropbox.Api.FileProperties.ModifyTemplateError.IsTooManyTemplates*
+  commentId: Overload:Dropbox.Api.FileProperties.ModifyTemplateError.IsTooManyTemplates
+  name: IsTooManyTemplates
+  nameWithType: ModifyTemplateError.IsTooManyTemplates
+  fullName: Dropbox.Api.FileProperties.ModifyTemplateError.IsTooManyTemplates
+- uid: Dropbox.Api.FileProperties.ModifyTemplateError.AsTooManyTemplates*
+  commentId: Overload:Dropbox.Api.FileProperties.ModifyTemplateError.AsTooManyTemplates
+  name: AsTooManyTemplates
+  nameWithType: ModifyTemplateError.AsTooManyTemplates
+  fullName: Dropbox.Api.FileProperties.ModifyTemplateError.AsTooManyTemplates
+- uid: Dropbox.Api.FileProperties.ModifyTemplateError.TooManyTemplates
+  commentId: T:Dropbox.Api.FileProperties.ModifyTemplateError.TooManyTemplates
+  parent: Dropbox.Api.FileProperties
+  name: ModifyTemplateError.TooManyTemplates
+  nameWithType: ModifyTemplateError.TooManyTemplates
+  fullName: Dropbox.Api.FileProperties.ModifyTemplateError.TooManyTemplates
+- uid: Dropbox.Api.FileProperties.ModifyTemplateError.IsTemplateAttributeTooLarge*
+  commentId: Overload:Dropbox.Api.FileProperties.ModifyTemplateError.IsTemplateAttributeTooLarge
+  name: IsTemplateAttributeTooLarge
+  nameWithType: ModifyTemplateError.IsTemplateAttributeTooLarge
+  fullName: Dropbox.Api.FileProperties.ModifyTemplateError.IsTemplateAttributeTooLarge
+- uid: Dropbox.Api.FileProperties.ModifyTemplateError.AsTemplateAttributeTooLarge*
+  commentId: Overload:Dropbox.Api.FileProperties.ModifyTemplateError.AsTemplateAttributeTooLarge
+  name: AsTemplateAttributeTooLarge
+  nameWithType: ModifyTemplateError.AsTemplateAttributeTooLarge
+  fullName: Dropbox.Api.FileProperties.ModifyTemplateError.AsTemplateAttributeTooLarge
+- uid: Dropbox.Api.FileProperties.ModifyTemplateError.TemplateAttributeTooLarge
+  commentId: T:Dropbox.Api.FileProperties.ModifyTemplateError.TemplateAttributeTooLarge
+  parent: Dropbox.Api.FileProperties
+  name: ModifyTemplateError.TemplateAttributeTooLarge
+  nameWithType: ModifyTemplateError.TemplateAttributeTooLarge
+  fullName: Dropbox.Api.FileProperties.ModifyTemplateError.TemplateAttributeTooLarge
+- uid: Dropbox.Api.FileProperties.ModifyTemplateError.IsTemplateNotFound*
+  commentId: Overload:Dropbox.Api.FileProperties.ModifyTemplateError.IsTemplateNotFound
+  name: IsTemplateNotFound
+  nameWithType: ModifyTemplateError.IsTemplateNotFound
+  fullName: Dropbox.Api.FileProperties.ModifyTemplateError.IsTemplateNotFound
+- uid: Dropbox.Api.FileProperties.ModifyTemplateError.AsTemplateNotFound*
+  commentId: Overload:Dropbox.Api.FileProperties.ModifyTemplateError.AsTemplateNotFound
+  name: AsTemplateNotFound
+  nameWithType: ModifyTemplateError.AsTemplateNotFound
+  fullName: Dropbox.Api.FileProperties.ModifyTemplateError.AsTemplateNotFound
+- uid: Dropbox.Api.FileProperties.ModifyTemplateError.TemplateNotFound
+  commentId: T:Dropbox.Api.FileProperties.ModifyTemplateError.TemplateNotFound
+  parent: Dropbox.Api.FileProperties
+  name: ModifyTemplateError.TemplateNotFound
+  nameWithType: ModifyTemplateError.TemplateNotFound
+  fullName: Dropbox.Api.FileProperties.ModifyTemplateError.TemplateNotFound
+- uid: Dropbox.Api.FileProperties.ModifyTemplateError.IsRestrictedContent*
+  commentId: Overload:Dropbox.Api.FileProperties.ModifyTemplateError.IsRestrictedContent
+  name: IsRestrictedContent
+  nameWithType: ModifyTemplateError.IsRestrictedContent
+  fullName: Dropbox.Api.FileProperties.ModifyTemplateError.IsRestrictedContent
+- uid: Dropbox.Api.FileProperties.ModifyTemplateError.AsRestrictedContent*
+  commentId: Overload:Dropbox.Api.FileProperties.ModifyTemplateError.AsRestrictedContent
+  name: AsRestrictedContent
+  nameWithType: ModifyTemplateError.AsRestrictedContent
+  fullName: Dropbox.Api.FileProperties.ModifyTemplateError.AsRestrictedContent
+- uid: Dropbox.Api.FileProperties.ModifyTemplateError.RestrictedContent
+  commentId: T:Dropbox.Api.FileProperties.ModifyTemplateError.RestrictedContent
+  parent: Dropbox.Api.FileProperties
+  name: ModifyTemplateError.RestrictedContent
+  nameWithType: ModifyTemplateError.RestrictedContent
+  fullName: Dropbox.Api.FileProperties.ModifyTemplateError.RestrictedContent
+- uid: Dropbox.Api.FileProperties.ModifyTemplateError.IsOther*
+  commentId: Overload:Dropbox.Api.FileProperties.ModifyTemplateError.IsOther
+  name: IsOther
+  nameWithType: ModifyTemplateError.IsOther
+  fullName: Dropbox.Api.FileProperties.ModifyTemplateError.IsOther
+- uid: Dropbox.Api.FileProperties.ModifyTemplateError.AsOther*
+  commentId: Overload:Dropbox.Api.FileProperties.ModifyTemplateError.AsOther
+  name: AsOther
+  nameWithType: ModifyTemplateError.AsOther
+  fullName: Dropbox.Api.FileProperties.ModifyTemplateError.AsOther
+- uid: Dropbox.Api.FileProperties.ModifyTemplateError.Other
+  commentId: T:Dropbox.Api.FileProperties.ModifyTemplateError.Other
+  parent: Dropbox.Api.FileProperties
+  name: ModifyTemplateError.Other
+  nameWithType: ModifyTemplateError.Other
+  fullName: Dropbox.Api.FileProperties.ModifyTemplateError.Other
+shouldSkipMarkup: true

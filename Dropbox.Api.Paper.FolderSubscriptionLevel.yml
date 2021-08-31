@@ -1,0 +1,474 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Paper.FolderSubscriptionLevel
+  commentId: T:Dropbox.Api.Paper.FolderSubscriptionLevel
+  id: FolderSubscriptionLevel
+  parent: Dropbox.Api.Paper
+  children:
+  - Dropbox.Api.Paper.FolderSubscriptionLevel.#ctor
+  - Dropbox.Api.Paper.FolderSubscriptionLevel.AsActivityOnly
+  - Dropbox.Api.Paper.FolderSubscriptionLevel.AsDailyEmails
+  - Dropbox.Api.Paper.FolderSubscriptionLevel.AsNone
+  - Dropbox.Api.Paper.FolderSubscriptionLevel.AsWeeklyEmails
+  - Dropbox.Api.Paper.FolderSubscriptionLevel.IsActivityOnly
+  - Dropbox.Api.Paper.FolderSubscriptionLevel.IsDailyEmails
+  - Dropbox.Api.Paper.FolderSubscriptionLevel.IsNone
+  - Dropbox.Api.Paper.FolderSubscriptionLevel.IsWeeklyEmails
+  langs:
+  - csharp
+  - vb
+  name: FolderSubscriptionLevel
+  nameWithType: FolderSubscriptionLevel
+  fullName: Dropbox.Api.Paper.FolderSubscriptionLevel
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/FolderSubscriptionLevel.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: FolderSubscriptionLevel
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/FolderSubscriptionLevel.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>The subscription level of a Paper folder.</p>\n"
+  example: []
+  syntax:
+    content: 'public class FolderSubscriptionLevel : object'
+    content.vb: >-
+      Public Class FolderSubscriptionLevel
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Paper.FolderSubscriptionLevel.ActivityOnly
+  - Dropbox.Api.Paper.FolderSubscriptionLevel.DailyEmails
+  - Dropbox.Api.Paper.FolderSubscriptionLevel.None
+  - Dropbox.Api.Paper.FolderSubscriptionLevel.WeeklyEmails
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Paper.FolderSubscriptionLevel.#ctor
+  commentId: M:Dropbox.Api.Paper.FolderSubscriptionLevel.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Paper.FolderSubscriptionLevel
+  langs:
+  - csharp
+  - vb
+  name: FolderSubscriptionLevel()
+  nameWithType: FolderSubscriptionLevel.FolderSubscriptionLevel()
+  fullName: Dropbox.Api.Paper.FolderSubscriptionLevel.FolderSubscriptionLevel()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/FolderSubscriptionLevel.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/FolderSubscriptionLevel.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Paper.FolderSubscriptionLevel\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public FolderSubscriptionLevel()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Paper.FolderSubscriptionLevel.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Paper.FolderSubscriptionLevel.IsNone
+  commentId: P:Dropbox.Api.Paper.FolderSubscriptionLevel.IsNone
+  id: IsNone
+  parent: Dropbox.Api.Paper.FolderSubscriptionLevel
+  langs:
+  - csharp
+  - vb
+  name: IsNone
+  nameWithType: FolderSubscriptionLevel.IsNone
+  fullName: Dropbox.Api.Paper.FolderSubscriptionLevel.IsNone
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/FolderSubscriptionLevel.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsNone
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/FolderSubscriptionLevel.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets a value indicating whether this instance is None</p>\n"
+  example: []
+  syntax:
+    content: public bool IsNone { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsNone As Boolean
+  overload: Dropbox.Api.Paper.FolderSubscriptionLevel.IsNone*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Paper.FolderSubscriptionLevel.AsNone
+  commentId: P:Dropbox.Api.Paper.FolderSubscriptionLevel.AsNone
+  id: AsNone
+  parent: Dropbox.Api.Paper.FolderSubscriptionLevel
+  langs:
+  - csharp
+  - vb
+  name: AsNone
+  nameWithType: FolderSubscriptionLevel.AsNone
+  fullName: Dropbox.Api.Paper.FolderSubscriptionLevel.AsNone
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/FolderSubscriptionLevel.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsNone
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/FolderSubscriptionLevel.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets this instance as a None, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public FolderSubscriptionLevel.None AsNone { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Paper.FolderSubscriptionLevel.None
+    content.vb: Public ReadOnly Property AsNone As FolderSubscriptionLevel.None
+  overload: Dropbox.Api.Paper.FolderSubscriptionLevel.AsNone*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Paper.FolderSubscriptionLevel.IsActivityOnly
+  commentId: P:Dropbox.Api.Paper.FolderSubscriptionLevel.IsActivityOnly
+  id: IsActivityOnly
+  parent: Dropbox.Api.Paper.FolderSubscriptionLevel
+  langs:
+  - csharp
+  - vb
+  name: IsActivityOnly
+  nameWithType: FolderSubscriptionLevel.IsActivityOnly
+  fullName: Dropbox.Api.Paper.FolderSubscriptionLevel.IsActivityOnly
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/FolderSubscriptionLevel.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsActivityOnly
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/FolderSubscriptionLevel.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets a value indicating whether this instance is ActivityOnly</p>\n"
+  example: []
+  syntax:
+    content: public bool IsActivityOnly { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsActivityOnly As Boolean
+  overload: Dropbox.Api.Paper.FolderSubscriptionLevel.IsActivityOnly*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Paper.FolderSubscriptionLevel.AsActivityOnly
+  commentId: P:Dropbox.Api.Paper.FolderSubscriptionLevel.AsActivityOnly
+  id: AsActivityOnly
+  parent: Dropbox.Api.Paper.FolderSubscriptionLevel
+  langs:
+  - csharp
+  - vb
+  name: AsActivityOnly
+  nameWithType: FolderSubscriptionLevel.AsActivityOnly
+  fullName: Dropbox.Api.Paper.FolderSubscriptionLevel.AsActivityOnly
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/FolderSubscriptionLevel.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsActivityOnly
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/FolderSubscriptionLevel.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets this instance as a ActivityOnly, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public FolderSubscriptionLevel.ActivityOnly AsActivityOnly { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Paper.FolderSubscriptionLevel.ActivityOnly
+    content.vb: Public ReadOnly Property AsActivityOnly As FolderSubscriptionLevel.ActivityOnly
+  overload: Dropbox.Api.Paper.FolderSubscriptionLevel.AsActivityOnly*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Paper.FolderSubscriptionLevel.IsDailyEmails
+  commentId: P:Dropbox.Api.Paper.FolderSubscriptionLevel.IsDailyEmails
+  id: IsDailyEmails
+  parent: Dropbox.Api.Paper.FolderSubscriptionLevel
+  langs:
+  - csharp
+  - vb
+  name: IsDailyEmails
+  nameWithType: FolderSubscriptionLevel.IsDailyEmails
+  fullName: Dropbox.Api.Paper.FolderSubscriptionLevel.IsDailyEmails
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/FolderSubscriptionLevel.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsDailyEmails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/FolderSubscriptionLevel.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets a value indicating whether this instance is DailyEmails</p>\n"
+  example: []
+  syntax:
+    content: public bool IsDailyEmails { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsDailyEmails As Boolean
+  overload: Dropbox.Api.Paper.FolderSubscriptionLevel.IsDailyEmails*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Paper.FolderSubscriptionLevel.AsDailyEmails
+  commentId: P:Dropbox.Api.Paper.FolderSubscriptionLevel.AsDailyEmails
+  id: AsDailyEmails
+  parent: Dropbox.Api.Paper.FolderSubscriptionLevel
+  langs:
+  - csharp
+  - vb
+  name: AsDailyEmails
+  nameWithType: FolderSubscriptionLevel.AsDailyEmails
+  fullName: Dropbox.Api.Paper.FolderSubscriptionLevel.AsDailyEmails
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/FolderSubscriptionLevel.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsDailyEmails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/FolderSubscriptionLevel.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets this instance as a DailyEmails, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public FolderSubscriptionLevel.DailyEmails AsDailyEmails { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Paper.FolderSubscriptionLevel.DailyEmails
+    content.vb: Public ReadOnly Property AsDailyEmails As FolderSubscriptionLevel.DailyEmails
+  overload: Dropbox.Api.Paper.FolderSubscriptionLevel.AsDailyEmails*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Paper.FolderSubscriptionLevel.IsWeeklyEmails
+  commentId: P:Dropbox.Api.Paper.FolderSubscriptionLevel.IsWeeklyEmails
+  id: IsWeeklyEmails
+  parent: Dropbox.Api.Paper.FolderSubscriptionLevel
+  langs:
+  - csharp
+  - vb
+  name: IsWeeklyEmails
+  nameWithType: FolderSubscriptionLevel.IsWeeklyEmails
+  fullName: Dropbox.Api.Paper.FolderSubscriptionLevel.IsWeeklyEmails
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/FolderSubscriptionLevel.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsWeeklyEmails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/FolderSubscriptionLevel.cs
+    startLine: 106
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets a value indicating whether this instance is WeeklyEmails</p>\n"
+  example: []
+  syntax:
+    content: public bool IsWeeklyEmails { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsWeeklyEmails As Boolean
+  overload: Dropbox.Api.Paper.FolderSubscriptionLevel.IsWeeklyEmails*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Paper.FolderSubscriptionLevel.AsWeeklyEmails
+  commentId: P:Dropbox.Api.Paper.FolderSubscriptionLevel.AsWeeklyEmails
+  id: AsWeeklyEmails
+  parent: Dropbox.Api.Paper.FolderSubscriptionLevel
+  langs:
+  - csharp
+  - vb
+  name: AsWeeklyEmails
+  nameWithType: FolderSubscriptionLevel.AsWeeklyEmails
+  fullName: Dropbox.Api.Paper.FolderSubscriptionLevel.AsWeeklyEmails
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/FolderSubscriptionLevel.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsWeeklyEmails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/FolderSubscriptionLevel.cs
+    startLine: 117
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets this instance as a WeeklyEmails, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public FolderSubscriptionLevel.WeeklyEmails AsWeeklyEmails { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Paper.FolderSubscriptionLevel.WeeklyEmails
+    content.vb: Public ReadOnly Property AsWeeklyEmails As FolderSubscriptionLevel.WeeklyEmails
+  overload: Dropbox.Api.Paper.FolderSubscriptionLevel.AsWeeklyEmails*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Paper
+  commentId: N:Dropbox.Api.Paper
+  name: Dropbox.Api.Paper
+  nameWithType: Dropbox.Api.Paper
+  fullName: Dropbox.Api.Paper
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Paper.FolderSubscriptionLevel
+  commentId: T:Dropbox.Api.Paper.FolderSubscriptionLevel
+  parent: Dropbox.Api.Paper
+  name: FolderSubscriptionLevel
+  nameWithType: FolderSubscriptionLevel
+  fullName: Dropbox.Api.Paper.FolderSubscriptionLevel
+- uid: Dropbox.Api.Paper.FolderSubscriptionLevel.#ctor*
+  commentId: Overload:Dropbox.Api.Paper.FolderSubscriptionLevel.#ctor
+  name: FolderSubscriptionLevel
+  nameWithType: FolderSubscriptionLevel.FolderSubscriptionLevel
+  fullName: Dropbox.Api.Paper.FolderSubscriptionLevel.FolderSubscriptionLevel
+- uid: Dropbox.Api.Paper.FolderSubscriptionLevel.IsNone*
+  commentId: Overload:Dropbox.Api.Paper.FolderSubscriptionLevel.IsNone
+  name: IsNone
+  nameWithType: FolderSubscriptionLevel.IsNone
+  fullName: Dropbox.Api.Paper.FolderSubscriptionLevel.IsNone
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Paper.FolderSubscriptionLevel.AsNone*
+  commentId: Overload:Dropbox.Api.Paper.FolderSubscriptionLevel.AsNone
+  name: AsNone
+  nameWithType: FolderSubscriptionLevel.AsNone
+  fullName: Dropbox.Api.Paper.FolderSubscriptionLevel.AsNone
+- uid: Dropbox.Api.Paper.FolderSubscriptionLevel.None
+  commentId: T:Dropbox.Api.Paper.FolderSubscriptionLevel.None
+  parent: Dropbox.Api.Paper
+  name: FolderSubscriptionLevel.None
+  nameWithType: FolderSubscriptionLevel.None
+  fullName: Dropbox.Api.Paper.FolderSubscriptionLevel.None
+- uid: Dropbox.Api.Paper.FolderSubscriptionLevel.IsActivityOnly*
+  commentId: Overload:Dropbox.Api.Paper.FolderSubscriptionLevel.IsActivityOnly
+  name: IsActivityOnly
+  nameWithType: FolderSubscriptionLevel.IsActivityOnly
+  fullName: Dropbox.Api.Paper.FolderSubscriptionLevel.IsActivityOnly
+- uid: Dropbox.Api.Paper.FolderSubscriptionLevel.AsActivityOnly*
+  commentId: Overload:Dropbox.Api.Paper.FolderSubscriptionLevel.AsActivityOnly
+  name: AsActivityOnly
+  nameWithType: FolderSubscriptionLevel.AsActivityOnly
+  fullName: Dropbox.Api.Paper.FolderSubscriptionLevel.AsActivityOnly
+- uid: Dropbox.Api.Paper.FolderSubscriptionLevel.ActivityOnly
+  commentId: T:Dropbox.Api.Paper.FolderSubscriptionLevel.ActivityOnly
+  parent: Dropbox.Api.Paper
+  name: FolderSubscriptionLevel.ActivityOnly
+  nameWithType: FolderSubscriptionLevel.ActivityOnly
+  fullName: Dropbox.Api.Paper.FolderSubscriptionLevel.ActivityOnly
+- uid: Dropbox.Api.Paper.FolderSubscriptionLevel.IsDailyEmails*
+  commentId: Overload:Dropbox.Api.Paper.FolderSubscriptionLevel.IsDailyEmails
+  name: IsDailyEmails
+  nameWithType: FolderSubscriptionLevel.IsDailyEmails
+  fullName: Dropbox.Api.Paper.FolderSubscriptionLevel.IsDailyEmails
+- uid: Dropbox.Api.Paper.FolderSubscriptionLevel.AsDailyEmails*
+  commentId: Overload:Dropbox.Api.Paper.FolderSubscriptionLevel.AsDailyEmails
+  name: AsDailyEmails
+  nameWithType: FolderSubscriptionLevel.AsDailyEmails
+  fullName: Dropbox.Api.Paper.FolderSubscriptionLevel.AsDailyEmails
+- uid: Dropbox.Api.Paper.FolderSubscriptionLevel.DailyEmails
+  commentId: T:Dropbox.Api.Paper.FolderSubscriptionLevel.DailyEmails
+  parent: Dropbox.Api.Paper
+  name: FolderSubscriptionLevel.DailyEmails
+  nameWithType: FolderSubscriptionLevel.DailyEmails
+  fullName: Dropbox.Api.Paper.FolderSubscriptionLevel.DailyEmails
+- uid: Dropbox.Api.Paper.FolderSubscriptionLevel.IsWeeklyEmails*
+  commentId: Overload:Dropbox.Api.Paper.FolderSubscriptionLevel.IsWeeklyEmails
+  name: IsWeeklyEmails
+  nameWithType: FolderSubscriptionLevel.IsWeeklyEmails
+  fullName: Dropbox.Api.Paper.FolderSubscriptionLevel.IsWeeklyEmails
+- uid: Dropbox.Api.Paper.FolderSubscriptionLevel.AsWeeklyEmails*
+  commentId: Overload:Dropbox.Api.Paper.FolderSubscriptionLevel.AsWeeklyEmails
+  name: AsWeeklyEmails
+  nameWithType: FolderSubscriptionLevel.AsWeeklyEmails
+  fullName: Dropbox.Api.Paper.FolderSubscriptionLevel.AsWeeklyEmails
+- uid: Dropbox.Api.Paper.FolderSubscriptionLevel.WeeklyEmails
+  commentId: T:Dropbox.Api.Paper.FolderSubscriptionLevel.WeeklyEmails
+  parent: Dropbox.Api.Paper
+  name: FolderSubscriptionLevel.WeeklyEmails
+  nameWithType: FolderSubscriptionLevel.WeeklyEmails
+  fullName: Dropbox.Api.Paper.FolderSubscriptionLevel.WeeklyEmails
+shouldSkipMarkup: true

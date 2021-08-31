@@ -1,0 +1,148 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamPolicies.SharedFolderJoinPolicy.Other
+  commentId: T:Dropbox.Api.TeamPolicies.SharedFolderJoinPolicy.Other
+  id: SharedFolderJoinPolicy.Other
+  parent: Dropbox.Api.TeamPolicies
+  children:
+  - Dropbox.Api.TeamPolicies.SharedFolderJoinPolicy.Other.Instance
+  langs:
+  - csharp
+  - vb
+  name: SharedFolderJoinPolicy.Other
+  nameWithType: SharedFolderJoinPolicy.Other
+  fullName: Dropbox.Api.TeamPolicies.SharedFolderJoinPolicy.Other
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SharedFolderJoinPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Other
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SharedFolderJoinPolicy.cs
+    startLine: 323
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>The other object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Other : SharedFolderJoinPolicy'
+    content.vb: >-
+      Public NotInheritable Class Other
+          Inherits SharedFolderJoinPolicy
+  inheritance:
+  - System.Object
+  - Dropbox.Api.TeamPolicies.SharedFolderJoinPolicy
+  inheritedMembers:
+  - Dropbox.Api.TeamPolicies.SharedFolderJoinPolicy.IsFromTeamOnly
+  - Dropbox.Api.TeamPolicies.SharedFolderJoinPolicy.AsFromTeamOnly
+  - Dropbox.Api.TeamPolicies.SharedFolderJoinPolicy.IsFromAnyone
+  - Dropbox.Api.TeamPolicies.SharedFolderJoinPolicy.AsFromAnyone
+  - Dropbox.Api.TeamPolicies.SharedFolderJoinPolicy.IsOther
+  - Dropbox.Api.TeamPolicies.SharedFolderJoinPolicy.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.TeamPolicies.SharedFolderJoinPolicy.Other.Instance
+  commentId: F:Dropbox.Api.TeamPolicies.SharedFolderJoinPolicy.Other.Instance
+  id: Instance
+  parent: Dropbox.Api.TeamPolicies.SharedFolderJoinPolicy.Other
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: SharedFolderJoinPolicy.Other.Instance
+  fullName: Dropbox.Api.TeamPolicies.SharedFolderJoinPolicy.Other.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SharedFolderJoinPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SharedFolderJoinPolicy.cs
+    startLine: 347
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>A singleton instance of Other</p>\n"
+  example: []
+  syntax:
+    content: public static readonly SharedFolderJoinPolicy.Other Instance
+    return:
+      type: Dropbox.Api.TeamPolicies.SharedFolderJoinPolicy.Other
+    content.vb: Public Shared ReadOnly Instance As SharedFolderJoinPolicy.Other
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamPolicies
+  commentId: N:Dropbox.Api.TeamPolicies
+  name: Dropbox.Api.TeamPolicies
+  nameWithType: Dropbox.Api.TeamPolicies
+  fullName: Dropbox.Api.TeamPolicies
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamPolicies.SharedFolderJoinPolicy
+  commentId: T:Dropbox.Api.TeamPolicies.SharedFolderJoinPolicy
+  parent: Dropbox.Api.TeamPolicies
+  name: SharedFolderJoinPolicy
+  nameWithType: SharedFolderJoinPolicy
+  fullName: Dropbox.Api.TeamPolicies.SharedFolderJoinPolicy
+- uid: Dropbox.Api.TeamPolicies.SharedFolderJoinPolicy.IsFromTeamOnly
+  commentId: P:Dropbox.Api.TeamPolicies.SharedFolderJoinPolicy.IsFromTeamOnly
+  parent: Dropbox.Api.TeamPolicies.SharedFolderJoinPolicy
+  name: IsFromTeamOnly
+  nameWithType: SharedFolderJoinPolicy.IsFromTeamOnly
+  fullName: Dropbox.Api.TeamPolicies.SharedFolderJoinPolicy.IsFromTeamOnly
+- uid: Dropbox.Api.TeamPolicies.SharedFolderJoinPolicy.AsFromTeamOnly
+  commentId: P:Dropbox.Api.TeamPolicies.SharedFolderJoinPolicy.AsFromTeamOnly
+  parent: Dropbox.Api.TeamPolicies.SharedFolderJoinPolicy
+  name: AsFromTeamOnly
+  nameWithType: SharedFolderJoinPolicy.AsFromTeamOnly
+  fullName: Dropbox.Api.TeamPolicies.SharedFolderJoinPolicy.AsFromTeamOnly
+- uid: Dropbox.Api.TeamPolicies.SharedFolderJoinPolicy.IsFromAnyone
+  commentId: P:Dropbox.Api.TeamPolicies.SharedFolderJoinPolicy.IsFromAnyone
+  parent: Dropbox.Api.TeamPolicies.SharedFolderJoinPolicy
+  name: IsFromAnyone
+  nameWithType: SharedFolderJoinPolicy.IsFromAnyone
+  fullName: Dropbox.Api.TeamPolicies.SharedFolderJoinPolicy.IsFromAnyone
+- uid: Dropbox.Api.TeamPolicies.SharedFolderJoinPolicy.AsFromAnyone
+  commentId: P:Dropbox.Api.TeamPolicies.SharedFolderJoinPolicy.AsFromAnyone
+  parent: Dropbox.Api.TeamPolicies.SharedFolderJoinPolicy
+  name: AsFromAnyone
+  nameWithType: SharedFolderJoinPolicy.AsFromAnyone
+  fullName: Dropbox.Api.TeamPolicies.SharedFolderJoinPolicy.AsFromAnyone
+- uid: Dropbox.Api.TeamPolicies.SharedFolderJoinPolicy.IsOther
+  commentId: P:Dropbox.Api.TeamPolicies.SharedFolderJoinPolicy.IsOther
+  parent: Dropbox.Api.TeamPolicies.SharedFolderJoinPolicy
+  name: IsOther
+  nameWithType: SharedFolderJoinPolicy.IsOther
+  fullName: Dropbox.Api.TeamPolicies.SharedFolderJoinPolicy.IsOther
+- uid: Dropbox.Api.TeamPolicies.SharedFolderJoinPolicy.AsOther
+  commentId: P:Dropbox.Api.TeamPolicies.SharedFolderJoinPolicy.AsOther
+  parent: Dropbox.Api.TeamPolicies.SharedFolderJoinPolicy
+  name: AsOther
+  nameWithType: SharedFolderJoinPolicy.AsOther
+  fullName: Dropbox.Api.TeamPolicies.SharedFolderJoinPolicy.AsOther
+- uid: Dropbox.Api.TeamPolicies.SharedFolderJoinPolicy.Other
+  commentId: T:Dropbox.Api.TeamPolicies.SharedFolderJoinPolicy.Other
+  parent: Dropbox.Api.TeamPolicies
+  name: SharedFolderJoinPolicy.Other
+  nameWithType: SharedFolderJoinPolicy.Other
+  fullName: Dropbox.Api.TeamPolicies.SharedFolderJoinPolicy.Other
+shouldSkipMarkup: true

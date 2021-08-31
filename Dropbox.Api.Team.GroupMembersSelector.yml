@@ -1,0 +1,244 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.GroupMembersSelector
+  commentId: T:Dropbox.Api.Team.GroupMembersSelector
+  id: GroupMembersSelector
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.GroupMembersSelector.#ctor
+  - Dropbox.Api.Team.GroupMembersSelector.#ctor(Dropbox.Api.Team.GroupSelector,Dropbox.Api.Team.UsersSelectorArg)
+  - Dropbox.Api.Team.GroupMembersSelector.Group
+  - Dropbox.Api.Team.GroupMembersSelector.Users
+  langs:
+  - csharp
+  - vb
+  name: GroupMembersSelector
+  nameWithType: GroupMembersSelector
+  fullName: Dropbox.Api.Team.GroupMembersSelector
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupMembersSelector.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GroupMembersSelector
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupMembersSelector.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Argument for selecting a group and a list of users.</p>\n"
+  example: []
+  syntax:
+    content: 'public class GroupMembersSelector : object'
+    content.vb: >-
+      Public Class GroupMembersSelector
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.GroupMembersSelector.#ctor(Dropbox.Api.Team.GroupSelector,Dropbox.Api.Team.UsersSelectorArg)
+  commentId: M:Dropbox.Api.Team.GroupMembersSelector.#ctor(Dropbox.Api.Team.GroupSelector,Dropbox.Api.Team.UsersSelectorArg)
+  id: '#ctor(Dropbox.Api.Team.GroupSelector,Dropbox.Api.Team.UsersSelectorArg)'
+  parent: Dropbox.Api.Team.GroupMembersSelector
+  langs:
+  - csharp
+  - vb
+  name: GroupMembersSelector(GroupSelector, UsersSelectorArg)
+  nameWithType: GroupMembersSelector.GroupMembersSelector(GroupSelector, UsersSelectorArg)
+  fullName: Dropbox.Api.Team.GroupMembersSelector.GroupMembersSelector(Dropbox.Api.Team.GroupSelector, Dropbox.Api.Team.UsersSelectorArg)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupMembersSelector.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupMembersSelector.cs
+    startLine: 36
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.GroupMembersSelector\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public GroupMembersSelector(GroupSelector group, UsersSelectorArg users)
+    parameters:
+    - id: group
+      type: Dropbox.Api.Team.GroupSelector
+      description: Specify a group.
+    - id: users
+      type: Dropbox.Api.Team.UsersSelectorArg
+      description: A list of users that are members of <code data-dev-comment-type="paramref" class="paramref">group</code>.
+    content.vb: Public Sub New(group As GroupSelector, users As UsersSelectorArg)
+  overload: Dropbox.Api.Team.GroupMembersSelector.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.GroupMembersSelector.#ctor
+  commentId: M:Dropbox.Api.Team.GroupMembersSelector.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.GroupMembersSelector
+  langs:
+  - csharp
+  - vb
+  name: GroupMembersSelector()
+  nameWithType: GroupMembersSelector.GroupMembersSelector()
+  fullName: Dropbox.Api.Team.GroupMembersSelector.GroupMembersSelector()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupMembersSelector.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupMembersSelector.cs
+    startLine: 59
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.GroupMembersSelector\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public GroupMembersSelector()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.GroupMembersSelector.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.GroupMembersSelector.Group
+  commentId: P:Dropbox.Api.Team.GroupMembersSelector.Group
+  id: Group
+  parent: Dropbox.Api.Team.GroupMembersSelector
+  langs:
+  - csharp
+  - vb
+  name: Group
+  nameWithType: GroupMembersSelector.Group
+  fullName: Dropbox.Api.Team.GroupMembersSelector.Group
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupMembersSelector.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Group
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupMembersSelector.cs
+    startLine: 67
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Specify a group.</p>\n"
+  example: []
+  syntax:
+    content: public GroupSelector Group { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.GroupSelector
+    content.vb: Public Property Group As GroupSelector
+  overload: Dropbox.Api.Team.GroupMembersSelector.Group*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.GroupMembersSelector.Users
+  commentId: P:Dropbox.Api.Team.GroupMembersSelector.Users
+  id: Users
+  parent: Dropbox.Api.Team.GroupMembersSelector
+  langs:
+  - csharp
+  - vb
+  name: Users
+  nameWithType: GroupMembersSelector.Users
+  fullName: Dropbox.Api.Team.GroupMembersSelector.Users
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupMembersSelector.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Users
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupMembersSelector.cs
+    startLine: 72
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>A list of users that are members of <xref href=\"Dropbox.Api.Team.GroupMembersSelector.Group\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+  example: []
+  syntax:
+    content: public UsersSelectorArg Users { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.UsersSelectorArg
+    content.vb: Public Property Users As UsersSelectorArg
+  overload: Dropbox.Api.Team.GroupMembersSelector.Users*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.GroupMembersSelector
+  commentId: T:Dropbox.Api.Team.GroupMembersSelector
+  name: GroupMembersSelector
+  nameWithType: GroupMembersSelector
+  fullName: Dropbox.Api.Team.GroupMembersSelector
+- uid: Dropbox.Api.Team.GroupMembersSelector.#ctor*
+  commentId: Overload:Dropbox.Api.Team.GroupMembersSelector.#ctor
+  name: GroupMembersSelector
+  nameWithType: GroupMembersSelector.GroupMembersSelector
+  fullName: Dropbox.Api.Team.GroupMembersSelector.GroupMembersSelector
+- uid: Dropbox.Api.Team.GroupSelector
+  commentId: T:Dropbox.Api.Team.GroupSelector
+  parent: Dropbox.Api.Team
+  name: GroupSelector
+  nameWithType: GroupSelector
+  fullName: Dropbox.Api.Team.GroupSelector
+- uid: Dropbox.Api.Team.UsersSelectorArg
+  commentId: T:Dropbox.Api.Team.UsersSelectorArg
+  parent: Dropbox.Api.Team
+  name: UsersSelectorArg
+  nameWithType: UsersSelectorArg
+  fullName: Dropbox.Api.Team.UsersSelectorArg
+- uid: Dropbox.Api.Team.GroupMembersSelector.Group*
+  commentId: Overload:Dropbox.Api.Team.GroupMembersSelector.Group
+  name: Group
+  nameWithType: GroupMembersSelector.Group
+  fullName: Dropbox.Api.Team.GroupMembersSelector.Group
+- uid: Dropbox.Api.Team.GroupMembersSelector.Group
+  commentId: P:Dropbox.Api.Team.GroupMembersSelector.Group
+  isExternal: true
+- uid: Dropbox.Api.Team.GroupMembersSelector.Users*
+  commentId: Overload:Dropbox.Api.Team.GroupMembersSelector.Users
+  name: Users
+  nameWithType: GroupMembersSelector.Users
+  fullName: Dropbox.Api.Team.GroupMembersSelector.Users
+shouldSkipMarkup: true

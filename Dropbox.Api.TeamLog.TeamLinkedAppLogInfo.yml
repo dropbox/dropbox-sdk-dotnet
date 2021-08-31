@@ -1,0 +1,209 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.TeamLinkedAppLogInfo
+  commentId: T:Dropbox.Api.TeamLog.TeamLinkedAppLogInfo
+  id: TeamLinkedAppLogInfo
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.TeamLinkedAppLogInfo.#ctor
+  - Dropbox.Api.TeamLog.TeamLinkedAppLogInfo.#ctor(System.String,System.String)
+  langs:
+  - csharp
+  - vb
+  name: TeamLinkedAppLogInfo
+  nameWithType: TeamLinkedAppLogInfo
+  fullName: Dropbox.Api.TeamLog.TeamLinkedAppLogInfo
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamLinkedAppLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TeamLinkedAppLogInfo
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamLinkedAppLogInfo.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Team linked app</p>\n"
+  example: []
+  syntax:
+    content: 'public class TeamLinkedAppLogInfo : AppLogInfo'
+    content.vb: >-
+      Public Class TeamLinkedAppLogInfo
+          Inherits AppLogInfo
+  inheritance:
+  - System.Object
+  - Dropbox.Api.TeamLog.AppLogInfo
+  inheritedMembers:
+  - Dropbox.Api.TeamLog.AppLogInfo.IsUserOrTeamLinkedApp
+  - Dropbox.Api.TeamLog.AppLogInfo.AsUserOrTeamLinkedApp
+  - Dropbox.Api.TeamLog.AppLogInfo.IsUserLinkedApp
+  - Dropbox.Api.TeamLog.AppLogInfo.AsUserLinkedApp
+  - Dropbox.Api.TeamLog.AppLogInfo.IsTeamLinkedApp
+  - Dropbox.Api.TeamLog.AppLogInfo.AsTeamLinkedApp
+  - Dropbox.Api.TeamLog.AppLogInfo.AppId
+  - Dropbox.Api.TeamLog.AppLogInfo.DisplayName
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.TeamLinkedAppLogInfo.#ctor(System.String,System.String)
+  commentId: M:Dropbox.Api.TeamLog.TeamLinkedAppLogInfo.#ctor(System.String,System.String)
+  id: '#ctor(System.String,System.String)'
+  parent: Dropbox.Api.TeamLog.TeamLinkedAppLogInfo
+  langs:
+  - csharp
+  - vb
+  name: TeamLinkedAppLogInfo(String, String)
+  nameWithType: TeamLinkedAppLogInfo.TeamLinkedAppLogInfo(String, String)
+  fullName: Dropbox.Api.TeamLog.TeamLinkedAppLogInfo.TeamLinkedAppLogInfo(System.String, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamLinkedAppLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamLinkedAppLogInfo.cs
+    startLine: 36
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.TeamLinkedAppLogInfo\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public TeamLinkedAppLogInfo(string appId = null, string displayName = null)
+    parameters:
+    - id: appId
+      type: System.String
+      description: App unique ID.
+    - id: displayName
+      type: System.String
+      description: App display name.
+    content.vb: Public Sub New(appId As String = Nothing, displayName As String = Nothing)
+  overload: Dropbox.Api.TeamLog.TeamLinkedAppLogInfo.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.TeamLinkedAppLogInfo.#ctor
+  commentId: M:Dropbox.Api.TeamLog.TeamLinkedAppLogInfo.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.TeamLinkedAppLogInfo
+  langs:
+  - csharp
+  - vb
+  name: TeamLinkedAppLogInfo()
+  nameWithType: TeamLinkedAppLogInfo.TeamLinkedAppLogInfo()
+  fullName: Dropbox.Api.TeamLog.TeamLinkedAppLogInfo.TeamLinkedAppLogInfo()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamLinkedAppLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamLinkedAppLogInfo.cs
+    startLine: 48
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.TeamLinkedAppLogInfo\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public TeamLinkedAppLogInfo()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.TeamLinkedAppLogInfo.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.AppLogInfo
+  commentId: T:Dropbox.Api.TeamLog.AppLogInfo
+  parent: Dropbox.Api.TeamLog
+  name: AppLogInfo
+  nameWithType: AppLogInfo
+  fullName: Dropbox.Api.TeamLog.AppLogInfo
+- uid: Dropbox.Api.TeamLog.AppLogInfo.IsUserOrTeamLinkedApp
+  commentId: P:Dropbox.Api.TeamLog.AppLogInfo.IsUserOrTeamLinkedApp
+  parent: Dropbox.Api.TeamLog.AppLogInfo
+  name: IsUserOrTeamLinkedApp
+  nameWithType: AppLogInfo.IsUserOrTeamLinkedApp
+  fullName: Dropbox.Api.TeamLog.AppLogInfo.IsUserOrTeamLinkedApp
+- uid: Dropbox.Api.TeamLog.AppLogInfo.AsUserOrTeamLinkedApp
+  commentId: P:Dropbox.Api.TeamLog.AppLogInfo.AsUserOrTeamLinkedApp
+  parent: Dropbox.Api.TeamLog.AppLogInfo
+  name: AsUserOrTeamLinkedApp
+  nameWithType: AppLogInfo.AsUserOrTeamLinkedApp
+  fullName: Dropbox.Api.TeamLog.AppLogInfo.AsUserOrTeamLinkedApp
+- uid: Dropbox.Api.TeamLog.AppLogInfo.IsUserLinkedApp
+  commentId: P:Dropbox.Api.TeamLog.AppLogInfo.IsUserLinkedApp
+  parent: Dropbox.Api.TeamLog.AppLogInfo
+  name: IsUserLinkedApp
+  nameWithType: AppLogInfo.IsUserLinkedApp
+  fullName: Dropbox.Api.TeamLog.AppLogInfo.IsUserLinkedApp
+- uid: Dropbox.Api.TeamLog.AppLogInfo.AsUserLinkedApp
+  commentId: P:Dropbox.Api.TeamLog.AppLogInfo.AsUserLinkedApp
+  parent: Dropbox.Api.TeamLog.AppLogInfo
+  name: AsUserLinkedApp
+  nameWithType: AppLogInfo.AsUserLinkedApp
+  fullName: Dropbox.Api.TeamLog.AppLogInfo.AsUserLinkedApp
+- uid: Dropbox.Api.TeamLog.AppLogInfo.IsTeamLinkedApp
+  commentId: P:Dropbox.Api.TeamLog.AppLogInfo.IsTeamLinkedApp
+  parent: Dropbox.Api.TeamLog.AppLogInfo
+  name: IsTeamLinkedApp
+  nameWithType: AppLogInfo.IsTeamLinkedApp
+  fullName: Dropbox.Api.TeamLog.AppLogInfo.IsTeamLinkedApp
+- uid: Dropbox.Api.TeamLog.AppLogInfo.AsTeamLinkedApp
+  commentId: P:Dropbox.Api.TeamLog.AppLogInfo.AsTeamLinkedApp
+  parent: Dropbox.Api.TeamLog.AppLogInfo
+  name: AsTeamLinkedApp
+  nameWithType: AppLogInfo.AsTeamLinkedApp
+  fullName: Dropbox.Api.TeamLog.AppLogInfo.AsTeamLinkedApp
+- uid: Dropbox.Api.TeamLog.AppLogInfo.AppId
+  commentId: P:Dropbox.Api.TeamLog.AppLogInfo.AppId
+  parent: Dropbox.Api.TeamLog.AppLogInfo
+  name: AppId
+  nameWithType: AppLogInfo.AppId
+  fullName: Dropbox.Api.TeamLog.AppLogInfo.AppId
+- uid: Dropbox.Api.TeamLog.AppLogInfo.DisplayName
+  commentId: P:Dropbox.Api.TeamLog.AppLogInfo.DisplayName
+  parent: Dropbox.Api.TeamLog.AppLogInfo
+  name: DisplayName
+  nameWithType: AppLogInfo.DisplayName
+  fullName: Dropbox.Api.TeamLog.AppLogInfo.DisplayName
+- uid: Dropbox.Api.TeamLog.TeamLinkedAppLogInfo
+  commentId: T:Dropbox.Api.TeamLog.TeamLinkedAppLogInfo
+  parent: Dropbox.Api.TeamLog
+  name: TeamLinkedAppLogInfo
+  nameWithType: TeamLinkedAppLogInfo
+  fullName: Dropbox.Api.TeamLog.TeamLinkedAppLogInfo
+- uid: Dropbox.Api.TeamLog.TeamLinkedAppLogInfo.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.TeamLinkedAppLogInfo.#ctor
+  name: TeamLinkedAppLogInfo
+  nameWithType: TeamLinkedAppLogInfo.TeamLinkedAppLogInfo
+  fullName: Dropbox.Api.TeamLog.TeamLinkedAppLogInfo.TeamLinkedAppLogInfo
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+shouldSkipMarkup: true

@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.GuestAdminChangeStatusType
+  commentId: T:Dropbox.Api.TeamLog.GuestAdminChangeStatusType
+  id: GuestAdminChangeStatusType
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.GuestAdminChangeStatusType.#ctor
+  - Dropbox.Api.TeamLog.GuestAdminChangeStatusType.#ctor(System.String)
+  - Dropbox.Api.TeamLog.GuestAdminChangeStatusType.Description
+  langs:
+  - csharp
+  - vb
+  name: GuestAdminChangeStatusType
+  nameWithType: GuestAdminChangeStatusType
+  fullName: Dropbox.Api.TeamLog.GuestAdminChangeStatusType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GuestAdminChangeStatusType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GuestAdminChangeStatusType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GuestAdminChangeStatusType.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The guest admin change status type object</p>\n"
+  example: []
+  syntax:
+    content: 'public class GuestAdminChangeStatusType : object'
+    content.vb: >-
+      Public Class GuestAdminChangeStatusType
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.GuestAdminChangeStatusType.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.GuestAdminChangeStatusType.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.GuestAdminChangeStatusType
+  langs:
+  - csharp
+  - vb
+  name: GuestAdminChangeStatusType(String)
+  nameWithType: GuestAdminChangeStatusType.GuestAdminChangeStatusType(String)
+  fullName: Dropbox.Api.TeamLog.GuestAdminChangeStatusType.GuestAdminChangeStatusType(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GuestAdminChangeStatusType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GuestAdminChangeStatusType.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.GuestAdminChangeStatusType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public GuestAdminChangeStatusType(string description)
+    parameters:
+    - id: description
+      type: System.String
+      description: The description
+    content.vb: Public Sub New(description As String)
+  overload: Dropbox.Api.TeamLog.GuestAdminChangeStatusType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.GuestAdminChangeStatusType.#ctor
+  commentId: M:Dropbox.Api.TeamLog.GuestAdminChangeStatusType.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.GuestAdminChangeStatusType
+  langs:
+  - csharp
+  - vb
+  name: GuestAdminChangeStatusType()
+  nameWithType: GuestAdminChangeStatusType.GuestAdminChangeStatusType()
+  fullName: Dropbox.Api.TeamLog.GuestAdminChangeStatusType.GuestAdminChangeStatusType()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GuestAdminChangeStatusType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GuestAdminChangeStatusType.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.GuestAdminChangeStatusType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public GuestAdminChangeStatusType()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.GuestAdminChangeStatusType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.GuestAdminChangeStatusType.Description
+  commentId: P:Dropbox.Api.TeamLog.GuestAdminChangeStatusType.Description
+  id: Description
+  parent: Dropbox.Api.TeamLog.GuestAdminChangeStatusType
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: GuestAdminChangeStatusType.Description
+  fullName: Dropbox.Api.TeamLog.GuestAdminChangeStatusType.Description
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GuestAdminChangeStatusType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Description
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GuestAdminChangeStatusType.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets the description of the guest admin change status type</p>\n"
+  example: []
+  syntax:
+    content: public string Description { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Dropbox.Api.TeamLog.GuestAdminChangeStatusType.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.GuestAdminChangeStatusType
+  commentId: T:Dropbox.Api.TeamLog.GuestAdminChangeStatusType
+  parent: Dropbox.Api.TeamLog
+  name: GuestAdminChangeStatusType
+  nameWithType: GuestAdminChangeStatusType
+  fullName: Dropbox.Api.TeamLog.GuestAdminChangeStatusType
+- uid: Dropbox.Api.TeamLog.GuestAdminChangeStatusType.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.GuestAdminChangeStatusType.#ctor
+  name: GuestAdminChangeStatusType
+  nameWithType: GuestAdminChangeStatusType.GuestAdminChangeStatusType
+  fullName: Dropbox.Api.TeamLog.GuestAdminChangeStatusType.GuestAdminChangeStatusType
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.GuestAdminChangeStatusType.Description*
+  commentId: Overload:Dropbox.Api.TeamLog.GuestAdminChangeStatusType.Description
+  name: Description
+  nameWithType: GuestAdminChangeStatusType.Description
+  fullName: Dropbox.Api.TeamLog.GuestAdminChangeStatusType.Description
+shouldSkipMarkup: true

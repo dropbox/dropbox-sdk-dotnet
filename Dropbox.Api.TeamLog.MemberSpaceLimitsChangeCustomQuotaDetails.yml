@@ -1,0 +1,235 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCustomQuotaDetails
+  commentId: T:Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCustomQuotaDetails
+  id: MemberSpaceLimitsChangeCustomQuotaDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCustomQuotaDetails.#ctor
+  - Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCustomQuotaDetails.#ctor(System.UInt64,System.UInt64)
+  - Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCustomQuotaDetails.NewValue
+  - Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCustomQuotaDetails.PreviousValue
+  langs:
+  - csharp
+  - vb
+  name: MemberSpaceLimitsChangeCustomQuotaDetails
+  nameWithType: MemberSpaceLimitsChangeCustomQuotaDetails
+  fullName: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCustomQuotaDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSpaceLimitsChangeCustomQuotaDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: MemberSpaceLimitsChangeCustomQuotaDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSpaceLimitsChangeCustomQuotaDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Changed custom member space limit.</p>\n"
+  example: []
+  syntax:
+    content: 'public class MemberSpaceLimitsChangeCustomQuotaDetails : object'
+    content.vb: >-
+      Public Class MemberSpaceLimitsChangeCustomQuotaDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCustomQuotaDetails.#ctor(System.UInt64,System.UInt64)
+  commentId: M:Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCustomQuotaDetails.#ctor(System.UInt64,System.UInt64)
+  id: '#ctor(System.UInt64,System.UInt64)'
+  parent: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCustomQuotaDetails
+  langs:
+  - csharp
+  - vb
+  name: MemberSpaceLimitsChangeCustomQuotaDetails(UInt64, UInt64)
+  nameWithType: MemberSpaceLimitsChangeCustomQuotaDetails.MemberSpaceLimitsChangeCustomQuotaDetails(UInt64, UInt64)
+  fullName: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCustomQuotaDetails.MemberSpaceLimitsChangeCustomQuotaDetails(System.UInt64, System.UInt64)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSpaceLimitsChangeCustomQuotaDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSpaceLimitsChangeCustomQuotaDetails.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCustomQuotaDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public MemberSpaceLimitsChangeCustomQuotaDetails(ulong previousValue, ulong newValue)
+    parameters:
+    - id: previousValue
+      type: System.UInt64
+      description: Previous custom quota value in bytes.
+    - id: newValue
+      type: System.UInt64
+      description: New custom quota value in bytes.
+    content.vb: Public Sub New(previousValue As ULong, newValue As ULong)
+  overload: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCustomQuotaDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCustomQuotaDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCustomQuotaDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCustomQuotaDetails
+  langs:
+  - csharp
+  - vb
+  name: MemberSpaceLimitsChangeCustomQuotaDetails()
+  nameWithType: MemberSpaceLimitsChangeCustomQuotaDetails.MemberSpaceLimitsChangeCustomQuotaDetails()
+  fullName: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCustomQuotaDetails.MemberSpaceLimitsChangeCustomQuotaDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSpaceLimitsChangeCustomQuotaDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSpaceLimitsChangeCustomQuotaDetails.cs
+    startLine: 48
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCustomQuotaDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public MemberSpaceLimitsChangeCustomQuotaDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCustomQuotaDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCustomQuotaDetails.PreviousValue
+  commentId: P:Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCustomQuotaDetails.PreviousValue
+  id: PreviousValue
+  parent: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCustomQuotaDetails
+  langs:
+  - csharp
+  - vb
+  name: PreviousValue
+  nameWithType: MemberSpaceLimitsChangeCustomQuotaDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCustomQuotaDetails.PreviousValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSpaceLimitsChangeCustomQuotaDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PreviousValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSpaceLimitsChangeCustomQuotaDetails.cs
+    startLine: 56
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Previous custom quota value in bytes.</p>\n"
+  example: []
+  syntax:
+    content: public ulong PreviousValue { get; protected set; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: Public Property PreviousValue As ULong
+  overload: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCustomQuotaDetails.PreviousValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCustomQuotaDetails.NewValue
+  commentId: P:Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCustomQuotaDetails.NewValue
+  id: NewValue
+  parent: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCustomQuotaDetails
+  langs:
+  - csharp
+  - vb
+  name: NewValue
+  nameWithType: MemberSpaceLimitsChangeCustomQuotaDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCustomQuotaDetails.NewValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSpaceLimitsChangeCustomQuotaDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NewValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSpaceLimitsChangeCustomQuotaDetails.cs
+    startLine: 61
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>New custom quota value in bytes.</p>\n"
+  example: []
+  syntax:
+    content: public ulong NewValue { get; protected set; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: Public Property NewValue As ULong
+  overload: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCustomQuotaDetails.NewValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCustomQuotaDetails
+  commentId: T:Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCustomQuotaDetails
+  parent: Dropbox.Api.TeamLog
+  name: MemberSpaceLimitsChangeCustomQuotaDetails
+  nameWithType: MemberSpaceLimitsChangeCustomQuotaDetails
+  fullName: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCustomQuotaDetails
+- uid: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCustomQuotaDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCustomQuotaDetails.#ctor
+  name: MemberSpaceLimitsChangeCustomQuotaDetails
+  nameWithType: MemberSpaceLimitsChangeCustomQuotaDetails.MemberSpaceLimitsChangeCustomQuotaDetails
+  fullName: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCustomQuotaDetails.MemberSpaceLimitsChangeCustomQuotaDetails
+- uid: System.UInt64
+  isExternal: true
+  name: UInt64
+  nameWithType: UInt64
+  fullName: System.UInt64
+- uid: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCustomQuotaDetails.PreviousValue*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCustomQuotaDetails.PreviousValue
+  name: PreviousValue
+  nameWithType: MemberSpaceLimitsChangeCustomQuotaDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCustomQuotaDetails.PreviousValue
+- uid: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCustomQuotaDetails.NewValue*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCustomQuotaDetails.NewValue
+  name: NewValue
+  nameWithType: MemberSpaceLimitsChangeCustomQuotaDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCustomQuotaDetails.NewValue
+shouldSkipMarkup: true

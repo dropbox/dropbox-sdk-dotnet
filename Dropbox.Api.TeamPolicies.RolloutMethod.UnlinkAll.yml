@@ -1,0 +1,148 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamPolicies.RolloutMethod.UnlinkAll
+  commentId: T:Dropbox.Api.TeamPolicies.RolloutMethod.UnlinkAll
+  id: RolloutMethod.UnlinkAll
+  parent: Dropbox.Api.TeamPolicies
+  children:
+  - Dropbox.Api.TeamPolicies.RolloutMethod.UnlinkAll.Instance
+  langs:
+  - csharp
+  - vb
+  name: RolloutMethod.UnlinkAll
+  nameWithType: RolloutMethod.UnlinkAll
+  fullName: Dropbox.Api.TeamPolicies.RolloutMethod.UnlinkAll
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/RolloutMethod.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: UnlinkAll
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/RolloutMethod.cs
+    startLine: 183
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Unlink all.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class UnlinkAll : RolloutMethod'
+    content.vb: >-
+      Public NotInheritable Class UnlinkAll
+          Inherits RolloutMethod
+  inheritance:
+  - System.Object
+  - Dropbox.Api.TeamPolicies.RolloutMethod
+  inheritedMembers:
+  - Dropbox.Api.TeamPolicies.RolloutMethod.IsUnlinkAll
+  - Dropbox.Api.TeamPolicies.RolloutMethod.AsUnlinkAll
+  - Dropbox.Api.TeamPolicies.RolloutMethod.IsUnlinkMostInactive
+  - Dropbox.Api.TeamPolicies.RolloutMethod.AsUnlinkMostInactive
+  - Dropbox.Api.TeamPolicies.RolloutMethod.IsAddMemberToExceptions
+  - Dropbox.Api.TeamPolicies.RolloutMethod.AsAddMemberToExceptions
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.TeamPolicies.RolloutMethod.UnlinkAll.Instance
+  commentId: F:Dropbox.Api.TeamPolicies.RolloutMethod.UnlinkAll.Instance
+  id: Instance
+  parent: Dropbox.Api.TeamPolicies.RolloutMethod.UnlinkAll
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: RolloutMethod.UnlinkAll.Instance
+  fullName: Dropbox.Api.TeamPolicies.RolloutMethod.UnlinkAll.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/RolloutMethod.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/RolloutMethod.cs
+    startLine: 207
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>A singleton instance of UnlinkAll</p>\n"
+  example: []
+  syntax:
+    content: public static readonly RolloutMethod.UnlinkAll Instance
+    return:
+      type: Dropbox.Api.TeamPolicies.RolloutMethod.UnlinkAll
+    content.vb: Public Shared ReadOnly Instance As RolloutMethod.UnlinkAll
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamPolicies
+  commentId: N:Dropbox.Api.TeamPolicies
+  name: Dropbox.Api.TeamPolicies
+  nameWithType: Dropbox.Api.TeamPolicies
+  fullName: Dropbox.Api.TeamPolicies
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamPolicies.RolloutMethod
+  commentId: T:Dropbox.Api.TeamPolicies.RolloutMethod
+  parent: Dropbox.Api.TeamPolicies
+  name: RolloutMethod
+  nameWithType: RolloutMethod
+  fullName: Dropbox.Api.TeamPolicies.RolloutMethod
+- uid: Dropbox.Api.TeamPolicies.RolloutMethod.IsUnlinkAll
+  commentId: P:Dropbox.Api.TeamPolicies.RolloutMethod.IsUnlinkAll
+  parent: Dropbox.Api.TeamPolicies.RolloutMethod
+  name: IsUnlinkAll
+  nameWithType: RolloutMethod.IsUnlinkAll
+  fullName: Dropbox.Api.TeamPolicies.RolloutMethod.IsUnlinkAll
+- uid: Dropbox.Api.TeamPolicies.RolloutMethod.AsUnlinkAll
+  commentId: P:Dropbox.Api.TeamPolicies.RolloutMethod.AsUnlinkAll
+  parent: Dropbox.Api.TeamPolicies.RolloutMethod
+  name: AsUnlinkAll
+  nameWithType: RolloutMethod.AsUnlinkAll
+  fullName: Dropbox.Api.TeamPolicies.RolloutMethod.AsUnlinkAll
+- uid: Dropbox.Api.TeamPolicies.RolloutMethod.IsUnlinkMostInactive
+  commentId: P:Dropbox.Api.TeamPolicies.RolloutMethod.IsUnlinkMostInactive
+  parent: Dropbox.Api.TeamPolicies.RolloutMethod
+  name: IsUnlinkMostInactive
+  nameWithType: RolloutMethod.IsUnlinkMostInactive
+  fullName: Dropbox.Api.TeamPolicies.RolloutMethod.IsUnlinkMostInactive
+- uid: Dropbox.Api.TeamPolicies.RolloutMethod.AsUnlinkMostInactive
+  commentId: P:Dropbox.Api.TeamPolicies.RolloutMethod.AsUnlinkMostInactive
+  parent: Dropbox.Api.TeamPolicies.RolloutMethod
+  name: AsUnlinkMostInactive
+  nameWithType: RolloutMethod.AsUnlinkMostInactive
+  fullName: Dropbox.Api.TeamPolicies.RolloutMethod.AsUnlinkMostInactive
+- uid: Dropbox.Api.TeamPolicies.RolloutMethod.IsAddMemberToExceptions
+  commentId: P:Dropbox.Api.TeamPolicies.RolloutMethod.IsAddMemberToExceptions
+  parent: Dropbox.Api.TeamPolicies.RolloutMethod
+  name: IsAddMemberToExceptions
+  nameWithType: RolloutMethod.IsAddMemberToExceptions
+  fullName: Dropbox.Api.TeamPolicies.RolloutMethod.IsAddMemberToExceptions
+- uid: Dropbox.Api.TeamPolicies.RolloutMethod.AsAddMemberToExceptions
+  commentId: P:Dropbox.Api.TeamPolicies.RolloutMethod.AsAddMemberToExceptions
+  parent: Dropbox.Api.TeamPolicies.RolloutMethod
+  name: AsAddMemberToExceptions
+  nameWithType: RolloutMethod.AsAddMemberToExceptions
+  fullName: Dropbox.Api.TeamPolicies.RolloutMethod.AsAddMemberToExceptions
+- uid: Dropbox.Api.TeamPolicies.RolloutMethod.UnlinkAll
+  commentId: T:Dropbox.Api.TeamPolicies.RolloutMethod.UnlinkAll
+  parent: Dropbox.Api.TeamPolicies
+  name: RolloutMethod.UnlinkAll
+  nameWithType: RolloutMethod.UnlinkAll
+  fullName: Dropbox.Api.TeamPolicies.RolloutMethod.UnlinkAll
+shouldSkipMarkup: true

@@ -1,0 +1,200 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.CreateFolderBatchLaunch.AsyncJobId
+  commentId: T:Dropbox.Api.Files.CreateFolderBatchLaunch.AsyncJobId
+  id: CreateFolderBatchLaunch.AsyncJobId
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.CreateFolderBatchLaunch.AsyncJobId.#ctor(System.String)
+  - Dropbox.Api.Files.CreateFolderBatchLaunch.AsyncJobId.Value
+  langs:
+  - csharp
+  - vb
+  name: CreateFolderBatchLaunch.AsyncJobId
+  nameWithType: CreateFolderBatchLaunch.AsyncJobId
+  fullName: Dropbox.Api.Files.CreateFolderBatchLaunch.AsyncJobId
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/CreateFolderBatchLaunch.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsyncJobId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/CreateFolderBatchLaunch.cs
+    startLine: 342
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>This response indicates that the processing is asynchronous. The string is an\nid that can be used to obtain the status of the asynchronous job.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class AsyncJobId : CreateFolderBatchLaunch'
+    content.vb: >-
+      Public NotInheritable Class AsyncJobId
+          Inherits CreateFolderBatchLaunch
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Files.CreateFolderBatchLaunch
+  inheritedMembers:
+  - Dropbox.Api.Files.CreateFolderBatchLaunch.IsComplete
+  - Dropbox.Api.Files.CreateFolderBatchLaunch.AsComplete
+  - Dropbox.Api.Files.CreateFolderBatchLaunch.IsOther
+  - Dropbox.Api.Files.CreateFolderBatchLaunch.AsOther
+  - Dropbox.Api.Files.CreateFolderBatchLaunch.IsAsyncJobId
+  - Dropbox.Api.Files.CreateFolderBatchLaunch.AsAsyncJobId
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Files.CreateFolderBatchLaunch.AsyncJobId.#ctor(System.String)
+  commentId: M:Dropbox.Api.Files.CreateFolderBatchLaunch.AsyncJobId.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.Files.CreateFolderBatchLaunch.AsyncJobId
+  langs:
+  - csharp
+  - vb
+  name: AsyncJobId(String)
+  nameWithType: CreateFolderBatchLaunch.AsyncJobId.AsyncJobId(String)
+  fullName: Dropbox.Api.Files.CreateFolderBatchLaunch.AsyncJobId.AsyncJobId(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/CreateFolderBatchLaunch.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/CreateFolderBatchLaunch.cs
+    startLine: 360
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.CreateFolderBatchLaunch.AsyncJobId\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public AsyncJobId(string value)
+    parameters:
+    - id: value
+      type: System.String
+      description: The value
+    content.vb: Public Sub New(value As String)
+  overload: Dropbox.Api.Files.CreateFolderBatchLaunch.AsyncJobId.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.CreateFolderBatchLaunch.AsyncJobId.Value
+  commentId: P:Dropbox.Api.Files.CreateFolderBatchLaunch.AsyncJobId.Value
+  id: Value
+  parent: Dropbox.Api.Files.CreateFolderBatchLaunch.AsyncJobId
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: CreateFolderBatchLaunch.AsyncJobId.Value
+  fullName: Dropbox.Api.Files.CreateFolderBatchLaunch.AsyncJobId.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/CreateFolderBatchLaunch.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/CreateFolderBatchLaunch.cs
+    startLine: 374
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public string Value { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Value As String
+  overload: Dropbox.Api.Files.CreateFolderBatchLaunch.AsyncJobId.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.CreateFolderBatchLaunch
+  commentId: T:Dropbox.Api.Files.CreateFolderBatchLaunch
+  parent: Dropbox.Api.Files
+  name: CreateFolderBatchLaunch
+  nameWithType: CreateFolderBatchLaunch
+  fullName: Dropbox.Api.Files.CreateFolderBatchLaunch
+- uid: Dropbox.Api.Files.CreateFolderBatchLaunch.IsComplete
+  commentId: P:Dropbox.Api.Files.CreateFolderBatchLaunch.IsComplete
+  parent: Dropbox.Api.Files.CreateFolderBatchLaunch
+  name: IsComplete
+  nameWithType: CreateFolderBatchLaunch.IsComplete
+  fullName: Dropbox.Api.Files.CreateFolderBatchLaunch.IsComplete
+- uid: Dropbox.Api.Files.CreateFolderBatchLaunch.AsComplete
+  commentId: P:Dropbox.Api.Files.CreateFolderBatchLaunch.AsComplete
+  parent: Dropbox.Api.Files.CreateFolderBatchLaunch
+  name: AsComplete
+  nameWithType: CreateFolderBatchLaunch.AsComplete
+  fullName: Dropbox.Api.Files.CreateFolderBatchLaunch.AsComplete
+- uid: Dropbox.Api.Files.CreateFolderBatchLaunch.IsOther
+  commentId: P:Dropbox.Api.Files.CreateFolderBatchLaunch.IsOther
+  parent: Dropbox.Api.Files.CreateFolderBatchLaunch
+  name: IsOther
+  nameWithType: CreateFolderBatchLaunch.IsOther
+  fullName: Dropbox.Api.Files.CreateFolderBatchLaunch.IsOther
+- uid: Dropbox.Api.Files.CreateFolderBatchLaunch.AsOther
+  commentId: P:Dropbox.Api.Files.CreateFolderBatchLaunch.AsOther
+  parent: Dropbox.Api.Files.CreateFolderBatchLaunch
+  name: AsOther
+  nameWithType: CreateFolderBatchLaunch.AsOther
+  fullName: Dropbox.Api.Files.CreateFolderBatchLaunch.AsOther
+- uid: Dropbox.Api.Files.CreateFolderBatchLaunch.IsAsyncJobId
+  commentId: P:Dropbox.Api.Files.CreateFolderBatchLaunch.IsAsyncJobId
+  parent: Dropbox.Api.Files.CreateFolderBatchLaunch
+  name: IsAsyncJobId
+  nameWithType: CreateFolderBatchLaunch.IsAsyncJobId
+  fullName: Dropbox.Api.Files.CreateFolderBatchLaunch.IsAsyncJobId
+- uid: Dropbox.Api.Files.CreateFolderBatchLaunch.AsAsyncJobId
+  commentId: P:Dropbox.Api.Files.CreateFolderBatchLaunch.AsAsyncJobId
+  parent: Dropbox.Api.Files.CreateFolderBatchLaunch
+  name: AsAsyncJobId
+  nameWithType: CreateFolderBatchLaunch.AsAsyncJobId
+  fullName: Dropbox.Api.Files.CreateFolderBatchLaunch.AsAsyncJobId
+- uid: Dropbox.Api.Files.CreateFolderBatchLaunch.AsyncJobId
+  commentId: T:Dropbox.Api.Files.CreateFolderBatchLaunch.AsyncJobId
+  parent: Dropbox.Api.Files
+  name: CreateFolderBatchLaunch.AsyncJobId
+  nameWithType: CreateFolderBatchLaunch.AsyncJobId
+  fullName: Dropbox.Api.Files.CreateFolderBatchLaunch.AsyncJobId
+- uid: Dropbox.Api.Files.CreateFolderBatchLaunch.AsyncJobId.#ctor*
+  commentId: Overload:Dropbox.Api.Files.CreateFolderBatchLaunch.AsyncJobId.#ctor
+  name: AsyncJobId
+  nameWithType: CreateFolderBatchLaunch.AsyncJobId.AsyncJobId
+  fullName: Dropbox.Api.Files.CreateFolderBatchLaunch.AsyncJobId.AsyncJobId
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Files.CreateFolderBatchLaunch.AsyncJobId.Value*
+  commentId: Overload:Dropbox.Api.Files.CreateFolderBatchLaunch.AsyncJobId.Value
+  name: Value
+  nameWithType: CreateFolderBatchLaunch.AsyncJobId.Value
+  fullName: Dropbox.Api.Files.CreateFolderBatchLaunch.AsyncJobId.Value
+shouldSkipMarkup: true

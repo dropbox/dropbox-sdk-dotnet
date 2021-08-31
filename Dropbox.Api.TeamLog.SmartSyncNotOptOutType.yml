@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.SmartSyncNotOptOutType
+  commentId: T:Dropbox.Api.TeamLog.SmartSyncNotOptOutType
+  id: SmartSyncNotOptOutType
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.SmartSyncNotOptOutType.#ctor
+  - Dropbox.Api.TeamLog.SmartSyncNotOptOutType.#ctor(System.String)
+  - Dropbox.Api.TeamLog.SmartSyncNotOptOutType.Description
+  langs:
+  - csharp
+  - vb
+  name: SmartSyncNotOptOutType
+  nameWithType: SmartSyncNotOptOutType
+  fullName: Dropbox.Api.TeamLog.SmartSyncNotOptOutType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SmartSyncNotOptOutType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SmartSyncNotOptOutType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SmartSyncNotOptOutType.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The smart sync not opt out type object</p>\n"
+  example: []
+  syntax:
+    content: 'public class SmartSyncNotOptOutType : object'
+    content.vb: >-
+      Public Class SmartSyncNotOptOutType
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.SmartSyncNotOptOutType.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.SmartSyncNotOptOutType.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.SmartSyncNotOptOutType
+  langs:
+  - csharp
+  - vb
+  name: SmartSyncNotOptOutType(String)
+  nameWithType: SmartSyncNotOptOutType.SmartSyncNotOptOutType(String)
+  fullName: Dropbox.Api.TeamLog.SmartSyncNotOptOutType.SmartSyncNotOptOutType(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SmartSyncNotOptOutType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SmartSyncNotOptOutType.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SmartSyncNotOptOutType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public SmartSyncNotOptOutType(string description)
+    parameters:
+    - id: description
+      type: System.String
+      description: The description
+    content.vb: Public Sub New(description As String)
+  overload: Dropbox.Api.TeamLog.SmartSyncNotOptOutType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SmartSyncNotOptOutType.#ctor
+  commentId: M:Dropbox.Api.TeamLog.SmartSyncNotOptOutType.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.SmartSyncNotOptOutType
+  langs:
+  - csharp
+  - vb
+  name: SmartSyncNotOptOutType()
+  nameWithType: SmartSyncNotOptOutType.SmartSyncNotOptOutType()
+  fullName: Dropbox.Api.TeamLog.SmartSyncNotOptOutType.SmartSyncNotOptOutType()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SmartSyncNotOptOutType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SmartSyncNotOptOutType.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SmartSyncNotOptOutType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public SmartSyncNotOptOutType()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.SmartSyncNotOptOutType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SmartSyncNotOptOutType.Description
+  commentId: P:Dropbox.Api.TeamLog.SmartSyncNotOptOutType.Description
+  id: Description
+  parent: Dropbox.Api.TeamLog.SmartSyncNotOptOutType
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: SmartSyncNotOptOutType.Description
+  fullName: Dropbox.Api.TeamLog.SmartSyncNotOptOutType.Description
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SmartSyncNotOptOutType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Description
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SmartSyncNotOptOutType.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets the description of the smart sync not opt out type</p>\n"
+  example: []
+  syntax:
+    content: public string Description { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Dropbox.Api.TeamLog.SmartSyncNotOptOutType.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.SmartSyncNotOptOutType
+  commentId: T:Dropbox.Api.TeamLog.SmartSyncNotOptOutType
+  parent: Dropbox.Api.TeamLog
+  name: SmartSyncNotOptOutType
+  nameWithType: SmartSyncNotOptOutType
+  fullName: Dropbox.Api.TeamLog.SmartSyncNotOptOutType
+- uid: Dropbox.Api.TeamLog.SmartSyncNotOptOutType.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.SmartSyncNotOptOutType.#ctor
+  name: SmartSyncNotOptOutType
+  nameWithType: SmartSyncNotOptOutType.SmartSyncNotOptOutType
+  fullName: Dropbox.Api.TeamLog.SmartSyncNotOptOutType.SmartSyncNotOptOutType
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.SmartSyncNotOptOutType.Description*
+  commentId: Overload:Dropbox.Api.TeamLog.SmartSyncNotOptOutType.Description
+  name: Description
+  nameWithType: SmartSyncNotOptOutType.Description
+  fullName: Dropbox.Api.TeamLog.SmartSyncNotOptOutType.Description
+shouldSkipMarkup: true

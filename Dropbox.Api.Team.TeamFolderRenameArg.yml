@@ -1,0 +1,205 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.TeamFolderRenameArg
+  commentId: T:Dropbox.Api.Team.TeamFolderRenameArg
+  id: TeamFolderRenameArg
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.TeamFolderRenameArg.#ctor
+  - Dropbox.Api.Team.TeamFolderRenameArg.#ctor(System.String,System.String)
+  - Dropbox.Api.Team.TeamFolderRenameArg.Name
+  langs:
+  - csharp
+  - vb
+  name: TeamFolderRenameArg
+  nameWithType: TeamFolderRenameArg
+  fullName: Dropbox.Api.Team.TeamFolderRenameArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderRenameArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TeamFolderRenameArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderRenameArg.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The team folder rename arg object</p>\n"
+  example: []
+  syntax:
+    content: 'public class TeamFolderRenameArg : TeamFolderIdArg'
+    content.vb: >-
+      Public Class TeamFolderRenameArg
+          Inherits TeamFolderIdArg
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.TeamFolderIdArg
+  inheritedMembers:
+  - Dropbox.Api.Team.TeamFolderIdArg.TeamFolderId
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.TeamFolderRenameArg.#ctor(System.String,System.String)
+  commentId: M:Dropbox.Api.Team.TeamFolderRenameArg.#ctor(System.String,System.String)
+  id: '#ctor(System.String,System.String)'
+  parent: Dropbox.Api.Team.TeamFolderRenameArg
+  langs:
+  - csharp
+  - vb
+  name: TeamFolderRenameArg(String, String)
+  nameWithType: TeamFolderRenameArg.TeamFolderRenameArg(String, String)
+  fullName: Dropbox.Api.Team.TeamFolderRenameArg.TeamFolderRenameArg(System.String, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderRenameArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderRenameArg.cs
+    startLine: 36
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.TeamFolderRenameArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public TeamFolderRenameArg(string teamFolderId, string name)
+    parameters:
+    - id: teamFolderId
+      type: System.String
+      description: The ID of the team folder.
+    - id: name
+      type: System.String
+      description: New team folder name.
+    content.vb: Public Sub New(teamFolderId As String, name As String)
+  overload: Dropbox.Api.Team.TeamFolderRenameArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.TeamFolderRenameArg.#ctor
+  commentId: M:Dropbox.Api.Team.TeamFolderRenameArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.TeamFolderRenameArg
+  langs:
+  - csharp
+  - vb
+  name: TeamFolderRenameArg()
+  nameWithType: TeamFolderRenameArg.TeamFolderRenameArg()
+  fullName: Dropbox.Api.Team.TeamFolderRenameArg.TeamFolderRenameArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderRenameArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderRenameArg.cs
+    startLine: 54
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.TeamFolderRenameArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public TeamFolderRenameArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.TeamFolderRenameArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.TeamFolderRenameArg.Name
+  commentId: P:Dropbox.Api.Team.TeamFolderRenameArg.Name
+  id: Name
+  parent: Dropbox.Api.Team.TeamFolderRenameArg
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: TeamFolderRenameArg.Name
+  fullName: Dropbox.Api.Team.TeamFolderRenameArg.Name
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderRenameArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Name
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderRenameArg.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>New team folder name.</p>\n"
+  example: []
+  syntax:
+    content: public string Name { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: Dropbox.Api.Team.TeamFolderRenameArg.Name*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.TeamFolderIdArg
+  commentId: T:Dropbox.Api.Team.TeamFolderIdArg
+  parent: Dropbox.Api.Team
+  name: TeamFolderIdArg
+  nameWithType: TeamFolderIdArg
+  fullName: Dropbox.Api.Team.TeamFolderIdArg
+- uid: Dropbox.Api.Team.TeamFolderIdArg.TeamFolderId
+  commentId: P:Dropbox.Api.Team.TeamFolderIdArg.TeamFolderId
+  parent: Dropbox.Api.Team.TeamFolderIdArg
+  name: TeamFolderId
+  nameWithType: TeamFolderIdArg.TeamFolderId
+  fullName: Dropbox.Api.Team.TeamFolderIdArg.TeamFolderId
+- uid: Dropbox.Api.Team.TeamFolderRenameArg
+  commentId: T:Dropbox.Api.Team.TeamFolderRenameArg
+  parent: Dropbox.Api.Team
+  name: TeamFolderRenameArg
+  nameWithType: TeamFolderRenameArg
+  fullName: Dropbox.Api.Team.TeamFolderRenameArg
+- uid: Dropbox.Api.Team.TeamFolderRenameArg.#ctor*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderRenameArg.#ctor
+  name: TeamFolderRenameArg
+  nameWithType: TeamFolderRenameArg.TeamFolderRenameArg
+  fullName: Dropbox.Api.Team.TeamFolderRenameArg.TeamFolderRenameArg
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Team.TeamFolderRenameArg.Name*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderRenameArg.Name
+  name: Name
+  nameWithType: TeamFolderRenameArg.Name
+  fullName: Dropbox.Api.Team.TeamFolderRenameArg.Name
+shouldSkipMarkup: true

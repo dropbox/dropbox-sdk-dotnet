@@ -1,0 +1,477 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.GetTeamEventsError
+  commentId: T:Dropbox.Api.TeamLog.GetTeamEventsError
+  id: GetTeamEventsError
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.GetTeamEventsError.#ctor
+  - Dropbox.Api.TeamLog.GetTeamEventsError.AsAccountIdNotFound
+  - Dropbox.Api.TeamLog.GetTeamEventsError.AsInvalidFilters
+  - Dropbox.Api.TeamLog.GetTeamEventsError.AsInvalidTimeRange
+  - Dropbox.Api.TeamLog.GetTeamEventsError.AsOther
+  - Dropbox.Api.TeamLog.GetTeamEventsError.IsAccountIdNotFound
+  - Dropbox.Api.TeamLog.GetTeamEventsError.IsInvalidFilters
+  - Dropbox.Api.TeamLog.GetTeamEventsError.IsInvalidTimeRange
+  - Dropbox.Api.TeamLog.GetTeamEventsError.IsOther
+  langs:
+  - csharp
+  - vb
+  name: GetTeamEventsError
+  nameWithType: GetTeamEventsError
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GetTeamEventsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GetTeamEventsError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GetTeamEventsError.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Errors that can be raised when calling <xref href=\"Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.GetEventsAsync(Dropbox.Api.TeamLog.GetTeamEventsArg)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+  example: []
+  syntax:
+    content: 'public class GetTeamEventsError : object'
+    content.vb: >-
+      Public Class GetTeamEventsError
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.TeamLog.GetTeamEventsError.AccountIdNotFound
+  - Dropbox.Api.TeamLog.GetTeamEventsError.InvalidFilters
+  - Dropbox.Api.TeamLog.GetTeamEventsError.InvalidTimeRange
+  - Dropbox.Api.TeamLog.GetTeamEventsError.Other
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.GetTeamEventsError.#ctor
+  commentId: M:Dropbox.Api.TeamLog.GetTeamEventsError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.GetTeamEventsError
+  langs:
+  - csharp
+  - vb
+  name: GetTeamEventsError()
+  nameWithType: GetTeamEventsError.GetTeamEventsError()
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsError.GetTeamEventsError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GetTeamEventsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GetTeamEventsError.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.GetTeamEventsError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public GetTeamEventsError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.GetTeamEventsError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.GetTeamEventsError.IsAccountIdNotFound
+  commentId: P:Dropbox.Api.TeamLog.GetTeamEventsError.IsAccountIdNotFound
+  id: IsAccountIdNotFound
+  parent: Dropbox.Api.TeamLog.GetTeamEventsError
+  langs:
+  - csharp
+  - vb
+  name: IsAccountIdNotFound
+  nameWithType: GetTeamEventsError.IsAccountIdNotFound
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsError.IsAccountIdNotFound
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GetTeamEventsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsAccountIdNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GetTeamEventsError.cs
+    startLine: 41
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is AccountIdNotFound</p>\n"
+  example: []
+  syntax:
+    content: public bool IsAccountIdNotFound { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsAccountIdNotFound As Boolean
+  overload: Dropbox.Api.TeamLog.GetTeamEventsError.IsAccountIdNotFound*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.GetTeamEventsError.AsAccountIdNotFound
+  commentId: P:Dropbox.Api.TeamLog.GetTeamEventsError.AsAccountIdNotFound
+  id: AsAccountIdNotFound
+  parent: Dropbox.Api.TeamLog.GetTeamEventsError
+  langs:
+  - csharp
+  - vb
+  name: AsAccountIdNotFound
+  nameWithType: GetTeamEventsError.AsAccountIdNotFound
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsError.AsAccountIdNotFound
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GetTeamEventsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsAccountIdNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GetTeamEventsError.cs
+    startLine: 52
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a AccountIdNotFound, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public GetTeamEventsError.AccountIdNotFound AsAccountIdNotFound { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.GetTeamEventsError.AccountIdNotFound
+    content.vb: Public ReadOnly Property AsAccountIdNotFound As GetTeamEventsError.AccountIdNotFound
+  overload: Dropbox.Api.TeamLog.GetTeamEventsError.AsAccountIdNotFound*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.GetTeamEventsError.IsInvalidTimeRange
+  commentId: P:Dropbox.Api.TeamLog.GetTeamEventsError.IsInvalidTimeRange
+  id: IsInvalidTimeRange
+  parent: Dropbox.Api.TeamLog.GetTeamEventsError
+  langs:
+  - csharp
+  - vb
+  name: IsInvalidTimeRange
+  nameWithType: GetTeamEventsError.IsInvalidTimeRange
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsError.IsInvalidTimeRange
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GetTeamEventsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsInvalidTimeRange
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GetTeamEventsError.cs
+    startLine: 63
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is InvalidTimeRange</p>\n"
+  example: []
+  syntax:
+    content: public bool IsInvalidTimeRange { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsInvalidTimeRange As Boolean
+  overload: Dropbox.Api.TeamLog.GetTeamEventsError.IsInvalidTimeRange*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.GetTeamEventsError.AsInvalidTimeRange
+  commentId: P:Dropbox.Api.TeamLog.GetTeamEventsError.AsInvalidTimeRange
+  id: AsInvalidTimeRange
+  parent: Dropbox.Api.TeamLog.GetTeamEventsError
+  langs:
+  - csharp
+  - vb
+  name: AsInvalidTimeRange
+  nameWithType: GetTeamEventsError.AsInvalidTimeRange
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsError.AsInvalidTimeRange
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GetTeamEventsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsInvalidTimeRange
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GetTeamEventsError.cs
+    startLine: 74
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a InvalidTimeRange, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public GetTeamEventsError.InvalidTimeRange AsInvalidTimeRange { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.GetTeamEventsError.InvalidTimeRange
+    content.vb: Public ReadOnly Property AsInvalidTimeRange As GetTeamEventsError.InvalidTimeRange
+  overload: Dropbox.Api.TeamLog.GetTeamEventsError.AsInvalidTimeRange*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.GetTeamEventsError.IsInvalidFilters
+  commentId: P:Dropbox.Api.TeamLog.GetTeamEventsError.IsInvalidFilters
+  id: IsInvalidFilters
+  parent: Dropbox.Api.TeamLog.GetTeamEventsError
+  langs:
+  - csharp
+  - vb
+  name: IsInvalidFilters
+  nameWithType: GetTeamEventsError.IsInvalidFilters
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsError.IsInvalidFilters
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GetTeamEventsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsInvalidFilters
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GetTeamEventsError.cs
+    startLine: 85
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is InvalidFilters</p>\n"
+  example: []
+  syntax:
+    content: public bool IsInvalidFilters { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsInvalidFilters As Boolean
+  overload: Dropbox.Api.TeamLog.GetTeamEventsError.IsInvalidFilters*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.GetTeamEventsError.AsInvalidFilters
+  commentId: P:Dropbox.Api.TeamLog.GetTeamEventsError.AsInvalidFilters
+  id: AsInvalidFilters
+  parent: Dropbox.Api.TeamLog.GetTeamEventsError
+  langs:
+  - csharp
+  - vb
+  name: AsInvalidFilters
+  nameWithType: GetTeamEventsError.AsInvalidFilters
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsError.AsInvalidFilters
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GetTeamEventsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsInvalidFilters
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GetTeamEventsError.cs
+    startLine: 96
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a InvalidFilters, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public GetTeamEventsError.InvalidFilters AsInvalidFilters { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.GetTeamEventsError.InvalidFilters
+    content.vb: Public ReadOnly Property AsInvalidFilters As GetTeamEventsError.InvalidFilters
+  overload: Dropbox.Api.TeamLog.GetTeamEventsError.AsInvalidFilters*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.GetTeamEventsError.IsOther
+  commentId: P:Dropbox.Api.TeamLog.GetTeamEventsError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.TeamLog.GetTeamEventsError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: GetTeamEventsError.IsOther
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GetTeamEventsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GetTeamEventsError.cs
+    startLine: 107
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.TeamLog.GetTeamEventsError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.GetTeamEventsError.AsOther
+  commentId: P:Dropbox.Api.TeamLog.GetTeamEventsError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.TeamLog.GetTeamEventsError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: GetTeamEventsError.AsOther
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GetTeamEventsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GetTeamEventsError.cs
+    startLine: 118
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public GetTeamEventsError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.GetTeamEventsError.Other
+    content.vb: Public ReadOnly Property AsOther As GetTeamEventsError.Other
+  overload: Dropbox.Api.TeamLog.GetTeamEventsError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.GetEventsAsync(Dropbox.Api.TeamLog.GetTeamEventsArg)
+  commentId: M:Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.GetEventsAsync(Dropbox.Api.TeamLog.GetTeamEventsArg)
+  isExternal: true
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.GetTeamEventsError
+  commentId: T:Dropbox.Api.TeamLog.GetTeamEventsError
+  parent: Dropbox.Api.TeamLog
+  name: GetTeamEventsError
+  nameWithType: GetTeamEventsError
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsError
+- uid: Dropbox.Api.TeamLog.GetTeamEventsError.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.GetTeamEventsError.#ctor
+  name: GetTeamEventsError
+  nameWithType: GetTeamEventsError.GetTeamEventsError
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsError.GetTeamEventsError
+- uid: Dropbox.Api.TeamLog.GetTeamEventsError.IsAccountIdNotFound*
+  commentId: Overload:Dropbox.Api.TeamLog.GetTeamEventsError.IsAccountIdNotFound
+  name: IsAccountIdNotFound
+  nameWithType: GetTeamEventsError.IsAccountIdNotFound
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsError.IsAccountIdNotFound
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.TeamLog.GetTeamEventsError.AsAccountIdNotFound*
+  commentId: Overload:Dropbox.Api.TeamLog.GetTeamEventsError.AsAccountIdNotFound
+  name: AsAccountIdNotFound
+  nameWithType: GetTeamEventsError.AsAccountIdNotFound
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsError.AsAccountIdNotFound
+- uid: Dropbox.Api.TeamLog.GetTeamEventsError.AccountIdNotFound
+  commentId: T:Dropbox.Api.TeamLog.GetTeamEventsError.AccountIdNotFound
+  parent: Dropbox.Api.TeamLog
+  name: GetTeamEventsError.AccountIdNotFound
+  nameWithType: GetTeamEventsError.AccountIdNotFound
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsError.AccountIdNotFound
+- uid: Dropbox.Api.TeamLog.GetTeamEventsError.IsInvalidTimeRange*
+  commentId: Overload:Dropbox.Api.TeamLog.GetTeamEventsError.IsInvalidTimeRange
+  name: IsInvalidTimeRange
+  nameWithType: GetTeamEventsError.IsInvalidTimeRange
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsError.IsInvalidTimeRange
+- uid: Dropbox.Api.TeamLog.GetTeamEventsError.AsInvalidTimeRange*
+  commentId: Overload:Dropbox.Api.TeamLog.GetTeamEventsError.AsInvalidTimeRange
+  name: AsInvalidTimeRange
+  nameWithType: GetTeamEventsError.AsInvalidTimeRange
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsError.AsInvalidTimeRange
+- uid: Dropbox.Api.TeamLog.GetTeamEventsError.InvalidTimeRange
+  commentId: T:Dropbox.Api.TeamLog.GetTeamEventsError.InvalidTimeRange
+  parent: Dropbox.Api.TeamLog
+  name: GetTeamEventsError.InvalidTimeRange
+  nameWithType: GetTeamEventsError.InvalidTimeRange
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsError.InvalidTimeRange
+- uid: Dropbox.Api.TeamLog.GetTeamEventsError.IsInvalidFilters*
+  commentId: Overload:Dropbox.Api.TeamLog.GetTeamEventsError.IsInvalidFilters
+  name: IsInvalidFilters
+  nameWithType: GetTeamEventsError.IsInvalidFilters
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsError.IsInvalidFilters
+- uid: Dropbox.Api.TeamLog.GetTeamEventsError.AsInvalidFilters*
+  commentId: Overload:Dropbox.Api.TeamLog.GetTeamEventsError.AsInvalidFilters
+  name: AsInvalidFilters
+  nameWithType: GetTeamEventsError.AsInvalidFilters
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsError.AsInvalidFilters
+- uid: Dropbox.Api.TeamLog.GetTeamEventsError.InvalidFilters
+  commentId: T:Dropbox.Api.TeamLog.GetTeamEventsError.InvalidFilters
+  parent: Dropbox.Api.TeamLog
+  name: GetTeamEventsError.InvalidFilters
+  nameWithType: GetTeamEventsError.InvalidFilters
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsError.InvalidFilters
+- uid: Dropbox.Api.TeamLog.GetTeamEventsError.IsOther*
+  commentId: Overload:Dropbox.Api.TeamLog.GetTeamEventsError.IsOther
+  name: IsOther
+  nameWithType: GetTeamEventsError.IsOther
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsError.IsOther
+- uid: Dropbox.Api.TeamLog.GetTeamEventsError.AsOther*
+  commentId: Overload:Dropbox.Api.TeamLog.GetTeamEventsError.AsOther
+  name: AsOther
+  nameWithType: GetTeamEventsError.AsOther
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsError.AsOther
+- uid: Dropbox.Api.TeamLog.GetTeamEventsError.Other
+  commentId: T:Dropbox.Api.TeamLog.GetTeamEventsError.Other
+  parent: Dropbox.Api.TeamLog
+  name: GetTeamEventsError.Other
+  nameWithType: GetTeamEventsError.Other
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsError.Other
+shouldSkipMarkup: true

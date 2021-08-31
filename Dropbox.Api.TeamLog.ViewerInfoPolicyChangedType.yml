@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.ViewerInfoPolicyChangedType
+  commentId: T:Dropbox.Api.TeamLog.ViewerInfoPolicyChangedType
+  id: ViewerInfoPolicyChangedType
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.ViewerInfoPolicyChangedType.#ctor
+  - Dropbox.Api.TeamLog.ViewerInfoPolicyChangedType.#ctor(System.String)
+  - Dropbox.Api.TeamLog.ViewerInfoPolicyChangedType.Description
+  langs:
+  - csharp
+  - vb
+  name: ViewerInfoPolicyChangedType
+  nameWithType: ViewerInfoPolicyChangedType
+  fullName: Dropbox.Api.TeamLog.ViewerInfoPolicyChangedType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ViewerInfoPolicyChangedType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ViewerInfoPolicyChangedType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ViewerInfoPolicyChangedType.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The viewer info policy changed type object</p>\n"
+  example: []
+  syntax:
+    content: 'public class ViewerInfoPolicyChangedType : object'
+    content.vb: >-
+      Public Class ViewerInfoPolicyChangedType
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.ViewerInfoPolicyChangedType.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.ViewerInfoPolicyChangedType.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.ViewerInfoPolicyChangedType
+  langs:
+  - csharp
+  - vb
+  name: ViewerInfoPolicyChangedType(String)
+  nameWithType: ViewerInfoPolicyChangedType.ViewerInfoPolicyChangedType(String)
+  fullName: Dropbox.Api.TeamLog.ViewerInfoPolicyChangedType.ViewerInfoPolicyChangedType(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ViewerInfoPolicyChangedType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ViewerInfoPolicyChangedType.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.ViewerInfoPolicyChangedType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public ViewerInfoPolicyChangedType(string description)
+    parameters:
+    - id: description
+      type: System.String
+      description: The description
+    content.vb: Public Sub New(description As String)
+  overload: Dropbox.Api.TeamLog.ViewerInfoPolicyChangedType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.ViewerInfoPolicyChangedType.#ctor
+  commentId: M:Dropbox.Api.TeamLog.ViewerInfoPolicyChangedType.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.ViewerInfoPolicyChangedType
+  langs:
+  - csharp
+  - vb
+  name: ViewerInfoPolicyChangedType()
+  nameWithType: ViewerInfoPolicyChangedType.ViewerInfoPolicyChangedType()
+  fullName: Dropbox.Api.TeamLog.ViewerInfoPolicyChangedType.ViewerInfoPolicyChangedType()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ViewerInfoPolicyChangedType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ViewerInfoPolicyChangedType.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.ViewerInfoPolicyChangedType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public ViewerInfoPolicyChangedType()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.ViewerInfoPolicyChangedType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.ViewerInfoPolicyChangedType.Description
+  commentId: P:Dropbox.Api.TeamLog.ViewerInfoPolicyChangedType.Description
+  id: Description
+  parent: Dropbox.Api.TeamLog.ViewerInfoPolicyChangedType
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: ViewerInfoPolicyChangedType.Description
+  fullName: Dropbox.Api.TeamLog.ViewerInfoPolicyChangedType.Description
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ViewerInfoPolicyChangedType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Description
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ViewerInfoPolicyChangedType.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets the description of the viewer info policy changed type</p>\n"
+  example: []
+  syntax:
+    content: public string Description { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Dropbox.Api.TeamLog.ViewerInfoPolicyChangedType.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.ViewerInfoPolicyChangedType
+  commentId: T:Dropbox.Api.TeamLog.ViewerInfoPolicyChangedType
+  parent: Dropbox.Api.TeamLog
+  name: ViewerInfoPolicyChangedType
+  nameWithType: ViewerInfoPolicyChangedType
+  fullName: Dropbox.Api.TeamLog.ViewerInfoPolicyChangedType
+- uid: Dropbox.Api.TeamLog.ViewerInfoPolicyChangedType.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.ViewerInfoPolicyChangedType.#ctor
+  name: ViewerInfoPolicyChangedType
+  nameWithType: ViewerInfoPolicyChangedType.ViewerInfoPolicyChangedType
+  fullName: Dropbox.Api.TeamLog.ViewerInfoPolicyChangedType.ViewerInfoPolicyChangedType
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.ViewerInfoPolicyChangedType.Description*
+  commentId: Overload:Dropbox.Api.TeamLog.ViewerInfoPolicyChangedType.Description
+  name: Description
+  nameWithType: ViewerInfoPolicyChangedType.Description
+  fullName: Dropbox.Api.TeamLog.ViewerInfoPolicyChangedType.Description
+shouldSkipMarkup: true

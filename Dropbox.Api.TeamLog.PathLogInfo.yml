@@ -1,0 +1,269 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.PathLogInfo
+  commentId: T:Dropbox.Api.TeamLog.PathLogInfo
+  id: PathLogInfo
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.PathLogInfo.#ctor
+  - Dropbox.Api.TeamLog.PathLogInfo.#ctor(Dropbox.Api.TeamLog.NamespaceRelativePathLogInfo,System.String)
+  - Dropbox.Api.TeamLog.PathLogInfo.Contextual
+  - Dropbox.Api.TeamLog.PathLogInfo.NamespaceRelative
+  langs:
+  - csharp
+  - vb
+  name: PathLogInfo
+  nameWithType: PathLogInfo
+  fullName: Dropbox.Api.TeamLog.PathLogInfo
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PathLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PathLogInfo
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PathLogInfo.cs
+    startLine: 18
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Path&apos;s details.</p>\n"
+  example: []
+  syntax:
+    content: 'public class PathLogInfo : object'
+    content.vb: >-
+      Public Class PathLogInfo
+          Inherits Object
+  seealso:
+  - linkId: Dropbox.Api.TeamLog.FileLogInfo
+    commentId: T:Dropbox.Api.TeamLog.FileLogInfo
+  - linkId: Dropbox.Api.TeamLog.FileOrFolderLogInfo
+    commentId: T:Dropbox.Api.TeamLog.FileOrFolderLogInfo
+  - linkId: Dropbox.Api.TeamLog.FolderLogInfo
+    commentId: T:Dropbox.Api.TeamLog.FolderLogInfo
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.PathLogInfo.#ctor(Dropbox.Api.TeamLog.NamespaceRelativePathLogInfo,System.String)
+  commentId: M:Dropbox.Api.TeamLog.PathLogInfo.#ctor(Dropbox.Api.TeamLog.NamespaceRelativePathLogInfo,System.String)
+  id: '#ctor(Dropbox.Api.TeamLog.NamespaceRelativePathLogInfo,System.String)'
+  parent: Dropbox.Api.TeamLog.PathLogInfo
+  langs:
+  - csharp
+  - vb
+  name: PathLogInfo(NamespaceRelativePathLogInfo, String)
+  nameWithType: PathLogInfo.PathLogInfo(NamespaceRelativePathLogInfo, String)
+  fullName: Dropbox.Api.TeamLog.PathLogInfo.PathLogInfo(Dropbox.Api.TeamLog.NamespaceRelativePathLogInfo, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PathLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PathLogInfo.cs
+    startLine: 38
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.PathLogInfo\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public PathLogInfo(NamespaceRelativePathLogInfo namespaceRelative, string contextual = null)
+    parameters:
+    - id: namespaceRelative
+      type: Dropbox.Api.TeamLog.NamespaceRelativePathLogInfo
+      description: >-
+        Path relative to the namespace containing the
+
+        content.
+    - id: contextual
+      type: System.String
+      description: Fully qualified path relative to event&apos;s context.
+    content.vb: Public Sub New(namespaceRelative As NamespaceRelativePathLogInfo, contextual As String = Nothing)
+  overload: Dropbox.Api.TeamLog.PathLogInfo.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.PathLogInfo.#ctor
+  commentId: M:Dropbox.Api.TeamLog.PathLogInfo.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.PathLogInfo
+  langs:
+  - csharp
+  - vb
+  name: PathLogInfo()
+  nameWithType: PathLogInfo.PathLogInfo()
+  fullName: Dropbox.Api.TeamLog.PathLogInfo.PathLogInfo()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PathLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PathLogInfo.cs
+    startLine: 55
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.PathLogInfo\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public PathLogInfo()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.PathLogInfo.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.PathLogInfo.NamespaceRelative
+  commentId: P:Dropbox.Api.TeamLog.PathLogInfo.NamespaceRelative
+  id: NamespaceRelative
+  parent: Dropbox.Api.TeamLog.PathLogInfo
+  langs:
+  - csharp
+  - vb
+  name: NamespaceRelative
+  nameWithType: PathLogInfo.NamespaceRelative
+  fullName: Dropbox.Api.TeamLog.PathLogInfo.NamespaceRelative
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PathLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NamespaceRelative
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PathLogInfo.cs
+    startLine: 63
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Path relative to the namespace containing the content.</p>\n"
+  example: []
+  syntax:
+    content: public NamespaceRelativePathLogInfo NamespaceRelative { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.NamespaceRelativePathLogInfo
+    content.vb: Public Property NamespaceRelative As NamespaceRelativePathLogInfo
+  overload: Dropbox.Api.TeamLog.PathLogInfo.NamespaceRelative*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.PathLogInfo.Contextual
+  commentId: P:Dropbox.Api.TeamLog.PathLogInfo.Contextual
+  id: Contextual
+  parent: Dropbox.Api.TeamLog.PathLogInfo
+  langs:
+  - csharp
+  - vb
+  name: Contextual
+  nameWithType: PathLogInfo.Contextual
+  fullName: Dropbox.Api.TeamLog.PathLogInfo.Contextual
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PathLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Contextual
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PathLogInfo.cs
+    startLine: 68
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Fully qualified path relative to event&apos;s context.</p>\n"
+  example: []
+  syntax:
+    content: public string Contextual { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Contextual As String
+  overload: Dropbox.Api.TeamLog.PathLogInfo.Contextual*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog.FileLogInfo
+  commentId: T:Dropbox.Api.TeamLog.FileLogInfo
+  parent: Dropbox.Api.TeamLog
+  name: FileLogInfo
+  nameWithType: FileLogInfo
+  fullName: Dropbox.Api.TeamLog.FileLogInfo
+- uid: Dropbox.Api.TeamLog.FileOrFolderLogInfo
+  commentId: T:Dropbox.Api.TeamLog.FileOrFolderLogInfo
+  parent: Dropbox.Api.TeamLog
+  name: FileOrFolderLogInfo
+  nameWithType: FileOrFolderLogInfo
+  fullName: Dropbox.Api.TeamLog.FileOrFolderLogInfo
+- uid: Dropbox.Api.TeamLog.FolderLogInfo
+  commentId: T:Dropbox.Api.TeamLog.FolderLogInfo
+  parent: Dropbox.Api.TeamLog
+  name: FolderLogInfo
+  nameWithType: FolderLogInfo
+  fullName: Dropbox.Api.TeamLog.FolderLogInfo
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.PathLogInfo
+  commentId: T:Dropbox.Api.TeamLog.PathLogInfo
+  parent: Dropbox.Api.TeamLog
+  name: PathLogInfo
+  nameWithType: PathLogInfo
+  fullName: Dropbox.Api.TeamLog.PathLogInfo
+- uid: Dropbox.Api.TeamLog.PathLogInfo.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.PathLogInfo.#ctor
+  name: PathLogInfo
+  nameWithType: PathLogInfo.PathLogInfo
+  fullName: Dropbox.Api.TeamLog.PathLogInfo.PathLogInfo
+- uid: Dropbox.Api.TeamLog.NamespaceRelativePathLogInfo
+  commentId: T:Dropbox.Api.TeamLog.NamespaceRelativePathLogInfo
+  parent: Dropbox.Api.TeamLog
+  name: NamespaceRelativePathLogInfo
+  nameWithType: NamespaceRelativePathLogInfo
+  fullName: Dropbox.Api.TeamLog.NamespaceRelativePathLogInfo
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.PathLogInfo.NamespaceRelative*
+  commentId: Overload:Dropbox.Api.TeamLog.PathLogInfo.NamespaceRelative
+  name: NamespaceRelative
+  nameWithType: PathLogInfo.NamespaceRelative
+  fullName: Dropbox.Api.TeamLog.PathLogInfo.NamespaceRelative
+- uid: Dropbox.Api.TeamLog.PathLogInfo.Contextual*
+  commentId: Overload:Dropbox.Api.TeamLog.PathLogInfo.Contextual
+  name: Contextual
+  nameWithType: PathLogInfo.Contextual
+  fullName: Dropbox.Api.TeamLog.PathLogInfo.Contextual
+shouldSkipMarkup: true

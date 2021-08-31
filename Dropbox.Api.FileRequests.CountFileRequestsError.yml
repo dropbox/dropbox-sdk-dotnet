@@ -1,0 +1,288 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.FileRequests.CountFileRequestsError
+  commentId: T:Dropbox.Api.FileRequests.CountFileRequestsError
+  id: CountFileRequestsError
+  parent: Dropbox.Api.FileRequests
+  children:
+  - Dropbox.Api.FileRequests.CountFileRequestsError.#ctor
+  - Dropbox.Api.FileRequests.CountFileRequestsError.AsDisabledForTeam
+  - Dropbox.Api.FileRequests.CountFileRequestsError.AsOther
+  - Dropbox.Api.FileRequests.CountFileRequestsError.IsDisabledForTeam
+  - Dropbox.Api.FileRequests.CountFileRequestsError.IsOther
+  langs:
+  - csharp
+  - vb
+  name: CountFileRequestsError
+  nameWithType: CountFileRequestsError
+  fullName: Dropbox.Api.FileRequests.CountFileRequestsError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/CountFileRequestsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: CountFileRequestsError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/CountFileRequestsError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>There was an error counting the file requests.</p>\n"
+  example: []
+  syntax:
+    content: 'public class CountFileRequestsError : object'
+    content.vb: >-
+      Public Class CountFileRequestsError
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.FileRequests.CountFileRequestsError.DisabledForTeam
+  - Dropbox.Api.FileRequests.CountFileRequestsError.Other
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.FileRequests.CountFileRequestsError.#ctor
+  commentId: M:Dropbox.Api.FileRequests.CountFileRequestsError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.FileRequests.CountFileRequestsError
+  langs:
+  - csharp
+  - vb
+  name: CountFileRequestsError()
+  nameWithType: CountFileRequestsError.CountFileRequestsError()
+  fullName: Dropbox.Api.FileRequests.CountFileRequestsError.CountFileRequestsError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/CountFileRequestsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/CountFileRequestsError.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.FileRequests.CountFileRequestsError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public CountFileRequestsError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.FileRequests.CountFileRequestsError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileRequests.CountFileRequestsError.IsDisabledForTeam
+  commentId: P:Dropbox.Api.FileRequests.CountFileRequestsError.IsDisabledForTeam
+  id: IsDisabledForTeam
+  parent: Dropbox.Api.FileRequests.CountFileRequestsError
+  langs:
+  - csharp
+  - vb
+  name: IsDisabledForTeam
+  nameWithType: CountFileRequestsError.IsDisabledForTeam
+  fullName: Dropbox.Api.FileRequests.CountFileRequestsError.IsDisabledForTeam
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/CountFileRequestsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsDisabledForTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/CountFileRequestsError.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Gets a value indicating whether this instance is DisabledForTeam</p>\n"
+  example: []
+  syntax:
+    content: public bool IsDisabledForTeam { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsDisabledForTeam As Boolean
+  overload: Dropbox.Api.FileRequests.CountFileRequestsError.IsDisabledForTeam*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileRequests.CountFileRequestsError.AsDisabledForTeam
+  commentId: P:Dropbox.Api.FileRequests.CountFileRequestsError.AsDisabledForTeam
+  id: AsDisabledForTeam
+  parent: Dropbox.Api.FileRequests.CountFileRequestsError
+  langs:
+  - csharp
+  - vb
+  name: AsDisabledForTeam
+  nameWithType: CountFileRequestsError.AsDisabledForTeam
+  fullName: Dropbox.Api.FileRequests.CountFileRequestsError.AsDisabledForTeam
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/CountFileRequestsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsDisabledForTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/CountFileRequestsError.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Gets this instance as a DisabledForTeam, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public CountFileRequestsError.DisabledForTeam AsDisabledForTeam { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.FileRequests.CountFileRequestsError.DisabledForTeam
+    content.vb: Public ReadOnly Property AsDisabledForTeam As CountFileRequestsError.DisabledForTeam
+  overload: Dropbox.Api.FileRequests.CountFileRequestsError.AsDisabledForTeam*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileRequests.CountFileRequestsError.IsOther
+  commentId: P:Dropbox.Api.FileRequests.CountFileRequestsError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.FileRequests.CountFileRequestsError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: CountFileRequestsError.IsOther
+  fullName: Dropbox.Api.FileRequests.CountFileRequestsError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/CountFileRequestsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/CountFileRequestsError.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.FileRequests.CountFileRequestsError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileRequests.CountFileRequestsError.AsOther
+  commentId: P:Dropbox.Api.FileRequests.CountFileRequestsError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.FileRequests.CountFileRequestsError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: CountFileRequestsError.AsOther
+  fullName: Dropbox.Api.FileRequests.CountFileRequestsError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/CountFileRequestsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/CountFileRequestsError.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public CountFileRequestsError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.FileRequests.CountFileRequestsError.Other
+    content.vb: Public ReadOnly Property AsOther As CountFileRequestsError.Other
+  overload: Dropbox.Api.FileRequests.CountFileRequestsError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.FileRequests
+  commentId: N:Dropbox.Api.FileRequests
+  name: Dropbox.Api.FileRequests
+  nameWithType: Dropbox.Api.FileRequests
+  fullName: Dropbox.Api.FileRequests
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.FileRequests.CountFileRequestsError
+  commentId: T:Dropbox.Api.FileRequests.CountFileRequestsError
+  parent: Dropbox.Api.FileRequests
+  name: CountFileRequestsError
+  nameWithType: CountFileRequestsError
+  fullName: Dropbox.Api.FileRequests.CountFileRequestsError
+- uid: Dropbox.Api.FileRequests.CountFileRequestsError.#ctor*
+  commentId: Overload:Dropbox.Api.FileRequests.CountFileRequestsError.#ctor
+  name: CountFileRequestsError
+  nameWithType: CountFileRequestsError.CountFileRequestsError
+  fullName: Dropbox.Api.FileRequests.CountFileRequestsError.CountFileRequestsError
+- uid: Dropbox.Api.FileRequests.CountFileRequestsError.IsDisabledForTeam*
+  commentId: Overload:Dropbox.Api.FileRequests.CountFileRequestsError.IsDisabledForTeam
+  name: IsDisabledForTeam
+  nameWithType: CountFileRequestsError.IsDisabledForTeam
+  fullName: Dropbox.Api.FileRequests.CountFileRequestsError.IsDisabledForTeam
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.FileRequests.CountFileRequestsError.AsDisabledForTeam*
+  commentId: Overload:Dropbox.Api.FileRequests.CountFileRequestsError.AsDisabledForTeam
+  name: AsDisabledForTeam
+  nameWithType: CountFileRequestsError.AsDisabledForTeam
+  fullName: Dropbox.Api.FileRequests.CountFileRequestsError.AsDisabledForTeam
+- uid: Dropbox.Api.FileRequests.CountFileRequestsError.DisabledForTeam
+  commentId: T:Dropbox.Api.FileRequests.CountFileRequestsError.DisabledForTeam
+  parent: Dropbox.Api.FileRequests
+  name: CountFileRequestsError.DisabledForTeam
+  nameWithType: CountFileRequestsError.DisabledForTeam
+  fullName: Dropbox.Api.FileRequests.CountFileRequestsError.DisabledForTeam
+- uid: Dropbox.Api.FileRequests.CountFileRequestsError.IsOther*
+  commentId: Overload:Dropbox.Api.FileRequests.CountFileRequestsError.IsOther
+  name: IsOther
+  nameWithType: CountFileRequestsError.IsOther
+  fullName: Dropbox.Api.FileRequests.CountFileRequestsError.IsOther
+- uid: Dropbox.Api.FileRequests.CountFileRequestsError.AsOther*
+  commentId: Overload:Dropbox.Api.FileRequests.CountFileRequestsError.AsOther
+  name: AsOther
+  nameWithType: CountFileRequestsError.AsOther
+  fullName: Dropbox.Api.FileRequests.CountFileRequestsError.AsOther
+- uid: Dropbox.Api.FileRequests.CountFileRequestsError.Other
+  commentId: T:Dropbox.Api.FileRequests.CountFileRequestsError.Other
+  parent: Dropbox.Api.FileRequests
+  name: CountFileRequestsError.Other
+  nameWithType: CountFileRequestsError.Other
+  fullName: Dropbox.Api.FileRequests.CountFileRequestsError.Other
+shouldSkipMarkup: true

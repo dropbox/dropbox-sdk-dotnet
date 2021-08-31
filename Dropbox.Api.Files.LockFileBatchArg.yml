@@ -1,0 +1,348 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.LockFileBatchArg
+  commentId: T:Dropbox.Api.Files.LockFileBatchArg
+  id: LockFileBatchArg
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.LockFileBatchArg.#ctor
+  - Dropbox.Api.Files.LockFileBatchArg.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Files.LockFileArg})
+  - Dropbox.Api.Files.LockFileBatchArg.Entries
+  langs:
+  - csharp
+  - vb
+  name: LockFileBatchArg
+  nameWithType: LockFileBatchArg
+  fullName: Dropbox.Api.Files.LockFileBatchArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileBatchArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: LockFileBatchArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileBatchArg.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The lock file batch arg object</p>\n"
+  example: []
+  syntax:
+    content: 'public class LockFileBatchArg : object'
+    content.vb: >-
+      Public Class LockFileBatchArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.LockFileBatchArg.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Files.LockFileArg})
+  commentId: M:Dropbox.Api.Files.LockFileBatchArg.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Files.LockFileArg})
+  id: '#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Files.LockFileArg})'
+  parent: Dropbox.Api.Files.LockFileBatchArg
+  langs:
+  - csharp
+  - vb
+  name: LockFileBatchArg(System.Collections.Generic.IEnumerable<LockFileArg>)
+  nameWithType: LockFileBatchArg.LockFileBatchArg(System.Collections.Generic.IEnumerable<LockFileArg>)
+  fullName: Dropbox.Api.Files.LockFileBatchArg.LockFileBatchArg(System.Collections.Generic.IEnumerable<Dropbox.Api.Files.LockFileArg>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileBatchArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileBatchArg.cs
+    startLine: 36
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.LockFileBatchArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public LockFileBatchArg(System.Collections.Generic.IEnumerable<LockFileArg> entries)
+    parameters:
+    - id: entries
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.Files.LockFileArg}
+      description: >-
+        List of &apos;entries&apos;. Each &apos;entry&apos; contains a path of the file
+
+        which will be locked or queried. Duplicate path arguments in the batch are
+
+        considered only once.
+    content.vb: Public Sub New(entries As System.Collections.Generic.IEnumerable(Of LockFileArg))
+  overload: Dropbox.Api.Files.LockFileBatchArg.#ctor*
+  nameWithType.vb: LockFileBatchArg.LockFileBatchArg(System.Collections.Generic.IEnumerable(Of LockFileArg))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Files.LockFileBatchArg.LockFileBatchArg(System.Collections.Generic.IEnumerable(Of Dropbox.Api.Files.LockFileArg))
+  name.vb: LockFileBatchArg(System.Collections.Generic.IEnumerable(Of LockFileArg))
+- uid: Dropbox.Api.Files.LockFileBatchArg.#ctor
+  commentId: M:Dropbox.Api.Files.LockFileBatchArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.LockFileBatchArg
+  langs:
+  - csharp
+  - vb
+  name: LockFileBatchArg()
+  nameWithType: LockFileBatchArg.LockFileBatchArg()
+  fullName: Dropbox.Api.Files.LockFileBatchArg.LockFileBatchArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileBatchArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileBatchArg.cs
+    startLine: 54
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.LockFileBatchArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public LockFileBatchArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.LockFileBatchArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.LockFileBatchArg.Entries
+  commentId: P:Dropbox.Api.Files.LockFileBatchArg.Entries
+  id: Entries
+  parent: Dropbox.Api.Files.LockFileBatchArg
+  langs:
+  - csharp
+  - vb
+  name: Entries
+  nameWithType: LockFileBatchArg.Entries
+  fullName: Dropbox.Api.Files.LockFileBatchArg.Entries
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileBatchArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Entries
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileBatchArg.cs
+    startLine: 64
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>List of &apos;entries&apos;. Each &apos;entry&apos; contains a path of the file which will be\nlocked or queried. Duplicate path arguments in the batch are considered only\nonce.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<LockFileArg> Entries { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{Dropbox.Api.Files.LockFileArg}
+    content.vb: Public Property Entries As System.Collections.Generic.IList(Of LockFileArg)
+  overload: Dropbox.Api.Files.LockFileBatchArg.Entries*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.LockFileBatchArg
+  commentId: T:Dropbox.Api.Files.LockFileBatchArg
+  parent: Dropbox.Api.Files
+  name: LockFileBatchArg
+  nameWithType: LockFileBatchArg
+  fullName: Dropbox.Api.Files.LockFileBatchArg
+- uid: Dropbox.Api.Files.LockFileBatchArg.#ctor*
+  commentId: Overload:Dropbox.Api.Files.LockFileBatchArg.#ctor
+  name: LockFileBatchArg
+  nameWithType: LockFileBatchArg.LockFileBatchArg
+  fullName: Dropbox.Api.Files.LockFileBatchArg.LockFileBatchArg
+- uid: System.Collections.Generic.IEnumerable{Dropbox.Api.Files.LockFileArg}
+  commentId: '!:System.Collections.Generic.IEnumerable{Dropbox.Api.Files.LockFileArg}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<LockFileArg>
+  nameWithType: System.Collections.Generic.IEnumerable<LockFileArg>
+  fullName: System.Collections.Generic.IEnumerable<Dropbox.Api.Files.LockFileArg>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of LockFileArg)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Dropbox.Api.Files.LockFileArg)
+  name.vb: System.Collections.Generic.IEnumerable(Of LockFileArg)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Files.LockFileArg
+    name: LockFileArg
+    nameWithType: LockFileArg
+    fullName: Dropbox.Api.Files.LockFileArg
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Files.LockFileArg
+    name: LockFileArg
+    nameWithType: LockFileArg
+    fullName: Dropbox.Api.Files.LockFileArg
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: System.Collections.Generic.IEnumerable<>
+  nameWithType: System.Collections.Generic.IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: System.Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Files.LockFileBatchArg.Entries*
+  commentId: Overload:Dropbox.Api.Files.LockFileBatchArg.Entries
+  name: Entries
+  nameWithType: LockFileBatchArg.Entries
+  fullName: Dropbox.Api.Files.LockFileBatchArg.Entries
+- uid: System.Collections.Generic.IList{Dropbox.Api.Files.LockFileArg}
+  commentId: '!:System.Collections.Generic.IList{Dropbox.Api.Files.LockFileArg}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<LockFileArg>
+  nameWithType: System.Collections.Generic.IList<LockFileArg>
+  fullName: System.Collections.Generic.IList<Dropbox.Api.Files.LockFileArg>
+  nameWithType.vb: System.Collections.Generic.IList(Of LockFileArg)
+  fullName.vb: System.Collections.Generic.IList(Of Dropbox.Api.Files.LockFileArg)
+  name.vb: System.Collections.Generic.IList(Of LockFileArg)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Files.LockFileArg
+    name: LockFileArg
+    nameWithType: LockFileArg
+    fullName: Dropbox.Api.Files.LockFileArg
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Files.LockFileArg
+    name: LockFileArg
+    nameWithType: LockFileArg
+    fullName: Dropbox.Api.Files.LockFileArg
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  isExternal: true
+  name: System.Collections.Generic.IList<>
+  nameWithType: System.Collections.Generic.IList<>
+  fullName: System.Collections.Generic.IList<>
+  nameWithType.vb: System.Collections.Generic.IList(Of )
+  fullName.vb: System.Collections.Generic.IList(Of )
+  name.vb: System.Collections.Generic.IList(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+shouldSkipMarkup: true

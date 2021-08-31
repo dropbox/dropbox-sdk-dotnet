@@ -1,0 +1,239 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.SharedFolderChangeMembersInheritancePolicyDetails
+  commentId: T:Dropbox.Api.TeamLog.SharedFolderChangeMembersInheritancePolicyDetails
+  id: SharedFolderChangeMembersInheritancePolicyDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.SharedFolderChangeMembersInheritancePolicyDetails.#ctor
+  - Dropbox.Api.TeamLog.SharedFolderChangeMembersInheritancePolicyDetails.#ctor(Dropbox.Api.TeamLog.SharedFolderMembersInheritancePolicy,Dropbox.Api.TeamLog.SharedFolderMembersInheritancePolicy)
+  - Dropbox.Api.TeamLog.SharedFolderChangeMembersInheritancePolicyDetails.NewValue
+  - Dropbox.Api.TeamLog.SharedFolderChangeMembersInheritancePolicyDetails.PreviousValue
+  langs:
+  - csharp
+  - vb
+  name: SharedFolderChangeMembersInheritancePolicyDetails
+  nameWithType: SharedFolderChangeMembersInheritancePolicyDetails
+  fullName: Dropbox.Api.TeamLog.SharedFolderChangeMembersInheritancePolicyDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderChangeMembersInheritancePolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SharedFolderChangeMembersInheritancePolicyDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderChangeMembersInheritancePolicyDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Changed whether shared folder inherits members from parent folder.</p>\n"
+  example: []
+  syntax:
+    content: 'public class SharedFolderChangeMembersInheritancePolicyDetails : object'
+    content.vb: >-
+      Public Class SharedFolderChangeMembersInheritancePolicyDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.SharedFolderChangeMembersInheritancePolicyDetails.#ctor(Dropbox.Api.TeamLog.SharedFolderMembersInheritancePolicy,Dropbox.Api.TeamLog.SharedFolderMembersInheritancePolicy)
+  commentId: M:Dropbox.Api.TeamLog.SharedFolderChangeMembersInheritancePolicyDetails.#ctor(Dropbox.Api.TeamLog.SharedFolderMembersInheritancePolicy,Dropbox.Api.TeamLog.SharedFolderMembersInheritancePolicy)
+  id: '#ctor(Dropbox.Api.TeamLog.SharedFolderMembersInheritancePolicy,Dropbox.Api.TeamLog.SharedFolderMembersInheritancePolicy)'
+  parent: Dropbox.Api.TeamLog.SharedFolderChangeMembersInheritancePolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: SharedFolderChangeMembersInheritancePolicyDetails(SharedFolderMembersInheritancePolicy, SharedFolderMembersInheritancePolicy)
+  nameWithType: SharedFolderChangeMembersInheritancePolicyDetails.SharedFolderChangeMembersInheritancePolicyDetails(SharedFolderMembersInheritancePolicy, SharedFolderMembersInheritancePolicy)
+  fullName: Dropbox.Api.TeamLog.SharedFolderChangeMembersInheritancePolicyDetails.SharedFolderChangeMembersInheritancePolicyDetails(Dropbox.Api.TeamLog.SharedFolderMembersInheritancePolicy, Dropbox.Api.TeamLog.SharedFolderMembersInheritancePolicy)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderChangeMembersInheritancePolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderChangeMembersInheritancePolicyDetails.cs
+    startLine: 36
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SharedFolderChangeMembersInheritancePolicyDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public SharedFolderChangeMembersInheritancePolicyDetails(SharedFolderMembersInheritancePolicy newValue, SharedFolderMembersInheritancePolicy previousValue = null)
+    parameters:
+    - id: newValue
+      type: Dropbox.Api.TeamLog.SharedFolderMembersInheritancePolicy
+      description: New member inheritance policy.
+    - id: previousValue
+      type: Dropbox.Api.TeamLog.SharedFolderMembersInheritancePolicy
+      description: >-
+        Previous member inheritance policy. Might be missing
+
+        due to historical data gap.
+    content.vb: Public Sub New(newValue As SharedFolderMembersInheritancePolicy, previousValue As SharedFolderMembersInheritancePolicy = Nothing)
+  overload: Dropbox.Api.TeamLog.SharedFolderChangeMembersInheritancePolicyDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SharedFolderChangeMembersInheritancePolicyDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.SharedFolderChangeMembersInheritancePolicyDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.SharedFolderChangeMembersInheritancePolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: SharedFolderChangeMembersInheritancePolicyDetails()
+  nameWithType: SharedFolderChangeMembersInheritancePolicyDetails.SharedFolderChangeMembersInheritancePolicyDetails()
+  fullName: Dropbox.Api.TeamLog.SharedFolderChangeMembersInheritancePolicyDetails.SharedFolderChangeMembersInheritancePolicyDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderChangeMembersInheritancePolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderChangeMembersInheritancePolicyDetails.cs
+    startLine: 54
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SharedFolderChangeMembersInheritancePolicyDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public SharedFolderChangeMembersInheritancePolicyDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.SharedFolderChangeMembersInheritancePolicyDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SharedFolderChangeMembersInheritancePolicyDetails.NewValue
+  commentId: P:Dropbox.Api.TeamLog.SharedFolderChangeMembersInheritancePolicyDetails.NewValue
+  id: NewValue
+  parent: Dropbox.Api.TeamLog.SharedFolderChangeMembersInheritancePolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: NewValue
+  nameWithType: SharedFolderChangeMembersInheritancePolicyDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.SharedFolderChangeMembersInheritancePolicyDetails.NewValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderChangeMembersInheritancePolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NewValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderChangeMembersInheritancePolicyDetails.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>New member inheritance policy.</p>\n"
+  example: []
+  syntax:
+    content: public SharedFolderMembersInheritancePolicy NewValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.SharedFolderMembersInheritancePolicy
+    content.vb: Public Property NewValue As SharedFolderMembersInheritancePolicy
+  overload: Dropbox.Api.TeamLog.SharedFolderChangeMembersInheritancePolicyDetails.NewValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.SharedFolderChangeMembersInheritancePolicyDetails.PreviousValue
+  commentId: P:Dropbox.Api.TeamLog.SharedFolderChangeMembersInheritancePolicyDetails.PreviousValue
+  id: PreviousValue
+  parent: Dropbox.Api.TeamLog.SharedFolderChangeMembersInheritancePolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: PreviousValue
+  nameWithType: SharedFolderChangeMembersInheritancePolicyDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.SharedFolderChangeMembersInheritancePolicyDetails.PreviousValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderChangeMembersInheritancePolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PreviousValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderChangeMembersInheritancePolicyDetails.cs
+    startLine: 68
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Previous member inheritance policy. Might be missing due to historical data\ngap.</p>\n"
+  example: []
+  syntax:
+    content: public SharedFolderMembersInheritancePolicy PreviousValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.SharedFolderMembersInheritancePolicy
+    content.vb: Public Property PreviousValue As SharedFolderMembersInheritancePolicy
+  overload: Dropbox.Api.TeamLog.SharedFolderChangeMembersInheritancePolicyDetails.PreviousValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.SharedFolderChangeMembersInheritancePolicyDetails
+  commentId: T:Dropbox.Api.TeamLog.SharedFolderChangeMembersInheritancePolicyDetails
+  parent: Dropbox.Api.TeamLog
+  name: SharedFolderChangeMembersInheritancePolicyDetails
+  nameWithType: SharedFolderChangeMembersInheritancePolicyDetails
+  fullName: Dropbox.Api.TeamLog.SharedFolderChangeMembersInheritancePolicyDetails
+- uid: Dropbox.Api.TeamLog.SharedFolderChangeMembersInheritancePolicyDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedFolderChangeMembersInheritancePolicyDetails.#ctor
+  name: SharedFolderChangeMembersInheritancePolicyDetails
+  nameWithType: SharedFolderChangeMembersInheritancePolicyDetails.SharedFolderChangeMembersInheritancePolicyDetails
+  fullName: Dropbox.Api.TeamLog.SharedFolderChangeMembersInheritancePolicyDetails.SharedFolderChangeMembersInheritancePolicyDetails
+- uid: Dropbox.Api.TeamLog.SharedFolderMembersInheritancePolicy
+  commentId: T:Dropbox.Api.TeamLog.SharedFolderMembersInheritancePolicy
+  parent: Dropbox.Api.TeamLog
+  name: SharedFolderMembersInheritancePolicy
+  nameWithType: SharedFolderMembersInheritancePolicy
+  fullName: Dropbox.Api.TeamLog.SharedFolderMembersInheritancePolicy
+- uid: Dropbox.Api.TeamLog.SharedFolderChangeMembersInheritancePolicyDetails.NewValue*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedFolderChangeMembersInheritancePolicyDetails.NewValue
+  name: NewValue
+  nameWithType: SharedFolderChangeMembersInheritancePolicyDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.SharedFolderChangeMembersInheritancePolicyDetails.NewValue
+- uid: Dropbox.Api.TeamLog.SharedFolderChangeMembersInheritancePolicyDetails.PreviousValue*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedFolderChangeMembersInheritancePolicyDetails.PreviousValue
+  name: PreviousValue
+  nameWithType: SharedFolderChangeMembersInheritancePolicyDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.SharedFolderChangeMembersInheritancePolicyDetails.PreviousValue
+shouldSkipMarkup: true

@@ -1,0 +1,343 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.ExcludedUsersUpdateArg
+  commentId: T:Dropbox.Api.Team.ExcludedUsersUpdateArg
+  id: ExcludedUsersUpdateArg
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.ExcludedUsersUpdateArg.#ctor
+  - Dropbox.Api.Team.ExcludedUsersUpdateArg.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Team.UserSelectorArg})
+  - Dropbox.Api.Team.ExcludedUsersUpdateArg.Users
+  langs:
+  - csharp
+  - vb
+  name: ExcludedUsersUpdateArg
+  nameWithType: ExcludedUsersUpdateArg
+  fullName: Dropbox.Api.Team.ExcludedUsersUpdateArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ExcludedUsersUpdateArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ExcludedUsersUpdateArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ExcludedUsersUpdateArg.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Argument of excluded users update operation. Should include a list of users to\nadd/remove (according to endpoint), Maximum size of the list is 1000 users.</p>\n"
+  example: []
+  syntax:
+    content: 'public class ExcludedUsersUpdateArg : object'
+    content.vb: >-
+      Public Class ExcludedUsersUpdateArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.ExcludedUsersUpdateArg.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Team.UserSelectorArg})
+  commentId: M:Dropbox.Api.Team.ExcludedUsersUpdateArg.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Team.UserSelectorArg})
+  id: '#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Team.UserSelectorArg})'
+  parent: Dropbox.Api.Team.ExcludedUsersUpdateArg
+  langs:
+  - csharp
+  - vb
+  name: ExcludedUsersUpdateArg(System.Collections.Generic.IEnumerable<UserSelectorArg>)
+  nameWithType: ExcludedUsersUpdateArg.ExcludedUsersUpdateArg(System.Collections.Generic.IEnumerable<UserSelectorArg>)
+  fullName: Dropbox.Api.Team.ExcludedUsersUpdateArg.ExcludedUsersUpdateArg(System.Collections.Generic.IEnumerable<Dropbox.Api.Team.UserSelectorArg>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ExcludedUsersUpdateArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ExcludedUsersUpdateArg.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.ExcludedUsersUpdateArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public ExcludedUsersUpdateArg(System.Collections.Generic.IEnumerable<UserSelectorArg> users = null)
+    parameters:
+    - id: users
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.Team.UserSelectorArg}
+      description: List of users to be added/removed.
+    content.vb: Public Sub New(users As System.Collections.Generic.IEnumerable(Of UserSelectorArg) = Nothing)
+  overload: Dropbox.Api.Team.ExcludedUsersUpdateArg.#ctor*
+  nameWithType.vb: ExcludedUsersUpdateArg.ExcludedUsersUpdateArg(System.Collections.Generic.IEnumerable(Of UserSelectorArg))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Team.ExcludedUsersUpdateArg.ExcludedUsersUpdateArg(System.Collections.Generic.IEnumerable(Of Dropbox.Api.Team.UserSelectorArg))
+  name.vb: ExcludedUsersUpdateArg(System.Collections.Generic.IEnumerable(Of UserSelectorArg))
+- uid: Dropbox.Api.Team.ExcludedUsersUpdateArg.#ctor
+  commentId: M:Dropbox.Api.Team.ExcludedUsersUpdateArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.ExcludedUsersUpdateArg
+  langs:
+  - csharp
+  - vb
+  name: ExcludedUsersUpdateArg()
+  nameWithType: ExcludedUsersUpdateArg.ExcludedUsersUpdateArg()
+  fullName: Dropbox.Api.Team.ExcludedUsersUpdateArg.ExcludedUsersUpdateArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ExcludedUsersUpdateArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ExcludedUsersUpdateArg.cs
+    startLine: 48
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.ExcludedUsersUpdateArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public ExcludedUsersUpdateArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.ExcludedUsersUpdateArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.ExcludedUsersUpdateArg.Users
+  commentId: P:Dropbox.Api.Team.ExcludedUsersUpdateArg.Users
+  id: Users
+  parent: Dropbox.Api.Team.ExcludedUsersUpdateArg
+  langs:
+  - csharp
+  - vb
+  name: Users
+  nameWithType: ExcludedUsersUpdateArg.Users
+  fullName: Dropbox.Api.Team.ExcludedUsersUpdateArg.Users
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ExcludedUsersUpdateArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Users
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ExcludedUsersUpdateArg.cs
+    startLine: 56
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>List of users to be added/removed.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<UserSelectorArg> Users { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{Dropbox.Api.Team.UserSelectorArg}
+    content.vb: Public Property Users As System.Collections.Generic.IList(Of UserSelectorArg)
+  overload: Dropbox.Api.Team.ExcludedUsersUpdateArg.Users*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.ExcludedUsersUpdateArg
+  commentId: T:Dropbox.Api.Team.ExcludedUsersUpdateArg
+  parent: Dropbox.Api.Team
+  name: ExcludedUsersUpdateArg
+  nameWithType: ExcludedUsersUpdateArg
+  fullName: Dropbox.Api.Team.ExcludedUsersUpdateArg
+- uid: Dropbox.Api.Team.ExcludedUsersUpdateArg.#ctor*
+  commentId: Overload:Dropbox.Api.Team.ExcludedUsersUpdateArg.#ctor
+  name: ExcludedUsersUpdateArg
+  nameWithType: ExcludedUsersUpdateArg.ExcludedUsersUpdateArg
+  fullName: Dropbox.Api.Team.ExcludedUsersUpdateArg.ExcludedUsersUpdateArg
+- uid: System.Collections.Generic.IEnumerable{Dropbox.Api.Team.UserSelectorArg}
+  commentId: '!:System.Collections.Generic.IEnumerable{Dropbox.Api.Team.UserSelectorArg}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<UserSelectorArg>
+  nameWithType: System.Collections.Generic.IEnumerable<UserSelectorArg>
+  fullName: System.Collections.Generic.IEnumerable<Dropbox.Api.Team.UserSelectorArg>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of UserSelectorArg)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Dropbox.Api.Team.UserSelectorArg)
+  name.vb: System.Collections.Generic.IEnumerable(Of UserSelectorArg)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Team.UserSelectorArg
+    name: UserSelectorArg
+    nameWithType: UserSelectorArg
+    fullName: Dropbox.Api.Team.UserSelectorArg
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Team.UserSelectorArg
+    name: UserSelectorArg
+    nameWithType: UserSelectorArg
+    fullName: Dropbox.Api.Team.UserSelectorArg
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: System.Collections.Generic.IEnumerable<>
+  nameWithType: System.Collections.Generic.IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: System.Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Team.ExcludedUsersUpdateArg.Users*
+  commentId: Overload:Dropbox.Api.Team.ExcludedUsersUpdateArg.Users
+  name: Users
+  nameWithType: ExcludedUsersUpdateArg.Users
+  fullName: Dropbox.Api.Team.ExcludedUsersUpdateArg.Users
+- uid: System.Collections.Generic.IList{Dropbox.Api.Team.UserSelectorArg}
+  commentId: '!:System.Collections.Generic.IList{Dropbox.Api.Team.UserSelectorArg}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<UserSelectorArg>
+  nameWithType: System.Collections.Generic.IList<UserSelectorArg>
+  fullName: System.Collections.Generic.IList<Dropbox.Api.Team.UserSelectorArg>
+  nameWithType.vb: System.Collections.Generic.IList(Of UserSelectorArg)
+  fullName.vb: System.Collections.Generic.IList(Of Dropbox.Api.Team.UserSelectorArg)
+  name.vb: System.Collections.Generic.IList(Of UserSelectorArg)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Team.UserSelectorArg
+    name: UserSelectorArg
+    nameWithType: UserSelectorArg
+    fullName: Dropbox.Api.Team.UserSelectorArg
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Team.UserSelectorArg
+    name: UserSelectorArg
+    nameWithType: UserSelectorArg
+    fullName: Dropbox.Api.Team.UserSelectorArg
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  isExternal: true
+  name: System.Collections.Generic.IList<>
+  nameWithType: System.Collections.Generic.IList<>
+  fullName: System.Collections.Generic.IList<>
+  nameWithType.vb: System.Collections.Generic.IList(Of )
+  fullName.vb: System.Collections.Generic.IList(Of )
+  name.vb: System.Collections.Generic.IList(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+shouldSkipMarkup: true

@@ -1,0 +1,190 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.FileProperties.LookupError.NotFolder
+  commentId: T:Dropbox.Api.FileProperties.LookupError.NotFolder
+  id: LookupError.NotFolder
+  parent: Dropbox.Api.FileProperties
+  children:
+  - Dropbox.Api.FileProperties.LookupError.NotFolder.Instance
+  langs:
+  - csharp
+  - vb
+  name: LookupError.NotFolder
+  nameWithType: LookupError.NotFolder
+  fullName: Dropbox.Api.FileProperties.LookupError.NotFolder
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/LookupError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NotFolder
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/LookupError.cs
+    startLine: 509
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>We were expecting a folder, but the given path refers to something that isn&apos;t\na folder.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class NotFolder : LookupError'
+    content.vb: >-
+      Public NotInheritable Class NotFolder
+          Inherits LookupError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.FileProperties.LookupError
+  inheritedMembers:
+  - Dropbox.Api.FileProperties.LookupError.IsMalformedPath
+  - Dropbox.Api.FileProperties.LookupError.AsMalformedPath
+  - Dropbox.Api.FileProperties.LookupError.IsNotFound
+  - Dropbox.Api.FileProperties.LookupError.AsNotFound
+  - Dropbox.Api.FileProperties.LookupError.IsNotFile
+  - Dropbox.Api.FileProperties.LookupError.AsNotFile
+  - Dropbox.Api.FileProperties.LookupError.IsNotFolder
+  - Dropbox.Api.FileProperties.LookupError.AsNotFolder
+  - Dropbox.Api.FileProperties.LookupError.IsRestrictedContent
+  - Dropbox.Api.FileProperties.LookupError.AsRestrictedContent
+  - Dropbox.Api.FileProperties.LookupError.IsOther
+  - Dropbox.Api.FileProperties.LookupError.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.FileProperties.LookupError.NotFolder.Instance
+  commentId: F:Dropbox.Api.FileProperties.LookupError.NotFolder.Instance
+  id: Instance
+  parent: Dropbox.Api.FileProperties.LookupError.NotFolder
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: LookupError.NotFolder.Instance
+  fullName: Dropbox.Api.FileProperties.LookupError.NotFolder.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/LookupError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/LookupError.cs
+    startLine: 533
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>A singleton instance of NotFolder</p>\n"
+  example: []
+  syntax:
+    content: public static readonly LookupError.NotFolder Instance
+    return:
+      type: Dropbox.Api.FileProperties.LookupError.NotFolder
+    content.vb: Public Shared ReadOnly Instance As LookupError.NotFolder
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.FileProperties
+  commentId: N:Dropbox.Api.FileProperties
+  name: Dropbox.Api.FileProperties
+  nameWithType: Dropbox.Api.FileProperties
+  fullName: Dropbox.Api.FileProperties
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.FileProperties.LookupError
+  commentId: T:Dropbox.Api.FileProperties.LookupError
+  parent: Dropbox.Api.FileProperties
+  name: LookupError
+  nameWithType: LookupError
+  fullName: Dropbox.Api.FileProperties.LookupError
+- uid: Dropbox.Api.FileProperties.LookupError.IsMalformedPath
+  commentId: P:Dropbox.Api.FileProperties.LookupError.IsMalformedPath
+  parent: Dropbox.Api.FileProperties.LookupError
+  name: IsMalformedPath
+  nameWithType: LookupError.IsMalformedPath
+  fullName: Dropbox.Api.FileProperties.LookupError.IsMalformedPath
+- uid: Dropbox.Api.FileProperties.LookupError.AsMalformedPath
+  commentId: P:Dropbox.Api.FileProperties.LookupError.AsMalformedPath
+  parent: Dropbox.Api.FileProperties.LookupError
+  name: AsMalformedPath
+  nameWithType: LookupError.AsMalformedPath
+  fullName: Dropbox.Api.FileProperties.LookupError.AsMalformedPath
+- uid: Dropbox.Api.FileProperties.LookupError.IsNotFound
+  commentId: P:Dropbox.Api.FileProperties.LookupError.IsNotFound
+  parent: Dropbox.Api.FileProperties.LookupError
+  name: IsNotFound
+  nameWithType: LookupError.IsNotFound
+  fullName: Dropbox.Api.FileProperties.LookupError.IsNotFound
+- uid: Dropbox.Api.FileProperties.LookupError.AsNotFound
+  commentId: P:Dropbox.Api.FileProperties.LookupError.AsNotFound
+  parent: Dropbox.Api.FileProperties.LookupError
+  name: AsNotFound
+  nameWithType: LookupError.AsNotFound
+  fullName: Dropbox.Api.FileProperties.LookupError.AsNotFound
+- uid: Dropbox.Api.FileProperties.LookupError.IsNotFile
+  commentId: P:Dropbox.Api.FileProperties.LookupError.IsNotFile
+  parent: Dropbox.Api.FileProperties.LookupError
+  name: IsNotFile
+  nameWithType: LookupError.IsNotFile
+  fullName: Dropbox.Api.FileProperties.LookupError.IsNotFile
+- uid: Dropbox.Api.FileProperties.LookupError.AsNotFile
+  commentId: P:Dropbox.Api.FileProperties.LookupError.AsNotFile
+  parent: Dropbox.Api.FileProperties.LookupError
+  name: AsNotFile
+  nameWithType: LookupError.AsNotFile
+  fullName: Dropbox.Api.FileProperties.LookupError.AsNotFile
+- uid: Dropbox.Api.FileProperties.LookupError.IsNotFolder
+  commentId: P:Dropbox.Api.FileProperties.LookupError.IsNotFolder
+  parent: Dropbox.Api.FileProperties.LookupError
+  name: IsNotFolder
+  nameWithType: LookupError.IsNotFolder
+  fullName: Dropbox.Api.FileProperties.LookupError.IsNotFolder
+- uid: Dropbox.Api.FileProperties.LookupError.AsNotFolder
+  commentId: P:Dropbox.Api.FileProperties.LookupError.AsNotFolder
+  parent: Dropbox.Api.FileProperties.LookupError
+  name: AsNotFolder
+  nameWithType: LookupError.AsNotFolder
+  fullName: Dropbox.Api.FileProperties.LookupError.AsNotFolder
+- uid: Dropbox.Api.FileProperties.LookupError.IsRestrictedContent
+  commentId: P:Dropbox.Api.FileProperties.LookupError.IsRestrictedContent
+  parent: Dropbox.Api.FileProperties.LookupError
+  name: IsRestrictedContent
+  nameWithType: LookupError.IsRestrictedContent
+  fullName: Dropbox.Api.FileProperties.LookupError.IsRestrictedContent
+- uid: Dropbox.Api.FileProperties.LookupError.AsRestrictedContent
+  commentId: P:Dropbox.Api.FileProperties.LookupError.AsRestrictedContent
+  parent: Dropbox.Api.FileProperties.LookupError
+  name: AsRestrictedContent
+  nameWithType: LookupError.AsRestrictedContent
+  fullName: Dropbox.Api.FileProperties.LookupError.AsRestrictedContent
+- uid: Dropbox.Api.FileProperties.LookupError.IsOther
+  commentId: P:Dropbox.Api.FileProperties.LookupError.IsOther
+  parent: Dropbox.Api.FileProperties.LookupError
+  name: IsOther
+  nameWithType: LookupError.IsOther
+  fullName: Dropbox.Api.FileProperties.LookupError.IsOther
+- uid: Dropbox.Api.FileProperties.LookupError.AsOther
+  commentId: P:Dropbox.Api.FileProperties.LookupError.AsOther
+  parent: Dropbox.Api.FileProperties.LookupError
+  name: AsOther
+  nameWithType: LookupError.AsOther
+  fullName: Dropbox.Api.FileProperties.LookupError.AsOther
+- uid: Dropbox.Api.FileProperties.LookupError.NotFolder
+  commentId: T:Dropbox.Api.FileProperties.LookupError.NotFolder
+  parent: Dropbox.Api.FileProperties
+  name: LookupError.NotFolder
+  nameWithType: LookupError.NotFolder
+  fullName: Dropbox.Api.FileProperties.LookupError.NotFolder
+shouldSkipMarkup: true

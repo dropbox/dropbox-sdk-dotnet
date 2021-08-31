@@ -1,0 +1,266 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.GroupDeleteDetails
+  commentId: T:Dropbox.Api.TeamLog.GroupDeleteDetails
+  id: GroupDeleteDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.GroupDeleteDetails.#ctor
+  - Dropbox.Api.TeamLog.GroupDeleteDetails.#ctor(System.Nullable{System.Boolean})
+  - Dropbox.Api.TeamLog.GroupDeleteDetails.IsCompanyManaged
+  langs:
+  - csharp
+  - vb
+  name: GroupDeleteDetails
+  nameWithType: GroupDeleteDetails
+  fullName: Dropbox.Api.TeamLog.GroupDeleteDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupDeleteDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GroupDeleteDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupDeleteDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Deleted group.</p>\n"
+  example: []
+  syntax:
+    content: 'public class GroupDeleteDetails : object'
+    content.vb: >-
+      Public Class GroupDeleteDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.GroupDeleteDetails.#ctor(System.Nullable{System.Boolean})
+  commentId: M:Dropbox.Api.TeamLog.GroupDeleteDetails.#ctor(System.Nullable{System.Boolean})
+  id: '#ctor(System.Nullable{System.Boolean})'
+  parent: Dropbox.Api.TeamLog.GroupDeleteDetails
+  langs:
+  - csharp
+  - vb
+  name: GroupDeleteDetails(Nullable<Boolean>)
+  nameWithType: GroupDeleteDetails.GroupDeleteDetails(Nullable<Boolean>)
+  fullName: Dropbox.Api.TeamLog.GroupDeleteDetails.GroupDeleteDetails(System.Nullable<System.Boolean>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupDeleteDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupDeleteDetails.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.GroupDeleteDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public GroupDeleteDetails(bool? isCompanyManaged = null)
+    parameters:
+    - id: isCompanyManaged
+      type: System.Nullable{System.Boolean}
+      description: Is company managed group.
+    content.vb: Public Sub New(isCompanyManaged As Boolean? = Nothing)
+  overload: Dropbox.Api.TeamLog.GroupDeleteDetails.#ctor*
+  nameWithType.vb: GroupDeleteDetails.GroupDeleteDetails(Nullable(Of Boolean))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.TeamLog.GroupDeleteDetails.GroupDeleteDetails(System.Nullable(Of System.Boolean))
+  name.vb: GroupDeleteDetails(Nullable(Of Boolean))
+- uid: Dropbox.Api.TeamLog.GroupDeleteDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.GroupDeleteDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.GroupDeleteDetails
+  langs:
+  - csharp
+  - vb
+  name: GroupDeleteDetails()
+  nameWithType: GroupDeleteDetails.GroupDeleteDetails()
+  fullName: Dropbox.Api.TeamLog.GroupDeleteDetails.GroupDeleteDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupDeleteDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupDeleteDetails.cs
+    startLine: 45
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.GroupDeleteDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public GroupDeleteDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.GroupDeleteDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.GroupDeleteDetails.IsCompanyManaged
+  commentId: P:Dropbox.Api.TeamLog.GroupDeleteDetails.IsCompanyManaged
+  id: IsCompanyManaged
+  parent: Dropbox.Api.TeamLog.GroupDeleteDetails
+  langs:
+  - csharp
+  - vb
+  name: IsCompanyManaged
+  nameWithType: GroupDeleteDetails.IsCompanyManaged
+  fullName: Dropbox.Api.TeamLog.GroupDeleteDetails.IsCompanyManaged
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupDeleteDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsCompanyManaged
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupDeleteDetails.cs
+    startLine: 53
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Is company managed group.</p>\n"
+  example: []
+  syntax:
+    content: public bool? IsCompanyManaged { get; protected set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: Public Property IsCompanyManaged As Boolean?
+  overload: Dropbox.Api.TeamLog.GroupDeleteDetails.IsCompanyManaged*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.GroupDeleteDetails
+  commentId: T:Dropbox.Api.TeamLog.GroupDeleteDetails
+  parent: Dropbox.Api.TeamLog
+  name: GroupDeleteDetails
+  nameWithType: GroupDeleteDetails
+  fullName: Dropbox.Api.TeamLog.GroupDeleteDetails
+- uid: Dropbox.Api.TeamLog.GroupDeleteDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.GroupDeleteDetails.#ctor
+  name: GroupDeleteDetails
+  nameWithType: GroupDeleteDetails.GroupDeleteDetails
+  fullName: Dropbox.Api.TeamLog.GroupDeleteDetails.GroupDeleteDetails
+- uid: System.Nullable{System.Boolean}
+  commentId: '!:System.Nullable{System.Boolean}'
+  definition: System.Nullable`1
+  name: Nullable<Boolean>
+  nameWithType: Nullable<Boolean>
+  fullName: System.Nullable<System.Boolean>
+  nameWithType.vb: Nullable(Of Boolean)
+  fullName.vb: System.Nullable(Of System.Boolean)
+  name.vb: Nullable(Of Boolean)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  isExternal: true
+  name: Nullable<>
+  nameWithType: Nullable<>
+  fullName: System.Nullable<>
+  nameWithType.vb: Nullable(Of )
+  fullName.vb: System.Nullable(Of )
+  name.vb: Nullable(Of )
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.TeamLog.GroupDeleteDetails.IsCompanyManaged*
+  commentId: Overload:Dropbox.Api.TeamLog.GroupDeleteDetails.IsCompanyManaged
+  name: IsCompanyManaged
+  nameWithType: GroupDeleteDetails.IsCompanyManaged
+  fullName: Dropbox.Api.TeamLog.GroupDeleteDetails.IsCompanyManaged
+shouldSkipMarkup: true

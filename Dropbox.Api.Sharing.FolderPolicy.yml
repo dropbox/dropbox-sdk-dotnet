@@ -1,0 +1,433 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.FolderPolicy
+  commentId: T:Dropbox.Api.Sharing.FolderPolicy
+  id: FolderPolicy
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.FolderPolicy.#ctor
+  - Dropbox.Api.Sharing.FolderPolicy.#ctor(Dropbox.Api.Sharing.AclUpdatePolicy,Dropbox.Api.Sharing.SharedLinkPolicy,Dropbox.Api.Sharing.MemberPolicy,Dropbox.Api.Sharing.MemberPolicy,Dropbox.Api.Sharing.ViewerInfoPolicy)
+  - Dropbox.Api.Sharing.FolderPolicy.AclUpdatePolicy
+  - Dropbox.Api.Sharing.FolderPolicy.MemberPolicy
+  - Dropbox.Api.Sharing.FolderPolicy.ResolvedMemberPolicy
+  - Dropbox.Api.Sharing.FolderPolicy.SharedLinkPolicy
+  - Dropbox.Api.Sharing.FolderPolicy.ViewerInfoPolicy
+  langs:
+  - csharp
+  - vb
+  name: FolderPolicy
+  nameWithType: FolderPolicy
+  fullName: Dropbox.Api.Sharing.FolderPolicy
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: FolderPolicy
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderPolicy.cs
+    startLine: 17
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>A set of policies governing membership and privileges for a shared folder.</p>\n"
+  example: []
+  syntax:
+    content: 'public class FolderPolicy : object'
+    content.vb: >-
+      Public Class FolderPolicy
+          Inherits Object
+  seealso:
+  - linkId: Dropbox.Api.Sharing.SharedFileMetadata
+    commentId: T:Dropbox.Api.Sharing.SharedFileMetadata
+  - linkId: Dropbox.Api.Sharing.SharedFolderMetadata
+    commentId: T:Dropbox.Api.Sharing.SharedFolderMetadata
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Sharing.FolderPolicy.#ctor(Dropbox.Api.Sharing.AclUpdatePolicy,Dropbox.Api.Sharing.SharedLinkPolicy,Dropbox.Api.Sharing.MemberPolicy,Dropbox.Api.Sharing.MemberPolicy,Dropbox.Api.Sharing.ViewerInfoPolicy)
+  commentId: M:Dropbox.Api.Sharing.FolderPolicy.#ctor(Dropbox.Api.Sharing.AclUpdatePolicy,Dropbox.Api.Sharing.SharedLinkPolicy,Dropbox.Api.Sharing.MemberPolicy,Dropbox.Api.Sharing.MemberPolicy,Dropbox.Api.Sharing.ViewerInfoPolicy)
+  id: '#ctor(Dropbox.Api.Sharing.AclUpdatePolicy,Dropbox.Api.Sharing.SharedLinkPolicy,Dropbox.Api.Sharing.MemberPolicy,Dropbox.Api.Sharing.MemberPolicy,Dropbox.Api.Sharing.ViewerInfoPolicy)'
+  parent: Dropbox.Api.Sharing.FolderPolicy
+  langs:
+  - csharp
+  - vb
+  name: FolderPolicy(AclUpdatePolicy, SharedLinkPolicy, MemberPolicy, MemberPolicy, ViewerInfoPolicy)
+  nameWithType: FolderPolicy.FolderPolicy(AclUpdatePolicy, SharedLinkPolicy, MemberPolicy, MemberPolicy, ViewerInfoPolicy)
+  fullName: Dropbox.Api.Sharing.FolderPolicy.FolderPolicy(Dropbox.Api.Sharing.AclUpdatePolicy, Dropbox.Api.Sharing.SharedLinkPolicy, Dropbox.Api.Sharing.MemberPolicy, Dropbox.Api.Sharing.MemberPolicy, Dropbox.Api.Sharing.ViewerInfoPolicy)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderPolicy.cs
+    startLine: 46
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.FolderPolicy\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public FolderPolicy(AclUpdatePolicy aclUpdatePolicy, SharedLinkPolicy sharedLinkPolicy, MemberPolicy memberPolicy = null, MemberPolicy resolvedMemberPolicy = null, ViewerInfoPolicy viewerInfoPolicy = null)
+    parameters:
+    - id: aclUpdatePolicy
+      type: Dropbox.Api.Sharing.AclUpdatePolicy
+      description: >-
+        Who can add and remove members from this shared
+
+        folder.
+    - id: sharedLinkPolicy
+      type: Dropbox.Api.Sharing.SharedLinkPolicy
+      description: Who links can be shared with.
+    - id: memberPolicy
+      type: Dropbox.Api.Sharing.MemberPolicy
+      description: >-
+        Who can be a member of this shared folder, as set on the
+
+        folder itself. The effective policy may differ from this value if the team-wide
+
+        policy is more restrictive. Present only if the folder is owned by a team.
+    - id: resolvedMemberPolicy
+      type: Dropbox.Api.Sharing.MemberPolicy
+      description: >-
+        Who can be a member of this shared folder,
+
+        taking into account both the folder and the team-wide policy. This value may differ
+
+        from that of member_policy if the team-wide policy is more restrictive than the
+
+        folder policy. Present only if the folder is owned by a team.
+    - id: viewerInfoPolicy
+      type: Dropbox.Api.Sharing.ViewerInfoPolicy
+      description: >-
+        Who can enable/disable viewer info for this shared
+
+        folder.
+    content.vb: Public Sub New(aclUpdatePolicy As AclUpdatePolicy, sharedLinkPolicy As SharedLinkPolicy, memberPolicy As MemberPolicy = Nothing, resolvedMemberPolicy As MemberPolicy = Nothing, viewerInfoPolicy As ViewerInfoPolicy = Nothing)
+  overload: Dropbox.Api.Sharing.FolderPolicy.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.FolderPolicy.#ctor
+  commentId: M:Dropbox.Api.Sharing.FolderPolicy.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Sharing.FolderPolicy
+  langs:
+  - csharp
+  - vb
+  name: FolderPolicy()
+  nameWithType: FolderPolicy.FolderPolicy()
+  fullName: Dropbox.Api.Sharing.FolderPolicy.FolderPolicy()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderPolicy.cs
+    startLine: 74
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.FolderPolicy\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public FolderPolicy()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Sharing.FolderPolicy.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.FolderPolicy.AclUpdatePolicy
+  commentId: P:Dropbox.Api.Sharing.FolderPolicy.AclUpdatePolicy
+  id: AclUpdatePolicy
+  parent: Dropbox.Api.Sharing.FolderPolicy
+  langs:
+  - csharp
+  - vb
+  name: AclUpdatePolicy
+  nameWithType: FolderPolicy.AclUpdatePolicy
+  fullName: Dropbox.Api.Sharing.FolderPolicy.AclUpdatePolicy
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AclUpdatePolicy
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderPolicy.cs
+    startLine: 82
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Who can add and remove members from this shared folder.</p>\n"
+  example: []
+  syntax:
+    content: public AclUpdatePolicy AclUpdatePolicy { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.AclUpdatePolicy
+    content.vb: Public Property AclUpdatePolicy As AclUpdatePolicy
+  overload: Dropbox.Api.Sharing.FolderPolicy.AclUpdatePolicy*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.FolderPolicy.SharedLinkPolicy
+  commentId: P:Dropbox.Api.Sharing.FolderPolicy.SharedLinkPolicy
+  id: SharedLinkPolicy
+  parent: Dropbox.Api.Sharing.FolderPolicy
+  langs:
+  - csharp
+  - vb
+  name: SharedLinkPolicy
+  nameWithType: FolderPolicy.SharedLinkPolicy
+  fullName: Dropbox.Api.Sharing.FolderPolicy.SharedLinkPolicy
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SharedLinkPolicy
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderPolicy.cs
+    startLine: 87
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Who links can be shared with.</p>\n"
+  example: []
+  syntax:
+    content: public SharedLinkPolicy SharedLinkPolicy { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.SharedLinkPolicy
+    content.vb: Public Property SharedLinkPolicy As SharedLinkPolicy
+  overload: Dropbox.Api.Sharing.FolderPolicy.SharedLinkPolicy*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.FolderPolicy.MemberPolicy
+  commentId: P:Dropbox.Api.Sharing.FolderPolicy.MemberPolicy
+  id: MemberPolicy
+  parent: Dropbox.Api.Sharing.FolderPolicy
+  langs:
+  - csharp
+  - vb
+  name: MemberPolicy
+  nameWithType: FolderPolicy.MemberPolicy
+  fullName: Dropbox.Api.Sharing.FolderPolicy.MemberPolicy
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: MemberPolicy
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderPolicy.cs
+    startLine: 94
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Who can be a member of this shared folder, as set on the folder itself. The\neffective policy may differ from this value if the team-wide policy is more\nrestrictive. Present only if the folder is owned by a team.</p>\n"
+  example: []
+  syntax:
+    content: public MemberPolicy MemberPolicy { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.MemberPolicy
+    content.vb: Public Property MemberPolicy As MemberPolicy
+  overload: Dropbox.Api.Sharing.FolderPolicy.MemberPolicy*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.FolderPolicy.ResolvedMemberPolicy
+  commentId: P:Dropbox.Api.Sharing.FolderPolicy.ResolvedMemberPolicy
+  id: ResolvedMemberPolicy
+  parent: Dropbox.Api.Sharing.FolderPolicy
+  langs:
+  - csharp
+  - vb
+  name: ResolvedMemberPolicy
+  nameWithType: FolderPolicy.ResolvedMemberPolicy
+  fullName: Dropbox.Api.Sharing.FolderPolicy.ResolvedMemberPolicy
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ResolvedMemberPolicy
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderPolicy.cs
+    startLine: 102
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Who can be a member of this shared folder, taking into account both the\nfolder and the team-wide policy. This value may differ from that of member_policy\nif the team-wide policy is more restrictive than the folder policy. Present only if\nthe folder is owned by a team.</p>\n"
+  example: []
+  syntax:
+    content: public MemberPolicy ResolvedMemberPolicy { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.MemberPolicy
+    content.vb: Public Property ResolvedMemberPolicy As MemberPolicy
+  overload: Dropbox.Api.Sharing.FolderPolicy.ResolvedMemberPolicy*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.FolderPolicy.ViewerInfoPolicy
+  commentId: P:Dropbox.Api.Sharing.FolderPolicy.ViewerInfoPolicy
+  id: ViewerInfoPolicy
+  parent: Dropbox.Api.Sharing.FolderPolicy
+  langs:
+  - csharp
+  - vb
+  name: ViewerInfoPolicy
+  nameWithType: FolderPolicy.ViewerInfoPolicy
+  fullName: Dropbox.Api.Sharing.FolderPolicy.ViewerInfoPolicy
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ViewerInfoPolicy
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderPolicy.cs
+    startLine: 107
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Who can enable/disable viewer info for this shared folder.</p>\n"
+  example: []
+  syntax:
+    content: public ViewerInfoPolicy ViewerInfoPolicy { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.ViewerInfoPolicy
+    content.vb: Public Property ViewerInfoPolicy As ViewerInfoPolicy
+  overload: Dropbox.Api.Sharing.FolderPolicy.ViewerInfoPolicy*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Sharing.SharedFileMetadata
+  commentId: T:Dropbox.Api.Sharing.SharedFileMetadata
+  parent: Dropbox.Api.Sharing
+  name: SharedFileMetadata
+  nameWithType: SharedFileMetadata
+  fullName: Dropbox.Api.Sharing.SharedFileMetadata
+- uid: Dropbox.Api.Sharing.SharedFolderMetadata
+  commentId: T:Dropbox.Api.Sharing.SharedFolderMetadata
+  parent: Dropbox.Api.Sharing
+  name: SharedFolderMetadata
+  nameWithType: SharedFolderMetadata
+  fullName: Dropbox.Api.Sharing.SharedFolderMetadata
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.FolderPolicy
+  commentId: T:Dropbox.Api.Sharing.FolderPolicy
+  parent: Dropbox.Api.Sharing
+  name: FolderPolicy
+  nameWithType: FolderPolicy
+  fullName: Dropbox.Api.Sharing.FolderPolicy
+- uid: Dropbox.Api.Sharing.FolderPolicy.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.FolderPolicy.#ctor
+  name: FolderPolicy
+  nameWithType: FolderPolicy.FolderPolicy
+  fullName: Dropbox.Api.Sharing.FolderPolicy.FolderPolicy
+- uid: Dropbox.Api.Sharing.AclUpdatePolicy
+  commentId: T:Dropbox.Api.Sharing.AclUpdatePolicy
+  parent: Dropbox.Api.Sharing
+  name: AclUpdatePolicy
+  nameWithType: AclUpdatePolicy
+  fullName: Dropbox.Api.Sharing.AclUpdatePolicy
+- uid: Dropbox.Api.Sharing.SharedLinkPolicy
+  commentId: T:Dropbox.Api.Sharing.SharedLinkPolicy
+  parent: Dropbox.Api.Sharing
+  name: SharedLinkPolicy
+  nameWithType: SharedLinkPolicy
+  fullName: Dropbox.Api.Sharing.SharedLinkPolicy
+- uid: Dropbox.Api.Sharing.MemberPolicy
+  commentId: T:Dropbox.Api.Sharing.MemberPolicy
+  parent: Dropbox.Api.Sharing
+  name: MemberPolicy
+  nameWithType: MemberPolicy
+  fullName: Dropbox.Api.Sharing.MemberPolicy
+- uid: Dropbox.Api.Sharing.ViewerInfoPolicy
+  commentId: T:Dropbox.Api.Sharing.ViewerInfoPolicy
+  parent: Dropbox.Api.Sharing
+  name: ViewerInfoPolicy
+  nameWithType: ViewerInfoPolicy
+  fullName: Dropbox.Api.Sharing.ViewerInfoPolicy
+- uid: Dropbox.Api.Sharing.FolderPolicy.AclUpdatePolicy*
+  commentId: Overload:Dropbox.Api.Sharing.FolderPolicy.AclUpdatePolicy
+  name: AclUpdatePolicy
+  nameWithType: FolderPolicy.AclUpdatePolicy
+  fullName: Dropbox.Api.Sharing.FolderPolicy.AclUpdatePolicy
+- uid: Dropbox.Api.Sharing.FolderPolicy.SharedLinkPolicy*
+  commentId: Overload:Dropbox.Api.Sharing.FolderPolicy.SharedLinkPolicy
+  name: SharedLinkPolicy
+  nameWithType: FolderPolicy.SharedLinkPolicy
+  fullName: Dropbox.Api.Sharing.FolderPolicy.SharedLinkPolicy
+- uid: Dropbox.Api.Sharing.FolderPolicy.MemberPolicy*
+  commentId: Overload:Dropbox.Api.Sharing.FolderPolicy.MemberPolicy
+  name: MemberPolicy
+  nameWithType: FolderPolicy.MemberPolicy
+  fullName: Dropbox.Api.Sharing.FolderPolicy.MemberPolicy
+- uid: Dropbox.Api.Sharing.FolderPolicy.ResolvedMemberPolicy*
+  commentId: Overload:Dropbox.Api.Sharing.FolderPolicy.ResolvedMemberPolicy
+  name: ResolvedMemberPolicy
+  nameWithType: FolderPolicy.ResolvedMemberPolicy
+  fullName: Dropbox.Api.Sharing.FolderPolicy.ResolvedMemberPolicy
+- uid: Dropbox.Api.Sharing.FolderPolicy.ViewerInfoPolicy*
+  commentId: Overload:Dropbox.Api.Sharing.FolderPolicy.ViewerInfoPolicy
+  name: ViewerInfoPolicy
+  nameWithType: FolderPolicy.ViewerInfoPolicy
+  fullName: Dropbox.Api.Sharing.FolderPolicy.ViewerInfoPolicy
+shouldSkipMarkup: true

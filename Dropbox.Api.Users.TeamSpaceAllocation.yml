@@ -1,0 +1,407 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Users.TeamSpaceAllocation
+  commentId: T:Dropbox.Api.Users.TeamSpaceAllocation
+  id: TeamSpaceAllocation
+  parent: Dropbox.Api.Users
+  children:
+  - Dropbox.Api.Users.TeamSpaceAllocation.#ctor
+  - Dropbox.Api.Users.TeamSpaceAllocation.#ctor(System.UInt64,System.UInt64,System.UInt64,Dropbox.Api.TeamCommon.MemberSpaceLimitType,System.UInt64)
+  - Dropbox.Api.Users.TeamSpaceAllocation.Allocated
+  - Dropbox.Api.Users.TeamSpaceAllocation.Used
+  - Dropbox.Api.Users.TeamSpaceAllocation.UserWithinTeamSpaceAllocated
+  - Dropbox.Api.Users.TeamSpaceAllocation.UserWithinTeamSpaceLimitType
+  - Dropbox.Api.Users.TeamSpaceAllocation.UserWithinTeamSpaceUsedCached
+  langs:
+  - csharp
+  - vb
+  name: TeamSpaceAllocation
+  nameWithType: TeamSpaceAllocation
+  fullName: Dropbox.Api.Users.TeamSpaceAllocation
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/TeamSpaceAllocation.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TeamSpaceAllocation
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/TeamSpaceAllocation.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users
+  summary: "\n<p>The team space allocation object</p>\n"
+  example: []
+  syntax:
+    content: 'public class TeamSpaceAllocation : object'
+    content.vb: >-
+      Public Class TeamSpaceAllocation
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Users.TeamSpaceAllocation.#ctor(System.UInt64,System.UInt64,System.UInt64,Dropbox.Api.TeamCommon.MemberSpaceLimitType,System.UInt64)
+  commentId: M:Dropbox.Api.Users.TeamSpaceAllocation.#ctor(System.UInt64,System.UInt64,System.UInt64,Dropbox.Api.TeamCommon.MemberSpaceLimitType,System.UInt64)
+  id: '#ctor(System.UInt64,System.UInt64,System.UInt64,Dropbox.Api.TeamCommon.MemberSpaceLimitType,System.UInt64)'
+  parent: Dropbox.Api.Users.TeamSpaceAllocation
+  langs:
+  - csharp
+  - vb
+  name: TeamSpaceAllocation(UInt64, UInt64, UInt64, MemberSpaceLimitType, UInt64)
+  nameWithType: TeamSpaceAllocation.TeamSpaceAllocation(UInt64, UInt64, UInt64, MemberSpaceLimitType, UInt64)
+  fullName: Dropbox.Api.Users.TeamSpaceAllocation.TeamSpaceAllocation(System.UInt64, System.UInt64, System.UInt64, Dropbox.Api.TeamCommon.MemberSpaceLimitType, System.UInt64)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/TeamSpaceAllocation.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/TeamSpaceAllocation.cs
+    startLine: 44
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Users.TeamSpaceAllocation\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public TeamSpaceAllocation(ulong used, ulong allocated, ulong userWithinTeamSpaceAllocated, MemberSpaceLimitType userWithinTeamSpaceLimitType, ulong userWithinTeamSpaceUsedCached)
+    parameters:
+    - id: used
+      type: System.UInt64
+      description: >-
+        The total space currently used by the user&apos;s team
+
+        (bytes).
+    - id: allocated
+      type: System.UInt64
+      description: >-
+        The total space allocated to the user&apos;s team
+
+        (bytes).
+    - id: userWithinTeamSpaceAllocated
+      type: System.UInt64
+      description: >-
+        The total space allocated to the user
+
+        within its team allocated space (0 means that no restriction is imposed on the
+
+        user&apos;s quota within its team).
+    - id: userWithinTeamSpaceLimitType
+      type: Dropbox.Api.TeamCommon.MemberSpaceLimitType
+      description: >-
+        The type of the space limit imposed on
+
+        the team member (off, alert_only, stop_sync).
+    - id: userWithinTeamSpaceUsedCached
+      type: System.UInt64
+      description: >-
+        An accurate cached calculation of a
+
+        team member&apos;s total space usage (bytes).
+    content.vb: Public Sub New(used As ULong, allocated As ULong, userWithinTeamSpaceAllocated As ULong, userWithinTeamSpaceLimitType As MemberSpaceLimitType, userWithinTeamSpaceUsedCached As ULong)
+  overload: Dropbox.Api.Users.TeamSpaceAllocation.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Users.TeamSpaceAllocation.#ctor
+  commentId: M:Dropbox.Api.Users.TeamSpaceAllocation.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Users.TeamSpaceAllocation
+  langs:
+  - csharp
+  - vb
+  name: TeamSpaceAllocation()
+  nameWithType: TeamSpaceAllocation.TeamSpaceAllocation()
+  fullName: Dropbox.Api.Users.TeamSpaceAllocation.TeamSpaceAllocation()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/TeamSpaceAllocation.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/TeamSpaceAllocation.cs
+    startLine: 68
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Users.TeamSpaceAllocation\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public TeamSpaceAllocation()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Users.TeamSpaceAllocation.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Users.TeamSpaceAllocation.Used
+  commentId: P:Dropbox.Api.Users.TeamSpaceAllocation.Used
+  id: Used
+  parent: Dropbox.Api.Users.TeamSpaceAllocation
+  langs:
+  - csharp
+  - vb
+  name: Used
+  nameWithType: TeamSpaceAllocation.Used
+  fullName: Dropbox.Api.Users.TeamSpaceAllocation.Used
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/TeamSpaceAllocation.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Used
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/TeamSpaceAllocation.cs
+    startLine: 76
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users
+  summary: "\n<p>The total space currently used by the user&apos;s team (bytes).</p>\n"
+  example: []
+  syntax:
+    content: public ulong Used { get; protected set; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: Public Property Used As ULong
+  overload: Dropbox.Api.Users.TeamSpaceAllocation.Used*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Users.TeamSpaceAllocation.Allocated
+  commentId: P:Dropbox.Api.Users.TeamSpaceAllocation.Allocated
+  id: Allocated
+  parent: Dropbox.Api.Users.TeamSpaceAllocation
+  langs:
+  - csharp
+  - vb
+  name: Allocated
+  nameWithType: TeamSpaceAllocation.Allocated
+  fullName: Dropbox.Api.Users.TeamSpaceAllocation.Allocated
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/TeamSpaceAllocation.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Allocated
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/TeamSpaceAllocation.cs
+    startLine: 81
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users
+  summary: "\n<p>The total space allocated to the user&apos;s team (bytes).</p>\n"
+  example: []
+  syntax:
+    content: public ulong Allocated { get; protected set; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: Public Property Allocated As ULong
+  overload: Dropbox.Api.Users.TeamSpaceAllocation.Allocated*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Users.TeamSpaceAllocation.UserWithinTeamSpaceAllocated
+  commentId: P:Dropbox.Api.Users.TeamSpaceAllocation.UserWithinTeamSpaceAllocated
+  id: UserWithinTeamSpaceAllocated
+  parent: Dropbox.Api.Users.TeamSpaceAllocation
+  langs:
+  - csharp
+  - vb
+  name: UserWithinTeamSpaceAllocated
+  nameWithType: TeamSpaceAllocation.UserWithinTeamSpaceAllocated
+  fullName: Dropbox.Api.Users.TeamSpaceAllocation.UserWithinTeamSpaceAllocated
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/TeamSpaceAllocation.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: UserWithinTeamSpaceAllocated
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/TeamSpaceAllocation.cs
+    startLine: 87
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users
+  summary: "\n<p>The total space allocated to the user within its team allocated space (0\nmeans that no restriction is imposed on the user&apos;s quota within its team).</p>\n"
+  example: []
+  syntax:
+    content: public ulong UserWithinTeamSpaceAllocated { get; protected set; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: Public Property UserWithinTeamSpaceAllocated As ULong
+  overload: Dropbox.Api.Users.TeamSpaceAllocation.UserWithinTeamSpaceAllocated*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Users.TeamSpaceAllocation.UserWithinTeamSpaceLimitType
+  commentId: P:Dropbox.Api.Users.TeamSpaceAllocation.UserWithinTeamSpaceLimitType
+  id: UserWithinTeamSpaceLimitType
+  parent: Dropbox.Api.Users.TeamSpaceAllocation
+  langs:
+  - csharp
+  - vb
+  name: UserWithinTeamSpaceLimitType
+  nameWithType: TeamSpaceAllocation.UserWithinTeamSpaceLimitType
+  fullName: Dropbox.Api.Users.TeamSpaceAllocation.UserWithinTeamSpaceLimitType
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/TeamSpaceAllocation.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: UserWithinTeamSpaceLimitType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/TeamSpaceAllocation.cs
+    startLine: 93
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users
+  summary: "\n<p>The type of the space limit imposed on the team member (off, alert_only,\nstop_sync).</p>\n"
+  example: []
+  syntax:
+    content: public MemberSpaceLimitType UserWithinTeamSpaceLimitType { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamCommon.MemberSpaceLimitType
+    content.vb: Public Property UserWithinTeamSpaceLimitType As MemberSpaceLimitType
+  overload: Dropbox.Api.Users.TeamSpaceAllocation.UserWithinTeamSpaceLimitType*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Users.TeamSpaceAllocation.UserWithinTeamSpaceUsedCached
+  commentId: P:Dropbox.Api.Users.TeamSpaceAllocation.UserWithinTeamSpaceUsedCached
+  id: UserWithinTeamSpaceUsedCached
+  parent: Dropbox.Api.Users.TeamSpaceAllocation
+  langs:
+  - csharp
+  - vb
+  name: UserWithinTeamSpaceUsedCached
+  nameWithType: TeamSpaceAllocation.UserWithinTeamSpaceUsedCached
+  fullName: Dropbox.Api.Users.TeamSpaceAllocation.UserWithinTeamSpaceUsedCached
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/TeamSpaceAllocation.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: UserWithinTeamSpaceUsedCached
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/TeamSpaceAllocation.cs
+    startLine: 99
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users
+  summary: "\n<p>An accurate cached calculation of a team member&apos;s total space usage\n(bytes).</p>\n"
+  example: []
+  syntax:
+    content: public ulong UserWithinTeamSpaceUsedCached { get; protected set; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: Public Property UserWithinTeamSpaceUsedCached As ULong
+  overload: Dropbox.Api.Users.TeamSpaceAllocation.UserWithinTeamSpaceUsedCached*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Users
+  commentId: N:Dropbox.Api.Users
+  name: Dropbox.Api.Users
+  nameWithType: Dropbox.Api.Users
+  fullName: Dropbox.Api.Users
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Users.TeamSpaceAllocation
+  commentId: T:Dropbox.Api.Users.TeamSpaceAllocation
+  parent: Dropbox.Api.Users
+  name: TeamSpaceAllocation
+  nameWithType: TeamSpaceAllocation
+  fullName: Dropbox.Api.Users.TeamSpaceAllocation
+- uid: Dropbox.Api.Users.TeamSpaceAllocation.#ctor*
+  commentId: Overload:Dropbox.Api.Users.TeamSpaceAllocation.#ctor
+  name: TeamSpaceAllocation
+  nameWithType: TeamSpaceAllocation.TeamSpaceAllocation
+  fullName: Dropbox.Api.Users.TeamSpaceAllocation.TeamSpaceAllocation
+- uid: System.UInt64
+  isExternal: true
+  name: UInt64
+  nameWithType: UInt64
+  fullName: System.UInt64
+- uid: Dropbox.Api.TeamCommon.MemberSpaceLimitType
+  commentId: T:Dropbox.Api.TeamCommon.MemberSpaceLimitType
+  parent: Dropbox.Api.TeamCommon
+  name: MemberSpaceLimitType
+  nameWithType: MemberSpaceLimitType
+  fullName: Dropbox.Api.TeamCommon.MemberSpaceLimitType
+- uid: Dropbox.Api.TeamCommon
+  commentId: N:Dropbox.Api.TeamCommon
+  name: Dropbox.Api.TeamCommon
+  nameWithType: Dropbox.Api.TeamCommon
+  fullName: Dropbox.Api.TeamCommon
+- uid: Dropbox.Api.Users.TeamSpaceAllocation.Used*
+  commentId: Overload:Dropbox.Api.Users.TeamSpaceAllocation.Used
+  name: Used
+  nameWithType: TeamSpaceAllocation.Used
+  fullName: Dropbox.Api.Users.TeamSpaceAllocation.Used
+- uid: Dropbox.Api.Users.TeamSpaceAllocation.Allocated*
+  commentId: Overload:Dropbox.Api.Users.TeamSpaceAllocation.Allocated
+  name: Allocated
+  nameWithType: TeamSpaceAllocation.Allocated
+  fullName: Dropbox.Api.Users.TeamSpaceAllocation.Allocated
+- uid: Dropbox.Api.Users.TeamSpaceAllocation.UserWithinTeamSpaceAllocated*
+  commentId: Overload:Dropbox.Api.Users.TeamSpaceAllocation.UserWithinTeamSpaceAllocated
+  name: UserWithinTeamSpaceAllocated
+  nameWithType: TeamSpaceAllocation.UserWithinTeamSpaceAllocated
+  fullName: Dropbox.Api.Users.TeamSpaceAllocation.UserWithinTeamSpaceAllocated
+- uid: Dropbox.Api.Users.TeamSpaceAllocation.UserWithinTeamSpaceLimitType*
+  commentId: Overload:Dropbox.Api.Users.TeamSpaceAllocation.UserWithinTeamSpaceLimitType
+  name: UserWithinTeamSpaceLimitType
+  nameWithType: TeamSpaceAllocation.UserWithinTeamSpaceLimitType
+  fullName: Dropbox.Api.Users.TeamSpaceAllocation.UserWithinTeamSpaceLimitType
+- uid: Dropbox.Api.Users.TeamSpaceAllocation.UserWithinTeamSpaceUsedCached*
+  commentId: Overload:Dropbox.Api.Users.TeamSpaceAllocation.UserWithinTeamSpaceUsedCached
+  name: UserWithinTeamSpaceUsedCached
+  nameWithType: TeamSpaceAllocation.UserWithinTeamSpaceUsedCached
+  fullName: Dropbox.Api.Users.TeamSpaceAllocation.UserWithinTeamSpaceUsedCached
+shouldSkipMarkup: true

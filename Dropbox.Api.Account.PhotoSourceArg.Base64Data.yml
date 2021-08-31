@@ -1,0 +1,186 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Account.PhotoSourceArg.Base64Data
+  commentId: T:Dropbox.Api.Account.PhotoSourceArg.Base64Data
+  id: PhotoSourceArg.Base64Data
+  parent: Dropbox.Api.Account
+  children:
+  - Dropbox.Api.Account.PhotoSourceArg.Base64Data.#ctor(System.String)
+  - Dropbox.Api.Account.PhotoSourceArg.Base64Data.Value
+  langs:
+  - csharp
+  - vb
+  name: PhotoSourceArg.Base64Data
+  nameWithType: PhotoSourceArg.Base64Data
+  fullName: Dropbox.Api.Account.PhotoSourceArg.Base64Data
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Account/PhotoSourceArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Base64Data
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Account/PhotoSourceArg.cs
+    startLine: 151
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Account
+  summary: "\n<p>Image data in base64-encoded bytes.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Base64Data : PhotoSourceArg'
+    content.vb: >-
+      Public NotInheritable Class Base64Data
+          Inherits PhotoSourceArg
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Account.PhotoSourceArg
+  inheritedMembers:
+  - Dropbox.Api.Account.PhotoSourceArg.IsBase64Data
+  - Dropbox.Api.Account.PhotoSourceArg.AsBase64Data
+  - Dropbox.Api.Account.PhotoSourceArg.IsOther
+  - Dropbox.Api.Account.PhotoSourceArg.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Account.PhotoSourceArg.Base64Data.#ctor(System.String)
+  commentId: M:Dropbox.Api.Account.PhotoSourceArg.Base64Data.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.Account.PhotoSourceArg.Base64Data
+  langs:
+  - csharp
+  - vb
+  name: Base64Data(String)
+  nameWithType: PhotoSourceArg.Base64Data.Base64Data(String)
+  fullName: Dropbox.Api.Account.PhotoSourceArg.Base64Data.Base64Data(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Account/PhotoSourceArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Account/PhotoSourceArg.cs
+    startLine: 169
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Account
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Account.PhotoSourceArg.Base64Data\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public Base64Data(string value)
+    parameters:
+    - id: value
+      type: System.String
+      description: The value
+    content.vb: Public Sub New(value As String)
+  overload: Dropbox.Api.Account.PhotoSourceArg.Base64Data.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Account.PhotoSourceArg.Base64Data.Value
+  commentId: P:Dropbox.Api.Account.PhotoSourceArg.Base64Data.Value
+  id: Value
+  parent: Dropbox.Api.Account.PhotoSourceArg.Base64Data
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: PhotoSourceArg.Base64Data.Value
+  fullName: Dropbox.Api.Account.PhotoSourceArg.Base64Data.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Account/PhotoSourceArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Account/PhotoSourceArg.cs
+    startLine: 183
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Account
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public string Value { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Value As String
+  overload: Dropbox.Api.Account.PhotoSourceArg.Base64Data.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Account
+  commentId: N:Dropbox.Api.Account
+  name: Dropbox.Api.Account
+  nameWithType: Dropbox.Api.Account
+  fullName: Dropbox.Api.Account
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Account.PhotoSourceArg
+  commentId: T:Dropbox.Api.Account.PhotoSourceArg
+  parent: Dropbox.Api.Account
+  name: PhotoSourceArg
+  nameWithType: PhotoSourceArg
+  fullName: Dropbox.Api.Account.PhotoSourceArg
+- uid: Dropbox.Api.Account.PhotoSourceArg.IsBase64Data
+  commentId: P:Dropbox.Api.Account.PhotoSourceArg.IsBase64Data
+  parent: Dropbox.Api.Account.PhotoSourceArg
+  name: IsBase64Data
+  nameWithType: PhotoSourceArg.IsBase64Data
+  fullName: Dropbox.Api.Account.PhotoSourceArg.IsBase64Data
+- uid: Dropbox.Api.Account.PhotoSourceArg.AsBase64Data
+  commentId: P:Dropbox.Api.Account.PhotoSourceArg.AsBase64Data
+  parent: Dropbox.Api.Account.PhotoSourceArg
+  name: AsBase64Data
+  nameWithType: PhotoSourceArg.AsBase64Data
+  fullName: Dropbox.Api.Account.PhotoSourceArg.AsBase64Data
+- uid: Dropbox.Api.Account.PhotoSourceArg.IsOther
+  commentId: P:Dropbox.Api.Account.PhotoSourceArg.IsOther
+  parent: Dropbox.Api.Account.PhotoSourceArg
+  name: IsOther
+  nameWithType: PhotoSourceArg.IsOther
+  fullName: Dropbox.Api.Account.PhotoSourceArg.IsOther
+- uid: Dropbox.Api.Account.PhotoSourceArg.AsOther
+  commentId: P:Dropbox.Api.Account.PhotoSourceArg.AsOther
+  parent: Dropbox.Api.Account.PhotoSourceArg
+  name: AsOther
+  nameWithType: PhotoSourceArg.AsOther
+  fullName: Dropbox.Api.Account.PhotoSourceArg.AsOther
+- uid: Dropbox.Api.Account.PhotoSourceArg.Base64Data
+  commentId: T:Dropbox.Api.Account.PhotoSourceArg.Base64Data
+  parent: Dropbox.Api.Account
+  name: PhotoSourceArg.Base64Data
+  nameWithType: PhotoSourceArg.Base64Data
+  fullName: Dropbox.Api.Account.PhotoSourceArg.Base64Data
+- uid: Dropbox.Api.Account.PhotoSourceArg.Base64Data.#ctor*
+  commentId: Overload:Dropbox.Api.Account.PhotoSourceArg.Base64Data.#ctor
+  name: Base64Data
+  nameWithType: PhotoSourceArg.Base64Data.Base64Data
+  fullName: Dropbox.Api.Account.PhotoSourceArg.Base64Data.Base64Data
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Account.PhotoSourceArg.Base64Data.Value*
+  commentId: Overload:Dropbox.Api.Account.PhotoSourceArg.Base64Data.Value
+  name: Value
+  nameWithType: PhotoSourceArg.Base64Data.Value
+  fullName: Dropbox.Api.Account.PhotoSourceArg.Base64Data.Value
+shouldSkipMarkup: true

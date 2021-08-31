@@ -1,0 +1,343 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.FileRenameDetails
+  commentId: T:Dropbox.Api.TeamLog.FileRenameDetails
+  id: FileRenameDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.FileRenameDetails.#ctor
+  - Dropbox.Api.TeamLog.FileRenameDetails.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.TeamLog.RelocateAssetReferencesLogInfo})
+  - Dropbox.Api.TeamLog.FileRenameDetails.RelocateActionDetails
+  langs:
+  - csharp
+  - vb
+  name: FileRenameDetails
+  nameWithType: FileRenameDetails
+  fullName: Dropbox.Api.TeamLog.FileRenameDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRenameDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: FileRenameDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRenameDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Renamed files and/or folders.</p>\n"
+  example: []
+  syntax:
+    content: 'public class FileRenameDetails : object'
+    content.vb: >-
+      Public Class FileRenameDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.FileRenameDetails.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.TeamLog.RelocateAssetReferencesLogInfo})
+  commentId: M:Dropbox.Api.TeamLog.FileRenameDetails.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.TeamLog.RelocateAssetReferencesLogInfo})
+  id: '#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.TeamLog.RelocateAssetReferencesLogInfo})'
+  parent: Dropbox.Api.TeamLog.FileRenameDetails
+  langs:
+  - csharp
+  - vb
+  name: FileRenameDetails(System.Collections.Generic.IEnumerable<RelocateAssetReferencesLogInfo>)
+  nameWithType: FileRenameDetails.FileRenameDetails(System.Collections.Generic.IEnumerable<RelocateAssetReferencesLogInfo>)
+  fullName: Dropbox.Api.TeamLog.FileRenameDetails.FileRenameDetails(System.Collections.Generic.IEnumerable<Dropbox.Api.TeamLog.RelocateAssetReferencesLogInfo>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRenameDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRenameDetails.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.FileRenameDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public FileRenameDetails(System.Collections.Generic.IEnumerable<RelocateAssetReferencesLogInfo> relocateActionDetails)
+    parameters:
+    - id: relocateActionDetails
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.TeamLog.RelocateAssetReferencesLogInfo}
+      description: Relocate action details.
+    content.vb: Public Sub New(relocateActionDetails As System.Collections.Generic.IEnumerable(Of RelocateAssetReferencesLogInfo))
+  overload: Dropbox.Api.TeamLog.FileRenameDetails.#ctor*
+  nameWithType.vb: FileRenameDetails.FileRenameDetails(System.Collections.Generic.IEnumerable(Of RelocateAssetReferencesLogInfo))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.TeamLog.FileRenameDetails.FileRenameDetails(System.Collections.Generic.IEnumerable(Of Dropbox.Api.TeamLog.RelocateAssetReferencesLogInfo))
+  name.vb: FileRenameDetails(System.Collections.Generic.IEnumerable(Of RelocateAssetReferencesLogInfo))
+- uid: Dropbox.Api.TeamLog.FileRenameDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.FileRenameDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.FileRenameDetails
+  langs:
+  - csharp
+  - vb
+  name: FileRenameDetails()
+  nameWithType: FileRenameDetails.FileRenameDetails()
+  fullName: Dropbox.Api.TeamLog.FileRenameDetails.FileRenameDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRenameDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRenameDetails.cs
+    startLine: 52
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.FileRenameDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public FileRenameDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.FileRenameDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.FileRenameDetails.RelocateActionDetails
+  commentId: P:Dropbox.Api.TeamLog.FileRenameDetails.RelocateActionDetails
+  id: RelocateActionDetails
+  parent: Dropbox.Api.TeamLog.FileRenameDetails
+  langs:
+  - csharp
+  - vb
+  name: RelocateActionDetails
+  nameWithType: FileRenameDetails.RelocateActionDetails
+  fullName: Dropbox.Api.TeamLog.FileRenameDetails.RelocateActionDetails
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRenameDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: RelocateActionDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRenameDetails.cs
+    startLine: 60
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Relocate action details.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<RelocateAssetReferencesLogInfo> RelocateActionDetails { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{Dropbox.Api.TeamLog.RelocateAssetReferencesLogInfo}
+    content.vb: Public Property RelocateActionDetails As System.Collections.Generic.IList(Of RelocateAssetReferencesLogInfo)
+  overload: Dropbox.Api.TeamLog.FileRenameDetails.RelocateActionDetails*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.FileRenameDetails
+  commentId: T:Dropbox.Api.TeamLog.FileRenameDetails
+  parent: Dropbox.Api.TeamLog
+  name: FileRenameDetails
+  nameWithType: FileRenameDetails
+  fullName: Dropbox.Api.TeamLog.FileRenameDetails
+- uid: Dropbox.Api.TeamLog.FileRenameDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.FileRenameDetails.#ctor
+  name: FileRenameDetails
+  nameWithType: FileRenameDetails.FileRenameDetails
+  fullName: Dropbox.Api.TeamLog.FileRenameDetails.FileRenameDetails
+- uid: System.Collections.Generic.IEnumerable{Dropbox.Api.TeamLog.RelocateAssetReferencesLogInfo}
+  commentId: '!:System.Collections.Generic.IEnumerable{Dropbox.Api.TeamLog.RelocateAssetReferencesLogInfo}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<RelocateAssetReferencesLogInfo>
+  nameWithType: System.Collections.Generic.IEnumerable<RelocateAssetReferencesLogInfo>
+  fullName: System.Collections.Generic.IEnumerable<Dropbox.Api.TeamLog.RelocateAssetReferencesLogInfo>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of RelocateAssetReferencesLogInfo)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Dropbox.Api.TeamLog.RelocateAssetReferencesLogInfo)
+  name.vb: System.Collections.Generic.IEnumerable(Of RelocateAssetReferencesLogInfo)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.TeamLog.RelocateAssetReferencesLogInfo
+    name: RelocateAssetReferencesLogInfo
+    nameWithType: RelocateAssetReferencesLogInfo
+    fullName: Dropbox.Api.TeamLog.RelocateAssetReferencesLogInfo
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.TeamLog.RelocateAssetReferencesLogInfo
+    name: RelocateAssetReferencesLogInfo
+    nameWithType: RelocateAssetReferencesLogInfo
+    fullName: Dropbox.Api.TeamLog.RelocateAssetReferencesLogInfo
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: System.Collections.Generic.IEnumerable<>
+  nameWithType: System.Collections.Generic.IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: System.Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.TeamLog.FileRenameDetails.RelocateActionDetails*
+  commentId: Overload:Dropbox.Api.TeamLog.FileRenameDetails.RelocateActionDetails
+  name: RelocateActionDetails
+  nameWithType: FileRenameDetails.RelocateActionDetails
+  fullName: Dropbox.Api.TeamLog.FileRenameDetails.RelocateActionDetails
+- uid: System.Collections.Generic.IList{Dropbox.Api.TeamLog.RelocateAssetReferencesLogInfo}
+  commentId: '!:System.Collections.Generic.IList{Dropbox.Api.TeamLog.RelocateAssetReferencesLogInfo}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<RelocateAssetReferencesLogInfo>
+  nameWithType: System.Collections.Generic.IList<RelocateAssetReferencesLogInfo>
+  fullName: System.Collections.Generic.IList<Dropbox.Api.TeamLog.RelocateAssetReferencesLogInfo>
+  nameWithType.vb: System.Collections.Generic.IList(Of RelocateAssetReferencesLogInfo)
+  fullName.vb: System.Collections.Generic.IList(Of Dropbox.Api.TeamLog.RelocateAssetReferencesLogInfo)
+  name.vb: System.Collections.Generic.IList(Of RelocateAssetReferencesLogInfo)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.TeamLog.RelocateAssetReferencesLogInfo
+    name: RelocateAssetReferencesLogInfo
+    nameWithType: RelocateAssetReferencesLogInfo
+    fullName: Dropbox.Api.TeamLog.RelocateAssetReferencesLogInfo
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.TeamLog.RelocateAssetReferencesLogInfo
+    name: RelocateAssetReferencesLogInfo
+    nameWithType: RelocateAssetReferencesLogInfo
+    fullName: Dropbox.Api.TeamLog.RelocateAssetReferencesLogInfo
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  isExternal: true
+  name: System.Collections.Generic.IList<>
+  nameWithType: System.Collections.Generic.IList<>
+  fullName: System.Collections.Generic.IList<>
+  nameWithType.vb: System.Collections.Generic.IList(Of )
+  fullName.vb: System.Collections.Generic.IList(Of )
+  name.vb: System.Collections.Generic.IList(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+shouldSkipMarkup: true

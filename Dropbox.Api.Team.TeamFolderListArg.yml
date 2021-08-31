@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.TeamFolderListArg
+  commentId: T:Dropbox.Api.Team.TeamFolderListArg
+  id: TeamFolderListArg
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.TeamFolderListArg.#ctor
+  - Dropbox.Api.Team.TeamFolderListArg.#ctor(System.UInt32)
+  - Dropbox.Api.Team.TeamFolderListArg.Limit
+  langs:
+  - csharp
+  - vb
+  name: TeamFolderListArg
+  nameWithType: TeamFolderListArg
+  fullName: Dropbox.Api.Team.TeamFolderListArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderListArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TeamFolderListArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderListArg.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The team folder list arg object</p>\n"
+  example: []
+  syntax:
+    content: 'public class TeamFolderListArg : object'
+    content.vb: >-
+      Public Class TeamFolderListArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.TeamFolderListArg.#ctor(System.UInt32)
+  commentId: M:Dropbox.Api.Team.TeamFolderListArg.#ctor(System.UInt32)
+  id: '#ctor(System.UInt32)'
+  parent: Dropbox.Api.Team.TeamFolderListArg
+  langs:
+  - csharp
+  - vb
+  name: TeamFolderListArg(UInt32)
+  nameWithType: TeamFolderListArg.TeamFolderListArg(UInt32)
+  fullName: Dropbox.Api.Team.TeamFolderListArg.TeamFolderListArg(System.UInt32)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderListArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderListArg.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.TeamFolderListArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public TeamFolderListArg(uint limit = null)
+    parameters:
+    - id: limit
+      type: System.UInt32
+      description: The maximum number of results to return per request.
+    content.vb: Public Sub New(limit As UInteger = Nothing)
+  overload: Dropbox.Api.Team.TeamFolderListArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.TeamFolderListArg.#ctor
+  commentId: M:Dropbox.Api.Team.TeamFolderListArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.TeamFolderListArg
+  langs:
+  - csharp
+  - vb
+  name: TeamFolderListArg()
+  nameWithType: TeamFolderListArg.TeamFolderListArg()
+  fullName: Dropbox.Api.Team.TeamFolderListArg.TeamFolderListArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderListArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderListArg.cs
+    startLine: 54
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.TeamFolderListArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public TeamFolderListArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.TeamFolderListArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.TeamFolderListArg.Limit
+  commentId: P:Dropbox.Api.Team.TeamFolderListArg.Limit
+  id: Limit
+  parent: Dropbox.Api.Team.TeamFolderListArg
+  langs:
+  - csharp
+  - vb
+  name: Limit
+  nameWithType: TeamFolderListArg.Limit
+  fullName: Dropbox.Api.Team.TeamFolderListArg.Limit
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderListArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Limit
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderListArg.cs
+    startLine: 63
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The maximum number of results to return per request.</p>\n"
+  example: []
+  syntax:
+    content: public uint Limit { get; protected set; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public Property Limit As UInteger
+  overload: Dropbox.Api.Team.TeamFolderListArg.Limit*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.TeamFolderListArg
+  commentId: T:Dropbox.Api.Team.TeamFolderListArg
+  parent: Dropbox.Api.Team
+  name: TeamFolderListArg
+  nameWithType: TeamFolderListArg
+  fullName: Dropbox.Api.Team.TeamFolderListArg
+- uid: Dropbox.Api.Team.TeamFolderListArg.#ctor*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderListArg.#ctor
+  name: TeamFolderListArg
+  nameWithType: TeamFolderListArg.TeamFolderListArg
+  fullName: Dropbox.Api.Team.TeamFolderListArg.TeamFolderListArg
+- uid: System.UInt32
+  isExternal: true
+  name: UInt32
+  nameWithType: UInt32
+  fullName: System.UInt32
+- uid: Dropbox.Api.Team.TeamFolderListArg.Limit*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderListArg.Limit
+  name: Limit
+  nameWithType: TeamFolderListArg.Limit
+  fullName: Dropbox.Api.Team.TeamFolderListArg.Limit
+shouldSkipMarkup: true

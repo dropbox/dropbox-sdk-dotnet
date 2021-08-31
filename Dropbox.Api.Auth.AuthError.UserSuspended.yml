@@ -1,0 +1,218 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Auth.AuthError.UserSuspended
+  commentId: T:Dropbox.Api.Auth.AuthError.UserSuspended
+  id: AuthError.UserSuspended
+  parent: Dropbox.Api.Auth
+  children:
+  - Dropbox.Api.Auth.AuthError.UserSuspended.Instance
+  langs:
+  - csharp
+  - vb
+  name: AuthError.UserSuspended
+  nameWithType: AuthError.UserSuspended
+  fullName: Dropbox.Api.Auth.AuthError.UserSuspended
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: UserSuspended
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthError.cs
+    startLine: 546
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth
+  summary: "\n<p>The user has been suspended.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class UserSuspended : AuthError'
+    content.vb: >-
+      Public NotInheritable Class UserSuspended
+          Inherits AuthError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Auth.AuthError
+  inheritedMembers:
+  - Dropbox.Api.Auth.AuthError.IsInvalidAccessToken
+  - Dropbox.Api.Auth.AuthError.AsInvalidAccessToken
+  - Dropbox.Api.Auth.AuthError.IsInvalidSelectUser
+  - Dropbox.Api.Auth.AuthError.AsInvalidSelectUser
+  - Dropbox.Api.Auth.AuthError.IsInvalidSelectAdmin
+  - Dropbox.Api.Auth.AuthError.AsInvalidSelectAdmin
+  - Dropbox.Api.Auth.AuthError.IsUserSuspended
+  - Dropbox.Api.Auth.AuthError.AsUserSuspended
+  - Dropbox.Api.Auth.AuthError.IsExpiredAccessToken
+  - Dropbox.Api.Auth.AuthError.AsExpiredAccessToken
+  - Dropbox.Api.Auth.AuthError.IsMissingScope
+  - Dropbox.Api.Auth.AuthError.AsMissingScope
+  - Dropbox.Api.Auth.AuthError.IsRouteAccessDenied
+  - Dropbox.Api.Auth.AuthError.AsRouteAccessDenied
+  - Dropbox.Api.Auth.AuthError.IsOther
+  - Dropbox.Api.Auth.AuthError.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Auth.AuthError.UserSuspended.Instance
+  commentId: F:Dropbox.Api.Auth.AuthError.UserSuspended.Instance
+  id: Instance
+  parent: Dropbox.Api.Auth.AuthError.UserSuspended
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: AuthError.UserSuspended.Instance
+  fullName: Dropbox.Api.Auth.AuthError.UserSuspended.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthError.cs
+    startLine: 571
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth
+  summary: "\n<p>A singleton instance of UserSuspended</p>\n"
+  example: []
+  syntax:
+    content: public static readonly AuthError.UserSuspended Instance
+    return:
+      type: Dropbox.Api.Auth.AuthError.UserSuspended
+    content.vb: Public Shared ReadOnly Instance As AuthError.UserSuspended
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Auth
+  commentId: N:Dropbox.Api.Auth
+  name: Dropbox.Api.Auth
+  nameWithType: Dropbox.Api.Auth
+  fullName: Dropbox.Api.Auth
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Auth.AuthError
+  commentId: T:Dropbox.Api.Auth.AuthError
+  parent: Dropbox.Api.Auth
+  name: AuthError
+  nameWithType: AuthError
+  fullName: Dropbox.Api.Auth.AuthError
+- uid: Dropbox.Api.Auth.AuthError.IsInvalidAccessToken
+  commentId: P:Dropbox.Api.Auth.AuthError.IsInvalidAccessToken
+  parent: Dropbox.Api.Auth.AuthError
+  name: IsInvalidAccessToken
+  nameWithType: AuthError.IsInvalidAccessToken
+  fullName: Dropbox.Api.Auth.AuthError.IsInvalidAccessToken
+- uid: Dropbox.Api.Auth.AuthError.AsInvalidAccessToken
+  commentId: P:Dropbox.Api.Auth.AuthError.AsInvalidAccessToken
+  parent: Dropbox.Api.Auth.AuthError
+  name: AsInvalidAccessToken
+  nameWithType: AuthError.AsInvalidAccessToken
+  fullName: Dropbox.Api.Auth.AuthError.AsInvalidAccessToken
+- uid: Dropbox.Api.Auth.AuthError.IsInvalidSelectUser
+  commentId: P:Dropbox.Api.Auth.AuthError.IsInvalidSelectUser
+  parent: Dropbox.Api.Auth.AuthError
+  name: IsInvalidSelectUser
+  nameWithType: AuthError.IsInvalidSelectUser
+  fullName: Dropbox.Api.Auth.AuthError.IsInvalidSelectUser
+- uid: Dropbox.Api.Auth.AuthError.AsInvalidSelectUser
+  commentId: P:Dropbox.Api.Auth.AuthError.AsInvalidSelectUser
+  parent: Dropbox.Api.Auth.AuthError
+  name: AsInvalidSelectUser
+  nameWithType: AuthError.AsInvalidSelectUser
+  fullName: Dropbox.Api.Auth.AuthError.AsInvalidSelectUser
+- uid: Dropbox.Api.Auth.AuthError.IsInvalidSelectAdmin
+  commentId: P:Dropbox.Api.Auth.AuthError.IsInvalidSelectAdmin
+  parent: Dropbox.Api.Auth.AuthError
+  name: IsInvalidSelectAdmin
+  nameWithType: AuthError.IsInvalidSelectAdmin
+  fullName: Dropbox.Api.Auth.AuthError.IsInvalidSelectAdmin
+- uid: Dropbox.Api.Auth.AuthError.AsInvalidSelectAdmin
+  commentId: P:Dropbox.Api.Auth.AuthError.AsInvalidSelectAdmin
+  parent: Dropbox.Api.Auth.AuthError
+  name: AsInvalidSelectAdmin
+  nameWithType: AuthError.AsInvalidSelectAdmin
+  fullName: Dropbox.Api.Auth.AuthError.AsInvalidSelectAdmin
+- uid: Dropbox.Api.Auth.AuthError.IsUserSuspended
+  commentId: P:Dropbox.Api.Auth.AuthError.IsUserSuspended
+  parent: Dropbox.Api.Auth.AuthError
+  name: IsUserSuspended
+  nameWithType: AuthError.IsUserSuspended
+  fullName: Dropbox.Api.Auth.AuthError.IsUserSuspended
+- uid: Dropbox.Api.Auth.AuthError.AsUserSuspended
+  commentId: P:Dropbox.Api.Auth.AuthError.AsUserSuspended
+  parent: Dropbox.Api.Auth.AuthError
+  name: AsUserSuspended
+  nameWithType: AuthError.AsUserSuspended
+  fullName: Dropbox.Api.Auth.AuthError.AsUserSuspended
+- uid: Dropbox.Api.Auth.AuthError.IsExpiredAccessToken
+  commentId: P:Dropbox.Api.Auth.AuthError.IsExpiredAccessToken
+  parent: Dropbox.Api.Auth.AuthError
+  name: IsExpiredAccessToken
+  nameWithType: AuthError.IsExpiredAccessToken
+  fullName: Dropbox.Api.Auth.AuthError.IsExpiredAccessToken
+- uid: Dropbox.Api.Auth.AuthError.AsExpiredAccessToken
+  commentId: P:Dropbox.Api.Auth.AuthError.AsExpiredAccessToken
+  parent: Dropbox.Api.Auth.AuthError
+  name: AsExpiredAccessToken
+  nameWithType: AuthError.AsExpiredAccessToken
+  fullName: Dropbox.Api.Auth.AuthError.AsExpiredAccessToken
+- uid: Dropbox.Api.Auth.AuthError.IsMissingScope
+  commentId: P:Dropbox.Api.Auth.AuthError.IsMissingScope
+  parent: Dropbox.Api.Auth.AuthError
+  name: IsMissingScope
+  nameWithType: AuthError.IsMissingScope
+  fullName: Dropbox.Api.Auth.AuthError.IsMissingScope
+- uid: Dropbox.Api.Auth.AuthError.AsMissingScope
+  commentId: P:Dropbox.Api.Auth.AuthError.AsMissingScope
+  parent: Dropbox.Api.Auth.AuthError
+  name: AsMissingScope
+  nameWithType: AuthError.AsMissingScope
+  fullName: Dropbox.Api.Auth.AuthError.AsMissingScope
+- uid: Dropbox.Api.Auth.AuthError.IsRouteAccessDenied
+  commentId: P:Dropbox.Api.Auth.AuthError.IsRouteAccessDenied
+  parent: Dropbox.Api.Auth.AuthError
+  name: IsRouteAccessDenied
+  nameWithType: AuthError.IsRouteAccessDenied
+  fullName: Dropbox.Api.Auth.AuthError.IsRouteAccessDenied
+- uid: Dropbox.Api.Auth.AuthError.AsRouteAccessDenied
+  commentId: P:Dropbox.Api.Auth.AuthError.AsRouteAccessDenied
+  parent: Dropbox.Api.Auth.AuthError
+  name: AsRouteAccessDenied
+  nameWithType: AuthError.AsRouteAccessDenied
+  fullName: Dropbox.Api.Auth.AuthError.AsRouteAccessDenied
+- uid: Dropbox.Api.Auth.AuthError.IsOther
+  commentId: P:Dropbox.Api.Auth.AuthError.IsOther
+  parent: Dropbox.Api.Auth.AuthError
+  name: IsOther
+  nameWithType: AuthError.IsOther
+  fullName: Dropbox.Api.Auth.AuthError.IsOther
+- uid: Dropbox.Api.Auth.AuthError.AsOther
+  commentId: P:Dropbox.Api.Auth.AuthError.AsOther
+  parent: Dropbox.Api.Auth.AuthError
+  name: AsOther
+  nameWithType: AuthError.AsOther
+  fullName: Dropbox.Api.Auth.AuthError.AsOther
+- uid: Dropbox.Api.Auth.AuthError.UserSuspended
+  commentId: T:Dropbox.Api.Auth.AuthError.UserSuspended
+  parent: Dropbox.Api.Auth
+  name: AuthError.UserSuspended
+  nameWithType: AuthError.UserSuspended
+  fullName: Dropbox.Api.Auth.AuthError.UserSuspended
+shouldSkipMarkup: true

@@ -1,0 +1,190 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.TeamFolderListContinueArg
+  commentId: T:Dropbox.Api.Team.TeamFolderListContinueArg
+  id: TeamFolderListContinueArg
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.TeamFolderListContinueArg.#ctor
+  - Dropbox.Api.Team.TeamFolderListContinueArg.#ctor(System.String)
+  - Dropbox.Api.Team.TeamFolderListContinueArg.Cursor
+  langs:
+  - csharp
+  - vb
+  name: TeamFolderListContinueArg
+  nameWithType: TeamFolderListContinueArg
+  fullName: Dropbox.Api.Team.TeamFolderListContinueArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderListContinueArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TeamFolderListContinueArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderListContinueArg.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The team folder list continue arg object</p>\n"
+  example: []
+  syntax:
+    content: 'public class TeamFolderListContinueArg : object'
+    content.vb: >-
+      Public Class TeamFolderListContinueArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.TeamFolderListContinueArg.#ctor(System.String)
+  commentId: M:Dropbox.Api.Team.TeamFolderListContinueArg.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.Team.TeamFolderListContinueArg
+  langs:
+  - csharp
+  - vb
+  name: TeamFolderListContinueArg(String)
+  nameWithType: TeamFolderListContinueArg.TeamFolderListContinueArg(String)
+  fullName: Dropbox.Api.Team.TeamFolderListContinueArg.TeamFolderListContinueArg(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderListContinueArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderListContinueArg.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.TeamFolderListContinueArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public TeamFolderListContinueArg(string cursor)
+    parameters:
+    - id: cursor
+      type: System.String
+      description: >-
+        Indicates from what point to get the next set of team
+
+        folders.
+    content.vb: Public Sub New(cursor As String)
+  overload: Dropbox.Api.Team.TeamFolderListContinueArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.TeamFolderListContinueArg.#ctor
+  commentId: M:Dropbox.Api.Team.TeamFolderListContinueArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.TeamFolderListContinueArg
+  langs:
+  - csharp
+  - vb
+  name: TeamFolderListContinueArg()
+  nameWithType: TeamFolderListContinueArg.TeamFolderListContinueArg()
+  fullName: Dropbox.Api.Team.TeamFolderListContinueArg.TeamFolderListContinueArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderListContinueArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderListContinueArg.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.TeamFolderListContinueArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public TeamFolderListContinueArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.TeamFolderListContinueArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.TeamFolderListContinueArg.Cursor
+  commentId: P:Dropbox.Api.Team.TeamFolderListContinueArg.Cursor
+  id: Cursor
+  parent: Dropbox.Api.Team.TeamFolderListContinueArg
+  langs:
+  - csharp
+  - vb
+  name: Cursor
+  nameWithType: TeamFolderListContinueArg.Cursor
+  fullName: Dropbox.Api.Team.TeamFolderListContinueArg.Cursor
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderListContinueArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Cursor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderListContinueArg.cs
+    startLine: 59
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Indicates from what point to get the next set of team folders.</p>\n"
+  example: []
+  syntax:
+    content: public string Cursor { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Cursor As String
+  overload: Dropbox.Api.Team.TeamFolderListContinueArg.Cursor*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.TeamFolderListContinueArg
+  commentId: T:Dropbox.Api.Team.TeamFolderListContinueArg
+  parent: Dropbox.Api.Team
+  name: TeamFolderListContinueArg
+  nameWithType: TeamFolderListContinueArg
+  fullName: Dropbox.Api.Team.TeamFolderListContinueArg
+- uid: Dropbox.Api.Team.TeamFolderListContinueArg.#ctor*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderListContinueArg.#ctor
+  name: TeamFolderListContinueArg
+  nameWithType: TeamFolderListContinueArg.TeamFolderListContinueArg
+  fullName: Dropbox.Api.Team.TeamFolderListContinueArg.TeamFolderListContinueArg
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Team.TeamFolderListContinueArg.Cursor*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderListContinueArg.Cursor
+  name: Cursor
+  nameWithType: TeamFolderListContinueArg.Cursor
+  fullName: Dropbox.Api.Team.TeamFolderListContinueArg.Cursor
+shouldSkipMarkup: true

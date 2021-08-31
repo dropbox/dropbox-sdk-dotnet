@@ -1,0 +1,96 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.CreateFolderDetails
+  commentId: T:Dropbox.Api.TeamLog.CreateFolderDetails
+  id: CreateFolderDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.CreateFolderDetails.#ctor
+  langs:
+  - csharp
+  - vb
+  name: CreateFolderDetails
+  nameWithType: CreateFolderDetails
+  fullName: Dropbox.Api.TeamLog.CreateFolderDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/CreateFolderDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: CreateFolderDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/CreateFolderDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Created folders.</p>\n"
+  example: []
+  syntax:
+    content: 'public class CreateFolderDetails : object'
+    content.vb: >-
+      Public Class CreateFolderDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.CreateFolderDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.CreateFolderDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.CreateFolderDetails
+  langs:
+  - csharp
+  - vb
+  name: CreateFolderDetails()
+  nameWithType: CreateFolderDetails.CreateFolderDetails()
+  fullName: Dropbox.Api.TeamLog.CreateFolderDetails.CreateFolderDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/CreateFolderDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/CreateFolderDetails.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.CreateFolderDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public CreateFolderDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.CreateFolderDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.CreateFolderDetails
+  commentId: T:Dropbox.Api.TeamLog.CreateFolderDetails
+  parent: Dropbox.Api.TeamLog
+  name: CreateFolderDetails
+  nameWithType: CreateFolderDetails
+  fullName: Dropbox.Api.TeamLog.CreateFolderDetails
+- uid: Dropbox.Api.TeamLog.CreateFolderDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.CreateFolderDetails.#ctor
+  name: CreateFolderDetails
+  nameWithType: CreateFolderDetails.CreateFolderDetails
+  fullName: Dropbox.Api.TeamLog.CreateFolderDetails.CreateFolderDetails
+shouldSkipMarkup: true

@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.RewindFolderType
+  commentId: T:Dropbox.Api.TeamLog.RewindFolderType
+  id: RewindFolderType
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.RewindFolderType.#ctor
+  - Dropbox.Api.TeamLog.RewindFolderType.#ctor(System.String)
+  - Dropbox.Api.TeamLog.RewindFolderType.Description
+  langs:
+  - csharp
+  - vb
+  name: RewindFolderType
+  nameWithType: RewindFolderType
+  fullName: Dropbox.Api.TeamLog.RewindFolderType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/RewindFolderType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: RewindFolderType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/RewindFolderType.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The rewind folder type object</p>\n"
+  example: []
+  syntax:
+    content: 'public class RewindFolderType : object'
+    content.vb: >-
+      Public Class RewindFolderType
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.RewindFolderType.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.RewindFolderType.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.RewindFolderType
+  langs:
+  - csharp
+  - vb
+  name: RewindFolderType(String)
+  nameWithType: RewindFolderType.RewindFolderType(String)
+  fullName: Dropbox.Api.TeamLog.RewindFolderType.RewindFolderType(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/RewindFolderType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/RewindFolderType.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.RewindFolderType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public RewindFolderType(string description)
+    parameters:
+    - id: description
+      type: System.String
+      description: The description
+    content.vb: Public Sub New(description As String)
+  overload: Dropbox.Api.TeamLog.RewindFolderType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.RewindFolderType.#ctor
+  commentId: M:Dropbox.Api.TeamLog.RewindFolderType.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.RewindFolderType
+  langs:
+  - csharp
+  - vb
+  name: RewindFolderType()
+  nameWithType: RewindFolderType.RewindFolderType()
+  fullName: Dropbox.Api.TeamLog.RewindFolderType.RewindFolderType()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/RewindFolderType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/RewindFolderType.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.RewindFolderType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public RewindFolderType()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.RewindFolderType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.RewindFolderType.Description
+  commentId: P:Dropbox.Api.TeamLog.RewindFolderType.Description
+  id: Description
+  parent: Dropbox.Api.TeamLog.RewindFolderType
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: RewindFolderType.Description
+  fullName: Dropbox.Api.TeamLog.RewindFolderType.Description
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/RewindFolderType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Description
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/RewindFolderType.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets the description of the rewind folder type</p>\n"
+  example: []
+  syntax:
+    content: public string Description { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Dropbox.Api.TeamLog.RewindFolderType.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.RewindFolderType
+  commentId: T:Dropbox.Api.TeamLog.RewindFolderType
+  parent: Dropbox.Api.TeamLog
+  name: RewindFolderType
+  nameWithType: RewindFolderType
+  fullName: Dropbox.Api.TeamLog.RewindFolderType
+- uid: Dropbox.Api.TeamLog.RewindFolderType.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.RewindFolderType.#ctor
+  name: RewindFolderType
+  nameWithType: RewindFolderType.RewindFolderType
+  fullName: Dropbox.Api.TeamLog.RewindFolderType.RewindFolderType
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.RewindFolderType.Description*
+  commentId: Overload:Dropbox.Api.TeamLog.RewindFolderType.Description
+  name: Description
+  nameWithType: RewindFolderType.Description
+  fullName: Dropbox.Api.TeamLog.RewindFolderType.Description
+shouldSkipMarkup: true

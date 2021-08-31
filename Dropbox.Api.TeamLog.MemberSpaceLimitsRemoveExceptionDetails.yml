@@ -1,0 +1,96 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.MemberSpaceLimitsRemoveExceptionDetails
+  commentId: T:Dropbox.Api.TeamLog.MemberSpaceLimitsRemoveExceptionDetails
+  id: MemberSpaceLimitsRemoveExceptionDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.MemberSpaceLimitsRemoveExceptionDetails.#ctor
+  langs:
+  - csharp
+  - vb
+  name: MemberSpaceLimitsRemoveExceptionDetails
+  nameWithType: MemberSpaceLimitsRemoveExceptionDetails
+  fullName: Dropbox.Api.TeamLog.MemberSpaceLimitsRemoveExceptionDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSpaceLimitsRemoveExceptionDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: MemberSpaceLimitsRemoveExceptionDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSpaceLimitsRemoveExceptionDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Removed members from member space limit exception list.</p>\n"
+  example: []
+  syntax:
+    content: 'public class MemberSpaceLimitsRemoveExceptionDetails : object'
+    content.vb: >-
+      Public Class MemberSpaceLimitsRemoveExceptionDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.MemberSpaceLimitsRemoveExceptionDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.MemberSpaceLimitsRemoveExceptionDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.MemberSpaceLimitsRemoveExceptionDetails
+  langs:
+  - csharp
+  - vb
+  name: MemberSpaceLimitsRemoveExceptionDetails()
+  nameWithType: MemberSpaceLimitsRemoveExceptionDetails.MemberSpaceLimitsRemoveExceptionDetails()
+  fullName: Dropbox.Api.TeamLog.MemberSpaceLimitsRemoveExceptionDetails.MemberSpaceLimitsRemoveExceptionDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSpaceLimitsRemoveExceptionDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSpaceLimitsRemoveExceptionDetails.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.MemberSpaceLimitsRemoveExceptionDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public MemberSpaceLimitsRemoveExceptionDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.MemberSpaceLimitsRemoveExceptionDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.MemberSpaceLimitsRemoveExceptionDetails
+  commentId: T:Dropbox.Api.TeamLog.MemberSpaceLimitsRemoveExceptionDetails
+  parent: Dropbox.Api.TeamLog
+  name: MemberSpaceLimitsRemoveExceptionDetails
+  nameWithType: MemberSpaceLimitsRemoveExceptionDetails
+  fullName: Dropbox.Api.TeamLog.MemberSpaceLimitsRemoveExceptionDetails
+- uid: Dropbox.Api.TeamLog.MemberSpaceLimitsRemoveExceptionDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberSpaceLimitsRemoveExceptionDetails.#ctor
+  name: MemberSpaceLimitsRemoveExceptionDetails
+  nameWithType: MemberSpaceLimitsRemoveExceptionDetails.MemberSpaceLimitsRemoveExceptionDetails
+  fullName: Dropbox.Api.TeamLog.MemberSpaceLimitsRemoveExceptionDetails.MemberSpaceLimitsRemoveExceptionDetails
+shouldSkipMarkup: true

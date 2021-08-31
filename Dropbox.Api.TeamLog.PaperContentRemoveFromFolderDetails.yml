@@ -1,0 +1,367 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.PaperContentRemoveFromFolderDetails
+  commentId: T:Dropbox.Api.TeamLog.PaperContentRemoveFromFolderDetails
+  id: PaperContentRemoveFromFolderDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.PaperContentRemoveFromFolderDetails.#ctor
+  - Dropbox.Api.TeamLog.PaperContentRemoveFromFolderDetails.#ctor(System.String,System.Nullable{System.UInt64},System.Nullable{System.UInt64})
+  - Dropbox.Api.TeamLog.PaperContentRemoveFromFolderDetails.EventUuid
+  - Dropbox.Api.TeamLog.PaperContentRemoveFromFolderDetails.ParentAssetIndex
+  - Dropbox.Api.TeamLog.PaperContentRemoveFromFolderDetails.TargetAssetIndex
+  langs:
+  - csharp
+  - vb
+  name: PaperContentRemoveFromFolderDetails
+  nameWithType: PaperContentRemoveFromFolderDetails
+  fullName: Dropbox.Api.TeamLog.PaperContentRemoveFromFolderDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperContentRemoveFromFolderDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PaperContentRemoveFromFolderDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperContentRemoveFromFolderDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Removed Paper doc/folder from folder.</p>\n"
+  example: []
+  syntax:
+    content: 'public class PaperContentRemoveFromFolderDetails : object'
+    content.vb: >-
+      Public Class PaperContentRemoveFromFolderDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.PaperContentRemoveFromFolderDetails.#ctor(System.String,System.Nullable{System.UInt64},System.Nullable{System.UInt64})
+  commentId: M:Dropbox.Api.TeamLog.PaperContentRemoveFromFolderDetails.#ctor(System.String,System.Nullable{System.UInt64},System.Nullable{System.UInt64})
+  id: '#ctor(System.String,System.Nullable{System.UInt64},System.Nullable{System.UInt64})'
+  parent: Dropbox.Api.TeamLog.PaperContentRemoveFromFolderDetails
+  langs:
+  - csharp
+  - vb
+  name: PaperContentRemoveFromFolderDetails(String, Nullable<UInt64>, Nullable<UInt64>)
+  nameWithType: PaperContentRemoveFromFolderDetails.PaperContentRemoveFromFolderDetails(String, Nullable<UInt64>, Nullable<UInt64>)
+  fullName: Dropbox.Api.TeamLog.PaperContentRemoveFromFolderDetails.PaperContentRemoveFromFolderDetails(System.String, System.Nullable<System.UInt64>, System.Nullable<System.UInt64>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperContentRemoveFromFolderDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperContentRemoveFromFolderDetails.cs
+    startLine: 36
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.PaperContentRemoveFromFolderDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public PaperContentRemoveFromFolderDetails(string eventUuid, ulong? targetAssetIndex = null, ulong? parentAssetIndex = null)
+    parameters:
+    - id: eventUuid
+      type: System.String
+      description: Event unique identifier.
+    - id: targetAssetIndex
+      type: System.Nullable{System.UInt64}
+      description: Target asset position in the Assets list.
+    - id: parentAssetIndex
+      type: System.Nullable{System.UInt64}
+      description: Parent asset position in the Assets list.
+    content.vb: Public Sub New(eventUuid As String, targetAssetIndex As ULong? = Nothing, parentAssetIndex As ULong? = Nothing)
+  overload: Dropbox.Api.TeamLog.PaperContentRemoveFromFolderDetails.#ctor*
+  nameWithType.vb: PaperContentRemoveFromFolderDetails.PaperContentRemoveFromFolderDetails(String, Nullable(Of UInt64), Nullable(Of UInt64))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.TeamLog.PaperContentRemoveFromFolderDetails.PaperContentRemoveFromFolderDetails(System.String, System.Nullable(Of System.UInt64), System.Nullable(Of System.UInt64))
+  name.vb: PaperContentRemoveFromFolderDetails(String, Nullable(Of UInt64), Nullable(Of UInt64))
+- uid: Dropbox.Api.TeamLog.PaperContentRemoveFromFolderDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.PaperContentRemoveFromFolderDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.PaperContentRemoveFromFolderDetails
+  langs:
+  - csharp
+  - vb
+  name: PaperContentRemoveFromFolderDetails()
+  nameWithType: PaperContentRemoveFromFolderDetails.PaperContentRemoveFromFolderDetails()
+  fullName: Dropbox.Api.TeamLog.PaperContentRemoveFromFolderDetails.PaperContentRemoveFromFolderDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperContentRemoveFromFolderDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperContentRemoveFromFolderDetails.cs
+    startLine: 56
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.PaperContentRemoveFromFolderDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public PaperContentRemoveFromFolderDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.PaperContentRemoveFromFolderDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.PaperContentRemoveFromFolderDetails.EventUuid
+  commentId: P:Dropbox.Api.TeamLog.PaperContentRemoveFromFolderDetails.EventUuid
+  id: EventUuid
+  parent: Dropbox.Api.TeamLog.PaperContentRemoveFromFolderDetails
+  langs:
+  - csharp
+  - vb
+  name: EventUuid
+  nameWithType: PaperContentRemoveFromFolderDetails.EventUuid
+  fullName: Dropbox.Api.TeamLog.PaperContentRemoveFromFolderDetails.EventUuid
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperContentRemoveFromFolderDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: EventUuid
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperContentRemoveFromFolderDetails.cs
+    startLine: 64
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Event unique identifier.</p>\n"
+  example: []
+  syntax:
+    content: public string EventUuid { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property EventUuid As String
+  overload: Dropbox.Api.TeamLog.PaperContentRemoveFromFolderDetails.EventUuid*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.PaperContentRemoveFromFolderDetails.TargetAssetIndex
+  commentId: P:Dropbox.Api.TeamLog.PaperContentRemoveFromFolderDetails.TargetAssetIndex
+  id: TargetAssetIndex
+  parent: Dropbox.Api.TeamLog.PaperContentRemoveFromFolderDetails
+  langs:
+  - csharp
+  - vb
+  name: TargetAssetIndex
+  nameWithType: PaperContentRemoveFromFolderDetails.TargetAssetIndex
+  fullName: Dropbox.Api.TeamLog.PaperContentRemoveFromFolderDetails.TargetAssetIndex
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperContentRemoveFromFolderDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TargetAssetIndex
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperContentRemoveFromFolderDetails.cs
+    startLine: 69
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Target asset position in the Assets list.</p>\n"
+  example: []
+  syntax:
+    content: public ulong? TargetAssetIndex { get; protected set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.UInt64}
+    content.vb: Public Property TargetAssetIndex As ULong?
+  overload: Dropbox.Api.TeamLog.PaperContentRemoveFromFolderDetails.TargetAssetIndex*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.PaperContentRemoveFromFolderDetails.ParentAssetIndex
+  commentId: P:Dropbox.Api.TeamLog.PaperContentRemoveFromFolderDetails.ParentAssetIndex
+  id: ParentAssetIndex
+  parent: Dropbox.Api.TeamLog.PaperContentRemoveFromFolderDetails
+  langs:
+  - csharp
+  - vb
+  name: ParentAssetIndex
+  nameWithType: PaperContentRemoveFromFolderDetails.ParentAssetIndex
+  fullName: Dropbox.Api.TeamLog.PaperContentRemoveFromFolderDetails.ParentAssetIndex
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperContentRemoveFromFolderDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ParentAssetIndex
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperContentRemoveFromFolderDetails.cs
+    startLine: 74
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Parent asset position in the Assets list.</p>\n"
+  example: []
+  syntax:
+    content: public ulong? ParentAssetIndex { get; protected set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.UInt64}
+    content.vb: Public Property ParentAssetIndex As ULong?
+  overload: Dropbox.Api.TeamLog.PaperContentRemoveFromFolderDetails.ParentAssetIndex*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.PaperContentRemoveFromFolderDetails
+  commentId: T:Dropbox.Api.TeamLog.PaperContentRemoveFromFolderDetails
+  parent: Dropbox.Api.TeamLog
+  name: PaperContentRemoveFromFolderDetails
+  nameWithType: PaperContentRemoveFromFolderDetails
+  fullName: Dropbox.Api.TeamLog.PaperContentRemoveFromFolderDetails
+- uid: Dropbox.Api.TeamLog.PaperContentRemoveFromFolderDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.PaperContentRemoveFromFolderDetails.#ctor
+  name: PaperContentRemoveFromFolderDetails
+  nameWithType: PaperContentRemoveFromFolderDetails.PaperContentRemoveFromFolderDetails
+  fullName: Dropbox.Api.TeamLog.PaperContentRemoveFromFolderDetails.PaperContentRemoveFromFolderDetails
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Nullable{System.UInt64}
+  commentId: '!:System.Nullable{System.UInt64}'
+  definition: System.Nullable`1
+  name: Nullable<UInt64>
+  nameWithType: Nullable<UInt64>
+  fullName: System.Nullable<System.UInt64>
+  nameWithType.vb: Nullable(Of UInt64)
+  fullName.vb: System.Nullable(Of System.UInt64)
+  name.vb: Nullable(Of UInt64)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.UInt64
+    name: UInt64
+    nameWithType: UInt64
+    fullName: System.UInt64
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.UInt64
+    name: UInt64
+    nameWithType: UInt64
+    fullName: System.UInt64
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  isExternal: true
+  name: Nullable<>
+  nameWithType: Nullable<>
+  fullName: System.Nullable<>
+  nameWithType.vb: Nullable(Of )
+  fullName.vb: System.Nullable(Of )
+  name.vb: Nullable(Of )
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.TeamLog.PaperContentRemoveFromFolderDetails.EventUuid*
+  commentId: Overload:Dropbox.Api.TeamLog.PaperContentRemoveFromFolderDetails.EventUuid
+  name: EventUuid
+  nameWithType: PaperContentRemoveFromFolderDetails.EventUuid
+  fullName: Dropbox.Api.TeamLog.PaperContentRemoveFromFolderDetails.EventUuid
+- uid: Dropbox.Api.TeamLog.PaperContentRemoveFromFolderDetails.TargetAssetIndex*
+  commentId: Overload:Dropbox.Api.TeamLog.PaperContentRemoveFromFolderDetails.TargetAssetIndex
+  name: TargetAssetIndex
+  nameWithType: PaperContentRemoveFromFolderDetails.TargetAssetIndex
+  fullName: Dropbox.Api.TeamLog.PaperContentRemoveFromFolderDetails.TargetAssetIndex
+- uid: Dropbox.Api.TeamLog.PaperContentRemoveFromFolderDetails.ParentAssetIndex*
+  commentId: Overload:Dropbox.Api.TeamLog.PaperContentRemoveFromFolderDetails.ParentAssetIndex
+  name: ParentAssetIndex
+  nameWithType: PaperContentRemoveFromFolderDetails.ParentAssetIndex
+  fullName: Dropbox.Api.TeamLog.PaperContentRemoveFromFolderDetails.ParentAssetIndex
+shouldSkipMarkup: true

@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.TeamMergeFromDetails
+  commentId: T:Dropbox.Api.TeamLog.TeamMergeFromDetails
+  id: TeamMergeFromDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.TeamMergeFromDetails.#ctor
+  - Dropbox.Api.TeamLog.TeamMergeFromDetails.#ctor(System.String)
+  - Dropbox.Api.TeamLog.TeamMergeFromDetails.TeamName
+  langs:
+  - csharp
+  - vb
+  name: TeamMergeFromDetails
+  nameWithType: TeamMergeFromDetails
+  fullName: Dropbox.Api.TeamLog.TeamMergeFromDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeFromDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TeamMergeFromDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeFromDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Merged another team into this team.</p>\n"
+  example: []
+  syntax:
+    content: 'public class TeamMergeFromDetails : object'
+    content.vb: >-
+      Public Class TeamMergeFromDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.TeamMergeFromDetails.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.TeamMergeFromDetails.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.TeamMergeFromDetails
+  langs:
+  - csharp
+  - vb
+  name: TeamMergeFromDetails(String)
+  nameWithType: TeamMergeFromDetails.TeamMergeFromDetails(String)
+  fullName: Dropbox.Api.TeamLog.TeamMergeFromDetails.TeamMergeFromDetails(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeFromDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeFromDetails.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.TeamMergeFromDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public TeamMergeFromDetails(string teamName)
+    parameters:
+    - id: teamName
+      type: System.String
+      description: The name of the team that was merged into this team.
+    content.vb: Public Sub New(teamName As String)
+  overload: Dropbox.Api.TeamLog.TeamMergeFromDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.TeamMergeFromDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.TeamMergeFromDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.TeamMergeFromDetails
+  langs:
+  - csharp
+  - vb
+  name: TeamMergeFromDetails()
+  nameWithType: TeamMergeFromDetails.TeamMergeFromDetails()
+  fullName: Dropbox.Api.TeamLog.TeamMergeFromDetails.TeamMergeFromDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeFromDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeFromDetails.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.TeamMergeFromDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public TeamMergeFromDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.TeamMergeFromDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.TeamMergeFromDetails.TeamName
+  commentId: P:Dropbox.Api.TeamLog.TeamMergeFromDetails.TeamName
+  id: TeamName
+  parent: Dropbox.Api.TeamLog.TeamMergeFromDetails
+  langs:
+  - csharp
+  - vb
+  name: TeamName
+  nameWithType: TeamMergeFromDetails.TeamName
+  fullName: Dropbox.Api.TeamLog.TeamMergeFromDetails.TeamName
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeFromDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TeamName
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeFromDetails.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The name of the team that was merged into this team.</p>\n"
+  example: []
+  syntax:
+    content: public string TeamName { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property TeamName As String
+  overload: Dropbox.Api.TeamLog.TeamMergeFromDetails.TeamName*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.TeamMergeFromDetails
+  commentId: T:Dropbox.Api.TeamLog.TeamMergeFromDetails
+  parent: Dropbox.Api.TeamLog
+  name: TeamMergeFromDetails
+  nameWithType: TeamMergeFromDetails
+  fullName: Dropbox.Api.TeamLog.TeamMergeFromDetails
+- uid: Dropbox.Api.TeamLog.TeamMergeFromDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.TeamMergeFromDetails.#ctor
+  name: TeamMergeFromDetails
+  nameWithType: TeamMergeFromDetails.TeamMergeFromDetails
+  fullName: Dropbox.Api.TeamLog.TeamMergeFromDetails.TeamMergeFromDetails
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.TeamMergeFromDetails.TeamName*
+  commentId: Overload:Dropbox.Api.TeamLog.TeamMergeFromDetails.TeamName
+  name: TeamName
+  nameWithType: TeamMergeFromDetails.TeamName
+  fullName: Dropbox.Api.TeamLog.TeamMergeFromDetails.TeamName
+shouldSkipMarkup: true

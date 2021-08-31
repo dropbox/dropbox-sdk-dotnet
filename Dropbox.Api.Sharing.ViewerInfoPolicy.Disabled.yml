@@ -1,0 +1,148 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.ViewerInfoPolicy.Disabled
+  commentId: T:Dropbox.Api.Sharing.ViewerInfoPolicy.Disabled
+  id: ViewerInfoPolicy.Disabled
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.ViewerInfoPolicy.Disabled.Instance
+  langs:
+  - csharp
+  - vb
+  name: ViewerInfoPolicy.Disabled
+  nameWithType: ViewerInfoPolicy.Disabled
+  fullName: Dropbox.Api.Sharing.ViewerInfoPolicy.Disabled
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ViewerInfoPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Disabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ViewerInfoPolicy.cs
+    startLine: 251
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Viewer information is disabled on this file.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Disabled : ViewerInfoPolicy'
+    content.vb: >-
+      Public NotInheritable Class Disabled
+          Inherits ViewerInfoPolicy
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Sharing.ViewerInfoPolicy
+  inheritedMembers:
+  - Dropbox.Api.Sharing.ViewerInfoPolicy.IsEnabled
+  - Dropbox.Api.Sharing.ViewerInfoPolicy.AsEnabled
+  - Dropbox.Api.Sharing.ViewerInfoPolicy.IsDisabled
+  - Dropbox.Api.Sharing.ViewerInfoPolicy.AsDisabled
+  - Dropbox.Api.Sharing.ViewerInfoPolicy.IsOther
+  - Dropbox.Api.Sharing.ViewerInfoPolicy.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Sharing.ViewerInfoPolicy.Disabled.Instance
+  commentId: F:Dropbox.Api.Sharing.ViewerInfoPolicy.Disabled.Instance
+  id: Instance
+  parent: Dropbox.Api.Sharing.ViewerInfoPolicy.Disabled
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: ViewerInfoPolicy.Disabled.Instance
+  fullName: Dropbox.Api.Sharing.ViewerInfoPolicy.Disabled.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ViewerInfoPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ViewerInfoPolicy.cs
+    startLine: 275
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>A singleton instance of Disabled</p>\n"
+  example: []
+  syntax:
+    content: public static readonly ViewerInfoPolicy.Disabled Instance
+    return:
+      type: Dropbox.Api.Sharing.ViewerInfoPolicy.Disabled
+    content.vb: Public Shared ReadOnly Instance As ViewerInfoPolicy.Disabled
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.ViewerInfoPolicy
+  commentId: T:Dropbox.Api.Sharing.ViewerInfoPolicy
+  parent: Dropbox.Api.Sharing
+  name: ViewerInfoPolicy
+  nameWithType: ViewerInfoPolicy
+  fullName: Dropbox.Api.Sharing.ViewerInfoPolicy
+- uid: Dropbox.Api.Sharing.ViewerInfoPolicy.IsEnabled
+  commentId: P:Dropbox.Api.Sharing.ViewerInfoPolicy.IsEnabled
+  parent: Dropbox.Api.Sharing.ViewerInfoPolicy
+  name: IsEnabled
+  nameWithType: ViewerInfoPolicy.IsEnabled
+  fullName: Dropbox.Api.Sharing.ViewerInfoPolicy.IsEnabled
+- uid: Dropbox.Api.Sharing.ViewerInfoPolicy.AsEnabled
+  commentId: P:Dropbox.Api.Sharing.ViewerInfoPolicy.AsEnabled
+  parent: Dropbox.Api.Sharing.ViewerInfoPolicy
+  name: AsEnabled
+  nameWithType: ViewerInfoPolicy.AsEnabled
+  fullName: Dropbox.Api.Sharing.ViewerInfoPolicy.AsEnabled
+- uid: Dropbox.Api.Sharing.ViewerInfoPolicy.IsDisabled
+  commentId: P:Dropbox.Api.Sharing.ViewerInfoPolicy.IsDisabled
+  parent: Dropbox.Api.Sharing.ViewerInfoPolicy
+  name: IsDisabled
+  nameWithType: ViewerInfoPolicy.IsDisabled
+  fullName: Dropbox.Api.Sharing.ViewerInfoPolicy.IsDisabled
+- uid: Dropbox.Api.Sharing.ViewerInfoPolicy.AsDisabled
+  commentId: P:Dropbox.Api.Sharing.ViewerInfoPolicy.AsDisabled
+  parent: Dropbox.Api.Sharing.ViewerInfoPolicy
+  name: AsDisabled
+  nameWithType: ViewerInfoPolicy.AsDisabled
+  fullName: Dropbox.Api.Sharing.ViewerInfoPolicy.AsDisabled
+- uid: Dropbox.Api.Sharing.ViewerInfoPolicy.IsOther
+  commentId: P:Dropbox.Api.Sharing.ViewerInfoPolicy.IsOther
+  parent: Dropbox.Api.Sharing.ViewerInfoPolicy
+  name: IsOther
+  nameWithType: ViewerInfoPolicy.IsOther
+  fullName: Dropbox.Api.Sharing.ViewerInfoPolicy.IsOther
+- uid: Dropbox.Api.Sharing.ViewerInfoPolicy.AsOther
+  commentId: P:Dropbox.Api.Sharing.ViewerInfoPolicy.AsOther
+  parent: Dropbox.Api.Sharing.ViewerInfoPolicy
+  name: AsOther
+  nameWithType: ViewerInfoPolicy.AsOther
+  fullName: Dropbox.Api.Sharing.ViewerInfoPolicy.AsOther
+- uid: Dropbox.Api.Sharing.ViewerInfoPolicy.Disabled
+  commentId: T:Dropbox.Api.Sharing.ViewerInfoPolicy.Disabled
+  parent: Dropbox.Api.Sharing
+  name: ViewerInfoPolicy.Disabled
+  nameWithType: ViewerInfoPolicy.Disabled
+  fullName: Dropbox.Api.Sharing.ViewerInfoPolicy.Disabled
+shouldSkipMarkup: true

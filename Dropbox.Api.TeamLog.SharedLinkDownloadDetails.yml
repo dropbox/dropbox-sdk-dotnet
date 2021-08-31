@@ -1,0 +1,191 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.SharedLinkDownloadDetails
+  commentId: T:Dropbox.Api.TeamLog.SharedLinkDownloadDetails
+  id: SharedLinkDownloadDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.SharedLinkDownloadDetails.#ctor
+  - Dropbox.Api.TeamLog.SharedLinkDownloadDetails.#ctor(Dropbox.Api.TeamLog.UserLogInfo)
+  - Dropbox.Api.TeamLog.SharedLinkDownloadDetails.SharedLinkOwner
+  langs:
+  - csharp
+  - vb
+  name: SharedLinkDownloadDetails
+  nameWithType: SharedLinkDownloadDetails
+  fullName: Dropbox.Api.TeamLog.SharedLinkDownloadDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedLinkDownloadDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SharedLinkDownloadDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedLinkDownloadDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Downloaded file/folder from shared link.</p>\n"
+  example: []
+  syntax:
+    content: 'public class SharedLinkDownloadDetails : object'
+    content.vb: >-
+      Public Class SharedLinkDownloadDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.SharedLinkDownloadDetails.#ctor(Dropbox.Api.TeamLog.UserLogInfo)
+  commentId: M:Dropbox.Api.TeamLog.SharedLinkDownloadDetails.#ctor(Dropbox.Api.TeamLog.UserLogInfo)
+  id: '#ctor(Dropbox.Api.TeamLog.UserLogInfo)'
+  parent: Dropbox.Api.TeamLog.SharedLinkDownloadDetails
+  langs:
+  - csharp
+  - vb
+  name: SharedLinkDownloadDetails(UserLogInfo)
+  nameWithType: SharedLinkDownloadDetails.SharedLinkDownloadDetails(UserLogInfo)
+  fullName: Dropbox.Api.TeamLog.SharedLinkDownloadDetails.SharedLinkDownloadDetails(Dropbox.Api.TeamLog.UserLogInfo)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedLinkDownloadDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedLinkDownloadDetails.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SharedLinkDownloadDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public SharedLinkDownloadDetails(UserLogInfo sharedLinkOwner = null)
+    parameters:
+    - id: sharedLinkOwner
+      type: Dropbox.Api.TeamLog.UserLogInfo
+      description: >-
+        Shared link owner details. Might be missing due to
+
+        historical data gap.
+    content.vb: Public Sub New(sharedLinkOwner As UserLogInfo = Nothing)
+  overload: Dropbox.Api.TeamLog.SharedLinkDownloadDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SharedLinkDownloadDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.SharedLinkDownloadDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.SharedLinkDownloadDetails
+  langs:
+  - csharp
+  - vb
+  name: SharedLinkDownloadDetails()
+  nameWithType: SharedLinkDownloadDetails.SharedLinkDownloadDetails()
+  fullName: Dropbox.Api.TeamLog.SharedLinkDownloadDetails.SharedLinkDownloadDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedLinkDownloadDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedLinkDownloadDetails.cs
+    startLine: 46
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SharedLinkDownloadDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public SharedLinkDownloadDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.SharedLinkDownloadDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SharedLinkDownloadDetails.SharedLinkOwner
+  commentId: P:Dropbox.Api.TeamLog.SharedLinkDownloadDetails.SharedLinkOwner
+  id: SharedLinkOwner
+  parent: Dropbox.Api.TeamLog.SharedLinkDownloadDetails
+  langs:
+  - csharp
+  - vb
+  name: SharedLinkOwner
+  nameWithType: SharedLinkDownloadDetails.SharedLinkOwner
+  fullName: Dropbox.Api.TeamLog.SharedLinkDownloadDetails.SharedLinkOwner
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedLinkDownloadDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SharedLinkOwner
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedLinkDownloadDetails.cs
+    startLine: 55
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Shared link owner details. Might be missing due to historical data\ngap.</p>\n"
+  example: []
+  syntax:
+    content: public UserLogInfo SharedLinkOwner { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.UserLogInfo
+    content.vb: Public Property SharedLinkOwner As UserLogInfo
+  overload: Dropbox.Api.TeamLog.SharedLinkDownloadDetails.SharedLinkOwner*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.SharedLinkDownloadDetails
+  commentId: T:Dropbox.Api.TeamLog.SharedLinkDownloadDetails
+  parent: Dropbox.Api.TeamLog
+  name: SharedLinkDownloadDetails
+  nameWithType: SharedLinkDownloadDetails
+  fullName: Dropbox.Api.TeamLog.SharedLinkDownloadDetails
+- uid: Dropbox.Api.TeamLog.SharedLinkDownloadDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedLinkDownloadDetails.#ctor
+  name: SharedLinkDownloadDetails
+  nameWithType: SharedLinkDownloadDetails.SharedLinkDownloadDetails
+  fullName: Dropbox.Api.TeamLog.SharedLinkDownloadDetails.SharedLinkDownloadDetails
+- uid: Dropbox.Api.TeamLog.UserLogInfo
+  commentId: T:Dropbox.Api.TeamLog.UserLogInfo
+  parent: Dropbox.Api.TeamLog
+  name: UserLogInfo
+  nameWithType: UserLogInfo
+  fullName: Dropbox.Api.TeamLog.UserLogInfo
+- uid: Dropbox.Api.TeamLog.SharedLinkDownloadDetails.SharedLinkOwner*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedLinkDownloadDetails.SharedLinkOwner
+  name: SharedLinkOwner
+  nameWithType: SharedLinkDownloadDetails.SharedLinkOwner
+  fullName: Dropbox.Api.TeamLog.SharedLinkDownloadDetails.SharedLinkOwner
+shouldSkipMarkup: true

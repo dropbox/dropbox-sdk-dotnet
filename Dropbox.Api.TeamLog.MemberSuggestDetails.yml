@@ -1,0 +1,347 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.MemberSuggestDetails
+  commentId: T:Dropbox.Api.TeamLog.MemberSuggestDetails
+  id: MemberSuggestDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.MemberSuggestDetails.#ctor
+  - Dropbox.Api.TeamLog.MemberSuggestDetails.#ctor(System.Collections.Generic.IEnumerable{System.String})
+  - Dropbox.Api.TeamLog.MemberSuggestDetails.SuggestedMembers
+  langs:
+  - csharp
+  - vb
+  name: MemberSuggestDetails
+  nameWithType: MemberSuggestDetails
+  fullName: Dropbox.Api.TeamLog.MemberSuggestDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSuggestDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: MemberSuggestDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSuggestDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Suggested person to add to team.</p>\n"
+  example: []
+  syntax:
+    content: 'public class MemberSuggestDetails : object'
+    content.vb: >-
+      Public Class MemberSuggestDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.MemberSuggestDetails.#ctor(System.Collections.Generic.IEnumerable{System.String})
+  commentId: M:Dropbox.Api.TeamLog.MemberSuggestDetails.#ctor(System.Collections.Generic.IEnumerable{System.String})
+  id: '#ctor(System.Collections.Generic.IEnumerable{System.String})'
+  parent: Dropbox.Api.TeamLog.MemberSuggestDetails
+  langs:
+  - csharp
+  - vb
+  name: MemberSuggestDetails(System.Collections.Generic.IEnumerable<String>)
+  nameWithType: MemberSuggestDetails.MemberSuggestDetails(System.Collections.Generic.IEnumerable<String>)
+  fullName: Dropbox.Api.TeamLog.MemberSuggestDetails.MemberSuggestDetails(System.Collections.Generic.IEnumerable<System.String>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSuggestDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSuggestDetails.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.MemberSuggestDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public MemberSuggestDetails(System.Collections.Generic.IEnumerable<string> suggestedMembers)
+    parameters:
+    - id: suggestedMembers
+      type: System.Collections.Generic.IEnumerable{System.String}
+      description: suggested users emails.
+    content.vb: Public Sub New(suggestedMembers As System.Collections.Generic.IEnumerable(Of String))
+  overload: Dropbox.Api.TeamLog.MemberSuggestDetails.#ctor*
+  nameWithType.vb: MemberSuggestDetails.MemberSuggestDetails(System.Collections.Generic.IEnumerable(Of String))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.TeamLog.MemberSuggestDetails.MemberSuggestDetails(System.Collections.Generic.IEnumerable(Of System.String))
+  name.vb: MemberSuggestDetails(System.Collections.Generic.IEnumerable(Of String))
+- uid: Dropbox.Api.TeamLog.MemberSuggestDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.MemberSuggestDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.MemberSuggestDetails
+  langs:
+  - csharp
+  - vb
+  name: MemberSuggestDetails()
+  nameWithType: MemberSuggestDetails.MemberSuggestDetails()
+  fullName: Dropbox.Api.TeamLog.MemberSuggestDetails.MemberSuggestDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSuggestDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSuggestDetails.cs
+    startLine: 52
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.MemberSuggestDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public MemberSuggestDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.MemberSuggestDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.MemberSuggestDetails.SuggestedMembers
+  commentId: P:Dropbox.Api.TeamLog.MemberSuggestDetails.SuggestedMembers
+  id: SuggestedMembers
+  parent: Dropbox.Api.TeamLog.MemberSuggestDetails
+  langs:
+  - csharp
+  - vb
+  name: SuggestedMembers
+  nameWithType: MemberSuggestDetails.SuggestedMembers
+  fullName: Dropbox.Api.TeamLog.MemberSuggestDetails.SuggestedMembers
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSuggestDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SuggestedMembers
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSuggestDetails.cs
+    startLine: 60
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>suggested users emails.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<string> SuggestedMembers { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{System.String}
+    content.vb: Public Property SuggestedMembers As System.Collections.Generic.IList(Of String)
+  overload: Dropbox.Api.TeamLog.MemberSuggestDetails.SuggestedMembers*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.MemberSuggestDetails
+  commentId: T:Dropbox.Api.TeamLog.MemberSuggestDetails
+  parent: Dropbox.Api.TeamLog
+  name: MemberSuggestDetails
+  nameWithType: MemberSuggestDetails
+  fullName: Dropbox.Api.TeamLog.MemberSuggestDetails
+- uid: Dropbox.Api.TeamLog.MemberSuggestDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberSuggestDetails.#ctor
+  name: MemberSuggestDetails
+  nameWithType: MemberSuggestDetails.MemberSuggestDetails
+  fullName: Dropbox.Api.TeamLog.MemberSuggestDetails.MemberSuggestDetails
+- uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: '!:System.Collections.Generic.IEnumerable{System.String}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<String>
+  nameWithType: System.Collections.Generic.IEnumerable<String>
+  fullName: System.Collections.Generic.IEnumerable<System.String>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of String)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.String)
+  name.vb: System.Collections.Generic.IEnumerable(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: System.Collections.Generic.IEnumerable<>
+  nameWithType: System.Collections.Generic.IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: System.Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.TeamLog.MemberSuggestDetails.SuggestedMembers*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberSuggestDetails.SuggestedMembers
+  name: SuggestedMembers
+  nameWithType: MemberSuggestDetails.SuggestedMembers
+  fullName: Dropbox.Api.TeamLog.MemberSuggestDetails.SuggestedMembers
+- uid: System.Collections.Generic.IList{System.String}
+  commentId: '!:System.Collections.Generic.IList{System.String}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<String>
+  nameWithType: System.Collections.Generic.IList<String>
+  fullName: System.Collections.Generic.IList<System.String>
+  nameWithType.vb: System.Collections.Generic.IList(Of String)
+  fullName.vb: System.Collections.Generic.IList(Of System.String)
+  name.vb: System.Collections.Generic.IList(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  isExternal: true
+  name: System.Collections.Generic.IList<>
+  nameWithType: System.Collections.Generic.IList<>
+  fullName: System.Collections.Generic.IList<>
+  nameWithType.vb: System.Collections.Generic.IList(Of )
+  fullName.vb: System.Collections.Generic.IList(Of )
+  name.vb: System.Collections.Generic.IList(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+shouldSkipMarkup: true

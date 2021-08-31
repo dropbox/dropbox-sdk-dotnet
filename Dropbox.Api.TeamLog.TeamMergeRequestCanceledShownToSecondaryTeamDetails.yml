@@ -1,0 +1,241 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamDetails
+  commentId: T:Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamDetails
+  id: TeamMergeRequestCanceledShownToSecondaryTeamDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamDetails.#ctor
+  - Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamDetails.#ctor(System.String,System.String)
+  - Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamDetails.SentBy
+  - Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamDetails.SentTo
+  langs:
+  - csharp
+  - vb
+  name: TeamMergeRequestCanceledShownToSecondaryTeamDetails
+  nameWithType: TeamMergeRequestCanceledShownToSecondaryTeamDetails
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestCanceledShownToSecondaryTeamDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TeamMergeRequestCanceledShownToSecondaryTeamDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestCanceledShownToSecondaryTeamDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Canceled a team merge request.</p>\n"
+  example: []
+  syntax:
+    content: 'public class TeamMergeRequestCanceledShownToSecondaryTeamDetails : object'
+    content.vb: >-
+      Public Class TeamMergeRequestCanceledShownToSecondaryTeamDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamDetails.#ctor(System.String,System.String)
+  commentId: M:Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamDetails.#ctor(System.String,System.String)
+  id: '#ctor(System.String,System.String)'
+  parent: Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamDetails
+  langs:
+  - csharp
+  - vb
+  name: TeamMergeRequestCanceledShownToSecondaryTeamDetails(String, String)
+  nameWithType: TeamMergeRequestCanceledShownToSecondaryTeamDetails.TeamMergeRequestCanceledShownToSecondaryTeamDetails(String, String)
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamDetails.TeamMergeRequestCanceledShownToSecondaryTeamDetails(System.String, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestCanceledShownToSecondaryTeamDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestCanceledShownToSecondaryTeamDetails.cs
+    startLine: 37
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public TeamMergeRequestCanceledShownToSecondaryTeamDetails(string sentTo, string sentBy)
+    parameters:
+    - id: sentTo
+      type: System.String
+      description: >-
+        The email of the primary team admin that the request was sent
+
+        to.
+    - id: sentBy
+      type: System.String
+      description: >-
+        The name of the secondary team admin who sent the request
+
+        originally.
+    content.vb: Public Sub New(sentTo As String, sentBy As String)
+  overload: Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamDetails
+  langs:
+  - csharp
+  - vb
+  name: TeamMergeRequestCanceledShownToSecondaryTeamDetails()
+  nameWithType: TeamMergeRequestCanceledShownToSecondaryTeamDetails.TeamMergeRequestCanceledShownToSecondaryTeamDetails()
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamDetails.TeamMergeRequestCanceledShownToSecondaryTeamDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestCanceledShownToSecondaryTeamDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestCanceledShownToSecondaryTeamDetails.cs
+    startLine: 60
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public TeamMergeRequestCanceledShownToSecondaryTeamDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamDetails.SentTo
+  commentId: P:Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamDetails.SentTo
+  id: SentTo
+  parent: Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamDetails
+  langs:
+  - csharp
+  - vb
+  name: SentTo
+  nameWithType: TeamMergeRequestCanceledShownToSecondaryTeamDetails.SentTo
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamDetails.SentTo
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestCanceledShownToSecondaryTeamDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SentTo
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestCanceledShownToSecondaryTeamDetails.cs
+    startLine: 68
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The email of the primary team admin that the request was sent to.</p>\n"
+  example: []
+  syntax:
+    content: public string SentTo { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SentTo As String
+  overload: Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamDetails.SentTo*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamDetails.SentBy
+  commentId: P:Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamDetails.SentBy
+  id: SentBy
+  parent: Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamDetails
+  langs:
+  - csharp
+  - vb
+  name: SentBy
+  nameWithType: TeamMergeRequestCanceledShownToSecondaryTeamDetails.SentBy
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamDetails.SentBy
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestCanceledShownToSecondaryTeamDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SentBy
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestCanceledShownToSecondaryTeamDetails.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The name of the secondary team admin who sent the request originally.</p>\n"
+  example: []
+  syntax:
+    content: public string SentBy { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SentBy As String
+  overload: Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamDetails.SentBy*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamDetails
+  commentId: T:Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamDetails
+  parent: Dropbox.Api.TeamLog
+  name: TeamMergeRequestCanceledShownToSecondaryTeamDetails
+  nameWithType: TeamMergeRequestCanceledShownToSecondaryTeamDetails
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamDetails
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamDetails.#ctor
+  name: TeamMergeRequestCanceledShownToSecondaryTeamDetails
+  nameWithType: TeamMergeRequestCanceledShownToSecondaryTeamDetails.TeamMergeRequestCanceledShownToSecondaryTeamDetails
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamDetails.TeamMergeRequestCanceledShownToSecondaryTeamDetails
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamDetails.SentTo*
+  commentId: Overload:Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamDetails.SentTo
+  name: SentTo
+  nameWithType: TeamMergeRequestCanceledShownToSecondaryTeamDetails.SentTo
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamDetails.SentTo
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamDetails.SentBy*
+  commentId: Overload:Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamDetails.SentBy
+  name: SentBy
+  nameWithType: TeamMergeRequestCanceledShownToSecondaryTeamDetails.SentBy
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamDetails.SentBy
+shouldSkipMarkup: true

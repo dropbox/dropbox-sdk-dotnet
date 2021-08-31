@@ -1,0 +1,240 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.UserCustomQuotaArg
+  commentId: T:Dropbox.Api.Team.UserCustomQuotaArg
+  id: UserCustomQuotaArg
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.UserCustomQuotaArg.#ctor
+  - Dropbox.Api.Team.UserCustomQuotaArg.#ctor(Dropbox.Api.Team.UserSelectorArg,System.UInt32)
+  - Dropbox.Api.Team.UserCustomQuotaArg.QuotaGb
+  - Dropbox.Api.Team.UserCustomQuotaArg.User
+  langs:
+  - csharp
+  - vb
+  name: UserCustomQuotaArg
+  nameWithType: UserCustomQuotaArg
+  fullName: Dropbox.Api.Team.UserCustomQuotaArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserCustomQuotaArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: UserCustomQuotaArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserCustomQuotaArg.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>User and their required custom quota in GB (1 TB = 1024 GB).</p>\n"
+  example: []
+  syntax:
+    content: 'public class UserCustomQuotaArg : object'
+    content.vb: >-
+      Public Class UserCustomQuotaArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.UserCustomQuotaArg.#ctor(Dropbox.Api.Team.UserSelectorArg,System.UInt32)
+  commentId: M:Dropbox.Api.Team.UserCustomQuotaArg.#ctor(Dropbox.Api.Team.UserSelectorArg,System.UInt32)
+  id: '#ctor(Dropbox.Api.Team.UserSelectorArg,System.UInt32)'
+  parent: Dropbox.Api.Team.UserCustomQuotaArg
+  langs:
+  - csharp
+  - vb
+  name: UserCustomQuotaArg(UserSelectorArg, UInt32)
+  nameWithType: UserCustomQuotaArg.UserCustomQuotaArg(UserSelectorArg, UInt32)
+  fullName: Dropbox.Api.Team.UserCustomQuotaArg.UserCustomQuotaArg(Dropbox.Api.Team.UserSelectorArg, System.UInt32)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserCustomQuotaArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserCustomQuotaArg.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.UserCustomQuotaArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public UserCustomQuotaArg(UserSelectorArg user, uint quotaGb)
+    parameters:
+    - id: user
+      type: Dropbox.Api.Team.UserSelectorArg
+      description: The user
+    - id: quotaGb
+      type: System.UInt32
+      description: The quota gb
+    content.vb: Public Sub New(user As UserSelectorArg, quotaGb As UInteger)
+  overload: Dropbox.Api.Team.UserCustomQuotaArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.UserCustomQuotaArg.#ctor
+  commentId: M:Dropbox.Api.Team.UserCustomQuotaArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.UserCustomQuotaArg
+  langs:
+  - csharp
+  - vb
+  name: UserCustomQuotaArg()
+  nameWithType: UserCustomQuotaArg.UserCustomQuotaArg()
+  fullName: Dropbox.Api.Team.UserCustomQuotaArg.UserCustomQuotaArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserCustomQuotaArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserCustomQuotaArg.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.UserCustomQuotaArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public UserCustomQuotaArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.UserCustomQuotaArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.UserCustomQuotaArg.User
+  commentId: P:Dropbox.Api.Team.UserCustomQuotaArg.User
+  id: User
+  parent: Dropbox.Api.Team.UserCustomQuotaArg
+  langs:
+  - csharp
+  - vb
+  name: User
+  nameWithType: UserCustomQuotaArg.User
+  fullName: Dropbox.Api.Team.UserCustomQuotaArg.User
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserCustomQuotaArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: User
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserCustomQuotaArg.cs
+    startLine: 66
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets the user of the user custom quota arg</p>\n"
+  example: []
+  syntax:
+    content: public UserSelectorArg User { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.UserSelectorArg
+    content.vb: Public Property User As UserSelectorArg
+  overload: Dropbox.Api.Team.UserCustomQuotaArg.User*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.UserCustomQuotaArg.QuotaGb
+  commentId: P:Dropbox.Api.Team.UserCustomQuotaArg.QuotaGb
+  id: QuotaGb
+  parent: Dropbox.Api.Team.UserCustomQuotaArg
+  langs:
+  - csharp
+  - vb
+  name: QuotaGb
+  nameWithType: UserCustomQuotaArg.QuotaGb
+  fullName: Dropbox.Api.Team.UserCustomQuotaArg.QuotaGb
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserCustomQuotaArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: QuotaGb
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserCustomQuotaArg.cs
+    startLine: 71
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets the quota gb of the user custom quota arg</p>\n"
+  example: []
+  syntax:
+    content: public uint QuotaGb { get; protected set; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public Property QuotaGb As UInteger
+  overload: Dropbox.Api.Team.UserCustomQuotaArg.QuotaGb*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.UserCustomQuotaArg
+  commentId: T:Dropbox.Api.Team.UserCustomQuotaArg
+  name: UserCustomQuotaArg
+  nameWithType: UserCustomQuotaArg
+  fullName: Dropbox.Api.Team.UserCustomQuotaArg
+- uid: Dropbox.Api.Team.UserCustomQuotaArg.#ctor*
+  commentId: Overload:Dropbox.Api.Team.UserCustomQuotaArg.#ctor
+  name: UserCustomQuotaArg
+  nameWithType: UserCustomQuotaArg.UserCustomQuotaArg
+  fullName: Dropbox.Api.Team.UserCustomQuotaArg.UserCustomQuotaArg
+- uid: Dropbox.Api.Team.UserSelectorArg
+  commentId: T:Dropbox.Api.Team.UserSelectorArg
+  parent: Dropbox.Api.Team
+  name: UserSelectorArg
+  nameWithType: UserSelectorArg
+  fullName: Dropbox.Api.Team.UserSelectorArg
+- uid: System.UInt32
+  isExternal: true
+  name: UInt32
+  nameWithType: UInt32
+  fullName: System.UInt32
+- uid: Dropbox.Api.Team.UserCustomQuotaArg.User*
+  commentId: Overload:Dropbox.Api.Team.UserCustomQuotaArg.User
+  name: User
+  nameWithType: UserCustomQuotaArg.User
+  fullName: Dropbox.Api.Team.UserCustomQuotaArg.User
+- uid: Dropbox.Api.Team.UserCustomQuotaArg.QuotaGb*
+  commentId: Overload:Dropbox.Api.Team.UserCustomQuotaArg.QuotaGb
+  name: QuotaGb
+  nameWithType: UserCustomQuotaArg.QuotaGb
+  fullName: Dropbox.Api.Team.UserCustomQuotaArg.QuotaGb
+shouldSkipMarkup: true

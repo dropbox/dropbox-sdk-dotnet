@@ -1,0 +1,359 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.DeleteBatchResult
+  commentId: T:Dropbox.Api.Files.DeleteBatchResult
+  id: DeleteBatchResult
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.DeleteBatchResult.#ctor
+  - Dropbox.Api.Files.DeleteBatchResult.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Files.DeleteBatchResultEntry})
+  - Dropbox.Api.Files.DeleteBatchResult.Entries
+  langs:
+  - csharp
+  - vb
+  name: DeleteBatchResult
+  nameWithType: DeleteBatchResult
+  fullName: Dropbox.Api.Files.DeleteBatchResult
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/DeleteBatchResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: DeleteBatchResult
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/DeleteBatchResult.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The delete batch result object</p>\n"
+  example: []
+  syntax:
+    content: 'public class DeleteBatchResult : FileOpsResult'
+    content.vb: >-
+      Public Class DeleteBatchResult
+          Inherits FileOpsResult
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Files.FileOpsResult
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.DeleteBatchResult.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Files.DeleteBatchResultEntry})
+  commentId: M:Dropbox.Api.Files.DeleteBatchResult.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Files.DeleteBatchResultEntry})
+  id: '#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Files.DeleteBatchResultEntry})'
+  parent: Dropbox.Api.Files.DeleteBatchResult
+  langs:
+  - csharp
+  - vb
+  name: DeleteBatchResult(System.Collections.Generic.IEnumerable<DeleteBatchResultEntry>)
+  nameWithType: DeleteBatchResult.DeleteBatchResult(System.Collections.Generic.IEnumerable<DeleteBatchResultEntry>)
+  fullName: Dropbox.Api.Files.DeleteBatchResult.DeleteBatchResult(System.Collections.Generic.IEnumerable<Dropbox.Api.Files.DeleteBatchResultEntry>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/DeleteBatchResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/DeleteBatchResult.cs
+    startLine: 37
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.DeleteBatchResult\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public DeleteBatchResult(System.Collections.Generic.IEnumerable<DeleteBatchResultEntry> entries)
+    parameters:
+    - id: entries
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.Files.DeleteBatchResultEntry}
+      description: >-
+        Each entry in <xref href="Dropbox.Api.Files.DeleteBatchArg.Entries" data-throw-if-not-resolved="false"></xref> will appear at the same position
+
+        inside <xref href="Dropbox.Api.Files.DeleteBatchResult.Entries" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Sub New(entries As System.Collections.Generic.IEnumerable(Of DeleteBatchResultEntry))
+  overload: Dropbox.Api.Files.DeleteBatchResult.#ctor*
+  nameWithType.vb: DeleteBatchResult.DeleteBatchResult(System.Collections.Generic.IEnumerable(Of DeleteBatchResultEntry))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Files.DeleteBatchResult.DeleteBatchResult(System.Collections.Generic.IEnumerable(Of Dropbox.Api.Files.DeleteBatchResultEntry))
+  name.vb: DeleteBatchResult(System.Collections.Generic.IEnumerable(Of DeleteBatchResultEntry))
+- uid: Dropbox.Api.Files.DeleteBatchResult.#ctor
+  commentId: M:Dropbox.Api.Files.DeleteBatchResult.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.DeleteBatchResult
+  langs:
+  - csharp
+  - vb
+  name: DeleteBatchResult()
+  nameWithType: DeleteBatchResult.DeleteBatchResult()
+  fullName: Dropbox.Api.Files.DeleteBatchResult.DeleteBatchResult()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/DeleteBatchResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/DeleteBatchResult.cs
+    startLine: 55
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.DeleteBatchResult\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public DeleteBatchResult()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.DeleteBatchResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.DeleteBatchResult.Entries
+  commentId: P:Dropbox.Api.Files.DeleteBatchResult.Entries
+  id: Entries
+  parent: Dropbox.Api.Files.DeleteBatchResult
+  langs:
+  - csharp
+  - vb
+  name: Entries
+  nameWithType: DeleteBatchResult.Entries
+  fullName: Dropbox.Api.Files.DeleteBatchResult.Entries
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/DeleteBatchResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Entries
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/DeleteBatchResult.cs
+    startLine: 65
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Each entry in <xref href=\"Dropbox.Api.Files.DeleteBatchArg.Entries\" data-throw-if-not-resolved=\"false\"></xref> will\nappear at the same position inside <xref href=\"Dropbox.Api.Files.DeleteBatchResult.Entries\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<DeleteBatchResultEntry> Entries { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{Dropbox.Api.Files.DeleteBatchResultEntry}
+    content.vb: Public Property Entries As System.Collections.Generic.IList(Of DeleteBatchResultEntry)
+  overload: Dropbox.Api.Files.DeleteBatchResult.Entries*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.FileOpsResult
+  commentId: T:Dropbox.Api.Files.FileOpsResult
+  parent: Dropbox.Api.Files
+  name: FileOpsResult
+  nameWithType: FileOpsResult
+  fullName: Dropbox.Api.Files.FileOpsResult
+- uid: Dropbox.Api.Files.DeleteBatchResult
+  commentId: T:Dropbox.Api.Files.DeleteBatchResult
+  parent: Dropbox.Api.Files
+  name: DeleteBatchResult
+  nameWithType: DeleteBatchResult
+  fullName: Dropbox.Api.Files.DeleteBatchResult
+- uid: Dropbox.Api.Files.DeleteBatchArg.Entries
+  commentId: P:Dropbox.Api.Files.DeleteBatchArg.Entries
+  isExternal: true
+- uid: Dropbox.Api.Files.DeleteBatchResult.Entries
+  commentId: P:Dropbox.Api.Files.DeleteBatchResult.Entries
+  isExternal: true
+- uid: Dropbox.Api.Files.DeleteBatchResult.#ctor*
+  commentId: Overload:Dropbox.Api.Files.DeleteBatchResult.#ctor
+  name: DeleteBatchResult
+  nameWithType: DeleteBatchResult.DeleteBatchResult
+  fullName: Dropbox.Api.Files.DeleteBatchResult.DeleteBatchResult
+- uid: System.Collections.Generic.IEnumerable{Dropbox.Api.Files.DeleteBatchResultEntry}
+  commentId: '!:System.Collections.Generic.IEnumerable{Dropbox.Api.Files.DeleteBatchResultEntry}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<DeleteBatchResultEntry>
+  nameWithType: System.Collections.Generic.IEnumerable<DeleteBatchResultEntry>
+  fullName: System.Collections.Generic.IEnumerable<Dropbox.Api.Files.DeleteBatchResultEntry>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of DeleteBatchResultEntry)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Dropbox.Api.Files.DeleteBatchResultEntry)
+  name.vb: System.Collections.Generic.IEnumerable(Of DeleteBatchResultEntry)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Files.DeleteBatchResultEntry
+    name: DeleteBatchResultEntry
+    nameWithType: DeleteBatchResultEntry
+    fullName: Dropbox.Api.Files.DeleteBatchResultEntry
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Files.DeleteBatchResultEntry
+    name: DeleteBatchResultEntry
+    nameWithType: DeleteBatchResultEntry
+    fullName: Dropbox.Api.Files.DeleteBatchResultEntry
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: System.Collections.Generic.IEnumerable<>
+  nameWithType: System.Collections.Generic.IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: System.Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Files.DeleteBatchResult.Entries*
+  commentId: Overload:Dropbox.Api.Files.DeleteBatchResult.Entries
+  name: Entries
+  nameWithType: DeleteBatchResult.Entries
+  fullName: Dropbox.Api.Files.DeleteBatchResult.Entries
+- uid: System.Collections.Generic.IList{Dropbox.Api.Files.DeleteBatchResultEntry}
+  commentId: '!:System.Collections.Generic.IList{Dropbox.Api.Files.DeleteBatchResultEntry}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<DeleteBatchResultEntry>
+  nameWithType: System.Collections.Generic.IList<DeleteBatchResultEntry>
+  fullName: System.Collections.Generic.IList<Dropbox.Api.Files.DeleteBatchResultEntry>
+  nameWithType.vb: System.Collections.Generic.IList(Of DeleteBatchResultEntry)
+  fullName.vb: System.Collections.Generic.IList(Of Dropbox.Api.Files.DeleteBatchResultEntry)
+  name.vb: System.Collections.Generic.IList(Of DeleteBatchResultEntry)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Files.DeleteBatchResultEntry
+    name: DeleteBatchResultEntry
+    nameWithType: DeleteBatchResultEntry
+    fullName: Dropbox.Api.Files.DeleteBatchResultEntry
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Files.DeleteBatchResultEntry
+    name: DeleteBatchResultEntry
+    nameWithType: DeleteBatchResultEntry
+    fullName: Dropbox.Api.Files.DeleteBatchResultEntry
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  isExternal: true
+  name: System.Collections.Generic.IList<>
+  nameWithType: System.Collections.Generic.IList<>
+  fullName: System.Collections.Generic.IList<>
+  nameWithType.vb: System.Collections.Generic.IList(Of )
+  fullName.vb: System.Collections.Generic.IList(Of )
+  name.vb: System.Collections.Generic.IList(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+shouldSkipMarkup: true

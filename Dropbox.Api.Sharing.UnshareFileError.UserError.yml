@@ -1,0 +1,201 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.UnshareFileError.UserError
+  commentId: T:Dropbox.Api.Sharing.UnshareFileError.UserError
+  id: UnshareFileError.UserError
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.UnshareFileError.UserError.#ctor(Dropbox.Api.Sharing.SharingUserError)
+  - Dropbox.Api.Sharing.UnshareFileError.UserError.Value
+  langs:
+  - csharp
+  - vb
+  name: UnshareFileError.UserError
+  nameWithType: UnshareFileError.UserError
+  fullName: Dropbox.Api.Sharing.UnshareFileError.UserError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UnshareFileError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: UserError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UnshareFileError.cs
+    startLine: 183
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The user error object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class UserError : UnshareFileError'
+    content.vb: >-
+      Public NotInheritable Class UserError
+          Inherits UnshareFileError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Sharing.UnshareFileError
+  inheritedMembers:
+  - Dropbox.Api.Sharing.UnshareFileError.IsUserError
+  - Dropbox.Api.Sharing.UnshareFileError.AsUserError
+  - Dropbox.Api.Sharing.UnshareFileError.IsAccessError
+  - Dropbox.Api.Sharing.UnshareFileError.AsAccessError
+  - Dropbox.Api.Sharing.UnshareFileError.IsOther
+  - Dropbox.Api.Sharing.UnshareFileError.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Sharing.UnshareFileError.UserError.#ctor(Dropbox.Api.Sharing.SharingUserError)
+  commentId: M:Dropbox.Api.Sharing.UnshareFileError.UserError.#ctor(Dropbox.Api.Sharing.SharingUserError)
+  id: '#ctor(Dropbox.Api.Sharing.SharingUserError)'
+  parent: Dropbox.Api.Sharing.UnshareFileError.UserError
+  langs:
+  - csharp
+  - vb
+  name: UserError(SharingUserError)
+  nameWithType: UnshareFileError.UserError.UserError(SharingUserError)
+  fullName: Dropbox.Api.Sharing.UnshareFileError.UserError.UserError(Dropbox.Api.Sharing.SharingUserError)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UnshareFileError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UnshareFileError.cs
+    startLine: 201
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.UnshareFileError.UserError\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public UserError(SharingUserError value)
+    parameters:
+    - id: value
+      type: Dropbox.Api.Sharing.SharingUserError
+      description: The value
+    content.vb: Public Sub New(value As SharingUserError)
+  overload: Dropbox.Api.Sharing.UnshareFileError.UserError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.UnshareFileError.UserError.Value
+  commentId: P:Dropbox.Api.Sharing.UnshareFileError.UserError.Value
+  id: Value
+  parent: Dropbox.Api.Sharing.UnshareFileError.UserError
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: UnshareFileError.UserError.Value
+  fullName: Dropbox.Api.Sharing.UnshareFileError.UserError.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UnshareFileError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UnshareFileError.cs
+    startLine: 215
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public SharingUserError Value { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.SharingUserError
+    content.vb: Public ReadOnly Property Value As SharingUserError
+  overload: Dropbox.Api.Sharing.UnshareFileError.UserError.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.UnshareFileError
+  commentId: T:Dropbox.Api.Sharing.UnshareFileError
+  parent: Dropbox.Api.Sharing
+  name: UnshareFileError
+  nameWithType: UnshareFileError
+  fullName: Dropbox.Api.Sharing.UnshareFileError
+- uid: Dropbox.Api.Sharing.UnshareFileError.IsUserError
+  commentId: P:Dropbox.Api.Sharing.UnshareFileError.IsUserError
+  parent: Dropbox.Api.Sharing.UnshareFileError
+  name: IsUserError
+  nameWithType: UnshareFileError.IsUserError
+  fullName: Dropbox.Api.Sharing.UnshareFileError.IsUserError
+- uid: Dropbox.Api.Sharing.UnshareFileError.AsUserError
+  commentId: P:Dropbox.Api.Sharing.UnshareFileError.AsUserError
+  parent: Dropbox.Api.Sharing.UnshareFileError
+  name: AsUserError
+  nameWithType: UnshareFileError.AsUserError
+  fullName: Dropbox.Api.Sharing.UnshareFileError.AsUserError
+- uid: Dropbox.Api.Sharing.UnshareFileError.IsAccessError
+  commentId: P:Dropbox.Api.Sharing.UnshareFileError.IsAccessError
+  parent: Dropbox.Api.Sharing.UnshareFileError
+  name: IsAccessError
+  nameWithType: UnshareFileError.IsAccessError
+  fullName: Dropbox.Api.Sharing.UnshareFileError.IsAccessError
+- uid: Dropbox.Api.Sharing.UnshareFileError.AsAccessError
+  commentId: P:Dropbox.Api.Sharing.UnshareFileError.AsAccessError
+  parent: Dropbox.Api.Sharing.UnshareFileError
+  name: AsAccessError
+  nameWithType: UnshareFileError.AsAccessError
+  fullName: Dropbox.Api.Sharing.UnshareFileError.AsAccessError
+- uid: Dropbox.Api.Sharing.UnshareFileError.IsOther
+  commentId: P:Dropbox.Api.Sharing.UnshareFileError.IsOther
+  parent: Dropbox.Api.Sharing.UnshareFileError
+  name: IsOther
+  nameWithType: UnshareFileError.IsOther
+  fullName: Dropbox.Api.Sharing.UnshareFileError.IsOther
+- uid: Dropbox.Api.Sharing.UnshareFileError.AsOther
+  commentId: P:Dropbox.Api.Sharing.UnshareFileError.AsOther
+  parent: Dropbox.Api.Sharing.UnshareFileError
+  name: AsOther
+  nameWithType: UnshareFileError.AsOther
+  fullName: Dropbox.Api.Sharing.UnshareFileError.AsOther
+- uid: Dropbox.Api.Sharing.UnshareFileError.UserError
+  commentId: T:Dropbox.Api.Sharing.UnshareFileError.UserError
+  parent: Dropbox.Api.Sharing
+  name: UnshareFileError.UserError
+  nameWithType: UnshareFileError.UserError
+  fullName: Dropbox.Api.Sharing.UnshareFileError.UserError
+- uid: Dropbox.Api.Sharing.UnshareFileError.UserError.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.UnshareFileError.UserError.#ctor
+  name: UserError
+  nameWithType: UnshareFileError.UserError.UserError
+  fullName: Dropbox.Api.Sharing.UnshareFileError.UserError.UserError
+- uid: Dropbox.Api.Sharing.SharingUserError
+  commentId: T:Dropbox.Api.Sharing.SharingUserError
+  parent: Dropbox.Api.Sharing
+  name: SharingUserError
+  nameWithType: SharingUserError
+  fullName: Dropbox.Api.Sharing.SharingUserError
+- uid: Dropbox.Api.Sharing.UnshareFileError.UserError.Value*
+  commentId: Overload:Dropbox.Api.Sharing.UnshareFileError.UserError.Value
+  name: Value
+  nameWithType: UnshareFileError.UserError.Value
+  fullName: Dropbox.Api.Sharing.UnshareFileError.UserError.Value
+shouldSkipMarkup: true

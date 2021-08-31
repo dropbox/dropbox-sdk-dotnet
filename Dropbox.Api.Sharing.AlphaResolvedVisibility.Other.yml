@@ -1,0 +1,218 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.AlphaResolvedVisibility.Other
+  commentId: T:Dropbox.Api.Sharing.AlphaResolvedVisibility.Other
+  id: AlphaResolvedVisibility.Other
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.AlphaResolvedVisibility.Other.Instance
+  langs:
+  - csharp
+  - vb
+  name: AlphaResolvedVisibility.Other
+  nameWithType: AlphaResolvedVisibility.Other
+  fullName: Dropbox.Api.Sharing.AlphaResolvedVisibility.Other
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AlphaResolvedVisibility.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Other
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AlphaResolvedVisibility.cs
+    startLine: 618
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The other object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Other : AlphaResolvedVisibility'
+    content.vb: >-
+      Public NotInheritable Class Other
+          Inherits AlphaResolvedVisibility
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Sharing.AlphaResolvedVisibility
+  inheritedMembers:
+  - Dropbox.Api.Sharing.AlphaResolvedVisibility.IsTeamAndPassword
+  - Dropbox.Api.Sharing.AlphaResolvedVisibility.AsTeamAndPassword
+  - Dropbox.Api.Sharing.AlphaResolvedVisibility.IsSharedFolderOnly
+  - Dropbox.Api.Sharing.AlphaResolvedVisibility.AsSharedFolderOnly
+  - Dropbox.Api.Sharing.AlphaResolvedVisibility.IsNoOne
+  - Dropbox.Api.Sharing.AlphaResolvedVisibility.AsNoOne
+  - Dropbox.Api.Sharing.AlphaResolvedVisibility.IsOnlyYou
+  - Dropbox.Api.Sharing.AlphaResolvedVisibility.AsOnlyYou
+  - Dropbox.Api.Sharing.AlphaResolvedVisibility.IsOther
+  - Dropbox.Api.Sharing.AlphaResolvedVisibility.AsOther
+  - Dropbox.Api.Sharing.AlphaResolvedVisibility.IsPublic
+  - Dropbox.Api.Sharing.AlphaResolvedVisibility.AsPublic
+  - Dropbox.Api.Sharing.AlphaResolvedVisibility.IsTeamOnly
+  - Dropbox.Api.Sharing.AlphaResolvedVisibility.AsTeamOnly
+  - Dropbox.Api.Sharing.AlphaResolvedVisibility.IsPassword
+  - Dropbox.Api.Sharing.AlphaResolvedVisibility.AsPassword
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Sharing.AlphaResolvedVisibility.Other.Instance
+  commentId: F:Dropbox.Api.Sharing.AlphaResolvedVisibility.Other.Instance
+  id: Instance
+  parent: Dropbox.Api.Sharing.AlphaResolvedVisibility.Other
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: AlphaResolvedVisibility.Other.Instance
+  fullName: Dropbox.Api.Sharing.AlphaResolvedVisibility.Other.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AlphaResolvedVisibility.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AlphaResolvedVisibility.cs
+    startLine: 642
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>A singleton instance of Other</p>\n"
+  example: []
+  syntax:
+    content: public static readonly AlphaResolvedVisibility.Other Instance
+    return:
+      type: Dropbox.Api.Sharing.AlphaResolvedVisibility.Other
+    content.vb: Public Shared ReadOnly Instance As AlphaResolvedVisibility.Other
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.AlphaResolvedVisibility
+  commentId: T:Dropbox.Api.Sharing.AlphaResolvedVisibility
+  parent: Dropbox.Api.Sharing
+  name: AlphaResolvedVisibility
+  nameWithType: AlphaResolvedVisibility
+  fullName: Dropbox.Api.Sharing.AlphaResolvedVisibility
+- uid: Dropbox.Api.Sharing.AlphaResolvedVisibility.IsTeamAndPassword
+  commentId: P:Dropbox.Api.Sharing.AlphaResolvedVisibility.IsTeamAndPassword
+  parent: Dropbox.Api.Sharing.AlphaResolvedVisibility
+  name: IsTeamAndPassword
+  nameWithType: AlphaResolvedVisibility.IsTeamAndPassword
+  fullName: Dropbox.Api.Sharing.AlphaResolvedVisibility.IsTeamAndPassword
+- uid: Dropbox.Api.Sharing.AlphaResolvedVisibility.AsTeamAndPassword
+  commentId: P:Dropbox.Api.Sharing.AlphaResolvedVisibility.AsTeamAndPassword
+  parent: Dropbox.Api.Sharing.AlphaResolvedVisibility
+  name: AsTeamAndPassword
+  nameWithType: AlphaResolvedVisibility.AsTeamAndPassword
+  fullName: Dropbox.Api.Sharing.AlphaResolvedVisibility.AsTeamAndPassword
+- uid: Dropbox.Api.Sharing.AlphaResolvedVisibility.IsSharedFolderOnly
+  commentId: P:Dropbox.Api.Sharing.AlphaResolvedVisibility.IsSharedFolderOnly
+  parent: Dropbox.Api.Sharing.AlphaResolvedVisibility
+  name: IsSharedFolderOnly
+  nameWithType: AlphaResolvedVisibility.IsSharedFolderOnly
+  fullName: Dropbox.Api.Sharing.AlphaResolvedVisibility.IsSharedFolderOnly
+- uid: Dropbox.Api.Sharing.AlphaResolvedVisibility.AsSharedFolderOnly
+  commentId: P:Dropbox.Api.Sharing.AlphaResolvedVisibility.AsSharedFolderOnly
+  parent: Dropbox.Api.Sharing.AlphaResolvedVisibility
+  name: AsSharedFolderOnly
+  nameWithType: AlphaResolvedVisibility.AsSharedFolderOnly
+  fullName: Dropbox.Api.Sharing.AlphaResolvedVisibility.AsSharedFolderOnly
+- uid: Dropbox.Api.Sharing.AlphaResolvedVisibility.IsNoOne
+  commentId: P:Dropbox.Api.Sharing.AlphaResolvedVisibility.IsNoOne
+  parent: Dropbox.Api.Sharing.AlphaResolvedVisibility
+  name: IsNoOne
+  nameWithType: AlphaResolvedVisibility.IsNoOne
+  fullName: Dropbox.Api.Sharing.AlphaResolvedVisibility.IsNoOne
+- uid: Dropbox.Api.Sharing.AlphaResolvedVisibility.AsNoOne
+  commentId: P:Dropbox.Api.Sharing.AlphaResolvedVisibility.AsNoOne
+  parent: Dropbox.Api.Sharing.AlphaResolvedVisibility
+  name: AsNoOne
+  nameWithType: AlphaResolvedVisibility.AsNoOne
+  fullName: Dropbox.Api.Sharing.AlphaResolvedVisibility.AsNoOne
+- uid: Dropbox.Api.Sharing.AlphaResolvedVisibility.IsOnlyYou
+  commentId: P:Dropbox.Api.Sharing.AlphaResolvedVisibility.IsOnlyYou
+  parent: Dropbox.Api.Sharing.AlphaResolvedVisibility
+  name: IsOnlyYou
+  nameWithType: AlphaResolvedVisibility.IsOnlyYou
+  fullName: Dropbox.Api.Sharing.AlphaResolvedVisibility.IsOnlyYou
+- uid: Dropbox.Api.Sharing.AlphaResolvedVisibility.AsOnlyYou
+  commentId: P:Dropbox.Api.Sharing.AlphaResolvedVisibility.AsOnlyYou
+  parent: Dropbox.Api.Sharing.AlphaResolvedVisibility
+  name: AsOnlyYou
+  nameWithType: AlphaResolvedVisibility.AsOnlyYou
+  fullName: Dropbox.Api.Sharing.AlphaResolvedVisibility.AsOnlyYou
+- uid: Dropbox.Api.Sharing.AlphaResolvedVisibility.IsOther
+  commentId: P:Dropbox.Api.Sharing.AlphaResolvedVisibility.IsOther
+  parent: Dropbox.Api.Sharing.AlphaResolvedVisibility
+  name: IsOther
+  nameWithType: AlphaResolvedVisibility.IsOther
+  fullName: Dropbox.Api.Sharing.AlphaResolvedVisibility.IsOther
+- uid: Dropbox.Api.Sharing.AlphaResolvedVisibility.AsOther
+  commentId: P:Dropbox.Api.Sharing.AlphaResolvedVisibility.AsOther
+  parent: Dropbox.Api.Sharing.AlphaResolvedVisibility
+  name: AsOther
+  nameWithType: AlphaResolvedVisibility.AsOther
+  fullName: Dropbox.Api.Sharing.AlphaResolvedVisibility.AsOther
+- uid: Dropbox.Api.Sharing.AlphaResolvedVisibility.IsPublic
+  commentId: P:Dropbox.Api.Sharing.AlphaResolvedVisibility.IsPublic
+  parent: Dropbox.Api.Sharing.AlphaResolvedVisibility
+  name: IsPublic
+  nameWithType: AlphaResolvedVisibility.IsPublic
+  fullName: Dropbox.Api.Sharing.AlphaResolvedVisibility.IsPublic
+- uid: Dropbox.Api.Sharing.AlphaResolvedVisibility.AsPublic
+  commentId: P:Dropbox.Api.Sharing.AlphaResolvedVisibility.AsPublic
+  parent: Dropbox.Api.Sharing.AlphaResolvedVisibility
+  name: AsPublic
+  nameWithType: AlphaResolvedVisibility.AsPublic
+  fullName: Dropbox.Api.Sharing.AlphaResolvedVisibility.AsPublic
+- uid: Dropbox.Api.Sharing.AlphaResolvedVisibility.IsTeamOnly
+  commentId: P:Dropbox.Api.Sharing.AlphaResolvedVisibility.IsTeamOnly
+  parent: Dropbox.Api.Sharing.AlphaResolvedVisibility
+  name: IsTeamOnly
+  nameWithType: AlphaResolvedVisibility.IsTeamOnly
+  fullName: Dropbox.Api.Sharing.AlphaResolvedVisibility.IsTeamOnly
+- uid: Dropbox.Api.Sharing.AlphaResolvedVisibility.AsTeamOnly
+  commentId: P:Dropbox.Api.Sharing.AlphaResolvedVisibility.AsTeamOnly
+  parent: Dropbox.Api.Sharing.AlphaResolvedVisibility
+  name: AsTeamOnly
+  nameWithType: AlphaResolvedVisibility.AsTeamOnly
+  fullName: Dropbox.Api.Sharing.AlphaResolvedVisibility.AsTeamOnly
+- uid: Dropbox.Api.Sharing.AlphaResolvedVisibility.IsPassword
+  commentId: P:Dropbox.Api.Sharing.AlphaResolvedVisibility.IsPassword
+  parent: Dropbox.Api.Sharing.AlphaResolvedVisibility
+  name: IsPassword
+  nameWithType: AlphaResolvedVisibility.IsPassword
+  fullName: Dropbox.Api.Sharing.AlphaResolvedVisibility.IsPassword
+- uid: Dropbox.Api.Sharing.AlphaResolvedVisibility.AsPassword
+  commentId: P:Dropbox.Api.Sharing.AlphaResolvedVisibility.AsPassword
+  parent: Dropbox.Api.Sharing.AlphaResolvedVisibility
+  name: AsPassword
+  nameWithType: AlphaResolvedVisibility.AsPassword
+  fullName: Dropbox.Api.Sharing.AlphaResolvedVisibility.AsPassword
+- uid: Dropbox.Api.Sharing.AlphaResolvedVisibility.Other
+  commentId: T:Dropbox.Api.Sharing.AlphaResolvedVisibility.Other
+  parent: Dropbox.Api.Sharing
+  name: AlphaResolvedVisibility.Other
+  nameWithType: AlphaResolvedVisibility.Other
+  fullName: Dropbox.Api.Sharing.AlphaResolvedVisibility.Other
+shouldSkipMarkup: true

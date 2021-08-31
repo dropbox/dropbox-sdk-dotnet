@@ -1,0 +1,96 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.ResellerSupportSessionStartDetails
+  commentId: T:Dropbox.Api.TeamLog.ResellerSupportSessionStartDetails
+  id: ResellerSupportSessionStartDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.ResellerSupportSessionStartDetails.#ctor
+  langs:
+  - csharp
+  - vb
+  name: ResellerSupportSessionStartDetails
+  nameWithType: ResellerSupportSessionStartDetails
+  fullName: Dropbox.Api.TeamLog.ResellerSupportSessionStartDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ResellerSupportSessionStartDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ResellerSupportSessionStartDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ResellerSupportSessionStartDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Started reseller support session.</p>\n"
+  example: []
+  syntax:
+    content: 'public class ResellerSupportSessionStartDetails : object'
+    content.vb: >-
+      Public Class ResellerSupportSessionStartDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.ResellerSupportSessionStartDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.ResellerSupportSessionStartDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.ResellerSupportSessionStartDetails
+  langs:
+  - csharp
+  - vb
+  name: ResellerSupportSessionStartDetails()
+  nameWithType: ResellerSupportSessionStartDetails.ResellerSupportSessionStartDetails()
+  fullName: Dropbox.Api.TeamLog.ResellerSupportSessionStartDetails.ResellerSupportSessionStartDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ResellerSupportSessionStartDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ResellerSupportSessionStartDetails.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.ResellerSupportSessionStartDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public ResellerSupportSessionStartDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.ResellerSupportSessionStartDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.ResellerSupportSessionStartDetails
+  commentId: T:Dropbox.Api.TeamLog.ResellerSupportSessionStartDetails
+  parent: Dropbox.Api.TeamLog
+  name: ResellerSupportSessionStartDetails
+  nameWithType: ResellerSupportSessionStartDetails
+  fullName: Dropbox.Api.TeamLog.ResellerSupportSessionStartDetails
+- uid: Dropbox.Api.TeamLog.ResellerSupportSessionStartDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.ResellerSupportSessionStartDetails.#ctor
+  name: ResellerSupportSessionStartDetails
+  nameWithType: ResellerSupportSessionStartDetails.ResellerSupportSessionStartDetails
+  fullName: Dropbox.Api.TeamLog.ResellerSupportSessionStartDetails.ResellerSupportSessionStartDetails
+shouldSkipMarkup: true

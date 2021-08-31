@@ -1,0 +1,202 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.PathRootException
+  commentId: T:Dropbox.Api.PathRootException
+  id: PathRootException
+  parent: Dropbox.Api
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: PathRootException
+  nameWithType: PathRootException
+  fullName: Dropbox.Api.PathRootException
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/PathRootException.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PathRootException
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/PathRootException.cs
+    startLine: 13
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api
+  summary: "\nAn exception which is caused by invalid Dropbox-Api-Path-Root header.\n"
+  example: []
+  syntax:
+    content: 'public sealed class PathRootException : StructuredException<PathRootError>'
+    content.vb: >-
+      Public NotInheritable Class PathRootException
+          Inherits StructuredException(Of PathRootError)
+  inheritance:
+  - System.Object
+  - Dropbox.Api.DropboxException
+  - Dropbox.Api.StructuredException{Dropbox.Api.Common.PathRootError}
+  inheritedMembers:
+  - Dropbox.Api.StructuredException{Dropbox.Api.Common.PathRootError}.ErrorResponse
+  - Dropbox.Api.StructuredException{Dropbox.Api.Common.PathRootError}.Message
+  - Dropbox.Api.DropboxException.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+references:
+- uid: Dropbox.Api
+  commentId: N:Dropbox.Api
+  name: Dropbox.Api
+  nameWithType: Dropbox.Api
+  fullName: Dropbox.Api
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.DropboxException
+  commentId: T:Dropbox.Api.DropboxException
+  parent: Dropbox.Api
+  name: DropboxException
+  nameWithType: DropboxException
+  fullName: Dropbox.Api.DropboxException
+- uid: Dropbox.Api.StructuredException{Dropbox.Api.Common.PathRootError}
+  commentId: T:Dropbox.Api.StructuredException{Dropbox.Api.Common.PathRootError}
+  parent: Dropbox.Api
+  definition: Dropbox.Api.StructuredException`1
+  name: StructuredException<PathRootError>
+  nameWithType: StructuredException<PathRootError>
+  fullName: Dropbox.Api.StructuredException<Dropbox.Api.Common.PathRootError>
+  nameWithType.vb: StructuredException(Of PathRootError)
+  fullName.vb: Dropbox.Api.StructuredException(Of Dropbox.Api.Common.PathRootError)
+  name.vb: StructuredException(Of PathRootError)
+  spec.csharp:
+  - uid: Dropbox.Api.StructuredException`1
+    name: StructuredException
+    nameWithType: StructuredException
+    fullName: Dropbox.Api.StructuredException
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Common.PathRootError
+    name: PathRootError
+    nameWithType: PathRootError
+    fullName: Dropbox.Api.Common.PathRootError
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Dropbox.Api.StructuredException`1
+    name: StructuredException
+    nameWithType: StructuredException
+    fullName: Dropbox.Api.StructuredException
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Common.PathRootError
+    name: PathRootError
+    nameWithType: PathRootError
+    fullName: Dropbox.Api.Common.PathRootError
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.StructuredException{Dropbox.Api.Common.PathRootError}.ErrorResponse
+  commentId: P:Dropbox.Api.StructuredException{Dropbox.Api.Common.PathRootError}.ErrorResponse
+  parent: Dropbox.Api.StructuredException{Dropbox.Api.Common.PathRootError}
+  definition: Dropbox.Api.StructuredException`1.ErrorResponse
+  name: ErrorResponse
+  nameWithType: StructuredException<PathRootError>.ErrorResponse
+  fullName: Dropbox.Api.StructuredException<Dropbox.Api.Common.PathRootError>.ErrorResponse
+  nameWithType.vb: StructuredException(Of PathRootError).ErrorResponse
+  fullName.vb: Dropbox.Api.StructuredException(Of Dropbox.Api.Common.PathRootError).ErrorResponse
+- uid: Dropbox.Api.StructuredException{Dropbox.Api.Common.PathRootError}.Message
+  commentId: P:Dropbox.Api.StructuredException{Dropbox.Api.Common.PathRootError}.Message
+  parent: Dropbox.Api.StructuredException{Dropbox.Api.Common.PathRootError}
+  definition: Dropbox.Api.StructuredException`1.Message
+  name: Message
+  nameWithType: StructuredException<PathRootError>.Message
+  fullName: Dropbox.Api.StructuredException<Dropbox.Api.Common.PathRootError>.Message
+  nameWithType.vb: StructuredException(Of PathRootError).Message
+  fullName.vb: Dropbox.Api.StructuredException(Of Dropbox.Api.Common.PathRootError).Message
+- uid: Dropbox.Api.DropboxException.ToString
+  commentId: M:Dropbox.Api.DropboxException.ToString
+  parent: Dropbox.Api.DropboxException
+  name: ToString()
+  nameWithType: DropboxException.ToString()
+  fullName: Dropbox.Api.DropboxException.ToString()
+  spec.csharp:
+  - uid: Dropbox.Api.DropboxException.ToString
+    name: ToString
+    nameWithType: DropboxException.ToString
+    fullName: Dropbox.Api.DropboxException.ToString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Dropbox.Api.DropboxException.ToString
+    name: ToString
+    nameWithType: DropboxException.ToString
+    fullName: Dropbox.Api.DropboxException.ToString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.StructuredException`1
+  commentId: T:Dropbox.Api.StructuredException`1
+  name: StructuredException<TError>
+  nameWithType: StructuredException<TError>
+  fullName: Dropbox.Api.StructuredException<TError>
+  nameWithType.vb: StructuredException(Of TError)
+  fullName.vb: Dropbox.Api.StructuredException(Of TError)
+  name.vb: StructuredException(Of TError)
+  spec.csharp:
+  - uid: Dropbox.Api.StructuredException`1
+    name: StructuredException
+    nameWithType: StructuredException
+    fullName: Dropbox.Api.StructuredException
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TError
+    nameWithType: TError
+    fullName: TError
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Dropbox.Api.StructuredException`1
+    name: StructuredException
+    nameWithType: StructuredException
+    fullName: Dropbox.Api.StructuredException
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TError
+    nameWithType: TError
+    fullName: TError
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.StructuredException`1.ErrorResponse
+  commentId: P:Dropbox.Api.StructuredException`1.ErrorResponse
+  name: ErrorResponse
+  nameWithType: StructuredException<TError>.ErrorResponse
+  fullName: Dropbox.Api.StructuredException<TError>.ErrorResponse
+  nameWithType.vb: StructuredException(Of TError).ErrorResponse
+  fullName.vb: Dropbox.Api.StructuredException(Of TError).ErrorResponse
+- uid: Dropbox.Api.StructuredException`1.Message
+  commentId: P:Dropbox.Api.StructuredException`1.Message
+  name: Message
+  nameWithType: StructuredException<TError>.Message
+  fullName: Dropbox.Api.StructuredException<TError>.Message
+  nameWithType.vb: StructuredException(Of TError).Message
+  fullName.vb: Dropbox.Api.StructuredException(Of TError).Message
+shouldSkipMarkup: true

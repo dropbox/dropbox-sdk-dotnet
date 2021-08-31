@@ -1,0 +1,193 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.ListFolderContinueArg
+  commentId: T:Dropbox.Api.Files.ListFolderContinueArg
+  id: ListFolderContinueArg
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.ListFolderContinueArg.#ctor
+  - Dropbox.Api.Files.ListFolderContinueArg.#ctor(System.String)
+  - Dropbox.Api.Files.ListFolderContinueArg.Cursor
+  langs:
+  - csharp
+  - vb
+  name: ListFolderContinueArg
+  nameWithType: ListFolderContinueArg
+  fullName: Dropbox.Api.Files.ListFolderContinueArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderContinueArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ListFolderContinueArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderContinueArg.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The list folder continue arg object</p>\n"
+  example: []
+  syntax:
+    content: 'public class ListFolderContinueArg : object'
+    content.vb: >-
+      Public Class ListFolderContinueArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.ListFolderContinueArg.#ctor(System.String)
+  commentId: M:Dropbox.Api.Files.ListFolderContinueArg.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.Files.ListFolderContinueArg
+  langs:
+  - csharp
+  - vb
+  name: ListFolderContinueArg(String)
+  nameWithType: ListFolderContinueArg.ListFolderContinueArg(String)
+  fullName: Dropbox.Api.Files.ListFolderContinueArg.ListFolderContinueArg(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderContinueArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderContinueArg.cs
+    startLine: 36
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.ListFolderContinueArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public ListFolderContinueArg(string cursor)
+    parameters:
+    - id: cursor
+      type: System.String
+      description: The cursor returned by your last call to <xref href="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderAsync(Dropbox.Api.Files.ListFolderArg)" data-throw-if-not-resolved="false"></xref> or <xref href="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync(Dropbox.Api.Files.ListFolderContinueArg)" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Sub New(cursor As String)
+  overload: Dropbox.Api.Files.ListFolderContinueArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.ListFolderContinueArg.#ctor
+  commentId: M:Dropbox.Api.Files.ListFolderContinueArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.ListFolderContinueArg
+  langs:
+  - csharp
+  - vb
+  name: ListFolderContinueArg()
+  nameWithType: ListFolderContinueArg.ListFolderContinueArg()
+  fullName: Dropbox.Api.Files.ListFolderContinueArg.ListFolderContinueArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderContinueArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderContinueArg.cs
+    startLine: 56
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.ListFolderContinueArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public ListFolderContinueArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.ListFolderContinueArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.ListFolderContinueArg.Cursor
+  commentId: P:Dropbox.Api.Files.ListFolderContinueArg.Cursor
+  id: Cursor
+  parent: Dropbox.Api.Files.ListFolderContinueArg
+  langs:
+  - csharp
+  - vb
+  name: Cursor
+  nameWithType: ListFolderContinueArg.Cursor
+  fullName: Dropbox.Api.Files.ListFolderContinueArg.Cursor
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderContinueArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Cursor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderContinueArg.cs
+    startLine: 66
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The cursor returned by your last call to <xref href=\"Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderAsync(Dropbox.Api.Files.ListFolderArg)\" data-throw-if-not-resolved=\"false\"></xref> or <xref href=\"Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync(Dropbox.Api.Files.ListFolderContinueArg)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+  example: []
+  syntax:
+    content: public string Cursor { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Cursor As String
+  overload: Dropbox.Api.Files.ListFolderContinueArg.Cursor*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.ListFolderContinueArg
+  commentId: T:Dropbox.Api.Files.ListFolderContinueArg
+  parent: Dropbox.Api.Files
+  name: ListFolderContinueArg
+  nameWithType: ListFolderContinueArg
+  fullName: Dropbox.Api.Files.ListFolderContinueArg
+- uid: Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderAsync(Dropbox.Api.Files.ListFolderArg)
+  commentId: M:Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderAsync(Dropbox.Api.Files.ListFolderArg)
+  isExternal: true
+- uid: Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync(Dropbox.Api.Files.ListFolderContinueArg)
+  commentId: M:Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync(Dropbox.Api.Files.ListFolderContinueArg)
+  isExternal: true
+- uid: Dropbox.Api.Files.ListFolderContinueArg.#ctor*
+  commentId: Overload:Dropbox.Api.Files.ListFolderContinueArg.#ctor
+  name: ListFolderContinueArg
+  nameWithType: ListFolderContinueArg.ListFolderContinueArg
+  fullName: Dropbox.Api.Files.ListFolderContinueArg.ListFolderContinueArg
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Files.ListFolderContinueArg.Cursor*
+  commentId: Overload:Dropbox.Api.Files.ListFolderContinueArg.Cursor
+  name: Cursor
+  nameWithType: ListFolderContinueArg.Cursor
+  fullName: Dropbox.Api.Files.ListFolderContinueArg.Cursor
+shouldSkipMarkup: true

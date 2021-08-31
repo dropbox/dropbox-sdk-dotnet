@@ -1,0 +1,443 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Common.RootInfo
+  commentId: T:Dropbox.Api.Common.RootInfo
+  id: RootInfo
+  parent: Dropbox.Api.Common
+  children:
+  - Dropbox.Api.Common.RootInfo.#ctor
+  - Dropbox.Api.Common.RootInfo.#ctor(System.String,System.String)
+  - Dropbox.Api.Common.RootInfo.AsTeam
+  - Dropbox.Api.Common.RootInfo.AsUser
+  - Dropbox.Api.Common.RootInfo.HomeNamespaceId
+  - Dropbox.Api.Common.RootInfo.IsTeam
+  - Dropbox.Api.Common.RootInfo.IsUser
+  - Dropbox.Api.Common.RootInfo.RootNamespaceId
+  langs:
+  - csharp
+  - vb
+  name: RootInfo
+  nameWithType: RootInfo
+  fullName: Dropbox.Api.Common.RootInfo
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Common/RootInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: RootInfo
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Common/RootInfo.cs
+    startLine: 17
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Common
+  summary: "\n<p>Information about current user&apos;s root.</p>\n"
+  example: []
+  syntax:
+    content: 'public class RootInfo : object'
+    content.vb: >-
+      Public Class RootInfo
+          Inherits Object
+  seealso:
+  - linkId: Dropbox.Api.Common.TeamRootInfo
+    commentId: T:Dropbox.Api.Common.TeamRootInfo
+  - linkId: Dropbox.Api.Common.UserRootInfo
+    commentId: T:Dropbox.Api.Common.UserRootInfo
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Common.TeamRootInfo
+  - Dropbox.Api.Common.UserRootInfo
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Common.RootInfo.#ctor(System.String,System.String)
+  commentId: M:Dropbox.Api.Common.RootInfo.#ctor(System.String,System.String)
+  id: '#ctor(System.String,System.String)'
+  parent: Dropbox.Api.Common.RootInfo
+  langs:
+  - csharp
+  - vb
+  name: RootInfo(String, String)
+  nameWithType: RootInfo.RootInfo(String, String)
+  fullName: Dropbox.Api.Common.RootInfo.RootInfo(System.String, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Common/RootInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Common/RootInfo.cs
+    startLine: 39
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Common
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Common.RootInfo\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: protected RootInfo(string rootNamespaceId, string homeNamespaceId)
+    parameters:
+    - id: rootNamespaceId
+      type: System.String
+      description: >-
+        The namespace ID for user&apos;s root namespace. It will
+
+        be the namespace ID of the shared team root if the user is member of a team with a
+
+        separate team root. Otherwise it will be same as <xref href="Dropbox.Api.Common.RootInfo.HomeNamespaceId" data-throw-if-not-resolved="false"></xref>.
+    - id: homeNamespaceId
+      type: System.String
+      description: The namespace ID for user&apos;s home namespace.
+    content.vb: Protected Sub New(rootNamespaceId As String, homeNamespaceId As String)
+  overload: Dropbox.Api.Common.RootInfo.#ctor*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: Dropbox.Api.Common.RootInfo.#ctor
+  commentId: M:Dropbox.Api.Common.RootInfo.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Common.RootInfo
+  langs:
+  - csharp
+  - vb
+  name: RootInfo()
+  nameWithType: RootInfo.RootInfo()
+  fullName: Dropbox.Api.Common.RootInfo.RootInfo()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Common/RootInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Common/RootInfo.cs
+    startLine: 69
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Common
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Common.RootInfo\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public RootInfo()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Common.RootInfo.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Common.RootInfo.IsTeam
+  commentId: P:Dropbox.Api.Common.RootInfo.IsTeam
+  id: IsTeam
+  parent: Dropbox.Api.Common.RootInfo
+  langs:
+  - csharp
+  - vb
+  name: IsTeam
+  nameWithType: RootInfo.IsTeam
+  fullName: Dropbox.Api.Common.RootInfo.IsTeam
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Common/RootInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Common/RootInfo.cs
+    startLine: 77
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Common
+  summary: "\n<p>Gets a value indicating whether this instance is Team</p>\n"
+  example: []
+  syntax:
+    content: public bool IsTeam { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsTeam As Boolean
+  overload: Dropbox.Api.Common.RootInfo.IsTeam*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Common.RootInfo.AsTeam
+  commentId: P:Dropbox.Api.Common.RootInfo.AsTeam
+  id: AsTeam
+  parent: Dropbox.Api.Common.RootInfo
+  langs:
+  - csharp
+  - vb
+  name: AsTeam
+  nameWithType: RootInfo.AsTeam
+  fullName: Dropbox.Api.Common.RootInfo.AsTeam
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Common/RootInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Common/RootInfo.cs
+    startLine: 88
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Common
+  summary: "\n<p>Gets this instance as a <xref href=\"Dropbox.Api.Common.TeamRootInfo\" data-throw-if-not-resolved=\"false\"></xref>, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public TeamRootInfo AsTeam { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Common.TeamRootInfo
+    content.vb: Public ReadOnly Property AsTeam As TeamRootInfo
+  overload: Dropbox.Api.Common.RootInfo.AsTeam*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Common.RootInfo.IsUser
+  commentId: P:Dropbox.Api.Common.RootInfo.IsUser
+  id: IsUser
+  parent: Dropbox.Api.Common.RootInfo
+  langs:
+  - csharp
+  - vb
+  name: IsUser
+  nameWithType: RootInfo.IsUser
+  fullName: Dropbox.Api.Common.RootInfo.IsUser
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Common/RootInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsUser
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Common/RootInfo.cs
+    startLine: 99
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Common
+  summary: "\n<p>Gets a value indicating whether this instance is User</p>\n"
+  example: []
+  syntax:
+    content: public bool IsUser { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsUser As Boolean
+  overload: Dropbox.Api.Common.RootInfo.IsUser*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Common.RootInfo.AsUser
+  commentId: P:Dropbox.Api.Common.RootInfo.AsUser
+  id: AsUser
+  parent: Dropbox.Api.Common.RootInfo
+  langs:
+  - csharp
+  - vb
+  name: AsUser
+  nameWithType: RootInfo.AsUser
+  fullName: Dropbox.Api.Common.RootInfo.AsUser
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Common/RootInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsUser
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Common/RootInfo.cs
+    startLine: 110
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Common
+  summary: "\n<p>Gets this instance as a <xref href=\"Dropbox.Api.Common.UserRootInfo\" data-throw-if-not-resolved=\"false\"></xref>, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public UserRootInfo AsUser { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Common.UserRootInfo
+    content.vb: Public ReadOnly Property AsUser As UserRootInfo
+  overload: Dropbox.Api.Common.RootInfo.AsUser*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Common.RootInfo.RootNamespaceId
+  commentId: P:Dropbox.Api.Common.RootInfo.RootNamespaceId
+  id: RootNamespaceId
+  parent: Dropbox.Api.Common.RootInfo
+  langs:
+  - csharp
+  - vb
+  name: RootNamespaceId
+  nameWithType: RootInfo.RootNamespaceId
+  fullName: Dropbox.Api.Common.RootInfo.RootNamespaceId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Common/RootInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: RootNamespaceId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Common/RootInfo.cs
+    startLine: 124
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Common
+  summary: "\n<p>The namespace ID for user&apos;s root namespace. It will be the namespace ID of\nthe shared team root if the user is member of a team with a separate team root.\nOtherwise it will be same as <xref href=\"Dropbox.Api.Common.RootInfo.HomeNamespaceId\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+  example: []
+  syntax:
+    content: public string RootNamespaceId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property RootNamespaceId As String
+  overload: Dropbox.Api.Common.RootInfo.RootNamespaceId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Common.RootInfo.HomeNamespaceId
+  commentId: P:Dropbox.Api.Common.RootInfo.HomeNamespaceId
+  id: HomeNamespaceId
+  parent: Dropbox.Api.Common.RootInfo
+  langs:
+  - csharp
+  - vb
+  name: HomeNamespaceId
+  nameWithType: RootInfo.HomeNamespaceId
+  fullName: Dropbox.Api.Common.RootInfo.HomeNamespaceId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Common/RootInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: HomeNamespaceId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Common/RootInfo.cs
+    startLine: 129
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Common
+  summary: "\n<p>The namespace ID for user&apos;s home namespace.</p>\n"
+  example: []
+  syntax:
+    content: public string HomeNamespaceId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property HomeNamespaceId As String
+  overload: Dropbox.Api.Common.RootInfo.HomeNamespaceId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Common.TeamRootInfo
+  commentId: T:Dropbox.Api.Common.TeamRootInfo
+  parent: Dropbox.Api.Common
+  name: TeamRootInfo
+  nameWithType: TeamRootInfo
+  fullName: Dropbox.Api.Common.TeamRootInfo
+- uid: Dropbox.Api.Common.UserRootInfo
+  commentId: T:Dropbox.Api.Common.UserRootInfo
+  parent: Dropbox.Api.Common
+  name: UserRootInfo
+  nameWithType: UserRootInfo
+  fullName: Dropbox.Api.Common.UserRootInfo
+- uid: Dropbox.Api.Common
+  commentId: N:Dropbox.Api.Common
+  name: Dropbox.Api.Common
+  nameWithType: Dropbox.Api.Common
+  fullName: Dropbox.Api.Common
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Common.RootInfo
+  commentId: T:Dropbox.Api.Common.RootInfo
+  parent: Dropbox.Api.Common
+  name: RootInfo
+  nameWithType: RootInfo
+  fullName: Dropbox.Api.Common.RootInfo
+- uid: Dropbox.Api.Common.RootInfo.HomeNamespaceId
+  commentId: P:Dropbox.Api.Common.RootInfo.HomeNamespaceId
+  parent: Dropbox.Api.Common.RootInfo
+  name: HomeNamespaceId
+  nameWithType: RootInfo.HomeNamespaceId
+  fullName: Dropbox.Api.Common.RootInfo.HomeNamespaceId
+- uid: Dropbox.Api.Common.RootInfo.#ctor*
+  commentId: Overload:Dropbox.Api.Common.RootInfo.#ctor
+  name: RootInfo
+  nameWithType: RootInfo.RootInfo
+  fullName: Dropbox.Api.Common.RootInfo.RootInfo
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Common.RootInfo.IsTeam*
+  commentId: Overload:Dropbox.Api.Common.RootInfo.IsTeam
+  name: IsTeam
+  nameWithType: RootInfo.IsTeam
+  fullName: Dropbox.Api.Common.RootInfo.IsTeam
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Common.RootInfo.AsTeam*
+  commentId: Overload:Dropbox.Api.Common.RootInfo.AsTeam
+  name: AsTeam
+  nameWithType: RootInfo.AsTeam
+  fullName: Dropbox.Api.Common.RootInfo.AsTeam
+- uid: Dropbox.Api.Common.RootInfo.IsUser*
+  commentId: Overload:Dropbox.Api.Common.RootInfo.IsUser
+  name: IsUser
+  nameWithType: RootInfo.IsUser
+  fullName: Dropbox.Api.Common.RootInfo.IsUser
+- uid: Dropbox.Api.Common.RootInfo.AsUser*
+  commentId: Overload:Dropbox.Api.Common.RootInfo.AsUser
+  name: AsUser
+  nameWithType: RootInfo.AsUser
+  fullName: Dropbox.Api.Common.RootInfo.AsUser
+- uid: Dropbox.Api.Common.RootInfo.RootNamespaceId*
+  commentId: Overload:Dropbox.Api.Common.RootInfo.RootNamespaceId
+  name: RootNamespaceId
+  nameWithType: RootInfo.RootNamespaceId
+  fullName: Dropbox.Api.Common.RootInfo.RootNamespaceId
+- uid: Dropbox.Api.Common.RootInfo.HomeNamespaceId*
+  commentId: Overload:Dropbox.Api.Common.RootInfo.HomeNamespaceId
+  name: HomeNamespaceId
+  nameWithType: RootInfo.HomeNamespaceId
+  fullName: Dropbox.Api.Common.RootInfo.HomeNamespaceId
+shouldSkipMarkup: true

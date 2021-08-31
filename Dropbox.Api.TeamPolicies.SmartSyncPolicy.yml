@@ -1,0 +1,381 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamPolicies.SmartSyncPolicy
+  commentId: T:Dropbox.Api.TeamPolicies.SmartSyncPolicy
+  id: SmartSyncPolicy
+  parent: Dropbox.Api.TeamPolicies
+  children:
+  - Dropbox.Api.TeamPolicies.SmartSyncPolicy.#ctor
+  - Dropbox.Api.TeamPolicies.SmartSyncPolicy.AsLocal
+  - Dropbox.Api.TeamPolicies.SmartSyncPolicy.AsOnDemand
+  - Dropbox.Api.TeamPolicies.SmartSyncPolicy.AsOther
+  - Dropbox.Api.TeamPolicies.SmartSyncPolicy.IsLocal
+  - Dropbox.Api.TeamPolicies.SmartSyncPolicy.IsOnDemand
+  - Dropbox.Api.TeamPolicies.SmartSyncPolicy.IsOther
+  langs:
+  - csharp
+  - vb
+  name: SmartSyncPolicy
+  nameWithType: SmartSyncPolicy
+  fullName: Dropbox.Api.TeamPolicies.SmartSyncPolicy
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SmartSyncPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SmartSyncPolicy
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SmartSyncPolicy.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>The smart sync policy object</p>\n"
+  example: []
+  syntax:
+    content: 'public class SmartSyncPolicy : object'
+    content.vb: >-
+      Public Class SmartSyncPolicy
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.TeamPolicies.SmartSyncPolicy.Local
+  - Dropbox.Api.TeamPolicies.SmartSyncPolicy.OnDemand
+  - Dropbox.Api.TeamPolicies.SmartSyncPolicy.Other
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamPolicies.SmartSyncPolicy.#ctor
+  commentId: M:Dropbox.Api.TeamPolicies.SmartSyncPolicy.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamPolicies.SmartSyncPolicy
+  langs:
+  - csharp
+  - vb
+  name: SmartSyncPolicy()
+  nameWithType: SmartSyncPolicy.SmartSyncPolicy()
+  fullName: Dropbox.Api.TeamPolicies.SmartSyncPolicy.SmartSyncPolicy()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SmartSyncPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SmartSyncPolicy.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamPolicies.SmartSyncPolicy\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public SmartSyncPolicy()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamPolicies.SmartSyncPolicy.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamPolicies.SmartSyncPolicy.IsLocal
+  commentId: P:Dropbox.Api.TeamPolicies.SmartSyncPolicy.IsLocal
+  id: IsLocal
+  parent: Dropbox.Api.TeamPolicies.SmartSyncPolicy
+  langs:
+  - csharp
+  - vb
+  name: IsLocal
+  nameWithType: SmartSyncPolicy.IsLocal
+  fullName: Dropbox.Api.TeamPolicies.SmartSyncPolicy.IsLocal
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SmartSyncPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsLocal
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SmartSyncPolicy.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Gets a value indicating whether this instance is Local</p>\n"
+  example: []
+  syntax:
+    content: public bool IsLocal { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsLocal As Boolean
+  overload: Dropbox.Api.TeamPolicies.SmartSyncPolicy.IsLocal*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamPolicies.SmartSyncPolicy.AsLocal
+  commentId: P:Dropbox.Api.TeamPolicies.SmartSyncPolicy.AsLocal
+  id: AsLocal
+  parent: Dropbox.Api.TeamPolicies.SmartSyncPolicy
+  langs:
+  - csharp
+  - vb
+  name: AsLocal
+  nameWithType: SmartSyncPolicy.AsLocal
+  fullName: Dropbox.Api.TeamPolicies.SmartSyncPolicy.AsLocal
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SmartSyncPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsLocal
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SmartSyncPolicy.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Gets this instance as a Local, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SmartSyncPolicy.Local AsLocal { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamPolicies.SmartSyncPolicy.Local
+    content.vb: Public ReadOnly Property AsLocal As SmartSyncPolicy.Local
+  overload: Dropbox.Api.TeamPolicies.SmartSyncPolicy.AsLocal*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamPolicies.SmartSyncPolicy.IsOnDemand
+  commentId: P:Dropbox.Api.TeamPolicies.SmartSyncPolicy.IsOnDemand
+  id: IsOnDemand
+  parent: Dropbox.Api.TeamPolicies.SmartSyncPolicy
+  langs:
+  - csharp
+  - vb
+  name: IsOnDemand
+  nameWithType: SmartSyncPolicy.IsOnDemand
+  fullName: Dropbox.Api.TeamPolicies.SmartSyncPolicy.IsOnDemand
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SmartSyncPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOnDemand
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SmartSyncPolicy.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Gets a value indicating whether this instance is OnDemand</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOnDemand { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOnDemand As Boolean
+  overload: Dropbox.Api.TeamPolicies.SmartSyncPolicy.IsOnDemand*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamPolicies.SmartSyncPolicy.AsOnDemand
+  commentId: P:Dropbox.Api.TeamPolicies.SmartSyncPolicy.AsOnDemand
+  id: AsOnDemand
+  parent: Dropbox.Api.TeamPolicies.SmartSyncPolicy
+  langs:
+  - csharp
+  - vb
+  name: AsOnDemand
+  nameWithType: SmartSyncPolicy.AsOnDemand
+  fullName: Dropbox.Api.TeamPolicies.SmartSyncPolicy.AsOnDemand
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SmartSyncPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOnDemand
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SmartSyncPolicy.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Gets this instance as a OnDemand, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SmartSyncPolicy.OnDemand AsOnDemand { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamPolicies.SmartSyncPolicy.OnDemand
+    content.vb: Public ReadOnly Property AsOnDemand As SmartSyncPolicy.OnDemand
+  overload: Dropbox.Api.TeamPolicies.SmartSyncPolicy.AsOnDemand*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamPolicies.SmartSyncPolicy.IsOther
+  commentId: P:Dropbox.Api.TeamPolicies.SmartSyncPolicy.IsOther
+  id: IsOther
+  parent: Dropbox.Api.TeamPolicies.SmartSyncPolicy
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: SmartSyncPolicy.IsOther
+  fullName: Dropbox.Api.TeamPolicies.SmartSyncPolicy.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SmartSyncPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SmartSyncPolicy.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.TeamPolicies.SmartSyncPolicy.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamPolicies.SmartSyncPolicy.AsOther
+  commentId: P:Dropbox.Api.TeamPolicies.SmartSyncPolicy.AsOther
+  id: AsOther
+  parent: Dropbox.Api.TeamPolicies.SmartSyncPolicy
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: SmartSyncPolicy.AsOther
+  fullName: Dropbox.Api.TeamPolicies.SmartSyncPolicy.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SmartSyncPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SmartSyncPolicy.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SmartSyncPolicy.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamPolicies.SmartSyncPolicy.Other
+    content.vb: Public ReadOnly Property AsOther As SmartSyncPolicy.Other
+  overload: Dropbox.Api.TeamPolicies.SmartSyncPolicy.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamPolicies
+  commentId: N:Dropbox.Api.TeamPolicies
+  name: Dropbox.Api.TeamPolicies
+  nameWithType: Dropbox.Api.TeamPolicies
+  fullName: Dropbox.Api.TeamPolicies
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamPolicies.SmartSyncPolicy
+  commentId: T:Dropbox.Api.TeamPolicies.SmartSyncPolicy
+  parent: Dropbox.Api.TeamPolicies
+  name: SmartSyncPolicy
+  nameWithType: SmartSyncPolicy
+  fullName: Dropbox.Api.TeamPolicies.SmartSyncPolicy
+- uid: Dropbox.Api.TeamPolicies.SmartSyncPolicy.#ctor*
+  commentId: Overload:Dropbox.Api.TeamPolicies.SmartSyncPolicy.#ctor
+  name: SmartSyncPolicy
+  nameWithType: SmartSyncPolicy.SmartSyncPolicy
+  fullName: Dropbox.Api.TeamPolicies.SmartSyncPolicy.SmartSyncPolicy
+- uid: Dropbox.Api.TeamPolicies.SmartSyncPolicy.IsLocal*
+  commentId: Overload:Dropbox.Api.TeamPolicies.SmartSyncPolicy.IsLocal
+  name: IsLocal
+  nameWithType: SmartSyncPolicy.IsLocal
+  fullName: Dropbox.Api.TeamPolicies.SmartSyncPolicy.IsLocal
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.TeamPolicies.SmartSyncPolicy.AsLocal*
+  commentId: Overload:Dropbox.Api.TeamPolicies.SmartSyncPolicy.AsLocal
+  name: AsLocal
+  nameWithType: SmartSyncPolicy.AsLocal
+  fullName: Dropbox.Api.TeamPolicies.SmartSyncPolicy.AsLocal
+- uid: Dropbox.Api.TeamPolicies.SmartSyncPolicy.Local
+  commentId: T:Dropbox.Api.TeamPolicies.SmartSyncPolicy.Local
+  parent: Dropbox.Api.TeamPolicies
+  name: SmartSyncPolicy.Local
+  nameWithType: SmartSyncPolicy.Local
+  fullName: Dropbox.Api.TeamPolicies.SmartSyncPolicy.Local
+- uid: Dropbox.Api.TeamPolicies.SmartSyncPolicy.IsOnDemand*
+  commentId: Overload:Dropbox.Api.TeamPolicies.SmartSyncPolicy.IsOnDemand
+  name: IsOnDemand
+  nameWithType: SmartSyncPolicy.IsOnDemand
+  fullName: Dropbox.Api.TeamPolicies.SmartSyncPolicy.IsOnDemand
+- uid: Dropbox.Api.TeamPolicies.SmartSyncPolicy.AsOnDemand*
+  commentId: Overload:Dropbox.Api.TeamPolicies.SmartSyncPolicy.AsOnDemand
+  name: AsOnDemand
+  nameWithType: SmartSyncPolicy.AsOnDemand
+  fullName: Dropbox.Api.TeamPolicies.SmartSyncPolicy.AsOnDemand
+- uid: Dropbox.Api.TeamPolicies.SmartSyncPolicy.OnDemand
+  commentId: T:Dropbox.Api.TeamPolicies.SmartSyncPolicy.OnDemand
+  parent: Dropbox.Api.TeamPolicies
+  name: SmartSyncPolicy.OnDemand
+  nameWithType: SmartSyncPolicy.OnDemand
+  fullName: Dropbox.Api.TeamPolicies.SmartSyncPolicy.OnDemand
+- uid: Dropbox.Api.TeamPolicies.SmartSyncPolicy.IsOther*
+  commentId: Overload:Dropbox.Api.TeamPolicies.SmartSyncPolicy.IsOther
+  name: IsOther
+  nameWithType: SmartSyncPolicy.IsOther
+  fullName: Dropbox.Api.TeamPolicies.SmartSyncPolicy.IsOther
+- uid: Dropbox.Api.TeamPolicies.SmartSyncPolicy.AsOther*
+  commentId: Overload:Dropbox.Api.TeamPolicies.SmartSyncPolicy.AsOther
+  name: AsOther
+  nameWithType: SmartSyncPolicy.AsOther
+  fullName: Dropbox.Api.TeamPolicies.SmartSyncPolicy.AsOther
+- uid: Dropbox.Api.TeamPolicies.SmartSyncPolicy.Other
+  commentId: T:Dropbox.Api.TeamPolicies.SmartSyncPolicy.Other
+  parent: Dropbox.Api.TeamPolicies
+  name: SmartSyncPolicy.Other
+  nameWithType: SmartSyncPolicy.Other
+  fullName: Dropbox.Api.TeamPolicies.SmartSyncPolicy.Other
+shouldSkipMarkup: true

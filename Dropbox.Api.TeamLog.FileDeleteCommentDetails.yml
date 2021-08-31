@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.FileDeleteCommentDetails
+  commentId: T:Dropbox.Api.TeamLog.FileDeleteCommentDetails
+  id: FileDeleteCommentDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.FileDeleteCommentDetails.#ctor
+  - Dropbox.Api.TeamLog.FileDeleteCommentDetails.#ctor(System.String)
+  - Dropbox.Api.TeamLog.FileDeleteCommentDetails.CommentText
+  langs:
+  - csharp
+  - vb
+  name: FileDeleteCommentDetails
+  nameWithType: FileDeleteCommentDetails
+  fullName: Dropbox.Api.TeamLog.FileDeleteCommentDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileDeleteCommentDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: FileDeleteCommentDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileDeleteCommentDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Deleted file comment.</p>\n"
+  example: []
+  syntax:
+    content: 'public class FileDeleteCommentDetails : object'
+    content.vb: >-
+      Public Class FileDeleteCommentDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.FileDeleteCommentDetails.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.FileDeleteCommentDetails.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.FileDeleteCommentDetails
+  langs:
+  - csharp
+  - vb
+  name: FileDeleteCommentDetails(String)
+  nameWithType: FileDeleteCommentDetails.FileDeleteCommentDetails(String)
+  fullName: Dropbox.Api.TeamLog.FileDeleteCommentDetails.FileDeleteCommentDetails(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileDeleteCommentDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileDeleteCommentDetails.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.FileDeleteCommentDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public FileDeleteCommentDetails(string commentText = null)
+    parameters:
+    - id: commentText
+      type: System.String
+      description: Comment text.
+    content.vb: Public Sub New(commentText As String = Nothing)
+  overload: Dropbox.Api.TeamLog.FileDeleteCommentDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.FileDeleteCommentDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.FileDeleteCommentDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.FileDeleteCommentDetails
+  langs:
+  - csharp
+  - vb
+  name: FileDeleteCommentDetails()
+  nameWithType: FileDeleteCommentDetails.FileDeleteCommentDetails()
+  fullName: Dropbox.Api.TeamLog.FileDeleteCommentDetails.FileDeleteCommentDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileDeleteCommentDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileDeleteCommentDetails.cs
+    startLine: 45
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.FileDeleteCommentDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public FileDeleteCommentDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.FileDeleteCommentDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.FileDeleteCommentDetails.CommentText
+  commentId: P:Dropbox.Api.TeamLog.FileDeleteCommentDetails.CommentText
+  id: CommentText
+  parent: Dropbox.Api.TeamLog.FileDeleteCommentDetails
+  langs:
+  - csharp
+  - vb
+  name: CommentText
+  nameWithType: FileDeleteCommentDetails.CommentText
+  fullName: Dropbox.Api.TeamLog.FileDeleteCommentDetails.CommentText
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileDeleteCommentDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: CommentText
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileDeleteCommentDetails.cs
+    startLine: 53
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Comment text.</p>\n"
+  example: []
+  syntax:
+    content: public string CommentText { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property CommentText As String
+  overload: Dropbox.Api.TeamLog.FileDeleteCommentDetails.CommentText*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.FileDeleteCommentDetails
+  commentId: T:Dropbox.Api.TeamLog.FileDeleteCommentDetails
+  parent: Dropbox.Api.TeamLog
+  name: FileDeleteCommentDetails
+  nameWithType: FileDeleteCommentDetails
+  fullName: Dropbox.Api.TeamLog.FileDeleteCommentDetails
+- uid: Dropbox.Api.TeamLog.FileDeleteCommentDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.FileDeleteCommentDetails.#ctor
+  name: FileDeleteCommentDetails
+  nameWithType: FileDeleteCommentDetails.FileDeleteCommentDetails
+  fullName: Dropbox.Api.TeamLog.FileDeleteCommentDetails.FileDeleteCommentDetails
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.FileDeleteCommentDetails.CommentText*
+  commentId: Overload:Dropbox.Api.TeamLog.FileDeleteCommentDetails.CommentText
+  name: CommentText
+  nameWithType: FileDeleteCommentDetails.CommentText
+  fullName: Dropbox.Api.TeamLog.FileDeleteCommentDetails.CommentText
+shouldSkipMarkup: true

@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.TeamActivityCreateReportType
+  commentId: T:Dropbox.Api.TeamLog.TeamActivityCreateReportType
+  id: TeamActivityCreateReportType
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.TeamActivityCreateReportType.#ctor
+  - Dropbox.Api.TeamLog.TeamActivityCreateReportType.#ctor(System.String)
+  - Dropbox.Api.TeamLog.TeamActivityCreateReportType.Description
+  langs:
+  - csharp
+  - vb
+  name: TeamActivityCreateReportType
+  nameWithType: TeamActivityCreateReportType
+  fullName: Dropbox.Api.TeamLog.TeamActivityCreateReportType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamActivityCreateReportType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TeamActivityCreateReportType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamActivityCreateReportType.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The team activity create report type object</p>\n"
+  example: []
+  syntax:
+    content: 'public class TeamActivityCreateReportType : object'
+    content.vb: >-
+      Public Class TeamActivityCreateReportType
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.TeamActivityCreateReportType.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.TeamActivityCreateReportType.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.TeamActivityCreateReportType
+  langs:
+  - csharp
+  - vb
+  name: TeamActivityCreateReportType(String)
+  nameWithType: TeamActivityCreateReportType.TeamActivityCreateReportType(String)
+  fullName: Dropbox.Api.TeamLog.TeamActivityCreateReportType.TeamActivityCreateReportType(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamActivityCreateReportType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamActivityCreateReportType.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.TeamActivityCreateReportType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public TeamActivityCreateReportType(string description)
+    parameters:
+    - id: description
+      type: System.String
+      description: The description
+    content.vb: Public Sub New(description As String)
+  overload: Dropbox.Api.TeamLog.TeamActivityCreateReportType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.TeamActivityCreateReportType.#ctor
+  commentId: M:Dropbox.Api.TeamLog.TeamActivityCreateReportType.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.TeamActivityCreateReportType
+  langs:
+  - csharp
+  - vb
+  name: TeamActivityCreateReportType()
+  nameWithType: TeamActivityCreateReportType.TeamActivityCreateReportType()
+  fullName: Dropbox.Api.TeamLog.TeamActivityCreateReportType.TeamActivityCreateReportType()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamActivityCreateReportType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamActivityCreateReportType.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.TeamActivityCreateReportType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public TeamActivityCreateReportType()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.TeamActivityCreateReportType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.TeamActivityCreateReportType.Description
+  commentId: P:Dropbox.Api.TeamLog.TeamActivityCreateReportType.Description
+  id: Description
+  parent: Dropbox.Api.TeamLog.TeamActivityCreateReportType
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: TeamActivityCreateReportType.Description
+  fullName: Dropbox.Api.TeamLog.TeamActivityCreateReportType.Description
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamActivityCreateReportType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Description
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamActivityCreateReportType.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets the description of the team activity create report type</p>\n"
+  example: []
+  syntax:
+    content: public string Description { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Dropbox.Api.TeamLog.TeamActivityCreateReportType.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.TeamActivityCreateReportType
+  commentId: T:Dropbox.Api.TeamLog.TeamActivityCreateReportType
+  parent: Dropbox.Api.TeamLog
+  name: TeamActivityCreateReportType
+  nameWithType: TeamActivityCreateReportType
+  fullName: Dropbox.Api.TeamLog.TeamActivityCreateReportType
+- uid: Dropbox.Api.TeamLog.TeamActivityCreateReportType.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.TeamActivityCreateReportType.#ctor
+  name: TeamActivityCreateReportType
+  nameWithType: TeamActivityCreateReportType.TeamActivityCreateReportType
+  fullName: Dropbox.Api.TeamLog.TeamActivityCreateReportType.TeamActivityCreateReportType
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.TeamActivityCreateReportType.Description*
+  commentId: Overload:Dropbox.Api.TeamLog.TeamActivityCreateReportType.Description
+  name: Description
+  nameWithType: TeamActivityCreateReportType.Description
+  fullName: Dropbox.Api.TeamLog.TeamActivityCreateReportType.Description
+shouldSkipMarkup: true

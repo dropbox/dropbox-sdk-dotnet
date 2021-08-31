@@ -1,0 +1,96 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.FileRequestsEmailsEnabledDetails
+  commentId: T:Dropbox.Api.TeamLog.FileRequestsEmailsEnabledDetails
+  id: FileRequestsEmailsEnabledDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.FileRequestsEmailsEnabledDetails.#ctor
+  langs:
+  - csharp
+  - vb
+  name: FileRequestsEmailsEnabledDetails
+  nameWithType: FileRequestsEmailsEnabledDetails
+  fullName: Dropbox.Api.TeamLog.FileRequestsEmailsEnabledDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestsEmailsEnabledDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: FileRequestsEmailsEnabledDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestsEmailsEnabledDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Enabled file request emails for everyone.</p>\n"
+  example: []
+  syntax:
+    content: 'public class FileRequestsEmailsEnabledDetails : object'
+    content.vb: >-
+      Public Class FileRequestsEmailsEnabledDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.FileRequestsEmailsEnabledDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.FileRequestsEmailsEnabledDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.FileRequestsEmailsEnabledDetails
+  langs:
+  - csharp
+  - vb
+  name: FileRequestsEmailsEnabledDetails()
+  nameWithType: FileRequestsEmailsEnabledDetails.FileRequestsEmailsEnabledDetails()
+  fullName: Dropbox.Api.TeamLog.FileRequestsEmailsEnabledDetails.FileRequestsEmailsEnabledDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestsEmailsEnabledDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestsEmailsEnabledDetails.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.FileRequestsEmailsEnabledDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public FileRequestsEmailsEnabledDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.FileRequestsEmailsEnabledDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.FileRequestsEmailsEnabledDetails
+  commentId: T:Dropbox.Api.TeamLog.FileRequestsEmailsEnabledDetails
+  parent: Dropbox.Api.TeamLog
+  name: FileRequestsEmailsEnabledDetails
+  nameWithType: FileRequestsEmailsEnabledDetails
+  fullName: Dropbox.Api.TeamLog.FileRequestsEmailsEnabledDetails
+- uid: Dropbox.Api.TeamLog.FileRequestsEmailsEnabledDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.FileRequestsEmailsEnabledDetails.#ctor
+  name: FileRequestsEmailsEnabledDetails
+  nameWithType: FileRequestsEmailsEnabledDetails.FileRequestsEmailsEnabledDetails
+  fullName: Dropbox.Api.TeamLog.FileRequestsEmailsEnabledDetails.FileRequestsEmailsEnabledDetails
+shouldSkipMarkup: true

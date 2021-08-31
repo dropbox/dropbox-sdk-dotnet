@@ -1,0 +1,36 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.Routes
+  commentId: N:Dropbox.Api.Files.Routes
+  id: Dropbox.Api.Files.Routes
+  children:
+  - Dropbox.Api.Files.Routes.FilesAppRoutes
+  - Dropbox.Api.Files.Routes.FilesUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: Dropbox.Api.Files.Routes
+  nameWithType: Dropbox.Api.Files.Routes
+  fullName: Dropbox.Api.Files.Routes
+  type: Namespace
+  assemblies:
+  - Dropbox.Api
+references:
+- uid: Dropbox.Api.Files.Routes.FilesAppRoutes
+  commentId: T:Dropbox.Api.Files.Routes.FilesAppRoutes
+  parent: Dropbox.Api.Files.Routes
+  name: FilesAppRoutes
+  nameWithType: FilesAppRoutes
+  fullName: Dropbox.Api.Files.Routes.FilesAppRoutes
+- uid: Dropbox.Api.Files.Routes.FilesUserRoutes
+  commentId: T:Dropbox.Api.Files.Routes.FilesUserRoutes
+  parent: Dropbox.Api.Files.Routes
+  name: FilesUserRoutes
+  nameWithType: FilesUserRoutes
+  fullName: Dropbox.Api.Files.Routes.FilesUserRoutes
+- uid: Dropbox.Api.Files.Routes
+  commentId: N:Dropbox.Api.Files.Routes
+  name: Dropbox.Api.Files.Routes
+  nameWithType: Dropbox.Api.Files.Routes
+  fullName: Dropbox.Api.Files.Routes
+shouldSkipMarkup: true

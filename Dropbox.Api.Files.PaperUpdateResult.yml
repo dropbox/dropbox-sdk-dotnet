@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.PaperUpdateResult
+  commentId: T:Dropbox.Api.Files.PaperUpdateResult
+  id: PaperUpdateResult
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.PaperUpdateResult.#ctor
+  - Dropbox.Api.Files.PaperUpdateResult.#ctor(System.Int64)
+  - Dropbox.Api.Files.PaperUpdateResult.PaperRevision
+  langs:
+  - csharp
+  - vb
+  name: PaperUpdateResult
+  nameWithType: PaperUpdateResult
+  fullName: Dropbox.Api.Files.PaperUpdateResult
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperUpdateResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PaperUpdateResult
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperUpdateResult.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The paper update result object</p>\n"
+  example: []
+  syntax:
+    content: 'public class PaperUpdateResult : object'
+    content.vb: >-
+      Public Class PaperUpdateResult
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.PaperUpdateResult.#ctor(System.Int64)
+  commentId: M:Dropbox.Api.Files.PaperUpdateResult.#ctor(System.Int64)
+  id: '#ctor(System.Int64)'
+  parent: Dropbox.Api.Files.PaperUpdateResult
+  langs:
+  - csharp
+  - vb
+  name: PaperUpdateResult(Int64)
+  nameWithType: PaperUpdateResult.PaperUpdateResult(Int64)
+  fullName: Dropbox.Api.Files.PaperUpdateResult.PaperUpdateResult(System.Int64)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperUpdateResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperUpdateResult.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.PaperUpdateResult\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public PaperUpdateResult(long paperRevision)
+    parameters:
+    - id: paperRevision
+      type: System.Int64
+      description: The current doc revision.
+    content.vb: Public Sub New(paperRevision As Long)
+  overload: Dropbox.Api.Files.PaperUpdateResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.PaperUpdateResult.#ctor
+  commentId: M:Dropbox.Api.Files.PaperUpdateResult.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.PaperUpdateResult
+  langs:
+  - csharp
+  - vb
+  name: PaperUpdateResult()
+  nameWithType: PaperUpdateResult.PaperUpdateResult()
+  fullName: Dropbox.Api.Files.PaperUpdateResult.PaperUpdateResult()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperUpdateResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperUpdateResult.cs
+    startLine: 45
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.PaperUpdateResult\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public PaperUpdateResult()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.PaperUpdateResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.PaperUpdateResult.PaperRevision
+  commentId: P:Dropbox.Api.Files.PaperUpdateResult.PaperRevision
+  id: PaperRevision
+  parent: Dropbox.Api.Files.PaperUpdateResult
+  langs:
+  - csharp
+  - vb
+  name: PaperRevision
+  nameWithType: PaperUpdateResult.PaperRevision
+  fullName: Dropbox.Api.Files.PaperUpdateResult.PaperRevision
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperUpdateResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PaperRevision
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperUpdateResult.cs
+    startLine: 53
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The current doc revision.</p>\n"
+  example: []
+  syntax:
+    content: public long PaperRevision { get; protected set; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: Public Property PaperRevision As Long
+  overload: Dropbox.Api.Files.PaperUpdateResult.PaperRevision*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.PaperUpdateResult
+  commentId: T:Dropbox.Api.Files.PaperUpdateResult
+  parent: Dropbox.Api.Files
+  name: PaperUpdateResult
+  nameWithType: PaperUpdateResult
+  fullName: Dropbox.Api.Files.PaperUpdateResult
+- uid: Dropbox.Api.Files.PaperUpdateResult.#ctor*
+  commentId: Overload:Dropbox.Api.Files.PaperUpdateResult.#ctor
+  name: PaperUpdateResult
+  nameWithType: PaperUpdateResult.PaperUpdateResult
+  fullName: Dropbox.Api.Files.PaperUpdateResult.PaperUpdateResult
+- uid: System.Int64
+  isExternal: true
+  name: Int64
+  nameWithType: Int64
+  fullName: System.Int64
+- uid: Dropbox.Api.Files.PaperUpdateResult.PaperRevision*
+  commentId: Overload:Dropbox.Api.Files.PaperUpdateResult.PaperRevision
+  name: PaperRevision
+  nameWithType: PaperUpdateResult.PaperRevision
+  fullName: Dropbox.Api.Files.PaperUpdateResult.PaperRevision
+shouldSkipMarkup: true

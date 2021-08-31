@@ -1,0 +1,239 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.FileRequestsChangePolicyDetails
+  commentId: T:Dropbox.Api.TeamLog.FileRequestsChangePolicyDetails
+  id: FileRequestsChangePolicyDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.FileRequestsChangePolicyDetails.#ctor
+  - Dropbox.Api.TeamLog.FileRequestsChangePolicyDetails.#ctor(Dropbox.Api.TeamLog.FileRequestsPolicy,Dropbox.Api.TeamLog.FileRequestsPolicy)
+  - Dropbox.Api.TeamLog.FileRequestsChangePolicyDetails.NewValue
+  - Dropbox.Api.TeamLog.FileRequestsChangePolicyDetails.PreviousValue
+  langs:
+  - csharp
+  - vb
+  name: FileRequestsChangePolicyDetails
+  nameWithType: FileRequestsChangePolicyDetails
+  fullName: Dropbox.Api.TeamLog.FileRequestsChangePolicyDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestsChangePolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: FileRequestsChangePolicyDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestsChangePolicyDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Enabled/disabled file requests.</p>\n"
+  example: []
+  syntax:
+    content: 'public class FileRequestsChangePolicyDetails : object'
+    content.vb: >-
+      Public Class FileRequestsChangePolicyDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.FileRequestsChangePolicyDetails.#ctor(Dropbox.Api.TeamLog.FileRequestsPolicy,Dropbox.Api.TeamLog.FileRequestsPolicy)
+  commentId: M:Dropbox.Api.TeamLog.FileRequestsChangePolicyDetails.#ctor(Dropbox.Api.TeamLog.FileRequestsPolicy,Dropbox.Api.TeamLog.FileRequestsPolicy)
+  id: '#ctor(Dropbox.Api.TeamLog.FileRequestsPolicy,Dropbox.Api.TeamLog.FileRequestsPolicy)'
+  parent: Dropbox.Api.TeamLog.FileRequestsChangePolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: FileRequestsChangePolicyDetails(FileRequestsPolicy, FileRequestsPolicy)
+  nameWithType: FileRequestsChangePolicyDetails.FileRequestsChangePolicyDetails(FileRequestsPolicy, FileRequestsPolicy)
+  fullName: Dropbox.Api.TeamLog.FileRequestsChangePolicyDetails.FileRequestsChangePolicyDetails(Dropbox.Api.TeamLog.FileRequestsPolicy, Dropbox.Api.TeamLog.FileRequestsPolicy)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestsChangePolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestsChangePolicyDetails.cs
+    startLine: 36
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.FileRequestsChangePolicyDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public FileRequestsChangePolicyDetails(FileRequestsPolicy newValue, FileRequestsPolicy previousValue = null)
+    parameters:
+    - id: newValue
+      type: Dropbox.Api.TeamLog.FileRequestsPolicy
+      description: New file requests policy.
+    - id: previousValue
+      type: Dropbox.Api.TeamLog.FileRequestsPolicy
+      description: >-
+        Previous file requests policy. Might be missing due to
+
+        historical data gap.
+    content.vb: Public Sub New(newValue As FileRequestsPolicy, previousValue As FileRequestsPolicy = Nothing)
+  overload: Dropbox.Api.TeamLog.FileRequestsChangePolicyDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.FileRequestsChangePolicyDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.FileRequestsChangePolicyDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.FileRequestsChangePolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: FileRequestsChangePolicyDetails()
+  nameWithType: FileRequestsChangePolicyDetails.FileRequestsChangePolicyDetails()
+  fullName: Dropbox.Api.TeamLog.FileRequestsChangePolicyDetails.FileRequestsChangePolicyDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestsChangePolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestsChangePolicyDetails.cs
+    startLine: 54
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.FileRequestsChangePolicyDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public FileRequestsChangePolicyDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.FileRequestsChangePolicyDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.FileRequestsChangePolicyDetails.NewValue
+  commentId: P:Dropbox.Api.TeamLog.FileRequestsChangePolicyDetails.NewValue
+  id: NewValue
+  parent: Dropbox.Api.TeamLog.FileRequestsChangePolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: NewValue
+  nameWithType: FileRequestsChangePolicyDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.FileRequestsChangePolicyDetails.NewValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestsChangePolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NewValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestsChangePolicyDetails.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>New file requests policy.</p>\n"
+  example: []
+  syntax:
+    content: public FileRequestsPolicy NewValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.FileRequestsPolicy
+    content.vb: Public Property NewValue As FileRequestsPolicy
+  overload: Dropbox.Api.TeamLog.FileRequestsChangePolicyDetails.NewValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.FileRequestsChangePolicyDetails.PreviousValue
+  commentId: P:Dropbox.Api.TeamLog.FileRequestsChangePolicyDetails.PreviousValue
+  id: PreviousValue
+  parent: Dropbox.Api.TeamLog.FileRequestsChangePolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: PreviousValue
+  nameWithType: FileRequestsChangePolicyDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.FileRequestsChangePolicyDetails.PreviousValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestsChangePolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PreviousValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestsChangePolicyDetails.cs
+    startLine: 68
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Previous file requests policy. Might be missing due to historical data\ngap.</p>\n"
+  example: []
+  syntax:
+    content: public FileRequestsPolicy PreviousValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.FileRequestsPolicy
+    content.vb: Public Property PreviousValue As FileRequestsPolicy
+  overload: Dropbox.Api.TeamLog.FileRequestsChangePolicyDetails.PreviousValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.FileRequestsChangePolicyDetails
+  commentId: T:Dropbox.Api.TeamLog.FileRequestsChangePolicyDetails
+  parent: Dropbox.Api.TeamLog
+  name: FileRequestsChangePolicyDetails
+  nameWithType: FileRequestsChangePolicyDetails
+  fullName: Dropbox.Api.TeamLog.FileRequestsChangePolicyDetails
+- uid: Dropbox.Api.TeamLog.FileRequestsChangePolicyDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.FileRequestsChangePolicyDetails.#ctor
+  name: FileRequestsChangePolicyDetails
+  nameWithType: FileRequestsChangePolicyDetails.FileRequestsChangePolicyDetails
+  fullName: Dropbox.Api.TeamLog.FileRequestsChangePolicyDetails.FileRequestsChangePolicyDetails
+- uid: Dropbox.Api.TeamLog.FileRequestsPolicy
+  commentId: T:Dropbox.Api.TeamLog.FileRequestsPolicy
+  parent: Dropbox.Api.TeamLog
+  name: FileRequestsPolicy
+  nameWithType: FileRequestsPolicy
+  fullName: Dropbox.Api.TeamLog.FileRequestsPolicy
+- uid: Dropbox.Api.TeamLog.FileRequestsChangePolicyDetails.NewValue*
+  commentId: Overload:Dropbox.Api.TeamLog.FileRequestsChangePolicyDetails.NewValue
+  name: NewValue
+  nameWithType: FileRequestsChangePolicyDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.FileRequestsChangePolicyDetails.NewValue
+- uid: Dropbox.Api.TeamLog.FileRequestsChangePolicyDetails.PreviousValue*
+  commentId: Overload:Dropbox.Api.TeamLog.FileRequestsChangePolicyDetails.PreviousValue
+  name: PreviousValue
+  nameWithType: FileRequestsChangePolicyDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.FileRequestsChangePolicyDetails.PreviousValue
+shouldSkipMarkup: true

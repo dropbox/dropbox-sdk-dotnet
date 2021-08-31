@@ -1,0 +1,474 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.LegalHoldsListPoliciesError
+  commentId: T:Dropbox.Api.Team.LegalHoldsListPoliciesError
+  id: LegalHoldsListPoliciesError
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.LegalHoldsListPoliciesError.#ctor
+  - Dropbox.Api.Team.LegalHoldsListPoliciesError.AsInsufficientPermissions
+  - Dropbox.Api.Team.LegalHoldsListPoliciesError.AsOther
+  - Dropbox.Api.Team.LegalHoldsListPoliciesError.AsTransientError
+  - Dropbox.Api.Team.LegalHoldsListPoliciesError.AsUnknownLegalHoldError
+  - Dropbox.Api.Team.LegalHoldsListPoliciesError.IsInsufficientPermissions
+  - Dropbox.Api.Team.LegalHoldsListPoliciesError.IsOther
+  - Dropbox.Api.Team.LegalHoldsListPoliciesError.IsTransientError
+  - Dropbox.Api.Team.LegalHoldsListPoliciesError.IsUnknownLegalHoldError
+  langs:
+  - csharp
+  - vb
+  name: LegalHoldsListPoliciesError
+  nameWithType: LegalHoldsListPoliciesError
+  fullName: Dropbox.Api.Team.LegalHoldsListPoliciesError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListPoliciesError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: LegalHoldsListPoliciesError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListPoliciesError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The legal holds list policies error object</p>\n"
+  example: []
+  syntax:
+    content: 'public class LegalHoldsListPoliciesError : object'
+    content.vb: >-
+      Public Class LegalHoldsListPoliciesError
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Team.LegalHoldsListPoliciesError.InsufficientPermissions
+  - Dropbox.Api.Team.LegalHoldsListPoliciesError.Other
+  - Dropbox.Api.Team.LegalHoldsListPoliciesError.TransientError
+  - Dropbox.Api.Team.LegalHoldsListPoliciesError.UnknownLegalHoldError
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.LegalHoldsListPoliciesError.#ctor
+  commentId: M:Dropbox.Api.Team.LegalHoldsListPoliciesError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.LegalHoldsListPoliciesError
+  langs:
+  - csharp
+  - vb
+  name: LegalHoldsListPoliciesError()
+  nameWithType: LegalHoldsListPoliciesError.LegalHoldsListPoliciesError()
+  fullName: Dropbox.Api.Team.LegalHoldsListPoliciesError.LegalHoldsListPoliciesError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListPoliciesError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListPoliciesError.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.LegalHoldsListPoliciesError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public LegalHoldsListPoliciesError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.LegalHoldsListPoliciesError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.LegalHoldsListPoliciesError.IsTransientError
+  commentId: P:Dropbox.Api.Team.LegalHoldsListPoliciesError.IsTransientError
+  id: IsTransientError
+  parent: Dropbox.Api.Team.LegalHoldsListPoliciesError
+  langs:
+  - csharp
+  - vb
+  name: IsTransientError
+  nameWithType: LegalHoldsListPoliciesError.IsTransientError
+  fullName: Dropbox.Api.Team.LegalHoldsListPoliciesError.IsTransientError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListPoliciesError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsTransientError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListPoliciesError.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is TransientError</p>\n"
+  example: []
+  syntax:
+    content: public bool IsTransientError { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsTransientError As Boolean
+  overload: Dropbox.Api.Team.LegalHoldsListPoliciesError.IsTransientError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.LegalHoldsListPoliciesError.AsTransientError
+  commentId: P:Dropbox.Api.Team.LegalHoldsListPoliciesError.AsTransientError
+  id: AsTransientError
+  parent: Dropbox.Api.Team.LegalHoldsListPoliciesError
+  langs:
+  - csharp
+  - vb
+  name: AsTransientError
+  nameWithType: LegalHoldsListPoliciesError.AsTransientError
+  fullName: Dropbox.Api.Team.LegalHoldsListPoliciesError.AsTransientError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListPoliciesError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsTransientError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListPoliciesError.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a TransientError, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public LegalHoldsListPoliciesError.TransientError AsTransientError { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.LegalHoldsListPoliciesError.TransientError
+    content.vb: Public ReadOnly Property AsTransientError As LegalHoldsListPoliciesError.TransientError
+  overload: Dropbox.Api.Team.LegalHoldsListPoliciesError.AsTransientError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.LegalHoldsListPoliciesError.IsUnknownLegalHoldError
+  commentId: P:Dropbox.Api.Team.LegalHoldsListPoliciesError.IsUnknownLegalHoldError
+  id: IsUnknownLegalHoldError
+  parent: Dropbox.Api.Team.LegalHoldsListPoliciesError
+  langs:
+  - csharp
+  - vb
+  name: IsUnknownLegalHoldError
+  nameWithType: LegalHoldsListPoliciesError.IsUnknownLegalHoldError
+  fullName: Dropbox.Api.Team.LegalHoldsListPoliciesError.IsUnknownLegalHoldError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListPoliciesError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsUnknownLegalHoldError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListPoliciesError.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is UnknownLegalHoldError</p>\n"
+  example: []
+  syntax:
+    content: public bool IsUnknownLegalHoldError { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsUnknownLegalHoldError As Boolean
+  overload: Dropbox.Api.Team.LegalHoldsListPoliciesError.IsUnknownLegalHoldError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.LegalHoldsListPoliciesError.AsUnknownLegalHoldError
+  commentId: P:Dropbox.Api.Team.LegalHoldsListPoliciesError.AsUnknownLegalHoldError
+  id: AsUnknownLegalHoldError
+  parent: Dropbox.Api.Team.LegalHoldsListPoliciesError
+  langs:
+  - csharp
+  - vb
+  name: AsUnknownLegalHoldError
+  nameWithType: LegalHoldsListPoliciesError.AsUnknownLegalHoldError
+  fullName: Dropbox.Api.Team.LegalHoldsListPoliciesError.AsUnknownLegalHoldError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListPoliciesError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsUnknownLegalHoldError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListPoliciesError.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a UnknownLegalHoldError, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public LegalHoldsListPoliciesError.UnknownLegalHoldError AsUnknownLegalHoldError { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.LegalHoldsListPoliciesError.UnknownLegalHoldError
+    content.vb: Public ReadOnly Property AsUnknownLegalHoldError As LegalHoldsListPoliciesError.UnknownLegalHoldError
+  overload: Dropbox.Api.Team.LegalHoldsListPoliciesError.AsUnknownLegalHoldError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.LegalHoldsListPoliciesError.IsInsufficientPermissions
+  commentId: P:Dropbox.Api.Team.LegalHoldsListPoliciesError.IsInsufficientPermissions
+  id: IsInsufficientPermissions
+  parent: Dropbox.Api.Team.LegalHoldsListPoliciesError
+  langs:
+  - csharp
+  - vb
+  name: IsInsufficientPermissions
+  nameWithType: LegalHoldsListPoliciesError.IsInsufficientPermissions
+  fullName: Dropbox.Api.Team.LegalHoldsListPoliciesError.IsInsufficientPermissions
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListPoliciesError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsInsufficientPermissions
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListPoliciesError.cs
+    startLine: 85
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is\nInsufficientPermissions</p>\n"
+  example: []
+  syntax:
+    content: public bool IsInsufficientPermissions { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsInsufficientPermissions As Boolean
+  overload: Dropbox.Api.Team.LegalHoldsListPoliciesError.IsInsufficientPermissions*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.LegalHoldsListPoliciesError.AsInsufficientPermissions
+  commentId: P:Dropbox.Api.Team.LegalHoldsListPoliciesError.AsInsufficientPermissions
+  id: AsInsufficientPermissions
+  parent: Dropbox.Api.Team.LegalHoldsListPoliciesError
+  langs:
+  - csharp
+  - vb
+  name: AsInsufficientPermissions
+  nameWithType: LegalHoldsListPoliciesError.AsInsufficientPermissions
+  fullName: Dropbox.Api.Team.LegalHoldsListPoliciesError.AsInsufficientPermissions
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListPoliciesError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsInsufficientPermissions
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListPoliciesError.cs
+    startLine: 96
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a InsufficientPermissions, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public LegalHoldsListPoliciesError.InsufficientPermissions AsInsufficientPermissions { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.LegalHoldsListPoliciesError.InsufficientPermissions
+    content.vb: Public ReadOnly Property AsInsufficientPermissions As LegalHoldsListPoliciesError.InsufficientPermissions
+  overload: Dropbox.Api.Team.LegalHoldsListPoliciesError.AsInsufficientPermissions*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.LegalHoldsListPoliciesError.IsOther
+  commentId: P:Dropbox.Api.Team.LegalHoldsListPoliciesError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Team.LegalHoldsListPoliciesError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: LegalHoldsListPoliciesError.IsOther
+  fullName: Dropbox.Api.Team.LegalHoldsListPoliciesError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListPoliciesError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListPoliciesError.cs
+    startLine: 107
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Team.LegalHoldsListPoliciesError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.LegalHoldsListPoliciesError.AsOther
+  commentId: P:Dropbox.Api.Team.LegalHoldsListPoliciesError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Team.LegalHoldsListPoliciesError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: LegalHoldsListPoliciesError.AsOther
+  fullName: Dropbox.Api.Team.LegalHoldsListPoliciesError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListPoliciesError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListPoliciesError.cs
+    startLine: 118
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public LegalHoldsListPoliciesError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.LegalHoldsListPoliciesError.Other
+    content.vb: Public ReadOnly Property AsOther As LegalHoldsListPoliciesError.Other
+  overload: Dropbox.Api.Team.LegalHoldsListPoliciesError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.LegalHoldsListPoliciesError
+  commentId: T:Dropbox.Api.Team.LegalHoldsListPoliciesError
+  parent: Dropbox.Api.Team
+  name: LegalHoldsListPoliciesError
+  nameWithType: LegalHoldsListPoliciesError
+  fullName: Dropbox.Api.Team.LegalHoldsListPoliciesError
+- uid: Dropbox.Api.Team.LegalHoldsListPoliciesError.#ctor*
+  commentId: Overload:Dropbox.Api.Team.LegalHoldsListPoliciesError.#ctor
+  name: LegalHoldsListPoliciesError
+  nameWithType: LegalHoldsListPoliciesError.LegalHoldsListPoliciesError
+  fullName: Dropbox.Api.Team.LegalHoldsListPoliciesError.LegalHoldsListPoliciesError
+- uid: Dropbox.Api.Team.LegalHoldsListPoliciesError.IsTransientError*
+  commentId: Overload:Dropbox.Api.Team.LegalHoldsListPoliciesError.IsTransientError
+  name: IsTransientError
+  nameWithType: LegalHoldsListPoliciesError.IsTransientError
+  fullName: Dropbox.Api.Team.LegalHoldsListPoliciesError.IsTransientError
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Team.LegalHoldsListPoliciesError.AsTransientError*
+  commentId: Overload:Dropbox.Api.Team.LegalHoldsListPoliciesError.AsTransientError
+  name: AsTransientError
+  nameWithType: LegalHoldsListPoliciesError.AsTransientError
+  fullName: Dropbox.Api.Team.LegalHoldsListPoliciesError.AsTransientError
+- uid: Dropbox.Api.Team.LegalHoldsListPoliciesError.TransientError
+  commentId: T:Dropbox.Api.Team.LegalHoldsListPoliciesError.TransientError
+  parent: Dropbox.Api.Team
+  name: LegalHoldsListPoliciesError.TransientError
+  nameWithType: LegalHoldsListPoliciesError.TransientError
+  fullName: Dropbox.Api.Team.LegalHoldsListPoliciesError.TransientError
+- uid: Dropbox.Api.Team.LegalHoldsListPoliciesError.IsUnknownLegalHoldError*
+  commentId: Overload:Dropbox.Api.Team.LegalHoldsListPoliciesError.IsUnknownLegalHoldError
+  name: IsUnknownLegalHoldError
+  nameWithType: LegalHoldsListPoliciesError.IsUnknownLegalHoldError
+  fullName: Dropbox.Api.Team.LegalHoldsListPoliciesError.IsUnknownLegalHoldError
+- uid: Dropbox.Api.Team.LegalHoldsListPoliciesError.AsUnknownLegalHoldError*
+  commentId: Overload:Dropbox.Api.Team.LegalHoldsListPoliciesError.AsUnknownLegalHoldError
+  name: AsUnknownLegalHoldError
+  nameWithType: LegalHoldsListPoliciesError.AsUnknownLegalHoldError
+  fullName: Dropbox.Api.Team.LegalHoldsListPoliciesError.AsUnknownLegalHoldError
+- uid: Dropbox.Api.Team.LegalHoldsListPoliciesError.UnknownLegalHoldError
+  commentId: T:Dropbox.Api.Team.LegalHoldsListPoliciesError.UnknownLegalHoldError
+  parent: Dropbox.Api.Team
+  name: LegalHoldsListPoliciesError.UnknownLegalHoldError
+  nameWithType: LegalHoldsListPoliciesError.UnknownLegalHoldError
+  fullName: Dropbox.Api.Team.LegalHoldsListPoliciesError.UnknownLegalHoldError
+- uid: Dropbox.Api.Team.LegalHoldsListPoliciesError.IsInsufficientPermissions*
+  commentId: Overload:Dropbox.Api.Team.LegalHoldsListPoliciesError.IsInsufficientPermissions
+  name: IsInsufficientPermissions
+  nameWithType: LegalHoldsListPoliciesError.IsInsufficientPermissions
+  fullName: Dropbox.Api.Team.LegalHoldsListPoliciesError.IsInsufficientPermissions
+- uid: Dropbox.Api.Team.LegalHoldsListPoliciesError.AsInsufficientPermissions*
+  commentId: Overload:Dropbox.Api.Team.LegalHoldsListPoliciesError.AsInsufficientPermissions
+  name: AsInsufficientPermissions
+  nameWithType: LegalHoldsListPoliciesError.AsInsufficientPermissions
+  fullName: Dropbox.Api.Team.LegalHoldsListPoliciesError.AsInsufficientPermissions
+- uid: Dropbox.Api.Team.LegalHoldsListPoliciesError.InsufficientPermissions
+  commentId: T:Dropbox.Api.Team.LegalHoldsListPoliciesError.InsufficientPermissions
+  parent: Dropbox.Api.Team
+  name: LegalHoldsListPoliciesError.InsufficientPermissions
+  nameWithType: LegalHoldsListPoliciesError.InsufficientPermissions
+  fullName: Dropbox.Api.Team.LegalHoldsListPoliciesError.InsufficientPermissions
+- uid: Dropbox.Api.Team.LegalHoldsListPoliciesError.IsOther*
+  commentId: Overload:Dropbox.Api.Team.LegalHoldsListPoliciesError.IsOther
+  name: IsOther
+  nameWithType: LegalHoldsListPoliciesError.IsOther
+  fullName: Dropbox.Api.Team.LegalHoldsListPoliciesError.IsOther
+- uid: Dropbox.Api.Team.LegalHoldsListPoliciesError.AsOther*
+  commentId: Overload:Dropbox.Api.Team.LegalHoldsListPoliciesError.AsOther
+  name: AsOther
+  nameWithType: LegalHoldsListPoliciesError.AsOther
+  fullName: Dropbox.Api.Team.LegalHoldsListPoliciesError.AsOther
+- uid: Dropbox.Api.Team.LegalHoldsListPoliciesError.Other
+  commentId: T:Dropbox.Api.Team.LegalHoldsListPoliciesError.Other
+  parent: Dropbox.Api.Team
+  name: LegalHoldsListPoliciesError.Other
+  nameWithType: LegalHoldsListPoliciesError.Other
+  fullName: Dropbox.Api.Team.LegalHoldsListPoliciesError.Other
+shouldSkipMarkup: true

@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.PaperPublishedLinkDisabledType
+  commentId: T:Dropbox.Api.TeamLog.PaperPublishedLinkDisabledType
+  id: PaperPublishedLinkDisabledType
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.PaperPublishedLinkDisabledType.#ctor
+  - Dropbox.Api.TeamLog.PaperPublishedLinkDisabledType.#ctor(System.String)
+  - Dropbox.Api.TeamLog.PaperPublishedLinkDisabledType.Description
+  langs:
+  - csharp
+  - vb
+  name: PaperPublishedLinkDisabledType
+  nameWithType: PaperPublishedLinkDisabledType
+  fullName: Dropbox.Api.TeamLog.PaperPublishedLinkDisabledType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperPublishedLinkDisabledType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PaperPublishedLinkDisabledType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperPublishedLinkDisabledType.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The paper published link disabled type object</p>\n"
+  example: []
+  syntax:
+    content: 'public class PaperPublishedLinkDisabledType : object'
+    content.vb: >-
+      Public Class PaperPublishedLinkDisabledType
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.PaperPublishedLinkDisabledType.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.PaperPublishedLinkDisabledType.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.PaperPublishedLinkDisabledType
+  langs:
+  - csharp
+  - vb
+  name: PaperPublishedLinkDisabledType(String)
+  nameWithType: PaperPublishedLinkDisabledType.PaperPublishedLinkDisabledType(String)
+  fullName: Dropbox.Api.TeamLog.PaperPublishedLinkDisabledType.PaperPublishedLinkDisabledType(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperPublishedLinkDisabledType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperPublishedLinkDisabledType.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.PaperPublishedLinkDisabledType\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public PaperPublishedLinkDisabledType(string description)
+    parameters:
+    - id: description
+      type: System.String
+      description: The description
+    content.vb: Public Sub New(description As String)
+  overload: Dropbox.Api.TeamLog.PaperPublishedLinkDisabledType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.PaperPublishedLinkDisabledType.#ctor
+  commentId: M:Dropbox.Api.TeamLog.PaperPublishedLinkDisabledType.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.PaperPublishedLinkDisabledType
+  langs:
+  - csharp
+  - vb
+  name: PaperPublishedLinkDisabledType()
+  nameWithType: PaperPublishedLinkDisabledType.PaperPublishedLinkDisabledType()
+  fullName: Dropbox.Api.TeamLog.PaperPublishedLinkDisabledType.PaperPublishedLinkDisabledType()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperPublishedLinkDisabledType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperPublishedLinkDisabledType.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.PaperPublishedLinkDisabledType\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public PaperPublishedLinkDisabledType()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.PaperPublishedLinkDisabledType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.PaperPublishedLinkDisabledType.Description
+  commentId: P:Dropbox.Api.TeamLog.PaperPublishedLinkDisabledType.Description
+  id: Description
+  parent: Dropbox.Api.TeamLog.PaperPublishedLinkDisabledType
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: PaperPublishedLinkDisabledType.Description
+  fullName: Dropbox.Api.TeamLog.PaperPublishedLinkDisabledType.Description
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperPublishedLinkDisabledType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Description
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperPublishedLinkDisabledType.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets the description of the paper published link disabled type</p>\n"
+  example: []
+  syntax:
+    content: public string Description { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Dropbox.Api.TeamLog.PaperPublishedLinkDisabledType.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.PaperPublishedLinkDisabledType
+  commentId: T:Dropbox.Api.TeamLog.PaperPublishedLinkDisabledType
+  parent: Dropbox.Api.TeamLog
+  name: PaperPublishedLinkDisabledType
+  nameWithType: PaperPublishedLinkDisabledType
+  fullName: Dropbox.Api.TeamLog.PaperPublishedLinkDisabledType
+- uid: Dropbox.Api.TeamLog.PaperPublishedLinkDisabledType.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.PaperPublishedLinkDisabledType.#ctor
+  name: PaperPublishedLinkDisabledType
+  nameWithType: PaperPublishedLinkDisabledType.PaperPublishedLinkDisabledType
+  fullName: Dropbox.Api.TeamLog.PaperPublishedLinkDisabledType.PaperPublishedLinkDisabledType
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.PaperPublishedLinkDisabledType.Description*
+  commentId: Overload:Dropbox.Api.TeamLog.PaperPublishedLinkDisabledType.Description
+  name: Description
+  nameWithType: PaperPublishedLinkDisabledType.Description
+  fullName: Dropbox.Api.TeamLog.PaperPublishedLinkDisabledType.Description
+shouldSkipMarkup: true

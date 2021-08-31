@@ -1,0 +1,238 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.GroupMembersAddError.UserMustBeActiveToBeOwner
+  commentId: T:Dropbox.Api.Team.GroupMembersAddError.UserMustBeActiveToBeOwner
+  id: GroupMembersAddError.UserMustBeActiveToBeOwner
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.GroupMembersAddError.UserMustBeActiveToBeOwner.Instance
+  langs:
+  - csharp
+  - vb
+  name: GroupMembersAddError.UserMustBeActiveToBeOwner
+  nameWithType: GroupMembersAddError.UserMustBeActiveToBeOwner
+  fullName: Dropbox.Api.Team.GroupMembersAddError.UserMustBeActiveToBeOwner
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupMembersAddError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: UserMustBeActiveToBeOwner
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupMembersAddError.cs
+    startLine: 710
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>A suspended user cannot be added to a group as <xref href=\"Dropbox.Api.Team.GroupAccessType.Owner\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class UserMustBeActiveToBeOwner : GroupMembersAddError'
+    content.vb: >-
+      Public NotInheritable Class UserMustBeActiveToBeOwner
+          Inherits GroupMembersAddError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.GroupMembersAddError
+  inheritedMembers:
+  - Dropbox.Api.Team.GroupMembersAddError.IsDuplicateUser
+  - Dropbox.Api.Team.GroupMembersAddError.AsDuplicateUser
+  - Dropbox.Api.Team.GroupMembersAddError.IsGroupNotInTeam
+  - Dropbox.Api.Team.GroupMembersAddError.AsGroupNotInTeam
+  - Dropbox.Api.Team.GroupMembersAddError.IsMembersNotInTeam
+  - Dropbox.Api.Team.GroupMembersAddError.AsMembersNotInTeam
+  - Dropbox.Api.Team.GroupMembersAddError.IsUsersNotFound
+  - Dropbox.Api.Team.GroupMembersAddError.AsUsersNotFound
+  - Dropbox.Api.Team.GroupMembersAddError.IsUserMustBeActiveToBeOwner
+  - Dropbox.Api.Team.GroupMembersAddError.AsUserMustBeActiveToBeOwner
+  - Dropbox.Api.Team.GroupMembersAddError.IsUserCannotBeManagerOfCompanyManagedGroup
+  - Dropbox.Api.Team.GroupMembersAddError.AsUserCannotBeManagerOfCompanyManagedGroup
+  - Dropbox.Api.Team.GroupMembersAddError.IsSystemManagedGroupDisallowed
+  - Dropbox.Api.Team.GroupMembersAddError.AsSystemManagedGroupDisallowed
+  - Dropbox.Api.Team.GroupMembersAddError.IsGroupNotFound
+  - Dropbox.Api.Team.GroupMembersAddError.AsGroupNotFound
+  - Dropbox.Api.Team.GroupMembersAddError.IsOther
+  - Dropbox.Api.Team.GroupMembersAddError.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Team.GroupMembersAddError.UserMustBeActiveToBeOwner.Instance
+  commentId: F:Dropbox.Api.Team.GroupMembersAddError.UserMustBeActiveToBeOwner.Instance
+  id: Instance
+  parent: Dropbox.Api.Team.GroupMembersAddError.UserMustBeActiveToBeOwner
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: GroupMembersAddError.UserMustBeActiveToBeOwner.Instance
+  fullName: Dropbox.Api.Team.GroupMembersAddError.UserMustBeActiveToBeOwner.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupMembersAddError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupMembersAddError.cs
+    startLine: 735
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>A singleton instance of UserMustBeActiveToBeOwner</p>\n"
+  example: []
+  syntax:
+    content: public static readonly GroupMembersAddError.UserMustBeActiveToBeOwner Instance
+    return:
+      type: Dropbox.Api.Team.GroupMembersAddError.UserMustBeActiveToBeOwner
+    content.vb: Public Shared ReadOnly Instance As GroupMembersAddError.UserMustBeActiveToBeOwner
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team.GroupAccessType.Owner
+  commentId: T:Dropbox.Api.Team.GroupAccessType.Owner
+  parent: Dropbox.Api.Team
+  name: GroupAccessType.Owner
+  nameWithType: GroupAccessType.Owner
+  fullName: Dropbox.Api.Team.GroupAccessType.Owner
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.GroupMembersAddError
+  commentId: T:Dropbox.Api.Team.GroupMembersAddError
+  parent: Dropbox.Api.Team
+  name: GroupMembersAddError
+  nameWithType: GroupMembersAddError
+  fullName: Dropbox.Api.Team.GroupMembersAddError
+- uid: Dropbox.Api.Team.GroupMembersAddError.IsDuplicateUser
+  commentId: P:Dropbox.Api.Team.GroupMembersAddError.IsDuplicateUser
+  parent: Dropbox.Api.Team.GroupMembersAddError
+  name: IsDuplicateUser
+  nameWithType: GroupMembersAddError.IsDuplicateUser
+  fullName: Dropbox.Api.Team.GroupMembersAddError.IsDuplicateUser
+- uid: Dropbox.Api.Team.GroupMembersAddError.AsDuplicateUser
+  commentId: P:Dropbox.Api.Team.GroupMembersAddError.AsDuplicateUser
+  parent: Dropbox.Api.Team.GroupMembersAddError
+  name: AsDuplicateUser
+  nameWithType: GroupMembersAddError.AsDuplicateUser
+  fullName: Dropbox.Api.Team.GroupMembersAddError.AsDuplicateUser
+- uid: Dropbox.Api.Team.GroupMembersAddError.IsGroupNotInTeam
+  commentId: P:Dropbox.Api.Team.GroupMembersAddError.IsGroupNotInTeam
+  parent: Dropbox.Api.Team.GroupMembersAddError
+  name: IsGroupNotInTeam
+  nameWithType: GroupMembersAddError.IsGroupNotInTeam
+  fullName: Dropbox.Api.Team.GroupMembersAddError.IsGroupNotInTeam
+- uid: Dropbox.Api.Team.GroupMembersAddError.AsGroupNotInTeam
+  commentId: P:Dropbox.Api.Team.GroupMembersAddError.AsGroupNotInTeam
+  parent: Dropbox.Api.Team.GroupMembersAddError
+  name: AsGroupNotInTeam
+  nameWithType: GroupMembersAddError.AsGroupNotInTeam
+  fullName: Dropbox.Api.Team.GroupMembersAddError.AsGroupNotInTeam
+- uid: Dropbox.Api.Team.GroupMembersAddError.IsMembersNotInTeam
+  commentId: P:Dropbox.Api.Team.GroupMembersAddError.IsMembersNotInTeam
+  parent: Dropbox.Api.Team.GroupMembersAddError
+  name: IsMembersNotInTeam
+  nameWithType: GroupMembersAddError.IsMembersNotInTeam
+  fullName: Dropbox.Api.Team.GroupMembersAddError.IsMembersNotInTeam
+- uid: Dropbox.Api.Team.GroupMembersAddError.AsMembersNotInTeam
+  commentId: P:Dropbox.Api.Team.GroupMembersAddError.AsMembersNotInTeam
+  parent: Dropbox.Api.Team.GroupMembersAddError
+  name: AsMembersNotInTeam
+  nameWithType: GroupMembersAddError.AsMembersNotInTeam
+  fullName: Dropbox.Api.Team.GroupMembersAddError.AsMembersNotInTeam
+- uid: Dropbox.Api.Team.GroupMembersAddError.IsUsersNotFound
+  commentId: P:Dropbox.Api.Team.GroupMembersAddError.IsUsersNotFound
+  parent: Dropbox.Api.Team.GroupMembersAddError
+  name: IsUsersNotFound
+  nameWithType: GroupMembersAddError.IsUsersNotFound
+  fullName: Dropbox.Api.Team.GroupMembersAddError.IsUsersNotFound
+- uid: Dropbox.Api.Team.GroupMembersAddError.AsUsersNotFound
+  commentId: P:Dropbox.Api.Team.GroupMembersAddError.AsUsersNotFound
+  parent: Dropbox.Api.Team.GroupMembersAddError
+  name: AsUsersNotFound
+  nameWithType: GroupMembersAddError.AsUsersNotFound
+  fullName: Dropbox.Api.Team.GroupMembersAddError.AsUsersNotFound
+- uid: Dropbox.Api.Team.GroupMembersAddError.IsUserMustBeActiveToBeOwner
+  commentId: P:Dropbox.Api.Team.GroupMembersAddError.IsUserMustBeActiveToBeOwner
+  parent: Dropbox.Api.Team.GroupMembersAddError
+  name: IsUserMustBeActiveToBeOwner
+  nameWithType: GroupMembersAddError.IsUserMustBeActiveToBeOwner
+  fullName: Dropbox.Api.Team.GroupMembersAddError.IsUserMustBeActiveToBeOwner
+- uid: Dropbox.Api.Team.GroupMembersAddError.AsUserMustBeActiveToBeOwner
+  commentId: P:Dropbox.Api.Team.GroupMembersAddError.AsUserMustBeActiveToBeOwner
+  parent: Dropbox.Api.Team.GroupMembersAddError
+  name: AsUserMustBeActiveToBeOwner
+  nameWithType: GroupMembersAddError.AsUserMustBeActiveToBeOwner
+  fullName: Dropbox.Api.Team.GroupMembersAddError.AsUserMustBeActiveToBeOwner
+- uid: Dropbox.Api.Team.GroupMembersAddError.IsUserCannotBeManagerOfCompanyManagedGroup
+  commentId: P:Dropbox.Api.Team.GroupMembersAddError.IsUserCannotBeManagerOfCompanyManagedGroup
+  parent: Dropbox.Api.Team.GroupMembersAddError
+  name: IsUserCannotBeManagerOfCompanyManagedGroup
+  nameWithType: GroupMembersAddError.IsUserCannotBeManagerOfCompanyManagedGroup
+  fullName: Dropbox.Api.Team.GroupMembersAddError.IsUserCannotBeManagerOfCompanyManagedGroup
+- uid: Dropbox.Api.Team.GroupMembersAddError.AsUserCannotBeManagerOfCompanyManagedGroup
+  commentId: P:Dropbox.Api.Team.GroupMembersAddError.AsUserCannotBeManagerOfCompanyManagedGroup
+  parent: Dropbox.Api.Team.GroupMembersAddError
+  name: AsUserCannotBeManagerOfCompanyManagedGroup
+  nameWithType: GroupMembersAddError.AsUserCannotBeManagerOfCompanyManagedGroup
+  fullName: Dropbox.Api.Team.GroupMembersAddError.AsUserCannotBeManagerOfCompanyManagedGroup
+- uid: Dropbox.Api.Team.GroupMembersAddError.IsSystemManagedGroupDisallowed
+  commentId: P:Dropbox.Api.Team.GroupMembersAddError.IsSystemManagedGroupDisallowed
+  parent: Dropbox.Api.Team.GroupMembersAddError
+  name: IsSystemManagedGroupDisallowed
+  nameWithType: GroupMembersAddError.IsSystemManagedGroupDisallowed
+  fullName: Dropbox.Api.Team.GroupMembersAddError.IsSystemManagedGroupDisallowed
+- uid: Dropbox.Api.Team.GroupMembersAddError.AsSystemManagedGroupDisallowed
+  commentId: P:Dropbox.Api.Team.GroupMembersAddError.AsSystemManagedGroupDisallowed
+  parent: Dropbox.Api.Team.GroupMembersAddError
+  name: AsSystemManagedGroupDisallowed
+  nameWithType: GroupMembersAddError.AsSystemManagedGroupDisallowed
+  fullName: Dropbox.Api.Team.GroupMembersAddError.AsSystemManagedGroupDisallowed
+- uid: Dropbox.Api.Team.GroupMembersAddError.IsGroupNotFound
+  commentId: P:Dropbox.Api.Team.GroupMembersAddError.IsGroupNotFound
+  parent: Dropbox.Api.Team.GroupMembersAddError
+  name: IsGroupNotFound
+  nameWithType: GroupMembersAddError.IsGroupNotFound
+  fullName: Dropbox.Api.Team.GroupMembersAddError.IsGroupNotFound
+- uid: Dropbox.Api.Team.GroupMembersAddError.AsGroupNotFound
+  commentId: P:Dropbox.Api.Team.GroupMembersAddError.AsGroupNotFound
+  parent: Dropbox.Api.Team.GroupMembersAddError
+  name: AsGroupNotFound
+  nameWithType: GroupMembersAddError.AsGroupNotFound
+  fullName: Dropbox.Api.Team.GroupMembersAddError.AsGroupNotFound
+- uid: Dropbox.Api.Team.GroupMembersAddError.IsOther
+  commentId: P:Dropbox.Api.Team.GroupMembersAddError.IsOther
+  parent: Dropbox.Api.Team.GroupMembersAddError
+  name: IsOther
+  nameWithType: GroupMembersAddError.IsOther
+  fullName: Dropbox.Api.Team.GroupMembersAddError.IsOther
+- uid: Dropbox.Api.Team.GroupMembersAddError.AsOther
+  commentId: P:Dropbox.Api.Team.GroupMembersAddError.AsOther
+  parent: Dropbox.Api.Team.GroupMembersAddError
+  name: AsOther
+  nameWithType: GroupMembersAddError.AsOther
+  fullName: Dropbox.Api.Team.GroupMembersAddError.AsOther
+- uid: Dropbox.Api.Team.GroupMembersAddError.UserMustBeActiveToBeOwner
+  commentId: T:Dropbox.Api.Team.GroupMembersAddError.UserMustBeActiveToBeOwner
+  parent: Dropbox.Api.Team
+  name: GroupMembersAddError.UserMustBeActiveToBeOwner
+  nameWithType: GroupMembersAddError.UserMustBeActiveToBeOwner
+  fullName: Dropbox.Api.Team.GroupMembersAddError.UserMustBeActiveToBeOwner
+shouldSkipMarkup: true

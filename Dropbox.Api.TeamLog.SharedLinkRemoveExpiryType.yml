@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.SharedLinkRemoveExpiryType
+  commentId: T:Dropbox.Api.TeamLog.SharedLinkRemoveExpiryType
+  id: SharedLinkRemoveExpiryType
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.SharedLinkRemoveExpiryType.#ctor
+  - Dropbox.Api.TeamLog.SharedLinkRemoveExpiryType.#ctor(System.String)
+  - Dropbox.Api.TeamLog.SharedLinkRemoveExpiryType.Description
+  langs:
+  - csharp
+  - vb
+  name: SharedLinkRemoveExpiryType
+  nameWithType: SharedLinkRemoveExpiryType
+  fullName: Dropbox.Api.TeamLog.SharedLinkRemoveExpiryType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedLinkRemoveExpiryType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SharedLinkRemoveExpiryType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedLinkRemoveExpiryType.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The shared link remove expiry type object</p>\n"
+  example: []
+  syntax:
+    content: 'public class SharedLinkRemoveExpiryType : object'
+    content.vb: >-
+      Public Class SharedLinkRemoveExpiryType
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.SharedLinkRemoveExpiryType.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.SharedLinkRemoveExpiryType.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.SharedLinkRemoveExpiryType
+  langs:
+  - csharp
+  - vb
+  name: SharedLinkRemoveExpiryType(String)
+  nameWithType: SharedLinkRemoveExpiryType.SharedLinkRemoveExpiryType(String)
+  fullName: Dropbox.Api.TeamLog.SharedLinkRemoveExpiryType.SharedLinkRemoveExpiryType(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedLinkRemoveExpiryType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedLinkRemoveExpiryType.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SharedLinkRemoveExpiryType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public SharedLinkRemoveExpiryType(string description)
+    parameters:
+    - id: description
+      type: System.String
+      description: The description
+    content.vb: Public Sub New(description As String)
+  overload: Dropbox.Api.TeamLog.SharedLinkRemoveExpiryType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SharedLinkRemoveExpiryType.#ctor
+  commentId: M:Dropbox.Api.TeamLog.SharedLinkRemoveExpiryType.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.SharedLinkRemoveExpiryType
+  langs:
+  - csharp
+  - vb
+  name: SharedLinkRemoveExpiryType()
+  nameWithType: SharedLinkRemoveExpiryType.SharedLinkRemoveExpiryType()
+  fullName: Dropbox.Api.TeamLog.SharedLinkRemoveExpiryType.SharedLinkRemoveExpiryType()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedLinkRemoveExpiryType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedLinkRemoveExpiryType.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SharedLinkRemoveExpiryType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public SharedLinkRemoveExpiryType()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.SharedLinkRemoveExpiryType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SharedLinkRemoveExpiryType.Description
+  commentId: P:Dropbox.Api.TeamLog.SharedLinkRemoveExpiryType.Description
+  id: Description
+  parent: Dropbox.Api.TeamLog.SharedLinkRemoveExpiryType
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: SharedLinkRemoveExpiryType.Description
+  fullName: Dropbox.Api.TeamLog.SharedLinkRemoveExpiryType.Description
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedLinkRemoveExpiryType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Description
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedLinkRemoveExpiryType.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets the description of the shared link remove expiry type</p>\n"
+  example: []
+  syntax:
+    content: public string Description { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Dropbox.Api.TeamLog.SharedLinkRemoveExpiryType.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.SharedLinkRemoveExpiryType
+  commentId: T:Dropbox.Api.TeamLog.SharedLinkRemoveExpiryType
+  parent: Dropbox.Api.TeamLog
+  name: SharedLinkRemoveExpiryType
+  nameWithType: SharedLinkRemoveExpiryType
+  fullName: Dropbox.Api.TeamLog.SharedLinkRemoveExpiryType
+- uid: Dropbox.Api.TeamLog.SharedLinkRemoveExpiryType.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedLinkRemoveExpiryType.#ctor
+  name: SharedLinkRemoveExpiryType
+  nameWithType: SharedLinkRemoveExpiryType.SharedLinkRemoveExpiryType
+  fullName: Dropbox.Api.TeamLog.SharedLinkRemoveExpiryType.SharedLinkRemoveExpiryType
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.SharedLinkRemoveExpiryType.Description*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedLinkRemoveExpiryType.Description
+  name: Description
+  nameWithType: SharedLinkRemoveExpiryType.Description
+  fullName: Dropbox.Api.TeamLog.SharedLinkRemoveExpiryType.Description
+shouldSkipMarkup: true

@@ -1,0 +1,148 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Users.UserFeatureValue.Other
+  commentId: T:Dropbox.Api.Users.UserFeatureValue.Other
+  id: UserFeatureValue.Other
+  parent: Dropbox.Api.Users
+  children:
+  - Dropbox.Api.Users.UserFeatureValue.Other.Instance
+  langs:
+  - csharp
+  - vb
+  name: UserFeatureValue.Other
+  nameWithType: UserFeatureValue.Other
+  fullName: Dropbox.Api.Users.UserFeatureValue.Other
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/UserFeatureValue.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Other
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/UserFeatureValue.cs
+    startLine: 378
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users
+  summary: "\n<p>The other object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Other : UserFeatureValue'
+    content.vb: >-
+      Public NotInheritable Class Other
+          Inherits UserFeatureValue
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Users.UserFeatureValue
+  inheritedMembers:
+  - Dropbox.Api.Users.UserFeatureValue.IsPaperAsFiles
+  - Dropbox.Api.Users.UserFeatureValue.AsPaperAsFiles
+  - Dropbox.Api.Users.UserFeatureValue.IsFileLocking
+  - Dropbox.Api.Users.UserFeatureValue.AsFileLocking
+  - Dropbox.Api.Users.UserFeatureValue.IsOther
+  - Dropbox.Api.Users.UserFeatureValue.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Users.UserFeatureValue.Other.Instance
+  commentId: F:Dropbox.Api.Users.UserFeatureValue.Other.Instance
+  id: Instance
+  parent: Dropbox.Api.Users.UserFeatureValue.Other
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: UserFeatureValue.Other.Instance
+  fullName: Dropbox.Api.Users.UserFeatureValue.Other.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/UserFeatureValue.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/UserFeatureValue.cs
+    startLine: 402
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users
+  summary: "\n<p>A singleton instance of Other</p>\n"
+  example: []
+  syntax:
+    content: public static readonly UserFeatureValue.Other Instance
+    return:
+      type: Dropbox.Api.Users.UserFeatureValue.Other
+    content.vb: Public Shared ReadOnly Instance As UserFeatureValue.Other
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Users
+  commentId: N:Dropbox.Api.Users
+  name: Dropbox.Api.Users
+  nameWithType: Dropbox.Api.Users
+  fullName: Dropbox.Api.Users
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Users.UserFeatureValue
+  commentId: T:Dropbox.Api.Users.UserFeatureValue
+  parent: Dropbox.Api.Users
+  name: UserFeatureValue
+  nameWithType: UserFeatureValue
+  fullName: Dropbox.Api.Users.UserFeatureValue
+- uid: Dropbox.Api.Users.UserFeatureValue.IsPaperAsFiles
+  commentId: P:Dropbox.Api.Users.UserFeatureValue.IsPaperAsFiles
+  parent: Dropbox.Api.Users.UserFeatureValue
+  name: IsPaperAsFiles
+  nameWithType: UserFeatureValue.IsPaperAsFiles
+  fullName: Dropbox.Api.Users.UserFeatureValue.IsPaperAsFiles
+- uid: Dropbox.Api.Users.UserFeatureValue.AsPaperAsFiles
+  commentId: P:Dropbox.Api.Users.UserFeatureValue.AsPaperAsFiles
+  parent: Dropbox.Api.Users.UserFeatureValue
+  name: AsPaperAsFiles
+  nameWithType: UserFeatureValue.AsPaperAsFiles
+  fullName: Dropbox.Api.Users.UserFeatureValue.AsPaperAsFiles
+- uid: Dropbox.Api.Users.UserFeatureValue.IsFileLocking
+  commentId: P:Dropbox.Api.Users.UserFeatureValue.IsFileLocking
+  parent: Dropbox.Api.Users.UserFeatureValue
+  name: IsFileLocking
+  nameWithType: UserFeatureValue.IsFileLocking
+  fullName: Dropbox.Api.Users.UserFeatureValue.IsFileLocking
+- uid: Dropbox.Api.Users.UserFeatureValue.AsFileLocking
+  commentId: P:Dropbox.Api.Users.UserFeatureValue.AsFileLocking
+  parent: Dropbox.Api.Users.UserFeatureValue
+  name: AsFileLocking
+  nameWithType: UserFeatureValue.AsFileLocking
+  fullName: Dropbox.Api.Users.UserFeatureValue.AsFileLocking
+- uid: Dropbox.Api.Users.UserFeatureValue.IsOther
+  commentId: P:Dropbox.Api.Users.UserFeatureValue.IsOther
+  parent: Dropbox.Api.Users.UserFeatureValue
+  name: IsOther
+  nameWithType: UserFeatureValue.IsOther
+  fullName: Dropbox.Api.Users.UserFeatureValue.IsOther
+- uid: Dropbox.Api.Users.UserFeatureValue.AsOther
+  commentId: P:Dropbox.Api.Users.UserFeatureValue.AsOther
+  parent: Dropbox.Api.Users.UserFeatureValue
+  name: AsOther
+  nameWithType: UserFeatureValue.AsOther
+  fullName: Dropbox.Api.Users.UserFeatureValue.AsOther
+- uid: Dropbox.Api.Users.UserFeatureValue.Other
+  commentId: T:Dropbox.Api.Users.UserFeatureValue.Other
+  parent: Dropbox.Api.Users
+  name: UserFeatureValue.Other
+  nameWithType: UserFeatureValue.Other
+  fullName: Dropbox.Api.Users.UserFeatureValue.Other
+shouldSkipMarkup: true
