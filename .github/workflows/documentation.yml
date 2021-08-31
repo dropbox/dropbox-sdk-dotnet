@@ -24,4 +24,4 @@ jobs:
         with:
           ACCESS_TOKEN: ${{ secrets.GH_PAGES_PUBLISH_TOKEN }}
           BRANCH: gh_pages_docfx # The branch the action should deploy to.
-          FOLDER: docs # The folder the action should deploy.
+          FOLDER: _site # The folder the action should deploy.
