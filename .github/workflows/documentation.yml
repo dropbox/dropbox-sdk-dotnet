@@ -1,0 +1,27 @@
+name: Update Documentation
+
+on:
+  push:
+    pull_request:
+
+jobs:
+  npm:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2.3.4
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 3.1.101
+      - name: Install dependencies
+        run: dotnet restore dropbox-sdk-dotnet/Dropbox.Api
+      - uses: nikeee/docfx-action@v1.0.0
+        name: Build Documentation
+        with:
+          args: docfx.json
+      - name: Push Documentation
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          ACCESS_TOKEN: ${{ secrets.GH_PAGES_PUBLISH_TOKEN }}
+          BRANCH: gh_pages_docfx # The branch the action should deploy to.
+          FOLDER: _site # The folder the action should deploy.
