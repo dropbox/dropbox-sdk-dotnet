@@ -1,0 +1,245 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.FileProperties.PropertyField
+  commentId: T:Dropbox.Api.FileProperties.PropertyField
+  id: PropertyField
+  parent: Dropbox.Api.FileProperties
+  children:
+  - Dropbox.Api.FileProperties.PropertyField.#ctor
+  - Dropbox.Api.FileProperties.PropertyField.#ctor(System.String,System.String)
+  - Dropbox.Api.FileProperties.PropertyField.Name
+  - Dropbox.Api.FileProperties.PropertyField.Value
+  langs:
+  - csharp
+  - vb
+  name: PropertyField
+  nameWithType: PropertyField
+  fullName: Dropbox.Api.FileProperties.PropertyField
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertyField.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PropertyField
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertyField.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Raw key/value data to be associated with a Dropbox file. Property fields are\nadded to Dropbox files as a <xref href=\"Dropbox.Api.FileProperties.PropertyGroup\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+  example: []
+  syntax:
+    content: 'public class PropertyField : object'
+    content.vb: >-
+      Public Class PropertyField
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.FileProperties.PropertyField.#ctor(System.String,System.String)
+  commentId: M:Dropbox.Api.FileProperties.PropertyField.#ctor(System.String,System.String)
+  id: '#ctor(System.String,System.String)'
+  parent: Dropbox.Api.FileProperties.PropertyField
+  langs:
+  - csharp
+  - vb
+  name: PropertyField(String, String)
+  nameWithType: PropertyField.PropertyField(String, String)
+  fullName: Dropbox.Api.FileProperties.PropertyField.PropertyField(System.String, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertyField.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertyField.cs
+    startLine: 37
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.FileProperties.PropertyField\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public PropertyField(string name, string value)
+    parameters:
+    - id: name
+      type: System.String
+      description: >-
+        Key of the property field associated with a file and template.
+
+        Keys can be up to 256 bytes.
+    - id: value
+      type: System.String
+      description: >-
+        Value of the property field associated with a file and
+
+        template. Values can be up to 1024 bytes.
+    content.vb: Public Sub New(name As String, value As String)
+  overload: Dropbox.Api.FileProperties.PropertyField.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileProperties.PropertyField.#ctor
+  commentId: M:Dropbox.Api.FileProperties.PropertyField.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.FileProperties.PropertyField
+  langs:
+  - csharp
+  - vb
+  name: PropertyField()
+  nameWithType: PropertyField.PropertyField()
+  fullName: Dropbox.Api.FileProperties.PropertyField.PropertyField()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertyField.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertyField.cs
+    startLine: 59
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.FileProperties.PropertyField\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public PropertyField()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.FileProperties.PropertyField.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileProperties.PropertyField.Name
+  commentId: P:Dropbox.Api.FileProperties.PropertyField.Name
+  id: Name
+  parent: Dropbox.Api.FileProperties.PropertyField
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: PropertyField.Name
+  fullName: Dropbox.Api.FileProperties.PropertyField.Name
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertyField.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Name
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertyField.cs
+    startLine: 68
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Key of the property field associated with a file and template. Keys can be up\nto 256 bytes.</p>\n"
+  example: []
+  syntax:
+    content: public string Name { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: Dropbox.Api.FileProperties.PropertyField.Name*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.FileProperties.PropertyField.Value
+  commentId: P:Dropbox.Api.FileProperties.PropertyField.Value
+  id: Value
+  parent: Dropbox.Api.FileProperties.PropertyField
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: PropertyField.Value
+  fullName: Dropbox.Api.FileProperties.PropertyField.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertyField.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertyField.cs
+    startLine: 74
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Value of the property field associated with a file and template. Values can\nbe up to 1024 bytes.</p>\n"
+  example: []
+  syntax:
+    content: public string Value { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Value As String
+  overload: Dropbox.Api.FileProperties.PropertyField.Value*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.FileProperties.PropertyGroup
+  commentId: T:Dropbox.Api.FileProperties.PropertyGroup
+  name: PropertyGroup
+  nameWithType: PropertyGroup
+  fullName: Dropbox.Api.FileProperties.PropertyGroup
+- uid: Dropbox.Api.FileProperties
+  commentId: N:Dropbox.Api.FileProperties
+  name: Dropbox.Api.FileProperties
+  nameWithType: Dropbox.Api.FileProperties
+  fullName: Dropbox.Api.FileProperties
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.FileProperties.PropertyField
+  commentId: T:Dropbox.Api.FileProperties.PropertyField
+  name: PropertyField
+  nameWithType: PropertyField
+  fullName: Dropbox.Api.FileProperties.PropertyField
+- uid: Dropbox.Api.FileProperties.PropertyField.#ctor*
+  commentId: Overload:Dropbox.Api.FileProperties.PropertyField.#ctor
+  name: PropertyField
+  nameWithType: PropertyField.PropertyField
+  fullName: Dropbox.Api.FileProperties.PropertyField.PropertyField
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.FileProperties.PropertyField.Name*
+  commentId: Overload:Dropbox.Api.FileProperties.PropertyField.Name
+  name: Name
+  nameWithType: PropertyField.Name
+  fullName: Dropbox.Api.FileProperties.PropertyField.Name
+- uid: Dropbox.Api.FileProperties.PropertyField.Value*
+  commentId: Overload:Dropbox.Api.FileProperties.PropertyField.Value
+  name: Value
+  nameWithType: PropertyField.Value
+  fullName: Dropbox.Api.FileProperties.PropertyField.Value
+shouldSkipMarkup: true

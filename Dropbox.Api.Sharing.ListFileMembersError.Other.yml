@@ -1,0 +1,148 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.ListFileMembersError.Other
+  commentId: T:Dropbox.Api.Sharing.ListFileMembersError.Other
+  id: ListFileMembersError.Other
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.ListFileMembersError.Other.Instance
+  langs:
+  - csharp
+  - vb
+  name: ListFileMembersError.Other
+  nameWithType: ListFileMembersError.Other
+  fullName: Dropbox.Api.Sharing.ListFileMembersError.Other
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Other
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersError.cs
+    startLine: 377
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The other object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Other : ListFileMembersError'
+    content.vb: >-
+      Public NotInheritable Class Other
+          Inherits ListFileMembersError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Sharing.ListFileMembersError
+  inheritedMembers:
+  - Dropbox.Api.Sharing.ListFileMembersError.IsUserError
+  - Dropbox.Api.Sharing.ListFileMembersError.AsUserError
+  - Dropbox.Api.Sharing.ListFileMembersError.IsAccessError
+  - Dropbox.Api.Sharing.ListFileMembersError.AsAccessError
+  - Dropbox.Api.Sharing.ListFileMembersError.IsOther
+  - Dropbox.Api.Sharing.ListFileMembersError.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Sharing.ListFileMembersError.Other.Instance
+  commentId: F:Dropbox.Api.Sharing.ListFileMembersError.Other.Instance
+  id: Instance
+  parent: Dropbox.Api.Sharing.ListFileMembersError.Other
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: ListFileMembersError.Other.Instance
+  fullName: Dropbox.Api.Sharing.ListFileMembersError.Other.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersError.cs
+    startLine: 401
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>A singleton instance of Other</p>\n"
+  example: []
+  syntax:
+    content: public static readonly ListFileMembersError.Other Instance
+    return:
+      type: Dropbox.Api.Sharing.ListFileMembersError.Other
+    content.vb: Public Shared ReadOnly Instance As ListFileMembersError.Other
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.ListFileMembersError
+  commentId: T:Dropbox.Api.Sharing.ListFileMembersError
+  parent: Dropbox.Api.Sharing
+  name: ListFileMembersError
+  nameWithType: ListFileMembersError
+  fullName: Dropbox.Api.Sharing.ListFileMembersError
+- uid: Dropbox.Api.Sharing.ListFileMembersError.IsUserError
+  commentId: P:Dropbox.Api.Sharing.ListFileMembersError.IsUserError
+  parent: Dropbox.Api.Sharing.ListFileMembersError
+  name: IsUserError
+  nameWithType: ListFileMembersError.IsUserError
+  fullName: Dropbox.Api.Sharing.ListFileMembersError.IsUserError
+- uid: Dropbox.Api.Sharing.ListFileMembersError.AsUserError
+  commentId: P:Dropbox.Api.Sharing.ListFileMembersError.AsUserError
+  parent: Dropbox.Api.Sharing.ListFileMembersError
+  name: AsUserError
+  nameWithType: ListFileMembersError.AsUserError
+  fullName: Dropbox.Api.Sharing.ListFileMembersError.AsUserError
+- uid: Dropbox.Api.Sharing.ListFileMembersError.IsAccessError
+  commentId: P:Dropbox.Api.Sharing.ListFileMembersError.IsAccessError
+  parent: Dropbox.Api.Sharing.ListFileMembersError
+  name: IsAccessError
+  nameWithType: ListFileMembersError.IsAccessError
+  fullName: Dropbox.Api.Sharing.ListFileMembersError.IsAccessError
+- uid: Dropbox.Api.Sharing.ListFileMembersError.AsAccessError
+  commentId: P:Dropbox.Api.Sharing.ListFileMembersError.AsAccessError
+  parent: Dropbox.Api.Sharing.ListFileMembersError
+  name: AsAccessError
+  nameWithType: ListFileMembersError.AsAccessError
+  fullName: Dropbox.Api.Sharing.ListFileMembersError.AsAccessError
+- uid: Dropbox.Api.Sharing.ListFileMembersError.IsOther
+  commentId: P:Dropbox.Api.Sharing.ListFileMembersError.IsOther
+  parent: Dropbox.Api.Sharing.ListFileMembersError
+  name: IsOther
+  nameWithType: ListFileMembersError.IsOther
+  fullName: Dropbox.Api.Sharing.ListFileMembersError.IsOther
+- uid: Dropbox.Api.Sharing.ListFileMembersError.AsOther
+  commentId: P:Dropbox.Api.Sharing.ListFileMembersError.AsOther
+  parent: Dropbox.Api.Sharing.ListFileMembersError
+  name: AsOther
+  nameWithType: ListFileMembersError.AsOther
+  fullName: Dropbox.Api.Sharing.ListFileMembersError.AsOther
+- uid: Dropbox.Api.Sharing.ListFileMembersError.Other
+  commentId: T:Dropbox.Api.Sharing.ListFileMembersError.Other
+  parent: Dropbox.Api.Sharing
+  name: ListFileMembersError.Other
+  nameWithType: ListFileMembersError.Other
+  fullName: Dropbox.Api.Sharing.ListFileMembersError.Other
+shouldSkipMarkup: true

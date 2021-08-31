@@ -1,0 +1,567 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.GetTemporaryLinkError
+  commentId: T:Dropbox.Api.Files.GetTemporaryLinkError
+  id: GetTemporaryLinkError
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.GetTemporaryLinkError.#ctor
+  - Dropbox.Api.Files.GetTemporaryLinkError.AsEmailNotVerified
+  - Dropbox.Api.Files.GetTemporaryLinkError.AsNotAllowed
+  - Dropbox.Api.Files.GetTemporaryLinkError.AsOther
+  - Dropbox.Api.Files.GetTemporaryLinkError.AsPath
+  - Dropbox.Api.Files.GetTemporaryLinkError.AsUnsupportedFile
+  - Dropbox.Api.Files.GetTemporaryLinkError.IsEmailNotVerified
+  - Dropbox.Api.Files.GetTemporaryLinkError.IsNotAllowed
+  - Dropbox.Api.Files.GetTemporaryLinkError.IsOther
+  - Dropbox.Api.Files.GetTemporaryLinkError.IsPath
+  - Dropbox.Api.Files.GetTemporaryLinkError.IsUnsupportedFile
+  langs:
+  - csharp
+  - vb
+  name: GetTemporaryLinkError
+  nameWithType: GetTemporaryLinkError
+  fullName: Dropbox.Api.Files.GetTemporaryLinkError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetTemporaryLinkError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GetTemporaryLinkError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetTemporaryLinkError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The get temporary link error object</p>\n"
+  example: []
+  syntax:
+    content: 'public class GetTemporaryLinkError : object'
+    content.vb: >-
+      Public Class GetTemporaryLinkError
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Files.GetTemporaryLinkError.EmailNotVerified
+  - Dropbox.Api.Files.GetTemporaryLinkError.NotAllowed
+  - Dropbox.Api.Files.GetTemporaryLinkError.Other
+  - Dropbox.Api.Files.GetTemporaryLinkError.Path
+  - Dropbox.Api.Files.GetTemporaryLinkError.UnsupportedFile
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.GetTemporaryLinkError.#ctor
+  commentId: M:Dropbox.Api.Files.GetTemporaryLinkError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.GetTemporaryLinkError
+  langs:
+  - csharp
+  - vb
+  name: GetTemporaryLinkError()
+  nameWithType: GetTemporaryLinkError.GetTemporaryLinkError()
+  fullName: Dropbox.Api.Files.GetTemporaryLinkError.GetTemporaryLinkError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetTemporaryLinkError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetTemporaryLinkError.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.GetTemporaryLinkError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public GetTemporaryLinkError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.GetTemporaryLinkError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.GetTemporaryLinkError.IsPath
+  commentId: P:Dropbox.Api.Files.GetTemporaryLinkError.IsPath
+  id: IsPath
+  parent: Dropbox.Api.Files.GetTemporaryLinkError
+  langs:
+  - csharp
+  - vb
+  name: IsPath
+  nameWithType: GetTemporaryLinkError.IsPath
+  fullName: Dropbox.Api.Files.GetTemporaryLinkError.IsPath
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetTemporaryLinkError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsPath
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetTemporaryLinkError.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is Path</p>\n"
+  example: []
+  syntax:
+    content: public bool IsPath { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsPath As Boolean
+  overload: Dropbox.Api.Files.GetTemporaryLinkError.IsPath*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.GetTemporaryLinkError.AsPath
+  commentId: P:Dropbox.Api.Files.GetTemporaryLinkError.AsPath
+  id: AsPath
+  parent: Dropbox.Api.Files.GetTemporaryLinkError
+  langs:
+  - csharp
+  - vb
+  name: AsPath
+  nameWithType: GetTemporaryLinkError.AsPath
+  fullName: Dropbox.Api.Files.GetTemporaryLinkError.AsPath
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetTemporaryLinkError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsPath
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetTemporaryLinkError.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a Path, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public GetTemporaryLinkError.Path AsPath { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.GetTemporaryLinkError.Path
+    content.vb: Public ReadOnly Property AsPath As GetTemporaryLinkError.Path
+  overload: Dropbox.Api.Files.GetTemporaryLinkError.AsPath*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.GetTemporaryLinkError.IsEmailNotVerified
+  commentId: P:Dropbox.Api.Files.GetTemporaryLinkError.IsEmailNotVerified
+  id: IsEmailNotVerified
+  parent: Dropbox.Api.Files.GetTemporaryLinkError
+  langs:
+  - csharp
+  - vb
+  name: IsEmailNotVerified
+  nameWithType: GetTemporaryLinkError.IsEmailNotVerified
+  fullName: Dropbox.Api.Files.GetTemporaryLinkError.IsEmailNotVerified
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetTemporaryLinkError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsEmailNotVerified
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetTemporaryLinkError.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is EmailNotVerified</p>\n"
+  example: []
+  syntax:
+    content: public bool IsEmailNotVerified { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsEmailNotVerified As Boolean
+  overload: Dropbox.Api.Files.GetTemporaryLinkError.IsEmailNotVerified*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.GetTemporaryLinkError.AsEmailNotVerified
+  commentId: P:Dropbox.Api.Files.GetTemporaryLinkError.AsEmailNotVerified
+  id: AsEmailNotVerified
+  parent: Dropbox.Api.Files.GetTemporaryLinkError
+  langs:
+  - csharp
+  - vb
+  name: AsEmailNotVerified
+  nameWithType: GetTemporaryLinkError.AsEmailNotVerified
+  fullName: Dropbox.Api.Files.GetTemporaryLinkError.AsEmailNotVerified
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetTemporaryLinkError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsEmailNotVerified
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetTemporaryLinkError.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a EmailNotVerified, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public GetTemporaryLinkError.EmailNotVerified AsEmailNotVerified { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.GetTemporaryLinkError.EmailNotVerified
+    content.vb: Public ReadOnly Property AsEmailNotVerified As GetTemporaryLinkError.EmailNotVerified
+  overload: Dropbox.Api.Files.GetTemporaryLinkError.AsEmailNotVerified*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.GetTemporaryLinkError.IsUnsupportedFile
+  commentId: P:Dropbox.Api.Files.GetTemporaryLinkError.IsUnsupportedFile
+  id: IsUnsupportedFile
+  parent: Dropbox.Api.Files.GetTemporaryLinkError
+  langs:
+  - csharp
+  - vb
+  name: IsUnsupportedFile
+  nameWithType: GetTemporaryLinkError.IsUnsupportedFile
+  fullName: Dropbox.Api.Files.GetTemporaryLinkError.IsUnsupportedFile
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetTemporaryLinkError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsUnsupportedFile
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetTemporaryLinkError.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is UnsupportedFile</p>\n"
+  example: []
+  syntax:
+    content: public bool IsUnsupportedFile { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsUnsupportedFile As Boolean
+  overload: Dropbox.Api.Files.GetTemporaryLinkError.IsUnsupportedFile*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.GetTemporaryLinkError.AsUnsupportedFile
+  commentId: P:Dropbox.Api.Files.GetTemporaryLinkError.AsUnsupportedFile
+  id: AsUnsupportedFile
+  parent: Dropbox.Api.Files.GetTemporaryLinkError
+  langs:
+  - csharp
+  - vb
+  name: AsUnsupportedFile
+  nameWithType: GetTemporaryLinkError.AsUnsupportedFile
+  fullName: Dropbox.Api.Files.GetTemporaryLinkError.AsUnsupportedFile
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetTemporaryLinkError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsUnsupportedFile
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetTemporaryLinkError.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a UnsupportedFile, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public GetTemporaryLinkError.UnsupportedFile AsUnsupportedFile { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.GetTemporaryLinkError.UnsupportedFile
+    content.vb: Public ReadOnly Property AsUnsupportedFile As GetTemporaryLinkError.UnsupportedFile
+  overload: Dropbox.Api.Files.GetTemporaryLinkError.AsUnsupportedFile*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.GetTemporaryLinkError.IsNotAllowed
+  commentId: P:Dropbox.Api.Files.GetTemporaryLinkError.IsNotAllowed
+  id: IsNotAllowed
+  parent: Dropbox.Api.Files.GetTemporaryLinkError
+  langs:
+  - csharp
+  - vb
+  name: IsNotAllowed
+  nameWithType: GetTemporaryLinkError.IsNotAllowed
+  fullName: Dropbox.Api.Files.GetTemporaryLinkError.IsNotAllowed
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetTemporaryLinkError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsNotAllowed
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetTemporaryLinkError.cs
+    startLine: 106
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is NotAllowed</p>\n"
+  example: []
+  syntax:
+    content: public bool IsNotAllowed { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsNotAllowed As Boolean
+  overload: Dropbox.Api.Files.GetTemporaryLinkError.IsNotAllowed*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.GetTemporaryLinkError.AsNotAllowed
+  commentId: P:Dropbox.Api.Files.GetTemporaryLinkError.AsNotAllowed
+  id: AsNotAllowed
+  parent: Dropbox.Api.Files.GetTemporaryLinkError
+  langs:
+  - csharp
+  - vb
+  name: AsNotAllowed
+  nameWithType: GetTemporaryLinkError.AsNotAllowed
+  fullName: Dropbox.Api.Files.GetTemporaryLinkError.AsNotAllowed
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetTemporaryLinkError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsNotAllowed
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetTemporaryLinkError.cs
+    startLine: 117
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a NotAllowed, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public GetTemporaryLinkError.NotAllowed AsNotAllowed { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.GetTemporaryLinkError.NotAllowed
+    content.vb: Public ReadOnly Property AsNotAllowed As GetTemporaryLinkError.NotAllowed
+  overload: Dropbox.Api.Files.GetTemporaryLinkError.AsNotAllowed*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.GetTemporaryLinkError.IsOther
+  commentId: P:Dropbox.Api.Files.GetTemporaryLinkError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Files.GetTemporaryLinkError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: GetTemporaryLinkError.IsOther
+  fullName: Dropbox.Api.Files.GetTemporaryLinkError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetTemporaryLinkError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetTemporaryLinkError.cs
+    startLine: 128
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Files.GetTemporaryLinkError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.GetTemporaryLinkError.AsOther
+  commentId: P:Dropbox.Api.Files.GetTemporaryLinkError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Files.GetTemporaryLinkError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: GetTemporaryLinkError.AsOther
+  fullName: Dropbox.Api.Files.GetTemporaryLinkError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetTemporaryLinkError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetTemporaryLinkError.cs
+    startLine: 139
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public GetTemporaryLinkError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.GetTemporaryLinkError.Other
+    content.vb: Public ReadOnly Property AsOther As GetTemporaryLinkError.Other
+  overload: Dropbox.Api.Files.GetTemporaryLinkError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.GetTemporaryLinkError
+  commentId: T:Dropbox.Api.Files.GetTemporaryLinkError
+  parent: Dropbox.Api.Files
+  name: GetTemporaryLinkError
+  nameWithType: GetTemporaryLinkError
+  fullName: Dropbox.Api.Files.GetTemporaryLinkError
+- uid: Dropbox.Api.Files.GetTemporaryLinkError.#ctor*
+  commentId: Overload:Dropbox.Api.Files.GetTemporaryLinkError.#ctor
+  name: GetTemporaryLinkError
+  nameWithType: GetTemporaryLinkError.GetTemporaryLinkError
+  fullName: Dropbox.Api.Files.GetTemporaryLinkError.GetTemporaryLinkError
+- uid: Dropbox.Api.Files.GetTemporaryLinkError.IsPath*
+  commentId: Overload:Dropbox.Api.Files.GetTemporaryLinkError.IsPath
+  name: IsPath
+  nameWithType: GetTemporaryLinkError.IsPath
+  fullName: Dropbox.Api.Files.GetTemporaryLinkError.IsPath
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Files.GetTemporaryLinkError.AsPath*
+  commentId: Overload:Dropbox.Api.Files.GetTemporaryLinkError.AsPath
+  name: AsPath
+  nameWithType: GetTemporaryLinkError.AsPath
+  fullName: Dropbox.Api.Files.GetTemporaryLinkError.AsPath
+- uid: Dropbox.Api.Files.GetTemporaryLinkError.Path
+  commentId: T:Dropbox.Api.Files.GetTemporaryLinkError.Path
+  parent: Dropbox.Api.Files
+  name: GetTemporaryLinkError.Path
+  nameWithType: GetTemporaryLinkError.Path
+  fullName: Dropbox.Api.Files.GetTemporaryLinkError.Path
+- uid: Dropbox.Api.Files.GetTemporaryLinkError.IsEmailNotVerified*
+  commentId: Overload:Dropbox.Api.Files.GetTemporaryLinkError.IsEmailNotVerified
+  name: IsEmailNotVerified
+  nameWithType: GetTemporaryLinkError.IsEmailNotVerified
+  fullName: Dropbox.Api.Files.GetTemporaryLinkError.IsEmailNotVerified
+- uid: Dropbox.Api.Files.GetTemporaryLinkError.AsEmailNotVerified*
+  commentId: Overload:Dropbox.Api.Files.GetTemporaryLinkError.AsEmailNotVerified
+  name: AsEmailNotVerified
+  nameWithType: GetTemporaryLinkError.AsEmailNotVerified
+  fullName: Dropbox.Api.Files.GetTemporaryLinkError.AsEmailNotVerified
+- uid: Dropbox.Api.Files.GetTemporaryLinkError.EmailNotVerified
+  commentId: T:Dropbox.Api.Files.GetTemporaryLinkError.EmailNotVerified
+  parent: Dropbox.Api.Files
+  name: GetTemporaryLinkError.EmailNotVerified
+  nameWithType: GetTemporaryLinkError.EmailNotVerified
+  fullName: Dropbox.Api.Files.GetTemporaryLinkError.EmailNotVerified
+- uid: Dropbox.Api.Files.GetTemporaryLinkError.IsUnsupportedFile*
+  commentId: Overload:Dropbox.Api.Files.GetTemporaryLinkError.IsUnsupportedFile
+  name: IsUnsupportedFile
+  nameWithType: GetTemporaryLinkError.IsUnsupportedFile
+  fullName: Dropbox.Api.Files.GetTemporaryLinkError.IsUnsupportedFile
+- uid: Dropbox.Api.Files.GetTemporaryLinkError.AsUnsupportedFile*
+  commentId: Overload:Dropbox.Api.Files.GetTemporaryLinkError.AsUnsupportedFile
+  name: AsUnsupportedFile
+  nameWithType: GetTemporaryLinkError.AsUnsupportedFile
+  fullName: Dropbox.Api.Files.GetTemporaryLinkError.AsUnsupportedFile
+- uid: Dropbox.Api.Files.GetTemporaryLinkError.UnsupportedFile
+  commentId: T:Dropbox.Api.Files.GetTemporaryLinkError.UnsupportedFile
+  parent: Dropbox.Api.Files
+  name: GetTemporaryLinkError.UnsupportedFile
+  nameWithType: GetTemporaryLinkError.UnsupportedFile
+  fullName: Dropbox.Api.Files.GetTemporaryLinkError.UnsupportedFile
+- uid: Dropbox.Api.Files.GetTemporaryLinkError.IsNotAllowed*
+  commentId: Overload:Dropbox.Api.Files.GetTemporaryLinkError.IsNotAllowed
+  name: IsNotAllowed
+  nameWithType: GetTemporaryLinkError.IsNotAllowed
+  fullName: Dropbox.Api.Files.GetTemporaryLinkError.IsNotAllowed
+- uid: Dropbox.Api.Files.GetTemporaryLinkError.AsNotAllowed*
+  commentId: Overload:Dropbox.Api.Files.GetTemporaryLinkError.AsNotAllowed
+  name: AsNotAllowed
+  nameWithType: GetTemporaryLinkError.AsNotAllowed
+  fullName: Dropbox.Api.Files.GetTemporaryLinkError.AsNotAllowed
+- uid: Dropbox.Api.Files.GetTemporaryLinkError.NotAllowed
+  commentId: T:Dropbox.Api.Files.GetTemporaryLinkError.NotAllowed
+  parent: Dropbox.Api.Files
+  name: GetTemporaryLinkError.NotAllowed
+  nameWithType: GetTemporaryLinkError.NotAllowed
+  fullName: Dropbox.Api.Files.GetTemporaryLinkError.NotAllowed
+- uid: Dropbox.Api.Files.GetTemporaryLinkError.IsOther*
+  commentId: Overload:Dropbox.Api.Files.GetTemporaryLinkError.IsOther
+  name: IsOther
+  nameWithType: GetTemporaryLinkError.IsOther
+  fullName: Dropbox.Api.Files.GetTemporaryLinkError.IsOther
+- uid: Dropbox.Api.Files.GetTemporaryLinkError.AsOther*
+  commentId: Overload:Dropbox.Api.Files.GetTemporaryLinkError.AsOther
+  name: AsOther
+  nameWithType: GetTemporaryLinkError.AsOther
+  fullName: Dropbox.Api.Files.GetTemporaryLinkError.AsOther
+- uid: Dropbox.Api.Files.GetTemporaryLinkError.Other
+  commentId: T:Dropbox.Api.Files.GetTemporaryLinkError.Other
+  parent: Dropbox.Api.Files
+  name: GetTemporaryLinkError.Other
+  nameWithType: GetTemporaryLinkError.Other
+  fullName: Dropbox.Api.Files.GetTemporaryLinkError.Other
+shouldSkipMarkup: true

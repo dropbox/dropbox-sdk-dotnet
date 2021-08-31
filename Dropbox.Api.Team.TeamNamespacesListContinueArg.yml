@@ -1,0 +1,190 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.TeamNamespacesListContinueArg
+  commentId: T:Dropbox.Api.Team.TeamNamespacesListContinueArg
+  id: TeamNamespacesListContinueArg
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.TeamNamespacesListContinueArg.#ctor
+  - Dropbox.Api.Team.TeamNamespacesListContinueArg.#ctor(System.String)
+  - Dropbox.Api.Team.TeamNamespacesListContinueArg.Cursor
+  langs:
+  - csharp
+  - vb
+  name: TeamNamespacesListContinueArg
+  nameWithType: TeamNamespacesListContinueArg
+  fullName: Dropbox.Api.Team.TeamNamespacesListContinueArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamNamespacesListContinueArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TeamNamespacesListContinueArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamNamespacesListContinueArg.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The team namespaces list continue arg object</p>\n"
+  example: []
+  syntax:
+    content: 'public class TeamNamespacesListContinueArg : object'
+    content.vb: >-
+      Public Class TeamNamespacesListContinueArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.TeamNamespacesListContinueArg.#ctor(System.String)
+  commentId: M:Dropbox.Api.Team.TeamNamespacesListContinueArg.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.Team.TeamNamespacesListContinueArg
+  langs:
+  - csharp
+  - vb
+  name: TeamNamespacesListContinueArg(String)
+  nameWithType: TeamNamespacesListContinueArg.TeamNamespacesListContinueArg(String)
+  fullName: Dropbox.Api.Team.TeamNamespacesListContinueArg.TeamNamespacesListContinueArg(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamNamespacesListContinueArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamNamespacesListContinueArg.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.TeamNamespacesListContinueArg\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public TeamNamespacesListContinueArg(string cursor)
+    parameters:
+    - id: cursor
+      type: System.String
+      description: >-
+        Indicates from what point to get the next set of
+
+        team-accessible namespaces.
+    content.vb: Public Sub New(cursor As String)
+  overload: Dropbox.Api.Team.TeamNamespacesListContinueArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.TeamNamespacesListContinueArg.#ctor
+  commentId: M:Dropbox.Api.Team.TeamNamespacesListContinueArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.TeamNamespacesListContinueArg
+  langs:
+  - csharp
+  - vb
+  name: TeamNamespacesListContinueArg()
+  nameWithType: TeamNamespacesListContinueArg.TeamNamespacesListContinueArg()
+  fullName: Dropbox.Api.Team.TeamNamespacesListContinueArg.TeamNamespacesListContinueArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamNamespacesListContinueArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamNamespacesListContinueArg.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.TeamNamespacesListContinueArg\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public TeamNamespacesListContinueArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.TeamNamespacesListContinueArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.TeamNamespacesListContinueArg.Cursor
+  commentId: P:Dropbox.Api.Team.TeamNamespacesListContinueArg.Cursor
+  id: Cursor
+  parent: Dropbox.Api.Team.TeamNamespacesListContinueArg
+  langs:
+  - csharp
+  - vb
+  name: Cursor
+  nameWithType: TeamNamespacesListContinueArg.Cursor
+  fullName: Dropbox.Api.Team.TeamNamespacesListContinueArg.Cursor
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamNamespacesListContinueArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Cursor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamNamespacesListContinueArg.cs
+    startLine: 60
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Indicates from what point to get the next set of team-accessible\nnamespaces.</p>\n"
+  example: []
+  syntax:
+    content: public string Cursor { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Cursor As String
+  overload: Dropbox.Api.Team.TeamNamespacesListContinueArg.Cursor*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.TeamNamespacesListContinueArg
+  commentId: T:Dropbox.Api.Team.TeamNamespacesListContinueArg
+  parent: Dropbox.Api.Team
+  name: TeamNamespacesListContinueArg
+  nameWithType: TeamNamespacesListContinueArg
+  fullName: Dropbox.Api.Team.TeamNamespacesListContinueArg
+- uid: Dropbox.Api.Team.TeamNamespacesListContinueArg.#ctor*
+  commentId: Overload:Dropbox.Api.Team.TeamNamespacesListContinueArg.#ctor
+  name: TeamNamespacesListContinueArg
+  nameWithType: TeamNamespacesListContinueArg.TeamNamespacesListContinueArg
+  fullName: Dropbox.Api.Team.TeamNamespacesListContinueArg.TeamNamespacesListContinueArg
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Team.TeamNamespacesListContinueArg.Cursor*
+  commentId: Overload:Dropbox.Api.Team.TeamNamespacesListContinueArg.Cursor
+  name: Cursor
+  nameWithType: TeamNamespacesListContinueArg.Cursor
+  fullName: Dropbox.Api.Team.TeamNamespacesListContinueArg.Cursor
+shouldSkipMarkup: true

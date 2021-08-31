@@ -1,0 +1,191 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.MembersDeleteProfilePhotoArg
+  commentId: T:Dropbox.Api.Team.MembersDeleteProfilePhotoArg
+  id: MembersDeleteProfilePhotoArg
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.MembersDeleteProfilePhotoArg.#ctor
+  - Dropbox.Api.Team.MembersDeleteProfilePhotoArg.#ctor(Dropbox.Api.Team.UserSelectorArg)
+  - Dropbox.Api.Team.MembersDeleteProfilePhotoArg.User
+  langs:
+  - csharp
+  - vb
+  name: MembersDeleteProfilePhotoArg
+  nameWithType: MembersDeleteProfilePhotoArg
+  fullName: Dropbox.Api.Team.MembersDeleteProfilePhotoArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersDeleteProfilePhotoArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: MembersDeleteProfilePhotoArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersDeleteProfilePhotoArg.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The members delete profile photo arg object</p>\n"
+  example: []
+  syntax:
+    content: 'public class MembersDeleteProfilePhotoArg : object'
+    content.vb: >-
+      Public Class MembersDeleteProfilePhotoArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.MembersDeleteProfilePhotoArg.#ctor(Dropbox.Api.Team.UserSelectorArg)
+  commentId: M:Dropbox.Api.Team.MembersDeleteProfilePhotoArg.#ctor(Dropbox.Api.Team.UserSelectorArg)
+  id: '#ctor(Dropbox.Api.Team.UserSelectorArg)'
+  parent: Dropbox.Api.Team.MembersDeleteProfilePhotoArg
+  langs:
+  - csharp
+  - vb
+  name: MembersDeleteProfilePhotoArg(UserSelectorArg)
+  nameWithType: MembersDeleteProfilePhotoArg.MembersDeleteProfilePhotoArg(UserSelectorArg)
+  fullName: Dropbox.Api.Team.MembersDeleteProfilePhotoArg.MembersDeleteProfilePhotoArg(Dropbox.Api.Team.UserSelectorArg)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersDeleteProfilePhotoArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersDeleteProfilePhotoArg.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.MembersDeleteProfilePhotoArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public MembersDeleteProfilePhotoArg(UserSelectorArg user)
+    parameters:
+    - id: user
+      type: Dropbox.Api.Team.UserSelectorArg
+      description: >-
+        Identity of the user whose profile photo will be
+
+        deleted.
+    content.vb: Public Sub New(user As UserSelectorArg)
+  overload: Dropbox.Api.Team.MembersDeleteProfilePhotoArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.MembersDeleteProfilePhotoArg.#ctor
+  commentId: M:Dropbox.Api.Team.MembersDeleteProfilePhotoArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.MembersDeleteProfilePhotoArg
+  langs:
+  - csharp
+  - vb
+  name: MembersDeleteProfilePhotoArg()
+  nameWithType: MembersDeleteProfilePhotoArg.MembersDeleteProfilePhotoArg()
+  fullName: Dropbox.Api.Team.MembersDeleteProfilePhotoArg.MembersDeleteProfilePhotoArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersDeleteProfilePhotoArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersDeleteProfilePhotoArg.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.MembersDeleteProfilePhotoArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public MembersDeleteProfilePhotoArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.MembersDeleteProfilePhotoArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.MembersDeleteProfilePhotoArg.User
+  commentId: P:Dropbox.Api.Team.MembersDeleteProfilePhotoArg.User
+  id: User
+  parent: Dropbox.Api.Team.MembersDeleteProfilePhotoArg
+  langs:
+  - csharp
+  - vb
+  name: User
+  nameWithType: MembersDeleteProfilePhotoArg.User
+  fullName: Dropbox.Api.Team.MembersDeleteProfilePhotoArg.User
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersDeleteProfilePhotoArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: User
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersDeleteProfilePhotoArg.cs
+    startLine: 59
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Identity of the user whose profile photo will be deleted.</p>\n"
+  example: []
+  syntax:
+    content: public UserSelectorArg User { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.UserSelectorArg
+    content.vb: Public Property User As UserSelectorArg
+  overload: Dropbox.Api.Team.MembersDeleteProfilePhotoArg.User*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.MembersDeleteProfilePhotoArg
+  commentId: T:Dropbox.Api.Team.MembersDeleteProfilePhotoArg
+  parent: Dropbox.Api.Team
+  name: MembersDeleteProfilePhotoArg
+  nameWithType: MembersDeleteProfilePhotoArg
+  fullName: Dropbox.Api.Team.MembersDeleteProfilePhotoArg
+- uid: Dropbox.Api.Team.MembersDeleteProfilePhotoArg.#ctor*
+  commentId: Overload:Dropbox.Api.Team.MembersDeleteProfilePhotoArg.#ctor
+  name: MembersDeleteProfilePhotoArg
+  nameWithType: MembersDeleteProfilePhotoArg.MembersDeleteProfilePhotoArg
+  fullName: Dropbox.Api.Team.MembersDeleteProfilePhotoArg.MembersDeleteProfilePhotoArg
+- uid: Dropbox.Api.Team.UserSelectorArg
+  commentId: T:Dropbox.Api.Team.UserSelectorArg
+  parent: Dropbox.Api.Team
+  name: UserSelectorArg
+  nameWithType: UserSelectorArg
+  fullName: Dropbox.Api.Team.UserSelectorArg
+- uid: Dropbox.Api.Team.MembersDeleteProfilePhotoArg.User*
+  commentId: Overload:Dropbox.Api.Team.MembersDeleteProfilePhotoArg.User
+  name: User
+  nameWithType: MembersDeleteProfilePhotoArg.User
+  fullName: Dropbox.Api.Team.MembersDeleteProfilePhotoArg.User
+shouldSkipMarkup: true

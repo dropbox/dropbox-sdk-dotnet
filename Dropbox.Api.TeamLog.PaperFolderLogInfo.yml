@@ -1,0 +1,235 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.PaperFolderLogInfo
+  commentId: T:Dropbox.Api.TeamLog.PaperFolderLogInfo
+  id: PaperFolderLogInfo
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.PaperFolderLogInfo.#ctor
+  - Dropbox.Api.TeamLog.PaperFolderLogInfo.#ctor(System.String,System.String)
+  - Dropbox.Api.TeamLog.PaperFolderLogInfo.FolderId
+  - Dropbox.Api.TeamLog.PaperFolderLogInfo.FolderName
+  langs:
+  - csharp
+  - vb
+  name: PaperFolderLogInfo
+  nameWithType: PaperFolderLogInfo
+  fullName: Dropbox.Api.TeamLog.PaperFolderLogInfo
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperFolderLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PaperFolderLogInfo
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperFolderLogInfo.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Paper folder&apos;s logged information.</p>\n"
+  example: []
+  syntax:
+    content: 'public class PaperFolderLogInfo : object'
+    content.vb: >-
+      Public Class PaperFolderLogInfo
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.PaperFolderLogInfo.#ctor(System.String,System.String)
+  commentId: M:Dropbox.Api.TeamLog.PaperFolderLogInfo.#ctor(System.String,System.String)
+  id: '#ctor(System.String,System.String)'
+  parent: Dropbox.Api.TeamLog.PaperFolderLogInfo
+  langs:
+  - csharp
+  - vb
+  name: PaperFolderLogInfo(String, String)
+  nameWithType: PaperFolderLogInfo.PaperFolderLogInfo(String, String)
+  fullName: Dropbox.Api.TeamLog.PaperFolderLogInfo.PaperFolderLogInfo(System.String, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperFolderLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperFolderLogInfo.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.PaperFolderLogInfo\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public PaperFolderLogInfo(string folderId, string folderName)
+    parameters:
+    - id: folderId
+      type: System.String
+      description: Papers folder Id.
+    - id: folderName
+      type: System.String
+      description: Paper folder name.
+    content.vb: Public Sub New(folderId As String, folderName As String)
+  overload: Dropbox.Api.TeamLog.PaperFolderLogInfo.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.PaperFolderLogInfo.#ctor
+  commentId: M:Dropbox.Api.TeamLog.PaperFolderLogInfo.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.PaperFolderLogInfo
+  langs:
+  - csharp
+  - vb
+  name: PaperFolderLogInfo()
+  nameWithType: PaperFolderLogInfo.PaperFolderLogInfo()
+  fullName: Dropbox.Api.TeamLog.PaperFolderLogInfo.PaperFolderLogInfo()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperFolderLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperFolderLogInfo.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.PaperFolderLogInfo\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public PaperFolderLogInfo()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.PaperFolderLogInfo.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.PaperFolderLogInfo.FolderId
+  commentId: P:Dropbox.Api.TeamLog.PaperFolderLogInfo.FolderId
+  id: FolderId
+  parent: Dropbox.Api.TeamLog.PaperFolderLogInfo
+  langs:
+  - csharp
+  - vb
+  name: FolderId
+  nameWithType: PaperFolderLogInfo.FolderId
+  fullName: Dropbox.Api.TeamLog.PaperFolderLogInfo.FolderId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperFolderLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: FolderId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperFolderLogInfo.cs
+    startLine: 66
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Papers folder Id.</p>\n"
+  example: []
+  syntax:
+    content: public string FolderId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property FolderId As String
+  overload: Dropbox.Api.TeamLog.PaperFolderLogInfo.FolderId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.PaperFolderLogInfo.FolderName
+  commentId: P:Dropbox.Api.TeamLog.PaperFolderLogInfo.FolderName
+  id: FolderName
+  parent: Dropbox.Api.TeamLog.PaperFolderLogInfo
+  langs:
+  - csharp
+  - vb
+  name: FolderName
+  nameWithType: PaperFolderLogInfo.FolderName
+  fullName: Dropbox.Api.TeamLog.PaperFolderLogInfo.FolderName
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperFolderLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: FolderName
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperFolderLogInfo.cs
+    startLine: 71
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Paper folder name.</p>\n"
+  example: []
+  syntax:
+    content: public string FolderName { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property FolderName As String
+  overload: Dropbox.Api.TeamLog.PaperFolderLogInfo.FolderName*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.PaperFolderLogInfo
+  commentId: T:Dropbox.Api.TeamLog.PaperFolderLogInfo
+  parent: Dropbox.Api.TeamLog
+  name: PaperFolderLogInfo
+  nameWithType: PaperFolderLogInfo
+  fullName: Dropbox.Api.TeamLog.PaperFolderLogInfo
+- uid: Dropbox.Api.TeamLog.PaperFolderLogInfo.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.PaperFolderLogInfo.#ctor
+  name: PaperFolderLogInfo
+  nameWithType: PaperFolderLogInfo.PaperFolderLogInfo
+  fullName: Dropbox.Api.TeamLog.PaperFolderLogInfo.PaperFolderLogInfo
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.PaperFolderLogInfo.FolderId*
+  commentId: Overload:Dropbox.Api.TeamLog.PaperFolderLogInfo.FolderId
+  name: FolderId
+  nameWithType: PaperFolderLogInfo.FolderId
+  fullName: Dropbox.Api.TeamLog.PaperFolderLogInfo.FolderId
+- uid: Dropbox.Api.TeamLog.PaperFolderLogInfo.FolderName*
+  commentId: Overload:Dropbox.Api.TeamLog.PaperFolderLogInfo.FolderName
+  name: FolderName
+  nameWithType: PaperFolderLogInfo.FolderName
+  fullName: Dropbox.Api.TeamLog.PaperFolderLogInfo.FolderName
+shouldSkipMarkup: true

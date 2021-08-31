@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.SsoChangeSamlIdentityModeType
+  commentId: T:Dropbox.Api.TeamLog.SsoChangeSamlIdentityModeType
+  id: SsoChangeSamlIdentityModeType
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.SsoChangeSamlIdentityModeType.#ctor
+  - Dropbox.Api.TeamLog.SsoChangeSamlIdentityModeType.#ctor(System.String)
+  - Dropbox.Api.TeamLog.SsoChangeSamlIdentityModeType.Description
+  langs:
+  - csharp
+  - vb
+  name: SsoChangeSamlIdentityModeType
+  nameWithType: SsoChangeSamlIdentityModeType
+  fullName: Dropbox.Api.TeamLog.SsoChangeSamlIdentityModeType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SsoChangeSamlIdentityModeType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SsoChangeSamlIdentityModeType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SsoChangeSamlIdentityModeType.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The sso change saml identity mode type object</p>\n"
+  example: []
+  syntax:
+    content: 'public class SsoChangeSamlIdentityModeType : object'
+    content.vb: >-
+      Public Class SsoChangeSamlIdentityModeType
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.SsoChangeSamlIdentityModeType.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.SsoChangeSamlIdentityModeType.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.SsoChangeSamlIdentityModeType
+  langs:
+  - csharp
+  - vb
+  name: SsoChangeSamlIdentityModeType(String)
+  nameWithType: SsoChangeSamlIdentityModeType.SsoChangeSamlIdentityModeType(String)
+  fullName: Dropbox.Api.TeamLog.SsoChangeSamlIdentityModeType.SsoChangeSamlIdentityModeType(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SsoChangeSamlIdentityModeType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SsoChangeSamlIdentityModeType.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SsoChangeSamlIdentityModeType\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public SsoChangeSamlIdentityModeType(string description)
+    parameters:
+    - id: description
+      type: System.String
+      description: The description
+    content.vb: Public Sub New(description As String)
+  overload: Dropbox.Api.TeamLog.SsoChangeSamlIdentityModeType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SsoChangeSamlIdentityModeType.#ctor
+  commentId: M:Dropbox.Api.TeamLog.SsoChangeSamlIdentityModeType.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.SsoChangeSamlIdentityModeType
+  langs:
+  - csharp
+  - vb
+  name: SsoChangeSamlIdentityModeType()
+  nameWithType: SsoChangeSamlIdentityModeType.SsoChangeSamlIdentityModeType()
+  fullName: Dropbox.Api.TeamLog.SsoChangeSamlIdentityModeType.SsoChangeSamlIdentityModeType()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SsoChangeSamlIdentityModeType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SsoChangeSamlIdentityModeType.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SsoChangeSamlIdentityModeType\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public SsoChangeSamlIdentityModeType()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.SsoChangeSamlIdentityModeType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SsoChangeSamlIdentityModeType.Description
+  commentId: P:Dropbox.Api.TeamLog.SsoChangeSamlIdentityModeType.Description
+  id: Description
+  parent: Dropbox.Api.TeamLog.SsoChangeSamlIdentityModeType
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: SsoChangeSamlIdentityModeType.Description
+  fullName: Dropbox.Api.TeamLog.SsoChangeSamlIdentityModeType.Description
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SsoChangeSamlIdentityModeType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Description
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SsoChangeSamlIdentityModeType.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets the description of the sso change saml identity mode type</p>\n"
+  example: []
+  syntax:
+    content: public string Description { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Dropbox.Api.TeamLog.SsoChangeSamlIdentityModeType.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.SsoChangeSamlIdentityModeType
+  commentId: T:Dropbox.Api.TeamLog.SsoChangeSamlIdentityModeType
+  parent: Dropbox.Api.TeamLog
+  name: SsoChangeSamlIdentityModeType
+  nameWithType: SsoChangeSamlIdentityModeType
+  fullName: Dropbox.Api.TeamLog.SsoChangeSamlIdentityModeType
+- uid: Dropbox.Api.TeamLog.SsoChangeSamlIdentityModeType.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.SsoChangeSamlIdentityModeType.#ctor
+  name: SsoChangeSamlIdentityModeType
+  nameWithType: SsoChangeSamlIdentityModeType.SsoChangeSamlIdentityModeType
+  fullName: Dropbox.Api.TeamLog.SsoChangeSamlIdentityModeType.SsoChangeSamlIdentityModeType
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.SsoChangeSamlIdentityModeType.Description*
+  commentId: Overload:Dropbox.Api.TeamLog.SsoChangeSamlIdentityModeType.Description
+  name: Description
+  nameWithType: SsoChangeSamlIdentityModeType.Description
+  fullName: Dropbox.Api.TeamLog.SsoChangeSamlIdentityModeType.Description
+shouldSkipMarkup: true

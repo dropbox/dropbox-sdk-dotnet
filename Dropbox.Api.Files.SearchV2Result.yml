@@ -1,0 +1,460 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.SearchV2Result
+  commentId: T:Dropbox.Api.Files.SearchV2Result
+  id: SearchV2Result
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.SearchV2Result.#ctor
+  - Dropbox.Api.Files.SearchV2Result.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Files.SearchMatchV2},System.Boolean,System.String)
+  - Dropbox.Api.Files.SearchV2Result.Cursor
+  - Dropbox.Api.Files.SearchV2Result.HasMore
+  - Dropbox.Api.Files.SearchV2Result.Matches
+  langs:
+  - csharp
+  - vb
+  name: SearchV2Result
+  nameWithType: SearchV2Result
+  fullName: Dropbox.Api.Files.SearchV2Result
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchV2Result.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SearchV2Result
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchV2Result.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The search v2 result object</p>\n"
+  example: []
+  syntax:
+    content: 'public class SearchV2Result : object'
+    content.vb: >-
+      Public Class SearchV2Result
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.SearchV2Result.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Files.SearchMatchV2},System.Boolean,System.String)
+  commentId: M:Dropbox.Api.Files.SearchV2Result.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Files.SearchMatchV2},System.Boolean,System.String)
+  id: '#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Files.SearchMatchV2},System.Boolean,System.String)'
+  parent: Dropbox.Api.Files.SearchV2Result
+  langs:
+  - csharp
+  - vb
+  name: SearchV2Result(System.Collections.Generic.IEnumerable<SearchMatchV2>, Boolean, String)
+  nameWithType: SearchV2Result.SearchV2Result(System.Collections.Generic.IEnumerable<SearchMatchV2>, Boolean, String)
+  fullName: Dropbox.Api.Files.SearchV2Result.SearchV2Result(System.Collections.Generic.IEnumerable<Dropbox.Api.Files.SearchMatchV2>, System.Boolean, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchV2Result.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchV2Result.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.SearchV2Result\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public SearchV2Result(System.Collections.Generic.IEnumerable<SearchMatchV2> matches, bool hasMore, string cursor = null)
+    parameters:
+    - id: matches
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.Files.SearchMatchV2}
+      description: A list (possibly empty) of matches for the query.
+    - id: hasMore
+      type: System.Boolean
+      description: >-
+        Used for paging. If true, indicates there is another page of
+
+        results available that can be fetched by calling <xref href="Dropbox.Api.Files.Routes.FilesUserRoutes.SearchContinueV2Async(Dropbox.Api.Files.SearchV2ContinueArg)" data-throw-if-not-resolved="false"></xref> with the
+
+        cursor.
+    - id: cursor
+      type: System.String
+      description: >-
+        Pass the cursor into <xref href="Dropbox.Api.Files.Routes.FilesUserRoutes.SearchContinueV2Async(Dropbox.Api.Files.SearchV2ContinueArg)" data-throw-if-not-resolved="false"></xref> to fetch
+
+        the next page of results.
+    content.vb: Public Sub New(matches As System.Collections.Generic.IEnumerable(Of SearchMatchV2), hasMore As Boolean, cursor As String = Nothing)
+  overload: Dropbox.Api.Files.SearchV2Result.#ctor*
+  nameWithType.vb: SearchV2Result.SearchV2Result(System.Collections.Generic.IEnumerable(Of SearchMatchV2), Boolean, String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Files.SearchV2Result.SearchV2Result(System.Collections.Generic.IEnumerable(Of Dropbox.Api.Files.SearchMatchV2), System.Boolean, System.String)
+  name.vb: SearchV2Result(System.Collections.Generic.IEnumerable(Of SearchMatchV2), Boolean, String)
+- uid: Dropbox.Api.Files.SearchV2Result.#ctor
+  commentId: M:Dropbox.Api.Files.SearchV2Result.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.SearchV2Result
+  langs:
+  - csharp
+  - vb
+  name: SearchV2Result()
+  nameWithType: SearchV2Result.SearchV2Result()
+  fullName: Dropbox.Api.Files.SearchV2Result.SearchV2Result()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchV2Result.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchV2Result.cs
+    startLine: 69
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.SearchV2Result\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public SearchV2Result()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.SearchV2Result.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.SearchV2Result.Matches
+  commentId: P:Dropbox.Api.Files.SearchV2Result.Matches
+  id: Matches
+  parent: Dropbox.Api.Files.SearchV2Result
+  langs:
+  - csharp
+  - vb
+  name: Matches
+  nameWithType: SearchV2Result.Matches
+  fullName: Dropbox.Api.Files.SearchV2Result.Matches
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchV2Result.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Matches
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchV2Result.cs
+    startLine: 77
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>A list (possibly empty) of matches for the query.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<SearchMatchV2> Matches { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{Dropbox.Api.Files.SearchMatchV2}
+    content.vb: Public Property Matches As System.Collections.Generic.IList(Of SearchMatchV2)
+  overload: Dropbox.Api.Files.SearchV2Result.Matches*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.SearchV2Result.HasMore
+  commentId: P:Dropbox.Api.Files.SearchV2Result.HasMore
+  id: HasMore
+  parent: Dropbox.Api.Files.SearchV2Result
+  langs:
+  - csharp
+  - vb
+  name: HasMore
+  nameWithType: SearchV2Result.HasMore
+  fullName: Dropbox.Api.Files.SearchV2Result.HasMore
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchV2Result.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: HasMore
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchV2Result.cs
+    startLine: 85
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Used for paging. If true, indicates there is another page of results\navailable that can be fetched by calling <xref href=\"Dropbox.Api.Files.Routes.FilesUserRoutes.SearchContinueV2Async(Dropbox.Api.Files.SearchV2ContinueArg)\" data-throw-if-not-resolved=\"false\"></xref> with the\ncursor.</p>\n"
+  example: []
+  syntax:
+    content: public bool HasMore { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property HasMore As Boolean
+  overload: Dropbox.Api.Files.SearchV2Result.HasMore*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.SearchV2Result.Cursor
+  commentId: P:Dropbox.Api.Files.SearchV2Result.Cursor
+  id: Cursor
+  parent: Dropbox.Api.Files.SearchV2Result
+  langs:
+  - csharp
+  - vb
+  name: Cursor
+  nameWithType: SearchV2Result.Cursor
+  fullName: Dropbox.Api.Files.SearchV2Result.Cursor
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchV2Result.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Cursor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchV2Result.cs
+    startLine: 92
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Pass the cursor into <xref href=\"Dropbox.Api.Files.Routes.FilesUserRoutes.SearchContinueV2Async(Dropbox.Api.Files.SearchV2ContinueArg)\" data-throw-if-not-resolved=\"false\"></xref> to fetch\nthe next page of results.</p>\n"
+  example: []
+  syntax:
+    content: public string Cursor { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Cursor As String
+  overload: Dropbox.Api.Files.SearchV2Result.Cursor*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.SearchV2Result
+  commentId: T:Dropbox.Api.Files.SearchV2Result
+  parent: Dropbox.Api.Files
+  name: SearchV2Result
+  nameWithType: SearchV2Result
+  fullName: Dropbox.Api.Files.SearchV2Result
+- uid: Dropbox.Api.Files.Routes.FilesUserRoutes.SearchContinueV2Async(Dropbox.Api.Files.SearchV2ContinueArg)
+  commentId: M:Dropbox.Api.Files.Routes.FilesUserRoutes.SearchContinueV2Async(Dropbox.Api.Files.SearchV2ContinueArg)
+  isExternal: true
+- uid: Dropbox.Api.Files.SearchV2Result.#ctor*
+  commentId: Overload:Dropbox.Api.Files.SearchV2Result.#ctor
+  name: SearchV2Result
+  nameWithType: SearchV2Result.SearchV2Result
+  fullName: Dropbox.Api.Files.SearchV2Result.SearchV2Result
+- uid: System.Collections.Generic.IEnumerable{Dropbox.Api.Files.SearchMatchV2}
+  commentId: '!:System.Collections.Generic.IEnumerable{Dropbox.Api.Files.SearchMatchV2}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<SearchMatchV2>
+  nameWithType: System.Collections.Generic.IEnumerable<SearchMatchV2>
+  fullName: System.Collections.Generic.IEnumerable<Dropbox.Api.Files.SearchMatchV2>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of SearchMatchV2)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Dropbox.Api.Files.SearchMatchV2)
+  name.vb: System.Collections.Generic.IEnumerable(Of SearchMatchV2)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Files.SearchMatchV2
+    name: SearchMatchV2
+    nameWithType: SearchMatchV2
+    fullName: Dropbox.Api.Files.SearchMatchV2
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Files.SearchMatchV2
+    name: SearchMatchV2
+    nameWithType: SearchMatchV2
+    fullName: Dropbox.Api.Files.SearchMatchV2
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: System.Collections.Generic.IEnumerable<>
+  nameWithType: System.Collections.Generic.IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: System.Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Files.SearchV2Result.Matches*
+  commentId: Overload:Dropbox.Api.Files.SearchV2Result.Matches
+  name: Matches
+  nameWithType: SearchV2Result.Matches
+  fullName: Dropbox.Api.Files.SearchV2Result.Matches
+- uid: System.Collections.Generic.IList{Dropbox.Api.Files.SearchMatchV2}
+  commentId: '!:System.Collections.Generic.IList{Dropbox.Api.Files.SearchMatchV2}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<SearchMatchV2>
+  nameWithType: System.Collections.Generic.IList<SearchMatchV2>
+  fullName: System.Collections.Generic.IList<Dropbox.Api.Files.SearchMatchV2>
+  nameWithType.vb: System.Collections.Generic.IList(Of SearchMatchV2)
+  fullName.vb: System.Collections.Generic.IList(Of Dropbox.Api.Files.SearchMatchV2)
+  name.vb: System.Collections.Generic.IList(Of SearchMatchV2)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Files.SearchMatchV2
+    name: SearchMatchV2
+    nameWithType: SearchMatchV2
+    fullName: Dropbox.Api.Files.SearchMatchV2
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Files.SearchMatchV2
+    name: SearchMatchV2
+    nameWithType: SearchMatchV2
+    fullName: Dropbox.Api.Files.SearchMatchV2
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  isExternal: true
+  name: System.Collections.Generic.IList<>
+  nameWithType: System.Collections.Generic.IList<>
+  fullName: System.Collections.Generic.IList<>
+  nameWithType.vb: System.Collections.Generic.IList(Of )
+  fullName.vb: System.Collections.Generic.IList(Of )
+  name.vb: System.Collections.Generic.IList(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Files.SearchV2Result.HasMore*
+  commentId: Overload:Dropbox.Api.Files.SearchV2Result.HasMore
+  name: HasMore
+  nameWithType: SearchV2Result.HasMore
+  fullName: Dropbox.Api.Files.SearchV2Result.HasMore
+- uid: Dropbox.Api.Files.SearchV2Result.Cursor*
+  commentId: Overload:Dropbox.Api.Files.SearchV2Result.Cursor
+  name: Cursor
+  nameWithType: SearchV2Result.Cursor
+  fullName: Dropbox.Api.Files.SearchV2Result.Cursor
+shouldSkipMarkup: true

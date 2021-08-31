@@ -1,0 +1,2916 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes
+  commentId: T:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes
+  id: FileRequestsUserRoutes
+  parent: Dropbox.Api.FileRequests.Routes
+  children:
+  - Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginCount(System.AsyncCallback,System.Object)
+  - Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginCreate(Dropbox.Api.FileRequests.CreateFileRequestArgs,System.AsyncCallback,System.Object)
+  - Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginCreate(System.String,System.String,Dropbox.Api.FileRequests.FileRequestDeadline,System.Boolean,System.String,System.AsyncCallback,System.Object)
+  - Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginDelete(Dropbox.Api.FileRequests.DeleteFileRequestArgs,System.AsyncCallback,System.Object)
+  - Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginDelete(System.Collections.Generic.IEnumerable{System.String},System.AsyncCallback,System.Object)
+  - Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginDeleteAllClosed(System.AsyncCallback,System.Object)
+  - Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginGet(Dropbox.Api.FileRequests.GetFileRequestArgs,System.AsyncCallback,System.Object)
+  - Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginGet(System.String,System.AsyncCallback,System.Object)
+  - Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginList(System.AsyncCallback,System.Object)
+  - Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginListContinue(Dropbox.Api.FileRequests.ListFileRequestsContinueArg,System.AsyncCallback,System.Object)
+  - Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginListContinue(System.String,System.AsyncCallback,System.Object)
+  - Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginListV2(Dropbox.Api.FileRequests.ListFileRequestsArg,System.AsyncCallback,System.Object)
+  - Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginListV2(System.UInt64,System.AsyncCallback,System.Object)
+  - Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginUpdate(Dropbox.Api.FileRequests.UpdateFileRequestArgs,System.AsyncCallback,System.Object)
+  - Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginUpdate(System.String,System.String,System.String,Dropbox.Api.FileRequests.UpdateFileRequestDeadline,System.Nullable{System.Boolean},System.String,System.AsyncCallback,System.Object)
+  - Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.CountAsync
+  - Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.CreateAsync(Dropbox.Api.FileRequests.CreateFileRequestArgs)
+  - Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.CreateAsync(System.String,System.String,Dropbox.Api.FileRequests.FileRequestDeadline,System.Boolean,System.String)
+  - Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.DeleteAllClosedAsync
+  - Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.DeleteAsync(Dropbox.Api.FileRequests.DeleteFileRequestArgs)
+  - Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.DeleteAsync(System.Collections.Generic.IEnumerable{System.String})
+  - Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndCount(System.IAsyncResult)
+  - Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndCreate(System.IAsyncResult)
+  - Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndDelete(System.IAsyncResult)
+  - Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndDeleteAllClosed(System.IAsyncResult)
+  - Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndGet(System.IAsyncResult)
+  - Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndList(System.IAsyncResult)
+  - Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndListContinue(System.IAsyncResult)
+  - Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndListV2(System.IAsyncResult)
+  - Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndUpdate(System.IAsyncResult)
+  - Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.GetAsync(Dropbox.Api.FileRequests.GetFileRequestArgs)
+  - Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.GetAsync(System.String)
+  - Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListAsync
+  - Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListContinueAsync(Dropbox.Api.FileRequests.ListFileRequestsContinueArg)
+  - Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListContinueAsync(System.String)
+  - Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListV2Async(Dropbox.Api.FileRequests.ListFileRequestsArg)
+  - Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListV2Async(System.UInt64)
+  - Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.UpdateAsync(Dropbox.Api.FileRequests.UpdateFileRequestArgs)
+  - Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.UpdateAsync(System.String,System.String,System.String,Dropbox.Api.FileRequests.UpdateFileRequestDeadline,System.Nullable{System.Boolean},System.String)
+  langs:
+  - csharp
+  - vb
+  name: FileRequestsUserRoutes
+  nameWithType: FileRequestsUserRoutes
+  fullName: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: FileRequestsUserRoutes
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests.Routes
+  summary: "\n<p>The routes for the <xref href=\"Dropbox.Api.FileRequests\" data-throw-if-not-resolved=\"false\"></xref> namespace</p>\n"
+  example: []
+  syntax:
+    content: 'public class FileRequestsUserRoutes : object'
+    content.vb: >-
+      Public Class FileRequestsUserRoutes
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.CountAsync
+  commentId: M:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.CountAsync
+  id: CountAsync
+  parent: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: CountAsync()
+  nameWithType: FileRequestsUserRoutes.CountAsync()
+  fullName: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.CountAsync()
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: CountAsync
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+    startLine: 41
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests.Routes
+  summary: "\n<p>Returns the total number of file requests owned by this user. Includes both\nopen and closed file requests.</p>\n"
+  example: []
+  syntax:
+    content: public System.Threading.Tasks.Task<CountFileRequestsResult> CountAsync()
+    return:
+      type: System.Threading.Tasks.Task{Dropbox.Api.FileRequests.CountFileRequestsResult}
+      description: >-
+        The task that represents the asynchronous send operation. The TResult
+
+        parameter contains the response from the server.
+    content.vb: Public Function CountAsync As System.Threading.Tasks.Task(Of CountFileRequestsResult)
+  overload: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.CountAsync*
+  exceptions:
+  - type: Dropbox.Api.ApiException`1
+    commentId: T:Dropbox.Api.ApiException`1
+    description: >-
+      Thrown if there is an error
+
+      processing the request; This will contain a <xref href="Dropbox.Api.FileRequests.CountFileRequestsError" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginCount(System.AsyncCallback,System.Object)
+  commentId: M:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginCount(System.AsyncCallback,System.Object)
+  id: BeginCount(System.AsyncCallback,System.Object)
+  parent: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: BeginCount(System.AsyncCallback, Object)
+  nameWithType: FileRequestsUserRoutes.BeginCount(System.AsyncCallback, Object)
+  fullName: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginCount(System.AsyncCallback, System.Object)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: BeginCount
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+    startLine: 54
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests.Routes
+  summary: "\n<p>Begins an asynchronous send to the count route.</p>\n"
+  example: []
+  syntax:
+    content: public System.IAsyncResult BeginCount(System.AsyncCallback callback, object state = null)
+    parameters:
+    - id: callback
+      type: System.AsyncCallback
+      description: >-
+        The method to be called when the asynchronous send is
+
+        completed.
+    - id: state
+      type: System.Object
+      description: >-
+        A user provided object that distinguished this send from other
+
+        send requests.
+    return:
+      type: System.IAsyncResult
+      description: An object that represents the asynchronous send request.
+    content.vb: Public Function BeginCount(callback As System.AsyncCallback, state As Object = Nothing) As System.IAsyncResult
+  overload: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginCount*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndCount(System.IAsyncResult)
+  commentId: M:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndCount(System.IAsyncResult)
+  id: EndCount(System.IAsyncResult)
+  parent: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: EndCount(System.IAsyncResult)
+  nameWithType: FileRequestsUserRoutes.EndCount(System.IAsyncResult)
+  fullName: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndCount(System.IAsyncResult)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: EndCount
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+    startLine: 70
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests.Routes
+  summary: "\n<p>Waits for the pending asynchronous send to the count route to complete</p>\n"
+  example: []
+  syntax:
+    content: public CountFileRequestsResult EndCount(System.IAsyncResult asyncResult)
+    parameters:
+    - id: asyncResult
+      type: System.IAsyncResult
+      description: >-
+        The reference to the pending asynchronous send
+
+        request
+    return:
+      type: Dropbox.Api.FileRequests.CountFileRequestsResult
+      description: The response to the send request
+    content.vb: Public Function EndCount(asyncResult As System.IAsyncResult) As CountFileRequestsResult
+  overload: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndCount*
+  exceptions:
+  - type: Dropbox.Api.ApiException`1
+    commentId: T:Dropbox.Api.ApiException`1
+    description: >-
+      Thrown if there is an error
+
+      processing the request; This will contain a <xref href="Dropbox.Api.FileRequests.CountFileRequestsError" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.CreateAsync(Dropbox.Api.FileRequests.CreateFileRequestArgs)
+  commentId: M:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.CreateAsync(Dropbox.Api.FileRequests.CreateFileRequestArgs)
+  id: CreateAsync(Dropbox.Api.FileRequests.CreateFileRequestArgs)
+  parent: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: CreateAsync(CreateFileRequestArgs)
+  nameWithType: FileRequestsUserRoutes.CreateAsync(CreateFileRequestArgs)
+  fullName: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.CreateAsync(Dropbox.Api.FileRequests.CreateFileRequestArgs)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: CreateAsync
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+    startLine: 90
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests.Routes
+  summary: "\n<p>Creates a file request for this user.</p>\n"
+  example: []
+  syntax:
+    content: public System.Threading.Tasks.Task<FileRequest> CreateAsync(CreateFileRequestArgs createFileRequestArgs)
+    parameters:
+    - id: createFileRequestArgs
+      type: Dropbox.Api.FileRequests.CreateFileRequestArgs
+      description: The request parameters
+    return:
+      type: System.Threading.Tasks.Task{Dropbox.Api.FileRequests.FileRequest}
+      description: >-
+        The task that represents the asynchronous send operation. The TResult
+
+        parameter contains the response from the server.
+    content.vb: Public Function CreateAsync(createFileRequestArgs As CreateFileRequestArgs) As System.Threading.Tasks.Task(Of FileRequest)
+  overload: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.CreateAsync*
+  exceptions:
+  - type: Dropbox.Api.ApiException`1
+    commentId: T:Dropbox.Api.ApiException`1
+    description: >-
+      Thrown if there is an error
+
+      processing the request; This will contain a <xref href="Dropbox.Api.FileRequests.CreateFileRequestError" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginCreate(Dropbox.Api.FileRequests.CreateFileRequestArgs,System.AsyncCallback,System.Object)
+  commentId: M:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginCreate(Dropbox.Api.FileRequests.CreateFileRequestArgs,System.AsyncCallback,System.Object)
+  id: BeginCreate(Dropbox.Api.FileRequests.CreateFileRequestArgs,System.AsyncCallback,System.Object)
+  parent: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: BeginCreate(CreateFileRequestArgs, System.AsyncCallback, Object)
+  nameWithType: FileRequestsUserRoutes.BeginCreate(CreateFileRequestArgs, System.AsyncCallback, Object)
+  fullName: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginCreate(Dropbox.Api.FileRequests.CreateFileRequestArgs, System.AsyncCallback, System.Object)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: BeginCreate
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+    startLine: 104
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests.Routes
+  summary: "\n<p>Begins an asynchronous send to the create route.</p>\n"
+  example: []
+  syntax:
+    content: public System.IAsyncResult BeginCreate(CreateFileRequestArgs createFileRequestArgs, System.AsyncCallback callback, object state = null)
+    parameters:
+    - id: createFileRequestArgs
+      type: Dropbox.Api.FileRequests.CreateFileRequestArgs
+      description: The request parameters.
+    - id: callback
+      type: System.AsyncCallback
+      description: >-
+        The method to be called when the asynchronous send is
+
+        completed.
+    - id: state
+      type: System.Object
+      description: >-
+        A user provided object that distinguished this send from other
+
+        send requests.
+    return:
+      type: System.IAsyncResult
+      description: An object that represents the asynchronous send request.
+    content.vb: Public Function BeginCreate(createFileRequestArgs As CreateFileRequestArgs, callback As System.AsyncCallback, state As Object = Nothing) As System.IAsyncResult
+  overload: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginCreate*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.CreateAsync(System.String,System.String,Dropbox.Api.FileRequests.FileRequestDeadline,System.Boolean,System.String)
+  commentId: M:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.CreateAsync(System.String,System.String,Dropbox.Api.FileRequests.FileRequestDeadline,System.Boolean,System.String)
+  id: CreateAsync(System.String,System.String,Dropbox.Api.FileRequests.FileRequestDeadline,System.Boolean,System.String)
+  parent: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: CreateAsync(String, String, FileRequestDeadline, Boolean, String)
+  nameWithType: FileRequestsUserRoutes.CreateAsync(String, String, FileRequestDeadline, Boolean, String)
+  fullName: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.CreateAsync(System.String, System.String, Dropbox.Api.FileRequests.FileRequestDeadline, System.Boolean, System.String)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: CreateAsync
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+    startLine: 129
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests.Routes
+  summary: "\n<p>Creates a file request for this user.</p>\n"
+  example: []
+  syntax:
+    content: public System.Threading.Tasks.Task<FileRequest> CreateAsync(string title, string destination, FileRequestDeadline deadline = null, bool open = true, string description = null)
+    parameters:
+    - id: title
+      type: System.String
+      description: The title of the file request. Must not be empty.
+    - id: destination
+      type: System.String
+      description: >-
+        The path of the folder in the Dropbox where uploaded
+
+        files will be sent. For apps with the app folder permission, this will be relative
+
+        to the app folder.
+    - id: deadline
+      type: Dropbox.Api.FileRequests.FileRequestDeadline
+      description: >-
+        The deadline for the file request. Deadlines can only be set
+
+        by Professional and Business accounts.
+    - id: open
+      type: System.Boolean
+      description: >-
+        Whether or not the file request should be open. If the file
+
+        request is closed, it will not accept any file submissions, but it can be opened
+
+        later.
+    - id: description
+      type: System.String
+      description: A description of the file request.
+    return:
+      type: System.Threading.Tasks.Task{Dropbox.Api.FileRequests.FileRequest}
+      description: >-
+        The task that represents the asynchronous send operation. The TResult
+
+        parameter contains the response from the server.
+    content.vb: Public Function CreateAsync(title As String, destination As String, deadline As FileRequestDeadline = Nothing, open As Boolean = True, description As String = Nothing) As System.Threading.Tasks.Task(Of FileRequest)
+  overload: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.CreateAsync*
+  exceptions:
+  - type: Dropbox.Api.ApiException`1
+    commentId: T:Dropbox.Api.ApiException`1
+    description: >-
+      Thrown if there is an error
+
+      processing the request; This will contain a <xref href="Dropbox.Api.FileRequests.CreateFileRequestError" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginCreate(System.String,System.String,Dropbox.Api.FileRequests.FileRequestDeadline,System.Boolean,System.String,System.AsyncCallback,System.Object)
+  commentId: M:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginCreate(System.String,System.String,Dropbox.Api.FileRequests.FileRequestDeadline,System.Boolean,System.String,System.AsyncCallback,System.Object)
+  id: BeginCreate(System.String,System.String,Dropbox.Api.FileRequests.FileRequestDeadline,System.Boolean,System.String,System.AsyncCallback,System.Object)
+  parent: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: BeginCreate(String, String, FileRequestDeadline, Boolean, String, System.AsyncCallback, Object)
+  nameWithType: FileRequestsUserRoutes.BeginCreate(String, String, FileRequestDeadline, Boolean, String, System.AsyncCallback, Object)
+  fullName: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginCreate(System.String, System.String, Dropbox.Api.FileRequests.FileRequestDeadline, System.Boolean, System.String, System.AsyncCallback, System.Object)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: BeginCreate
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+    startLine: 162
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests.Routes
+  summary: "\n<p>Begins an asynchronous send to the create route.</p>\n"
+  example: []
+  syntax:
+    content: public System.IAsyncResult BeginCreate(string title, string destination, FileRequestDeadline deadline = null, bool open = true, string description = null, System.AsyncCallback callback = null, object callbackState = null)
+    parameters:
+    - id: title
+      type: System.String
+      description: The title of the file request. Must not be empty.
+    - id: destination
+      type: System.String
+      description: >-
+        The path of the folder in the Dropbox where uploaded
+
+        files will be sent. For apps with the app folder permission, this will be relative
+
+        to the app folder.
+    - id: deadline
+      type: Dropbox.Api.FileRequests.FileRequestDeadline
+      description: >-
+        The deadline for the file request. Deadlines can only be set
+
+        by Professional and Business accounts.
+    - id: open
+      type: System.Boolean
+      description: >-
+        Whether or not the file request should be open. If the file
+
+        request is closed, it will not accept any file submissions, but it can be opened
+
+        later.
+    - id: description
+      type: System.String
+      description: A description of the file request.
+    - id: callback
+      type: System.AsyncCallback
+      description: >-
+        The method to be called when the asynchronous send is
+
+        completed.
+    - id: callbackState
+      type: System.Object
+      description: >-
+        A user provided object that distinguished this send
+
+        from other send requests.
+    return:
+      type: System.IAsyncResult
+      description: An object that represents the asynchronous send request.
+    content.vb: Public Function BeginCreate(title As String, destination As String, deadline As FileRequestDeadline = Nothing, open As Boolean = True, description As String = Nothing, callback As System.AsyncCallback = Nothing, callbackState As Object = Nothing) As System.IAsyncResult
+  overload: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginCreate*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndCreate(System.IAsyncResult)
+  commentId: M:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndCreate(System.IAsyncResult)
+  id: EndCreate(System.IAsyncResult)
+  parent: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: EndCreate(System.IAsyncResult)
+  nameWithType: FileRequestsUserRoutes.EndCreate(System.IAsyncResult)
+  fullName: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndCreate(System.IAsyncResult)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: EndCreate
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+    startLine: 189
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests.Routes
+  summary: "\n<p>Waits for the pending asynchronous send to the create route to\ncomplete</p>\n"
+  example: []
+  syntax:
+    content: public FileRequest EndCreate(System.IAsyncResult asyncResult)
+    parameters:
+    - id: asyncResult
+      type: System.IAsyncResult
+      description: >-
+        The reference to the pending asynchronous send
+
+        request
+    return:
+      type: Dropbox.Api.FileRequests.FileRequest
+      description: The response to the send request
+    content.vb: Public Function EndCreate(asyncResult As System.IAsyncResult) As FileRequest
+  overload: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndCreate*
+  exceptions:
+  - type: Dropbox.Api.ApiException`1
+    commentId: T:Dropbox.Api.ApiException`1
+    description: >-
+      Thrown if there is an error
+
+      processing the request; This will contain a <xref href="Dropbox.Api.FileRequests.CreateFileRequestError" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.DeleteAsync(Dropbox.Api.FileRequests.DeleteFileRequestArgs)
+  commentId: M:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.DeleteAsync(Dropbox.Api.FileRequests.DeleteFileRequestArgs)
+  id: DeleteAsync(Dropbox.Api.FileRequests.DeleteFileRequestArgs)
+  parent: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: DeleteAsync(DeleteFileRequestArgs)
+  nameWithType: FileRequestsUserRoutes.DeleteAsync(DeleteFileRequestArgs)
+  fullName: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.DeleteAsync(Dropbox.Api.FileRequests.DeleteFileRequestArgs)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: DeleteAsync
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+    startLine: 209
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests.Routes
+  summary: "\n<p>Delete a batch of closed file requests.</p>\n"
+  example: []
+  syntax:
+    content: public System.Threading.Tasks.Task<DeleteFileRequestsResult> DeleteAsync(DeleteFileRequestArgs deleteFileRequestArgs)
+    parameters:
+    - id: deleteFileRequestArgs
+      type: Dropbox.Api.FileRequests.DeleteFileRequestArgs
+      description: The request parameters
+    return:
+      type: System.Threading.Tasks.Task{Dropbox.Api.FileRequests.DeleteFileRequestsResult}
+      description: >-
+        The task that represents the asynchronous send operation. The TResult
+
+        parameter contains the response from the server.
+    content.vb: Public Function DeleteAsync(deleteFileRequestArgs As DeleteFileRequestArgs) As System.Threading.Tasks.Task(Of DeleteFileRequestsResult)
+  overload: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.DeleteAsync*
+  exceptions:
+  - type: Dropbox.Api.ApiException`1
+    commentId: T:Dropbox.Api.ApiException`1
+    description: >-
+      Thrown if there is an error
+
+      processing the request; This will contain a <xref href="Dropbox.Api.FileRequests.DeleteFileRequestError" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginDelete(Dropbox.Api.FileRequests.DeleteFileRequestArgs,System.AsyncCallback,System.Object)
+  commentId: M:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginDelete(Dropbox.Api.FileRequests.DeleteFileRequestArgs,System.AsyncCallback,System.Object)
+  id: BeginDelete(Dropbox.Api.FileRequests.DeleteFileRequestArgs,System.AsyncCallback,System.Object)
+  parent: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: BeginDelete(DeleteFileRequestArgs, System.AsyncCallback, Object)
+  nameWithType: FileRequestsUserRoutes.BeginDelete(DeleteFileRequestArgs, System.AsyncCallback, Object)
+  fullName: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginDelete(Dropbox.Api.FileRequests.DeleteFileRequestArgs, System.AsyncCallback, System.Object)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: BeginDelete
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+    startLine: 223
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests.Routes
+  summary: "\n<p>Begins an asynchronous send to the delete route.</p>\n"
+  example: []
+  syntax:
+    content: public System.IAsyncResult BeginDelete(DeleteFileRequestArgs deleteFileRequestArgs, System.AsyncCallback callback, object state = null)
+    parameters:
+    - id: deleteFileRequestArgs
+      type: Dropbox.Api.FileRequests.DeleteFileRequestArgs
+      description: The request parameters.
+    - id: callback
+      type: System.AsyncCallback
+      description: >-
+        The method to be called when the asynchronous send is
+
+        completed.
+    - id: state
+      type: System.Object
+      description: >-
+        A user provided object that distinguished this send from other
+
+        send requests.
+    return:
+      type: System.IAsyncResult
+      description: An object that represents the asynchronous send request.
+    content.vb: Public Function BeginDelete(deleteFileRequestArgs As DeleteFileRequestArgs, callback As System.AsyncCallback, state As Object = Nothing) As System.IAsyncResult
+  overload: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginDelete*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.DeleteAsync(System.Collections.Generic.IEnumerable{System.String})
+  commentId: M:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.DeleteAsync(System.Collections.Generic.IEnumerable{System.String})
+  id: DeleteAsync(System.Collections.Generic.IEnumerable{System.String})
+  parent: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: DeleteAsync(System.Collections.Generic.IEnumerable<String>)
+  nameWithType: FileRequestsUserRoutes.DeleteAsync(System.Collections.Generic.IEnumerable<String>)
+  fullName: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.DeleteAsync(System.Collections.Generic.IEnumerable<System.String>)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: DeleteAsync
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+    startLine: 239
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests.Routes
+  summary: "\n<p>Delete a batch of closed file requests.</p>\n"
+  example: []
+  syntax:
+    content: public System.Threading.Tasks.Task<DeleteFileRequestsResult> DeleteAsync(System.Collections.Generic.IEnumerable<string> ids)
+    parameters:
+    - id: ids
+      type: System.Collections.Generic.IEnumerable{System.String}
+      description: List IDs of the file requests to delete.
+    return:
+      type: System.Threading.Tasks.Task{Dropbox.Api.FileRequests.DeleteFileRequestsResult}
+      description: >-
+        The task that represents the asynchronous send operation. The TResult
+
+        parameter contains the response from the server.
+    content.vb: Public Function DeleteAsync(ids As System.Collections.Generic.IEnumerable(Of String)) As System.Threading.Tasks.Task(Of DeleteFileRequestsResult)
+  overload: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.DeleteAsync*
+  exceptions:
+  - type: Dropbox.Api.ApiException`1
+    commentId: T:Dropbox.Api.ApiException`1
+    description: >-
+      Thrown if there is an error
+
+      processing the request; This will contain a <xref href="Dropbox.Api.FileRequests.DeleteFileRequestError" data-throw-if-not-resolved="false"></xref>.
+  nameWithType.vb: FileRequestsUserRoutes.DeleteAsync(System.Collections.Generic.IEnumerable(Of String))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.DeleteAsync(System.Collections.Generic.IEnumerable(Of System.String))
+  name.vb: DeleteAsync(System.Collections.Generic.IEnumerable(Of String))
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginDelete(System.Collections.Generic.IEnumerable{System.String},System.AsyncCallback,System.Object)
+  commentId: M:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginDelete(System.Collections.Generic.IEnumerable{System.String},System.AsyncCallback,System.Object)
+  id: BeginDelete(System.Collections.Generic.IEnumerable{System.String},System.AsyncCallback,System.Object)
+  parent: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: BeginDelete(System.Collections.Generic.IEnumerable<String>, System.AsyncCallback, Object)
+  nameWithType: FileRequestsUserRoutes.BeginDelete(System.Collections.Generic.IEnumerable<String>, System.AsyncCallback, Object)
+  fullName: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginDelete(System.Collections.Generic.IEnumerable<System.String>, System.AsyncCallback, System.Object)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: BeginDelete
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+    startLine: 255
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests.Routes
+  summary: "\n<p>Begins an asynchronous send to the delete route.</p>\n"
+  example: []
+  syntax:
+    content: public System.IAsyncResult BeginDelete(System.Collections.Generic.IEnumerable<string> ids, System.AsyncCallback callback, object callbackState = null)
+    parameters:
+    - id: ids
+      type: System.Collections.Generic.IEnumerable{System.String}
+      description: List IDs of the file requests to delete.
+    - id: callback
+      type: System.AsyncCallback
+      description: >-
+        The method to be called when the asynchronous send is
+
+        completed.
+    - id: callbackState
+      type: System.Object
+      description: >-
+        A user provided object that distinguished this send
+
+        from other send requests.
+    return:
+      type: System.IAsyncResult
+      description: An object that represents the asynchronous send request.
+    content.vb: Public Function BeginDelete(ids As System.Collections.Generic.IEnumerable(Of String), callback As System.AsyncCallback, callbackState As Object = Nothing) As System.IAsyncResult
+  overload: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginDelete*
+  nameWithType.vb: FileRequestsUserRoutes.BeginDelete(System.Collections.Generic.IEnumerable(Of String), System.AsyncCallback, Object)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginDelete(System.Collections.Generic.IEnumerable(Of System.String), System.AsyncCallback, System.Object)
+  name.vb: BeginDelete(System.Collections.Generic.IEnumerable(Of String), System.AsyncCallback, Object)
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndDelete(System.IAsyncResult)
+  commentId: M:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndDelete(System.IAsyncResult)
+  id: EndDelete(System.IAsyncResult)
+  parent: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: EndDelete(System.IAsyncResult)
+  nameWithType: FileRequestsUserRoutes.EndDelete(System.IAsyncResult)
+  fullName: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndDelete(System.IAsyncResult)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: EndDelete
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+    startLine: 274
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests.Routes
+  summary: "\n<p>Waits for the pending asynchronous send to the delete route to\ncomplete</p>\n"
+  example: []
+  syntax:
+    content: public DeleteFileRequestsResult EndDelete(System.IAsyncResult asyncResult)
+    parameters:
+    - id: asyncResult
+      type: System.IAsyncResult
+      description: >-
+        The reference to the pending asynchronous send
+
+        request
+    return:
+      type: Dropbox.Api.FileRequests.DeleteFileRequestsResult
+      description: The response to the send request
+    content.vb: Public Function EndDelete(asyncResult As System.IAsyncResult) As DeleteFileRequestsResult
+  overload: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndDelete*
+  exceptions:
+  - type: Dropbox.Api.ApiException`1
+    commentId: T:Dropbox.Api.ApiException`1
+    description: >-
+      Thrown if there is an error
+
+      processing the request; This will contain a <xref href="Dropbox.Api.FileRequests.DeleteFileRequestError" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.DeleteAllClosedAsync
+  commentId: M:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.DeleteAllClosedAsync
+  id: DeleteAllClosedAsync
+  parent: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: DeleteAllClosedAsync()
+  nameWithType: FileRequestsUserRoutes.DeleteAllClosedAsync()
+  fullName: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.DeleteAllClosedAsync()
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: DeleteAllClosedAsync
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+    startLine: 293
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests.Routes
+  summary: "\n<p>Delete all closed file requests owned by this user.</p>\n"
+  example: []
+  syntax:
+    content: public System.Threading.Tasks.Task<DeleteAllClosedFileRequestsResult> DeleteAllClosedAsync()
+    return:
+      type: System.Threading.Tasks.Task{Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsResult}
+      description: >-
+        The task that represents the asynchronous send operation. The TResult
+
+        parameter contains the response from the server.
+    content.vb: Public Function DeleteAllClosedAsync As System.Threading.Tasks.Task(Of DeleteAllClosedFileRequestsResult)
+  overload: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.DeleteAllClosedAsync*
+  exceptions:
+  - type: Dropbox.Api.ApiException`1
+    commentId: T:Dropbox.Api.ApiException`1
+    description: >-
+      Thrown if there is an error
+
+      processing the request; This will contain a <xref href="Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginDeleteAllClosed(System.AsyncCallback,System.Object)
+  commentId: M:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginDeleteAllClosed(System.AsyncCallback,System.Object)
+  id: BeginDeleteAllClosed(System.AsyncCallback,System.Object)
+  parent: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: BeginDeleteAllClosed(System.AsyncCallback, Object)
+  nameWithType: FileRequestsUserRoutes.BeginDeleteAllClosed(System.AsyncCallback, Object)
+  fullName: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginDeleteAllClosed(System.AsyncCallback, System.Object)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: BeginDeleteAllClosed
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+    startLine: 306
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests.Routes
+  summary: "\n<p>Begins an asynchronous send to the delete all closed route.</p>\n"
+  example: []
+  syntax:
+    content: public System.IAsyncResult BeginDeleteAllClosed(System.AsyncCallback callback, object state = null)
+    parameters:
+    - id: callback
+      type: System.AsyncCallback
+      description: >-
+        The method to be called when the asynchronous send is
+
+        completed.
+    - id: state
+      type: System.Object
+      description: >-
+        A user provided object that distinguished this send from other
+
+        send requests.
+    return:
+      type: System.IAsyncResult
+      description: An object that represents the asynchronous send request.
+    content.vb: Public Function BeginDeleteAllClosed(callback As System.AsyncCallback, state As Object = Nothing) As System.IAsyncResult
+  overload: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginDeleteAllClosed*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndDeleteAllClosed(System.IAsyncResult)
+  commentId: M:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndDeleteAllClosed(System.IAsyncResult)
+  id: EndDeleteAllClosed(System.IAsyncResult)
+  parent: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: EndDeleteAllClosed(System.IAsyncResult)
+  nameWithType: FileRequestsUserRoutes.EndDeleteAllClosed(System.IAsyncResult)
+  fullName: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndDeleteAllClosed(System.IAsyncResult)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: EndDeleteAllClosed
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+    startLine: 323
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests.Routes
+  summary: "\n<p>Waits for the pending asynchronous send to the delete all closed route to\ncomplete</p>\n"
+  example: []
+  syntax:
+    content: public DeleteAllClosedFileRequestsResult EndDeleteAllClosed(System.IAsyncResult asyncResult)
+    parameters:
+    - id: asyncResult
+      type: System.IAsyncResult
+      description: >-
+        The reference to the pending asynchronous send
+
+        request
+    return:
+      type: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsResult
+      description: The response to the send request
+    content.vb: Public Function EndDeleteAllClosed(asyncResult As System.IAsyncResult) As DeleteAllClosedFileRequestsResult
+  overload: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndDeleteAllClosed*
+  exceptions:
+  - type: Dropbox.Api.ApiException`1
+    commentId: T:Dropbox.Api.ApiException`1
+    description: >-
+      Thrown if there is an error
+
+      processing the request; This will contain a <xref href="Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.GetAsync(Dropbox.Api.FileRequests.GetFileRequestArgs)
+  commentId: M:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.GetAsync(Dropbox.Api.FileRequests.GetFileRequestArgs)
+  id: GetAsync(Dropbox.Api.FileRequests.GetFileRequestArgs)
+  parent: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: GetAsync(GetFileRequestArgs)
+  nameWithType: FileRequestsUserRoutes.GetAsync(GetFileRequestArgs)
+  fullName: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.GetAsync(Dropbox.Api.FileRequests.GetFileRequestArgs)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GetAsync
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+    startLine: 343
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests.Routes
+  summary: "\n<p>Returns the specified file request.</p>\n"
+  example: []
+  syntax:
+    content: public System.Threading.Tasks.Task<FileRequest> GetAsync(GetFileRequestArgs getFileRequestArgs)
+    parameters:
+    - id: getFileRequestArgs
+      type: Dropbox.Api.FileRequests.GetFileRequestArgs
+      description: The request parameters
+    return:
+      type: System.Threading.Tasks.Task{Dropbox.Api.FileRequests.FileRequest}
+      description: >-
+        The task that represents the asynchronous send operation. The TResult
+
+        parameter contains the response from the server.
+    content.vb: Public Function GetAsync(getFileRequestArgs As GetFileRequestArgs) As System.Threading.Tasks.Task(Of FileRequest)
+  overload: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.GetAsync*
+  exceptions:
+  - type: Dropbox.Api.ApiException`1
+    commentId: T:Dropbox.Api.ApiException`1
+    description: >-
+      Thrown if there is an error
+
+      processing the request; This will contain a <xref href="Dropbox.Api.FileRequests.GetFileRequestError" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginGet(Dropbox.Api.FileRequests.GetFileRequestArgs,System.AsyncCallback,System.Object)
+  commentId: M:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginGet(Dropbox.Api.FileRequests.GetFileRequestArgs,System.AsyncCallback,System.Object)
+  id: BeginGet(Dropbox.Api.FileRequests.GetFileRequestArgs,System.AsyncCallback,System.Object)
+  parent: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: BeginGet(GetFileRequestArgs, System.AsyncCallback, Object)
+  nameWithType: FileRequestsUserRoutes.BeginGet(GetFileRequestArgs, System.AsyncCallback, Object)
+  fullName: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginGet(Dropbox.Api.FileRequests.GetFileRequestArgs, System.AsyncCallback, System.Object)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: BeginGet
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+    startLine: 357
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests.Routes
+  summary: "\n<p>Begins an asynchronous send to the get route.</p>\n"
+  example: []
+  syntax:
+    content: public System.IAsyncResult BeginGet(GetFileRequestArgs getFileRequestArgs, System.AsyncCallback callback, object state = null)
+    parameters:
+    - id: getFileRequestArgs
+      type: Dropbox.Api.FileRequests.GetFileRequestArgs
+      description: The request parameters.
+    - id: callback
+      type: System.AsyncCallback
+      description: >-
+        The method to be called when the asynchronous send is
+
+        completed.
+    - id: state
+      type: System.Object
+      description: >-
+        A user provided object that distinguished this send from other
+
+        send requests.
+    return:
+      type: System.IAsyncResult
+      description: An object that represents the asynchronous send request.
+    content.vb: Public Function BeginGet(getFileRequestArgs As GetFileRequestArgs, callback As System.AsyncCallback, state As Object = Nothing) As System.IAsyncResult
+  overload: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginGet*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.GetAsync(System.String)
+  commentId: M:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.GetAsync(System.String)
+  id: GetAsync(System.String)
+  parent: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: GetAsync(String)
+  nameWithType: FileRequestsUserRoutes.GetAsync(String)
+  fullName: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.GetAsync(System.String)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GetAsync
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+    startLine: 373
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests.Routes
+  summary: "\n<p>Returns the specified file request.</p>\n"
+  example: []
+  syntax:
+    content: public System.Threading.Tasks.Task<FileRequest> GetAsync(string id)
+    parameters:
+    - id: id
+      type: System.String
+      description: The ID of the file request to retrieve.
+    return:
+      type: System.Threading.Tasks.Task{Dropbox.Api.FileRequests.FileRequest}
+      description: >-
+        The task that represents the asynchronous send operation. The TResult
+
+        parameter contains the response from the server.
+    content.vb: Public Function GetAsync(id As String) As System.Threading.Tasks.Task(Of FileRequest)
+  overload: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.GetAsync*
+  exceptions:
+  - type: Dropbox.Api.ApiException`1
+    commentId: T:Dropbox.Api.ApiException`1
+    description: >-
+      Thrown if there is an error
+
+      processing the request; This will contain a <xref href="Dropbox.Api.FileRequests.GetFileRequestError" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginGet(System.String,System.AsyncCallback,System.Object)
+  commentId: M:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginGet(System.String,System.AsyncCallback,System.Object)
+  id: BeginGet(System.String,System.AsyncCallback,System.Object)
+  parent: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: BeginGet(String, System.AsyncCallback, Object)
+  nameWithType: FileRequestsUserRoutes.BeginGet(String, System.AsyncCallback, Object)
+  fullName: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginGet(System.String, System.AsyncCallback, System.Object)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: BeginGet
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+    startLine: 389
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests.Routes
+  summary: "\n<p>Begins an asynchronous send to the get route.</p>\n"
+  example: []
+  syntax:
+    content: public System.IAsyncResult BeginGet(string id, System.AsyncCallback callback, object callbackState = null)
+    parameters:
+    - id: id
+      type: System.String
+      description: The ID of the file request to retrieve.
+    - id: callback
+      type: System.AsyncCallback
+      description: >-
+        The method to be called when the asynchronous send is
+
+        completed.
+    - id: callbackState
+      type: System.Object
+      description: >-
+        A user provided object that distinguished this send
+
+        from other send requests.
+    return:
+      type: System.IAsyncResult
+      description: An object that represents the asynchronous send request.
+    content.vb: Public Function BeginGet(id As String, callback As System.AsyncCallback, callbackState As Object = Nothing) As System.IAsyncResult
+  overload: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginGet*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndGet(System.IAsyncResult)
+  commentId: M:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndGet(System.IAsyncResult)
+  id: EndGet(System.IAsyncResult)
+  parent: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: EndGet(System.IAsyncResult)
+  nameWithType: FileRequestsUserRoutes.EndGet(System.IAsyncResult)
+  fullName: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndGet(System.IAsyncResult)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: EndGet
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+    startLine: 407
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests.Routes
+  summary: "\n<p>Waits for the pending asynchronous send to the get route to complete</p>\n"
+  example: []
+  syntax:
+    content: public FileRequest EndGet(System.IAsyncResult asyncResult)
+    parameters:
+    - id: asyncResult
+      type: System.IAsyncResult
+      description: >-
+        The reference to the pending asynchronous send
+
+        request
+    return:
+      type: Dropbox.Api.FileRequests.FileRequest
+      description: The response to the send request
+    content.vb: Public Function EndGet(asyncResult As System.IAsyncResult) As FileRequest
+  overload: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndGet*
+  exceptions:
+  - type: Dropbox.Api.ApiException`1
+    commentId: T:Dropbox.Api.ApiException`1
+    description: >-
+      Thrown if there is an error
+
+      processing the request; This will contain a <xref href="Dropbox.Api.FileRequests.GetFileRequestError" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListV2Async(Dropbox.Api.FileRequests.ListFileRequestsArg)
+  commentId: M:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListV2Async(Dropbox.Api.FileRequests.ListFileRequestsArg)
+  id: ListV2Async(Dropbox.Api.FileRequests.ListFileRequestsArg)
+  parent: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: ListV2Async(ListFileRequestsArg)
+  nameWithType: FileRequestsUserRoutes.ListV2Async(ListFileRequestsArg)
+  fullName: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListV2Async(Dropbox.Api.FileRequests.ListFileRequestsArg)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ListV2Async
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+    startLine: 429
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests.Routes
+  summary: "\n<p>Returns a list of file requests owned by this user. For apps with the app\nfolder permission, this will only return file requests with destinations in the app\nfolder.</p>\n"
+  example: []
+  syntax:
+    content: public System.Threading.Tasks.Task<ListFileRequestsV2Result> ListV2Async(ListFileRequestsArg listFileRequestsArg)
+    parameters:
+    - id: listFileRequestsArg
+      type: Dropbox.Api.FileRequests.ListFileRequestsArg
+      description: The request parameters
+    return:
+      type: System.Threading.Tasks.Task{Dropbox.Api.FileRequests.ListFileRequestsV2Result}
+      description: >-
+        The task that represents the asynchronous send operation. The TResult
+
+        parameter contains the response from the server.
+    content.vb: Public Function ListV2Async(listFileRequestsArg As ListFileRequestsArg) As System.Threading.Tasks.Task(Of ListFileRequestsV2Result)
+  overload: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListV2Async*
+  exceptions:
+  - type: Dropbox.Api.ApiException`1
+    commentId: T:Dropbox.Api.ApiException`1
+    description: >-
+      Thrown if there is an error
+
+      processing the request; This will contain a <xref href="Dropbox.Api.FileRequests.ListFileRequestsError" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginListV2(Dropbox.Api.FileRequests.ListFileRequestsArg,System.AsyncCallback,System.Object)
+  commentId: M:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginListV2(Dropbox.Api.FileRequests.ListFileRequestsArg,System.AsyncCallback,System.Object)
+  id: BeginListV2(Dropbox.Api.FileRequests.ListFileRequestsArg,System.AsyncCallback,System.Object)
+  parent: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: BeginListV2(ListFileRequestsArg, System.AsyncCallback, Object)
+  nameWithType: FileRequestsUserRoutes.BeginListV2(ListFileRequestsArg, System.AsyncCallback, Object)
+  fullName: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginListV2(Dropbox.Api.FileRequests.ListFileRequestsArg, System.AsyncCallback, System.Object)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: BeginListV2
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+    startLine: 443
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests.Routes
+  summary: "\n<p>Begins an asynchronous send to the list route.</p>\n"
+  example: []
+  syntax:
+    content: public System.IAsyncResult BeginListV2(ListFileRequestsArg listFileRequestsArg, System.AsyncCallback callback, object state = null)
+    parameters:
+    - id: listFileRequestsArg
+      type: Dropbox.Api.FileRequests.ListFileRequestsArg
+      description: The request parameters.
+    - id: callback
+      type: System.AsyncCallback
+      description: >-
+        The method to be called when the asynchronous send is
+
+        completed.
+    - id: state
+      type: System.Object
+      description: >-
+        A user provided object that distinguished this send from other
+
+        send requests.
+    return:
+      type: System.IAsyncResult
+      description: An object that represents the asynchronous send request.
+    content.vb: Public Function BeginListV2(listFileRequestsArg As ListFileRequestsArg, callback As System.AsyncCallback, state As Object = Nothing) As System.IAsyncResult
+  overload: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginListV2*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListV2Async(System.UInt64)
+  commentId: M:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListV2Async(System.UInt64)
+  id: ListV2Async(System.UInt64)
+  parent: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: ListV2Async(UInt64)
+  nameWithType: FileRequestsUserRoutes.ListV2Async(UInt64)
+  fullName: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListV2Async(System.UInt64)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ListV2Async
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+    startLine: 462
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests.Routes
+  summary: "\n<p>Returns a list of file requests owned by this user. For apps with the app\nfolder permission, this will only return file requests with destinations in the app\nfolder.</p>\n"
+  example: []
+  syntax:
+    content: public System.Threading.Tasks.Task<ListFileRequestsV2Result> ListV2Async(ulong limit = null)
+    parameters:
+    - id: limit
+      type: System.UInt64
+      description: >-
+        The maximum number of file requests that should be returned per
+
+        request.
+    return:
+      type: System.Threading.Tasks.Task{Dropbox.Api.FileRequests.ListFileRequestsV2Result}
+      description: >-
+        The task that represents the asynchronous send operation. The TResult
+
+        parameter contains the response from the server.
+    content.vb: Public Function ListV2Async(limit As ULong = Nothing) As System.Threading.Tasks.Task(Of ListFileRequestsV2Result)
+  overload: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListV2Async*
+  exceptions:
+  - type: Dropbox.Api.ApiException`1
+    commentId: T:Dropbox.Api.ApiException`1
+    description: >-
+      Thrown if there is an error
+
+      processing the request; This will contain a <xref href="Dropbox.Api.FileRequests.ListFileRequestsError" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginListV2(System.UInt64,System.AsyncCallback,System.Object)
+  commentId: M:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginListV2(System.UInt64,System.AsyncCallback,System.Object)
+  id: BeginListV2(System.UInt64,System.AsyncCallback,System.Object)
+  parent: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: BeginListV2(UInt64, System.AsyncCallback, Object)
+  nameWithType: FileRequestsUserRoutes.BeginListV2(UInt64, System.AsyncCallback, Object)
+  fullName: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginListV2(System.UInt64, System.AsyncCallback, System.Object)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: BeginListV2
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+    startLine: 479
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests.Routes
+  summary: "\n<p>Begins an asynchronous send to the list route.</p>\n"
+  example: []
+  syntax:
+    content: public System.IAsyncResult BeginListV2(ulong limit = null, System.AsyncCallback callback = null, object callbackState = null)
+    parameters:
+    - id: limit
+      type: System.UInt64
+      description: >-
+        The maximum number of file requests that should be returned per
+
+        request.
+    - id: callback
+      type: System.AsyncCallback
+      description: >-
+        The method to be called when the asynchronous send is
+
+        completed.
+    - id: callbackState
+      type: System.Object
+      description: >-
+        A user provided object that distinguished this send
+
+        from other send requests.
+    return:
+      type: System.IAsyncResult
+      description: An object that represents the asynchronous send request.
+    content.vb: Public Function BeginListV2(limit As ULong = Nothing, callback As System.AsyncCallback = Nothing, callbackState As Object = Nothing) As System.IAsyncResult
+  overload: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginListV2*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndListV2(System.IAsyncResult)
+  commentId: M:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndListV2(System.IAsyncResult)
+  id: EndListV2(System.IAsyncResult)
+  parent: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: EndListV2(System.IAsyncResult)
+  nameWithType: FileRequestsUserRoutes.EndListV2(System.IAsyncResult)
+  fullName: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndListV2(System.IAsyncResult)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: EndListV2
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+    startLine: 497
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests.Routes
+  summary: "\n<p>Waits for the pending asynchronous send to the list route to complete</p>\n"
+  example: []
+  syntax:
+    content: public ListFileRequestsV2Result EndListV2(System.IAsyncResult asyncResult)
+    parameters:
+    - id: asyncResult
+      type: System.IAsyncResult
+      description: >-
+        The reference to the pending asynchronous send
+
+        request
+    return:
+      type: Dropbox.Api.FileRequests.ListFileRequestsV2Result
+      description: The response to the send request
+    content.vb: Public Function EndListV2(asyncResult As System.IAsyncResult) As ListFileRequestsV2Result
+  overload: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndListV2*
+  exceptions:
+  - type: Dropbox.Api.ApiException`1
+    commentId: T:Dropbox.Api.ApiException`1
+    description: >-
+      Thrown if there is an error
+
+      processing the request; This will contain a <xref href="Dropbox.Api.FileRequests.ListFileRequestsError" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListAsync
+  commentId: M:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListAsync
+  id: ListAsync
+  parent: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: ListAsync()
+  nameWithType: FileRequestsUserRoutes.ListAsync()
+  fullName: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListAsync()
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ListAsync
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+    startLine: 518
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests.Routes
+  summary: "\n<p>Returns a list of file requests owned by this user. For apps with the app\nfolder permission, this will only return file requests with destinations in the app\nfolder.</p>\n"
+  example: []
+  syntax:
+    content: public System.Threading.Tasks.Task<ListFileRequestsResult> ListAsync()
+    return:
+      type: System.Threading.Tasks.Task{Dropbox.Api.FileRequests.ListFileRequestsResult}
+      description: >-
+        The task that represents the asynchronous send operation. The TResult
+
+        parameter contains the response from the server.
+    content.vb: Public Function ListAsync As System.Threading.Tasks.Task(Of ListFileRequestsResult)
+  overload: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListAsync*
+  exceptions:
+  - type: Dropbox.Api.ApiException`1
+    commentId: T:Dropbox.Api.ApiException`1
+    description: >-
+      Thrown if there is an error
+
+      processing the request; This will contain a <xref href="Dropbox.Api.FileRequests.ListFileRequestsError" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginList(System.AsyncCallback,System.Object)
+  commentId: M:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginList(System.AsyncCallback,System.Object)
+  id: BeginList(System.AsyncCallback,System.Object)
+  parent: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: BeginList(System.AsyncCallback, Object)
+  nameWithType: FileRequestsUserRoutes.BeginList(System.AsyncCallback, Object)
+  fullName: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginList(System.AsyncCallback, System.Object)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: BeginList
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+    startLine: 531
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests.Routes
+  summary: "\n<p>Begins an asynchronous send to the list route.</p>\n"
+  example: []
+  syntax:
+    content: public System.IAsyncResult BeginList(System.AsyncCallback callback, object state = null)
+    parameters:
+    - id: callback
+      type: System.AsyncCallback
+      description: >-
+        The method to be called when the asynchronous send is
+
+        completed.
+    - id: state
+      type: System.Object
+      description: >-
+        A user provided object that distinguished this send from other
+
+        send requests.
+    return:
+      type: System.IAsyncResult
+      description: An object that represents the asynchronous send request.
+    content.vb: Public Function BeginList(callback As System.AsyncCallback, state As Object = Nothing) As System.IAsyncResult
+  overload: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginList*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndList(System.IAsyncResult)
+  commentId: M:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndList(System.IAsyncResult)
+  id: EndList(System.IAsyncResult)
+  parent: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: EndList(System.IAsyncResult)
+  nameWithType: FileRequestsUserRoutes.EndList(System.IAsyncResult)
+  fullName: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndList(System.IAsyncResult)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: EndList
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+    startLine: 547
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests.Routes
+  summary: "\n<p>Waits for the pending asynchronous send to the list route to complete</p>\n"
+  example: []
+  syntax:
+    content: public ListFileRequestsResult EndList(System.IAsyncResult asyncResult)
+    parameters:
+    - id: asyncResult
+      type: System.IAsyncResult
+      description: >-
+        The reference to the pending asynchronous send
+
+        request
+    return:
+      type: Dropbox.Api.FileRequests.ListFileRequestsResult
+      description: The response to the send request
+    content.vb: Public Function EndList(asyncResult As System.IAsyncResult) As ListFileRequestsResult
+  overload: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndList*
+  exceptions:
+  - type: Dropbox.Api.ApiException`1
+    commentId: T:Dropbox.Api.ApiException`1
+    description: >-
+      Thrown if there is an error
+
+      processing the request; This will contain a <xref href="Dropbox.Api.FileRequests.ListFileRequestsError" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListContinueAsync(Dropbox.Api.FileRequests.ListFileRequestsContinueArg)
+  commentId: M:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListContinueAsync(Dropbox.Api.FileRequests.ListFileRequestsContinueArg)
+  id: ListContinueAsync(Dropbox.Api.FileRequests.ListFileRequestsContinueArg)
+  parent: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: ListContinueAsync(ListFileRequestsContinueArg)
+  nameWithType: FileRequestsUserRoutes.ListContinueAsync(ListFileRequestsContinueArg)
+  fullName: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListContinueAsync(Dropbox.Api.FileRequests.ListFileRequestsContinueArg)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ListContinueAsync
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+    startLine: 574
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests.Routes
+  summary: "\n<p>Once a cursor has been retrieved from <xref href=\"Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListV2Async(Dropbox.Api.FileRequests.ListFileRequestsArg)\" data-throw-if-not-resolved=\"false\"></xref>, use\nthis to paginate through all file requests. The cursor must come from a previous\ncall to <xref href=\"Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListV2Async(Dropbox.Api.FileRequests.ListFileRequestsArg)\" data-throw-if-not-resolved=\"false\"></xref> or\n<xref href=\"Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListContinueAsync(Dropbox.Api.FileRequests.ListFileRequestsContinueArg)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+  example: []
+  syntax:
+    content: public System.Threading.Tasks.Task<ListFileRequestsV2Result> ListContinueAsync(ListFileRequestsContinueArg listFileRequestsContinueArg)
+    parameters:
+    - id: listFileRequestsContinueArg
+      type: Dropbox.Api.FileRequests.ListFileRequestsContinueArg
+      description: The request parameters
+    return:
+      type: System.Threading.Tasks.Task{Dropbox.Api.FileRequests.ListFileRequestsV2Result}
+      description: >-
+        The task that represents the asynchronous send operation. The TResult
+
+        parameter contains the response from the server.
+    content.vb: Public Function ListContinueAsync(listFileRequestsContinueArg As ListFileRequestsContinueArg) As System.Threading.Tasks.Task(Of ListFileRequestsV2Result)
+  overload: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListContinueAsync*
+  exceptions:
+  - type: Dropbox.Api.ApiException`1
+    commentId: T:Dropbox.Api.ApiException`1
+    description: >-
+      Thrown if there is an error
+
+      processing the request; This will contain a <xref href="Dropbox.Api.FileRequests.ListFileRequestsContinueError" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginListContinue(Dropbox.Api.FileRequests.ListFileRequestsContinueArg,System.AsyncCallback,System.Object)
+  commentId: M:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginListContinue(Dropbox.Api.FileRequests.ListFileRequestsContinueArg,System.AsyncCallback,System.Object)
+  id: BeginListContinue(Dropbox.Api.FileRequests.ListFileRequestsContinueArg,System.AsyncCallback,System.Object)
+  parent: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: BeginListContinue(ListFileRequestsContinueArg, System.AsyncCallback, Object)
+  nameWithType: FileRequestsUserRoutes.BeginListContinue(ListFileRequestsContinueArg, System.AsyncCallback, Object)
+  fullName: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginListContinue(Dropbox.Api.FileRequests.ListFileRequestsContinueArg, System.AsyncCallback, System.Object)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: BeginListContinue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+    startLine: 588
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests.Routes
+  summary: "\n<p>Begins an asynchronous send to the list continue route.</p>\n"
+  example: []
+  syntax:
+    content: public System.IAsyncResult BeginListContinue(ListFileRequestsContinueArg listFileRequestsContinueArg, System.AsyncCallback callback, object state = null)
+    parameters:
+    - id: listFileRequestsContinueArg
+      type: Dropbox.Api.FileRequests.ListFileRequestsContinueArg
+      description: The request parameters.
+    - id: callback
+      type: System.AsyncCallback
+      description: >-
+        The method to be called when the asynchronous send is
+
+        completed.
+    - id: state
+      type: System.Object
+      description: >-
+        A user provided object that distinguished this send from other
+
+        send requests.
+    return:
+      type: System.IAsyncResult
+      description: An object that represents the asynchronous send request.
+    content.vb: Public Function BeginListContinue(listFileRequestsContinueArg As ListFileRequestsContinueArg, callback As System.AsyncCallback, state As Object = Nothing) As System.IAsyncResult
+  overload: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginListContinue*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListContinueAsync(System.String)
+  commentId: M:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListContinueAsync(System.String)
+  id: ListContinueAsync(System.String)
+  parent: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: ListContinueAsync(String)
+  nameWithType: FileRequestsUserRoutes.ListContinueAsync(String)
+  fullName: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListContinueAsync(System.String)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ListContinueAsync
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+    startLine: 612
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests.Routes
+  summary: "\n<p>Once a cursor has been retrieved from <xref href=\"Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListV2Async(Dropbox.Api.FileRequests.ListFileRequestsArg)\" data-throw-if-not-resolved=\"false\"></xref>, use\nthis to paginate through all file requests. The cursor must come from a previous\ncall to <xref href=\"Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListV2Async(Dropbox.Api.FileRequests.ListFileRequestsArg)\" data-throw-if-not-resolved=\"false\"></xref> or\n<xref href=\"Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListContinueAsync(Dropbox.Api.FileRequests.ListFileRequestsContinueArg)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+  example: []
+  syntax:
+    content: public System.Threading.Tasks.Task<ListFileRequestsV2Result> ListContinueAsync(string cursor)
+    parameters:
+    - id: cursor
+      type: System.String
+      description: >-
+        The cursor returned by the previous API call specified in the
+
+        endpoint description.
+    return:
+      type: System.Threading.Tasks.Task{Dropbox.Api.FileRequests.ListFileRequestsV2Result}
+      description: >-
+        The task that represents the asynchronous send operation. The TResult
+
+        parameter contains the response from the server.
+    content.vb: Public Function ListContinueAsync(cursor As String) As System.Threading.Tasks.Task(Of ListFileRequestsV2Result)
+  overload: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListContinueAsync*
+  exceptions:
+  - type: Dropbox.Api.ApiException`1
+    commentId: T:Dropbox.Api.ApiException`1
+    description: >-
+      Thrown if there is an error
+
+      processing the request; This will contain a <xref href="Dropbox.Api.FileRequests.ListFileRequestsContinueError" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginListContinue(System.String,System.AsyncCallback,System.Object)
+  commentId: M:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginListContinue(System.String,System.AsyncCallback,System.Object)
+  id: BeginListContinue(System.String,System.AsyncCallback,System.Object)
+  parent: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: BeginListContinue(String, System.AsyncCallback, Object)
+  nameWithType: FileRequestsUserRoutes.BeginListContinue(String, System.AsyncCallback, Object)
+  fullName: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginListContinue(System.String, System.AsyncCallback, System.Object)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: BeginListContinue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+    startLine: 629
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests.Routes
+  summary: "\n<p>Begins an asynchronous send to the list continue route.</p>\n"
+  example: []
+  syntax:
+    content: public System.IAsyncResult BeginListContinue(string cursor, System.AsyncCallback callback, object callbackState = null)
+    parameters:
+    - id: cursor
+      type: System.String
+      description: >-
+        The cursor returned by the previous API call specified in the
+
+        endpoint description.
+    - id: callback
+      type: System.AsyncCallback
+      description: >-
+        The method to be called when the asynchronous send is
+
+        completed.
+    - id: callbackState
+      type: System.Object
+      description: >-
+        A user provided object that distinguished this send
+
+        from other send requests.
+    return:
+      type: System.IAsyncResult
+      description: An object that represents the asynchronous send request.
+    content.vb: Public Function BeginListContinue(cursor As String, callback As System.AsyncCallback, callbackState As Object = Nothing) As System.IAsyncResult
+  overload: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginListContinue*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndListContinue(System.IAsyncResult)
+  commentId: M:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndListContinue(System.IAsyncResult)
+  id: EndListContinue(System.IAsyncResult)
+  parent: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: EndListContinue(System.IAsyncResult)
+  nameWithType: FileRequestsUserRoutes.EndListContinue(System.IAsyncResult)
+  fullName: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndListContinue(System.IAsyncResult)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: EndListContinue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+    startLine: 648
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests.Routes
+  summary: "\n<p>Waits for the pending asynchronous send to the list continue route to\ncomplete</p>\n"
+  example: []
+  syntax:
+    content: public ListFileRequestsV2Result EndListContinue(System.IAsyncResult asyncResult)
+    parameters:
+    - id: asyncResult
+      type: System.IAsyncResult
+      description: >-
+        The reference to the pending asynchronous send
+
+        request
+    return:
+      type: Dropbox.Api.FileRequests.ListFileRequestsV2Result
+      description: The response to the send request
+    content.vb: Public Function EndListContinue(asyncResult As System.IAsyncResult) As ListFileRequestsV2Result
+  overload: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndListContinue*
+  exceptions:
+  - type: Dropbox.Api.ApiException`1
+    commentId: T:Dropbox.Api.ApiException`1
+    description: >-
+      Thrown if there is an error
+
+      processing the request; This will contain a <xref href="Dropbox.Api.FileRequests.ListFileRequestsContinueError" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.UpdateAsync(Dropbox.Api.FileRequests.UpdateFileRequestArgs)
+  commentId: M:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.UpdateAsync(Dropbox.Api.FileRequests.UpdateFileRequestArgs)
+  id: UpdateAsync(Dropbox.Api.FileRequests.UpdateFileRequestArgs)
+  parent: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: UpdateAsync(UpdateFileRequestArgs)
+  nameWithType: FileRequestsUserRoutes.UpdateAsync(UpdateFileRequestArgs)
+  fullName: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.UpdateAsync(Dropbox.Api.FileRequests.UpdateFileRequestArgs)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: UpdateAsync
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+    startLine: 668
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests.Routes
+  summary: "\n<p>Update a file request.</p>\n"
+  example: []
+  syntax:
+    content: public System.Threading.Tasks.Task<FileRequest> UpdateAsync(UpdateFileRequestArgs updateFileRequestArgs)
+    parameters:
+    - id: updateFileRequestArgs
+      type: Dropbox.Api.FileRequests.UpdateFileRequestArgs
+      description: The request parameters
+    return:
+      type: System.Threading.Tasks.Task{Dropbox.Api.FileRequests.FileRequest}
+      description: >-
+        The task that represents the asynchronous send operation. The TResult
+
+        parameter contains the response from the server.
+    content.vb: Public Function UpdateAsync(updateFileRequestArgs As UpdateFileRequestArgs) As System.Threading.Tasks.Task(Of FileRequest)
+  overload: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.UpdateAsync*
+  exceptions:
+  - type: Dropbox.Api.ApiException`1
+    commentId: T:Dropbox.Api.ApiException`1
+    description: >-
+      Thrown if there is an error
+
+      processing the request; This will contain a <xref href="Dropbox.Api.FileRequests.UpdateFileRequestError" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginUpdate(Dropbox.Api.FileRequests.UpdateFileRequestArgs,System.AsyncCallback,System.Object)
+  commentId: M:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginUpdate(Dropbox.Api.FileRequests.UpdateFileRequestArgs,System.AsyncCallback,System.Object)
+  id: BeginUpdate(Dropbox.Api.FileRequests.UpdateFileRequestArgs,System.AsyncCallback,System.Object)
+  parent: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: BeginUpdate(UpdateFileRequestArgs, System.AsyncCallback, Object)
+  nameWithType: FileRequestsUserRoutes.BeginUpdate(UpdateFileRequestArgs, System.AsyncCallback, Object)
+  fullName: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginUpdate(Dropbox.Api.FileRequests.UpdateFileRequestArgs, System.AsyncCallback, System.Object)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: BeginUpdate
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+    startLine: 682
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests.Routes
+  summary: "\n<p>Begins an asynchronous send to the update route.</p>\n"
+  example: []
+  syntax:
+    content: public System.IAsyncResult BeginUpdate(UpdateFileRequestArgs updateFileRequestArgs, System.AsyncCallback callback, object state = null)
+    parameters:
+    - id: updateFileRequestArgs
+      type: Dropbox.Api.FileRequests.UpdateFileRequestArgs
+      description: The request parameters.
+    - id: callback
+      type: System.AsyncCallback
+      description: >-
+        The method to be called when the asynchronous send is
+
+        completed.
+    - id: state
+      type: System.Object
+      description: >-
+        A user provided object that distinguished this send from other
+
+        send requests.
+    return:
+      type: System.IAsyncResult
+      description: An object that represents the asynchronous send request.
+    content.vb: Public Function BeginUpdate(updateFileRequestArgs As UpdateFileRequestArgs, callback As System.AsyncCallback, state As Object = Nothing) As System.IAsyncResult
+  overload: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginUpdate*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.UpdateAsync(System.String,System.String,System.String,Dropbox.Api.FileRequests.UpdateFileRequestDeadline,System.Nullable{System.Boolean},System.String)
+  commentId: M:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.UpdateAsync(System.String,System.String,System.String,Dropbox.Api.FileRequests.UpdateFileRequestDeadline,System.Nullable{System.Boolean},System.String)
+  id: UpdateAsync(System.String,System.String,System.String,Dropbox.Api.FileRequests.UpdateFileRequestDeadline,System.Nullable{System.Boolean},System.String)
+  parent: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: UpdateAsync(String, String, String, UpdateFileRequestDeadline, Nullable<Boolean>, String)
+  nameWithType: FileRequestsUserRoutes.UpdateAsync(String, String, String, UpdateFileRequestDeadline, Nullable<Boolean>, String)
+  fullName: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.UpdateAsync(System.String, System.String, System.String, Dropbox.Api.FileRequests.UpdateFileRequestDeadline, System.Nullable<System.Boolean>, System.String)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: UpdateAsync
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+    startLine: 706
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests.Routes
+  summary: "\n<p>Update a file request.</p>\n"
+  example: []
+  syntax:
+    content: public System.Threading.Tasks.Task<FileRequest> UpdateAsync(string id, string title = null, string destination = null, UpdateFileRequestDeadline deadline = null, bool? open = null, string description = null)
+    parameters:
+    - id: id
+      type: System.String
+      description: The ID of the file request to update.
+    - id: title
+      type: System.String
+      description: The new title of the file request. Must not be empty.
+    - id: destination
+      type: System.String
+      description: >-
+        The new path of the folder in the Dropbox where uploaded
+
+        files will be sent. For apps with the app folder permission, this will be relative
+
+        to the app folder.
+    - id: deadline
+      type: Dropbox.Api.FileRequests.UpdateFileRequestDeadline
+      description: >-
+        The new deadline for the file request. Deadlines can only be
+
+        set by Professional and Business accounts.
+    - id: open
+      type: System.Nullable{System.Boolean}
+      description: Whether to set this file request as open or closed.
+    - id: description
+      type: System.String
+      description: The description of the file request.
+    return:
+      type: System.Threading.Tasks.Task{Dropbox.Api.FileRequests.FileRequest}
+      description: >-
+        The task that represents the asynchronous send operation. The TResult
+
+        parameter contains the response from the server.
+    content.vb: Public Function UpdateAsync(id As String, title As String = Nothing, destination As String = Nothing, deadline As UpdateFileRequestDeadline = Nothing, open As Boolean? = Nothing, description As String = Nothing) As System.Threading.Tasks.Task(Of FileRequest)
+  overload: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.UpdateAsync*
+  exceptions:
+  - type: Dropbox.Api.ApiException`1
+    commentId: T:Dropbox.Api.ApiException`1
+    description: >-
+      Thrown if there is an error
+
+      processing the request; This will contain a <xref href="Dropbox.Api.FileRequests.UpdateFileRequestError" data-throw-if-not-resolved="false"></xref>.
+  nameWithType.vb: FileRequestsUserRoutes.UpdateAsync(String, String, String, UpdateFileRequestDeadline, Nullable(Of Boolean), String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.UpdateAsync(System.String, System.String, System.String, Dropbox.Api.FileRequests.UpdateFileRequestDeadline, System.Nullable(Of System.Boolean), System.String)
+  name.vb: UpdateAsync(String, String, String, UpdateFileRequestDeadline, Nullable(Of Boolean), String)
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginUpdate(System.String,System.String,System.String,Dropbox.Api.FileRequests.UpdateFileRequestDeadline,System.Nullable{System.Boolean},System.String,System.AsyncCallback,System.Object)
+  commentId: M:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginUpdate(System.String,System.String,System.String,Dropbox.Api.FileRequests.UpdateFileRequestDeadline,System.Nullable{System.Boolean},System.String,System.AsyncCallback,System.Object)
+  id: BeginUpdate(System.String,System.String,System.String,Dropbox.Api.FileRequests.UpdateFileRequestDeadline,System.Nullable{System.Boolean},System.String,System.AsyncCallback,System.Object)
+  parent: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: BeginUpdate(String, String, String, UpdateFileRequestDeadline, Nullable<Boolean>, String, System.AsyncCallback, Object)
+  nameWithType: FileRequestsUserRoutes.BeginUpdate(String, String, String, UpdateFileRequestDeadline, Nullable<Boolean>, String, System.AsyncCallback, Object)
+  fullName: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginUpdate(System.String, System.String, System.String, Dropbox.Api.FileRequests.UpdateFileRequestDeadline, System.Nullable<System.Boolean>, System.String, System.AsyncCallback, System.Object)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: BeginUpdate
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+    startLine: 740
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests.Routes
+  summary: "\n<p>Begins an asynchronous send to the update route.</p>\n"
+  example: []
+  syntax:
+    content: public System.IAsyncResult BeginUpdate(string id, string title = null, string destination = null, UpdateFileRequestDeadline deadline = null, bool? open = null, string description = null, System.AsyncCallback callback = null, object callbackState = null)
+    parameters:
+    - id: id
+      type: System.String
+      description: The ID of the file request to update.
+    - id: title
+      type: System.String
+      description: The new title of the file request. Must not be empty.
+    - id: destination
+      type: System.String
+      description: >-
+        The new path of the folder in the Dropbox where uploaded
+
+        files will be sent. For apps with the app folder permission, this will be relative
+
+        to the app folder.
+    - id: deadline
+      type: Dropbox.Api.FileRequests.UpdateFileRequestDeadline
+      description: >-
+        The new deadline for the file request. Deadlines can only be
+
+        set by Professional and Business accounts.
+    - id: open
+      type: System.Nullable{System.Boolean}
+      description: Whether to set this file request as open or closed.
+    - id: description
+      type: System.String
+      description: The description of the file request.
+    - id: callback
+      type: System.AsyncCallback
+      description: >-
+        The method to be called when the asynchronous send is
+
+        completed.
+    - id: callbackState
+      type: System.Object
+      description: >-
+        A user provided object that distinguished this send
+
+        from other send requests.
+    return:
+      type: System.IAsyncResult
+      description: An object that represents the asynchronous send request.
+    content.vb: Public Function BeginUpdate(id As String, title As String = Nothing, destination As String = Nothing, deadline As UpdateFileRequestDeadline = Nothing, open As Boolean? = Nothing, description As String = Nothing, callback As System.AsyncCallback = Nothing, callbackState As Object = Nothing) As System.IAsyncResult
+  overload: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginUpdate*
+  nameWithType.vb: FileRequestsUserRoutes.BeginUpdate(String, String, String, UpdateFileRequestDeadline, Nullable(Of Boolean), String, System.AsyncCallback, Object)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginUpdate(System.String, System.String, System.String, Dropbox.Api.FileRequests.UpdateFileRequestDeadline, System.Nullable(Of System.Boolean), System.String, System.AsyncCallback, System.Object)
+  name.vb: BeginUpdate(String, String, String, UpdateFileRequestDeadline, Nullable(Of Boolean), String, System.AsyncCallback, Object)
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndUpdate(System.IAsyncResult)
+  commentId: M:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndUpdate(System.IAsyncResult)
+  id: EndUpdate(System.IAsyncResult)
+  parent: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: EndUpdate(System.IAsyncResult)
+  nameWithType: FileRequestsUserRoutes.EndUpdate(System.IAsyncResult)
+  fullName: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndUpdate(System.IAsyncResult)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: EndUpdate
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestsUserRoutes.cs
+    startLine: 769
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests.Routes
+  summary: "\n<p>Waits for the pending asynchronous send to the update route to\ncomplete</p>\n"
+  example: []
+  syntax:
+    content: public FileRequest EndUpdate(System.IAsyncResult asyncResult)
+    parameters:
+    - id: asyncResult
+      type: System.IAsyncResult
+      description: >-
+        The reference to the pending asynchronous send
+
+        request
+    return:
+      type: Dropbox.Api.FileRequests.FileRequest
+      description: The response to the send request
+    content.vb: Public Function EndUpdate(asyncResult As System.IAsyncResult) As FileRequest
+  overload: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndUpdate*
+  exceptions:
+  - type: Dropbox.Api.ApiException`1
+    commentId: T:Dropbox.Api.ApiException`1
+    description: >-
+      Thrown if there is an error
+
+      processing the request; This will contain a <xref href="Dropbox.Api.FileRequests.UpdateFileRequestError" data-throw-if-not-resolved="false"></xref>.
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Dropbox.Api.FileRequests
+  commentId: N:Dropbox.Api.FileRequests
+  name: Dropbox.Api.FileRequests
+  nameWithType: Dropbox.Api.FileRequests
+  fullName: Dropbox.Api.FileRequests
+- uid: Dropbox.Api.FileRequests.Routes
+  commentId: N:Dropbox.Api.FileRequests.Routes
+  name: Dropbox.Api.FileRequests.Routes
+  nameWithType: Dropbox.Api.FileRequests.Routes
+  fullName: Dropbox.Api.FileRequests.Routes
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.FileRequests.CountFileRequestsError
+  commentId: T:Dropbox.Api.FileRequests.CountFileRequestsError
+  parent: Dropbox.Api.FileRequests
+  name: CountFileRequestsError
+  nameWithType: CountFileRequestsError
+  fullName: Dropbox.Api.FileRequests.CountFileRequestsError
+- uid: Dropbox.Api.ApiException`1
+  commentId: T:Dropbox.Api.ApiException`1
+  name: ApiException<TError>
+  nameWithType: ApiException<TError>
+  fullName: Dropbox.Api.ApiException<TError>
+  nameWithType.vb: ApiException(Of TError)
+  fullName.vb: Dropbox.Api.ApiException(Of TError)
+  name.vb: ApiException(Of TError)
+  spec.csharp:
+  - uid: Dropbox.Api.ApiException`1
+    name: ApiException
+    nameWithType: ApiException
+    fullName: Dropbox.Api.ApiException
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TError
+    nameWithType: TError
+    fullName: TError
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Dropbox.Api.ApiException`1
+    name: ApiException
+    nameWithType: ApiException
+    fullName: Dropbox.Api.ApiException
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TError
+    nameWithType: TError
+    fullName: TError
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.CountAsync*
+  commentId: Overload:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.CountAsync
+  name: CountAsync
+  nameWithType: FileRequestsUserRoutes.CountAsync
+  fullName: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.CountAsync
+- uid: System.Threading.Tasks.Task{Dropbox.Api.FileRequests.CountFileRequestsResult}
+  commentId: '!:System.Threading.Tasks.Task{Dropbox.Api.FileRequests.CountFileRequestsResult}'
+  definition: System.Threading.Tasks.Task`1
+  name: System.Threading.Tasks.Task<CountFileRequestsResult>
+  nameWithType: System.Threading.Tasks.Task<CountFileRequestsResult>
+  fullName: System.Threading.Tasks.Task<Dropbox.Api.FileRequests.CountFileRequestsResult>
+  nameWithType.vb: System.Threading.Tasks.Task(Of CountFileRequestsResult)
+  fullName.vb: System.Threading.Tasks.Task(Of Dropbox.Api.FileRequests.CountFileRequestsResult)
+  name.vb: System.Threading.Tasks.Task(Of CountFileRequestsResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: System.Threading.Tasks.Task
+    nameWithType: System.Threading.Tasks.Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.FileRequests.CountFileRequestsResult
+    name: CountFileRequestsResult
+    nameWithType: CountFileRequestsResult
+    fullName: Dropbox.Api.FileRequests.CountFileRequestsResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: System.Threading.Tasks.Task
+    nameWithType: System.Threading.Tasks.Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.FileRequests.CountFileRequestsResult
+    name: CountFileRequestsResult
+    nameWithType: CountFileRequestsResult
+    fullName: Dropbox.Api.FileRequests.CountFileRequestsResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks.Task`1
+  isExternal: true
+  name: System.Threading.Tasks.Task<>
+  nameWithType: System.Threading.Tasks.Task<>
+  fullName: System.Threading.Tasks.Task<>
+  nameWithType.vb: System.Threading.Tasks.Task(Of )
+  fullName.vb: System.Threading.Tasks.Task(Of )
+  name.vb: System.Threading.Tasks.Task(Of )
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: System.Threading.Tasks.Task
+    nameWithType: System.Threading.Tasks.Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: System.Threading.Tasks.Task
+    nameWithType: System.Threading.Tasks.Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginCount*
+  commentId: Overload:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginCount
+  name: BeginCount
+  nameWithType: FileRequestsUserRoutes.BeginCount
+  fullName: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginCount
+- uid: System.AsyncCallback
+  isExternal: true
+  name: System.AsyncCallback
+  nameWithType: System.AsyncCallback
+  fullName: System.AsyncCallback
+- uid: System.IAsyncResult
+  isExternal: true
+  name: System.IAsyncResult
+  nameWithType: System.IAsyncResult
+  fullName: System.IAsyncResult
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndCount*
+  commentId: Overload:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndCount
+  name: EndCount
+  nameWithType: FileRequestsUserRoutes.EndCount
+  fullName: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndCount
+- uid: Dropbox.Api.FileRequests.CountFileRequestsResult
+  commentId: T:Dropbox.Api.FileRequests.CountFileRequestsResult
+  parent: Dropbox.Api.FileRequests
+  name: CountFileRequestsResult
+  nameWithType: CountFileRequestsResult
+  fullName: Dropbox.Api.FileRequests.CountFileRequestsResult
+- uid: Dropbox.Api.FileRequests.CreateFileRequestError
+  commentId: T:Dropbox.Api.FileRequests.CreateFileRequestError
+  parent: Dropbox.Api.FileRequests
+  name: CreateFileRequestError
+  nameWithType: CreateFileRequestError
+  fullName: Dropbox.Api.FileRequests.CreateFileRequestError
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.CreateAsync*
+  commentId: Overload:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.CreateAsync
+  name: CreateAsync
+  nameWithType: FileRequestsUserRoutes.CreateAsync
+  fullName: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.CreateAsync
+- uid: Dropbox.Api.FileRequests.CreateFileRequestArgs
+  commentId: T:Dropbox.Api.FileRequests.CreateFileRequestArgs
+  parent: Dropbox.Api.FileRequests
+  name: CreateFileRequestArgs
+  nameWithType: CreateFileRequestArgs
+  fullName: Dropbox.Api.FileRequests.CreateFileRequestArgs
+- uid: System.Threading.Tasks.Task{Dropbox.Api.FileRequests.FileRequest}
+  commentId: '!:System.Threading.Tasks.Task{Dropbox.Api.FileRequests.FileRequest}'
+  definition: System.Threading.Tasks.Task`1
+  name: System.Threading.Tasks.Task<FileRequest>
+  nameWithType: System.Threading.Tasks.Task<FileRequest>
+  fullName: System.Threading.Tasks.Task<Dropbox.Api.FileRequests.FileRequest>
+  nameWithType.vb: System.Threading.Tasks.Task(Of FileRequest)
+  fullName.vb: System.Threading.Tasks.Task(Of Dropbox.Api.FileRequests.FileRequest)
+  name.vb: System.Threading.Tasks.Task(Of FileRequest)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: System.Threading.Tasks.Task
+    nameWithType: System.Threading.Tasks.Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.FileRequests.FileRequest
+    name: FileRequest
+    nameWithType: FileRequest
+    fullName: Dropbox.Api.FileRequests.FileRequest
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: System.Threading.Tasks.Task
+    nameWithType: System.Threading.Tasks.Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.FileRequests.FileRequest
+    name: FileRequest
+    nameWithType: FileRequest
+    fullName: Dropbox.Api.FileRequests.FileRequest
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginCreate*
+  commentId: Overload:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginCreate
+  name: BeginCreate
+  nameWithType: FileRequestsUserRoutes.BeginCreate
+  fullName: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginCreate
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.FileRequests.FileRequestDeadline
+  commentId: T:Dropbox.Api.FileRequests.FileRequestDeadline
+  parent: Dropbox.Api.FileRequests
+  name: FileRequestDeadline
+  nameWithType: FileRequestDeadline
+  fullName: Dropbox.Api.FileRequests.FileRequestDeadline
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndCreate*
+  commentId: Overload:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndCreate
+  name: EndCreate
+  nameWithType: FileRequestsUserRoutes.EndCreate
+  fullName: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndCreate
+- uid: Dropbox.Api.FileRequests.FileRequest
+  commentId: T:Dropbox.Api.FileRequests.FileRequest
+  parent: Dropbox.Api.FileRequests
+  name: FileRequest
+  nameWithType: FileRequest
+  fullName: Dropbox.Api.FileRequests.FileRequest
+- uid: Dropbox.Api.FileRequests.DeleteFileRequestError
+  commentId: T:Dropbox.Api.FileRequests.DeleteFileRequestError
+  parent: Dropbox.Api.FileRequests
+  name: DeleteFileRequestError
+  nameWithType: DeleteFileRequestError
+  fullName: Dropbox.Api.FileRequests.DeleteFileRequestError
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.DeleteAsync*
+  commentId: Overload:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.DeleteAsync
+  name: DeleteAsync
+  nameWithType: FileRequestsUserRoutes.DeleteAsync
+  fullName: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.DeleteAsync
+- uid: Dropbox.Api.FileRequests.DeleteFileRequestArgs
+  commentId: T:Dropbox.Api.FileRequests.DeleteFileRequestArgs
+  parent: Dropbox.Api.FileRequests
+  name: DeleteFileRequestArgs
+  nameWithType: DeleteFileRequestArgs
+  fullName: Dropbox.Api.FileRequests.DeleteFileRequestArgs
+- uid: System.Threading.Tasks.Task{Dropbox.Api.FileRequests.DeleteFileRequestsResult}
+  commentId: '!:System.Threading.Tasks.Task{Dropbox.Api.FileRequests.DeleteFileRequestsResult}'
+  definition: System.Threading.Tasks.Task`1
+  name: System.Threading.Tasks.Task<DeleteFileRequestsResult>
+  nameWithType: System.Threading.Tasks.Task<DeleteFileRequestsResult>
+  fullName: System.Threading.Tasks.Task<Dropbox.Api.FileRequests.DeleteFileRequestsResult>
+  nameWithType.vb: System.Threading.Tasks.Task(Of DeleteFileRequestsResult)
+  fullName.vb: System.Threading.Tasks.Task(Of Dropbox.Api.FileRequests.DeleteFileRequestsResult)
+  name.vb: System.Threading.Tasks.Task(Of DeleteFileRequestsResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: System.Threading.Tasks.Task
+    nameWithType: System.Threading.Tasks.Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.FileRequests.DeleteFileRequestsResult
+    name: DeleteFileRequestsResult
+    nameWithType: DeleteFileRequestsResult
+    fullName: Dropbox.Api.FileRequests.DeleteFileRequestsResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: System.Threading.Tasks.Task
+    nameWithType: System.Threading.Tasks.Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.FileRequests.DeleteFileRequestsResult
+    name: DeleteFileRequestsResult
+    nameWithType: DeleteFileRequestsResult
+    fullName: Dropbox.Api.FileRequests.DeleteFileRequestsResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginDelete*
+  commentId: Overload:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginDelete
+  name: BeginDelete
+  nameWithType: FileRequestsUserRoutes.BeginDelete
+  fullName: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginDelete
+- uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: '!:System.Collections.Generic.IEnumerable{System.String}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<String>
+  nameWithType: System.Collections.Generic.IEnumerable<String>
+  fullName: System.Collections.Generic.IEnumerable<System.String>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of String)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.String)
+  name.vb: System.Collections.Generic.IEnumerable(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: System.Collections.Generic.IEnumerable<>
+  nameWithType: System.Collections.Generic.IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: System.Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndDelete*
+  commentId: Overload:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndDelete
+  name: EndDelete
+  nameWithType: FileRequestsUserRoutes.EndDelete
+  fullName: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndDelete
+- uid: Dropbox.Api.FileRequests.DeleteFileRequestsResult
+  commentId: T:Dropbox.Api.FileRequests.DeleteFileRequestsResult
+  parent: Dropbox.Api.FileRequests
+  name: DeleteFileRequestsResult
+  nameWithType: DeleteFileRequestsResult
+  fullName: Dropbox.Api.FileRequests.DeleteFileRequestsResult
+- uid: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError
+  commentId: T:Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError
+  parent: Dropbox.Api.FileRequests
+  name: DeleteAllClosedFileRequestsError
+  nameWithType: DeleteAllClosedFileRequestsError
+  fullName: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.DeleteAllClosedAsync*
+  commentId: Overload:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.DeleteAllClosedAsync
+  name: DeleteAllClosedAsync
+  nameWithType: FileRequestsUserRoutes.DeleteAllClosedAsync
+  fullName: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.DeleteAllClosedAsync
+- uid: System.Threading.Tasks.Task{Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsResult}
+  commentId: '!:System.Threading.Tasks.Task{Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsResult}'
+  definition: System.Threading.Tasks.Task`1
+  name: System.Threading.Tasks.Task<DeleteAllClosedFileRequestsResult>
+  nameWithType: System.Threading.Tasks.Task<DeleteAllClosedFileRequestsResult>
+  fullName: System.Threading.Tasks.Task<Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsResult>
+  nameWithType.vb: System.Threading.Tasks.Task(Of DeleteAllClosedFileRequestsResult)
+  fullName.vb: System.Threading.Tasks.Task(Of Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsResult)
+  name.vb: System.Threading.Tasks.Task(Of DeleteAllClosedFileRequestsResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: System.Threading.Tasks.Task
+    nameWithType: System.Threading.Tasks.Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsResult
+    name: DeleteAllClosedFileRequestsResult
+    nameWithType: DeleteAllClosedFileRequestsResult
+    fullName: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: System.Threading.Tasks.Task
+    nameWithType: System.Threading.Tasks.Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsResult
+    name: DeleteAllClosedFileRequestsResult
+    nameWithType: DeleteAllClosedFileRequestsResult
+    fullName: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginDeleteAllClosed*
+  commentId: Overload:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginDeleteAllClosed
+  name: BeginDeleteAllClosed
+  nameWithType: FileRequestsUserRoutes.BeginDeleteAllClosed
+  fullName: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginDeleteAllClosed
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndDeleteAllClosed*
+  commentId: Overload:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndDeleteAllClosed
+  name: EndDeleteAllClosed
+  nameWithType: FileRequestsUserRoutes.EndDeleteAllClosed
+  fullName: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndDeleteAllClosed
+- uid: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsResult
+  commentId: T:Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsResult
+  parent: Dropbox.Api.FileRequests
+  name: DeleteAllClosedFileRequestsResult
+  nameWithType: DeleteAllClosedFileRequestsResult
+  fullName: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsResult
+- uid: Dropbox.Api.FileRequests.GetFileRequestError
+  commentId: T:Dropbox.Api.FileRequests.GetFileRequestError
+  parent: Dropbox.Api.FileRequests
+  name: GetFileRequestError
+  nameWithType: GetFileRequestError
+  fullName: Dropbox.Api.FileRequests.GetFileRequestError
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.GetAsync*
+  commentId: Overload:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.GetAsync
+  name: GetAsync
+  nameWithType: FileRequestsUserRoutes.GetAsync
+  fullName: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.GetAsync
+- uid: Dropbox.Api.FileRequests.GetFileRequestArgs
+  commentId: T:Dropbox.Api.FileRequests.GetFileRequestArgs
+  parent: Dropbox.Api.FileRequests
+  name: GetFileRequestArgs
+  nameWithType: GetFileRequestArgs
+  fullName: Dropbox.Api.FileRequests.GetFileRequestArgs
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginGet*
+  commentId: Overload:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginGet
+  name: BeginGet
+  nameWithType: FileRequestsUserRoutes.BeginGet
+  fullName: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginGet
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndGet*
+  commentId: Overload:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndGet
+  name: EndGet
+  nameWithType: FileRequestsUserRoutes.EndGet
+  fullName: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndGet
+- uid: Dropbox.Api.FileRequests.ListFileRequestsError
+  commentId: T:Dropbox.Api.FileRequests.ListFileRequestsError
+  parent: Dropbox.Api.FileRequests
+  name: ListFileRequestsError
+  nameWithType: ListFileRequestsError
+  fullName: Dropbox.Api.FileRequests.ListFileRequestsError
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListV2Async*
+  commentId: Overload:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListV2Async
+  name: ListV2Async
+  nameWithType: FileRequestsUserRoutes.ListV2Async
+  fullName: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListV2Async
+- uid: Dropbox.Api.FileRequests.ListFileRequestsArg
+  commentId: T:Dropbox.Api.FileRequests.ListFileRequestsArg
+  parent: Dropbox.Api.FileRequests
+  name: ListFileRequestsArg
+  nameWithType: ListFileRequestsArg
+  fullName: Dropbox.Api.FileRequests.ListFileRequestsArg
+- uid: System.Threading.Tasks.Task{Dropbox.Api.FileRequests.ListFileRequestsV2Result}
+  commentId: '!:System.Threading.Tasks.Task{Dropbox.Api.FileRequests.ListFileRequestsV2Result}'
+  definition: System.Threading.Tasks.Task`1
+  name: System.Threading.Tasks.Task<ListFileRequestsV2Result>
+  nameWithType: System.Threading.Tasks.Task<ListFileRequestsV2Result>
+  fullName: System.Threading.Tasks.Task<Dropbox.Api.FileRequests.ListFileRequestsV2Result>
+  nameWithType.vb: System.Threading.Tasks.Task(Of ListFileRequestsV2Result)
+  fullName.vb: System.Threading.Tasks.Task(Of Dropbox.Api.FileRequests.ListFileRequestsV2Result)
+  name.vb: System.Threading.Tasks.Task(Of ListFileRequestsV2Result)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: System.Threading.Tasks.Task
+    nameWithType: System.Threading.Tasks.Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.FileRequests.ListFileRequestsV2Result
+    name: ListFileRequestsV2Result
+    nameWithType: ListFileRequestsV2Result
+    fullName: Dropbox.Api.FileRequests.ListFileRequestsV2Result
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: System.Threading.Tasks.Task
+    nameWithType: System.Threading.Tasks.Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.FileRequests.ListFileRequestsV2Result
+    name: ListFileRequestsV2Result
+    nameWithType: ListFileRequestsV2Result
+    fullName: Dropbox.Api.FileRequests.ListFileRequestsV2Result
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginListV2*
+  commentId: Overload:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginListV2
+  name: BeginListV2
+  nameWithType: FileRequestsUserRoutes.BeginListV2
+  fullName: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginListV2
+- uid: System.UInt64
+  isExternal: true
+  name: UInt64
+  nameWithType: UInt64
+  fullName: System.UInt64
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndListV2*
+  commentId: Overload:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndListV2
+  name: EndListV2
+  nameWithType: FileRequestsUserRoutes.EndListV2
+  fullName: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndListV2
+- uid: Dropbox.Api.FileRequests.ListFileRequestsV2Result
+  commentId: T:Dropbox.Api.FileRequests.ListFileRequestsV2Result
+  parent: Dropbox.Api.FileRequests
+  name: ListFileRequestsV2Result
+  nameWithType: ListFileRequestsV2Result
+  fullName: Dropbox.Api.FileRequests.ListFileRequestsV2Result
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListAsync*
+  commentId: Overload:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListAsync
+  name: ListAsync
+  nameWithType: FileRequestsUserRoutes.ListAsync
+  fullName: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListAsync
+- uid: System.Threading.Tasks.Task{Dropbox.Api.FileRequests.ListFileRequestsResult}
+  commentId: '!:System.Threading.Tasks.Task{Dropbox.Api.FileRequests.ListFileRequestsResult}'
+  definition: System.Threading.Tasks.Task`1
+  name: System.Threading.Tasks.Task<ListFileRequestsResult>
+  nameWithType: System.Threading.Tasks.Task<ListFileRequestsResult>
+  fullName: System.Threading.Tasks.Task<Dropbox.Api.FileRequests.ListFileRequestsResult>
+  nameWithType.vb: System.Threading.Tasks.Task(Of ListFileRequestsResult)
+  fullName.vb: System.Threading.Tasks.Task(Of Dropbox.Api.FileRequests.ListFileRequestsResult)
+  name.vb: System.Threading.Tasks.Task(Of ListFileRequestsResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: System.Threading.Tasks.Task
+    nameWithType: System.Threading.Tasks.Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.FileRequests.ListFileRequestsResult
+    name: ListFileRequestsResult
+    nameWithType: ListFileRequestsResult
+    fullName: Dropbox.Api.FileRequests.ListFileRequestsResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: System.Threading.Tasks.Task
+    nameWithType: System.Threading.Tasks.Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.FileRequests.ListFileRequestsResult
+    name: ListFileRequestsResult
+    nameWithType: ListFileRequestsResult
+    fullName: Dropbox.Api.FileRequests.ListFileRequestsResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginList*
+  commentId: Overload:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginList
+  name: BeginList
+  nameWithType: FileRequestsUserRoutes.BeginList
+  fullName: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginList
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndList*
+  commentId: Overload:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndList
+  name: EndList
+  nameWithType: FileRequestsUserRoutes.EndList
+  fullName: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndList
+- uid: Dropbox.Api.FileRequests.ListFileRequestsResult
+  commentId: T:Dropbox.Api.FileRequests.ListFileRequestsResult
+  parent: Dropbox.Api.FileRequests
+  name: ListFileRequestsResult
+  nameWithType: ListFileRequestsResult
+  fullName: Dropbox.Api.FileRequests.ListFileRequestsResult
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListV2Async(Dropbox.Api.FileRequests.ListFileRequestsArg)
+  commentId: M:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListV2Async(Dropbox.Api.FileRequests.ListFileRequestsArg)
+  isExternal: true
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListContinueAsync(Dropbox.Api.FileRequests.ListFileRequestsContinueArg)
+  commentId: M:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListContinueAsync(Dropbox.Api.FileRequests.ListFileRequestsContinueArg)
+  isExternal: true
+- uid: Dropbox.Api.FileRequests.ListFileRequestsContinueError
+  commentId: T:Dropbox.Api.FileRequests.ListFileRequestsContinueError
+  parent: Dropbox.Api.FileRequests
+  name: ListFileRequestsContinueError
+  nameWithType: ListFileRequestsContinueError
+  fullName: Dropbox.Api.FileRequests.ListFileRequestsContinueError
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListContinueAsync*
+  commentId: Overload:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListContinueAsync
+  name: ListContinueAsync
+  nameWithType: FileRequestsUserRoutes.ListContinueAsync
+  fullName: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListContinueAsync
+- uid: Dropbox.Api.FileRequests.ListFileRequestsContinueArg
+  commentId: T:Dropbox.Api.FileRequests.ListFileRequestsContinueArg
+  parent: Dropbox.Api.FileRequests
+  name: ListFileRequestsContinueArg
+  nameWithType: ListFileRequestsContinueArg
+  fullName: Dropbox.Api.FileRequests.ListFileRequestsContinueArg
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginListContinue*
+  commentId: Overload:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginListContinue
+  name: BeginListContinue
+  nameWithType: FileRequestsUserRoutes.BeginListContinue
+  fullName: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginListContinue
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndListContinue*
+  commentId: Overload:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndListContinue
+  name: EndListContinue
+  nameWithType: FileRequestsUserRoutes.EndListContinue
+  fullName: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndListContinue
+- uid: Dropbox.Api.FileRequests.UpdateFileRequestError
+  commentId: T:Dropbox.Api.FileRequests.UpdateFileRequestError
+  parent: Dropbox.Api.FileRequests
+  name: UpdateFileRequestError
+  nameWithType: UpdateFileRequestError
+  fullName: Dropbox.Api.FileRequests.UpdateFileRequestError
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.UpdateAsync*
+  commentId: Overload:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.UpdateAsync
+  name: UpdateAsync
+  nameWithType: FileRequestsUserRoutes.UpdateAsync
+  fullName: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.UpdateAsync
+- uid: Dropbox.Api.FileRequests.UpdateFileRequestArgs
+  commentId: T:Dropbox.Api.FileRequests.UpdateFileRequestArgs
+  parent: Dropbox.Api.FileRequests
+  name: UpdateFileRequestArgs
+  nameWithType: UpdateFileRequestArgs
+  fullName: Dropbox.Api.FileRequests.UpdateFileRequestArgs
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginUpdate*
+  commentId: Overload:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginUpdate
+  name: BeginUpdate
+  nameWithType: FileRequestsUserRoutes.BeginUpdate
+  fullName: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.BeginUpdate
+- uid: Dropbox.Api.FileRequests.UpdateFileRequestDeadline
+  commentId: T:Dropbox.Api.FileRequests.UpdateFileRequestDeadline
+  parent: Dropbox.Api.FileRequests
+  name: UpdateFileRequestDeadline
+  nameWithType: UpdateFileRequestDeadline
+  fullName: Dropbox.Api.FileRequests.UpdateFileRequestDeadline
+- uid: System.Nullable{System.Boolean}
+  commentId: '!:System.Nullable{System.Boolean}'
+  definition: System.Nullable`1
+  name: Nullable<Boolean>
+  nameWithType: Nullable<Boolean>
+  fullName: System.Nullable<System.Boolean>
+  nameWithType.vb: Nullable(Of Boolean)
+  fullName.vb: System.Nullable(Of System.Boolean)
+  name.vb: Nullable(Of Boolean)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  isExternal: true
+  name: Nullable<>
+  nameWithType: Nullable<>
+  fullName: System.Nullable<>
+  nameWithType.vb: Nullable(Of )
+  fullName.vb: System.Nullable(Of )
+  name.vb: Nullable(Of )
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndUpdate*
+  commentId: Overload:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndUpdate
+  name: EndUpdate
+  nameWithType: FileRequestsUserRoutes.EndUpdate
+  fullName: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.EndUpdate
+shouldSkipMarkup: true

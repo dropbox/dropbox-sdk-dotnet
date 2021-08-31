@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCapsTypePolicyType
+  commentId: T:Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCapsTypePolicyType
+  id: MemberSpaceLimitsChangeCapsTypePolicyType
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCapsTypePolicyType.#ctor
+  - Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCapsTypePolicyType.#ctor(System.String)
+  - Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCapsTypePolicyType.Description
+  langs:
+  - csharp
+  - vb
+  name: MemberSpaceLimitsChangeCapsTypePolicyType
+  nameWithType: MemberSpaceLimitsChangeCapsTypePolicyType
+  fullName: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCapsTypePolicyType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSpaceLimitsChangeCapsTypePolicyType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: MemberSpaceLimitsChangeCapsTypePolicyType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSpaceLimitsChangeCapsTypePolicyType.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The member space limits change caps type policy type object</p>\n"
+  example: []
+  syntax:
+    content: 'public class MemberSpaceLimitsChangeCapsTypePolicyType : object'
+    content.vb: >-
+      Public Class MemberSpaceLimitsChangeCapsTypePolicyType
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCapsTypePolicyType.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCapsTypePolicyType.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCapsTypePolicyType
+  langs:
+  - csharp
+  - vb
+  name: MemberSpaceLimitsChangeCapsTypePolicyType(String)
+  nameWithType: MemberSpaceLimitsChangeCapsTypePolicyType.MemberSpaceLimitsChangeCapsTypePolicyType(String)
+  fullName: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCapsTypePolicyType.MemberSpaceLimitsChangeCapsTypePolicyType(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSpaceLimitsChangeCapsTypePolicyType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSpaceLimitsChangeCapsTypePolicyType.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCapsTypePolicyType\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public MemberSpaceLimitsChangeCapsTypePolicyType(string description)
+    parameters:
+    - id: description
+      type: System.String
+      description: The description
+    content.vb: Public Sub New(description As String)
+  overload: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCapsTypePolicyType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCapsTypePolicyType.#ctor
+  commentId: M:Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCapsTypePolicyType.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCapsTypePolicyType
+  langs:
+  - csharp
+  - vb
+  name: MemberSpaceLimitsChangeCapsTypePolicyType()
+  nameWithType: MemberSpaceLimitsChangeCapsTypePolicyType.MemberSpaceLimitsChangeCapsTypePolicyType()
+  fullName: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCapsTypePolicyType.MemberSpaceLimitsChangeCapsTypePolicyType()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSpaceLimitsChangeCapsTypePolicyType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSpaceLimitsChangeCapsTypePolicyType.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCapsTypePolicyType\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public MemberSpaceLimitsChangeCapsTypePolicyType()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCapsTypePolicyType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCapsTypePolicyType.Description
+  commentId: P:Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCapsTypePolicyType.Description
+  id: Description
+  parent: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCapsTypePolicyType
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: MemberSpaceLimitsChangeCapsTypePolicyType.Description
+  fullName: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCapsTypePolicyType.Description
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSpaceLimitsChangeCapsTypePolicyType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Description
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSpaceLimitsChangeCapsTypePolicyType.cs
+    startLine: 59
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets the description of the member space limits change caps type policy\ntype</p>\n"
+  example: []
+  syntax:
+    content: public string Description { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCapsTypePolicyType.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCapsTypePolicyType
+  commentId: T:Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCapsTypePolicyType
+  parent: Dropbox.Api.TeamLog
+  name: MemberSpaceLimitsChangeCapsTypePolicyType
+  nameWithType: MemberSpaceLimitsChangeCapsTypePolicyType
+  fullName: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCapsTypePolicyType
+- uid: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCapsTypePolicyType.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCapsTypePolicyType.#ctor
+  name: MemberSpaceLimitsChangeCapsTypePolicyType
+  nameWithType: MemberSpaceLimitsChangeCapsTypePolicyType.MemberSpaceLimitsChangeCapsTypePolicyType
+  fullName: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCapsTypePolicyType.MemberSpaceLimitsChangeCapsTypePolicyType
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCapsTypePolicyType.Description*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCapsTypePolicyType.Description
+  name: Description
+  nameWithType: MemberSpaceLimitsChangeCapsTypePolicyType.Description
+  fullName: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeCapsTypePolicyType.Description
+shouldSkipMarkup: true

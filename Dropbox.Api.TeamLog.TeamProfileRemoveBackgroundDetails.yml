@@ -1,0 +1,96 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.TeamProfileRemoveBackgroundDetails
+  commentId: T:Dropbox.Api.TeamLog.TeamProfileRemoveBackgroundDetails
+  id: TeamProfileRemoveBackgroundDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.TeamProfileRemoveBackgroundDetails.#ctor
+  langs:
+  - csharp
+  - vb
+  name: TeamProfileRemoveBackgroundDetails
+  nameWithType: TeamProfileRemoveBackgroundDetails
+  fullName: Dropbox.Api.TeamLog.TeamProfileRemoveBackgroundDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamProfileRemoveBackgroundDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TeamProfileRemoveBackgroundDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamProfileRemoveBackgroundDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Removed team background displayed on shared link headers.</p>\n"
+  example: []
+  syntax:
+    content: 'public class TeamProfileRemoveBackgroundDetails : object'
+    content.vb: >-
+      Public Class TeamProfileRemoveBackgroundDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.TeamProfileRemoveBackgroundDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.TeamProfileRemoveBackgroundDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.TeamProfileRemoveBackgroundDetails
+  langs:
+  - csharp
+  - vb
+  name: TeamProfileRemoveBackgroundDetails()
+  nameWithType: TeamProfileRemoveBackgroundDetails.TeamProfileRemoveBackgroundDetails()
+  fullName: Dropbox.Api.TeamLog.TeamProfileRemoveBackgroundDetails.TeamProfileRemoveBackgroundDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamProfileRemoveBackgroundDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamProfileRemoveBackgroundDetails.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.TeamProfileRemoveBackgroundDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public TeamProfileRemoveBackgroundDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.TeamProfileRemoveBackgroundDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.TeamProfileRemoveBackgroundDetails
+  commentId: T:Dropbox.Api.TeamLog.TeamProfileRemoveBackgroundDetails
+  parent: Dropbox.Api.TeamLog
+  name: TeamProfileRemoveBackgroundDetails
+  nameWithType: TeamProfileRemoveBackgroundDetails
+  fullName: Dropbox.Api.TeamLog.TeamProfileRemoveBackgroundDetails
+- uid: Dropbox.Api.TeamLog.TeamProfileRemoveBackgroundDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.TeamProfileRemoveBackgroundDetails.#ctor
+  name: TeamProfileRemoveBackgroundDetails
+  nameWithType: TeamProfileRemoveBackgroundDetails.TeamProfileRemoveBackgroundDetails
+  fullName: Dropbox.Api.TeamLog.TeamProfileRemoveBackgroundDetails.TeamProfileRemoveBackgroundDetails
+shouldSkipMarkup: true

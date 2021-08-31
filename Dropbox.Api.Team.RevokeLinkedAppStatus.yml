@@ -1,0 +1,240 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.RevokeLinkedAppStatus
+  commentId: T:Dropbox.Api.Team.RevokeLinkedAppStatus
+  id: RevokeLinkedAppStatus
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.RevokeLinkedAppStatus.#ctor
+  - Dropbox.Api.Team.RevokeLinkedAppStatus.#ctor(System.Boolean,Dropbox.Api.Team.RevokeLinkedAppError)
+  - Dropbox.Api.Team.RevokeLinkedAppStatus.ErrorType
+  - Dropbox.Api.Team.RevokeLinkedAppStatus.Success
+  langs:
+  - csharp
+  - vb
+  name: RevokeLinkedAppStatus
+  nameWithType: RevokeLinkedAppStatus
+  fullName: Dropbox.Api.Team.RevokeLinkedAppStatus
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeLinkedAppStatus.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: RevokeLinkedAppStatus
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeLinkedAppStatus.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The revoke linked app status object</p>\n"
+  example: []
+  syntax:
+    content: 'public class RevokeLinkedAppStatus : object'
+    content.vb: >-
+      Public Class RevokeLinkedAppStatus
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.RevokeLinkedAppStatus.#ctor(System.Boolean,Dropbox.Api.Team.RevokeLinkedAppError)
+  commentId: M:Dropbox.Api.Team.RevokeLinkedAppStatus.#ctor(System.Boolean,Dropbox.Api.Team.RevokeLinkedAppError)
+  id: '#ctor(System.Boolean,Dropbox.Api.Team.RevokeLinkedAppError)'
+  parent: Dropbox.Api.Team.RevokeLinkedAppStatus
+  langs:
+  - csharp
+  - vb
+  name: RevokeLinkedAppStatus(Boolean, RevokeLinkedAppError)
+  nameWithType: RevokeLinkedAppStatus.RevokeLinkedAppStatus(Boolean, RevokeLinkedAppError)
+  fullName: Dropbox.Api.Team.RevokeLinkedAppStatus.RevokeLinkedAppStatus(System.Boolean, Dropbox.Api.Team.RevokeLinkedAppError)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeLinkedAppStatus.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeLinkedAppStatus.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.RevokeLinkedAppStatus\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public RevokeLinkedAppStatus(bool success, RevokeLinkedAppError errorType = null)
+    parameters:
+    - id: success
+      type: System.Boolean
+      description: Result of the revoking request.
+    - id: errorType
+      type: Dropbox.Api.Team.RevokeLinkedAppError
+      description: The error cause in case of a failure.
+    content.vb: Public Sub New(success As Boolean, errorType As RevokeLinkedAppError = Nothing)
+  overload: Dropbox.Api.Team.RevokeLinkedAppStatus.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.RevokeLinkedAppStatus.#ctor
+  commentId: M:Dropbox.Api.Team.RevokeLinkedAppStatus.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.RevokeLinkedAppStatus
+  langs:
+  - csharp
+  - vb
+  name: RevokeLinkedAppStatus()
+  nameWithType: RevokeLinkedAppStatus.RevokeLinkedAppStatus()
+  fullName: Dropbox.Api.Team.RevokeLinkedAppStatus.RevokeLinkedAppStatus()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeLinkedAppStatus.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeLinkedAppStatus.cs
+    startLine: 48
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.RevokeLinkedAppStatus\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public RevokeLinkedAppStatus()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.RevokeLinkedAppStatus.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.RevokeLinkedAppStatus.Success
+  commentId: P:Dropbox.Api.Team.RevokeLinkedAppStatus.Success
+  id: Success
+  parent: Dropbox.Api.Team.RevokeLinkedAppStatus
+  langs:
+  - csharp
+  - vb
+  name: Success
+  nameWithType: RevokeLinkedAppStatus.Success
+  fullName: Dropbox.Api.Team.RevokeLinkedAppStatus.Success
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeLinkedAppStatus.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Success
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeLinkedAppStatus.cs
+    startLine: 56
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Result of the revoking request.</p>\n"
+  example: []
+  syntax:
+    content: public bool Success { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property Success As Boolean
+  overload: Dropbox.Api.Team.RevokeLinkedAppStatus.Success*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.RevokeLinkedAppStatus.ErrorType
+  commentId: P:Dropbox.Api.Team.RevokeLinkedAppStatus.ErrorType
+  id: ErrorType
+  parent: Dropbox.Api.Team.RevokeLinkedAppStatus
+  langs:
+  - csharp
+  - vb
+  name: ErrorType
+  nameWithType: RevokeLinkedAppStatus.ErrorType
+  fullName: Dropbox.Api.Team.RevokeLinkedAppStatus.ErrorType
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeLinkedAppStatus.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ErrorType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeLinkedAppStatus.cs
+    startLine: 61
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The error cause in case of a failure.</p>\n"
+  example: []
+  syntax:
+    content: public RevokeLinkedAppError ErrorType { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.RevokeLinkedAppError
+    content.vb: Public Property ErrorType As RevokeLinkedAppError
+  overload: Dropbox.Api.Team.RevokeLinkedAppStatus.ErrorType*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.RevokeLinkedAppStatus
+  commentId: T:Dropbox.Api.Team.RevokeLinkedAppStatus
+  name: RevokeLinkedAppStatus
+  nameWithType: RevokeLinkedAppStatus
+  fullName: Dropbox.Api.Team.RevokeLinkedAppStatus
+- uid: Dropbox.Api.Team.RevokeLinkedAppStatus.#ctor*
+  commentId: Overload:Dropbox.Api.Team.RevokeLinkedAppStatus.#ctor
+  name: RevokeLinkedAppStatus
+  nameWithType: RevokeLinkedAppStatus.RevokeLinkedAppStatus
+  fullName: Dropbox.Api.Team.RevokeLinkedAppStatus.RevokeLinkedAppStatus
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Team.RevokeLinkedAppError
+  commentId: T:Dropbox.Api.Team.RevokeLinkedAppError
+  parent: Dropbox.Api.Team
+  name: RevokeLinkedAppError
+  nameWithType: RevokeLinkedAppError
+  fullName: Dropbox.Api.Team.RevokeLinkedAppError
+- uid: Dropbox.Api.Team.RevokeLinkedAppStatus.Success*
+  commentId: Overload:Dropbox.Api.Team.RevokeLinkedAppStatus.Success
+  name: Success
+  nameWithType: RevokeLinkedAppStatus.Success
+  fullName: Dropbox.Api.Team.RevokeLinkedAppStatus.Success
+- uid: Dropbox.Api.Team.RevokeLinkedAppStatus.ErrorType*
+  commentId: Overload:Dropbox.Api.Team.RevokeLinkedAppStatus.ErrorType
+  name: ErrorType
+  nameWithType: RevokeLinkedAppStatus.ErrorType
+  fullName: Dropbox.Api.Team.RevokeLinkedAppStatus.ErrorType
+shouldSkipMarkup: true

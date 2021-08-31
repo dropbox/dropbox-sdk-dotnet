@@ -1,0 +1,162 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.GroupsPollError.AccessDenied
+  commentId: T:Dropbox.Api.Team.GroupsPollError.AccessDenied
+  id: GroupsPollError.AccessDenied
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.GroupsPollError.AccessDenied.Instance
+  langs:
+  - csharp
+  - vb
+  name: GroupsPollError.AccessDenied
+  nameWithType: GroupsPollError.AccessDenied
+  fullName: Dropbox.Api.Team.GroupsPollError.AccessDenied
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsPollError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AccessDenied
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsPollError.cs
+    startLine: 214
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>You are not allowed to poll this job.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class AccessDenied : GroupsPollError'
+    content.vb: >-
+      Public NotInheritable Class AccessDenied
+          Inherits GroupsPollError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.GroupsPollError
+  inheritedMembers:
+  - Dropbox.Api.Team.GroupsPollError.IsAccessDenied
+  - Dropbox.Api.Team.GroupsPollError.AsAccessDenied
+  - Dropbox.Api.Team.GroupsPollError.IsInvalidAsyncJobId
+  - Dropbox.Api.Team.GroupsPollError.AsInvalidAsyncJobId
+  - Dropbox.Api.Team.GroupsPollError.IsInternalError
+  - Dropbox.Api.Team.GroupsPollError.AsInternalError
+  - Dropbox.Api.Team.GroupsPollError.IsOther
+  - Dropbox.Api.Team.GroupsPollError.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Team.GroupsPollError.AccessDenied.Instance
+  commentId: F:Dropbox.Api.Team.GroupsPollError.AccessDenied.Instance
+  id: Instance
+  parent: Dropbox.Api.Team.GroupsPollError.AccessDenied
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: GroupsPollError.AccessDenied.Instance
+  fullName: Dropbox.Api.Team.GroupsPollError.AccessDenied.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsPollError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsPollError.cs
+    startLine: 239
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>A singleton instance of AccessDenied</p>\n"
+  example: []
+  syntax:
+    content: public static readonly GroupsPollError.AccessDenied Instance
+    return:
+      type: Dropbox.Api.Team.GroupsPollError.AccessDenied
+    content.vb: Public Shared ReadOnly Instance As GroupsPollError.AccessDenied
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.GroupsPollError
+  commentId: T:Dropbox.Api.Team.GroupsPollError
+  parent: Dropbox.Api.Team
+  name: GroupsPollError
+  nameWithType: GroupsPollError
+  fullName: Dropbox.Api.Team.GroupsPollError
+- uid: Dropbox.Api.Team.GroupsPollError.IsAccessDenied
+  commentId: P:Dropbox.Api.Team.GroupsPollError.IsAccessDenied
+  parent: Dropbox.Api.Team.GroupsPollError
+  name: IsAccessDenied
+  nameWithType: GroupsPollError.IsAccessDenied
+  fullName: Dropbox.Api.Team.GroupsPollError.IsAccessDenied
+- uid: Dropbox.Api.Team.GroupsPollError.AsAccessDenied
+  commentId: P:Dropbox.Api.Team.GroupsPollError.AsAccessDenied
+  parent: Dropbox.Api.Team.GroupsPollError
+  name: AsAccessDenied
+  nameWithType: GroupsPollError.AsAccessDenied
+  fullName: Dropbox.Api.Team.GroupsPollError.AsAccessDenied
+- uid: Dropbox.Api.Team.GroupsPollError.IsInvalidAsyncJobId
+  commentId: P:Dropbox.Api.Team.GroupsPollError.IsInvalidAsyncJobId
+  parent: Dropbox.Api.Team.GroupsPollError
+  name: IsInvalidAsyncJobId
+  nameWithType: GroupsPollError.IsInvalidAsyncJobId
+  fullName: Dropbox.Api.Team.GroupsPollError.IsInvalidAsyncJobId
+- uid: Dropbox.Api.Team.GroupsPollError.AsInvalidAsyncJobId
+  commentId: P:Dropbox.Api.Team.GroupsPollError.AsInvalidAsyncJobId
+  parent: Dropbox.Api.Team.GroupsPollError
+  name: AsInvalidAsyncJobId
+  nameWithType: GroupsPollError.AsInvalidAsyncJobId
+  fullName: Dropbox.Api.Team.GroupsPollError.AsInvalidAsyncJobId
+- uid: Dropbox.Api.Team.GroupsPollError.IsInternalError
+  commentId: P:Dropbox.Api.Team.GroupsPollError.IsInternalError
+  parent: Dropbox.Api.Team.GroupsPollError
+  name: IsInternalError
+  nameWithType: GroupsPollError.IsInternalError
+  fullName: Dropbox.Api.Team.GroupsPollError.IsInternalError
+- uid: Dropbox.Api.Team.GroupsPollError.AsInternalError
+  commentId: P:Dropbox.Api.Team.GroupsPollError.AsInternalError
+  parent: Dropbox.Api.Team.GroupsPollError
+  name: AsInternalError
+  nameWithType: GroupsPollError.AsInternalError
+  fullName: Dropbox.Api.Team.GroupsPollError.AsInternalError
+- uid: Dropbox.Api.Team.GroupsPollError.IsOther
+  commentId: P:Dropbox.Api.Team.GroupsPollError.IsOther
+  parent: Dropbox.Api.Team.GroupsPollError
+  name: IsOther
+  nameWithType: GroupsPollError.IsOther
+  fullName: Dropbox.Api.Team.GroupsPollError.IsOther
+- uid: Dropbox.Api.Team.GroupsPollError.AsOther
+  commentId: P:Dropbox.Api.Team.GroupsPollError.AsOther
+  parent: Dropbox.Api.Team.GroupsPollError
+  name: AsOther
+  nameWithType: GroupsPollError.AsOther
+  fullName: Dropbox.Api.Team.GroupsPollError.AsOther
+- uid: Dropbox.Api.Team.GroupsPollError.AccessDenied
+  commentId: T:Dropbox.Api.Team.GroupsPollError.AccessDenied
+  parent: Dropbox.Api.Team
+  name: GroupsPollError.AccessDenied
+  nameWithType: GroupsPollError.AccessDenied
+  fullName: Dropbox.Api.Team.GroupsPollError.AccessDenied
+shouldSkipMarkup: true

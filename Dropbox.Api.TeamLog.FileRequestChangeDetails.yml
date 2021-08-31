@@ -1,0 +1,295 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.FileRequestChangeDetails
+  commentId: T:Dropbox.Api.TeamLog.FileRequestChangeDetails
+  id: FileRequestChangeDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.FileRequestChangeDetails.#ctor
+  - Dropbox.Api.TeamLog.FileRequestChangeDetails.#ctor(Dropbox.Api.TeamLog.FileRequestDetails,System.String,Dropbox.Api.TeamLog.FileRequestDetails)
+  - Dropbox.Api.TeamLog.FileRequestChangeDetails.FileRequestId
+  - Dropbox.Api.TeamLog.FileRequestChangeDetails.NewDetails
+  - Dropbox.Api.TeamLog.FileRequestChangeDetails.PreviousDetails
+  langs:
+  - csharp
+  - vb
+  name: FileRequestChangeDetails
+  nameWithType: FileRequestChangeDetails
+  fullName: Dropbox.Api.TeamLog.FileRequestChangeDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestChangeDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: FileRequestChangeDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestChangeDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Changed file request.</p>\n"
+  example: []
+  syntax:
+    content: 'public class FileRequestChangeDetails : object'
+    content.vb: >-
+      Public Class FileRequestChangeDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.FileRequestChangeDetails.#ctor(Dropbox.Api.TeamLog.FileRequestDetails,System.String,Dropbox.Api.TeamLog.FileRequestDetails)
+  commentId: M:Dropbox.Api.TeamLog.FileRequestChangeDetails.#ctor(Dropbox.Api.TeamLog.FileRequestDetails,System.String,Dropbox.Api.TeamLog.FileRequestDetails)
+  id: '#ctor(Dropbox.Api.TeamLog.FileRequestDetails,System.String,Dropbox.Api.TeamLog.FileRequestDetails)'
+  parent: Dropbox.Api.TeamLog.FileRequestChangeDetails
+  langs:
+  - csharp
+  - vb
+  name: FileRequestChangeDetails(FileRequestDetails, String, FileRequestDetails)
+  nameWithType: FileRequestChangeDetails.FileRequestChangeDetails(FileRequestDetails, String, FileRequestDetails)
+  fullName: Dropbox.Api.TeamLog.FileRequestChangeDetails.FileRequestChangeDetails(Dropbox.Api.TeamLog.FileRequestDetails, System.String, Dropbox.Api.TeamLog.FileRequestDetails)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestChangeDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestChangeDetails.cs
+    startLine: 38
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.FileRequestChangeDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public FileRequestChangeDetails(FileRequestDetails newDetails, string fileRequestId = null, FileRequestDetails previousDetails = null)
+    parameters:
+    - id: newDetails
+      type: Dropbox.Api.TeamLog.FileRequestDetails
+      description: New file request details.
+    - id: fileRequestId
+      type: System.String
+      description: >-
+        File request id. Might be missing due to historical
+
+        data gap.
+    - id: previousDetails
+      type: Dropbox.Api.TeamLog.FileRequestDetails
+      description: >-
+        Previous file request details. Might be missing due
+
+        to historical data gap.
+    content.vb: Public Sub New(newDetails As FileRequestDetails, fileRequestId As String = Nothing, previousDetails As FileRequestDetails = Nothing)
+  overload: Dropbox.Api.TeamLog.FileRequestChangeDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.FileRequestChangeDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.FileRequestChangeDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.FileRequestChangeDetails
+  langs:
+  - csharp
+  - vb
+  name: FileRequestChangeDetails()
+  nameWithType: FileRequestChangeDetails.FileRequestChangeDetails()
+  fullName: Dropbox.Api.TeamLog.FileRequestChangeDetails.FileRequestChangeDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestChangeDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestChangeDetails.cs
+    startLine: 70
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.FileRequestChangeDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public FileRequestChangeDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.FileRequestChangeDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.FileRequestChangeDetails.NewDetails
+  commentId: P:Dropbox.Api.TeamLog.FileRequestChangeDetails.NewDetails
+  id: NewDetails
+  parent: Dropbox.Api.TeamLog.FileRequestChangeDetails
+  langs:
+  - csharp
+  - vb
+  name: NewDetails
+  nameWithType: FileRequestChangeDetails.NewDetails
+  fullName: Dropbox.Api.TeamLog.FileRequestChangeDetails.NewDetails
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestChangeDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NewDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestChangeDetails.cs
+    startLine: 78
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>New file request details.</p>\n"
+  example: []
+  syntax:
+    content: public FileRequestDetails NewDetails { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.FileRequestDetails
+    content.vb: Public Property NewDetails As FileRequestDetails
+  overload: Dropbox.Api.TeamLog.FileRequestChangeDetails.NewDetails*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.FileRequestChangeDetails.FileRequestId
+  commentId: P:Dropbox.Api.TeamLog.FileRequestChangeDetails.FileRequestId
+  id: FileRequestId
+  parent: Dropbox.Api.TeamLog.FileRequestChangeDetails
+  langs:
+  - csharp
+  - vb
+  name: FileRequestId
+  nameWithType: FileRequestChangeDetails.FileRequestId
+  fullName: Dropbox.Api.TeamLog.FileRequestChangeDetails.FileRequestId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestChangeDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: FileRequestId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestChangeDetails.cs
+    startLine: 83
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>File request id. Might be missing due to historical data gap.</p>\n"
+  example: []
+  syntax:
+    content: public string FileRequestId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property FileRequestId As String
+  overload: Dropbox.Api.TeamLog.FileRequestChangeDetails.FileRequestId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.FileRequestChangeDetails.PreviousDetails
+  commentId: P:Dropbox.Api.TeamLog.FileRequestChangeDetails.PreviousDetails
+  id: PreviousDetails
+  parent: Dropbox.Api.TeamLog.FileRequestChangeDetails
+  langs:
+  - csharp
+  - vb
+  name: PreviousDetails
+  nameWithType: FileRequestChangeDetails.PreviousDetails
+  fullName: Dropbox.Api.TeamLog.FileRequestChangeDetails.PreviousDetails
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestChangeDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PreviousDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestChangeDetails.cs
+    startLine: 89
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Previous file request details. Might be missing due to historical data\ngap.</p>\n"
+  example: []
+  syntax:
+    content: public FileRequestDetails PreviousDetails { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.FileRequestDetails
+    content.vb: Public Property PreviousDetails As FileRequestDetails
+  overload: Dropbox.Api.TeamLog.FileRequestChangeDetails.PreviousDetails*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.FileRequestChangeDetails
+  commentId: T:Dropbox.Api.TeamLog.FileRequestChangeDetails
+  parent: Dropbox.Api.TeamLog
+  name: FileRequestChangeDetails
+  nameWithType: FileRequestChangeDetails
+  fullName: Dropbox.Api.TeamLog.FileRequestChangeDetails
+- uid: Dropbox.Api.TeamLog.FileRequestChangeDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.FileRequestChangeDetails.#ctor
+  name: FileRequestChangeDetails
+  nameWithType: FileRequestChangeDetails.FileRequestChangeDetails
+  fullName: Dropbox.Api.TeamLog.FileRequestChangeDetails.FileRequestChangeDetails
+- uid: Dropbox.Api.TeamLog.FileRequestDetails
+  commentId: T:Dropbox.Api.TeamLog.FileRequestDetails
+  parent: Dropbox.Api.TeamLog
+  name: FileRequestDetails
+  nameWithType: FileRequestDetails
+  fullName: Dropbox.Api.TeamLog.FileRequestDetails
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.FileRequestChangeDetails.NewDetails*
+  commentId: Overload:Dropbox.Api.TeamLog.FileRequestChangeDetails.NewDetails
+  name: NewDetails
+  nameWithType: FileRequestChangeDetails.NewDetails
+  fullName: Dropbox.Api.TeamLog.FileRequestChangeDetails.NewDetails
+- uid: Dropbox.Api.TeamLog.FileRequestChangeDetails.FileRequestId*
+  commentId: Overload:Dropbox.Api.TeamLog.FileRequestChangeDetails.FileRequestId
+  name: FileRequestId
+  nameWithType: FileRequestChangeDetails.FileRequestId
+  fullName: Dropbox.Api.TeamLog.FileRequestChangeDetails.FileRequestId
+- uid: Dropbox.Api.TeamLog.FileRequestChangeDetails.PreviousDetails*
+  commentId: Overload:Dropbox.Api.TeamLog.FileRequestChangeDetails.PreviousDetails
+  name: PreviousDetails
+  nameWithType: FileRequestChangeDetails.PreviousDetails
+  fullName: Dropbox.Api.TeamLog.FileRequestChangeDetails.PreviousDetails
+shouldSkipMarkup: true

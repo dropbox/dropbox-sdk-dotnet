@@ -1,0 +1,404 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Stone.IDownloadResponse`1
+  commentId: T:Dropbox.Api.Stone.IDownloadResponse`1
+  id: IDownloadResponse`1
+  parent: Dropbox.Api.Stone
+  children:
+  - Dropbox.Api.Stone.IDownloadResponse`1.GetContentAsByteArrayAsync
+  - Dropbox.Api.Stone.IDownloadResponse`1.GetContentAsStreamAsync
+  - Dropbox.Api.Stone.IDownloadResponse`1.GetContentAsStringAsync
+  - Dropbox.Api.Stone.IDownloadResponse`1.Response
+  langs:
+  - csharp
+  - vb
+  name: IDownloadResponse<TResponse>
+  nameWithType: IDownloadResponse<TResponse>
+  fullName: Dropbox.Api.Stone.IDownloadResponse<TResponse>
+  type: Interface
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Stone/ITransport.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IDownloadResponse
+    path: dropbox-sdk-dotnet/Dropbox.Api/Stone/ITransport.cs
+    startLine: 18
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Stone
+  summary: "\nUsed to encapsulate both the response object and the response body from\na download operation.\n"
+  example: []
+  syntax:
+    content: 'public interface IDownloadResponse<TResponse> : IDisposable'
+    typeParameters:
+    - id: TResponse
+      description: The type of the response.
+    content.vb: >-
+      Public Interface IDownloadResponse(Of TResponse)
+          Inherits IDisposable
+  nameWithType.vb: IDownloadResponse(Of TResponse)
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+  fullName.vb: Dropbox.Api.Stone.IDownloadResponse(Of TResponse)
+  name.vb: IDownloadResponse(Of TResponse)
+- uid: Dropbox.Api.Stone.IDownloadResponse`1.Response
+  commentId: P:Dropbox.Api.Stone.IDownloadResponse`1.Response
+  id: Response
+  parent: Dropbox.Api.Stone.IDownloadResponse`1
+  langs:
+  - csharp
+  - vb
+  name: Response
+  nameWithType: IDownloadResponse<TResponse>.Response
+  fullName: Dropbox.Api.Stone.IDownloadResponse<TResponse>.Response
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Stone/ITransport.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Response
+    path: dropbox-sdk-dotnet/Dropbox.Api/Stone/ITransport.cs
+    startLine: 26
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Stone
+  summary: "\nGets the response.\n"
+  example: []
+  syntax:
+    content: TResponse Response { get; }
+    parameters: []
+    return:
+      type: '{TResponse}'
+      description: "\nThe response.\n"
+    content.vb: ReadOnly Property Response As TResponse
+  overload: Dropbox.Api.Stone.IDownloadResponse`1.Response*
+  nameWithType.vb: IDownloadResponse(Of TResponse).Response
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+  fullName.vb: Dropbox.Api.Stone.IDownloadResponse(Of TResponse).Response
+- uid: Dropbox.Api.Stone.IDownloadResponse`1.GetContentAsStreamAsync
+  commentId: M:Dropbox.Api.Stone.IDownloadResponse`1.GetContentAsStreamAsync
+  id: GetContentAsStreamAsync
+  parent: Dropbox.Api.Stone.IDownloadResponse`1
+  langs:
+  - csharp
+  - vb
+  name: GetContentAsStreamAsync()
+  nameWithType: IDownloadResponse<TResponse>.GetContentAsStreamAsync()
+  fullName: Dropbox.Api.Stone.IDownloadResponse<TResponse>.GetContentAsStreamAsync()
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Stone/ITransport.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GetContentAsStreamAsync
+    path: dropbox-sdk-dotnet/Dropbox.Api/Stone/ITransport.cs
+    startLine: 32
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Stone
+  summary: "\nAsynchronously gets the content as a <see cref=\"!:Stream\"></see>.\n"
+  example: []
+  syntax:
+    content: Task<Stream> GetContentAsStreamAsync()
+    return:
+      type: Task{Stream}
+      description: The downloaded content as a stream.
+    content.vb: Function GetContentAsStreamAsync As Task(Of Stream)
+  overload: Dropbox.Api.Stone.IDownloadResponse`1.GetContentAsStreamAsync*
+  nameWithType.vb: IDownloadResponse(Of TResponse).GetContentAsStreamAsync()
+  fullName.vb: Dropbox.Api.Stone.IDownloadResponse(Of TResponse).GetContentAsStreamAsync()
+- uid: Dropbox.Api.Stone.IDownloadResponse`1.GetContentAsByteArrayAsync
+  commentId: M:Dropbox.Api.Stone.IDownloadResponse`1.GetContentAsByteArrayAsync
+  id: GetContentAsByteArrayAsync
+  parent: Dropbox.Api.Stone.IDownloadResponse`1
+  langs:
+  - csharp
+  - vb
+  name: GetContentAsByteArrayAsync()
+  nameWithType: IDownloadResponse<TResponse>.GetContentAsByteArrayAsync()
+  fullName: Dropbox.Api.Stone.IDownloadResponse<TResponse>.GetContentAsByteArrayAsync()
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Stone/ITransport.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GetContentAsByteArrayAsync
+    path: dropbox-sdk-dotnet/Dropbox.Api/Stone/ITransport.cs
+    startLine: 38
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Stone
+  summary: "\nAsynchronously gets the content as a <see cref=\"!:System.Byte\"></see> array.\n"
+  example: []
+  syntax:
+    content: Task<byte[]> GetContentAsByteArrayAsync()
+    return:
+      type: Task{System.Byte[]}
+      description: The downloaded content as a byte array.
+    content.vb: Function GetContentAsByteArrayAsync As Task(Of Byte())
+  overload: Dropbox.Api.Stone.IDownloadResponse`1.GetContentAsByteArrayAsync*
+  nameWithType.vb: IDownloadResponse(Of TResponse).GetContentAsByteArrayAsync()
+  fullName.vb: Dropbox.Api.Stone.IDownloadResponse(Of TResponse).GetContentAsByteArrayAsync()
+- uid: Dropbox.Api.Stone.IDownloadResponse`1.GetContentAsStringAsync
+  commentId: M:Dropbox.Api.Stone.IDownloadResponse`1.GetContentAsStringAsync
+  id: GetContentAsStringAsync
+  parent: Dropbox.Api.Stone.IDownloadResponse`1
+  langs:
+  - csharp
+  - vb
+  name: GetContentAsStringAsync()
+  nameWithType: IDownloadResponse<TResponse>.GetContentAsStringAsync()
+  fullName: Dropbox.Api.Stone.IDownloadResponse<TResponse>.GetContentAsStringAsync()
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Stone/ITransport.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GetContentAsStringAsync
+    path: dropbox-sdk-dotnet/Dropbox.Api/Stone/ITransport.cs
+    startLine: 44
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Stone
+  summary: "\nAsynchronously gets the content as <see cref=\"!:System.String\"></see>.\n"
+  example: []
+  syntax:
+    content: Task<string> GetContentAsStringAsync()
+    return:
+      type: Task{System.String}
+      description: The downloaded content as a string.
+    content.vb: Function GetContentAsStringAsync As Task(Of String)
+  overload: Dropbox.Api.Stone.IDownloadResponse`1.GetContentAsStringAsync*
+  nameWithType.vb: IDownloadResponse(Of TResponse).GetContentAsStringAsync()
+  fullName.vb: Dropbox.Api.Stone.IDownloadResponse(Of TResponse).GetContentAsStringAsync()
+references:
+- uid: Dropbox.Api.Stone
+  commentId: N:Dropbox.Api.Stone
+  name: Dropbox.Api.Stone
+  nameWithType: Dropbox.Api.Stone
+  fullName: Dropbox.Api.Stone
+- uid: Dropbox.Api.Stone.IDownloadResponse`1.Response*
+  commentId: Overload:Dropbox.Api.Stone.IDownloadResponse`1.Response
+  name: Response
+  nameWithType: IDownloadResponse<TResponse>.Response
+  fullName: Dropbox.Api.Stone.IDownloadResponse<TResponse>.Response
+  nameWithType.vb: IDownloadResponse(Of TResponse).Response
+  fullName.vb: Dropbox.Api.Stone.IDownloadResponse(Of TResponse).Response
+- uid: '{TResponse}'
+  commentId: '!:TResponse'
+  definition: TResponse
+  name: TResponse
+  nameWithType: TResponse
+  fullName: TResponse
+- uid: TResponse
+  commentId: '!:TResponse'
+  name: TResponse
+  nameWithType: TResponse
+  fullName: TResponse
+- uid: Dropbox.Api.Stone.IDownloadResponse`1.GetContentAsStreamAsync*
+  commentId: Overload:Dropbox.Api.Stone.IDownloadResponse`1.GetContentAsStreamAsync
+  name: GetContentAsStreamAsync
+  nameWithType: IDownloadResponse<TResponse>.GetContentAsStreamAsync
+  fullName: Dropbox.Api.Stone.IDownloadResponse<TResponse>.GetContentAsStreamAsync
+  nameWithType.vb: IDownloadResponse(Of TResponse).GetContentAsStreamAsync
+  fullName.vb: Dropbox.Api.Stone.IDownloadResponse(Of TResponse).GetContentAsStreamAsync
+- uid: Task{Stream}
+  commentId: '!:Task{Stream}'
+  definition: Task`1
+  name: Task<Stream>
+  nameWithType: Task<Stream>
+  fullName: Task<Stream>
+  nameWithType.vb: Task(Of Stream)
+  fullName.vb: Task(Of Stream)
+  name.vb: Task(Of Stream)
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Stream
+    name: Stream
+    nameWithType: Stream
+    fullName: Stream
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Stream
+    name: Stream
+    nameWithType: Stream
+    fullName: Stream
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Task`1
+  isExternal: true
+  name: Task<>
+  nameWithType: Task<>
+  fullName: Task<>
+  nameWithType.vb: Task(Of )
+  fullName.vb: Task(Of )
+  name.vb: Task(Of )
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Stone.IDownloadResponse`1.GetContentAsByteArrayAsync*
+  commentId: Overload:Dropbox.Api.Stone.IDownloadResponse`1.GetContentAsByteArrayAsync
+  name: GetContentAsByteArrayAsync
+  nameWithType: IDownloadResponse<TResponse>.GetContentAsByteArrayAsync
+  fullName: Dropbox.Api.Stone.IDownloadResponse<TResponse>.GetContentAsByteArrayAsync
+  nameWithType.vb: IDownloadResponse(Of TResponse).GetContentAsByteArrayAsync
+  fullName.vb: Dropbox.Api.Stone.IDownloadResponse(Of TResponse).GetContentAsByteArrayAsync
+- uid: Task{System.Byte[]}
+  commentId: '!:Task{System.Byte[]}'
+  definition: Task`1
+  name: Task<Byte[]>
+  nameWithType: Task<Byte[]>
+  fullName: Task<System.Byte[]>
+  nameWithType.vb: Task(Of Byte())
+  fullName.vb: Task(Of System.Byte())
+  name.vb: Task(Of Byte())
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Stone.IDownloadResponse`1.GetContentAsStringAsync*
+  commentId: Overload:Dropbox.Api.Stone.IDownloadResponse`1.GetContentAsStringAsync
+  name: GetContentAsStringAsync
+  nameWithType: IDownloadResponse<TResponse>.GetContentAsStringAsync
+  fullName: Dropbox.Api.Stone.IDownloadResponse<TResponse>.GetContentAsStringAsync
+  nameWithType.vb: IDownloadResponse(Of TResponse).GetContentAsStringAsync
+  fullName.vb: Dropbox.Api.Stone.IDownloadResponse(Of TResponse).GetContentAsStringAsync
+- uid: Task{System.String}
+  commentId: '!:Task{System.String}'
+  definition: Task`1
+  name: Task<String>
+  nameWithType: Task<String>
+  fullName: Task<System.String>
+  nameWithType.vb: Task(Of String)
+  fullName.vb: Task(Of System.String)
+  name.vb: Task(Of String)
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+shouldSkipMarkup: true

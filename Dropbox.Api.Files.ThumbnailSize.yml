@@ -1,0 +1,939 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.ThumbnailSize
+  commentId: T:Dropbox.Api.Files.ThumbnailSize
+  id: ThumbnailSize
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.ThumbnailSize.#ctor
+  - Dropbox.Api.Files.ThumbnailSize.AsW1024h768
+  - Dropbox.Api.Files.ThumbnailSize.AsW128h128
+  - Dropbox.Api.Files.ThumbnailSize.AsW2048h1536
+  - Dropbox.Api.Files.ThumbnailSize.AsW256h256
+  - Dropbox.Api.Files.ThumbnailSize.AsW32h32
+  - Dropbox.Api.Files.ThumbnailSize.AsW480h320
+  - Dropbox.Api.Files.ThumbnailSize.AsW640h480
+  - Dropbox.Api.Files.ThumbnailSize.AsW64h64
+  - Dropbox.Api.Files.ThumbnailSize.AsW960h640
+  - Dropbox.Api.Files.ThumbnailSize.IsW1024h768
+  - Dropbox.Api.Files.ThumbnailSize.IsW128h128
+  - Dropbox.Api.Files.ThumbnailSize.IsW2048h1536
+  - Dropbox.Api.Files.ThumbnailSize.IsW256h256
+  - Dropbox.Api.Files.ThumbnailSize.IsW32h32
+  - Dropbox.Api.Files.ThumbnailSize.IsW480h320
+  - Dropbox.Api.Files.ThumbnailSize.IsW640h480
+  - Dropbox.Api.Files.ThumbnailSize.IsW64h64
+  - Dropbox.Api.Files.ThumbnailSize.IsW960h640
+  langs:
+  - csharp
+  - vb
+  name: ThumbnailSize
+  nameWithType: ThumbnailSize
+  fullName: Dropbox.Api.Files.ThumbnailSize
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailSize.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ThumbnailSize
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailSize.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The thumbnail size object</p>\n"
+  example: []
+  syntax:
+    content: 'public class ThumbnailSize : object'
+    content.vb: >-
+      Public Class ThumbnailSize
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Files.ThumbnailSize.W1024h768
+  - Dropbox.Api.Files.ThumbnailSize.W128h128
+  - Dropbox.Api.Files.ThumbnailSize.W2048h1536
+  - Dropbox.Api.Files.ThumbnailSize.W256h256
+  - Dropbox.Api.Files.ThumbnailSize.W32h32
+  - Dropbox.Api.Files.ThumbnailSize.W480h320
+  - Dropbox.Api.Files.ThumbnailSize.W640h480
+  - Dropbox.Api.Files.ThumbnailSize.W64h64
+  - Dropbox.Api.Files.ThumbnailSize.W960h640
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.ThumbnailSize.#ctor
+  commentId: M:Dropbox.Api.Files.ThumbnailSize.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.ThumbnailSize
+  langs:
+  - csharp
+  - vb
+  name: ThumbnailSize()
+  nameWithType: ThumbnailSize.ThumbnailSize()
+  fullName: Dropbox.Api.Files.ThumbnailSize.ThumbnailSize()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailSize.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailSize.cs
+    startLine: 32
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.ThumbnailSize\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public ThumbnailSize()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.ThumbnailSize.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.ThumbnailSize.IsW32h32
+  commentId: P:Dropbox.Api.Files.ThumbnailSize.IsW32h32
+  id: IsW32h32
+  parent: Dropbox.Api.Files.ThumbnailSize
+  langs:
+  - csharp
+  - vb
+  name: IsW32h32
+  nameWithType: ThumbnailSize.IsW32h32
+  fullName: Dropbox.Api.Files.ThumbnailSize.IsW32h32
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailSize.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsW32h32
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailSize.cs
+    startLine: 39
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is W32h32</p>\n"
+  example: []
+  syntax:
+    content: public bool IsW32h32 { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsW32h32 As Boolean
+  overload: Dropbox.Api.Files.ThumbnailSize.IsW32h32*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.ThumbnailSize.AsW32h32
+  commentId: P:Dropbox.Api.Files.ThumbnailSize.AsW32h32
+  id: AsW32h32
+  parent: Dropbox.Api.Files.ThumbnailSize
+  langs:
+  - csharp
+  - vb
+  name: AsW32h32
+  nameWithType: ThumbnailSize.AsW32h32
+  fullName: Dropbox.Api.Files.ThumbnailSize.AsW32h32
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailSize.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsW32h32
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailSize.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a W32h32, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ThumbnailSize.W32h32 AsW32h32 { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.ThumbnailSize.W32h32
+    content.vb: Public ReadOnly Property AsW32h32 As ThumbnailSize.W32h32
+  overload: Dropbox.Api.Files.ThumbnailSize.AsW32h32*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.ThumbnailSize.IsW64h64
+  commentId: P:Dropbox.Api.Files.ThumbnailSize.IsW64h64
+  id: IsW64h64
+  parent: Dropbox.Api.Files.ThumbnailSize
+  langs:
+  - csharp
+  - vb
+  name: IsW64h64
+  nameWithType: ThumbnailSize.IsW64h64
+  fullName: Dropbox.Api.Files.ThumbnailSize.IsW64h64
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailSize.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsW64h64
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailSize.cs
+    startLine: 61
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is W64h64</p>\n"
+  example: []
+  syntax:
+    content: public bool IsW64h64 { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsW64h64 As Boolean
+  overload: Dropbox.Api.Files.ThumbnailSize.IsW64h64*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.ThumbnailSize.AsW64h64
+  commentId: P:Dropbox.Api.Files.ThumbnailSize.AsW64h64
+  id: AsW64h64
+  parent: Dropbox.Api.Files.ThumbnailSize
+  langs:
+  - csharp
+  - vb
+  name: AsW64h64
+  nameWithType: ThumbnailSize.AsW64h64
+  fullName: Dropbox.Api.Files.ThumbnailSize.AsW64h64
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailSize.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsW64h64
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailSize.cs
+    startLine: 72
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a W64h64, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ThumbnailSize.W64h64 AsW64h64 { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.ThumbnailSize.W64h64
+    content.vb: Public ReadOnly Property AsW64h64 As ThumbnailSize.W64h64
+  overload: Dropbox.Api.Files.ThumbnailSize.AsW64h64*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.ThumbnailSize.IsW128h128
+  commentId: P:Dropbox.Api.Files.ThumbnailSize.IsW128h128
+  id: IsW128h128
+  parent: Dropbox.Api.Files.ThumbnailSize
+  langs:
+  - csharp
+  - vb
+  name: IsW128h128
+  nameWithType: ThumbnailSize.IsW128h128
+  fullName: Dropbox.Api.Files.ThumbnailSize.IsW128h128
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailSize.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsW128h128
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailSize.cs
+    startLine: 83
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is W128h128</p>\n"
+  example: []
+  syntax:
+    content: public bool IsW128h128 { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsW128h128 As Boolean
+  overload: Dropbox.Api.Files.ThumbnailSize.IsW128h128*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.ThumbnailSize.AsW128h128
+  commentId: P:Dropbox.Api.Files.ThumbnailSize.AsW128h128
+  id: AsW128h128
+  parent: Dropbox.Api.Files.ThumbnailSize
+  langs:
+  - csharp
+  - vb
+  name: AsW128h128
+  nameWithType: ThumbnailSize.AsW128h128
+  fullName: Dropbox.Api.Files.ThumbnailSize.AsW128h128
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailSize.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsW128h128
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailSize.cs
+    startLine: 94
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a W128h128, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ThumbnailSize.W128h128 AsW128h128 { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.ThumbnailSize.W128h128
+    content.vb: Public ReadOnly Property AsW128h128 As ThumbnailSize.W128h128
+  overload: Dropbox.Api.Files.ThumbnailSize.AsW128h128*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.ThumbnailSize.IsW256h256
+  commentId: P:Dropbox.Api.Files.ThumbnailSize.IsW256h256
+  id: IsW256h256
+  parent: Dropbox.Api.Files.ThumbnailSize
+  langs:
+  - csharp
+  - vb
+  name: IsW256h256
+  nameWithType: ThumbnailSize.IsW256h256
+  fullName: Dropbox.Api.Files.ThumbnailSize.IsW256h256
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailSize.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsW256h256
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailSize.cs
+    startLine: 105
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is W256h256</p>\n"
+  example: []
+  syntax:
+    content: public bool IsW256h256 { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsW256h256 As Boolean
+  overload: Dropbox.Api.Files.ThumbnailSize.IsW256h256*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.ThumbnailSize.AsW256h256
+  commentId: P:Dropbox.Api.Files.ThumbnailSize.AsW256h256
+  id: AsW256h256
+  parent: Dropbox.Api.Files.ThumbnailSize
+  langs:
+  - csharp
+  - vb
+  name: AsW256h256
+  nameWithType: ThumbnailSize.AsW256h256
+  fullName: Dropbox.Api.Files.ThumbnailSize.AsW256h256
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailSize.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsW256h256
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailSize.cs
+    startLine: 116
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a W256h256, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ThumbnailSize.W256h256 AsW256h256 { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.ThumbnailSize.W256h256
+    content.vb: Public ReadOnly Property AsW256h256 As ThumbnailSize.W256h256
+  overload: Dropbox.Api.Files.ThumbnailSize.AsW256h256*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.ThumbnailSize.IsW480h320
+  commentId: P:Dropbox.Api.Files.ThumbnailSize.IsW480h320
+  id: IsW480h320
+  parent: Dropbox.Api.Files.ThumbnailSize
+  langs:
+  - csharp
+  - vb
+  name: IsW480h320
+  nameWithType: ThumbnailSize.IsW480h320
+  fullName: Dropbox.Api.Files.ThumbnailSize.IsW480h320
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailSize.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsW480h320
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailSize.cs
+    startLine: 127
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is W480h320</p>\n"
+  example: []
+  syntax:
+    content: public bool IsW480h320 { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsW480h320 As Boolean
+  overload: Dropbox.Api.Files.ThumbnailSize.IsW480h320*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.ThumbnailSize.AsW480h320
+  commentId: P:Dropbox.Api.Files.ThumbnailSize.AsW480h320
+  id: AsW480h320
+  parent: Dropbox.Api.Files.ThumbnailSize
+  langs:
+  - csharp
+  - vb
+  name: AsW480h320
+  nameWithType: ThumbnailSize.AsW480h320
+  fullName: Dropbox.Api.Files.ThumbnailSize.AsW480h320
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailSize.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsW480h320
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailSize.cs
+    startLine: 138
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a W480h320, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ThumbnailSize.W480h320 AsW480h320 { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.ThumbnailSize.W480h320
+    content.vb: Public ReadOnly Property AsW480h320 As ThumbnailSize.W480h320
+  overload: Dropbox.Api.Files.ThumbnailSize.AsW480h320*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.ThumbnailSize.IsW640h480
+  commentId: P:Dropbox.Api.Files.ThumbnailSize.IsW640h480
+  id: IsW640h480
+  parent: Dropbox.Api.Files.ThumbnailSize
+  langs:
+  - csharp
+  - vb
+  name: IsW640h480
+  nameWithType: ThumbnailSize.IsW640h480
+  fullName: Dropbox.Api.Files.ThumbnailSize.IsW640h480
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailSize.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsW640h480
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailSize.cs
+    startLine: 149
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is W640h480</p>\n"
+  example: []
+  syntax:
+    content: public bool IsW640h480 { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsW640h480 As Boolean
+  overload: Dropbox.Api.Files.ThumbnailSize.IsW640h480*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.ThumbnailSize.AsW640h480
+  commentId: P:Dropbox.Api.Files.ThumbnailSize.AsW640h480
+  id: AsW640h480
+  parent: Dropbox.Api.Files.ThumbnailSize
+  langs:
+  - csharp
+  - vb
+  name: AsW640h480
+  nameWithType: ThumbnailSize.AsW640h480
+  fullName: Dropbox.Api.Files.ThumbnailSize.AsW640h480
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailSize.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsW640h480
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailSize.cs
+    startLine: 160
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a W640h480, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ThumbnailSize.W640h480 AsW640h480 { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.ThumbnailSize.W640h480
+    content.vb: Public ReadOnly Property AsW640h480 As ThumbnailSize.W640h480
+  overload: Dropbox.Api.Files.ThumbnailSize.AsW640h480*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.ThumbnailSize.IsW960h640
+  commentId: P:Dropbox.Api.Files.ThumbnailSize.IsW960h640
+  id: IsW960h640
+  parent: Dropbox.Api.Files.ThumbnailSize
+  langs:
+  - csharp
+  - vb
+  name: IsW960h640
+  nameWithType: ThumbnailSize.IsW960h640
+  fullName: Dropbox.Api.Files.ThumbnailSize.IsW960h640
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailSize.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsW960h640
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailSize.cs
+    startLine: 171
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is W960h640</p>\n"
+  example: []
+  syntax:
+    content: public bool IsW960h640 { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsW960h640 As Boolean
+  overload: Dropbox.Api.Files.ThumbnailSize.IsW960h640*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.ThumbnailSize.AsW960h640
+  commentId: P:Dropbox.Api.Files.ThumbnailSize.AsW960h640
+  id: AsW960h640
+  parent: Dropbox.Api.Files.ThumbnailSize
+  langs:
+  - csharp
+  - vb
+  name: AsW960h640
+  nameWithType: ThumbnailSize.AsW960h640
+  fullName: Dropbox.Api.Files.ThumbnailSize.AsW960h640
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailSize.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsW960h640
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailSize.cs
+    startLine: 182
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a W960h640, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ThumbnailSize.W960h640 AsW960h640 { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.ThumbnailSize.W960h640
+    content.vb: Public ReadOnly Property AsW960h640 As ThumbnailSize.W960h640
+  overload: Dropbox.Api.Files.ThumbnailSize.AsW960h640*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.ThumbnailSize.IsW1024h768
+  commentId: P:Dropbox.Api.Files.ThumbnailSize.IsW1024h768
+  id: IsW1024h768
+  parent: Dropbox.Api.Files.ThumbnailSize
+  langs:
+  - csharp
+  - vb
+  name: IsW1024h768
+  nameWithType: ThumbnailSize.IsW1024h768
+  fullName: Dropbox.Api.Files.ThumbnailSize.IsW1024h768
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailSize.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsW1024h768
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailSize.cs
+    startLine: 193
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is W1024h768</p>\n"
+  example: []
+  syntax:
+    content: public bool IsW1024h768 { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsW1024h768 As Boolean
+  overload: Dropbox.Api.Files.ThumbnailSize.IsW1024h768*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.ThumbnailSize.AsW1024h768
+  commentId: P:Dropbox.Api.Files.ThumbnailSize.AsW1024h768
+  id: AsW1024h768
+  parent: Dropbox.Api.Files.ThumbnailSize
+  langs:
+  - csharp
+  - vb
+  name: AsW1024h768
+  nameWithType: ThumbnailSize.AsW1024h768
+  fullName: Dropbox.Api.Files.ThumbnailSize.AsW1024h768
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailSize.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsW1024h768
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailSize.cs
+    startLine: 204
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a W1024h768, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ThumbnailSize.W1024h768 AsW1024h768 { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.ThumbnailSize.W1024h768
+    content.vb: Public ReadOnly Property AsW1024h768 As ThumbnailSize.W1024h768
+  overload: Dropbox.Api.Files.ThumbnailSize.AsW1024h768*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.ThumbnailSize.IsW2048h1536
+  commentId: P:Dropbox.Api.Files.ThumbnailSize.IsW2048h1536
+  id: IsW2048h1536
+  parent: Dropbox.Api.Files.ThumbnailSize
+  langs:
+  - csharp
+  - vb
+  name: IsW2048h1536
+  nameWithType: ThumbnailSize.IsW2048h1536
+  fullName: Dropbox.Api.Files.ThumbnailSize.IsW2048h1536
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailSize.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsW2048h1536
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailSize.cs
+    startLine: 215
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is W2048h1536</p>\n"
+  example: []
+  syntax:
+    content: public bool IsW2048h1536 { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsW2048h1536 As Boolean
+  overload: Dropbox.Api.Files.ThumbnailSize.IsW2048h1536*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.ThumbnailSize.AsW2048h1536
+  commentId: P:Dropbox.Api.Files.ThumbnailSize.AsW2048h1536
+  id: AsW2048h1536
+  parent: Dropbox.Api.Files.ThumbnailSize
+  langs:
+  - csharp
+  - vb
+  name: AsW2048h1536
+  nameWithType: ThumbnailSize.AsW2048h1536
+  fullName: Dropbox.Api.Files.ThumbnailSize.AsW2048h1536
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailSize.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsW2048h1536
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ThumbnailSize.cs
+    startLine: 226
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a W2048h1536, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ThumbnailSize.W2048h1536 AsW2048h1536 { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.ThumbnailSize.W2048h1536
+    content.vb: Public ReadOnly Property AsW2048h1536 As ThumbnailSize.W2048h1536
+  overload: Dropbox.Api.Files.ThumbnailSize.AsW2048h1536*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.ThumbnailSize
+  commentId: T:Dropbox.Api.Files.ThumbnailSize
+  parent: Dropbox.Api.Files
+  name: ThumbnailSize
+  nameWithType: ThumbnailSize
+  fullName: Dropbox.Api.Files.ThumbnailSize
+- uid: Dropbox.Api.Files.ThumbnailSize.#ctor*
+  commentId: Overload:Dropbox.Api.Files.ThumbnailSize.#ctor
+  name: ThumbnailSize
+  nameWithType: ThumbnailSize.ThumbnailSize
+  fullName: Dropbox.Api.Files.ThumbnailSize.ThumbnailSize
+- uid: Dropbox.Api.Files.ThumbnailSize.IsW32h32*
+  commentId: Overload:Dropbox.Api.Files.ThumbnailSize.IsW32h32
+  name: IsW32h32
+  nameWithType: ThumbnailSize.IsW32h32
+  fullName: Dropbox.Api.Files.ThumbnailSize.IsW32h32
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Files.ThumbnailSize.AsW32h32*
+  commentId: Overload:Dropbox.Api.Files.ThumbnailSize.AsW32h32
+  name: AsW32h32
+  nameWithType: ThumbnailSize.AsW32h32
+  fullName: Dropbox.Api.Files.ThumbnailSize.AsW32h32
+- uid: Dropbox.Api.Files.ThumbnailSize.W32h32
+  commentId: T:Dropbox.Api.Files.ThumbnailSize.W32h32
+  parent: Dropbox.Api.Files
+  name: ThumbnailSize.W32h32
+  nameWithType: ThumbnailSize.W32h32
+  fullName: Dropbox.Api.Files.ThumbnailSize.W32h32
+- uid: Dropbox.Api.Files.ThumbnailSize.IsW64h64*
+  commentId: Overload:Dropbox.Api.Files.ThumbnailSize.IsW64h64
+  name: IsW64h64
+  nameWithType: ThumbnailSize.IsW64h64
+  fullName: Dropbox.Api.Files.ThumbnailSize.IsW64h64
+- uid: Dropbox.Api.Files.ThumbnailSize.AsW64h64*
+  commentId: Overload:Dropbox.Api.Files.ThumbnailSize.AsW64h64
+  name: AsW64h64
+  nameWithType: ThumbnailSize.AsW64h64
+  fullName: Dropbox.Api.Files.ThumbnailSize.AsW64h64
+- uid: Dropbox.Api.Files.ThumbnailSize.W64h64
+  commentId: T:Dropbox.Api.Files.ThumbnailSize.W64h64
+  parent: Dropbox.Api.Files
+  name: ThumbnailSize.W64h64
+  nameWithType: ThumbnailSize.W64h64
+  fullName: Dropbox.Api.Files.ThumbnailSize.W64h64
+- uid: Dropbox.Api.Files.ThumbnailSize.IsW128h128*
+  commentId: Overload:Dropbox.Api.Files.ThumbnailSize.IsW128h128
+  name: IsW128h128
+  nameWithType: ThumbnailSize.IsW128h128
+  fullName: Dropbox.Api.Files.ThumbnailSize.IsW128h128
+- uid: Dropbox.Api.Files.ThumbnailSize.AsW128h128*
+  commentId: Overload:Dropbox.Api.Files.ThumbnailSize.AsW128h128
+  name: AsW128h128
+  nameWithType: ThumbnailSize.AsW128h128
+  fullName: Dropbox.Api.Files.ThumbnailSize.AsW128h128
+- uid: Dropbox.Api.Files.ThumbnailSize.W128h128
+  commentId: T:Dropbox.Api.Files.ThumbnailSize.W128h128
+  parent: Dropbox.Api.Files
+  name: ThumbnailSize.W128h128
+  nameWithType: ThumbnailSize.W128h128
+  fullName: Dropbox.Api.Files.ThumbnailSize.W128h128
+- uid: Dropbox.Api.Files.ThumbnailSize.IsW256h256*
+  commentId: Overload:Dropbox.Api.Files.ThumbnailSize.IsW256h256
+  name: IsW256h256
+  nameWithType: ThumbnailSize.IsW256h256
+  fullName: Dropbox.Api.Files.ThumbnailSize.IsW256h256
+- uid: Dropbox.Api.Files.ThumbnailSize.AsW256h256*
+  commentId: Overload:Dropbox.Api.Files.ThumbnailSize.AsW256h256
+  name: AsW256h256
+  nameWithType: ThumbnailSize.AsW256h256
+  fullName: Dropbox.Api.Files.ThumbnailSize.AsW256h256
+- uid: Dropbox.Api.Files.ThumbnailSize.W256h256
+  commentId: T:Dropbox.Api.Files.ThumbnailSize.W256h256
+  parent: Dropbox.Api.Files
+  name: ThumbnailSize.W256h256
+  nameWithType: ThumbnailSize.W256h256
+  fullName: Dropbox.Api.Files.ThumbnailSize.W256h256
+- uid: Dropbox.Api.Files.ThumbnailSize.IsW480h320*
+  commentId: Overload:Dropbox.Api.Files.ThumbnailSize.IsW480h320
+  name: IsW480h320
+  nameWithType: ThumbnailSize.IsW480h320
+  fullName: Dropbox.Api.Files.ThumbnailSize.IsW480h320
+- uid: Dropbox.Api.Files.ThumbnailSize.AsW480h320*
+  commentId: Overload:Dropbox.Api.Files.ThumbnailSize.AsW480h320
+  name: AsW480h320
+  nameWithType: ThumbnailSize.AsW480h320
+  fullName: Dropbox.Api.Files.ThumbnailSize.AsW480h320
+- uid: Dropbox.Api.Files.ThumbnailSize.W480h320
+  commentId: T:Dropbox.Api.Files.ThumbnailSize.W480h320
+  parent: Dropbox.Api.Files
+  name: ThumbnailSize.W480h320
+  nameWithType: ThumbnailSize.W480h320
+  fullName: Dropbox.Api.Files.ThumbnailSize.W480h320
+- uid: Dropbox.Api.Files.ThumbnailSize.IsW640h480*
+  commentId: Overload:Dropbox.Api.Files.ThumbnailSize.IsW640h480
+  name: IsW640h480
+  nameWithType: ThumbnailSize.IsW640h480
+  fullName: Dropbox.Api.Files.ThumbnailSize.IsW640h480
+- uid: Dropbox.Api.Files.ThumbnailSize.AsW640h480*
+  commentId: Overload:Dropbox.Api.Files.ThumbnailSize.AsW640h480
+  name: AsW640h480
+  nameWithType: ThumbnailSize.AsW640h480
+  fullName: Dropbox.Api.Files.ThumbnailSize.AsW640h480
+- uid: Dropbox.Api.Files.ThumbnailSize.W640h480
+  commentId: T:Dropbox.Api.Files.ThumbnailSize.W640h480
+  parent: Dropbox.Api.Files
+  name: ThumbnailSize.W640h480
+  nameWithType: ThumbnailSize.W640h480
+  fullName: Dropbox.Api.Files.ThumbnailSize.W640h480
+- uid: Dropbox.Api.Files.ThumbnailSize.IsW960h640*
+  commentId: Overload:Dropbox.Api.Files.ThumbnailSize.IsW960h640
+  name: IsW960h640
+  nameWithType: ThumbnailSize.IsW960h640
+  fullName: Dropbox.Api.Files.ThumbnailSize.IsW960h640
+- uid: Dropbox.Api.Files.ThumbnailSize.AsW960h640*
+  commentId: Overload:Dropbox.Api.Files.ThumbnailSize.AsW960h640
+  name: AsW960h640
+  nameWithType: ThumbnailSize.AsW960h640
+  fullName: Dropbox.Api.Files.ThumbnailSize.AsW960h640
+- uid: Dropbox.Api.Files.ThumbnailSize.W960h640
+  commentId: T:Dropbox.Api.Files.ThumbnailSize.W960h640
+  parent: Dropbox.Api.Files
+  name: ThumbnailSize.W960h640
+  nameWithType: ThumbnailSize.W960h640
+  fullName: Dropbox.Api.Files.ThumbnailSize.W960h640
+- uid: Dropbox.Api.Files.ThumbnailSize.IsW1024h768*
+  commentId: Overload:Dropbox.Api.Files.ThumbnailSize.IsW1024h768
+  name: IsW1024h768
+  nameWithType: ThumbnailSize.IsW1024h768
+  fullName: Dropbox.Api.Files.ThumbnailSize.IsW1024h768
+- uid: Dropbox.Api.Files.ThumbnailSize.AsW1024h768*
+  commentId: Overload:Dropbox.Api.Files.ThumbnailSize.AsW1024h768
+  name: AsW1024h768
+  nameWithType: ThumbnailSize.AsW1024h768
+  fullName: Dropbox.Api.Files.ThumbnailSize.AsW1024h768
+- uid: Dropbox.Api.Files.ThumbnailSize.W1024h768
+  commentId: T:Dropbox.Api.Files.ThumbnailSize.W1024h768
+  parent: Dropbox.Api.Files
+  name: ThumbnailSize.W1024h768
+  nameWithType: ThumbnailSize.W1024h768
+  fullName: Dropbox.Api.Files.ThumbnailSize.W1024h768
+- uid: Dropbox.Api.Files.ThumbnailSize.IsW2048h1536*
+  commentId: Overload:Dropbox.Api.Files.ThumbnailSize.IsW2048h1536
+  name: IsW2048h1536
+  nameWithType: ThumbnailSize.IsW2048h1536
+  fullName: Dropbox.Api.Files.ThumbnailSize.IsW2048h1536
+- uid: Dropbox.Api.Files.ThumbnailSize.AsW2048h1536*
+  commentId: Overload:Dropbox.Api.Files.ThumbnailSize.AsW2048h1536
+  name: AsW2048h1536
+  nameWithType: ThumbnailSize.AsW2048h1536
+  fullName: Dropbox.Api.Files.ThumbnailSize.AsW2048h1536
+- uid: Dropbox.Api.Files.ThumbnailSize.W2048h1536
+  commentId: T:Dropbox.Api.Files.ThumbnailSize.W2048h1536
+  parent: Dropbox.Api.Files
+  name: ThumbnailSize.W2048h1536
+  nameWithType: ThumbnailSize.W2048h1536
+  fullName: Dropbox.Api.Files.ThumbnailSize.W2048h1536
+shouldSkipMarkup: true

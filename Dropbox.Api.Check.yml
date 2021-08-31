@@ -1,0 +1,36 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Check
+  commentId: N:Dropbox.Api.Check
+  id: Dropbox.Api.Check
+  children:
+  - Dropbox.Api.Check.EchoArg
+  - Dropbox.Api.Check.EchoResult
+  langs:
+  - csharp
+  - vb
+  name: Dropbox.Api.Check
+  nameWithType: Dropbox.Api.Check
+  fullName: Dropbox.Api.Check
+  type: Namespace
+  assemblies:
+  - Dropbox.Api
+references:
+- uid: Dropbox.Api.Check.EchoArg
+  commentId: T:Dropbox.Api.Check.EchoArg
+  parent: Dropbox.Api.Check
+  name: EchoArg
+  nameWithType: EchoArg
+  fullName: Dropbox.Api.Check.EchoArg
+- uid: Dropbox.Api.Check.EchoResult
+  commentId: T:Dropbox.Api.Check.EchoResult
+  parent: Dropbox.Api.Check
+  name: EchoResult
+  nameWithType: EchoResult
+  fullName: Dropbox.Api.Check.EchoResult
+- uid: Dropbox.Api.Check
+  commentId: N:Dropbox.Api.Check
+  name: Dropbox.Api.Check
+  nameWithType: Dropbox.Api.Check
+  fullName: Dropbox.Api.Check
+shouldSkipMarkup: true

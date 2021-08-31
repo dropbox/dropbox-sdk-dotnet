@@ -1,0 +1,486 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.GetTeamEventsResult
+  commentId: T:Dropbox.Api.TeamLog.GetTeamEventsResult
+  id: GetTeamEventsResult
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.GetTeamEventsResult.#ctor
+  - Dropbox.Api.TeamLog.GetTeamEventsResult.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.TeamLog.TeamEvent},System.String,System.Boolean)
+  - Dropbox.Api.TeamLog.GetTeamEventsResult.Cursor
+  - Dropbox.Api.TeamLog.GetTeamEventsResult.Events
+  - Dropbox.Api.TeamLog.GetTeamEventsResult.HasMore
+  langs:
+  - csharp
+  - vb
+  name: GetTeamEventsResult
+  nameWithType: GetTeamEventsResult
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsResult
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GetTeamEventsResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GetTeamEventsResult
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GetTeamEventsResult.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The get team events result object</p>\n"
+  example: []
+  syntax:
+    content: 'public class GetTeamEventsResult : object'
+    content.vb: >-
+      Public Class GetTeamEventsResult
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.GetTeamEventsResult.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.TeamLog.TeamEvent},System.String,System.Boolean)
+  commentId: M:Dropbox.Api.TeamLog.GetTeamEventsResult.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.TeamLog.TeamEvent},System.String,System.Boolean)
+  id: '#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.TeamLog.TeamEvent},System.String,System.Boolean)'
+  parent: Dropbox.Api.TeamLog.GetTeamEventsResult
+  langs:
+  - csharp
+  - vb
+  name: GetTeamEventsResult(System.Collections.Generic.IEnumerable<TeamEvent>, String, Boolean)
+  nameWithType: GetTeamEventsResult.GetTeamEventsResult(System.Collections.Generic.IEnumerable<TeamEvent>, String, Boolean)
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsResult.GetTeamEventsResult(System.Collections.Generic.IEnumerable<Dropbox.Api.TeamLog.TeamEvent>, System.String, System.Boolean)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GetTeamEventsResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GetTeamEventsResult.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.GetTeamEventsResult\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public GetTeamEventsResult(System.Collections.Generic.IEnumerable<TeamEvent> events, string cursor, bool hasMore)
+    parameters:
+    - id: events
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.TeamLog.TeamEvent}
+      description: >-
+        List of events. Note that events are not guaranteed to be
+
+        sorted by their timestamp value.
+    - id: cursor
+      type: System.String
+      description: >-
+        Pass the cursor into <xref href="Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.GetEventsContinueAsync(Dropbox.Api.TeamLog.GetTeamEventsContinueArg)" data-throw-if-not-resolved="false"></xref> to
+
+        obtain additional events. The value of <code data-dev-comment-type="paramref" class="paramref">cursor</code> may change for
+
+        each response from <xref href="Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.GetEventsContinueAsync(Dropbox.Api.TeamLog.GetTeamEventsContinueArg)" data-throw-if-not-resolved="false"></xref>,
+
+        regardless of the value of <code data-dev-comment-type="paramref" class="paramref">hasMore</code>; older cursor strings may
+
+        expire. Thus, callers should ensure that they update their cursor based on the
+
+        latest value of <code data-dev-comment-type="paramref" class="paramref">cursor</code> after each call, and poll regularly if
+
+        they wish to poll for new events. Callers should handle reset exceptions for
+
+        expired cursors.
+    - id: hasMore
+      type: System.Boolean
+      description: >-
+        Is true if there may be additional events that have not been
+
+        returned yet. An additional call to <xref href="Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.GetEventsContinueAsync(Dropbox.Api.TeamLog.GetTeamEventsContinueArg)" data-throw-if-not-resolved="false"></xref> can
+
+        retrieve them. Note that <code data-dev-comment-type="paramref" class="paramref">hasMore</code> may be <code>true</code>, even if
+
+        <code data-dev-comment-type="paramref" class="paramref">events</code> is empty.
+    content.vb: Public Sub New(events As System.Collections.Generic.IEnumerable(Of TeamEvent), cursor As String, hasMore As Boolean)
+  overload: Dropbox.Api.TeamLog.GetTeamEventsResult.#ctor*
+  nameWithType.vb: GetTeamEventsResult.GetTeamEventsResult(System.Collections.Generic.IEnumerable(Of TeamEvent), String, Boolean)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.TeamLog.GetTeamEventsResult.GetTeamEventsResult(System.Collections.Generic.IEnumerable(Of Dropbox.Api.TeamLog.TeamEvent), System.String, System.Boolean)
+  name.vb: GetTeamEventsResult(System.Collections.Generic.IEnumerable(Of TeamEvent), String, Boolean)
+- uid: Dropbox.Api.TeamLog.GetTeamEventsResult.#ctor
+  commentId: M:Dropbox.Api.TeamLog.GetTeamEventsResult.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.GetTeamEventsResult
+  langs:
+  - csharp
+  - vb
+  name: GetTeamEventsResult()
+  nameWithType: GetTeamEventsResult.GetTeamEventsResult()
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsResult.GetTeamEventsResult()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GetTeamEventsResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GetTeamEventsResult.cs
+    startLine: 77
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.GetTeamEventsResult\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public GetTeamEventsResult()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.GetTeamEventsResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.GetTeamEventsResult.Events
+  commentId: P:Dropbox.Api.TeamLog.GetTeamEventsResult.Events
+  id: Events
+  parent: Dropbox.Api.TeamLog.GetTeamEventsResult
+  langs:
+  - csharp
+  - vb
+  name: Events
+  nameWithType: GetTeamEventsResult.Events
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsResult.Events
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GetTeamEventsResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Events
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GetTeamEventsResult.cs
+    startLine: 86
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>List of events. Note that events are not guaranteed to be sorted by their\ntimestamp value.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<TeamEvent> Events { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{Dropbox.Api.TeamLog.TeamEvent}
+    content.vb: Public Property Events As System.Collections.Generic.IList(Of TeamEvent)
+  overload: Dropbox.Api.TeamLog.GetTeamEventsResult.Events*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.GetTeamEventsResult.Cursor
+  commentId: P:Dropbox.Api.TeamLog.GetTeamEventsResult.Cursor
+  id: Cursor
+  parent: Dropbox.Api.TeamLog.GetTeamEventsResult
+  langs:
+  - csharp
+  - vb
+  name: Cursor
+  nameWithType: GetTeamEventsResult.Cursor
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsResult.Cursor
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GetTeamEventsResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Cursor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GetTeamEventsResult.cs
+    startLine: 101
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Pass the cursor into <xref href=\"Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.GetEventsContinueAsync(Dropbox.Api.TeamLog.GetTeamEventsContinueArg)\" data-throw-if-not-resolved=\"false\"></xref> to\nobtain additional events.</p>\n<p>The value of <xref href=\"Dropbox.Api.TeamLog.GetTeamEventsResult.Cursor\" data-throw-if-not-resolved=\"false\"></xref> may change for each response from <xref href=\"Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.GetEventsContinueAsync(Dropbox.Api.TeamLog.GetTeamEventsContinueArg)\" data-throw-if-not-resolved=\"false\"></xref>,\nregardless of the value of <xref href=\"Dropbox.Api.TeamLog.GetTeamEventsResult.HasMore\" data-throw-if-not-resolved=\"false\"></xref>; older cursor strings may\nexpire.</p>\n<p>Thus, callers should ensure that they update their cursor based on the latest\nvalue of <xref href=\"Dropbox.Api.TeamLog.GetTeamEventsResult.Cursor\" data-throw-if-not-resolved=\"false\"></xref> after each call, and poll regularly if they wish to\npoll for new events.</p>\n<p>Callers should handle reset exceptions for expired cursors.</p>\n"
+  example: []
+  syntax:
+    content: public string Cursor { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Cursor As String
+  overload: Dropbox.Api.TeamLog.GetTeamEventsResult.Cursor*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.GetTeamEventsResult.HasMore
+  commentId: P:Dropbox.Api.TeamLog.GetTeamEventsResult.HasMore
+  id: HasMore
+  parent: Dropbox.Api.TeamLog.GetTeamEventsResult
+  langs:
+  - csharp
+  - vb
+  name: HasMore
+  nameWithType: GetTeamEventsResult.HasMore
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsResult.HasMore
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GetTeamEventsResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: HasMore
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GetTeamEventsResult.cs
+    startLine: 110
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Is true if there may be additional events that have not been returned yet. An\nadditional call to <xref href=\"Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.GetEventsContinueAsync(Dropbox.Api.TeamLog.GetTeamEventsContinueArg)\" data-throw-if-not-resolved=\"false\"></xref> can\nretrieve them. Note that <xref href=\"Dropbox.Api.TeamLog.GetTeamEventsResult.HasMore\" data-throw-if-not-resolved=\"false\"></xref> may be <code>true</code>, even if <xref href=\"Dropbox.Api.TeamLog.GetTeamEventsResult.Events\" data-throw-if-not-resolved=\"false\"></xref> is empty.</p>\n"
+  example: []
+  syntax:
+    content: public bool HasMore { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property HasMore As Boolean
+  overload: Dropbox.Api.TeamLog.GetTeamEventsResult.HasMore*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.GetTeamEventsResult
+  commentId: T:Dropbox.Api.TeamLog.GetTeamEventsResult
+  parent: Dropbox.Api.TeamLog
+  name: GetTeamEventsResult
+  nameWithType: GetTeamEventsResult
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsResult
+- uid: Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.GetEventsContinueAsync(Dropbox.Api.TeamLog.GetTeamEventsContinueArg)
+  commentId: M:Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.GetEventsContinueAsync(Dropbox.Api.TeamLog.GetTeamEventsContinueArg)
+  isExternal: true
+- uid: Dropbox.Api.TeamLog.GetTeamEventsResult.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.GetTeamEventsResult.#ctor
+  name: GetTeamEventsResult
+  nameWithType: GetTeamEventsResult.GetTeamEventsResult
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsResult.GetTeamEventsResult
+- uid: System.Collections.Generic.IEnumerable{Dropbox.Api.TeamLog.TeamEvent}
+  commentId: '!:System.Collections.Generic.IEnumerable{Dropbox.Api.TeamLog.TeamEvent}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<TeamEvent>
+  nameWithType: System.Collections.Generic.IEnumerable<TeamEvent>
+  fullName: System.Collections.Generic.IEnumerable<Dropbox.Api.TeamLog.TeamEvent>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of TeamEvent)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Dropbox.Api.TeamLog.TeamEvent)
+  name.vb: System.Collections.Generic.IEnumerable(Of TeamEvent)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.TeamLog.TeamEvent
+    name: TeamEvent
+    nameWithType: TeamEvent
+    fullName: Dropbox.Api.TeamLog.TeamEvent
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.TeamLog.TeamEvent
+    name: TeamEvent
+    nameWithType: TeamEvent
+    fullName: Dropbox.Api.TeamLog.TeamEvent
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: System.Collections.Generic.IEnumerable<>
+  nameWithType: System.Collections.Generic.IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: System.Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.TeamLog.GetTeamEventsResult.Events*
+  commentId: Overload:Dropbox.Api.TeamLog.GetTeamEventsResult.Events
+  name: Events
+  nameWithType: GetTeamEventsResult.Events
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsResult.Events
+- uid: System.Collections.Generic.IList{Dropbox.Api.TeamLog.TeamEvent}
+  commentId: '!:System.Collections.Generic.IList{Dropbox.Api.TeamLog.TeamEvent}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<TeamEvent>
+  nameWithType: System.Collections.Generic.IList<TeamEvent>
+  fullName: System.Collections.Generic.IList<Dropbox.Api.TeamLog.TeamEvent>
+  nameWithType.vb: System.Collections.Generic.IList(Of TeamEvent)
+  fullName.vb: System.Collections.Generic.IList(Of Dropbox.Api.TeamLog.TeamEvent)
+  name.vb: System.Collections.Generic.IList(Of TeamEvent)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.TeamLog.TeamEvent
+    name: TeamEvent
+    nameWithType: TeamEvent
+    fullName: Dropbox.Api.TeamLog.TeamEvent
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.TeamLog.TeamEvent
+    name: TeamEvent
+    nameWithType: TeamEvent
+    fullName: Dropbox.Api.TeamLog.TeamEvent
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  isExternal: true
+  name: System.Collections.Generic.IList<>
+  nameWithType: System.Collections.Generic.IList<>
+  fullName: System.Collections.Generic.IList<>
+  nameWithType.vb: System.Collections.Generic.IList(Of )
+  fullName.vb: System.Collections.Generic.IList(Of )
+  name.vb: System.Collections.Generic.IList(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.TeamLog.GetTeamEventsResult.Cursor
+  commentId: P:Dropbox.Api.TeamLog.GetTeamEventsResult.Cursor
+  isExternal: true
+- uid: Dropbox.Api.TeamLog.GetTeamEventsResult.HasMore
+  commentId: P:Dropbox.Api.TeamLog.GetTeamEventsResult.HasMore
+  isExternal: true
+- uid: Dropbox.Api.TeamLog.GetTeamEventsResult.Cursor*
+  commentId: Overload:Dropbox.Api.TeamLog.GetTeamEventsResult.Cursor
+  name: Cursor
+  nameWithType: GetTeamEventsResult.Cursor
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsResult.Cursor
+- uid: Dropbox.Api.TeamLog.GetTeamEventsResult.Events
+  commentId: P:Dropbox.Api.TeamLog.GetTeamEventsResult.Events
+  isExternal: true
+- uid: Dropbox.Api.TeamLog.GetTeamEventsResult.HasMore*
+  commentId: Overload:Dropbox.Api.TeamLog.GetTeamEventsResult.HasMore
+  name: HasMore
+  nameWithType: GetTeamEventsResult.HasMore
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsResult.HasMore
+shouldSkipMarkup: true

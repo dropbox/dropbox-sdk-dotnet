@@ -1,0 +1,201 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestExpiredExtraDetails.SecondaryTeam
+  commentId: T:Dropbox.Api.TeamLog.TeamMergeRequestExpiredExtraDetails.SecondaryTeam
+  id: TeamMergeRequestExpiredExtraDetails.SecondaryTeam
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.TeamMergeRequestExpiredExtraDetails.SecondaryTeam.#ctor(Dropbox.Api.TeamLog.SecondaryTeamRequestExpiredDetails)
+  - Dropbox.Api.TeamLog.TeamMergeRequestExpiredExtraDetails.SecondaryTeam.Value
+  langs:
+  - csharp
+  - vb
+  name: TeamMergeRequestExpiredExtraDetails.SecondaryTeam
+  nameWithType: TeamMergeRequestExpiredExtraDetails.SecondaryTeam
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestExpiredExtraDetails.SecondaryTeam
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestExpiredExtraDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SecondaryTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestExpiredExtraDetails.cs
+    startLine: 272
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Team merge request canceled details shown to the secondary team.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class SecondaryTeam : TeamMergeRequestExpiredExtraDetails'
+    content.vb: >-
+      Public NotInheritable Class SecondaryTeam
+          Inherits TeamMergeRequestExpiredExtraDetails
+  inheritance:
+  - System.Object
+  - Dropbox.Api.TeamLog.TeamMergeRequestExpiredExtraDetails
+  inheritedMembers:
+  - Dropbox.Api.TeamLog.TeamMergeRequestExpiredExtraDetails.IsPrimaryTeam
+  - Dropbox.Api.TeamLog.TeamMergeRequestExpiredExtraDetails.AsPrimaryTeam
+  - Dropbox.Api.TeamLog.TeamMergeRequestExpiredExtraDetails.IsSecondaryTeam
+  - Dropbox.Api.TeamLog.TeamMergeRequestExpiredExtraDetails.AsSecondaryTeam
+  - Dropbox.Api.TeamLog.TeamMergeRequestExpiredExtraDetails.IsOther
+  - Dropbox.Api.TeamLog.TeamMergeRequestExpiredExtraDetails.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestExpiredExtraDetails.SecondaryTeam.#ctor(Dropbox.Api.TeamLog.SecondaryTeamRequestExpiredDetails)
+  commentId: M:Dropbox.Api.TeamLog.TeamMergeRequestExpiredExtraDetails.SecondaryTeam.#ctor(Dropbox.Api.TeamLog.SecondaryTeamRequestExpiredDetails)
+  id: '#ctor(Dropbox.Api.TeamLog.SecondaryTeamRequestExpiredDetails)'
+  parent: Dropbox.Api.TeamLog.TeamMergeRequestExpiredExtraDetails.SecondaryTeam
+  langs:
+  - csharp
+  - vb
+  name: SecondaryTeam(SecondaryTeamRequestExpiredDetails)
+  nameWithType: TeamMergeRequestExpiredExtraDetails.SecondaryTeam.SecondaryTeam(SecondaryTeamRequestExpiredDetails)
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestExpiredExtraDetails.SecondaryTeam.SecondaryTeam(Dropbox.Api.TeamLog.SecondaryTeamRequestExpiredDetails)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestExpiredExtraDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestExpiredExtraDetails.cs
+    startLine: 291
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.TeamMergeRequestExpiredExtraDetails.SecondaryTeam\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public SecondaryTeam(SecondaryTeamRequestExpiredDetails value)
+    parameters:
+    - id: value
+      type: Dropbox.Api.TeamLog.SecondaryTeamRequestExpiredDetails
+      description: The value
+    content.vb: Public Sub New(value As SecondaryTeamRequestExpiredDetails)
+  overload: Dropbox.Api.TeamLog.TeamMergeRequestExpiredExtraDetails.SecondaryTeam.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestExpiredExtraDetails.SecondaryTeam.Value
+  commentId: P:Dropbox.Api.TeamLog.TeamMergeRequestExpiredExtraDetails.SecondaryTeam.Value
+  id: Value
+  parent: Dropbox.Api.TeamLog.TeamMergeRequestExpiredExtraDetails.SecondaryTeam
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: TeamMergeRequestExpiredExtraDetails.SecondaryTeam.Value
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestExpiredExtraDetails.SecondaryTeam.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestExpiredExtraDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestExpiredExtraDetails.cs
+    startLine: 306
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public SecondaryTeamRequestExpiredDetails Value { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.SecondaryTeamRequestExpiredDetails
+    content.vb: Public ReadOnly Property Value As SecondaryTeamRequestExpiredDetails
+  overload: Dropbox.Api.TeamLog.TeamMergeRequestExpiredExtraDetails.SecondaryTeam.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestExpiredExtraDetails
+  commentId: T:Dropbox.Api.TeamLog.TeamMergeRequestExpiredExtraDetails
+  parent: Dropbox.Api.TeamLog
+  name: TeamMergeRequestExpiredExtraDetails
+  nameWithType: TeamMergeRequestExpiredExtraDetails
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestExpiredExtraDetails
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestExpiredExtraDetails.IsPrimaryTeam
+  commentId: P:Dropbox.Api.TeamLog.TeamMergeRequestExpiredExtraDetails.IsPrimaryTeam
+  parent: Dropbox.Api.TeamLog.TeamMergeRequestExpiredExtraDetails
+  name: IsPrimaryTeam
+  nameWithType: TeamMergeRequestExpiredExtraDetails.IsPrimaryTeam
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestExpiredExtraDetails.IsPrimaryTeam
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestExpiredExtraDetails.AsPrimaryTeam
+  commentId: P:Dropbox.Api.TeamLog.TeamMergeRequestExpiredExtraDetails.AsPrimaryTeam
+  parent: Dropbox.Api.TeamLog.TeamMergeRequestExpiredExtraDetails
+  name: AsPrimaryTeam
+  nameWithType: TeamMergeRequestExpiredExtraDetails.AsPrimaryTeam
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestExpiredExtraDetails.AsPrimaryTeam
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestExpiredExtraDetails.IsSecondaryTeam
+  commentId: P:Dropbox.Api.TeamLog.TeamMergeRequestExpiredExtraDetails.IsSecondaryTeam
+  parent: Dropbox.Api.TeamLog.TeamMergeRequestExpiredExtraDetails
+  name: IsSecondaryTeam
+  nameWithType: TeamMergeRequestExpiredExtraDetails.IsSecondaryTeam
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestExpiredExtraDetails.IsSecondaryTeam
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestExpiredExtraDetails.AsSecondaryTeam
+  commentId: P:Dropbox.Api.TeamLog.TeamMergeRequestExpiredExtraDetails.AsSecondaryTeam
+  parent: Dropbox.Api.TeamLog.TeamMergeRequestExpiredExtraDetails
+  name: AsSecondaryTeam
+  nameWithType: TeamMergeRequestExpiredExtraDetails.AsSecondaryTeam
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestExpiredExtraDetails.AsSecondaryTeam
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestExpiredExtraDetails.IsOther
+  commentId: P:Dropbox.Api.TeamLog.TeamMergeRequestExpiredExtraDetails.IsOther
+  parent: Dropbox.Api.TeamLog.TeamMergeRequestExpiredExtraDetails
+  name: IsOther
+  nameWithType: TeamMergeRequestExpiredExtraDetails.IsOther
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestExpiredExtraDetails.IsOther
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestExpiredExtraDetails.AsOther
+  commentId: P:Dropbox.Api.TeamLog.TeamMergeRequestExpiredExtraDetails.AsOther
+  parent: Dropbox.Api.TeamLog.TeamMergeRequestExpiredExtraDetails
+  name: AsOther
+  nameWithType: TeamMergeRequestExpiredExtraDetails.AsOther
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestExpiredExtraDetails.AsOther
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestExpiredExtraDetails.SecondaryTeam
+  commentId: T:Dropbox.Api.TeamLog.TeamMergeRequestExpiredExtraDetails.SecondaryTeam
+  parent: Dropbox.Api.TeamLog
+  name: TeamMergeRequestExpiredExtraDetails.SecondaryTeam
+  nameWithType: TeamMergeRequestExpiredExtraDetails.SecondaryTeam
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestExpiredExtraDetails.SecondaryTeam
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestExpiredExtraDetails.SecondaryTeam.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.TeamMergeRequestExpiredExtraDetails.SecondaryTeam.#ctor
+  name: SecondaryTeam
+  nameWithType: TeamMergeRequestExpiredExtraDetails.SecondaryTeam.SecondaryTeam
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestExpiredExtraDetails.SecondaryTeam.SecondaryTeam
+- uid: Dropbox.Api.TeamLog.SecondaryTeamRequestExpiredDetails
+  commentId: T:Dropbox.Api.TeamLog.SecondaryTeamRequestExpiredDetails
+  parent: Dropbox.Api.TeamLog
+  name: SecondaryTeamRequestExpiredDetails
+  nameWithType: SecondaryTeamRequestExpiredDetails
+  fullName: Dropbox.Api.TeamLog.SecondaryTeamRequestExpiredDetails
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestExpiredExtraDetails.SecondaryTeam.Value*
+  commentId: Overload:Dropbox.Api.TeamLog.TeamMergeRequestExpiredExtraDetails.SecondaryTeam.Value
+  name: Value
+  nameWithType: TeamMergeRequestExpiredExtraDetails.SecondaryTeam.Value
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestExpiredExtraDetails.SecondaryTeam.Value
+shouldSkipMarkup: true

@@ -1,0 +1,344 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Paper.PaperDocExportResult
+  commentId: T:Dropbox.Api.Paper.PaperDocExportResult
+  id: PaperDocExportResult
+  parent: Dropbox.Api.Paper
+  children:
+  - Dropbox.Api.Paper.PaperDocExportResult.#ctor
+  - Dropbox.Api.Paper.PaperDocExportResult.#ctor(System.String,System.String,System.Int64,System.String)
+  - Dropbox.Api.Paper.PaperDocExportResult.MimeType
+  - Dropbox.Api.Paper.PaperDocExportResult.Owner
+  - Dropbox.Api.Paper.PaperDocExportResult.Revision
+  - Dropbox.Api.Paper.PaperDocExportResult.Title
+  langs:
+  - csharp
+  - vb
+  name: PaperDocExportResult
+  nameWithType: PaperDocExportResult
+  fullName: Dropbox.Api.Paper.PaperDocExportResult
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperDocExportResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PaperDocExportResult
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperDocExportResult.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>The paper doc export result object</p>\n"
+  example: []
+  syntax:
+    content: 'public class PaperDocExportResult : object'
+    content.vb: >-
+      Public Class PaperDocExportResult
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Paper.PaperDocExportResult.#ctor(System.String,System.String,System.Int64,System.String)
+  commentId: M:Dropbox.Api.Paper.PaperDocExportResult.#ctor(System.String,System.String,System.Int64,System.String)
+  id: '#ctor(System.String,System.String,System.Int64,System.String)'
+  parent: Dropbox.Api.Paper.PaperDocExportResult
+  langs:
+  - csharp
+  - vb
+  name: PaperDocExportResult(String, String, Int64, String)
+  nameWithType: PaperDocExportResult.PaperDocExportResult(String, String, Int64, String)
+  fullName: Dropbox.Api.Paper.PaperDocExportResult.PaperDocExportResult(System.String, System.String, System.Int64, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperDocExportResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperDocExportResult.cs
+    startLine: 39
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Paper.PaperDocExportResult\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public PaperDocExportResult(string owner, string title, long revision, string mimeType)
+    parameters:
+    - id: owner
+      type: System.String
+      description: The Paper doc owner&apos;s email address.
+    - id: title
+      type: System.String
+      description: The Paper doc title.
+    - id: revision
+      type: System.Int64
+      description: >-
+        The Paper doc revision. Simply an ever increasing
+
+        number.
+    - id: mimeType
+      type: System.String
+      description: MIME type of the export. This corresponds to <xref href="Dropbox.Api.Paper.ExportFormat" data-throw-if-not-resolved="false"></xref> specified in the request.
+    content.vb: Public Sub New(owner As String, title As String, revision As Long, mimeType As String)
+  overload: Dropbox.Api.Paper.PaperDocExportResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Paper.PaperDocExportResult.#ctor
+  commentId: M:Dropbox.Api.Paper.PaperDocExportResult.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Paper.PaperDocExportResult
+  langs:
+  - csharp
+  - vb
+  name: PaperDocExportResult()
+  nameWithType: PaperDocExportResult.PaperDocExportResult()
+  fullName: Dropbox.Api.Paper.PaperDocExportResult.PaperDocExportResult()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperDocExportResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperDocExportResult.cs
+    startLine: 71
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Paper.PaperDocExportResult\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public PaperDocExportResult()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Paper.PaperDocExportResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Paper.PaperDocExportResult.Owner
+  commentId: P:Dropbox.Api.Paper.PaperDocExportResult.Owner
+  id: Owner
+  parent: Dropbox.Api.Paper.PaperDocExportResult
+  langs:
+  - csharp
+  - vb
+  name: Owner
+  nameWithType: PaperDocExportResult.Owner
+  fullName: Dropbox.Api.Paper.PaperDocExportResult.Owner
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperDocExportResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Owner
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperDocExportResult.cs
+    startLine: 79
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>The Paper doc owner&apos;s email address.</p>\n"
+  example: []
+  syntax:
+    content: public string Owner { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Owner As String
+  overload: Dropbox.Api.Paper.PaperDocExportResult.Owner*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Paper.PaperDocExportResult.Title
+  commentId: P:Dropbox.Api.Paper.PaperDocExportResult.Title
+  id: Title
+  parent: Dropbox.Api.Paper.PaperDocExportResult
+  langs:
+  - csharp
+  - vb
+  name: Title
+  nameWithType: PaperDocExportResult.Title
+  fullName: Dropbox.Api.Paper.PaperDocExportResult.Title
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperDocExportResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Title
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperDocExportResult.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>The Paper doc title.</p>\n"
+  example: []
+  syntax:
+    content: public string Title { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Title As String
+  overload: Dropbox.Api.Paper.PaperDocExportResult.Title*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Paper.PaperDocExportResult.Revision
+  commentId: P:Dropbox.Api.Paper.PaperDocExportResult.Revision
+  id: Revision
+  parent: Dropbox.Api.Paper.PaperDocExportResult
+  langs:
+  - csharp
+  - vb
+  name: Revision
+  nameWithType: PaperDocExportResult.Revision
+  fullName: Dropbox.Api.Paper.PaperDocExportResult.Revision
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperDocExportResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Revision
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperDocExportResult.cs
+    startLine: 89
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>The Paper doc revision. Simply an ever increasing number.</p>\n"
+  example: []
+  syntax:
+    content: public long Revision { get; protected set; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: Public Property Revision As Long
+  overload: Dropbox.Api.Paper.PaperDocExportResult.Revision*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Paper.PaperDocExportResult.MimeType
+  commentId: P:Dropbox.Api.Paper.PaperDocExportResult.MimeType
+  id: MimeType
+  parent: Dropbox.Api.Paper.PaperDocExportResult
+  langs:
+  - csharp
+  - vb
+  name: MimeType
+  nameWithType: PaperDocExportResult.MimeType
+  fullName: Dropbox.Api.Paper.PaperDocExportResult.MimeType
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperDocExportResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: MimeType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperDocExportResult.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>MIME type of the export. This corresponds to <xref href=\"Dropbox.Api.Paper.ExportFormat\" data-throw-if-not-resolved=\"false\"></xref>\nspecified in the request.</p>\n"
+  example: []
+  syntax:
+    content: public string MimeType { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property MimeType As String
+  overload: Dropbox.Api.Paper.PaperDocExportResult.MimeType*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Paper
+  commentId: N:Dropbox.Api.Paper
+  name: Dropbox.Api.Paper
+  nameWithType: Dropbox.Api.Paper
+  fullName: Dropbox.Api.Paper
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Paper.PaperDocExportResult
+  commentId: T:Dropbox.Api.Paper.PaperDocExportResult
+  name: PaperDocExportResult
+  nameWithType: PaperDocExportResult
+  fullName: Dropbox.Api.Paper.PaperDocExportResult
+- uid: Dropbox.Api.Paper.ExportFormat
+  commentId: T:Dropbox.Api.Paper.ExportFormat
+  parent: Dropbox.Api.Paper
+  name: ExportFormat
+  nameWithType: ExportFormat
+  fullName: Dropbox.Api.Paper.ExportFormat
+- uid: Dropbox.Api.Paper.PaperDocExportResult.#ctor*
+  commentId: Overload:Dropbox.Api.Paper.PaperDocExportResult.#ctor
+  name: PaperDocExportResult
+  nameWithType: PaperDocExportResult.PaperDocExportResult
+  fullName: Dropbox.Api.Paper.PaperDocExportResult.PaperDocExportResult
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Int64
+  isExternal: true
+  name: Int64
+  nameWithType: Int64
+  fullName: System.Int64
+- uid: Dropbox.Api.Paper.PaperDocExportResult.Owner*
+  commentId: Overload:Dropbox.Api.Paper.PaperDocExportResult.Owner
+  name: Owner
+  nameWithType: PaperDocExportResult.Owner
+  fullName: Dropbox.Api.Paper.PaperDocExportResult.Owner
+- uid: Dropbox.Api.Paper.PaperDocExportResult.Title*
+  commentId: Overload:Dropbox.Api.Paper.PaperDocExportResult.Title
+  name: Title
+  nameWithType: PaperDocExportResult.Title
+  fullName: Dropbox.Api.Paper.PaperDocExportResult.Title
+- uid: Dropbox.Api.Paper.PaperDocExportResult.Revision*
+  commentId: Overload:Dropbox.Api.Paper.PaperDocExportResult.Revision
+  name: Revision
+  nameWithType: PaperDocExportResult.Revision
+  fullName: Dropbox.Api.Paper.PaperDocExportResult.Revision
+- uid: Dropbox.Api.Paper.PaperDocExportResult.MimeType*
+  commentId: Overload:Dropbox.Api.Paper.PaperDocExportResult.MimeType
+  name: MimeType
+  nameWithType: PaperDocExportResult.MimeType
+  fullName: Dropbox.Api.Paper.PaperDocExportResult.MimeType
+shouldSkipMarkup: true

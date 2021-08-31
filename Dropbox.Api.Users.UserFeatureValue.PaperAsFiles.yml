@@ -1,0 +1,201 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Users.UserFeatureValue.PaperAsFiles
+  commentId: T:Dropbox.Api.Users.UserFeatureValue.PaperAsFiles
+  id: UserFeatureValue.PaperAsFiles
+  parent: Dropbox.Api.Users
+  children:
+  - Dropbox.Api.Users.UserFeatureValue.PaperAsFiles.#ctor(Dropbox.Api.Users.PaperAsFilesValue)
+  - Dropbox.Api.Users.UserFeatureValue.PaperAsFiles.Value
+  langs:
+  - csharp
+  - vb
+  name: UserFeatureValue.PaperAsFiles
+  nameWithType: UserFeatureValue.PaperAsFiles
+  fullName: Dropbox.Api.Users.UserFeatureValue.PaperAsFiles
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/UserFeatureValue.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PaperAsFiles
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/UserFeatureValue.cs
+    startLine: 182
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users
+  summary: "\n<p>The paper as files object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class PaperAsFiles : UserFeatureValue'
+    content.vb: >-
+      Public NotInheritable Class PaperAsFiles
+          Inherits UserFeatureValue
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Users.UserFeatureValue
+  inheritedMembers:
+  - Dropbox.Api.Users.UserFeatureValue.IsPaperAsFiles
+  - Dropbox.Api.Users.UserFeatureValue.AsPaperAsFiles
+  - Dropbox.Api.Users.UserFeatureValue.IsFileLocking
+  - Dropbox.Api.Users.UserFeatureValue.AsFileLocking
+  - Dropbox.Api.Users.UserFeatureValue.IsOther
+  - Dropbox.Api.Users.UserFeatureValue.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Users.UserFeatureValue.PaperAsFiles.#ctor(Dropbox.Api.Users.PaperAsFilesValue)
+  commentId: M:Dropbox.Api.Users.UserFeatureValue.PaperAsFiles.#ctor(Dropbox.Api.Users.PaperAsFilesValue)
+  id: '#ctor(Dropbox.Api.Users.PaperAsFilesValue)'
+  parent: Dropbox.Api.Users.UserFeatureValue.PaperAsFiles
+  langs:
+  - csharp
+  - vb
+  name: PaperAsFiles(PaperAsFilesValue)
+  nameWithType: UserFeatureValue.PaperAsFiles.PaperAsFiles(PaperAsFilesValue)
+  fullName: Dropbox.Api.Users.UserFeatureValue.PaperAsFiles.PaperAsFiles(Dropbox.Api.Users.PaperAsFilesValue)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/UserFeatureValue.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/UserFeatureValue.cs
+    startLine: 201
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Users.UserFeatureValue.PaperAsFiles\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public PaperAsFiles(PaperAsFilesValue value)
+    parameters:
+    - id: value
+      type: Dropbox.Api.Users.PaperAsFilesValue
+      description: The value
+    content.vb: Public Sub New(value As PaperAsFilesValue)
+  overload: Dropbox.Api.Users.UserFeatureValue.PaperAsFiles.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Users.UserFeatureValue.PaperAsFiles.Value
+  commentId: P:Dropbox.Api.Users.UserFeatureValue.PaperAsFiles.Value
+  id: Value
+  parent: Dropbox.Api.Users.UserFeatureValue.PaperAsFiles
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: UserFeatureValue.PaperAsFiles.Value
+  fullName: Dropbox.Api.Users.UserFeatureValue.PaperAsFiles.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/UserFeatureValue.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/UserFeatureValue.cs
+    startLine: 216
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public PaperAsFilesValue Value { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Users.PaperAsFilesValue
+    content.vb: Public ReadOnly Property Value As PaperAsFilesValue
+  overload: Dropbox.Api.Users.UserFeatureValue.PaperAsFiles.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Users
+  commentId: N:Dropbox.Api.Users
+  name: Dropbox.Api.Users
+  nameWithType: Dropbox.Api.Users
+  fullName: Dropbox.Api.Users
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Users.UserFeatureValue
+  commentId: T:Dropbox.Api.Users.UserFeatureValue
+  parent: Dropbox.Api.Users
+  name: UserFeatureValue
+  nameWithType: UserFeatureValue
+  fullName: Dropbox.Api.Users.UserFeatureValue
+- uid: Dropbox.Api.Users.UserFeatureValue.IsPaperAsFiles
+  commentId: P:Dropbox.Api.Users.UserFeatureValue.IsPaperAsFiles
+  parent: Dropbox.Api.Users.UserFeatureValue
+  name: IsPaperAsFiles
+  nameWithType: UserFeatureValue.IsPaperAsFiles
+  fullName: Dropbox.Api.Users.UserFeatureValue.IsPaperAsFiles
+- uid: Dropbox.Api.Users.UserFeatureValue.AsPaperAsFiles
+  commentId: P:Dropbox.Api.Users.UserFeatureValue.AsPaperAsFiles
+  parent: Dropbox.Api.Users.UserFeatureValue
+  name: AsPaperAsFiles
+  nameWithType: UserFeatureValue.AsPaperAsFiles
+  fullName: Dropbox.Api.Users.UserFeatureValue.AsPaperAsFiles
+- uid: Dropbox.Api.Users.UserFeatureValue.IsFileLocking
+  commentId: P:Dropbox.Api.Users.UserFeatureValue.IsFileLocking
+  parent: Dropbox.Api.Users.UserFeatureValue
+  name: IsFileLocking
+  nameWithType: UserFeatureValue.IsFileLocking
+  fullName: Dropbox.Api.Users.UserFeatureValue.IsFileLocking
+- uid: Dropbox.Api.Users.UserFeatureValue.AsFileLocking
+  commentId: P:Dropbox.Api.Users.UserFeatureValue.AsFileLocking
+  parent: Dropbox.Api.Users.UserFeatureValue
+  name: AsFileLocking
+  nameWithType: UserFeatureValue.AsFileLocking
+  fullName: Dropbox.Api.Users.UserFeatureValue.AsFileLocking
+- uid: Dropbox.Api.Users.UserFeatureValue.IsOther
+  commentId: P:Dropbox.Api.Users.UserFeatureValue.IsOther
+  parent: Dropbox.Api.Users.UserFeatureValue
+  name: IsOther
+  nameWithType: UserFeatureValue.IsOther
+  fullName: Dropbox.Api.Users.UserFeatureValue.IsOther
+- uid: Dropbox.Api.Users.UserFeatureValue.AsOther
+  commentId: P:Dropbox.Api.Users.UserFeatureValue.AsOther
+  parent: Dropbox.Api.Users.UserFeatureValue
+  name: AsOther
+  nameWithType: UserFeatureValue.AsOther
+  fullName: Dropbox.Api.Users.UserFeatureValue.AsOther
+- uid: Dropbox.Api.Users.UserFeatureValue.PaperAsFiles
+  commentId: T:Dropbox.Api.Users.UserFeatureValue.PaperAsFiles
+  parent: Dropbox.Api.Users
+  name: UserFeatureValue.PaperAsFiles
+  nameWithType: UserFeatureValue.PaperAsFiles
+  fullName: Dropbox.Api.Users.UserFeatureValue.PaperAsFiles
+- uid: Dropbox.Api.Users.UserFeatureValue.PaperAsFiles.#ctor*
+  commentId: Overload:Dropbox.Api.Users.UserFeatureValue.PaperAsFiles.#ctor
+  name: PaperAsFiles
+  nameWithType: UserFeatureValue.PaperAsFiles.PaperAsFiles
+  fullName: Dropbox.Api.Users.UserFeatureValue.PaperAsFiles.PaperAsFiles
+- uid: Dropbox.Api.Users.PaperAsFilesValue
+  commentId: T:Dropbox.Api.Users.PaperAsFilesValue
+  parent: Dropbox.Api.Users
+  name: PaperAsFilesValue
+  nameWithType: PaperAsFilesValue
+  fullName: Dropbox.Api.Users.PaperAsFilesValue
+- uid: Dropbox.Api.Users.UserFeatureValue.PaperAsFiles.Value*
+  commentId: Overload:Dropbox.Api.Users.UserFeatureValue.PaperAsFiles.Value
+  name: Value
+  nameWithType: UserFeatureValue.PaperAsFiles.Value
+  fullName: Dropbox.Api.Users.UserFeatureValue.PaperAsFiles.Value
+shouldSkipMarkup: true

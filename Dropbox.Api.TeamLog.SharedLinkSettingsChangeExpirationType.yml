@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.SharedLinkSettingsChangeExpirationType
+  commentId: T:Dropbox.Api.TeamLog.SharedLinkSettingsChangeExpirationType
+  id: SharedLinkSettingsChangeExpirationType
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.SharedLinkSettingsChangeExpirationType.#ctor
+  - Dropbox.Api.TeamLog.SharedLinkSettingsChangeExpirationType.#ctor(System.String)
+  - Dropbox.Api.TeamLog.SharedLinkSettingsChangeExpirationType.Description
+  langs:
+  - csharp
+  - vb
+  name: SharedLinkSettingsChangeExpirationType
+  nameWithType: SharedLinkSettingsChangeExpirationType
+  fullName: Dropbox.Api.TeamLog.SharedLinkSettingsChangeExpirationType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedLinkSettingsChangeExpirationType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SharedLinkSettingsChangeExpirationType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedLinkSettingsChangeExpirationType.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The shared link settings change expiration type object</p>\n"
+  example: []
+  syntax:
+    content: 'public class SharedLinkSettingsChangeExpirationType : object'
+    content.vb: >-
+      Public Class SharedLinkSettingsChangeExpirationType
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.SharedLinkSettingsChangeExpirationType.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.SharedLinkSettingsChangeExpirationType.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.SharedLinkSettingsChangeExpirationType
+  langs:
+  - csharp
+  - vb
+  name: SharedLinkSettingsChangeExpirationType(String)
+  nameWithType: SharedLinkSettingsChangeExpirationType.SharedLinkSettingsChangeExpirationType(String)
+  fullName: Dropbox.Api.TeamLog.SharedLinkSettingsChangeExpirationType.SharedLinkSettingsChangeExpirationType(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedLinkSettingsChangeExpirationType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedLinkSettingsChangeExpirationType.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SharedLinkSettingsChangeExpirationType\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public SharedLinkSettingsChangeExpirationType(string description)
+    parameters:
+    - id: description
+      type: System.String
+      description: The description
+    content.vb: Public Sub New(description As String)
+  overload: Dropbox.Api.TeamLog.SharedLinkSettingsChangeExpirationType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SharedLinkSettingsChangeExpirationType.#ctor
+  commentId: M:Dropbox.Api.TeamLog.SharedLinkSettingsChangeExpirationType.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.SharedLinkSettingsChangeExpirationType
+  langs:
+  - csharp
+  - vb
+  name: SharedLinkSettingsChangeExpirationType()
+  nameWithType: SharedLinkSettingsChangeExpirationType.SharedLinkSettingsChangeExpirationType()
+  fullName: Dropbox.Api.TeamLog.SharedLinkSettingsChangeExpirationType.SharedLinkSettingsChangeExpirationType()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedLinkSettingsChangeExpirationType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedLinkSettingsChangeExpirationType.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SharedLinkSettingsChangeExpirationType\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public SharedLinkSettingsChangeExpirationType()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.SharedLinkSettingsChangeExpirationType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SharedLinkSettingsChangeExpirationType.Description
+  commentId: P:Dropbox.Api.TeamLog.SharedLinkSettingsChangeExpirationType.Description
+  id: Description
+  parent: Dropbox.Api.TeamLog.SharedLinkSettingsChangeExpirationType
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: SharedLinkSettingsChangeExpirationType.Description
+  fullName: Dropbox.Api.TeamLog.SharedLinkSettingsChangeExpirationType.Description
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedLinkSettingsChangeExpirationType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Description
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedLinkSettingsChangeExpirationType.cs
+    startLine: 59
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets the description of the shared link settings change expiration\ntype</p>\n"
+  example: []
+  syntax:
+    content: public string Description { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Dropbox.Api.TeamLog.SharedLinkSettingsChangeExpirationType.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.SharedLinkSettingsChangeExpirationType
+  commentId: T:Dropbox.Api.TeamLog.SharedLinkSettingsChangeExpirationType
+  parent: Dropbox.Api.TeamLog
+  name: SharedLinkSettingsChangeExpirationType
+  nameWithType: SharedLinkSettingsChangeExpirationType
+  fullName: Dropbox.Api.TeamLog.SharedLinkSettingsChangeExpirationType
+- uid: Dropbox.Api.TeamLog.SharedLinkSettingsChangeExpirationType.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedLinkSettingsChangeExpirationType.#ctor
+  name: SharedLinkSettingsChangeExpirationType
+  nameWithType: SharedLinkSettingsChangeExpirationType.SharedLinkSettingsChangeExpirationType
+  fullName: Dropbox.Api.TeamLog.SharedLinkSettingsChangeExpirationType.SharedLinkSettingsChangeExpirationType
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.SharedLinkSettingsChangeExpirationType.Description*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedLinkSettingsChangeExpirationType.Description
+  name: Description
+  nameWithType: SharedLinkSettingsChangeExpirationType.Description
+  fullName: Dropbox.Api.TeamLog.SharedLinkSettingsChangeExpirationType.Description
+shouldSkipMarkup: true

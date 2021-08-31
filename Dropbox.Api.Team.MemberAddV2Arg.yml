@@ -1,0 +1,525 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.MemberAddV2Arg
+  commentId: T:Dropbox.Api.Team.MemberAddV2Arg
+  id: MemberAddV2Arg
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.MemberAddV2Arg.#ctor
+  - Dropbox.Api.Team.MemberAddV2Arg.#ctor(System.String,System.String,System.String,System.String,System.String,System.Boolean,System.Nullable{System.Boolean},System.Collections.Generic.IEnumerable{System.String})
+  - Dropbox.Api.Team.MemberAddV2Arg.RoleIds
+  langs:
+  - csharp
+  - vb
+  name: MemberAddV2Arg
+  nameWithType: MemberAddV2Arg
+  fullName: Dropbox.Api.Team.MemberAddV2Arg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MemberAddV2Arg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: MemberAddV2Arg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MemberAddV2Arg.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The member add v2 arg object</p>\n"
+  example: []
+  syntax:
+    content: 'public class MemberAddV2Arg : MemberAddArgBase'
+    content.vb: >-
+      Public Class MemberAddV2Arg
+          Inherits MemberAddArgBase
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.MemberAddArgBase
+  inheritedMembers:
+  - Dropbox.Api.Team.MemberAddArgBase.MemberEmail
+  - Dropbox.Api.Team.MemberAddArgBase.MemberGivenName
+  - Dropbox.Api.Team.MemberAddArgBase.MemberSurname
+  - Dropbox.Api.Team.MemberAddArgBase.MemberExternalId
+  - Dropbox.Api.Team.MemberAddArgBase.MemberPersistentId
+  - Dropbox.Api.Team.MemberAddArgBase.SendWelcomeEmail
+  - Dropbox.Api.Team.MemberAddArgBase.IsDirectoryRestricted
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.MemberAddV2Arg.#ctor(System.String,System.String,System.String,System.String,System.String,System.Boolean,System.Nullable{System.Boolean},System.Collections.Generic.IEnumerable{System.String})
+  commentId: M:Dropbox.Api.Team.MemberAddV2Arg.#ctor(System.String,System.String,System.String,System.String,System.String,System.Boolean,System.Nullable{System.Boolean},System.Collections.Generic.IEnumerable{System.String})
+  id: '#ctor(System.String,System.String,System.String,System.String,System.String,System.Boolean,System.Nullable{System.Boolean},System.Collections.Generic.IEnumerable{System.String})'
+  parent: Dropbox.Api.Team.MemberAddV2Arg
+  langs:
+  - csharp
+  - vb
+  name: MemberAddV2Arg(String, String, String, String, String, Boolean, Nullable<Boolean>, System.Collections.Generic.IEnumerable<String>)
+  nameWithType: MemberAddV2Arg.MemberAddV2Arg(String, String, String, String, String, Boolean, Nullable<Boolean>, System.Collections.Generic.IEnumerable<String>)
+  fullName: Dropbox.Api.Team.MemberAddV2Arg.MemberAddV2Arg(System.String, System.String, System.String, System.String, System.String, System.Boolean, System.Nullable<System.Boolean>, System.Collections.Generic.IEnumerable<System.String>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MemberAddV2Arg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MemberAddV2Arg.cs
+    startLine: 45
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.MemberAddV2Arg\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public MemberAddV2Arg(string memberEmail, string memberGivenName = null, string memberSurname = null, string memberExternalId = null, string memberPersistentId = null, bool sendWelcomeEmail = true, bool? isDirectoryRestricted = null, System.Collections.Generic.IEnumerable<string> roleIds = null)
+    parameters:
+    - id: memberEmail
+      type: System.String
+      description: The member email
+    - id: memberGivenName
+      type: System.String
+      description: Member&apos;s first name.
+    - id: memberSurname
+      type: System.String
+      description: Member&apos;s last name.
+    - id: memberExternalId
+      type: System.String
+      description: External ID for member.
+    - id: memberPersistentId
+      type: System.String
+      description: >-
+        Persistent ID for member. This field is only
+
+        available to teams using persistent ID SAML configuration.
+    - id: sendWelcomeEmail
+      type: System.Boolean
+      description: >-
+        Whether to send a welcome email to the member. If
+
+        send_welcome_email is false, no email invitation will be sent to the user. This may
+
+        be useful for apps using single sign-on (SSO) flows for onboarding that want to
+
+        handle announcements themselves.
+    - id: isDirectoryRestricted
+      type: System.Nullable{System.Boolean}
+      description: Whether a user is directory restricted.
+    - id: roleIds
+      type: System.Collections.Generic.IEnumerable{System.String}
+      description: The role ids
+    content.vb: Public Sub New(memberEmail As String, memberGivenName As String = Nothing, memberSurname As String = Nothing, memberExternalId As String = Nothing, memberPersistentId As String = Nothing, sendWelcomeEmail As Boolean = True, isDirectoryRestricted As Boolean? = Nothing, roleIds As System.Collections.Generic.IEnumerable(Of String) = Nothing)
+  overload: Dropbox.Api.Team.MemberAddV2Arg.#ctor*
+  nameWithType.vb: MemberAddV2Arg.MemberAddV2Arg(String, String, String, String, String, Boolean, Nullable(Of Boolean), System.Collections.Generic.IEnumerable(Of String))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Team.MemberAddV2Arg.MemberAddV2Arg(System.String, System.String, System.String, System.String, System.String, System.Boolean, System.Nullable(Of System.Boolean), System.Collections.Generic.IEnumerable(Of System.String))
+  name.vb: MemberAddV2Arg(String, String, String, String, String, Boolean, Nullable(Of Boolean), System.Collections.Generic.IEnumerable(Of String))
+- uid: Dropbox.Api.Team.MemberAddV2Arg.#ctor
+  commentId: M:Dropbox.Api.Team.MemberAddV2Arg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.MemberAddV2Arg
+  langs:
+  - csharp
+  - vb
+  name: MemberAddV2Arg()
+  nameWithType: MemberAddV2Arg.MemberAddV2Arg()
+  fullName: Dropbox.Api.Team.MemberAddV2Arg.MemberAddV2Arg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MemberAddV2Arg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MemberAddV2Arg.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.MemberAddV2Arg\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public MemberAddV2Arg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.MemberAddV2Arg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.MemberAddV2Arg.RoleIds
+  commentId: P:Dropbox.Api.Team.MemberAddV2Arg.RoleIds
+  id: RoleIds
+  parent: Dropbox.Api.Team.MemberAddV2Arg
+  langs:
+  - csharp
+  - vb
+  name: RoleIds
+  nameWithType: MemberAddV2Arg.RoleIds
+  fullName: Dropbox.Api.Team.MemberAddV2Arg.RoleIds
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MemberAddV2Arg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: RoleIds
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MemberAddV2Arg.cs
+    startLine: 81
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets the role ids of the member add v2 arg</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<string> RoleIds { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{System.String}
+    content.vb: Public Property RoleIds As System.Collections.Generic.IList(Of String)
+  overload: Dropbox.Api.Team.MemberAddV2Arg.RoleIds*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.MemberAddArgBase
+  commentId: T:Dropbox.Api.Team.MemberAddArgBase
+  parent: Dropbox.Api.Team
+  name: MemberAddArgBase
+  nameWithType: MemberAddArgBase
+  fullName: Dropbox.Api.Team.MemberAddArgBase
+- uid: Dropbox.Api.Team.MemberAddArgBase.MemberEmail
+  commentId: P:Dropbox.Api.Team.MemberAddArgBase.MemberEmail
+  parent: Dropbox.Api.Team.MemberAddArgBase
+  name: MemberEmail
+  nameWithType: MemberAddArgBase.MemberEmail
+  fullName: Dropbox.Api.Team.MemberAddArgBase.MemberEmail
+- uid: Dropbox.Api.Team.MemberAddArgBase.MemberGivenName
+  commentId: P:Dropbox.Api.Team.MemberAddArgBase.MemberGivenName
+  parent: Dropbox.Api.Team.MemberAddArgBase
+  name: MemberGivenName
+  nameWithType: MemberAddArgBase.MemberGivenName
+  fullName: Dropbox.Api.Team.MemberAddArgBase.MemberGivenName
+- uid: Dropbox.Api.Team.MemberAddArgBase.MemberSurname
+  commentId: P:Dropbox.Api.Team.MemberAddArgBase.MemberSurname
+  parent: Dropbox.Api.Team.MemberAddArgBase
+  name: MemberSurname
+  nameWithType: MemberAddArgBase.MemberSurname
+  fullName: Dropbox.Api.Team.MemberAddArgBase.MemberSurname
+- uid: Dropbox.Api.Team.MemberAddArgBase.MemberExternalId
+  commentId: P:Dropbox.Api.Team.MemberAddArgBase.MemberExternalId
+  parent: Dropbox.Api.Team.MemberAddArgBase
+  name: MemberExternalId
+  nameWithType: MemberAddArgBase.MemberExternalId
+  fullName: Dropbox.Api.Team.MemberAddArgBase.MemberExternalId
+- uid: Dropbox.Api.Team.MemberAddArgBase.MemberPersistentId
+  commentId: P:Dropbox.Api.Team.MemberAddArgBase.MemberPersistentId
+  parent: Dropbox.Api.Team.MemberAddArgBase
+  name: MemberPersistentId
+  nameWithType: MemberAddArgBase.MemberPersistentId
+  fullName: Dropbox.Api.Team.MemberAddArgBase.MemberPersistentId
+- uid: Dropbox.Api.Team.MemberAddArgBase.SendWelcomeEmail
+  commentId: P:Dropbox.Api.Team.MemberAddArgBase.SendWelcomeEmail
+  parent: Dropbox.Api.Team.MemberAddArgBase
+  name: SendWelcomeEmail
+  nameWithType: MemberAddArgBase.SendWelcomeEmail
+  fullName: Dropbox.Api.Team.MemberAddArgBase.SendWelcomeEmail
+- uid: Dropbox.Api.Team.MemberAddArgBase.IsDirectoryRestricted
+  commentId: P:Dropbox.Api.Team.MemberAddArgBase.IsDirectoryRestricted
+  parent: Dropbox.Api.Team.MemberAddArgBase
+  name: IsDirectoryRestricted
+  nameWithType: MemberAddArgBase.IsDirectoryRestricted
+  fullName: Dropbox.Api.Team.MemberAddArgBase.IsDirectoryRestricted
+- uid: Dropbox.Api.Team.MemberAddV2Arg
+  commentId: T:Dropbox.Api.Team.MemberAddV2Arg
+  name: MemberAddV2Arg
+  nameWithType: MemberAddV2Arg
+  fullName: Dropbox.Api.Team.MemberAddV2Arg
+- uid: Dropbox.Api.Team.MemberAddV2Arg.#ctor*
+  commentId: Overload:Dropbox.Api.Team.MemberAddV2Arg.#ctor
+  name: MemberAddV2Arg
+  nameWithType: MemberAddV2Arg.MemberAddV2Arg
+  fullName: Dropbox.Api.Team.MemberAddV2Arg.MemberAddV2Arg
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.Nullable{System.Boolean}
+  commentId: '!:System.Nullable{System.Boolean}'
+  definition: System.Nullable`1
+  name: Nullable<Boolean>
+  nameWithType: Nullable<Boolean>
+  fullName: System.Nullable<System.Boolean>
+  nameWithType.vb: Nullable(Of Boolean)
+  fullName.vb: System.Nullable(Of System.Boolean)
+  name.vb: Nullable(Of Boolean)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: '!:System.Collections.Generic.IEnumerable{System.String}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<String>
+  nameWithType: System.Collections.Generic.IEnumerable<String>
+  fullName: System.Collections.Generic.IEnumerable<System.String>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of String)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.String)
+  name.vb: System.Collections.Generic.IEnumerable(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  isExternal: true
+  name: Nullable<>
+  nameWithType: Nullable<>
+  fullName: System.Nullable<>
+  nameWithType.vb: Nullable(Of )
+  fullName.vb: System.Nullable(Of )
+  name.vb: Nullable(Of )
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: System.Collections.Generic.IEnumerable<>
+  nameWithType: System.Collections.Generic.IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: System.Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Team.MemberAddV2Arg.RoleIds*
+  commentId: Overload:Dropbox.Api.Team.MemberAddV2Arg.RoleIds
+  name: RoleIds
+  nameWithType: MemberAddV2Arg.RoleIds
+  fullName: Dropbox.Api.Team.MemberAddV2Arg.RoleIds
+- uid: System.Collections.Generic.IList{System.String}
+  commentId: '!:System.Collections.Generic.IList{System.String}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<String>
+  nameWithType: System.Collections.Generic.IList<String>
+  fullName: System.Collections.Generic.IList<System.String>
+  nameWithType.vb: System.Collections.Generic.IList(Of String)
+  fullName.vb: System.Collections.Generic.IList(Of System.String)
+  name.vb: System.Collections.Generic.IList(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  isExternal: true
+  name: System.Collections.Generic.IList<>
+  nameWithType: System.Collections.Generic.IList<>
+  fullName: System.Collections.Generic.IList<>
+  nameWithType.vb: System.Collections.Generic.IList(Of )
+  fullName.vb: System.Collections.Generic.IList(Of )
+  name.vb: System.Collections.Generic.IList(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+shouldSkipMarkup: true

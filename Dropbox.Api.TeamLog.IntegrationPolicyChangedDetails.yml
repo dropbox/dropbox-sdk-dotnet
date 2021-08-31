@@ -1,0 +1,289 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.IntegrationPolicyChangedDetails
+  commentId: T:Dropbox.Api.TeamLog.IntegrationPolicyChangedDetails
+  id: IntegrationPolicyChangedDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.IntegrationPolicyChangedDetails.#ctor
+  - Dropbox.Api.TeamLog.IntegrationPolicyChangedDetails.#ctor(System.String,Dropbox.Api.TeamLog.IntegrationPolicy,Dropbox.Api.TeamLog.IntegrationPolicy)
+  - Dropbox.Api.TeamLog.IntegrationPolicyChangedDetails.IntegrationName
+  - Dropbox.Api.TeamLog.IntegrationPolicyChangedDetails.NewValue
+  - Dropbox.Api.TeamLog.IntegrationPolicyChangedDetails.PreviousValue
+  langs:
+  - csharp
+  - vb
+  name: IntegrationPolicyChangedDetails
+  nameWithType: IntegrationPolicyChangedDetails
+  fullName: Dropbox.Api.TeamLog.IntegrationPolicyChangedDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/IntegrationPolicyChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IntegrationPolicyChangedDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/IntegrationPolicyChangedDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Changed integration policy for team.</p>\n"
+  example: []
+  syntax:
+    content: 'public class IntegrationPolicyChangedDetails : object'
+    content.vb: >-
+      Public Class IntegrationPolicyChangedDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.IntegrationPolicyChangedDetails.#ctor(System.String,Dropbox.Api.TeamLog.IntegrationPolicy,Dropbox.Api.TeamLog.IntegrationPolicy)
+  commentId: M:Dropbox.Api.TeamLog.IntegrationPolicyChangedDetails.#ctor(System.String,Dropbox.Api.TeamLog.IntegrationPolicy,Dropbox.Api.TeamLog.IntegrationPolicy)
+  id: '#ctor(System.String,Dropbox.Api.TeamLog.IntegrationPolicy,Dropbox.Api.TeamLog.IntegrationPolicy)'
+  parent: Dropbox.Api.TeamLog.IntegrationPolicyChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: IntegrationPolicyChangedDetails(String, IntegrationPolicy, IntegrationPolicy)
+  nameWithType: IntegrationPolicyChangedDetails.IntegrationPolicyChangedDetails(String, IntegrationPolicy, IntegrationPolicy)
+  fullName: Dropbox.Api.TeamLog.IntegrationPolicyChangedDetails.IntegrationPolicyChangedDetails(System.String, Dropbox.Api.TeamLog.IntegrationPolicy, Dropbox.Api.TeamLog.IntegrationPolicy)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/IntegrationPolicyChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/IntegrationPolicyChangedDetails.cs
+    startLine: 36
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.IntegrationPolicyChangedDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public IntegrationPolicyChangedDetails(string integrationName, IntegrationPolicy newValue, IntegrationPolicy previousValue)
+    parameters:
+    - id: integrationName
+      type: System.String
+      description: Name of the third-party integration.
+    - id: newValue
+      type: Dropbox.Api.TeamLog.IntegrationPolicy
+      description: New integration policy.
+    - id: previousValue
+      type: Dropbox.Api.TeamLog.IntegrationPolicy
+      description: Previous integration policy.
+    content.vb: Public Sub New(integrationName As String, newValue As IntegrationPolicy, previousValue As IntegrationPolicy)
+  overload: Dropbox.Api.TeamLog.IntegrationPolicyChangedDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.IntegrationPolicyChangedDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.IntegrationPolicyChangedDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.IntegrationPolicyChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: IntegrationPolicyChangedDetails()
+  nameWithType: IntegrationPolicyChangedDetails.IntegrationPolicyChangedDetails()
+  fullName: Dropbox.Api.TeamLog.IntegrationPolicyChangedDetails.IntegrationPolicyChangedDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/IntegrationPolicyChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/IntegrationPolicyChangedDetails.cs
+    startLine: 66
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.IntegrationPolicyChangedDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public IntegrationPolicyChangedDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.IntegrationPolicyChangedDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.IntegrationPolicyChangedDetails.IntegrationName
+  commentId: P:Dropbox.Api.TeamLog.IntegrationPolicyChangedDetails.IntegrationName
+  id: IntegrationName
+  parent: Dropbox.Api.TeamLog.IntegrationPolicyChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: IntegrationName
+  nameWithType: IntegrationPolicyChangedDetails.IntegrationName
+  fullName: Dropbox.Api.TeamLog.IntegrationPolicyChangedDetails.IntegrationName
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/IntegrationPolicyChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IntegrationName
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/IntegrationPolicyChangedDetails.cs
+    startLine: 74
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Name of the third-party integration.</p>\n"
+  example: []
+  syntax:
+    content: public string IntegrationName { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property IntegrationName As String
+  overload: Dropbox.Api.TeamLog.IntegrationPolicyChangedDetails.IntegrationName*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.IntegrationPolicyChangedDetails.NewValue
+  commentId: P:Dropbox.Api.TeamLog.IntegrationPolicyChangedDetails.NewValue
+  id: NewValue
+  parent: Dropbox.Api.TeamLog.IntegrationPolicyChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: NewValue
+  nameWithType: IntegrationPolicyChangedDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.IntegrationPolicyChangedDetails.NewValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/IntegrationPolicyChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NewValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/IntegrationPolicyChangedDetails.cs
+    startLine: 79
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>New integration policy.</p>\n"
+  example: []
+  syntax:
+    content: public IntegrationPolicy NewValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.IntegrationPolicy
+    content.vb: Public Property NewValue As IntegrationPolicy
+  overload: Dropbox.Api.TeamLog.IntegrationPolicyChangedDetails.NewValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.IntegrationPolicyChangedDetails.PreviousValue
+  commentId: P:Dropbox.Api.TeamLog.IntegrationPolicyChangedDetails.PreviousValue
+  id: PreviousValue
+  parent: Dropbox.Api.TeamLog.IntegrationPolicyChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: PreviousValue
+  nameWithType: IntegrationPolicyChangedDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.IntegrationPolicyChangedDetails.PreviousValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/IntegrationPolicyChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PreviousValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/IntegrationPolicyChangedDetails.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Previous integration policy.</p>\n"
+  example: []
+  syntax:
+    content: public IntegrationPolicy PreviousValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.IntegrationPolicy
+    content.vb: Public Property PreviousValue As IntegrationPolicy
+  overload: Dropbox.Api.TeamLog.IntegrationPolicyChangedDetails.PreviousValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.IntegrationPolicyChangedDetails
+  commentId: T:Dropbox.Api.TeamLog.IntegrationPolicyChangedDetails
+  parent: Dropbox.Api.TeamLog
+  name: IntegrationPolicyChangedDetails
+  nameWithType: IntegrationPolicyChangedDetails
+  fullName: Dropbox.Api.TeamLog.IntegrationPolicyChangedDetails
+- uid: Dropbox.Api.TeamLog.IntegrationPolicyChangedDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.IntegrationPolicyChangedDetails.#ctor
+  name: IntegrationPolicyChangedDetails
+  nameWithType: IntegrationPolicyChangedDetails.IntegrationPolicyChangedDetails
+  fullName: Dropbox.Api.TeamLog.IntegrationPolicyChangedDetails.IntegrationPolicyChangedDetails
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.IntegrationPolicy
+  commentId: T:Dropbox.Api.TeamLog.IntegrationPolicy
+  parent: Dropbox.Api.TeamLog
+  name: IntegrationPolicy
+  nameWithType: IntegrationPolicy
+  fullName: Dropbox.Api.TeamLog.IntegrationPolicy
+- uid: Dropbox.Api.TeamLog.IntegrationPolicyChangedDetails.IntegrationName*
+  commentId: Overload:Dropbox.Api.TeamLog.IntegrationPolicyChangedDetails.IntegrationName
+  name: IntegrationName
+  nameWithType: IntegrationPolicyChangedDetails.IntegrationName
+  fullName: Dropbox.Api.TeamLog.IntegrationPolicyChangedDetails.IntegrationName
+- uid: Dropbox.Api.TeamLog.IntegrationPolicyChangedDetails.NewValue*
+  commentId: Overload:Dropbox.Api.TeamLog.IntegrationPolicyChangedDetails.NewValue
+  name: NewValue
+  nameWithType: IntegrationPolicyChangedDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.IntegrationPolicyChangedDetails.NewValue
+- uid: Dropbox.Api.TeamLog.IntegrationPolicyChangedDetails.PreviousValue*
+  commentId: Overload:Dropbox.Api.TeamLog.IntegrationPolicyChangedDetails.PreviousValue
+  name: PreviousValue
+  nameWithType: IntegrationPolicyChangedDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.IntegrationPolicyChangedDetails.PreviousValue
+shouldSkipMarkup: true

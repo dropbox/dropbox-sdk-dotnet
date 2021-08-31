@@ -1,0 +1,477 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.ListFileMembersContinueError
+  commentId: T:Dropbox.Api.Sharing.ListFileMembersContinueError
+  id: ListFileMembersContinueError
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.ListFileMembersContinueError.#ctor
+  - Dropbox.Api.Sharing.ListFileMembersContinueError.AsAccessError
+  - Dropbox.Api.Sharing.ListFileMembersContinueError.AsInvalidCursor
+  - Dropbox.Api.Sharing.ListFileMembersContinueError.AsOther
+  - Dropbox.Api.Sharing.ListFileMembersContinueError.AsUserError
+  - Dropbox.Api.Sharing.ListFileMembersContinueError.IsAccessError
+  - Dropbox.Api.Sharing.ListFileMembersContinueError.IsInvalidCursor
+  - Dropbox.Api.Sharing.ListFileMembersContinueError.IsOther
+  - Dropbox.Api.Sharing.ListFileMembersContinueError.IsUserError
+  langs:
+  - csharp
+  - vb
+  name: ListFileMembersContinueError
+  nameWithType: ListFileMembersContinueError
+  fullName: Dropbox.Api.Sharing.ListFileMembersContinueError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersContinueError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ListFileMembersContinueError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersContinueError.cs
+    startLine: 17
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Error for <xref href=\"Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListFileMembersContinueAsync(Dropbox.Api.Sharing.ListFileMembersContinueArg)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+  example: []
+  syntax:
+    content: 'public class ListFileMembersContinueError : object'
+    content.vb: >-
+      Public Class ListFileMembersContinueError
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Sharing.ListFileMembersContinueError.AccessError
+  - Dropbox.Api.Sharing.ListFileMembersContinueError.InvalidCursor
+  - Dropbox.Api.Sharing.ListFileMembersContinueError.Other
+  - Dropbox.Api.Sharing.ListFileMembersContinueError.UserError
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Sharing.ListFileMembersContinueError.#ctor
+  commentId: M:Dropbox.Api.Sharing.ListFileMembersContinueError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Sharing.ListFileMembersContinueError
+  langs:
+  - csharp
+  - vb
+  name: ListFileMembersContinueError()
+  nameWithType: ListFileMembersContinueError.ListFileMembersContinueError()
+  fullName: Dropbox.Api.Sharing.ListFileMembersContinueError.ListFileMembersContinueError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersContinueError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersContinueError.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.ListFileMembersContinueError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public ListFileMembersContinueError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Sharing.ListFileMembersContinueError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.ListFileMembersContinueError.IsUserError
+  commentId: P:Dropbox.Api.Sharing.ListFileMembersContinueError.IsUserError
+  id: IsUserError
+  parent: Dropbox.Api.Sharing.ListFileMembersContinueError
+  langs:
+  - csharp
+  - vb
+  name: IsUserError
+  nameWithType: ListFileMembersContinueError.IsUserError
+  fullName: Dropbox.Api.Sharing.ListFileMembersContinueError.IsUserError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersContinueError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsUserError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersContinueError.cs
+    startLine: 42
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is UserError</p>\n"
+  example: []
+  syntax:
+    content: public bool IsUserError { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsUserError As Boolean
+  overload: Dropbox.Api.Sharing.ListFileMembersContinueError.IsUserError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.ListFileMembersContinueError.AsUserError
+  commentId: P:Dropbox.Api.Sharing.ListFileMembersContinueError.AsUserError
+  id: AsUserError
+  parent: Dropbox.Api.Sharing.ListFileMembersContinueError
+  langs:
+  - csharp
+  - vb
+  name: AsUserError
+  nameWithType: ListFileMembersContinueError.AsUserError
+  fullName: Dropbox.Api.Sharing.ListFileMembersContinueError.AsUserError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersContinueError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsUserError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersContinueError.cs
+    startLine: 53
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a UserError, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ListFileMembersContinueError.UserError AsUserError { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.ListFileMembersContinueError.UserError
+    content.vb: Public ReadOnly Property AsUserError As ListFileMembersContinueError.UserError
+  overload: Dropbox.Api.Sharing.ListFileMembersContinueError.AsUserError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.ListFileMembersContinueError.IsAccessError
+  commentId: P:Dropbox.Api.Sharing.ListFileMembersContinueError.IsAccessError
+  id: IsAccessError
+  parent: Dropbox.Api.Sharing.ListFileMembersContinueError
+  langs:
+  - csharp
+  - vb
+  name: IsAccessError
+  nameWithType: ListFileMembersContinueError.IsAccessError
+  fullName: Dropbox.Api.Sharing.ListFileMembersContinueError.IsAccessError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersContinueError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsAccessError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersContinueError.cs
+    startLine: 64
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is AccessError</p>\n"
+  example: []
+  syntax:
+    content: public bool IsAccessError { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsAccessError As Boolean
+  overload: Dropbox.Api.Sharing.ListFileMembersContinueError.IsAccessError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.ListFileMembersContinueError.AsAccessError
+  commentId: P:Dropbox.Api.Sharing.ListFileMembersContinueError.AsAccessError
+  id: AsAccessError
+  parent: Dropbox.Api.Sharing.ListFileMembersContinueError
+  langs:
+  - csharp
+  - vb
+  name: AsAccessError
+  nameWithType: ListFileMembersContinueError.AsAccessError
+  fullName: Dropbox.Api.Sharing.ListFileMembersContinueError.AsAccessError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersContinueError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsAccessError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersContinueError.cs
+    startLine: 75
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a AccessError, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ListFileMembersContinueError.AccessError AsAccessError { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.ListFileMembersContinueError.AccessError
+    content.vb: Public ReadOnly Property AsAccessError As ListFileMembersContinueError.AccessError
+  overload: Dropbox.Api.Sharing.ListFileMembersContinueError.AsAccessError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.ListFileMembersContinueError.IsInvalidCursor
+  commentId: P:Dropbox.Api.Sharing.ListFileMembersContinueError.IsInvalidCursor
+  id: IsInvalidCursor
+  parent: Dropbox.Api.Sharing.ListFileMembersContinueError
+  langs:
+  - csharp
+  - vb
+  name: IsInvalidCursor
+  nameWithType: ListFileMembersContinueError.IsInvalidCursor
+  fullName: Dropbox.Api.Sharing.ListFileMembersContinueError.IsInvalidCursor
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersContinueError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsInvalidCursor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersContinueError.cs
+    startLine: 86
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is InvalidCursor</p>\n"
+  example: []
+  syntax:
+    content: public bool IsInvalidCursor { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsInvalidCursor As Boolean
+  overload: Dropbox.Api.Sharing.ListFileMembersContinueError.IsInvalidCursor*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.ListFileMembersContinueError.AsInvalidCursor
+  commentId: P:Dropbox.Api.Sharing.ListFileMembersContinueError.AsInvalidCursor
+  id: AsInvalidCursor
+  parent: Dropbox.Api.Sharing.ListFileMembersContinueError
+  langs:
+  - csharp
+  - vb
+  name: AsInvalidCursor
+  nameWithType: ListFileMembersContinueError.AsInvalidCursor
+  fullName: Dropbox.Api.Sharing.ListFileMembersContinueError.AsInvalidCursor
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersContinueError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsInvalidCursor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersContinueError.cs
+    startLine: 97
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a InvalidCursor, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ListFileMembersContinueError.InvalidCursor AsInvalidCursor { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.ListFileMembersContinueError.InvalidCursor
+    content.vb: Public ReadOnly Property AsInvalidCursor As ListFileMembersContinueError.InvalidCursor
+  overload: Dropbox.Api.Sharing.ListFileMembersContinueError.AsInvalidCursor*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.ListFileMembersContinueError.IsOther
+  commentId: P:Dropbox.Api.Sharing.ListFileMembersContinueError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Sharing.ListFileMembersContinueError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: ListFileMembersContinueError.IsOther
+  fullName: Dropbox.Api.Sharing.ListFileMembersContinueError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersContinueError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersContinueError.cs
+    startLine: 108
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Sharing.ListFileMembersContinueError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.ListFileMembersContinueError.AsOther
+  commentId: P:Dropbox.Api.Sharing.ListFileMembersContinueError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Sharing.ListFileMembersContinueError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: ListFileMembersContinueError.AsOther
+  fullName: Dropbox.Api.Sharing.ListFileMembersContinueError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersContinueError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersContinueError.cs
+    startLine: 119
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ListFileMembersContinueError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.ListFileMembersContinueError.Other
+    content.vb: Public ReadOnly Property AsOther As ListFileMembersContinueError.Other
+  overload: Dropbox.Api.Sharing.ListFileMembersContinueError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListFileMembersContinueAsync(Dropbox.Api.Sharing.ListFileMembersContinueArg)
+  commentId: M:Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListFileMembersContinueAsync(Dropbox.Api.Sharing.ListFileMembersContinueArg)
+  isExternal: true
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.ListFileMembersContinueError
+  commentId: T:Dropbox.Api.Sharing.ListFileMembersContinueError
+  parent: Dropbox.Api.Sharing
+  name: ListFileMembersContinueError
+  nameWithType: ListFileMembersContinueError
+  fullName: Dropbox.Api.Sharing.ListFileMembersContinueError
+- uid: Dropbox.Api.Sharing.ListFileMembersContinueError.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.ListFileMembersContinueError.#ctor
+  name: ListFileMembersContinueError
+  nameWithType: ListFileMembersContinueError.ListFileMembersContinueError
+  fullName: Dropbox.Api.Sharing.ListFileMembersContinueError.ListFileMembersContinueError
+- uid: Dropbox.Api.Sharing.ListFileMembersContinueError.IsUserError*
+  commentId: Overload:Dropbox.Api.Sharing.ListFileMembersContinueError.IsUserError
+  name: IsUserError
+  nameWithType: ListFileMembersContinueError.IsUserError
+  fullName: Dropbox.Api.Sharing.ListFileMembersContinueError.IsUserError
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Sharing.ListFileMembersContinueError.AsUserError*
+  commentId: Overload:Dropbox.Api.Sharing.ListFileMembersContinueError.AsUserError
+  name: AsUserError
+  nameWithType: ListFileMembersContinueError.AsUserError
+  fullName: Dropbox.Api.Sharing.ListFileMembersContinueError.AsUserError
+- uid: Dropbox.Api.Sharing.ListFileMembersContinueError.UserError
+  commentId: T:Dropbox.Api.Sharing.ListFileMembersContinueError.UserError
+  parent: Dropbox.Api.Sharing
+  name: ListFileMembersContinueError.UserError
+  nameWithType: ListFileMembersContinueError.UserError
+  fullName: Dropbox.Api.Sharing.ListFileMembersContinueError.UserError
+- uid: Dropbox.Api.Sharing.ListFileMembersContinueError.IsAccessError*
+  commentId: Overload:Dropbox.Api.Sharing.ListFileMembersContinueError.IsAccessError
+  name: IsAccessError
+  nameWithType: ListFileMembersContinueError.IsAccessError
+  fullName: Dropbox.Api.Sharing.ListFileMembersContinueError.IsAccessError
+- uid: Dropbox.Api.Sharing.ListFileMembersContinueError.AsAccessError*
+  commentId: Overload:Dropbox.Api.Sharing.ListFileMembersContinueError.AsAccessError
+  name: AsAccessError
+  nameWithType: ListFileMembersContinueError.AsAccessError
+  fullName: Dropbox.Api.Sharing.ListFileMembersContinueError.AsAccessError
+- uid: Dropbox.Api.Sharing.ListFileMembersContinueError.AccessError
+  commentId: T:Dropbox.Api.Sharing.ListFileMembersContinueError.AccessError
+  parent: Dropbox.Api.Sharing
+  name: ListFileMembersContinueError.AccessError
+  nameWithType: ListFileMembersContinueError.AccessError
+  fullName: Dropbox.Api.Sharing.ListFileMembersContinueError.AccessError
+- uid: Dropbox.Api.Sharing.ListFileMembersContinueError.IsInvalidCursor*
+  commentId: Overload:Dropbox.Api.Sharing.ListFileMembersContinueError.IsInvalidCursor
+  name: IsInvalidCursor
+  nameWithType: ListFileMembersContinueError.IsInvalidCursor
+  fullName: Dropbox.Api.Sharing.ListFileMembersContinueError.IsInvalidCursor
+- uid: Dropbox.Api.Sharing.ListFileMembersContinueError.AsInvalidCursor*
+  commentId: Overload:Dropbox.Api.Sharing.ListFileMembersContinueError.AsInvalidCursor
+  name: AsInvalidCursor
+  nameWithType: ListFileMembersContinueError.AsInvalidCursor
+  fullName: Dropbox.Api.Sharing.ListFileMembersContinueError.AsInvalidCursor
+- uid: Dropbox.Api.Sharing.ListFileMembersContinueError.InvalidCursor
+  commentId: T:Dropbox.Api.Sharing.ListFileMembersContinueError.InvalidCursor
+  parent: Dropbox.Api.Sharing
+  name: ListFileMembersContinueError.InvalidCursor
+  nameWithType: ListFileMembersContinueError.InvalidCursor
+  fullName: Dropbox.Api.Sharing.ListFileMembersContinueError.InvalidCursor
+- uid: Dropbox.Api.Sharing.ListFileMembersContinueError.IsOther*
+  commentId: Overload:Dropbox.Api.Sharing.ListFileMembersContinueError.IsOther
+  name: IsOther
+  nameWithType: ListFileMembersContinueError.IsOther
+  fullName: Dropbox.Api.Sharing.ListFileMembersContinueError.IsOther
+- uid: Dropbox.Api.Sharing.ListFileMembersContinueError.AsOther*
+  commentId: Overload:Dropbox.Api.Sharing.ListFileMembersContinueError.AsOther
+  name: AsOther
+  nameWithType: ListFileMembersContinueError.AsOther
+  fullName: Dropbox.Api.Sharing.ListFileMembersContinueError.AsOther
+- uid: Dropbox.Api.Sharing.ListFileMembersContinueError.Other
+  commentId: T:Dropbox.Api.Sharing.ListFileMembersContinueError.Other
+  parent: Dropbox.Api.Sharing
+  name: ListFileMembersContinueError.Other
+  nameWithType: ListFileMembersContinueError.Other
+  fullName: Dropbox.Api.Sharing.ListFileMembersContinueError.Other
+shouldSkipMarkup: true

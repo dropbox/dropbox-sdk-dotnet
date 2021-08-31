@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.MemberSpaceLimitsAddExceptionType
+  commentId: T:Dropbox.Api.TeamLog.MemberSpaceLimitsAddExceptionType
+  id: MemberSpaceLimitsAddExceptionType
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.MemberSpaceLimitsAddExceptionType.#ctor
+  - Dropbox.Api.TeamLog.MemberSpaceLimitsAddExceptionType.#ctor(System.String)
+  - Dropbox.Api.TeamLog.MemberSpaceLimitsAddExceptionType.Description
+  langs:
+  - csharp
+  - vb
+  name: MemberSpaceLimitsAddExceptionType
+  nameWithType: MemberSpaceLimitsAddExceptionType
+  fullName: Dropbox.Api.TeamLog.MemberSpaceLimitsAddExceptionType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSpaceLimitsAddExceptionType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: MemberSpaceLimitsAddExceptionType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSpaceLimitsAddExceptionType.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The member space limits add exception type object</p>\n"
+  example: []
+  syntax:
+    content: 'public class MemberSpaceLimitsAddExceptionType : object'
+    content.vb: >-
+      Public Class MemberSpaceLimitsAddExceptionType
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.MemberSpaceLimitsAddExceptionType.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.MemberSpaceLimitsAddExceptionType.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.MemberSpaceLimitsAddExceptionType
+  langs:
+  - csharp
+  - vb
+  name: MemberSpaceLimitsAddExceptionType(String)
+  nameWithType: MemberSpaceLimitsAddExceptionType.MemberSpaceLimitsAddExceptionType(String)
+  fullName: Dropbox.Api.TeamLog.MemberSpaceLimitsAddExceptionType.MemberSpaceLimitsAddExceptionType(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSpaceLimitsAddExceptionType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSpaceLimitsAddExceptionType.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.MemberSpaceLimitsAddExceptionType\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public MemberSpaceLimitsAddExceptionType(string description)
+    parameters:
+    - id: description
+      type: System.String
+      description: The description
+    content.vb: Public Sub New(description As String)
+  overload: Dropbox.Api.TeamLog.MemberSpaceLimitsAddExceptionType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.MemberSpaceLimitsAddExceptionType.#ctor
+  commentId: M:Dropbox.Api.TeamLog.MemberSpaceLimitsAddExceptionType.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.MemberSpaceLimitsAddExceptionType
+  langs:
+  - csharp
+  - vb
+  name: MemberSpaceLimitsAddExceptionType()
+  nameWithType: MemberSpaceLimitsAddExceptionType.MemberSpaceLimitsAddExceptionType()
+  fullName: Dropbox.Api.TeamLog.MemberSpaceLimitsAddExceptionType.MemberSpaceLimitsAddExceptionType()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSpaceLimitsAddExceptionType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSpaceLimitsAddExceptionType.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.MemberSpaceLimitsAddExceptionType\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public MemberSpaceLimitsAddExceptionType()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.MemberSpaceLimitsAddExceptionType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.MemberSpaceLimitsAddExceptionType.Description
+  commentId: P:Dropbox.Api.TeamLog.MemberSpaceLimitsAddExceptionType.Description
+  id: Description
+  parent: Dropbox.Api.TeamLog.MemberSpaceLimitsAddExceptionType
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: MemberSpaceLimitsAddExceptionType.Description
+  fullName: Dropbox.Api.TeamLog.MemberSpaceLimitsAddExceptionType.Description
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSpaceLimitsAddExceptionType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Description
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSpaceLimitsAddExceptionType.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets the description of the member space limits add exception type</p>\n"
+  example: []
+  syntax:
+    content: public string Description { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Dropbox.Api.TeamLog.MemberSpaceLimitsAddExceptionType.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.MemberSpaceLimitsAddExceptionType
+  commentId: T:Dropbox.Api.TeamLog.MemberSpaceLimitsAddExceptionType
+  parent: Dropbox.Api.TeamLog
+  name: MemberSpaceLimitsAddExceptionType
+  nameWithType: MemberSpaceLimitsAddExceptionType
+  fullName: Dropbox.Api.TeamLog.MemberSpaceLimitsAddExceptionType
+- uid: Dropbox.Api.TeamLog.MemberSpaceLimitsAddExceptionType.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberSpaceLimitsAddExceptionType.#ctor
+  name: MemberSpaceLimitsAddExceptionType
+  nameWithType: MemberSpaceLimitsAddExceptionType.MemberSpaceLimitsAddExceptionType
+  fullName: Dropbox.Api.TeamLog.MemberSpaceLimitsAddExceptionType.MemberSpaceLimitsAddExceptionType
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.MemberSpaceLimitsAddExceptionType.Description*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberSpaceLimitsAddExceptionType.Description
+  name: Description
+  nameWithType: MemberSpaceLimitsAddExceptionType.Description
+  fullName: Dropbox.Api.TeamLog.MemberSpaceLimitsAddExceptionType.Description
+shouldSkipMarkup: true

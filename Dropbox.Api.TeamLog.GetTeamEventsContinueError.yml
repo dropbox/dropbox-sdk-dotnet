@@ -1,0 +1,384 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.GetTeamEventsContinueError
+  commentId: T:Dropbox.Api.TeamLog.GetTeamEventsContinueError
+  id: GetTeamEventsContinueError
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.GetTeamEventsContinueError.#ctor
+  - Dropbox.Api.TeamLog.GetTeamEventsContinueError.AsBadCursor
+  - Dropbox.Api.TeamLog.GetTeamEventsContinueError.AsOther
+  - Dropbox.Api.TeamLog.GetTeamEventsContinueError.AsReset
+  - Dropbox.Api.TeamLog.GetTeamEventsContinueError.IsBadCursor
+  - Dropbox.Api.TeamLog.GetTeamEventsContinueError.IsOther
+  - Dropbox.Api.TeamLog.GetTeamEventsContinueError.IsReset
+  langs:
+  - csharp
+  - vb
+  name: GetTeamEventsContinueError
+  nameWithType: GetTeamEventsContinueError
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsContinueError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GetTeamEventsContinueError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GetTeamEventsContinueError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GetTeamEventsContinueError.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Errors that can be raised when calling <xref href=\"Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.GetEventsContinueAsync(Dropbox.Api.TeamLog.GetTeamEventsContinueArg)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+  example: []
+  syntax:
+    content: 'public class GetTeamEventsContinueError : object'
+    content.vb: >-
+      Public Class GetTeamEventsContinueError
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.TeamLog.GetTeamEventsContinueError.BadCursor
+  - Dropbox.Api.TeamLog.GetTeamEventsContinueError.Other
+  - Dropbox.Api.TeamLog.GetTeamEventsContinueError.Reset
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.GetTeamEventsContinueError.#ctor
+  commentId: M:Dropbox.Api.TeamLog.GetTeamEventsContinueError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.GetTeamEventsContinueError
+  langs:
+  - csharp
+  - vb
+  name: GetTeamEventsContinueError()
+  nameWithType: GetTeamEventsContinueError.GetTeamEventsContinueError()
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsContinueError.GetTeamEventsContinueError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GetTeamEventsContinueError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GetTeamEventsContinueError.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.GetTeamEventsContinueError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public GetTeamEventsContinueError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.GetTeamEventsContinueError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.GetTeamEventsContinueError.IsBadCursor
+  commentId: P:Dropbox.Api.TeamLog.GetTeamEventsContinueError.IsBadCursor
+  id: IsBadCursor
+  parent: Dropbox.Api.TeamLog.GetTeamEventsContinueError
+  langs:
+  - csharp
+  - vb
+  name: IsBadCursor
+  nameWithType: GetTeamEventsContinueError.IsBadCursor
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsContinueError.IsBadCursor
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GetTeamEventsContinueError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsBadCursor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GetTeamEventsContinueError.cs
+    startLine: 41
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is BadCursor</p>\n"
+  example: []
+  syntax:
+    content: public bool IsBadCursor { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsBadCursor As Boolean
+  overload: Dropbox.Api.TeamLog.GetTeamEventsContinueError.IsBadCursor*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.GetTeamEventsContinueError.AsBadCursor
+  commentId: P:Dropbox.Api.TeamLog.GetTeamEventsContinueError.AsBadCursor
+  id: AsBadCursor
+  parent: Dropbox.Api.TeamLog.GetTeamEventsContinueError
+  langs:
+  - csharp
+  - vb
+  name: AsBadCursor
+  nameWithType: GetTeamEventsContinueError.AsBadCursor
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsContinueError.AsBadCursor
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GetTeamEventsContinueError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsBadCursor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GetTeamEventsContinueError.cs
+    startLine: 52
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a BadCursor, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public GetTeamEventsContinueError.BadCursor AsBadCursor { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.GetTeamEventsContinueError.BadCursor
+    content.vb: Public ReadOnly Property AsBadCursor As GetTeamEventsContinueError.BadCursor
+  overload: Dropbox.Api.TeamLog.GetTeamEventsContinueError.AsBadCursor*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.GetTeamEventsContinueError.IsReset
+  commentId: P:Dropbox.Api.TeamLog.GetTeamEventsContinueError.IsReset
+  id: IsReset
+  parent: Dropbox.Api.TeamLog.GetTeamEventsContinueError
+  langs:
+  - csharp
+  - vb
+  name: IsReset
+  nameWithType: GetTeamEventsContinueError.IsReset
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsContinueError.IsReset
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GetTeamEventsContinueError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsReset
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GetTeamEventsContinueError.cs
+    startLine: 63
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Reset</p>\n"
+  example: []
+  syntax:
+    content: public bool IsReset { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsReset As Boolean
+  overload: Dropbox.Api.TeamLog.GetTeamEventsContinueError.IsReset*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.GetTeamEventsContinueError.AsReset
+  commentId: P:Dropbox.Api.TeamLog.GetTeamEventsContinueError.AsReset
+  id: AsReset
+  parent: Dropbox.Api.TeamLog.GetTeamEventsContinueError
+  langs:
+  - csharp
+  - vb
+  name: AsReset
+  nameWithType: GetTeamEventsContinueError.AsReset
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsContinueError.AsReset
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GetTeamEventsContinueError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsReset
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GetTeamEventsContinueError.cs
+    startLine: 74
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Reset, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public GetTeamEventsContinueError.Reset AsReset { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.GetTeamEventsContinueError.Reset
+    content.vb: Public ReadOnly Property AsReset As GetTeamEventsContinueError.Reset
+  overload: Dropbox.Api.TeamLog.GetTeamEventsContinueError.AsReset*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.GetTeamEventsContinueError.IsOther
+  commentId: P:Dropbox.Api.TeamLog.GetTeamEventsContinueError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.TeamLog.GetTeamEventsContinueError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: GetTeamEventsContinueError.IsOther
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsContinueError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GetTeamEventsContinueError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GetTeamEventsContinueError.cs
+    startLine: 85
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.TeamLog.GetTeamEventsContinueError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.GetTeamEventsContinueError.AsOther
+  commentId: P:Dropbox.Api.TeamLog.GetTeamEventsContinueError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.TeamLog.GetTeamEventsContinueError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: GetTeamEventsContinueError.AsOther
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsContinueError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GetTeamEventsContinueError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GetTeamEventsContinueError.cs
+    startLine: 96
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public GetTeamEventsContinueError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.GetTeamEventsContinueError.Other
+    content.vb: Public ReadOnly Property AsOther As GetTeamEventsContinueError.Other
+  overload: Dropbox.Api.TeamLog.GetTeamEventsContinueError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.GetEventsContinueAsync(Dropbox.Api.TeamLog.GetTeamEventsContinueArg)
+  commentId: M:Dropbox.Api.TeamLog.Routes.TeamLogTeamRoutes.GetEventsContinueAsync(Dropbox.Api.TeamLog.GetTeamEventsContinueArg)
+  isExternal: true
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.GetTeamEventsContinueError
+  commentId: T:Dropbox.Api.TeamLog.GetTeamEventsContinueError
+  parent: Dropbox.Api.TeamLog
+  name: GetTeamEventsContinueError
+  nameWithType: GetTeamEventsContinueError
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsContinueError
+- uid: Dropbox.Api.TeamLog.GetTeamEventsContinueError.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.GetTeamEventsContinueError.#ctor
+  name: GetTeamEventsContinueError
+  nameWithType: GetTeamEventsContinueError.GetTeamEventsContinueError
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsContinueError.GetTeamEventsContinueError
+- uid: Dropbox.Api.TeamLog.GetTeamEventsContinueError.IsBadCursor*
+  commentId: Overload:Dropbox.Api.TeamLog.GetTeamEventsContinueError.IsBadCursor
+  name: IsBadCursor
+  nameWithType: GetTeamEventsContinueError.IsBadCursor
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsContinueError.IsBadCursor
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.TeamLog.GetTeamEventsContinueError.AsBadCursor*
+  commentId: Overload:Dropbox.Api.TeamLog.GetTeamEventsContinueError.AsBadCursor
+  name: AsBadCursor
+  nameWithType: GetTeamEventsContinueError.AsBadCursor
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsContinueError.AsBadCursor
+- uid: Dropbox.Api.TeamLog.GetTeamEventsContinueError.BadCursor
+  commentId: T:Dropbox.Api.TeamLog.GetTeamEventsContinueError.BadCursor
+  parent: Dropbox.Api.TeamLog
+  name: GetTeamEventsContinueError.BadCursor
+  nameWithType: GetTeamEventsContinueError.BadCursor
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsContinueError.BadCursor
+- uid: Dropbox.Api.TeamLog.GetTeamEventsContinueError.IsReset*
+  commentId: Overload:Dropbox.Api.TeamLog.GetTeamEventsContinueError.IsReset
+  name: IsReset
+  nameWithType: GetTeamEventsContinueError.IsReset
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsContinueError.IsReset
+- uid: Dropbox.Api.TeamLog.GetTeamEventsContinueError.AsReset*
+  commentId: Overload:Dropbox.Api.TeamLog.GetTeamEventsContinueError.AsReset
+  name: AsReset
+  nameWithType: GetTeamEventsContinueError.AsReset
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsContinueError.AsReset
+- uid: Dropbox.Api.TeamLog.GetTeamEventsContinueError.Reset
+  commentId: T:Dropbox.Api.TeamLog.GetTeamEventsContinueError.Reset
+  parent: Dropbox.Api.TeamLog
+  name: GetTeamEventsContinueError.Reset
+  nameWithType: GetTeamEventsContinueError.Reset
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsContinueError.Reset
+- uid: Dropbox.Api.TeamLog.GetTeamEventsContinueError.IsOther*
+  commentId: Overload:Dropbox.Api.TeamLog.GetTeamEventsContinueError.IsOther
+  name: IsOther
+  nameWithType: GetTeamEventsContinueError.IsOther
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsContinueError.IsOther
+- uid: Dropbox.Api.TeamLog.GetTeamEventsContinueError.AsOther*
+  commentId: Overload:Dropbox.Api.TeamLog.GetTeamEventsContinueError.AsOther
+  name: AsOther
+  nameWithType: GetTeamEventsContinueError.AsOther
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsContinueError.AsOther
+- uid: Dropbox.Api.TeamLog.GetTeamEventsContinueError.Other
+  commentId: T:Dropbox.Api.TeamLog.GetTeamEventsContinueError.Other
+  parent: Dropbox.Api.TeamLog
+  name: GetTeamEventsContinueError.Other
+  nameWithType: GetTeamEventsContinueError.Other
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsContinueError.Other
+shouldSkipMarkup: true

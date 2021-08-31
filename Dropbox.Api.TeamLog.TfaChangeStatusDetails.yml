@@ -1,0 +1,374 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.TfaChangeStatusDetails
+  commentId: T:Dropbox.Api.TeamLog.TfaChangeStatusDetails
+  id: TfaChangeStatusDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.TfaChangeStatusDetails.#ctor
+  - Dropbox.Api.TeamLog.TfaChangeStatusDetails.#ctor(Dropbox.Api.TeamLog.TfaConfiguration,Dropbox.Api.TeamLog.TfaConfiguration,System.Nullable{System.Boolean})
+  - Dropbox.Api.TeamLog.TfaChangeStatusDetails.NewValue
+  - Dropbox.Api.TeamLog.TfaChangeStatusDetails.PreviousValue
+  - Dropbox.Api.TeamLog.TfaChangeStatusDetails.UsedRescueCode
+  langs:
+  - csharp
+  - vb
+  name: TfaChangeStatusDetails
+  nameWithType: TfaChangeStatusDetails
+  fullName: Dropbox.Api.TeamLog.TfaChangeStatusDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaChangeStatusDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TfaChangeStatusDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaChangeStatusDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Enabled/disabled/changed two-step verification setting.</p>\n"
+  example: []
+  syntax:
+    content: 'public class TfaChangeStatusDetails : object'
+    content.vb: >-
+      Public Class TfaChangeStatusDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.TfaChangeStatusDetails.#ctor(Dropbox.Api.TeamLog.TfaConfiguration,Dropbox.Api.TeamLog.TfaConfiguration,System.Nullable{System.Boolean})
+  commentId: M:Dropbox.Api.TeamLog.TfaChangeStatusDetails.#ctor(Dropbox.Api.TeamLog.TfaConfiguration,Dropbox.Api.TeamLog.TfaConfiguration,System.Nullable{System.Boolean})
+  id: '#ctor(Dropbox.Api.TeamLog.TfaConfiguration,Dropbox.Api.TeamLog.TfaConfiguration,System.Nullable{System.Boolean})'
+  parent: Dropbox.Api.TeamLog.TfaChangeStatusDetails
+  langs:
+  - csharp
+  - vb
+  name: TfaChangeStatusDetails(TfaConfiguration, TfaConfiguration, Nullable<Boolean>)
+  nameWithType: TfaChangeStatusDetails.TfaChangeStatusDetails(TfaConfiguration, TfaConfiguration, Nullable<Boolean>)
+  fullName: Dropbox.Api.TeamLog.TfaChangeStatusDetails.TfaChangeStatusDetails(Dropbox.Api.TeamLog.TfaConfiguration, Dropbox.Api.TeamLog.TfaConfiguration, System.Nullable<System.Boolean>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaChangeStatusDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaChangeStatusDetails.cs
+    startLine: 38
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.TfaChangeStatusDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public TfaChangeStatusDetails(TfaConfiguration newValue, TfaConfiguration previousValue = null, bool? usedRescueCode = null)
+    parameters:
+    - id: newValue
+      type: Dropbox.Api.TeamLog.TfaConfiguration
+      description: The new two factor authentication configuration.
+    - id: previousValue
+      type: Dropbox.Api.TeamLog.TfaConfiguration
+      description: >-
+        The previous two factor authentication configuration.
+
+        Might be missing due to historical data gap.
+    - id: usedRescueCode
+      type: System.Nullable{System.Boolean}
+      description: >-
+        Used two factor authentication rescue code. This flag
+
+        is relevant when the two factor authentication configuration is disabled.
+    content.vb: Public Sub New(newValue As TfaConfiguration, previousValue As TfaConfiguration = Nothing, usedRescueCode As Boolean? = Nothing)
+  overload: Dropbox.Api.TeamLog.TfaChangeStatusDetails.#ctor*
+  nameWithType.vb: TfaChangeStatusDetails.TfaChangeStatusDetails(TfaConfiguration, TfaConfiguration, Nullable(Of Boolean))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.TeamLog.TfaChangeStatusDetails.TfaChangeStatusDetails(Dropbox.Api.TeamLog.TfaConfiguration, Dropbox.Api.TeamLog.TfaConfiguration, System.Nullable(Of System.Boolean))
+  name.vb: TfaChangeStatusDetails(TfaConfiguration, TfaConfiguration, Nullable(Of Boolean))
+- uid: Dropbox.Api.TeamLog.TfaChangeStatusDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.TfaChangeStatusDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.TfaChangeStatusDetails
+  langs:
+  - csharp
+  - vb
+  name: TfaChangeStatusDetails()
+  nameWithType: TfaChangeStatusDetails.TfaChangeStatusDetails()
+  fullName: Dropbox.Api.TeamLog.TfaChangeStatusDetails.TfaChangeStatusDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaChangeStatusDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaChangeStatusDetails.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.TfaChangeStatusDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public TfaChangeStatusDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.TfaChangeStatusDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.TfaChangeStatusDetails.NewValue
+  commentId: P:Dropbox.Api.TeamLog.TfaChangeStatusDetails.NewValue
+  id: NewValue
+  parent: Dropbox.Api.TeamLog.TfaChangeStatusDetails
+  langs:
+  - csharp
+  - vb
+  name: NewValue
+  nameWithType: TfaChangeStatusDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.TfaChangeStatusDetails.NewValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaChangeStatusDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NewValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaChangeStatusDetails.cs
+    startLine: 66
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The new two factor authentication configuration.</p>\n"
+  example: []
+  syntax:
+    content: public TfaConfiguration NewValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.TfaConfiguration
+    content.vb: Public Property NewValue As TfaConfiguration
+  overload: Dropbox.Api.TeamLog.TfaChangeStatusDetails.NewValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.TfaChangeStatusDetails.PreviousValue
+  commentId: P:Dropbox.Api.TeamLog.TfaChangeStatusDetails.PreviousValue
+  id: PreviousValue
+  parent: Dropbox.Api.TeamLog.TfaChangeStatusDetails
+  langs:
+  - csharp
+  - vb
+  name: PreviousValue
+  nameWithType: TfaChangeStatusDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.TfaChangeStatusDetails.PreviousValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaChangeStatusDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PreviousValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaChangeStatusDetails.cs
+    startLine: 72
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The previous two factor authentication configuration. Might be missing due to\nhistorical data gap.</p>\n"
+  example: []
+  syntax:
+    content: public TfaConfiguration PreviousValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.TfaConfiguration
+    content.vb: Public Property PreviousValue As TfaConfiguration
+  overload: Dropbox.Api.TeamLog.TfaChangeStatusDetails.PreviousValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.TfaChangeStatusDetails.UsedRescueCode
+  commentId: P:Dropbox.Api.TeamLog.TfaChangeStatusDetails.UsedRescueCode
+  id: UsedRescueCode
+  parent: Dropbox.Api.TeamLog.TfaChangeStatusDetails
+  langs:
+  - csharp
+  - vb
+  name: UsedRescueCode
+  nameWithType: TfaChangeStatusDetails.UsedRescueCode
+  fullName: Dropbox.Api.TeamLog.TfaChangeStatusDetails.UsedRescueCode
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaChangeStatusDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: UsedRescueCode
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaChangeStatusDetails.cs
+    startLine: 78
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Used two factor authentication rescue code. This flag is relevant when the\ntwo factor authentication configuration is disabled.</p>\n"
+  example: []
+  syntax:
+    content: public bool? UsedRescueCode { get; protected set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: Public Property UsedRescueCode As Boolean?
+  overload: Dropbox.Api.TeamLog.TfaChangeStatusDetails.UsedRescueCode*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.TfaChangeStatusDetails
+  commentId: T:Dropbox.Api.TeamLog.TfaChangeStatusDetails
+  parent: Dropbox.Api.TeamLog
+  name: TfaChangeStatusDetails
+  nameWithType: TfaChangeStatusDetails
+  fullName: Dropbox.Api.TeamLog.TfaChangeStatusDetails
+- uid: Dropbox.Api.TeamLog.TfaChangeStatusDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.TfaChangeStatusDetails.#ctor
+  name: TfaChangeStatusDetails
+  nameWithType: TfaChangeStatusDetails.TfaChangeStatusDetails
+  fullName: Dropbox.Api.TeamLog.TfaChangeStatusDetails.TfaChangeStatusDetails
+- uid: Dropbox.Api.TeamLog.TfaConfiguration
+  commentId: T:Dropbox.Api.TeamLog.TfaConfiguration
+  parent: Dropbox.Api.TeamLog
+  name: TfaConfiguration
+  nameWithType: TfaConfiguration
+  fullName: Dropbox.Api.TeamLog.TfaConfiguration
+- uid: System.Nullable{System.Boolean}
+  commentId: '!:System.Nullable{System.Boolean}'
+  definition: System.Nullable`1
+  name: Nullable<Boolean>
+  nameWithType: Nullable<Boolean>
+  fullName: System.Nullable<System.Boolean>
+  nameWithType.vb: Nullable(Of Boolean)
+  fullName.vb: System.Nullable(Of System.Boolean)
+  name.vb: Nullable(Of Boolean)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  isExternal: true
+  name: Nullable<>
+  nameWithType: Nullable<>
+  fullName: System.Nullable<>
+  nameWithType.vb: Nullable(Of )
+  fullName.vb: System.Nullable(Of )
+  name.vb: Nullable(Of )
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.TeamLog.TfaChangeStatusDetails.NewValue*
+  commentId: Overload:Dropbox.Api.TeamLog.TfaChangeStatusDetails.NewValue
+  name: NewValue
+  nameWithType: TfaChangeStatusDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.TfaChangeStatusDetails.NewValue
+- uid: Dropbox.Api.TeamLog.TfaChangeStatusDetails.PreviousValue*
+  commentId: Overload:Dropbox.Api.TeamLog.TfaChangeStatusDetails.PreviousValue
+  name: PreviousValue
+  nameWithType: TfaChangeStatusDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.TfaChangeStatusDetails.PreviousValue
+- uid: Dropbox.Api.TeamLog.TfaChangeStatusDetails.UsedRescueCode*
+  commentId: Overload:Dropbox.Api.TeamLog.TfaChangeStatusDetails.UsedRescueCode
+  name: UsedRescueCode
+  nameWithType: TfaChangeStatusDetails.UsedRescueCode
+  fullName: Dropbox.Api.TeamLog.TfaChangeStatusDetails.UsedRescueCode
+shouldSkipMarkup: true

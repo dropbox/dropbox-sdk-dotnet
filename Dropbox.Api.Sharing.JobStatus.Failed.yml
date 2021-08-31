@@ -1,0 +1,201 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.JobStatus.Failed
+  commentId: T:Dropbox.Api.Sharing.JobStatus.Failed
+  id: JobStatus.Failed
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.JobStatus.Failed.#ctor(Dropbox.Api.Sharing.JobError)
+  - Dropbox.Api.Sharing.JobStatus.Failed.Value
+  langs:
+  - csharp
+  - vb
+  name: JobStatus.Failed
+  nameWithType: JobStatus.Failed
+  fullName: Dropbox.Api.Sharing.JobStatus.Failed
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/JobStatus.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Failed
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/JobStatus.cs
+    startLine: 252
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The asynchronous job returned an error.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Failed : JobStatus'
+    content.vb: >-
+      Public NotInheritable Class Failed
+          Inherits JobStatus
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Sharing.JobStatus
+  inheritedMembers:
+  - Dropbox.Api.Sharing.JobStatus.IsComplete
+  - Dropbox.Api.Sharing.JobStatus.AsComplete
+  - Dropbox.Api.Sharing.JobStatus.IsFailed
+  - Dropbox.Api.Sharing.JobStatus.AsFailed
+  - Dropbox.Api.Sharing.JobStatus.IsInProgress
+  - Dropbox.Api.Sharing.JobStatus.AsInProgress
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Sharing.JobStatus.Failed.#ctor(Dropbox.Api.Sharing.JobError)
+  commentId: M:Dropbox.Api.Sharing.JobStatus.Failed.#ctor(Dropbox.Api.Sharing.JobError)
+  id: '#ctor(Dropbox.Api.Sharing.JobError)'
+  parent: Dropbox.Api.Sharing.JobStatus.Failed
+  langs:
+  - csharp
+  - vb
+  name: Failed(JobError)
+  nameWithType: JobStatus.Failed.Failed(JobError)
+  fullName: Dropbox.Api.Sharing.JobStatus.Failed.Failed(Dropbox.Api.Sharing.JobError)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/JobStatus.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/JobStatus.cs
+    startLine: 270
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.JobStatus.Failed\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public Failed(JobError value)
+    parameters:
+    - id: value
+      type: Dropbox.Api.Sharing.JobError
+      description: The value
+    content.vb: Public Sub New(value As JobError)
+  overload: Dropbox.Api.Sharing.JobStatus.Failed.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.JobStatus.Failed.Value
+  commentId: P:Dropbox.Api.Sharing.JobStatus.Failed.Value
+  id: Value
+  parent: Dropbox.Api.Sharing.JobStatus.Failed
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: JobStatus.Failed.Value
+  fullName: Dropbox.Api.Sharing.JobStatus.Failed.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/JobStatus.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/JobStatus.cs
+    startLine: 284
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public JobError Value { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.JobError
+    content.vb: Public ReadOnly Property Value As JobError
+  overload: Dropbox.Api.Sharing.JobStatus.Failed.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.JobStatus
+  commentId: T:Dropbox.Api.Sharing.JobStatus
+  parent: Dropbox.Api.Sharing
+  name: JobStatus
+  nameWithType: JobStatus
+  fullName: Dropbox.Api.Sharing.JobStatus
+- uid: Dropbox.Api.Sharing.JobStatus.IsComplete
+  commentId: P:Dropbox.Api.Sharing.JobStatus.IsComplete
+  parent: Dropbox.Api.Sharing.JobStatus
+  name: IsComplete
+  nameWithType: JobStatus.IsComplete
+  fullName: Dropbox.Api.Sharing.JobStatus.IsComplete
+- uid: Dropbox.Api.Sharing.JobStatus.AsComplete
+  commentId: P:Dropbox.Api.Sharing.JobStatus.AsComplete
+  parent: Dropbox.Api.Sharing.JobStatus
+  name: AsComplete
+  nameWithType: JobStatus.AsComplete
+  fullName: Dropbox.Api.Sharing.JobStatus.AsComplete
+- uid: Dropbox.Api.Sharing.JobStatus.IsFailed
+  commentId: P:Dropbox.Api.Sharing.JobStatus.IsFailed
+  parent: Dropbox.Api.Sharing.JobStatus
+  name: IsFailed
+  nameWithType: JobStatus.IsFailed
+  fullName: Dropbox.Api.Sharing.JobStatus.IsFailed
+- uid: Dropbox.Api.Sharing.JobStatus.AsFailed
+  commentId: P:Dropbox.Api.Sharing.JobStatus.AsFailed
+  parent: Dropbox.Api.Sharing.JobStatus
+  name: AsFailed
+  nameWithType: JobStatus.AsFailed
+  fullName: Dropbox.Api.Sharing.JobStatus.AsFailed
+- uid: Dropbox.Api.Sharing.JobStatus.IsInProgress
+  commentId: P:Dropbox.Api.Sharing.JobStatus.IsInProgress
+  parent: Dropbox.Api.Sharing.JobStatus
+  name: IsInProgress
+  nameWithType: JobStatus.IsInProgress
+  fullName: Dropbox.Api.Sharing.JobStatus.IsInProgress
+- uid: Dropbox.Api.Sharing.JobStatus.AsInProgress
+  commentId: P:Dropbox.Api.Sharing.JobStatus.AsInProgress
+  parent: Dropbox.Api.Sharing.JobStatus
+  name: AsInProgress
+  nameWithType: JobStatus.AsInProgress
+  fullName: Dropbox.Api.Sharing.JobStatus.AsInProgress
+- uid: Dropbox.Api.Sharing.JobStatus.Failed
+  commentId: T:Dropbox.Api.Sharing.JobStatus.Failed
+  parent: Dropbox.Api.Sharing
+  name: JobStatus.Failed
+  nameWithType: JobStatus.Failed
+  fullName: Dropbox.Api.Sharing.JobStatus.Failed
+- uid: Dropbox.Api.Sharing.JobStatus.Failed.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.JobStatus.Failed.#ctor
+  name: Failed
+  nameWithType: JobStatus.Failed.Failed
+  fullName: Dropbox.Api.Sharing.JobStatus.Failed.Failed
+- uid: Dropbox.Api.Sharing.JobError
+  commentId: T:Dropbox.Api.Sharing.JobError
+  parent: Dropbox.Api.Sharing
+  name: JobError
+  nameWithType: JobError
+  fullName: Dropbox.Api.Sharing.JobError
+- uid: Dropbox.Api.Sharing.JobStatus.Failed.Value*
+  commentId: Overload:Dropbox.Api.Sharing.JobStatus.Failed.Value
+  name: Value
+  nameWithType: JobStatus.Failed.Value
+  fullName: Dropbox.Api.Sharing.JobStatus.Failed.Value
+shouldSkipMarkup: true

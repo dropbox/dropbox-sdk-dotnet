@@ -1,0 +1,162 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Paper.PaperDocUpdatePolicy.Other
+  commentId: T:Dropbox.Api.Paper.PaperDocUpdatePolicy.Other
+  id: PaperDocUpdatePolicy.Other
+  parent: Dropbox.Api.Paper
+  children:
+  - Dropbox.Api.Paper.PaperDocUpdatePolicy.Other.Instance
+  langs:
+  - csharp
+  - vb
+  name: PaperDocUpdatePolicy.Other
+  nameWithType: PaperDocUpdatePolicy.Other
+  fullName: Dropbox.Api.Paper.PaperDocUpdatePolicy.Other
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperDocUpdatePolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Other
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperDocUpdatePolicy.cs
+    startLine: 421
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>The other object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Other : PaperDocUpdatePolicy'
+    content.vb: >-
+      Public NotInheritable Class Other
+          Inherits PaperDocUpdatePolicy
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Paper.PaperDocUpdatePolicy
+  inheritedMembers:
+  - Dropbox.Api.Paper.PaperDocUpdatePolicy.IsAppend
+  - Dropbox.Api.Paper.PaperDocUpdatePolicy.AsAppend
+  - Dropbox.Api.Paper.PaperDocUpdatePolicy.IsPrepend
+  - Dropbox.Api.Paper.PaperDocUpdatePolicy.AsPrepend
+  - Dropbox.Api.Paper.PaperDocUpdatePolicy.IsOverwriteAll
+  - Dropbox.Api.Paper.PaperDocUpdatePolicy.AsOverwriteAll
+  - Dropbox.Api.Paper.PaperDocUpdatePolicy.IsOther
+  - Dropbox.Api.Paper.PaperDocUpdatePolicy.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Paper.PaperDocUpdatePolicy.Other.Instance
+  commentId: F:Dropbox.Api.Paper.PaperDocUpdatePolicy.Other.Instance
+  id: Instance
+  parent: Dropbox.Api.Paper.PaperDocUpdatePolicy.Other
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: PaperDocUpdatePolicy.Other.Instance
+  fullName: Dropbox.Api.Paper.PaperDocUpdatePolicy.Other.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperDocUpdatePolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperDocUpdatePolicy.cs
+    startLine: 445
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>A singleton instance of Other</p>\n"
+  example: []
+  syntax:
+    content: public static readonly PaperDocUpdatePolicy.Other Instance
+    return:
+      type: Dropbox.Api.Paper.PaperDocUpdatePolicy.Other
+    content.vb: Public Shared ReadOnly Instance As PaperDocUpdatePolicy.Other
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Paper
+  commentId: N:Dropbox.Api.Paper
+  name: Dropbox.Api.Paper
+  nameWithType: Dropbox.Api.Paper
+  fullName: Dropbox.Api.Paper
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Paper.PaperDocUpdatePolicy
+  commentId: T:Dropbox.Api.Paper.PaperDocUpdatePolicy
+  parent: Dropbox.Api.Paper
+  name: PaperDocUpdatePolicy
+  nameWithType: PaperDocUpdatePolicy
+  fullName: Dropbox.Api.Paper.PaperDocUpdatePolicy
+- uid: Dropbox.Api.Paper.PaperDocUpdatePolicy.IsAppend
+  commentId: P:Dropbox.Api.Paper.PaperDocUpdatePolicy.IsAppend
+  parent: Dropbox.Api.Paper.PaperDocUpdatePolicy
+  name: IsAppend
+  nameWithType: PaperDocUpdatePolicy.IsAppend
+  fullName: Dropbox.Api.Paper.PaperDocUpdatePolicy.IsAppend
+- uid: Dropbox.Api.Paper.PaperDocUpdatePolicy.AsAppend
+  commentId: P:Dropbox.Api.Paper.PaperDocUpdatePolicy.AsAppend
+  parent: Dropbox.Api.Paper.PaperDocUpdatePolicy
+  name: AsAppend
+  nameWithType: PaperDocUpdatePolicy.AsAppend
+  fullName: Dropbox.Api.Paper.PaperDocUpdatePolicy.AsAppend
+- uid: Dropbox.Api.Paper.PaperDocUpdatePolicy.IsPrepend
+  commentId: P:Dropbox.Api.Paper.PaperDocUpdatePolicy.IsPrepend
+  parent: Dropbox.Api.Paper.PaperDocUpdatePolicy
+  name: IsPrepend
+  nameWithType: PaperDocUpdatePolicy.IsPrepend
+  fullName: Dropbox.Api.Paper.PaperDocUpdatePolicy.IsPrepend
+- uid: Dropbox.Api.Paper.PaperDocUpdatePolicy.AsPrepend
+  commentId: P:Dropbox.Api.Paper.PaperDocUpdatePolicy.AsPrepend
+  parent: Dropbox.Api.Paper.PaperDocUpdatePolicy
+  name: AsPrepend
+  nameWithType: PaperDocUpdatePolicy.AsPrepend
+  fullName: Dropbox.Api.Paper.PaperDocUpdatePolicy.AsPrepend
+- uid: Dropbox.Api.Paper.PaperDocUpdatePolicy.IsOverwriteAll
+  commentId: P:Dropbox.Api.Paper.PaperDocUpdatePolicy.IsOverwriteAll
+  parent: Dropbox.Api.Paper.PaperDocUpdatePolicy
+  name: IsOverwriteAll
+  nameWithType: PaperDocUpdatePolicy.IsOverwriteAll
+  fullName: Dropbox.Api.Paper.PaperDocUpdatePolicy.IsOverwriteAll
+- uid: Dropbox.Api.Paper.PaperDocUpdatePolicy.AsOverwriteAll
+  commentId: P:Dropbox.Api.Paper.PaperDocUpdatePolicy.AsOverwriteAll
+  parent: Dropbox.Api.Paper.PaperDocUpdatePolicy
+  name: AsOverwriteAll
+  nameWithType: PaperDocUpdatePolicy.AsOverwriteAll
+  fullName: Dropbox.Api.Paper.PaperDocUpdatePolicy.AsOverwriteAll
+- uid: Dropbox.Api.Paper.PaperDocUpdatePolicy.IsOther
+  commentId: P:Dropbox.Api.Paper.PaperDocUpdatePolicy.IsOther
+  parent: Dropbox.Api.Paper.PaperDocUpdatePolicy
+  name: IsOther
+  nameWithType: PaperDocUpdatePolicy.IsOther
+  fullName: Dropbox.Api.Paper.PaperDocUpdatePolicy.IsOther
+- uid: Dropbox.Api.Paper.PaperDocUpdatePolicy.AsOther
+  commentId: P:Dropbox.Api.Paper.PaperDocUpdatePolicy.AsOther
+  parent: Dropbox.Api.Paper.PaperDocUpdatePolicy
+  name: AsOther
+  nameWithType: PaperDocUpdatePolicy.AsOther
+  fullName: Dropbox.Api.Paper.PaperDocUpdatePolicy.AsOther
+- uid: Dropbox.Api.Paper.PaperDocUpdatePolicy.Other
+  commentId: T:Dropbox.Api.Paper.PaperDocUpdatePolicy.Other
+  parent: Dropbox.Api.Paper
+  name: PaperDocUpdatePolicy.Other
+  nameWithType: PaperDocUpdatePolicy.Other
+  fullName: Dropbox.Api.Paper.PaperDocUpdatePolicy.Other
+shouldSkipMarkup: true

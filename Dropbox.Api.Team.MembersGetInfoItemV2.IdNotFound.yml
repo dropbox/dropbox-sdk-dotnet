@@ -1,0 +1,206 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.MembersGetInfoItemV2.IdNotFound
+  commentId: T:Dropbox.Api.Team.MembersGetInfoItemV2.IdNotFound
+  id: MembersGetInfoItemV2.IdNotFound
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.MembersGetInfoItemV2.IdNotFound.#ctor(System.String)
+  - Dropbox.Api.Team.MembersGetInfoItemV2.IdNotFound.Value
+  langs:
+  - csharp
+  - vb
+  name: MembersGetInfoItemV2.IdNotFound
+  nameWithType: MembersGetInfoItemV2.IdNotFound
+  fullName: Dropbox.Api.Team.MembersGetInfoItemV2.IdNotFound
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersGetInfoItemV2.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IdNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersGetInfoItemV2.cs
+    startLine: 344
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>An ID that was provided as a parameter to <xref href=\"Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersGetInfoAsync(Dropbox.Api.Team.MembersGetInfoArgs)\" data-throw-if-not-resolved=\"false\"></xref> or <xref href=\"Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersGetInfoV2Async(Dropbox.Api.Team.MembersGetInfoV2Arg)\" data-throw-if-not-resolved=\"false\"></xref>, and did not\nmatch a corresponding user. This might be a team_member_id, an email, or an\nexternal ID, depending on how the method was called.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class IdNotFound : MembersGetInfoItemV2'
+    content.vb: >-
+      Public NotInheritable Class IdNotFound
+          Inherits MembersGetInfoItemV2
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.MembersGetInfoItemV2
+  inheritedMembers:
+  - Dropbox.Api.Team.MembersGetInfoItemV2.IsMemberInfo
+  - Dropbox.Api.Team.MembersGetInfoItemV2.AsMemberInfo
+  - Dropbox.Api.Team.MembersGetInfoItemV2.IsOther
+  - Dropbox.Api.Team.MembersGetInfoItemV2.AsOther
+  - Dropbox.Api.Team.MembersGetInfoItemV2.IsIdNotFound
+  - Dropbox.Api.Team.MembersGetInfoItemV2.AsIdNotFound
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Team.MembersGetInfoItemV2.IdNotFound.#ctor(System.String)
+  commentId: M:Dropbox.Api.Team.MembersGetInfoItemV2.IdNotFound.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.Team.MembersGetInfoItemV2.IdNotFound
+  langs:
+  - csharp
+  - vb
+  name: IdNotFound(String)
+  nameWithType: MembersGetInfoItemV2.IdNotFound.IdNotFound(String)
+  fullName: Dropbox.Api.Team.MembersGetInfoItemV2.IdNotFound.IdNotFound(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersGetInfoItemV2.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersGetInfoItemV2.cs
+    startLine: 362
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.MembersGetInfoItemV2.IdNotFound\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public IdNotFound(string value)
+    parameters:
+    - id: value
+      type: System.String
+      description: The value
+    content.vb: Public Sub New(value As String)
+  overload: Dropbox.Api.Team.MembersGetInfoItemV2.IdNotFound.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.MembersGetInfoItemV2.IdNotFound.Value
+  commentId: P:Dropbox.Api.Team.MembersGetInfoItemV2.IdNotFound.Value
+  id: Value
+  parent: Dropbox.Api.Team.MembersGetInfoItemV2.IdNotFound
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: MembersGetInfoItemV2.IdNotFound.Value
+  fullName: Dropbox.Api.Team.MembersGetInfoItemV2.IdNotFound.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersGetInfoItemV2.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersGetInfoItemV2.cs
+    startLine: 376
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public string Value { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Value As String
+  overload: Dropbox.Api.Team.MembersGetInfoItemV2.IdNotFound.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersGetInfoAsync(Dropbox.Api.Team.MembersGetInfoArgs)
+  commentId: M:Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersGetInfoAsync(Dropbox.Api.Team.MembersGetInfoArgs)
+  isExternal: true
+- uid: Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersGetInfoV2Async(Dropbox.Api.Team.MembersGetInfoV2Arg)
+  commentId: M:Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersGetInfoV2Async(Dropbox.Api.Team.MembersGetInfoV2Arg)
+  isExternal: true
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.MembersGetInfoItemV2
+  commentId: T:Dropbox.Api.Team.MembersGetInfoItemV2
+  parent: Dropbox.Api.Team
+  name: MembersGetInfoItemV2
+  nameWithType: MembersGetInfoItemV2
+  fullName: Dropbox.Api.Team.MembersGetInfoItemV2
+- uid: Dropbox.Api.Team.MembersGetInfoItemV2.IsMemberInfo
+  commentId: P:Dropbox.Api.Team.MembersGetInfoItemV2.IsMemberInfo
+  parent: Dropbox.Api.Team.MembersGetInfoItemV2
+  name: IsMemberInfo
+  nameWithType: MembersGetInfoItemV2.IsMemberInfo
+  fullName: Dropbox.Api.Team.MembersGetInfoItemV2.IsMemberInfo
+- uid: Dropbox.Api.Team.MembersGetInfoItemV2.AsMemberInfo
+  commentId: P:Dropbox.Api.Team.MembersGetInfoItemV2.AsMemberInfo
+  parent: Dropbox.Api.Team.MembersGetInfoItemV2
+  name: AsMemberInfo
+  nameWithType: MembersGetInfoItemV2.AsMemberInfo
+  fullName: Dropbox.Api.Team.MembersGetInfoItemV2.AsMemberInfo
+- uid: Dropbox.Api.Team.MembersGetInfoItemV2.IsOther
+  commentId: P:Dropbox.Api.Team.MembersGetInfoItemV2.IsOther
+  parent: Dropbox.Api.Team.MembersGetInfoItemV2
+  name: IsOther
+  nameWithType: MembersGetInfoItemV2.IsOther
+  fullName: Dropbox.Api.Team.MembersGetInfoItemV2.IsOther
+- uid: Dropbox.Api.Team.MembersGetInfoItemV2.AsOther
+  commentId: P:Dropbox.Api.Team.MembersGetInfoItemV2.AsOther
+  parent: Dropbox.Api.Team.MembersGetInfoItemV2
+  name: AsOther
+  nameWithType: MembersGetInfoItemV2.AsOther
+  fullName: Dropbox.Api.Team.MembersGetInfoItemV2.AsOther
+- uid: Dropbox.Api.Team.MembersGetInfoItemV2.IsIdNotFound
+  commentId: P:Dropbox.Api.Team.MembersGetInfoItemV2.IsIdNotFound
+  parent: Dropbox.Api.Team.MembersGetInfoItemV2
+  name: IsIdNotFound
+  nameWithType: MembersGetInfoItemV2.IsIdNotFound
+  fullName: Dropbox.Api.Team.MembersGetInfoItemV2.IsIdNotFound
+- uid: Dropbox.Api.Team.MembersGetInfoItemV2.AsIdNotFound
+  commentId: P:Dropbox.Api.Team.MembersGetInfoItemV2.AsIdNotFound
+  parent: Dropbox.Api.Team.MembersGetInfoItemV2
+  name: AsIdNotFound
+  nameWithType: MembersGetInfoItemV2.AsIdNotFound
+  fullName: Dropbox.Api.Team.MembersGetInfoItemV2.AsIdNotFound
+- uid: Dropbox.Api.Team.MembersGetInfoItemV2.IdNotFound
+  commentId: T:Dropbox.Api.Team.MembersGetInfoItemV2.IdNotFound
+  parent: Dropbox.Api.Team
+  name: MembersGetInfoItemV2.IdNotFound
+  nameWithType: MembersGetInfoItemV2.IdNotFound
+  fullName: Dropbox.Api.Team.MembersGetInfoItemV2.IdNotFound
+- uid: Dropbox.Api.Team.MembersGetInfoItemV2.IdNotFound.#ctor*
+  commentId: Overload:Dropbox.Api.Team.MembersGetInfoItemV2.IdNotFound.#ctor
+  name: IdNotFound
+  nameWithType: MembersGetInfoItemV2.IdNotFound.IdNotFound
+  fullName: Dropbox.Api.Team.MembersGetInfoItemV2.IdNotFound.IdNotFound
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Team.MembersGetInfoItemV2.IdNotFound.Value*
+  commentId: Overload:Dropbox.Api.Team.MembersGetInfoItemV2.IdNotFound.Value
+  name: Value
+  nameWithType: MembersGetInfoItemV2.IdNotFound.Value
+  fullName: Dropbox.Api.Team.MembersGetInfoItemV2.IdNotFound.Value
+shouldSkipMarkup: true

@@ -1,0 +1,148 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.AccessInheritance.NoInherit
+  commentId: T:Dropbox.Api.Sharing.AccessInheritance.NoInherit
+  id: AccessInheritance.NoInherit
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.AccessInheritance.NoInherit.Instance
+  langs:
+  - csharp
+  - vb
+  name: AccessInheritance.NoInherit
+  nameWithType: AccessInheritance.NoInherit
+  fullName: Dropbox.Api.Sharing.AccessInheritance.NoInherit
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AccessInheritance.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NoInherit
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AccessInheritance.cs
+    startLine: 251
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The shared folder does not inherit its members from the parent folder.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class NoInherit : AccessInheritance'
+    content.vb: >-
+      Public NotInheritable Class NoInherit
+          Inherits AccessInheritance
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Sharing.AccessInheritance
+  inheritedMembers:
+  - Dropbox.Api.Sharing.AccessInheritance.IsInherit
+  - Dropbox.Api.Sharing.AccessInheritance.AsInherit
+  - Dropbox.Api.Sharing.AccessInheritance.IsNoInherit
+  - Dropbox.Api.Sharing.AccessInheritance.AsNoInherit
+  - Dropbox.Api.Sharing.AccessInheritance.IsOther
+  - Dropbox.Api.Sharing.AccessInheritance.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Sharing.AccessInheritance.NoInherit.Instance
+  commentId: F:Dropbox.Api.Sharing.AccessInheritance.NoInherit.Instance
+  id: Instance
+  parent: Dropbox.Api.Sharing.AccessInheritance.NoInherit
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: AccessInheritance.NoInherit.Instance
+  fullName: Dropbox.Api.Sharing.AccessInheritance.NoInherit.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AccessInheritance.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AccessInheritance.cs
+    startLine: 275
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>A singleton instance of NoInherit</p>\n"
+  example: []
+  syntax:
+    content: public static readonly AccessInheritance.NoInherit Instance
+    return:
+      type: Dropbox.Api.Sharing.AccessInheritance.NoInherit
+    content.vb: Public Shared ReadOnly Instance As AccessInheritance.NoInherit
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.AccessInheritance
+  commentId: T:Dropbox.Api.Sharing.AccessInheritance
+  parent: Dropbox.Api.Sharing
+  name: AccessInheritance
+  nameWithType: AccessInheritance
+  fullName: Dropbox.Api.Sharing.AccessInheritance
+- uid: Dropbox.Api.Sharing.AccessInheritance.IsInherit
+  commentId: P:Dropbox.Api.Sharing.AccessInheritance.IsInherit
+  parent: Dropbox.Api.Sharing.AccessInheritance
+  name: IsInherit
+  nameWithType: AccessInheritance.IsInherit
+  fullName: Dropbox.Api.Sharing.AccessInheritance.IsInherit
+- uid: Dropbox.Api.Sharing.AccessInheritance.AsInherit
+  commentId: P:Dropbox.Api.Sharing.AccessInheritance.AsInherit
+  parent: Dropbox.Api.Sharing.AccessInheritance
+  name: AsInherit
+  nameWithType: AccessInheritance.AsInherit
+  fullName: Dropbox.Api.Sharing.AccessInheritance.AsInherit
+- uid: Dropbox.Api.Sharing.AccessInheritance.IsNoInherit
+  commentId: P:Dropbox.Api.Sharing.AccessInheritance.IsNoInherit
+  parent: Dropbox.Api.Sharing.AccessInheritance
+  name: IsNoInherit
+  nameWithType: AccessInheritance.IsNoInherit
+  fullName: Dropbox.Api.Sharing.AccessInheritance.IsNoInherit
+- uid: Dropbox.Api.Sharing.AccessInheritance.AsNoInherit
+  commentId: P:Dropbox.Api.Sharing.AccessInheritance.AsNoInherit
+  parent: Dropbox.Api.Sharing.AccessInheritance
+  name: AsNoInherit
+  nameWithType: AccessInheritance.AsNoInherit
+  fullName: Dropbox.Api.Sharing.AccessInheritance.AsNoInherit
+- uid: Dropbox.Api.Sharing.AccessInheritance.IsOther
+  commentId: P:Dropbox.Api.Sharing.AccessInheritance.IsOther
+  parent: Dropbox.Api.Sharing.AccessInheritance
+  name: IsOther
+  nameWithType: AccessInheritance.IsOther
+  fullName: Dropbox.Api.Sharing.AccessInheritance.IsOther
+- uid: Dropbox.Api.Sharing.AccessInheritance.AsOther
+  commentId: P:Dropbox.Api.Sharing.AccessInheritance.AsOther
+  parent: Dropbox.Api.Sharing.AccessInheritance
+  name: AsOther
+  nameWithType: AccessInheritance.AsOther
+  fullName: Dropbox.Api.Sharing.AccessInheritance.AsOther
+- uid: Dropbox.Api.Sharing.AccessInheritance.NoInherit
+  commentId: T:Dropbox.Api.Sharing.AccessInheritance.NoInherit
+  parent: Dropbox.Api.Sharing
+  name: AccessInheritance.NoInherit
+  nameWithType: AccessInheritance.NoInherit
+  fullName: Dropbox.Api.Sharing.AccessInheritance.NoInherit
+shouldSkipMarkup: true

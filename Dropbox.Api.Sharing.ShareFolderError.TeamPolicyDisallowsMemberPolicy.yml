@@ -1,0 +1,190 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.ShareFolderError.TeamPolicyDisallowsMemberPolicy
+  commentId: T:Dropbox.Api.Sharing.ShareFolderError.TeamPolicyDisallowsMemberPolicy
+  id: ShareFolderError.TeamPolicyDisallowsMemberPolicy
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.ShareFolderError.TeamPolicyDisallowsMemberPolicy.Instance
+  langs:
+  - csharp
+  - vb
+  name: ShareFolderError.TeamPolicyDisallowsMemberPolicy
+  nameWithType: ShareFolderError.TeamPolicyDisallowsMemberPolicy
+  fullName: Dropbox.Api.Sharing.ShareFolderError.TeamPolicyDisallowsMemberPolicy
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ShareFolderError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TeamPolicyDisallowsMemberPolicy
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ShareFolderError.cs
+    startLine: 516
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Team policy is more restrictive than <see cref=\"!:Dropbox.Api.Sharing.ShareFolderArg.MemberPolicy\"></see>.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class TeamPolicyDisallowsMemberPolicy : ShareFolderError'
+    content.vb: >-
+      Public NotInheritable Class TeamPolicyDisallowsMemberPolicy
+          Inherits ShareFolderError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Sharing.ShareFolderError
+  inheritedMembers:
+  - Dropbox.Api.Sharing.ShareFolderError.IsNoPermission
+  - Dropbox.Api.Sharing.ShareFolderError.AsNoPermission
+  - Dropbox.Api.Sharing.ShareFolderError.IsEmailUnverified
+  - Dropbox.Api.Sharing.ShareFolderError.AsEmailUnverified
+  - Dropbox.Api.Sharing.ShareFolderError.IsBadPath
+  - Dropbox.Api.Sharing.ShareFolderError.AsBadPath
+  - Dropbox.Api.Sharing.ShareFolderError.IsTeamPolicyDisallowsMemberPolicy
+  - Dropbox.Api.Sharing.ShareFolderError.AsTeamPolicyDisallowsMemberPolicy
+  - Dropbox.Api.Sharing.ShareFolderError.IsDisallowedSharedLinkPolicy
+  - Dropbox.Api.Sharing.ShareFolderError.AsDisallowedSharedLinkPolicy
+  - Dropbox.Api.Sharing.ShareFolderError.IsOther
+  - Dropbox.Api.Sharing.ShareFolderError.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Sharing.ShareFolderError.TeamPolicyDisallowsMemberPolicy.Instance
+  commentId: F:Dropbox.Api.Sharing.ShareFolderError.TeamPolicyDisallowsMemberPolicy.Instance
+  id: Instance
+  parent: Dropbox.Api.Sharing.ShareFolderError.TeamPolicyDisallowsMemberPolicy
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: ShareFolderError.TeamPolicyDisallowsMemberPolicy.Instance
+  fullName: Dropbox.Api.Sharing.ShareFolderError.TeamPolicyDisallowsMemberPolicy.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ShareFolderError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ShareFolderError.cs
+    startLine: 541
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>A singleton instance of TeamPolicyDisallowsMemberPolicy</p>\n"
+  example: []
+  syntax:
+    content: public static readonly ShareFolderError.TeamPolicyDisallowsMemberPolicy Instance
+    return:
+      type: Dropbox.Api.Sharing.ShareFolderError.TeamPolicyDisallowsMemberPolicy
+    content.vb: Public Shared ReadOnly Instance As ShareFolderError.TeamPolicyDisallowsMemberPolicy
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.ShareFolderError
+  commentId: T:Dropbox.Api.Sharing.ShareFolderError
+  parent: Dropbox.Api.Sharing
+  name: ShareFolderError
+  nameWithType: ShareFolderError
+  fullName: Dropbox.Api.Sharing.ShareFolderError
+- uid: Dropbox.Api.Sharing.ShareFolderError.IsNoPermission
+  commentId: P:Dropbox.Api.Sharing.ShareFolderError.IsNoPermission
+  parent: Dropbox.Api.Sharing.ShareFolderError
+  name: IsNoPermission
+  nameWithType: ShareFolderError.IsNoPermission
+  fullName: Dropbox.Api.Sharing.ShareFolderError.IsNoPermission
+- uid: Dropbox.Api.Sharing.ShareFolderError.AsNoPermission
+  commentId: P:Dropbox.Api.Sharing.ShareFolderError.AsNoPermission
+  parent: Dropbox.Api.Sharing.ShareFolderError
+  name: AsNoPermission
+  nameWithType: ShareFolderError.AsNoPermission
+  fullName: Dropbox.Api.Sharing.ShareFolderError.AsNoPermission
+- uid: Dropbox.Api.Sharing.ShareFolderError.IsEmailUnverified
+  commentId: P:Dropbox.Api.Sharing.ShareFolderError.IsEmailUnverified
+  parent: Dropbox.Api.Sharing.ShareFolderError
+  name: IsEmailUnverified
+  nameWithType: ShareFolderError.IsEmailUnverified
+  fullName: Dropbox.Api.Sharing.ShareFolderError.IsEmailUnverified
+- uid: Dropbox.Api.Sharing.ShareFolderError.AsEmailUnverified
+  commentId: P:Dropbox.Api.Sharing.ShareFolderError.AsEmailUnverified
+  parent: Dropbox.Api.Sharing.ShareFolderError
+  name: AsEmailUnverified
+  nameWithType: ShareFolderError.AsEmailUnverified
+  fullName: Dropbox.Api.Sharing.ShareFolderError.AsEmailUnverified
+- uid: Dropbox.Api.Sharing.ShareFolderError.IsBadPath
+  commentId: P:Dropbox.Api.Sharing.ShareFolderError.IsBadPath
+  parent: Dropbox.Api.Sharing.ShareFolderError
+  name: IsBadPath
+  nameWithType: ShareFolderError.IsBadPath
+  fullName: Dropbox.Api.Sharing.ShareFolderError.IsBadPath
+- uid: Dropbox.Api.Sharing.ShareFolderError.AsBadPath
+  commentId: P:Dropbox.Api.Sharing.ShareFolderError.AsBadPath
+  parent: Dropbox.Api.Sharing.ShareFolderError
+  name: AsBadPath
+  nameWithType: ShareFolderError.AsBadPath
+  fullName: Dropbox.Api.Sharing.ShareFolderError.AsBadPath
+- uid: Dropbox.Api.Sharing.ShareFolderError.IsTeamPolicyDisallowsMemberPolicy
+  commentId: P:Dropbox.Api.Sharing.ShareFolderError.IsTeamPolicyDisallowsMemberPolicy
+  parent: Dropbox.Api.Sharing.ShareFolderError
+  name: IsTeamPolicyDisallowsMemberPolicy
+  nameWithType: ShareFolderError.IsTeamPolicyDisallowsMemberPolicy
+  fullName: Dropbox.Api.Sharing.ShareFolderError.IsTeamPolicyDisallowsMemberPolicy
+- uid: Dropbox.Api.Sharing.ShareFolderError.AsTeamPolicyDisallowsMemberPolicy
+  commentId: P:Dropbox.Api.Sharing.ShareFolderError.AsTeamPolicyDisallowsMemberPolicy
+  parent: Dropbox.Api.Sharing.ShareFolderError
+  name: AsTeamPolicyDisallowsMemberPolicy
+  nameWithType: ShareFolderError.AsTeamPolicyDisallowsMemberPolicy
+  fullName: Dropbox.Api.Sharing.ShareFolderError.AsTeamPolicyDisallowsMemberPolicy
+- uid: Dropbox.Api.Sharing.ShareFolderError.IsDisallowedSharedLinkPolicy
+  commentId: P:Dropbox.Api.Sharing.ShareFolderError.IsDisallowedSharedLinkPolicy
+  parent: Dropbox.Api.Sharing.ShareFolderError
+  name: IsDisallowedSharedLinkPolicy
+  nameWithType: ShareFolderError.IsDisallowedSharedLinkPolicy
+  fullName: Dropbox.Api.Sharing.ShareFolderError.IsDisallowedSharedLinkPolicy
+- uid: Dropbox.Api.Sharing.ShareFolderError.AsDisallowedSharedLinkPolicy
+  commentId: P:Dropbox.Api.Sharing.ShareFolderError.AsDisallowedSharedLinkPolicy
+  parent: Dropbox.Api.Sharing.ShareFolderError
+  name: AsDisallowedSharedLinkPolicy
+  nameWithType: ShareFolderError.AsDisallowedSharedLinkPolicy
+  fullName: Dropbox.Api.Sharing.ShareFolderError.AsDisallowedSharedLinkPolicy
+- uid: Dropbox.Api.Sharing.ShareFolderError.IsOther
+  commentId: P:Dropbox.Api.Sharing.ShareFolderError.IsOther
+  parent: Dropbox.Api.Sharing.ShareFolderError
+  name: IsOther
+  nameWithType: ShareFolderError.IsOther
+  fullName: Dropbox.Api.Sharing.ShareFolderError.IsOther
+- uid: Dropbox.Api.Sharing.ShareFolderError.AsOther
+  commentId: P:Dropbox.Api.Sharing.ShareFolderError.AsOther
+  parent: Dropbox.Api.Sharing.ShareFolderError
+  name: AsOther
+  nameWithType: ShareFolderError.AsOther
+  fullName: Dropbox.Api.Sharing.ShareFolderError.AsOther
+- uid: Dropbox.Api.Sharing.ShareFolderError.TeamPolicyDisallowsMemberPolicy
+  commentId: T:Dropbox.Api.Sharing.ShareFolderError.TeamPolicyDisallowsMemberPolicy
+  parent: Dropbox.Api.Sharing
+  name: ShareFolderError.TeamPolicyDisallowsMemberPolicy
+  nameWithType: ShareFolderError.TeamPolicyDisallowsMemberPolicy
+  fullName: Dropbox.Api.Sharing.ShareFolderError.TeamPolicyDisallowsMemberPolicy
+shouldSkipMarkup: true

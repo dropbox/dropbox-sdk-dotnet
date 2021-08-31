@@ -1,0 +1,474 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.SpaceLimitsStatus
+  commentId: T:Dropbox.Api.TeamLog.SpaceLimitsStatus
+  id: SpaceLimitsStatus
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.SpaceLimitsStatus.#ctor
+  - Dropbox.Api.TeamLog.SpaceLimitsStatus.AsNearQuota
+  - Dropbox.Api.TeamLog.SpaceLimitsStatus.AsOther
+  - Dropbox.Api.TeamLog.SpaceLimitsStatus.AsOverQuota
+  - Dropbox.Api.TeamLog.SpaceLimitsStatus.AsWithinQuota
+  - Dropbox.Api.TeamLog.SpaceLimitsStatus.IsNearQuota
+  - Dropbox.Api.TeamLog.SpaceLimitsStatus.IsOther
+  - Dropbox.Api.TeamLog.SpaceLimitsStatus.IsOverQuota
+  - Dropbox.Api.TeamLog.SpaceLimitsStatus.IsWithinQuota
+  langs:
+  - csharp
+  - vb
+  name: SpaceLimitsStatus
+  nameWithType: SpaceLimitsStatus
+  fullName: Dropbox.Api.TeamLog.SpaceLimitsStatus
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SpaceLimitsStatus.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SpaceLimitsStatus
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SpaceLimitsStatus.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The space limits status object</p>\n"
+  example: []
+  syntax:
+    content: 'public class SpaceLimitsStatus : object'
+    content.vb: >-
+      Public Class SpaceLimitsStatus
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.TeamLog.SpaceLimitsStatus.NearQuota
+  - Dropbox.Api.TeamLog.SpaceLimitsStatus.Other
+  - Dropbox.Api.TeamLog.SpaceLimitsStatus.OverQuota
+  - Dropbox.Api.TeamLog.SpaceLimitsStatus.WithinQuota
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.SpaceLimitsStatus.#ctor
+  commentId: M:Dropbox.Api.TeamLog.SpaceLimitsStatus.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.SpaceLimitsStatus
+  langs:
+  - csharp
+  - vb
+  name: SpaceLimitsStatus()
+  nameWithType: SpaceLimitsStatus.SpaceLimitsStatus()
+  fullName: Dropbox.Api.TeamLog.SpaceLimitsStatus.SpaceLimitsStatus()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SpaceLimitsStatus.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SpaceLimitsStatus.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SpaceLimitsStatus\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public SpaceLimitsStatus()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.SpaceLimitsStatus.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SpaceLimitsStatus.IsNearQuota
+  commentId: P:Dropbox.Api.TeamLog.SpaceLimitsStatus.IsNearQuota
+  id: IsNearQuota
+  parent: Dropbox.Api.TeamLog.SpaceLimitsStatus
+  langs:
+  - csharp
+  - vb
+  name: IsNearQuota
+  nameWithType: SpaceLimitsStatus.IsNearQuota
+  fullName: Dropbox.Api.TeamLog.SpaceLimitsStatus.IsNearQuota
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SpaceLimitsStatus.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsNearQuota
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SpaceLimitsStatus.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is NearQuota</p>\n"
+  example: []
+  syntax:
+    content: public bool IsNearQuota { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsNearQuota As Boolean
+  overload: Dropbox.Api.TeamLog.SpaceLimitsStatus.IsNearQuota*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.SpaceLimitsStatus.AsNearQuota
+  commentId: P:Dropbox.Api.TeamLog.SpaceLimitsStatus.AsNearQuota
+  id: AsNearQuota
+  parent: Dropbox.Api.TeamLog.SpaceLimitsStatus
+  langs:
+  - csharp
+  - vb
+  name: AsNearQuota
+  nameWithType: SpaceLimitsStatus.AsNearQuota
+  fullName: Dropbox.Api.TeamLog.SpaceLimitsStatus.AsNearQuota
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SpaceLimitsStatus.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsNearQuota
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SpaceLimitsStatus.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a NearQuota, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SpaceLimitsStatus.NearQuota AsNearQuota { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.SpaceLimitsStatus.NearQuota
+    content.vb: Public ReadOnly Property AsNearQuota As SpaceLimitsStatus.NearQuota
+  overload: Dropbox.Api.TeamLog.SpaceLimitsStatus.AsNearQuota*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.SpaceLimitsStatus.IsOverQuota
+  commentId: P:Dropbox.Api.TeamLog.SpaceLimitsStatus.IsOverQuota
+  id: IsOverQuota
+  parent: Dropbox.Api.TeamLog.SpaceLimitsStatus
+  langs:
+  - csharp
+  - vb
+  name: IsOverQuota
+  nameWithType: SpaceLimitsStatus.IsOverQuota
+  fullName: Dropbox.Api.TeamLog.SpaceLimitsStatus.IsOverQuota
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SpaceLimitsStatus.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOverQuota
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SpaceLimitsStatus.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is OverQuota</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOverQuota { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOverQuota As Boolean
+  overload: Dropbox.Api.TeamLog.SpaceLimitsStatus.IsOverQuota*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.SpaceLimitsStatus.AsOverQuota
+  commentId: P:Dropbox.Api.TeamLog.SpaceLimitsStatus.AsOverQuota
+  id: AsOverQuota
+  parent: Dropbox.Api.TeamLog.SpaceLimitsStatus
+  langs:
+  - csharp
+  - vb
+  name: AsOverQuota
+  nameWithType: SpaceLimitsStatus.AsOverQuota
+  fullName: Dropbox.Api.TeamLog.SpaceLimitsStatus.AsOverQuota
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SpaceLimitsStatus.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOverQuota
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SpaceLimitsStatus.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a OverQuota, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SpaceLimitsStatus.OverQuota AsOverQuota { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.SpaceLimitsStatus.OverQuota
+    content.vb: Public ReadOnly Property AsOverQuota As SpaceLimitsStatus.OverQuota
+  overload: Dropbox.Api.TeamLog.SpaceLimitsStatus.AsOverQuota*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.SpaceLimitsStatus.IsWithinQuota
+  commentId: P:Dropbox.Api.TeamLog.SpaceLimitsStatus.IsWithinQuota
+  id: IsWithinQuota
+  parent: Dropbox.Api.TeamLog.SpaceLimitsStatus
+  langs:
+  - csharp
+  - vb
+  name: IsWithinQuota
+  nameWithType: SpaceLimitsStatus.IsWithinQuota
+  fullName: Dropbox.Api.TeamLog.SpaceLimitsStatus.IsWithinQuota
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SpaceLimitsStatus.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsWithinQuota
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SpaceLimitsStatus.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is WithinQuota</p>\n"
+  example: []
+  syntax:
+    content: public bool IsWithinQuota { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsWithinQuota As Boolean
+  overload: Dropbox.Api.TeamLog.SpaceLimitsStatus.IsWithinQuota*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.SpaceLimitsStatus.AsWithinQuota
+  commentId: P:Dropbox.Api.TeamLog.SpaceLimitsStatus.AsWithinQuota
+  id: AsWithinQuota
+  parent: Dropbox.Api.TeamLog.SpaceLimitsStatus
+  langs:
+  - csharp
+  - vb
+  name: AsWithinQuota
+  nameWithType: SpaceLimitsStatus.AsWithinQuota
+  fullName: Dropbox.Api.TeamLog.SpaceLimitsStatus.AsWithinQuota
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SpaceLimitsStatus.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsWithinQuota
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SpaceLimitsStatus.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a WithinQuota, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SpaceLimitsStatus.WithinQuota AsWithinQuota { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.SpaceLimitsStatus.WithinQuota
+    content.vb: Public ReadOnly Property AsWithinQuota As SpaceLimitsStatus.WithinQuota
+  overload: Dropbox.Api.TeamLog.SpaceLimitsStatus.AsWithinQuota*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.SpaceLimitsStatus.IsOther
+  commentId: P:Dropbox.Api.TeamLog.SpaceLimitsStatus.IsOther
+  id: IsOther
+  parent: Dropbox.Api.TeamLog.SpaceLimitsStatus
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: SpaceLimitsStatus.IsOther
+  fullName: Dropbox.Api.TeamLog.SpaceLimitsStatus.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SpaceLimitsStatus.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SpaceLimitsStatus.cs
+    startLine: 106
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.TeamLog.SpaceLimitsStatus.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.SpaceLimitsStatus.AsOther
+  commentId: P:Dropbox.Api.TeamLog.SpaceLimitsStatus.AsOther
+  id: AsOther
+  parent: Dropbox.Api.TeamLog.SpaceLimitsStatus
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: SpaceLimitsStatus.AsOther
+  fullName: Dropbox.Api.TeamLog.SpaceLimitsStatus.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SpaceLimitsStatus.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SpaceLimitsStatus.cs
+    startLine: 117
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SpaceLimitsStatus.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.SpaceLimitsStatus.Other
+    content.vb: Public ReadOnly Property AsOther As SpaceLimitsStatus.Other
+  overload: Dropbox.Api.TeamLog.SpaceLimitsStatus.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.SpaceLimitsStatus
+  commentId: T:Dropbox.Api.TeamLog.SpaceLimitsStatus
+  parent: Dropbox.Api.TeamLog
+  name: SpaceLimitsStatus
+  nameWithType: SpaceLimitsStatus
+  fullName: Dropbox.Api.TeamLog.SpaceLimitsStatus
+- uid: Dropbox.Api.TeamLog.SpaceLimitsStatus.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.SpaceLimitsStatus.#ctor
+  name: SpaceLimitsStatus
+  nameWithType: SpaceLimitsStatus.SpaceLimitsStatus
+  fullName: Dropbox.Api.TeamLog.SpaceLimitsStatus.SpaceLimitsStatus
+- uid: Dropbox.Api.TeamLog.SpaceLimitsStatus.IsNearQuota*
+  commentId: Overload:Dropbox.Api.TeamLog.SpaceLimitsStatus.IsNearQuota
+  name: IsNearQuota
+  nameWithType: SpaceLimitsStatus.IsNearQuota
+  fullName: Dropbox.Api.TeamLog.SpaceLimitsStatus.IsNearQuota
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.TeamLog.SpaceLimitsStatus.AsNearQuota*
+  commentId: Overload:Dropbox.Api.TeamLog.SpaceLimitsStatus.AsNearQuota
+  name: AsNearQuota
+  nameWithType: SpaceLimitsStatus.AsNearQuota
+  fullName: Dropbox.Api.TeamLog.SpaceLimitsStatus.AsNearQuota
+- uid: Dropbox.Api.TeamLog.SpaceLimitsStatus.NearQuota
+  commentId: T:Dropbox.Api.TeamLog.SpaceLimitsStatus.NearQuota
+  parent: Dropbox.Api.TeamLog
+  name: SpaceLimitsStatus.NearQuota
+  nameWithType: SpaceLimitsStatus.NearQuota
+  fullName: Dropbox.Api.TeamLog.SpaceLimitsStatus.NearQuota
+- uid: Dropbox.Api.TeamLog.SpaceLimitsStatus.IsOverQuota*
+  commentId: Overload:Dropbox.Api.TeamLog.SpaceLimitsStatus.IsOverQuota
+  name: IsOverQuota
+  nameWithType: SpaceLimitsStatus.IsOverQuota
+  fullName: Dropbox.Api.TeamLog.SpaceLimitsStatus.IsOverQuota
+- uid: Dropbox.Api.TeamLog.SpaceLimitsStatus.AsOverQuota*
+  commentId: Overload:Dropbox.Api.TeamLog.SpaceLimitsStatus.AsOverQuota
+  name: AsOverQuota
+  nameWithType: SpaceLimitsStatus.AsOverQuota
+  fullName: Dropbox.Api.TeamLog.SpaceLimitsStatus.AsOverQuota
+- uid: Dropbox.Api.TeamLog.SpaceLimitsStatus.OverQuota
+  commentId: T:Dropbox.Api.TeamLog.SpaceLimitsStatus.OverQuota
+  parent: Dropbox.Api.TeamLog
+  name: SpaceLimitsStatus.OverQuota
+  nameWithType: SpaceLimitsStatus.OverQuota
+  fullName: Dropbox.Api.TeamLog.SpaceLimitsStatus.OverQuota
+- uid: Dropbox.Api.TeamLog.SpaceLimitsStatus.IsWithinQuota*
+  commentId: Overload:Dropbox.Api.TeamLog.SpaceLimitsStatus.IsWithinQuota
+  name: IsWithinQuota
+  nameWithType: SpaceLimitsStatus.IsWithinQuota
+  fullName: Dropbox.Api.TeamLog.SpaceLimitsStatus.IsWithinQuota
+- uid: Dropbox.Api.TeamLog.SpaceLimitsStatus.AsWithinQuota*
+  commentId: Overload:Dropbox.Api.TeamLog.SpaceLimitsStatus.AsWithinQuota
+  name: AsWithinQuota
+  nameWithType: SpaceLimitsStatus.AsWithinQuota
+  fullName: Dropbox.Api.TeamLog.SpaceLimitsStatus.AsWithinQuota
+- uid: Dropbox.Api.TeamLog.SpaceLimitsStatus.WithinQuota
+  commentId: T:Dropbox.Api.TeamLog.SpaceLimitsStatus.WithinQuota
+  parent: Dropbox.Api.TeamLog
+  name: SpaceLimitsStatus.WithinQuota
+  nameWithType: SpaceLimitsStatus.WithinQuota
+  fullName: Dropbox.Api.TeamLog.SpaceLimitsStatus.WithinQuota
+- uid: Dropbox.Api.TeamLog.SpaceLimitsStatus.IsOther*
+  commentId: Overload:Dropbox.Api.TeamLog.SpaceLimitsStatus.IsOther
+  name: IsOther
+  nameWithType: SpaceLimitsStatus.IsOther
+  fullName: Dropbox.Api.TeamLog.SpaceLimitsStatus.IsOther
+- uid: Dropbox.Api.TeamLog.SpaceLimitsStatus.AsOther*
+  commentId: Overload:Dropbox.Api.TeamLog.SpaceLimitsStatus.AsOther
+  name: AsOther
+  nameWithType: SpaceLimitsStatus.AsOther
+  fullName: Dropbox.Api.TeamLog.SpaceLimitsStatus.AsOther
+- uid: Dropbox.Api.TeamLog.SpaceLimitsStatus.Other
+  commentId: T:Dropbox.Api.TeamLog.SpaceLimitsStatus.Other
+  parent: Dropbox.Api.TeamLog
+  name: SpaceLimitsStatus.Other
+  nameWithType: SpaceLimitsStatus.Other
+  fullName: Dropbox.Api.TeamLog.SpaceLimitsStatus.Other
+shouldSkipMarkup: true

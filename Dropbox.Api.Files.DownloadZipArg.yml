@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.DownloadZipArg
+  commentId: T:Dropbox.Api.Files.DownloadZipArg
+  id: DownloadZipArg
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.DownloadZipArg.#ctor
+  - Dropbox.Api.Files.DownloadZipArg.#ctor(System.String)
+  - Dropbox.Api.Files.DownloadZipArg.Path
+  langs:
+  - csharp
+  - vb
+  name: DownloadZipArg
+  nameWithType: DownloadZipArg
+  fullName: Dropbox.Api.Files.DownloadZipArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/DownloadZipArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: DownloadZipArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/DownloadZipArg.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The download zip arg object</p>\n"
+  example: []
+  syntax:
+    content: 'public class DownloadZipArg : object'
+    content.vb: >-
+      Public Class DownloadZipArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.DownloadZipArg.#ctor(System.String)
+  commentId: M:Dropbox.Api.Files.DownloadZipArg.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.Files.DownloadZipArg
+  langs:
+  - csharp
+  - vb
+  name: DownloadZipArg(String)
+  nameWithType: DownloadZipArg.DownloadZipArg(String)
+  fullName: Dropbox.Api.Files.DownloadZipArg.DownloadZipArg(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/DownloadZipArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/DownloadZipArg.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.DownloadZipArg\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public DownloadZipArg(string path)
+    parameters:
+    - id: path
+      type: System.String
+      description: The path of the folder to download.
+    content.vb: Public Sub New(path As String)
+  overload: Dropbox.Api.Files.DownloadZipArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.DownloadZipArg.#ctor
+  commentId: M:Dropbox.Api.Files.DownloadZipArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.DownloadZipArg
+  langs:
+  - csharp
+  - vb
+  name: DownloadZipArg()
+  nameWithType: DownloadZipArg.DownloadZipArg()
+  fullName: Dropbox.Api.Files.DownloadZipArg.DownloadZipArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/DownloadZipArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/DownloadZipArg.cs
+    startLine: 52
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.DownloadZipArg\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public DownloadZipArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.DownloadZipArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.DownloadZipArg.Path
+  commentId: P:Dropbox.Api.Files.DownloadZipArg.Path
+  id: Path
+  parent: Dropbox.Api.Files.DownloadZipArg
+  langs:
+  - csharp
+  - vb
+  name: Path
+  nameWithType: DownloadZipArg.Path
+  fullName: Dropbox.Api.Files.DownloadZipArg.Path
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/DownloadZipArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Path
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/DownloadZipArg.cs
+    startLine: 60
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The path of the folder to download.</p>\n"
+  example: []
+  syntax:
+    content: public string Path { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Path As String
+  overload: Dropbox.Api.Files.DownloadZipArg.Path*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.DownloadZipArg
+  commentId: T:Dropbox.Api.Files.DownloadZipArg
+  parent: Dropbox.Api.Files
+  name: DownloadZipArg
+  nameWithType: DownloadZipArg
+  fullName: Dropbox.Api.Files.DownloadZipArg
+- uid: Dropbox.Api.Files.DownloadZipArg.#ctor*
+  commentId: Overload:Dropbox.Api.Files.DownloadZipArg.#ctor
+  name: DownloadZipArg
+  nameWithType: DownloadZipArg.DownloadZipArg
+  fullName: Dropbox.Api.Files.DownloadZipArg.DownloadZipArg
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Files.DownloadZipArg.Path*
+  commentId: Overload:Dropbox.Api.Files.DownloadZipArg.Path
+  name: Path
+  nameWithType: DownloadZipArg.Path
+  fullName: Dropbox.Api.Files.DownloadZipArg.Path
+shouldSkipMarkup: true

@@ -1,0 +1,236 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.FileLockingLockStatusChangedDetails
+  commentId: T:Dropbox.Api.TeamLog.FileLockingLockStatusChangedDetails
+  id: FileLockingLockStatusChangedDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.FileLockingLockStatusChangedDetails.#ctor
+  - Dropbox.Api.TeamLog.FileLockingLockStatusChangedDetails.#ctor(Dropbox.Api.TeamLog.LockStatus,Dropbox.Api.TeamLog.LockStatus)
+  - Dropbox.Api.TeamLog.FileLockingLockStatusChangedDetails.NewValue
+  - Dropbox.Api.TeamLog.FileLockingLockStatusChangedDetails.PreviousValue
+  langs:
+  - csharp
+  - vb
+  name: FileLockingLockStatusChangedDetails
+  nameWithType: FileLockingLockStatusChangedDetails
+  fullName: Dropbox.Api.TeamLog.FileLockingLockStatusChangedDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileLockingLockStatusChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: FileLockingLockStatusChangedDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileLockingLockStatusChangedDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Locked/unlocked editing for a file.</p>\n"
+  example: []
+  syntax:
+    content: 'public class FileLockingLockStatusChangedDetails : object'
+    content.vb: >-
+      Public Class FileLockingLockStatusChangedDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.FileLockingLockStatusChangedDetails.#ctor(Dropbox.Api.TeamLog.LockStatus,Dropbox.Api.TeamLog.LockStatus)
+  commentId: M:Dropbox.Api.TeamLog.FileLockingLockStatusChangedDetails.#ctor(Dropbox.Api.TeamLog.LockStatus,Dropbox.Api.TeamLog.LockStatus)
+  id: '#ctor(Dropbox.Api.TeamLog.LockStatus,Dropbox.Api.TeamLog.LockStatus)'
+  parent: Dropbox.Api.TeamLog.FileLockingLockStatusChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: FileLockingLockStatusChangedDetails(LockStatus, LockStatus)
+  nameWithType: FileLockingLockStatusChangedDetails.FileLockingLockStatusChangedDetails(LockStatus, LockStatus)
+  fullName: Dropbox.Api.TeamLog.FileLockingLockStatusChangedDetails.FileLockingLockStatusChangedDetails(Dropbox.Api.TeamLog.LockStatus, Dropbox.Api.TeamLog.LockStatus)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileLockingLockStatusChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileLockingLockStatusChangedDetails.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.FileLockingLockStatusChangedDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public FileLockingLockStatusChangedDetails(LockStatus previousValue, LockStatus newValue)
+    parameters:
+    - id: previousValue
+      type: Dropbox.Api.TeamLog.LockStatus
+      description: Previous lock status of the file.
+    - id: newValue
+      type: Dropbox.Api.TeamLog.LockStatus
+      description: New lock status of the file.
+    content.vb: Public Sub New(previousValue As LockStatus, newValue As LockStatus)
+  overload: Dropbox.Api.TeamLog.FileLockingLockStatusChangedDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.FileLockingLockStatusChangedDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.FileLockingLockStatusChangedDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.FileLockingLockStatusChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: FileLockingLockStatusChangedDetails()
+  nameWithType: FileLockingLockStatusChangedDetails.FileLockingLockStatusChangedDetails()
+  fullName: Dropbox.Api.TeamLog.FileLockingLockStatusChangedDetails.FileLockingLockStatusChangedDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileLockingLockStatusChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileLockingLockStatusChangedDetails.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.FileLockingLockStatusChangedDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public FileLockingLockStatusChangedDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.FileLockingLockStatusChangedDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.FileLockingLockStatusChangedDetails.PreviousValue
+  commentId: P:Dropbox.Api.TeamLog.FileLockingLockStatusChangedDetails.PreviousValue
+  id: PreviousValue
+  parent: Dropbox.Api.TeamLog.FileLockingLockStatusChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: PreviousValue
+  nameWithType: FileLockingLockStatusChangedDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.FileLockingLockStatusChangedDetails.PreviousValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileLockingLockStatusChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PreviousValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileLockingLockStatusChangedDetails.cs
+    startLine: 66
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Previous lock status of the file.</p>\n"
+  example: []
+  syntax:
+    content: public LockStatus PreviousValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.LockStatus
+    content.vb: Public Property PreviousValue As LockStatus
+  overload: Dropbox.Api.TeamLog.FileLockingLockStatusChangedDetails.PreviousValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.FileLockingLockStatusChangedDetails.NewValue
+  commentId: P:Dropbox.Api.TeamLog.FileLockingLockStatusChangedDetails.NewValue
+  id: NewValue
+  parent: Dropbox.Api.TeamLog.FileLockingLockStatusChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: NewValue
+  nameWithType: FileLockingLockStatusChangedDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.FileLockingLockStatusChangedDetails.NewValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileLockingLockStatusChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NewValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileLockingLockStatusChangedDetails.cs
+    startLine: 71
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>New lock status of the file.</p>\n"
+  example: []
+  syntax:
+    content: public LockStatus NewValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.LockStatus
+    content.vb: Public Property NewValue As LockStatus
+  overload: Dropbox.Api.TeamLog.FileLockingLockStatusChangedDetails.NewValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.FileLockingLockStatusChangedDetails
+  commentId: T:Dropbox.Api.TeamLog.FileLockingLockStatusChangedDetails
+  parent: Dropbox.Api.TeamLog
+  name: FileLockingLockStatusChangedDetails
+  nameWithType: FileLockingLockStatusChangedDetails
+  fullName: Dropbox.Api.TeamLog.FileLockingLockStatusChangedDetails
+- uid: Dropbox.Api.TeamLog.FileLockingLockStatusChangedDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.FileLockingLockStatusChangedDetails.#ctor
+  name: FileLockingLockStatusChangedDetails
+  nameWithType: FileLockingLockStatusChangedDetails.FileLockingLockStatusChangedDetails
+  fullName: Dropbox.Api.TeamLog.FileLockingLockStatusChangedDetails.FileLockingLockStatusChangedDetails
+- uid: Dropbox.Api.TeamLog.LockStatus
+  commentId: T:Dropbox.Api.TeamLog.LockStatus
+  parent: Dropbox.Api.TeamLog
+  name: LockStatus
+  nameWithType: LockStatus
+  fullName: Dropbox.Api.TeamLog.LockStatus
+- uid: Dropbox.Api.TeamLog.FileLockingLockStatusChangedDetails.PreviousValue*
+  commentId: Overload:Dropbox.Api.TeamLog.FileLockingLockStatusChangedDetails.PreviousValue
+  name: PreviousValue
+  nameWithType: FileLockingLockStatusChangedDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.FileLockingLockStatusChangedDetails.PreviousValue
+- uid: Dropbox.Api.TeamLog.FileLockingLockStatusChangedDetails.NewValue*
+  commentId: Overload:Dropbox.Api.TeamLog.FileLockingLockStatusChangedDetails.NewValue
+  name: NewValue
+  nameWithType: FileLockingLockStatusChangedDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.FileLockingLockStatusChangedDetails.NewValue
+shouldSkipMarkup: true

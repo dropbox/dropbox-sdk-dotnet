@@ -1,0 +1,283 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.BinderRemoveSectionDetails
+  commentId: T:Dropbox.Api.TeamLog.BinderRemoveSectionDetails
+  id: BinderRemoveSectionDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.BinderRemoveSectionDetails.#ctor
+  - Dropbox.Api.TeamLog.BinderRemoveSectionDetails.#ctor(System.String,System.String,System.String)
+  - Dropbox.Api.TeamLog.BinderRemoveSectionDetails.BinderItemName
+  - Dropbox.Api.TeamLog.BinderRemoveSectionDetails.DocTitle
+  - Dropbox.Api.TeamLog.BinderRemoveSectionDetails.EventUuid
+  langs:
+  - csharp
+  - vb
+  name: BinderRemoveSectionDetails
+  nameWithType: BinderRemoveSectionDetails
+  fullName: Dropbox.Api.TeamLog.BinderRemoveSectionDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/BinderRemoveSectionDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: BinderRemoveSectionDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/BinderRemoveSectionDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Removed Binder section.</p>\n"
+  example: []
+  syntax:
+    content: 'public class BinderRemoveSectionDetails : object'
+    content.vb: >-
+      Public Class BinderRemoveSectionDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.BinderRemoveSectionDetails.#ctor(System.String,System.String,System.String)
+  commentId: M:Dropbox.Api.TeamLog.BinderRemoveSectionDetails.#ctor(System.String,System.String,System.String)
+  id: '#ctor(System.String,System.String,System.String)'
+  parent: Dropbox.Api.TeamLog.BinderRemoveSectionDetails
+  langs:
+  - csharp
+  - vb
+  name: BinderRemoveSectionDetails(String, String, String)
+  nameWithType: BinderRemoveSectionDetails.BinderRemoveSectionDetails(String, String, String)
+  fullName: Dropbox.Api.TeamLog.BinderRemoveSectionDetails.BinderRemoveSectionDetails(System.String, System.String, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/BinderRemoveSectionDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/BinderRemoveSectionDetails.cs
+    startLine: 36
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.BinderRemoveSectionDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public BinderRemoveSectionDetails(string eventUuid, string docTitle, string binderItemName)
+    parameters:
+    - id: eventUuid
+      type: System.String
+      description: Event unique identifier.
+    - id: docTitle
+      type: System.String
+      description: Title of the Binder doc.
+    - id: binderItemName
+      type: System.String
+      description: Name of the Binder page/section.
+    content.vb: Public Sub New(eventUuid As String, docTitle As String, binderItemName As String)
+  overload: Dropbox.Api.TeamLog.BinderRemoveSectionDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.BinderRemoveSectionDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.BinderRemoveSectionDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.BinderRemoveSectionDetails
+  langs:
+  - csharp
+  - vb
+  name: BinderRemoveSectionDetails()
+  nameWithType: BinderRemoveSectionDetails.BinderRemoveSectionDetails()
+  fullName: Dropbox.Api.TeamLog.BinderRemoveSectionDetails.BinderRemoveSectionDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/BinderRemoveSectionDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/BinderRemoveSectionDetails.cs
+    startLine: 66
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.BinderRemoveSectionDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public BinderRemoveSectionDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.BinderRemoveSectionDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.BinderRemoveSectionDetails.EventUuid
+  commentId: P:Dropbox.Api.TeamLog.BinderRemoveSectionDetails.EventUuid
+  id: EventUuid
+  parent: Dropbox.Api.TeamLog.BinderRemoveSectionDetails
+  langs:
+  - csharp
+  - vb
+  name: EventUuid
+  nameWithType: BinderRemoveSectionDetails.EventUuid
+  fullName: Dropbox.Api.TeamLog.BinderRemoveSectionDetails.EventUuid
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/BinderRemoveSectionDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: EventUuid
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/BinderRemoveSectionDetails.cs
+    startLine: 74
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Event unique identifier.</p>\n"
+  example: []
+  syntax:
+    content: public string EventUuid { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property EventUuid As String
+  overload: Dropbox.Api.TeamLog.BinderRemoveSectionDetails.EventUuid*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.BinderRemoveSectionDetails.DocTitle
+  commentId: P:Dropbox.Api.TeamLog.BinderRemoveSectionDetails.DocTitle
+  id: DocTitle
+  parent: Dropbox.Api.TeamLog.BinderRemoveSectionDetails
+  langs:
+  - csharp
+  - vb
+  name: DocTitle
+  nameWithType: BinderRemoveSectionDetails.DocTitle
+  fullName: Dropbox.Api.TeamLog.BinderRemoveSectionDetails.DocTitle
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/BinderRemoveSectionDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: DocTitle
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/BinderRemoveSectionDetails.cs
+    startLine: 79
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Title of the Binder doc.</p>\n"
+  example: []
+  syntax:
+    content: public string DocTitle { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property DocTitle As String
+  overload: Dropbox.Api.TeamLog.BinderRemoveSectionDetails.DocTitle*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.BinderRemoveSectionDetails.BinderItemName
+  commentId: P:Dropbox.Api.TeamLog.BinderRemoveSectionDetails.BinderItemName
+  id: BinderItemName
+  parent: Dropbox.Api.TeamLog.BinderRemoveSectionDetails
+  langs:
+  - csharp
+  - vb
+  name: BinderItemName
+  nameWithType: BinderRemoveSectionDetails.BinderItemName
+  fullName: Dropbox.Api.TeamLog.BinderRemoveSectionDetails.BinderItemName
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/BinderRemoveSectionDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: BinderItemName
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/BinderRemoveSectionDetails.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Name of the Binder page/section.</p>\n"
+  example: []
+  syntax:
+    content: public string BinderItemName { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BinderItemName As String
+  overload: Dropbox.Api.TeamLog.BinderRemoveSectionDetails.BinderItemName*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.BinderRemoveSectionDetails
+  commentId: T:Dropbox.Api.TeamLog.BinderRemoveSectionDetails
+  parent: Dropbox.Api.TeamLog
+  name: BinderRemoveSectionDetails
+  nameWithType: BinderRemoveSectionDetails
+  fullName: Dropbox.Api.TeamLog.BinderRemoveSectionDetails
+- uid: Dropbox.Api.TeamLog.BinderRemoveSectionDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.BinderRemoveSectionDetails.#ctor
+  name: BinderRemoveSectionDetails
+  nameWithType: BinderRemoveSectionDetails.BinderRemoveSectionDetails
+  fullName: Dropbox.Api.TeamLog.BinderRemoveSectionDetails.BinderRemoveSectionDetails
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.BinderRemoveSectionDetails.EventUuid*
+  commentId: Overload:Dropbox.Api.TeamLog.BinderRemoveSectionDetails.EventUuid
+  name: EventUuid
+  nameWithType: BinderRemoveSectionDetails.EventUuid
+  fullName: Dropbox.Api.TeamLog.BinderRemoveSectionDetails.EventUuid
+- uid: Dropbox.Api.TeamLog.BinderRemoveSectionDetails.DocTitle*
+  commentId: Overload:Dropbox.Api.TeamLog.BinderRemoveSectionDetails.DocTitle
+  name: DocTitle
+  nameWithType: BinderRemoveSectionDetails.DocTitle
+  fullName: Dropbox.Api.TeamLog.BinderRemoveSectionDetails.DocTitle
+- uid: Dropbox.Api.TeamLog.BinderRemoveSectionDetails.BinderItemName*
+  commentId: Overload:Dropbox.Api.TeamLog.BinderRemoveSectionDetails.BinderItemName
+  name: BinderItemName
+  nameWithType: BinderRemoveSectionDetails.BinderItemName
+  fullName: Dropbox.Api.TeamLog.BinderRemoveSectionDetails.BinderItemName
+shouldSkipMarkup: true

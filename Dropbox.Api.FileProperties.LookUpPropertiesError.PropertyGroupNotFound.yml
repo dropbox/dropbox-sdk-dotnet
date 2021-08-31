@@ -1,0 +1,134 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.FileProperties.LookUpPropertiesError.PropertyGroupNotFound
+  commentId: T:Dropbox.Api.FileProperties.LookUpPropertiesError.PropertyGroupNotFound
+  id: LookUpPropertiesError.PropertyGroupNotFound
+  parent: Dropbox.Api.FileProperties
+  children:
+  - Dropbox.Api.FileProperties.LookUpPropertiesError.PropertyGroupNotFound.Instance
+  langs:
+  - csharp
+  - vb
+  name: LookUpPropertiesError.PropertyGroupNotFound
+  nameWithType: LookUpPropertiesError.PropertyGroupNotFound
+  fullName: Dropbox.Api.FileProperties.LookUpPropertiesError.PropertyGroupNotFound
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/LookUpPropertiesError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PropertyGroupNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/LookUpPropertiesError.cs
+    startLine: 153
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>No property group was found.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class PropertyGroupNotFound : LookUpPropertiesError'
+    content.vb: >-
+      Public NotInheritable Class PropertyGroupNotFound
+          Inherits LookUpPropertiesError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.FileProperties.LookUpPropertiesError
+  inheritedMembers:
+  - Dropbox.Api.FileProperties.LookUpPropertiesError.IsPropertyGroupNotFound
+  - Dropbox.Api.FileProperties.LookUpPropertiesError.AsPropertyGroupNotFound
+  - Dropbox.Api.FileProperties.LookUpPropertiesError.IsOther
+  - Dropbox.Api.FileProperties.LookUpPropertiesError.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.FileProperties.LookUpPropertiesError.PropertyGroupNotFound.Instance
+  commentId: F:Dropbox.Api.FileProperties.LookUpPropertiesError.PropertyGroupNotFound.Instance
+  id: Instance
+  parent: Dropbox.Api.FileProperties.LookUpPropertiesError.PropertyGroupNotFound
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: LookUpPropertiesError.PropertyGroupNotFound.Instance
+  fullName: Dropbox.Api.FileProperties.LookUpPropertiesError.PropertyGroupNotFound.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/LookUpPropertiesError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/LookUpPropertiesError.cs
+    startLine: 178
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>A singleton instance of PropertyGroupNotFound</p>\n"
+  example: []
+  syntax:
+    content: public static readonly LookUpPropertiesError.PropertyGroupNotFound Instance
+    return:
+      type: Dropbox.Api.FileProperties.LookUpPropertiesError.PropertyGroupNotFound
+    content.vb: Public Shared ReadOnly Instance As LookUpPropertiesError.PropertyGroupNotFound
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.FileProperties
+  commentId: N:Dropbox.Api.FileProperties
+  name: Dropbox.Api.FileProperties
+  nameWithType: Dropbox.Api.FileProperties
+  fullName: Dropbox.Api.FileProperties
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.FileProperties.LookUpPropertiesError
+  commentId: T:Dropbox.Api.FileProperties.LookUpPropertiesError
+  parent: Dropbox.Api.FileProperties
+  name: LookUpPropertiesError
+  nameWithType: LookUpPropertiesError
+  fullName: Dropbox.Api.FileProperties.LookUpPropertiesError
+- uid: Dropbox.Api.FileProperties.LookUpPropertiesError.IsPropertyGroupNotFound
+  commentId: P:Dropbox.Api.FileProperties.LookUpPropertiesError.IsPropertyGroupNotFound
+  parent: Dropbox.Api.FileProperties.LookUpPropertiesError
+  name: IsPropertyGroupNotFound
+  nameWithType: LookUpPropertiesError.IsPropertyGroupNotFound
+  fullName: Dropbox.Api.FileProperties.LookUpPropertiesError.IsPropertyGroupNotFound
+- uid: Dropbox.Api.FileProperties.LookUpPropertiesError.AsPropertyGroupNotFound
+  commentId: P:Dropbox.Api.FileProperties.LookUpPropertiesError.AsPropertyGroupNotFound
+  parent: Dropbox.Api.FileProperties.LookUpPropertiesError
+  name: AsPropertyGroupNotFound
+  nameWithType: LookUpPropertiesError.AsPropertyGroupNotFound
+  fullName: Dropbox.Api.FileProperties.LookUpPropertiesError.AsPropertyGroupNotFound
+- uid: Dropbox.Api.FileProperties.LookUpPropertiesError.IsOther
+  commentId: P:Dropbox.Api.FileProperties.LookUpPropertiesError.IsOther
+  parent: Dropbox.Api.FileProperties.LookUpPropertiesError
+  name: IsOther
+  nameWithType: LookUpPropertiesError.IsOther
+  fullName: Dropbox.Api.FileProperties.LookUpPropertiesError.IsOther
+- uid: Dropbox.Api.FileProperties.LookUpPropertiesError.AsOther
+  commentId: P:Dropbox.Api.FileProperties.LookUpPropertiesError.AsOther
+  parent: Dropbox.Api.FileProperties.LookUpPropertiesError
+  name: AsOther
+  nameWithType: LookUpPropertiesError.AsOther
+  fullName: Dropbox.Api.FileProperties.LookUpPropertiesError.AsOther
+- uid: Dropbox.Api.FileProperties.LookUpPropertiesError.PropertyGroupNotFound
+  commentId: T:Dropbox.Api.FileProperties.LookUpPropertiesError.PropertyGroupNotFound
+  parent: Dropbox.Api.FileProperties
+  name: LookUpPropertiesError.PropertyGroupNotFound
+  nameWithType: LookUpPropertiesError.PropertyGroupNotFound
+  fullName: Dropbox.Api.FileProperties.LookUpPropertiesError.PropertyGroupNotFound
+shouldSkipMarkup: true

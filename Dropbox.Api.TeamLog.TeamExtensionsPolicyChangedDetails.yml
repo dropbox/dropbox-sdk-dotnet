@@ -1,0 +1,236 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.TeamExtensionsPolicyChangedDetails
+  commentId: T:Dropbox.Api.TeamLog.TeamExtensionsPolicyChangedDetails
+  id: TeamExtensionsPolicyChangedDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.TeamExtensionsPolicyChangedDetails.#ctor
+  - Dropbox.Api.TeamLog.TeamExtensionsPolicyChangedDetails.#ctor(Dropbox.Api.TeamLog.TeamExtensionsPolicy,Dropbox.Api.TeamLog.TeamExtensionsPolicy)
+  - Dropbox.Api.TeamLog.TeamExtensionsPolicyChangedDetails.NewValue
+  - Dropbox.Api.TeamLog.TeamExtensionsPolicyChangedDetails.PreviousValue
+  langs:
+  - csharp
+  - vb
+  name: TeamExtensionsPolicyChangedDetails
+  nameWithType: TeamExtensionsPolicyChangedDetails
+  fullName: Dropbox.Api.TeamLog.TeamExtensionsPolicyChangedDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamExtensionsPolicyChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TeamExtensionsPolicyChangedDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamExtensionsPolicyChangedDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Changed App Integrations setting for team.</p>\n"
+  example: []
+  syntax:
+    content: 'public class TeamExtensionsPolicyChangedDetails : object'
+    content.vb: >-
+      Public Class TeamExtensionsPolicyChangedDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.TeamExtensionsPolicyChangedDetails.#ctor(Dropbox.Api.TeamLog.TeamExtensionsPolicy,Dropbox.Api.TeamLog.TeamExtensionsPolicy)
+  commentId: M:Dropbox.Api.TeamLog.TeamExtensionsPolicyChangedDetails.#ctor(Dropbox.Api.TeamLog.TeamExtensionsPolicy,Dropbox.Api.TeamLog.TeamExtensionsPolicy)
+  id: '#ctor(Dropbox.Api.TeamLog.TeamExtensionsPolicy,Dropbox.Api.TeamLog.TeamExtensionsPolicy)'
+  parent: Dropbox.Api.TeamLog.TeamExtensionsPolicyChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: TeamExtensionsPolicyChangedDetails(TeamExtensionsPolicy, TeamExtensionsPolicy)
+  nameWithType: TeamExtensionsPolicyChangedDetails.TeamExtensionsPolicyChangedDetails(TeamExtensionsPolicy, TeamExtensionsPolicy)
+  fullName: Dropbox.Api.TeamLog.TeamExtensionsPolicyChangedDetails.TeamExtensionsPolicyChangedDetails(Dropbox.Api.TeamLog.TeamExtensionsPolicy, Dropbox.Api.TeamLog.TeamExtensionsPolicy)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamExtensionsPolicyChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamExtensionsPolicyChangedDetails.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.TeamExtensionsPolicyChangedDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public TeamExtensionsPolicyChangedDetails(TeamExtensionsPolicy newValue, TeamExtensionsPolicy previousValue)
+    parameters:
+    - id: newValue
+      type: Dropbox.Api.TeamLog.TeamExtensionsPolicy
+      description: New Extensions policy.
+    - id: previousValue
+      type: Dropbox.Api.TeamLog.TeamExtensionsPolicy
+      description: Previous Extensions policy.
+    content.vb: Public Sub New(newValue As TeamExtensionsPolicy, previousValue As TeamExtensionsPolicy)
+  overload: Dropbox.Api.TeamLog.TeamExtensionsPolicyChangedDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.TeamExtensionsPolicyChangedDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.TeamExtensionsPolicyChangedDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.TeamExtensionsPolicyChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: TeamExtensionsPolicyChangedDetails()
+  nameWithType: TeamExtensionsPolicyChangedDetails.TeamExtensionsPolicyChangedDetails()
+  fullName: Dropbox.Api.TeamLog.TeamExtensionsPolicyChangedDetails.TeamExtensionsPolicyChangedDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamExtensionsPolicyChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamExtensionsPolicyChangedDetails.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.TeamExtensionsPolicyChangedDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public TeamExtensionsPolicyChangedDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.TeamExtensionsPolicyChangedDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.TeamExtensionsPolicyChangedDetails.NewValue
+  commentId: P:Dropbox.Api.TeamLog.TeamExtensionsPolicyChangedDetails.NewValue
+  id: NewValue
+  parent: Dropbox.Api.TeamLog.TeamExtensionsPolicyChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: NewValue
+  nameWithType: TeamExtensionsPolicyChangedDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.TeamExtensionsPolicyChangedDetails.NewValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamExtensionsPolicyChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NewValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamExtensionsPolicyChangedDetails.cs
+    startLine: 66
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>New Extensions policy.</p>\n"
+  example: []
+  syntax:
+    content: public TeamExtensionsPolicy NewValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.TeamExtensionsPolicy
+    content.vb: Public Property NewValue As TeamExtensionsPolicy
+  overload: Dropbox.Api.TeamLog.TeamExtensionsPolicyChangedDetails.NewValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.TeamExtensionsPolicyChangedDetails.PreviousValue
+  commentId: P:Dropbox.Api.TeamLog.TeamExtensionsPolicyChangedDetails.PreviousValue
+  id: PreviousValue
+  parent: Dropbox.Api.TeamLog.TeamExtensionsPolicyChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: PreviousValue
+  nameWithType: TeamExtensionsPolicyChangedDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.TeamExtensionsPolicyChangedDetails.PreviousValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamExtensionsPolicyChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PreviousValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamExtensionsPolicyChangedDetails.cs
+    startLine: 71
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Previous Extensions policy.</p>\n"
+  example: []
+  syntax:
+    content: public TeamExtensionsPolicy PreviousValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.TeamExtensionsPolicy
+    content.vb: Public Property PreviousValue As TeamExtensionsPolicy
+  overload: Dropbox.Api.TeamLog.TeamExtensionsPolicyChangedDetails.PreviousValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.TeamExtensionsPolicyChangedDetails
+  commentId: T:Dropbox.Api.TeamLog.TeamExtensionsPolicyChangedDetails
+  parent: Dropbox.Api.TeamLog
+  name: TeamExtensionsPolicyChangedDetails
+  nameWithType: TeamExtensionsPolicyChangedDetails
+  fullName: Dropbox.Api.TeamLog.TeamExtensionsPolicyChangedDetails
+- uid: Dropbox.Api.TeamLog.TeamExtensionsPolicyChangedDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.TeamExtensionsPolicyChangedDetails.#ctor
+  name: TeamExtensionsPolicyChangedDetails
+  nameWithType: TeamExtensionsPolicyChangedDetails.TeamExtensionsPolicyChangedDetails
+  fullName: Dropbox.Api.TeamLog.TeamExtensionsPolicyChangedDetails.TeamExtensionsPolicyChangedDetails
+- uid: Dropbox.Api.TeamLog.TeamExtensionsPolicy
+  commentId: T:Dropbox.Api.TeamLog.TeamExtensionsPolicy
+  parent: Dropbox.Api.TeamLog
+  name: TeamExtensionsPolicy
+  nameWithType: TeamExtensionsPolicy
+  fullName: Dropbox.Api.TeamLog.TeamExtensionsPolicy
+- uid: Dropbox.Api.TeamLog.TeamExtensionsPolicyChangedDetails.NewValue*
+  commentId: Overload:Dropbox.Api.TeamLog.TeamExtensionsPolicyChangedDetails.NewValue
+  name: NewValue
+  nameWithType: TeamExtensionsPolicyChangedDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.TeamExtensionsPolicyChangedDetails.NewValue
+- uid: Dropbox.Api.TeamLog.TeamExtensionsPolicyChangedDetails.PreviousValue*
+  commentId: Overload:Dropbox.Api.TeamLog.TeamExtensionsPolicyChangedDetails.PreviousValue
+  name: PreviousValue
+  nameWithType: TeamExtensionsPolicyChangedDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.TeamExtensionsPolicyChangedDetails.PreviousValue
+shouldSkipMarkup: true

@@ -1,0 +1,236 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.MemberChangeMembershipTypeDetails
+  commentId: T:Dropbox.Api.TeamLog.MemberChangeMembershipTypeDetails
+  id: MemberChangeMembershipTypeDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.MemberChangeMembershipTypeDetails.#ctor
+  - Dropbox.Api.TeamLog.MemberChangeMembershipTypeDetails.#ctor(Dropbox.Api.TeamLog.TeamMembershipType,Dropbox.Api.TeamLog.TeamMembershipType)
+  - Dropbox.Api.TeamLog.MemberChangeMembershipTypeDetails.NewValue
+  - Dropbox.Api.TeamLog.MemberChangeMembershipTypeDetails.PrevValue
+  langs:
+  - csharp
+  - vb
+  name: MemberChangeMembershipTypeDetails
+  nameWithType: MemberChangeMembershipTypeDetails
+  fullName: Dropbox.Api.TeamLog.MemberChangeMembershipTypeDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberChangeMembershipTypeDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: MemberChangeMembershipTypeDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberChangeMembershipTypeDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Changed membership type (limited/full) of member.</p>\n"
+  example: []
+  syntax:
+    content: 'public class MemberChangeMembershipTypeDetails : object'
+    content.vb: >-
+      Public Class MemberChangeMembershipTypeDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.MemberChangeMembershipTypeDetails.#ctor(Dropbox.Api.TeamLog.TeamMembershipType,Dropbox.Api.TeamLog.TeamMembershipType)
+  commentId: M:Dropbox.Api.TeamLog.MemberChangeMembershipTypeDetails.#ctor(Dropbox.Api.TeamLog.TeamMembershipType,Dropbox.Api.TeamLog.TeamMembershipType)
+  id: '#ctor(Dropbox.Api.TeamLog.TeamMembershipType,Dropbox.Api.TeamLog.TeamMembershipType)'
+  parent: Dropbox.Api.TeamLog.MemberChangeMembershipTypeDetails
+  langs:
+  - csharp
+  - vb
+  name: MemberChangeMembershipTypeDetails(TeamMembershipType, TeamMembershipType)
+  nameWithType: MemberChangeMembershipTypeDetails.MemberChangeMembershipTypeDetails(TeamMembershipType, TeamMembershipType)
+  fullName: Dropbox.Api.TeamLog.MemberChangeMembershipTypeDetails.MemberChangeMembershipTypeDetails(Dropbox.Api.TeamLog.TeamMembershipType, Dropbox.Api.TeamLog.TeamMembershipType)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberChangeMembershipTypeDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberChangeMembershipTypeDetails.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.MemberChangeMembershipTypeDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public MemberChangeMembershipTypeDetails(TeamMembershipType prevValue, TeamMembershipType newValue)
+    parameters:
+    - id: prevValue
+      type: Dropbox.Api.TeamLog.TeamMembershipType
+      description: Previous membership type.
+    - id: newValue
+      type: Dropbox.Api.TeamLog.TeamMembershipType
+      description: New membership type.
+    content.vb: Public Sub New(prevValue As TeamMembershipType, newValue As TeamMembershipType)
+  overload: Dropbox.Api.TeamLog.MemberChangeMembershipTypeDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.MemberChangeMembershipTypeDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.MemberChangeMembershipTypeDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.MemberChangeMembershipTypeDetails
+  langs:
+  - csharp
+  - vb
+  name: MemberChangeMembershipTypeDetails()
+  nameWithType: MemberChangeMembershipTypeDetails.MemberChangeMembershipTypeDetails()
+  fullName: Dropbox.Api.TeamLog.MemberChangeMembershipTypeDetails.MemberChangeMembershipTypeDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberChangeMembershipTypeDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberChangeMembershipTypeDetails.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.MemberChangeMembershipTypeDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public MemberChangeMembershipTypeDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.MemberChangeMembershipTypeDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.MemberChangeMembershipTypeDetails.PrevValue
+  commentId: P:Dropbox.Api.TeamLog.MemberChangeMembershipTypeDetails.PrevValue
+  id: PrevValue
+  parent: Dropbox.Api.TeamLog.MemberChangeMembershipTypeDetails
+  langs:
+  - csharp
+  - vb
+  name: PrevValue
+  nameWithType: MemberChangeMembershipTypeDetails.PrevValue
+  fullName: Dropbox.Api.TeamLog.MemberChangeMembershipTypeDetails.PrevValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberChangeMembershipTypeDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PrevValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberChangeMembershipTypeDetails.cs
+    startLine: 66
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Previous membership type.</p>\n"
+  example: []
+  syntax:
+    content: public TeamMembershipType PrevValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.TeamMembershipType
+    content.vb: Public Property PrevValue As TeamMembershipType
+  overload: Dropbox.Api.TeamLog.MemberChangeMembershipTypeDetails.PrevValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.MemberChangeMembershipTypeDetails.NewValue
+  commentId: P:Dropbox.Api.TeamLog.MemberChangeMembershipTypeDetails.NewValue
+  id: NewValue
+  parent: Dropbox.Api.TeamLog.MemberChangeMembershipTypeDetails
+  langs:
+  - csharp
+  - vb
+  name: NewValue
+  nameWithType: MemberChangeMembershipTypeDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.MemberChangeMembershipTypeDetails.NewValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberChangeMembershipTypeDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NewValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberChangeMembershipTypeDetails.cs
+    startLine: 71
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>New membership type.</p>\n"
+  example: []
+  syntax:
+    content: public TeamMembershipType NewValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.TeamMembershipType
+    content.vb: Public Property NewValue As TeamMembershipType
+  overload: Dropbox.Api.TeamLog.MemberChangeMembershipTypeDetails.NewValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.MemberChangeMembershipTypeDetails
+  commentId: T:Dropbox.Api.TeamLog.MemberChangeMembershipTypeDetails
+  parent: Dropbox.Api.TeamLog
+  name: MemberChangeMembershipTypeDetails
+  nameWithType: MemberChangeMembershipTypeDetails
+  fullName: Dropbox.Api.TeamLog.MemberChangeMembershipTypeDetails
+- uid: Dropbox.Api.TeamLog.MemberChangeMembershipTypeDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberChangeMembershipTypeDetails.#ctor
+  name: MemberChangeMembershipTypeDetails
+  nameWithType: MemberChangeMembershipTypeDetails.MemberChangeMembershipTypeDetails
+  fullName: Dropbox.Api.TeamLog.MemberChangeMembershipTypeDetails.MemberChangeMembershipTypeDetails
+- uid: Dropbox.Api.TeamLog.TeamMembershipType
+  commentId: T:Dropbox.Api.TeamLog.TeamMembershipType
+  parent: Dropbox.Api.TeamLog
+  name: TeamMembershipType
+  nameWithType: TeamMembershipType
+  fullName: Dropbox.Api.TeamLog.TeamMembershipType
+- uid: Dropbox.Api.TeamLog.MemberChangeMembershipTypeDetails.PrevValue*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberChangeMembershipTypeDetails.PrevValue
+  name: PrevValue
+  nameWithType: MemberChangeMembershipTypeDetails.PrevValue
+  fullName: Dropbox.Api.TeamLog.MemberChangeMembershipTypeDetails.PrevValue
+- uid: Dropbox.Api.TeamLog.MemberChangeMembershipTypeDetails.NewValue*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberChangeMembershipTypeDetails.NewValue
+  name: NewValue
+  nameWithType: MemberChangeMembershipTypeDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.MemberChangeMembershipTypeDetails.NewValue
+shouldSkipMarkup: true

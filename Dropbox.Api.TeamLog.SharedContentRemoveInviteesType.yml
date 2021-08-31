@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.SharedContentRemoveInviteesType
+  commentId: T:Dropbox.Api.TeamLog.SharedContentRemoveInviteesType
+  id: SharedContentRemoveInviteesType
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.SharedContentRemoveInviteesType.#ctor
+  - Dropbox.Api.TeamLog.SharedContentRemoveInviteesType.#ctor(System.String)
+  - Dropbox.Api.TeamLog.SharedContentRemoveInviteesType.Description
+  langs:
+  - csharp
+  - vb
+  name: SharedContentRemoveInviteesType
+  nameWithType: SharedContentRemoveInviteesType
+  fullName: Dropbox.Api.TeamLog.SharedContentRemoveInviteesType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentRemoveInviteesType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SharedContentRemoveInviteesType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentRemoveInviteesType.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The shared content remove invitees type object</p>\n"
+  example: []
+  syntax:
+    content: 'public class SharedContentRemoveInviteesType : object'
+    content.vb: >-
+      Public Class SharedContentRemoveInviteesType
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.SharedContentRemoveInviteesType.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.SharedContentRemoveInviteesType.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.SharedContentRemoveInviteesType
+  langs:
+  - csharp
+  - vb
+  name: SharedContentRemoveInviteesType(String)
+  nameWithType: SharedContentRemoveInviteesType.SharedContentRemoveInviteesType(String)
+  fullName: Dropbox.Api.TeamLog.SharedContentRemoveInviteesType.SharedContentRemoveInviteesType(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentRemoveInviteesType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentRemoveInviteesType.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SharedContentRemoveInviteesType\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public SharedContentRemoveInviteesType(string description)
+    parameters:
+    - id: description
+      type: System.String
+      description: The description
+    content.vb: Public Sub New(description As String)
+  overload: Dropbox.Api.TeamLog.SharedContentRemoveInviteesType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SharedContentRemoveInviteesType.#ctor
+  commentId: M:Dropbox.Api.TeamLog.SharedContentRemoveInviteesType.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.SharedContentRemoveInviteesType
+  langs:
+  - csharp
+  - vb
+  name: SharedContentRemoveInviteesType()
+  nameWithType: SharedContentRemoveInviteesType.SharedContentRemoveInviteesType()
+  fullName: Dropbox.Api.TeamLog.SharedContentRemoveInviteesType.SharedContentRemoveInviteesType()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentRemoveInviteesType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentRemoveInviteesType.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SharedContentRemoveInviteesType\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public SharedContentRemoveInviteesType()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.SharedContentRemoveInviteesType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SharedContentRemoveInviteesType.Description
+  commentId: P:Dropbox.Api.TeamLog.SharedContentRemoveInviteesType.Description
+  id: Description
+  parent: Dropbox.Api.TeamLog.SharedContentRemoveInviteesType
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: SharedContentRemoveInviteesType.Description
+  fullName: Dropbox.Api.TeamLog.SharedContentRemoveInviteesType.Description
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentRemoveInviteesType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Description
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentRemoveInviteesType.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets the description of the shared content remove invitees type</p>\n"
+  example: []
+  syntax:
+    content: public string Description { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Dropbox.Api.TeamLog.SharedContentRemoveInviteesType.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.SharedContentRemoveInviteesType
+  commentId: T:Dropbox.Api.TeamLog.SharedContentRemoveInviteesType
+  parent: Dropbox.Api.TeamLog
+  name: SharedContentRemoveInviteesType
+  nameWithType: SharedContentRemoveInviteesType
+  fullName: Dropbox.Api.TeamLog.SharedContentRemoveInviteesType
+- uid: Dropbox.Api.TeamLog.SharedContentRemoveInviteesType.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedContentRemoveInviteesType.#ctor
+  name: SharedContentRemoveInviteesType
+  nameWithType: SharedContentRemoveInviteesType.SharedContentRemoveInviteesType
+  fullName: Dropbox.Api.TeamLog.SharedContentRemoveInviteesType.SharedContentRemoveInviteesType
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.SharedContentRemoveInviteesType.Description*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedContentRemoveInviteesType.Description
+  name: Description
+  nameWithType: SharedContentRemoveInviteesType.Description
+  fullName: Dropbox.Api.TeamLog.SharedContentRemoveInviteesType.Description
+shouldSkipMarkup: true

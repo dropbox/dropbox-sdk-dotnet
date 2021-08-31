@@ -1,0 +1,350 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Users.GetAccountBatchArg
+  commentId: T:Dropbox.Api.Users.GetAccountBatchArg
+  id: GetAccountBatchArg
+  parent: Dropbox.Api.Users
+  children:
+  - Dropbox.Api.Users.GetAccountBatchArg.#ctor
+  - Dropbox.Api.Users.GetAccountBatchArg.#ctor(System.Collections.Generic.IEnumerable{System.String})
+  - Dropbox.Api.Users.GetAccountBatchArg.AccountIds
+  langs:
+  - csharp
+  - vb
+  name: GetAccountBatchArg
+  nameWithType: GetAccountBatchArg
+  fullName: Dropbox.Api.Users.GetAccountBatchArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/GetAccountBatchArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GetAccountBatchArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/GetAccountBatchArg.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users
+  summary: "\n<p>The get account batch arg object</p>\n"
+  example: []
+  syntax:
+    content: 'public class GetAccountBatchArg : object'
+    content.vb: >-
+      Public Class GetAccountBatchArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Users.GetAccountBatchArg.#ctor(System.Collections.Generic.IEnumerable{System.String})
+  commentId: M:Dropbox.Api.Users.GetAccountBatchArg.#ctor(System.Collections.Generic.IEnumerable{System.String})
+  id: '#ctor(System.Collections.Generic.IEnumerable{System.String})'
+  parent: Dropbox.Api.Users.GetAccountBatchArg
+  langs:
+  - csharp
+  - vb
+  name: GetAccountBatchArg(System.Collections.Generic.IEnumerable<String>)
+  nameWithType: GetAccountBatchArg.GetAccountBatchArg(System.Collections.Generic.IEnumerable<String>)
+  fullName: Dropbox.Api.Users.GetAccountBatchArg.GetAccountBatchArg(System.Collections.Generic.IEnumerable<System.String>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/GetAccountBatchArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/GetAccountBatchArg.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Users.GetAccountBatchArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public GetAccountBatchArg(System.Collections.Generic.IEnumerable<string> accountIds)
+    parameters:
+    - id: accountIds
+      type: System.Collections.Generic.IEnumerable{System.String}
+      description: >-
+        List of user account identifiers.  Should not contain any
+
+        duplicate account IDs.
+    content.vb: Public Sub New(accountIds As System.Collections.Generic.IEnumerable(Of String))
+  overload: Dropbox.Api.Users.GetAccountBatchArg.#ctor*
+  nameWithType.vb: GetAccountBatchArg.GetAccountBatchArg(System.Collections.Generic.IEnumerable(Of String))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Users.GetAccountBatchArg.GetAccountBatchArg(System.Collections.Generic.IEnumerable(Of System.String))
+  name.vb: GetAccountBatchArg(System.Collections.Generic.IEnumerable(Of String))
+- uid: Dropbox.Api.Users.GetAccountBatchArg.#ctor
+  commentId: M:Dropbox.Api.Users.GetAccountBatchArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Users.GetAccountBatchArg
+  langs:
+  - csharp
+  - vb
+  name: GetAccountBatchArg()
+  nameWithType: GetAccountBatchArg.GetAccountBatchArg()
+  fullName: Dropbox.Api.Users.GetAccountBatchArg.GetAccountBatchArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/GetAccountBatchArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/GetAccountBatchArg.cs
+    startLine: 57
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Users.GetAccountBatchArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public GetAccountBatchArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Users.GetAccountBatchArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Users.GetAccountBatchArg.AccountIds
+  commentId: P:Dropbox.Api.Users.GetAccountBatchArg.AccountIds
+  id: AccountIds
+  parent: Dropbox.Api.Users.GetAccountBatchArg
+  langs:
+  - csharp
+  - vb
+  name: AccountIds
+  nameWithType: GetAccountBatchArg.AccountIds
+  fullName: Dropbox.Api.Users.GetAccountBatchArg.AccountIds
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/GetAccountBatchArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AccountIds
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/GetAccountBatchArg.cs
+    startLine: 66
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users
+  summary: "\n<p>List of user account identifiers.  Should not contain any duplicate account\nIDs.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<string> AccountIds { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{System.String}
+    content.vb: Public Property AccountIds As System.Collections.Generic.IList(Of String)
+  overload: Dropbox.Api.Users.GetAccountBatchArg.AccountIds*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Users
+  commentId: N:Dropbox.Api.Users
+  name: Dropbox.Api.Users
+  nameWithType: Dropbox.Api.Users
+  fullName: Dropbox.Api.Users
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Users.GetAccountBatchArg
+  commentId: T:Dropbox.Api.Users.GetAccountBatchArg
+  parent: Dropbox.Api.Users
+  name: GetAccountBatchArg
+  nameWithType: GetAccountBatchArg
+  fullName: Dropbox.Api.Users.GetAccountBatchArg
+- uid: Dropbox.Api.Users.GetAccountBatchArg.#ctor*
+  commentId: Overload:Dropbox.Api.Users.GetAccountBatchArg.#ctor
+  name: GetAccountBatchArg
+  nameWithType: GetAccountBatchArg.GetAccountBatchArg
+  fullName: Dropbox.Api.Users.GetAccountBatchArg.GetAccountBatchArg
+- uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: '!:System.Collections.Generic.IEnumerable{System.String}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<String>
+  nameWithType: System.Collections.Generic.IEnumerable<String>
+  fullName: System.Collections.Generic.IEnumerable<System.String>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of String)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.String)
+  name.vb: System.Collections.Generic.IEnumerable(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: System.Collections.Generic.IEnumerable<>
+  nameWithType: System.Collections.Generic.IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: System.Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Users.GetAccountBatchArg.AccountIds*
+  commentId: Overload:Dropbox.Api.Users.GetAccountBatchArg.AccountIds
+  name: AccountIds
+  nameWithType: GetAccountBatchArg.AccountIds
+  fullName: Dropbox.Api.Users.GetAccountBatchArg.AccountIds
+- uid: System.Collections.Generic.IList{System.String}
+  commentId: '!:System.Collections.Generic.IList{System.String}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<String>
+  nameWithType: System.Collections.Generic.IList<String>
+  fullName: System.Collections.Generic.IList<System.String>
+  nameWithType.vb: System.Collections.Generic.IList(Of String)
+  fullName.vb: System.Collections.Generic.IList(Of System.String)
+  name.vb: System.Collections.Generic.IList(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  isExternal: true
+  name: System.Collections.Generic.IList<>
+  nameWithType: System.Collections.Generic.IList<>
+  fullName: System.Collections.Generic.IList<>
+  nameWithType.vb: System.Collections.Generic.IList(Of )
+  fullName.vb: System.Collections.Generic.IList(Of )
+  name.vb: System.Collections.Generic.IList(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+shouldSkipMarkup: true

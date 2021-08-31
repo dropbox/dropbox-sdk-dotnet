@@ -1,0 +1,320 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.SharedContentChangeLinkExpiryDetails
+  commentId: T:Dropbox.Api.TeamLog.SharedContentChangeLinkExpiryDetails
+  id: SharedContentChangeLinkExpiryDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.SharedContentChangeLinkExpiryDetails.#ctor
+  - Dropbox.Api.TeamLog.SharedContentChangeLinkExpiryDetails.#ctor(System.Nullable{System.DateTime},System.Nullable{System.DateTime})
+  - Dropbox.Api.TeamLog.SharedContentChangeLinkExpiryDetails.NewValue
+  - Dropbox.Api.TeamLog.SharedContentChangeLinkExpiryDetails.PreviousValue
+  langs:
+  - csharp
+  - vb
+  name: SharedContentChangeLinkExpiryDetails
+  nameWithType: SharedContentChangeLinkExpiryDetails
+  fullName: Dropbox.Api.TeamLog.SharedContentChangeLinkExpiryDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentChangeLinkExpiryDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SharedContentChangeLinkExpiryDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentChangeLinkExpiryDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Changed link expiration of shared file/folder.</p>\n"
+  example: []
+  syntax:
+    content: 'public class SharedContentChangeLinkExpiryDetails : object'
+    content.vb: >-
+      Public Class SharedContentChangeLinkExpiryDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.SharedContentChangeLinkExpiryDetails.#ctor(System.Nullable{System.DateTime},System.Nullable{System.DateTime})
+  commentId: M:Dropbox.Api.TeamLog.SharedContentChangeLinkExpiryDetails.#ctor(System.Nullable{System.DateTime},System.Nullable{System.DateTime})
+  id: '#ctor(System.Nullable{System.DateTime},System.Nullable{System.DateTime})'
+  parent: Dropbox.Api.TeamLog.SharedContentChangeLinkExpiryDetails
+  langs:
+  - csharp
+  - vb
+  name: SharedContentChangeLinkExpiryDetails(Nullable<System.DateTime>, Nullable<System.DateTime>)
+  nameWithType: SharedContentChangeLinkExpiryDetails.SharedContentChangeLinkExpiryDetails(Nullable<System.DateTime>, Nullable<System.DateTime>)
+  fullName: Dropbox.Api.TeamLog.SharedContentChangeLinkExpiryDetails.SharedContentChangeLinkExpiryDetails(System.Nullable<System.DateTime>, System.Nullable<System.DateTime>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentChangeLinkExpiryDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentChangeLinkExpiryDetails.cs
+    startLine: 37
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SharedContentChangeLinkExpiryDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public SharedContentChangeLinkExpiryDetails(System.DateTime? newValue = null, System.DateTime? previousValue = null)
+    parameters:
+    - id: newValue
+      type: System.Nullable{System.DateTime}
+      description: >-
+        New shared content link expiration date. Might be missing
+
+        due to historical data gap.
+    - id: previousValue
+      type: System.Nullable{System.DateTime}
+      description: >-
+        Previous shared content link expiration date. Might be
+
+        missing due to historical data gap.
+    content.vb: Public Sub New(newValue As System.DateTime? = Nothing, previousValue As System.DateTime? = Nothing)
+  overload: Dropbox.Api.TeamLog.SharedContentChangeLinkExpiryDetails.#ctor*
+  nameWithType.vb: SharedContentChangeLinkExpiryDetails.SharedContentChangeLinkExpiryDetails(Nullable(Of System.DateTime), Nullable(Of System.DateTime))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.TeamLog.SharedContentChangeLinkExpiryDetails.SharedContentChangeLinkExpiryDetails(System.Nullable(Of System.DateTime), System.Nullable(Of System.DateTime))
+  name.vb: SharedContentChangeLinkExpiryDetails(Nullable(Of System.DateTime), Nullable(Of System.DateTime))
+- uid: Dropbox.Api.TeamLog.SharedContentChangeLinkExpiryDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.SharedContentChangeLinkExpiryDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.SharedContentChangeLinkExpiryDetails
+  langs:
+  - csharp
+  - vb
+  name: SharedContentChangeLinkExpiryDetails()
+  nameWithType: SharedContentChangeLinkExpiryDetails.SharedContentChangeLinkExpiryDetails()
+  fullName: Dropbox.Api.TeamLog.SharedContentChangeLinkExpiryDetails.SharedContentChangeLinkExpiryDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentChangeLinkExpiryDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentChangeLinkExpiryDetails.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SharedContentChangeLinkExpiryDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public SharedContentChangeLinkExpiryDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.SharedContentChangeLinkExpiryDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SharedContentChangeLinkExpiryDetails.NewValue
+  commentId: P:Dropbox.Api.TeamLog.SharedContentChangeLinkExpiryDetails.NewValue
+  id: NewValue
+  parent: Dropbox.Api.TeamLog.SharedContentChangeLinkExpiryDetails
+  langs:
+  - csharp
+  - vb
+  name: NewValue
+  nameWithType: SharedContentChangeLinkExpiryDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.SharedContentChangeLinkExpiryDetails.NewValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentChangeLinkExpiryDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NewValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentChangeLinkExpiryDetails.cs
+    startLine: 59
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>New shared content link expiration date. Might be missing due to historical\ndata gap.</p>\n"
+  example: []
+  syntax:
+    content: public System.DateTime? NewValue { get; protected set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property NewValue As System.DateTime?
+  overload: Dropbox.Api.TeamLog.SharedContentChangeLinkExpiryDetails.NewValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.SharedContentChangeLinkExpiryDetails.PreviousValue
+  commentId: P:Dropbox.Api.TeamLog.SharedContentChangeLinkExpiryDetails.PreviousValue
+  id: PreviousValue
+  parent: Dropbox.Api.TeamLog.SharedContentChangeLinkExpiryDetails
+  langs:
+  - csharp
+  - vb
+  name: PreviousValue
+  nameWithType: SharedContentChangeLinkExpiryDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.SharedContentChangeLinkExpiryDetails.PreviousValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentChangeLinkExpiryDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PreviousValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentChangeLinkExpiryDetails.cs
+    startLine: 65
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Previous shared content link expiration date. Might be missing due to\nhistorical data gap.</p>\n"
+  example: []
+  syntax:
+    content: public System.DateTime? PreviousValue { get; protected set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property PreviousValue As System.DateTime?
+  overload: Dropbox.Api.TeamLog.SharedContentChangeLinkExpiryDetails.PreviousValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.SharedContentChangeLinkExpiryDetails
+  commentId: T:Dropbox.Api.TeamLog.SharedContentChangeLinkExpiryDetails
+  parent: Dropbox.Api.TeamLog
+  name: SharedContentChangeLinkExpiryDetails
+  nameWithType: SharedContentChangeLinkExpiryDetails
+  fullName: Dropbox.Api.TeamLog.SharedContentChangeLinkExpiryDetails
+- uid: Dropbox.Api.TeamLog.SharedContentChangeLinkExpiryDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedContentChangeLinkExpiryDetails.#ctor
+  name: SharedContentChangeLinkExpiryDetails
+  nameWithType: SharedContentChangeLinkExpiryDetails.SharedContentChangeLinkExpiryDetails
+  fullName: Dropbox.Api.TeamLog.SharedContentChangeLinkExpiryDetails.SharedContentChangeLinkExpiryDetails
+- uid: System.Nullable{System.DateTime}
+  commentId: '!:System.Nullable{System.DateTime}'
+  definition: System.Nullable`1
+  name: Nullable<System.DateTime>
+  nameWithType: Nullable<System.DateTime>
+  fullName: System.Nullable<System.DateTime>
+  nameWithType.vb: Nullable(Of System.DateTime)
+  fullName.vb: System.Nullable(Of System.DateTime)
+  name.vb: Nullable(Of System.DateTime)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.DateTime
+    name: System.DateTime
+    nameWithType: System.DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.DateTime
+    name: System.DateTime
+    nameWithType: System.DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  isExternal: true
+  name: Nullable<>
+  nameWithType: Nullable<>
+  fullName: System.Nullable<>
+  nameWithType.vb: Nullable(Of )
+  fullName.vb: System.Nullable(Of )
+  name.vb: Nullable(Of )
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.TeamLog.SharedContentChangeLinkExpiryDetails.NewValue*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedContentChangeLinkExpiryDetails.NewValue
+  name: NewValue
+  nameWithType: SharedContentChangeLinkExpiryDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.SharedContentChangeLinkExpiryDetails.NewValue
+- uid: Dropbox.Api.TeamLog.SharedContentChangeLinkExpiryDetails.PreviousValue*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedContentChangeLinkExpiryDetails.PreviousValue
+  name: PreviousValue
+  nameWithType: SharedContentChangeLinkExpiryDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.SharedContentChangeLinkExpiryDetails.PreviousValue
+shouldSkipMarkup: true

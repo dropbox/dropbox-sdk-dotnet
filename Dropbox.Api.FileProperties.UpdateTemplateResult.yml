@@ -1,0 +1,193 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.FileProperties.UpdateTemplateResult
+  commentId: T:Dropbox.Api.FileProperties.UpdateTemplateResult
+  id: UpdateTemplateResult
+  parent: Dropbox.Api.FileProperties
+  children:
+  - Dropbox.Api.FileProperties.UpdateTemplateResult.#ctor
+  - Dropbox.Api.FileProperties.UpdateTemplateResult.#ctor(System.String)
+  - Dropbox.Api.FileProperties.UpdateTemplateResult.TemplateId
+  langs:
+  - csharp
+  - vb
+  name: UpdateTemplateResult
+  nameWithType: UpdateTemplateResult
+  fullName: Dropbox.Api.FileProperties.UpdateTemplateResult
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/UpdateTemplateResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: UpdateTemplateResult
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/UpdateTemplateResult.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>The update template result object</p>\n"
+  example: []
+  syntax:
+    content: 'public class UpdateTemplateResult : object'
+    content.vb: >-
+      Public Class UpdateTemplateResult
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.FileProperties.UpdateTemplateResult.#ctor(System.String)
+  commentId: M:Dropbox.Api.FileProperties.UpdateTemplateResult.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.FileProperties.UpdateTemplateResult
+  langs:
+  - csharp
+  - vb
+  name: UpdateTemplateResult(String)
+  nameWithType: UpdateTemplateResult.UpdateTemplateResult(String)
+  fullName: Dropbox.Api.FileProperties.UpdateTemplateResult.UpdateTemplateResult(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/UpdateTemplateResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/UpdateTemplateResult.cs
+    startLine: 38
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.FileProperties.UpdateTemplateResult\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public UpdateTemplateResult(string templateId)
+    parameters:
+    - id: templateId
+      type: System.String
+      description: An identifier for template added by route  See <xref href="Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.TemplatesAddForUserAsync(Dropbox.Api.FileProperties.AddTemplateArg)" data-throw-if-not-resolved="false"></xref> or <xref href="Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesAddForTeamAsync(Dropbox.Api.FileProperties.AddTemplateArg)" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Sub New(templateId As String)
+  overload: Dropbox.Api.FileProperties.UpdateTemplateResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileProperties.UpdateTemplateResult.#ctor
+  commentId: M:Dropbox.Api.FileProperties.UpdateTemplateResult.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.FileProperties.UpdateTemplateResult
+  langs:
+  - csharp
+  - vb
+  name: UpdateTemplateResult()
+  nameWithType: UpdateTemplateResult.UpdateTemplateResult()
+  fullName: Dropbox.Api.FileProperties.UpdateTemplateResult.UpdateTemplateResult()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/UpdateTemplateResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/UpdateTemplateResult.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.FileProperties.UpdateTemplateResult\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public UpdateTemplateResult()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.FileProperties.UpdateTemplateResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileProperties.UpdateTemplateResult.TemplateId
+  commentId: P:Dropbox.Api.FileProperties.UpdateTemplateResult.TemplateId
+  id: TemplateId
+  parent: Dropbox.Api.FileProperties.UpdateTemplateResult
+  langs:
+  - csharp
+  - vb
+  name: TemplateId
+  nameWithType: UpdateTemplateResult.TemplateId
+  fullName: Dropbox.Api.FileProperties.UpdateTemplateResult.TemplateId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/UpdateTemplateResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TemplateId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/UpdateTemplateResult.cs
+    startLine: 74
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>An identifier for template added by route  See <xref href=\"Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.TemplatesAddForUserAsync(Dropbox.Api.FileProperties.AddTemplateArg)\" data-throw-if-not-resolved=\"false\"></xref> or <xref href=\"Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesAddForTeamAsync(Dropbox.Api.FileProperties.AddTemplateArg)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+  example: []
+  syntax:
+    content: public string TemplateId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property TemplateId As String
+  overload: Dropbox.Api.FileProperties.UpdateTemplateResult.TemplateId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.FileProperties
+  commentId: N:Dropbox.Api.FileProperties
+  name: Dropbox.Api.FileProperties
+  nameWithType: Dropbox.Api.FileProperties
+  fullName: Dropbox.Api.FileProperties
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.FileProperties.UpdateTemplateResult
+  commentId: T:Dropbox.Api.FileProperties.UpdateTemplateResult
+  parent: Dropbox.Api.FileProperties
+  name: UpdateTemplateResult
+  nameWithType: UpdateTemplateResult
+  fullName: Dropbox.Api.FileProperties.UpdateTemplateResult
+- uid: Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.TemplatesAddForUserAsync(Dropbox.Api.FileProperties.AddTemplateArg)
+  commentId: M:Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.TemplatesAddForUserAsync(Dropbox.Api.FileProperties.AddTemplateArg)
+  isExternal: true
+- uid: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesAddForTeamAsync(Dropbox.Api.FileProperties.AddTemplateArg)
+  commentId: M:Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesAddForTeamAsync(Dropbox.Api.FileProperties.AddTemplateArg)
+  isExternal: true
+- uid: Dropbox.Api.FileProperties.UpdateTemplateResult.#ctor*
+  commentId: Overload:Dropbox.Api.FileProperties.UpdateTemplateResult.#ctor
+  name: UpdateTemplateResult
+  nameWithType: UpdateTemplateResult.UpdateTemplateResult
+  fullName: Dropbox.Api.FileProperties.UpdateTemplateResult.UpdateTemplateResult
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.FileProperties.UpdateTemplateResult.TemplateId*
+  commentId: Overload:Dropbox.Api.FileProperties.UpdateTemplateResult.TemplateId
+  name: TemplateId
+  nameWithType: UpdateTemplateResult.TemplateId
+  fullName: Dropbox.Api.FileProperties.UpdateTemplateResult.TemplateId
+shouldSkipMarkup: true

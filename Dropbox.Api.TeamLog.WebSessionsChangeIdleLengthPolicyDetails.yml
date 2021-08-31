@@ -1,0 +1,242 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails
+  commentId: T:Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails
+  id: WebSessionsChangeIdleLengthPolicyDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails.#ctor
+  - Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails.#ctor(Dropbox.Api.TeamLog.WebSessionsIdleLengthPolicy,Dropbox.Api.TeamLog.WebSessionsIdleLengthPolicy)
+  - Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails.NewValue
+  - Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails.PreviousValue
+  langs:
+  - csharp
+  - vb
+  name: WebSessionsChangeIdleLengthPolicyDetails
+  nameWithType: WebSessionsChangeIdleLengthPolicyDetails
+  fullName: Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/WebSessionsChangeIdleLengthPolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: WebSessionsChangeIdleLengthPolicyDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/WebSessionsChangeIdleLengthPolicyDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Changed how long team members can be idle while signed in to Dropbox.com.</p>\n"
+  example: []
+  syntax:
+    content: 'public class WebSessionsChangeIdleLengthPolicyDetails : object'
+    content.vb: >-
+      Public Class WebSessionsChangeIdleLengthPolicyDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails.#ctor(Dropbox.Api.TeamLog.WebSessionsIdleLengthPolicy,Dropbox.Api.TeamLog.WebSessionsIdleLengthPolicy)
+  commentId: M:Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails.#ctor(Dropbox.Api.TeamLog.WebSessionsIdleLengthPolicy,Dropbox.Api.TeamLog.WebSessionsIdleLengthPolicy)
+  id: '#ctor(Dropbox.Api.TeamLog.WebSessionsIdleLengthPolicy,Dropbox.Api.TeamLog.WebSessionsIdleLengthPolicy)'
+  parent: Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: WebSessionsChangeIdleLengthPolicyDetails(WebSessionsIdleLengthPolicy, WebSessionsIdleLengthPolicy)
+  nameWithType: WebSessionsChangeIdleLengthPolicyDetails.WebSessionsChangeIdleLengthPolicyDetails(WebSessionsIdleLengthPolicy, WebSessionsIdleLengthPolicy)
+  fullName: Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails.WebSessionsChangeIdleLengthPolicyDetails(Dropbox.Api.TeamLog.WebSessionsIdleLengthPolicy, Dropbox.Api.TeamLog.WebSessionsIdleLengthPolicy)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/WebSessionsChangeIdleLengthPolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/WebSessionsChangeIdleLengthPolicyDetails.cs
+    startLine: 37
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public WebSessionsChangeIdleLengthPolicyDetails(WebSessionsIdleLengthPolicy newValue = null, WebSessionsIdleLengthPolicy previousValue = null)
+    parameters:
+    - id: newValue
+      type: Dropbox.Api.TeamLog.WebSessionsIdleLengthPolicy
+      description: >-
+        New idle length policy. Might be missing due to historical
+
+        data gap.
+    - id: previousValue
+      type: Dropbox.Api.TeamLog.WebSessionsIdleLengthPolicy
+      description: >-
+        Previous idle length policy. Might be missing due to
+
+        historical data gap.
+    content.vb: Public Sub New(newValue As WebSessionsIdleLengthPolicy = Nothing, previousValue As WebSessionsIdleLengthPolicy = Nothing)
+  overload: Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: WebSessionsChangeIdleLengthPolicyDetails()
+  nameWithType: WebSessionsChangeIdleLengthPolicyDetails.WebSessionsChangeIdleLengthPolicyDetails()
+  fullName: Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails.WebSessionsChangeIdleLengthPolicyDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/WebSessionsChangeIdleLengthPolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/WebSessionsChangeIdleLengthPolicyDetails.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public WebSessionsChangeIdleLengthPolicyDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails.NewValue
+  commentId: P:Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails.NewValue
+  id: NewValue
+  parent: Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: NewValue
+  nameWithType: WebSessionsChangeIdleLengthPolicyDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails.NewValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/WebSessionsChangeIdleLengthPolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NewValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/WebSessionsChangeIdleLengthPolicyDetails.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>New idle length policy. Might be missing due to historical data gap.</p>\n"
+  example: []
+  syntax:
+    content: public WebSessionsIdleLengthPolicy NewValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.WebSessionsIdleLengthPolicy
+    content.vb: Public Property NewValue As WebSessionsIdleLengthPolicy
+  overload: Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails.NewValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails.PreviousValue
+  commentId: P:Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails.PreviousValue
+  id: PreviousValue
+  parent: Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: PreviousValue
+  nameWithType: WebSessionsChangeIdleLengthPolicyDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails.PreviousValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/WebSessionsChangeIdleLengthPolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PreviousValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/WebSessionsChangeIdleLengthPolicyDetails.cs
+    startLine: 64
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Previous idle length policy. Might be missing due to historical data\ngap.</p>\n"
+  example: []
+  syntax:
+    content: public WebSessionsIdleLengthPolicy PreviousValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.WebSessionsIdleLengthPolicy
+    content.vb: Public Property PreviousValue As WebSessionsIdleLengthPolicy
+  overload: Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails.PreviousValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails
+  commentId: T:Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails
+  parent: Dropbox.Api.TeamLog
+  name: WebSessionsChangeIdleLengthPolicyDetails
+  nameWithType: WebSessionsChangeIdleLengthPolicyDetails
+  fullName: Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails
+- uid: Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails.#ctor
+  name: WebSessionsChangeIdleLengthPolicyDetails
+  nameWithType: WebSessionsChangeIdleLengthPolicyDetails.WebSessionsChangeIdleLengthPolicyDetails
+  fullName: Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails.WebSessionsChangeIdleLengthPolicyDetails
+- uid: Dropbox.Api.TeamLog.WebSessionsIdleLengthPolicy
+  commentId: T:Dropbox.Api.TeamLog.WebSessionsIdleLengthPolicy
+  parent: Dropbox.Api.TeamLog
+  name: WebSessionsIdleLengthPolicy
+  nameWithType: WebSessionsIdleLengthPolicy
+  fullName: Dropbox.Api.TeamLog.WebSessionsIdleLengthPolicy
+- uid: Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails.NewValue*
+  commentId: Overload:Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails.NewValue
+  name: NewValue
+  nameWithType: WebSessionsChangeIdleLengthPolicyDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails.NewValue
+- uid: Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails.PreviousValue*
+  commentId: Overload:Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails.PreviousValue
+  name: PreviousValue
+  nameWithType: WebSessionsChangeIdleLengthPolicyDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails.PreviousValue
+shouldSkipMarkup: true

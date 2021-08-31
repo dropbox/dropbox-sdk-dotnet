@@ -1,0 +1,188 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.DeviceChangeIpMobileDetails
+  commentId: T:Dropbox.Api.TeamLog.DeviceChangeIpMobileDetails
+  id: DeviceChangeIpMobileDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.DeviceChangeIpMobileDetails.#ctor
+  - Dropbox.Api.TeamLog.DeviceChangeIpMobileDetails.#ctor(Dropbox.Api.TeamLog.DeviceSessionLogInfo)
+  - Dropbox.Api.TeamLog.DeviceChangeIpMobileDetails.DeviceSessionInfo
+  langs:
+  - csharp
+  - vb
+  name: DeviceChangeIpMobileDetails
+  nameWithType: DeviceChangeIpMobileDetails
+  fullName: Dropbox.Api.TeamLog.DeviceChangeIpMobileDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceChangeIpMobileDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: DeviceChangeIpMobileDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceChangeIpMobileDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Changed IP address associated with active mobile session.</p>\n"
+  example: []
+  syntax:
+    content: 'public class DeviceChangeIpMobileDetails : object'
+    content.vb: >-
+      Public Class DeviceChangeIpMobileDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.DeviceChangeIpMobileDetails.#ctor(Dropbox.Api.TeamLog.DeviceSessionLogInfo)
+  commentId: M:Dropbox.Api.TeamLog.DeviceChangeIpMobileDetails.#ctor(Dropbox.Api.TeamLog.DeviceSessionLogInfo)
+  id: '#ctor(Dropbox.Api.TeamLog.DeviceSessionLogInfo)'
+  parent: Dropbox.Api.TeamLog.DeviceChangeIpMobileDetails
+  langs:
+  - csharp
+  - vb
+  name: DeviceChangeIpMobileDetails(DeviceSessionLogInfo)
+  nameWithType: DeviceChangeIpMobileDetails.DeviceChangeIpMobileDetails(DeviceSessionLogInfo)
+  fullName: Dropbox.Api.TeamLog.DeviceChangeIpMobileDetails.DeviceChangeIpMobileDetails(Dropbox.Api.TeamLog.DeviceSessionLogInfo)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceChangeIpMobileDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceChangeIpMobileDetails.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.DeviceChangeIpMobileDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public DeviceChangeIpMobileDetails(DeviceSessionLogInfo deviceSessionInfo = null)
+    parameters:
+    - id: deviceSessionInfo
+      type: Dropbox.Api.TeamLog.DeviceSessionLogInfo
+      description: Device&apos;s session logged information.
+    content.vb: Public Sub New(deviceSessionInfo As DeviceSessionLogInfo = Nothing)
+  overload: Dropbox.Api.TeamLog.DeviceChangeIpMobileDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.DeviceChangeIpMobileDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.DeviceChangeIpMobileDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.DeviceChangeIpMobileDetails
+  langs:
+  - csharp
+  - vb
+  name: DeviceChangeIpMobileDetails()
+  nameWithType: DeviceChangeIpMobileDetails.DeviceChangeIpMobileDetails()
+  fullName: Dropbox.Api.TeamLog.DeviceChangeIpMobileDetails.DeviceChangeIpMobileDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceChangeIpMobileDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceChangeIpMobileDetails.cs
+    startLine: 45
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.DeviceChangeIpMobileDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public DeviceChangeIpMobileDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.DeviceChangeIpMobileDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.DeviceChangeIpMobileDetails.DeviceSessionInfo
+  commentId: P:Dropbox.Api.TeamLog.DeviceChangeIpMobileDetails.DeviceSessionInfo
+  id: DeviceSessionInfo
+  parent: Dropbox.Api.TeamLog.DeviceChangeIpMobileDetails
+  langs:
+  - csharp
+  - vb
+  name: DeviceSessionInfo
+  nameWithType: DeviceChangeIpMobileDetails.DeviceSessionInfo
+  fullName: Dropbox.Api.TeamLog.DeviceChangeIpMobileDetails.DeviceSessionInfo
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceChangeIpMobileDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: DeviceSessionInfo
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceChangeIpMobileDetails.cs
+    startLine: 53
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Device&apos;s session logged information.</p>\n"
+  example: []
+  syntax:
+    content: public DeviceSessionLogInfo DeviceSessionInfo { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.DeviceSessionLogInfo
+    content.vb: Public Property DeviceSessionInfo As DeviceSessionLogInfo
+  overload: Dropbox.Api.TeamLog.DeviceChangeIpMobileDetails.DeviceSessionInfo*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.DeviceChangeIpMobileDetails
+  commentId: T:Dropbox.Api.TeamLog.DeviceChangeIpMobileDetails
+  parent: Dropbox.Api.TeamLog
+  name: DeviceChangeIpMobileDetails
+  nameWithType: DeviceChangeIpMobileDetails
+  fullName: Dropbox.Api.TeamLog.DeviceChangeIpMobileDetails
+- uid: Dropbox.Api.TeamLog.DeviceChangeIpMobileDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.DeviceChangeIpMobileDetails.#ctor
+  name: DeviceChangeIpMobileDetails
+  nameWithType: DeviceChangeIpMobileDetails.DeviceChangeIpMobileDetails
+  fullName: Dropbox.Api.TeamLog.DeviceChangeIpMobileDetails.DeviceChangeIpMobileDetails
+- uid: Dropbox.Api.TeamLog.DeviceSessionLogInfo
+  commentId: T:Dropbox.Api.TeamLog.DeviceSessionLogInfo
+  parent: Dropbox.Api.TeamLog
+  name: DeviceSessionLogInfo
+  nameWithType: DeviceSessionLogInfo
+  fullName: Dropbox.Api.TeamLog.DeviceSessionLogInfo
+- uid: Dropbox.Api.TeamLog.DeviceChangeIpMobileDetails.DeviceSessionInfo*
+  commentId: Overload:Dropbox.Api.TeamLog.DeviceChangeIpMobileDetails.DeviceSessionInfo
+  name: DeviceSessionInfo
+  nameWithType: DeviceChangeIpMobileDetails.DeviceSessionInfo
+  fullName: Dropbox.Api.TeamLog.DeviceChangeIpMobileDetails.DeviceSessionInfo
+shouldSkipMarkup: true

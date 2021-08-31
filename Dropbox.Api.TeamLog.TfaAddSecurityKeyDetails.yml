@@ -1,0 +1,96 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.TfaAddSecurityKeyDetails
+  commentId: T:Dropbox.Api.TeamLog.TfaAddSecurityKeyDetails
+  id: TfaAddSecurityKeyDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.TfaAddSecurityKeyDetails.#ctor
+  langs:
+  - csharp
+  - vb
+  name: TfaAddSecurityKeyDetails
+  nameWithType: TfaAddSecurityKeyDetails
+  fullName: Dropbox.Api.TeamLog.TfaAddSecurityKeyDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaAddSecurityKeyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TfaAddSecurityKeyDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaAddSecurityKeyDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Added security key for two-step verification.</p>\n"
+  example: []
+  syntax:
+    content: 'public class TfaAddSecurityKeyDetails : object'
+    content.vb: >-
+      Public Class TfaAddSecurityKeyDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.TfaAddSecurityKeyDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.TfaAddSecurityKeyDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.TfaAddSecurityKeyDetails
+  langs:
+  - csharp
+  - vb
+  name: TfaAddSecurityKeyDetails()
+  nameWithType: TfaAddSecurityKeyDetails.TfaAddSecurityKeyDetails()
+  fullName: Dropbox.Api.TeamLog.TfaAddSecurityKeyDetails.TfaAddSecurityKeyDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaAddSecurityKeyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaAddSecurityKeyDetails.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.TfaAddSecurityKeyDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public TfaAddSecurityKeyDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.TfaAddSecurityKeyDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.TfaAddSecurityKeyDetails
+  commentId: T:Dropbox.Api.TeamLog.TfaAddSecurityKeyDetails
+  parent: Dropbox.Api.TeamLog
+  name: TfaAddSecurityKeyDetails
+  nameWithType: TfaAddSecurityKeyDetails
+  fullName: Dropbox.Api.TeamLog.TfaAddSecurityKeyDetails
+- uid: Dropbox.Api.TeamLog.TfaAddSecurityKeyDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.TfaAddSecurityKeyDetails.#ctor
+  name: TfaAddSecurityKeyDetails
+  nameWithType: TfaAddSecurityKeyDetails.TfaAddSecurityKeyDetails
+  fullName: Dropbox.Api.TeamLog.TfaAddSecurityKeyDetails.TfaAddSecurityKeyDetails
+shouldSkipMarkup: true

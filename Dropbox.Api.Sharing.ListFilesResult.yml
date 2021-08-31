@@ -1,0 +1,399 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.ListFilesResult
+  commentId: T:Dropbox.Api.Sharing.ListFilesResult
+  id: ListFilesResult
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.ListFilesResult.#ctor
+  - Dropbox.Api.Sharing.ListFilesResult.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.SharedFileMetadata},System.String)
+  - Dropbox.Api.Sharing.ListFilesResult.Cursor
+  - Dropbox.Api.Sharing.ListFilesResult.Entries
+  langs:
+  - csharp
+  - vb
+  name: ListFilesResult
+  nameWithType: ListFilesResult
+  fullName: Dropbox.Api.Sharing.ListFilesResult
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFilesResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ListFilesResult
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFilesResult.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Success results for <xref href=\"Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListReceivedFilesAsync(Dropbox.Api.Sharing.ListFilesArg)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+  example: []
+  syntax:
+    content: 'public class ListFilesResult : object'
+    content.vb: >-
+      Public Class ListFilesResult
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Sharing.ListFilesResult.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.SharedFileMetadata},System.String)
+  commentId: M:Dropbox.Api.Sharing.ListFilesResult.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.SharedFileMetadata},System.String)
+  id: '#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.SharedFileMetadata},System.String)'
+  parent: Dropbox.Api.Sharing.ListFilesResult
+  langs:
+  - csharp
+  - vb
+  name: ListFilesResult(System.Collections.Generic.IEnumerable<SharedFileMetadata>, String)
+  nameWithType: ListFilesResult.ListFilesResult(System.Collections.Generic.IEnumerable<SharedFileMetadata>, String)
+  fullName: Dropbox.Api.Sharing.ListFilesResult.ListFilesResult(System.Collections.Generic.IEnumerable<Dropbox.Api.Sharing.SharedFileMetadata>, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFilesResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFilesResult.cs
+    startLine: 36
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.ListFilesResult\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public ListFilesResult(System.Collections.Generic.IEnumerable<SharedFileMetadata> entries, string cursor = null)
+    parameters:
+    - id: entries
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.SharedFileMetadata}
+      description: Information about the files shared with current user.
+    - id: cursor
+      type: System.String
+      description: Cursor used to obtain additional shared files.
+    content.vb: Public Sub New(entries As System.Collections.Generic.IEnumerable(Of SharedFileMetadata), cursor As String = Nothing)
+  overload: Dropbox.Api.Sharing.ListFilesResult.#ctor*
+  nameWithType.vb: ListFilesResult.ListFilesResult(System.Collections.Generic.IEnumerable(Of SharedFileMetadata), String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Sharing.ListFilesResult.ListFilesResult(System.Collections.Generic.IEnumerable(Of Dropbox.Api.Sharing.SharedFileMetadata), System.String)
+  name.vb: ListFilesResult(System.Collections.Generic.IEnumerable(Of SharedFileMetadata), String)
+- uid: Dropbox.Api.Sharing.ListFilesResult.#ctor
+  commentId: M:Dropbox.Api.Sharing.ListFilesResult.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Sharing.ListFilesResult
+  langs:
+  - csharp
+  - vb
+  name: ListFilesResult()
+  nameWithType: ListFilesResult.ListFilesResult()
+  fullName: Dropbox.Api.Sharing.ListFilesResult.ListFilesResult()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFilesResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFilesResult.cs
+    startLine: 56
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.ListFilesResult\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public ListFilesResult()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Sharing.ListFilesResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.ListFilesResult.Entries
+  commentId: P:Dropbox.Api.Sharing.ListFilesResult.Entries
+  id: Entries
+  parent: Dropbox.Api.Sharing.ListFilesResult
+  langs:
+  - csharp
+  - vb
+  name: Entries
+  nameWithType: ListFilesResult.Entries
+  fullName: Dropbox.Api.Sharing.ListFilesResult.Entries
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFilesResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Entries
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFilesResult.cs
+    startLine: 64
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Information about the files shared with current user.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<SharedFileMetadata> Entries { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{Dropbox.Api.Sharing.SharedFileMetadata}
+    content.vb: Public Property Entries As System.Collections.Generic.IList(Of SharedFileMetadata)
+  overload: Dropbox.Api.Sharing.ListFilesResult.Entries*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.ListFilesResult.Cursor
+  commentId: P:Dropbox.Api.Sharing.ListFilesResult.Cursor
+  id: Cursor
+  parent: Dropbox.Api.Sharing.ListFilesResult
+  langs:
+  - csharp
+  - vb
+  name: Cursor
+  nameWithType: ListFilesResult.Cursor
+  fullName: Dropbox.Api.Sharing.ListFilesResult.Cursor
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFilesResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Cursor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFilesResult.cs
+    startLine: 69
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Cursor used to obtain additional shared files.</p>\n"
+  example: []
+  syntax:
+    content: public string Cursor { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Cursor As String
+  overload: Dropbox.Api.Sharing.ListFilesResult.Cursor*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListReceivedFilesAsync(Dropbox.Api.Sharing.ListFilesArg)
+  commentId: M:Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListReceivedFilesAsync(Dropbox.Api.Sharing.ListFilesArg)
+  isExternal: true
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.ListFilesResult
+  commentId: T:Dropbox.Api.Sharing.ListFilesResult
+  parent: Dropbox.Api.Sharing
+  name: ListFilesResult
+  nameWithType: ListFilesResult
+  fullName: Dropbox.Api.Sharing.ListFilesResult
+- uid: Dropbox.Api.Sharing.ListFilesResult.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.ListFilesResult.#ctor
+  name: ListFilesResult
+  nameWithType: ListFilesResult.ListFilesResult
+  fullName: Dropbox.Api.Sharing.ListFilesResult.ListFilesResult
+- uid: System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.SharedFileMetadata}
+  commentId: '!:System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.SharedFileMetadata}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<SharedFileMetadata>
+  nameWithType: System.Collections.Generic.IEnumerable<SharedFileMetadata>
+  fullName: System.Collections.Generic.IEnumerable<Dropbox.Api.Sharing.SharedFileMetadata>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of SharedFileMetadata)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Dropbox.Api.Sharing.SharedFileMetadata)
+  name.vb: System.Collections.Generic.IEnumerable(Of SharedFileMetadata)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Sharing.SharedFileMetadata
+    name: SharedFileMetadata
+    nameWithType: SharedFileMetadata
+    fullName: Dropbox.Api.Sharing.SharedFileMetadata
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Sharing.SharedFileMetadata
+    name: SharedFileMetadata
+    nameWithType: SharedFileMetadata
+    fullName: Dropbox.Api.Sharing.SharedFileMetadata
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: System.Collections.Generic.IEnumerable<>
+  nameWithType: System.Collections.Generic.IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: System.Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Sharing.ListFilesResult.Entries*
+  commentId: Overload:Dropbox.Api.Sharing.ListFilesResult.Entries
+  name: Entries
+  nameWithType: ListFilesResult.Entries
+  fullName: Dropbox.Api.Sharing.ListFilesResult.Entries
+- uid: System.Collections.Generic.IList{Dropbox.Api.Sharing.SharedFileMetadata}
+  commentId: '!:System.Collections.Generic.IList{Dropbox.Api.Sharing.SharedFileMetadata}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<SharedFileMetadata>
+  nameWithType: System.Collections.Generic.IList<SharedFileMetadata>
+  fullName: System.Collections.Generic.IList<Dropbox.Api.Sharing.SharedFileMetadata>
+  nameWithType.vb: System.Collections.Generic.IList(Of SharedFileMetadata)
+  fullName.vb: System.Collections.Generic.IList(Of Dropbox.Api.Sharing.SharedFileMetadata)
+  name.vb: System.Collections.Generic.IList(Of SharedFileMetadata)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Sharing.SharedFileMetadata
+    name: SharedFileMetadata
+    nameWithType: SharedFileMetadata
+    fullName: Dropbox.Api.Sharing.SharedFileMetadata
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Sharing.SharedFileMetadata
+    name: SharedFileMetadata
+    nameWithType: SharedFileMetadata
+    fullName: Dropbox.Api.Sharing.SharedFileMetadata
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  isExternal: true
+  name: System.Collections.Generic.IList<>
+  nameWithType: System.Collections.Generic.IList<>
+  fullName: System.Collections.Generic.IList<>
+  nameWithType.vb: System.Collections.Generic.IList(Of )
+  fullName.vb: System.Collections.Generic.IList(Of )
+  name.vb: System.Collections.Generic.IList(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Sharing.ListFilesResult.Cursor*
+  commentId: Overload:Dropbox.Api.Sharing.ListFilesResult.Cursor
+  name: Cursor
+  nameWithType: ListFilesResult.Cursor
+  fullName: Dropbox.Api.Sharing.ListFilesResult.Cursor
+shouldSkipMarkup: true

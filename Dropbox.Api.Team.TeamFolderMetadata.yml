@@ -1,0 +1,616 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.TeamFolderMetadata
+  commentId: T:Dropbox.Api.Team.TeamFolderMetadata
+  id: TeamFolderMetadata
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.TeamFolderMetadata.#ctor
+  - Dropbox.Api.Team.TeamFolderMetadata.#ctor(System.String,System.String,Dropbox.Api.Team.TeamFolderStatus,System.Boolean,Dropbox.Api.Files.SyncSetting,System.Collections.Generic.IEnumerable{Dropbox.Api.Files.ContentSyncSetting})
+  - Dropbox.Api.Team.TeamFolderMetadata.ContentSyncSettings
+  - Dropbox.Api.Team.TeamFolderMetadata.IsTeamSharedDropbox
+  - Dropbox.Api.Team.TeamFolderMetadata.Name
+  - Dropbox.Api.Team.TeamFolderMetadata.Status
+  - Dropbox.Api.Team.TeamFolderMetadata.SyncSetting
+  - Dropbox.Api.Team.TeamFolderMetadata.TeamFolderId
+  langs:
+  - csharp
+  - vb
+  name: TeamFolderMetadata
+  nameWithType: TeamFolderMetadata
+  fullName: Dropbox.Api.Team.TeamFolderMetadata
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderMetadata.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TeamFolderMetadata
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderMetadata.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Properties of a team folder.</p>\n"
+  example: []
+  syntax:
+    content: 'public class TeamFolderMetadata : object'
+    content.vb: >-
+      Public Class TeamFolderMetadata
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.TeamFolderMetadata.#ctor(System.String,System.String,Dropbox.Api.Team.TeamFolderStatus,System.Boolean,Dropbox.Api.Files.SyncSetting,System.Collections.Generic.IEnumerable{Dropbox.Api.Files.ContentSyncSetting})
+  commentId: M:Dropbox.Api.Team.TeamFolderMetadata.#ctor(System.String,System.String,Dropbox.Api.Team.TeamFolderStatus,System.Boolean,Dropbox.Api.Files.SyncSetting,System.Collections.Generic.IEnumerable{Dropbox.Api.Files.ContentSyncSetting})
+  id: '#ctor(System.String,System.String,Dropbox.Api.Team.TeamFolderStatus,System.Boolean,Dropbox.Api.Files.SyncSetting,System.Collections.Generic.IEnumerable{Dropbox.Api.Files.ContentSyncSetting})'
+  parent: Dropbox.Api.Team.TeamFolderMetadata
+  langs:
+  - csharp
+  - vb
+  name: TeamFolderMetadata(String, String, TeamFolderStatus, Boolean, SyncSetting, System.Collections.Generic.IEnumerable<ContentSyncSetting>)
+  nameWithType: TeamFolderMetadata.TeamFolderMetadata(String, String, TeamFolderStatus, Boolean, SyncSetting, System.Collections.Generic.IEnumerable<ContentSyncSetting>)
+  fullName: Dropbox.Api.Team.TeamFolderMetadata.TeamFolderMetadata(System.String, System.String, Dropbox.Api.Team.TeamFolderStatus, System.Boolean, Dropbox.Api.Files.SyncSetting, System.Collections.Generic.IEnumerable<Dropbox.Api.Files.ContentSyncSetting>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderMetadata.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderMetadata.cs
+    startLine: 41
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.TeamFolderMetadata\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public TeamFolderMetadata(string teamFolderId, string name, TeamFolderStatus status, bool isTeamSharedDropbox, SyncSetting syncSetting, System.Collections.Generic.IEnumerable<ContentSyncSetting> contentSyncSettings)
+    parameters:
+    - id: teamFolderId
+      type: System.String
+      description: The ID of the team folder.
+    - id: name
+      type: System.String
+      description: The name of the team folder.
+    - id: status
+      type: Dropbox.Api.Team.TeamFolderStatus
+      description: The status of the team folder.
+    - id: isTeamSharedDropbox
+      type: System.Boolean
+      description: >-
+        True if this team folder is a shared team
+
+        root.
+    - id: syncSetting
+      type: Dropbox.Api.Files.SyncSetting
+      description: The sync setting applied to this team folder.
+    - id: contentSyncSettings
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.Files.ContentSyncSetting}
+      description: >-
+        Sync settings applied to contents of this team
+
+        folder.
+    content.vb: Public Sub New(teamFolderId As String, name As String, status As TeamFolderStatus, isTeamSharedDropbox As Boolean, syncSetting As SyncSetting, contentSyncSettings As System.Collections.Generic.IEnumerable(Of ContentSyncSetting))
+  overload: Dropbox.Api.Team.TeamFolderMetadata.#ctor*
+  nameWithType.vb: TeamFolderMetadata.TeamFolderMetadata(String, String, TeamFolderStatus, Boolean, SyncSetting, System.Collections.Generic.IEnumerable(Of ContentSyncSetting))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Team.TeamFolderMetadata.TeamFolderMetadata(System.String, System.String, Dropbox.Api.Team.TeamFolderStatus, System.Boolean, Dropbox.Api.Files.SyncSetting, System.Collections.Generic.IEnumerable(Of Dropbox.Api.Files.ContentSyncSetting))
+  name.vb: TeamFolderMetadata(String, String, TeamFolderStatus, Boolean, SyncSetting, System.Collections.Generic.IEnumerable(Of ContentSyncSetting))
+- uid: Dropbox.Api.Team.TeamFolderMetadata.#ctor
+  commentId: M:Dropbox.Api.Team.TeamFolderMetadata.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.TeamFolderMetadata
+  langs:
+  - csharp
+  - vb
+  name: TeamFolderMetadata()
+  nameWithType: TeamFolderMetadata.TeamFolderMetadata()
+  fullName: Dropbox.Api.Team.TeamFolderMetadata.TeamFolderMetadata()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderMetadata.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderMetadata.cs
+    startLine: 93
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.TeamFolderMetadata\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public TeamFolderMetadata()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.TeamFolderMetadata.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.TeamFolderMetadata.TeamFolderId
+  commentId: P:Dropbox.Api.Team.TeamFolderMetadata.TeamFolderId
+  id: TeamFolderId
+  parent: Dropbox.Api.Team.TeamFolderMetadata
+  langs:
+  - csharp
+  - vb
+  name: TeamFolderId
+  nameWithType: TeamFolderMetadata.TeamFolderId
+  fullName: Dropbox.Api.Team.TeamFolderMetadata.TeamFolderId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderMetadata.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TeamFolderId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderMetadata.cs
+    startLine: 101
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The ID of the team folder.</p>\n"
+  example: []
+  syntax:
+    content: public string TeamFolderId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property TeamFolderId As String
+  overload: Dropbox.Api.Team.TeamFolderMetadata.TeamFolderId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.TeamFolderMetadata.Name
+  commentId: P:Dropbox.Api.Team.TeamFolderMetadata.Name
+  id: Name
+  parent: Dropbox.Api.Team.TeamFolderMetadata
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: TeamFolderMetadata.Name
+  fullName: Dropbox.Api.Team.TeamFolderMetadata.Name
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderMetadata.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Name
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderMetadata.cs
+    startLine: 106
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The name of the team folder.</p>\n"
+  example: []
+  syntax:
+    content: public string Name { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: Dropbox.Api.Team.TeamFolderMetadata.Name*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.TeamFolderMetadata.Status
+  commentId: P:Dropbox.Api.Team.TeamFolderMetadata.Status
+  id: Status
+  parent: Dropbox.Api.Team.TeamFolderMetadata
+  langs:
+  - csharp
+  - vb
+  name: Status
+  nameWithType: TeamFolderMetadata.Status
+  fullName: Dropbox.Api.Team.TeamFolderMetadata.Status
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderMetadata.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Status
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderMetadata.cs
+    startLine: 111
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The status of the team folder.</p>\n"
+  example: []
+  syntax:
+    content: public TeamFolderStatus Status { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.TeamFolderStatus
+    content.vb: Public Property Status As TeamFolderStatus
+  overload: Dropbox.Api.Team.TeamFolderMetadata.Status*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.TeamFolderMetadata.IsTeamSharedDropbox
+  commentId: P:Dropbox.Api.Team.TeamFolderMetadata.IsTeamSharedDropbox
+  id: IsTeamSharedDropbox
+  parent: Dropbox.Api.Team.TeamFolderMetadata
+  langs:
+  - csharp
+  - vb
+  name: IsTeamSharedDropbox
+  nameWithType: TeamFolderMetadata.IsTeamSharedDropbox
+  fullName: Dropbox.Api.Team.TeamFolderMetadata.IsTeamSharedDropbox
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderMetadata.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsTeamSharedDropbox
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderMetadata.cs
+    startLine: 116
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>True if this team folder is a shared team root.</p>\n"
+  example: []
+  syntax:
+    content: public bool IsTeamSharedDropbox { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsTeamSharedDropbox As Boolean
+  overload: Dropbox.Api.Team.TeamFolderMetadata.IsTeamSharedDropbox*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.TeamFolderMetadata.SyncSetting
+  commentId: P:Dropbox.Api.Team.TeamFolderMetadata.SyncSetting
+  id: SyncSetting
+  parent: Dropbox.Api.Team.TeamFolderMetadata
+  langs:
+  - csharp
+  - vb
+  name: SyncSetting
+  nameWithType: TeamFolderMetadata.SyncSetting
+  fullName: Dropbox.Api.Team.TeamFolderMetadata.SyncSetting
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderMetadata.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SyncSetting
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderMetadata.cs
+    startLine: 121
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The sync setting applied to this team folder.</p>\n"
+  example: []
+  syntax:
+    content: public SyncSetting SyncSetting { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.SyncSetting
+    content.vb: Public Property SyncSetting As SyncSetting
+  overload: Dropbox.Api.Team.TeamFolderMetadata.SyncSetting*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.TeamFolderMetadata.ContentSyncSettings
+  commentId: P:Dropbox.Api.Team.TeamFolderMetadata.ContentSyncSettings
+  id: ContentSyncSettings
+  parent: Dropbox.Api.Team.TeamFolderMetadata
+  langs:
+  - csharp
+  - vb
+  name: ContentSyncSettings
+  nameWithType: TeamFolderMetadata.ContentSyncSettings
+  fullName: Dropbox.Api.Team.TeamFolderMetadata.ContentSyncSettings
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderMetadata.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ContentSyncSettings
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderMetadata.cs
+    startLine: 126
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Sync settings applied to contents of this team folder.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<ContentSyncSetting> ContentSyncSettings { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{Dropbox.Api.Files.ContentSyncSetting}
+    content.vb: Public Property ContentSyncSettings As System.Collections.Generic.IList(Of ContentSyncSetting)
+  overload: Dropbox.Api.Team.TeamFolderMetadata.ContentSyncSettings*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.TeamFolderMetadata
+  commentId: T:Dropbox.Api.Team.TeamFolderMetadata
+  parent: Dropbox.Api.Team
+  name: TeamFolderMetadata
+  nameWithType: TeamFolderMetadata
+  fullName: Dropbox.Api.Team.TeamFolderMetadata
+- uid: Dropbox.Api.Team.TeamFolderMetadata.#ctor*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderMetadata.#ctor
+  name: TeamFolderMetadata
+  nameWithType: TeamFolderMetadata.TeamFolderMetadata
+  fullName: Dropbox.Api.Team.TeamFolderMetadata.TeamFolderMetadata
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Team.TeamFolderStatus
+  commentId: T:Dropbox.Api.Team.TeamFolderStatus
+  parent: Dropbox.Api.Team
+  name: TeamFolderStatus
+  nameWithType: TeamFolderStatus
+  fullName: Dropbox.Api.Team.TeamFolderStatus
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Files.SyncSetting
+  commentId: T:Dropbox.Api.Files.SyncSetting
+  parent: Dropbox.Api.Files
+  name: SyncSetting
+  nameWithType: SyncSetting
+  fullName: Dropbox.Api.Files.SyncSetting
+- uid: System.Collections.Generic.IEnumerable{Dropbox.Api.Files.ContentSyncSetting}
+  commentId: '!:System.Collections.Generic.IEnumerable{Dropbox.Api.Files.ContentSyncSetting}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<ContentSyncSetting>
+  nameWithType: System.Collections.Generic.IEnumerable<ContentSyncSetting>
+  fullName: System.Collections.Generic.IEnumerable<Dropbox.Api.Files.ContentSyncSetting>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of ContentSyncSetting)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Dropbox.Api.Files.ContentSyncSetting)
+  name.vb: System.Collections.Generic.IEnumerable(Of ContentSyncSetting)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Files.ContentSyncSetting
+    name: ContentSyncSetting
+    nameWithType: ContentSyncSetting
+    fullName: Dropbox.Api.Files.ContentSyncSetting
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Files.ContentSyncSetting
+    name: ContentSyncSetting
+    nameWithType: ContentSyncSetting
+    fullName: Dropbox.Api.Files.ContentSyncSetting
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: System.Collections.Generic.IEnumerable<>
+  nameWithType: System.Collections.Generic.IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: System.Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Team.TeamFolderMetadata.TeamFolderId*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderMetadata.TeamFolderId
+  name: TeamFolderId
+  nameWithType: TeamFolderMetadata.TeamFolderId
+  fullName: Dropbox.Api.Team.TeamFolderMetadata.TeamFolderId
+- uid: Dropbox.Api.Team.TeamFolderMetadata.Name*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderMetadata.Name
+  name: Name
+  nameWithType: TeamFolderMetadata.Name
+  fullName: Dropbox.Api.Team.TeamFolderMetadata.Name
+- uid: Dropbox.Api.Team.TeamFolderMetadata.Status*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderMetadata.Status
+  name: Status
+  nameWithType: TeamFolderMetadata.Status
+  fullName: Dropbox.Api.Team.TeamFolderMetadata.Status
+- uid: Dropbox.Api.Team.TeamFolderMetadata.IsTeamSharedDropbox*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderMetadata.IsTeamSharedDropbox
+  name: IsTeamSharedDropbox
+  nameWithType: TeamFolderMetadata.IsTeamSharedDropbox
+  fullName: Dropbox.Api.Team.TeamFolderMetadata.IsTeamSharedDropbox
+- uid: Dropbox.Api.Team.TeamFolderMetadata.SyncSetting*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderMetadata.SyncSetting
+  name: SyncSetting
+  nameWithType: TeamFolderMetadata.SyncSetting
+  fullName: Dropbox.Api.Team.TeamFolderMetadata.SyncSetting
+- uid: Dropbox.Api.Team.TeamFolderMetadata.ContentSyncSettings*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderMetadata.ContentSyncSettings
+  name: ContentSyncSettings
+  nameWithType: TeamFolderMetadata.ContentSyncSettings
+  fullName: Dropbox.Api.Team.TeamFolderMetadata.ContentSyncSettings
+- uid: System.Collections.Generic.IList{Dropbox.Api.Files.ContentSyncSetting}
+  commentId: '!:System.Collections.Generic.IList{Dropbox.Api.Files.ContentSyncSetting}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<ContentSyncSetting>
+  nameWithType: System.Collections.Generic.IList<ContentSyncSetting>
+  fullName: System.Collections.Generic.IList<Dropbox.Api.Files.ContentSyncSetting>
+  nameWithType.vb: System.Collections.Generic.IList(Of ContentSyncSetting)
+  fullName.vb: System.Collections.Generic.IList(Of Dropbox.Api.Files.ContentSyncSetting)
+  name.vb: System.Collections.Generic.IList(Of ContentSyncSetting)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Files.ContentSyncSetting
+    name: ContentSyncSetting
+    nameWithType: ContentSyncSetting
+    fullName: Dropbox.Api.Files.ContentSyncSetting
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Files.ContentSyncSetting
+    name: ContentSyncSetting
+    nameWithType: ContentSyncSetting
+    fullName: Dropbox.Api.Files.ContentSyncSetting
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  isExternal: true
+  name: System.Collections.Generic.IList<>
+  nameWithType: System.Collections.Generic.IList<>
+  fullName: System.Collections.Generic.IList<>
+  nameWithType.vb: System.Collections.Generic.IList(Of )
+  fullName.vb: System.Collections.Generic.IList(Of )
+  name.vb: System.Collections.Generic.IList(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+shouldSkipMarkup: true

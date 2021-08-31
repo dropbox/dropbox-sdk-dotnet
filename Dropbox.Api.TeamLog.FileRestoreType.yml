@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.FileRestoreType
+  commentId: T:Dropbox.Api.TeamLog.FileRestoreType
+  id: FileRestoreType
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.FileRestoreType.#ctor
+  - Dropbox.Api.TeamLog.FileRestoreType.#ctor(System.String)
+  - Dropbox.Api.TeamLog.FileRestoreType.Description
+  langs:
+  - csharp
+  - vb
+  name: FileRestoreType
+  nameWithType: FileRestoreType
+  fullName: Dropbox.Api.TeamLog.FileRestoreType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRestoreType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: FileRestoreType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRestoreType.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The file restore type object</p>\n"
+  example: []
+  syntax:
+    content: 'public class FileRestoreType : object'
+    content.vb: >-
+      Public Class FileRestoreType
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.FileRestoreType.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.FileRestoreType.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.FileRestoreType
+  langs:
+  - csharp
+  - vb
+  name: FileRestoreType(String)
+  nameWithType: FileRestoreType.FileRestoreType(String)
+  fullName: Dropbox.Api.TeamLog.FileRestoreType.FileRestoreType(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRestoreType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRestoreType.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.FileRestoreType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public FileRestoreType(string description)
+    parameters:
+    - id: description
+      type: System.String
+      description: The description
+    content.vb: Public Sub New(description As String)
+  overload: Dropbox.Api.TeamLog.FileRestoreType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.FileRestoreType.#ctor
+  commentId: M:Dropbox.Api.TeamLog.FileRestoreType.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.FileRestoreType
+  langs:
+  - csharp
+  - vb
+  name: FileRestoreType()
+  nameWithType: FileRestoreType.FileRestoreType()
+  fullName: Dropbox.Api.TeamLog.FileRestoreType.FileRestoreType()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRestoreType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRestoreType.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.FileRestoreType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public FileRestoreType()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.FileRestoreType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.FileRestoreType.Description
+  commentId: P:Dropbox.Api.TeamLog.FileRestoreType.Description
+  id: Description
+  parent: Dropbox.Api.TeamLog.FileRestoreType
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: FileRestoreType.Description
+  fullName: Dropbox.Api.TeamLog.FileRestoreType.Description
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRestoreType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Description
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRestoreType.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets the description of the file restore type</p>\n"
+  example: []
+  syntax:
+    content: public string Description { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Dropbox.Api.TeamLog.FileRestoreType.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.FileRestoreType
+  commentId: T:Dropbox.Api.TeamLog.FileRestoreType
+  parent: Dropbox.Api.TeamLog
+  name: FileRestoreType
+  nameWithType: FileRestoreType
+  fullName: Dropbox.Api.TeamLog.FileRestoreType
+- uid: Dropbox.Api.TeamLog.FileRestoreType.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.FileRestoreType.#ctor
+  name: FileRestoreType
+  nameWithType: FileRestoreType.FileRestoreType
+  fullName: Dropbox.Api.TeamLog.FileRestoreType.FileRestoreType
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.FileRestoreType.Description*
+  commentId: Overload:Dropbox.Api.TeamLog.FileRestoreType.Description
+  name: Description
+  nameWithType: FileRestoreType.Description
+  fullName: Dropbox.Api.TeamLog.FileRestoreType.Description
+shouldSkipMarkup: true

@@ -1,0 +1,236 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.ComputerBackupPolicyChangedDetails
+  commentId: T:Dropbox.Api.TeamLog.ComputerBackupPolicyChangedDetails
+  id: ComputerBackupPolicyChangedDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.ComputerBackupPolicyChangedDetails.#ctor
+  - Dropbox.Api.TeamLog.ComputerBackupPolicyChangedDetails.#ctor(Dropbox.Api.TeamLog.ComputerBackupPolicy,Dropbox.Api.TeamLog.ComputerBackupPolicy)
+  - Dropbox.Api.TeamLog.ComputerBackupPolicyChangedDetails.NewValue
+  - Dropbox.Api.TeamLog.ComputerBackupPolicyChangedDetails.PreviousValue
+  langs:
+  - csharp
+  - vb
+  name: ComputerBackupPolicyChangedDetails
+  nameWithType: ComputerBackupPolicyChangedDetails
+  fullName: Dropbox.Api.TeamLog.ComputerBackupPolicyChangedDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ComputerBackupPolicyChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ComputerBackupPolicyChangedDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ComputerBackupPolicyChangedDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Changed computer backup policy for team.</p>\n"
+  example: []
+  syntax:
+    content: 'public class ComputerBackupPolicyChangedDetails : object'
+    content.vb: >-
+      Public Class ComputerBackupPolicyChangedDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.ComputerBackupPolicyChangedDetails.#ctor(Dropbox.Api.TeamLog.ComputerBackupPolicy,Dropbox.Api.TeamLog.ComputerBackupPolicy)
+  commentId: M:Dropbox.Api.TeamLog.ComputerBackupPolicyChangedDetails.#ctor(Dropbox.Api.TeamLog.ComputerBackupPolicy,Dropbox.Api.TeamLog.ComputerBackupPolicy)
+  id: '#ctor(Dropbox.Api.TeamLog.ComputerBackupPolicy,Dropbox.Api.TeamLog.ComputerBackupPolicy)'
+  parent: Dropbox.Api.TeamLog.ComputerBackupPolicyChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: ComputerBackupPolicyChangedDetails(ComputerBackupPolicy, ComputerBackupPolicy)
+  nameWithType: ComputerBackupPolicyChangedDetails.ComputerBackupPolicyChangedDetails(ComputerBackupPolicy, ComputerBackupPolicy)
+  fullName: Dropbox.Api.TeamLog.ComputerBackupPolicyChangedDetails.ComputerBackupPolicyChangedDetails(Dropbox.Api.TeamLog.ComputerBackupPolicy, Dropbox.Api.TeamLog.ComputerBackupPolicy)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ComputerBackupPolicyChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ComputerBackupPolicyChangedDetails.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.ComputerBackupPolicyChangedDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public ComputerBackupPolicyChangedDetails(ComputerBackupPolicy newValue, ComputerBackupPolicy previousValue)
+    parameters:
+    - id: newValue
+      type: Dropbox.Api.TeamLog.ComputerBackupPolicy
+      description: New computer backup policy.
+    - id: previousValue
+      type: Dropbox.Api.TeamLog.ComputerBackupPolicy
+      description: Previous computer backup policy.
+    content.vb: Public Sub New(newValue As ComputerBackupPolicy, previousValue As ComputerBackupPolicy)
+  overload: Dropbox.Api.TeamLog.ComputerBackupPolicyChangedDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.ComputerBackupPolicyChangedDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.ComputerBackupPolicyChangedDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.ComputerBackupPolicyChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: ComputerBackupPolicyChangedDetails()
+  nameWithType: ComputerBackupPolicyChangedDetails.ComputerBackupPolicyChangedDetails()
+  fullName: Dropbox.Api.TeamLog.ComputerBackupPolicyChangedDetails.ComputerBackupPolicyChangedDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ComputerBackupPolicyChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ComputerBackupPolicyChangedDetails.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.ComputerBackupPolicyChangedDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public ComputerBackupPolicyChangedDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.ComputerBackupPolicyChangedDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.ComputerBackupPolicyChangedDetails.NewValue
+  commentId: P:Dropbox.Api.TeamLog.ComputerBackupPolicyChangedDetails.NewValue
+  id: NewValue
+  parent: Dropbox.Api.TeamLog.ComputerBackupPolicyChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: NewValue
+  nameWithType: ComputerBackupPolicyChangedDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.ComputerBackupPolicyChangedDetails.NewValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ComputerBackupPolicyChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NewValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ComputerBackupPolicyChangedDetails.cs
+    startLine: 66
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>New computer backup policy.</p>\n"
+  example: []
+  syntax:
+    content: public ComputerBackupPolicy NewValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.ComputerBackupPolicy
+    content.vb: Public Property NewValue As ComputerBackupPolicy
+  overload: Dropbox.Api.TeamLog.ComputerBackupPolicyChangedDetails.NewValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.ComputerBackupPolicyChangedDetails.PreviousValue
+  commentId: P:Dropbox.Api.TeamLog.ComputerBackupPolicyChangedDetails.PreviousValue
+  id: PreviousValue
+  parent: Dropbox.Api.TeamLog.ComputerBackupPolicyChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: PreviousValue
+  nameWithType: ComputerBackupPolicyChangedDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.ComputerBackupPolicyChangedDetails.PreviousValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ComputerBackupPolicyChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PreviousValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ComputerBackupPolicyChangedDetails.cs
+    startLine: 71
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Previous computer backup policy.</p>\n"
+  example: []
+  syntax:
+    content: public ComputerBackupPolicy PreviousValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.ComputerBackupPolicy
+    content.vb: Public Property PreviousValue As ComputerBackupPolicy
+  overload: Dropbox.Api.TeamLog.ComputerBackupPolicyChangedDetails.PreviousValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.ComputerBackupPolicyChangedDetails
+  commentId: T:Dropbox.Api.TeamLog.ComputerBackupPolicyChangedDetails
+  parent: Dropbox.Api.TeamLog
+  name: ComputerBackupPolicyChangedDetails
+  nameWithType: ComputerBackupPolicyChangedDetails
+  fullName: Dropbox.Api.TeamLog.ComputerBackupPolicyChangedDetails
+- uid: Dropbox.Api.TeamLog.ComputerBackupPolicyChangedDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.ComputerBackupPolicyChangedDetails.#ctor
+  name: ComputerBackupPolicyChangedDetails
+  nameWithType: ComputerBackupPolicyChangedDetails.ComputerBackupPolicyChangedDetails
+  fullName: Dropbox.Api.TeamLog.ComputerBackupPolicyChangedDetails.ComputerBackupPolicyChangedDetails
+- uid: Dropbox.Api.TeamLog.ComputerBackupPolicy
+  commentId: T:Dropbox.Api.TeamLog.ComputerBackupPolicy
+  parent: Dropbox.Api.TeamLog
+  name: ComputerBackupPolicy
+  nameWithType: ComputerBackupPolicy
+  fullName: Dropbox.Api.TeamLog.ComputerBackupPolicy
+- uid: Dropbox.Api.TeamLog.ComputerBackupPolicyChangedDetails.NewValue*
+  commentId: Overload:Dropbox.Api.TeamLog.ComputerBackupPolicyChangedDetails.NewValue
+  name: NewValue
+  nameWithType: ComputerBackupPolicyChangedDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.ComputerBackupPolicyChangedDetails.NewValue
+- uid: Dropbox.Api.TeamLog.ComputerBackupPolicyChangedDetails.PreviousValue*
+  commentId: Overload:Dropbox.Api.TeamLog.ComputerBackupPolicyChangedDetails.PreviousValue
+  name: PreviousValue
+  nameWithType: ComputerBackupPolicyChangedDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.ComputerBackupPolicyChangedDetails.PreviousValue
+shouldSkipMarkup: true

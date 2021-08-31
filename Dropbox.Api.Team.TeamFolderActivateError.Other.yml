@@ -1,0 +1,162 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.TeamFolderActivateError.Other
+  commentId: T:Dropbox.Api.Team.TeamFolderActivateError.Other
+  id: TeamFolderActivateError.Other
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.TeamFolderActivateError.Other.Instance
+  langs:
+  - csharp
+  - vb
+  name: TeamFolderActivateError.Other
+  nameWithType: TeamFolderActivateError.Other
+  fullName: Dropbox.Api.Team.TeamFolderActivateError.Other
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderActivateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Other
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderActivateError.cs
+    startLine: 511
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The other object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Other : TeamFolderActivateError'
+    content.vb: >-
+      Public NotInheritable Class Other
+          Inherits TeamFolderActivateError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.TeamFolderActivateError
+  inheritedMembers:
+  - Dropbox.Api.Team.TeamFolderActivateError.IsAccessError
+  - Dropbox.Api.Team.TeamFolderActivateError.AsAccessError
+  - Dropbox.Api.Team.TeamFolderActivateError.IsStatusError
+  - Dropbox.Api.Team.TeamFolderActivateError.AsStatusError
+  - Dropbox.Api.Team.TeamFolderActivateError.IsTeamSharedDropboxError
+  - Dropbox.Api.Team.TeamFolderActivateError.AsTeamSharedDropboxError
+  - Dropbox.Api.Team.TeamFolderActivateError.IsOther
+  - Dropbox.Api.Team.TeamFolderActivateError.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Team.TeamFolderActivateError.Other.Instance
+  commentId: F:Dropbox.Api.Team.TeamFolderActivateError.Other.Instance
+  id: Instance
+  parent: Dropbox.Api.Team.TeamFolderActivateError.Other
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: TeamFolderActivateError.Other.Instance
+  fullName: Dropbox.Api.Team.TeamFolderActivateError.Other.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderActivateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderActivateError.cs
+    startLine: 535
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>A singleton instance of Other</p>\n"
+  example: []
+  syntax:
+    content: public static readonly TeamFolderActivateError.Other Instance
+    return:
+      type: Dropbox.Api.Team.TeamFolderActivateError.Other
+    content.vb: Public Shared ReadOnly Instance As TeamFolderActivateError.Other
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.TeamFolderActivateError
+  commentId: T:Dropbox.Api.Team.TeamFolderActivateError
+  parent: Dropbox.Api.Team
+  name: TeamFolderActivateError
+  nameWithType: TeamFolderActivateError
+  fullName: Dropbox.Api.Team.TeamFolderActivateError
+- uid: Dropbox.Api.Team.TeamFolderActivateError.IsAccessError
+  commentId: P:Dropbox.Api.Team.TeamFolderActivateError.IsAccessError
+  parent: Dropbox.Api.Team.TeamFolderActivateError
+  name: IsAccessError
+  nameWithType: TeamFolderActivateError.IsAccessError
+  fullName: Dropbox.Api.Team.TeamFolderActivateError.IsAccessError
+- uid: Dropbox.Api.Team.TeamFolderActivateError.AsAccessError
+  commentId: P:Dropbox.Api.Team.TeamFolderActivateError.AsAccessError
+  parent: Dropbox.Api.Team.TeamFolderActivateError
+  name: AsAccessError
+  nameWithType: TeamFolderActivateError.AsAccessError
+  fullName: Dropbox.Api.Team.TeamFolderActivateError.AsAccessError
+- uid: Dropbox.Api.Team.TeamFolderActivateError.IsStatusError
+  commentId: P:Dropbox.Api.Team.TeamFolderActivateError.IsStatusError
+  parent: Dropbox.Api.Team.TeamFolderActivateError
+  name: IsStatusError
+  nameWithType: TeamFolderActivateError.IsStatusError
+  fullName: Dropbox.Api.Team.TeamFolderActivateError.IsStatusError
+- uid: Dropbox.Api.Team.TeamFolderActivateError.AsStatusError
+  commentId: P:Dropbox.Api.Team.TeamFolderActivateError.AsStatusError
+  parent: Dropbox.Api.Team.TeamFolderActivateError
+  name: AsStatusError
+  nameWithType: TeamFolderActivateError.AsStatusError
+  fullName: Dropbox.Api.Team.TeamFolderActivateError.AsStatusError
+- uid: Dropbox.Api.Team.TeamFolderActivateError.IsTeamSharedDropboxError
+  commentId: P:Dropbox.Api.Team.TeamFolderActivateError.IsTeamSharedDropboxError
+  parent: Dropbox.Api.Team.TeamFolderActivateError
+  name: IsTeamSharedDropboxError
+  nameWithType: TeamFolderActivateError.IsTeamSharedDropboxError
+  fullName: Dropbox.Api.Team.TeamFolderActivateError.IsTeamSharedDropboxError
+- uid: Dropbox.Api.Team.TeamFolderActivateError.AsTeamSharedDropboxError
+  commentId: P:Dropbox.Api.Team.TeamFolderActivateError.AsTeamSharedDropboxError
+  parent: Dropbox.Api.Team.TeamFolderActivateError
+  name: AsTeamSharedDropboxError
+  nameWithType: TeamFolderActivateError.AsTeamSharedDropboxError
+  fullName: Dropbox.Api.Team.TeamFolderActivateError.AsTeamSharedDropboxError
+- uid: Dropbox.Api.Team.TeamFolderActivateError.IsOther
+  commentId: P:Dropbox.Api.Team.TeamFolderActivateError.IsOther
+  parent: Dropbox.Api.Team.TeamFolderActivateError
+  name: IsOther
+  nameWithType: TeamFolderActivateError.IsOther
+  fullName: Dropbox.Api.Team.TeamFolderActivateError.IsOther
+- uid: Dropbox.Api.Team.TeamFolderActivateError.AsOther
+  commentId: P:Dropbox.Api.Team.TeamFolderActivateError.AsOther
+  parent: Dropbox.Api.Team.TeamFolderActivateError
+  name: AsOther
+  nameWithType: TeamFolderActivateError.AsOther
+  fullName: Dropbox.Api.Team.TeamFolderActivateError.AsOther
+- uid: Dropbox.Api.Team.TeamFolderActivateError.Other
+  commentId: T:Dropbox.Api.Team.TeamFolderActivateError.Other
+  parent: Dropbox.Api.Team
+  name: TeamFolderActivateError.Other
+  nameWithType: TeamFolderActivateError.Other
+  fullName: Dropbox.Api.Team.TeamFolderActivateError.Other
+shouldSkipMarkup: true

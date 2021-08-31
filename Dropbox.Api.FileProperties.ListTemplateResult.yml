@@ -1,0 +1,353 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.FileProperties.ListTemplateResult
+  commentId: T:Dropbox.Api.FileProperties.ListTemplateResult
+  id: ListTemplateResult
+  parent: Dropbox.Api.FileProperties
+  children:
+  - Dropbox.Api.FileProperties.ListTemplateResult.#ctor
+  - Dropbox.Api.FileProperties.ListTemplateResult.#ctor(System.Collections.Generic.IEnumerable{System.String})
+  - Dropbox.Api.FileProperties.ListTemplateResult.TemplateIds
+  langs:
+  - csharp
+  - vb
+  name: ListTemplateResult
+  nameWithType: ListTemplateResult
+  fullName: Dropbox.Api.FileProperties.ListTemplateResult
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/ListTemplateResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ListTemplateResult
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/ListTemplateResult.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>The list template result object</p>\n"
+  example: []
+  syntax:
+    content: 'public class ListTemplateResult : object'
+    content.vb: >-
+      Public Class ListTemplateResult
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.FileProperties.ListTemplateResult.#ctor(System.Collections.Generic.IEnumerable{System.String})
+  commentId: M:Dropbox.Api.FileProperties.ListTemplateResult.#ctor(System.Collections.Generic.IEnumerable{System.String})
+  id: '#ctor(System.Collections.Generic.IEnumerable{System.String})'
+  parent: Dropbox.Api.FileProperties.ListTemplateResult
+  langs:
+  - csharp
+  - vb
+  name: ListTemplateResult(System.Collections.Generic.IEnumerable<String>)
+  nameWithType: ListTemplateResult.ListTemplateResult(System.Collections.Generic.IEnumerable<String>)
+  fullName: Dropbox.Api.FileProperties.ListTemplateResult.ListTemplateResult(System.Collections.Generic.IEnumerable<System.String>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/ListTemplateResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/ListTemplateResult.cs
+    startLine: 38
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.FileProperties.ListTemplateResult\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public ListTemplateResult(System.Collections.Generic.IEnumerable<string> templateIds)
+    parameters:
+    - id: templateIds
+      type: System.Collections.Generic.IEnumerable{System.String}
+      description: List of identifiers for templates added by  See <xref href="Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.TemplatesAddForUserAsync(Dropbox.Api.FileProperties.AddTemplateArg)" data-throw-if-not-resolved="false"></xref> or <xref href="Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesAddForTeamAsync(Dropbox.Api.FileProperties.AddTemplateArg)" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Sub New(templateIds As System.Collections.Generic.IEnumerable(Of String))
+  overload: Dropbox.Api.FileProperties.ListTemplateResult.#ctor*
+  nameWithType.vb: ListTemplateResult.ListTemplateResult(System.Collections.Generic.IEnumerable(Of String))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.FileProperties.ListTemplateResult.ListTemplateResult(System.Collections.Generic.IEnumerable(Of System.String))
+  name.vb: ListTemplateResult(System.Collections.Generic.IEnumerable(Of String))
+- uid: Dropbox.Api.FileProperties.ListTemplateResult.#ctor
+  commentId: M:Dropbox.Api.FileProperties.ListTemplateResult.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.FileProperties.ListTemplateResult
+  langs:
+  - csharp
+  - vb
+  name: ListTemplateResult()
+  nameWithType: ListTemplateResult.ListTemplateResult()
+  fullName: Dropbox.Api.FileProperties.ListTemplateResult.ListTemplateResult()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/ListTemplateResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/ListTemplateResult.cs
+    startLine: 56
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.FileProperties.ListTemplateResult\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public ListTemplateResult()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.FileProperties.ListTemplateResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileProperties.ListTemplateResult.TemplateIds
+  commentId: P:Dropbox.Api.FileProperties.ListTemplateResult.TemplateIds
+  id: TemplateIds
+  parent: Dropbox.Api.FileProperties.ListTemplateResult
+  langs:
+  - csharp
+  - vb
+  name: TemplateIds
+  nameWithType: ListTemplateResult.TemplateIds
+  fullName: Dropbox.Api.FileProperties.ListTemplateResult.TemplateIds
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/ListTemplateResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TemplateIds
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/ListTemplateResult.cs
+    startLine: 68
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>List of identifiers for templates added by  See <xref href=\"Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.TemplatesAddForUserAsync(Dropbox.Api.FileProperties.AddTemplateArg)\" data-throw-if-not-resolved=\"false\"></xref> or <xref href=\"Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesAddForTeamAsync(Dropbox.Api.FileProperties.AddTemplateArg)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<string> TemplateIds { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{System.String}
+    content.vb: Public Property TemplateIds As System.Collections.Generic.IList(Of String)
+  overload: Dropbox.Api.FileProperties.ListTemplateResult.TemplateIds*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.FileProperties
+  commentId: N:Dropbox.Api.FileProperties
+  name: Dropbox.Api.FileProperties
+  nameWithType: Dropbox.Api.FileProperties
+  fullName: Dropbox.Api.FileProperties
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.FileProperties.ListTemplateResult
+  commentId: T:Dropbox.Api.FileProperties.ListTemplateResult
+  parent: Dropbox.Api.FileProperties
+  name: ListTemplateResult
+  nameWithType: ListTemplateResult
+  fullName: Dropbox.Api.FileProperties.ListTemplateResult
+- uid: Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.TemplatesAddForUserAsync(Dropbox.Api.FileProperties.AddTemplateArg)
+  commentId: M:Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.TemplatesAddForUserAsync(Dropbox.Api.FileProperties.AddTemplateArg)
+  isExternal: true
+- uid: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesAddForTeamAsync(Dropbox.Api.FileProperties.AddTemplateArg)
+  commentId: M:Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesAddForTeamAsync(Dropbox.Api.FileProperties.AddTemplateArg)
+  isExternal: true
+- uid: Dropbox.Api.FileProperties.ListTemplateResult.#ctor*
+  commentId: Overload:Dropbox.Api.FileProperties.ListTemplateResult.#ctor
+  name: ListTemplateResult
+  nameWithType: ListTemplateResult.ListTemplateResult
+  fullName: Dropbox.Api.FileProperties.ListTemplateResult.ListTemplateResult
+- uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: '!:System.Collections.Generic.IEnumerable{System.String}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<String>
+  nameWithType: System.Collections.Generic.IEnumerable<String>
+  fullName: System.Collections.Generic.IEnumerable<System.String>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of String)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.String)
+  name.vb: System.Collections.Generic.IEnumerable(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: System.Collections.Generic.IEnumerable<>
+  nameWithType: System.Collections.Generic.IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: System.Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.FileProperties.ListTemplateResult.TemplateIds*
+  commentId: Overload:Dropbox.Api.FileProperties.ListTemplateResult.TemplateIds
+  name: TemplateIds
+  nameWithType: ListTemplateResult.TemplateIds
+  fullName: Dropbox.Api.FileProperties.ListTemplateResult.TemplateIds
+- uid: System.Collections.Generic.IList{System.String}
+  commentId: '!:System.Collections.Generic.IList{System.String}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<String>
+  nameWithType: System.Collections.Generic.IList<String>
+  fullName: System.Collections.Generic.IList<System.String>
+  nameWithType.vb: System.Collections.Generic.IList(Of String)
+  fullName.vb: System.Collections.Generic.IList(Of System.String)
+  name.vb: System.Collections.Generic.IList(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  isExternal: true
+  name: System.Collections.Generic.IList<>
+  nameWithType: System.Collections.Generic.IList<>
+  fullName: System.Collections.Generic.IList<>
+  nameWithType.vb: System.Collections.Generic.IList(Of )
+  fullName.vb: System.Collections.Generic.IList(Of )
+  name.vb: System.Collections.Generic.IList(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+shouldSkipMarkup: true

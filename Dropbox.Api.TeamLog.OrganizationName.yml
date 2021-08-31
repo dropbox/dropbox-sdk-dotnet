@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.OrganizationName
+  commentId: T:Dropbox.Api.TeamLog.OrganizationName
+  id: OrganizationName
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.OrganizationName.#ctor
+  - Dropbox.Api.TeamLog.OrganizationName.#ctor(System.String)
+  - Dropbox.Api.TeamLog.OrganizationName.Organization
+  langs:
+  - csharp
+  - vb
+  name: OrganizationName
+  nameWithType: OrganizationName
+  fullName: Dropbox.Api.TeamLog.OrganizationName
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/OrganizationName.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: OrganizationName
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/OrganizationName.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The name of the organization</p>\n"
+  example: []
+  syntax:
+    content: 'public class OrganizationName : object'
+    content.vb: >-
+      Public Class OrganizationName
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.OrganizationName.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.OrganizationName.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.OrganizationName
+  langs:
+  - csharp
+  - vb
+  name: OrganizationName(String)
+  nameWithType: OrganizationName.OrganizationName(String)
+  fullName: Dropbox.Api.TeamLog.OrganizationName.OrganizationName(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/OrganizationName.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/OrganizationName.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.OrganizationName\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public OrganizationName(string organization)
+    parameters:
+    - id: organization
+      type: System.String
+      description: The name of the organization.
+    content.vb: Public Sub New(organization As String)
+  overload: Dropbox.Api.TeamLog.OrganizationName.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.OrganizationName.#ctor
+  commentId: M:Dropbox.Api.TeamLog.OrganizationName.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.OrganizationName
+  langs:
+  - csharp
+  - vb
+  name: OrganizationName()
+  nameWithType: OrganizationName.OrganizationName()
+  fullName: Dropbox.Api.TeamLog.OrganizationName.OrganizationName()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/OrganizationName.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/OrganizationName.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.OrganizationName\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public OrganizationName()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.OrganizationName.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.OrganizationName.Organization
+  commentId: P:Dropbox.Api.TeamLog.OrganizationName.Organization
+  id: Organization
+  parent: Dropbox.Api.TeamLog.OrganizationName
+  langs:
+  - csharp
+  - vb
+  name: Organization
+  nameWithType: OrganizationName.Organization
+  fullName: Dropbox.Api.TeamLog.OrganizationName.Organization
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/OrganizationName.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Organization
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/OrganizationName.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The name of the organization.</p>\n"
+  example: []
+  syntax:
+    content: public string Organization { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Organization As String
+  overload: Dropbox.Api.TeamLog.OrganizationName.Organization*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.OrganizationName
+  commentId: T:Dropbox.Api.TeamLog.OrganizationName
+  parent: Dropbox.Api.TeamLog
+  name: OrganizationName
+  nameWithType: OrganizationName
+  fullName: Dropbox.Api.TeamLog.OrganizationName
+- uid: Dropbox.Api.TeamLog.OrganizationName.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.OrganizationName.#ctor
+  name: OrganizationName
+  nameWithType: OrganizationName.OrganizationName
+  fullName: Dropbox.Api.TeamLog.OrganizationName.OrganizationName
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.OrganizationName.Organization*
+  commentId: Overload:Dropbox.Api.TeamLog.OrganizationName.Organization
+  name: Organization
+  nameWithType: OrganizationName.Organization
+  fullName: Dropbox.Api.TeamLog.OrganizationName.Organization
+shouldSkipMarkup: true

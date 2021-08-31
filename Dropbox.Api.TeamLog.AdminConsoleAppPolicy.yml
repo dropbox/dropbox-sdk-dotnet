@@ -1,0 +1,474 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.AdminConsoleAppPolicy
+  commentId: T:Dropbox.Api.TeamLog.AdminConsoleAppPolicy
+  id: AdminConsoleAppPolicy
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.AdminConsoleAppPolicy.#ctor
+  - Dropbox.Api.TeamLog.AdminConsoleAppPolicy.AsAllow
+  - Dropbox.Api.TeamLog.AdminConsoleAppPolicy.AsBlock
+  - Dropbox.Api.TeamLog.AdminConsoleAppPolicy.AsDefault
+  - Dropbox.Api.TeamLog.AdminConsoleAppPolicy.AsOther
+  - Dropbox.Api.TeamLog.AdminConsoleAppPolicy.IsAllow
+  - Dropbox.Api.TeamLog.AdminConsoleAppPolicy.IsBlock
+  - Dropbox.Api.TeamLog.AdminConsoleAppPolicy.IsDefault
+  - Dropbox.Api.TeamLog.AdminConsoleAppPolicy.IsOther
+  langs:
+  - csharp
+  - vb
+  name: AdminConsoleAppPolicy
+  nameWithType: AdminConsoleAppPolicy
+  fullName: Dropbox.Api.TeamLog.AdminConsoleAppPolicy
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminConsoleAppPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AdminConsoleAppPolicy
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminConsoleAppPolicy.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The admin console app policy object</p>\n"
+  example: []
+  syntax:
+    content: 'public class AdminConsoleAppPolicy : object'
+    content.vb: >-
+      Public Class AdminConsoleAppPolicy
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.TeamLog.AdminConsoleAppPolicy.Allow
+  - Dropbox.Api.TeamLog.AdminConsoleAppPolicy.Block
+  - Dropbox.Api.TeamLog.AdminConsoleAppPolicy.Default
+  - Dropbox.Api.TeamLog.AdminConsoleAppPolicy.Other
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.AdminConsoleAppPolicy.#ctor
+  commentId: M:Dropbox.Api.TeamLog.AdminConsoleAppPolicy.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.AdminConsoleAppPolicy
+  langs:
+  - csharp
+  - vb
+  name: AdminConsoleAppPolicy()
+  nameWithType: AdminConsoleAppPolicy.AdminConsoleAppPolicy()
+  fullName: Dropbox.Api.TeamLog.AdminConsoleAppPolicy.AdminConsoleAppPolicy()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminConsoleAppPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminConsoleAppPolicy.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.AdminConsoleAppPolicy\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public AdminConsoleAppPolicy()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.AdminConsoleAppPolicy.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.AdminConsoleAppPolicy.IsAllow
+  commentId: P:Dropbox.Api.TeamLog.AdminConsoleAppPolicy.IsAllow
+  id: IsAllow
+  parent: Dropbox.Api.TeamLog.AdminConsoleAppPolicy
+  langs:
+  - csharp
+  - vb
+  name: IsAllow
+  nameWithType: AdminConsoleAppPolicy.IsAllow
+  fullName: Dropbox.Api.TeamLog.AdminConsoleAppPolicy.IsAllow
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminConsoleAppPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsAllow
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminConsoleAppPolicy.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Allow</p>\n"
+  example: []
+  syntax:
+    content: public bool IsAllow { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsAllow As Boolean
+  overload: Dropbox.Api.TeamLog.AdminConsoleAppPolicy.IsAllow*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.AdminConsoleAppPolicy.AsAllow
+  commentId: P:Dropbox.Api.TeamLog.AdminConsoleAppPolicy.AsAllow
+  id: AsAllow
+  parent: Dropbox.Api.TeamLog.AdminConsoleAppPolicy
+  langs:
+  - csharp
+  - vb
+  name: AsAllow
+  nameWithType: AdminConsoleAppPolicy.AsAllow
+  fullName: Dropbox.Api.TeamLog.AdminConsoleAppPolicy.AsAllow
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminConsoleAppPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsAllow
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminConsoleAppPolicy.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Allow, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public AdminConsoleAppPolicy.Allow AsAllow { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.AdminConsoleAppPolicy.Allow
+    content.vb: Public ReadOnly Property AsAllow As AdminConsoleAppPolicy.Allow
+  overload: Dropbox.Api.TeamLog.AdminConsoleAppPolicy.AsAllow*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.AdminConsoleAppPolicy.IsBlock
+  commentId: P:Dropbox.Api.TeamLog.AdminConsoleAppPolicy.IsBlock
+  id: IsBlock
+  parent: Dropbox.Api.TeamLog.AdminConsoleAppPolicy
+  langs:
+  - csharp
+  - vb
+  name: IsBlock
+  nameWithType: AdminConsoleAppPolicy.IsBlock
+  fullName: Dropbox.Api.TeamLog.AdminConsoleAppPolicy.IsBlock
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminConsoleAppPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsBlock
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminConsoleAppPolicy.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Block</p>\n"
+  example: []
+  syntax:
+    content: public bool IsBlock { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsBlock As Boolean
+  overload: Dropbox.Api.TeamLog.AdminConsoleAppPolicy.IsBlock*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.AdminConsoleAppPolicy.AsBlock
+  commentId: P:Dropbox.Api.TeamLog.AdminConsoleAppPolicy.AsBlock
+  id: AsBlock
+  parent: Dropbox.Api.TeamLog.AdminConsoleAppPolicy
+  langs:
+  - csharp
+  - vb
+  name: AsBlock
+  nameWithType: AdminConsoleAppPolicy.AsBlock
+  fullName: Dropbox.Api.TeamLog.AdminConsoleAppPolicy.AsBlock
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminConsoleAppPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsBlock
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminConsoleAppPolicy.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Block, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public AdminConsoleAppPolicy.Block AsBlock { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.AdminConsoleAppPolicy.Block
+    content.vb: Public ReadOnly Property AsBlock As AdminConsoleAppPolicy.Block
+  overload: Dropbox.Api.TeamLog.AdminConsoleAppPolicy.AsBlock*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.AdminConsoleAppPolicy.IsDefault
+  commentId: P:Dropbox.Api.TeamLog.AdminConsoleAppPolicy.IsDefault
+  id: IsDefault
+  parent: Dropbox.Api.TeamLog.AdminConsoleAppPolicy
+  langs:
+  - csharp
+  - vb
+  name: IsDefault
+  nameWithType: AdminConsoleAppPolicy.IsDefault
+  fullName: Dropbox.Api.TeamLog.AdminConsoleAppPolicy.IsDefault
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminConsoleAppPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsDefault
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminConsoleAppPolicy.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Default</p>\n"
+  example: []
+  syntax:
+    content: public bool IsDefault { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsDefault As Boolean
+  overload: Dropbox.Api.TeamLog.AdminConsoleAppPolicy.IsDefault*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.AdminConsoleAppPolicy.AsDefault
+  commentId: P:Dropbox.Api.TeamLog.AdminConsoleAppPolicy.AsDefault
+  id: AsDefault
+  parent: Dropbox.Api.TeamLog.AdminConsoleAppPolicy
+  langs:
+  - csharp
+  - vb
+  name: AsDefault
+  nameWithType: AdminConsoleAppPolicy.AsDefault
+  fullName: Dropbox.Api.TeamLog.AdminConsoleAppPolicy.AsDefault
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminConsoleAppPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsDefault
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminConsoleAppPolicy.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Default, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public AdminConsoleAppPolicy.Default AsDefault { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.AdminConsoleAppPolicy.Default
+    content.vb: Public ReadOnly Property AsDefault As AdminConsoleAppPolicy.Default
+  overload: Dropbox.Api.TeamLog.AdminConsoleAppPolicy.AsDefault*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.AdminConsoleAppPolicy.IsOther
+  commentId: P:Dropbox.Api.TeamLog.AdminConsoleAppPolicy.IsOther
+  id: IsOther
+  parent: Dropbox.Api.TeamLog.AdminConsoleAppPolicy
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: AdminConsoleAppPolicy.IsOther
+  fullName: Dropbox.Api.TeamLog.AdminConsoleAppPolicy.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminConsoleAppPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminConsoleAppPolicy.cs
+    startLine: 106
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.TeamLog.AdminConsoleAppPolicy.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.AdminConsoleAppPolicy.AsOther
+  commentId: P:Dropbox.Api.TeamLog.AdminConsoleAppPolicy.AsOther
+  id: AsOther
+  parent: Dropbox.Api.TeamLog.AdminConsoleAppPolicy
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: AdminConsoleAppPolicy.AsOther
+  fullName: Dropbox.Api.TeamLog.AdminConsoleAppPolicy.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminConsoleAppPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminConsoleAppPolicy.cs
+    startLine: 117
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public AdminConsoleAppPolicy.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.AdminConsoleAppPolicy.Other
+    content.vb: Public ReadOnly Property AsOther As AdminConsoleAppPolicy.Other
+  overload: Dropbox.Api.TeamLog.AdminConsoleAppPolicy.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.AdminConsoleAppPolicy
+  commentId: T:Dropbox.Api.TeamLog.AdminConsoleAppPolicy
+  parent: Dropbox.Api.TeamLog
+  name: AdminConsoleAppPolicy
+  nameWithType: AdminConsoleAppPolicy
+  fullName: Dropbox.Api.TeamLog.AdminConsoleAppPolicy
+- uid: Dropbox.Api.TeamLog.AdminConsoleAppPolicy.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.AdminConsoleAppPolicy.#ctor
+  name: AdminConsoleAppPolicy
+  nameWithType: AdminConsoleAppPolicy.AdminConsoleAppPolicy
+  fullName: Dropbox.Api.TeamLog.AdminConsoleAppPolicy.AdminConsoleAppPolicy
+- uid: Dropbox.Api.TeamLog.AdminConsoleAppPolicy.IsAllow*
+  commentId: Overload:Dropbox.Api.TeamLog.AdminConsoleAppPolicy.IsAllow
+  name: IsAllow
+  nameWithType: AdminConsoleAppPolicy.IsAllow
+  fullName: Dropbox.Api.TeamLog.AdminConsoleAppPolicy.IsAllow
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.TeamLog.AdminConsoleAppPolicy.AsAllow*
+  commentId: Overload:Dropbox.Api.TeamLog.AdminConsoleAppPolicy.AsAllow
+  name: AsAllow
+  nameWithType: AdminConsoleAppPolicy.AsAllow
+  fullName: Dropbox.Api.TeamLog.AdminConsoleAppPolicy.AsAllow
+- uid: Dropbox.Api.TeamLog.AdminConsoleAppPolicy.Allow
+  commentId: T:Dropbox.Api.TeamLog.AdminConsoleAppPolicy.Allow
+  parent: Dropbox.Api.TeamLog
+  name: AdminConsoleAppPolicy.Allow
+  nameWithType: AdminConsoleAppPolicy.Allow
+  fullName: Dropbox.Api.TeamLog.AdminConsoleAppPolicy.Allow
+- uid: Dropbox.Api.TeamLog.AdminConsoleAppPolicy.IsBlock*
+  commentId: Overload:Dropbox.Api.TeamLog.AdminConsoleAppPolicy.IsBlock
+  name: IsBlock
+  nameWithType: AdminConsoleAppPolicy.IsBlock
+  fullName: Dropbox.Api.TeamLog.AdminConsoleAppPolicy.IsBlock
+- uid: Dropbox.Api.TeamLog.AdminConsoleAppPolicy.AsBlock*
+  commentId: Overload:Dropbox.Api.TeamLog.AdminConsoleAppPolicy.AsBlock
+  name: AsBlock
+  nameWithType: AdminConsoleAppPolicy.AsBlock
+  fullName: Dropbox.Api.TeamLog.AdminConsoleAppPolicy.AsBlock
+- uid: Dropbox.Api.TeamLog.AdminConsoleAppPolicy.Block
+  commentId: T:Dropbox.Api.TeamLog.AdminConsoleAppPolicy.Block
+  parent: Dropbox.Api.TeamLog
+  name: AdminConsoleAppPolicy.Block
+  nameWithType: AdminConsoleAppPolicy.Block
+  fullName: Dropbox.Api.TeamLog.AdminConsoleAppPolicy.Block
+- uid: Dropbox.Api.TeamLog.AdminConsoleAppPolicy.IsDefault*
+  commentId: Overload:Dropbox.Api.TeamLog.AdminConsoleAppPolicy.IsDefault
+  name: IsDefault
+  nameWithType: AdminConsoleAppPolicy.IsDefault
+  fullName: Dropbox.Api.TeamLog.AdminConsoleAppPolicy.IsDefault
+- uid: Dropbox.Api.TeamLog.AdminConsoleAppPolicy.AsDefault*
+  commentId: Overload:Dropbox.Api.TeamLog.AdminConsoleAppPolicy.AsDefault
+  name: AsDefault
+  nameWithType: AdminConsoleAppPolicy.AsDefault
+  fullName: Dropbox.Api.TeamLog.AdminConsoleAppPolicy.AsDefault
+- uid: Dropbox.Api.TeamLog.AdminConsoleAppPolicy.Default
+  commentId: T:Dropbox.Api.TeamLog.AdminConsoleAppPolicy.Default
+  parent: Dropbox.Api.TeamLog
+  name: AdminConsoleAppPolicy.Default
+  nameWithType: AdminConsoleAppPolicy.Default
+  fullName: Dropbox.Api.TeamLog.AdminConsoleAppPolicy.Default
+- uid: Dropbox.Api.TeamLog.AdminConsoleAppPolicy.IsOther*
+  commentId: Overload:Dropbox.Api.TeamLog.AdminConsoleAppPolicy.IsOther
+  name: IsOther
+  nameWithType: AdminConsoleAppPolicy.IsOther
+  fullName: Dropbox.Api.TeamLog.AdminConsoleAppPolicy.IsOther
+- uid: Dropbox.Api.TeamLog.AdminConsoleAppPolicy.AsOther*
+  commentId: Overload:Dropbox.Api.TeamLog.AdminConsoleAppPolicy.AsOther
+  name: AsOther
+  nameWithType: AdminConsoleAppPolicy.AsOther
+  fullName: Dropbox.Api.TeamLog.AdminConsoleAppPolicy.AsOther
+- uid: Dropbox.Api.TeamLog.AdminConsoleAppPolicy.Other
+  commentId: T:Dropbox.Api.TeamLog.AdminConsoleAppPolicy.Other
+  parent: Dropbox.Api.TeamLog
+  name: AdminConsoleAppPolicy.Other
+  nameWithType: AdminConsoleAppPolicy.Other
+  fullName: Dropbox.Api.TeamLog.AdminConsoleAppPolicy.Other
+shouldSkipMarkup: true

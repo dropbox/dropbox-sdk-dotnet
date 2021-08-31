@@ -1,0 +1,244 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.TeamFolderChangeStatusDetails
+  commentId: T:Dropbox.Api.TeamLog.TeamFolderChangeStatusDetails
+  id: TeamFolderChangeStatusDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.TeamFolderChangeStatusDetails.#ctor
+  - Dropbox.Api.TeamLog.TeamFolderChangeStatusDetails.#ctor(Dropbox.Api.Team.TeamFolderStatus,Dropbox.Api.Team.TeamFolderStatus)
+  - Dropbox.Api.TeamLog.TeamFolderChangeStatusDetails.NewValue
+  - Dropbox.Api.TeamLog.TeamFolderChangeStatusDetails.PreviousValue
+  langs:
+  - csharp
+  - vb
+  name: TeamFolderChangeStatusDetails
+  nameWithType: TeamFolderChangeStatusDetails
+  fullName: Dropbox.Api.TeamLog.TeamFolderChangeStatusDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamFolderChangeStatusDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TeamFolderChangeStatusDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamFolderChangeStatusDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Changed archival status of team folder.</p>\n"
+  example: []
+  syntax:
+    content: 'public class TeamFolderChangeStatusDetails : object'
+    content.vb: >-
+      Public Class TeamFolderChangeStatusDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.TeamFolderChangeStatusDetails.#ctor(Dropbox.Api.Team.TeamFolderStatus,Dropbox.Api.Team.TeamFolderStatus)
+  commentId: M:Dropbox.Api.TeamLog.TeamFolderChangeStatusDetails.#ctor(Dropbox.Api.Team.TeamFolderStatus,Dropbox.Api.Team.TeamFolderStatus)
+  id: '#ctor(Dropbox.Api.Team.TeamFolderStatus,Dropbox.Api.Team.TeamFolderStatus)'
+  parent: Dropbox.Api.TeamLog.TeamFolderChangeStatusDetails
+  langs:
+  - csharp
+  - vb
+  name: TeamFolderChangeStatusDetails(TeamFolderStatus, TeamFolderStatus)
+  nameWithType: TeamFolderChangeStatusDetails.TeamFolderChangeStatusDetails(TeamFolderStatus, TeamFolderStatus)
+  fullName: Dropbox.Api.TeamLog.TeamFolderChangeStatusDetails.TeamFolderChangeStatusDetails(Dropbox.Api.Team.TeamFolderStatus, Dropbox.Api.Team.TeamFolderStatus)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamFolderChangeStatusDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamFolderChangeStatusDetails.cs
+    startLine: 36
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.TeamFolderChangeStatusDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public TeamFolderChangeStatusDetails(TeamFolderStatus newValue, TeamFolderStatus previousValue = null)
+    parameters:
+    - id: newValue
+      type: Dropbox.Api.Team.TeamFolderStatus
+      description: New team folder status.
+    - id: previousValue
+      type: Dropbox.Api.Team.TeamFolderStatus
+      description: >-
+        Previous team folder status. Might be missing due to
+
+        historical data gap.
+    content.vb: Public Sub New(newValue As TeamFolderStatus, previousValue As TeamFolderStatus = Nothing)
+  overload: Dropbox.Api.TeamLog.TeamFolderChangeStatusDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.TeamFolderChangeStatusDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.TeamFolderChangeStatusDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.TeamFolderChangeStatusDetails
+  langs:
+  - csharp
+  - vb
+  name: TeamFolderChangeStatusDetails()
+  nameWithType: TeamFolderChangeStatusDetails.TeamFolderChangeStatusDetails()
+  fullName: Dropbox.Api.TeamLog.TeamFolderChangeStatusDetails.TeamFolderChangeStatusDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamFolderChangeStatusDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamFolderChangeStatusDetails.cs
+    startLine: 54
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.TeamFolderChangeStatusDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public TeamFolderChangeStatusDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.TeamFolderChangeStatusDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.TeamFolderChangeStatusDetails.NewValue
+  commentId: P:Dropbox.Api.TeamLog.TeamFolderChangeStatusDetails.NewValue
+  id: NewValue
+  parent: Dropbox.Api.TeamLog.TeamFolderChangeStatusDetails
+  langs:
+  - csharp
+  - vb
+  name: NewValue
+  nameWithType: TeamFolderChangeStatusDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.TeamFolderChangeStatusDetails.NewValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamFolderChangeStatusDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NewValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamFolderChangeStatusDetails.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>New team folder status.</p>\n"
+  example: []
+  syntax:
+    content: public TeamFolderStatus NewValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.TeamFolderStatus
+    content.vb: Public Property NewValue As TeamFolderStatus
+  overload: Dropbox.Api.TeamLog.TeamFolderChangeStatusDetails.NewValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.TeamFolderChangeStatusDetails.PreviousValue
+  commentId: P:Dropbox.Api.TeamLog.TeamFolderChangeStatusDetails.PreviousValue
+  id: PreviousValue
+  parent: Dropbox.Api.TeamLog.TeamFolderChangeStatusDetails
+  langs:
+  - csharp
+  - vb
+  name: PreviousValue
+  nameWithType: TeamFolderChangeStatusDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.TeamFolderChangeStatusDetails.PreviousValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamFolderChangeStatusDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PreviousValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamFolderChangeStatusDetails.cs
+    startLine: 68
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Previous team folder status. Might be missing due to historical data\ngap.</p>\n"
+  example: []
+  syntax:
+    content: public TeamFolderStatus PreviousValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.TeamFolderStatus
+    content.vb: Public Property PreviousValue As TeamFolderStatus
+  overload: Dropbox.Api.TeamLog.TeamFolderChangeStatusDetails.PreviousValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.TeamFolderChangeStatusDetails
+  commentId: T:Dropbox.Api.TeamLog.TeamFolderChangeStatusDetails
+  parent: Dropbox.Api.TeamLog
+  name: TeamFolderChangeStatusDetails
+  nameWithType: TeamFolderChangeStatusDetails
+  fullName: Dropbox.Api.TeamLog.TeamFolderChangeStatusDetails
+- uid: Dropbox.Api.TeamLog.TeamFolderChangeStatusDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.TeamFolderChangeStatusDetails.#ctor
+  name: TeamFolderChangeStatusDetails
+  nameWithType: TeamFolderChangeStatusDetails.TeamFolderChangeStatusDetails
+  fullName: Dropbox.Api.TeamLog.TeamFolderChangeStatusDetails.TeamFolderChangeStatusDetails
+- uid: Dropbox.Api.Team.TeamFolderStatus
+  commentId: T:Dropbox.Api.Team.TeamFolderStatus
+  parent: Dropbox.Api.Team
+  name: TeamFolderStatus
+  nameWithType: TeamFolderStatus
+  fullName: Dropbox.Api.Team.TeamFolderStatus
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: Dropbox.Api.TeamLog.TeamFolderChangeStatusDetails.NewValue*
+  commentId: Overload:Dropbox.Api.TeamLog.TeamFolderChangeStatusDetails.NewValue
+  name: NewValue
+  nameWithType: TeamFolderChangeStatusDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.TeamFolderChangeStatusDetails.NewValue
+- uid: Dropbox.Api.TeamLog.TeamFolderChangeStatusDetails.PreviousValue*
+  commentId: Overload:Dropbox.Api.TeamLog.TeamFolderChangeStatusDetails.PreviousValue
+  name: PreviousValue
+  nameWithType: TeamFolderChangeStatusDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.TeamFolderChangeStatusDetails.PreviousValue
+shouldSkipMarkup: true

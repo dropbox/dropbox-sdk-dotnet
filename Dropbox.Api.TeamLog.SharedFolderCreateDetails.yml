@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.SharedFolderCreateDetails
+  commentId: T:Dropbox.Api.TeamLog.SharedFolderCreateDetails
+  id: SharedFolderCreateDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.SharedFolderCreateDetails.#ctor
+  - Dropbox.Api.TeamLog.SharedFolderCreateDetails.#ctor(System.String)
+  - Dropbox.Api.TeamLog.SharedFolderCreateDetails.TargetNsId
+  langs:
+  - csharp
+  - vb
+  name: SharedFolderCreateDetails
+  nameWithType: SharedFolderCreateDetails
+  fullName: Dropbox.Api.TeamLog.SharedFolderCreateDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderCreateDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SharedFolderCreateDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderCreateDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Created shared folder.</p>\n"
+  example: []
+  syntax:
+    content: 'public class SharedFolderCreateDetails : object'
+    content.vb: >-
+      Public Class SharedFolderCreateDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.SharedFolderCreateDetails.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.SharedFolderCreateDetails.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.SharedFolderCreateDetails
+  langs:
+  - csharp
+  - vb
+  name: SharedFolderCreateDetails(String)
+  nameWithType: SharedFolderCreateDetails.SharedFolderCreateDetails(String)
+  fullName: Dropbox.Api.TeamLog.SharedFolderCreateDetails.SharedFolderCreateDetails(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderCreateDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderCreateDetails.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SharedFolderCreateDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public SharedFolderCreateDetails(string targetNsId = null)
+    parameters:
+    - id: targetNsId
+      type: System.String
+      description: Target namespace ID.
+    content.vb: Public Sub New(targetNsId As String = Nothing)
+  overload: Dropbox.Api.TeamLog.SharedFolderCreateDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SharedFolderCreateDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.SharedFolderCreateDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.SharedFolderCreateDetails
+  langs:
+  - csharp
+  - vb
+  name: SharedFolderCreateDetails()
+  nameWithType: SharedFolderCreateDetails.SharedFolderCreateDetails()
+  fullName: Dropbox.Api.TeamLog.SharedFolderCreateDetails.SharedFolderCreateDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderCreateDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderCreateDetails.cs
+    startLine: 45
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SharedFolderCreateDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public SharedFolderCreateDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.SharedFolderCreateDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SharedFolderCreateDetails.TargetNsId
+  commentId: P:Dropbox.Api.TeamLog.SharedFolderCreateDetails.TargetNsId
+  id: TargetNsId
+  parent: Dropbox.Api.TeamLog.SharedFolderCreateDetails
+  langs:
+  - csharp
+  - vb
+  name: TargetNsId
+  nameWithType: SharedFolderCreateDetails.TargetNsId
+  fullName: Dropbox.Api.TeamLog.SharedFolderCreateDetails.TargetNsId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderCreateDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TargetNsId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderCreateDetails.cs
+    startLine: 53
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Target namespace ID.</p>\n"
+  example: []
+  syntax:
+    content: public string TargetNsId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property TargetNsId As String
+  overload: Dropbox.Api.TeamLog.SharedFolderCreateDetails.TargetNsId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.SharedFolderCreateDetails
+  commentId: T:Dropbox.Api.TeamLog.SharedFolderCreateDetails
+  parent: Dropbox.Api.TeamLog
+  name: SharedFolderCreateDetails
+  nameWithType: SharedFolderCreateDetails
+  fullName: Dropbox.Api.TeamLog.SharedFolderCreateDetails
+- uid: Dropbox.Api.TeamLog.SharedFolderCreateDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedFolderCreateDetails.#ctor
+  name: SharedFolderCreateDetails
+  nameWithType: SharedFolderCreateDetails.SharedFolderCreateDetails
+  fullName: Dropbox.Api.TeamLog.SharedFolderCreateDetails.SharedFolderCreateDetails
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.SharedFolderCreateDetails.TargetNsId*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedFolderCreateDetails.TargetNsId
+  name: TargetNsId
+  nameWithType: SharedFolderCreateDetails.TargetNsId
+  fullName: Dropbox.Api.TeamLog.SharedFolderCreateDetails.TargetNsId
+shouldSkipMarkup: true

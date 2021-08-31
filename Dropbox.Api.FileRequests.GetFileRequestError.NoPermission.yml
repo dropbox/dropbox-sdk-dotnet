@@ -1,0 +1,218 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.FileRequests.GetFileRequestError.NoPermission
+  commentId: T:Dropbox.Api.FileRequests.GetFileRequestError.NoPermission
+  id: GetFileRequestError.NoPermission
+  parent: Dropbox.Api.FileRequests
+  children:
+  - Dropbox.Api.FileRequests.GetFileRequestError.NoPermission.Instance
+  langs:
+  - csharp
+  - vb
+  name: GetFileRequestError.NoPermission
+  nameWithType: GetFileRequestError.NoPermission
+  fullName: Dropbox.Api.FileRequests.GetFileRequestError.NoPermission
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/GetFileRequestError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NoPermission
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/GetFileRequestError.cs
+    startLine: 544
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>This user doesn&apos;t have permission to access or modify this file\nrequest.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class NoPermission : GetFileRequestError'
+    content.vb: >-
+      Public NotInheritable Class NoPermission
+          Inherits GetFileRequestError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.FileRequests.GetFileRequestError
+  inheritedMembers:
+  - Dropbox.Api.FileRequests.GetFileRequestError.IsNotFound
+  - Dropbox.Api.FileRequests.GetFileRequestError.AsNotFound
+  - Dropbox.Api.FileRequests.GetFileRequestError.IsNotAFolder
+  - Dropbox.Api.FileRequests.GetFileRequestError.AsNotAFolder
+  - Dropbox.Api.FileRequests.GetFileRequestError.IsAppLacksAccess
+  - Dropbox.Api.FileRequests.GetFileRequestError.AsAppLacksAccess
+  - Dropbox.Api.FileRequests.GetFileRequestError.IsNoPermission
+  - Dropbox.Api.FileRequests.GetFileRequestError.AsNoPermission
+  - Dropbox.Api.FileRequests.GetFileRequestError.IsEmailUnverified
+  - Dropbox.Api.FileRequests.GetFileRequestError.AsEmailUnverified
+  - Dropbox.Api.FileRequests.GetFileRequestError.IsValidationError
+  - Dropbox.Api.FileRequests.GetFileRequestError.AsValidationError
+  - Dropbox.Api.FileRequests.GetFileRequestError.IsDisabledForTeam
+  - Dropbox.Api.FileRequests.GetFileRequestError.AsDisabledForTeam
+  - Dropbox.Api.FileRequests.GetFileRequestError.IsOther
+  - Dropbox.Api.FileRequests.GetFileRequestError.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.FileRequests.GetFileRequestError.NoPermission.Instance
+  commentId: F:Dropbox.Api.FileRequests.GetFileRequestError.NoPermission.Instance
+  id: Instance
+  parent: Dropbox.Api.FileRequests.GetFileRequestError.NoPermission
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: GetFileRequestError.NoPermission.Instance
+  fullName: Dropbox.Api.FileRequests.GetFileRequestError.NoPermission.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/GetFileRequestError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/GetFileRequestError.cs
+    startLine: 569
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>A singleton instance of NoPermission</p>\n"
+  example: []
+  syntax:
+    content: public static readonly GetFileRequestError.NoPermission Instance
+    return:
+      type: Dropbox.Api.FileRequests.GetFileRequestError.NoPermission
+    content.vb: Public Shared ReadOnly Instance As GetFileRequestError.NoPermission
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.FileRequests
+  commentId: N:Dropbox.Api.FileRequests
+  name: Dropbox.Api.FileRequests
+  nameWithType: Dropbox.Api.FileRequests
+  fullName: Dropbox.Api.FileRequests
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.FileRequests.GetFileRequestError
+  commentId: T:Dropbox.Api.FileRequests.GetFileRequestError
+  parent: Dropbox.Api.FileRequests
+  name: GetFileRequestError
+  nameWithType: GetFileRequestError
+  fullName: Dropbox.Api.FileRequests.GetFileRequestError
+- uid: Dropbox.Api.FileRequests.GetFileRequestError.IsNotFound
+  commentId: P:Dropbox.Api.FileRequests.GetFileRequestError.IsNotFound
+  parent: Dropbox.Api.FileRequests.GetFileRequestError
+  name: IsNotFound
+  nameWithType: GetFileRequestError.IsNotFound
+  fullName: Dropbox.Api.FileRequests.GetFileRequestError.IsNotFound
+- uid: Dropbox.Api.FileRequests.GetFileRequestError.AsNotFound
+  commentId: P:Dropbox.Api.FileRequests.GetFileRequestError.AsNotFound
+  parent: Dropbox.Api.FileRequests.GetFileRequestError
+  name: AsNotFound
+  nameWithType: GetFileRequestError.AsNotFound
+  fullName: Dropbox.Api.FileRequests.GetFileRequestError.AsNotFound
+- uid: Dropbox.Api.FileRequests.GetFileRequestError.IsNotAFolder
+  commentId: P:Dropbox.Api.FileRequests.GetFileRequestError.IsNotAFolder
+  parent: Dropbox.Api.FileRequests.GetFileRequestError
+  name: IsNotAFolder
+  nameWithType: GetFileRequestError.IsNotAFolder
+  fullName: Dropbox.Api.FileRequests.GetFileRequestError.IsNotAFolder
+- uid: Dropbox.Api.FileRequests.GetFileRequestError.AsNotAFolder
+  commentId: P:Dropbox.Api.FileRequests.GetFileRequestError.AsNotAFolder
+  parent: Dropbox.Api.FileRequests.GetFileRequestError
+  name: AsNotAFolder
+  nameWithType: GetFileRequestError.AsNotAFolder
+  fullName: Dropbox.Api.FileRequests.GetFileRequestError.AsNotAFolder
+- uid: Dropbox.Api.FileRequests.GetFileRequestError.IsAppLacksAccess
+  commentId: P:Dropbox.Api.FileRequests.GetFileRequestError.IsAppLacksAccess
+  parent: Dropbox.Api.FileRequests.GetFileRequestError
+  name: IsAppLacksAccess
+  nameWithType: GetFileRequestError.IsAppLacksAccess
+  fullName: Dropbox.Api.FileRequests.GetFileRequestError.IsAppLacksAccess
+- uid: Dropbox.Api.FileRequests.GetFileRequestError.AsAppLacksAccess
+  commentId: P:Dropbox.Api.FileRequests.GetFileRequestError.AsAppLacksAccess
+  parent: Dropbox.Api.FileRequests.GetFileRequestError
+  name: AsAppLacksAccess
+  nameWithType: GetFileRequestError.AsAppLacksAccess
+  fullName: Dropbox.Api.FileRequests.GetFileRequestError.AsAppLacksAccess
+- uid: Dropbox.Api.FileRequests.GetFileRequestError.IsNoPermission
+  commentId: P:Dropbox.Api.FileRequests.GetFileRequestError.IsNoPermission
+  parent: Dropbox.Api.FileRequests.GetFileRequestError
+  name: IsNoPermission
+  nameWithType: GetFileRequestError.IsNoPermission
+  fullName: Dropbox.Api.FileRequests.GetFileRequestError.IsNoPermission
+- uid: Dropbox.Api.FileRequests.GetFileRequestError.AsNoPermission
+  commentId: P:Dropbox.Api.FileRequests.GetFileRequestError.AsNoPermission
+  parent: Dropbox.Api.FileRequests.GetFileRequestError
+  name: AsNoPermission
+  nameWithType: GetFileRequestError.AsNoPermission
+  fullName: Dropbox.Api.FileRequests.GetFileRequestError.AsNoPermission
+- uid: Dropbox.Api.FileRequests.GetFileRequestError.IsEmailUnverified
+  commentId: P:Dropbox.Api.FileRequests.GetFileRequestError.IsEmailUnverified
+  parent: Dropbox.Api.FileRequests.GetFileRequestError
+  name: IsEmailUnverified
+  nameWithType: GetFileRequestError.IsEmailUnverified
+  fullName: Dropbox.Api.FileRequests.GetFileRequestError.IsEmailUnverified
+- uid: Dropbox.Api.FileRequests.GetFileRequestError.AsEmailUnverified
+  commentId: P:Dropbox.Api.FileRequests.GetFileRequestError.AsEmailUnverified
+  parent: Dropbox.Api.FileRequests.GetFileRequestError
+  name: AsEmailUnverified
+  nameWithType: GetFileRequestError.AsEmailUnverified
+  fullName: Dropbox.Api.FileRequests.GetFileRequestError.AsEmailUnverified
+- uid: Dropbox.Api.FileRequests.GetFileRequestError.IsValidationError
+  commentId: P:Dropbox.Api.FileRequests.GetFileRequestError.IsValidationError
+  parent: Dropbox.Api.FileRequests.GetFileRequestError
+  name: IsValidationError
+  nameWithType: GetFileRequestError.IsValidationError
+  fullName: Dropbox.Api.FileRequests.GetFileRequestError.IsValidationError
+- uid: Dropbox.Api.FileRequests.GetFileRequestError.AsValidationError
+  commentId: P:Dropbox.Api.FileRequests.GetFileRequestError.AsValidationError
+  parent: Dropbox.Api.FileRequests.GetFileRequestError
+  name: AsValidationError
+  nameWithType: GetFileRequestError.AsValidationError
+  fullName: Dropbox.Api.FileRequests.GetFileRequestError.AsValidationError
+- uid: Dropbox.Api.FileRequests.GetFileRequestError.IsDisabledForTeam
+  commentId: P:Dropbox.Api.FileRequests.GetFileRequestError.IsDisabledForTeam
+  parent: Dropbox.Api.FileRequests.GetFileRequestError
+  name: IsDisabledForTeam
+  nameWithType: GetFileRequestError.IsDisabledForTeam
+  fullName: Dropbox.Api.FileRequests.GetFileRequestError.IsDisabledForTeam
+- uid: Dropbox.Api.FileRequests.GetFileRequestError.AsDisabledForTeam
+  commentId: P:Dropbox.Api.FileRequests.GetFileRequestError.AsDisabledForTeam
+  parent: Dropbox.Api.FileRequests.GetFileRequestError
+  name: AsDisabledForTeam
+  nameWithType: GetFileRequestError.AsDisabledForTeam
+  fullName: Dropbox.Api.FileRequests.GetFileRequestError.AsDisabledForTeam
+- uid: Dropbox.Api.FileRequests.GetFileRequestError.IsOther
+  commentId: P:Dropbox.Api.FileRequests.GetFileRequestError.IsOther
+  parent: Dropbox.Api.FileRequests.GetFileRequestError
+  name: IsOther
+  nameWithType: GetFileRequestError.IsOther
+  fullName: Dropbox.Api.FileRequests.GetFileRequestError.IsOther
+- uid: Dropbox.Api.FileRequests.GetFileRequestError.AsOther
+  commentId: P:Dropbox.Api.FileRequests.GetFileRequestError.AsOther
+  parent: Dropbox.Api.FileRequests.GetFileRequestError
+  name: AsOther
+  nameWithType: GetFileRequestError.AsOther
+  fullName: Dropbox.Api.FileRequests.GetFileRequestError.AsOther
+- uid: Dropbox.Api.FileRequests.GetFileRequestError.NoPermission
+  commentId: T:Dropbox.Api.FileRequests.GetFileRequestError.NoPermission
+  parent: Dropbox.Api.FileRequests
+  name: GetFileRequestError.NoPermission
+  nameWithType: GetFileRequestError.NoPermission
+  fullName: Dropbox.Api.FileRequests.GetFileRequestError.NoPermission
+shouldSkipMarkup: true

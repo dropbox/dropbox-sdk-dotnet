@@ -1,0 +1,96 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.TeamProfileChangeLogoDetails
+  commentId: T:Dropbox.Api.TeamLog.TeamProfileChangeLogoDetails
+  id: TeamProfileChangeLogoDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.TeamProfileChangeLogoDetails.#ctor
+  langs:
+  - csharp
+  - vb
+  name: TeamProfileChangeLogoDetails
+  nameWithType: TeamProfileChangeLogoDetails
+  fullName: Dropbox.Api.TeamLog.TeamProfileChangeLogoDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamProfileChangeLogoDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TeamProfileChangeLogoDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamProfileChangeLogoDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Changed team logo displayed on shared link headers.</p>\n"
+  example: []
+  syntax:
+    content: 'public class TeamProfileChangeLogoDetails : object'
+    content.vb: >-
+      Public Class TeamProfileChangeLogoDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.TeamProfileChangeLogoDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.TeamProfileChangeLogoDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.TeamProfileChangeLogoDetails
+  langs:
+  - csharp
+  - vb
+  name: TeamProfileChangeLogoDetails()
+  nameWithType: TeamProfileChangeLogoDetails.TeamProfileChangeLogoDetails()
+  fullName: Dropbox.Api.TeamLog.TeamProfileChangeLogoDetails.TeamProfileChangeLogoDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamProfileChangeLogoDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamProfileChangeLogoDetails.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.TeamProfileChangeLogoDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public TeamProfileChangeLogoDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.TeamProfileChangeLogoDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.TeamProfileChangeLogoDetails
+  commentId: T:Dropbox.Api.TeamLog.TeamProfileChangeLogoDetails
+  parent: Dropbox.Api.TeamLog
+  name: TeamProfileChangeLogoDetails
+  nameWithType: TeamProfileChangeLogoDetails
+  fullName: Dropbox.Api.TeamLog.TeamProfileChangeLogoDetails
+- uid: Dropbox.Api.TeamLog.TeamProfileChangeLogoDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.TeamProfileChangeLogoDetails.#ctor
+  name: TeamProfileChangeLogoDetails
+  nameWithType: TeamProfileChangeLogoDetails.TeamProfileChangeLogoDetails
+  fullName: Dropbox.Api.TeamLog.TeamProfileChangeLogoDetails.TeamProfileChangeLogoDetails
+shouldSkipMarkup: true

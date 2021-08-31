@@ -1,0 +1,170 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.FileOpsResult
+  commentId: T:Dropbox.Api.Files.FileOpsResult
+  id: FileOpsResult
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.FileOpsResult.#ctor
+  langs:
+  - csharp
+  - vb
+  name: FileOpsResult
+  nameWithType: FileOpsResult
+  fullName: Dropbox.Api.Files.FileOpsResult
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileOpsResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: FileOpsResult
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileOpsResult.cs
+    startLine: 23
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The file ops result object</p>\n"
+  example: []
+  syntax:
+    content: 'public class FileOpsResult : object'
+    content.vb: >-
+      Public Class FileOpsResult
+          Inherits Object
+  seealso:
+  - linkId: Dropbox.Api.Files.CreateFolderBatchResult
+    commentId: T:Dropbox.Api.Files.CreateFolderBatchResult
+  - linkId: Dropbox.Api.Files.CreateFolderResult
+    commentId: T:Dropbox.Api.Files.CreateFolderResult
+  - linkId: Dropbox.Api.Files.DeleteBatchResult
+    commentId: T:Dropbox.Api.Files.DeleteBatchResult
+  - linkId: Dropbox.Api.Files.DeleteResult
+    commentId: T:Dropbox.Api.Files.DeleteResult
+  - linkId: Dropbox.Api.Files.LockFileBatchResult
+    commentId: T:Dropbox.Api.Files.LockFileBatchResult
+  - linkId: Dropbox.Api.Files.RelocationBatchResult
+    commentId: T:Dropbox.Api.Files.RelocationBatchResult
+  - linkId: Dropbox.Api.Files.RelocationBatchV2Result
+    commentId: T:Dropbox.Api.Files.RelocationBatchV2Result
+  - linkId: Dropbox.Api.Files.RelocationResult
+    commentId: T:Dropbox.Api.Files.RelocationResult
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Files.CreateFolderBatchResult
+  - Dropbox.Api.Files.CreateFolderResult
+  - Dropbox.Api.Files.DeleteBatchResult
+  - Dropbox.Api.Files.DeleteResult
+  - Dropbox.Api.Files.LockFileBatchResult
+  - Dropbox.Api.Files.RelocationBatchResult
+  - Dropbox.Api.Files.RelocationBatchV2Result
+  - Dropbox.Api.Files.RelocationResult
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.FileOpsResult.#ctor
+  commentId: M:Dropbox.Api.Files.FileOpsResult.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.FileOpsResult
+  langs:
+  - csharp
+  - vb
+  name: FileOpsResult()
+  nameWithType: FileOpsResult.FileOpsResult()
+  fullName: Dropbox.Api.Files.FileOpsResult.FileOpsResult()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileOpsResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileOpsResult.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.FileOpsResult\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public FileOpsResult()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.FileOpsResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Dropbox.Api.Files.CreateFolderBatchResult
+  commentId: T:Dropbox.Api.Files.CreateFolderBatchResult
+  parent: Dropbox.Api.Files
+  name: CreateFolderBatchResult
+  nameWithType: CreateFolderBatchResult
+  fullName: Dropbox.Api.Files.CreateFolderBatchResult
+- uid: Dropbox.Api.Files.CreateFolderResult
+  commentId: T:Dropbox.Api.Files.CreateFolderResult
+  parent: Dropbox.Api.Files
+  name: CreateFolderResult
+  nameWithType: CreateFolderResult
+  fullName: Dropbox.Api.Files.CreateFolderResult
+- uid: Dropbox.Api.Files.DeleteBatchResult
+  commentId: T:Dropbox.Api.Files.DeleteBatchResult
+  parent: Dropbox.Api.Files
+  name: DeleteBatchResult
+  nameWithType: DeleteBatchResult
+  fullName: Dropbox.Api.Files.DeleteBatchResult
+- uid: Dropbox.Api.Files.DeleteResult
+  commentId: T:Dropbox.Api.Files.DeleteResult
+  parent: Dropbox.Api.Files
+  name: DeleteResult
+  nameWithType: DeleteResult
+  fullName: Dropbox.Api.Files.DeleteResult
+- uid: Dropbox.Api.Files.LockFileBatchResult
+  commentId: T:Dropbox.Api.Files.LockFileBatchResult
+  parent: Dropbox.Api.Files
+  name: LockFileBatchResult
+  nameWithType: LockFileBatchResult
+  fullName: Dropbox.Api.Files.LockFileBatchResult
+- uid: Dropbox.Api.Files.RelocationBatchResult
+  commentId: T:Dropbox.Api.Files.RelocationBatchResult
+  parent: Dropbox.Api.Files
+  name: RelocationBatchResult
+  nameWithType: RelocationBatchResult
+  fullName: Dropbox.Api.Files.RelocationBatchResult
+- uid: Dropbox.Api.Files.RelocationBatchV2Result
+  commentId: T:Dropbox.Api.Files.RelocationBatchV2Result
+  parent: Dropbox.Api.Files
+  name: RelocationBatchV2Result
+  nameWithType: RelocationBatchV2Result
+  fullName: Dropbox.Api.Files.RelocationBatchV2Result
+- uid: Dropbox.Api.Files.RelocationResult
+  commentId: T:Dropbox.Api.Files.RelocationResult
+  parent: Dropbox.Api.Files
+  name: RelocationResult
+  nameWithType: RelocationResult
+  fullName: Dropbox.Api.Files.RelocationResult
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.FileOpsResult
+  commentId: T:Dropbox.Api.Files.FileOpsResult
+  parent: Dropbox.Api.Files
+  name: FileOpsResult
+  nameWithType: FileOpsResult
+  fullName: Dropbox.Api.Files.FileOpsResult
+- uid: Dropbox.Api.Files.FileOpsResult.#ctor*
+  commentId: Overload:Dropbox.Api.Files.FileOpsResult.#ctor
+  name: FileOpsResult
+  nameWithType: FileOpsResult.FileOpsResult
+  fullName: Dropbox.Api.Files.FileOpsResult.FileOpsResult
+shouldSkipMarkup: true

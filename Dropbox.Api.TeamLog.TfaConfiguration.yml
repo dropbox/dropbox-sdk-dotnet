@@ -1,0 +1,567 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.TfaConfiguration
+  commentId: T:Dropbox.Api.TeamLog.TfaConfiguration
+  id: TfaConfiguration
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.TfaConfiguration.#ctor
+  - Dropbox.Api.TeamLog.TfaConfiguration.AsAuthenticator
+  - Dropbox.Api.TeamLog.TfaConfiguration.AsDisabled
+  - Dropbox.Api.TeamLog.TfaConfiguration.AsEnabled
+  - Dropbox.Api.TeamLog.TfaConfiguration.AsOther
+  - Dropbox.Api.TeamLog.TfaConfiguration.AsSms
+  - Dropbox.Api.TeamLog.TfaConfiguration.IsAuthenticator
+  - Dropbox.Api.TeamLog.TfaConfiguration.IsDisabled
+  - Dropbox.Api.TeamLog.TfaConfiguration.IsEnabled
+  - Dropbox.Api.TeamLog.TfaConfiguration.IsOther
+  - Dropbox.Api.TeamLog.TfaConfiguration.IsSms
+  langs:
+  - csharp
+  - vb
+  name: TfaConfiguration
+  nameWithType: TfaConfiguration
+  fullName: Dropbox.Api.TeamLog.TfaConfiguration
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaConfiguration.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TfaConfiguration
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaConfiguration.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Two factor authentication configuration. Note: the enabled option is\ndeprecated.</p>\n"
+  example: []
+  syntax:
+    content: 'public class TfaConfiguration : object'
+    content.vb: >-
+      Public Class TfaConfiguration
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.TeamLog.TfaConfiguration.Authenticator
+  - Dropbox.Api.TeamLog.TfaConfiguration.Disabled
+  - Dropbox.Api.TeamLog.TfaConfiguration.Enabled
+  - Dropbox.Api.TeamLog.TfaConfiguration.Other
+  - Dropbox.Api.TeamLog.TfaConfiguration.Sms
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.TfaConfiguration.#ctor
+  commentId: M:Dropbox.Api.TeamLog.TfaConfiguration.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.TfaConfiguration
+  langs:
+  - csharp
+  - vb
+  name: TfaConfiguration()
+  nameWithType: TfaConfiguration.TfaConfiguration()
+  fullName: Dropbox.Api.TeamLog.TfaConfiguration.TfaConfiguration()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaConfiguration.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaConfiguration.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.TfaConfiguration\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public TfaConfiguration()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.TfaConfiguration.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.TfaConfiguration.IsAuthenticator
+  commentId: P:Dropbox.Api.TeamLog.TfaConfiguration.IsAuthenticator
+  id: IsAuthenticator
+  parent: Dropbox.Api.TeamLog.TfaConfiguration
+  langs:
+  - csharp
+  - vb
+  name: IsAuthenticator
+  nameWithType: TfaConfiguration.IsAuthenticator
+  fullName: Dropbox.Api.TeamLog.TfaConfiguration.IsAuthenticator
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaConfiguration.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsAuthenticator
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaConfiguration.cs
+    startLine: 41
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Authenticator</p>\n"
+  example: []
+  syntax:
+    content: public bool IsAuthenticator { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsAuthenticator As Boolean
+  overload: Dropbox.Api.TeamLog.TfaConfiguration.IsAuthenticator*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.TfaConfiguration.AsAuthenticator
+  commentId: P:Dropbox.Api.TeamLog.TfaConfiguration.AsAuthenticator
+  id: AsAuthenticator
+  parent: Dropbox.Api.TeamLog.TfaConfiguration
+  langs:
+  - csharp
+  - vb
+  name: AsAuthenticator
+  nameWithType: TfaConfiguration.AsAuthenticator
+  fullName: Dropbox.Api.TeamLog.TfaConfiguration.AsAuthenticator
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaConfiguration.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsAuthenticator
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaConfiguration.cs
+    startLine: 52
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Authenticator, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public TfaConfiguration.Authenticator AsAuthenticator { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.TfaConfiguration.Authenticator
+    content.vb: Public ReadOnly Property AsAuthenticator As TfaConfiguration.Authenticator
+  overload: Dropbox.Api.TeamLog.TfaConfiguration.AsAuthenticator*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.TfaConfiguration.IsDisabled
+  commentId: P:Dropbox.Api.TeamLog.TfaConfiguration.IsDisabled
+  id: IsDisabled
+  parent: Dropbox.Api.TeamLog.TfaConfiguration
+  langs:
+  - csharp
+  - vb
+  name: IsDisabled
+  nameWithType: TfaConfiguration.IsDisabled
+  fullName: Dropbox.Api.TeamLog.TfaConfiguration.IsDisabled
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaConfiguration.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsDisabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaConfiguration.cs
+    startLine: 63
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Disabled</p>\n"
+  example: []
+  syntax:
+    content: public bool IsDisabled { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsDisabled As Boolean
+  overload: Dropbox.Api.TeamLog.TfaConfiguration.IsDisabled*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.TfaConfiguration.AsDisabled
+  commentId: P:Dropbox.Api.TeamLog.TfaConfiguration.AsDisabled
+  id: AsDisabled
+  parent: Dropbox.Api.TeamLog.TfaConfiguration
+  langs:
+  - csharp
+  - vb
+  name: AsDisabled
+  nameWithType: TfaConfiguration.AsDisabled
+  fullName: Dropbox.Api.TeamLog.TfaConfiguration.AsDisabled
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaConfiguration.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsDisabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaConfiguration.cs
+    startLine: 74
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Disabled, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public TfaConfiguration.Disabled AsDisabled { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.TfaConfiguration.Disabled
+    content.vb: Public ReadOnly Property AsDisabled As TfaConfiguration.Disabled
+  overload: Dropbox.Api.TeamLog.TfaConfiguration.AsDisabled*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.TfaConfiguration.IsEnabled
+  commentId: P:Dropbox.Api.TeamLog.TfaConfiguration.IsEnabled
+  id: IsEnabled
+  parent: Dropbox.Api.TeamLog.TfaConfiguration
+  langs:
+  - csharp
+  - vb
+  name: IsEnabled
+  nameWithType: TfaConfiguration.IsEnabled
+  fullName: Dropbox.Api.TeamLog.TfaConfiguration.IsEnabled
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaConfiguration.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsEnabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaConfiguration.cs
+    startLine: 85
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Enabled</p>\n"
+  example: []
+  syntax:
+    content: public bool IsEnabled { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsEnabled As Boolean
+  overload: Dropbox.Api.TeamLog.TfaConfiguration.IsEnabled*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.TfaConfiguration.AsEnabled
+  commentId: P:Dropbox.Api.TeamLog.TfaConfiguration.AsEnabled
+  id: AsEnabled
+  parent: Dropbox.Api.TeamLog.TfaConfiguration
+  langs:
+  - csharp
+  - vb
+  name: AsEnabled
+  nameWithType: TfaConfiguration.AsEnabled
+  fullName: Dropbox.Api.TeamLog.TfaConfiguration.AsEnabled
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaConfiguration.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsEnabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaConfiguration.cs
+    startLine: 96
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Enabled, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public TfaConfiguration.Enabled AsEnabled { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.TfaConfiguration.Enabled
+    content.vb: Public ReadOnly Property AsEnabled As TfaConfiguration.Enabled
+  overload: Dropbox.Api.TeamLog.TfaConfiguration.AsEnabled*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.TfaConfiguration.IsSms
+  commentId: P:Dropbox.Api.TeamLog.TfaConfiguration.IsSms
+  id: IsSms
+  parent: Dropbox.Api.TeamLog.TfaConfiguration
+  langs:
+  - csharp
+  - vb
+  name: IsSms
+  nameWithType: TfaConfiguration.IsSms
+  fullName: Dropbox.Api.TeamLog.TfaConfiguration.IsSms
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaConfiguration.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsSms
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaConfiguration.cs
+    startLine: 107
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Sms</p>\n"
+  example: []
+  syntax:
+    content: public bool IsSms { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsSms As Boolean
+  overload: Dropbox.Api.TeamLog.TfaConfiguration.IsSms*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.TfaConfiguration.AsSms
+  commentId: P:Dropbox.Api.TeamLog.TfaConfiguration.AsSms
+  id: AsSms
+  parent: Dropbox.Api.TeamLog.TfaConfiguration
+  langs:
+  - csharp
+  - vb
+  name: AsSms
+  nameWithType: TfaConfiguration.AsSms
+  fullName: Dropbox.Api.TeamLog.TfaConfiguration.AsSms
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaConfiguration.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsSms
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaConfiguration.cs
+    startLine: 118
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Sms, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public TfaConfiguration.Sms AsSms { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.TfaConfiguration.Sms
+    content.vb: Public ReadOnly Property AsSms As TfaConfiguration.Sms
+  overload: Dropbox.Api.TeamLog.TfaConfiguration.AsSms*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.TfaConfiguration.IsOther
+  commentId: P:Dropbox.Api.TeamLog.TfaConfiguration.IsOther
+  id: IsOther
+  parent: Dropbox.Api.TeamLog.TfaConfiguration
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: TfaConfiguration.IsOther
+  fullName: Dropbox.Api.TeamLog.TfaConfiguration.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaConfiguration.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaConfiguration.cs
+    startLine: 129
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.TeamLog.TfaConfiguration.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.TfaConfiguration.AsOther
+  commentId: P:Dropbox.Api.TeamLog.TfaConfiguration.AsOther
+  id: AsOther
+  parent: Dropbox.Api.TeamLog.TfaConfiguration
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: TfaConfiguration.AsOther
+  fullName: Dropbox.Api.TeamLog.TfaConfiguration.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaConfiguration.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaConfiguration.cs
+    startLine: 140
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public TfaConfiguration.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.TfaConfiguration.Other
+    content.vb: Public ReadOnly Property AsOther As TfaConfiguration.Other
+  overload: Dropbox.Api.TeamLog.TfaConfiguration.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.TfaConfiguration
+  commentId: T:Dropbox.Api.TeamLog.TfaConfiguration
+  parent: Dropbox.Api.TeamLog
+  name: TfaConfiguration
+  nameWithType: TfaConfiguration
+  fullName: Dropbox.Api.TeamLog.TfaConfiguration
+- uid: Dropbox.Api.TeamLog.TfaConfiguration.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.TfaConfiguration.#ctor
+  name: TfaConfiguration
+  nameWithType: TfaConfiguration.TfaConfiguration
+  fullName: Dropbox.Api.TeamLog.TfaConfiguration.TfaConfiguration
+- uid: Dropbox.Api.TeamLog.TfaConfiguration.IsAuthenticator*
+  commentId: Overload:Dropbox.Api.TeamLog.TfaConfiguration.IsAuthenticator
+  name: IsAuthenticator
+  nameWithType: TfaConfiguration.IsAuthenticator
+  fullName: Dropbox.Api.TeamLog.TfaConfiguration.IsAuthenticator
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.TeamLog.TfaConfiguration.AsAuthenticator*
+  commentId: Overload:Dropbox.Api.TeamLog.TfaConfiguration.AsAuthenticator
+  name: AsAuthenticator
+  nameWithType: TfaConfiguration.AsAuthenticator
+  fullName: Dropbox.Api.TeamLog.TfaConfiguration.AsAuthenticator
+- uid: Dropbox.Api.TeamLog.TfaConfiguration.Authenticator
+  commentId: T:Dropbox.Api.TeamLog.TfaConfiguration.Authenticator
+  parent: Dropbox.Api.TeamLog
+  name: TfaConfiguration.Authenticator
+  nameWithType: TfaConfiguration.Authenticator
+  fullName: Dropbox.Api.TeamLog.TfaConfiguration.Authenticator
+- uid: Dropbox.Api.TeamLog.TfaConfiguration.IsDisabled*
+  commentId: Overload:Dropbox.Api.TeamLog.TfaConfiguration.IsDisabled
+  name: IsDisabled
+  nameWithType: TfaConfiguration.IsDisabled
+  fullName: Dropbox.Api.TeamLog.TfaConfiguration.IsDisabled
+- uid: Dropbox.Api.TeamLog.TfaConfiguration.AsDisabled*
+  commentId: Overload:Dropbox.Api.TeamLog.TfaConfiguration.AsDisabled
+  name: AsDisabled
+  nameWithType: TfaConfiguration.AsDisabled
+  fullName: Dropbox.Api.TeamLog.TfaConfiguration.AsDisabled
+- uid: Dropbox.Api.TeamLog.TfaConfiguration.Disabled
+  commentId: T:Dropbox.Api.TeamLog.TfaConfiguration.Disabled
+  parent: Dropbox.Api.TeamLog
+  name: TfaConfiguration.Disabled
+  nameWithType: TfaConfiguration.Disabled
+  fullName: Dropbox.Api.TeamLog.TfaConfiguration.Disabled
+- uid: Dropbox.Api.TeamLog.TfaConfiguration.IsEnabled*
+  commentId: Overload:Dropbox.Api.TeamLog.TfaConfiguration.IsEnabled
+  name: IsEnabled
+  nameWithType: TfaConfiguration.IsEnabled
+  fullName: Dropbox.Api.TeamLog.TfaConfiguration.IsEnabled
+- uid: Dropbox.Api.TeamLog.TfaConfiguration.AsEnabled*
+  commentId: Overload:Dropbox.Api.TeamLog.TfaConfiguration.AsEnabled
+  name: AsEnabled
+  nameWithType: TfaConfiguration.AsEnabled
+  fullName: Dropbox.Api.TeamLog.TfaConfiguration.AsEnabled
+- uid: Dropbox.Api.TeamLog.TfaConfiguration.Enabled
+  commentId: T:Dropbox.Api.TeamLog.TfaConfiguration.Enabled
+  parent: Dropbox.Api.TeamLog
+  name: TfaConfiguration.Enabled
+  nameWithType: TfaConfiguration.Enabled
+  fullName: Dropbox.Api.TeamLog.TfaConfiguration.Enabled
+- uid: Dropbox.Api.TeamLog.TfaConfiguration.IsSms*
+  commentId: Overload:Dropbox.Api.TeamLog.TfaConfiguration.IsSms
+  name: IsSms
+  nameWithType: TfaConfiguration.IsSms
+  fullName: Dropbox.Api.TeamLog.TfaConfiguration.IsSms
+- uid: Dropbox.Api.TeamLog.TfaConfiguration.AsSms*
+  commentId: Overload:Dropbox.Api.TeamLog.TfaConfiguration.AsSms
+  name: AsSms
+  nameWithType: TfaConfiguration.AsSms
+  fullName: Dropbox.Api.TeamLog.TfaConfiguration.AsSms
+- uid: Dropbox.Api.TeamLog.TfaConfiguration.Sms
+  commentId: T:Dropbox.Api.TeamLog.TfaConfiguration.Sms
+  parent: Dropbox.Api.TeamLog
+  name: TfaConfiguration.Sms
+  nameWithType: TfaConfiguration.Sms
+  fullName: Dropbox.Api.TeamLog.TfaConfiguration.Sms
+- uid: Dropbox.Api.TeamLog.TfaConfiguration.IsOther*
+  commentId: Overload:Dropbox.Api.TeamLog.TfaConfiguration.IsOther
+  name: IsOther
+  nameWithType: TfaConfiguration.IsOther
+  fullName: Dropbox.Api.TeamLog.TfaConfiguration.IsOther
+- uid: Dropbox.Api.TeamLog.TfaConfiguration.AsOther*
+  commentId: Overload:Dropbox.Api.TeamLog.TfaConfiguration.AsOther
+  name: AsOther
+  nameWithType: TfaConfiguration.AsOther
+  fullName: Dropbox.Api.TeamLog.TfaConfiguration.AsOther
+- uid: Dropbox.Api.TeamLog.TfaConfiguration.Other
+  commentId: T:Dropbox.Api.TeamLog.TfaConfiguration.Other
+  parent: Dropbox.Api.TeamLog
+  name: TfaConfiguration.Other
+  nameWithType: TfaConfiguration.Other
+  fullName: Dropbox.Api.TeamLog.TfaConfiguration.Other
+shouldSkipMarkup: true

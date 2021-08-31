@@ -1,0 +1,571 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.MembersSetProfileArg
+  commentId: T:Dropbox.Api.Team.MembersSetProfileArg
+  id: MembersSetProfileArg
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.MembersSetProfileArg.#ctor
+  - Dropbox.Api.Team.MembersSetProfileArg.#ctor(Dropbox.Api.Team.UserSelectorArg,System.String,System.String,System.String,System.String,System.String,System.Nullable{System.Boolean})
+  - Dropbox.Api.Team.MembersSetProfileArg.NewEmail
+  - Dropbox.Api.Team.MembersSetProfileArg.NewExternalId
+  - Dropbox.Api.Team.MembersSetProfileArg.NewGivenName
+  - Dropbox.Api.Team.MembersSetProfileArg.NewIsDirectoryRestricted
+  - Dropbox.Api.Team.MembersSetProfileArg.NewPersistentId
+  - Dropbox.Api.Team.MembersSetProfileArg.NewSurname
+  - Dropbox.Api.Team.MembersSetProfileArg.User
+  langs:
+  - csharp
+  - vb
+  name: MembersSetProfileArg
+  nameWithType: MembersSetProfileArg
+  fullName: Dropbox.Api.Team.MembersSetProfileArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: MembersSetProfileArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileArg.cs
+    startLine: 18
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Exactly one of team_member_id, email, or external_id must be provided to identify\nthe user account.</p>\n<p>At least one of new_email, new_external_id, new_given_name, and/or new_surname\nmust be provided.</p>\n"
+  example: []
+  syntax:
+    content: 'public class MembersSetProfileArg : object'
+    content.vb: >-
+      Public Class MembersSetProfileArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.MembersSetProfileArg.#ctor(Dropbox.Api.Team.UserSelectorArg,System.String,System.String,System.String,System.String,System.String,System.Nullable{System.Boolean})
+  commentId: M:Dropbox.Api.Team.MembersSetProfileArg.#ctor(Dropbox.Api.Team.UserSelectorArg,System.String,System.String,System.String,System.String,System.String,System.Nullable{System.Boolean})
+  id: '#ctor(Dropbox.Api.Team.UserSelectorArg,System.String,System.String,System.String,System.String,System.String,System.Nullable{System.Boolean})'
+  parent: Dropbox.Api.Team.MembersSetProfileArg
+  langs:
+  - csharp
+  - vb
+  name: MembersSetProfileArg(UserSelectorArg, String, String, String, String, String, Nullable<Boolean>)
+  nameWithType: MembersSetProfileArg.MembersSetProfileArg(UserSelectorArg, String, String, String, String, String, Nullable<Boolean>)
+  fullName: Dropbox.Api.Team.MembersSetProfileArg.MembersSetProfileArg(Dropbox.Api.Team.UserSelectorArg, System.String, System.String, System.String, System.String, System.String, System.Nullable<System.Boolean>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileArg.cs
+    startLine: 45
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.MembersSetProfileArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public MembersSetProfileArg(UserSelectorArg user, string newEmail = null, string newExternalId = null, string newGivenName = null, string newSurname = null, string newPersistentId = null, bool? newIsDirectoryRestricted = null)
+    parameters:
+    - id: user
+      type: Dropbox.Api.Team.UserSelectorArg
+      description: Identity of user whose profile will be set.
+    - id: newEmail
+      type: System.String
+      description: New email for member.
+    - id: newExternalId
+      type: System.String
+      description: New external ID for member.
+    - id: newGivenName
+      type: System.String
+      description: New given name for member.
+    - id: newSurname
+      type: System.String
+      description: New surname for member.
+    - id: newPersistentId
+      type: System.String
+      description: >-
+        New persistent ID. This field only available to teams
+
+        using persistent ID SAML configuration.
+    - id: newIsDirectoryRestricted
+      type: System.Nullable{System.Boolean}
+      description: >-
+        New value for whether the user is a
+
+        directory restricted user.
+    content.vb: Public Sub New(user As UserSelectorArg, newEmail As String = Nothing, newExternalId As String = Nothing, newGivenName As String = Nothing, newSurname As String = Nothing, newPersistentId As String = Nothing, newIsDirectoryRestricted As Boolean? = Nothing)
+  overload: Dropbox.Api.Team.MembersSetProfileArg.#ctor*
+  nameWithType.vb: MembersSetProfileArg.MembersSetProfileArg(UserSelectorArg, String, String, String, String, String, Nullable(Of Boolean))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Team.MembersSetProfileArg.MembersSetProfileArg(Dropbox.Api.Team.UserSelectorArg, System.String, System.String, System.String, System.String, System.String, System.Nullable(Of System.Boolean))
+  name.vb: MembersSetProfileArg(UserSelectorArg, String, String, String, String, String, Nullable(Of Boolean))
+- uid: Dropbox.Api.Team.MembersSetProfileArg.#ctor
+  commentId: M:Dropbox.Api.Team.MembersSetProfileArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.MembersSetProfileArg
+  langs:
+  - csharp
+  - vb
+  name: MembersSetProfileArg()
+  nameWithType: MembersSetProfileArg.MembersSetProfileArg()
+  fullName: Dropbox.Api.Team.MembersSetProfileArg.MembersSetProfileArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileArg.cs
+    startLine: 117
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.MembersSetProfileArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public MembersSetProfileArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.MembersSetProfileArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.MembersSetProfileArg.User
+  commentId: P:Dropbox.Api.Team.MembersSetProfileArg.User
+  id: User
+  parent: Dropbox.Api.Team.MembersSetProfileArg
+  langs:
+  - csharp
+  - vb
+  name: User
+  nameWithType: MembersSetProfileArg.User
+  fullName: Dropbox.Api.Team.MembersSetProfileArg.User
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: User
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileArg.cs
+    startLine: 125
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Identity of user whose profile will be set.</p>\n"
+  example: []
+  syntax:
+    content: public UserSelectorArg User { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.UserSelectorArg
+    content.vb: Public Property User As UserSelectorArg
+  overload: Dropbox.Api.Team.MembersSetProfileArg.User*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.MembersSetProfileArg.NewEmail
+  commentId: P:Dropbox.Api.Team.MembersSetProfileArg.NewEmail
+  id: NewEmail
+  parent: Dropbox.Api.Team.MembersSetProfileArg
+  langs:
+  - csharp
+  - vb
+  name: NewEmail
+  nameWithType: MembersSetProfileArg.NewEmail
+  fullName: Dropbox.Api.Team.MembersSetProfileArg.NewEmail
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NewEmail
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileArg.cs
+    startLine: 130
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>New email for member.</p>\n"
+  example: []
+  syntax:
+    content: public string NewEmail { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property NewEmail As String
+  overload: Dropbox.Api.Team.MembersSetProfileArg.NewEmail*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.MembersSetProfileArg.NewExternalId
+  commentId: P:Dropbox.Api.Team.MembersSetProfileArg.NewExternalId
+  id: NewExternalId
+  parent: Dropbox.Api.Team.MembersSetProfileArg
+  langs:
+  - csharp
+  - vb
+  name: NewExternalId
+  nameWithType: MembersSetProfileArg.NewExternalId
+  fullName: Dropbox.Api.Team.MembersSetProfileArg.NewExternalId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NewExternalId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileArg.cs
+    startLine: 135
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>New external ID for member.</p>\n"
+  example: []
+  syntax:
+    content: public string NewExternalId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property NewExternalId As String
+  overload: Dropbox.Api.Team.MembersSetProfileArg.NewExternalId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.MembersSetProfileArg.NewGivenName
+  commentId: P:Dropbox.Api.Team.MembersSetProfileArg.NewGivenName
+  id: NewGivenName
+  parent: Dropbox.Api.Team.MembersSetProfileArg
+  langs:
+  - csharp
+  - vb
+  name: NewGivenName
+  nameWithType: MembersSetProfileArg.NewGivenName
+  fullName: Dropbox.Api.Team.MembersSetProfileArg.NewGivenName
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NewGivenName
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileArg.cs
+    startLine: 140
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>New given name for member.</p>\n"
+  example: []
+  syntax:
+    content: public string NewGivenName { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property NewGivenName As String
+  overload: Dropbox.Api.Team.MembersSetProfileArg.NewGivenName*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.MembersSetProfileArg.NewSurname
+  commentId: P:Dropbox.Api.Team.MembersSetProfileArg.NewSurname
+  id: NewSurname
+  parent: Dropbox.Api.Team.MembersSetProfileArg
+  langs:
+  - csharp
+  - vb
+  name: NewSurname
+  nameWithType: MembersSetProfileArg.NewSurname
+  fullName: Dropbox.Api.Team.MembersSetProfileArg.NewSurname
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NewSurname
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileArg.cs
+    startLine: 145
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>New surname for member.</p>\n"
+  example: []
+  syntax:
+    content: public string NewSurname { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property NewSurname As String
+  overload: Dropbox.Api.Team.MembersSetProfileArg.NewSurname*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.MembersSetProfileArg.NewPersistentId
+  commentId: P:Dropbox.Api.Team.MembersSetProfileArg.NewPersistentId
+  id: NewPersistentId
+  parent: Dropbox.Api.Team.MembersSetProfileArg
+  langs:
+  - csharp
+  - vb
+  name: NewPersistentId
+  nameWithType: MembersSetProfileArg.NewPersistentId
+  fullName: Dropbox.Api.Team.MembersSetProfileArg.NewPersistentId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NewPersistentId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileArg.cs
+    startLine: 151
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>New persistent ID. This field only available to teams using persistent ID\nSAML configuration.</p>\n"
+  example: []
+  syntax:
+    content: public string NewPersistentId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property NewPersistentId As String
+  overload: Dropbox.Api.Team.MembersSetProfileArg.NewPersistentId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.MembersSetProfileArg.NewIsDirectoryRestricted
+  commentId: P:Dropbox.Api.Team.MembersSetProfileArg.NewIsDirectoryRestricted
+  id: NewIsDirectoryRestricted
+  parent: Dropbox.Api.Team.MembersSetProfileArg
+  langs:
+  - csharp
+  - vb
+  name: NewIsDirectoryRestricted
+  nameWithType: MembersSetProfileArg.NewIsDirectoryRestricted
+  fullName: Dropbox.Api.Team.MembersSetProfileArg.NewIsDirectoryRestricted
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NewIsDirectoryRestricted
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfileArg.cs
+    startLine: 156
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>New value for whether the user is a directory restricted user.</p>\n"
+  example: []
+  syntax:
+    content: public bool? NewIsDirectoryRestricted { get; protected set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: Public Property NewIsDirectoryRestricted As Boolean?
+  overload: Dropbox.Api.Team.MembersSetProfileArg.NewIsDirectoryRestricted*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.MembersSetProfileArg
+  commentId: T:Dropbox.Api.Team.MembersSetProfileArg
+  parent: Dropbox.Api.Team
+  name: MembersSetProfileArg
+  nameWithType: MembersSetProfileArg
+  fullName: Dropbox.Api.Team.MembersSetProfileArg
+- uid: Dropbox.Api.Team.MembersSetProfileArg.#ctor*
+  commentId: Overload:Dropbox.Api.Team.MembersSetProfileArg.#ctor
+  name: MembersSetProfileArg
+  nameWithType: MembersSetProfileArg.MembersSetProfileArg
+  fullName: Dropbox.Api.Team.MembersSetProfileArg.MembersSetProfileArg
+- uid: Dropbox.Api.Team.UserSelectorArg
+  commentId: T:Dropbox.Api.Team.UserSelectorArg
+  parent: Dropbox.Api.Team
+  name: UserSelectorArg
+  nameWithType: UserSelectorArg
+  fullName: Dropbox.Api.Team.UserSelectorArg
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Nullable{System.Boolean}
+  commentId: '!:System.Nullable{System.Boolean}'
+  definition: System.Nullable`1
+  name: Nullable<Boolean>
+  nameWithType: Nullable<Boolean>
+  fullName: System.Nullable<System.Boolean>
+  nameWithType.vb: Nullable(Of Boolean)
+  fullName.vb: System.Nullable(Of System.Boolean)
+  name.vb: Nullable(Of Boolean)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  isExternal: true
+  name: Nullable<>
+  nameWithType: Nullable<>
+  fullName: System.Nullable<>
+  nameWithType.vb: Nullable(Of )
+  fullName.vb: System.Nullable(Of )
+  name.vb: Nullable(Of )
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Team.MembersSetProfileArg.User*
+  commentId: Overload:Dropbox.Api.Team.MembersSetProfileArg.User
+  name: User
+  nameWithType: MembersSetProfileArg.User
+  fullName: Dropbox.Api.Team.MembersSetProfileArg.User
+- uid: Dropbox.Api.Team.MembersSetProfileArg.NewEmail*
+  commentId: Overload:Dropbox.Api.Team.MembersSetProfileArg.NewEmail
+  name: NewEmail
+  nameWithType: MembersSetProfileArg.NewEmail
+  fullName: Dropbox.Api.Team.MembersSetProfileArg.NewEmail
+- uid: Dropbox.Api.Team.MembersSetProfileArg.NewExternalId*
+  commentId: Overload:Dropbox.Api.Team.MembersSetProfileArg.NewExternalId
+  name: NewExternalId
+  nameWithType: MembersSetProfileArg.NewExternalId
+  fullName: Dropbox.Api.Team.MembersSetProfileArg.NewExternalId
+- uid: Dropbox.Api.Team.MembersSetProfileArg.NewGivenName*
+  commentId: Overload:Dropbox.Api.Team.MembersSetProfileArg.NewGivenName
+  name: NewGivenName
+  nameWithType: MembersSetProfileArg.NewGivenName
+  fullName: Dropbox.Api.Team.MembersSetProfileArg.NewGivenName
+- uid: Dropbox.Api.Team.MembersSetProfileArg.NewSurname*
+  commentId: Overload:Dropbox.Api.Team.MembersSetProfileArg.NewSurname
+  name: NewSurname
+  nameWithType: MembersSetProfileArg.NewSurname
+  fullName: Dropbox.Api.Team.MembersSetProfileArg.NewSurname
+- uid: Dropbox.Api.Team.MembersSetProfileArg.NewPersistentId*
+  commentId: Overload:Dropbox.Api.Team.MembersSetProfileArg.NewPersistentId
+  name: NewPersistentId
+  nameWithType: MembersSetProfileArg.NewPersistentId
+  fullName: Dropbox.Api.Team.MembersSetProfileArg.NewPersistentId
+- uid: Dropbox.Api.Team.MembersSetProfileArg.NewIsDirectoryRestricted*
+  commentId: Overload:Dropbox.Api.Team.MembersSetProfileArg.NewIsDirectoryRestricted
+  name: NewIsDirectoryRestricted
+  nameWithType: MembersSetProfileArg.NewIsDirectoryRestricted
+  fullName: Dropbox.Api.Team.MembersSetProfileArg.NewIsDirectoryRestricted
+shouldSkipMarkup: true

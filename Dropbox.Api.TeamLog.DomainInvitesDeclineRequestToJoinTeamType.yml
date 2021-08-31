@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.DomainInvitesDeclineRequestToJoinTeamType
+  commentId: T:Dropbox.Api.TeamLog.DomainInvitesDeclineRequestToJoinTeamType
+  id: DomainInvitesDeclineRequestToJoinTeamType
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.DomainInvitesDeclineRequestToJoinTeamType.#ctor
+  - Dropbox.Api.TeamLog.DomainInvitesDeclineRequestToJoinTeamType.#ctor(System.String)
+  - Dropbox.Api.TeamLog.DomainInvitesDeclineRequestToJoinTeamType.Description
+  langs:
+  - csharp
+  - vb
+  name: DomainInvitesDeclineRequestToJoinTeamType
+  nameWithType: DomainInvitesDeclineRequestToJoinTeamType
+  fullName: Dropbox.Api.TeamLog.DomainInvitesDeclineRequestToJoinTeamType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DomainInvitesDeclineRequestToJoinTeamType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: DomainInvitesDeclineRequestToJoinTeamType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DomainInvitesDeclineRequestToJoinTeamType.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The domain invites decline request to join team type object</p>\n"
+  example: []
+  syntax:
+    content: 'public class DomainInvitesDeclineRequestToJoinTeamType : object'
+    content.vb: >-
+      Public Class DomainInvitesDeclineRequestToJoinTeamType
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.DomainInvitesDeclineRequestToJoinTeamType.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.DomainInvitesDeclineRequestToJoinTeamType.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.DomainInvitesDeclineRequestToJoinTeamType
+  langs:
+  - csharp
+  - vb
+  name: DomainInvitesDeclineRequestToJoinTeamType(String)
+  nameWithType: DomainInvitesDeclineRequestToJoinTeamType.DomainInvitesDeclineRequestToJoinTeamType(String)
+  fullName: Dropbox.Api.TeamLog.DomainInvitesDeclineRequestToJoinTeamType.DomainInvitesDeclineRequestToJoinTeamType(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DomainInvitesDeclineRequestToJoinTeamType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DomainInvitesDeclineRequestToJoinTeamType.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.DomainInvitesDeclineRequestToJoinTeamType\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public DomainInvitesDeclineRequestToJoinTeamType(string description)
+    parameters:
+    - id: description
+      type: System.String
+      description: The description
+    content.vb: Public Sub New(description As String)
+  overload: Dropbox.Api.TeamLog.DomainInvitesDeclineRequestToJoinTeamType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.DomainInvitesDeclineRequestToJoinTeamType.#ctor
+  commentId: M:Dropbox.Api.TeamLog.DomainInvitesDeclineRequestToJoinTeamType.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.DomainInvitesDeclineRequestToJoinTeamType
+  langs:
+  - csharp
+  - vb
+  name: DomainInvitesDeclineRequestToJoinTeamType()
+  nameWithType: DomainInvitesDeclineRequestToJoinTeamType.DomainInvitesDeclineRequestToJoinTeamType()
+  fullName: Dropbox.Api.TeamLog.DomainInvitesDeclineRequestToJoinTeamType.DomainInvitesDeclineRequestToJoinTeamType()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DomainInvitesDeclineRequestToJoinTeamType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DomainInvitesDeclineRequestToJoinTeamType.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.DomainInvitesDeclineRequestToJoinTeamType\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public DomainInvitesDeclineRequestToJoinTeamType()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.DomainInvitesDeclineRequestToJoinTeamType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.DomainInvitesDeclineRequestToJoinTeamType.Description
+  commentId: P:Dropbox.Api.TeamLog.DomainInvitesDeclineRequestToJoinTeamType.Description
+  id: Description
+  parent: Dropbox.Api.TeamLog.DomainInvitesDeclineRequestToJoinTeamType
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: DomainInvitesDeclineRequestToJoinTeamType.Description
+  fullName: Dropbox.Api.TeamLog.DomainInvitesDeclineRequestToJoinTeamType.Description
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DomainInvitesDeclineRequestToJoinTeamType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Description
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DomainInvitesDeclineRequestToJoinTeamType.cs
+    startLine: 59
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets the description of the domain invites decline request to join team\ntype</p>\n"
+  example: []
+  syntax:
+    content: public string Description { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Dropbox.Api.TeamLog.DomainInvitesDeclineRequestToJoinTeamType.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.DomainInvitesDeclineRequestToJoinTeamType
+  commentId: T:Dropbox.Api.TeamLog.DomainInvitesDeclineRequestToJoinTeamType
+  parent: Dropbox.Api.TeamLog
+  name: DomainInvitesDeclineRequestToJoinTeamType
+  nameWithType: DomainInvitesDeclineRequestToJoinTeamType
+  fullName: Dropbox.Api.TeamLog.DomainInvitesDeclineRequestToJoinTeamType
+- uid: Dropbox.Api.TeamLog.DomainInvitesDeclineRequestToJoinTeamType.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.DomainInvitesDeclineRequestToJoinTeamType.#ctor
+  name: DomainInvitesDeclineRequestToJoinTeamType
+  nameWithType: DomainInvitesDeclineRequestToJoinTeamType.DomainInvitesDeclineRequestToJoinTeamType
+  fullName: Dropbox.Api.TeamLog.DomainInvitesDeclineRequestToJoinTeamType.DomainInvitesDeclineRequestToJoinTeamType
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.DomainInvitesDeclineRequestToJoinTeamType.Description*
+  commentId: Overload:Dropbox.Api.TeamLog.DomainInvitesDeclineRequestToJoinTeamType.Description
+  name: Description
+  nameWithType: DomainInvitesDeclineRequestToJoinTeamType.Description
+  fullName: Dropbox.Api.TeamLog.DomainInvitesDeclineRequestToJoinTeamType.Description
+shouldSkipMarkup: true

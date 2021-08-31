@@ -1,0 +1,1517 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.LinkPermissions
+  commentId: T:Dropbox.Api.Sharing.LinkPermissions
+  id: LinkPermissions
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.LinkPermissions.#ctor
+  - Dropbox.Api.Sharing.LinkPermissions.#ctor(System.Boolean,System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.VisibilityPolicy},System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,Dropbox.Api.Sharing.ResolvedVisibility,Dropbox.Api.Sharing.RequestedVisibility,Dropbox.Api.Sharing.SharedLinkAccessFailureReason,Dropbox.Api.Sharing.LinkAudience,Dropbox.Api.Sharing.LinkAccessLevel,System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.LinkAudienceOption},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean})
+  - Dropbox.Api.Sharing.LinkPermissions.AllowComments
+  - Dropbox.Api.Sharing.LinkPermissions.AllowDownload
+  - Dropbox.Api.Sharing.LinkPermissions.AudienceOptions
+  - Dropbox.Api.Sharing.LinkPermissions.CanAllowDownload
+  - Dropbox.Api.Sharing.LinkPermissions.CanDisallowDownload
+  - Dropbox.Api.Sharing.LinkPermissions.CanRemoveExpiry
+  - Dropbox.Api.Sharing.LinkPermissions.CanRemovePassword
+  - Dropbox.Api.Sharing.LinkPermissions.CanRevoke
+  - Dropbox.Api.Sharing.LinkPermissions.CanSetExpiry
+  - Dropbox.Api.Sharing.LinkPermissions.CanSetPassword
+  - Dropbox.Api.Sharing.LinkPermissions.CanUseExtendedSharingControls
+  - Dropbox.Api.Sharing.LinkPermissions.EffectiveAudience
+  - Dropbox.Api.Sharing.LinkPermissions.LinkAccessLevel
+  - Dropbox.Api.Sharing.LinkPermissions.RequestedVisibility
+  - Dropbox.Api.Sharing.LinkPermissions.RequirePassword
+  - Dropbox.Api.Sharing.LinkPermissions.ResolvedVisibility
+  - Dropbox.Api.Sharing.LinkPermissions.RevokeFailureReason
+  - Dropbox.Api.Sharing.LinkPermissions.TeamRestrictsComments
+  - Dropbox.Api.Sharing.LinkPermissions.VisibilityPolicies
+  langs:
+  - csharp
+  - vb
+  name: LinkPermissions
+  nameWithType: LinkPermissions
+  fullName: Dropbox.Api.Sharing.LinkPermissions
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkPermissions.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: LinkPermissions
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkPermissions.cs
+    startLine: 18
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The link permissions object</p>\n"
+  example: []
+  syntax:
+    content: 'public class LinkPermissions : object'
+    content.vb: >-
+      Public Class LinkPermissions
+          Inherits Object
+  seealso:
+  - linkId: Dropbox.Api.Sharing.FileLinkMetadata
+    commentId: T:Dropbox.Api.Sharing.FileLinkMetadata
+  - linkId: Dropbox.Api.Sharing.FolderLinkMetadata
+    commentId: T:Dropbox.Api.Sharing.FolderLinkMetadata
+  - linkId: Dropbox.Api.Sharing.SharedLinkMetadata
+    commentId: T:Dropbox.Api.Sharing.SharedLinkMetadata
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Sharing.LinkPermissions.#ctor(System.Boolean,System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.VisibilityPolicy},System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,Dropbox.Api.Sharing.ResolvedVisibility,Dropbox.Api.Sharing.RequestedVisibility,Dropbox.Api.Sharing.SharedLinkAccessFailureReason,Dropbox.Api.Sharing.LinkAudience,Dropbox.Api.Sharing.LinkAccessLevel,System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.LinkAudienceOption},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean})
+  commentId: M:Dropbox.Api.Sharing.LinkPermissions.#ctor(System.Boolean,System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.VisibilityPolicy},System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,Dropbox.Api.Sharing.ResolvedVisibility,Dropbox.Api.Sharing.RequestedVisibility,Dropbox.Api.Sharing.SharedLinkAccessFailureReason,Dropbox.Api.Sharing.LinkAudience,Dropbox.Api.Sharing.LinkAccessLevel,System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.LinkAudienceOption},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean})
+  id: '#ctor(System.Boolean,System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.VisibilityPolicy},System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean,Dropbox.Api.Sharing.ResolvedVisibility,Dropbox.Api.Sharing.RequestedVisibility,Dropbox.Api.Sharing.SharedLinkAccessFailureReason,Dropbox.Api.Sharing.LinkAudience,Dropbox.Api.Sharing.LinkAccessLevel,System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.LinkAudienceOption},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean},System.Nullable{System.Boolean})'
+  parent: Dropbox.Api.Sharing.LinkPermissions
+  langs:
+  - csharp
+  - vb
+  name: LinkPermissions(Boolean, System.Collections.Generic.IEnumerable<VisibilityPolicy>, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, ResolvedVisibility, RequestedVisibility, SharedLinkAccessFailureReason, LinkAudience, LinkAccessLevel, System.Collections.Generic.IEnumerable<LinkAudienceOption>, Nullable<Boolean>, Nullable<Boolean>, Nullable<Boolean>, Nullable<Boolean>)
+  nameWithType: LinkPermissions.LinkPermissions(Boolean, System.Collections.Generic.IEnumerable<VisibilityPolicy>, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, ResolvedVisibility, RequestedVisibility, SharedLinkAccessFailureReason, LinkAudience, LinkAccessLevel, System.Collections.Generic.IEnumerable<LinkAudienceOption>, Nullable<Boolean>, Nullable<Boolean>, Nullable<Boolean>, Nullable<Boolean>)
+  fullName: Dropbox.Api.Sharing.LinkPermissions.LinkPermissions(System.Boolean, System.Collections.Generic.IEnumerable<Dropbox.Api.Sharing.VisibilityPolicy>, System.Boolean, System.Boolean, System.Boolean, System.Boolean, System.Boolean, System.Boolean, System.Boolean, Dropbox.Api.Sharing.ResolvedVisibility, Dropbox.Api.Sharing.RequestedVisibility, Dropbox.Api.Sharing.SharedLinkAccessFailureReason, Dropbox.Api.Sharing.LinkAudience, Dropbox.Api.Sharing.LinkAccessLevel, System.Collections.Generic.IEnumerable<Dropbox.Api.Sharing.LinkAudienceOption>, System.Nullable<System.Boolean>, System.Nullable<System.Boolean>, System.Nullable<System.Boolean>, System.Nullable<System.Boolean>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkPermissions.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkPermissions.cs
+    startLine: 87
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.LinkPermissions\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public LinkPermissions(bool canRevoke, System.Collections.Generic.IEnumerable<VisibilityPolicy> visibilityPolicies, bool canSetExpiry, bool canRemoveExpiry, bool allowDownload, bool canAllowDownload, bool canDisallowDownload, bool allowComments, bool teamRestrictsComments, ResolvedVisibility resolvedVisibility = null, RequestedVisibility requestedVisibility = null, SharedLinkAccessFailureReason revokeFailureReason = null, LinkAudience effectiveAudience = null, LinkAccessLevel linkAccessLevel = null, System.Collections.Generic.IEnumerable<LinkAudienceOption> audienceOptions = null, bool? canSetPassword = null, bool? canRemovePassword = null, bool? requirePassword = null, bool? canUseExtendedSharingControls = null)
+    parameters:
+    - id: canRevoke
+      type: System.Boolean
+      description: Whether the caller can revoke the shared link.
+    - id: visibilityPolicies
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.VisibilityPolicy}
+      description: >-
+        A list of policies that the user might be able to
+
+        set for the visibility.
+    - id: canSetExpiry
+      type: System.Boolean
+      description: >-
+        Whether the user can set the expiry settings of the
+
+        link. This refers to the ability to create a new expiry and modify an existing
+
+        expiry.
+    - id: canRemoveExpiry
+      type: System.Boolean
+      description: >-
+        Whether the user can remove the expiry of the
+
+        link.
+    - id: allowDownload
+      type: System.Boolean
+      description: Whether the link can be downloaded or not.
+    - id: canAllowDownload
+      type: System.Boolean
+      description: >-
+        Whether the user can allow downloads via the link.
+
+        This refers to the ability to remove a no-download restriction on the link.
+    - id: canDisallowDownload
+      type: System.Boolean
+      description: >-
+        Whether the user can disallow downloads via the
+
+        link. This refers to the ability to impose a no-download restriction on the
+
+        link.
+    - id: allowComments
+      type: System.Boolean
+      description: >-
+        Whether comments are enabled for the linked file. This
+
+        takes the team commenting policy into account.
+    - id: teamRestrictsComments
+      type: System.Boolean
+      description: >-
+        Whether the team has disabled commenting
+
+        globally.
+    - id: resolvedVisibility
+      type: Dropbox.Api.Sharing.ResolvedVisibility
+      description: >-
+        The current visibility of the link after
+
+        considering the shared links policies of the the team (in case the link&apos;s owner is
+
+        part of a team) and the shared folder (in case the linked file is part of a shared
+
+        folder). This field is shown only if the caller has access to this info (the link&apos;s
+
+        owner always has access to this data). For some links, an effective_audience value
+
+        is returned instead.
+    - id: requestedVisibility
+      type: Dropbox.Api.Sharing.RequestedVisibility
+      description: >-
+        The shared link&apos;s requested visibility. This can
+
+        be overridden by the team and shared folder policies. The final visibility, after
+
+        considering these policies, can be found in <code data-dev-comment-type="paramref" class="paramref">resolvedVisibility</code>.
+
+        This is shown only if the caller is the link&apos;s owner and resolved_visibility is
+
+        returned instead of effective_audience.
+    - id: revokeFailureReason
+      type: Dropbox.Api.Sharing.SharedLinkAccessFailureReason
+      description: >-
+        The failure reason for revoking the link. This
+
+        field will only be present if the <code data-dev-comment-type="paramref" class="paramref">canRevoke</code> is
+
+        <code>false</code>.
+    - id: effectiveAudience
+      type: Dropbox.Api.Sharing.LinkAudience
+      description: >-
+        The type of audience who can benefit from the
+
+        access level specified by the `link_access_level` field.
+    - id: linkAccessLevel
+      type: Dropbox.Api.Sharing.LinkAccessLevel
+      description: >-
+        The access level that the link will grant to its
+
+        users. A link can grant additional rights to a user beyond their current access
+
+        level. For example, if a user was invited as a viewer to a file, and then opens a
+
+        link with `link_access_level` set to `editor`, then they will gain editor
+
+        privileges. The `link_access_level` is a property of the link, and does not depend
+
+        on who is calling this API. In particular, `link_access_level` does not take into
+
+        account the API caller&apos;s current permissions to the content.
+    - id: audienceOptions
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.LinkAudienceOption}
+      description: >-
+        A list of link audience options the user might be
+
+        able to set as the new audience.
+    - id: canSetPassword
+      type: System.Nullable{System.Boolean}
+      description: >-
+        Whether the user can set a password for the
+
+        link.
+    - id: canRemovePassword
+      type: System.Nullable{System.Boolean}
+      description: >-
+        Whether the user can remove the password of the
+
+        link.
+    - id: requirePassword
+      type: System.Nullable{System.Boolean}
+      description: >-
+        Whether the user is required to provide a password to
+
+        view the link.
+    - id: canUseExtendedSharingControls
+      type: System.Nullable{System.Boolean}
+      description: >-
+        Whether the user can use extended
+
+        sharing controls, based on their account type.
+    content.vb: Public Sub New(canRevoke As Boolean, visibilityPolicies As System.Collections.Generic.IEnumerable(Of VisibilityPolicy), canSetExpiry As Boolean, canRemoveExpiry As Boolean, allowDownload As Boolean, canAllowDownload As Boolean, canDisallowDownload As Boolean, allowComments As Boolean, teamRestrictsComments As Boolean, resolvedVisibility As ResolvedVisibility = Nothing, requestedVisibility As RequestedVisibility = Nothing, revokeFailureReason As SharedLinkAccessFailureReason = Nothing, effectiveAudience As LinkAudience = Nothing, linkAccessLevel As LinkAccessLevel = Nothing, audienceOptions As System.Collections.Generic.IEnumerable(Of LinkAudienceOption) = Nothing, canSetPassword As Boolean? = Nothing, canRemovePassword As Boolean? = Nothing, requirePassword As Boolean? = Nothing, canUseExtendedSharingControls As Boolean? = Nothing)
+  overload: Dropbox.Api.Sharing.LinkPermissions.#ctor*
+  nameWithType.vb: LinkPermissions.LinkPermissions(Boolean, System.Collections.Generic.IEnumerable(Of VisibilityPolicy), Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, ResolvedVisibility, RequestedVisibility, SharedLinkAccessFailureReason, LinkAudience, LinkAccessLevel, System.Collections.Generic.IEnumerable(Of LinkAudienceOption), Nullable(Of Boolean), Nullable(Of Boolean), Nullable(Of Boolean), Nullable(Of Boolean))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Sharing.LinkPermissions.LinkPermissions(System.Boolean, System.Collections.Generic.IEnumerable(Of Dropbox.Api.Sharing.VisibilityPolicy), System.Boolean, System.Boolean, System.Boolean, System.Boolean, System.Boolean, System.Boolean, System.Boolean, Dropbox.Api.Sharing.ResolvedVisibility, Dropbox.Api.Sharing.RequestedVisibility, Dropbox.Api.Sharing.SharedLinkAccessFailureReason, Dropbox.Api.Sharing.LinkAudience, Dropbox.Api.Sharing.LinkAccessLevel, System.Collections.Generic.IEnumerable(Of Dropbox.Api.Sharing.LinkAudienceOption), System.Nullable(Of System.Boolean), System.Nullable(Of System.Boolean), System.Nullable(Of System.Boolean), System.Nullable(Of System.Boolean))
+  name.vb: LinkPermissions(Boolean, System.Collections.Generic.IEnumerable(Of VisibilityPolicy), Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, Boolean, ResolvedVisibility, RequestedVisibility, SharedLinkAccessFailureReason, LinkAudience, LinkAccessLevel, System.Collections.Generic.IEnumerable(Of LinkAudienceOption), Nullable(Of Boolean), Nullable(Of Boolean), Nullable(Of Boolean), Nullable(Of Boolean))
+- uid: Dropbox.Api.Sharing.LinkPermissions.#ctor
+  commentId: M:Dropbox.Api.Sharing.LinkPermissions.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Sharing.LinkPermissions
+  langs:
+  - csharp
+  - vb
+  name: LinkPermissions()
+  nameWithType: LinkPermissions.LinkPermissions()
+  fullName: Dropbox.Api.Sharing.LinkPermissions.LinkPermissions()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkPermissions.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkPermissions.cs
+    startLine: 143
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.LinkPermissions\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public LinkPermissions()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Sharing.LinkPermissions.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.LinkPermissions.CanRevoke
+  commentId: P:Dropbox.Api.Sharing.LinkPermissions.CanRevoke
+  id: CanRevoke
+  parent: Dropbox.Api.Sharing.LinkPermissions
+  langs:
+  - csharp
+  - vb
+  name: CanRevoke
+  nameWithType: LinkPermissions.CanRevoke
+  fullName: Dropbox.Api.Sharing.LinkPermissions.CanRevoke
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkPermissions.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: CanRevoke
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkPermissions.cs
+    startLine: 151
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Whether the caller can revoke the shared link.</p>\n"
+  example: []
+  syntax:
+    content: public bool CanRevoke { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property CanRevoke As Boolean
+  overload: Dropbox.Api.Sharing.LinkPermissions.CanRevoke*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.LinkPermissions.VisibilityPolicies
+  commentId: P:Dropbox.Api.Sharing.LinkPermissions.VisibilityPolicies
+  id: VisibilityPolicies
+  parent: Dropbox.Api.Sharing.LinkPermissions
+  langs:
+  - csharp
+  - vb
+  name: VisibilityPolicies
+  nameWithType: LinkPermissions.VisibilityPolicies
+  fullName: Dropbox.Api.Sharing.LinkPermissions.VisibilityPolicies
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkPermissions.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: VisibilityPolicies
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkPermissions.cs
+    startLine: 157
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>A list of policies that the user might be able to set for the\nvisibility.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<VisibilityPolicy> VisibilityPolicies { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{Dropbox.Api.Sharing.VisibilityPolicy}
+    content.vb: Public Property VisibilityPolicies As System.Collections.Generic.IList(Of VisibilityPolicy)
+  overload: Dropbox.Api.Sharing.LinkPermissions.VisibilityPolicies*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.LinkPermissions.CanSetExpiry
+  commentId: P:Dropbox.Api.Sharing.LinkPermissions.CanSetExpiry
+  id: CanSetExpiry
+  parent: Dropbox.Api.Sharing.LinkPermissions
+  langs:
+  - csharp
+  - vb
+  name: CanSetExpiry
+  nameWithType: LinkPermissions.CanSetExpiry
+  fullName: Dropbox.Api.Sharing.LinkPermissions.CanSetExpiry
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkPermissions.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: CanSetExpiry
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkPermissions.cs
+    startLine: 163
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Whether the user can set the expiry settings of the link. This refers to the\nability to create a new expiry and modify an existing expiry.</p>\n"
+  example: []
+  syntax:
+    content: public bool CanSetExpiry { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property CanSetExpiry As Boolean
+  overload: Dropbox.Api.Sharing.LinkPermissions.CanSetExpiry*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.LinkPermissions.CanRemoveExpiry
+  commentId: P:Dropbox.Api.Sharing.LinkPermissions.CanRemoveExpiry
+  id: CanRemoveExpiry
+  parent: Dropbox.Api.Sharing.LinkPermissions
+  langs:
+  - csharp
+  - vb
+  name: CanRemoveExpiry
+  nameWithType: LinkPermissions.CanRemoveExpiry
+  fullName: Dropbox.Api.Sharing.LinkPermissions.CanRemoveExpiry
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkPermissions.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: CanRemoveExpiry
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkPermissions.cs
+    startLine: 168
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Whether the user can remove the expiry of the link.</p>\n"
+  example: []
+  syntax:
+    content: public bool CanRemoveExpiry { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property CanRemoveExpiry As Boolean
+  overload: Dropbox.Api.Sharing.LinkPermissions.CanRemoveExpiry*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.LinkPermissions.AllowDownload
+  commentId: P:Dropbox.Api.Sharing.LinkPermissions.AllowDownload
+  id: AllowDownload
+  parent: Dropbox.Api.Sharing.LinkPermissions
+  langs:
+  - csharp
+  - vb
+  name: AllowDownload
+  nameWithType: LinkPermissions.AllowDownload
+  fullName: Dropbox.Api.Sharing.LinkPermissions.AllowDownload
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkPermissions.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AllowDownload
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkPermissions.cs
+    startLine: 173
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Whether the link can be downloaded or not.</p>\n"
+  example: []
+  syntax:
+    content: public bool AllowDownload { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property AllowDownload As Boolean
+  overload: Dropbox.Api.Sharing.LinkPermissions.AllowDownload*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.LinkPermissions.CanAllowDownload
+  commentId: P:Dropbox.Api.Sharing.LinkPermissions.CanAllowDownload
+  id: CanAllowDownload
+  parent: Dropbox.Api.Sharing.LinkPermissions
+  langs:
+  - csharp
+  - vb
+  name: CanAllowDownload
+  nameWithType: LinkPermissions.CanAllowDownload
+  fullName: Dropbox.Api.Sharing.LinkPermissions.CanAllowDownload
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkPermissions.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: CanAllowDownload
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkPermissions.cs
+    startLine: 179
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Whether the user can allow downloads via the link. This refers to the ability\nto remove a no-download restriction on the link.</p>\n"
+  example: []
+  syntax:
+    content: public bool CanAllowDownload { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property CanAllowDownload As Boolean
+  overload: Dropbox.Api.Sharing.LinkPermissions.CanAllowDownload*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.LinkPermissions.CanDisallowDownload
+  commentId: P:Dropbox.Api.Sharing.LinkPermissions.CanDisallowDownload
+  id: CanDisallowDownload
+  parent: Dropbox.Api.Sharing.LinkPermissions
+  langs:
+  - csharp
+  - vb
+  name: CanDisallowDownload
+  nameWithType: LinkPermissions.CanDisallowDownload
+  fullName: Dropbox.Api.Sharing.LinkPermissions.CanDisallowDownload
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkPermissions.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: CanDisallowDownload
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkPermissions.cs
+    startLine: 185
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Whether the user can disallow downloads via the link. This refers to the\nability to impose a no-download restriction on the link.</p>\n"
+  example: []
+  syntax:
+    content: public bool CanDisallowDownload { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property CanDisallowDownload As Boolean
+  overload: Dropbox.Api.Sharing.LinkPermissions.CanDisallowDownload*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.LinkPermissions.AllowComments
+  commentId: P:Dropbox.Api.Sharing.LinkPermissions.AllowComments
+  id: AllowComments
+  parent: Dropbox.Api.Sharing.LinkPermissions
+  langs:
+  - csharp
+  - vb
+  name: AllowComments
+  nameWithType: LinkPermissions.AllowComments
+  fullName: Dropbox.Api.Sharing.LinkPermissions.AllowComments
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkPermissions.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AllowComments
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkPermissions.cs
+    startLine: 191
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Whether comments are enabled for the linked file. This takes the team\ncommenting policy into account.</p>\n"
+  example: []
+  syntax:
+    content: public bool AllowComments { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property AllowComments As Boolean
+  overload: Dropbox.Api.Sharing.LinkPermissions.AllowComments*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.LinkPermissions.TeamRestrictsComments
+  commentId: P:Dropbox.Api.Sharing.LinkPermissions.TeamRestrictsComments
+  id: TeamRestrictsComments
+  parent: Dropbox.Api.Sharing.LinkPermissions
+  langs:
+  - csharp
+  - vb
+  name: TeamRestrictsComments
+  nameWithType: LinkPermissions.TeamRestrictsComments
+  fullName: Dropbox.Api.Sharing.LinkPermissions.TeamRestrictsComments
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkPermissions.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TeamRestrictsComments
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkPermissions.cs
+    startLine: 196
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Whether the team has disabled commenting globally.</p>\n"
+  example: []
+  syntax:
+    content: public bool TeamRestrictsComments { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property TeamRestrictsComments As Boolean
+  overload: Dropbox.Api.Sharing.LinkPermissions.TeamRestrictsComments*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.LinkPermissions.ResolvedVisibility
+  commentId: P:Dropbox.Api.Sharing.LinkPermissions.ResolvedVisibility
+  id: ResolvedVisibility
+  parent: Dropbox.Api.Sharing.LinkPermissions
+  langs:
+  - csharp
+  - vb
+  name: ResolvedVisibility
+  nameWithType: LinkPermissions.ResolvedVisibility
+  fullName: Dropbox.Api.Sharing.LinkPermissions.ResolvedVisibility
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkPermissions.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ResolvedVisibility
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkPermissions.cs
+    startLine: 206
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The current visibility of the link after considering the shared links\npolicies of the the team (in case the link&apos;s owner is part of a team) and the\nshared folder (in case the linked file is part of a shared folder). This field is\nshown only if the caller has access to this info (the link&apos;s owner always has\naccess to this data). For some links, an effective_audience value is returned\ninstead.</p>\n"
+  example: []
+  syntax:
+    content: public ResolvedVisibility ResolvedVisibility { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.ResolvedVisibility
+    content.vb: Public Property ResolvedVisibility As ResolvedVisibility
+  overload: Dropbox.Api.Sharing.LinkPermissions.ResolvedVisibility*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.LinkPermissions.RequestedVisibility
+  commentId: P:Dropbox.Api.Sharing.LinkPermissions.RequestedVisibility
+  id: RequestedVisibility
+  parent: Dropbox.Api.Sharing.LinkPermissions
+  langs:
+  - csharp
+  - vb
+  name: RequestedVisibility
+  nameWithType: LinkPermissions.RequestedVisibility
+  fullName: Dropbox.Api.Sharing.LinkPermissions.RequestedVisibility
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkPermissions.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: RequestedVisibility
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkPermissions.cs
+    startLine: 215
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The shared link&apos;s requested visibility. This can be overridden by the team\nand shared folder policies. The final visibility, after considering these policies,\ncan be found in <xref href=\"Dropbox.Api.Sharing.LinkPermissions.ResolvedVisibility\" data-throw-if-not-resolved=\"false\"></xref>. This is shown only if the caller\nis the link&apos;s owner and resolved_visibility is returned instead of\neffective_audience.</p>\n"
+  example: []
+  syntax:
+    content: public RequestedVisibility RequestedVisibility { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.RequestedVisibility
+    content.vb: Public Property RequestedVisibility As RequestedVisibility
+  overload: Dropbox.Api.Sharing.LinkPermissions.RequestedVisibility*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.LinkPermissions.RevokeFailureReason
+  commentId: P:Dropbox.Api.Sharing.LinkPermissions.RevokeFailureReason
+  id: RevokeFailureReason
+  parent: Dropbox.Api.Sharing.LinkPermissions
+  langs:
+  - csharp
+  - vb
+  name: RevokeFailureReason
+  nameWithType: LinkPermissions.RevokeFailureReason
+  fullName: Dropbox.Api.Sharing.LinkPermissions.RevokeFailureReason
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkPermissions.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: RevokeFailureReason
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkPermissions.cs
+    startLine: 221
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The failure reason for revoking the link. This field will only be present if\nthe <xref href=\"Dropbox.Api.Sharing.LinkPermissions.CanRevoke\" data-throw-if-not-resolved=\"false\"></xref> is <code>false</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SharedLinkAccessFailureReason RevokeFailureReason { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.SharedLinkAccessFailureReason
+    content.vb: Public Property RevokeFailureReason As SharedLinkAccessFailureReason
+  overload: Dropbox.Api.Sharing.LinkPermissions.RevokeFailureReason*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.LinkPermissions.EffectiveAudience
+  commentId: P:Dropbox.Api.Sharing.LinkPermissions.EffectiveAudience
+  id: EffectiveAudience
+  parent: Dropbox.Api.Sharing.LinkPermissions
+  langs:
+  - csharp
+  - vb
+  name: EffectiveAudience
+  nameWithType: LinkPermissions.EffectiveAudience
+  fullName: Dropbox.Api.Sharing.LinkPermissions.EffectiveAudience
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkPermissions.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: EffectiveAudience
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkPermissions.cs
+    startLine: 227
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The type of audience who can benefit from the access level specified by the\n`link_access_level` field.</p>\n"
+  example: []
+  syntax:
+    content: public LinkAudience EffectiveAudience { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.LinkAudience
+    content.vb: Public Property EffectiveAudience As LinkAudience
+  overload: Dropbox.Api.Sharing.LinkPermissions.EffectiveAudience*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.LinkPermissions.LinkAccessLevel
+  commentId: P:Dropbox.Api.Sharing.LinkPermissions.LinkAccessLevel
+  id: LinkAccessLevel
+  parent: Dropbox.Api.Sharing.LinkPermissions
+  langs:
+  - csharp
+  - vb
+  name: LinkAccessLevel
+  nameWithType: LinkPermissions.LinkAccessLevel
+  fullName: Dropbox.Api.Sharing.LinkPermissions.LinkAccessLevel
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkPermissions.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: LinkAccessLevel
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkPermissions.cs
+    startLine: 238
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The access level that the link will grant to its users. A link can grant\nadditional rights to a user beyond their current access level. For example, if a\nuser was invited as a viewer to a file, and then opens a link with\n`link_access_level` set to `editor`, then they will gain editor privileges. The\n`link_access_level` is a property of the link, and does not depend on who is\ncalling this API. In particular, `link_access_level` does not take into account the\nAPI caller&apos;s current permissions to the content.</p>\n"
+  example: []
+  syntax:
+    content: public LinkAccessLevel LinkAccessLevel { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.LinkAccessLevel
+    content.vb: Public Property LinkAccessLevel As LinkAccessLevel
+  overload: Dropbox.Api.Sharing.LinkPermissions.LinkAccessLevel*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.LinkPermissions.AudienceOptions
+  commentId: P:Dropbox.Api.Sharing.LinkPermissions.AudienceOptions
+  id: AudienceOptions
+  parent: Dropbox.Api.Sharing.LinkPermissions
+  langs:
+  - csharp
+  - vb
+  name: AudienceOptions
+  nameWithType: LinkPermissions.AudienceOptions
+  fullName: Dropbox.Api.Sharing.LinkPermissions.AudienceOptions
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkPermissions.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AudienceOptions
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkPermissions.cs
+    startLine: 244
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>A list of link audience options the user might be able to set as the new\naudience.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<LinkAudienceOption> AudienceOptions { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{Dropbox.Api.Sharing.LinkAudienceOption}
+    content.vb: Public Property AudienceOptions As System.Collections.Generic.IList(Of LinkAudienceOption)
+  overload: Dropbox.Api.Sharing.LinkPermissions.AudienceOptions*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.LinkPermissions.CanSetPassword
+  commentId: P:Dropbox.Api.Sharing.LinkPermissions.CanSetPassword
+  id: CanSetPassword
+  parent: Dropbox.Api.Sharing.LinkPermissions
+  langs:
+  - csharp
+  - vb
+  name: CanSetPassword
+  nameWithType: LinkPermissions.CanSetPassword
+  fullName: Dropbox.Api.Sharing.LinkPermissions.CanSetPassword
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkPermissions.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: CanSetPassword
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkPermissions.cs
+    startLine: 249
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Whether the user can set a password for the link.</p>\n"
+  example: []
+  syntax:
+    content: public bool? CanSetPassword { get; protected set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: Public Property CanSetPassword As Boolean?
+  overload: Dropbox.Api.Sharing.LinkPermissions.CanSetPassword*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.LinkPermissions.CanRemovePassword
+  commentId: P:Dropbox.Api.Sharing.LinkPermissions.CanRemovePassword
+  id: CanRemovePassword
+  parent: Dropbox.Api.Sharing.LinkPermissions
+  langs:
+  - csharp
+  - vb
+  name: CanRemovePassword
+  nameWithType: LinkPermissions.CanRemovePassword
+  fullName: Dropbox.Api.Sharing.LinkPermissions.CanRemovePassword
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkPermissions.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: CanRemovePassword
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkPermissions.cs
+    startLine: 254
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Whether the user can remove the password of the link.</p>\n"
+  example: []
+  syntax:
+    content: public bool? CanRemovePassword { get; protected set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: Public Property CanRemovePassword As Boolean?
+  overload: Dropbox.Api.Sharing.LinkPermissions.CanRemovePassword*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.LinkPermissions.RequirePassword
+  commentId: P:Dropbox.Api.Sharing.LinkPermissions.RequirePassword
+  id: RequirePassword
+  parent: Dropbox.Api.Sharing.LinkPermissions
+  langs:
+  - csharp
+  - vb
+  name: RequirePassword
+  nameWithType: LinkPermissions.RequirePassword
+  fullName: Dropbox.Api.Sharing.LinkPermissions.RequirePassword
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkPermissions.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: RequirePassword
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkPermissions.cs
+    startLine: 259
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Whether the user is required to provide a password to view the link.</p>\n"
+  example: []
+  syntax:
+    content: public bool? RequirePassword { get; protected set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: Public Property RequirePassword As Boolean?
+  overload: Dropbox.Api.Sharing.LinkPermissions.RequirePassword*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.LinkPermissions.CanUseExtendedSharingControls
+  commentId: P:Dropbox.Api.Sharing.LinkPermissions.CanUseExtendedSharingControls
+  id: CanUseExtendedSharingControls
+  parent: Dropbox.Api.Sharing.LinkPermissions
+  langs:
+  - csharp
+  - vb
+  name: CanUseExtendedSharingControls
+  nameWithType: LinkPermissions.CanUseExtendedSharingControls
+  fullName: Dropbox.Api.Sharing.LinkPermissions.CanUseExtendedSharingControls
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkPermissions.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: CanUseExtendedSharingControls
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkPermissions.cs
+    startLine: 265
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Whether the user can use extended sharing controls, based on their account\ntype.</p>\n"
+  example: []
+  syntax:
+    content: public bool? CanUseExtendedSharingControls { get; protected set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: Public Property CanUseExtendedSharingControls As Boolean?
+  overload: Dropbox.Api.Sharing.LinkPermissions.CanUseExtendedSharingControls*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Sharing.FileLinkMetadata
+  commentId: T:Dropbox.Api.Sharing.FileLinkMetadata
+  parent: Dropbox.Api.Sharing
+  name: FileLinkMetadata
+  nameWithType: FileLinkMetadata
+  fullName: Dropbox.Api.Sharing.FileLinkMetadata
+- uid: Dropbox.Api.Sharing.FolderLinkMetadata
+  commentId: T:Dropbox.Api.Sharing.FolderLinkMetadata
+  parent: Dropbox.Api.Sharing
+  name: FolderLinkMetadata
+  nameWithType: FolderLinkMetadata
+  fullName: Dropbox.Api.Sharing.FolderLinkMetadata
+- uid: Dropbox.Api.Sharing.SharedLinkMetadata
+  commentId: T:Dropbox.Api.Sharing.SharedLinkMetadata
+  parent: Dropbox.Api.Sharing
+  name: SharedLinkMetadata
+  nameWithType: SharedLinkMetadata
+  fullName: Dropbox.Api.Sharing.SharedLinkMetadata
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.LinkPermissions
+  commentId: T:Dropbox.Api.Sharing.LinkPermissions
+  parent: Dropbox.Api.Sharing
+  name: LinkPermissions
+  nameWithType: LinkPermissions
+  fullName: Dropbox.Api.Sharing.LinkPermissions
+- uid: Dropbox.Api.Sharing.LinkPermissions.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.LinkPermissions.#ctor
+  name: LinkPermissions
+  nameWithType: LinkPermissions.LinkPermissions
+  fullName: Dropbox.Api.Sharing.LinkPermissions.LinkPermissions
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.VisibilityPolicy}
+  commentId: '!:System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.VisibilityPolicy}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<VisibilityPolicy>
+  nameWithType: System.Collections.Generic.IEnumerable<VisibilityPolicy>
+  fullName: System.Collections.Generic.IEnumerable<Dropbox.Api.Sharing.VisibilityPolicy>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of VisibilityPolicy)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Dropbox.Api.Sharing.VisibilityPolicy)
+  name.vb: System.Collections.Generic.IEnumerable(Of VisibilityPolicy)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Sharing.VisibilityPolicy
+    name: VisibilityPolicy
+    nameWithType: VisibilityPolicy
+    fullName: Dropbox.Api.Sharing.VisibilityPolicy
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Sharing.VisibilityPolicy
+    name: VisibilityPolicy
+    nameWithType: VisibilityPolicy
+    fullName: Dropbox.Api.Sharing.VisibilityPolicy
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Sharing.ResolvedVisibility
+  commentId: T:Dropbox.Api.Sharing.ResolvedVisibility
+  parent: Dropbox.Api.Sharing
+  name: ResolvedVisibility
+  nameWithType: ResolvedVisibility
+  fullName: Dropbox.Api.Sharing.ResolvedVisibility
+- uid: Dropbox.Api.Sharing.RequestedVisibility
+  commentId: T:Dropbox.Api.Sharing.RequestedVisibility
+  parent: Dropbox.Api.Sharing
+  name: RequestedVisibility
+  nameWithType: RequestedVisibility
+  fullName: Dropbox.Api.Sharing.RequestedVisibility
+- uid: Dropbox.Api.Sharing.SharedLinkAccessFailureReason
+  commentId: T:Dropbox.Api.Sharing.SharedLinkAccessFailureReason
+  parent: Dropbox.Api.Sharing
+  name: SharedLinkAccessFailureReason
+  nameWithType: SharedLinkAccessFailureReason
+  fullName: Dropbox.Api.Sharing.SharedLinkAccessFailureReason
+- uid: Dropbox.Api.Sharing.LinkAudience
+  commentId: T:Dropbox.Api.Sharing.LinkAudience
+  parent: Dropbox.Api.Sharing
+  name: LinkAudience
+  nameWithType: LinkAudience
+  fullName: Dropbox.Api.Sharing.LinkAudience
+- uid: Dropbox.Api.Sharing.LinkAccessLevel
+  commentId: T:Dropbox.Api.Sharing.LinkAccessLevel
+  parent: Dropbox.Api.Sharing
+  name: LinkAccessLevel
+  nameWithType: LinkAccessLevel
+  fullName: Dropbox.Api.Sharing.LinkAccessLevel
+- uid: System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.LinkAudienceOption}
+  commentId: '!:System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.LinkAudienceOption}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<LinkAudienceOption>
+  nameWithType: System.Collections.Generic.IEnumerable<LinkAudienceOption>
+  fullName: System.Collections.Generic.IEnumerable<Dropbox.Api.Sharing.LinkAudienceOption>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of LinkAudienceOption)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Dropbox.Api.Sharing.LinkAudienceOption)
+  name.vb: System.Collections.Generic.IEnumerable(Of LinkAudienceOption)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Sharing.LinkAudienceOption
+    name: LinkAudienceOption
+    nameWithType: LinkAudienceOption
+    fullName: Dropbox.Api.Sharing.LinkAudienceOption
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Sharing.LinkAudienceOption
+    name: LinkAudienceOption
+    nameWithType: LinkAudienceOption
+    fullName: Dropbox.Api.Sharing.LinkAudienceOption
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable{System.Boolean}
+  commentId: '!:System.Nullable{System.Boolean}'
+  definition: System.Nullable`1
+  name: Nullable<Boolean>
+  nameWithType: Nullable<Boolean>
+  fullName: System.Nullable<System.Boolean>
+  nameWithType.vb: Nullable(Of Boolean)
+  fullName.vb: System.Nullable(Of System.Boolean)
+  name.vb: Nullable(Of Boolean)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: System.Collections.Generic.IEnumerable<>
+  nameWithType: System.Collections.Generic.IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: System.Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  isExternal: true
+  name: Nullable<>
+  nameWithType: Nullable<>
+  fullName: System.Nullable<>
+  nameWithType.vb: Nullable(Of )
+  fullName.vb: System.Nullable(Of )
+  name.vb: Nullable(Of )
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Sharing.LinkPermissions.CanRevoke*
+  commentId: Overload:Dropbox.Api.Sharing.LinkPermissions.CanRevoke
+  name: CanRevoke
+  nameWithType: LinkPermissions.CanRevoke
+  fullName: Dropbox.Api.Sharing.LinkPermissions.CanRevoke
+- uid: Dropbox.Api.Sharing.LinkPermissions.VisibilityPolicies*
+  commentId: Overload:Dropbox.Api.Sharing.LinkPermissions.VisibilityPolicies
+  name: VisibilityPolicies
+  nameWithType: LinkPermissions.VisibilityPolicies
+  fullName: Dropbox.Api.Sharing.LinkPermissions.VisibilityPolicies
+- uid: System.Collections.Generic.IList{Dropbox.Api.Sharing.VisibilityPolicy}
+  commentId: '!:System.Collections.Generic.IList{Dropbox.Api.Sharing.VisibilityPolicy}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<VisibilityPolicy>
+  nameWithType: System.Collections.Generic.IList<VisibilityPolicy>
+  fullName: System.Collections.Generic.IList<Dropbox.Api.Sharing.VisibilityPolicy>
+  nameWithType.vb: System.Collections.Generic.IList(Of VisibilityPolicy)
+  fullName.vb: System.Collections.Generic.IList(Of Dropbox.Api.Sharing.VisibilityPolicy)
+  name.vb: System.Collections.Generic.IList(Of VisibilityPolicy)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Sharing.VisibilityPolicy
+    name: VisibilityPolicy
+    nameWithType: VisibilityPolicy
+    fullName: Dropbox.Api.Sharing.VisibilityPolicy
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Sharing.VisibilityPolicy
+    name: VisibilityPolicy
+    nameWithType: VisibilityPolicy
+    fullName: Dropbox.Api.Sharing.VisibilityPolicy
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  isExternal: true
+  name: System.Collections.Generic.IList<>
+  nameWithType: System.Collections.Generic.IList<>
+  fullName: System.Collections.Generic.IList<>
+  nameWithType.vb: System.Collections.Generic.IList(Of )
+  fullName.vb: System.Collections.Generic.IList(Of )
+  name.vb: System.Collections.Generic.IList(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Sharing.LinkPermissions.CanSetExpiry*
+  commentId: Overload:Dropbox.Api.Sharing.LinkPermissions.CanSetExpiry
+  name: CanSetExpiry
+  nameWithType: LinkPermissions.CanSetExpiry
+  fullName: Dropbox.Api.Sharing.LinkPermissions.CanSetExpiry
+- uid: Dropbox.Api.Sharing.LinkPermissions.CanRemoveExpiry*
+  commentId: Overload:Dropbox.Api.Sharing.LinkPermissions.CanRemoveExpiry
+  name: CanRemoveExpiry
+  nameWithType: LinkPermissions.CanRemoveExpiry
+  fullName: Dropbox.Api.Sharing.LinkPermissions.CanRemoveExpiry
+- uid: Dropbox.Api.Sharing.LinkPermissions.AllowDownload*
+  commentId: Overload:Dropbox.Api.Sharing.LinkPermissions.AllowDownload
+  name: AllowDownload
+  nameWithType: LinkPermissions.AllowDownload
+  fullName: Dropbox.Api.Sharing.LinkPermissions.AllowDownload
+- uid: Dropbox.Api.Sharing.LinkPermissions.CanAllowDownload*
+  commentId: Overload:Dropbox.Api.Sharing.LinkPermissions.CanAllowDownload
+  name: CanAllowDownload
+  nameWithType: LinkPermissions.CanAllowDownload
+  fullName: Dropbox.Api.Sharing.LinkPermissions.CanAllowDownload
+- uid: Dropbox.Api.Sharing.LinkPermissions.CanDisallowDownload*
+  commentId: Overload:Dropbox.Api.Sharing.LinkPermissions.CanDisallowDownload
+  name: CanDisallowDownload
+  nameWithType: LinkPermissions.CanDisallowDownload
+  fullName: Dropbox.Api.Sharing.LinkPermissions.CanDisallowDownload
+- uid: Dropbox.Api.Sharing.LinkPermissions.AllowComments*
+  commentId: Overload:Dropbox.Api.Sharing.LinkPermissions.AllowComments
+  name: AllowComments
+  nameWithType: LinkPermissions.AllowComments
+  fullName: Dropbox.Api.Sharing.LinkPermissions.AllowComments
+- uid: Dropbox.Api.Sharing.LinkPermissions.TeamRestrictsComments*
+  commentId: Overload:Dropbox.Api.Sharing.LinkPermissions.TeamRestrictsComments
+  name: TeamRestrictsComments
+  nameWithType: LinkPermissions.TeamRestrictsComments
+  fullName: Dropbox.Api.Sharing.LinkPermissions.TeamRestrictsComments
+- uid: Dropbox.Api.Sharing.LinkPermissions.ResolvedVisibility*
+  commentId: Overload:Dropbox.Api.Sharing.LinkPermissions.ResolvedVisibility
+  name: ResolvedVisibility
+  nameWithType: LinkPermissions.ResolvedVisibility
+  fullName: Dropbox.Api.Sharing.LinkPermissions.ResolvedVisibility
+- uid: Dropbox.Api.Sharing.LinkPermissions.ResolvedVisibility
+  commentId: P:Dropbox.Api.Sharing.LinkPermissions.ResolvedVisibility
+  isExternal: true
+- uid: Dropbox.Api.Sharing.LinkPermissions.RequestedVisibility*
+  commentId: Overload:Dropbox.Api.Sharing.LinkPermissions.RequestedVisibility
+  name: RequestedVisibility
+  nameWithType: LinkPermissions.RequestedVisibility
+  fullName: Dropbox.Api.Sharing.LinkPermissions.RequestedVisibility
+- uid: Dropbox.Api.Sharing.LinkPermissions.CanRevoke
+  commentId: P:Dropbox.Api.Sharing.LinkPermissions.CanRevoke
+  isExternal: true
+- uid: Dropbox.Api.Sharing.LinkPermissions.RevokeFailureReason*
+  commentId: Overload:Dropbox.Api.Sharing.LinkPermissions.RevokeFailureReason
+  name: RevokeFailureReason
+  nameWithType: LinkPermissions.RevokeFailureReason
+  fullName: Dropbox.Api.Sharing.LinkPermissions.RevokeFailureReason
+- uid: Dropbox.Api.Sharing.LinkPermissions.EffectiveAudience*
+  commentId: Overload:Dropbox.Api.Sharing.LinkPermissions.EffectiveAudience
+  name: EffectiveAudience
+  nameWithType: LinkPermissions.EffectiveAudience
+  fullName: Dropbox.Api.Sharing.LinkPermissions.EffectiveAudience
+- uid: Dropbox.Api.Sharing.LinkPermissions.LinkAccessLevel*
+  commentId: Overload:Dropbox.Api.Sharing.LinkPermissions.LinkAccessLevel
+  name: LinkAccessLevel
+  nameWithType: LinkPermissions.LinkAccessLevel
+  fullName: Dropbox.Api.Sharing.LinkPermissions.LinkAccessLevel
+- uid: Dropbox.Api.Sharing.LinkPermissions.AudienceOptions*
+  commentId: Overload:Dropbox.Api.Sharing.LinkPermissions.AudienceOptions
+  name: AudienceOptions
+  nameWithType: LinkPermissions.AudienceOptions
+  fullName: Dropbox.Api.Sharing.LinkPermissions.AudienceOptions
+- uid: System.Collections.Generic.IList{Dropbox.Api.Sharing.LinkAudienceOption}
+  commentId: '!:System.Collections.Generic.IList{Dropbox.Api.Sharing.LinkAudienceOption}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<LinkAudienceOption>
+  nameWithType: System.Collections.Generic.IList<LinkAudienceOption>
+  fullName: System.Collections.Generic.IList<Dropbox.Api.Sharing.LinkAudienceOption>
+  nameWithType.vb: System.Collections.Generic.IList(Of LinkAudienceOption)
+  fullName.vb: System.Collections.Generic.IList(Of Dropbox.Api.Sharing.LinkAudienceOption)
+  name.vb: System.Collections.Generic.IList(Of LinkAudienceOption)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Sharing.LinkAudienceOption
+    name: LinkAudienceOption
+    nameWithType: LinkAudienceOption
+    fullName: Dropbox.Api.Sharing.LinkAudienceOption
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Sharing.LinkAudienceOption
+    name: LinkAudienceOption
+    nameWithType: LinkAudienceOption
+    fullName: Dropbox.Api.Sharing.LinkAudienceOption
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Sharing.LinkPermissions.CanSetPassword*
+  commentId: Overload:Dropbox.Api.Sharing.LinkPermissions.CanSetPassword
+  name: CanSetPassword
+  nameWithType: LinkPermissions.CanSetPassword
+  fullName: Dropbox.Api.Sharing.LinkPermissions.CanSetPassword
+- uid: Dropbox.Api.Sharing.LinkPermissions.CanRemovePassword*
+  commentId: Overload:Dropbox.Api.Sharing.LinkPermissions.CanRemovePassword
+  name: CanRemovePassword
+  nameWithType: LinkPermissions.CanRemovePassword
+  fullName: Dropbox.Api.Sharing.LinkPermissions.CanRemovePassword
+- uid: Dropbox.Api.Sharing.LinkPermissions.RequirePassword*
+  commentId: Overload:Dropbox.Api.Sharing.LinkPermissions.RequirePassword
+  name: RequirePassword
+  nameWithType: LinkPermissions.RequirePassword
+  fullName: Dropbox.Api.Sharing.LinkPermissions.RequirePassword
+- uid: Dropbox.Api.Sharing.LinkPermissions.CanUseExtendedSharingControls*
+  commentId: Overload:Dropbox.Api.Sharing.LinkPermissions.CanUseExtendedSharingControls
+  name: CanUseExtendedSharingControls
+  nameWithType: LinkPermissions.CanUseExtendedSharingControls
+  fullName: Dropbox.Api.Sharing.LinkPermissions.CanUseExtendedSharingControls
+shouldSkipMarkup: true

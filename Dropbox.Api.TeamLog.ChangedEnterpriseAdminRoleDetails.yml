@@ -1,0 +1,278 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.ChangedEnterpriseAdminRoleDetails
+  commentId: T:Dropbox.Api.TeamLog.ChangedEnterpriseAdminRoleDetails
+  id: ChangedEnterpriseAdminRoleDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.ChangedEnterpriseAdminRoleDetails.#ctor
+  - Dropbox.Api.TeamLog.ChangedEnterpriseAdminRoleDetails.#ctor(Dropbox.Api.TeamLog.FedAdminRole,Dropbox.Api.TeamLog.FedAdminRole,System.String)
+  - Dropbox.Api.TeamLog.ChangedEnterpriseAdminRoleDetails.NewValue
+  - Dropbox.Api.TeamLog.ChangedEnterpriseAdminRoleDetails.PreviousValue
+  - Dropbox.Api.TeamLog.ChangedEnterpriseAdminRoleDetails.TeamName
+  langs:
+  - csharp
+  - vb
+  name: ChangedEnterpriseAdminRoleDetails
+  nameWithType: ChangedEnterpriseAdminRoleDetails
+  fullName: Dropbox.Api.TeamLog.ChangedEnterpriseAdminRoleDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ChangedEnterpriseAdminRoleDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ChangedEnterpriseAdminRoleDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ChangedEnterpriseAdminRoleDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Changed enterprise admin role.</p>\n"
+  example: []
+  syntax:
+    content: 'public class ChangedEnterpriseAdminRoleDetails : object'
+    content.vb: >-
+      Public Class ChangedEnterpriseAdminRoleDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.ChangedEnterpriseAdminRoleDetails.#ctor(Dropbox.Api.TeamLog.FedAdminRole,Dropbox.Api.TeamLog.FedAdminRole,System.String)
+  commentId: M:Dropbox.Api.TeamLog.ChangedEnterpriseAdminRoleDetails.#ctor(Dropbox.Api.TeamLog.FedAdminRole,Dropbox.Api.TeamLog.FedAdminRole,System.String)
+  id: '#ctor(Dropbox.Api.TeamLog.FedAdminRole,Dropbox.Api.TeamLog.FedAdminRole,System.String)'
+  parent: Dropbox.Api.TeamLog.ChangedEnterpriseAdminRoleDetails
+  langs:
+  - csharp
+  - vb
+  name: ChangedEnterpriseAdminRoleDetails(FedAdminRole, FedAdminRole, String)
+  nameWithType: ChangedEnterpriseAdminRoleDetails.ChangedEnterpriseAdminRoleDetails(FedAdminRole, FedAdminRole, String)
+  fullName: Dropbox.Api.TeamLog.ChangedEnterpriseAdminRoleDetails.ChangedEnterpriseAdminRoleDetails(Dropbox.Api.TeamLog.FedAdminRole, Dropbox.Api.TeamLog.FedAdminRole, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ChangedEnterpriseAdminRoleDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ChangedEnterpriseAdminRoleDetails.cs
+    startLine: 37
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  syntax:
+    content: public ChangedEnterpriseAdminRoleDetails(FedAdminRole previousValue, FedAdminRole newValue, string teamName)
+    parameters:
+    - id: previousValue
+      type: Dropbox.Api.TeamLog.FedAdminRole
+    - id: newValue
+      type: Dropbox.Api.TeamLog.FedAdminRole
+    - id: teamName
+      type: System.String
+    content.vb: Public Sub New(previousValue As FedAdminRole, newValue As FedAdminRole, teamName As String)
+  overload: Dropbox.Api.TeamLog.ChangedEnterpriseAdminRoleDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.ChangedEnterpriseAdminRoleDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.ChangedEnterpriseAdminRoleDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.ChangedEnterpriseAdminRoleDetails
+  langs:
+  - csharp
+  - vb
+  name: ChangedEnterpriseAdminRoleDetails()
+  nameWithType: ChangedEnterpriseAdminRoleDetails.ChangedEnterpriseAdminRoleDetails()
+  fullName: Dropbox.Api.TeamLog.ChangedEnterpriseAdminRoleDetails.ChangedEnterpriseAdminRoleDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ChangedEnterpriseAdminRoleDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ChangedEnterpriseAdminRoleDetails.cs
+    startLine: 67
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.ChangedEnterpriseAdminRoleDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public ChangedEnterpriseAdminRoleDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.ChangedEnterpriseAdminRoleDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.ChangedEnterpriseAdminRoleDetails.PreviousValue
+  commentId: P:Dropbox.Api.TeamLog.ChangedEnterpriseAdminRoleDetails.PreviousValue
+  id: PreviousValue
+  parent: Dropbox.Api.TeamLog.ChangedEnterpriseAdminRoleDetails
+  langs:
+  - csharp
+  - vb
+  name: PreviousValue
+  nameWithType: ChangedEnterpriseAdminRoleDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.ChangedEnterpriseAdminRoleDetails.PreviousValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ChangedEnterpriseAdminRoleDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PreviousValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ChangedEnterpriseAdminRoleDetails.cs
+    startLine: 75
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  syntax:
+    content: public FedAdminRole PreviousValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.FedAdminRole
+    content.vb: Public Property PreviousValue As FedAdminRole
+  overload: Dropbox.Api.TeamLog.ChangedEnterpriseAdminRoleDetails.PreviousValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.ChangedEnterpriseAdminRoleDetails.NewValue
+  commentId: P:Dropbox.Api.TeamLog.ChangedEnterpriseAdminRoleDetails.NewValue
+  id: NewValue
+  parent: Dropbox.Api.TeamLog.ChangedEnterpriseAdminRoleDetails
+  langs:
+  - csharp
+  - vb
+  name: NewValue
+  nameWithType: ChangedEnterpriseAdminRoleDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.ChangedEnterpriseAdminRoleDetails.NewValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ChangedEnterpriseAdminRoleDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NewValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ChangedEnterpriseAdminRoleDetails.cs
+    startLine: 80
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  syntax:
+    content: public FedAdminRole NewValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.FedAdminRole
+    content.vb: Public Property NewValue As FedAdminRole
+  overload: Dropbox.Api.TeamLog.ChangedEnterpriseAdminRoleDetails.NewValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.ChangedEnterpriseAdminRoleDetails.TeamName
+  commentId: P:Dropbox.Api.TeamLog.ChangedEnterpriseAdminRoleDetails.TeamName
+  id: TeamName
+  parent: Dropbox.Api.TeamLog.ChangedEnterpriseAdminRoleDetails
+  langs:
+  - csharp
+  - vb
+  name: TeamName
+  nameWithType: ChangedEnterpriseAdminRoleDetails.TeamName
+  fullName: Dropbox.Api.TeamLog.ChangedEnterpriseAdminRoleDetails.TeamName
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ChangedEnterpriseAdminRoleDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TeamName
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ChangedEnterpriseAdminRoleDetails.cs
+    startLine: 85
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  syntax:
+    content: public string TeamName { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property TeamName As String
+  overload: Dropbox.Api.TeamLog.ChangedEnterpriseAdminRoleDetails.TeamName*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.ChangedEnterpriseAdminRoleDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.ChangedEnterpriseAdminRoleDetails.#ctor
+  name: ChangedEnterpriseAdminRoleDetails
+  nameWithType: ChangedEnterpriseAdminRoleDetails.ChangedEnterpriseAdminRoleDetails
+  fullName: Dropbox.Api.TeamLog.ChangedEnterpriseAdminRoleDetails.ChangedEnterpriseAdminRoleDetails
+- uid: Dropbox.Api.TeamLog.FedAdminRole
+  commentId: T:Dropbox.Api.TeamLog.FedAdminRole
+  parent: Dropbox.Api.TeamLog
+  name: FedAdminRole
+  nameWithType: FedAdminRole
+  fullName: Dropbox.Api.TeamLog.FedAdminRole
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.ChangedEnterpriseAdminRoleDetails
+  commentId: T:Dropbox.Api.TeamLog.ChangedEnterpriseAdminRoleDetails
+  parent: Dropbox.Api.TeamLog
+  name: ChangedEnterpriseAdminRoleDetails
+  nameWithType: ChangedEnterpriseAdminRoleDetails
+  fullName: Dropbox.Api.TeamLog.ChangedEnterpriseAdminRoleDetails
+- uid: Dropbox.Api.TeamLog.ChangedEnterpriseAdminRoleDetails.PreviousValue*
+  commentId: Overload:Dropbox.Api.TeamLog.ChangedEnterpriseAdminRoleDetails.PreviousValue
+  name: PreviousValue
+  nameWithType: ChangedEnterpriseAdminRoleDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.ChangedEnterpriseAdminRoleDetails.PreviousValue
+- uid: Dropbox.Api.TeamLog.ChangedEnterpriseAdminRoleDetails.NewValue*
+  commentId: Overload:Dropbox.Api.TeamLog.ChangedEnterpriseAdminRoleDetails.NewValue
+  name: NewValue
+  nameWithType: ChangedEnterpriseAdminRoleDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.ChangedEnterpriseAdminRoleDetails.NewValue
+- uid: Dropbox.Api.TeamLog.ChangedEnterpriseAdminRoleDetails.TeamName*
+  commentId: Overload:Dropbox.Api.TeamLog.ChangedEnterpriseAdminRoleDetails.TeamName
+  name: TeamName
+  nameWithType: ChangedEnterpriseAdminRoleDetails.TeamName
+  fullName: Dropbox.Api.TeamLog.ChangedEnterpriseAdminRoleDetails.TeamName
+shouldSkipMarkup: true

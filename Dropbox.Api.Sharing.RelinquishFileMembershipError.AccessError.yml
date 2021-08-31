@@ -1,0 +1,215 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.RelinquishFileMembershipError.AccessError
+  commentId: T:Dropbox.Api.Sharing.RelinquishFileMembershipError.AccessError
+  id: RelinquishFileMembershipError.AccessError
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.RelinquishFileMembershipError.AccessError.#ctor(Dropbox.Api.Sharing.SharingFileAccessError)
+  - Dropbox.Api.Sharing.RelinquishFileMembershipError.AccessError.Value
+  langs:
+  - csharp
+  - vb
+  name: RelinquishFileMembershipError.AccessError
+  nameWithType: RelinquishFileMembershipError.AccessError
+  fullName: Dropbox.Api.Sharing.RelinquishFileMembershipError.AccessError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RelinquishFileMembershipError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AccessError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RelinquishFileMembershipError.cs
+    startLine: 213
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The access error object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class AccessError : RelinquishFileMembershipError'
+    content.vb: >-
+      Public NotInheritable Class AccessError
+          Inherits RelinquishFileMembershipError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Sharing.RelinquishFileMembershipError
+  inheritedMembers:
+  - Dropbox.Api.Sharing.RelinquishFileMembershipError.IsAccessError
+  - Dropbox.Api.Sharing.RelinquishFileMembershipError.AsAccessError
+  - Dropbox.Api.Sharing.RelinquishFileMembershipError.IsGroupAccess
+  - Dropbox.Api.Sharing.RelinquishFileMembershipError.AsGroupAccess
+  - Dropbox.Api.Sharing.RelinquishFileMembershipError.IsNoPermission
+  - Dropbox.Api.Sharing.RelinquishFileMembershipError.AsNoPermission
+  - Dropbox.Api.Sharing.RelinquishFileMembershipError.IsOther
+  - Dropbox.Api.Sharing.RelinquishFileMembershipError.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Sharing.RelinquishFileMembershipError.AccessError.#ctor(Dropbox.Api.Sharing.SharingFileAccessError)
+  commentId: M:Dropbox.Api.Sharing.RelinquishFileMembershipError.AccessError.#ctor(Dropbox.Api.Sharing.SharingFileAccessError)
+  id: '#ctor(Dropbox.Api.Sharing.SharingFileAccessError)'
+  parent: Dropbox.Api.Sharing.RelinquishFileMembershipError.AccessError
+  langs:
+  - csharp
+  - vb
+  name: AccessError(SharingFileAccessError)
+  nameWithType: RelinquishFileMembershipError.AccessError.AccessError(SharingFileAccessError)
+  fullName: Dropbox.Api.Sharing.RelinquishFileMembershipError.AccessError.AccessError(Dropbox.Api.Sharing.SharingFileAccessError)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RelinquishFileMembershipError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RelinquishFileMembershipError.cs
+    startLine: 232
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.RelinquishFileMembershipError.AccessError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public AccessError(SharingFileAccessError value)
+    parameters:
+    - id: value
+      type: Dropbox.Api.Sharing.SharingFileAccessError
+      description: The value
+    content.vb: Public Sub New(value As SharingFileAccessError)
+  overload: Dropbox.Api.Sharing.RelinquishFileMembershipError.AccessError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.RelinquishFileMembershipError.AccessError.Value
+  commentId: P:Dropbox.Api.Sharing.RelinquishFileMembershipError.AccessError.Value
+  id: Value
+  parent: Dropbox.Api.Sharing.RelinquishFileMembershipError.AccessError
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: RelinquishFileMembershipError.AccessError.Value
+  fullName: Dropbox.Api.Sharing.RelinquishFileMembershipError.AccessError.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RelinquishFileMembershipError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RelinquishFileMembershipError.cs
+    startLine: 247
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public SharingFileAccessError Value { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.SharingFileAccessError
+    content.vb: Public ReadOnly Property Value As SharingFileAccessError
+  overload: Dropbox.Api.Sharing.RelinquishFileMembershipError.AccessError.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.RelinquishFileMembershipError
+  commentId: T:Dropbox.Api.Sharing.RelinquishFileMembershipError
+  parent: Dropbox.Api.Sharing
+  name: RelinquishFileMembershipError
+  nameWithType: RelinquishFileMembershipError
+  fullName: Dropbox.Api.Sharing.RelinquishFileMembershipError
+- uid: Dropbox.Api.Sharing.RelinquishFileMembershipError.IsAccessError
+  commentId: P:Dropbox.Api.Sharing.RelinquishFileMembershipError.IsAccessError
+  parent: Dropbox.Api.Sharing.RelinquishFileMembershipError
+  name: IsAccessError
+  nameWithType: RelinquishFileMembershipError.IsAccessError
+  fullName: Dropbox.Api.Sharing.RelinquishFileMembershipError.IsAccessError
+- uid: Dropbox.Api.Sharing.RelinquishFileMembershipError.AsAccessError
+  commentId: P:Dropbox.Api.Sharing.RelinquishFileMembershipError.AsAccessError
+  parent: Dropbox.Api.Sharing.RelinquishFileMembershipError
+  name: AsAccessError
+  nameWithType: RelinquishFileMembershipError.AsAccessError
+  fullName: Dropbox.Api.Sharing.RelinquishFileMembershipError.AsAccessError
+- uid: Dropbox.Api.Sharing.RelinquishFileMembershipError.IsGroupAccess
+  commentId: P:Dropbox.Api.Sharing.RelinquishFileMembershipError.IsGroupAccess
+  parent: Dropbox.Api.Sharing.RelinquishFileMembershipError
+  name: IsGroupAccess
+  nameWithType: RelinquishFileMembershipError.IsGroupAccess
+  fullName: Dropbox.Api.Sharing.RelinquishFileMembershipError.IsGroupAccess
+- uid: Dropbox.Api.Sharing.RelinquishFileMembershipError.AsGroupAccess
+  commentId: P:Dropbox.Api.Sharing.RelinquishFileMembershipError.AsGroupAccess
+  parent: Dropbox.Api.Sharing.RelinquishFileMembershipError
+  name: AsGroupAccess
+  nameWithType: RelinquishFileMembershipError.AsGroupAccess
+  fullName: Dropbox.Api.Sharing.RelinquishFileMembershipError.AsGroupAccess
+- uid: Dropbox.Api.Sharing.RelinquishFileMembershipError.IsNoPermission
+  commentId: P:Dropbox.Api.Sharing.RelinquishFileMembershipError.IsNoPermission
+  parent: Dropbox.Api.Sharing.RelinquishFileMembershipError
+  name: IsNoPermission
+  nameWithType: RelinquishFileMembershipError.IsNoPermission
+  fullName: Dropbox.Api.Sharing.RelinquishFileMembershipError.IsNoPermission
+- uid: Dropbox.Api.Sharing.RelinquishFileMembershipError.AsNoPermission
+  commentId: P:Dropbox.Api.Sharing.RelinquishFileMembershipError.AsNoPermission
+  parent: Dropbox.Api.Sharing.RelinquishFileMembershipError
+  name: AsNoPermission
+  nameWithType: RelinquishFileMembershipError.AsNoPermission
+  fullName: Dropbox.Api.Sharing.RelinquishFileMembershipError.AsNoPermission
+- uid: Dropbox.Api.Sharing.RelinquishFileMembershipError.IsOther
+  commentId: P:Dropbox.Api.Sharing.RelinquishFileMembershipError.IsOther
+  parent: Dropbox.Api.Sharing.RelinquishFileMembershipError
+  name: IsOther
+  nameWithType: RelinquishFileMembershipError.IsOther
+  fullName: Dropbox.Api.Sharing.RelinquishFileMembershipError.IsOther
+- uid: Dropbox.Api.Sharing.RelinquishFileMembershipError.AsOther
+  commentId: P:Dropbox.Api.Sharing.RelinquishFileMembershipError.AsOther
+  parent: Dropbox.Api.Sharing.RelinquishFileMembershipError
+  name: AsOther
+  nameWithType: RelinquishFileMembershipError.AsOther
+  fullName: Dropbox.Api.Sharing.RelinquishFileMembershipError.AsOther
+- uid: Dropbox.Api.Sharing.RelinquishFileMembershipError.AccessError
+  commentId: T:Dropbox.Api.Sharing.RelinquishFileMembershipError.AccessError
+  parent: Dropbox.Api.Sharing
+  name: RelinquishFileMembershipError.AccessError
+  nameWithType: RelinquishFileMembershipError.AccessError
+  fullName: Dropbox.Api.Sharing.RelinquishFileMembershipError.AccessError
+- uid: Dropbox.Api.Sharing.RelinquishFileMembershipError.AccessError.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.RelinquishFileMembershipError.AccessError.#ctor
+  name: AccessError
+  nameWithType: RelinquishFileMembershipError.AccessError.AccessError
+  fullName: Dropbox.Api.Sharing.RelinquishFileMembershipError.AccessError.AccessError
+- uid: Dropbox.Api.Sharing.SharingFileAccessError
+  commentId: T:Dropbox.Api.Sharing.SharingFileAccessError
+  parent: Dropbox.Api.Sharing
+  name: SharingFileAccessError
+  nameWithType: SharingFileAccessError
+  fullName: Dropbox.Api.Sharing.SharingFileAccessError
+- uid: Dropbox.Api.Sharing.RelinquishFileMembershipError.AccessError.Value*
+  commentId: Overload:Dropbox.Api.Sharing.RelinquishFileMembershipError.AccessError.Value
+  name: Value
+  nameWithType: RelinquishFileMembershipError.AccessError.Value
+  fullName: Dropbox.Api.Sharing.RelinquishFileMembershipError.AccessError.Value
+shouldSkipMarkup: true

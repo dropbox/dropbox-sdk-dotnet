@@ -1,0 +1,134 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.FileProperties.LogicalOperator.OrOperator
+  commentId: T:Dropbox.Api.FileProperties.LogicalOperator.OrOperator
+  id: LogicalOperator.OrOperator
+  parent: Dropbox.Api.FileProperties
+  children:
+  - Dropbox.Api.FileProperties.LogicalOperator.OrOperator.Instance
+  langs:
+  - csharp
+  - vb
+  name: LogicalOperator.OrOperator
+  nameWithType: LogicalOperator.OrOperator
+  fullName: Dropbox.Api.FileProperties.LogicalOperator.OrOperator
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/LogicalOperator.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: OrOperator
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/LogicalOperator.cs
+    startLine: 152
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Append a query with an &quot;or&quot; operator.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class OrOperator : LogicalOperator'
+    content.vb: >-
+      Public NotInheritable Class OrOperator
+          Inherits LogicalOperator
+  inheritance:
+  - System.Object
+  - Dropbox.Api.FileProperties.LogicalOperator
+  inheritedMembers:
+  - Dropbox.Api.FileProperties.LogicalOperator.IsOrOperator
+  - Dropbox.Api.FileProperties.LogicalOperator.AsOrOperator
+  - Dropbox.Api.FileProperties.LogicalOperator.IsOther
+  - Dropbox.Api.FileProperties.LogicalOperator.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.FileProperties.LogicalOperator.OrOperator.Instance
+  commentId: F:Dropbox.Api.FileProperties.LogicalOperator.OrOperator.Instance
+  id: Instance
+  parent: Dropbox.Api.FileProperties.LogicalOperator.OrOperator
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: LogicalOperator.OrOperator.Instance
+  fullName: Dropbox.Api.FileProperties.LogicalOperator.OrOperator.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/LogicalOperator.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/LogicalOperator.cs
+    startLine: 176
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>A singleton instance of OrOperator</p>\n"
+  example: []
+  syntax:
+    content: public static readonly LogicalOperator.OrOperator Instance
+    return:
+      type: Dropbox.Api.FileProperties.LogicalOperator.OrOperator
+    content.vb: Public Shared ReadOnly Instance As LogicalOperator.OrOperator
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.FileProperties
+  commentId: N:Dropbox.Api.FileProperties
+  name: Dropbox.Api.FileProperties
+  nameWithType: Dropbox.Api.FileProperties
+  fullName: Dropbox.Api.FileProperties
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.FileProperties.LogicalOperator
+  commentId: T:Dropbox.Api.FileProperties.LogicalOperator
+  parent: Dropbox.Api.FileProperties
+  name: LogicalOperator
+  nameWithType: LogicalOperator
+  fullName: Dropbox.Api.FileProperties.LogicalOperator
+- uid: Dropbox.Api.FileProperties.LogicalOperator.IsOrOperator
+  commentId: P:Dropbox.Api.FileProperties.LogicalOperator.IsOrOperator
+  parent: Dropbox.Api.FileProperties.LogicalOperator
+  name: IsOrOperator
+  nameWithType: LogicalOperator.IsOrOperator
+  fullName: Dropbox.Api.FileProperties.LogicalOperator.IsOrOperator
+- uid: Dropbox.Api.FileProperties.LogicalOperator.AsOrOperator
+  commentId: P:Dropbox.Api.FileProperties.LogicalOperator.AsOrOperator
+  parent: Dropbox.Api.FileProperties.LogicalOperator
+  name: AsOrOperator
+  nameWithType: LogicalOperator.AsOrOperator
+  fullName: Dropbox.Api.FileProperties.LogicalOperator.AsOrOperator
+- uid: Dropbox.Api.FileProperties.LogicalOperator.IsOther
+  commentId: P:Dropbox.Api.FileProperties.LogicalOperator.IsOther
+  parent: Dropbox.Api.FileProperties.LogicalOperator
+  name: IsOther
+  nameWithType: LogicalOperator.IsOther
+  fullName: Dropbox.Api.FileProperties.LogicalOperator.IsOther
+- uid: Dropbox.Api.FileProperties.LogicalOperator.AsOther
+  commentId: P:Dropbox.Api.FileProperties.LogicalOperator.AsOther
+  parent: Dropbox.Api.FileProperties.LogicalOperator
+  name: AsOther
+  nameWithType: LogicalOperator.AsOther
+  fullName: Dropbox.Api.FileProperties.LogicalOperator.AsOther
+- uid: Dropbox.Api.FileProperties.LogicalOperator.OrOperator
+  commentId: T:Dropbox.Api.FileProperties.LogicalOperator.OrOperator
+  parent: Dropbox.Api.FileProperties
+  name: LogicalOperator.OrOperator
+  nameWithType: LogicalOperator.OrOperator
+  fullName: Dropbox.Api.FileProperties.LogicalOperator.OrOperator
+shouldSkipMarkup: true

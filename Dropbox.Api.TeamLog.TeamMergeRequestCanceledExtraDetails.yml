@@ -1,0 +1,381 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails
+  commentId: T:Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails
+  id: TeamMergeRequestCanceledExtraDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.#ctor
+  - Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.AsOther
+  - Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.AsPrimaryTeam
+  - Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.AsSecondaryTeam
+  - Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.IsOther
+  - Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.IsPrimaryTeam
+  - Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.IsSecondaryTeam
+  langs:
+  - csharp
+  - vb
+  name: TeamMergeRequestCanceledExtraDetails
+  nameWithType: TeamMergeRequestCanceledExtraDetails
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestCanceledExtraDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TeamMergeRequestCanceledExtraDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestCanceledExtraDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Team merge request cancellation details</p>\n"
+  example: []
+  syntax:
+    content: 'public class TeamMergeRequestCanceledExtraDetails : object'
+    content.vb: >-
+      Public Class TeamMergeRequestCanceledExtraDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.Other
+  - Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.PrimaryTeam
+  - Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.SecondaryTeam
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails
+  langs:
+  - csharp
+  - vb
+  name: TeamMergeRequestCanceledExtraDetails()
+  nameWithType: TeamMergeRequestCanceledExtraDetails.TeamMergeRequestCanceledExtraDetails()
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.TeamMergeRequestCanceledExtraDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestCanceledExtraDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestCanceledExtraDetails.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public TeamMergeRequestCanceledExtraDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.IsPrimaryTeam
+  commentId: P:Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.IsPrimaryTeam
+  id: IsPrimaryTeam
+  parent: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails
+  langs:
+  - csharp
+  - vb
+  name: IsPrimaryTeam
+  nameWithType: TeamMergeRequestCanceledExtraDetails.IsPrimaryTeam
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.IsPrimaryTeam
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestCanceledExtraDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsPrimaryTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestCanceledExtraDetails.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is PrimaryTeam</p>\n"
+  example: []
+  syntax:
+    content: public bool IsPrimaryTeam { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsPrimaryTeam As Boolean
+  overload: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.IsPrimaryTeam*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.AsPrimaryTeam
+  commentId: P:Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.AsPrimaryTeam
+  id: AsPrimaryTeam
+  parent: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails
+  langs:
+  - csharp
+  - vb
+  name: AsPrimaryTeam
+  nameWithType: TeamMergeRequestCanceledExtraDetails.AsPrimaryTeam
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.AsPrimaryTeam
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestCanceledExtraDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsPrimaryTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestCanceledExtraDetails.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a PrimaryTeam, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public TeamMergeRequestCanceledExtraDetails.PrimaryTeam AsPrimaryTeam { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.PrimaryTeam
+    content.vb: Public ReadOnly Property AsPrimaryTeam As TeamMergeRequestCanceledExtraDetails.PrimaryTeam
+  overload: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.AsPrimaryTeam*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.IsSecondaryTeam
+  commentId: P:Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.IsSecondaryTeam
+  id: IsSecondaryTeam
+  parent: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails
+  langs:
+  - csharp
+  - vb
+  name: IsSecondaryTeam
+  nameWithType: TeamMergeRequestCanceledExtraDetails.IsSecondaryTeam
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.IsSecondaryTeam
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestCanceledExtraDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsSecondaryTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestCanceledExtraDetails.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is SecondaryTeam</p>\n"
+  example: []
+  syntax:
+    content: public bool IsSecondaryTeam { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsSecondaryTeam As Boolean
+  overload: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.IsSecondaryTeam*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.AsSecondaryTeam
+  commentId: P:Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.AsSecondaryTeam
+  id: AsSecondaryTeam
+  parent: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails
+  langs:
+  - csharp
+  - vb
+  name: AsSecondaryTeam
+  nameWithType: TeamMergeRequestCanceledExtraDetails.AsSecondaryTeam
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.AsSecondaryTeam
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestCanceledExtraDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsSecondaryTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestCanceledExtraDetails.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a SecondaryTeam, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public TeamMergeRequestCanceledExtraDetails.SecondaryTeam AsSecondaryTeam { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.SecondaryTeam
+    content.vb: Public ReadOnly Property AsSecondaryTeam As TeamMergeRequestCanceledExtraDetails.SecondaryTeam
+  overload: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.AsSecondaryTeam*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.IsOther
+  commentId: P:Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.IsOther
+  id: IsOther
+  parent: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: TeamMergeRequestCanceledExtraDetails.IsOther
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestCanceledExtraDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestCanceledExtraDetails.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.AsOther
+  commentId: P:Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.AsOther
+  id: AsOther
+  parent: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: TeamMergeRequestCanceledExtraDetails.AsOther
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestCanceledExtraDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestCanceledExtraDetails.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public TeamMergeRequestCanceledExtraDetails.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.Other
+    content.vb: Public ReadOnly Property AsOther As TeamMergeRequestCanceledExtraDetails.Other
+  overload: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails
+  commentId: T:Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails
+  parent: Dropbox.Api.TeamLog
+  name: TeamMergeRequestCanceledExtraDetails
+  nameWithType: TeamMergeRequestCanceledExtraDetails
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.#ctor
+  name: TeamMergeRequestCanceledExtraDetails
+  nameWithType: TeamMergeRequestCanceledExtraDetails.TeamMergeRequestCanceledExtraDetails
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.TeamMergeRequestCanceledExtraDetails
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.IsPrimaryTeam*
+  commentId: Overload:Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.IsPrimaryTeam
+  name: IsPrimaryTeam
+  nameWithType: TeamMergeRequestCanceledExtraDetails.IsPrimaryTeam
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.IsPrimaryTeam
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.AsPrimaryTeam*
+  commentId: Overload:Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.AsPrimaryTeam
+  name: AsPrimaryTeam
+  nameWithType: TeamMergeRequestCanceledExtraDetails.AsPrimaryTeam
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.AsPrimaryTeam
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.PrimaryTeam
+  commentId: T:Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.PrimaryTeam
+  parent: Dropbox.Api.TeamLog
+  name: TeamMergeRequestCanceledExtraDetails.PrimaryTeam
+  nameWithType: TeamMergeRequestCanceledExtraDetails.PrimaryTeam
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.PrimaryTeam
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.IsSecondaryTeam*
+  commentId: Overload:Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.IsSecondaryTeam
+  name: IsSecondaryTeam
+  nameWithType: TeamMergeRequestCanceledExtraDetails.IsSecondaryTeam
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.IsSecondaryTeam
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.AsSecondaryTeam*
+  commentId: Overload:Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.AsSecondaryTeam
+  name: AsSecondaryTeam
+  nameWithType: TeamMergeRequestCanceledExtraDetails.AsSecondaryTeam
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.AsSecondaryTeam
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.SecondaryTeam
+  commentId: T:Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.SecondaryTeam
+  parent: Dropbox.Api.TeamLog
+  name: TeamMergeRequestCanceledExtraDetails.SecondaryTeam
+  nameWithType: TeamMergeRequestCanceledExtraDetails.SecondaryTeam
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.SecondaryTeam
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.IsOther*
+  commentId: Overload:Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.IsOther
+  name: IsOther
+  nameWithType: TeamMergeRequestCanceledExtraDetails.IsOther
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.IsOther
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.AsOther*
+  commentId: Overload:Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.AsOther
+  name: AsOther
+  nameWithType: TeamMergeRequestCanceledExtraDetails.AsOther
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.AsOther
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.Other
+  commentId: T:Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.Other
+  parent: Dropbox.Api.TeamLog
+  name: TeamMergeRequestCanceledExtraDetails.Other
+  nameWithType: TeamMergeRequestCanceledExtraDetails.Other
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails.Other
+shouldSkipMarkup: true

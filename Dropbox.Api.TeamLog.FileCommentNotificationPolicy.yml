@@ -1,0 +1,381 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.FileCommentNotificationPolicy
+  commentId: T:Dropbox.Api.TeamLog.FileCommentNotificationPolicy
+  id: FileCommentNotificationPolicy
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.FileCommentNotificationPolicy.#ctor
+  - Dropbox.Api.TeamLog.FileCommentNotificationPolicy.AsDisabled
+  - Dropbox.Api.TeamLog.FileCommentNotificationPolicy.AsEnabled
+  - Dropbox.Api.TeamLog.FileCommentNotificationPolicy.AsOther
+  - Dropbox.Api.TeamLog.FileCommentNotificationPolicy.IsDisabled
+  - Dropbox.Api.TeamLog.FileCommentNotificationPolicy.IsEnabled
+  - Dropbox.Api.TeamLog.FileCommentNotificationPolicy.IsOther
+  langs:
+  - csharp
+  - vb
+  name: FileCommentNotificationPolicy
+  nameWithType: FileCommentNotificationPolicy
+  fullName: Dropbox.Api.TeamLog.FileCommentNotificationPolicy
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileCommentNotificationPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: FileCommentNotificationPolicy
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileCommentNotificationPolicy.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Enable or disable file comments notifications</p>\n"
+  example: []
+  syntax:
+    content: 'public class FileCommentNotificationPolicy : object'
+    content.vb: >-
+      Public Class FileCommentNotificationPolicy
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.TeamLog.FileCommentNotificationPolicy.Disabled
+  - Dropbox.Api.TeamLog.FileCommentNotificationPolicy.Enabled
+  - Dropbox.Api.TeamLog.FileCommentNotificationPolicy.Other
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.FileCommentNotificationPolicy.#ctor
+  commentId: M:Dropbox.Api.TeamLog.FileCommentNotificationPolicy.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.FileCommentNotificationPolicy
+  langs:
+  - csharp
+  - vb
+  name: FileCommentNotificationPolicy()
+  nameWithType: FileCommentNotificationPolicy.FileCommentNotificationPolicy()
+  fullName: Dropbox.Api.TeamLog.FileCommentNotificationPolicy.FileCommentNotificationPolicy()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileCommentNotificationPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileCommentNotificationPolicy.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.FileCommentNotificationPolicy\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public FileCommentNotificationPolicy()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.FileCommentNotificationPolicy.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.FileCommentNotificationPolicy.IsDisabled
+  commentId: P:Dropbox.Api.TeamLog.FileCommentNotificationPolicy.IsDisabled
+  id: IsDisabled
+  parent: Dropbox.Api.TeamLog.FileCommentNotificationPolicy
+  langs:
+  - csharp
+  - vb
+  name: IsDisabled
+  nameWithType: FileCommentNotificationPolicy.IsDisabled
+  fullName: Dropbox.Api.TeamLog.FileCommentNotificationPolicy.IsDisabled
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileCommentNotificationPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsDisabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileCommentNotificationPolicy.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Disabled</p>\n"
+  example: []
+  syntax:
+    content: public bool IsDisabled { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsDisabled As Boolean
+  overload: Dropbox.Api.TeamLog.FileCommentNotificationPolicy.IsDisabled*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.FileCommentNotificationPolicy.AsDisabled
+  commentId: P:Dropbox.Api.TeamLog.FileCommentNotificationPolicy.AsDisabled
+  id: AsDisabled
+  parent: Dropbox.Api.TeamLog.FileCommentNotificationPolicy
+  langs:
+  - csharp
+  - vb
+  name: AsDisabled
+  nameWithType: FileCommentNotificationPolicy.AsDisabled
+  fullName: Dropbox.Api.TeamLog.FileCommentNotificationPolicy.AsDisabled
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileCommentNotificationPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsDisabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileCommentNotificationPolicy.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Disabled, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public FileCommentNotificationPolicy.Disabled AsDisabled { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.FileCommentNotificationPolicy.Disabled
+    content.vb: Public ReadOnly Property AsDisabled As FileCommentNotificationPolicy.Disabled
+  overload: Dropbox.Api.TeamLog.FileCommentNotificationPolicy.AsDisabled*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.FileCommentNotificationPolicy.IsEnabled
+  commentId: P:Dropbox.Api.TeamLog.FileCommentNotificationPolicy.IsEnabled
+  id: IsEnabled
+  parent: Dropbox.Api.TeamLog.FileCommentNotificationPolicy
+  langs:
+  - csharp
+  - vb
+  name: IsEnabled
+  nameWithType: FileCommentNotificationPolicy.IsEnabled
+  fullName: Dropbox.Api.TeamLog.FileCommentNotificationPolicy.IsEnabled
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileCommentNotificationPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsEnabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileCommentNotificationPolicy.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Enabled</p>\n"
+  example: []
+  syntax:
+    content: public bool IsEnabled { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsEnabled As Boolean
+  overload: Dropbox.Api.TeamLog.FileCommentNotificationPolicy.IsEnabled*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.FileCommentNotificationPolicy.AsEnabled
+  commentId: P:Dropbox.Api.TeamLog.FileCommentNotificationPolicy.AsEnabled
+  id: AsEnabled
+  parent: Dropbox.Api.TeamLog.FileCommentNotificationPolicy
+  langs:
+  - csharp
+  - vb
+  name: AsEnabled
+  nameWithType: FileCommentNotificationPolicy.AsEnabled
+  fullName: Dropbox.Api.TeamLog.FileCommentNotificationPolicy.AsEnabled
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileCommentNotificationPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsEnabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileCommentNotificationPolicy.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Enabled, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public FileCommentNotificationPolicy.Enabled AsEnabled { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.FileCommentNotificationPolicy.Enabled
+    content.vb: Public ReadOnly Property AsEnabled As FileCommentNotificationPolicy.Enabled
+  overload: Dropbox.Api.TeamLog.FileCommentNotificationPolicy.AsEnabled*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.FileCommentNotificationPolicy.IsOther
+  commentId: P:Dropbox.Api.TeamLog.FileCommentNotificationPolicy.IsOther
+  id: IsOther
+  parent: Dropbox.Api.TeamLog.FileCommentNotificationPolicy
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: FileCommentNotificationPolicy.IsOther
+  fullName: Dropbox.Api.TeamLog.FileCommentNotificationPolicy.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileCommentNotificationPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileCommentNotificationPolicy.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.TeamLog.FileCommentNotificationPolicy.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.FileCommentNotificationPolicy.AsOther
+  commentId: P:Dropbox.Api.TeamLog.FileCommentNotificationPolicy.AsOther
+  id: AsOther
+  parent: Dropbox.Api.TeamLog.FileCommentNotificationPolicy
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: FileCommentNotificationPolicy.AsOther
+  fullName: Dropbox.Api.TeamLog.FileCommentNotificationPolicy.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileCommentNotificationPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileCommentNotificationPolicy.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public FileCommentNotificationPolicy.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.FileCommentNotificationPolicy.Other
+    content.vb: Public ReadOnly Property AsOther As FileCommentNotificationPolicy.Other
+  overload: Dropbox.Api.TeamLog.FileCommentNotificationPolicy.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.FileCommentNotificationPolicy
+  commentId: T:Dropbox.Api.TeamLog.FileCommentNotificationPolicy
+  parent: Dropbox.Api.TeamLog
+  name: FileCommentNotificationPolicy
+  nameWithType: FileCommentNotificationPolicy
+  fullName: Dropbox.Api.TeamLog.FileCommentNotificationPolicy
+- uid: Dropbox.Api.TeamLog.FileCommentNotificationPolicy.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.FileCommentNotificationPolicy.#ctor
+  name: FileCommentNotificationPolicy
+  nameWithType: FileCommentNotificationPolicy.FileCommentNotificationPolicy
+  fullName: Dropbox.Api.TeamLog.FileCommentNotificationPolicy.FileCommentNotificationPolicy
+- uid: Dropbox.Api.TeamLog.FileCommentNotificationPolicy.IsDisabled*
+  commentId: Overload:Dropbox.Api.TeamLog.FileCommentNotificationPolicy.IsDisabled
+  name: IsDisabled
+  nameWithType: FileCommentNotificationPolicy.IsDisabled
+  fullName: Dropbox.Api.TeamLog.FileCommentNotificationPolicy.IsDisabled
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.TeamLog.FileCommentNotificationPolicy.AsDisabled*
+  commentId: Overload:Dropbox.Api.TeamLog.FileCommentNotificationPolicy.AsDisabled
+  name: AsDisabled
+  nameWithType: FileCommentNotificationPolicy.AsDisabled
+  fullName: Dropbox.Api.TeamLog.FileCommentNotificationPolicy.AsDisabled
+- uid: Dropbox.Api.TeamLog.FileCommentNotificationPolicy.Disabled
+  commentId: T:Dropbox.Api.TeamLog.FileCommentNotificationPolicy.Disabled
+  parent: Dropbox.Api.TeamLog
+  name: FileCommentNotificationPolicy.Disabled
+  nameWithType: FileCommentNotificationPolicy.Disabled
+  fullName: Dropbox.Api.TeamLog.FileCommentNotificationPolicy.Disabled
+- uid: Dropbox.Api.TeamLog.FileCommentNotificationPolicy.IsEnabled*
+  commentId: Overload:Dropbox.Api.TeamLog.FileCommentNotificationPolicy.IsEnabled
+  name: IsEnabled
+  nameWithType: FileCommentNotificationPolicy.IsEnabled
+  fullName: Dropbox.Api.TeamLog.FileCommentNotificationPolicy.IsEnabled
+- uid: Dropbox.Api.TeamLog.FileCommentNotificationPolicy.AsEnabled*
+  commentId: Overload:Dropbox.Api.TeamLog.FileCommentNotificationPolicy.AsEnabled
+  name: AsEnabled
+  nameWithType: FileCommentNotificationPolicy.AsEnabled
+  fullName: Dropbox.Api.TeamLog.FileCommentNotificationPolicy.AsEnabled
+- uid: Dropbox.Api.TeamLog.FileCommentNotificationPolicy.Enabled
+  commentId: T:Dropbox.Api.TeamLog.FileCommentNotificationPolicy.Enabled
+  parent: Dropbox.Api.TeamLog
+  name: FileCommentNotificationPolicy.Enabled
+  nameWithType: FileCommentNotificationPolicy.Enabled
+  fullName: Dropbox.Api.TeamLog.FileCommentNotificationPolicy.Enabled
+- uid: Dropbox.Api.TeamLog.FileCommentNotificationPolicy.IsOther*
+  commentId: Overload:Dropbox.Api.TeamLog.FileCommentNotificationPolicy.IsOther
+  name: IsOther
+  nameWithType: FileCommentNotificationPolicy.IsOther
+  fullName: Dropbox.Api.TeamLog.FileCommentNotificationPolicy.IsOther
+- uid: Dropbox.Api.TeamLog.FileCommentNotificationPolicy.AsOther*
+  commentId: Overload:Dropbox.Api.TeamLog.FileCommentNotificationPolicy.AsOther
+  name: AsOther
+  nameWithType: FileCommentNotificationPolicy.AsOther
+  fullName: Dropbox.Api.TeamLog.FileCommentNotificationPolicy.AsOther
+- uid: Dropbox.Api.TeamLog.FileCommentNotificationPolicy.Other
+  commentId: T:Dropbox.Api.TeamLog.FileCommentNotificationPolicy.Other
+  parent: Dropbox.Api.TeamLog
+  name: FileCommentNotificationPolicy.Other
+  nameWithType: FileCommentNotificationPolicy.Other
+  fullName: Dropbox.Api.TeamLog.FileCommentNotificationPolicy.Other
+shouldSkipMarkup: true

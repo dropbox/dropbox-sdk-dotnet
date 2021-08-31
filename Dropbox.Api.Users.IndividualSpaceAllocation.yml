@@ -1,0 +1,190 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Users.IndividualSpaceAllocation
+  commentId: T:Dropbox.Api.Users.IndividualSpaceAllocation
+  id: IndividualSpaceAllocation
+  parent: Dropbox.Api.Users
+  children:
+  - Dropbox.Api.Users.IndividualSpaceAllocation.#ctor
+  - Dropbox.Api.Users.IndividualSpaceAllocation.#ctor(System.UInt64)
+  - Dropbox.Api.Users.IndividualSpaceAllocation.Allocated
+  langs:
+  - csharp
+  - vb
+  name: IndividualSpaceAllocation
+  nameWithType: IndividualSpaceAllocation
+  fullName: Dropbox.Api.Users.IndividualSpaceAllocation
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/IndividualSpaceAllocation.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IndividualSpaceAllocation
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/IndividualSpaceAllocation.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users
+  summary: "\n<p>The individual space allocation object</p>\n"
+  example: []
+  syntax:
+    content: 'public class IndividualSpaceAllocation : object'
+    content.vb: >-
+      Public Class IndividualSpaceAllocation
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Users.IndividualSpaceAllocation.#ctor(System.UInt64)
+  commentId: M:Dropbox.Api.Users.IndividualSpaceAllocation.#ctor(System.UInt64)
+  id: '#ctor(System.UInt64)'
+  parent: Dropbox.Api.Users.IndividualSpaceAllocation
+  langs:
+  - csharp
+  - vb
+  name: IndividualSpaceAllocation(UInt64)
+  nameWithType: IndividualSpaceAllocation.IndividualSpaceAllocation(UInt64)
+  fullName: Dropbox.Api.Users.IndividualSpaceAllocation.IndividualSpaceAllocation(System.UInt64)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/IndividualSpaceAllocation.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/IndividualSpaceAllocation.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Users.IndividualSpaceAllocation\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public IndividualSpaceAllocation(ulong allocated)
+    parameters:
+    - id: allocated
+      type: System.UInt64
+      description: >-
+        The total space allocated to the user&apos;s account
+
+        (bytes).
+    content.vb: Public Sub New(allocated As ULong)
+  overload: Dropbox.Api.Users.IndividualSpaceAllocation.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Users.IndividualSpaceAllocation.#ctor
+  commentId: M:Dropbox.Api.Users.IndividualSpaceAllocation.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Users.IndividualSpaceAllocation
+  langs:
+  - csharp
+  - vb
+  name: IndividualSpaceAllocation()
+  nameWithType: IndividualSpaceAllocation.IndividualSpaceAllocation()
+  fullName: Dropbox.Api.Users.IndividualSpaceAllocation.IndividualSpaceAllocation()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/IndividualSpaceAllocation.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/IndividualSpaceAllocation.cs
+    startLine: 46
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Users.IndividualSpaceAllocation\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public IndividualSpaceAllocation()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Users.IndividualSpaceAllocation.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Users.IndividualSpaceAllocation.Allocated
+  commentId: P:Dropbox.Api.Users.IndividualSpaceAllocation.Allocated
+  id: Allocated
+  parent: Dropbox.Api.Users.IndividualSpaceAllocation
+  langs:
+  - csharp
+  - vb
+  name: Allocated
+  nameWithType: IndividualSpaceAllocation.Allocated
+  fullName: Dropbox.Api.Users.IndividualSpaceAllocation.Allocated
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/IndividualSpaceAllocation.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Allocated
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/IndividualSpaceAllocation.cs
+    startLine: 54
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users
+  summary: "\n<p>The total space allocated to the user&apos;s account (bytes).</p>\n"
+  example: []
+  syntax:
+    content: public ulong Allocated { get; protected set; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: Public Property Allocated As ULong
+  overload: Dropbox.Api.Users.IndividualSpaceAllocation.Allocated*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Users
+  commentId: N:Dropbox.Api.Users
+  name: Dropbox.Api.Users
+  nameWithType: Dropbox.Api.Users
+  fullName: Dropbox.Api.Users
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Users.IndividualSpaceAllocation
+  commentId: T:Dropbox.Api.Users.IndividualSpaceAllocation
+  parent: Dropbox.Api.Users
+  name: IndividualSpaceAllocation
+  nameWithType: IndividualSpaceAllocation
+  fullName: Dropbox.Api.Users.IndividualSpaceAllocation
+- uid: Dropbox.Api.Users.IndividualSpaceAllocation.#ctor*
+  commentId: Overload:Dropbox.Api.Users.IndividualSpaceAllocation.#ctor
+  name: IndividualSpaceAllocation
+  nameWithType: IndividualSpaceAllocation.IndividualSpaceAllocation
+  fullName: Dropbox.Api.Users.IndividualSpaceAllocation.IndividualSpaceAllocation
+- uid: System.UInt64
+  isExternal: true
+  name: UInt64
+  nameWithType: UInt64
+  fullName: System.UInt64
+- uid: Dropbox.Api.Users.IndividualSpaceAllocation.Allocated*
+  commentId: Overload:Dropbox.Api.Users.IndividualSpaceAllocation.Allocated
+  name: Allocated
+  nameWithType: IndividualSpaceAllocation.Allocated
+  fullName: Dropbox.Api.Users.IndividualSpaceAllocation.Allocated
+shouldSkipMarkup: true

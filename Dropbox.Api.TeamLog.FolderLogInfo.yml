@@ -1,0 +1,325 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.FolderLogInfo
+  commentId: T:Dropbox.Api.TeamLog.FolderLogInfo
+  id: FolderLogInfo
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.FolderLogInfo.#ctor
+  - Dropbox.Api.TeamLog.FolderLogInfo.#ctor(Dropbox.Api.TeamLog.PathLogInfo,System.String,System.String,System.Nullable{System.UInt64},System.Nullable{System.UInt64})
+  - Dropbox.Api.TeamLog.FolderLogInfo.FileCount
+  langs:
+  - csharp
+  - vb
+  name: FolderLogInfo
+  nameWithType: FolderLogInfo
+  fullName: Dropbox.Api.TeamLog.FolderLogInfo
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FolderLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: FolderLogInfo
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FolderLogInfo.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Folder&apos;s logged information.</p>\n"
+  example: []
+  syntax:
+    content: 'public class FolderLogInfo : FileOrFolderLogInfo'
+    content.vb: >-
+      Public Class FolderLogInfo
+          Inherits FileOrFolderLogInfo
+  inheritance:
+  - System.Object
+  - Dropbox.Api.TeamLog.FileOrFolderLogInfo
+  inheritedMembers:
+  - Dropbox.Api.TeamLog.FileOrFolderLogInfo.Path
+  - Dropbox.Api.TeamLog.FileOrFolderLogInfo.DisplayName
+  - Dropbox.Api.TeamLog.FileOrFolderLogInfo.FileId
+  - Dropbox.Api.TeamLog.FileOrFolderLogInfo.FileSize
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.FolderLogInfo.#ctor(Dropbox.Api.TeamLog.PathLogInfo,System.String,System.String,System.Nullable{System.UInt64},System.Nullable{System.UInt64})
+  commentId: M:Dropbox.Api.TeamLog.FolderLogInfo.#ctor(Dropbox.Api.TeamLog.PathLogInfo,System.String,System.String,System.Nullable{System.UInt64},System.Nullable{System.UInt64})
+  id: '#ctor(Dropbox.Api.TeamLog.PathLogInfo,System.String,System.String,System.Nullable{System.UInt64},System.Nullable{System.UInt64})'
+  parent: Dropbox.Api.TeamLog.FolderLogInfo
+  langs:
+  - csharp
+  - vb
+  name: FolderLogInfo(PathLogInfo, String, String, Nullable<UInt64>, Nullable<UInt64>)
+  nameWithType: FolderLogInfo.FolderLogInfo(PathLogInfo, String, String, Nullable<UInt64>, Nullable<UInt64>)
+  fullName: Dropbox.Api.TeamLog.FolderLogInfo.FolderLogInfo(Dropbox.Api.TeamLog.PathLogInfo, System.String, System.String, System.Nullable<System.UInt64>, System.Nullable<System.UInt64>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FolderLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FolderLogInfo.cs
+    startLine: 38
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.FolderLogInfo\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public FolderLogInfo(PathLogInfo path, string displayName = null, string fileId = null, ulong? fileSize = null, ulong? fileCount = null)
+    parameters:
+    - id: path
+      type: Dropbox.Api.TeamLog.PathLogInfo
+      description: Path relative to event context.
+    - id: displayName
+      type: System.String
+      description: Display name.
+    - id: fileId
+      type: System.String
+      description: Unique ID.
+    - id: fileSize
+      type: System.Nullable{System.UInt64}
+      description: File or folder size in bytes.
+    - id: fileCount
+      type: System.Nullable{System.UInt64}
+      description: Number of files within the folder.
+    content.vb: Public Sub New(path As PathLogInfo, displayName As String = Nothing, fileId As String = Nothing, fileSize As ULong? = Nothing, fileCount As ULong? = Nothing)
+  overload: Dropbox.Api.TeamLog.FolderLogInfo.#ctor*
+  nameWithType.vb: FolderLogInfo.FolderLogInfo(PathLogInfo, String, String, Nullable(Of UInt64), Nullable(Of UInt64))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.TeamLog.FolderLogInfo.FolderLogInfo(Dropbox.Api.TeamLog.PathLogInfo, System.String, System.String, System.Nullable(Of System.UInt64), System.Nullable(Of System.UInt64))
+  name.vb: FolderLogInfo(PathLogInfo, String, String, Nullable(Of UInt64), Nullable(Of UInt64))
+- uid: Dropbox.Api.TeamLog.FolderLogInfo.#ctor
+  commentId: M:Dropbox.Api.TeamLog.FolderLogInfo.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.FolderLogInfo
+  langs:
+  - csharp
+  - vb
+  name: FolderLogInfo()
+  nameWithType: FolderLogInfo.FolderLogInfo()
+  fullName: Dropbox.Api.TeamLog.FolderLogInfo.FolderLogInfo()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FolderLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FolderLogInfo.cs
+    startLine: 53
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.FolderLogInfo\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public FolderLogInfo()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.FolderLogInfo.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.FolderLogInfo.FileCount
+  commentId: P:Dropbox.Api.TeamLog.FolderLogInfo.FileCount
+  id: FileCount
+  parent: Dropbox.Api.TeamLog.FolderLogInfo
+  langs:
+  - csharp
+  - vb
+  name: FileCount
+  nameWithType: FolderLogInfo.FileCount
+  fullName: Dropbox.Api.TeamLog.FolderLogInfo.FileCount
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FolderLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: FileCount
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FolderLogInfo.cs
+    startLine: 61
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Number of files within the folder.</p>\n"
+  example: []
+  syntax:
+    content: public ulong? FileCount { get; protected set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.UInt64}
+    content.vb: Public Property FileCount As ULong?
+  overload: Dropbox.Api.TeamLog.FolderLogInfo.FileCount*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.FileOrFolderLogInfo
+  commentId: T:Dropbox.Api.TeamLog.FileOrFolderLogInfo
+  parent: Dropbox.Api.TeamLog
+  name: FileOrFolderLogInfo
+  nameWithType: FileOrFolderLogInfo
+  fullName: Dropbox.Api.TeamLog.FileOrFolderLogInfo
+- uid: Dropbox.Api.TeamLog.FileOrFolderLogInfo.Path
+  commentId: P:Dropbox.Api.TeamLog.FileOrFolderLogInfo.Path
+  parent: Dropbox.Api.TeamLog.FileOrFolderLogInfo
+  name: Path
+  nameWithType: FileOrFolderLogInfo.Path
+  fullName: Dropbox.Api.TeamLog.FileOrFolderLogInfo.Path
+- uid: Dropbox.Api.TeamLog.FileOrFolderLogInfo.DisplayName
+  commentId: P:Dropbox.Api.TeamLog.FileOrFolderLogInfo.DisplayName
+  parent: Dropbox.Api.TeamLog.FileOrFolderLogInfo
+  name: DisplayName
+  nameWithType: FileOrFolderLogInfo.DisplayName
+  fullName: Dropbox.Api.TeamLog.FileOrFolderLogInfo.DisplayName
+- uid: Dropbox.Api.TeamLog.FileOrFolderLogInfo.FileId
+  commentId: P:Dropbox.Api.TeamLog.FileOrFolderLogInfo.FileId
+  parent: Dropbox.Api.TeamLog.FileOrFolderLogInfo
+  name: FileId
+  nameWithType: FileOrFolderLogInfo.FileId
+  fullName: Dropbox.Api.TeamLog.FileOrFolderLogInfo.FileId
+- uid: Dropbox.Api.TeamLog.FileOrFolderLogInfo.FileSize
+  commentId: P:Dropbox.Api.TeamLog.FileOrFolderLogInfo.FileSize
+  parent: Dropbox.Api.TeamLog.FileOrFolderLogInfo
+  name: FileSize
+  nameWithType: FileOrFolderLogInfo.FileSize
+  fullName: Dropbox.Api.TeamLog.FileOrFolderLogInfo.FileSize
+- uid: Dropbox.Api.TeamLog.FolderLogInfo
+  commentId: T:Dropbox.Api.TeamLog.FolderLogInfo
+  parent: Dropbox.Api.TeamLog
+  name: FolderLogInfo
+  nameWithType: FolderLogInfo
+  fullName: Dropbox.Api.TeamLog.FolderLogInfo
+- uid: Dropbox.Api.TeamLog.FolderLogInfo.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.FolderLogInfo.#ctor
+  name: FolderLogInfo
+  nameWithType: FolderLogInfo.FolderLogInfo
+  fullName: Dropbox.Api.TeamLog.FolderLogInfo.FolderLogInfo
+- uid: Dropbox.Api.TeamLog.PathLogInfo
+  commentId: T:Dropbox.Api.TeamLog.PathLogInfo
+  parent: Dropbox.Api.TeamLog
+  name: PathLogInfo
+  nameWithType: PathLogInfo
+  fullName: Dropbox.Api.TeamLog.PathLogInfo
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Nullable{System.UInt64}
+  commentId: '!:System.Nullable{System.UInt64}'
+  definition: System.Nullable`1
+  name: Nullable<UInt64>
+  nameWithType: Nullable<UInt64>
+  fullName: System.Nullable<System.UInt64>
+  nameWithType.vb: Nullable(Of UInt64)
+  fullName.vb: System.Nullable(Of System.UInt64)
+  name.vb: Nullable(Of UInt64)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.UInt64
+    name: UInt64
+    nameWithType: UInt64
+    fullName: System.UInt64
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.UInt64
+    name: UInt64
+    nameWithType: UInt64
+    fullName: System.UInt64
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  isExternal: true
+  name: Nullable<>
+  nameWithType: Nullable<>
+  fullName: System.Nullable<>
+  nameWithType.vb: Nullable(Of )
+  fullName.vb: System.Nullable(Of )
+  name.vb: Nullable(Of )
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.TeamLog.FolderLogInfo.FileCount*
+  commentId: Overload:Dropbox.Api.TeamLog.FolderLogInfo.FileCount
+  name: FileCount
+  nameWithType: FolderLogInfo.FileCount
+  fullName: Dropbox.Api.TeamLog.FolderLogInfo.FileCount
+shouldSkipMarkup: true

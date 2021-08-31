@@ -1,0 +1,244 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.SsoChangePolicyDetails
+  commentId: T:Dropbox.Api.TeamLog.SsoChangePolicyDetails
+  id: SsoChangePolicyDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.SsoChangePolicyDetails.#ctor
+  - Dropbox.Api.TeamLog.SsoChangePolicyDetails.#ctor(Dropbox.Api.TeamPolicies.SsoPolicy,Dropbox.Api.TeamPolicies.SsoPolicy)
+  - Dropbox.Api.TeamLog.SsoChangePolicyDetails.NewValue
+  - Dropbox.Api.TeamLog.SsoChangePolicyDetails.PreviousValue
+  langs:
+  - csharp
+  - vb
+  name: SsoChangePolicyDetails
+  nameWithType: SsoChangePolicyDetails
+  fullName: Dropbox.Api.TeamLog.SsoChangePolicyDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SsoChangePolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SsoChangePolicyDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SsoChangePolicyDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Changed single sign-on setting for team.</p>\n"
+  example: []
+  syntax:
+    content: 'public class SsoChangePolicyDetails : object'
+    content.vb: >-
+      Public Class SsoChangePolicyDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.SsoChangePolicyDetails.#ctor(Dropbox.Api.TeamPolicies.SsoPolicy,Dropbox.Api.TeamPolicies.SsoPolicy)
+  commentId: M:Dropbox.Api.TeamLog.SsoChangePolicyDetails.#ctor(Dropbox.Api.TeamPolicies.SsoPolicy,Dropbox.Api.TeamPolicies.SsoPolicy)
+  id: '#ctor(Dropbox.Api.TeamPolicies.SsoPolicy,Dropbox.Api.TeamPolicies.SsoPolicy)'
+  parent: Dropbox.Api.TeamLog.SsoChangePolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: SsoChangePolicyDetails(SsoPolicy, SsoPolicy)
+  nameWithType: SsoChangePolicyDetails.SsoChangePolicyDetails(SsoPolicy, SsoPolicy)
+  fullName: Dropbox.Api.TeamLog.SsoChangePolicyDetails.SsoChangePolicyDetails(Dropbox.Api.TeamPolicies.SsoPolicy, Dropbox.Api.TeamPolicies.SsoPolicy)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SsoChangePolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SsoChangePolicyDetails.cs
+    startLine: 36
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SsoChangePolicyDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public SsoChangePolicyDetails(SsoPolicy newValue, SsoPolicy previousValue = null)
+    parameters:
+    - id: newValue
+      type: Dropbox.Api.TeamPolicies.SsoPolicy
+      description: New single sign-on policy.
+    - id: previousValue
+      type: Dropbox.Api.TeamPolicies.SsoPolicy
+      description: >-
+        Previous single sign-on policy. Might be missing due to
+
+        historical data gap.
+    content.vb: Public Sub New(newValue As SsoPolicy, previousValue As SsoPolicy = Nothing)
+  overload: Dropbox.Api.TeamLog.SsoChangePolicyDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SsoChangePolicyDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.SsoChangePolicyDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.SsoChangePolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: SsoChangePolicyDetails()
+  nameWithType: SsoChangePolicyDetails.SsoChangePolicyDetails()
+  fullName: Dropbox.Api.TeamLog.SsoChangePolicyDetails.SsoChangePolicyDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SsoChangePolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SsoChangePolicyDetails.cs
+    startLine: 54
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SsoChangePolicyDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public SsoChangePolicyDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.SsoChangePolicyDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SsoChangePolicyDetails.NewValue
+  commentId: P:Dropbox.Api.TeamLog.SsoChangePolicyDetails.NewValue
+  id: NewValue
+  parent: Dropbox.Api.TeamLog.SsoChangePolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: NewValue
+  nameWithType: SsoChangePolicyDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.SsoChangePolicyDetails.NewValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SsoChangePolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NewValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SsoChangePolicyDetails.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>New single sign-on policy.</p>\n"
+  example: []
+  syntax:
+    content: public SsoPolicy NewValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamPolicies.SsoPolicy
+    content.vb: Public Property NewValue As SsoPolicy
+  overload: Dropbox.Api.TeamLog.SsoChangePolicyDetails.NewValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.SsoChangePolicyDetails.PreviousValue
+  commentId: P:Dropbox.Api.TeamLog.SsoChangePolicyDetails.PreviousValue
+  id: PreviousValue
+  parent: Dropbox.Api.TeamLog.SsoChangePolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: PreviousValue
+  nameWithType: SsoChangePolicyDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.SsoChangePolicyDetails.PreviousValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SsoChangePolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PreviousValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SsoChangePolicyDetails.cs
+    startLine: 68
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Previous single sign-on policy. Might be missing due to historical data\ngap.</p>\n"
+  example: []
+  syntax:
+    content: public SsoPolicy PreviousValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamPolicies.SsoPolicy
+    content.vb: Public Property PreviousValue As SsoPolicy
+  overload: Dropbox.Api.TeamLog.SsoChangePolicyDetails.PreviousValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.SsoChangePolicyDetails
+  commentId: T:Dropbox.Api.TeamLog.SsoChangePolicyDetails
+  parent: Dropbox.Api.TeamLog
+  name: SsoChangePolicyDetails
+  nameWithType: SsoChangePolicyDetails
+  fullName: Dropbox.Api.TeamLog.SsoChangePolicyDetails
+- uid: Dropbox.Api.TeamLog.SsoChangePolicyDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.SsoChangePolicyDetails.#ctor
+  name: SsoChangePolicyDetails
+  nameWithType: SsoChangePolicyDetails.SsoChangePolicyDetails
+  fullName: Dropbox.Api.TeamLog.SsoChangePolicyDetails.SsoChangePolicyDetails
+- uid: Dropbox.Api.TeamPolicies.SsoPolicy
+  commentId: T:Dropbox.Api.TeamPolicies.SsoPolicy
+  parent: Dropbox.Api.TeamPolicies
+  name: SsoPolicy
+  nameWithType: SsoPolicy
+  fullName: Dropbox.Api.TeamPolicies.SsoPolicy
+- uid: Dropbox.Api.TeamPolicies
+  commentId: N:Dropbox.Api.TeamPolicies
+  name: Dropbox.Api.TeamPolicies
+  nameWithType: Dropbox.Api.TeamPolicies
+  fullName: Dropbox.Api.TeamPolicies
+- uid: Dropbox.Api.TeamLog.SsoChangePolicyDetails.NewValue*
+  commentId: Overload:Dropbox.Api.TeamLog.SsoChangePolicyDetails.NewValue
+  name: NewValue
+  nameWithType: SsoChangePolicyDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.SsoChangePolicyDetails.NewValue
+- uid: Dropbox.Api.TeamLog.SsoChangePolicyDetails.PreviousValue*
+  commentId: Overload:Dropbox.Api.TeamLog.SsoChangePolicyDetails.PreviousValue
+  name: PreviousValue
+  nameWithType: SsoChangePolicyDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.SsoChangePolicyDetails.PreviousValue
+shouldSkipMarkup: true

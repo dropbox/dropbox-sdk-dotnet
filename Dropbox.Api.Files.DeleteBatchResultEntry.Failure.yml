@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.DeleteBatchResultEntry.Failure
+  commentId: T:Dropbox.Api.Files.DeleteBatchResultEntry.Failure
+  id: DeleteBatchResultEntry.Failure
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.DeleteBatchResultEntry.Failure.#ctor(Dropbox.Api.Files.DeleteError)
+  - Dropbox.Api.Files.DeleteBatchResultEntry.Failure.Value
+  langs:
+  - csharp
+  - vb
+  name: DeleteBatchResultEntry.Failure
+  nameWithType: DeleteBatchResultEntry.Failure
+  fullName: Dropbox.Api.Files.DeleteBatchResultEntry.Failure
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/DeleteBatchResultEntry.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Failure
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/DeleteBatchResultEntry.cs
+    startLine: 242
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The failure object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Failure : DeleteBatchResultEntry'
+    content.vb: >-
+      Public NotInheritable Class Failure
+          Inherits DeleteBatchResultEntry
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Files.DeleteBatchResultEntry
+  inheritedMembers:
+  - Dropbox.Api.Files.DeleteBatchResultEntry.IsSuccess
+  - Dropbox.Api.Files.DeleteBatchResultEntry.AsSuccess
+  - Dropbox.Api.Files.DeleteBatchResultEntry.IsFailure
+  - Dropbox.Api.Files.DeleteBatchResultEntry.AsFailure
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Files.DeleteBatchResultEntry.Failure.#ctor(Dropbox.Api.Files.DeleteError)
+  commentId: M:Dropbox.Api.Files.DeleteBatchResultEntry.Failure.#ctor(Dropbox.Api.Files.DeleteError)
+  id: '#ctor(Dropbox.Api.Files.DeleteError)'
+  parent: Dropbox.Api.Files.DeleteBatchResultEntry.Failure
+  langs:
+  - csharp
+  - vb
+  name: Failure(DeleteError)
+  nameWithType: DeleteBatchResultEntry.Failure.Failure(DeleteError)
+  fullName: Dropbox.Api.Files.DeleteBatchResultEntry.Failure.Failure(Dropbox.Api.Files.DeleteError)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/DeleteBatchResultEntry.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/DeleteBatchResultEntry.cs
+    startLine: 260
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.DeleteBatchResultEntry.Failure\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public Failure(DeleteError value)
+    parameters:
+    - id: value
+      type: Dropbox.Api.Files.DeleteError
+      description: The value
+    content.vb: Public Sub New(value As DeleteError)
+  overload: Dropbox.Api.Files.DeleteBatchResultEntry.Failure.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.DeleteBatchResultEntry.Failure.Value
+  commentId: P:Dropbox.Api.Files.DeleteBatchResultEntry.Failure.Value
+  id: Value
+  parent: Dropbox.Api.Files.DeleteBatchResultEntry.Failure
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: DeleteBatchResultEntry.Failure.Value
+  fullName: Dropbox.Api.Files.DeleteBatchResultEntry.Failure.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/DeleteBatchResultEntry.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/DeleteBatchResultEntry.cs
+    startLine: 274
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public DeleteError Value { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.DeleteError
+    content.vb: Public ReadOnly Property Value As DeleteError
+  overload: Dropbox.Api.Files.DeleteBatchResultEntry.Failure.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.DeleteBatchResultEntry
+  commentId: T:Dropbox.Api.Files.DeleteBatchResultEntry
+  parent: Dropbox.Api.Files
+  name: DeleteBatchResultEntry
+  nameWithType: DeleteBatchResultEntry
+  fullName: Dropbox.Api.Files.DeleteBatchResultEntry
+- uid: Dropbox.Api.Files.DeleteBatchResultEntry.IsSuccess
+  commentId: P:Dropbox.Api.Files.DeleteBatchResultEntry.IsSuccess
+  parent: Dropbox.Api.Files.DeleteBatchResultEntry
+  name: IsSuccess
+  nameWithType: DeleteBatchResultEntry.IsSuccess
+  fullName: Dropbox.Api.Files.DeleteBatchResultEntry.IsSuccess
+- uid: Dropbox.Api.Files.DeleteBatchResultEntry.AsSuccess
+  commentId: P:Dropbox.Api.Files.DeleteBatchResultEntry.AsSuccess
+  parent: Dropbox.Api.Files.DeleteBatchResultEntry
+  name: AsSuccess
+  nameWithType: DeleteBatchResultEntry.AsSuccess
+  fullName: Dropbox.Api.Files.DeleteBatchResultEntry.AsSuccess
+- uid: Dropbox.Api.Files.DeleteBatchResultEntry.IsFailure
+  commentId: P:Dropbox.Api.Files.DeleteBatchResultEntry.IsFailure
+  parent: Dropbox.Api.Files.DeleteBatchResultEntry
+  name: IsFailure
+  nameWithType: DeleteBatchResultEntry.IsFailure
+  fullName: Dropbox.Api.Files.DeleteBatchResultEntry.IsFailure
+- uid: Dropbox.Api.Files.DeleteBatchResultEntry.AsFailure
+  commentId: P:Dropbox.Api.Files.DeleteBatchResultEntry.AsFailure
+  parent: Dropbox.Api.Files.DeleteBatchResultEntry
+  name: AsFailure
+  nameWithType: DeleteBatchResultEntry.AsFailure
+  fullName: Dropbox.Api.Files.DeleteBatchResultEntry.AsFailure
+- uid: Dropbox.Api.Files.DeleteBatchResultEntry.Failure
+  commentId: T:Dropbox.Api.Files.DeleteBatchResultEntry.Failure
+  parent: Dropbox.Api.Files
+  name: DeleteBatchResultEntry.Failure
+  nameWithType: DeleteBatchResultEntry.Failure
+  fullName: Dropbox.Api.Files.DeleteBatchResultEntry.Failure
+- uid: Dropbox.Api.Files.DeleteBatchResultEntry.Failure.#ctor*
+  commentId: Overload:Dropbox.Api.Files.DeleteBatchResultEntry.Failure.#ctor
+  name: Failure
+  nameWithType: DeleteBatchResultEntry.Failure.Failure
+  fullName: Dropbox.Api.Files.DeleteBatchResultEntry.Failure.Failure
+- uid: Dropbox.Api.Files.DeleteError
+  commentId: T:Dropbox.Api.Files.DeleteError
+  parent: Dropbox.Api.Files
+  name: DeleteError
+  nameWithType: DeleteError
+  fullName: Dropbox.Api.Files.DeleteError
+- uid: Dropbox.Api.Files.DeleteBatchResultEntry.Failure.Value*
+  commentId: Overload:Dropbox.Api.Files.DeleteBatchResultEntry.Failure.Value
+  name: Value
+  nameWithType: DeleteBatchResultEntry.Failure.Value
+  fullName: Dropbox.Api.Files.DeleteBatchResultEntry.Failure.Value
+shouldSkipMarkup: true

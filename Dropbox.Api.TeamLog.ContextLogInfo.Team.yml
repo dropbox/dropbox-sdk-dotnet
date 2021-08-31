@@ -1,0 +1,204 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.ContextLogInfo.Team
+  commentId: T:Dropbox.Api.TeamLog.ContextLogInfo.Team
+  id: ContextLogInfo.Team
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.ContextLogInfo.Team.Instance
+  langs:
+  - csharp
+  - vb
+  name: ContextLogInfo.Team
+  nameWithType: ContextLogInfo.Team
+  fullName: Dropbox.Api.TeamLog.ContextLogInfo.Team
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ContextLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Team
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ContextLogInfo.cs
+    startLine: 548
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Action was done on behalf of the team.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Team : ContextLogInfo'
+    content.vb: >-
+      Public NotInheritable Class Team
+          Inherits ContextLogInfo
+  inheritance:
+  - System.Object
+  - Dropbox.Api.TeamLog.ContextLogInfo
+  inheritedMembers:
+  - Dropbox.Api.TeamLog.ContextLogInfo.IsAnonymous
+  - Dropbox.Api.TeamLog.ContextLogInfo.AsAnonymous
+  - Dropbox.Api.TeamLog.ContextLogInfo.IsNonTeamMember
+  - Dropbox.Api.TeamLog.ContextLogInfo.AsNonTeamMember
+  - Dropbox.Api.TeamLog.ContextLogInfo.IsOrganizationTeam
+  - Dropbox.Api.TeamLog.ContextLogInfo.AsOrganizationTeam
+  - Dropbox.Api.TeamLog.ContextLogInfo.IsTeam
+  - Dropbox.Api.TeamLog.ContextLogInfo.AsTeam
+  - Dropbox.Api.TeamLog.ContextLogInfo.IsTeamMember
+  - Dropbox.Api.TeamLog.ContextLogInfo.AsTeamMember
+  - Dropbox.Api.TeamLog.ContextLogInfo.IsTrustedNonTeamMember
+  - Dropbox.Api.TeamLog.ContextLogInfo.AsTrustedNonTeamMember
+  - Dropbox.Api.TeamLog.ContextLogInfo.IsOther
+  - Dropbox.Api.TeamLog.ContextLogInfo.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.TeamLog.ContextLogInfo.Team.Instance
+  commentId: F:Dropbox.Api.TeamLog.ContextLogInfo.Team.Instance
+  id: Instance
+  parent: Dropbox.Api.TeamLog.ContextLogInfo.Team
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: ContextLogInfo.Team.Instance
+  fullName: Dropbox.Api.TeamLog.ContextLogInfo.Team.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ContextLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ContextLogInfo.cs
+    startLine: 572
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>A singleton instance of Team</p>\n"
+  example: []
+  syntax:
+    content: public static readonly ContextLogInfo.Team Instance
+    return:
+      type: Dropbox.Api.TeamLog.ContextLogInfo.Team
+    content.vb: Public Shared ReadOnly Instance As ContextLogInfo.Team
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.ContextLogInfo
+  commentId: T:Dropbox.Api.TeamLog.ContextLogInfo
+  parent: Dropbox.Api.TeamLog
+  name: ContextLogInfo
+  nameWithType: ContextLogInfo
+  fullName: Dropbox.Api.TeamLog.ContextLogInfo
+- uid: Dropbox.Api.TeamLog.ContextLogInfo.IsAnonymous
+  commentId: P:Dropbox.Api.TeamLog.ContextLogInfo.IsAnonymous
+  parent: Dropbox.Api.TeamLog.ContextLogInfo
+  name: IsAnonymous
+  nameWithType: ContextLogInfo.IsAnonymous
+  fullName: Dropbox.Api.TeamLog.ContextLogInfo.IsAnonymous
+- uid: Dropbox.Api.TeamLog.ContextLogInfo.AsAnonymous
+  commentId: P:Dropbox.Api.TeamLog.ContextLogInfo.AsAnonymous
+  parent: Dropbox.Api.TeamLog.ContextLogInfo
+  name: AsAnonymous
+  nameWithType: ContextLogInfo.AsAnonymous
+  fullName: Dropbox.Api.TeamLog.ContextLogInfo.AsAnonymous
+- uid: Dropbox.Api.TeamLog.ContextLogInfo.IsNonTeamMember
+  commentId: P:Dropbox.Api.TeamLog.ContextLogInfo.IsNonTeamMember
+  parent: Dropbox.Api.TeamLog.ContextLogInfo
+  name: IsNonTeamMember
+  nameWithType: ContextLogInfo.IsNonTeamMember
+  fullName: Dropbox.Api.TeamLog.ContextLogInfo.IsNonTeamMember
+- uid: Dropbox.Api.TeamLog.ContextLogInfo.AsNonTeamMember
+  commentId: P:Dropbox.Api.TeamLog.ContextLogInfo.AsNonTeamMember
+  parent: Dropbox.Api.TeamLog.ContextLogInfo
+  name: AsNonTeamMember
+  nameWithType: ContextLogInfo.AsNonTeamMember
+  fullName: Dropbox.Api.TeamLog.ContextLogInfo.AsNonTeamMember
+- uid: Dropbox.Api.TeamLog.ContextLogInfo.IsOrganizationTeam
+  commentId: P:Dropbox.Api.TeamLog.ContextLogInfo.IsOrganizationTeam
+  parent: Dropbox.Api.TeamLog.ContextLogInfo
+  name: IsOrganizationTeam
+  nameWithType: ContextLogInfo.IsOrganizationTeam
+  fullName: Dropbox.Api.TeamLog.ContextLogInfo.IsOrganizationTeam
+- uid: Dropbox.Api.TeamLog.ContextLogInfo.AsOrganizationTeam
+  commentId: P:Dropbox.Api.TeamLog.ContextLogInfo.AsOrganizationTeam
+  parent: Dropbox.Api.TeamLog.ContextLogInfo
+  name: AsOrganizationTeam
+  nameWithType: ContextLogInfo.AsOrganizationTeam
+  fullName: Dropbox.Api.TeamLog.ContextLogInfo.AsOrganizationTeam
+- uid: Dropbox.Api.TeamLog.ContextLogInfo.IsTeam
+  commentId: P:Dropbox.Api.TeamLog.ContextLogInfo.IsTeam
+  parent: Dropbox.Api.TeamLog.ContextLogInfo
+  name: IsTeam
+  nameWithType: ContextLogInfo.IsTeam
+  fullName: Dropbox.Api.TeamLog.ContextLogInfo.IsTeam
+- uid: Dropbox.Api.TeamLog.ContextLogInfo.AsTeam
+  commentId: P:Dropbox.Api.TeamLog.ContextLogInfo.AsTeam
+  parent: Dropbox.Api.TeamLog.ContextLogInfo
+  name: AsTeam
+  nameWithType: ContextLogInfo.AsTeam
+  fullName: Dropbox.Api.TeamLog.ContextLogInfo.AsTeam
+- uid: Dropbox.Api.TeamLog.ContextLogInfo.IsTeamMember
+  commentId: P:Dropbox.Api.TeamLog.ContextLogInfo.IsTeamMember
+  parent: Dropbox.Api.TeamLog.ContextLogInfo
+  name: IsTeamMember
+  nameWithType: ContextLogInfo.IsTeamMember
+  fullName: Dropbox.Api.TeamLog.ContextLogInfo.IsTeamMember
+- uid: Dropbox.Api.TeamLog.ContextLogInfo.AsTeamMember
+  commentId: P:Dropbox.Api.TeamLog.ContextLogInfo.AsTeamMember
+  parent: Dropbox.Api.TeamLog.ContextLogInfo
+  name: AsTeamMember
+  nameWithType: ContextLogInfo.AsTeamMember
+  fullName: Dropbox.Api.TeamLog.ContextLogInfo.AsTeamMember
+- uid: Dropbox.Api.TeamLog.ContextLogInfo.IsTrustedNonTeamMember
+  commentId: P:Dropbox.Api.TeamLog.ContextLogInfo.IsTrustedNonTeamMember
+  parent: Dropbox.Api.TeamLog.ContextLogInfo
+  name: IsTrustedNonTeamMember
+  nameWithType: ContextLogInfo.IsTrustedNonTeamMember
+  fullName: Dropbox.Api.TeamLog.ContextLogInfo.IsTrustedNonTeamMember
+- uid: Dropbox.Api.TeamLog.ContextLogInfo.AsTrustedNonTeamMember
+  commentId: P:Dropbox.Api.TeamLog.ContextLogInfo.AsTrustedNonTeamMember
+  parent: Dropbox.Api.TeamLog.ContextLogInfo
+  name: AsTrustedNonTeamMember
+  nameWithType: ContextLogInfo.AsTrustedNonTeamMember
+  fullName: Dropbox.Api.TeamLog.ContextLogInfo.AsTrustedNonTeamMember
+- uid: Dropbox.Api.TeamLog.ContextLogInfo.IsOther
+  commentId: P:Dropbox.Api.TeamLog.ContextLogInfo.IsOther
+  parent: Dropbox.Api.TeamLog.ContextLogInfo
+  name: IsOther
+  nameWithType: ContextLogInfo.IsOther
+  fullName: Dropbox.Api.TeamLog.ContextLogInfo.IsOther
+- uid: Dropbox.Api.TeamLog.ContextLogInfo.AsOther
+  commentId: P:Dropbox.Api.TeamLog.ContextLogInfo.AsOther
+  parent: Dropbox.Api.TeamLog.ContextLogInfo
+  name: AsOther
+  nameWithType: ContextLogInfo.AsOther
+  fullName: Dropbox.Api.TeamLog.ContextLogInfo.AsOther
+- uid: Dropbox.Api.TeamLog.ContextLogInfo.Team
+  commentId: T:Dropbox.Api.TeamLog.ContextLogInfo.Team
+  parent: Dropbox.Api.TeamLog
+  name: ContextLogInfo.Team
+  nameWithType: ContextLogInfo.Team
+  fullName: Dropbox.Api.TeamLog.ContextLogInfo.Team
+shouldSkipMarkup: true

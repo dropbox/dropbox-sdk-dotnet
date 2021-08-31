@@ -1,0 +1,567 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.GroupCreateError
+  commentId: T:Dropbox.Api.Team.GroupCreateError
+  id: GroupCreateError
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.GroupCreateError.#ctor
+  - Dropbox.Api.Team.GroupCreateError.AsExternalIdAlreadyInUse
+  - Dropbox.Api.Team.GroupCreateError.AsGroupNameAlreadyUsed
+  - Dropbox.Api.Team.GroupCreateError.AsGroupNameInvalid
+  - Dropbox.Api.Team.GroupCreateError.AsOther
+  - Dropbox.Api.Team.GroupCreateError.AsSystemManagedGroupDisallowed
+  - Dropbox.Api.Team.GroupCreateError.IsExternalIdAlreadyInUse
+  - Dropbox.Api.Team.GroupCreateError.IsGroupNameAlreadyUsed
+  - Dropbox.Api.Team.GroupCreateError.IsGroupNameInvalid
+  - Dropbox.Api.Team.GroupCreateError.IsOther
+  - Dropbox.Api.Team.GroupCreateError.IsSystemManagedGroupDisallowed
+  langs:
+  - csharp
+  - vb
+  name: GroupCreateError
+  nameWithType: GroupCreateError
+  fullName: Dropbox.Api.Team.GroupCreateError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupCreateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GroupCreateError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupCreateError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The group create error object</p>\n"
+  example: []
+  syntax:
+    content: 'public class GroupCreateError : object'
+    content.vb: >-
+      Public Class GroupCreateError
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Team.GroupCreateError.ExternalIdAlreadyInUse
+  - Dropbox.Api.Team.GroupCreateError.GroupNameAlreadyUsed
+  - Dropbox.Api.Team.GroupCreateError.GroupNameInvalid
+  - Dropbox.Api.Team.GroupCreateError.Other
+  - Dropbox.Api.Team.GroupCreateError.SystemManagedGroupDisallowed
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.GroupCreateError.#ctor
+  commentId: M:Dropbox.Api.Team.GroupCreateError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.GroupCreateError
+  langs:
+  - csharp
+  - vb
+  name: GroupCreateError()
+  nameWithType: GroupCreateError.GroupCreateError()
+  fullName: Dropbox.Api.Team.GroupCreateError.GroupCreateError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupCreateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupCreateError.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.GroupCreateError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public GroupCreateError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.GroupCreateError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.GroupCreateError.IsGroupNameAlreadyUsed
+  commentId: P:Dropbox.Api.Team.GroupCreateError.IsGroupNameAlreadyUsed
+  id: IsGroupNameAlreadyUsed
+  parent: Dropbox.Api.Team.GroupCreateError
+  langs:
+  - csharp
+  - vb
+  name: IsGroupNameAlreadyUsed
+  nameWithType: GroupCreateError.IsGroupNameAlreadyUsed
+  fullName: Dropbox.Api.Team.GroupCreateError.IsGroupNameAlreadyUsed
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupCreateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsGroupNameAlreadyUsed
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupCreateError.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is GroupNameAlreadyUsed</p>\n"
+  example: []
+  syntax:
+    content: public bool IsGroupNameAlreadyUsed { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsGroupNameAlreadyUsed As Boolean
+  overload: Dropbox.Api.Team.GroupCreateError.IsGroupNameAlreadyUsed*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.GroupCreateError.AsGroupNameAlreadyUsed
+  commentId: P:Dropbox.Api.Team.GroupCreateError.AsGroupNameAlreadyUsed
+  id: AsGroupNameAlreadyUsed
+  parent: Dropbox.Api.Team.GroupCreateError
+  langs:
+  - csharp
+  - vb
+  name: AsGroupNameAlreadyUsed
+  nameWithType: GroupCreateError.AsGroupNameAlreadyUsed
+  fullName: Dropbox.Api.Team.GroupCreateError.AsGroupNameAlreadyUsed
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupCreateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsGroupNameAlreadyUsed
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupCreateError.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a GroupNameAlreadyUsed, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public GroupCreateError.GroupNameAlreadyUsed AsGroupNameAlreadyUsed { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.GroupCreateError.GroupNameAlreadyUsed
+    content.vb: Public ReadOnly Property AsGroupNameAlreadyUsed As GroupCreateError.GroupNameAlreadyUsed
+  overload: Dropbox.Api.Team.GroupCreateError.AsGroupNameAlreadyUsed*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.GroupCreateError.IsGroupNameInvalid
+  commentId: P:Dropbox.Api.Team.GroupCreateError.IsGroupNameInvalid
+  id: IsGroupNameInvalid
+  parent: Dropbox.Api.Team.GroupCreateError
+  langs:
+  - csharp
+  - vb
+  name: IsGroupNameInvalid
+  nameWithType: GroupCreateError.IsGroupNameInvalid
+  fullName: Dropbox.Api.Team.GroupCreateError.IsGroupNameInvalid
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupCreateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsGroupNameInvalid
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupCreateError.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is GroupNameInvalid</p>\n"
+  example: []
+  syntax:
+    content: public bool IsGroupNameInvalid { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsGroupNameInvalid As Boolean
+  overload: Dropbox.Api.Team.GroupCreateError.IsGroupNameInvalid*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.GroupCreateError.AsGroupNameInvalid
+  commentId: P:Dropbox.Api.Team.GroupCreateError.AsGroupNameInvalid
+  id: AsGroupNameInvalid
+  parent: Dropbox.Api.Team.GroupCreateError
+  langs:
+  - csharp
+  - vb
+  name: AsGroupNameInvalid
+  nameWithType: GroupCreateError.AsGroupNameInvalid
+  fullName: Dropbox.Api.Team.GroupCreateError.AsGroupNameInvalid
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupCreateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsGroupNameInvalid
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupCreateError.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a GroupNameInvalid, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public GroupCreateError.GroupNameInvalid AsGroupNameInvalid { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.GroupCreateError.GroupNameInvalid
+    content.vb: Public ReadOnly Property AsGroupNameInvalid As GroupCreateError.GroupNameInvalid
+  overload: Dropbox.Api.Team.GroupCreateError.AsGroupNameInvalid*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.GroupCreateError.IsExternalIdAlreadyInUse
+  commentId: P:Dropbox.Api.Team.GroupCreateError.IsExternalIdAlreadyInUse
+  id: IsExternalIdAlreadyInUse
+  parent: Dropbox.Api.Team.GroupCreateError
+  langs:
+  - csharp
+  - vb
+  name: IsExternalIdAlreadyInUse
+  nameWithType: GroupCreateError.IsExternalIdAlreadyInUse
+  fullName: Dropbox.Api.Team.GroupCreateError.IsExternalIdAlreadyInUse
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupCreateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsExternalIdAlreadyInUse
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupCreateError.cs
+    startLine: 85
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is\nExternalIdAlreadyInUse</p>\n"
+  example: []
+  syntax:
+    content: public bool IsExternalIdAlreadyInUse { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsExternalIdAlreadyInUse As Boolean
+  overload: Dropbox.Api.Team.GroupCreateError.IsExternalIdAlreadyInUse*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.GroupCreateError.AsExternalIdAlreadyInUse
+  commentId: P:Dropbox.Api.Team.GroupCreateError.AsExternalIdAlreadyInUse
+  id: AsExternalIdAlreadyInUse
+  parent: Dropbox.Api.Team.GroupCreateError
+  langs:
+  - csharp
+  - vb
+  name: AsExternalIdAlreadyInUse
+  nameWithType: GroupCreateError.AsExternalIdAlreadyInUse
+  fullName: Dropbox.Api.Team.GroupCreateError.AsExternalIdAlreadyInUse
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupCreateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsExternalIdAlreadyInUse
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupCreateError.cs
+    startLine: 96
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a ExternalIdAlreadyInUse, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public GroupCreateError.ExternalIdAlreadyInUse AsExternalIdAlreadyInUse { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.GroupCreateError.ExternalIdAlreadyInUse
+    content.vb: Public ReadOnly Property AsExternalIdAlreadyInUse As GroupCreateError.ExternalIdAlreadyInUse
+  overload: Dropbox.Api.Team.GroupCreateError.AsExternalIdAlreadyInUse*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.GroupCreateError.IsSystemManagedGroupDisallowed
+  commentId: P:Dropbox.Api.Team.GroupCreateError.IsSystemManagedGroupDisallowed
+  id: IsSystemManagedGroupDisallowed
+  parent: Dropbox.Api.Team.GroupCreateError
+  langs:
+  - csharp
+  - vb
+  name: IsSystemManagedGroupDisallowed
+  nameWithType: GroupCreateError.IsSystemManagedGroupDisallowed
+  fullName: Dropbox.Api.Team.GroupCreateError.IsSystemManagedGroupDisallowed
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupCreateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsSystemManagedGroupDisallowed
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupCreateError.cs
+    startLine: 108
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is\nSystemManagedGroupDisallowed</p>\n"
+  example: []
+  syntax:
+    content: public bool IsSystemManagedGroupDisallowed { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsSystemManagedGroupDisallowed As Boolean
+  overload: Dropbox.Api.Team.GroupCreateError.IsSystemManagedGroupDisallowed*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.GroupCreateError.AsSystemManagedGroupDisallowed
+  commentId: P:Dropbox.Api.Team.GroupCreateError.AsSystemManagedGroupDisallowed
+  id: AsSystemManagedGroupDisallowed
+  parent: Dropbox.Api.Team.GroupCreateError
+  langs:
+  - csharp
+  - vb
+  name: AsSystemManagedGroupDisallowed
+  nameWithType: GroupCreateError.AsSystemManagedGroupDisallowed
+  fullName: Dropbox.Api.Team.GroupCreateError.AsSystemManagedGroupDisallowed
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupCreateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsSystemManagedGroupDisallowed
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupCreateError.cs
+    startLine: 119
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a SystemManagedGroupDisallowed, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public GroupCreateError.SystemManagedGroupDisallowed AsSystemManagedGroupDisallowed { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.GroupCreateError.SystemManagedGroupDisallowed
+    content.vb: Public ReadOnly Property AsSystemManagedGroupDisallowed As GroupCreateError.SystemManagedGroupDisallowed
+  overload: Dropbox.Api.Team.GroupCreateError.AsSystemManagedGroupDisallowed*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.GroupCreateError.IsOther
+  commentId: P:Dropbox.Api.Team.GroupCreateError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Team.GroupCreateError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: GroupCreateError.IsOther
+  fullName: Dropbox.Api.Team.GroupCreateError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupCreateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupCreateError.cs
+    startLine: 130
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Team.GroupCreateError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.GroupCreateError.AsOther
+  commentId: P:Dropbox.Api.Team.GroupCreateError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Team.GroupCreateError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: GroupCreateError.AsOther
+  fullName: Dropbox.Api.Team.GroupCreateError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupCreateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupCreateError.cs
+    startLine: 141
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public GroupCreateError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.GroupCreateError.Other
+    content.vb: Public ReadOnly Property AsOther As GroupCreateError.Other
+  overload: Dropbox.Api.Team.GroupCreateError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.GroupCreateError
+  commentId: T:Dropbox.Api.Team.GroupCreateError
+  parent: Dropbox.Api.Team
+  name: GroupCreateError
+  nameWithType: GroupCreateError
+  fullName: Dropbox.Api.Team.GroupCreateError
+- uid: Dropbox.Api.Team.GroupCreateError.#ctor*
+  commentId: Overload:Dropbox.Api.Team.GroupCreateError.#ctor
+  name: GroupCreateError
+  nameWithType: GroupCreateError.GroupCreateError
+  fullName: Dropbox.Api.Team.GroupCreateError.GroupCreateError
+- uid: Dropbox.Api.Team.GroupCreateError.IsGroupNameAlreadyUsed*
+  commentId: Overload:Dropbox.Api.Team.GroupCreateError.IsGroupNameAlreadyUsed
+  name: IsGroupNameAlreadyUsed
+  nameWithType: GroupCreateError.IsGroupNameAlreadyUsed
+  fullName: Dropbox.Api.Team.GroupCreateError.IsGroupNameAlreadyUsed
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Team.GroupCreateError.AsGroupNameAlreadyUsed*
+  commentId: Overload:Dropbox.Api.Team.GroupCreateError.AsGroupNameAlreadyUsed
+  name: AsGroupNameAlreadyUsed
+  nameWithType: GroupCreateError.AsGroupNameAlreadyUsed
+  fullName: Dropbox.Api.Team.GroupCreateError.AsGroupNameAlreadyUsed
+- uid: Dropbox.Api.Team.GroupCreateError.GroupNameAlreadyUsed
+  commentId: T:Dropbox.Api.Team.GroupCreateError.GroupNameAlreadyUsed
+  parent: Dropbox.Api.Team
+  name: GroupCreateError.GroupNameAlreadyUsed
+  nameWithType: GroupCreateError.GroupNameAlreadyUsed
+  fullName: Dropbox.Api.Team.GroupCreateError.GroupNameAlreadyUsed
+- uid: Dropbox.Api.Team.GroupCreateError.IsGroupNameInvalid*
+  commentId: Overload:Dropbox.Api.Team.GroupCreateError.IsGroupNameInvalid
+  name: IsGroupNameInvalid
+  nameWithType: GroupCreateError.IsGroupNameInvalid
+  fullName: Dropbox.Api.Team.GroupCreateError.IsGroupNameInvalid
+- uid: Dropbox.Api.Team.GroupCreateError.AsGroupNameInvalid*
+  commentId: Overload:Dropbox.Api.Team.GroupCreateError.AsGroupNameInvalid
+  name: AsGroupNameInvalid
+  nameWithType: GroupCreateError.AsGroupNameInvalid
+  fullName: Dropbox.Api.Team.GroupCreateError.AsGroupNameInvalid
+- uid: Dropbox.Api.Team.GroupCreateError.GroupNameInvalid
+  commentId: T:Dropbox.Api.Team.GroupCreateError.GroupNameInvalid
+  parent: Dropbox.Api.Team
+  name: GroupCreateError.GroupNameInvalid
+  nameWithType: GroupCreateError.GroupNameInvalid
+  fullName: Dropbox.Api.Team.GroupCreateError.GroupNameInvalid
+- uid: Dropbox.Api.Team.GroupCreateError.IsExternalIdAlreadyInUse*
+  commentId: Overload:Dropbox.Api.Team.GroupCreateError.IsExternalIdAlreadyInUse
+  name: IsExternalIdAlreadyInUse
+  nameWithType: GroupCreateError.IsExternalIdAlreadyInUse
+  fullName: Dropbox.Api.Team.GroupCreateError.IsExternalIdAlreadyInUse
+- uid: Dropbox.Api.Team.GroupCreateError.AsExternalIdAlreadyInUse*
+  commentId: Overload:Dropbox.Api.Team.GroupCreateError.AsExternalIdAlreadyInUse
+  name: AsExternalIdAlreadyInUse
+  nameWithType: GroupCreateError.AsExternalIdAlreadyInUse
+  fullName: Dropbox.Api.Team.GroupCreateError.AsExternalIdAlreadyInUse
+- uid: Dropbox.Api.Team.GroupCreateError.ExternalIdAlreadyInUse
+  commentId: T:Dropbox.Api.Team.GroupCreateError.ExternalIdAlreadyInUse
+  parent: Dropbox.Api.Team
+  name: GroupCreateError.ExternalIdAlreadyInUse
+  nameWithType: GroupCreateError.ExternalIdAlreadyInUse
+  fullName: Dropbox.Api.Team.GroupCreateError.ExternalIdAlreadyInUse
+- uid: Dropbox.Api.Team.GroupCreateError.IsSystemManagedGroupDisallowed*
+  commentId: Overload:Dropbox.Api.Team.GroupCreateError.IsSystemManagedGroupDisallowed
+  name: IsSystemManagedGroupDisallowed
+  nameWithType: GroupCreateError.IsSystemManagedGroupDisallowed
+  fullName: Dropbox.Api.Team.GroupCreateError.IsSystemManagedGroupDisallowed
+- uid: Dropbox.Api.Team.GroupCreateError.AsSystemManagedGroupDisallowed*
+  commentId: Overload:Dropbox.Api.Team.GroupCreateError.AsSystemManagedGroupDisallowed
+  name: AsSystemManagedGroupDisallowed
+  nameWithType: GroupCreateError.AsSystemManagedGroupDisallowed
+  fullName: Dropbox.Api.Team.GroupCreateError.AsSystemManagedGroupDisallowed
+- uid: Dropbox.Api.Team.GroupCreateError.SystemManagedGroupDisallowed
+  commentId: T:Dropbox.Api.Team.GroupCreateError.SystemManagedGroupDisallowed
+  parent: Dropbox.Api.Team
+  name: GroupCreateError.SystemManagedGroupDisallowed
+  nameWithType: GroupCreateError.SystemManagedGroupDisallowed
+  fullName: Dropbox.Api.Team.GroupCreateError.SystemManagedGroupDisallowed
+- uid: Dropbox.Api.Team.GroupCreateError.IsOther*
+  commentId: Overload:Dropbox.Api.Team.GroupCreateError.IsOther
+  name: IsOther
+  nameWithType: GroupCreateError.IsOther
+  fullName: Dropbox.Api.Team.GroupCreateError.IsOther
+- uid: Dropbox.Api.Team.GroupCreateError.AsOther*
+  commentId: Overload:Dropbox.Api.Team.GroupCreateError.AsOther
+  name: AsOther
+  nameWithType: GroupCreateError.AsOther
+  fullName: Dropbox.Api.Team.GroupCreateError.AsOther
+- uid: Dropbox.Api.Team.GroupCreateError.Other
+  commentId: T:Dropbox.Api.Team.GroupCreateError.Other
+  parent: Dropbox.Api.Team
+  name: GroupCreateError.Other
+  nameWithType: GroupCreateError.Other
+  fullName: Dropbox.Api.Team.GroupCreateError.Other
+shouldSkipMarkup: true

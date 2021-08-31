@@ -1,0 +1,314 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamPolicies.TeamSharingPolicies
+  commentId: T:Dropbox.Api.TeamPolicies.TeamSharingPolicies
+  id: TeamSharingPolicies
+  parent: Dropbox.Api.TeamPolicies
+  children:
+  - Dropbox.Api.TeamPolicies.TeamSharingPolicies.#ctor
+  - Dropbox.Api.TeamPolicies.TeamSharingPolicies.#ctor(Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy,Dropbox.Api.TeamPolicies.SharedFolderJoinPolicy,Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy)
+  - Dropbox.Api.TeamPolicies.TeamSharingPolicies.SharedFolderJoinPolicy
+  - Dropbox.Api.TeamPolicies.TeamSharingPolicies.SharedFolderMemberPolicy
+  - Dropbox.Api.TeamPolicies.TeamSharingPolicies.SharedLinkCreatePolicy
+  langs:
+  - csharp
+  - vb
+  name: TeamSharingPolicies
+  nameWithType: TeamSharingPolicies
+  fullName: Dropbox.Api.TeamPolicies.TeamSharingPolicies
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/TeamSharingPolicies.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TeamSharingPolicies
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/TeamSharingPolicies.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Policies governing sharing within and outside of the team.</p>\n"
+  example: []
+  syntax:
+    content: 'public class TeamSharingPolicies : object'
+    content.vb: >-
+      Public Class TeamSharingPolicies
+          Inherits Object
+  seealso:
+  - linkId: Dropbox.Api.TeamPolicies.TeamMemberPolicies
+    commentId: T:Dropbox.Api.TeamPolicies.TeamMemberPolicies
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamPolicies.TeamSharingPolicies.#ctor(Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy,Dropbox.Api.TeamPolicies.SharedFolderJoinPolicy,Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy)
+  commentId: M:Dropbox.Api.TeamPolicies.TeamSharingPolicies.#ctor(Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy,Dropbox.Api.TeamPolicies.SharedFolderJoinPolicy,Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy)
+  id: '#ctor(Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy,Dropbox.Api.TeamPolicies.SharedFolderJoinPolicy,Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy)'
+  parent: Dropbox.Api.TeamPolicies.TeamSharingPolicies
+  langs:
+  - csharp
+  - vb
+  name: TeamSharingPolicies(SharedFolderMemberPolicy, SharedFolderJoinPolicy, SharedLinkCreatePolicy)
+  nameWithType: TeamSharingPolicies.TeamSharingPolicies(SharedFolderMemberPolicy, SharedFolderJoinPolicy, SharedLinkCreatePolicy)
+  fullName: Dropbox.Api.TeamPolicies.TeamSharingPolicies.TeamSharingPolicies(Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy, Dropbox.Api.TeamPolicies.SharedFolderJoinPolicy, Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/TeamSharingPolicies.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/TeamSharingPolicies.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamPolicies.TeamSharingPolicies\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public TeamSharingPolicies(SharedFolderMemberPolicy sharedFolderMemberPolicy, SharedFolderJoinPolicy sharedFolderJoinPolicy, SharedLinkCreatePolicy sharedLinkCreatePolicy)
+    parameters:
+    - id: sharedFolderMemberPolicy
+      type: Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy
+      description: >-
+        Who can join folders shared by team
+
+        members.
+    - id: sharedFolderJoinPolicy
+      type: Dropbox.Api.TeamPolicies.SharedFolderJoinPolicy
+      description: >-
+        Which shared folders team members can
+
+        join.
+    - id: sharedLinkCreatePolicy
+      type: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy
+      description: >-
+        Who can view shared links owned by team
+
+        members.
+    content.vb: Public Sub New(sharedFolderMemberPolicy As SharedFolderMemberPolicy, sharedFolderJoinPolicy As SharedFolderJoinPolicy, sharedLinkCreatePolicy As SharedLinkCreatePolicy)
+  overload: Dropbox.Api.TeamPolicies.TeamSharingPolicies.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamPolicies.TeamSharingPolicies.#ctor
+  commentId: M:Dropbox.Api.TeamPolicies.TeamSharingPolicies.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamPolicies.TeamSharingPolicies
+  langs:
+  - csharp
+  - vb
+  name: TeamSharingPolicies()
+  nameWithType: TeamSharingPolicies.TeamSharingPolicies()
+  fullName: Dropbox.Api.TeamPolicies.TeamSharingPolicies.TeamSharingPolicies()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/TeamSharingPolicies.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/TeamSharingPolicies.cs
+    startLine: 70
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamPolicies.TeamSharingPolicies\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public TeamSharingPolicies()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamPolicies.TeamSharingPolicies.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamPolicies.TeamSharingPolicies.SharedFolderMemberPolicy
+  commentId: P:Dropbox.Api.TeamPolicies.TeamSharingPolicies.SharedFolderMemberPolicy
+  id: SharedFolderMemberPolicy
+  parent: Dropbox.Api.TeamPolicies.TeamSharingPolicies
+  langs:
+  - csharp
+  - vb
+  name: SharedFolderMemberPolicy
+  nameWithType: TeamSharingPolicies.SharedFolderMemberPolicy
+  fullName: Dropbox.Api.TeamPolicies.TeamSharingPolicies.SharedFolderMemberPolicy
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/TeamSharingPolicies.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SharedFolderMemberPolicy
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/TeamSharingPolicies.cs
+    startLine: 78
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Who can join folders shared by team members.</p>\n"
+  example: []
+  syntax:
+    content: public SharedFolderMemberPolicy SharedFolderMemberPolicy { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy
+    content.vb: Public Property SharedFolderMemberPolicy As SharedFolderMemberPolicy
+  overload: Dropbox.Api.TeamPolicies.TeamSharingPolicies.SharedFolderMemberPolicy*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamPolicies.TeamSharingPolicies.SharedFolderJoinPolicy
+  commentId: P:Dropbox.Api.TeamPolicies.TeamSharingPolicies.SharedFolderJoinPolicy
+  id: SharedFolderJoinPolicy
+  parent: Dropbox.Api.TeamPolicies.TeamSharingPolicies
+  langs:
+  - csharp
+  - vb
+  name: SharedFolderJoinPolicy
+  nameWithType: TeamSharingPolicies.SharedFolderJoinPolicy
+  fullName: Dropbox.Api.TeamPolicies.TeamSharingPolicies.SharedFolderJoinPolicy
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/TeamSharingPolicies.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SharedFolderJoinPolicy
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/TeamSharingPolicies.cs
+    startLine: 83
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Which shared folders team members can join.</p>\n"
+  example: []
+  syntax:
+    content: public SharedFolderJoinPolicy SharedFolderJoinPolicy { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamPolicies.SharedFolderJoinPolicy
+    content.vb: Public Property SharedFolderJoinPolicy As SharedFolderJoinPolicy
+  overload: Dropbox.Api.TeamPolicies.TeamSharingPolicies.SharedFolderJoinPolicy*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamPolicies.TeamSharingPolicies.SharedLinkCreatePolicy
+  commentId: P:Dropbox.Api.TeamPolicies.TeamSharingPolicies.SharedLinkCreatePolicy
+  id: SharedLinkCreatePolicy
+  parent: Dropbox.Api.TeamPolicies.TeamSharingPolicies
+  langs:
+  - csharp
+  - vb
+  name: SharedLinkCreatePolicy
+  nameWithType: TeamSharingPolicies.SharedLinkCreatePolicy
+  fullName: Dropbox.Api.TeamPolicies.TeamSharingPolicies.SharedLinkCreatePolicy
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/TeamSharingPolicies.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SharedLinkCreatePolicy
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/TeamSharingPolicies.cs
+    startLine: 88
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Who can view shared links owned by team members.</p>\n"
+  example: []
+  syntax:
+    content: public SharedLinkCreatePolicy SharedLinkCreatePolicy { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy
+    content.vb: Public Property SharedLinkCreatePolicy As SharedLinkCreatePolicy
+  overload: Dropbox.Api.TeamPolicies.TeamSharingPolicies.SharedLinkCreatePolicy*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamPolicies.TeamMemberPolicies
+  commentId: T:Dropbox.Api.TeamPolicies.TeamMemberPolicies
+  parent: Dropbox.Api.TeamPolicies
+  name: TeamMemberPolicies
+  nameWithType: TeamMemberPolicies
+  fullName: Dropbox.Api.TeamPolicies.TeamMemberPolicies
+- uid: Dropbox.Api.TeamPolicies
+  commentId: N:Dropbox.Api.TeamPolicies
+  name: Dropbox.Api.TeamPolicies
+  nameWithType: Dropbox.Api.TeamPolicies
+  fullName: Dropbox.Api.TeamPolicies
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamPolicies.TeamSharingPolicies
+  commentId: T:Dropbox.Api.TeamPolicies.TeamSharingPolicies
+  parent: Dropbox.Api.TeamPolicies
+  name: TeamSharingPolicies
+  nameWithType: TeamSharingPolicies
+  fullName: Dropbox.Api.TeamPolicies.TeamSharingPolicies
+- uid: Dropbox.Api.TeamPolicies.TeamSharingPolicies.#ctor*
+  commentId: Overload:Dropbox.Api.TeamPolicies.TeamSharingPolicies.#ctor
+  name: TeamSharingPolicies
+  nameWithType: TeamSharingPolicies.TeamSharingPolicies
+  fullName: Dropbox.Api.TeamPolicies.TeamSharingPolicies.TeamSharingPolicies
+- uid: Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy
+  commentId: T:Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy
+  parent: Dropbox.Api.TeamPolicies
+  name: SharedFolderMemberPolicy
+  nameWithType: SharedFolderMemberPolicy
+  fullName: Dropbox.Api.TeamPolicies.SharedFolderMemberPolicy
+- uid: Dropbox.Api.TeamPolicies.SharedFolderJoinPolicy
+  commentId: T:Dropbox.Api.TeamPolicies.SharedFolderJoinPolicy
+  parent: Dropbox.Api.TeamPolicies
+  name: SharedFolderJoinPolicy
+  nameWithType: SharedFolderJoinPolicy
+  fullName: Dropbox.Api.TeamPolicies.SharedFolderJoinPolicy
+- uid: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy
+  commentId: T:Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy
+  parent: Dropbox.Api.TeamPolicies
+  name: SharedLinkCreatePolicy
+  nameWithType: SharedLinkCreatePolicy
+  fullName: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy
+- uid: Dropbox.Api.TeamPolicies.TeamSharingPolicies.SharedFolderMemberPolicy*
+  commentId: Overload:Dropbox.Api.TeamPolicies.TeamSharingPolicies.SharedFolderMemberPolicy
+  name: SharedFolderMemberPolicy
+  nameWithType: TeamSharingPolicies.SharedFolderMemberPolicy
+  fullName: Dropbox.Api.TeamPolicies.TeamSharingPolicies.SharedFolderMemberPolicy
+- uid: Dropbox.Api.TeamPolicies.TeamSharingPolicies.SharedFolderJoinPolicy*
+  commentId: Overload:Dropbox.Api.TeamPolicies.TeamSharingPolicies.SharedFolderJoinPolicy
+  name: SharedFolderJoinPolicy
+  nameWithType: TeamSharingPolicies.SharedFolderJoinPolicy
+  fullName: Dropbox.Api.TeamPolicies.TeamSharingPolicies.SharedFolderJoinPolicy
+- uid: Dropbox.Api.TeamPolicies.TeamSharingPolicies.SharedLinkCreatePolicy*
+  commentId: Overload:Dropbox.Api.TeamPolicies.TeamSharingPolicies.SharedLinkCreatePolicy
+  name: SharedLinkCreatePolicy
+  nameWithType: TeamSharingPolicies.SharedLinkCreatePolicy
+  fullName: Dropbox.Api.TeamPolicies.TeamSharingPolicies.SharedLinkCreatePolicy
+shouldSkipMarkup: true

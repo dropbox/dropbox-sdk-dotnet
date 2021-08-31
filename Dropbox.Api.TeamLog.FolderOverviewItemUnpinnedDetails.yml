@@ -1,0 +1,406 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.FolderOverviewItemUnpinnedDetails
+  commentId: T:Dropbox.Api.TeamLog.FolderOverviewItemUnpinnedDetails
+  id: FolderOverviewItemUnpinnedDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.FolderOverviewItemUnpinnedDetails.#ctor
+  - Dropbox.Api.TeamLog.FolderOverviewItemUnpinnedDetails.#ctor(System.UInt64,System.Collections.Generic.IEnumerable{System.UInt64})
+  - Dropbox.Api.TeamLog.FolderOverviewItemUnpinnedDetails.FolderOverviewLocationAsset
+  - Dropbox.Api.TeamLog.FolderOverviewItemUnpinnedDetails.PinnedItemsAssetIndices
+  langs:
+  - csharp
+  - vb
+  name: FolderOverviewItemUnpinnedDetails
+  nameWithType: FolderOverviewItemUnpinnedDetails
+  fullName: Dropbox.Api.TeamLog.FolderOverviewItemUnpinnedDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FolderOverviewItemUnpinnedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: FolderOverviewItemUnpinnedDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FolderOverviewItemUnpinnedDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Unpinned item from folder overview.</p>\n"
+  example: []
+  syntax:
+    content: 'public class FolderOverviewItemUnpinnedDetails : object'
+    content.vb: >-
+      Public Class FolderOverviewItemUnpinnedDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.FolderOverviewItemUnpinnedDetails.#ctor(System.UInt64,System.Collections.Generic.IEnumerable{System.UInt64})
+  commentId: M:Dropbox.Api.TeamLog.FolderOverviewItemUnpinnedDetails.#ctor(System.UInt64,System.Collections.Generic.IEnumerable{System.UInt64})
+  id: '#ctor(System.UInt64,System.Collections.Generic.IEnumerable{System.UInt64})'
+  parent: Dropbox.Api.TeamLog.FolderOverviewItemUnpinnedDetails
+  langs:
+  - csharp
+  - vb
+  name: FolderOverviewItemUnpinnedDetails(UInt64, System.Collections.Generic.IEnumerable<UInt64>)
+  nameWithType: FolderOverviewItemUnpinnedDetails.FolderOverviewItemUnpinnedDetails(UInt64, System.Collections.Generic.IEnumerable<UInt64>)
+  fullName: Dropbox.Api.TeamLog.FolderOverviewItemUnpinnedDetails.FolderOverviewItemUnpinnedDetails(System.UInt64, System.Collections.Generic.IEnumerable<System.UInt64>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FolderOverviewItemUnpinnedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FolderOverviewItemUnpinnedDetails.cs
+    startLine: 37
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.FolderOverviewItemUnpinnedDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public FolderOverviewItemUnpinnedDetails(ulong folderOverviewLocationAsset, System.Collections.Generic.IEnumerable<ulong> pinnedItemsAssetIndices)
+    parameters:
+    - id: folderOverviewLocationAsset
+      type: System.UInt64
+      description: >-
+        Folder Overview location position in the
+
+        Assets list.
+    - id: pinnedItemsAssetIndices
+      type: System.Collections.Generic.IEnumerable{System.UInt64}
+      description: >-
+        Pinned items positions in the Assets
+
+        list.
+    content.vb: Public Sub New(folderOverviewLocationAsset As ULong, pinnedItemsAssetIndices As System.Collections.Generic.IEnumerable(Of ULong))
+  overload: Dropbox.Api.TeamLog.FolderOverviewItemUnpinnedDetails.#ctor*
+  nameWithType.vb: FolderOverviewItemUnpinnedDetails.FolderOverviewItemUnpinnedDetails(UInt64, System.Collections.Generic.IEnumerable(Of UInt64))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.TeamLog.FolderOverviewItemUnpinnedDetails.FolderOverviewItemUnpinnedDetails(System.UInt64, System.Collections.Generic.IEnumerable(Of System.UInt64))
+  name.vb: FolderOverviewItemUnpinnedDetails(UInt64, System.Collections.Generic.IEnumerable(Of UInt64))
+- uid: Dropbox.Api.TeamLog.FolderOverviewItemUnpinnedDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.FolderOverviewItemUnpinnedDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.FolderOverviewItemUnpinnedDetails
+  langs:
+  - csharp
+  - vb
+  name: FolderOverviewItemUnpinnedDetails()
+  nameWithType: FolderOverviewItemUnpinnedDetails.FolderOverviewItemUnpinnedDetails()
+  fullName: Dropbox.Api.TeamLog.FolderOverviewItemUnpinnedDetails.FolderOverviewItemUnpinnedDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FolderOverviewItemUnpinnedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FolderOverviewItemUnpinnedDetails.cs
+    startLine: 57
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.FolderOverviewItemUnpinnedDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public FolderOverviewItemUnpinnedDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.FolderOverviewItemUnpinnedDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.FolderOverviewItemUnpinnedDetails.FolderOverviewLocationAsset
+  commentId: P:Dropbox.Api.TeamLog.FolderOverviewItemUnpinnedDetails.FolderOverviewLocationAsset
+  id: FolderOverviewLocationAsset
+  parent: Dropbox.Api.TeamLog.FolderOverviewItemUnpinnedDetails
+  langs:
+  - csharp
+  - vb
+  name: FolderOverviewLocationAsset
+  nameWithType: FolderOverviewItemUnpinnedDetails.FolderOverviewLocationAsset
+  fullName: Dropbox.Api.TeamLog.FolderOverviewItemUnpinnedDetails.FolderOverviewLocationAsset
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FolderOverviewItemUnpinnedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: FolderOverviewLocationAsset
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FolderOverviewItemUnpinnedDetails.cs
+    startLine: 65
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Folder Overview location position in the Assets list.</p>\n"
+  example: []
+  syntax:
+    content: public ulong FolderOverviewLocationAsset { get; protected set; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: Public Property FolderOverviewLocationAsset As ULong
+  overload: Dropbox.Api.TeamLog.FolderOverviewItemUnpinnedDetails.FolderOverviewLocationAsset*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.FolderOverviewItemUnpinnedDetails.PinnedItemsAssetIndices
+  commentId: P:Dropbox.Api.TeamLog.FolderOverviewItemUnpinnedDetails.PinnedItemsAssetIndices
+  id: PinnedItemsAssetIndices
+  parent: Dropbox.Api.TeamLog.FolderOverviewItemUnpinnedDetails
+  langs:
+  - csharp
+  - vb
+  name: PinnedItemsAssetIndices
+  nameWithType: FolderOverviewItemUnpinnedDetails.PinnedItemsAssetIndices
+  fullName: Dropbox.Api.TeamLog.FolderOverviewItemUnpinnedDetails.PinnedItemsAssetIndices
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FolderOverviewItemUnpinnedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PinnedItemsAssetIndices
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FolderOverviewItemUnpinnedDetails.cs
+    startLine: 70
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Pinned items positions in the Assets list.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<ulong> PinnedItemsAssetIndices { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{System.UInt64}
+    content.vb: Public Property PinnedItemsAssetIndices As System.Collections.Generic.IList(Of ULong)
+  overload: Dropbox.Api.TeamLog.FolderOverviewItemUnpinnedDetails.PinnedItemsAssetIndices*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.FolderOverviewItemUnpinnedDetails
+  commentId: T:Dropbox.Api.TeamLog.FolderOverviewItemUnpinnedDetails
+  parent: Dropbox.Api.TeamLog
+  name: FolderOverviewItemUnpinnedDetails
+  nameWithType: FolderOverviewItemUnpinnedDetails
+  fullName: Dropbox.Api.TeamLog.FolderOverviewItemUnpinnedDetails
+- uid: Dropbox.Api.TeamLog.FolderOverviewItemUnpinnedDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.FolderOverviewItemUnpinnedDetails.#ctor
+  name: FolderOverviewItemUnpinnedDetails
+  nameWithType: FolderOverviewItemUnpinnedDetails.FolderOverviewItemUnpinnedDetails
+  fullName: Dropbox.Api.TeamLog.FolderOverviewItemUnpinnedDetails.FolderOverviewItemUnpinnedDetails
+- uid: System.UInt64
+  isExternal: true
+  name: UInt64
+  nameWithType: UInt64
+  fullName: System.UInt64
+- uid: System.Collections.Generic.IEnumerable{System.UInt64}
+  commentId: '!:System.Collections.Generic.IEnumerable{System.UInt64}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<UInt64>
+  nameWithType: System.Collections.Generic.IEnumerable<UInt64>
+  fullName: System.Collections.Generic.IEnumerable<System.UInt64>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of UInt64)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.UInt64)
+  name.vb: System.Collections.Generic.IEnumerable(Of UInt64)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.UInt64
+    name: UInt64
+    nameWithType: UInt64
+    fullName: System.UInt64
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.UInt64
+    name: UInt64
+    nameWithType: UInt64
+    fullName: System.UInt64
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: System.Collections.Generic.IEnumerable<>
+  nameWithType: System.Collections.Generic.IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: System.Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.TeamLog.FolderOverviewItemUnpinnedDetails.FolderOverviewLocationAsset*
+  commentId: Overload:Dropbox.Api.TeamLog.FolderOverviewItemUnpinnedDetails.FolderOverviewLocationAsset
+  name: FolderOverviewLocationAsset
+  nameWithType: FolderOverviewItemUnpinnedDetails.FolderOverviewLocationAsset
+  fullName: Dropbox.Api.TeamLog.FolderOverviewItemUnpinnedDetails.FolderOverviewLocationAsset
+- uid: Dropbox.Api.TeamLog.FolderOverviewItemUnpinnedDetails.PinnedItemsAssetIndices*
+  commentId: Overload:Dropbox.Api.TeamLog.FolderOverviewItemUnpinnedDetails.PinnedItemsAssetIndices
+  name: PinnedItemsAssetIndices
+  nameWithType: FolderOverviewItemUnpinnedDetails.PinnedItemsAssetIndices
+  fullName: Dropbox.Api.TeamLog.FolderOverviewItemUnpinnedDetails.PinnedItemsAssetIndices
+- uid: System.Collections.Generic.IList{System.UInt64}
+  commentId: '!:System.Collections.Generic.IList{System.UInt64}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<UInt64>
+  nameWithType: System.Collections.Generic.IList<UInt64>
+  fullName: System.Collections.Generic.IList<System.UInt64>
+  nameWithType.vb: System.Collections.Generic.IList(Of UInt64)
+  fullName.vb: System.Collections.Generic.IList(Of System.UInt64)
+  name.vb: System.Collections.Generic.IList(Of UInt64)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.UInt64
+    name: UInt64
+    nameWithType: UInt64
+    fullName: System.UInt64
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.UInt64
+    name: UInt64
+    nameWithType: UInt64
+    fullName: System.UInt64
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  isExternal: true
+  name: System.Collections.Generic.IList<>
+  nameWithType: System.Collections.Generic.IList<>
+  fullName: System.Collections.Generic.IList<>
+  nameWithType.vb: System.Collections.Generic.IList(Of )
+  fullName.vb: System.Collections.Generic.IList(Of )
+  name.vb: System.Collections.Generic.IList(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+shouldSkipMarkup: true

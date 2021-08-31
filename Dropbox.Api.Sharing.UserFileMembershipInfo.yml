@@ -1,0 +1,507 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.UserFileMembershipInfo
+  commentId: T:Dropbox.Api.Sharing.UserFileMembershipInfo
+  id: UserFileMembershipInfo
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.UserFileMembershipInfo.#ctor
+  - Dropbox.Api.Sharing.UserFileMembershipInfo.#ctor(Dropbox.Api.Sharing.AccessLevel,Dropbox.Api.Sharing.UserInfo,System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.MemberPermission},System.String,System.Boolean,System.Nullable{System.DateTime},Dropbox.Api.SeenState.PlatformType)
+  - Dropbox.Api.Sharing.UserFileMembershipInfo.PlatformType
+  - Dropbox.Api.Sharing.UserFileMembershipInfo.TimeLastSeen
+  langs:
+  - csharp
+  - vb
+  name: UserFileMembershipInfo
+  nameWithType: UserFileMembershipInfo
+  fullName: Dropbox.Api.Sharing.UserFileMembershipInfo
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UserFileMembershipInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: UserFileMembershipInfo
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UserFileMembershipInfo.cs
+    startLine: 17
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The information about a user member of the shared content with an appended last\nseen timestamp.</p>\n"
+  example: []
+  syntax:
+    content: 'public class UserFileMembershipInfo : UserMembershipInfo'
+    content.vb: >-
+      Public Class UserFileMembershipInfo
+          Inherits UserMembershipInfo
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Sharing.MembershipInfo
+  - Dropbox.Api.Sharing.UserMembershipInfo
+  inheritedMembers:
+  - Dropbox.Api.Sharing.UserMembershipInfo.User
+  - Dropbox.Api.Sharing.MembershipInfo.AccessType
+  - Dropbox.Api.Sharing.MembershipInfo.Permissions
+  - Dropbox.Api.Sharing.MembershipInfo.Initials
+  - Dropbox.Api.Sharing.MembershipInfo.IsInherited
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Sharing.UserFileMembershipInfo.#ctor(Dropbox.Api.Sharing.AccessLevel,Dropbox.Api.Sharing.UserInfo,System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.MemberPermission},System.String,System.Boolean,System.Nullable{System.DateTime},Dropbox.Api.SeenState.PlatformType)
+  commentId: M:Dropbox.Api.Sharing.UserFileMembershipInfo.#ctor(Dropbox.Api.Sharing.AccessLevel,Dropbox.Api.Sharing.UserInfo,System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.MemberPermission},System.String,System.Boolean,System.Nullable{System.DateTime},Dropbox.Api.SeenState.PlatformType)
+  id: '#ctor(Dropbox.Api.Sharing.AccessLevel,Dropbox.Api.Sharing.UserInfo,System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.MemberPermission},System.String,System.Boolean,System.Nullable{System.DateTime},Dropbox.Api.SeenState.PlatformType)'
+  parent: Dropbox.Api.Sharing.UserFileMembershipInfo
+  langs:
+  - csharp
+  - vb
+  name: UserFileMembershipInfo(AccessLevel, UserInfo, System.Collections.Generic.IEnumerable<MemberPermission>, String, Boolean, Nullable<System.DateTime>, PlatformType)
+  nameWithType: UserFileMembershipInfo.UserFileMembershipInfo(AccessLevel, UserInfo, System.Collections.Generic.IEnumerable<MemberPermission>, String, Boolean, Nullable<System.DateTime>, PlatformType)
+  fullName: Dropbox.Api.Sharing.UserFileMembershipInfo.UserFileMembershipInfo(Dropbox.Api.Sharing.AccessLevel, Dropbox.Api.Sharing.UserInfo, System.Collections.Generic.IEnumerable<Dropbox.Api.Sharing.MemberPermission>, System.String, System.Boolean, System.Nullable<System.DateTime>, Dropbox.Api.SeenState.PlatformType)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UserFileMembershipInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UserFileMembershipInfo.cs
+    startLine: 48
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.UserFileMembershipInfo\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public UserFileMembershipInfo(AccessLevel accessType, UserInfo user, System.Collections.Generic.IEnumerable<MemberPermission> permissions = null, string initials = null, bool isInherited = false, System.DateTime? timeLastSeen = null, PlatformType platformType = null)
+    parameters:
+    - id: accessType
+      type: Dropbox.Api.Sharing.AccessLevel
+      description: >-
+        The access type for this member. It contains inherited
+
+        access type from parent folder, and acquired access type from this folder.
+    - id: user
+      type: Dropbox.Api.Sharing.UserInfo
+      description: The account information for the membership user.
+    - id: permissions
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.MemberPermission}
+      description: >-
+        The permissions that requesting user has on this member.
+
+        The set of permissions corresponds to the MemberActions in the request.
+    - id: initials
+      type: System.String
+      description: Never set.
+    - id: isInherited
+      type: System.Boolean
+      description: >-
+        True if the member has access from a parent
+
+        folder.
+    - id: timeLastSeen
+      type: System.Nullable{System.DateTime}
+      description: >-
+        The UTC timestamp of when the user has last seen the
+
+        content. Only populated if the user has seen the content and the caller has a plan
+
+        that includes viewer history.
+    - id: platformType
+      type: Dropbox.Api.SeenState.PlatformType
+      description: >-
+        The platform on which the user has last seen the
+
+        content, or unknown.
+    content.vb: Public Sub New(accessType As AccessLevel, user As UserInfo, permissions As System.Collections.Generic.IEnumerable(Of MemberPermission) = Nothing, initials As String = Nothing, isInherited As Boolean = False, timeLastSeen As System.DateTime? = Nothing, platformType As PlatformType = Nothing)
+  overload: Dropbox.Api.Sharing.UserFileMembershipInfo.#ctor*
+  nameWithType.vb: UserFileMembershipInfo.UserFileMembershipInfo(AccessLevel, UserInfo, System.Collections.Generic.IEnumerable(Of MemberPermission), String, Boolean, Nullable(Of System.DateTime), PlatformType)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Sharing.UserFileMembershipInfo.UserFileMembershipInfo(Dropbox.Api.Sharing.AccessLevel, Dropbox.Api.Sharing.UserInfo, System.Collections.Generic.IEnumerable(Of Dropbox.Api.Sharing.MemberPermission), System.String, System.Boolean, System.Nullable(Of System.DateTime), Dropbox.Api.SeenState.PlatformType)
+  name.vb: UserFileMembershipInfo(AccessLevel, UserInfo, System.Collections.Generic.IEnumerable(Of MemberPermission), String, Boolean, Nullable(Of System.DateTime), PlatformType)
+- uid: Dropbox.Api.Sharing.UserFileMembershipInfo.#ctor
+  commentId: M:Dropbox.Api.Sharing.UserFileMembershipInfo.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Sharing.UserFileMembershipInfo
+  langs:
+  - csharp
+  - vb
+  name: UserFileMembershipInfo()
+  nameWithType: UserFileMembershipInfo.UserFileMembershipInfo()
+  fullName: Dropbox.Api.Sharing.UserFileMembershipInfo.UserFileMembershipInfo()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UserFileMembershipInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UserFileMembershipInfo.cs
+    startLine: 67
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.UserFileMembershipInfo\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public UserFileMembershipInfo()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Sharing.UserFileMembershipInfo.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.UserFileMembershipInfo.TimeLastSeen
+  commentId: P:Dropbox.Api.Sharing.UserFileMembershipInfo.TimeLastSeen
+  id: TimeLastSeen
+  parent: Dropbox.Api.Sharing.UserFileMembershipInfo
+  langs:
+  - csharp
+  - vb
+  name: TimeLastSeen
+  nameWithType: UserFileMembershipInfo.TimeLastSeen
+  fullName: Dropbox.Api.Sharing.UserFileMembershipInfo.TimeLastSeen
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UserFileMembershipInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TimeLastSeen
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UserFileMembershipInfo.cs
+    startLine: 77
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The UTC timestamp of when the user has last seen the content. Only populated\nif the user has seen the content and the caller has a plan that includes viewer\nhistory.</p>\n"
+  example: []
+  syntax:
+    content: public System.DateTime? TimeLastSeen { get; protected set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property TimeLastSeen As System.DateTime?
+  overload: Dropbox.Api.Sharing.UserFileMembershipInfo.TimeLastSeen*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.UserFileMembershipInfo.PlatformType
+  commentId: P:Dropbox.Api.Sharing.UserFileMembershipInfo.PlatformType
+  id: PlatformType
+  parent: Dropbox.Api.Sharing.UserFileMembershipInfo
+  langs:
+  - csharp
+  - vb
+  name: PlatformType
+  nameWithType: UserFileMembershipInfo.PlatformType
+  fullName: Dropbox.Api.Sharing.UserFileMembershipInfo.PlatformType
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UserFileMembershipInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PlatformType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UserFileMembershipInfo.cs
+    startLine: 82
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The platform on which the user has last seen the content, or unknown.</p>\n"
+  example: []
+  syntax:
+    content: public PlatformType PlatformType { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.SeenState.PlatformType
+    content.vb: Public Property PlatformType As PlatformType
+  overload: Dropbox.Api.Sharing.UserFileMembershipInfo.PlatformType*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.MembershipInfo
+  commentId: T:Dropbox.Api.Sharing.MembershipInfo
+  parent: Dropbox.Api.Sharing
+  name: MembershipInfo
+  nameWithType: MembershipInfo
+  fullName: Dropbox.Api.Sharing.MembershipInfo
+- uid: Dropbox.Api.Sharing.UserMembershipInfo
+  commentId: T:Dropbox.Api.Sharing.UserMembershipInfo
+  parent: Dropbox.Api.Sharing
+  name: UserMembershipInfo
+  nameWithType: UserMembershipInfo
+  fullName: Dropbox.Api.Sharing.UserMembershipInfo
+- uid: Dropbox.Api.Sharing.UserMembershipInfo.User
+  commentId: P:Dropbox.Api.Sharing.UserMembershipInfo.User
+  parent: Dropbox.Api.Sharing.UserMembershipInfo
+  name: User
+  nameWithType: UserMembershipInfo.User
+  fullName: Dropbox.Api.Sharing.UserMembershipInfo.User
+- uid: Dropbox.Api.Sharing.MembershipInfo.AccessType
+  commentId: P:Dropbox.Api.Sharing.MembershipInfo.AccessType
+  parent: Dropbox.Api.Sharing.MembershipInfo
+  name: AccessType
+  nameWithType: MembershipInfo.AccessType
+  fullName: Dropbox.Api.Sharing.MembershipInfo.AccessType
+- uid: Dropbox.Api.Sharing.MembershipInfo.Permissions
+  commentId: P:Dropbox.Api.Sharing.MembershipInfo.Permissions
+  parent: Dropbox.Api.Sharing.MembershipInfo
+  name: Permissions
+  nameWithType: MembershipInfo.Permissions
+  fullName: Dropbox.Api.Sharing.MembershipInfo.Permissions
+- uid: Dropbox.Api.Sharing.MembershipInfo.Initials
+  commentId: P:Dropbox.Api.Sharing.MembershipInfo.Initials
+  parent: Dropbox.Api.Sharing.MembershipInfo
+  name: Initials
+  nameWithType: MembershipInfo.Initials
+  fullName: Dropbox.Api.Sharing.MembershipInfo.Initials
+- uid: Dropbox.Api.Sharing.MembershipInfo.IsInherited
+  commentId: P:Dropbox.Api.Sharing.MembershipInfo.IsInherited
+  parent: Dropbox.Api.Sharing.MembershipInfo
+  name: IsInherited
+  nameWithType: MembershipInfo.IsInherited
+  fullName: Dropbox.Api.Sharing.MembershipInfo.IsInherited
+- uid: Dropbox.Api.Sharing.UserFileMembershipInfo
+  commentId: T:Dropbox.Api.Sharing.UserFileMembershipInfo
+  name: UserFileMembershipInfo
+  nameWithType: UserFileMembershipInfo
+  fullName: Dropbox.Api.Sharing.UserFileMembershipInfo
+- uid: Dropbox.Api.Sharing.UserFileMembershipInfo.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.UserFileMembershipInfo.#ctor
+  name: UserFileMembershipInfo
+  nameWithType: UserFileMembershipInfo.UserFileMembershipInfo
+  fullName: Dropbox.Api.Sharing.UserFileMembershipInfo.UserFileMembershipInfo
+- uid: Dropbox.Api.Sharing.AccessLevel
+  commentId: T:Dropbox.Api.Sharing.AccessLevel
+  parent: Dropbox.Api.Sharing
+  name: AccessLevel
+  nameWithType: AccessLevel
+  fullName: Dropbox.Api.Sharing.AccessLevel
+- uid: Dropbox.Api.Sharing.UserInfo
+  commentId: T:Dropbox.Api.Sharing.UserInfo
+  parent: Dropbox.Api.Sharing
+  name: UserInfo
+  nameWithType: UserInfo
+  fullName: Dropbox.Api.Sharing.UserInfo
+- uid: System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.MemberPermission}
+  commentId: '!:System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.MemberPermission}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<MemberPermission>
+  nameWithType: System.Collections.Generic.IEnumerable<MemberPermission>
+  fullName: System.Collections.Generic.IEnumerable<Dropbox.Api.Sharing.MemberPermission>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of MemberPermission)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Dropbox.Api.Sharing.MemberPermission)
+  name.vb: System.Collections.Generic.IEnumerable(Of MemberPermission)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Sharing.MemberPermission
+    name: MemberPermission
+    nameWithType: MemberPermission
+    fullName: Dropbox.Api.Sharing.MemberPermission
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Sharing.MemberPermission
+    name: MemberPermission
+    nameWithType: MemberPermission
+    fullName: Dropbox.Api.Sharing.MemberPermission
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.Nullable{System.DateTime}
+  commentId: '!:System.Nullable{System.DateTime}'
+  definition: System.Nullable`1
+  name: Nullable<System.DateTime>
+  nameWithType: Nullable<System.DateTime>
+  fullName: System.Nullable<System.DateTime>
+  nameWithType.vb: Nullable(Of System.DateTime)
+  fullName.vb: System.Nullable(Of System.DateTime)
+  name.vb: Nullable(Of System.DateTime)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.DateTime
+    name: System.DateTime
+    nameWithType: System.DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.DateTime
+    name: System.DateTime
+    nameWithType: System.DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.SeenState.PlatformType
+  commentId: T:Dropbox.Api.SeenState.PlatformType
+  parent: Dropbox.Api.SeenState
+  name: PlatformType
+  nameWithType: PlatformType
+  fullName: Dropbox.Api.SeenState.PlatformType
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: System.Collections.Generic.IEnumerable<>
+  nameWithType: System.Collections.Generic.IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: System.Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  isExternal: true
+  name: Nullable<>
+  nameWithType: Nullable<>
+  fullName: System.Nullable<>
+  nameWithType.vb: Nullable(Of )
+  fullName.vb: System.Nullable(Of )
+  name.vb: Nullable(Of )
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.SeenState
+  commentId: N:Dropbox.Api.SeenState
+  name: Dropbox.Api.SeenState
+  nameWithType: Dropbox.Api.SeenState
+  fullName: Dropbox.Api.SeenState
+- uid: Dropbox.Api.Sharing.UserFileMembershipInfo.TimeLastSeen*
+  commentId: Overload:Dropbox.Api.Sharing.UserFileMembershipInfo.TimeLastSeen
+  name: TimeLastSeen
+  nameWithType: UserFileMembershipInfo.TimeLastSeen
+  fullName: Dropbox.Api.Sharing.UserFileMembershipInfo.TimeLastSeen
+- uid: Dropbox.Api.Sharing.UserFileMembershipInfo.PlatformType*
+  commentId: Overload:Dropbox.Api.Sharing.UserFileMembershipInfo.PlatformType
+  name: PlatformType
+  nameWithType: UserFileMembershipInfo.PlatformType
+  fullName: Dropbox.Api.Sharing.UserFileMembershipInfo.PlatformType
+shouldSkipMarkup: true

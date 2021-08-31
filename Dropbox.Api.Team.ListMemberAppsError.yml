@@ -1,0 +1,291 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.ListMemberAppsError
+  commentId: T:Dropbox.Api.Team.ListMemberAppsError
+  id: ListMemberAppsError
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.ListMemberAppsError.#ctor
+  - Dropbox.Api.Team.ListMemberAppsError.AsMemberNotFound
+  - Dropbox.Api.Team.ListMemberAppsError.AsOther
+  - Dropbox.Api.Team.ListMemberAppsError.IsMemberNotFound
+  - Dropbox.Api.Team.ListMemberAppsError.IsOther
+  langs:
+  - csharp
+  - vb
+  name: ListMemberAppsError
+  nameWithType: ListMemberAppsError
+  fullName: Dropbox.Api.Team.ListMemberAppsError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListMemberAppsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ListMemberAppsError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListMemberAppsError.cs
+    startLine: 17
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Error returned by <xref href=\"Dropbox.Api.Team.Routes.TeamTeamRoutes.LinkedAppsListMemberLinkedAppsAsync(Dropbox.Api.Team.ListMemberAppsArg)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+  example: []
+  syntax:
+    content: 'public class ListMemberAppsError : object'
+    content.vb: >-
+      Public Class ListMemberAppsError
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Team.ListMemberAppsError.MemberNotFound
+  - Dropbox.Api.Team.ListMemberAppsError.Other
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.ListMemberAppsError.#ctor
+  commentId: M:Dropbox.Api.Team.ListMemberAppsError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.ListMemberAppsError
+  langs:
+  - csharp
+  - vb
+  name: ListMemberAppsError()
+  nameWithType: ListMemberAppsError.ListMemberAppsError()
+  fullName: Dropbox.Api.Team.ListMemberAppsError.ListMemberAppsError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListMemberAppsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListMemberAppsError.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.ListMemberAppsError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public ListMemberAppsError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.ListMemberAppsError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.ListMemberAppsError.IsMemberNotFound
+  commentId: P:Dropbox.Api.Team.ListMemberAppsError.IsMemberNotFound
+  id: IsMemberNotFound
+  parent: Dropbox.Api.Team.ListMemberAppsError
+  langs:
+  - csharp
+  - vb
+  name: IsMemberNotFound
+  nameWithType: ListMemberAppsError.IsMemberNotFound
+  fullName: Dropbox.Api.Team.ListMemberAppsError.IsMemberNotFound
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListMemberAppsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsMemberNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListMemberAppsError.cs
+    startLine: 42
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is MemberNotFound</p>\n"
+  example: []
+  syntax:
+    content: public bool IsMemberNotFound { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsMemberNotFound As Boolean
+  overload: Dropbox.Api.Team.ListMemberAppsError.IsMemberNotFound*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.ListMemberAppsError.AsMemberNotFound
+  commentId: P:Dropbox.Api.Team.ListMemberAppsError.AsMemberNotFound
+  id: AsMemberNotFound
+  parent: Dropbox.Api.Team.ListMemberAppsError
+  langs:
+  - csharp
+  - vb
+  name: AsMemberNotFound
+  nameWithType: ListMemberAppsError.AsMemberNotFound
+  fullName: Dropbox.Api.Team.ListMemberAppsError.AsMemberNotFound
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListMemberAppsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsMemberNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListMemberAppsError.cs
+    startLine: 53
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a MemberNotFound, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ListMemberAppsError.MemberNotFound AsMemberNotFound { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.ListMemberAppsError.MemberNotFound
+    content.vb: Public ReadOnly Property AsMemberNotFound As ListMemberAppsError.MemberNotFound
+  overload: Dropbox.Api.Team.ListMemberAppsError.AsMemberNotFound*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.ListMemberAppsError.IsOther
+  commentId: P:Dropbox.Api.Team.ListMemberAppsError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Team.ListMemberAppsError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: ListMemberAppsError.IsOther
+  fullName: Dropbox.Api.Team.ListMemberAppsError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListMemberAppsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListMemberAppsError.cs
+    startLine: 64
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Team.ListMemberAppsError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.ListMemberAppsError.AsOther
+  commentId: P:Dropbox.Api.Team.ListMemberAppsError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Team.ListMemberAppsError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: ListMemberAppsError.AsOther
+  fullName: Dropbox.Api.Team.ListMemberAppsError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListMemberAppsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListMemberAppsError.cs
+    startLine: 75
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ListMemberAppsError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.ListMemberAppsError.Other
+    content.vb: Public ReadOnly Property AsOther As ListMemberAppsError.Other
+  overload: Dropbox.Api.Team.ListMemberAppsError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team.Routes.TeamTeamRoutes.LinkedAppsListMemberLinkedAppsAsync(Dropbox.Api.Team.ListMemberAppsArg)
+  commentId: M:Dropbox.Api.Team.Routes.TeamTeamRoutes.LinkedAppsListMemberLinkedAppsAsync(Dropbox.Api.Team.ListMemberAppsArg)
+  isExternal: true
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.ListMemberAppsError
+  commentId: T:Dropbox.Api.Team.ListMemberAppsError
+  parent: Dropbox.Api.Team
+  name: ListMemberAppsError
+  nameWithType: ListMemberAppsError
+  fullName: Dropbox.Api.Team.ListMemberAppsError
+- uid: Dropbox.Api.Team.ListMemberAppsError.#ctor*
+  commentId: Overload:Dropbox.Api.Team.ListMemberAppsError.#ctor
+  name: ListMemberAppsError
+  nameWithType: ListMemberAppsError.ListMemberAppsError
+  fullName: Dropbox.Api.Team.ListMemberAppsError.ListMemberAppsError
+- uid: Dropbox.Api.Team.ListMemberAppsError.IsMemberNotFound*
+  commentId: Overload:Dropbox.Api.Team.ListMemberAppsError.IsMemberNotFound
+  name: IsMemberNotFound
+  nameWithType: ListMemberAppsError.IsMemberNotFound
+  fullName: Dropbox.Api.Team.ListMemberAppsError.IsMemberNotFound
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Team.ListMemberAppsError.AsMemberNotFound*
+  commentId: Overload:Dropbox.Api.Team.ListMemberAppsError.AsMemberNotFound
+  name: AsMemberNotFound
+  nameWithType: ListMemberAppsError.AsMemberNotFound
+  fullName: Dropbox.Api.Team.ListMemberAppsError.AsMemberNotFound
+- uid: Dropbox.Api.Team.ListMemberAppsError.MemberNotFound
+  commentId: T:Dropbox.Api.Team.ListMemberAppsError.MemberNotFound
+  parent: Dropbox.Api.Team
+  name: ListMemberAppsError.MemberNotFound
+  nameWithType: ListMemberAppsError.MemberNotFound
+  fullName: Dropbox.Api.Team.ListMemberAppsError.MemberNotFound
+- uid: Dropbox.Api.Team.ListMemberAppsError.IsOther*
+  commentId: Overload:Dropbox.Api.Team.ListMemberAppsError.IsOther
+  name: IsOther
+  nameWithType: ListMemberAppsError.IsOther
+  fullName: Dropbox.Api.Team.ListMemberAppsError.IsOther
+- uid: Dropbox.Api.Team.ListMemberAppsError.AsOther*
+  commentId: Overload:Dropbox.Api.Team.ListMemberAppsError.AsOther
+  name: AsOther
+  nameWithType: ListMemberAppsError.AsOther
+  fullName: Dropbox.Api.Team.ListMemberAppsError.AsOther
+- uid: Dropbox.Api.Team.ListMemberAppsError.Other
+  commentId: T:Dropbox.Api.Team.ListMemberAppsError.Other
+  parent: Dropbox.Api.Team
+  name: ListMemberAppsError.Other
+  nameWithType: ListMemberAppsError.Other
+  fullName: Dropbox.Api.Team.ListMemberAppsError.Other
+shouldSkipMarkup: true

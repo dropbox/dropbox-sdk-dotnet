@@ -1,0 +1,201 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.ListFolderContinueError.Path
+  commentId: T:Dropbox.Api.Files.ListFolderContinueError.Path
+  id: ListFolderContinueError.Path
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.ListFolderContinueError.Path.#ctor(Dropbox.Api.Files.LookupError)
+  - Dropbox.Api.Files.ListFolderContinueError.Path.Value
+  langs:
+  - csharp
+  - vb
+  name: ListFolderContinueError.Path
+  nameWithType: ListFolderContinueError.Path
+  fullName: Dropbox.Api.Files.ListFolderContinueError.Path
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderContinueError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Path
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderContinueError.cs
+    startLine: 183
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The path object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Path : ListFolderContinueError'
+    content.vb: >-
+      Public NotInheritable Class Path
+          Inherits ListFolderContinueError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Files.ListFolderContinueError
+  inheritedMembers:
+  - Dropbox.Api.Files.ListFolderContinueError.IsPath
+  - Dropbox.Api.Files.ListFolderContinueError.AsPath
+  - Dropbox.Api.Files.ListFolderContinueError.IsReset
+  - Dropbox.Api.Files.ListFolderContinueError.AsReset
+  - Dropbox.Api.Files.ListFolderContinueError.IsOther
+  - Dropbox.Api.Files.ListFolderContinueError.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Files.ListFolderContinueError.Path.#ctor(Dropbox.Api.Files.LookupError)
+  commentId: M:Dropbox.Api.Files.ListFolderContinueError.Path.#ctor(Dropbox.Api.Files.LookupError)
+  id: '#ctor(Dropbox.Api.Files.LookupError)'
+  parent: Dropbox.Api.Files.ListFolderContinueError.Path
+  langs:
+  - csharp
+  - vb
+  name: Path(LookupError)
+  nameWithType: ListFolderContinueError.Path.Path(LookupError)
+  fullName: Dropbox.Api.Files.ListFolderContinueError.Path.Path(Dropbox.Api.Files.LookupError)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderContinueError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderContinueError.cs
+    startLine: 201
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.ListFolderContinueError.Path\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public Path(LookupError value)
+    parameters:
+    - id: value
+      type: Dropbox.Api.Files.LookupError
+      description: The value
+    content.vb: Public Sub New(value As LookupError)
+  overload: Dropbox.Api.Files.ListFolderContinueError.Path.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.ListFolderContinueError.Path.Value
+  commentId: P:Dropbox.Api.Files.ListFolderContinueError.Path.Value
+  id: Value
+  parent: Dropbox.Api.Files.ListFolderContinueError.Path
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: ListFolderContinueError.Path.Value
+  fullName: Dropbox.Api.Files.ListFolderContinueError.Path.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderContinueError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderContinueError.cs
+    startLine: 215
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public LookupError Value { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.LookupError
+    content.vb: Public ReadOnly Property Value As LookupError
+  overload: Dropbox.Api.Files.ListFolderContinueError.Path.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.ListFolderContinueError
+  commentId: T:Dropbox.Api.Files.ListFolderContinueError
+  parent: Dropbox.Api.Files
+  name: ListFolderContinueError
+  nameWithType: ListFolderContinueError
+  fullName: Dropbox.Api.Files.ListFolderContinueError
+- uid: Dropbox.Api.Files.ListFolderContinueError.IsPath
+  commentId: P:Dropbox.Api.Files.ListFolderContinueError.IsPath
+  parent: Dropbox.Api.Files.ListFolderContinueError
+  name: IsPath
+  nameWithType: ListFolderContinueError.IsPath
+  fullName: Dropbox.Api.Files.ListFolderContinueError.IsPath
+- uid: Dropbox.Api.Files.ListFolderContinueError.AsPath
+  commentId: P:Dropbox.Api.Files.ListFolderContinueError.AsPath
+  parent: Dropbox.Api.Files.ListFolderContinueError
+  name: AsPath
+  nameWithType: ListFolderContinueError.AsPath
+  fullName: Dropbox.Api.Files.ListFolderContinueError.AsPath
+- uid: Dropbox.Api.Files.ListFolderContinueError.IsReset
+  commentId: P:Dropbox.Api.Files.ListFolderContinueError.IsReset
+  parent: Dropbox.Api.Files.ListFolderContinueError
+  name: IsReset
+  nameWithType: ListFolderContinueError.IsReset
+  fullName: Dropbox.Api.Files.ListFolderContinueError.IsReset
+- uid: Dropbox.Api.Files.ListFolderContinueError.AsReset
+  commentId: P:Dropbox.Api.Files.ListFolderContinueError.AsReset
+  parent: Dropbox.Api.Files.ListFolderContinueError
+  name: AsReset
+  nameWithType: ListFolderContinueError.AsReset
+  fullName: Dropbox.Api.Files.ListFolderContinueError.AsReset
+- uid: Dropbox.Api.Files.ListFolderContinueError.IsOther
+  commentId: P:Dropbox.Api.Files.ListFolderContinueError.IsOther
+  parent: Dropbox.Api.Files.ListFolderContinueError
+  name: IsOther
+  nameWithType: ListFolderContinueError.IsOther
+  fullName: Dropbox.Api.Files.ListFolderContinueError.IsOther
+- uid: Dropbox.Api.Files.ListFolderContinueError.AsOther
+  commentId: P:Dropbox.Api.Files.ListFolderContinueError.AsOther
+  parent: Dropbox.Api.Files.ListFolderContinueError
+  name: AsOther
+  nameWithType: ListFolderContinueError.AsOther
+  fullName: Dropbox.Api.Files.ListFolderContinueError.AsOther
+- uid: Dropbox.Api.Files.ListFolderContinueError.Path
+  commentId: T:Dropbox.Api.Files.ListFolderContinueError.Path
+  parent: Dropbox.Api.Files
+  name: ListFolderContinueError.Path
+  nameWithType: ListFolderContinueError.Path
+  fullName: Dropbox.Api.Files.ListFolderContinueError.Path
+- uid: Dropbox.Api.Files.ListFolderContinueError.Path.#ctor*
+  commentId: Overload:Dropbox.Api.Files.ListFolderContinueError.Path.#ctor
+  name: Path
+  nameWithType: ListFolderContinueError.Path.Path
+  fullName: Dropbox.Api.Files.ListFolderContinueError.Path.Path
+- uid: Dropbox.Api.Files.LookupError
+  commentId: T:Dropbox.Api.Files.LookupError
+  parent: Dropbox.Api.Files
+  name: LookupError
+  nameWithType: LookupError
+  fullName: Dropbox.Api.Files.LookupError
+- uid: Dropbox.Api.Files.ListFolderContinueError.Path.Value*
+  commentId: Overload:Dropbox.Api.Files.ListFolderContinueError.Path.Value
+  name: Value
+  nameWithType: ListFolderContinueError.Path.Value
+  fullName: Dropbox.Api.Files.ListFolderContinueError.Path.Value
+shouldSkipMarkup: true

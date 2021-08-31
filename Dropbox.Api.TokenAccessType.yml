@@ -1,0 +1,157 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TokenAccessType
+  commentId: T:Dropbox.Api.TokenAccessType
+  id: TokenAccessType
+  parent: Dropbox.Api
+  children:
+  - Dropbox.Api.TokenAccessType.Legacy
+  - Dropbox.Api.TokenAccessType.Offline
+  - Dropbox.Api.TokenAccessType.Online
+  langs:
+  - csharp
+  - vb
+  name: TokenAccessType
+  nameWithType: TokenAccessType
+  fullName: Dropbox.Api.TokenAccessType
+  type: Enum
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/DropboxOauth2Helper.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TokenAccessType
+    path: dropbox-sdk-dotnet/Dropbox.Api/DropboxOauth2Helper.cs
+    startLine: 42
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api
+  summary: "\nUsed by <xref href=\"Dropbox.Api.DropboxOAuth2Helper.GetAuthorizeUri(Dropbox.Api.OAuthResponseType%2cSystem.String%2cSystem.String%2cSystem.String%2cSystem.Boolean%2cSystem.Boolean%2cSystem.String%2cSystem.Boolean%2cDropbox.Api.TokenAccessType%2cSystem.String%5b%5d%2cDropbox.Api.IncludeGrantedScopes%2cSystem.String)\" data-throw-if-not-resolved=\"false\"></xref> to specify which type of OAuth token to request.\n"
+  example: []
+  syntax:
+    content: 'public enum TokenAccessType : int'
+    content.vb: Public Enum TokenAccessType As Integer
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: Dropbox.Api.TokenAccessType.Legacy
+  commentId: F:Dropbox.Api.TokenAccessType.Legacy
+  id: Legacy
+  parent: Dropbox.Api.TokenAccessType
+  langs:
+  - csharp
+  - vb
+  name: Legacy
+  nameWithType: TokenAccessType.Legacy
+  fullName: Dropbox.Api.TokenAccessType.Legacy
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/DropboxOauth2Helper.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Legacy
+    path: dropbox-sdk-dotnet/Dropbox.Api/DropboxOauth2Helper.cs
+    startLine: 47
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api
+  summary: "\nCreates one long-lived token with no expiration\n"
+  example: []
+  syntax:
+    content: Legacy = 0
+    return:
+      type: Dropbox.Api.TokenAccessType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Dropbox.Api.TokenAccessType.Offline
+  commentId: F:Dropbox.Api.TokenAccessType.Offline
+  id: Offline
+  parent: Dropbox.Api.TokenAccessType
+  langs:
+  - csharp
+  - vb
+  name: Offline
+  nameWithType: TokenAccessType.Offline
+  fullName: Dropbox.Api.TokenAccessType.Offline
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/DropboxOauth2Helper.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Offline
+    path: dropbox-sdk-dotnet/Dropbox.Api/DropboxOauth2Helper.cs
+    startLine: 52
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api
+  summary: "\nCreate one short-lived token with an expiration with a refresh token\n"
+  example: []
+  syntax:
+    content: Offline = 1
+    return:
+      type: Dropbox.Api.TokenAccessType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Dropbox.Api.TokenAccessType.Online
+  commentId: F:Dropbox.Api.TokenAccessType.Online
+  id: Online
+  parent: Dropbox.Api.TokenAccessType
+  langs:
+  - csharp
+  - vb
+  name: Online
+  nameWithType: TokenAccessType.Online
+  fullName: Dropbox.Api.TokenAccessType.Online
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/DropboxOauth2Helper.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Online
+    path: dropbox-sdk-dotnet/Dropbox.Api/DropboxOauth2Helper.cs
+    startLine: 57
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api
+  summary: "\nCreate one short-lived token with an expiration\n"
+  example: []
+  syntax:
+    content: Online = 2
+    return:
+      type: Dropbox.Api.TokenAccessType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Dropbox.Api.DropboxOAuth2Helper.GetAuthorizeUri(Dropbox.Api.OAuthResponseType,System.String,System.String,System.String,System.Boolean,System.Boolean,System.String,System.Boolean,Dropbox.Api.TokenAccessType,System.String[],Dropbox.Api.IncludeGrantedScopes,System.String)
+  commentId: M:Dropbox.Api.DropboxOAuth2Helper.GetAuthorizeUri(Dropbox.Api.OAuthResponseType,System.String,System.String,System.String,System.Boolean,System.Boolean,System.String,System.Boolean,Dropbox.Api.TokenAccessType,System.String[],Dropbox.Api.IncludeGrantedScopes,System.String)
+  isExternal: true
+- uid: Dropbox.Api
+  commentId: N:Dropbox.Api
+  name: Dropbox.Api
+  nameWithType: Dropbox.Api
+  fullName: Dropbox.Api
+- uid: Dropbox.Api.TokenAccessType
+  commentId: T:Dropbox.Api.TokenAccessType
+  parent: Dropbox.Api
+  name: TokenAccessType
+  nameWithType: TokenAccessType
+  fullName: Dropbox.Api.TokenAccessType
+shouldSkipMarkup: true

@@ -1,0 +1,245 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.UnshareFolderArg
+  commentId: T:Dropbox.Api.Sharing.UnshareFolderArg
+  id: UnshareFolderArg
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.UnshareFolderArg.#ctor
+  - Dropbox.Api.Sharing.UnshareFolderArg.#ctor(System.String,System.Boolean)
+  - Dropbox.Api.Sharing.UnshareFolderArg.LeaveACopy
+  - Dropbox.Api.Sharing.UnshareFolderArg.SharedFolderId
+  langs:
+  - csharp
+  - vb
+  name: UnshareFolderArg
+  nameWithType: UnshareFolderArg
+  fullName: Dropbox.Api.Sharing.UnshareFolderArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UnshareFolderArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: UnshareFolderArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UnshareFolderArg.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The unshare folder arg object</p>\n"
+  example: []
+  syntax:
+    content: 'public class UnshareFolderArg : object'
+    content.vb: >-
+      Public Class UnshareFolderArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Sharing.UnshareFolderArg.#ctor(System.String,System.Boolean)
+  commentId: M:Dropbox.Api.Sharing.UnshareFolderArg.#ctor(System.String,System.Boolean)
+  id: '#ctor(System.String,System.Boolean)'
+  parent: Dropbox.Api.Sharing.UnshareFolderArg
+  langs:
+  - csharp
+  - vb
+  name: UnshareFolderArg(String, Boolean)
+  nameWithType: UnshareFolderArg.UnshareFolderArg(String, Boolean)
+  fullName: Dropbox.Api.Sharing.UnshareFolderArg.UnshareFolderArg(System.String, System.Boolean)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UnshareFolderArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UnshareFolderArg.cs
+    startLine: 37
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.UnshareFolderArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public UnshareFolderArg(string sharedFolderId, bool leaveACopy = false)
+    parameters:
+    - id: sharedFolderId
+      type: System.String
+      description: The ID for the shared folder.
+    - id: leaveACopy
+      type: System.Boolean
+      description: >-
+        If true, members of this shared folder will get a copy of
+
+        this folder after it&apos;s unshared. Otherwise, it will be removed from their Dropbox.
+
+        The current user, who is an owner, will always retain their copy.
+    content.vb: Public Sub New(sharedFolderId As String, leaveACopy As Boolean = False)
+  overload: Dropbox.Api.Sharing.UnshareFolderArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.UnshareFolderArg.#ctor
+  commentId: M:Dropbox.Api.Sharing.UnshareFolderArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Sharing.UnshareFolderArg
+  langs:
+  - csharp
+  - vb
+  name: UnshareFolderArg()
+  nameWithType: UnshareFolderArg.UnshareFolderArg()
+  fullName: Dropbox.Api.Sharing.UnshareFolderArg.UnshareFolderArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UnshareFolderArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UnshareFolderArg.cs
+    startLine: 59
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.UnshareFolderArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public UnshareFolderArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Sharing.UnshareFolderArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.UnshareFolderArg.SharedFolderId
+  commentId: P:Dropbox.Api.Sharing.UnshareFolderArg.SharedFolderId
+  id: SharedFolderId
+  parent: Dropbox.Api.Sharing.UnshareFolderArg
+  langs:
+  - csharp
+  - vb
+  name: SharedFolderId
+  nameWithType: UnshareFolderArg.SharedFolderId
+  fullName: Dropbox.Api.Sharing.UnshareFolderArg.SharedFolderId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UnshareFolderArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SharedFolderId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UnshareFolderArg.cs
+    startLine: 68
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The ID for the shared folder.</p>\n"
+  example: []
+  syntax:
+    content: public string SharedFolderId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SharedFolderId As String
+  overload: Dropbox.Api.Sharing.UnshareFolderArg.SharedFolderId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.UnshareFolderArg.LeaveACopy
+  commentId: P:Dropbox.Api.Sharing.UnshareFolderArg.LeaveACopy
+  id: LeaveACopy
+  parent: Dropbox.Api.Sharing.UnshareFolderArg
+  langs:
+  - csharp
+  - vb
+  name: LeaveACopy
+  nameWithType: UnshareFolderArg.LeaveACopy
+  fullName: Dropbox.Api.Sharing.UnshareFolderArg.LeaveACopy
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UnshareFolderArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: LeaveACopy
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/UnshareFolderArg.cs
+    startLine: 75
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>If true, members of this shared folder will get a copy of this folder after\nit&apos;s unshared. Otherwise, it will be removed from their Dropbox. The current user,\nwho is an owner, will always retain their copy.</p>\n"
+  example: []
+  syntax:
+    content: public bool LeaveACopy { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property LeaveACopy As Boolean
+  overload: Dropbox.Api.Sharing.UnshareFolderArg.LeaveACopy*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.UnshareFolderArg
+  commentId: T:Dropbox.Api.Sharing.UnshareFolderArg
+  parent: Dropbox.Api.Sharing
+  name: UnshareFolderArg
+  nameWithType: UnshareFolderArg
+  fullName: Dropbox.Api.Sharing.UnshareFolderArg
+- uid: Dropbox.Api.Sharing.UnshareFolderArg.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.UnshareFolderArg.#ctor
+  name: UnshareFolderArg
+  nameWithType: UnshareFolderArg.UnshareFolderArg
+  fullName: Dropbox.Api.Sharing.UnshareFolderArg.UnshareFolderArg
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Sharing.UnshareFolderArg.SharedFolderId*
+  commentId: Overload:Dropbox.Api.Sharing.UnshareFolderArg.SharedFolderId
+  name: SharedFolderId
+  nameWithType: UnshareFolderArg.SharedFolderId
+  fullName: Dropbox.Api.Sharing.UnshareFolderArg.SharedFolderId
+- uid: Dropbox.Api.Sharing.UnshareFolderArg.LeaveACopy*
+  commentId: Overload:Dropbox.Api.Sharing.UnshareFolderArg.LeaveACopy
+  name: LeaveACopy
+  nameWithType: UnshareFolderArg.LeaveACopy
+  fullName: Dropbox.Api.Sharing.UnshareFolderArg.LeaveACopy
+shouldSkipMarkup: true

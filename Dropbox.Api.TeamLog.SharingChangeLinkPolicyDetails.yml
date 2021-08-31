@@ -1,0 +1,239 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.SharingChangeLinkPolicyDetails
+  commentId: T:Dropbox.Api.TeamLog.SharingChangeLinkPolicyDetails
+  id: SharingChangeLinkPolicyDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.SharingChangeLinkPolicyDetails.#ctor
+  - Dropbox.Api.TeamLog.SharingChangeLinkPolicyDetails.#ctor(Dropbox.Api.TeamLog.SharingLinkPolicy,Dropbox.Api.TeamLog.SharingLinkPolicy)
+  - Dropbox.Api.TeamLog.SharingChangeLinkPolicyDetails.NewValue
+  - Dropbox.Api.TeamLog.SharingChangeLinkPolicyDetails.PreviousValue
+  langs:
+  - csharp
+  - vb
+  name: SharingChangeLinkPolicyDetails
+  nameWithType: SharingChangeLinkPolicyDetails
+  fullName: Dropbox.Api.TeamLog.SharingChangeLinkPolicyDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharingChangeLinkPolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SharingChangeLinkPolicyDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharingChangeLinkPolicyDetails.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Changed whether members can share links outside team, and if links are accessible\nonly by team members or anyone by default.</p>\n"
+  example: []
+  syntax:
+    content: 'public class SharingChangeLinkPolicyDetails : object'
+    content.vb: >-
+      Public Class SharingChangeLinkPolicyDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.SharingChangeLinkPolicyDetails.#ctor(Dropbox.Api.TeamLog.SharingLinkPolicy,Dropbox.Api.TeamLog.SharingLinkPolicy)
+  commentId: M:Dropbox.Api.TeamLog.SharingChangeLinkPolicyDetails.#ctor(Dropbox.Api.TeamLog.SharingLinkPolicy,Dropbox.Api.TeamLog.SharingLinkPolicy)
+  id: '#ctor(Dropbox.Api.TeamLog.SharingLinkPolicy,Dropbox.Api.TeamLog.SharingLinkPolicy)'
+  parent: Dropbox.Api.TeamLog.SharingChangeLinkPolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: SharingChangeLinkPolicyDetails(SharingLinkPolicy, SharingLinkPolicy)
+  nameWithType: SharingChangeLinkPolicyDetails.SharingChangeLinkPolicyDetails(SharingLinkPolicy, SharingLinkPolicy)
+  fullName: Dropbox.Api.TeamLog.SharingChangeLinkPolicyDetails.SharingChangeLinkPolicyDetails(Dropbox.Api.TeamLog.SharingLinkPolicy, Dropbox.Api.TeamLog.SharingLinkPolicy)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharingChangeLinkPolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharingChangeLinkPolicyDetails.cs
+    startLine: 37
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SharingChangeLinkPolicyDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public SharingChangeLinkPolicyDetails(SharingLinkPolicy newValue, SharingLinkPolicy previousValue = null)
+    parameters:
+    - id: newValue
+      type: Dropbox.Api.TeamLog.SharingLinkPolicy
+      description: New external link accessibility policy.
+    - id: previousValue
+      type: Dropbox.Api.TeamLog.SharingLinkPolicy
+      description: >-
+        Previous external link accessibility policy. Might be
+
+        missing due to historical data gap.
+    content.vb: Public Sub New(newValue As SharingLinkPolicy, previousValue As SharingLinkPolicy = Nothing)
+  overload: Dropbox.Api.TeamLog.SharingChangeLinkPolicyDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SharingChangeLinkPolicyDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.SharingChangeLinkPolicyDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.SharingChangeLinkPolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: SharingChangeLinkPolicyDetails()
+  nameWithType: SharingChangeLinkPolicyDetails.SharingChangeLinkPolicyDetails()
+  fullName: Dropbox.Api.TeamLog.SharingChangeLinkPolicyDetails.SharingChangeLinkPolicyDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharingChangeLinkPolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharingChangeLinkPolicyDetails.cs
+    startLine: 55
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SharingChangeLinkPolicyDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public SharingChangeLinkPolicyDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.SharingChangeLinkPolicyDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SharingChangeLinkPolicyDetails.NewValue
+  commentId: P:Dropbox.Api.TeamLog.SharingChangeLinkPolicyDetails.NewValue
+  id: NewValue
+  parent: Dropbox.Api.TeamLog.SharingChangeLinkPolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: NewValue
+  nameWithType: SharingChangeLinkPolicyDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.SharingChangeLinkPolicyDetails.NewValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharingChangeLinkPolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NewValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharingChangeLinkPolicyDetails.cs
+    startLine: 63
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>New external link accessibility policy.</p>\n"
+  example: []
+  syntax:
+    content: public SharingLinkPolicy NewValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.SharingLinkPolicy
+    content.vb: Public Property NewValue As SharingLinkPolicy
+  overload: Dropbox.Api.TeamLog.SharingChangeLinkPolicyDetails.NewValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.SharingChangeLinkPolicyDetails.PreviousValue
+  commentId: P:Dropbox.Api.TeamLog.SharingChangeLinkPolicyDetails.PreviousValue
+  id: PreviousValue
+  parent: Dropbox.Api.TeamLog.SharingChangeLinkPolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: PreviousValue
+  nameWithType: SharingChangeLinkPolicyDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.SharingChangeLinkPolicyDetails.PreviousValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharingChangeLinkPolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PreviousValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharingChangeLinkPolicyDetails.cs
+    startLine: 69
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Previous external link accessibility policy. Might be missing due to\nhistorical data gap.</p>\n"
+  example: []
+  syntax:
+    content: public SharingLinkPolicy PreviousValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.SharingLinkPolicy
+    content.vb: Public Property PreviousValue As SharingLinkPolicy
+  overload: Dropbox.Api.TeamLog.SharingChangeLinkPolicyDetails.PreviousValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.SharingChangeLinkPolicyDetails
+  commentId: T:Dropbox.Api.TeamLog.SharingChangeLinkPolicyDetails
+  parent: Dropbox.Api.TeamLog
+  name: SharingChangeLinkPolicyDetails
+  nameWithType: SharingChangeLinkPolicyDetails
+  fullName: Dropbox.Api.TeamLog.SharingChangeLinkPolicyDetails
+- uid: Dropbox.Api.TeamLog.SharingChangeLinkPolicyDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.SharingChangeLinkPolicyDetails.#ctor
+  name: SharingChangeLinkPolicyDetails
+  nameWithType: SharingChangeLinkPolicyDetails.SharingChangeLinkPolicyDetails
+  fullName: Dropbox.Api.TeamLog.SharingChangeLinkPolicyDetails.SharingChangeLinkPolicyDetails
+- uid: Dropbox.Api.TeamLog.SharingLinkPolicy
+  commentId: T:Dropbox.Api.TeamLog.SharingLinkPolicy
+  parent: Dropbox.Api.TeamLog
+  name: SharingLinkPolicy
+  nameWithType: SharingLinkPolicy
+  fullName: Dropbox.Api.TeamLog.SharingLinkPolicy
+- uid: Dropbox.Api.TeamLog.SharingChangeLinkPolicyDetails.NewValue*
+  commentId: Overload:Dropbox.Api.TeamLog.SharingChangeLinkPolicyDetails.NewValue
+  name: NewValue
+  nameWithType: SharingChangeLinkPolicyDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.SharingChangeLinkPolicyDetails.NewValue
+- uid: Dropbox.Api.TeamLog.SharingChangeLinkPolicyDetails.PreviousValue*
+  commentId: Overload:Dropbox.Api.TeamLog.SharingChangeLinkPolicyDetails.PreviousValue
+  name: PreviousValue
+  nameWithType: SharingChangeLinkPolicyDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.SharingChangeLinkPolicyDetails.PreviousValue
+shouldSkipMarkup: true

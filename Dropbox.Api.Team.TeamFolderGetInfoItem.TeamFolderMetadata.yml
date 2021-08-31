@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.TeamFolderGetInfoItem.TeamFolderMetadata
+  commentId: T:Dropbox.Api.Team.TeamFolderGetInfoItem.TeamFolderMetadata
+  id: TeamFolderGetInfoItem.TeamFolderMetadata
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.TeamFolderGetInfoItem.TeamFolderMetadata.#ctor(Dropbox.Api.Team.TeamFolderMetadata)
+  - Dropbox.Api.Team.TeamFolderGetInfoItem.TeamFolderMetadata.Value
+  langs:
+  - csharp
+  - vb
+  name: TeamFolderGetInfoItem.TeamFolderMetadata
+  nameWithType: TeamFolderGetInfoItem.TeamFolderMetadata
+  fullName: Dropbox.Api.Team.TeamFolderGetInfoItem.TeamFolderMetadata
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderGetInfoItem.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TeamFolderMetadata
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderGetInfoItem.cs
+    startLine: 253
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Properties of a team folder.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class TeamFolderMetadata : TeamFolderGetInfoItem'
+    content.vb: >-
+      Public NotInheritable Class TeamFolderMetadata
+          Inherits TeamFolderGetInfoItem
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.TeamFolderGetInfoItem
+  inheritedMembers:
+  - Dropbox.Api.Team.TeamFolderGetInfoItem.IsIdNotFound
+  - Dropbox.Api.Team.TeamFolderGetInfoItem.AsIdNotFound
+  - Dropbox.Api.Team.TeamFolderGetInfoItem.IsTeamFolderMetadata
+  - Dropbox.Api.Team.TeamFolderGetInfoItem.AsTeamFolderMetadata
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Team.TeamFolderGetInfoItem.TeamFolderMetadata.#ctor(Dropbox.Api.Team.TeamFolderMetadata)
+  commentId: M:Dropbox.Api.Team.TeamFolderGetInfoItem.TeamFolderMetadata.#ctor(Dropbox.Api.Team.TeamFolderMetadata)
+  id: '#ctor(Dropbox.Api.Team.TeamFolderMetadata)'
+  parent: Dropbox.Api.Team.TeamFolderGetInfoItem.TeamFolderMetadata
+  langs:
+  - csharp
+  - vb
+  name: TeamFolderMetadata(TeamFolderMetadata)
+  nameWithType: TeamFolderGetInfoItem.TeamFolderMetadata.TeamFolderMetadata(TeamFolderMetadata)
+  fullName: Dropbox.Api.Team.TeamFolderGetInfoItem.TeamFolderMetadata.TeamFolderMetadata(Dropbox.Api.Team.TeamFolderMetadata)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderGetInfoItem.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderGetInfoItem.cs
+    startLine: 272
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.TeamFolderGetInfoItem.TeamFolderMetadata\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public TeamFolderMetadata(TeamFolderMetadata value)
+    parameters:
+    - id: value
+      type: Dropbox.Api.Team.TeamFolderMetadata
+      description: The value
+    content.vb: Public Sub New(value As TeamFolderMetadata)
+  overload: Dropbox.Api.Team.TeamFolderGetInfoItem.TeamFolderMetadata.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.TeamFolderGetInfoItem.TeamFolderMetadata.Value
+  commentId: P:Dropbox.Api.Team.TeamFolderGetInfoItem.TeamFolderMetadata.Value
+  id: Value
+  parent: Dropbox.Api.Team.TeamFolderGetInfoItem.TeamFolderMetadata
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: TeamFolderGetInfoItem.TeamFolderMetadata.Value
+  fullName: Dropbox.Api.Team.TeamFolderGetInfoItem.TeamFolderMetadata.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderGetInfoItem.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderGetInfoItem.cs
+    startLine: 287
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public TeamFolderMetadata Value { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.TeamFolderMetadata
+    content.vb: Public ReadOnly Property Value As TeamFolderMetadata
+  overload: Dropbox.Api.Team.TeamFolderGetInfoItem.TeamFolderMetadata.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.TeamFolderGetInfoItem
+  commentId: T:Dropbox.Api.Team.TeamFolderGetInfoItem
+  parent: Dropbox.Api.Team
+  name: TeamFolderGetInfoItem
+  nameWithType: TeamFolderGetInfoItem
+  fullName: Dropbox.Api.Team.TeamFolderGetInfoItem
+- uid: Dropbox.Api.Team.TeamFolderGetInfoItem.IsIdNotFound
+  commentId: P:Dropbox.Api.Team.TeamFolderGetInfoItem.IsIdNotFound
+  parent: Dropbox.Api.Team.TeamFolderGetInfoItem
+  name: IsIdNotFound
+  nameWithType: TeamFolderGetInfoItem.IsIdNotFound
+  fullName: Dropbox.Api.Team.TeamFolderGetInfoItem.IsIdNotFound
+- uid: Dropbox.Api.Team.TeamFolderGetInfoItem.AsIdNotFound
+  commentId: P:Dropbox.Api.Team.TeamFolderGetInfoItem.AsIdNotFound
+  parent: Dropbox.Api.Team.TeamFolderGetInfoItem
+  name: AsIdNotFound
+  nameWithType: TeamFolderGetInfoItem.AsIdNotFound
+  fullName: Dropbox.Api.Team.TeamFolderGetInfoItem.AsIdNotFound
+- uid: Dropbox.Api.Team.TeamFolderGetInfoItem.IsTeamFolderMetadata
+  commentId: P:Dropbox.Api.Team.TeamFolderGetInfoItem.IsTeamFolderMetadata
+  parent: Dropbox.Api.Team.TeamFolderGetInfoItem
+  name: IsTeamFolderMetadata
+  nameWithType: TeamFolderGetInfoItem.IsTeamFolderMetadata
+  fullName: Dropbox.Api.Team.TeamFolderGetInfoItem.IsTeamFolderMetadata
+- uid: Dropbox.Api.Team.TeamFolderGetInfoItem.AsTeamFolderMetadata
+  commentId: P:Dropbox.Api.Team.TeamFolderGetInfoItem.AsTeamFolderMetadata
+  parent: Dropbox.Api.Team.TeamFolderGetInfoItem
+  name: AsTeamFolderMetadata
+  nameWithType: TeamFolderGetInfoItem.AsTeamFolderMetadata
+  fullName: Dropbox.Api.Team.TeamFolderGetInfoItem.AsTeamFolderMetadata
+- uid: Dropbox.Api.Team.TeamFolderGetInfoItem.TeamFolderMetadata
+  commentId: T:Dropbox.Api.Team.TeamFolderGetInfoItem.TeamFolderMetadata
+  parent: Dropbox.Api.Team
+  name: TeamFolderGetInfoItem.TeamFolderMetadata
+  nameWithType: TeamFolderGetInfoItem.TeamFolderMetadata
+  fullName: Dropbox.Api.Team.TeamFolderGetInfoItem.TeamFolderMetadata
+- uid: Dropbox.Api.Team.TeamFolderGetInfoItem.TeamFolderMetadata.#ctor*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderGetInfoItem.TeamFolderMetadata.#ctor
+  name: TeamFolderMetadata
+  nameWithType: TeamFolderGetInfoItem.TeamFolderMetadata.TeamFolderMetadata
+  fullName: Dropbox.Api.Team.TeamFolderGetInfoItem.TeamFolderMetadata.TeamFolderMetadata
+- uid: Dropbox.Api.Team.TeamFolderMetadata
+  commentId: T:Dropbox.Api.Team.TeamFolderMetadata
+  parent: Dropbox.Api.Team
+  name: TeamFolderMetadata
+  nameWithType: TeamFolderMetadata
+  fullName: Dropbox.Api.Team.TeamFolderMetadata
+- uid: Dropbox.Api.Team.TeamFolderGetInfoItem.TeamFolderMetadata.Value*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderGetInfoItem.TeamFolderMetadata.Value
+  name: Value
+  nameWithType: TeamFolderGetInfoItem.TeamFolderMetadata.Value
+  fullName: Dropbox.Api.Team.TeamFolderGetInfoItem.TeamFolderMetadata.Value
+shouldSkipMarkup: true

@@ -1,0 +1,96 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.TeamProfileChangeBackgroundDetails
+  commentId: T:Dropbox.Api.TeamLog.TeamProfileChangeBackgroundDetails
+  id: TeamProfileChangeBackgroundDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.TeamProfileChangeBackgroundDetails.#ctor
+  langs:
+  - csharp
+  - vb
+  name: TeamProfileChangeBackgroundDetails
+  nameWithType: TeamProfileChangeBackgroundDetails
+  fullName: Dropbox.Api.TeamLog.TeamProfileChangeBackgroundDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamProfileChangeBackgroundDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TeamProfileChangeBackgroundDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamProfileChangeBackgroundDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Changed team background displayed on shared link headers.</p>\n"
+  example: []
+  syntax:
+    content: 'public class TeamProfileChangeBackgroundDetails : object'
+    content.vb: >-
+      Public Class TeamProfileChangeBackgroundDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.TeamProfileChangeBackgroundDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.TeamProfileChangeBackgroundDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.TeamProfileChangeBackgroundDetails
+  langs:
+  - csharp
+  - vb
+  name: TeamProfileChangeBackgroundDetails()
+  nameWithType: TeamProfileChangeBackgroundDetails.TeamProfileChangeBackgroundDetails()
+  fullName: Dropbox.Api.TeamLog.TeamProfileChangeBackgroundDetails.TeamProfileChangeBackgroundDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamProfileChangeBackgroundDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamProfileChangeBackgroundDetails.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.TeamProfileChangeBackgroundDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public TeamProfileChangeBackgroundDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.TeamProfileChangeBackgroundDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.TeamProfileChangeBackgroundDetails
+  commentId: T:Dropbox.Api.TeamLog.TeamProfileChangeBackgroundDetails
+  parent: Dropbox.Api.TeamLog
+  name: TeamProfileChangeBackgroundDetails
+  nameWithType: TeamProfileChangeBackgroundDetails
+  fullName: Dropbox.Api.TeamLog.TeamProfileChangeBackgroundDetails
+- uid: Dropbox.Api.TeamLog.TeamProfileChangeBackgroundDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.TeamProfileChangeBackgroundDetails.#ctor
+  name: TeamProfileChangeBackgroundDetails
+  nameWithType: TeamProfileChangeBackgroundDetails.TeamProfileChangeBackgroundDetails
+  fullName: Dropbox.Api.TeamLog.TeamProfileChangeBackgroundDetails.TeamProfileChangeBackgroundDetails
+shouldSkipMarkup: true

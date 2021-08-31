@@ -1,0 +1,201 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.UploadError.Path
+  commentId: T:Dropbox.Api.Files.UploadError.Path
+  id: UploadError.Path
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.UploadError.Path.#ctor(Dropbox.Api.Files.UploadWriteFailed)
+  - Dropbox.Api.Files.UploadError.Path.Value
+  langs:
+  - csharp
+  - vb
+  name: UploadError.Path
+  nameWithType: UploadError.Path
+  fullName: Dropbox.Api.Files.UploadError.Path
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Path
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadError.cs
+    startLine: 181
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Unable to save the uploaded contents to a file.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Path : UploadError'
+    content.vb: >-
+      Public NotInheritable Class Path
+          Inherits UploadError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Files.UploadError
+  inheritedMembers:
+  - Dropbox.Api.Files.UploadError.IsPath
+  - Dropbox.Api.Files.UploadError.AsPath
+  - Dropbox.Api.Files.UploadError.IsPropertiesError
+  - Dropbox.Api.Files.UploadError.AsPropertiesError
+  - Dropbox.Api.Files.UploadError.IsOther
+  - Dropbox.Api.Files.UploadError.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Files.UploadError.Path.#ctor(Dropbox.Api.Files.UploadWriteFailed)
+  commentId: M:Dropbox.Api.Files.UploadError.Path.#ctor(Dropbox.Api.Files.UploadWriteFailed)
+  id: '#ctor(Dropbox.Api.Files.UploadWriteFailed)'
+  parent: Dropbox.Api.Files.UploadError.Path
+  langs:
+  - csharp
+  - vb
+  name: Path(UploadWriteFailed)
+  nameWithType: UploadError.Path.Path(UploadWriteFailed)
+  fullName: Dropbox.Api.Files.UploadError.Path.Path(Dropbox.Api.Files.UploadWriteFailed)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadError.cs
+    startLine: 199
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.UploadError.Path\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public Path(UploadWriteFailed value)
+    parameters:
+    - id: value
+      type: Dropbox.Api.Files.UploadWriteFailed
+      description: The value
+    content.vb: Public Sub New(value As UploadWriteFailed)
+  overload: Dropbox.Api.Files.UploadError.Path.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.UploadError.Path.Value
+  commentId: P:Dropbox.Api.Files.UploadError.Path.Value
+  id: Value
+  parent: Dropbox.Api.Files.UploadError.Path
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: UploadError.Path.Value
+  fullName: Dropbox.Api.Files.UploadError.Path.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadError.cs
+    startLine: 213
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public UploadWriteFailed Value { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.UploadWriteFailed
+    content.vb: Public ReadOnly Property Value As UploadWriteFailed
+  overload: Dropbox.Api.Files.UploadError.Path.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.UploadError
+  commentId: T:Dropbox.Api.Files.UploadError
+  parent: Dropbox.Api.Files
+  name: UploadError
+  nameWithType: UploadError
+  fullName: Dropbox.Api.Files.UploadError
+- uid: Dropbox.Api.Files.UploadError.IsPath
+  commentId: P:Dropbox.Api.Files.UploadError.IsPath
+  parent: Dropbox.Api.Files.UploadError
+  name: IsPath
+  nameWithType: UploadError.IsPath
+  fullName: Dropbox.Api.Files.UploadError.IsPath
+- uid: Dropbox.Api.Files.UploadError.AsPath
+  commentId: P:Dropbox.Api.Files.UploadError.AsPath
+  parent: Dropbox.Api.Files.UploadError
+  name: AsPath
+  nameWithType: UploadError.AsPath
+  fullName: Dropbox.Api.Files.UploadError.AsPath
+- uid: Dropbox.Api.Files.UploadError.IsPropertiesError
+  commentId: P:Dropbox.Api.Files.UploadError.IsPropertiesError
+  parent: Dropbox.Api.Files.UploadError
+  name: IsPropertiesError
+  nameWithType: UploadError.IsPropertiesError
+  fullName: Dropbox.Api.Files.UploadError.IsPropertiesError
+- uid: Dropbox.Api.Files.UploadError.AsPropertiesError
+  commentId: P:Dropbox.Api.Files.UploadError.AsPropertiesError
+  parent: Dropbox.Api.Files.UploadError
+  name: AsPropertiesError
+  nameWithType: UploadError.AsPropertiesError
+  fullName: Dropbox.Api.Files.UploadError.AsPropertiesError
+- uid: Dropbox.Api.Files.UploadError.IsOther
+  commentId: P:Dropbox.Api.Files.UploadError.IsOther
+  parent: Dropbox.Api.Files.UploadError
+  name: IsOther
+  nameWithType: UploadError.IsOther
+  fullName: Dropbox.Api.Files.UploadError.IsOther
+- uid: Dropbox.Api.Files.UploadError.AsOther
+  commentId: P:Dropbox.Api.Files.UploadError.AsOther
+  parent: Dropbox.Api.Files.UploadError
+  name: AsOther
+  nameWithType: UploadError.AsOther
+  fullName: Dropbox.Api.Files.UploadError.AsOther
+- uid: Dropbox.Api.Files.UploadError.Path
+  commentId: T:Dropbox.Api.Files.UploadError.Path
+  parent: Dropbox.Api.Files
+  name: UploadError.Path
+  nameWithType: UploadError.Path
+  fullName: Dropbox.Api.Files.UploadError.Path
+- uid: Dropbox.Api.Files.UploadError.Path.#ctor*
+  commentId: Overload:Dropbox.Api.Files.UploadError.Path.#ctor
+  name: Path
+  nameWithType: UploadError.Path.Path
+  fullName: Dropbox.Api.Files.UploadError.Path.Path
+- uid: Dropbox.Api.Files.UploadWriteFailed
+  commentId: T:Dropbox.Api.Files.UploadWriteFailed
+  parent: Dropbox.Api.Files
+  name: UploadWriteFailed
+  nameWithType: UploadWriteFailed
+  fullName: Dropbox.Api.Files.UploadWriteFailed
+- uid: Dropbox.Api.Files.UploadError.Path.Value*
+  commentId: Overload:Dropbox.Api.Files.UploadError.Path.Value
+  name: Value
+  nameWithType: UploadError.Path.Value
+  fullName: Dropbox.Api.Files.UploadError.Path.Value
+shouldSkipMarkup: true

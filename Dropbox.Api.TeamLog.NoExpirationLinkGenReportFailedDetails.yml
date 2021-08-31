@@ -1,0 +1,193 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.NoExpirationLinkGenReportFailedDetails
+  commentId: T:Dropbox.Api.TeamLog.NoExpirationLinkGenReportFailedDetails
+  id: NoExpirationLinkGenReportFailedDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.NoExpirationLinkGenReportFailedDetails.#ctor
+  - Dropbox.Api.TeamLog.NoExpirationLinkGenReportFailedDetails.#ctor(Dropbox.Api.Team.TeamReportFailureReason)
+  - Dropbox.Api.TeamLog.NoExpirationLinkGenReportFailedDetails.FailureReason
+  langs:
+  - csharp
+  - vb
+  name: NoExpirationLinkGenReportFailedDetails
+  nameWithType: NoExpirationLinkGenReportFailedDetails
+  fullName: Dropbox.Api.TeamLog.NoExpirationLinkGenReportFailedDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/NoExpirationLinkGenReportFailedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NoExpirationLinkGenReportFailedDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/NoExpirationLinkGenReportFailedDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Couldn&apos;t create report: Links created with no expiration.</p>\n"
+  example: []
+  syntax:
+    content: 'public class NoExpirationLinkGenReportFailedDetails : object'
+    content.vb: >-
+      Public Class NoExpirationLinkGenReportFailedDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.NoExpirationLinkGenReportFailedDetails.#ctor(Dropbox.Api.Team.TeamReportFailureReason)
+  commentId: M:Dropbox.Api.TeamLog.NoExpirationLinkGenReportFailedDetails.#ctor(Dropbox.Api.Team.TeamReportFailureReason)
+  id: '#ctor(Dropbox.Api.Team.TeamReportFailureReason)'
+  parent: Dropbox.Api.TeamLog.NoExpirationLinkGenReportFailedDetails
+  langs:
+  - csharp
+  - vb
+  name: NoExpirationLinkGenReportFailedDetails(TeamReportFailureReason)
+  nameWithType: NoExpirationLinkGenReportFailedDetails.NoExpirationLinkGenReportFailedDetails(TeamReportFailureReason)
+  fullName: Dropbox.Api.TeamLog.NoExpirationLinkGenReportFailedDetails.NoExpirationLinkGenReportFailedDetails(Dropbox.Api.Team.TeamReportFailureReason)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/NoExpirationLinkGenReportFailedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/NoExpirationLinkGenReportFailedDetails.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.NoExpirationLinkGenReportFailedDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public NoExpirationLinkGenReportFailedDetails(TeamReportFailureReason failureReason)
+    parameters:
+    - id: failureReason
+      type: Dropbox.Api.Team.TeamReportFailureReason
+      description: Failure reason.
+    content.vb: Public Sub New(failureReason As TeamReportFailureReason)
+  overload: Dropbox.Api.TeamLog.NoExpirationLinkGenReportFailedDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.NoExpirationLinkGenReportFailedDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.NoExpirationLinkGenReportFailedDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.NoExpirationLinkGenReportFailedDetails
+  langs:
+  - csharp
+  - vb
+  name: NoExpirationLinkGenReportFailedDetails()
+  nameWithType: NoExpirationLinkGenReportFailedDetails.NoExpirationLinkGenReportFailedDetails()
+  fullName: Dropbox.Api.TeamLog.NoExpirationLinkGenReportFailedDetails.NoExpirationLinkGenReportFailedDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/NoExpirationLinkGenReportFailedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/NoExpirationLinkGenReportFailedDetails.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.NoExpirationLinkGenReportFailedDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public NoExpirationLinkGenReportFailedDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.NoExpirationLinkGenReportFailedDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.NoExpirationLinkGenReportFailedDetails.FailureReason
+  commentId: P:Dropbox.Api.TeamLog.NoExpirationLinkGenReportFailedDetails.FailureReason
+  id: FailureReason
+  parent: Dropbox.Api.TeamLog.NoExpirationLinkGenReportFailedDetails
+  langs:
+  - csharp
+  - vb
+  name: FailureReason
+  nameWithType: NoExpirationLinkGenReportFailedDetails.FailureReason
+  fullName: Dropbox.Api.TeamLog.NoExpirationLinkGenReportFailedDetails.FailureReason
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/NoExpirationLinkGenReportFailedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: FailureReason
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/NoExpirationLinkGenReportFailedDetails.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Failure reason.</p>\n"
+  example: []
+  syntax:
+    content: public TeamReportFailureReason FailureReason { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.TeamReportFailureReason
+    content.vb: Public Property FailureReason As TeamReportFailureReason
+  overload: Dropbox.Api.TeamLog.NoExpirationLinkGenReportFailedDetails.FailureReason*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.NoExpirationLinkGenReportFailedDetails
+  commentId: T:Dropbox.Api.TeamLog.NoExpirationLinkGenReportFailedDetails
+  parent: Dropbox.Api.TeamLog
+  name: NoExpirationLinkGenReportFailedDetails
+  nameWithType: NoExpirationLinkGenReportFailedDetails
+  fullName: Dropbox.Api.TeamLog.NoExpirationLinkGenReportFailedDetails
+- uid: Dropbox.Api.TeamLog.NoExpirationLinkGenReportFailedDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.NoExpirationLinkGenReportFailedDetails.#ctor
+  name: NoExpirationLinkGenReportFailedDetails
+  nameWithType: NoExpirationLinkGenReportFailedDetails.NoExpirationLinkGenReportFailedDetails
+  fullName: Dropbox.Api.TeamLog.NoExpirationLinkGenReportFailedDetails.NoExpirationLinkGenReportFailedDetails
+- uid: Dropbox.Api.Team.TeamReportFailureReason
+  commentId: T:Dropbox.Api.Team.TeamReportFailureReason
+  parent: Dropbox.Api.Team
+  name: TeamReportFailureReason
+  nameWithType: TeamReportFailureReason
+  fullName: Dropbox.Api.Team.TeamReportFailureReason
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: Dropbox.Api.TeamLog.NoExpirationLinkGenReportFailedDetails.FailureReason*
+  commentId: Overload:Dropbox.Api.TeamLog.NoExpirationLinkGenReportFailedDetails.FailureReason
+  name: FailureReason
+  nameWithType: NoExpirationLinkGenReportFailedDetails.FailureReason
+  fullName: Dropbox.Api.TeamLog.NoExpirationLinkGenReportFailedDetails.FailureReason
+shouldSkipMarkup: true

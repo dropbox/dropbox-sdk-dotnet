@@ -1,0 +1,134 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamPolicies.GroupCreation.AdminsAndMembers
+  commentId: T:Dropbox.Api.TeamPolicies.GroupCreation.AdminsAndMembers
+  id: GroupCreation.AdminsAndMembers
+  parent: Dropbox.Api.TeamPolicies
+  children:
+  - Dropbox.Api.TeamPolicies.GroupCreation.AdminsAndMembers.Instance
+  langs:
+  - csharp
+  - vb
+  name: GroupCreation.AdminsAndMembers
+  nameWithType: GroupCreation.AdminsAndMembers
+  fullName: Dropbox.Api.TeamPolicies.GroupCreation.AdminsAndMembers
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/GroupCreation.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AdminsAndMembers
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/GroupCreation.cs
+    startLine: 153
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Team admins and members can create groups.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class AdminsAndMembers : GroupCreation'
+    content.vb: >-
+      Public NotInheritable Class AdminsAndMembers
+          Inherits GroupCreation
+  inheritance:
+  - System.Object
+  - Dropbox.Api.TeamPolicies.GroupCreation
+  inheritedMembers:
+  - Dropbox.Api.TeamPolicies.GroupCreation.IsAdminsAndMembers
+  - Dropbox.Api.TeamPolicies.GroupCreation.AsAdminsAndMembers
+  - Dropbox.Api.TeamPolicies.GroupCreation.IsAdminsOnly
+  - Dropbox.Api.TeamPolicies.GroupCreation.AsAdminsOnly
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.TeamPolicies.GroupCreation.AdminsAndMembers.Instance
+  commentId: F:Dropbox.Api.TeamPolicies.GroupCreation.AdminsAndMembers.Instance
+  id: Instance
+  parent: Dropbox.Api.TeamPolicies.GroupCreation.AdminsAndMembers
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: GroupCreation.AdminsAndMembers.Instance
+  fullName: Dropbox.Api.TeamPolicies.GroupCreation.AdminsAndMembers.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/GroupCreation.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/GroupCreation.cs
+    startLine: 178
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>A singleton instance of AdminsAndMembers</p>\n"
+  example: []
+  syntax:
+    content: public static readonly GroupCreation.AdminsAndMembers Instance
+    return:
+      type: Dropbox.Api.TeamPolicies.GroupCreation.AdminsAndMembers
+    content.vb: Public Shared ReadOnly Instance As GroupCreation.AdminsAndMembers
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamPolicies
+  commentId: N:Dropbox.Api.TeamPolicies
+  name: Dropbox.Api.TeamPolicies
+  nameWithType: Dropbox.Api.TeamPolicies
+  fullName: Dropbox.Api.TeamPolicies
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamPolicies.GroupCreation
+  commentId: T:Dropbox.Api.TeamPolicies.GroupCreation
+  parent: Dropbox.Api.TeamPolicies
+  name: GroupCreation
+  nameWithType: GroupCreation
+  fullName: Dropbox.Api.TeamPolicies.GroupCreation
+- uid: Dropbox.Api.TeamPolicies.GroupCreation.IsAdminsAndMembers
+  commentId: P:Dropbox.Api.TeamPolicies.GroupCreation.IsAdminsAndMembers
+  parent: Dropbox.Api.TeamPolicies.GroupCreation
+  name: IsAdminsAndMembers
+  nameWithType: GroupCreation.IsAdminsAndMembers
+  fullName: Dropbox.Api.TeamPolicies.GroupCreation.IsAdminsAndMembers
+- uid: Dropbox.Api.TeamPolicies.GroupCreation.AsAdminsAndMembers
+  commentId: P:Dropbox.Api.TeamPolicies.GroupCreation.AsAdminsAndMembers
+  parent: Dropbox.Api.TeamPolicies.GroupCreation
+  name: AsAdminsAndMembers
+  nameWithType: GroupCreation.AsAdminsAndMembers
+  fullName: Dropbox.Api.TeamPolicies.GroupCreation.AsAdminsAndMembers
+- uid: Dropbox.Api.TeamPolicies.GroupCreation.IsAdminsOnly
+  commentId: P:Dropbox.Api.TeamPolicies.GroupCreation.IsAdminsOnly
+  parent: Dropbox.Api.TeamPolicies.GroupCreation
+  name: IsAdminsOnly
+  nameWithType: GroupCreation.IsAdminsOnly
+  fullName: Dropbox.Api.TeamPolicies.GroupCreation.IsAdminsOnly
+- uid: Dropbox.Api.TeamPolicies.GroupCreation.AsAdminsOnly
+  commentId: P:Dropbox.Api.TeamPolicies.GroupCreation.AsAdminsOnly
+  parent: Dropbox.Api.TeamPolicies.GroupCreation
+  name: AsAdminsOnly
+  nameWithType: GroupCreation.AsAdminsOnly
+  fullName: Dropbox.Api.TeamPolicies.GroupCreation.AsAdminsOnly
+- uid: Dropbox.Api.TeamPolicies.GroupCreation.AdminsAndMembers
+  commentId: T:Dropbox.Api.TeamPolicies.GroupCreation.AdminsAndMembers
+  parent: Dropbox.Api.TeamPolicies
+  name: GroupCreation.AdminsAndMembers
+  nameWithType: GroupCreation.AdminsAndMembers
+  fullName: Dropbox.Api.TeamPolicies.GroupCreation.AdminsAndMembers
+shouldSkipMarkup: true

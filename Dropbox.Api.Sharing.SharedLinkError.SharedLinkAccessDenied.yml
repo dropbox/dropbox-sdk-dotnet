@@ -1,0 +1,162 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.SharedLinkError.SharedLinkAccessDenied
+  commentId: T:Dropbox.Api.Sharing.SharedLinkError.SharedLinkAccessDenied
+  id: SharedLinkError.SharedLinkAccessDenied
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.SharedLinkError.SharedLinkAccessDenied.Instance
+  langs:
+  - csharp
+  - vb
+  name: SharedLinkError.SharedLinkAccessDenied
+  nameWithType: SharedLinkError.SharedLinkAccessDenied
+  fullName: Dropbox.Api.Sharing.SharedLinkError.SharedLinkAccessDenied
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedLinkError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SharedLinkAccessDenied
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedLinkError.cs
+    startLine: 284
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The caller is not allowed to access this shared link.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class SharedLinkAccessDenied : SharedLinkError'
+    content.vb: >-
+      Public NotInheritable Class SharedLinkAccessDenied
+          Inherits SharedLinkError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Sharing.SharedLinkError
+  inheritedMembers:
+  - Dropbox.Api.Sharing.SharedLinkError.IsSharedLinkNotFound
+  - Dropbox.Api.Sharing.SharedLinkError.AsSharedLinkNotFound
+  - Dropbox.Api.Sharing.SharedLinkError.IsSharedLinkAccessDenied
+  - Dropbox.Api.Sharing.SharedLinkError.AsSharedLinkAccessDenied
+  - Dropbox.Api.Sharing.SharedLinkError.IsUnsupportedLinkType
+  - Dropbox.Api.Sharing.SharedLinkError.AsUnsupportedLinkType
+  - Dropbox.Api.Sharing.SharedLinkError.IsOther
+  - Dropbox.Api.Sharing.SharedLinkError.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Sharing.SharedLinkError.SharedLinkAccessDenied.Instance
+  commentId: F:Dropbox.Api.Sharing.SharedLinkError.SharedLinkAccessDenied.Instance
+  id: Instance
+  parent: Dropbox.Api.Sharing.SharedLinkError.SharedLinkAccessDenied
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: SharedLinkError.SharedLinkAccessDenied.Instance
+  fullName: Dropbox.Api.Sharing.SharedLinkError.SharedLinkAccessDenied.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedLinkError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedLinkError.cs
+    startLine: 309
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>A singleton instance of SharedLinkAccessDenied</p>\n"
+  example: []
+  syntax:
+    content: public static readonly SharedLinkError.SharedLinkAccessDenied Instance
+    return:
+      type: Dropbox.Api.Sharing.SharedLinkError.SharedLinkAccessDenied
+    content.vb: Public Shared ReadOnly Instance As SharedLinkError.SharedLinkAccessDenied
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.SharedLinkError
+  commentId: T:Dropbox.Api.Sharing.SharedLinkError
+  parent: Dropbox.Api.Sharing
+  name: SharedLinkError
+  nameWithType: SharedLinkError
+  fullName: Dropbox.Api.Sharing.SharedLinkError
+- uid: Dropbox.Api.Sharing.SharedLinkError.IsSharedLinkNotFound
+  commentId: P:Dropbox.Api.Sharing.SharedLinkError.IsSharedLinkNotFound
+  parent: Dropbox.Api.Sharing.SharedLinkError
+  name: IsSharedLinkNotFound
+  nameWithType: SharedLinkError.IsSharedLinkNotFound
+  fullName: Dropbox.Api.Sharing.SharedLinkError.IsSharedLinkNotFound
+- uid: Dropbox.Api.Sharing.SharedLinkError.AsSharedLinkNotFound
+  commentId: P:Dropbox.Api.Sharing.SharedLinkError.AsSharedLinkNotFound
+  parent: Dropbox.Api.Sharing.SharedLinkError
+  name: AsSharedLinkNotFound
+  nameWithType: SharedLinkError.AsSharedLinkNotFound
+  fullName: Dropbox.Api.Sharing.SharedLinkError.AsSharedLinkNotFound
+- uid: Dropbox.Api.Sharing.SharedLinkError.IsSharedLinkAccessDenied
+  commentId: P:Dropbox.Api.Sharing.SharedLinkError.IsSharedLinkAccessDenied
+  parent: Dropbox.Api.Sharing.SharedLinkError
+  name: IsSharedLinkAccessDenied
+  nameWithType: SharedLinkError.IsSharedLinkAccessDenied
+  fullName: Dropbox.Api.Sharing.SharedLinkError.IsSharedLinkAccessDenied
+- uid: Dropbox.Api.Sharing.SharedLinkError.AsSharedLinkAccessDenied
+  commentId: P:Dropbox.Api.Sharing.SharedLinkError.AsSharedLinkAccessDenied
+  parent: Dropbox.Api.Sharing.SharedLinkError
+  name: AsSharedLinkAccessDenied
+  nameWithType: SharedLinkError.AsSharedLinkAccessDenied
+  fullName: Dropbox.Api.Sharing.SharedLinkError.AsSharedLinkAccessDenied
+- uid: Dropbox.Api.Sharing.SharedLinkError.IsUnsupportedLinkType
+  commentId: P:Dropbox.Api.Sharing.SharedLinkError.IsUnsupportedLinkType
+  parent: Dropbox.Api.Sharing.SharedLinkError
+  name: IsUnsupportedLinkType
+  nameWithType: SharedLinkError.IsUnsupportedLinkType
+  fullName: Dropbox.Api.Sharing.SharedLinkError.IsUnsupportedLinkType
+- uid: Dropbox.Api.Sharing.SharedLinkError.AsUnsupportedLinkType
+  commentId: P:Dropbox.Api.Sharing.SharedLinkError.AsUnsupportedLinkType
+  parent: Dropbox.Api.Sharing.SharedLinkError
+  name: AsUnsupportedLinkType
+  nameWithType: SharedLinkError.AsUnsupportedLinkType
+  fullName: Dropbox.Api.Sharing.SharedLinkError.AsUnsupportedLinkType
+- uid: Dropbox.Api.Sharing.SharedLinkError.IsOther
+  commentId: P:Dropbox.Api.Sharing.SharedLinkError.IsOther
+  parent: Dropbox.Api.Sharing.SharedLinkError
+  name: IsOther
+  nameWithType: SharedLinkError.IsOther
+  fullName: Dropbox.Api.Sharing.SharedLinkError.IsOther
+- uid: Dropbox.Api.Sharing.SharedLinkError.AsOther
+  commentId: P:Dropbox.Api.Sharing.SharedLinkError.AsOther
+  parent: Dropbox.Api.Sharing.SharedLinkError
+  name: AsOther
+  nameWithType: SharedLinkError.AsOther
+  fullName: Dropbox.Api.Sharing.SharedLinkError.AsOther
+- uid: Dropbox.Api.Sharing.SharedLinkError.SharedLinkAccessDenied
+  commentId: T:Dropbox.Api.Sharing.SharedLinkError.SharedLinkAccessDenied
+  parent: Dropbox.Api.Sharing
+  name: SharedLinkError.SharedLinkAccessDenied
+  nameWithType: SharedLinkError.SharedLinkAccessDenied
+  fullName: Dropbox.Api.Sharing.SharedLinkError.SharedLinkAccessDenied
+shouldSkipMarkup: true

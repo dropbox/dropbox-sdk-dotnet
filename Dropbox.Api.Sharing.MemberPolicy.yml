@@ -1,0 +1,381 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.MemberPolicy
+  commentId: T:Dropbox.Api.Sharing.MemberPolicy
+  id: MemberPolicy
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.MemberPolicy.#ctor
+  - Dropbox.Api.Sharing.MemberPolicy.AsAnyone
+  - Dropbox.Api.Sharing.MemberPolicy.AsOther
+  - Dropbox.Api.Sharing.MemberPolicy.AsTeam
+  - Dropbox.Api.Sharing.MemberPolicy.IsAnyone
+  - Dropbox.Api.Sharing.MemberPolicy.IsOther
+  - Dropbox.Api.Sharing.MemberPolicy.IsTeam
+  langs:
+  - csharp
+  - vb
+  name: MemberPolicy
+  nameWithType: MemberPolicy
+  fullName: Dropbox.Api.Sharing.MemberPolicy
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MemberPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: MemberPolicy
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MemberPolicy.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Policy governing who can be a member of a shared folder. Only applicable to\nfolders owned by a user on a team.</p>\n"
+  example: []
+  syntax:
+    content: 'public class MemberPolicy : object'
+    content.vb: >-
+      Public Class MemberPolicy
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Sharing.MemberPolicy.Anyone
+  - Dropbox.Api.Sharing.MemberPolicy.Other
+  - Dropbox.Api.Sharing.MemberPolicy.Team
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Sharing.MemberPolicy.#ctor
+  commentId: M:Dropbox.Api.Sharing.MemberPolicy.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Sharing.MemberPolicy
+  langs:
+  - csharp
+  - vb
+  name: MemberPolicy()
+  nameWithType: MemberPolicy.MemberPolicy()
+  fullName: Dropbox.Api.Sharing.MemberPolicy.MemberPolicy()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MemberPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MemberPolicy.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.MemberPolicy\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public MemberPolicy()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Sharing.MemberPolicy.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.MemberPolicy.IsTeam
+  commentId: P:Dropbox.Api.Sharing.MemberPolicy.IsTeam
+  id: IsTeam
+  parent: Dropbox.Api.Sharing.MemberPolicy
+  langs:
+  - csharp
+  - vb
+  name: IsTeam
+  nameWithType: MemberPolicy.IsTeam
+  fullName: Dropbox.Api.Sharing.MemberPolicy.IsTeam
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MemberPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MemberPolicy.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is Team</p>\n"
+  example: []
+  syntax:
+    content: public bool IsTeam { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsTeam As Boolean
+  overload: Dropbox.Api.Sharing.MemberPolicy.IsTeam*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.MemberPolicy.AsTeam
+  commentId: P:Dropbox.Api.Sharing.MemberPolicy.AsTeam
+  id: AsTeam
+  parent: Dropbox.Api.Sharing.MemberPolicy
+  langs:
+  - csharp
+  - vb
+  name: AsTeam
+  nameWithType: MemberPolicy.AsTeam
+  fullName: Dropbox.Api.Sharing.MemberPolicy.AsTeam
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MemberPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MemberPolicy.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a Team, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MemberPolicy.Team AsTeam { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.MemberPolicy.Team
+    content.vb: Public ReadOnly Property AsTeam As MemberPolicy.Team
+  overload: Dropbox.Api.Sharing.MemberPolicy.AsTeam*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.MemberPolicy.IsAnyone
+  commentId: P:Dropbox.Api.Sharing.MemberPolicy.IsAnyone
+  id: IsAnyone
+  parent: Dropbox.Api.Sharing.MemberPolicy
+  langs:
+  - csharp
+  - vb
+  name: IsAnyone
+  nameWithType: MemberPolicy.IsAnyone
+  fullName: Dropbox.Api.Sharing.MemberPolicy.IsAnyone
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MemberPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsAnyone
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MemberPolicy.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is Anyone</p>\n"
+  example: []
+  syntax:
+    content: public bool IsAnyone { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsAnyone As Boolean
+  overload: Dropbox.Api.Sharing.MemberPolicy.IsAnyone*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.MemberPolicy.AsAnyone
+  commentId: P:Dropbox.Api.Sharing.MemberPolicy.AsAnyone
+  id: AsAnyone
+  parent: Dropbox.Api.Sharing.MemberPolicy
+  langs:
+  - csharp
+  - vb
+  name: AsAnyone
+  nameWithType: MemberPolicy.AsAnyone
+  fullName: Dropbox.Api.Sharing.MemberPolicy.AsAnyone
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MemberPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsAnyone
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MemberPolicy.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a Anyone, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MemberPolicy.Anyone AsAnyone { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.MemberPolicy.Anyone
+    content.vb: Public ReadOnly Property AsAnyone As MemberPolicy.Anyone
+  overload: Dropbox.Api.Sharing.MemberPolicy.AsAnyone*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.MemberPolicy.IsOther
+  commentId: P:Dropbox.Api.Sharing.MemberPolicy.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Sharing.MemberPolicy
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: MemberPolicy.IsOther
+  fullName: Dropbox.Api.Sharing.MemberPolicy.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MemberPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MemberPolicy.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Sharing.MemberPolicy.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.MemberPolicy.AsOther
+  commentId: P:Dropbox.Api.Sharing.MemberPolicy.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Sharing.MemberPolicy
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: MemberPolicy.AsOther
+  fullName: Dropbox.Api.Sharing.MemberPolicy.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MemberPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MemberPolicy.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MemberPolicy.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.MemberPolicy.Other
+    content.vb: Public ReadOnly Property AsOther As MemberPolicy.Other
+  overload: Dropbox.Api.Sharing.MemberPolicy.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.MemberPolicy
+  commentId: T:Dropbox.Api.Sharing.MemberPolicy
+  parent: Dropbox.Api.Sharing
+  name: MemberPolicy
+  nameWithType: MemberPolicy
+  fullName: Dropbox.Api.Sharing.MemberPolicy
+- uid: Dropbox.Api.Sharing.MemberPolicy.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.MemberPolicy.#ctor
+  name: MemberPolicy
+  nameWithType: MemberPolicy.MemberPolicy
+  fullName: Dropbox.Api.Sharing.MemberPolicy.MemberPolicy
+- uid: Dropbox.Api.Sharing.MemberPolicy.IsTeam*
+  commentId: Overload:Dropbox.Api.Sharing.MemberPolicy.IsTeam
+  name: IsTeam
+  nameWithType: MemberPolicy.IsTeam
+  fullName: Dropbox.Api.Sharing.MemberPolicy.IsTeam
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Sharing.MemberPolicy.AsTeam*
+  commentId: Overload:Dropbox.Api.Sharing.MemberPolicy.AsTeam
+  name: AsTeam
+  nameWithType: MemberPolicy.AsTeam
+  fullName: Dropbox.Api.Sharing.MemberPolicy.AsTeam
+- uid: Dropbox.Api.Sharing.MemberPolicy.Team
+  commentId: T:Dropbox.Api.Sharing.MemberPolicy.Team
+  parent: Dropbox.Api.Sharing
+  name: MemberPolicy.Team
+  nameWithType: MemberPolicy.Team
+  fullName: Dropbox.Api.Sharing.MemberPolicy.Team
+- uid: Dropbox.Api.Sharing.MemberPolicy.IsAnyone*
+  commentId: Overload:Dropbox.Api.Sharing.MemberPolicy.IsAnyone
+  name: IsAnyone
+  nameWithType: MemberPolicy.IsAnyone
+  fullName: Dropbox.Api.Sharing.MemberPolicy.IsAnyone
+- uid: Dropbox.Api.Sharing.MemberPolicy.AsAnyone*
+  commentId: Overload:Dropbox.Api.Sharing.MemberPolicy.AsAnyone
+  name: AsAnyone
+  nameWithType: MemberPolicy.AsAnyone
+  fullName: Dropbox.Api.Sharing.MemberPolicy.AsAnyone
+- uid: Dropbox.Api.Sharing.MemberPolicy.Anyone
+  commentId: T:Dropbox.Api.Sharing.MemberPolicy.Anyone
+  parent: Dropbox.Api.Sharing
+  name: MemberPolicy.Anyone
+  nameWithType: MemberPolicy.Anyone
+  fullName: Dropbox.Api.Sharing.MemberPolicy.Anyone
+- uid: Dropbox.Api.Sharing.MemberPolicy.IsOther*
+  commentId: Overload:Dropbox.Api.Sharing.MemberPolicy.IsOther
+  name: IsOther
+  nameWithType: MemberPolicy.IsOther
+  fullName: Dropbox.Api.Sharing.MemberPolicy.IsOther
+- uid: Dropbox.Api.Sharing.MemberPolicy.AsOther*
+  commentId: Overload:Dropbox.Api.Sharing.MemberPolicy.AsOther
+  name: AsOther
+  nameWithType: MemberPolicy.AsOther
+  fullName: Dropbox.Api.Sharing.MemberPolicy.AsOther
+- uid: Dropbox.Api.Sharing.MemberPolicy.Other
+  commentId: T:Dropbox.Api.Sharing.MemberPolicy.Other
+  parent: Dropbox.Api.Sharing
+  name: MemberPolicy.Other
+  nameWithType: MemberPolicy.Other
+  fullName: Dropbox.Api.Sharing.MemberPolicy.Other
+shouldSkipMarkup: true

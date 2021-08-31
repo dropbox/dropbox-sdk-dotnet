@@ -1,0 +1,244 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.EmmChangePolicyDetails
+  commentId: T:Dropbox.Api.TeamLog.EmmChangePolicyDetails
+  id: EmmChangePolicyDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.EmmChangePolicyDetails.#ctor
+  - Dropbox.Api.TeamLog.EmmChangePolicyDetails.#ctor(Dropbox.Api.TeamPolicies.EmmState,Dropbox.Api.TeamPolicies.EmmState)
+  - Dropbox.Api.TeamLog.EmmChangePolicyDetails.NewValue
+  - Dropbox.Api.TeamLog.EmmChangePolicyDetails.PreviousValue
+  langs:
+  - csharp
+  - vb
+  name: EmmChangePolicyDetails
+  nameWithType: EmmChangePolicyDetails
+  fullName: Dropbox.Api.TeamLog.EmmChangePolicyDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EmmChangePolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: EmmChangePolicyDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EmmChangePolicyDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Enabled/disabled enterprise mobility management for members.</p>\n"
+  example: []
+  syntax:
+    content: 'public class EmmChangePolicyDetails : object'
+    content.vb: >-
+      Public Class EmmChangePolicyDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.EmmChangePolicyDetails.#ctor(Dropbox.Api.TeamPolicies.EmmState,Dropbox.Api.TeamPolicies.EmmState)
+  commentId: M:Dropbox.Api.TeamLog.EmmChangePolicyDetails.#ctor(Dropbox.Api.TeamPolicies.EmmState,Dropbox.Api.TeamPolicies.EmmState)
+  id: '#ctor(Dropbox.Api.TeamPolicies.EmmState,Dropbox.Api.TeamPolicies.EmmState)'
+  parent: Dropbox.Api.TeamLog.EmmChangePolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: EmmChangePolicyDetails(EmmState, EmmState)
+  nameWithType: EmmChangePolicyDetails.EmmChangePolicyDetails(EmmState, EmmState)
+  fullName: Dropbox.Api.TeamLog.EmmChangePolicyDetails.EmmChangePolicyDetails(Dropbox.Api.TeamPolicies.EmmState, Dropbox.Api.TeamPolicies.EmmState)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EmmChangePolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EmmChangePolicyDetails.cs
+    startLine: 36
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.EmmChangePolicyDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public EmmChangePolicyDetails(EmmState newValue, EmmState previousValue = null)
+    parameters:
+    - id: newValue
+      type: Dropbox.Api.TeamPolicies.EmmState
+      description: New enterprise mobility management policy.
+    - id: previousValue
+      type: Dropbox.Api.TeamPolicies.EmmState
+      description: >-
+        Previous enterprise mobility management policy. Might
+
+        be missing due to historical data gap.
+    content.vb: Public Sub New(newValue As EmmState, previousValue As EmmState = Nothing)
+  overload: Dropbox.Api.TeamLog.EmmChangePolicyDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.EmmChangePolicyDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.EmmChangePolicyDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.EmmChangePolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: EmmChangePolicyDetails()
+  nameWithType: EmmChangePolicyDetails.EmmChangePolicyDetails()
+  fullName: Dropbox.Api.TeamLog.EmmChangePolicyDetails.EmmChangePolicyDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EmmChangePolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EmmChangePolicyDetails.cs
+    startLine: 54
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.EmmChangePolicyDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public EmmChangePolicyDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.EmmChangePolicyDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.EmmChangePolicyDetails.NewValue
+  commentId: P:Dropbox.Api.TeamLog.EmmChangePolicyDetails.NewValue
+  id: NewValue
+  parent: Dropbox.Api.TeamLog.EmmChangePolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: NewValue
+  nameWithType: EmmChangePolicyDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.EmmChangePolicyDetails.NewValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EmmChangePolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NewValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EmmChangePolicyDetails.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>New enterprise mobility management policy.</p>\n"
+  example: []
+  syntax:
+    content: public EmmState NewValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamPolicies.EmmState
+    content.vb: Public Property NewValue As EmmState
+  overload: Dropbox.Api.TeamLog.EmmChangePolicyDetails.NewValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.EmmChangePolicyDetails.PreviousValue
+  commentId: P:Dropbox.Api.TeamLog.EmmChangePolicyDetails.PreviousValue
+  id: PreviousValue
+  parent: Dropbox.Api.TeamLog.EmmChangePolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: PreviousValue
+  nameWithType: EmmChangePolicyDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.EmmChangePolicyDetails.PreviousValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EmmChangePolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PreviousValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EmmChangePolicyDetails.cs
+    startLine: 68
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Previous enterprise mobility management policy. Might be missing due to\nhistorical data gap.</p>\n"
+  example: []
+  syntax:
+    content: public EmmState PreviousValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamPolicies.EmmState
+    content.vb: Public Property PreviousValue As EmmState
+  overload: Dropbox.Api.TeamLog.EmmChangePolicyDetails.PreviousValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.EmmChangePolicyDetails
+  commentId: T:Dropbox.Api.TeamLog.EmmChangePolicyDetails
+  parent: Dropbox.Api.TeamLog
+  name: EmmChangePolicyDetails
+  nameWithType: EmmChangePolicyDetails
+  fullName: Dropbox.Api.TeamLog.EmmChangePolicyDetails
+- uid: Dropbox.Api.TeamLog.EmmChangePolicyDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.EmmChangePolicyDetails.#ctor
+  name: EmmChangePolicyDetails
+  nameWithType: EmmChangePolicyDetails.EmmChangePolicyDetails
+  fullName: Dropbox.Api.TeamLog.EmmChangePolicyDetails.EmmChangePolicyDetails
+- uid: Dropbox.Api.TeamPolicies.EmmState
+  commentId: T:Dropbox.Api.TeamPolicies.EmmState
+  parent: Dropbox.Api.TeamPolicies
+  name: EmmState
+  nameWithType: EmmState
+  fullName: Dropbox.Api.TeamPolicies.EmmState
+- uid: Dropbox.Api.TeamPolicies
+  commentId: N:Dropbox.Api.TeamPolicies
+  name: Dropbox.Api.TeamPolicies
+  nameWithType: Dropbox.Api.TeamPolicies
+  fullName: Dropbox.Api.TeamPolicies
+- uid: Dropbox.Api.TeamLog.EmmChangePolicyDetails.NewValue*
+  commentId: Overload:Dropbox.Api.TeamLog.EmmChangePolicyDetails.NewValue
+  name: NewValue
+  nameWithType: EmmChangePolicyDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.EmmChangePolicyDetails.NewValue
+- uid: Dropbox.Api.TeamLog.EmmChangePolicyDetails.PreviousValue*
+  commentId: Overload:Dropbox.Api.TeamLog.EmmChangePolicyDetails.PreviousValue
+  name: PreviousValue
+  nameWithType: EmmChangePolicyDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.EmmChangePolicyDetails.PreviousValue
+shouldSkipMarkup: true

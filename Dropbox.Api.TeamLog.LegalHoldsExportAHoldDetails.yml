@@ -1,0 +1,283 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.LegalHoldsExportAHoldDetails
+  commentId: T:Dropbox.Api.TeamLog.LegalHoldsExportAHoldDetails
+  id: LegalHoldsExportAHoldDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.LegalHoldsExportAHoldDetails.#ctor
+  - Dropbox.Api.TeamLog.LegalHoldsExportAHoldDetails.#ctor(System.String,System.String,System.String)
+  - Dropbox.Api.TeamLog.LegalHoldsExportAHoldDetails.ExportName
+  - Dropbox.Api.TeamLog.LegalHoldsExportAHoldDetails.LegalHoldId
+  - Dropbox.Api.TeamLog.LegalHoldsExportAHoldDetails.Name
+  langs:
+  - csharp
+  - vb
+  name: LegalHoldsExportAHoldDetails
+  nameWithType: LegalHoldsExportAHoldDetails
+  fullName: Dropbox.Api.TeamLog.LegalHoldsExportAHoldDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LegalHoldsExportAHoldDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: LegalHoldsExportAHoldDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LegalHoldsExportAHoldDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Exported hold.</p>\n"
+  example: []
+  syntax:
+    content: 'public class LegalHoldsExportAHoldDetails : object'
+    content.vb: >-
+      Public Class LegalHoldsExportAHoldDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.LegalHoldsExportAHoldDetails.#ctor(System.String,System.String,System.String)
+  commentId: M:Dropbox.Api.TeamLog.LegalHoldsExportAHoldDetails.#ctor(System.String,System.String,System.String)
+  id: '#ctor(System.String,System.String,System.String)'
+  parent: Dropbox.Api.TeamLog.LegalHoldsExportAHoldDetails
+  langs:
+  - csharp
+  - vb
+  name: LegalHoldsExportAHoldDetails(String, String, String)
+  nameWithType: LegalHoldsExportAHoldDetails.LegalHoldsExportAHoldDetails(String, String, String)
+  fullName: Dropbox.Api.TeamLog.LegalHoldsExportAHoldDetails.LegalHoldsExportAHoldDetails(System.String, System.String, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LegalHoldsExportAHoldDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LegalHoldsExportAHoldDetails.cs
+    startLine: 36
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.LegalHoldsExportAHoldDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public LegalHoldsExportAHoldDetails(string legalHoldId, string name, string exportName = null)
+    parameters:
+    - id: legalHoldId
+      type: System.String
+      description: Hold ID.
+    - id: name
+      type: System.String
+      description: Hold name.
+    - id: exportName
+      type: System.String
+      description: Export name.
+    content.vb: Public Sub New(legalHoldId As String, name As String, exportName As String = Nothing)
+  overload: Dropbox.Api.TeamLog.LegalHoldsExportAHoldDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.LegalHoldsExportAHoldDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.LegalHoldsExportAHoldDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.LegalHoldsExportAHoldDetails
+  langs:
+  - csharp
+  - vb
+  name: LegalHoldsExportAHoldDetails()
+  nameWithType: LegalHoldsExportAHoldDetails.LegalHoldsExportAHoldDetails()
+  fullName: Dropbox.Api.TeamLog.LegalHoldsExportAHoldDetails.LegalHoldsExportAHoldDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LegalHoldsExportAHoldDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LegalHoldsExportAHoldDetails.cs
+    startLine: 61
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.LegalHoldsExportAHoldDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public LegalHoldsExportAHoldDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.LegalHoldsExportAHoldDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.LegalHoldsExportAHoldDetails.LegalHoldId
+  commentId: P:Dropbox.Api.TeamLog.LegalHoldsExportAHoldDetails.LegalHoldId
+  id: LegalHoldId
+  parent: Dropbox.Api.TeamLog.LegalHoldsExportAHoldDetails
+  langs:
+  - csharp
+  - vb
+  name: LegalHoldId
+  nameWithType: LegalHoldsExportAHoldDetails.LegalHoldId
+  fullName: Dropbox.Api.TeamLog.LegalHoldsExportAHoldDetails.LegalHoldId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LegalHoldsExportAHoldDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: LegalHoldId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LegalHoldsExportAHoldDetails.cs
+    startLine: 69
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Hold ID.</p>\n"
+  example: []
+  syntax:
+    content: public string LegalHoldId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property LegalHoldId As String
+  overload: Dropbox.Api.TeamLog.LegalHoldsExportAHoldDetails.LegalHoldId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.LegalHoldsExportAHoldDetails.Name
+  commentId: P:Dropbox.Api.TeamLog.LegalHoldsExportAHoldDetails.Name
+  id: Name
+  parent: Dropbox.Api.TeamLog.LegalHoldsExportAHoldDetails
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: LegalHoldsExportAHoldDetails.Name
+  fullName: Dropbox.Api.TeamLog.LegalHoldsExportAHoldDetails.Name
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LegalHoldsExportAHoldDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Name
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LegalHoldsExportAHoldDetails.cs
+    startLine: 74
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Hold name.</p>\n"
+  example: []
+  syntax:
+    content: public string Name { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: Dropbox.Api.TeamLog.LegalHoldsExportAHoldDetails.Name*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.LegalHoldsExportAHoldDetails.ExportName
+  commentId: P:Dropbox.Api.TeamLog.LegalHoldsExportAHoldDetails.ExportName
+  id: ExportName
+  parent: Dropbox.Api.TeamLog.LegalHoldsExportAHoldDetails
+  langs:
+  - csharp
+  - vb
+  name: ExportName
+  nameWithType: LegalHoldsExportAHoldDetails.ExportName
+  fullName: Dropbox.Api.TeamLog.LegalHoldsExportAHoldDetails.ExportName
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LegalHoldsExportAHoldDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ExportName
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LegalHoldsExportAHoldDetails.cs
+    startLine: 79
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Export name.</p>\n"
+  example: []
+  syntax:
+    content: public string ExportName { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ExportName As String
+  overload: Dropbox.Api.TeamLog.LegalHoldsExportAHoldDetails.ExportName*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.LegalHoldsExportAHoldDetails
+  commentId: T:Dropbox.Api.TeamLog.LegalHoldsExportAHoldDetails
+  parent: Dropbox.Api.TeamLog
+  name: LegalHoldsExportAHoldDetails
+  nameWithType: LegalHoldsExportAHoldDetails
+  fullName: Dropbox.Api.TeamLog.LegalHoldsExportAHoldDetails
+- uid: Dropbox.Api.TeamLog.LegalHoldsExportAHoldDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.LegalHoldsExportAHoldDetails.#ctor
+  name: LegalHoldsExportAHoldDetails
+  nameWithType: LegalHoldsExportAHoldDetails.LegalHoldsExportAHoldDetails
+  fullName: Dropbox.Api.TeamLog.LegalHoldsExportAHoldDetails.LegalHoldsExportAHoldDetails
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.LegalHoldsExportAHoldDetails.LegalHoldId*
+  commentId: Overload:Dropbox.Api.TeamLog.LegalHoldsExportAHoldDetails.LegalHoldId
+  name: LegalHoldId
+  nameWithType: LegalHoldsExportAHoldDetails.LegalHoldId
+  fullName: Dropbox.Api.TeamLog.LegalHoldsExportAHoldDetails.LegalHoldId
+- uid: Dropbox.Api.TeamLog.LegalHoldsExportAHoldDetails.Name*
+  commentId: Overload:Dropbox.Api.TeamLog.LegalHoldsExportAHoldDetails.Name
+  name: Name
+  nameWithType: LegalHoldsExportAHoldDetails.Name
+  fullName: Dropbox.Api.TeamLog.LegalHoldsExportAHoldDetails.Name
+- uid: Dropbox.Api.TeamLog.LegalHoldsExportAHoldDetails.ExportName*
+  commentId: Overload:Dropbox.Api.TeamLog.LegalHoldsExportAHoldDetails.ExportName
+  name: ExportName
+  nameWithType: LegalHoldsExportAHoldDetails.ExportName
+  fullName: Dropbox.Api.TeamLog.LegalHoldsExportAHoldDetails.ExportName
+shouldSkipMarkup: true

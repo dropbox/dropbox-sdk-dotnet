@@ -1,0 +1,188 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.SsoErrorDetails
+  commentId: T:Dropbox.Api.TeamLog.SsoErrorDetails
+  id: SsoErrorDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.SsoErrorDetails.#ctor
+  - Dropbox.Api.TeamLog.SsoErrorDetails.#ctor(Dropbox.Api.TeamLog.FailureDetailsLogInfo)
+  - Dropbox.Api.TeamLog.SsoErrorDetails.ErrorDetails
+  langs:
+  - csharp
+  - vb
+  name: SsoErrorDetails
+  nameWithType: SsoErrorDetails
+  fullName: Dropbox.Api.TeamLog.SsoErrorDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SsoErrorDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SsoErrorDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SsoErrorDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Failed to sign in via SSO.</p>\n"
+  example: []
+  syntax:
+    content: 'public class SsoErrorDetails : object'
+    content.vb: >-
+      Public Class SsoErrorDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.SsoErrorDetails.#ctor(Dropbox.Api.TeamLog.FailureDetailsLogInfo)
+  commentId: M:Dropbox.Api.TeamLog.SsoErrorDetails.#ctor(Dropbox.Api.TeamLog.FailureDetailsLogInfo)
+  id: '#ctor(Dropbox.Api.TeamLog.FailureDetailsLogInfo)'
+  parent: Dropbox.Api.TeamLog.SsoErrorDetails
+  langs:
+  - csharp
+  - vb
+  name: SsoErrorDetails(FailureDetailsLogInfo)
+  nameWithType: SsoErrorDetails.SsoErrorDetails(FailureDetailsLogInfo)
+  fullName: Dropbox.Api.TeamLog.SsoErrorDetails.SsoErrorDetails(Dropbox.Api.TeamLog.FailureDetailsLogInfo)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SsoErrorDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SsoErrorDetails.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SsoErrorDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public SsoErrorDetails(FailureDetailsLogInfo errorDetails)
+    parameters:
+    - id: errorDetails
+      type: Dropbox.Api.TeamLog.FailureDetailsLogInfo
+      description: Error details.
+    content.vb: Public Sub New(errorDetails As FailureDetailsLogInfo)
+  overload: Dropbox.Api.TeamLog.SsoErrorDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SsoErrorDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.SsoErrorDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.SsoErrorDetails
+  langs:
+  - csharp
+  - vb
+  name: SsoErrorDetails()
+  nameWithType: SsoErrorDetails.SsoErrorDetails()
+  fullName: Dropbox.Api.TeamLog.SsoErrorDetails.SsoErrorDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SsoErrorDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SsoErrorDetails.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SsoErrorDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public SsoErrorDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.SsoErrorDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SsoErrorDetails.ErrorDetails
+  commentId: P:Dropbox.Api.TeamLog.SsoErrorDetails.ErrorDetails
+  id: ErrorDetails
+  parent: Dropbox.Api.TeamLog.SsoErrorDetails
+  langs:
+  - csharp
+  - vb
+  name: ErrorDetails
+  nameWithType: SsoErrorDetails.ErrorDetails
+  fullName: Dropbox.Api.TeamLog.SsoErrorDetails.ErrorDetails
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SsoErrorDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ErrorDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SsoErrorDetails.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Error details.</p>\n"
+  example: []
+  syntax:
+    content: public FailureDetailsLogInfo ErrorDetails { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.FailureDetailsLogInfo
+    content.vb: Public Property ErrorDetails As FailureDetailsLogInfo
+  overload: Dropbox.Api.TeamLog.SsoErrorDetails.ErrorDetails*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.SsoErrorDetails
+  commentId: T:Dropbox.Api.TeamLog.SsoErrorDetails
+  parent: Dropbox.Api.TeamLog
+  name: SsoErrorDetails
+  nameWithType: SsoErrorDetails
+  fullName: Dropbox.Api.TeamLog.SsoErrorDetails
+- uid: Dropbox.Api.TeamLog.SsoErrorDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.SsoErrorDetails.#ctor
+  name: SsoErrorDetails
+  nameWithType: SsoErrorDetails.SsoErrorDetails
+  fullName: Dropbox.Api.TeamLog.SsoErrorDetails.SsoErrorDetails
+- uid: Dropbox.Api.TeamLog.FailureDetailsLogInfo
+  commentId: T:Dropbox.Api.TeamLog.FailureDetailsLogInfo
+  parent: Dropbox.Api.TeamLog
+  name: FailureDetailsLogInfo
+  nameWithType: FailureDetailsLogInfo
+  fullName: Dropbox.Api.TeamLog.FailureDetailsLogInfo
+- uid: Dropbox.Api.TeamLog.SsoErrorDetails.ErrorDetails*
+  commentId: Overload:Dropbox.Api.TeamLog.SsoErrorDetails.ErrorDetails
+  name: ErrorDetails
+  nameWithType: SsoErrorDetails.ErrorDetails
+  fullName: Dropbox.Api.TeamLog.SsoErrorDetails.ErrorDetails
+shouldSkipMarkup: true

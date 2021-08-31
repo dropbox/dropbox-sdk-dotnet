@@ -1,0 +1,297 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.ListRevisionsArg
+  commentId: T:Dropbox.Api.Files.ListRevisionsArg
+  id: ListRevisionsArg
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.ListRevisionsArg.#ctor
+  - Dropbox.Api.Files.ListRevisionsArg.#ctor(System.String,Dropbox.Api.Files.ListRevisionsMode,System.UInt64)
+  - Dropbox.Api.Files.ListRevisionsArg.Limit
+  - Dropbox.Api.Files.ListRevisionsArg.Mode
+  - Dropbox.Api.Files.ListRevisionsArg.Path
+  langs:
+  - csharp
+  - vb
+  name: ListRevisionsArg
+  nameWithType: ListRevisionsArg
+  fullName: Dropbox.Api.Files.ListRevisionsArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListRevisionsArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ListRevisionsArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListRevisionsArg.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The list revisions arg object</p>\n"
+  example: []
+  syntax:
+    content: 'public class ListRevisionsArg : object'
+    content.vb: >-
+      Public Class ListRevisionsArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.ListRevisionsArg.#ctor(System.String,Dropbox.Api.Files.ListRevisionsMode,System.UInt64)
+  commentId: M:Dropbox.Api.Files.ListRevisionsArg.#ctor(System.String,Dropbox.Api.Files.ListRevisionsMode,System.UInt64)
+  id: '#ctor(System.String,Dropbox.Api.Files.ListRevisionsMode,System.UInt64)'
+  parent: Dropbox.Api.Files.ListRevisionsArg
+  langs:
+  - csharp
+  - vb
+  name: ListRevisionsArg(String, ListRevisionsMode, UInt64)
+  nameWithType: ListRevisionsArg.ListRevisionsArg(String, ListRevisionsMode, UInt64)
+  fullName: Dropbox.Api.Files.ListRevisionsArg.ListRevisionsArg(System.String, Dropbox.Api.Files.ListRevisionsMode, System.UInt64)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListRevisionsArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListRevisionsArg.cs
+    startLine: 37
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.ListRevisionsArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public ListRevisionsArg(string path, ListRevisionsMode mode = null, ulong limit = null)
+    parameters:
+    - id: path
+      type: System.String
+      description: The path to the file you want to see the revisions of.
+    - id: mode
+      type: Dropbox.Api.Files.ListRevisionsMode
+      description: >-
+        Determines the behavior of the API in listing the revisions for
+
+        a given file path or id.
+    - id: limit
+      type: System.UInt64
+      description: The maximum number of revision entries returned.
+    content.vb: Public Sub New(path As String, mode As ListRevisionsMode = Nothing, limit As ULong = Nothing)
+  overload: Dropbox.Api.Files.ListRevisionsArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.ListRevisionsArg.#ctor
+  commentId: M:Dropbox.Api.Files.ListRevisionsArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.ListRevisionsArg
+  langs:
+  - csharp
+  - vb
+  name: ListRevisionsArg()
+  nameWithType: ListRevisionsArg.ListRevisionsArg()
+  fullName: Dropbox.Api.Files.ListRevisionsArg.ListRevisionsArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListRevisionsArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListRevisionsArg.cs
+    startLine: 74
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.ListRevisionsArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public ListRevisionsArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.ListRevisionsArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.ListRevisionsArg.Path
+  commentId: P:Dropbox.Api.Files.ListRevisionsArg.Path
+  id: Path
+  parent: Dropbox.Api.Files.ListRevisionsArg
+  langs:
+  - csharp
+  - vb
+  name: Path
+  nameWithType: ListRevisionsArg.Path
+  fullName: Dropbox.Api.Files.ListRevisionsArg.Path
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListRevisionsArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Path
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListRevisionsArg.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The path to the file you want to see the revisions of.</p>\n"
+  example: []
+  syntax:
+    content: public string Path { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Path As String
+  overload: Dropbox.Api.Files.ListRevisionsArg.Path*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.ListRevisionsArg.Mode
+  commentId: P:Dropbox.Api.Files.ListRevisionsArg.Mode
+  id: Mode
+  parent: Dropbox.Api.Files.ListRevisionsArg
+  langs:
+  - csharp
+  - vb
+  name: Mode
+  nameWithType: ListRevisionsArg.Mode
+  fullName: Dropbox.Api.Files.ListRevisionsArg.Mode
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListRevisionsArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Mode
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListRevisionsArg.cs
+    startLine: 90
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Determines the behavior of the API in listing the revisions for a given file\npath or id.</p>\n"
+  example: []
+  syntax:
+    content: public ListRevisionsMode Mode { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.ListRevisionsMode
+    content.vb: Public Property Mode As ListRevisionsMode
+  overload: Dropbox.Api.Files.ListRevisionsArg.Mode*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.ListRevisionsArg.Limit
+  commentId: P:Dropbox.Api.Files.ListRevisionsArg.Limit
+  id: Limit
+  parent: Dropbox.Api.Files.ListRevisionsArg
+  langs:
+  - csharp
+  - vb
+  name: Limit
+  nameWithType: ListRevisionsArg.Limit
+  fullName: Dropbox.Api.Files.ListRevisionsArg.Limit
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListRevisionsArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Limit
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListRevisionsArg.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The maximum number of revision entries returned.</p>\n"
+  example: []
+  syntax:
+    content: public ulong Limit { get; protected set; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: Public Property Limit As ULong
+  overload: Dropbox.Api.Files.ListRevisionsArg.Limit*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.ListRevisionsArg
+  commentId: T:Dropbox.Api.Files.ListRevisionsArg
+  parent: Dropbox.Api.Files
+  name: ListRevisionsArg
+  nameWithType: ListRevisionsArg
+  fullName: Dropbox.Api.Files.ListRevisionsArg
+- uid: Dropbox.Api.Files.ListRevisionsArg.#ctor*
+  commentId: Overload:Dropbox.Api.Files.ListRevisionsArg.#ctor
+  name: ListRevisionsArg
+  nameWithType: ListRevisionsArg.ListRevisionsArg
+  fullName: Dropbox.Api.Files.ListRevisionsArg.ListRevisionsArg
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Files.ListRevisionsMode
+  commentId: T:Dropbox.Api.Files.ListRevisionsMode
+  parent: Dropbox.Api.Files
+  name: ListRevisionsMode
+  nameWithType: ListRevisionsMode
+  fullName: Dropbox.Api.Files.ListRevisionsMode
+- uid: System.UInt64
+  isExternal: true
+  name: UInt64
+  nameWithType: UInt64
+  fullName: System.UInt64
+- uid: Dropbox.Api.Files.ListRevisionsArg.Path*
+  commentId: Overload:Dropbox.Api.Files.ListRevisionsArg.Path
+  name: Path
+  nameWithType: ListRevisionsArg.Path
+  fullName: Dropbox.Api.Files.ListRevisionsArg.Path
+- uid: Dropbox.Api.Files.ListRevisionsArg.Mode*
+  commentId: Overload:Dropbox.Api.Files.ListRevisionsArg.Mode
+  name: Mode
+  nameWithType: ListRevisionsArg.Mode
+  fullName: Dropbox.Api.Files.ListRevisionsArg.Mode
+- uid: Dropbox.Api.Files.ListRevisionsArg.Limit*
+  commentId: Overload:Dropbox.Api.Files.ListRevisionsArg.Limit
+  name: Limit
+  nameWithType: ListRevisionsArg.Limit
+  fullName: Dropbox.Api.Files.ListRevisionsArg.Limit
+shouldSkipMarkup: true

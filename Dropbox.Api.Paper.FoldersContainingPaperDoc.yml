@@ -1,0 +1,403 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Paper.FoldersContainingPaperDoc
+  commentId: T:Dropbox.Api.Paper.FoldersContainingPaperDoc
+  id: FoldersContainingPaperDoc
+  parent: Dropbox.Api.Paper
+  children:
+  - Dropbox.Api.Paper.FoldersContainingPaperDoc.#ctor
+  - Dropbox.Api.Paper.FoldersContainingPaperDoc.#ctor(Dropbox.Api.Paper.FolderSharingPolicyType,System.Collections.Generic.IEnumerable{Dropbox.Api.Paper.Folder})
+  - Dropbox.Api.Paper.FoldersContainingPaperDoc.Folders
+  - Dropbox.Api.Paper.FoldersContainingPaperDoc.FolderSharingPolicyType
+  langs:
+  - csharp
+  - vb
+  name: FoldersContainingPaperDoc
+  nameWithType: FoldersContainingPaperDoc
+  fullName: Dropbox.Api.Paper.FoldersContainingPaperDoc
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/FoldersContainingPaperDoc.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: FoldersContainingPaperDoc
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/FoldersContainingPaperDoc.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Metadata about Paper folders containing the specififed Paper doc.</p>\n"
+  example: []
+  syntax:
+    content: 'public class FoldersContainingPaperDoc : object'
+    content.vb: >-
+      Public Class FoldersContainingPaperDoc
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Paper.FoldersContainingPaperDoc.#ctor(Dropbox.Api.Paper.FolderSharingPolicyType,System.Collections.Generic.IEnumerable{Dropbox.Api.Paper.Folder})
+  commentId: M:Dropbox.Api.Paper.FoldersContainingPaperDoc.#ctor(Dropbox.Api.Paper.FolderSharingPolicyType,System.Collections.Generic.IEnumerable{Dropbox.Api.Paper.Folder})
+  id: '#ctor(Dropbox.Api.Paper.FolderSharingPolicyType,System.Collections.Generic.IEnumerable{Dropbox.Api.Paper.Folder})'
+  parent: Dropbox.Api.Paper.FoldersContainingPaperDoc
+  langs:
+  - csharp
+  - vb
+  name: FoldersContainingPaperDoc(FolderSharingPolicyType, System.Collections.Generic.IEnumerable<Folder>)
+  nameWithType: FoldersContainingPaperDoc.FoldersContainingPaperDoc(FolderSharingPolicyType, System.Collections.Generic.IEnumerable<Folder>)
+  fullName: Dropbox.Api.Paper.FoldersContainingPaperDoc.FoldersContainingPaperDoc(Dropbox.Api.Paper.FolderSharingPolicyType, System.Collections.Generic.IEnumerable<Dropbox.Api.Paper.Folder>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/FoldersContainingPaperDoc.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/FoldersContainingPaperDoc.cs
+    startLine: 37
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Paper.FoldersContainingPaperDoc\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public FoldersContainingPaperDoc(FolderSharingPolicyType folderSharingPolicyType = null, System.Collections.Generic.IEnumerable<Folder> folders = null)
+    parameters:
+    - id: folderSharingPolicyType
+      type: Dropbox.Api.Paper.FolderSharingPolicyType
+      description: >-
+        The sharing policy of the folder containing
+
+        the Paper doc.
+    - id: folders
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.Paper.Folder}
+      description: >-
+        The folder path. If present the first folder is the root
+
+        folder.
+    content.vb: Public Sub New(folderSharingPolicyType As FolderSharingPolicyType = Nothing, folders As System.Collections.Generic.IEnumerable(Of Folder) = Nothing)
+  overload: Dropbox.Api.Paper.FoldersContainingPaperDoc.#ctor*
+  nameWithType.vb: FoldersContainingPaperDoc.FoldersContainingPaperDoc(FolderSharingPolicyType, System.Collections.Generic.IEnumerable(Of Folder))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Paper.FoldersContainingPaperDoc.FoldersContainingPaperDoc(Dropbox.Api.Paper.FolderSharingPolicyType, System.Collections.Generic.IEnumerable(Of Dropbox.Api.Paper.Folder))
+  name.vb: FoldersContainingPaperDoc(FolderSharingPolicyType, System.Collections.Generic.IEnumerable(Of Folder))
+- uid: Dropbox.Api.Paper.FoldersContainingPaperDoc.#ctor
+  commentId: M:Dropbox.Api.Paper.FoldersContainingPaperDoc.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Paper.FoldersContainingPaperDoc
+  langs:
+  - csharp
+  - vb
+  name: FoldersContainingPaperDoc()
+  nameWithType: FoldersContainingPaperDoc.FoldersContainingPaperDoc()
+  fullName: Dropbox.Api.Paper.FoldersContainingPaperDoc.FoldersContainingPaperDoc()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/FoldersContainingPaperDoc.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/FoldersContainingPaperDoc.cs
+    startLine: 52
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Paper.FoldersContainingPaperDoc\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public FoldersContainingPaperDoc()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Paper.FoldersContainingPaperDoc.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Paper.FoldersContainingPaperDoc.FolderSharingPolicyType
+  commentId: P:Dropbox.Api.Paper.FoldersContainingPaperDoc.FolderSharingPolicyType
+  id: FolderSharingPolicyType
+  parent: Dropbox.Api.Paper.FoldersContainingPaperDoc
+  langs:
+  - csharp
+  - vb
+  name: FolderSharingPolicyType
+  nameWithType: FoldersContainingPaperDoc.FolderSharingPolicyType
+  fullName: Dropbox.Api.Paper.FoldersContainingPaperDoc.FolderSharingPolicyType
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/FoldersContainingPaperDoc.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: FolderSharingPolicyType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/FoldersContainingPaperDoc.cs
+    startLine: 60
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>The sharing policy of the folder containing the Paper doc.</p>\n"
+  example: []
+  syntax:
+    content: public FolderSharingPolicyType FolderSharingPolicyType { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Paper.FolderSharingPolicyType
+    content.vb: Public Property FolderSharingPolicyType As FolderSharingPolicyType
+  overload: Dropbox.Api.Paper.FoldersContainingPaperDoc.FolderSharingPolicyType*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Paper.FoldersContainingPaperDoc.Folders
+  commentId: P:Dropbox.Api.Paper.FoldersContainingPaperDoc.Folders
+  id: Folders
+  parent: Dropbox.Api.Paper.FoldersContainingPaperDoc
+  langs:
+  - csharp
+  - vb
+  name: Folders
+  nameWithType: FoldersContainingPaperDoc.Folders
+  fullName: Dropbox.Api.Paper.FoldersContainingPaperDoc.Folders
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/FoldersContainingPaperDoc.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Folders
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/FoldersContainingPaperDoc.cs
+    startLine: 65
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>The folder path. If present the first folder is the root folder.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<Folder> Folders { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{Dropbox.Api.Paper.Folder}
+    content.vb: Public Property Folders As System.Collections.Generic.IList(Of Folder)
+  overload: Dropbox.Api.Paper.FoldersContainingPaperDoc.Folders*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Paper
+  commentId: N:Dropbox.Api.Paper
+  name: Dropbox.Api.Paper
+  nameWithType: Dropbox.Api.Paper
+  fullName: Dropbox.Api.Paper
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Paper.FoldersContainingPaperDoc
+  commentId: T:Dropbox.Api.Paper.FoldersContainingPaperDoc
+  parent: Dropbox.Api.Paper
+  name: FoldersContainingPaperDoc
+  nameWithType: FoldersContainingPaperDoc
+  fullName: Dropbox.Api.Paper.FoldersContainingPaperDoc
+- uid: Dropbox.Api.Paper.FoldersContainingPaperDoc.#ctor*
+  commentId: Overload:Dropbox.Api.Paper.FoldersContainingPaperDoc.#ctor
+  name: FoldersContainingPaperDoc
+  nameWithType: FoldersContainingPaperDoc.FoldersContainingPaperDoc
+  fullName: Dropbox.Api.Paper.FoldersContainingPaperDoc.FoldersContainingPaperDoc
+- uid: Dropbox.Api.Paper.FolderSharingPolicyType
+  commentId: T:Dropbox.Api.Paper.FolderSharingPolicyType
+  parent: Dropbox.Api.Paper
+  name: FolderSharingPolicyType
+  nameWithType: FolderSharingPolicyType
+  fullName: Dropbox.Api.Paper.FolderSharingPolicyType
+- uid: System.Collections.Generic.IEnumerable{Dropbox.Api.Paper.Folder}
+  commentId: '!:System.Collections.Generic.IEnumerable{Dropbox.Api.Paper.Folder}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<Folder>
+  nameWithType: System.Collections.Generic.IEnumerable<Folder>
+  fullName: System.Collections.Generic.IEnumerable<Dropbox.Api.Paper.Folder>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of Folder)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Dropbox.Api.Paper.Folder)
+  name.vb: System.Collections.Generic.IEnumerable(Of Folder)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Paper.Folder
+    name: Folder
+    nameWithType: Folder
+    fullName: Dropbox.Api.Paper.Folder
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Paper.Folder
+    name: Folder
+    nameWithType: Folder
+    fullName: Dropbox.Api.Paper.Folder
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: System.Collections.Generic.IEnumerable<>
+  nameWithType: System.Collections.Generic.IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: System.Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Paper.FoldersContainingPaperDoc.FolderSharingPolicyType*
+  commentId: Overload:Dropbox.Api.Paper.FoldersContainingPaperDoc.FolderSharingPolicyType
+  name: FolderSharingPolicyType
+  nameWithType: FoldersContainingPaperDoc.FolderSharingPolicyType
+  fullName: Dropbox.Api.Paper.FoldersContainingPaperDoc.FolderSharingPolicyType
+- uid: Dropbox.Api.Paper.FoldersContainingPaperDoc.Folders*
+  commentId: Overload:Dropbox.Api.Paper.FoldersContainingPaperDoc.Folders
+  name: Folders
+  nameWithType: FoldersContainingPaperDoc.Folders
+  fullName: Dropbox.Api.Paper.FoldersContainingPaperDoc.Folders
+- uid: System.Collections.Generic.IList{Dropbox.Api.Paper.Folder}
+  commentId: '!:System.Collections.Generic.IList{Dropbox.Api.Paper.Folder}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<Folder>
+  nameWithType: System.Collections.Generic.IList<Folder>
+  fullName: System.Collections.Generic.IList<Dropbox.Api.Paper.Folder>
+  nameWithType.vb: System.Collections.Generic.IList(Of Folder)
+  fullName.vb: System.Collections.Generic.IList(Of Dropbox.Api.Paper.Folder)
+  name.vb: System.Collections.Generic.IList(Of Folder)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Paper.Folder
+    name: Folder
+    nameWithType: Folder
+    fullName: Dropbox.Api.Paper.Folder
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Paper.Folder
+    name: Folder
+    nameWithType: Folder
+    fullName: Dropbox.Api.Paper.Folder
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  isExternal: true
+  name: System.Collections.Generic.IList<>
+  nameWithType: System.Collections.Generic.IList<>
+  fullName: System.Collections.Generic.IList<>
+  nameWithType.vb: System.Collections.Generic.IList(Of )
+  fullName.vb: System.Collections.Generic.IList(Of )
+  name.vb: System.Collections.Generic.IList(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+shouldSkipMarkup: true

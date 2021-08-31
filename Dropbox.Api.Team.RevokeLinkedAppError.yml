@@ -1,0 +1,477 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.RevokeLinkedAppError
+  commentId: T:Dropbox.Api.Team.RevokeLinkedAppError
+  id: RevokeLinkedAppError
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.RevokeLinkedAppError.#ctor
+  - Dropbox.Api.Team.RevokeLinkedAppError.AsAppFolderRemovalNotSupported
+  - Dropbox.Api.Team.RevokeLinkedAppError.AsAppNotFound
+  - Dropbox.Api.Team.RevokeLinkedAppError.AsMemberNotFound
+  - Dropbox.Api.Team.RevokeLinkedAppError.AsOther
+  - Dropbox.Api.Team.RevokeLinkedAppError.IsAppFolderRemovalNotSupported
+  - Dropbox.Api.Team.RevokeLinkedAppError.IsAppNotFound
+  - Dropbox.Api.Team.RevokeLinkedAppError.IsMemberNotFound
+  - Dropbox.Api.Team.RevokeLinkedAppError.IsOther
+  langs:
+  - csharp
+  - vb
+  name: RevokeLinkedAppError
+  nameWithType: RevokeLinkedAppError
+  fullName: Dropbox.Api.Team.RevokeLinkedAppError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeLinkedAppError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: RevokeLinkedAppError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeLinkedAppError.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Error returned by <xref href=\"Dropbox.Api.Team.Routes.TeamTeamRoutes.LinkedAppsRevokeLinkedAppAsync(Dropbox.Api.Team.RevokeLinkedApiAppArg)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+  example: []
+  syntax:
+    content: 'public class RevokeLinkedAppError : object'
+    content.vb: >-
+      Public Class RevokeLinkedAppError
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Team.RevokeLinkedAppError.AppFolderRemovalNotSupported
+  - Dropbox.Api.Team.RevokeLinkedAppError.AppNotFound
+  - Dropbox.Api.Team.RevokeLinkedAppError.MemberNotFound
+  - Dropbox.Api.Team.RevokeLinkedAppError.Other
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.RevokeLinkedAppError.#ctor
+  commentId: M:Dropbox.Api.Team.RevokeLinkedAppError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.RevokeLinkedAppError
+  langs:
+  - csharp
+  - vb
+  name: RevokeLinkedAppError()
+  nameWithType: RevokeLinkedAppError.RevokeLinkedAppError()
+  fullName: Dropbox.Api.Team.RevokeLinkedAppError.RevokeLinkedAppError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeLinkedAppError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeLinkedAppError.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.RevokeLinkedAppError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public RevokeLinkedAppError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.RevokeLinkedAppError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.RevokeLinkedAppError.IsAppNotFound
+  commentId: P:Dropbox.Api.Team.RevokeLinkedAppError.IsAppNotFound
+  id: IsAppNotFound
+  parent: Dropbox.Api.Team.RevokeLinkedAppError
+  langs:
+  - csharp
+  - vb
+  name: IsAppNotFound
+  nameWithType: RevokeLinkedAppError.IsAppNotFound
+  fullName: Dropbox.Api.Team.RevokeLinkedAppError.IsAppNotFound
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeLinkedAppError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsAppNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeLinkedAppError.cs
+    startLine: 41
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is AppNotFound</p>\n"
+  example: []
+  syntax:
+    content: public bool IsAppNotFound { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsAppNotFound As Boolean
+  overload: Dropbox.Api.Team.RevokeLinkedAppError.IsAppNotFound*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.RevokeLinkedAppError.AsAppNotFound
+  commentId: P:Dropbox.Api.Team.RevokeLinkedAppError.AsAppNotFound
+  id: AsAppNotFound
+  parent: Dropbox.Api.Team.RevokeLinkedAppError
+  langs:
+  - csharp
+  - vb
+  name: AsAppNotFound
+  nameWithType: RevokeLinkedAppError.AsAppNotFound
+  fullName: Dropbox.Api.Team.RevokeLinkedAppError.AsAppNotFound
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeLinkedAppError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsAppNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeLinkedAppError.cs
+    startLine: 52
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a AppNotFound, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public RevokeLinkedAppError.AppNotFound AsAppNotFound { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.RevokeLinkedAppError.AppNotFound
+    content.vb: Public ReadOnly Property AsAppNotFound As RevokeLinkedAppError.AppNotFound
+  overload: Dropbox.Api.Team.RevokeLinkedAppError.AsAppNotFound*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.RevokeLinkedAppError.IsMemberNotFound
+  commentId: P:Dropbox.Api.Team.RevokeLinkedAppError.IsMemberNotFound
+  id: IsMemberNotFound
+  parent: Dropbox.Api.Team.RevokeLinkedAppError
+  langs:
+  - csharp
+  - vb
+  name: IsMemberNotFound
+  nameWithType: RevokeLinkedAppError.IsMemberNotFound
+  fullName: Dropbox.Api.Team.RevokeLinkedAppError.IsMemberNotFound
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeLinkedAppError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsMemberNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeLinkedAppError.cs
+    startLine: 63
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is MemberNotFound</p>\n"
+  example: []
+  syntax:
+    content: public bool IsMemberNotFound { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsMemberNotFound As Boolean
+  overload: Dropbox.Api.Team.RevokeLinkedAppError.IsMemberNotFound*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.RevokeLinkedAppError.AsMemberNotFound
+  commentId: P:Dropbox.Api.Team.RevokeLinkedAppError.AsMemberNotFound
+  id: AsMemberNotFound
+  parent: Dropbox.Api.Team.RevokeLinkedAppError
+  langs:
+  - csharp
+  - vb
+  name: AsMemberNotFound
+  nameWithType: RevokeLinkedAppError.AsMemberNotFound
+  fullName: Dropbox.Api.Team.RevokeLinkedAppError.AsMemberNotFound
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeLinkedAppError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsMemberNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeLinkedAppError.cs
+    startLine: 74
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a MemberNotFound, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public RevokeLinkedAppError.MemberNotFound AsMemberNotFound { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.RevokeLinkedAppError.MemberNotFound
+    content.vb: Public ReadOnly Property AsMemberNotFound As RevokeLinkedAppError.MemberNotFound
+  overload: Dropbox.Api.Team.RevokeLinkedAppError.AsMemberNotFound*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.RevokeLinkedAppError.IsAppFolderRemovalNotSupported
+  commentId: P:Dropbox.Api.Team.RevokeLinkedAppError.IsAppFolderRemovalNotSupported
+  id: IsAppFolderRemovalNotSupported
+  parent: Dropbox.Api.Team.RevokeLinkedAppError
+  langs:
+  - csharp
+  - vb
+  name: IsAppFolderRemovalNotSupported
+  nameWithType: RevokeLinkedAppError.IsAppFolderRemovalNotSupported
+  fullName: Dropbox.Api.Team.RevokeLinkedAppError.IsAppFolderRemovalNotSupported
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeLinkedAppError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsAppFolderRemovalNotSupported
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeLinkedAppError.cs
+    startLine: 86
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is\nAppFolderRemovalNotSupported</p>\n"
+  example: []
+  syntax:
+    content: public bool IsAppFolderRemovalNotSupported { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsAppFolderRemovalNotSupported As Boolean
+  overload: Dropbox.Api.Team.RevokeLinkedAppError.IsAppFolderRemovalNotSupported*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.RevokeLinkedAppError.AsAppFolderRemovalNotSupported
+  commentId: P:Dropbox.Api.Team.RevokeLinkedAppError.AsAppFolderRemovalNotSupported
+  id: AsAppFolderRemovalNotSupported
+  parent: Dropbox.Api.Team.RevokeLinkedAppError
+  langs:
+  - csharp
+  - vb
+  name: AsAppFolderRemovalNotSupported
+  nameWithType: RevokeLinkedAppError.AsAppFolderRemovalNotSupported
+  fullName: Dropbox.Api.Team.RevokeLinkedAppError.AsAppFolderRemovalNotSupported
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeLinkedAppError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsAppFolderRemovalNotSupported
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeLinkedAppError.cs
+    startLine: 97
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a AppFolderRemovalNotSupported, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public RevokeLinkedAppError.AppFolderRemovalNotSupported AsAppFolderRemovalNotSupported { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.RevokeLinkedAppError.AppFolderRemovalNotSupported
+    content.vb: Public ReadOnly Property AsAppFolderRemovalNotSupported As RevokeLinkedAppError.AppFolderRemovalNotSupported
+  overload: Dropbox.Api.Team.RevokeLinkedAppError.AsAppFolderRemovalNotSupported*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.RevokeLinkedAppError.IsOther
+  commentId: P:Dropbox.Api.Team.RevokeLinkedAppError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Team.RevokeLinkedAppError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: RevokeLinkedAppError.IsOther
+  fullName: Dropbox.Api.Team.RevokeLinkedAppError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeLinkedAppError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeLinkedAppError.cs
+    startLine: 108
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Team.RevokeLinkedAppError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.RevokeLinkedAppError.AsOther
+  commentId: P:Dropbox.Api.Team.RevokeLinkedAppError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Team.RevokeLinkedAppError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: RevokeLinkedAppError.AsOther
+  fullName: Dropbox.Api.Team.RevokeLinkedAppError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeLinkedAppError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeLinkedAppError.cs
+    startLine: 119
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public RevokeLinkedAppError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.RevokeLinkedAppError.Other
+    content.vb: Public ReadOnly Property AsOther As RevokeLinkedAppError.Other
+  overload: Dropbox.Api.Team.RevokeLinkedAppError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team.Routes.TeamTeamRoutes.LinkedAppsRevokeLinkedAppAsync(Dropbox.Api.Team.RevokeLinkedApiAppArg)
+  commentId: M:Dropbox.Api.Team.Routes.TeamTeamRoutes.LinkedAppsRevokeLinkedAppAsync(Dropbox.Api.Team.RevokeLinkedApiAppArg)
+  isExternal: true
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.RevokeLinkedAppError
+  commentId: T:Dropbox.Api.Team.RevokeLinkedAppError
+  parent: Dropbox.Api.Team
+  name: RevokeLinkedAppError
+  nameWithType: RevokeLinkedAppError
+  fullName: Dropbox.Api.Team.RevokeLinkedAppError
+- uid: Dropbox.Api.Team.RevokeLinkedAppError.#ctor*
+  commentId: Overload:Dropbox.Api.Team.RevokeLinkedAppError.#ctor
+  name: RevokeLinkedAppError
+  nameWithType: RevokeLinkedAppError.RevokeLinkedAppError
+  fullName: Dropbox.Api.Team.RevokeLinkedAppError.RevokeLinkedAppError
+- uid: Dropbox.Api.Team.RevokeLinkedAppError.IsAppNotFound*
+  commentId: Overload:Dropbox.Api.Team.RevokeLinkedAppError.IsAppNotFound
+  name: IsAppNotFound
+  nameWithType: RevokeLinkedAppError.IsAppNotFound
+  fullName: Dropbox.Api.Team.RevokeLinkedAppError.IsAppNotFound
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Team.RevokeLinkedAppError.AsAppNotFound*
+  commentId: Overload:Dropbox.Api.Team.RevokeLinkedAppError.AsAppNotFound
+  name: AsAppNotFound
+  nameWithType: RevokeLinkedAppError.AsAppNotFound
+  fullName: Dropbox.Api.Team.RevokeLinkedAppError.AsAppNotFound
+- uid: Dropbox.Api.Team.RevokeLinkedAppError.AppNotFound
+  commentId: T:Dropbox.Api.Team.RevokeLinkedAppError.AppNotFound
+  parent: Dropbox.Api.Team
+  name: RevokeLinkedAppError.AppNotFound
+  nameWithType: RevokeLinkedAppError.AppNotFound
+  fullName: Dropbox.Api.Team.RevokeLinkedAppError.AppNotFound
+- uid: Dropbox.Api.Team.RevokeLinkedAppError.IsMemberNotFound*
+  commentId: Overload:Dropbox.Api.Team.RevokeLinkedAppError.IsMemberNotFound
+  name: IsMemberNotFound
+  nameWithType: RevokeLinkedAppError.IsMemberNotFound
+  fullName: Dropbox.Api.Team.RevokeLinkedAppError.IsMemberNotFound
+- uid: Dropbox.Api.Team.RevokeLinkedAppError.AsMemberNotFound*
+  commentId: Overload:Dropbox.Api.Team.RevokeLinkedAppError.AsMemberNotFound
+  name: AsMemberNotFound
+  nameWithType: RevokeLinkedAppError.AsMemberNotFound
+  fullName: Dropbox.Api.Team.RevokeLinkedAppError.AsMemberNotFound
+- uid: Dropbox.Api.Team.RevokeLinkedAppError.MemberNotFound
+  commentId: T:Dropbox.Api.Team.RevokeLinkedAppError.MemberNotFound
+  parent: Dropbox.Api.Team
+  name: RevokeLinkedAppError.MemberNotFound
+  nameWithType: RevokeLinkedAppError.MemberNotFound
+  fullName: Dropbox.Api.Team.RevokeLinkedAppError.MemberNotFound
+- uid: Dropbox.Api.Team.RevokeLinkedAppError.IsAppFolderRemovalNotSupported*
+  commentId: Overload:Dropbox.Api.Team.RevokeLinkedAppError.IsAppFolderRemovalNotSupported
+  name: IsAppFolderRemovalNotSupported
+  nameWithType: RevokeLinkedAppError.IsAppFolderRemovalNotSupported
+  fullName: Dropbox.Api.Team.RevokeLinkedAppError.IsAppFolderRemovalNotSupported
+- uid: Dropbox.Api.Team.RevokeLinkedAppError.AsAppFolderRemovalNotSupported*
+  commentId: Overload:Dropbox.Api.Team.RevokeLinkedAppError.AsAppFolderRemovalNotSupported
+  name: AsAppFolderRemovalNotSupported
+  nameWithType: RevokeLinkedAppError.AsAppFolderRemovalNotSupported
+  fullName: Dropbox.Api.Team.RevokeLinkedAppError.AsAppFolderRemovalNotSupported
+- uid: Dropbox.Api.Team.RevokeLinkedAppError.AppFolderRemovalNotSupported
+  commentId: T:Dropbox.Api.Team.RevokeLinkedAppError.AppFolderRemovalNotSupported
+  parent: Dropbox.Api.Team
+  name: RevokeLinkedAppError.AppFolderRemovalNotSupported
+  nameWithType: RevokeLinkedAppError.AppFolderRemovalNotSupported
+  fullName: Dropbox.Api.Team.RevokeLinkedAppError.AppFolderRemovalNotSupported
+- uid: Dropbox.Api.Team.RevokeLinkedAppError.IsOther*
+  commentId: Overload:Dropbox.Api.Team.RevokeLinkedAppError.IsOther
+  name: IsOther
+  nameWithType: RevokeLinkedAppError.IsOther
+  fullName: Dropbox.Api.Team.RevokeLinkedAppError.IsOther
+- uid: Dropbox.Api.Team.RevokeLinkedAppError.AsOther*
+  commentId: Overload:Dropbox.Api.Team.RevokeLinkedAppError.AsOther
+  name: AsOther
+  nameWithType: RevokeLinkedAppError.AsOther
+  fullName: Dropbox.Api.Team.RevokeLinkedAppError.AsOther
+- uid: Dropbox.Api.Team.RevokeLinkedAppError.Other
+  commentId: T:Dropbox.Api.Team.RevokeLinkedAppError.Other
+  parent: Dropbox.Api.Team
+  name: RevokeLinkedAppError.Other
+  nameWithType: RevokeLinkedAppError.Other
+  fullName: Dropbox.Api.Team.RevokeLinkedAppError.Other
+shouldSkipMarkup: true

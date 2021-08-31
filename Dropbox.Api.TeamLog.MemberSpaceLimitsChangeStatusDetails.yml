@@ -1,0 +1,236 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeStatusDetails
+  commentId: T:Dropbox.Api.TeamLog.MemberSpaceLimitsChangeStatusDetails
+  id: MemberSpaceLimitsChangeStatusDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.MemberSpaceLimitsChangeStatusDetails.#ctor
+  - Dropbox.Api.TeamLog.MemberSpaceLimitsChangeStatusDetails.#ctor(Dropbox.Api.TeamLog.SpaceLimitsStatus,Dropbox.Api.TeamLog.SpaceLimitsStatus)
+  - Dropbox.Api.TeamLog.MemberSpaceLimitsChangeStatusDetails.NewValue
+  - Dropbox.Api.TeamLog.MemberSpaceLimitsChangeStatusDetails.PreviousValue
+  langs:
+  - csharp
+  - vb
+  name: MemberSpaceLimitsChangeStatusDetails
+  nameWithType: MemberSpaceLimitsChangeStatusDetails
+  fullName: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeStatusDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSpaceLimitsChangeStatusDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: MemberSpaceLimitsChangeStatusDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSpaceLimitsChangeStatusDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Changed space limit status.</p>\n"
+  example: []
+  syntax:
+    content: 'public class MemberSpaceLimitsChangeStatusDetails : object'
+    content.vb: >-
+      Public Class MemberSpaceLimitsChangeStatusDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeStatusDetails.#ctor(Dropbox.Api.TeamLog.SpaceLimitsStatus,Dropbox.Api.TeamLog.SpaceLimitsStatus)
+  commentId: M:Dropbox.Api.TeamLog.MemberSpaceLimitsChangeStatusDetails.#ctor(Dropbox.Api.TeamLog.SpaceLimitsStatus,Dropbox.Api.TeamLog.SpaceLimitsStatus)
+  id: '#ctor(Dropbox.Api.TeamLog.SpaceLimitsStatus,Dropbox.Api.TeamLog.SpaceLimitsStatus)'
+  parent: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeStatusDetails
+  langs:
+  - csharp
+  - vb
+  name: MemberSpaceLimitsChangeStatusDetails(SpaceLimitsStatus, SpaceLimitsStatus)
+  nameWithType: MemberSpaceLimitsChangeStatusDetails.MemberSpaceLimitsChangeStatusDetails(SpaceLimitsStatus, SpaceLimitsStatus)
+  fullName: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeStatusDetails.MemberSpaceLimitsChangeStatusDetails(Dropbox.Api.TeamLog.SpaceLimitsStatus, Dropbox.Api.TeamLog.SpaceLimitsStatus)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSpaceLimitsChangeStatusDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSpaceLimitsChangeStatusDetails.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.MemberSpaceLimitsChangeStatusDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public MemberSpaceLimitsChangeStatusDetails(SpaceLimitsStatus previousValue, SpaceLimitsStatus newValue)
+    parameters:
+    - id: previousValue
+      type: Dropbox.Api.TeamLog.SpaceLimitsStatus
+      description: Previous storage quota status.
+    - id: newValue
+      type: Dropbox.Api.TeamLog.SpaceLimitsStatus
+      description: New storage quota status.
+    content.vb: Public Sub New(previousValue As SpaceLimitsStatus, newValue As SpaceLimitsStatus)
+  overload: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeStatusDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeStatusDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.MemberSpaceLimitsChangeStatusDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeStatusDetails
+  langs:
+  - csharp
+  - vb
+  name: MemberSpaceLimitsChangeStatusDetails()
+  nameWithType: MemberSpaceLimitsChangeStatusDetails.MemberSpaceLimitsChangeStatusDetails()
+  fullName: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeStatusDetails.MemberSpaceLimitsChangeStatusDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSpaceLimitsChangeStatusDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSpaceLimitsChangeStatusDetails.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.MemberSpaceLimitsChangeStatusDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public MemberSpaceLimitsChangeStatusDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeStatusDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeStatusDetails.PreviousValue
+  commentId: P:Dropbox.Api.TeamLog.MemberSpaceLimitsChangeStatusDetails.PreviousValue
+  id: PreviousValue
+  parent: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeStatusDetails
+  langs:
+  - csharp
+  - vb
+  name: PreviousValue
+  nameWithType: MemberSpaceLimitsChangeStatusDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeStatusDetails.PreviousValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSpaceLimitsChangeStatusDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PreviousValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSpaceLimitsChangeStatusDetails.cs
+    startLine: 66
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Previous storage quota status.</p>\n"
+  example: []
+  syntax:
+    content: public SpaceLimitsStatus PreviousValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.SpaceLimitsStatus
+    content.vb: Public Property PreviousValue As SpaceLimitsStatus
+  overload: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeStatusDetails.PreviousValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeStatusDetails.NewValue
+  commentId: P:Dropbox.Api.TeamLog.MemberSpaceLimitsChangeStatusDetails.NewValue
+  id: NewValue
+  parent: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeStatusDetails
+  langs:
+  - csharp
+  - vb
+  name: NewValue
+  nameWithType: MemberSpaceLimitsChangeStatusDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeStatusDetails.NewValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSpaceLimitsChangeStatusDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NewValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSpaceLimitsChangeStatusDetails.cs
+    startLine: 71
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>New storage quota status.</p>\n"
+  example: []
+  syntax:
+    content: public SpaceLimitsStatus NewValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.SpaceLimitsStatus
+    content.vb: Public Property NewValue As SpaceLimitsStatus
+  overload: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeStatusDetails.NewValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeStatusDetails
+  commentId: T:Dropbox.Api.TeamLog.MemberSpaceLimitsChangeStatusDetails
+  parent: Dropbox.Api.TeamLog
+  name: MemberSpaceLimitsChangeStatusDetails
+  nameWithType: MemberSpaceLimitsChangeStatusDetails
+  fullName: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeStatusDetails
+- uid: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeStatusDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberSpaceLimitsChangeStatusDetails.#ctor
+  name: MemberSpaceLimitsChangeStatusDetails
+  nameWithType: MemberSpaceLimitsChangeStatusDetails.MemberSpaceLimitsChangeStatusDetails
+  fullName: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeStatusDetails.MemberSpaceLimitsChangeStatusDetails
+- uid: Dropbox.Api.TeamLog.SpaceLimitsStatus
+  commentId: T:Dropbox.Api.TeamLog.SpaceLimitsStatus
+  parent: Dropbox.Api.TeamLog
+  name: SpaceLimitsStatus
+  nameWithType: SpaceLimitsStatus
+  fullName: Dropbox.Api.TeamLog.SpaceLimitsStatus
+- uid: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeStatusDetails.PreviousValue*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberSpaceLimitsChangeStatusDetails.PreviousValue
+  name: PreviousValue
+  nameWithType: MemberSpaceLimitsChangeStatusDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeStatusDetails.PreviousValue
+- uid: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeStatusDetails.NewValue*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberSpaceLimitsChangeStatusDetails.NewValue
+  name: NewValue
+  nameWithType: MemberSpaceLimitsChangeStatusDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.MemberSpaceLimitsChangeStatusDetails.NewValue
+shouldSkipMarkup: true

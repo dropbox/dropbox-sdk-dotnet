@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.AppBlockedByPermissionsType
+  commentId: T:Dropbox.Api.TeamLog.AppBlockedByPermissionsType
+  id: AppBlockedByPermissionsType
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.AppBlockedByPermissionsType.#ctor
+  - Dropbox.Api.TeamLog.AppBlockedByPermissionsType.#ctor(System.String)
+  - Dropbox.Api.TeamLog.AppBlockedByPermissionsType.Description
+  langs:
+  - csharp
+  - vb
+  name: AppBlockedByPermissionsType
+  nameWithType: AppBlockedByPermissionsType
+  fullName: Dropbox.Api.TeamLog.AppBlockedByPermissionsType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AppBlockedByPermissionsType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AppBlockedByPermissionsType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AppBlockedByPermissionsType.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The app blocked by permissions type object</p>\n"
+  example: []
+  syntax:
+    content: 'public class AppBlockedByPermissionsType : object'
+    content.vb: >-
+      Public Class AppBlockedByPermissionsType
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.AppBlockedByPermissionsType.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.AppBlockedByPermissionsType.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.AppBlockedByPermissionsType
+  langs:
+  - csharp
+  - vb
+  name: AppBlockedByPermissionsType(String)
+  nameWithType: AppBlockedByPermissionsType.AppBlockedByPermissionsType(String)
+  fullName: Dropbox.Api.TeamLog.AppBlockedByPermissionsType.AppBlockedByPermissionsType(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AppBlockedByPermissionsType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AppBlockedByPermissionsType.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.AppBlockedByPermissionsType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public AppBlockedByPermissionsType(string description)
+    parameters:
+    - id: description
+      type: System.String
+      description: The description
+    content.vb: Public Sub New(description As String)
+  overload: Dropbox.Api.TeamLog.AppBlockedByPermissionsType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.AppBlockedByPermissionsType.#ctor
+  commentId: M:Dropbox.Api.TeamLog.AppBlockedByPermissionsType.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.AppBlockedByPermissionsType
+  langs:
+  - csharp
+  - vb
+  name: AppBlockedByPermissionsType()
+  nameWithType: AppBlockedByPermissionsType.AppBlockedByPermissionsType()
+  fullName: Dropbox.Api.TeamLog.AppBlockedByPermissionsType.AppBlockedByPermissionsType()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AppBlockedByPermissionsType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AppBlockedByPermissionsType.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.AppBlockedByPermissionsType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public AppBlockedByPermissionsType()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.AppBlockedByPermissionsType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.AppBlockedByPermissionsType.Description
+  commentId: P:Dropbox.Api.TeamLog.AppBlockedByPermissionsType.Description
+  id: Description
+  parent: Dropbox.Api.TeamLog.AppBlockedByPermissionsType
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: AppBlockedByPermissionsType.Description
+  fullName: Dropbox.Api.TeamLog.AppBlockedByPermissionsType.Description
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AppBlockedByPermissionsType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Description
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AppBlockedByPermissionsType.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets the description of the app blocked by permissions type</p>\n"
+  example: []
+  syntax:
+    content: public string Description { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Dropbox.Api.TeamLog.AppBlockedByPermissionsType.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.AppBlockedByPermissionsType
+  commentId: T:Dropbox.Api.TeamLog.AppBlockedByPermissionsType
+  parent: Dropbox.Api.TeamLog
+  name: AppBlockedByPermissionsType
+  nameWithType: AppBlockedByPermissionsType
+  fullName: Dropbox.Api.TeamLog.AppBlockedByPermissionsType
+- uid: Dropbox.Api.TeamLog.AppBlockedByPermissionsType.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.AppBlockedByPermissionsType.#ctor
+  name: AppBlockedByPermissionsType
+  nameWithType: AppBlockedByPermissionsType.AppBlockedByPermissionsType
+  fullName: Dropbox.Api.TeamLog.AppBlockedByPermissionsType.AppBlockedByPermissionsType
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.AppBlockedByPermissionsType.Description*
+  commentId: Overload:Dropbox.Api.TeamLog.AppBlockedByPermissionsType.Description
+  name: Description
+  nameWithType: AppBlockedByPermissionsType.Description
+  fullName: Dropbox.Api.TeamLog.AppBlockedByPermissionsType.Description
+shouldSkipMarkup: true

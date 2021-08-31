@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.SharedFolderTransferOwnershipType
+  commentId: T:Dropbox.Api.TeamLog.SharedFolderTransferOwnershipType
+  id: SharedFolderTransferOwnershipType
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.SharedFolderTransferOwnershipType.#ctor
+  - Dropbox.Api.TeamLog.SharedFolderTransferOwnershipType.#ctor(System.String)
+  - Dropbox.Api.TeamLog.SharedFolderTransferOwnershipType.Description
+  langs:
+  - csharp
+  - vb
+  name: SharedFolderTransferOwnershipType
+  nameWithType: SharedFolderTransferOwnershipType
+  fullName: Dropbox.Api.TeamLog.SharedFolderTransferOwnershipType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderTransferOwnershipType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SharedFolderTransferOwnershipType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderTransferOwnershipType.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The shared folder transfer ownership type object</p>\n"
+  example: []
+  syntax:
+    content: 'public class SharedFolderTransferOwnershipType : object'
+    content.vb: >-
+      Public Class SharedFolderTransferOwnershipType
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.SharedFolderTransferOwnershipType.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.SharedFolderTransferOwnershipType.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.SharedFolderTransferOwnershipType
+  langs:
+  - csharp
+  - vb
+  name: SharedFolderTransferOwnershipType(String)
+  nameWithType: SharedFolderTransferOwnershipType.SharedFolderTransferOwnershipType(String)
+  fullName: Dropbox.Api.TeamLog.SharedFolderTransferOwnershipType.SharedFolderTransferOwnershipType(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderTransferOwnershipType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderTransferOwnershipType.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SharedFolderTransferOwnershipType\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public SharedFolderTransferOwnershipType(string description)
+    parameters:
+    - id: description
+      type: System.String
+      description: The description
+    content.vb: Public Sub New(description As String)
+  overload: Dropbox.Api.TeamLog.SharedFolderTransferOwnershipType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SharedFolderTransferOwnershipType.#ctor
+  commentId: M:Dropbox.Api.TeamLog.SharedFolderTransferOwnershipType.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.SharedFolderTransferOwnershipType
+  langs:
+  - csharp
+  - vb
+  name: SharedFolderTransferOwnershipType()
+  nameWithType: SharedFolderTransferOwnershipType.SharedFolderTransferOwnershipType()
+  fullName: Dropbox.Api.TeamLog.SharedFolderTransferOwnershipType.SharedFolderTransferOwnershipType()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderTransferOwnershipType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderTransferOwnershipType.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SharedFolderTransferOwnershipType\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public SharedFolderTransferOwnershipType()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.SharedFolderTransferOwnershipType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SharedFolderTransferOwnershipType.Description
+  commentId: P:Dropbox.Api.TeamLog.SharedFolderTransferOwnershipType.Description
+  id: Description
+  parent: Dropbox.Api.TeamLog.SharedFolderTransferOwnershipType
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: SharedFolderTransferOwnershipType.Description
+  fullName: Dropbox.Api.TeamLog.SharedFolderTransferOwnershipType.Description
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderTransferOwnershipType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Description
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderTransferOwnershipType.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets the description of the shared folder transfer ownership type</p>\n"
+  example: []
+  syntax:
+    content: public string Description { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Dropbox.Api.TeamLog.SharedFolderTransferOwnershipType.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.SharedFolderTransferOwnershipType
+  commentId: T:Dropbox.Api.TeamLog.SharedFolderTransferOwnershipType
+  parent: Dropbox.Api.TeamLog
+  name: SharedFolderTransferOwnershipType
+  nameWithType: SharedFolderTransferOwnershipType
+  fullName: Dropbox.Api.TeamLog.SharedFolderTransferOwnershipType
+- uid: Dropbox.Api.TeamLog.SharedFolderTransferOwnershipType.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedFolderTransferOwnershipType.#ctor
+  name: SharedFolderTransferOwnershipType
+  nameWithType: SharedFolderTransferOwnershipType.SharedFolderTransferOwnershipType
+  fullName: Dropbox.Api.TeamLog.SharedFolderTransferOwnershipType.SharedFolderTransferOwnershipType
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.SharedFolderTransferOwnershipType.Description*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedFolderTransferOwnershipType.Description
+  name: Description
+  nameWithType: SharedFolderTransferOwnershipType.Description
+  fullName: Dropbox.Api.TeamLog.SharedFolderTransferOwnershipType.Description
+shouldSkipMarkup: true

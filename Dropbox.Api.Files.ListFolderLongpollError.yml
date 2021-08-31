@@ -1,0 +1,288 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.ListFolderLongpollError
+  commentId: T:Dropbox.Api.Files.ListFolderLongpollError
+  id: ListFolderLongpollError
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.ListFolderLongpollError.#ctor
+  - Dropbox.Api.Files.ListFolderLongpollError.AsOther
+  - Dropbox.Api.Files.ListFolderLongpollError.AsReset
+  - Dropbox.Api.Files.ListFolderLongpollError.IsOther
+  - Dropbox.Api.Files.ListFolderLongpollError.IsReset
+  langs:
+  - csharp
+  - vb
+  name: ListFolderLongpollError
+  nameWithType: ListFolderLongpollError
+  fullName: Dropbox.Api.Files.ListFolderLongpollError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderLongpollError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ListFolderLongpollError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderLongpollError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The list folder longpoll error object</p>\n"
+  example: []
+  syntax:
+    content: 'public class ListFolderLongpollError : object'
+    content.vb: >-
+      Public Class ListFolderLongpollError
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Files.ListFolderLongpollError.Other
+  - Dropbox.Api.Files.ListFolderLongpollError.Reset
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.ListFolderLongpollError.#ctor
+  commentId: M:Dropbox.Api.Files.ListFolderLongpollError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.ListFolderLongpollError
+  langs:
+  - csharp
+  - vb
+  name: ListFolderLongpollError()
+  nameWithType: ListFolderLongpollError.ListFolderLongpollError()
+  fullName: Dropbox.Api.Files.ListFolderLongpollError.ListFolderLongpollError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderLongpollError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderLongpollError.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.ListFolderLongpollError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public ListFolderLongpollError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.ListFolderLongpollError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.ListFolderLongpollError.IsReset
+  commentId: P:Dropbox.Api.Files.ListFolderLongpollError.IsReset
+  id: IsReset
+  parent: Dropbox.Api.Files.ListFolderLongpollError
+  langs:
+  - csharp
+  - vb
+  name: IsReset
+  nameWithType: ListFolderLongpollError.IsReset
+  fullName: Dropbox.Api.Files.ListFolderLongpollError.IsReset
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderLongpollError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsReset
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderLongpollError.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is Reset</p>\n"
+  example: []
+  syntax:
+    content: public bool IsReset { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsReset As Boolean
+  overload: Dropbox.Api.Files.ListFolderLongpollError.IsReset*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.ListFolderLongpollError.AsReset
+  commentId: P:Dropbox.Api.Files.ListFolderLongpollError.AsReset
+  id: AsReset
+  parent: Dropbox.Api.Files.ListFolderLongpollError
+  langs:
+  - csharp
+  - vb
+  name: AsReset
+  nameWithType: ListFolderLongpollError.AsReset
+  fullName: Dropbox.Api.Files.ListFolderLongpollError.AsReset
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderLongpollError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsReset
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderLongpollError.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a Reset, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ListFolderLongpollError.Reset AsReset { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.ListFolderLongpollError.Reset
+    content.vb: Public ReadOnly Property AsReset As ListFolderLongpollError.Reset
+  overload: Dropbox.Api.Files.ListFolderLongpollError.AsReset*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.ListFolderLongpollError.IsOther
+  commentId: P:Dropbox.Api.Files.ListFolderLongpollError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Files.ListFolderLongpollError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: ListFolderLongpollError.IsOther
+  fullName: Dropbox.Api.Files.ListFolderLongpollError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderLongpollError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderLongpollError.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Files.ListFolderLongpollError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.ListFolderLongpollError.AsOther
+  commentId: P:Dropbox.Api.Files.ListFolderLongpollError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Files.ListFolderLongpollError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: ListFolderLongpollError.AsOther
+  fullName: Dropbox.Api.Files.ListFolderLongpollError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderLongpollError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderLongpollError.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ListFolderLongpollError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.ListFolderLongpollError.Other
+    content.vb: Public ReadOnly Property AsOther As ListFolderLongpollError.Other
+  overload: Dropbox.Api.Files.ListFolderLongpollError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.ListFolderLongpollError
+  commentId: T:Dropbox.Api.Files.ListFolderLongpollError
+  parent: Dropbox.Api.Files
+  name: ListFolderLongpollError
+  nameWithType: ListFolderLongpollError
+  fullName: Dropbox.Api.Files.ListFolderLongpollError
+- uid: Dropbox.Api.Files.ListFolderLongpollError.#ctor*
+  commentId: Overload:Dropbox.Api.Files.ListFolderLongpollError.#ctor
+  name: ListFolderLongpollError
+  nameWithType: ListFolderLongpollError.ListFolderLongpollError
+  fullName: Dropbox.Api.Files.ListFolderLongpollError.ListFolderLongpollError
+- uid: Dropbox.Api.Files.ListFolderLongpollError.IsReset*
+  commentId: Overload:Dropbox.Api.Files.ListFolderLongpollError.IsReset
+  name: IsReset
+  nameWithType: ListFolderLongpollError.IsReset
+  fullName: Dropbox.Api.Files.ListFolderLongpollError.IsReset
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Files.ListFolderLongpollError.AsReset*
+  commentId: Overload:Dropbox.Api.Files.ListFolderLongpollError.AsReset
+  name: AsReset
+  nameWithType: ListFolderLongpollError.AsReset
+  fullName: Dropbox.Api.Files.ListFolderLongpollError.AsReset
+- uid: Dropbox.Api.Files.ListFolderLongpollError.Reset
+  commentId: T:Dropbox.Api.Files.ListFolderLongpollError.Reset
+  parent: Dropbox.Api.Files
+  name: ListFolderLongpollError.Reset
+  nameWithType: ListFolderLongpollError.Reset
+  fullName: Dropbox.Api.Files.ListFolderLongpollError.Reset
+- uid: Dropbox.Api.Files.ListFolderLongpollError.IsOther*
+  commentId: Overload:Dropbox.Api.Files.ListFolderLongpollError.IsOther
+  name: IsOther
+  nameWithType: ListFolderLongpollError.IsOther
+  fullName: Dropbox.Api.Files.ListFolderLongpollError.IsOther
+- uid: Dropbox.Api.Files.ListFolderLongpollError.AsOther*
+  commentId: Overload:Dropbox.Api.Files.ListFolderLongpollError.AsOther
+  name: AsOther
+  nameWithType: ListFolderLongpollError.AsOther
+  fullName: Dropbox.Api.Files.ListFolderLongpollError.AsOther
+- uid: Dropbox.Api.Files.ListFolderLongpollError.Other
+  commentId: T:Dropbox.Api.Files.ListFolderLongpollError.Other
+  parent: Dropbox.Api.Files
+  name: ListFolderLongpollError.Other
+  nameWithType: ListFolderLongpollError.Other
+  fullName: Dropbox.Api.Files.ListFolderLongpollError.Other
+shouldSkipMarkup: true

@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.StartedEnterpriseAdminSessionType
+  commentId: T:Dropbox.Api.TeamLog.StartedEnterpriseAdminSessionType
+  id: StartedEnterpriseAdminSessionType
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.StartedEnterpriseAdminSessionType.#ctor
+  - Dropbox.Api.TeamLog.StartedEnterpriseAdminSessionType.#ctor(System.String)
+  - Dropbox.Api.TeamLog.StartedEnterpriseAdminSessionType.Description
+  langs:
+  - csharp
+  - vb
+  name: StartedEnterpriseAdminSessionType
+  nameWithType: StartedEnterpriseAdminSessionType
+  fullName: Dropbox.Api.TeamLog.StartedEnterpriseAdminSessionType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/StartedEnterpriseAdminSessionType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: StartedEnterpriseAdminSessionType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/StartedEnterpriseAdminSessionType.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The started enterprise admin session type object</p>\n"
+  example: []
+  syntax:
+    content: 'public class StartedEnterpriseAdminSessionType : object'
+    content.vb: >-
+      Public Class StartedEnterpriseAdminSessionType
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.StartedEnterpriseAdminSessionType.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.StartedEnterpriseAdminSessionType.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.StartedEnterpriseAdminSessionType
+  langs:
+  - csharp
+  - vb
+  name: StartedEnterpriseAdminSessionType(String)
+  nameWithType: StartedEnterpriseAdminSessionType.StartedEnterpriseAdminSessionType(String)
+  fullName: Dropbox.Api.TeamLog.StartedEnterpriseAdminSessionType.StartedEnterpriseAdminSessionType(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/StartedEnterpriseAdminSessionType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/StartedEnterpriseAdminSessionType.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.StartedEnterpriseAdminSessionType\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public StartedEnterpriseAdminSessionType(string description)
+    parameters:
+    - id: description
+      type: System.String
+      description: The description
+    content.vb: Public Sub New(description As String)
+  overload: Dropbox.Api.TeamLog.StartedEnterpriseAdminSessionType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.StartedEnterpriseAdminSessionType.#ctor
+  commentId: M:Dropbox.Api.TeamLog.StartedEnterpriseAdminSessionType.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.StartedEnterpriseAdminSessionType
+  langs:
+  - csharp
+  - vb
+  name: StartedEnterpriseAdminSessionType()
+  nameWithType: StartedEnterpriseAdminSessionType.StartedEnterpriseAdminSessionType()
+  fullName: Dropbox.Api.TeamLog.StartedEnterpriseAdminSessionType.StartedEnterpriseAdminSessionType()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/StartedEnterpriseAdminSessionType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/StartedEnterpriseAdminSessionType.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.StartedEnterpriseAdminSessionType\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public StartedEnterpriseAdminSessionType()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.StartedEnterpriseAdminSessionType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.StartedEnterpriseAdminSessionType.Description
+  commentId: P:Dropbox.Api.TeamLog.StartedEnterpriseAdminSessionType.Description
+  id: Description
+  parent: Dropbox.Api.TeamLog.StartedEnterpriseAdminSessionType
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: StartedEnterpriseAdminSessionType.Description
+  fullName: Dropbox.Api.TeamLog.StartedEnterpriseAdminSessionType.Description
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/StartedEnterpriseAdminSessionType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Description
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/StartedEnterpriseAdminSessionType.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets the description of the started enterprise admin session type</p>\n"
+  example: []
+  syntax:
+    content: public string Description { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Dropbox.Api.TeamLog.StartedEnterpriseAdminSessionType.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.StartedEnterpriseAdminSessionType
+  commentId: T:Dropbox.Api.TeamLog.StartedEnterpriseAdminSessionType
+  parent: Dropbox.Api.TeamLog
+  name: StartedEnterpriseAdminSessionType
+  nameWithType: StartedEnterpriseAdminSessionType
+  fullName: Dropbox.Api.TeamLog.StartedEnterpriseAdminSessionType
+- uid: Dropbox.Api.TeamLog.StartedEnterpriseAdminSessionType.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.StartedEnterpriseAdminSessionType.#ctor
+  name: StartedEnterpriseAdminSessionType
+  nameWithType: StartedEnterpriseAdminSessionType.StartedEnterpriseAdminSessionType
+  fullName: Dropbox.Api.TeamLog.StartedEnterpriseAdminSessionType.StartedEnterpriseAdminSessionType
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.StartedEnterpriseAdminSessionType.Description*
+  commentId: Overload:Dropbox.Api.TeamLog.StartedEnterpriseAdminSessionType.Description
+  name: Description
+  nameWithType: StartedEnterpriseAdminSessionType.Description
+  fullName: Dropbox.Api.TeamLog.StartedEnterpriseAdminSessionType.Description
+shouldSkipMarkup: true

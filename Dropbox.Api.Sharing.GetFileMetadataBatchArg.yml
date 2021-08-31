@@ -1,0 +1,488 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.GetFileMetadataBatchArg
+  commentId: T:Dropbox.Api.Sharing.GetFileMetadataBatchArg
+  id: GetFileMetadataBatchArg
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.GetFileMetadataBatchArg.#ctor
+  - Dropbox.Api.Sharing.GetFileMetadataBatchArg.#ctor(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.FileAction})
+  - Dropbox.Api.Sharing.GetFileMetadataBatchArg.Actions
+  - Dropbox.Api.Sharing.GetFileMetadataBatchArg.Files
+  langs:
+  - csharp
+  - vb
+  name: GetFileMetadataBatchArg
+  nameWithType: GetFileMetadataBatchArg
+  fullName: Dropbox.Api.Sharing.GetFileMetadataBatchArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetFileMetadataBatchArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GetFileMetadataBatchArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetFileMetadataBatchArg.cs
+    startLine: 17
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Arguments of <xref href=\"Dropbox.Api.Sharing.Routes.SharingUserRoutes.GetFileMetadataBatchAsync(Dropbox.Api.Sharing.GetFileMetadataBatchArg)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+  example: []
+  syntax:
+    content: 'public class GetFileMetadataBatchArg : object'
+    content.vb: >-
+      Public Class GetFileMetadataBatchArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Sharing.GetFileMetadataBatchArg.#ctor(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.FileAction})
+  commentId: M:Dropbox.Api.Sharing.GetFileMetadataBatchArg.#ctor(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.FileAction})
+  id: '#ctor(System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.FileAction})'
+  parent: Dropbox.Api.Sharing.GetFileMetadataBatchArg
+  langs:
+  - csharp
+  - vb
+  name: GetFileMetadataBatchArg(System.Collections.Generic.IEnumerable<String>, System.Collections.Generic.IEnumerable<FileAction>)
+  nameWithType: GetFileMetadataBatchArg.GetFileMetadataBatchArg(System.Collections.Generic.IEnumerable<String>, System.Collections.Generic.IEnumerable<FileAction>)
+  fullName: Dropbox.Api.Sharing.GetFileMetadataBatchArg.GetFileMetadataBatchArg(System.Collections.Generic.IEnumerable<System.String>, System.Collections.Generic.IEnumerable<Dropbox.Api.Sharing.FileAction>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetFileMetadataBatchArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetFileMetadataBatchArg.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.GetFileMetadataBatchArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public GetFileMetadataBatchArg(System.Collections.Generic.IEnumerable<string> files, System.Collections.Generic.IEnumerable<FileAction> actions = null)
+    parameters:
+    - id: files
+      type: System.Collections.Generic.IEnumerable{System.String}
+      description: The files to query.
+    - id: actions
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.FileAction}
+      description: >-
+        A list of `FileAction`s corresponding to `FilePermission`s
+
+        that should appear in the  response&apos;s <xref href="Dropbox.Api.Sharing.SharedFileMetadata.Permissions" data-throw-if-not-resolved="false"></xref> field describing the
+
+        actions the  authenticated user can perform on the file.
+    content.vb: Public Sub New(files As System.Collections.Generic.IEnumerable(Of String), actions As System.Collections.Generic.IEnumerable(Of FileAction) = Nothing)
+  overload: Dropbox.Api.Sharing.GetFileMetadataBatchArg.#ctor*
+  nameWithType.vb: GetFileMetadataBatchArg.GetFileMetadataBatchArg(System.Collections.Generic.IEnumerable(Of String), System.Collections.Generic.IEnumerable(Of FileAction))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Sharing.GetFileMetadataBatchArg.GetFileMetadataBatchArg(System.Collections.Generic.IEnumerable(Of System.String), System.Collections.Generic.IEnumerable(Of Dropbox.Api.Sharing.FileAction))
+  name.vb: GetFileMetadataBatchArg(System.Collections.Generic.IEnumerable(Of String), System.Collections.Generic.IEnumerable(Of FileAction))
+- uid: Dropbox.Api.Sharing.GetFileMetadataBatchArg.#ctor
+  commentId: M:Dropbox.Api.Sharing.GetFileMetadataBatchArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Sharing.GetFileMetadataBatchArg
+  langs:
+  - csharp
+  - vb
+  name: GetFileMetadataBatchArg()
+  nameWithType: GetFileMetadataBatchArg.GetFileMetadataBatchArg()
+  fullName: Dropbox.Api.Sharing.GetFileMetadataBatchArg.GetFileMetadataBatchArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetFileMetadataBatchArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetFileMetadataBatchArg.cs
+    startLine: 66
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.GetFileMetadataBatchArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public GetFileMetadataBatchArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Sharing.GetFileMetadataBatchArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.GetFileMetadataBatchArg.Files
+  commentId: P:Dropbox.Api.Sharing.GetFileMetadataBatchArg.Files
+  id: Files
+  parent: Dropbox.Api.Sharing.GetFileMetadataBatchArg
+  langs:
+  - csharp
+  - vb
+  name: Files
+  nameWithType: GetFileMetadataBatchArg.Files
+  fullName: Dropbox.Api.Sharing.GetFileMetadataBatchArg.Files
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetFileMetadataBatchArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Files
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetFileMetadataBatchArg.cs
+    startLine: 74
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The files to query.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<string> Files { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{System.String}
+    content.vb: Public Property Files As System.Collections.Generic.IList(Of String)
+  overload: Dropbox.Api.Sharing.GetFileMetadataBatchArg.Files*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.GetFileMetadataBatchArg.Actions
+  commentId: P:Dropbox.Api.Sharing.GetFileMetadataBatchArg.Actions
+  id: Actions
+  parent: Dropbox.Api.Sharing.GetFileMetadataBatchArg
+  langs:
+  - csharp
+  - vb
+  name: Actions
+  nameWithType: GetFileMetadataBatchArg.Actions
+  fullName: Dropbox.Api.Sharing.GetFileMetadataBatchArg.Actions
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetFileMetadataBatchArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Actions
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetFileMetadataBatchArg.cs
+    startLine: 82
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>A list of `FileAction`s corresponding to `FilePermission`s that should appear\nin the  response&apos;s <xref href=\"Dropbox.Api.Sharing.SharedFileMetadata.Permissions\" data-throw-if-not-resolved=\"false\"></xref> field describing the actions the  authenticated user can perform on the\nfile.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<FileAction> Actions { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{Dropbox.Api.Sharing.FileAction}
+    content.vb: Public Property Actions As System.Collections.Generic.IList(Of FileAction)
+  overload: Dropbox.Api.Sharing.GetFileMetadataBatchArg.Actions*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Sharing.Routes.SharingUserRoutes.GetFileMetadataBatchAsync(Dropbox.Api.Sharing.GetFileMetadataBatchArg)
+  commentId: M:Dropbox.Api.Sharing.Routes.SharingUserRoutes.GetFileMetadataBatchAsync(Dropbox.Api.Sharing.GetFileMetadataBatchArg)
+  isExternal: true
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.GetFileMetadataBatchArg
+  commentId: T:Dropbox.Api.Sharing.GetFileMetadataBatchArg
+  parent: Dropbox.Api.Sharing
+  name: GetFileMetadataBatchArg
+  nameWithType: GetFileMetadataBatchArg
+  fullName: Dropbox.Api.Sharing.GetFileMetadataBatchArg
+- uid: Dropbox.Api.Sharing.SharedFileMetadata.Permissions
+  commentId: P:Dropbox.Api.Sharing.SharedFileMetadata.Permissions
+  isExternal: true
+- uid: Dropbox.Api.Sharing.GetFileMetadataBatchArg.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.GetFileMetadataBatchArg.#ctor
+  name: GetFileMetadataBatchArg
+  nameWithType: GetFileMetadataBatchArg.GetFileMetadataBatchArg
+  fullName: Dropbox.Api.Sharing.GetFileMetadataBatchArg.GetFileMetadataBatchArg
+- uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: '!:System.Collections.Generic.IEnumerable{System.String}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<String>
+  nameWithType: System.Collections.Generic.IEnumerable<String>
+  fullName: System.Collections.Generic.IEnumerable<System.String>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of String)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.String)
+  name.vb: System.Collections.Generic.IEnumerable(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.FileAction}
+  commentId: '!:System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.FileAction}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<FileAction>
+  nameWithType: System.Collections.Generic.IEnumerable<FileAction>
+  fullName: System.Collections.Generic.IEnumerable<Dropbox.Api.Sharing.FileAction>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of FileAction)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Dropbox.Api.Sharing.FileAction)
+  name.vb: System.Collections.Generic.IEnumerable(Of FileAction)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Sharing.FileAction
+    name: FileAction
+    nameWithType: FileAction
+    fullName: Dropbox.Api.Sharing.FileAction
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Sharing.FileAction
+    name: FileAction
+    nameWithType: FileAction
+    fullName: Dropbox.Api.Sharing.FileAction
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: System.Collections.Generic.IEnumerable<>
+  nameWithType: System.Collections.Generic.IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: System.Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Sharing.GetFileMetadataBatchArg.Files*
+  commentId: Overload:Dropbox.Api.Sharing.GetFileMetadataBatchArg.Files
+  name: Files
+  nameWithType: GetFileMetadataBatchArg.Files
+  fullName: Dropbox.Api.Sharing.GetFileMetadataBatchArg.Files
+- uid: System.Collections.Generic.IList{System.String}
+  commentId: '!:System.Collections.Generic.IList{System.String}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<String>
+  nameWithType: System.Collections.Generic.IList<String>
+  fullName: System.Collections.Generic.IList<System.String>
+  nameWithType.vb: System.Collections.Generic.IList(Of String)
+  fullName.vb: System.Collections.Generic.IList(Of System.String)
+  name.vb: System.Collections.Generic.IList(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  isExternal: true
+  name: System.Collections.Generic.IList<>
+  nameWithType: System.Collections.Generic.IList<>
+  fullName: System.Collections.Generic.IList<>
+  nameWithType.vb: System.Collections.Generic.IList(Of )
+  fullName.vb: System.Collections.Generic.IList(Of )
+  name.vb: System.Collections.Generic.IList(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Sharing.GetFileMetadataBatchArg.Actions*
+  commentId: Overload:Dropbox.Api.Sharing.GetFileMetadataBatchArg.Actions
+  name: Actions
+  nameWithType: GetFileMetadataBatchArg.Actions
+  fullName: Dropbox.Api.Sharing.GetFileMetadataBatchArg.Actions
+- uid: System.Collections.Generic.IList{Dropbox.Api.Sharing.FileAction}
+  commentId: '!:System.Collections.Generic.IList{Dropbox.Api.Sharing.FileAction}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<FileAction>
+  nameWithType: System.Collections.Generic.IList<FileAction>
+  fullName: System.Collections.Generic.IList<Dropbox.Api.Sharing.FileAction>
+  nameWithType.vb: System.Collections.Generic.IList(Of FileAction)
+  fullName.vb: System.Collections.Generic.IList(Of Dropbox.Api.Sharing.FileAction)
+  name.vb: System.Collections.Generic.IList(Of FileAction)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Sharing.FileAction
+    name: FileAction
+    nameWithType: FileAction
+    fullName: Dropbox.Api.Sharing.FileAction
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Sharing.FileAction
+    name: FileAction
+    nameWithType: FileAction
+    fullName: Dropbox.Api.Sharing.FileAction
+  - name: )
+    nameWithType: )
+    fullName: )
+shouldSkipMarkup: true

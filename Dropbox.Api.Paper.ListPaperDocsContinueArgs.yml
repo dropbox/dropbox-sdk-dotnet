@@ -1,0 +1,196 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Paper.ListPaperDocsContinueArgs
+  commentId: T:Dropbox.Api.Paper.ListPaperDocsContinueArgs
+  id: ListPaperDocsContinueArgs
+  parent: Dropbox.Api.Paper
+  children:
+  - Dropbox.Api.Paper.ListPaperDocsContinueArgs.#ctor
+  - Dropbox.Api.Paper.ListPaperDocsContinueArgs.#ctor(System.String)
+  - Dropbox.Api.Paper.ListPaperDocsContinueArgs.Cursor
+  langs:
+  - csharp
+  - vb
+  name: ListPaperDocsContinueArgs
+  nameWithType: ListPaperDocsContinueArgs
+  fullName: Dropbox.Api.Paper.ListPaperDocsContinueArgs
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/ListPaperDocsContinueArgs.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ListPaperDocsContinueArgs
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/ListPaperDocsContinueArgs.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>The list paper docs continue args object</p>\n"
+  example: []
+  syntax:
+    content: 'public class ListPaperDocsContinueArgs : object'
+    content.vb: >-
+      Public Class ListPaperDocsContinueArgs
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Paper.ListPaperDocsContinueArgs.#ctor(System.String)
+  commentId: M:Dropbox.Api.Paper.ListPaperDocsContinueArgs.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.Paper.ListPaperDocsContinueArgs
+  langs:
+  - csharp
+  - vb
+  name: ListPaperDocsContinueArgs(String)
+  nameWithType: ListPaperDocsContinueArgs.ListPaperDocsContinueArgs(String)
+  fullName: Dropbox.Api.Paper.ListPaperDocsContinueArgs.ListPaperDocsContinueArgs(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/ListPaperDocsContinueArgs.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/ListPaperDocsContinueArgs.cs
+    startLine: 37
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Paper.ListPaperDocsContinueArgs\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public ListPaperDocsContinueArgs(string cursor)
+    parameters:
+    - id: cursor
+      type: System.String
+      description: >-
+        The cursor obtained from <xref href="Dropbox.Api.Paper.Routes.PaperUserRoutes.DocsListAsync(Dropbox.Api.Paper.ListPaperDocsArgs)" data-throw-if-not-resolved="false"></xref> or <xref href="Dropbox.Api.Paper.Routes.PaperUserRoutes.DocsListContinueAsync(Dropbox.Api.Paper.ListPaperDocsContinueArgs)" data-throw-if-not-resolved="false"></xref>. Allows
+
+        for pagination.
+    content.vb: Public Sub New(cursor As String)
+  overload: Dropbox.Api.Paper.ListPaperDocsContinueArgs.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Paper.ListPaperDocsContinueArgs.#ctor
+  commentId: M:Dropbox.Api.Paper.ListPaperDocsContinueArgs.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Paper.ListPaperDocsContinueArgs
+  langs:
+  - csharp
+  - vb
+  name: ListPaperDocsContinueArgs()
+  nameWithType: ListPaperDocsContinueArgs.ListPaperDocsContinueArgs()
+  fullName: Dropbox.Api.Paper.ListPaperDocsContinueArgs.ListPaperDocsContinueArgs()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/ListPaperDocsContinueArgs.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/ListPaperDocsContinueArgs.cs
+    startLine: 53
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Paper.ListPaperDocsContinueArgs\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public ListPaperDocsContinueArgs()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Paper.ListPaperDocsContinueArgs.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Paper.ListPaperDocsContinueArgs.Cursor
+  commentId: P:Dropbox.Api.Paper.ListPaperDocsContinueArgs.Cursor
+  id: Cursor
+  parent: Dropbox.Api.Paper.ListPaperDocsContinueArgs
+  langs:
+  - csharp
+  - vb
+  name: Cursor
+  nameWithType: ListPaperDocsContinueArgs.Cursor
+  fullName: Dropbox.Api.Paper.ListPaperDocsContinueArgs.Cursor
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/ListPaperDocsContinueArgs.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Cursor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/ListPaperDocsContinueArgs.cs
+    startLine: 64
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>The cursor obtained from <xref href=\"Dropbox.Api.Paper.Routes.PaperUserRoutes.DocsListAsync(Dropbox.Api.Paper.ListPaperDocsArgs)\" data-throw-if-not-resolved=\"false\"></xref> or <xref href=\"Dropbox.Api.Paper.Routes.PaperUserRoutes.DocsListContinueAsync(Dropbox.Api.Paper.ListPaperDocsContinueArgs)\" data-throw-if-not-resolved=\"false\"></xref>. Allows\nfor pagination.</p>\n"
+  example: []
+  syntax:
+    content: public string Cursor { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Cursor As String
+  overload: Dropbox.Api.Paper.ListPaperDocsContinueArgs.Cursor*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Paper
+  commentId: N:Dropbox.Api.Paper
+  name: Dropbox.Api.Paper
+  nameWithType: Dropbox.Api.Paper
+  fullName: Dropbox.Api.Paper
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Paper.ListPaperDocsContinueArgs
+  commentId: T:Dropbox.Api.Paper.ListPaperDocsContinueArgs
+  parent: Dropbox.Api.Paper
+  name: ListPaperDocsContinueArgs
+  nameWithType: ListPaperDocsContinueArgs
+  fullName: Dropbox.Api.Paper.ListPaperDocsContinueArgs
+- uid: Dropbox.Api.Paper.Routes.PaperUserRoutes.DocsListAsync(Dropbox.Api.Paper.ListPaperDocsArgs)
+  commentId: M:Dropbox.Api.Paper.Routes.PaperUserRoutes.DocsListAsync(Dropbox.Api.Paper.ListPaperDocsArgs)
+  isExternal: true
+- uid: Dropbox.Api.Paper.Routes.PaperUserRoutes.DocsListContinueAsync(Dropbox.Api.Paper.ListPaperDocsContinueArgs)
+  commentId: M:Dropbox.Api.Paper.Routes.PaperUserRoutes.DocsListContinueAsync(Dropbox.Api.Paper.ListPaperDocsContinueArgs)
+  isExternal: true
+- uid: Dropbox.Api.Paper.ListPaperDocsContinueArgs.#ctor*
+  commentId: Overload:Dropbox.Api.Paper.ListPaperDocsContinueArgs.#ctor
+  name: ListPaperDocsContinueArgs
+  nameWithType: ListPaperDocsContinueArgs.ListPaperDocsContinueArgs
+  fullName: Dropbox.Api.Paper.ListPaperDocsContinueArgs.ListPaperDocsContinueArgs
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Paper.ListPaperDocsContinueArgs.Cursor*
+  commentId: Overload:Dropbox.Api.Paper.ListPaperDocsContinueArgs.Cursor
+  name: Cursor
+  nameWithType: ListPaperDocsContinueArgs.Cursor
+  fullName: Dropbox.Api.Paper.ListPaperDocsContinueArgs.Cursor
+shouldSkipMarkup: true

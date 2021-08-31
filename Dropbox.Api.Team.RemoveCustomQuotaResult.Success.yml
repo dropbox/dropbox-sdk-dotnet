@@ -1,0 +1,201 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.RemoveCustomQuotaResult.Success
+  commentId: T:Dropbox.Api.Team.RemoveCustomQuotaResult.Success
+  id: RemoveCustomQuotaResult.Success
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.RemoveCustomQuotaResult.Success.#ctor(Dropbox.Api.Team.UserSelectorArg)
+  - Dropbox.Api.Team.RemoveCustomQuotaResult.Success.Value
+  langs:
+  - csharp
+  - vb
+  name: RemoveCustomQuotaResult.Success
+  nameWithType: RemoveCustomQuotaResult.Success
+  fullName: Dropbox.Api.Team.RemoveCustomQuotaResult.Success
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RemoveCustomQuotaResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Success
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RemoveCustomQuotaResult.cs
+    startLine: 183
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Successfully removed user.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Success : RemoveCustomQuotaResult'
+    content.vb: >-
+      Public NotInheritable Class Success
+          Inherits RemoveCustomQuotaResult
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.RemoveCustomQuotaResult
+  inheritedMembers:
+  - Dropbox.Api.Team.RemoveCustomQuotaResult.IsSuccess
+  - Dropbox.Api.Team.RemoveCustomQuotaResult.AsSuccess
+  - Dropbox.Api.Team.RemoveCustomQuotaResult.IsInvalidUser
+  - Dropbox.Api.Team.RemoveCustomQuotaResult.AsInvalidUser
+  - Dropbox.Api.Team.RemoveCustomQuotaResult.IsOther
+  - Dropbox.Api.Team.RemoveCustomQuotaResult.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Team.RemoveCustomQuotaResult.Success.#ctor(Dropbox.Api.Team.UserSelectorArg)
+  commentId: M:Dropbox.Api.Team.RemoveCustomQuotaResult.Success.#ctor(Dropbox.Api.Team.UserSelectorArg)
+  id: '#ctor(Dropbox.Api.Team.UserSelectorArg)'
+  parent: Dropbox.Api.Team.RemoveCustomQuotaResult.Success
+  langs:
+  - csharp
+  - vb
+  name: Success(UserSelectorArg)
+  nameWithType: RemoveCustomQuotaResult.Success.Success(UserSelectorArg)
+  fullName: Dropbox.Api.Team.RemoveCustomQuotaResult.Success.Success(Dropbox.Api.Team.UserSelectorArg)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RemoveCustomQuotaResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RemoveCustomQuotaResult.cs
+    startLine: 201
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.RemoveCustomQuotaResult.Success\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public Success(UserSelectorArg value)
+    parameters:
+    - id: value
+      type: Dropbox.Api.Team.UserSelectorArg
+      description: The value
+    content.vb: Public Sub New(value As UserSelectorArg)
+  overload: Dropbox.Api.Team.RemoveCustomQuotaResult.Success.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.RemoveCustomQuotaResult.Success.Value
+  commentId: P:Dropbox.Api.Team.RemoveCustomQuotaResult.Success.Value
+  id: Value
+  parent: Dropbox.Api.Team.RemoveCustomQuotaResult.Success
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: RemoveCustomQuotaResult.Success.Value
+  fullName: Dropbox.Api.Team.RemoveCustomQuotaResult.Success.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RemoveCustomQuotaResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RemoveCustomQuotaResult.cs
+    startLine: 215
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public UserSelectorArg Value { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.UserSelectorArg
+    content.vb: Public ReadOnly Property Value As UserSelectorArg
+  overload: Dropbox.Api.Team.RemoveCustomQuotaResult.Success.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.RemoveCustomQuotaResult
+  commentId: T:Dropbox.Api.Team.RemoveCustomQuotaResult
+  parent: Dropbox.Api.Team
+  name: RemoveCustomQuotaResult
+  nameWithType: RemoveCustomQuotaResult
+  fullName: Dropbox.Api.Team.RemoveCustomQuotaResult
+- uid: Dropbox.Api.Team.RemoveCustomQuotaResult.IsSuccess
+  commentId: P:Dropbox.Api.Team.RemoveCustomQuotaResult.IsSuccess
+  parent: Dropbox.Api.Team.RemoveCustomQuotaResult
+  name: IsSuccess
+  nameWithType: RemoveCustomQuotaResult.IsSuccess
+  fullName: Dropbox.Api.Team.RemoveCustomQuotaResult.IsSuccess
+- uid: Dropbox.Api.Team.RemoveCustomQuotaResult.AsSuccess
+  commentId: P:Dropbox.Api.Team.RemoveCustomQuotaResult.AsSuccess
+  parent: Dropbox.Api.Team.RemoveCustomQuotaResult
+  name: AsSuccess
+  nameWithType: RemoveCustomQuotaResult.AsSuccess
+  fullName: Dropbox.Api.Team.RemoveCustomQuotaResult.AsSuccess
+- uid: Dropbox.Api.Team.RemoveCustomQuotaResult.IsInvalidUser
+  commentId: P:Dropbox.Api.Team.RemoveCustomQuotaResult.IsInvalidUser
+  parent: Dropbox.Api.Team.RemoveCustomQuotaResult
+  name: IsInvalidUser
+  nameWithType: RemoveCustomQuotaResult.IsInvalidUser
+  fullName: Dropbox.Api.Team.RemoveCustomQuotaResult.IsInvalidUser
+- uid: Dropbox.Api.Team.RemoveCustomQuotaResult.AsInvalidUser
+  commentId: P:Dropbox.Api.Team.RemoveCustomQuotaResult.AsInvalidUser
+  parent: Dropbox.Api.Team.RemoveCustomQuotaResult
+  name: AsInvalidUser
+  nameWithType: RemoveCustomQuotaResult.AsInvalidUser
+  fullName: Dropbox.Api.Team.RemoveCustomQuotaResult.AsInvalidUser
+- uid: Dropbox.Api.Team.RemoveCustomQuotaResult.IsOther
+  commentId: P:Dropbox.Api.Team.RemoveCustomQuotaResult.IsOther
+  parent: Dropbox.Api.Team.RemoveCustomQuotaResult
+  name: IsOther
+  nameWithType: RemoveCustomQuotaResult.IsOther
+  fullName: Dropbox.Api.Team.RemoveCustomQuotaResult.IsOther
+- uid: Dropbox.Api.Team.RemoveCustomQuotaResult.AsOther
+  commentId: P:Dropbox.Api.Team.RemoveCustomQuotaResult.AsOther
+  parent: Dropbox.Api.Team.RemoveCustomQuotaResult
+  name: AsOther
+  nameWithType: RemoveCustomQuotaResult.AsOther
+  fullName: Dropbox.Api.Team.RemoveCustomQuotaResult.AsOther
+- uid: Dropbox.Api.Team.RemoveCustomQuotaResult.Success
+  commentId: T:Dropbox.Api.Team.RemoveCustomQuotaResult.Success
+  parent: Dropbox.Api.Team
+  name: RemoveCustomQuotaResult.Success
+  nameWithType: RemoveCustomQuotaResult.Success
+  fullName: Dropbox.Api.Team.RemoveCustomQuotaResult.Success
+- uid: Dropbox.Api.Team.RemoveCustomQuotaResult.Success.#ctor*
+  commentId: Overload:Dropbox.Api.Team.RemoveCustomQuotaResult.Success.#ctor
+  name: Success
+  nameWithType: RemoveCustomQuotaResult.Success.Success
+  fullName: Dropbox.Api.Team.RemoveCustomQuotaResult.Success.Success
+- uid: Dropbox.Api.Team.UserSelectorArg
+  commentId: T:Dropbox.Api.Team.UserSelectorArg
+  parent: Dropbox.Api.Team
+  name: UserSelectorArg
+  nameWithType: UserSelectorArg
+  fullName: Dropbox.Api.Team.UserSelectorArg
+- uid: Dropbox.Api.Team.RemoveCustomQuotaResult.Success.Value*
+  commentId: Overload:Dropbox.Api.Team.RemoveCustomQuotaResult.Success.Value
+  name: Value
+  nameWithType: RemoveCustomQuotaResult.Success.Value
+  fullName: Dropbox.Api.Team.RemoveCustomQuotaResult.Success.Value
+shouldSkipMarkup: true

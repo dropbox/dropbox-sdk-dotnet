@@ -1,0 +1,291 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.GetSharedLinkMetadataArg
+  commentId: T:Dropbox.Api.Sharing.GetSharedLinkMetadataArg
+  id: GetSharedLinkMetadataArg
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.GetSharedLinkMetadataArg.#ctor
+  - Dropbox.Api.Sharing.GetSharedLinkMetadataArg.#ctor(System.String,System.String,System.String)
+  - Dropbox.Api.Sharing.GetSharedLinkMetadataArg.LinkPassword
+  - Dropbox.Api.Sharing.GetSharedLinkMetadataArg.Path
+  - Dropbox.Api.Sharing.GetSharedLinkMetadataArg.Url
+  langs:
+  - csharp
+  - vb
+  name: GetSharedLinkMetadataArg
+  nameWithType: GetSharedLinkMetadataArg
+  fullName: Dropbox.Api.Sharing.GetSharedLinkMetadataArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetSharedLinkMetadataArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GetSharedLinkMetadataArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetSharedLinkMetadataArg.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The get shared link metadata arg object</p>\n"
+  example: []
+  syntax:
+    content: 'public class GetSharedLinkMetadataArg : object'
+    content.vb: >-
+      Public Class GetSharedLinkMetadataArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Sharing.GetSharedLinkMetadataArg.#ctor(System.String,System.String,System.String)
+  commentId: M:Dropbox.Api.Sharing.GetSharedLinkMetadataArg.#ctor(System.String,System.String,System.String)
+  id: '#ctor(System.String,System.String,System.String)'
+  parent: Dropbox.Api.Sharing.GetSharedLinkMetadataArg
+  langs:
+  - csharp
+  - vb
+  name: GetSharedLinkMetadataArg(String, String, String)
+  nameWithType: GetSharedLinkMetadataArg.GetSharedLinkMetadataArg(String, String, String)
+  fullName: Dropbox.Api.Sharing.GetSharedLinkMetadataArg.GetSharedLinkMetadataArg(System.String, System.String, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetSharedLinkMetadataArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetSharedLinkMetadataArg.cs
+    startLine: 39
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.GetSharedLinkMetadataArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public GetSharedLinkMetadataArg(string url, string path = null, string linkPassword = null)
+    parameters:
+    - id: url
+      type: System.String
+      description: URL of the shared link.
+    - id: path
+      type: System.String
+      description: >-
+        If the shared link is to a folder, this parameter can be used to
+
+        retrieve the metadata for a specific file or sub-folder in this folder. A relative
+
+        path should be used.
+    - id: linkPassword
+      type: System.String
+      description: >-
+        If the shared link has a password, this parameter can be
+
+        used.
+    content.vb: Public Sub New(url As String, path As String = Nothing, linkPassword As String = Nothing)
+  overload: Dropbox.Api.Sharing.GetSharedLinkMetadataArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.GetSharedLinkMetadataArg.#ctor
+  commentId: M:Dropbox.Api.Sharing.GetSharedLinkMetadataArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Sharing.GetSharedLinkMetadataArg
+  langs:
+  - csharp
+  - vb
+  name: GetSharedLinkMetadataArg()
+  nameWithType: GetSharedLinkMetadataArg.GetSharedLinkMetadataArg()
+  fullName: Dropbox.Api.Sharing.GetSharedLinkMetadataArg.GetSharedLinkMetadataArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetSharedLinkMetadataArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetSharedLinkMetadataArg.cs
+    startLine: 67
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.GetSharedLinkMetadataArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public GetSharedLinkMetadataArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Sharing.GetSharedLinkMetadataArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.GetSharedLinkMetadataArg.Url
+  commentId: P:Dropbox.Api.Sharing.GetSharedLinkMetadataArg.Url
+  id: Url
+  parent: Dropbox.Api.Sharing.GetSharedLinkMetadataArg
+  langs:
+  - csharp
+  - vb
+  name: Url
+  nameWithType: GetSharedLinkMetadataArg.Url
+  fullName: Dropbox.Api.Sharing.GetSharedLinkMetadataArg.Url
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetSharedLinkMetadataArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Url
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetSharedLinkMetadataArg.cs
+    startLine: 75
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>URL of the shared link.</p>\n"
+  example: []
+  syntax:
+    content: public string Url { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Url As String
+  overload: Dropbox.Api.Sharing.GetSharedLinkMetadataArg.Url*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.GetSharedLinkMetadataArg.Path
+  commentId: P:Dropbox.Api.Sharing.GetSharedLinkMetadataArg.Path
+  id: Path
+  parent: Dropbox.Api.Sharing.GetSharedLinkMetadataArg
+  langs:
+  - csharp
+  - vb
+  name: Path
+  nameWithType: GetSharedLinkMetadataArg.Path
+  fullName: Dropbox.Api.Sharing.GetSharedLinkMetadataArg.Path
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetSharedLinkMetadataArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Path
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetSharedLinkMetadataArg.cs
+    startLine: 82
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>If the shared link is to a folder, this parameter can be used to retrieve the\nmetadata for a specific file or sub-folder in this folder. A relative path should\nbe used.</p>\n"
+  example: []
+  syntax:
+    content: public string Path { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Path As String
+  overload: Dropbox.Api.Sharing.GetSharedLinkMetadataArg.Path*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.GetSharedLinkMetadataArg.LinkPassword
+  commentId: P:Dropbox.Api.Sharing.GetSharedLinkMetadataArg.LinkPassword
+  id: LinkPassword
+  parent: Dropbox.Api.Sharing.GetSharedLinkMetadataArg
+  langs:
+  - csharp
+  - vb
+  name: LinkPassword
+  nameWithType: GetSharedLinkMetadataArg.LinkPassword
+  fullName: Dropbox.Api.Sharing.GetSharedLinkMetadataArg.LinkPassword
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetSharedLinkMetadataArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: LinkPassword
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetSharedLinkMetadataArg.cs
+    startLine: 87
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>If the shared link has a password, this parameter can be used.</p>\n"
+  example: []
+  syntax:
+    content: public string LinkPassword { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property LinkPassword As String
+  overload: Dropbox.Api.Sharing.GetSharedLinkMetadataArg.LinkPassword*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.GetSharedLinkMetadataArg
+  commentId: T:Dropbox.Api.Sharing.GetSharedLinkMetadataArg
+  parent: Dropbox.Api.Sharing
+  name: GetSharedLinkMetadataArg
+  nameWithType: GetSharedLinkMetadataArg
+  fullName: Dropbox.Api.Sharing.GetSharedLinkMetadataArg
+- uid: Dropbox.Api.Sharing.GetSharedLinkMetadataArg.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.GetSharedLinkMetadataArg.#ctor
+  name: GetSharedLinkMetadataArg
+  nameWithType: GetSharedLinkMetadataArg.GetSharedLinkMetadataArg
+  fullName: Dropbox.Api.Sharing.GetSharedLinkMetadataArg.GetSharedLinkMetadataArg
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Sharing.GetSharedLinkMetadataArg.Url*
+  commentId: Overload:Dropbox.Api.Sharing.GetSharedLinkMetadataArg.Url
+  name: Url
+  nameWithType: GetSharedLinkMetadataArg.Url
+  fullName: Dropbox.Api.Sharing.GetSharedLinkMetadataArg.Url
+- uid: Dropbox.Api.Sharing.GetSharedLinkMetadataArg.Path*
+  commentId: Overload:Dropbox.Api.Sharing.GetSharedLinkMetadataArg.Path
+  name: Path
+  nameWithType: GetSharedLinkMetadataArg.Path
+  fullName: Dropbox.Api.Sharing.GetSharedLinkMetadataArg.Path
+- uid: Dropbox.Api.Sharing.GetSharedLinkMetadataArg.LinkPassword*
+  commentId: Overload:Dropbox.Api.Sharing.GetSharedLinkMetadataArg.LinkPassword
+  name: LinkPassword
+  nameWithType: GetSharedLinkMetadataArg.LinkPassword
+  fullName: Dropbox.Api.Sharing.GetSharedLinkMetadataArg.LinkPassword
+shouldSkipMarkup: true

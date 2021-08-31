@@ -1,0 +1,258 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.UploadSessionStartArg
+  commentId: T:Dropbox.Api.Files.UploadSessionStartArg
+  id: UploadSessionStartArg
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.UploadSessionStartArg.#ctor
+  - Dropbox.Api.Files.UploadSessionStartArg.#ctor(System.Boolean,Dropbox.Api.Files.UploadSessionType)
+  - Dropbox.Api.Files.UploadSessionStartArg.Close
+  - Dropbox.Api.Files.UploadSessionStartArg.SessionType
+  langs:
+  - csharp
+  - vb
+  name: UploadSessionStartArg
+  nameWithType: UploadSessionStartArg
+  fullName: Dropbox.Api.Files.UploadSessionStartArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionStartArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: UploadSessionStartArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionStartArg.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The upload session start arg object</p>\n"
+  example: []
+  syntax:
+    content: 'public class UploadSessionStartArg : object'
+    content.vb: >-
+      Public Class UploadSessionStartArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.UploadSessionStartArg.#ctor(System.Boolean,Dropbox.Api.Files.UploadSessionType)
+  commentId: M:Dropbox.Api.Files.UploadSessionStartArg.#ctor(System.Boolean,Dropbox.Api.Files.UploadSessionType)
+  id: '#ctor(System.Boolean,Dropbox.Api.Files.UploadSessionType)'
+  parent: Dropbox.Api.Files.UploadSessionStartArg
+  langs:
+  - csharp
+  - vb
+  name: UploadSessionStartArg(Boolean, UploadSessionType)
+  nameWithType: UploadSessionStartArg.UploadSessionStartArg(Boolean, UploadSessionType)
+  fullName: Dropbox.Api.Files.UploadSessionStartArg.UploadSessionStartArg(System.Boolean, Dropbox.Api.Files.UploadSessionType)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionStartArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionStartArg.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.UploadSessionStartArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public UploadSessionStartArg(bool close = false, UploadSessionType sessionType = null)
+    parameters:
+    - id: close
+      type: System.Boolean
+      description: >-
+        If true, the current session will be closed, at which point you
+
+        won&apos;t be able to call <xref href="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async(Dropbox.Api.Files.UploadSessionAppendArg%2cSystem.IO.Stream)" data-throw-if-not-resolved="false"></xref>
+
+        anymore with the current session.
+    - id: sessionType
+      type: Dropbox.Api.Files.UploadSessionType
+      description: >-
+        Type of upload session you want to start. If not
+
+        specified, default is <xref href="Dropbox.Api.Files.UploadSessionType.Sequential" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Sub New(close As Boolean = False, sessionType As UploadSessionType = Nothing)
+  overload: Dropbox.Api.Files.UploadSessionStartArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.UploadSessionStartArg.#ctor
+  commentId: M:Dropbox.Api.Files.UploadSessionStartArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.UploadSessionStartArg
+  langs:
+  - csharp
+  - vb
+  name: UploadSessionStartArg()
+  nameWithType: UploadSessionStartArg.UploadSessionStartArg()
+  fullName: Dropbox.Api.Files.UploadSessionStartArg.UploadSessionStartArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionStartArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionStartArg.cs
+    startLine: 53
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.UploadSessionStartArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public UploadSessionStartArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.UploadSessionStartArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.UploadSessionStartArg.Close
+  commentId: P:Dropbox.Api.Files.UploadSessionStartArg.Close
+  id: Close
+  parent: Dropbox.Api.Files.UploadSessionStartArg
+  langs:
+  - csharp
+  - vb
+  name: Close
+  nameWithType: UploadSessionStartArg.Close
+  fullName: Dropbox.Api.Files.UploadSessionStartArg.Close
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionStartArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Close
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionStartArg.cs
+    startLine: 65
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>If true, the current session will be closed, at which point you won&apos;t be able\nto call <xref href=\"Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async(Dropbox.Api.Files.UploadSessionAppendArg%2cSystem.IO.Stream)\" data-throw-if-not-resolved=\"false\"></xref>\nanymore with the current session.</p>\n"
+  example: []
+  syntax:
+    content: public bool Close { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property Close As Boolean
+  overload: Dropbox.Api.Files.UploadSessionStartArg.Close*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.UploadSessionStartArg.SessionType
+  commentId: P:Dropbox.Api.Files.UploadSessionStartArg.SessionType
+  id: SessionType
+  parent: Dropbox.Api.Files.UploadSessionStartArg
+  langs:
+  - csharp
+  - vb
+  name: SessionType
+  nameWithType: UploadSessionStartArg.SessionType
+  fullName: Dropbox.Api.Files.UploadSessionStartArg.SessionType
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionStartArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SessionType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionStartArg.cs
+    startLine: 71
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Type of upload session you want to start. If not specified, default is <xref href=\"Dropbox.Api.Files.UploadSessionType.Sequential\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+  example: []
+  syntax:
+    content: public UploadSessionType SessionType { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.UploadSessionType
+    content.vb: Public Property SessionType As UploadSessionType
+  overload: Dropbox.Api.Files.UploadSessionStartArg.SessionType*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.UploadSessionStartArg
+  commentId: T:Dropbox.Api.Files.UploadSessionStartArg
+  parent: Dropbox.Api.Files
+  name: UploadSessionStartArg
+  nameWithType: UploadSessionStartArg
+  fullName: Dropbox.Api.Files.UploadSessionStartArg
+- uid: Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async(Dropbox.Api.Files.UploadSessionAppendArg,System.IO.Stream)
+  commentId: M:Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async(Dropbox.Api.Files.UploadSessionAppendArg,System.IO.Stream)
+  isExternal: true
+- uid: Dropbox.Api.Files.UploadSessionType.Sequential
+  commentId: T:Dropbox.Api.Files.UploadSessionType.Sequential
+  parent: Dropbox.Api.Files
+  name: UploadSessionType.Sequential
+  nameWithType: UploadSessionType.Sequential
+  fullName: Dropbox.Api.Files.UploadSessionType.Sequential
+- uid: Dropbox.Api.Files.UploadSessionStartArg.#ctor*
+  commentId: Overload:Dropbox.Api.Files.UploadSessionStartArg.#ctor
+  name: UploadSessionStartArg
+  nameWithType: UploadSessionStartArg.UploadSessionStartArg
+  fullName: Dropbox.Api.Files.UploadSessionStartArg.UploadSessionStartArg
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Files.UploadSessionType
+  commentId: T:Dropbox.Api.Files.UploadSessionType
+  parent: Dropbox.Api.Files
+  name: UploadSessionType
+  nameWithType: UploadSessionType
+  fullName: Dropbox.Api.Files.UploadSessionType
+- uid: Dropbox.Api.Files.UploadSessionStartArg.Close*
+  commentId: Overload:Dropbox.Api.Files.UploadSessionStartArg.Close
+  name: Close
+  nameWithType: UploadSessionStartArg.Close
+  fullName: Dropbox.Api.Files.UploadSessionStartArg.Close
+- uid: Dropbox.Api.Files.UploadSessionStartArg.SessionType*
+  commentId: Overload:Dropbox.Api.Files.UploadSessionStartArg.SessionType
+  name: SessionType
+  nameWithType: UploadSessionStartArg.SessionType
+  fullName: Dropbox.Api.Files.UploadSessionStartArg.SessionType
+shouldSkipMarkup: true

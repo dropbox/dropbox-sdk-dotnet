@@ -1,0 +1,146 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Users.UserFeaturesGetValuesBatchError.EmptyFeaturesList
+  commentId: T:Dropbox.Api.Users.UserFeaturesGetValuesBatchError.EmptyFeaturesList
+  id: UserFeaturesGetValuesBatchError.EmptyFeaturesList
+  parent: Dropbox.Api.Users
+  children:
+  - Dropbox.Api.Users.UserFeaturesGetValuesBatchError.EmptyFeaturesList.Instance
+  langs:
+  - csharp
+  - vb
+  name: UserFeaturesGetValuesBatchError.EmptyFeaturesList
+  nameWithType: UserFeaturesGetValuesBatchError.EmptyFeaturesList
+  fullName: Dropbox.Api.Users.UserFeaturesGetValuesBatchError.EmptyFeaturesList
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/UserFeaturesGetValuesBatchError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: EmptyFeaturesList
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/UserFeaturesGetValuesBatchError.cs
+    startLine: 154
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users
+  summary: "\n<p>At least one <xref href=\"Dropbox.Api.Users.UserFeature\" data-throw-if-not-resolved=\"false\"></xref> must be included in the <xref href=\"Dropbox.Api.Users.UserFeaturesGetValuesBatchArg\" data-throw-if-not-resolved=\"false\"></xref>.features list.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class EmptyFeaturesList : UserFeaturesGetValuesBatchError'
+    content.vb: >-
+      Public NotInheritable Class EmptyFeaturesList
+          Inherits UserFeaturesGetValuesBatchError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Users.UserFeaturesGetValuesBatchError
+  inheritedMembers:
+  - Dropbox.Api.Users.UserFeaturesGetValuesBatchError.IsEmptyFeaturesList
+  - Dropbox.Api.Users.UserFeaturesGetValuesBatchError.AsEmptyFeaturesList
+  - Dropbox.Api.Users.UserFeaturesGetValuesBatchError.IsOther
+  - Dropbox.Api.Users.UserFeaturesGetValuesBatchError.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Users.UserFeaturesGetValuesBatchError.EmptyFeaturesList.Instance
+  commentId: F:Dropbox.Api.Users.UserFeaturesGetValuesBatchError.EmptyFeaturesList.Instance
+  id: Instance
+  parent: Dropbox.Api.Users.UserFeaturesGetValuesBatchError.EmptyFeaturesList
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: UserFeaturesGetValuesBatchError.EmptyFeaturesList.Instance
+  fullName: Dropbox.Api.Users.UserFeaturesGetValuesBatchError.EmptyFeaturesList.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/UserFeaturesGetValuesBatchError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/UserFeaturesGetValuesBatchError.cs
+    startLine: 179
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users
+  summary: "\n<p>A singleton instance of EmptyFeaturesList</p>\n"
+  example: []
+  syntax:
+    content: public static readonly UserFeaturesGetValuesBatchError.EmptyFeaturesList Instance
+    return:
+      type: Dropbox.Api.Users.UserFeaturesGetValuesBatchError.EmptyFeaturesList
+    content.vb: Public Shared ReadOnly Instance As UserFeaturesGetValuesBatchError.EmptyFeaturesList
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Users.UserFeature
+  commentId: T:Dropbox.Api.Users.UserFeature
+  parent: Dropbox.Api.Users
+  name: UserFeature
+  nameWithType: UserFeature
+  fullName: Dropbox.Api.Users.UserFeature
+- uid: Dropbox.Api.Users.UserFeaturesGetValuesBatchArg
+  commentId: T:Dropbox.Api.Users.UserFeaturesGetValuesBatchArg
+  parent: Dropbox.Api.Users
+  name: UserFeaturesGetValuesBatchArg
+  nameWithType: UserFeaturesGetValuesBatchArg
+  fullName: Dropbox.Api.Users.UserFeaturesGetValuesBatchArg
+- uid: Dropbox.Api.Users
+  commentId: N:Dropbox.Api.Users
+  name: Dropbox.Api.Users
+  nameWithType: Dropbox.Api.Users
+  fullName: Dropbox.Api.Users
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Users.UserFeaturesGetValuesBatchError
+  commentId: T:Dropbox.Api.Users.UserFeaturesGetValuesBatchError
+  parent: Dropbox.Api.Users
+  name: UserFeaturesGetValuesBatchError
+  nameWithType: UserFeaturesGetValuesBatchError
+  fullName: Dropbox.Api.Users.UserFeaturesGetValuesBatchError
+- uid: Dropbox.Api.Users.UserFeaturesGetValuesBatchError.IsEmptyFeaturesList
+  commentId: P:Dropbox.Api.Users.UserFeaturesGetValuesBatchError.IsEmptyFeaturesList
+  parent: Dropbox.Api.Users.UserFeaturesGetValuesBatchError
+  name: IsEmptyFeaturesList
+  nameWithType: UserFeaturesGetValuesBatchError.IsEmptyFeaturesList
+  fullName: Dropbox.Api.Users.UserFeaturesGetValuesBatchError.IsEmptyFeaturesList
+- uid: Dropbox.Api.Users.UserFeaturesGetValuesBatchError.AsEmptyFeaturesList
+  commentId: P:Dropbox.Api.Users.UserFeaturesGetValuesBatchError.AsEmptyFeaturesList
+  parent: Dropbox.Api.Users.UserFeaturesGetValuesBatchError
+  name: AsEmptyFeaturesList
+  nameWithType: UserFeaturesGetValuesBatchError.AsEmptyFeaturesList
+  fullName: Dropbox.Api.Users.UserFeaturesGetValuesBatchError.AsEmptyFeaturesList
+- uid: Dropbox.Api.Users.UserFeaturesGetValuesBatchError.IsOther
+  commentId: P:Dropbox.Api.Users.UserFeaturesGetValuesBatchError.IsOther
+  parent: Dropbox.Api.Users.UserFeaturesGetValuesBatchError
+  name: IsOther
+  nameWithType: UserFeaturesGetValuesBatchError.IsOther
+  fullName: Dropbox.Api.Users.UserFeaturesGetValuesBatchError.IsOther
+- uid: Dropbox.Api.Users.UserFeaturesGetValuesBatchError.AsOther
+  commentId: P:Dropbox.Api.Users.UserFeaturesGetValuesBatchError.AsOther
+  parent: Dropbox.Api.Users.UserFeaturesGetValuesBatchError
+  name: AsOther
+  nameWithType: UserFeaturesGetValuesBatchError.AsOther
+  fullName: Dropbox.Api.Users.UserFeaturesGetValuesBatchError.AsOther
+- uid: Dropbox.Api.Users.UserFeaturesGetValuesBatchError.EmptyFeaturesList
+  commentId: T:Dropbox.Api.Users.UserFeaturesGetValuesBatchError.EmptyFeaturesList
+  parent: Dropbox.Api.Users
+  name: UserFeaturesGetValuesBatchError.EmptyFeaturesList
+  nameWithType: UserFeaturesGetValuesBatchError.EmptyFeaturesList
+  fullName: Dropbox.Api.Users.UserFeaturesGetValuesBatchError.EmptyFeaturesList
+shouldSkipMarkup: true

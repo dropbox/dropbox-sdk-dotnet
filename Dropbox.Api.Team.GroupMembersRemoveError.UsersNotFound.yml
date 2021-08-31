@@ -1,0 +1,416 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.GroupMembersRemoveError.UsersNotFound
+  commentId: T:Dropbox.Api.Team.GroupMembersRemoveError.UsersNotFound
+  id: GroupMembersRemoveError.UsersNotFound
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.GroupMembersRemoveError.UsersNotFound.#ctor(System.Collections.Generic.IEnumerable{System.String})
+  - Dropbox.Api.Team.GroupMembersRemoveError.UsersNotFound.Value
+  langs:
+  - csharp
+  - vb
+  name: GroupMembersRemoveError.UsersNotFound
+  nameWithType: GroupMembersRemoveError.UsersNotFound
+  fullName: Dropbox.Api.Team.GroupMembersRemoveError.UsersNotFound
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupMembersRemoveError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: UsersNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupMembersRemoveError.cs
+    startLine: 475
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>These users were not found in Dropbox.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class UsersNotFound : GroupMembersRemoveError'
+    content.vb: >-
+      Public NotInheritable Class UsersNotFound
+          Inherits GroupMembersRemoveError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.GroupMembersRemoveError
+  inheritedMembers:
+  - Dropbox.Api.Team.GroupMembersRemoveError.IsGroupNotInTeam
+  - Dropbox.Api.Team.GroupMembersRemoveError.AsGroupNotInTeam
+  - Dropbox.Api.Team.GroupMembersRemoveError.IsMembersNotInTeam
+  - Dropbox.Api.Team.GroupMembersRemoveError.AsMembersNotInTeam
+  - Dropbox.Api.Team.GroupMembersRemoveError.IsUsersNotFound
+  - Dropbox.Api.Team.GroupMembersRemoveError.AsUsersNotFound
+  - Dropbox.Api.Team.GroupMembersRemoveError.IsMemberNotInGroup
+  - Dropbox.Api.Team.GroupMembersRemoveError.AsMemberNotInGroup
+  - Dropbox.Api.Team.GroupMembersRemoveError.IsSystemManagedGroupDisallowed
+  - Dropbox.Api.Team.GroupMembersRemoveError.AsSystemManagedGroupDisallowed
+  - Dropbox.Api.Team.GroupMembersRemoveError.IsGroupNotFound
+  - Dropbox.Api.Team.GroupMembersRemoveError.AsGroupNotFound
+  - Dropbox.Api.Team.GroupMembersRemoveError.IsOther
+  - Dropbox.Api.Team.GroupMembersRemoveError.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Team.GroupMembersRemoveError.UsersNotFound.#ctor(System.Collections.Generic.IEnumerable{System.String})
+  commentId: M:Dropbox.Api.Team.GroupMembersRemoveError.UsersNotFound.#ctor(System.Collections.Generic.IEnumerable{System.String})
+  id: '#ctor(System.Collections.Generic.IEnumerable{System.String})'
+  parent: Dropbox.Api.Team.GroupMembersRemoveError.UsersNotFound
+  langs:
+  - csharp
+  - vb
+  name: UsersNotFound(System.Collections.Generic.IEnumerable<String>)
+  nameWithType: GroupMembersRemoveError.UsersNotFound.UsersNotFound(System.Collections.Generic.IEnumerable<String>)
+  fullName: Dropbox.Api.Team.GroupMembersRemoveError.UsersNotFound.UsersNotFound(System.Collections.Generic.IEnumerable<System.String>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupMembersRemoveError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupMembersRemoveError.cs
+    startLine: 494
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.GroupMembersRemoveError.UsersNotFound\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public UsersNotFound(System.Collections.Generic.IEnumerable<string> value)
+    parameters:
+    - id: value
+      type: System.Collections.Generic.IEnumerable{System.String}
+      description: The value
+    content.vb: Public Sub New(value As System.Collections.Generic.IEnumerable(Of String))
+  overload: Dropbox.Api.Team.GroupMembersRemoveError.UsersNotFound.#ctor*
+  nameWithType.vb: GroupMembersRemoveError.UsersNotFound.UsersNotFound(System.Collections.Generic.IEnumerable(Of String))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Team.GroupMembersRemoveError.UsersNotFound.UsersNotFound(System.Collections.Generic.IEnumerable(Of System.String))
+  name.vb: UsersNotFound(System.Collections.Generic.IEnumerable(Of String))
+- uid: Dropbox.Api.Team.GroupMembersRemoveError.UsersNotFound.Value
+  commentId: P:Dropbox.Api.Team.GroupMembersRemoveError.UsersNotFound.Value
+  id: Value
+  parent: Dropbox.Api.Team.GroupMembersRemoveError.UsersNotFound
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: GroupMembersRemoveError.UsersNotFound.Value
+  fullName: Dropbox.Api.Team.GroupMembersRemoveError.UsersNotFound.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupMembersRemoveError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupMembersRemoveError.cs
+    startLine: 509
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<string> Value { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{System.String}
+    content.vb: Public ReadOnly Property Value As System.Collections.Generic.IList(Of String)
+  overload: Dropbox.Api.Team.GroupMembersRemoveError.UsersNotFound.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.GroupMembersRemoveError
+  commentId: T:Dropbox.Api.Team.GroupMembersRemoveError
+  parent: Dropbox.Api.Team
+  name: GroupMembersRemoveError
+  nameWithType: GroupMembersRemoveError
+  fullName: Dropbox.Api.Team.GroupMembersRemoveError
+- uid: Dropbox.Api.Team.GroupMembersRemoveError.IsGroupNotInTeam
+  commentId: P:Dropbox.Api.Team.GroupMembersRemoveError.IsGroupNotInTeam
+  parent: Dropbox.Api.Team.GroupMembersRemoveError
+  name: IsGroupNotInTeam
+  nameWithType: GroupMembersRemoveError.IsGroupNotInTeam
+  fullName: Dropbox.Api.Team.GroupMembersRemoveError.IsGroupNotInTeam
+- uid: Dropbox.Api.Team.GroupMembersRemoveError.AsGroupNotInTeam
+  commentId: P:Dropbox.Api.Team.GroupMembersRemoveError.AsGroupNotInTeam
+  parent: Dropbox.Api.Team.GroupMembersRemoveError
+  name: AsGroupNotInTeam
+  nameWithType: GroupMembersRemoveError.AsGroupNotInTeam
+  fullName: Dropbox.Api.Team.GroupMembersRemoveError.AsGroupNotInTeam
+- uid: Dropbox.Api.Team.GroupMembersRemoveError.IsMembersNotInTeam
+  commentId: P:Dropbox.Api.Team.GroupMembersRemoveError.IsMembersNotInTeam
+  parent: Dropbox.Api.Team.GroupMembersRemoveError
+  name: IsMembersNotInTeam
+  nameWithType: GroupMembersRemoveError.IsMembersNotInTeam
+  fullName: Dropbox.Api.Team.GroupMembersRemoveError.IsMembersNotInTeam
+- uid: Dropbox.Api.Team.GroupMembersRemoveError.AsMembersNotInTeam
+  commentId: P:Dropbox.Api.Team.GroupMembersRemoveError.AsMembersNotInTeam
+  parent: Dropbox.Api.Team.GroupMembersRemoveError
+  name: AsMembersNotInTeam
+  nameWithType: GroupMembersRemoveError.AsMembersNotInTeam
+  fullName: Dropbox.Api.Team.GroupMembersRemoveError.AsMembersNotInTeam
+- uid: Dropbox.Api.Team.GroupMembersRemoveError.IsUsersNotFound
+  commentId: P:Dropbox.Api.Team.GroupMembersRemoveError.IsUsersNotFound
+  parent: Dropbox.Api.Team.GroupMembersRemoveError
+  name: IsUsersNotFound
+  nameWithType: GroupMembersRemoveError.IsUsersNotFound
+  fullName: Dropbox.Api.Team.GroupMembersRemoveError.IsUsersNotFound
+- uid: Dropbox.Api.Team.GroupMembersRemoveError.AsUsersNotFound
+  commentId: P:Dropbox.Api.Team.GroupMembersRemoveError.AsUsersNotFound
+  parent: Dropbox.Api.Team.GroupMembersRemoveError
+  name: AsUsersNotFound
+  nameWithType: GroupMembersRemoveError.AsUsersNotFound
+  fullName: Dropbox.Api.Team.GroupMembersRemoveError.AsUsersNotFound
+- uid: Dropbox.Api.Team.GroupMembersRemoveError.IsMemberNotInGroup
+  commentId: P:Dropbox.Api.Team.GroupMembersRemoveError.IsMemberNotInGroup
+  parent: Dropbox.Api.Team.GroupMembersRemoveError
+  name: IsMemberNotInGroup
+  nameWithType: GroupMembersRemoveError.IsMemberNotInGroup
+  fullName: Dropbox.Api.Team.GroupMembersRemoveError.IsMemberNotInGroup
+- uid: Dropbox.Api.Team.GroupMembersRemoveError.AsMemberNotInGroup
+  commentId: P:Dropbox.Api.Team.GroupMembersRemoveError.AsMemberNotInGroup
+  parent: Dropbox.Api.Team.GroupMembersRemoveError
+  name: AsMemberNotInGroup
+  nameWithType: GroupMembersRemoveError.AsMemberNotInGroup
+  fullName: Dropbox.Api.Team.GroupMembersRemoveError.AsMemberNotInGroup
+- uid: Dropbox.Api.Team.GroupMembersRemoveError.IsSystemManagedGroupDisallowed
+  commentId: P:Dropbox.Api.Team.GroupMembersRemoveError.IsSystemManagedGroupDisallowed
+  parent: Dropbox.Api.Team.GroupMembersRemoveError
+  name: IsSystemManagedGroupDisallowed
+  nameWithType: GroupMembersRemoveError.IsSystemManagedGroupDisallowed
+  fullName: Dropbox.Api.Team.GroupMembersRemoveError.IsSystemManagedGroupDisallowed
+- uid: Dropbox.Api.Team.GroupMembersRemoveError.AsSystemManagedGroupDisallowed
+  commentId: P:Dropbox.Api.Team.GroupMembersRemoveError.AsSystemManagedGroupDisallowed
+  parent: Dropbox.Api.Team.GroupMembersRemoveError
+  name: AsSystemManagedGroupDisallowed
+  nameWithType: GroupMembersRemoveError.AsSystemManagedGroupDisallowed
+  fullName: Dropbox.Api.Team.GroupMembersRemoveError.AsSystemManagedGroupDisallowed
+- uid: Dropbox.Api.Team.GroupMembersRemoveError.IsGroupNotFound
+  commentId: P:Dropbox.Api.Team.GroupMembersRemoveError.IsGroupNotFound
+  parent: Dropbox.Api.Team.GroupMembersRemoveError
+  name: IsGroupNotFound
+  nameWithType: GroupMembersRemoveError.IsGroupNotFound
+  fullName: Dropbox.Api.Team.GroupMembersRemoveError.IsGroupNotFound
+- uid: Dropbox.Api.Team.GroupMembersRemoveError.AsGroupNotFound
+  commentId: P:Dropbox.Api.Team.GroupMembersRemoveError.AsGroupNotFound
+  parent: Dropbox.Api.Team.GroupMembersRemoveError
+  name: AsGroupNotFound
+  nameWithType: GroupMembersRemoveError.AsGroupNotFound
+  fullName: Dropbox.Api.Team.GroupMembersRemoveError.AsGroupNotFound
+- uid: Dropbox.Api.Team.GroupMembersRemoveError.IsOther
+  commentId: P:Dropbox.Api.Team.GroupMembersRemoveError.IsOther
+  parent: Dropbox.Api.Team.GroupMembersRemoveError
+  name: IsOther
+  nameWithType: GroupMembersRemoveError.IsOther
+  fullName: Dropbox.Api.Team.GroupMembersRemoveError.IsOther
+- uid: Dropbox.Api.Team.GroupMembersRemoveError.AsOther
+  commentId: P:Dropbox.Api.Team.GroupMembersRemoveError.AsOther
+  parent: Dropbox.Api.Team.GroupMembersRemoveError
+  name: AsOther
+  nameWithType: GroupMembersRemoveError.AsOther
+  fullName: Dropbox.Api.Team.GroupMembersRemoveError.AsOther
+- uid: Dropbox.Api.Team.GroupMembersRemoveError.UsersNotFound
+  commentId: T:Dropbox.Api.Team.GroupMembersRemoveError.UsersNotFound
+  parent: Dropbox.Api.Team
+  name: GroupMembersRemoveError.UsersNotFound
+  nameWithType: GroupMembersRemoveError.UsersNotFound
+  fullName: Dropbox.Api.Team.GroupMembersRemoveError.UsersNotFound
+- uid: Dropbox.Api.Team.GroupMembersRemoveError.UsersNotFound.#ctor*
+  commentId: Overload:Dropbox.Api.Team.GroupMembersRemoveError.UsersNotFound.#ctor
+  name: UsersNotFound
+  nameWithType: GroupMembersRemoveError.UsersNotFound.UsersNotFound
+  fullName: Dropbox.Api.Team.GroupMembersRemoveError.UsersNotFound.UsersNotFound
+- uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: '!:System.Collections.Generic.IEnumerable{System.String}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<String>
+  nameWithType: System.Collections.Generic.IEnumerable<String>
+  fullName: System.Collections.Generic.IEnumerable<System.String>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of String)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.String)
+  name.vb: System.Collections.Generic.IEnumerable(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: System.Collections.Generic.IEnumerable<>
+  nameWithType: System.Collections.Generic.IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: System.Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Team.GroupMembersRemoveError.UsersNotFound.Value*
+  commentId: Overload:Dropbox.Api.Team.GroupMembersRemoveError.UsersNotFound.Value
+  name: Value
+  nameWithType: GroupMembersRemoveError.UsersNotFound.Value
+  fullName: Dropbox.Api.Team.GroupMembersRemoveError.UsersNotFound.Value
+- uid: System.Collections.Generic.IList{System.String}
+  commentId: '!:System.Collections.Generic.IList{System.String}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<String>
+  nameWithType: System.Collections.Generic.IList<String>
+  fullName: System.Collections.Generic.IList<System.String>
+  nameWithType.vb: System.Collections.Generic.IList(Of String)
+  fullName.vb: System.Collections.Generic.IList(Of System.String)
+  name.vb: System.Collections.Generic.IList(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  isExternal: true
+  name: System.Collections.Generic.IList<>
+  nameWithType: System.Collections.Generic.IList<>
+  fullName: System.Collections.Generic.IList<>
+  nameWithType.vb: System.Collections.Generic.IList(Of )
+  fullName.vb: System.Collections.Generic.IList(Of )
+  name.vb: System.Collections.Generic.IList(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+shouldSkipMarkup: true

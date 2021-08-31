@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.ShowcaseAccessGrantedType
+  commentId: T:Dropbox.Api.TeamLog.ShowcaseAccessGrantedType
+  id: ShowcaseAccessGrantedType
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.ShowcaseAccessGrantedType.#ctor
+  - Dropbox.Api.TeamLog.ShowcaseAccessGrantedType.#ctor(System.String)
+  - Dropbox.Api.TeamLog.ShowcaseAccessGrantedType.Description
+  langs:
+  - csharp
+  - vb
+  name: ShowcaseAccessGrantedType
+  nameWithType: ShowcaseAccessGrantedType
+  fullName: Dropbox.Api.TeamLog.ShowcaseAccessGrantedType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseAccessGrantedType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ShowcaseAccessGrantedType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseAccessGrantedType.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The showcase access granted type object</p>\n"
+  example: []
+  syntax:
+    content: 'public class ShowcaseAccessGrantedType : object'
+    content.vb: >-
+      Public Class ShowcaseAccessGrantedType
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.ShowcaseAccessGrantedType.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.ShowcaseAccessGrantedType.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.ShowcaseAccessGrantedType
+  langs:
+  - csharp
+  - vb
+  name: ShowcaseAccessGrantedType(String)
+  nameWithType: ShowcaseAccessGrantedType.ShowcaseAccessGrantedType(String)
+  fullName: Dropbox.Api.TeamLog.ShowcaseAccessGrantedType.ShowcaseAccessGrantedType(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseAccessGrantedType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseAccessGrantedType.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.ShowcaseAccessGrantedType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public ShowcaseAccessGrantedType(string description)
+    parameters:
+    - id: description
+      type: System.String
+      description: The description
+    content.vb: Public Sub New(description As String)
+  overload: Dropbox.Api.TeamLog.ShowcaseAccessGrantedType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.ShowcaseAccessGrantedType.#ctor
+  commentId: M:Dropbox.Api.TeamLog.ShowcaseAccessGrantedType.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.ShowcaseAccessGrantedType
+  langs:
+  - csharp
+  - vb
+  name: ShowcaseAccessGrantedType()
+  nameWithType: ShowcaseAccessGrantedType.ShowcaseAccessGrantedType()
+  fullName: Dropbox.Api.TeamLog.ShowcaseAccessGrantedType.ShowcaseAccessGrantedType()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseAccessGrantedType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseAccessGrantedType.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.ShowcaseAccessGrantedType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public ShowcaseAccessGrantedType()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.ShowcaseAccessGrantedType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.ShowcaseAccessGrantedType.Description
+  commentId: P:Dropbox.Api.TeamLog.ShowcaseAccessGrantedType.Description
+  id: Description
+  parent: Dropbox.Api.TeamLog.ShowcaseAccessGrantedType
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: ShowcaseAccessGrantedType.Description
+  fullName: Dropbox.Api.TeamLog.ShowcaseAccessGrantedType.Description
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseAccessGrantedType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Description
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseAccessGrantedType.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets the description of the showcase access granted type</p>\n"
+  example: []
+  syntax:
+    content: public string Description { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Dropbox.Api.TeamLog.ShowcaseAccessGrantedType.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.ShowcaseAccessGrantedType
+  commentId: T:Dropbox.Api.TeamLog.ShowcaseAccessGrantedType
+  parent: Dropbox.Api.TeamLog
+  name: ShowcaseAccessGrantedType
+  nameWithType: ShowcaseAccessGrantedType
+  fullName: Dropbox.Api.TeamLog.ShowcaseAccessGrantedType
+- uid: Dropbox.Api.TeamLog.ShowcaseAccessGrantedType.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.ShowcaseAccessGrantedType.#ctor
+  name: ShowcaseAccessGrantedType
+  nameWithType: ShowcaseAccessGrantedType.ShowcaseAccessGrantedType
+  fullName: Dropbox.Api.TeamLog.ShowcaseAccessGrantedType.ShowcaseAccessGrantedType
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.ShowcaseAccessGrantedType.Description*
+  commentId: Overload:Dropbox.Api.TeamLog.ShowcaseAccessGrantedType.Description
+  name: Description
+  nameWithType: ShowcaseAccessGrantedType.Description
+  fullName: Dropbox.Api.TeamLog.ShowcaseAccessGrantedType.Description
+shouldSkipMarkup: true

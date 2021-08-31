@@ -1,0 +1,190 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.GroupsListContinueArg
+  commentId: T:Dropbox.Api.Team.GroupsListContinueArg
+  id: GroupsListContinueArg
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.GroupsListContinueArg.#ctor
+  - Dropbox.Api.Team.GroupsListContinueArg.#ctor(System.String)
+  - Dropbox.Api.Team.GroupsListContinueArg.Cursor
+  langs:
+  - csharp
+  - vb
+  name: GroupsListContinueArg
+  nameWithType: GroupsListContinueArg
+  fullName: Dropbox.Api.Team.GroupsListContinueArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsListContinueArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GroupsListContinueArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsListContinueArg.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The groups list continue arg object</p>\n"
+  example: []
+  syntax:
+    content: 'public class GroupsListContinueArg : object'
+    content.vb: >-
+      Public Class GroupsListContinueArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.GroupsListContinueArg.#ctor(System.String)
+  commentId: M:Dropbox.Api.Team.GroupsListContinueArg.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.Team.GroupsListContinueArg
+  langs:
+  - csharp
+  - vb
+  name: GroupsListContinueArg(String)
+  nameWithType: GroupsListContinueArg.GroupsListContinueArg(String)
+  fullName: Dropbox.Api.Team.GroupsListContinueArg.GroupsListContinueArg(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsListContinueArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsListContinueArg.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.GroupsListContinueArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public GroupsListContinueArg(string cursor)
+    parameters:
+    - id: cursor
+      type: System.String
+      description: >-
+        Indicates from what point to get the next set of
+
+        groups.
+    content.vb: Public Sub New(cursor As String)
+  overload: Dropbox.Api.Team.GroupsListContinueArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.GroupsListContinueArg.#ctor
+  commentId: M:Dropbox.Api.Team.GroupsListContinueArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.GroupsListContinueArg
+  langs:
+  - csharp
+  - vb
+  name: GroupsListContinueArg()
+  nameWithType: GroupsListContinueArg.GroupsListContinueArg()
+  fullName: Dropbox.Api.Team.GroupsListContinueArg.GroupsListContinueArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsListContinueArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsListContinueArg.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.GroupsListContinueArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public GroupsListContinueArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.GroupsListContinueArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.GroupsListContinueArg.Cursor
+  commentId: P:Dropbox.Api.Team.GroupsListContinueArg.Cursor
+  id: Cursor
+  parent: Dropbox.Api.Team.GroupsListContinueArg
+  langs:
+  - csharp
+  - vb
+  name: Cursor
+  nameWithType: GroupsListContinueArg.Cursor
+  fullName: Dropbox.Api.Team.GroupsListContinueArg.Cursor
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsListContinueArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Cursor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsListContinueArg.cs
+    startLine: 59
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Indicates from what point to get the next set of groups.</p>\n"
+  example: []
+  syntax:
+    content: public string Cursor { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Cursor As String
+  overload: Dropbox.Api.Team.GroupsListContinueArg.Cursor*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.GroupsListContinueArg
+  commentId: T:Dropbox.Api.Team.GroupsListContinueArg
+  parent: Dropbox.Api.Team
+  name: GroupsListContinueArg
+  nameWithType: GroupsListContinueArg
+  fullName: Dropbox.Api.Team.GroupsListContinueArg
+- uid: Dropbox.Api.Team.GroupsListContinueArg.#ctor*
+  commentId: Overload:Dropbox.Api.Team.GroupsListContinueArg.#ctor
+  name: GroupsListContinueArg
+  nameWithType: GroupsListContinueArg.GroupsListContinueArg
+  fullName: Dropbox.Api.Team.GroupsListContinueArg.GroupsListContinueArg
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Team.GroupsListContinueArg.Cursor*
+  commentId: Overload:Dropbox.Api.Team.GroupsListContinueArg.Cursor
+  name: Cursor
+  nameWithType: GroupsListContinueArg.Cursor
+  fullName: Dropbox.Api.Team.GroupsListContinueArg.Cursor
+shouldSkipMarkup: true

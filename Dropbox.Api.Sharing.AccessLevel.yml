@@ -1,0 +1,567 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.AccessLevel
+  commentId: T:Dropbox.Api.Sharing.AccessLevel
+  id: AccessLevel
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.AccessLevel.#ctor
+  - Dropbox.Api.Sharing.AccessLevel.AsEditor
+  - Dropbox.Api.Sharing.AccessLevel.AsOther
+  - Dropbox.Api.Sharing.AccessLevel.AsOwner
+  - Dropbox.Api.Sharing.AccessLevel.AsViewer
+  - Dropbox.Api.Sharing.AccessLevel.AsViewerNoComment
+  - Dropbox.Api.Sharing.AccessLevel.IsEditor
+  - Dropbox.Api.Sharing.AccessLevel.IsOther
+  - Dropbox.Api.Sharing.AccessLevel.IsOwner
+  - Dropbox.Api.Sharing.AccessLevel.IsViewer
+  - Dropbox.Api.Sharing.AccessLevel.IsViewerNoComment
+  langs:
+  - csharp
+  - vb
+  name: AccessLevel
+  nameWithType: AccessLevel
+  fullName: Dropbox.Api.Sharing.AccessLevel
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AccessLevel.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AccessLevel
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AccessLevel.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Defines the access levels for collaborators.</p>\n"
+  example: []
+  syntax:
+    content: 'public class AccessLevel : object'
+    content.vb: >-
+      Public Class AccessLevel
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Sharing.AccessLevel.Editor
+  - Dropbox.Api.Sharing.AccessLevel.Other
+  - Dropbox.Api.Sharing.AccessLevel.Owner
+  - Dropbox.Api.Sharing.AccessLevel.Viewer
+  - Dropbox.Api.Sharing.AccessLevel.ViewerNoComment
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Sharing.AccessLevel.#ctor
+  commentId: M:Dropbox.Api.Sharing.AccessLevel.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Sharing.AccessLevel
+  langs:
+  - csharp
+  - vb
+  name: AccessLevel()
+  nameWithType: AccessLevel.AccessLevel()
+  fullName: Dropbox.Api.Sharing.AccessLevel.AccessLevel()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AccessLevel.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AccessLevel.cs
+    startLine: 32
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.AccessLevel\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public AccessLevel()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Sharing.AccessLevel.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.AccessLevel.IsOwner
+  commentId: P:Dropbox.Api.Sharing.AccessLevel.IsOwner
+  id: IsOwner
+  parent: Dropbox.Api.Sharing.AccessLevel
+  langs:
+  - csharp
+  - vb
+  name: IsOwner
+  nameWithType: AccessLevel.IsOwner
+  fullName: Dropbox.Api.Sharing.AccessLevel.IsOwner
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AccessLevel.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOwner
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AccessLevel.cs
+    startLine: 39
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is Owner</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOwner { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOwner As Boolean
+  overload: Dropbox.Api.Sharing.AccessLevel.IsOwner*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.AccessLevel.AsOwner
+  commentId: P:Dropbox.Api.Sharing.AccessLevel.AsOwner
+  id: AsOwner
+  parent: Dropbox.Api.Sharing.AccessLevel
+  langs:
+  - csharp
+  - vb
+  name: AsOwner
+  nameWithType: AccessLevel.AsOwner
+  fullName: Dropbox.Api.Sharing.AccessLevel.AsOwner
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AccessLevel.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOwner
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AccessLevel.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a Owner, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public AccessLevel.Owner AsOwner { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.AccessLevel.Owner
+    content.vb: Public ReadOnly Property AsOwner As AccessLevel.Owner
+  overload: Dropbox.Api.Sharing.AccessLevel.AsOwner*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.AccessLevel.IsEditor
+  commentId: P:Dropbox.Api.Sharing.AccessLevel.IsEditor
+  id: IsEditor
+  parent: Dropbox.Api.Sharing.AccessLevel
+  langs:
+  - csharp
+  - vb
+  name: IsEditor
+  nameWithType: AccessLevel.IsEditor
+  fullName: Dropbox.Api.Sharing.AccessLevel.IsEditor
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AccessLevel.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsEditor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AccessLevel.cs
+    startLine: 61
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is Editor</p>\n"
+  example: []
+  syntax:
+    content: public bool IsEditor { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsEditor As Boolean
+  overload: Dropbox.Api.Sharing.AccessLevel.IsEditor*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.AccessLevel.AsEditor
+  commentId: P:Dropbox.Api.Sharing.AccessLevel.AsEditor
+  id: AsEditor
+  parent: Dropbox.Api.Sharing.AccessLevel
+  langs:
+  - csharp
+  - vb
+  name: AsEditor
+  nameWithType: AccessLevel.AsEditor
+  fullName: Dropbox.Api.Sharing.AccessLevel.AsEditor
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AccessLevel.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsEditor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AccessLevel.cs
+    startLine: 72
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a Editor, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public AccessLevel.Editor AsEditor { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.AccessLevel.Editor
+    content.vb: Public ReadOnly Property AsEditor As AccessLevel.Editor
+  overload: Dropbox.Api.Sharing.AccessLevel.AsEditor*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.AccessLevel.IsViewer
+  commentId: P:Dropbox.Api.Sharing.AccessLevel.IsViewer
+  id: IsViewer
+  parent: Dropbox.Api.Sharing.AccessLevel
+  langs:
+  - csharp
+  - vb
+  name: IsViewer
+  nameWithType: AccessLevel.IsViewer
+  fullName: Dropbox.Api.Sharing.AccessLevel.IsViewer
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AccessLevel.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsViewer
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AccessLevel.cs
+    startLine: 83
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is Viewer</p>\n"
+  example: []
+  syntax:
+    content: public bool IsViewer { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsViewer As Boolean
+  overload: Dropbox.Api.Sharing.AccessLevel.IsViewer*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.AccessLevel.AsViewer
+  commentId: P:Dropbox.Api.Sharing.AccessLevel.AsViewer
+  id: AsViewer
+  parent: Dropbox.Api.Sharing.AccessLevel
+  langs:
+  - csharp
+  - vb
+  name: AsViewer
+  nameWithType: AccessLevel.AsViewer
+  fullName: Dropbox.Api.Sharing.AccessLevel.AsViewer
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AccessLevel.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsViewer
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AccessLevel.cs
+    startLine: 94
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a Viewer, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public AccessLevel.Viewer AsViewer { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.AccessLevel.Viewer
+    content.vb: Public ReadOnly Property AsViewer As AccessLevel.Viewer
+  overload: Dropbox.Api.Sharing.AccessLevel.AsViewer*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.AccessLevel.IsViewerNoComment
+  commentId: P:Dropbox.Api.Sharing.AccessLevel.IsViewerNoComment
+  id: IsViewerNoComment
+  parent: Dropbox.Api.Sharing.AccessLevel
+  langs:
+  - csharp
+  - vb
+  name: IsViewerNoComment
+  nameWithType: AccessLevel.IsViewerNoComment
+  fullName: Dropbox.Api.Sharing.AccessLevel.IsViewerNoComment
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AccessLevel.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsViewerNoComment
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AccessLevel.cs
+    startLine: 105
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is ViewerNoComment</p>\n"
+  example: []
+  syntax:
+    content: public bool IsViewerNoComment { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsViewerNoComment As Boolean
+  overload: Dropbox.Api.Sharing.AccessLevel.IsViewerNoComment*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.AccessLevel.AsViewerNoComment
+  commentId: P:Dropbox.Api.Sharing.AccessLevel.AsViewerNoComment
+  id: AsViewerNoComment
+  parent: Dropbox.Api.Sharing.AccessLevel
+  langs:
+  - csharp
+  - vb
+  name: AsViewerNoComment
+  nameWithType: AccessLevel.AsViewerNoComment
+  fullName: Dropbox.Api.Sharing.AccessLevel.AsViewerNoComment
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AccessLevel.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsViewerNoComment
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AccessLevel.cs
+    startLine: 116
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a ViewerNoComment, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public AccessLevel.ViewerNoComment AsViewerNoComment { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.AccessLevel.ViewerNoComment
+    content.vb: Public ReadOnly Property AsViewerNoComment As AccessLevel.ViewerNoComment
+  overload: Dropbox.Api.Sharing.AccessLevel.AsViewerNoComment*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.AccessLevel.IsOther
+  commentId: P:Dropbox.Api.Sharing.AccessLevel.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Sharing.AccessLevel
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: AccessLevel.IsOther
+  fullName: Dropbox.Api.Sharing.AccessLevel.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AccessLevel.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AccessLevel.cs
+    startLine: 127
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Sharing.AccessLevel.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.AccessLevel.AsOther
+  commentId: P:Dropbox.Api.Sharing.AccessLevel.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Sharing.AccessLevel
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: AccessLevel.AsOther
+  fullName: Dropbox.Api.Sharing.AccessLevel.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AccessLevel.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AccessLevel.cs
+    startLine: 138
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public AccessLevel.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.AccessLevel.Other
+    content.vb: Public ReadOnly Property AsOther As AccessLevel.Other
+  overload: Dropbox.Api.Sharing.AccessLevel.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.AccessLevel
+  commentId: T:Dropbox.Api.Sharing.AccessLevel
+  parent: Dropbox.Api.Sharing
+  name: AccessLevel
+  nameWithType: AccessLevel
+  fullName: Dropbox.Api.Sharing.AccessLevel
+- uid: Dropbox.Api.Sharing.AccessLevel.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.AccessLevel.#ctor
+  name: AccessLevel
+  nameWithType: AccessLevel.AccessLevel
+  fullName: Dropbox.Api.Sharing.AccessLevel.AccessLevel
+- uid: Dropbox.Api.Sharing.AccessLevel.IsOwner*
+  commentId: Overload:Dropbox.Api.Sharing.AccessLevel.IsOwner
+  name: IsOwner
+  nameWithType: AccessLevel.IsOwner
+  fullName: Dropbox.Api.Sharing.AccessLevel.IsOwner
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Sharing.AccessLevel.AsOwner*
+  commentId: Overload:Dropbox.Api.Sharing.AccessLevel.AsOwner
+  name: AsOwner
+  nameWithType: AccessLevel.AsOwner
+  fullName: Dropbox.Api.Sharing.AccessLevel.AsOwner
+- uid: Dropbox.Api.Sharing.AccessLevel.Owner
+  commentId: T:Dropbox.Api.Sharing.AccessLevel.Owner
+  parent: Dropbox.Api.Sharing
+  name: AccessLevel.Owner
+  nameWithType: AccessLevel.Owner
+  fullName: Dropbox.Api.Sharing.AccessLevel.Owner
+- uid: Dropbox.Api.Sharing.AccessLevel.IsEditor*
+  commentId: Overload:Dropbox.Api.Sharing.AccessLevel.IsEditor
+  name: IsEditor
+  nameWithType: AccessLevel.IsEditor
+  fullName: Dropbox.Api.Sharing.AccessLevel.IsEditor
+- uid: Dropbox.Api.Sharing.AccessLevel.AsEditor*
+  commentId: Overload:Dropbox.Api.Sharing.AccessLevel.AsEditor
+  name: AsEditor
+  nameWithType: AccessLevel.AsEditor
+  fullName: Dropbox.Api.Sharing.AccessLevel.AsEditor
+- uid: Dropbox.Api.Sharing.AccessLevel.Editor
+  commentId: T:Dropbox.Api.Sharing.AccessLevel.Editor
+  parent: Dropbox.Api.Sharing
+  name: AccessLevel.Editor
+  nameWithType: AccessLevel.Editor
+  fullName: Dropbox.Api.Sharing.AccessLevel.Editor
+- uid: Dropbox.Api.Sharing.AccessLevel.IsViewer*
+  commentId: Overload:Dropbox.Api.Sharing.AccessLevel.IsViewer
+  name: IsViewer
+  nameWithType: AccessLevel.IsViewer
+  fullName: Dropbox.Api.Sharing.AccessLevel.IsViewer
+- uid: Dropbox.Api.Sharing.AccessLevel.AsViewer*
+  commentId: Overload:Dropbox.Api.Sharing.AccessLevel.AsViewer
+  name: AsViewer
+  nameWithType: AccessLevel.AsViewer
+  fullName: Dropbox.Api.Sharing.AccessLevel.AsViewer
+- uid: Dropbox.Api.Sharing.AccessLevel.Viewer
+  commentId: T:Dropbox.Api.Sharing.AccessLevel.Viewer
+  parent: Dropbox.Api.Sharing
+  name: AccessLevel.Viewer
+  nameWithType: AccessLevel.Viewer
+  fullName: Dropbox.Api.Sharing.AccessLevel.Viewer
+- uid: Dropbox.Api.Sharing.AccessLevel.IsViewerNoComment*
+  commentId: Overload:Dropbox.Api.Sharing.AccessLevel.IsViewerNoComment
+  name: IsViewerNoComment
+  nameWithType: AccessLevel.IsViewerNoComment
+  fullName: Dropbox.Api.Sharing.AccessLevel.IsViewerNoComment
+- uid: Dropbox.Api.Sharing.AccessLevel.AsViewerNoComment*
+  commentId: Overload:Dropbox.Api.Sharing.AccessLevel.AsViewerNoComment
+  name: AsViewerNoComment
+  nameWithType: AccessLevel.AsViewerNoComment
+  fullName: Dropbox.Api.Sharing.AccessLevel.AsViewerNoComment
+- uid: Dropbox.Api.Sharing.AccessLevel.ViewerNoComment
+  commentId: T:Dropbox.Api.Sharing.AccessLevel.ViewerNoComment
+  parent: Dropbox.Api.Sharing
+  name: AccessLevel.ViewerNoComment
+  nameWithType: AccessLevel.ViewerNoComment
+  fullName: Dropbox.Api.Sharing.AccessLevel.ViewerNoComment
+- uid: Dropbox.Api.Sharing.AccessLevel.IsOther*
+  commentId: Overload:Dropbox.Api.Sharing.AccessLevel.IsOther
+  name: IsOther
+  nameWithType: AccessLevel.IsOther
+  fullName: Dropbox.Api.Sharing.AccessLevel.IsOther
+- uid: Dropbox.Api.Sharing.AccessLevel.AsOther*
+  commentId: Overload:Dropbox.Api.Sharing.AccessLevel.AsOther
+  name: AsOther
+  nameWithType: AccessLevel.AsOther
+  fullName: Dropbox.Api.Sharing.AccessLevel.AsOther
+- uid: Dropbox.Api.Sharing.AccessLevel.Other
+  commentId: T:Dropbox.Api.Sharing.AccessLevel.Other
+  parent: Dropbox.Api.Sharing
+  name: AccessLevel.Other
+  nameWithType: AccessLevel.Other
+  fullName: Dropbox.Api.Sharing.AccessLevel.Other
+shouldSkipMarkup: true

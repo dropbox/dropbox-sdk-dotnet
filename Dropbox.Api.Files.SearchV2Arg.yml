@@ -1,0 +1,433 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.SearchV2Arg
+  commentId: T:Dropbox.Api.Files.SearchV2Arg
+  id: SearchV2Arg
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.SearchV2Arg.#ctor
+  - Dropbox.Api.Files.SearchV2Arg.#ctor(System.String,Dropbox.Api.Files.SearchOptions,Dropbox.Api.Files.SearchMatchFieldOptions,System.Nullable{System.Boolean})
+  - Dropbox.Api.Files.SearchV2Arg.IncludeHighlights
+  - Dropbox.Api.Files.SearchV2Arg.MatchFieldOptions
+  - Dropbox.Api.Files.SearchV2Arg.Options
+  - Dropbox.Api.Files.SearchV2Arg.Query
+  langs:
+  - csharp
+  - vb
+  name: SearchV2Arg
+  nameWithType: SearchV2Arg
+  fullName: Dropbox.Api.Files.SearchV2Arg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchV2Arg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SearchV2Arg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchV2Arg.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The search v2 arg object</p>\n"
+  example: []
+  syntax:
+    content: 'public class SearchV2Arg : object'
+    content.vb: >-
+      Public Class SearchV2Arg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.SearchV2Arg.#ctor(System.String,Dropbox.Api.Files.SearchOptions,Dropbox.Api.Files.SearchMatchFieldOptions,System.Nullable{System.Boolean})
+  commentId: M:Dropbox.Api.Files.SearchV2Arg.#ctor(System.String,Dropbox.Api.Files.SearchOptions,Dropbox.Api.Files.SearchMatchFieldOptions,System.Nullable{System.Boolean})
+  id: '#ctor(System.String,Dropbox.Api.Files.SearchOptions,Dropbox.Api.Files.SearchMatchFieldOptions,System.Nullable{System.Boolean})'
+  parent: Dropbox.Api.Files.SearchV2Arg
+  langs:
+  - csharp
+  - vb
+  name: SearchV2Arg(String, SearchOptions, SearchMatchFieldOptions, Nullable<Boolean>)
+  nameWithType: SearchV2Arg.SearchV2Arg(String, SearchOptions, SearchMatchFieldOptions, Nullable<Boolean>)
+  fullName: Dropbox.Api.Files.SearchV2Arg.SearchV2Arg(System.String, Dropbox.Api.Files.SearchOptions, Dropbox.Api.Files.SearchMatchFieldOptions, System.Nullable<System.Boolean>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchV2Arg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchV2Arg.cs
+    startLine: 38
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.SearchV2Arg\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public SearchV2Arg(string query, SearchOptions options = null, SearchMatchFieldOptions matchFieldOptions = null, bool? includeHighlights = null)
+    parameters:
+    - id: query
+      type: System.String
+      description: >-
+        The string to search for. May match across multiple fields
+
+        based on the request arguments.
+    - id: options
+      type: Dropbox.Api.Files.SearchOptions
+      description: Options for more targeted search results.
+    - id: matchFieldOptions
+      type: Dropbox.Api.Files.SearchMatchFieldOptions
+      description: Options for search results match fields.
+    - id: includeHighlights
+      type: System.Nullable{System.Boolean}
+      description: >-
+        Deprecated and moved this option to
+
+        SearchMatchFieldOptions.
+    content.vb: Public Sub New(query As String, options As SearchOptions = Nothing, matchFieldOptions As SearchMatchFieldOptions = Nothing, includeHighlights As Boolean? = Nothing)
+  overload: Dropbox.Api.Files.SearchV2Arg.#ctor*
+  nameWithType.vb: SearchV2Arg.SearchV2Arg(String, SearchOptions, SearchMatchFieldOptions, Nullable(Of Boolean))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Files.SearchV2Arg.SearchV2Arg(System.String, Dropbox.Api.Files.SearchOptions, Dropbox.Api.Files.SearchMatchFieldOptions, System.Nullable(Of System.Boolean))
+  name.vb: SearchV2Arg(String, SearchOptions, SearchMatchFieldOptions, Nullable(Of Boolean))
+- uid: Dropbox.Api.Files.SearchV2Arg.#ctor
+  commentId: M:Dropbox.Api.Files.SearchV2Arg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.SearchV2Arg
+  langs:
+  - csharp
+  - vb
+  name: SearchV2Arg()
+  nameWithType: SearchV2Arg.SearchV2Arg()
+  fullName: Dropbox.Api.Files.SearchV2Arg.SearchV2Arg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchV2Arg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchV2Arg.cs
+    startLine: 63
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.SearchV2Arg\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public SearchV2Arg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.SearchV2Arg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.SearchV2Arg.Query
+  commentId: P:Dropbox.Api.Files.SearchV2Arg.Query
+  id: Query
+  parent: Dropbox.Api.Files.SearchV2Arg
+  langs:
+  - csharp
+  - vb
+  name: Query
+  nameWithType: SearchV2Arg.Query
+  fullName: Dropbox.Api.Files.SearchV2Arg.Query
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchV2Arg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Query
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchV2Arg.cs
+    startLine: 72
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The string to search for. May match across multiple fields based on the\nrequest arguments.</p>\n"
+  example: []
+  syntax:
+    content: public string Query { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Query As String
+  overload: Dropbox.Api.Files.SearchV2Arg.Query*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.SearchV2Arg.Options
+  commentId: P:Dropbox.Api.Files.SearchV2Arg.Options
+  id: Options
+  parent: Dropbox.Api.Files.SearchV2Arg
+  langs:
+  - csharp
+  - vb
+  name: Options
+  nameWithType: SearchV2Arg.Options
+  fullName: Dropbox.Api.Files.SearchV2Arg.Options
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchV2Arg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Options
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchV2Arg.cs
+    startLine: 77
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Options for more targeted search results.</p>\n"
+  example: []
+  syntax:
+    content: public SearchOptions Options { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.SearchOptions
+    content.vb: Public Property Options As SearchOptions
+  overload: Dropbox.Api.Files.SearchV2Arg.Options*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.SearchV2Arg.MatchFieldOptions
+  commentId: P:Dropbox.Api.Files.SearchV2Arg.MatchFieldOptions
+  id: MatchFieldOptions
+  parent: Dropbox.Api.Files.SearchV2Arg
+  langs:
+  - csharp
+  - vb
+  name: MatchFieldOptions
+  nameWithType: SearchV2Arg.MatchFieldOptions
+  fullName: Dropbox.Api.Files.SearchV2Arg.MatchFieldOptions
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchV2Arg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: MatchFieldOptions
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchV2Arg.cs
+    startLine: 82
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Options for search results match fields.</p>\n"
+  example: []
+  syntax:
+    content: public SearchMatchFieldOptions MatchFieldOptions { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.SearchMatchFieldOptions
+    content.vb: Public Property MatchFieldOptions As SearchMatchFieldOptions
+  overload: Dropbox.Api.Files.SearchV2Arg.MatchFieldOptions*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.SearchV2Arg.IncludeHighlights
+  commentId: P:Dropbox.Api.Files.SearchV2Arg.IncludeHighlights
+  id: IncludeHighlights
+  parent: Dropbox.Api.Files.SearchV2Arg
+  langs:
+  - csharp
+  - vb
+  name: IncludeHighlights
+  nameWithType: SearchV2Arg.IncludeHighlights
+  fullName: Dropbox.Api.Files.SearchV2Arg.IncludeHighlights
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchV2Arg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IncludeHighlights
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchV2Arg.cs
+    startLine: 87
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Deprecated and moved this option to SearchMatchFieldOptions.</p>\n"
+  example: []
+  syntax:
+    content: public bool? IncludeHighlights { get; protected set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Boolean}
+    content.vb: Public Property IncludeHighlights As Boolean?
+  overload: Dropbox.Api.Files.SearchV2Arg.IncludeHighlights*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.SearchV2Arg
+  commentId: T:Dropbox.Api.Files.SearchV2Arg
+  parent: Dropbox.Api.Files
+  name: SearchV2Arg
+  nameWithType: SearchV2Arg
+  fullName: Dropbox.Api.Files.SearchV2Arg
+- uid: Dropbox.Api.Files.SearchV2Arg.#ctor*
+  commentId: Overload:Dropbox.Api.Files.SearchV2Arg.#ctor
+  name: SearchV2Arg
+  nameWithType: SearchV2Arg.SearchV2Arg
+  fullName: Dropbox.Api.Files.SearchV2Arg.SearchV2Arg
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Files.SearchOptions
+  commentId: T:Dropbox.Api.Files.SearchOptions
+  parent: Dropbox.Api.Files
+  name: SearchOptions
+  nameWithType: SearchOptions
+  fullName: Dropbox.Api.Files.SearchOptions
+- uid: Dropbox.Api.Files.SearchMatchFieldOptions
+  commentId: T:Dropbox.Api.Files.SearchMatchFieldOptions
+  parent: Dropbox.Api.Files
+  name: SearchMatchFieldOptions
+  nameWithType: SearchMatchFieldOptions
+  fullName: Dropbox.Api.Files.SearchMatchFieldOptions
+- uid: System.Nullable{System.Boolean}
+  commentId: '!:System.Nullable{System.Boolean}'
+  definition: System.Nullable`1
+  name: Nullable<Boolean>
+  nameWithType: Nullable<Boolean>
+  fullName: System.Nullable<System.Boolean>
+  nameWithType.vb: Nullable(Of Boolean)
+  fullName.vb: System.Nullable(Of System.Boolean)
+  name.vb: Nullable(Of Boolean)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  isExternal: true
+  name: Nullable<>
+  nameWithType: Nullable<>
+  fullName: System.Nullable<>
+  nameWithType.vb: Nullable(Of )
+  fullName.vb: System.Nullable(Of )
+  name.vb: Nullable(Of )
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Files.SearchV2Arg.Query*
+  commentId: Overload:Dropbox.Api.Files.SearchV2Arg.Query
+  name: Query
+  nameWithType: SearchV2Arg.Query
+  fullName: Dropbox.Api.Files.SearchV2Arg.Query
+- uid: Dropbox.Api.Files.SearchV2Arg.Options*
+  commentId: Overload:Dropbox.Api.Files.SearchV2Arg.Options
+  name: Options
+  nameWithType: SearchV2Arg.Options
+  fullName: Dropbox.Api.Files.SearchV2Arg.Options
+- uid: Dropbox.Api.Files.SearchV2Arg.MatchFieldOptions*
+  commentId: Overload:Dropbox.Api.Files.SearchV2Arg.MatchFieldOptions
+  name: MatchFieldOptions
+  nameWithType: SearchV2Arg.MatchFieldOptions
+  fullName: Dropbox.Api.Files.SearchV2Arg.MatchFieldOptions
+- uid: Dropbox.Api.Files.SearchV2Arg.IncludeHighlights*
+  commentId: Overload:Dropbox.Api.Files.SearchV2Arg.IncludeHighlights
+  name: IncludeHighlights
+  nameWithType: SearchV2Arg.IncludeHighlights
+  fullName: Dropbox.Api.Files.SearchV2Arg.IncludeHighlights
+shouldSkipMarkup: true

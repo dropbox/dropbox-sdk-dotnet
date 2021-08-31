@@ -1,0 +1,288 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.SharingUserError
+  commentId: T:Dropbox.Api.Sharing.SharingUserError
+  id: SharingUserError
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.SharingUserError.#ctor
+  - Dropbox.Api.Sharing.SharingUserError.AsEmailUnverified
+  - Dropbox.Api.Sharing.SharingUserError.AsOther
+  - Dropbox.Api.Sharing.SharingUserError.IsEmailUnverified
+  - Dropbox.Api.Sharing.SharingUserError.IsOther
+  langs:
+  - csharp
+  - vb
+  name: SharingUserError
+  nameWithType: SharingUserError
+  fullName: Dropbox.Api.Sharing.SharingUserError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharingUserError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SharingUserError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharingUserError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>User account had a problem preventing this action.</p>\n"
+  example: []
+  syntax:
+    content: 'public class SharingUserError : object'
+    content.vb: >-
+      Public Class SharingUserError
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Sharing.SharingUserError.EmailUnverified
+  - Dropbox.Api.Sharing.SharingUserError.Other
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Sharing.SharingUserError.#ctor
+  commentId: M:Dropbox.Api.Sharing.SharingUserError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Sharing.SharingUserError
+  langs:
+  - csharp
+  - vb
+  name: SharingUserError()
+  nameWithType: SharingUserError.SharingUserError()
+  fullName: Dropbox.Api.Sharing.SharingUserError.SharingUserError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharingUserError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharingUserError.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.SharingUserError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public SharingUserError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Sharing.SharingUserError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.SharingUserError.IsEmailUnverified
+  commentId: P:Dropbox.Api.Sharing.SharingUserError.IsEmailUnverified
+  id: IsEmailUnverified
+  parent: Dropbox.Api.Sharing.SharingUserError
+  langs:
+  - csharp
+  - vb
+  name: IsEmailUnverified
+  nameWithType: SharingUserError.IsEmailUnverified
+  fullName: Dropbox.Api.Sharing.SharingUserError.IsEmailUnverified
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharingUserError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsEmailUnverified
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharingUserError.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is EmailUnverified</p>\n"
+  example: []
+  syntax:
+    content: public bool IsEmailUnverified { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsEmailUnverified As Boolean
+  overload: Dropbox.Api.Sharing.SharingUserError.IsEmailUnverified*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.SharingUserError.AsEmailUnverified
+  commentId: P:Dropbox.Api.Sharing.SharingUserError.AsEmailUnverified
+  id: AsEmailUnverified
+  parent: Dropbox.Api.Sharing.SharingUserError
+  langs:
+  - csharp
+  - vb
+  name: AsEmailUnverified
+  nameWithType: SharingUserError.AsEmailUnverified
+  fullName: Dropbox.Api.Sharing.SharingUserError.AsEmailUnverified
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharingUserError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsEmailUnverified
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharingUserError.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a EmailUnverified, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SharingUserError.EmailUnverified AsEmailUnverified { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.SharingUserError.EmailUnverified
+    content.vb: Public ReadOnly Property AsEmailUnverified As SharingUserError.EmailUnverified
+  overload: Dropbox.Api.Sharing.SharingUserError.AsEmailUnverified*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.SharingUserError.IsOther
+  commentId: P:Dropbox.Api.Sharing.SharingUserError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Sharing.SharingUserError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: SharingUserError.IsOther
+  fullName: Dropbox.Api.Sharing.SharingUserError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharingUserError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharingUserError.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Sharing.SharingUserError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.SharingUserError.AsOther
+  commentId: P:Dropbox.Api.Sharing.SharingUserError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Sharing.SharingUserError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: SharingUserError.AsOther
+  fullName: Dropbox.Api.Sharing.SharingUserError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharingUserError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharingUserError.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SharingUserError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.SharingUserError.Other
+    content.vb: Public ReadOnly Property AsOther As SharingUserError.Other
+  overload: Dropbox.Api.Sharing.SharingUserError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.SharingUserError
+  commentId: T:Dropbox.Api.Sharing.SharingUserError
+  parent: Dropbox.Api.Sharing
+  name: SharingUserError
+  nameWithType: SharingUserError
+  fullName: Dropbox.Api.Sharing.SharingUserError
+- uid: Dropbox.Api.Sharing.SharingUserError.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.SharingUserError.#ctor
+  name: SharingUserError
+  nameWithType: SharingUserError.SharingUserError
+  fullName: Dropbox.Api.Sharing.SharingUserError.SharingUserError
+- uid: Dropbox.Api.Sharing.SharingUserError.IsEmailUnverified*
+  commentId: Overload:Dropbox.Api.Sharing.SharingUserError.IsEmailUnverified
+  name: IsEmailUnverified
+  nameWithType: SharingUserError.IsEmailUnverified
+  fullName: Dropbox.Api.Sharing.SharingUserError.IsEmailUnverified
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Sharing.SharingUserError.AsEmailUnverified*
+  commentId: Overload:Dropbox.Api.Sharing.SharingUserError.AsEmailUnverified
+  name: AsEmailUnverified
+  nameWithType: SharingUserError.AsEmailUnverified
+  fullName: Dropbox.Api.Sharing.SharingUserError.AsEmailUnverified
+- uid: Dropbox.Api.Sharing.SharingUserError.EmailUnverified
+  commentId: T:Dropbox.Api.Sharing.SharingUserError.EmailUnverified
+  parent: Dropbox.Api.Sharing
+  name: SharingUserError.EmailUnverified
+  nameWithType: SharingUserError.EmailUnverified
+  fullName: Dropbox.Api.Sharing.SharingUserError.EmailUnverified
+- uid: Dropbox.Api.Sharing.SharingUserError.IsOther*
+  commentId: Overload:Dropbox.Api.Sharing.SharingUserError.IsOther
+  name: IsOther
+  nameWithType: SharingUserError.IsOther
+  fullName: Dropbox.Api.Sharing.SharingUserError.IsOther
+- uid: Dropbox.Api.Sharing.SharingUserError.AsOther*
+  commentId: Overload:Dropbox.Api.Sharing.SharingUserError.AsOther
+  name: AsOther
+  nameWithType: SharingUserError.AsOther
+  fullName: Dropbox.Api.Sharing.SharingUserError.AsOther
+- uid: Dropbox.Api.Sharing.SharingUserError.Other
+  commentId: T:Dropbox.Api.Sharing.SharingUserError.Other
+  parent: Dropbox.Api.Sharing
+  name: SharingUserError.Other
+  nameWithType: SharingUserError.Other
+  fullName: Dropbox.Api.Sharing.SharingUserError.Other
+shouldSkipMarkup: true

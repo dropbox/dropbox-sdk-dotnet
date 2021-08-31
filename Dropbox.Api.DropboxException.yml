@@ -1,0 +1,109 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.DropboxException
+  commentId: T:Dropbox.Api.DropboxException
+  id: DropboxException
+  parent: Dropbox.Api
+  children:
+  - Dropbox.Api.DropboxException.ToString
+  langs:
+  - csharp
+  - vb
+  name: DropboxException
+  nameWithType: DropboxException
+  fullName: Dropbox.Api.DropboxException
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/DropboxException.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: DropboxException
+    path: dropbox-sdk-dotnet/Dropbox.Api/DropboxException.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api
+  summary: "\nBase class for all exceptions from Dropbox service.\n"
+  example: []
+  syntax:
+    content: 'public class DropboxException : Exception'
+    content.vb: >-
+      Public Class DropboxException
+          Inherits Exception
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.HttpException
+  - Dropbox.Api.StructuredException`1
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.DropboxException.ToString
+  commentId: M:Dropbox.Api.DropboxException.ToString
+  id: ToString
+  parent: Dropbox.Api.DropboxException
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: DropboxException.ToString()
+  fullName: Dropbox.Api.DropboxException.ToString()
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/DropboxException.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ToString
+    path: dropbox-sdk-dotnet/Dropbox.Api/DropboxException.cs
+    startLine: 38
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api
+  summary: "\nThe ToString().\n"
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: A string that represents the current <xref href="Dropbox.Api.DropboxException" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Overrides Function ToString As String
+  overload: Dropbox.Api.DropboxException.ToString*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: Dropbox.Api
+  commentId: N:Dropbox.Api
+  name: Dropbox.Api
+  nameWithType: Dropbox.Api
+  fullName: Dropbox.Api
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.DropboxException
+  commentId: T:Dropbox.Api.DropboxException
+  parent: Dropbox.Api
+  name: DropboxException
+  nameWithType: DropboxException
+  fullName: Dropbox.Api.DropboxException
+- uid: Dropbox.Api.DropboxException.ToString*
+  commentId: Overload:Dropbox.Api.DropboxException.ToString
+  name: ToString
+  nameWithType: DropboxException.ToString
+  fullName: Dropbox.Api.DropboxException.ToString
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+shouldSkipMarkup: true

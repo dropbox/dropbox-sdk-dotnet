@@ -1,0 +1,381 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.UsersCommon.AccountType
+  commentId: T:Dropbox.Api.UsersCommon.AccountType
+  id: AccountType
+  parent: Dropbox.Api.UsersCommon
+  children:
+  - Dropbox.Api.UsersCommon.AccountType.#ctor
+  - Dropbox.Api.UsersCommon.AccountType.AsBasic
+  - Dropbox.Api.UsersCommon.AccountType.AsBusiness
+  - Dropbox.Api.UsersCommon.AccountType.AsPro
+  - Dropbox.Api.UsersCommon.AccountType.IsBasic
+  - Dropbox.Api.UsersCommon.AccountType.IsBusiness
+  - Dropbox.Api.UsersCommon.AccountType.IsPro
+  langs:
+  - csharp
+  - vb
+  name: AccountType
+  nameWithType: AccountType
+  fullName: Dropbox.Api.UsersCommon.AccountType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/UsersCommon/AccountType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AccountType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/UsersCommon/AccountType.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.UsersCommon
+  summary: "\n<p>What type of account this user has.</p>\n"
+  example: []
+  syntax:
+    content: 'public class AccountType : object'
+    content.vb: >-
+      Public Class AccountType
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.UsersCommon.AccountType.Basic
+  - Dropbox.Api.UsersCommon.AccountType.Business
+  - Dropbox.Api.UsersCommon.AccountType.Pro
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.UsersCommon.AccountType.#ctor
+  commentId: M:Dropbox.Api.UsersCommon.AccountType.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.UsersCommon.AccountType
+  langs:
+  - csharp
+  - vb
+  name: AccountType()
+  nameWithType: AccountType.AccountType()
+  fullName: Dropbox.Api.UsersCommon.AccountType.AccountType()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/UsersCommon/AccountType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/UsersCommon/AccountType.cs
+    startLine: 32
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.UsersCommon
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.UsersCommon.AccountType\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public AccountType()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.UsersCommon.AccountType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.UsersCommon.AccountType.IsBasic
+  commentId: P:Dropbox.Api.UsersCommon.AccountType.IsBasic
+  id: IsBasic
+  parent: Dropbox.Api.UsersCommon.AccountType
+  langs:
+  - csharp
+  - vb
+  name: IsBasic
+  nameWithType: AccountType.IsBasic
+  fullName: Dropbox.Api.UsersCommon.AccountType.IsBasic
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/UsersCommon/AccountType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsBasic
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/UsersCommon/AccountType.cs
+    startLine: 39
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.UsersCommon
+  summary: "\n<p>Gets a value indicating whether this instance is Basic</p>\n"
+  example: []
+  syntax:
+    content: public bool IsBasic { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsBasic As Boolean
+  overload: Dropbox.Api.UsersCommon.AccountType.IsBasic*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.UsersCommon.AccountType.AsBasic
+  commentId: P:Dropbox.Api.UsersCommon.AccountType.AsBasic
+  id: AsBasic
+  parent: Dropbox.Api.UsersCommon.AccountType
+  langs:
+  - csharp
+  - vb
+  name: AsBasic
+  nameWithType: AccountType.AsBasic
+  fullName: Dropbox.Api.UsersCommon.AccountType.AsBasic
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/UsersCommon/AccountType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsBasic
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/UsersCommon/AccountType.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.UsersCommon
+  summary: "\n<p>Gets this instance as a Basic, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public AccountType.Basic AsBasic { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.UsersCommon.AccountType.Basic
+    content.vb: Public ReadOnly Property AsBasic As AccountType.Basic
+  overload: Dropbox.Api.UsersCommon.AccountType.AsBasic*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.UsersCommon.AccountType.IsPro
+  commentId: P:Dropbox.Api.UsersCommon.AccountType.IsPro
+  id: IsPro
+  parent: Dropbox.Api.UsersCommon.AccountType
+  langs:
+  - csharp
+  - vb
+  name: IsPro
+  nameWithType: AccountType.IsPro
+  fullName: Dropbox.Api.UsersCommon.AccountType.IsPro
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/UsersCommon/AccountType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsPro
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/UsersCommon/AccountType.cs
+    startLine: 61
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.UsersCommon
+  summary: "\n<p>Gets a value indicating whether this instance is Pro</p>\n"
+  example: []
+  syntax:
+    content: public bool IsPro { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsPro As Boolean
+  overload: Dropbox.Api.UsersCommon.AccountType.IsPro*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.UsersCommon.AccountType.AsPro
+  commentId: P:Dropbox.Api.UsersCommon.AccountType.AsPro
+  id: AsPro
+  parent: Dropbox.Api.UsersCommon.AccountType
+  langs:
+  - csharp
+  - vb
+  name: AsPro
+  nameWithType: AccountType.AsPro
+  fullName: Dropbox.Api.UsersCommon.AccountType.AsPro
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/UsersCommon/AccountType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsPro
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/UsersCommon/AccountType.cs
+    startLine: 72
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.UsersCommon
+  summary: "\n<p>Gets this instance as a Pro, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public AccountType.Pro AsPro { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.UsersCommon.AccountType.Pro
+    content.vb: Public ReadOnly Property AsPro As AccountType.Pro
+  overload: Dropbox.Api.UsersCommon.AccountType.AsPro*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.UsersCommon.AccountType.IsBusiness
+  commentId: P:Dropbox.Api.UsersCommon.AccountType.IsBusiness
+  id: IsBusiness
+  parent: Dropbox.Api.UsersCommon.AccountType
+  langs:
+  - csharp
+  - vb
+  name: IsBusiness
+  nameWithType: AccountType.IsBusiness
+  fullName: Dropbox.Api.UsersCommon.AccountType.IsBusiness
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/UsersCommon/AccountType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsBusiness
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/UsersCommon/AccountType.cs
+    startLine: 83
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.UsersCommon
+  summary: "\n<p>Gets a value indicating whether this instance is Business</p>\n"
+  example: []
+  syntax:
+    content: public bool IsBusiness { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsBusiness As Boolean
+  overload: Dropbox.Api.UsersCommon.AccountType.IsBusiness*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.UsersCommon.AccountType.AsBusiness
+  commentId: P:Dropbox.Api.UsersCommon.AccountType.AsBusiness
+  id: AsBusiness
+  parent: Dropbox.Api.UsersCommon.AccountType
+  langs:
+  - csharp
+  - vb
+  name: AsBusiness
+  nameWithType: AccountType.AsBusiness
+  fullName: Dropbox.Api.UsersCommon.AccountType.AsBusiness
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/UsersCommon/AccountType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsBusiness
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/UsersCommon/AccountType.cs
+    startLine: 94
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.UsersCommon
+  summary: "\n<p>Gets this instance as a Business, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public AccountType.Business AsBusiness { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.UsersCommon.AccountType.Business
+    content.vb: Public ReadOnly Property AsBusiness As AccountType.Business
+  overload: Dropbox.Api.UsersCommon.AccountType.AsBusiness*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.UsersCommon
+  commentId: N:Dropbox.Api.UsersCommon
+  name: Dropbox.Api.UsersCommon
+  nameWithType: Dropbox.Api.UsersCommon
+  fullName: Dropbox.Api.UsersCommon
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.UsersCommon.AccountType
+  commentId: T:Dropbox.Api.UsersCommon.AccountType
+  parent: Dropbox.Api.UsersCommon
+  name: AccountType
+  nameWithType: AccountType
+  fullName: Dropbox.Api.UsersCommon.AccountType
+- uid: Dropbox.Api.UsersCommon.AccountType.#ctor*
+  commentId: Overload:Dropbox.Api.UsersCommon.AccountType.#ctor
+  name: AccountType
+  nameWithType: AccountType.AccountType
+  fullName: Dropbox.Api.UsersCommon.AccountType.AccountType
+- uid: Dropbox.Api.UsersCommon.AccountType.IsBasic*
+  commentId: Overload:Dropbox.Api.UsersCommon.AccountType.IsBasic
+  name: IsBasic
+  nameWithType: AccountType.IsBasic
+  fullName: Dropbox.Api.UsersCommon.AccountType.IsBasic
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.UsersCommon.AccountType.AsBasic*
+  commentId: Overload:Dropbox.Api.UsersCommon.AccountType.AsBasic
+  name: AsBasic
+  nameWithType: AccountType.AsBasic
+  fullName: Dropbox.Api.UsersCommon.AccountType.AsBasic
+- uid: Dropbox.Api.UsersCommon.AccountType.Basic
+  commentId: T:Dropbox.Api.UsersCommon.AccountType.Basic
+  parent: Dropbox.Api.UsersCommon
+  name: AccountType.Basic
+  nameWithType: AccountType.Basic
+  fullName: Dropbox.Api.UsersCommon.AccountType.Basic
+- uid: Dropbox.Api.UsersCommon.AccountType.IsPro*
+  commentId: Overload:Dropbox.Api.UsersCommon.AccountType.IsPro
+  name: IsPro
+  nameWithType: AccountType.IsPro
+  fullName: Dropbox.Api.UsersCommon.AccountType.IsPro
+- uid: Dropbox.Api.UsersCommon.AccountType.AsPro*
+  commentId: Overload:Dropbox.Api.UsersCommon.AccountType.AsPro
+  name: AsPro
+  nameWithType: AccountType.AsPro
+  fullName: Dropbox.Api.UsersCommon.AccountType.AsPro
+- uid: Dropbox.Api.UsersCommon.AccountType.Pro
+  commentId: T:Dropbox.Api.UsersCommon.AccountType.Pro
+  parent: Dropbox.Api.UsersCommon
+  name: AccountType.Pro
+  nameWithType: AccountType.Pro
+  fullName: Dropbox.Api.UsersCommon.AccountType.Pro
+- uid: Dropbox.Api.UsersCommon.AccountType.IsBusiness*
+  commentId: Overload:Dropbox.Api.UsersCommon.AccountType.IsBusiness
+  name: IsBusiness
+  nameWithType: AccountType.IsBusiness
+  fullName: Dropbox.Api.UsersCommon.AccountType.IsBusiness
+- uid: Dropbox.Api.UsersCommon.AccountType.AsBusiness*
+  commentId: Overload:Dropbox.Api.UsersCommon.AccountType.AsBusiness
+  name: AsBusiness
+  nameWithType: AccountType.AsBusiness
+  fullName: Dropbox.Api.UsersCommon.AccountType.AsBusiness
+- uid: Dropbox.Api.UsersCommon.AccountType.Business
+  commentId: T:Dropbox.Api.UsersCommon.AccountType.Business
+  parent: Dropbox.Api.UsersCommon
+  name: AccountType.Business
+  nameWithType: AccountType.Business
+  fullName: Dropbox.Api.UsersCommon.AccountType.Business
+shouldSkipMarkup: true

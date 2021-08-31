@@ -1,0 +1,220 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Common.PathRoot.Root
+  commentId: T:Dropbox.Api.Common.PathRoot.Root
+  id: PathRoot.Root
+  parent: Dropbox.Api.Common
+  children:
+  - Dropbox.Api.Common.PathRoot.Root.#ctor(System.String)
+  - Dropbox.Api.Common.PathRoot.Root.Value
+  langs:
+  - csharp
+  - vb
+  name: PathRoot.Root
+  nameWithType: PathRoot.Root
+  fullName: Dropbox.Api.Common.PathRoot.Root
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Common/PathRoot.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Root
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Common/PathRoot.cs
+    startLine: 283
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Common
+  summary: "\n<p>Paths are relative to the authenticating user&apos;s root namespace (This results\nin <xref href=\"Dropbox.Api.Common.PathRootError.InvalidRoot\" data-throw-if-not-resolved=\"false\"></xref> if the user&apos;s root\nnamespace has changed.).</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Root : PathRoot'
+    content.vb: >-
+      Public NotInheritable Class Root
+          Inherits PathRoot
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Common.PathRoot
+  inheritedMembers:
+  - Dropbox.Api.Common.PathRoot.IsHome
+  - Dropbox.Api.Common.PathRoot.AsHome
+  - Dropbox.Api.Common.PathRoot.IsRoot
+  - Dropbox.Api.Common.PathRoot.AsRoot
+  - Dropbox.Api.Common.PathRoot.IsNamespaceId
+  - Dropbox.Api.Common.PathRoot.AsNamespaceId
+  - Dropbox.Api.Common.PathRoot.IsOther
+  - Dropbox.Api.Common.PathRoot.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Common.PathRoot.Root.#ctor(System.String)
+  commentId: M:Dropbox.Api.Common.PathRoot.Root.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.Common.PathRoot.Root
+  langs:
+  - csharp
+  - vb
+  name: Root(String)
+  nameWithType: PathRoot.Root.Root(String)
+  fullName: Dropbox.Api.Common.PathRoot.Root.Root(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Common/PathRoot.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Common/PathRoot.cs
+    startLine: 301
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Common
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Common.PathRoot.Root\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public Root(string value)
+    parameters:
+    - id: value
+      type: System.String
+      description: The value
+    content.vb: Public Sub New(value As String)
+  overload: Dropbox.Api.Common.PathRoot.Root.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Common.PathRoot.Root.Value
+  commentId: P:Dropbox.Api.Common.PathRoot.Root.Value
+  id: Value
+  parent: Dropbox.Api.Common.PathRoot.Root
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: PathRoot.Root.Value
+  fullName: Dropbox.Api.Common.PathRoot.Root.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Common/PathRoot.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Common/PathRoot.cs
+    startLine: 315
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Common
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public string Value { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Value As String
+  overload: Dropbox.Api.Common.PathRoot.Root.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Common.PathRootError.InvalidRoot
+  commentId: T:Dropbox.Api.Common.PathRootError.InvalidRoot
+  parent: Dropbox.Api.Common
+  name: PathRootError.InvalidRoot
+  nameWithType: PathRootError.InvalidRoot
+  fullName: Dropbox.Api.Common.PathRootError.InvalidRoot
+- uid: Dropbox.Api.Common
+  commentId: N:Dropbox.Api.Common
+  name: Dropbox.Api.Common
+  nameWithType: Dropbox.Api.Common
+  fullName: Dropbox.Api.Common
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Common.PathRoot
+  commentId: T:Dropbox.Api.Common.PathRoot
+  parent: Dropbox.Api.Common
+  name: PathRoot
+  nameWithType: PathRoot
+  fullName: Dropbox.Api.Common.PathRoot
+- uid: Dropbox.Api.Common.PathRoot.IsHome
+  commentId: P:Dropbox.Api.Common.PathRoot.IsHome
+  parent: Dropbox.Api.Common.PathRoot
+  name: IsHome
+  nameWithType: PathRoot.IsHome
+  fullName: Dropbox.Api.Common.PathRoot.IsHome
+- uid: Dropbox.Api.Common.PathRoot.AsHome
+  commentId: P:Dropbox.Api.Common.PathRoot.AsHome
+  parent: Dropbox.Api.Common.PathRoot
+  name: AsHome
+  nameWithType: PathRoot.AsHome
+  fullName: Dropbox.Api.Common.PathRoot.AsHome
+- uid: Dropbox.Api.Common.PathRoot.IsRoot
+  commentId: P:Dropbox.Api.Common.PathRoot.IsRoot
+  parent: Dropbox.Api.Common.PathRoot
+  name: IsRoot
+  nameWithType: PathRoot.IsRoot
+  fullName: Dropbox.Api.Common.PathRoot.IsRoot
+- uid: Dropbox.Api.Common.PathRoot.AsRoot
+  commentId: P:Dropbox.Api.Common.PathRoot.AsRoot
+  parent: Dropbox.Api.Common.PathRoot
+  name: AsRoot
+  nameWithType: PathRoot.AsRoot
+  fullName: Dropbox.Api.Common.PathRoot.AsRoot
+- uid: Dropbox.Api.Common.PathRoot.IsNamespaceId
+  commentId: P:Dropbox.Api.Common.PathRoot.IsNamespaceId
+  parent: Dropbox.Api.Common.PathRoot
+  name: IsNamespaceId
+  nameWithType: PathRoot.IsNamespaceId
+  fullName: Dropbox.Api.Common.PathRoot.IsNamespaceId
+- uid: Dropbox.Api.Common.PathRoot.AsNamespaceId
+  commentId: P:Dropbox.Api.Common.PathRoot.AsNamespaceId
+  parent: Dropbox.Api.Common.PathRoot
+  name: AsNamespaceId
+  nameWithType: PathRoot.AsNamespaceId
+  fullName: Dropbox.Api.Common.PathRoot.AsNamespaceId
+- uid: Dropbox.Api.Common.PathRoot.IsOther
+  commentId: P:Dropbox.Api.Common.PathRoot.IsOther
+  parent: Dropbox.Api.Common.PathRoot
+  name: IsOther
+  nameWithType: PathRoot.IsOther
+  fullName: Dropbox.Api.Common.PathRoot.IsOther
+- uid: Dropbox.Api.Common.PathRoot.AsOther
+  commentId: P:Dropbox.Api.Common.PathRoot.AsOther
+  parent: Dropbox.Api.Common.PathRoot
+  name: AsOther
+  nameWithType: PathRoot.AsOther
+  fullName: Dropbox.Api.Common.PathRoot.AsOther
+- uid: Dropbox.Api.Common.PathRoot.Root
+  commentId: T:Dropbox.Api.Common.PathRoot.Root
+  parent: Dropbox.Api.Common
+  name: PathRoot.Root
+  nameWithType: PathRoot.Root
+  fullName: Dropbox.Api.Common.PathRoot.Root
+- uid: Dropbox.Api.Common.PathRoot.Root.#ctor*
+  commentId: Overload:Dropbox.Api.Common.PathRoot.Root.#ctor
+  name: Root
+  nameWithType: PathRoot.Root.Root
+  fullName: Dropbox.Api.Common.PathRoot.Root.Root
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Common.PathRoot.Root.Value*
+  commentId: Overload:Dropbox.Api.Common.PathRoot.Root.Value
+  name: Value
+  nameWithType: PathRoot.Root.Value
+  fullName: Dropbox.Api.Common.PathRoot.Root.Value
+shouldSkipMarkup: true

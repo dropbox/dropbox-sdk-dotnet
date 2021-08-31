@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.DeviceApprovalsAddExceptionType
+  commentId: T:Dropbox.Api.TeamLog.DeviceApprovalsAddExceptionType
+  id: DeviceApprovalsAddExceptionType
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.DeviceApprovalsAddExceptionType.#ctor
+  - Dropbox.Api.TeamLog.DeviceApprovalsAddExceptionType.#ctor(System.String)
+  - Dropbox.Api.TeamLog.DeviceApprovalsAddExceptionType.Description
+  langs:
+  - csharp
+  - vb
+  name: DeviceApprovalsAddExceptionType
+  nameWithType: DeviceApprovalsAddExceptionType
+  fullName: Dropbox.Api.TeamLog.DeviceApprovalsAddExceptionType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceApprovalsAddExceptionType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: DeviceApprovalsAddExceptionType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceApprovalsAddExceptionType.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The device approvals add exception type object</p>\n"
+  example: []
+  syntax:
+    content: 'public class DeviceApprovalsAddExceptionType : object'
+    content.vb: >-
+      Public Class DeviceApprovalsAddExceptionType
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.DeviceApprovalsAddExceptionType.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.DeviceApprovalsAddExceptionType.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.DeviceApprovalsAddExceptionType
+  langs:
+  - csharp
+  - vb
+  name: DeviceApprovalsAddExceptionType(String)
+  nameWithType: DeviceApprovalsAddExceptionType.DeviceApprovalsAddExceptionType(String)
+  fullName: Dropbox.Api.TeamLog.DeviceApprovalsAddExceptionType.DeviceApprovalsAddExceptionType(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceApprovalsAddExceptionType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceApprovalsAddExceptionType.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.DeviceApprovalsAddExceptionType\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public DeviceApprovalsAddExceptionType(string description)
+    parameters:
+    - id: description
+      type: System.String
+      description: The description
+    content.vb: Public Sub New(description As String)
+  overload: Dropbox.Api.TeamLog.DeviceApprovalsAddExceptionType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.DeviceApprovalsAddExceptionType.#ctor
+  commentId: M:Dropbox.Api.TeamLog.DeviceApprovalsAddExceptionType.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.DeviceApprovalsAddExceptionType
+  langs:
+  - csharp
+  - vb
+  name: DeviceApprovalsAddExceptionType()
+  nameWithType: DeviceApprovalsAddExceptionType.DeviceApprovalsAddExceptionType()
+  fullName: Dropbox.Api.TeamLog.DeviceApprovalsAddExceptionType.DeviceApprovalsAddExceptionType()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceApprovalsAddExceptionType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceApprovalsAddExceptionType.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.DeviceApprovalsAddExceptionType\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public DeviceApprovalsAddExceptionType()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.DeviceApprovalsAddExceptionType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.DeviceApprovalsAddExceptionType.Description
+  commentId: P:Dropbox.Api.TeamLog.DeviceApprovalsAddExceptionType.Description
+  id: Description
+  parent: Dropbox.Api.TeamLog.DeviceApprovalsAddExceptionType
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: DeviceApprovalsAddExceptionType.Description
+  fullName: Dropbox.Api.TeamLog.DeviceApprovalsAddExceptionType.Description
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceApprovalsAddExceptionType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Description
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceApprovalsAddExceptionType.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets the description of the device approvals add exception type</p>\n"
+  example: []
+  syntax:
+    content: public string Description { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Dropbox.Api.TeamLog.DeviceApprovalsAddExceptionType.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.DeviceApprovalsAddExceptionType
+  commentId: T:Dropbox.Api.TeamLog.DeviceApprovalsAddExceptionType
+  parent: Dropbox.Api.TeamLog
+  name: DeviceApprovalsAddExceptionType
+  nameWithType: DeviceApprovalsAddExceptionType
+  fullName: Dropbox.Api.TeamLog.DeviceApprovalsAddExceptionType
+- uid: Dropbox.Api.TeamLog.DeviceApprovalsAddExceptionType.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.DeviceApprovalsAddExceptionType.#ctor
+  name: DeviceApprovalsAddExceptionType
+  nameWithType: DeviceApprovalsAddExceptionType.DeviceApprovalsAddExceptionType
+  fullName: Dropbox.Api.TeamLog.DeviceApprovalsAddExceptionType.DeviceApprovalsAddExceptionType
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.DeviceApprovalsAddExceptionType.Description*
+  commentId: Overload:Dropbox.Api.TeamLog.DeviceApprovalsAddExceptionType.Description
+  name: Description
+  nameWithType: DeviceApprovalsAddExceptionType.Description
+  fullName: Dropbox.Api.TeamLog.DeviceApprovalsAddExceptionType.Description
+shouldSkipMarkup: true

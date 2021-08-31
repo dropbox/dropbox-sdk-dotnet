@@ -1,0 +1,232 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.LockFileError.Other
+  commentId: T:Dropbox.Api.Files.LockFileError.Other
+  id: LockFileError.Other
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.LockFileError.Other.Instance
+  langs:
+  - csharp
+  - vb
+  name: LockFileError.Other
+  nameWithType: LockFileError.Other
+  fullName: Dropbox.Api.Files.LockFileError.Other
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Other
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileError.cs
+    startLine: 974
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The other object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Other : LockFileError'
+    content.vb: >-
+      Public NotInheritable Class Other
+          Inherits LockFileError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Files.LockFileError
+  inheritedMembers:
+  - Dropbox.Api.Files.LockFileError.IsPathLookup
+  - Dropbox.Api.Files.LockFileError.AsPathLookup
+  - Dropbox.Api.Files.LockFileError.IsTooManyWriteOperations
+  - Dropbox.Api.Files.LockFileError.AsTooManyWriteOperations
+  - Dropbox.Api.Files.LockFileError.IsTooManyFiles
+  - Dropbox.Api.Files.LockFileError.AsTooManyFiles
+  - Dropbox.Api.Files.LockFileError.IsNoWritePermission
+  - Dropbox.Api.Files.LockFileError.AsNoWritePermission
+  - Dropbox.Api.Files.LockFileError.IsCannotBeLocked
+  - Dropbox.Api.Files.LockFileError.AsCannotBeLocked
+  - Dropbox.Api.Files.LockFileError.IsFileNotShared
+  - Dropbox.Api.Files.LockFileError.AsFileNotShared
+  - Dropbox.Api.Files.LockFileError.IsLockConflict
+  - Dropbox.Api.Files.LockFileError.AsLockConflict
+  - Dropbox.Api.Files.LockFileError.IsInternalError
+  - Dropbox.Api.Files.LockFileError.AsInternalError
+  - Dropbox.Api.Files.LockFileError.IsOther
+  - Dropbox.Api.Files.LockFileError.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Files.LockFileError.Other.Instance
+  commentId: F:Dropbox.Api.Files.LockFileError.Other.Instance
+  id: Instance
+  parent: Dropbox.Api.Files.LockFileError.Other
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: LockFileError.Other.Instance
+  fullName: Dropbox.Api.Files.LockFileError.Other.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileError.cs
+    startLine: 998
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>A singleton instance of Other</p>\n"
+  example: []
+  syntax:
+    content: public static readonly LockFileError.Other Instance
+    return:
+      type: Dropbox.Api.Files.LockFileError.Other
+    content.vb: Public Shared ReadOnly Instance As LockFileError.Other
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.LockFileError
+  commentId: T:Dropbox.Api.Files.LockFileError
+  parent: Dropbox.Api.Files
+  name: LockFileError
+  nameWithType: LockFileError
+  fullName: Dropbox.Api.Files.LockFileError
+- uid: Dropbox.Api.Files.LockFileError.IsPathLookup
+  commentId: P:Dropbox.Api.Files.LockFileError.IsPathLookup
+  parent: Dropbox.Api.Files.LockFileError
+  name: IsPathLookup
+  nameWithType: LockFileError.IsPathLookup
+  fullName: Dropbox.Api.Files.LockFileError.IsPathLookup
+- uid: Dropbox.Api.Files.LockFileError.AsPathLookup
+  commentId: P:Dropbox.Api.Files.LockFileError.AsPathLookup
+  parent: Dropbox.Api.Files.LockFileError
+  name: AsPathLookup
+  nameWithType: LockFileError.AsPathLookup
+  fullName: Dropbox.Api.Files.LockFileError.AsPathLookup
+- uid: Dropbox.Api.Files.LockFileError.IsTooManyWriteOperations
+  commentId: P:Dropbox.Api.Files.LockFileError.IsTooManyWriteOperations
+  parent: Dropbox.Api.Files.LockFileError
+  name: IsTooManyWriteOperations
+  nameWithType: LockFileError.IsTooManyWriteOperations
+  fullName: Dropbox.Api.Files.LockFileError.IsTooManyWriteOperations
+- uid: Dropbox.Api.Files.LockFileError.AsTooManyWriteOperations
+  commentId: P:Dropbox.Api.Files.LockFileError.AsTooManyWriteOperations
+  parent: Dropbox.Api.Files.LockFileError
+  name: AsTooManyWriteOperations
+  nameWithType: LockFileError.AsTooManyWriteOperations
+  fullName: Dropbox.Api.Files.LockFileError.AsTooManyWriteOperations
+- uid: Dropbox.Api.Files.LockFileError.IsTooManyFiles
+  commentId: P:Dropbox.Api.Files.LockFileError.IsTooManyFiles
+  parent: Dropbox.Api.Files.LockFileError
+  name: IsTooManyFiles
+  nameWithType: LockFileError.IsTooManyFiles
+  fullName: Dropbox.Api.Files.LockFileError.IsTooManyFiles
+- uid: Dropbox.Api.Files.LockFileError.AsTooManyFiles
+  commentId: P:Dropbox.Api.Files.LockFileError.AsTooManyFiles
+  parent: Dropbox.Api.Files.LockFileError
+  name: AsTooManyFiles
+  nameWithType: LockFileError.AsTooManyFiles
+  fullName: Dropbox.Api.Files.LockFileError.AsTooManyFiles
+- uid: Dropbox.Api.Files.LockFileError.IsNoWritePermission
+  commentId: P:Dropbox.Api.Files.LockFileError.IsNoWritePermission
+  parent: Dropbox.Api.Files.LockFileError
+  name: IsNoWritePermission
+  nameWithType: LockFileError.IsNoWritePermission
+  fullName: Dropbox.Api.Files.LockFileError.IsNoWritePermission
+- uid: Dropbox.Api.Files.LockFileError.AsNoWritePermission
+  commentId: P:Dropbox.Api.Files.LockFileError.AsNoWritePermission
+  parent: Dropbox.Api.Files.LockFileError
+  name: AsNoWritePermission
+  nameWithType: LockFileError.AsNoWritePermission
+  fullName: Dropbox.Api.Files.LockFileError.AsNoWritePermission
+- uid: Dropbox.Api.Files.LockFileError.IsCannotBeLocked
+  commentId: P:Dropbox.Api.Files.LockFileError.IsCannotBeLocked
+  parent: Dropbox.Api.Files.LockFileError
+  name: IsCannotBeLocked
+  nameWithType: LockFileError.IsCannotBeLocked
+  fullName: Dropbox.Api.Files.LockFileError.IsCannotBeLocked
+- uid: Dropbox.Api.Files.LockFileError.AsCannotBeLocked
+  commentId: P:Dropbox.Api.Files.LockFileError.AsCannotBeLocked
+  parent: Dropbox.Api.Files.LockFileError
+  name: AsCannotBeLocked
+  nameWithType: LockFileError.AsCannotBeLocked
+  fullName: Dropbox.Api.Files.LockFileError.AsCannotBeLocked
+- uid: Dropbox.Api.Files.LockFileError.IsFileNotShared
+  commentId: P:Dropbox.Api.Files.LockFileError.IsFileNotShared
+  parent: Dropbox.Api.Files.LockFileError
+  name: IsFileNotShared
+  nameWithType: LockFileError.IsFileNotShared
+  fullName: Dropbox.Api.Files.LockFileError.IsFileNotShared
+- uid: Dropbox.Api.Files.LockFileError.AsFileNotShared
+  commentId: P:Dropbox.Api.Files.LockFileError.AsFileNotShared
+  parent: Dropbox.Api.Files.LockFileError
+  name: AsFileNotShared
+  nameWithType: LockFileError.AsFileNotShared
+  fullName: Dropbox.Api.Files.LockFileError.AsFileNotShared
+- uid: Dropbox.Api.Files.LockFileError.IsLockConflict
+  commentId: P:Dropbox.Api.Files.LockFileError.IsLockConflict
+  parent: Dropbox.Api.Files.LockFileError
+  name: IsLockConflict
+  nameWithType: LockFileError.IsLockConflict
+  fullName: Dropbox.Api.Files.LockFileError.IsLockConflict
+- uid: Dropbox.Api.Files.LockFileError.AsLockConflict
+  commentId: P:Dropbox.Api.Files.LockFileError.AsLockConflict
+  parent: Dropbox.Api.Files.LockFileError
+  name: AsLockConflict
+  nameWithType: LockFileError.AsLockConflict
+  fullName: Dropbox.Api.Files.LockFileError.AsLockConflict
+- uid: Dropbox.Api.Files.LockFileError.IsInternalError
+  commentId: P:Dropbox.Api.Files.LockFileError.IsInternalError
+  parent: Dropbox.Api.Files.LockFileError
+  name: IsInternalError
+  nameWithType: LockFileError.IsInternalError
+  fullName: Dropbox.Api.Files.LockFileError.IsInternalError
+- uid: Dropbox.Api.Files.LockFileError.AsInternalError
+  commentId: P:Dropbox.Api.Files.LockFileError.AsInternalError
+  parent: Dropbox.Api.Files.LockFileError
+  name: AsInternalError
+  nameWithType: LockFileError.AsInternalError
+  fullName: Dropbox.Api.Files.LockFileError.AsInternalError
+- uid: Dropbox.Api.Files.LockFileError.IsOther
+  commentId: P:Dropbox.Api.Files.LockFileError.IsOther
+  parent: Dropbox.Api.Files.LockFileError
+  name: IsOther
+  nameWithType: LockFileError.IsOther
+  fullName: Dropbox.Api.Files.LockFileError.IsOther
+- uid: Dropbox.Api.Files.LockFileError.AsOther
+  commentId: P:Dropbox.Api.Files.LockFileError.AsOther
+  parent: Dropbox.Api.Files.LockFileError
+  name: AsOther
+  nameWithType: LockFileError.AsOther
+  fullName: Dropbox.Api.Files.LockFileError.AsOther
+- uid: Dropbox.Api.Files.LockFileError.Other
+  commentId: T:Dropbox.Api.Files.LockFileError.Other
+  parent: Dropbox.Api.Files
+  name: LockFileError.Other
+  nameWithType: LockFileError.Other
+  fullName: Dropbox.Api.Files.LockFileError.Other
+shouldSkipMarkup: true

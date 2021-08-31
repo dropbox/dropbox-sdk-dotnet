@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.OutdatedLinkViewReportFailedType
+  commentId: T:Dropbox.Api.TeamLog.OutdatedLinkViewReportFailedType
+  id: OutdatedLinkViewReportFailedType
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.OutdatedLinkViewReportFailedType.#ctor
+  - Dropbox.Api.TeamLog.OutdatedLinkViewReportFailedType.#ctor(System.String)
+  - Dropbox.Api.TeamLog.OutdatedLinkViewReportFailedType.Description
+  langs:
+  - csharp
+  - vb
+  name: OutdatedLinkViewReportFailedType
+  nameWithType: OutdatedLinkViewReportFailedType
+  fullName: Dropbox.Api.TeamLog.OutdatedLinkViewReportFailedType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/OutdatedLinkViewReportFailedType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: OutdatedLinkViewReportFailedType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/OutdatedLinkViewReportFailedType.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The outdated link view report failed type object</p>\n"
+  example: []
+  syntax:
+    content: 'public class OutdatedLinkViewReportFailedType : object'
+    content.vb: >-
+      Public Class OutdatedLinkViewReportFailedType
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.OutdatedLinkViewReportFailedType.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.OutdatedLinkViewReportFailedType.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.OutdatedLinkViewReportFailedType
+  langs:
+  - csharp
+  - vb
+  name: OutdatedLinkViewReportFailedType(String)
+  nameWithType: OutdatedLinkViewReportFailedType.OutdatedLinkViewReportFailedType(String)
+  fullName: Dropbox.Api.TeamLog.OutdatedLinkViewReportFailedType.OutdatedLinkViewReportFailedType(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/OutdatedLinkViewReportFailedType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/OutdatedLinkViewReportFailedType.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.OutdatedLinkViewReportFailedType\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public OutdatedLinkViewReportFailedType(string description)
+    parameters:
+    - id: description
+      type: System.String
+      description: The description
+    content.vb: Public Sub New(description As String)
+  overload: Dropbox.Api.TeamLog.OutdatedLinkViewReportFailedType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.OutdatedLinkViewReportFailedType.#ctor
+  commentId: M:Dropbox.Api.TeamLog.OutdatedLinkViewReportFailedType.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.OutdatedLinkViewReportFailedType
+  langs:
+  - csharp
+  - vb
+  name: OutdatedLinkViewReportFailedType()
+  nameWithType: OutdatedLinkViewReportFailedType.OutdatedLinkViewReportFailedType()
+  fullName: Dropbox.Api.TeamLog.OutdatedLinkViewReportFailedType.OutdatedLinkViewReportFailedType()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/OutdatedLinkViewReportFailedType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/OutdatedLinkViewReportFailedType.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.OutdatedLinkViewReportFailedType\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public OutdatedLinkViewReportFailedType()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.OutdatedLinkViewReportFailedType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.OutdatedLinkViewReportFailedType.Description
+  commentId: P:Dropbox.Api.TeamLog.OutdatedLinkViewReportFailedType.Description
+  id: Description
+  parent: Dropbox.Api.TeamLog.OutdatedLinkViewReportFailedType
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: OutdatedLinkViewReportFailedType.Description
+  fullName: Dropbox.Api.TeamLog.OutdatedLinkViewReportFailedType.Description
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/OutdatedLinkViewReportFailedType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Description
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/OutdatedLinkViewReportFailedType.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets the description of the outdated link view report failed type</p>\n"
+  example: []
+  syntax:
+    content: public string Description { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Dropbox.Api.TeamLog.OutdatedLinkViewReportFailedType.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.OutdatedLinkViewReportFailedType
+  commentId: T:Dropbox.Api.TeamLog.OutdatedLinkViewReportFailedType
+  parent: Dropbox.Api.TeamLog
+  name: OutdatedLinkViewReportFailedType
+  nameWithType: OutdatedLinkViewReportFailedType
+  fullName: Dropbox.Api.TeamLog.OutdatedLinkViewReportFailedType
+- uid: Dropbox.Api.TeamLog.OutdatedLinkViewReportFailedType.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.OutdatedLinkViewReportFailedType.#ctor
+  name: OutdatedLinkViewReportFailedType
+  nameWithType: OutdatedLinkViewReportFailedType.OutdatedLinkViewReportFailedType
+  fullName: Dropbox.Api.TeamLog.OutdatedLinkViewReportFailedType.OutdatedLinkViewReportFailedType
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.OutdatedLinkViewReportFailedType.Description*
+  commentId: Overload:Dropbox.Api.TeamLog.OutdatedLinkViewReportFailedType.Description
+  name: Description
+  nameWithType: OutdatedLinkViewReportFailedType.Description
+  fullName: Dropbox.Api.TeamLog.OutdatedLinkViewReportFailedType.Description
+shouldSkipMarkup: true

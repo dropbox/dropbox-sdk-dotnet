@@ -1,0 +1,625 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo
+  commentId: T:Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo
+  id: MobileDeviceSessionLogInfo
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo.#ctor
+  - Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo.#ctor(System.String,Dropbox.Api.Team.MobileClientPlatform,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},Dropbox.Api.TeamLog.MobileSessionLogInfo,System.String,System.String,System.String)
+  - Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo.ClientType
+  - Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo.ClientVersion
+  - Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo.DeviceName
+  - Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo.LastCarrier
+  - Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo.OsVersion
+  - Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo.SessionInfo
+  langs:
+  - csharp
+  - vb
+  name: MobileDeviceSessionLogInfo
+  nameWithType: MobileDeviceSessionLogInfo
+  fullName: Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MobileDeviceSessionLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: MobileDeviceSessionLogInfo
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MobileDeviceSessionLogInfo.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Information about linked Dropbox mobile client sessions</p>\n"
+  example: []
+  syntax:
+    content: 'public class MobileDeviceSessionLogInfo : DeviceSessionLogInfo'
+    content.vb: >-
+      Public Class MobileDeviceSessionLogInfo
+          Inherits DeviceSessionLogInfo
+  inheritance:
+  - System.Object
+  - Dropbox.Api.TeamLog.DeviceSessionLogInfo
+  inheritedMembers:
+  - Dropbox.Api.TeamLog.DeviceSessionLogInfo.IsDesktopDeviceSession
+  - Dropbox.Api.TeamLog.DeviceSessionLogInfo.AsDesktopDeviceSession
+  - Dropbox.Api.TeamLog.DeviceSessionLogInfo.IsMobileDeviceSession
+  - Dropbox.Api.TeamLog.DeviceSessionLogInfo.AsMobileDeviceSession
+  - Dropbox.Api.TeamLog.DeviceSessionLogInfo.IsWebDeviceSession
+  - Dropbox.Api.TeamLog.DeviceSessionLogInfo.AsWebDeviceSession
+  - Dropbox.Api.TeamLog.DeviceSessionLogInfo.IsLegacyDeviceSession
+  - Dropbox.Api.TeamLog.DeviceSessionLogInfo.AsLegacyDeviceSession
+  - Dropbox.Api.TeamLog.DeviceSessionLogInfo.IpAddress
+  - Dropbox.Api.TeamLog.DeviceSessionLogInfo.Created
+  - Dropbox.Api.TeamLog.DeviceSessionLogInfo.Updated
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo.#ctor(System.String,Dropbox.Api.Team.MobileClientPlatform,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},Dropbox.Api.TeamLog.MobileSessionLogInfo,System.String,System.String,System.String)
+  commentId: M:Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo.#ctor(System.String,Dropbox.Api.Team.MobileClientPlatform,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},Dropbox.Api.TeamLog.MobileSessionLogInfo,System.String,System.String,System.String)
+  id: '#ctor(System.String,Dropbox.Api.Team.MobileClientPlatform,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},Dropbox.Api.TeamLog.MobileSessionLogInfo,System.String,System.String,System.String)'
+  parent: Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo
+  langs:
+  - csharp
+  - vb
+  name: MobileDeviceSessionLogInfo(String, MobileClientPlatform, String, Nullable<System.DateTime>, Nullable<System.DateTime>, MobileSessionLogInfo, String, String, String)
+  nameWithType: MobileDeviceSessionLogInfo.MobileDeviceSessionLogInfo(String, MobileClientPlatform, String, Nullable<System.DateTime>, Nullable<System.DateTime>, MobileSessionLogInfo, String, String, String)
+  fullName: Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo.MobileDeviceSessionLogInfo(System.String, Dropbox.Api.Team.MobileClientPlatform, System.String, System.Nullable<System.DateTime>, System.Nullable<System.DateTime>, Dropbox.Api.TeamLog.MobileSessionLogInfo, System.String, System.String, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MobileDeviceSessionLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MobileDeviceSessionLogInfo.cs
+    startLine: 44
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public MobileDeviceSessionLogInfo(string deviceName, MobileClientPlatform clientType, string ipAddress = null, System.DateTime? created = null, System.DateTime? updated = null, MobileSessionLogInfo sessionInfo = null, string clientVersion = null, string osVersion = null, string lastCarrier = null)
+    parameters:
+    - id: deviceName
+      type: System.String
+      description: The device name.
+    - id: clientType
+      type: Dropbox.Api.Team.MobileClientPlatform
+      description: The mobile application type.
+    - id: ipAddress
+      type: System.String
+      description: >-
+        The IP address of the last activity from this
+
+        session.
+    - id: created
+      type: System.Nullable{System.DateTime}
+      description: The time this session was created.
+    - id: updated
+      type: System.Nullable{System.DateTime}
+      description: The time of the last activity from this session.
+    - id: sessionInfo
+      type: Dropbox.Api.TeamLog.MobileSessionLogInfo
+      description: Mobile session unique id.
+    - id: clientVersion
+      type: System.String
+      description: The Dropbox client version.
+    - id: osVersion
+      type: System.String
+      description: The hosting OS version.
+    - id: lastCarrier
+      type: System.String
+      description: last carrier used by the device.
+    content.vb: Public Sub New(deviceName As String, clientType As MobileClientPlatform, ipAddress As String = Nothing, created As System.DateTime? = Nothing, updated As System.DateTime? = Nothing, sessionInfo As MobileSessionLogInfo = Nothing, clientVersion As String = Nothing, osVersion As String = Nothing, lastCarrier As String = Nothing)
+  overload: Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo.#ctor*
+  nameWithType.vb: MobileDeviceSessionLogInfo.MobileDeviceSessionLogInfo(String, MobileClientPlatform, String, Nullable(Of System.DateTime), Nullable(Of System.DateTime), MobileSessionLogInfo, String, String, String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo.MobileDeviceSessionLogInfo(System.String, Dropbox.Api.Team.MobileClientPlatform, System.String, System.Nullable(Of System.DateTime), System.Nullable(Of System.DateTime), Dropbox.Api.TeamLog.MobileSessionLogInfo, System.String, System.String, System.String)
+  name.vb: MobileDeviceSessionLogInfo(String, MobileClientPlatform, String, Nullable(Of System.DateTime), Nullable(Of System.DateTime), MobileSessionLogInfo, String, String, String)
+- uid: Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo.#ctor
+  commentId: M:Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo
+  langs:
+  - csharp
+  - vb
+  name: MobileDeviceSessionLogInfo()
+  nameWithType: MobileDeviceSessionLogInfo.MobileDeviceSessionLogInfo()
+  fullName: Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo.MobileDeviceSessionLogInfo()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MobileDeviceSessionLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MobileDeviceSessionLogInfo.cs
+    startLine: 79
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public MobileDeviceSessionLogInfo()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo.DeviceName
+  commentId: P:Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo.DeviceName
+  id: DeviceName
+  parent: Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo
+  langs:
+  - csharp
+  - vb
+  name: DeviceName
+  nameWithType: MobileDeviceSessionLogInfo.DeviceName
+  fullName: Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo.DeviceName
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MobileDeviceSessionLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: DeviceName
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MobileDeviceSessionLogInfo.cs
+    startLine: 87
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The device name.</p>\n"
+  example: []
+  syntax:
+    content: public string DeviceName { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property DeviceName As String
+  overload: Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo.DeviceName*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo.ClientType
+  commentId: P:Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo.ClientType
+  id: ClientType
+  parent: Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo
+  langs:
+  - csharp
+  - vb
+  name: ClientType
+  nameWithType: MobileDeviceSessionLogInfo.ClientType
+  fullName: Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo.ClientType
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MobileDeviceSessionLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ClientType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MobileDeviceSessionLogInfo.cs
+    startLine: 92
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The mobile application type.</p>\n"
+  example: []
+  syntax:
+    content: public MobileClientPlatform ClientType { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.MobileClientPlatform
+    content.vb: Public Property ClientType As MobileClientPlatform
+  overload: Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo.ClientType*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo.SessionInfo
+  commentId: P:Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo.SessionInfo
+  id: SessionInfo
+  parent: Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo
+  langs:
+  - csharp
+  - vb
+  name: SessionInfo
+  nameWithType: MobileDeviceSessionLogInfo.SessionInfo
+  fullName: Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo.SessionInfo
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MobileDeviceSessionLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SessionInfo
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MobileDeviceSessionLogInfo.cs
+    startLine: 97
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Mobile session unique id.</p>\n"
+  example: []
+  syntax:
+    content: public MobileSessionLogInfo SessionInfo { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.MobileSessionLogInfo
+    content.vb: Public Property SessionInfo As MobileSessionLogInfo
+  overload: Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo.SessionInfo*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo.ClientVersion
+  commentId: P:Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo.ClientVersion
+  id: ClientVersion
+  parent: Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo
+  langs:
+  - csharp
+  - vb
+  name: ClientVersion
+  nameWithType: MobileDeviceSessionLogInfo.ClientVersion
+  fullName: Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo.ClientVersion
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MobileDeviceSessionLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ClientVersion
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MobileDeviceSessionLogInfo.cs
+    startLine: 102
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The Dropbox client version.</p>\n"
+  example: []
+  syntax:
+    content: public string ClientVersion { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ClientVersion As String
+  overload: Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo.ClientVersion*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo.OsVersion
+  commentId: P:Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo.OsVersion
+  id: OsVersion
+  parent: Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo
+  langs:
+  - csharp
+  - vb
+  name: OsVersion
+  nameWithType: MobileDeviceSessionLogInfo.OsVersion
+  fullName: Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo.OsVersion
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MobileDeviceSessionLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: OsVersion
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MobileDeviceSessionLogInfo.cs
+    startLine: 107
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The hosting OS version.</p>\n"
+  example: []
+  syntax:
+    content: public string OsVersion { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property OsVersion As String
+  overload: Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo.OsVersion*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo.LastCarrier
+  commentId: P:Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo.LastCarrier
+  id: LastCarrier
+  parent: Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo
+  langs:
+  - csharp
+  - vb
+  name: LastCarrier
+  nameWithType: MobileDeviceSessionLogInfo.LastCarrier
+  fullName: Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo.LastCarrier
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MobileDeviceSessionLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: LastCarrier
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MobileDeviceSessionLogInfo.cs
+    startLine: 112
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>last carrier used by the device.</p>\n"
+  example: []
+  syntax:
+    content: public string LastCarrier { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property LastCarrier As String
+  overload: Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo.LastCarrier*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.DeviceSessionLogInfo
+  commentId: T:Dropbox.Api.TeamLog.DeviceSessionLogInfo
+  parent: Dropbox.Api.TeamLog
+  name: DeviceSessionLogInfo
+  nameWithType: DeviceSessionLogInfo
+  fullName: Dropbox.Api.TeamLog.DeviceSessionLogInfo
+- uid: Dropbox.Api.TeamLog.DeviceSessionLogInfo.IsDesktopDeviceSession
+  commentId: P:Dropbox.Api.TeamLog.DeviceSessionLogInfo.IsDesktopDeviceSession
+  parent: Dropbox.Api.TeamLog.DeviceSessionLogInfo
+  name: IsDesktopDeviceSession
+  nameWithType: DeviceSessionLogInfo.IsDesktopDeviceSession
+  fullName: Dropbox.Api.TeamLog.DeviceSessionLogInfo.IsDesktopDeviceSession
+- uid: Dropbox.Api.TeamLog.DeviceSessionLogInfo.AsDesktopDeviceSession
+  commentId: P:Dropbox.Api.TeamLog.DeviceSessionLogInfo.AsDesktopDeviceSession
+  parent: Dropbox.Api.TeamLog.DeviceSessionLogInfo
+  name: AsDesktopDeviceSession
+  nameWithType: DeviceSessionLogInfo.AsDesktopDeviceSession
+  fullName: Dropbox.Api.TeamLog.DeviceSessionLogInfo.AsDesktopDeviceSession
+- uid: Dropbox.Api.TeamLog.DeviceSessionLogInfo.IsMobileDeviceSession
+  commentId: P:Dropbox.Api.TeamLog.DeviceSessionLogInfo.IsMobileDeviceSession
+  parent: Dropbox.Api.TeamLog.DeviceSessionLogInfo
+  name: IsMobileDeviceSession
+  nameWithType: DeviceSessionLogInfo.IsMobileDeviceSession
+  fullName: Dropbox.Api.TeamLog.DeviceSessionLogInfo.IsMobileDeviceSession
+- uid: Dropbox.Api.TeamLog.DeviceSessionLogInfo.AsMobileDeviceSession
+  commentId: P:Dropbox.Api.TeamLog.DeviceSessionLogInfo.AsMobileDeviceSession
+  parent: Dropbox.Api.TeamLog.DeviceSessionLogInfo
+  name: AsMobileDeviceSession
+  nameWithType: DeviceSessionLogInfo.AsMobileDeviceSession
+  fullName: Dropbox.Api.TeamLog.DeviceSessionLogInfo.AsMobileDeviceSession
+- uid: Dropbox.Api.TeamLog.DeviceSessionLogInfo.IsWebDeviceSession
+  commentId: P:Dropbox.Api.TeamLog.DeviceSessionLogInfo.IsWebDeviceSession
+  parent: Dropbox.Api.TeamLog.DeviceSessionLogInfo
+  name: IsWebDeviceSession
+  nameWithType: DeviceSessionLogInfo.IsWebDeviceSession
+  fullName: Dropbox.Api.TeamLog.DeviceSessionLogInfo.IsWebDeviceSession
+- uid: Dropbox.Api.TeamLog.DeviceSessionLogInfo.AsWebDeviceSession
+  commentId: P:Dropbox.Api.TeamLog.DeviceSessionLogInfo.AsWebDeviceSession
+  parent: Dropbox.Api.TeamLog.DeviceSessionLogInfo
+  name: AsWebDeviceSession
+  nameWithType: DeviceSessionLogInfo.AsWebDeviceSession
+  fullName: Dropbox.Api.TeamLog.DeviceSessionLogInfo.AsWebDeviceSession
+- uid: Dropbox.Api.TeamLog.DeviceSessionLogInfo.IsLegacyDeviceSession
+  commentId: P:Dropbox.Api.TeamLog.DeviceSessionLogInfo.IsLegacyDeviceSession
+  parent: Dropbox.Api.TeamLog.DeviceSessionLogInfo
+  name: IsLegacyDeviceSession
+  nameWithType: DeviceSessionLogInfo.IsLegacyDeviceSession
+  fullName: Dropbox.Api.TeamLog.DeviceSessionLogInfo.IsLegacyDeviceSession
+- uid: Dropbox.Api.TeamLog.DeviceSessionLogInfo.AsLegacyDeviceSession
+  commentId: P:Dropbox.Api.TeamLog.DeviceSessionLogInfo.AsLegacyDeviceSession
+  parent: Dropbox.Api.TeamLog.DeviceSessionLogInfo
+  name: AsLegacyDeviceSession
+  nameWithType: DeviceSessionLogInfo.AsLegacyDeviceSession
+  fullName: Dropbox.Api.TeamLog.DeviceSessionLogInfo.AsLegacyDeviceSession
+- uid: Dropbox.Api.TeamLog.DeviceSessionLogInfo.IpAddress
+  commentId: P:Dropbox.Api.TeamLog.DeviceSessionLogInfo.IpAddress
+  parent: Dropbox.Api.TeamLog.DeviceSessionLogInfo
+  name: IpAddress
+  nameWithType: DeviceSessionLogInfo.IpAddress
+  fullName: Dropbox.Api.TeamLog.DeviceSessionLogInfo.IpAddress
+- uid: Dropbox.Api.TeamLog.DeviceSessionLogInfo.Created
+  commentId: P:Dropbox.Api.TeamLog.DeviceSessionLogInfo.Created
+  parent: Dropbox.Api.TeamLog.DeviceSessionLogInfo
+  name: Created
+  nameWithType: DeviceSessionLogInfo.Created
+  fullName: Dropbox.Api.TeamLog.DeviceSessionLogInfo.Created
+- uid: Dropbox.Api.TeamLog.DeviceSessionLogInfo.Updated
+  commentId: P:Dropbox.Api.TeamLog.DeviceSessionLogInfo.Updated
+  parent: Dropbox.Api.TeamLog.DeviceSessionLogInfo
+  name: Updated
+  nameWithType: DeviceSessionLogInfo.Updated
+  fullName: Dropbox.Api.TeamLog.DeviceSessionLogInfo.Updated
+- uid: Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo
+  commentId: T:Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo
+  parent: Dropbox.Api.TeamLog
+  name: MobileDeviceSessionLogInfo
+  nameWithType: MobileDeviceSessionLogInfo
+  fullName: Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo
+- uid: Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo.#ctor
+  name: MobileDeviceSessionLogInfo
+  nameWithType: MobileDeviceSessionLogInfo.MobileDeviceSessionLogInfo
+  fullName: Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo.MobileDeviceSessionLogInfo
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Team.MobileClientPlatform
+  commentId: T:Dropbox.Api.Team.MobileClientPlatform
+  parent: Dropbox.Api.Team
+  name: MobileClientPlatform
+  nameWithType: MobileClientPlatform
+  fullName: Dropbox.Api.Team.MobileClientPlatform
+- uid: System.Nullable{System.DateTime}
+  commentId: '!:System.Nullable{System.DateTime}'
+  definition: System.Nullable`1
+  name: Nullable<System.DateTime>
+  nameWithType: Nullable<System.DateTime>
+  fullName: System.Nullable<System.DateTime>
+  nameWithType.vb: Nullable(Of System.DateTime)
+  fullName.vb: System.Nullable(Of System.DateTime)
+  name.vb: Nullable(Of System.DateTime)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.DateTime
+    name: System.DateTime
+    nameWithType: System.DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.DateTime
+    name: System.DateTime
+    nameWithType: System.DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.TeamLog.MobileSessionLogInfo
+  commentId: T:Dropbox.Api.TeamLog.MobileSessionLogInfo
+  parent: Dropbox.Api.TeamLog
+  name: MobileSessionLogInfo
+  nameWithType: MobileSessionLogInfo
+  fullName: Dropbox.Api.TeamLog.MobileSessionLogInfo
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Nullable`1
+  isExternal: true
+  name: Nullable<>
+  nameWithType: Nullable<>
+  fullName: System.Nullable<>
+  nameWithType.vb: Nullable(Of )
+  fullName.vb: System.Nullable(Of )
+  name.vb: Nullable(Of )
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo.DeviceName*
+  commentId: Overload:Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo.DeviceName
+  name: DeviceName
+  nameWithType: MobileDeviceSessionLogInfo.DeviceName
+  fullName: Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo.DeviceName
+- uid: Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo.ClientType*
+  commentId: Overload:Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo.ClientType
+  name: ClientType
+  nameWithType: MobileDeviceSessionLogInfo.ClientType
+  fullName: Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo.ClientType
+- uid: Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo.SessionInfo*
+  commentId: Overload:Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo.SessionInfo
+  name: SessionInfo
+  nameWithType: MobileDeviceSessionLogInfo.SessionInfo
+  fullName: Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo.SessionInfo
+- uid: Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo.ClientVersion*
+  commentId: Overload:Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo.ClientVersion
+  name: ClientVersion
+  nameWithType: MobileDeviceSessionLogInfo.ClientVersion
+  fullName: Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo.ClientVersion
+- uid: Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo.OsVersion*
+  commentId: Overload:Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo.OsVersion
+  name: OsVersion
+  nameWithType: MobileDeviceSessionLogInfo.OsVersion
+  fullName: Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo.OsVersion
+- uid: Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo.LastCarrier*
+  commentId: Overload:Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo.LastCarrier
+  name: LastCarrier
+  nameWithType: MobileDeviceSessionLogInfo.LastCarrier
+  fullName: Dropbox.Api.TeamLog.MobileDeviceSessionLogInfo.LastCarrier
+shouldSkipMarkup: true

@@ -1,0 +1,96 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.FileRequestsEmailsRestrictedToTeamOnlyDetails
+  commentId: T:Dropbox.Api.TeamLog.FileRequestsEmailsRestrictedToTeamOnlyDetails
+  id: FileRequestsEmailsRestrictedToTeamOnlyDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.FileRequestsEmailsRestrictedToTeamOnlyDetails.#ctor
+  langs:
+  - csharp
+  - vb
+  name: FileRequestsEmailsRestrictedToTeamOnlyDetails
+  nameWithType: FileRequestsEmailsRestrictedToTeamOnlyDetails
+  fullName: Dropbox.Api.TeamLog.FileRequestsEmailsRestrictedToTeamOnlyDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestsEmailsRestrictedToTeamOnlyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: FileRequestsEmailsRestrictedToTeamOnlyDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestsEmailsRestrictedToTeamOnlyDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Enabled file request emails for team.</p>\n"
+  example: []
+  syntax:
+    content: 'public class FileRequestsEmailsRestrictedToTeamOnlyDetails : object'
+    content.vb: >-
+      Public Class FileRequestsEmailsRestrictedToTeamOnlyDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.FileRequestsEmailsRestrictedToTeamOnlyDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.FileRequestsEmailsRestrictedToTeamOnlyDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.FileRequestsEmailsRestrictedToTeamOnlyDetails
+  langs:
+  - csharp
+  - vb
+  name: FileRequestsEmailsRestrictedToTeamOnlyDetails()
+  nameWithType: FileRequestsEmailsRestrictedToTeamOnlyDetails.FileRequestsEmailsRestrictedToTeamOnlyDetails()
+  fullName: Dropbox.Api.TeamLog.FileRequestsEmailsRestrictedToTeamOnlyDetails.FileRequestsEmailsRestrictedToTeamOnlyDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestsEmailsRestrictedToTeamOnlyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestsEmailsRestrictedToTeamOnlyDetails.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.FileRequestsEmailsRestrictedToTeamOnlyDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public FileRequestsEmailsRestrictedToTeamOnlyDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.FileRequestsEmailsRestrictedToTeamOnlyDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.FileRequestsEmailsRestrictedToTeamOnlyDetails
+  commentId: T:Dropbox.Api.TeamLog.FileRequestsEmailsRestrictedToTeamOnlyDetails
+  parent: Dropbox.Api.TeamLog
+  name: FileRequestsEmailsRestrictedToTeamOnlyDetails
+  nameWithType: FileRequestsEmailsRestrictedToTeamOnlyDetails
+  fullName: Dropbox.Api.TeamLog.FileRequestsEmailsRestrictedToTeamOnlyDetails
+- uid: Dropbox.Api.TeamLog.FileRequestsEmailsRestrictedToTeamOnlyDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.FileRequestsEmailsRestrictedToTeamOnlyDetails.#ctor
+  name: FileRequestsEmailsRestrictedToTeamOnlyDetails
+  nameWithType: FileRequestsEmailsRestrictedToTeamOnlyDetails.FileRequestsEmailsRestrictedToTeamOnlyDetails
+  fullName: Dropbox.Api.TeamLog.FileRequestsEmailsRestrictedToTeamOnlyDetails.FileRequestsEmailsRestrictedToTeamOnlyDetails
+shouldSkipMarkup: true

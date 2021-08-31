@@ -1,0 +1,381 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.FileProperties.TemplateFilter
+  commentId: T:Dropbox.Api.FileProperties.TemplateFilter
+  id: TemplateFilter
+  parent: Dropbox.Api.FileProperties
+  children:
+  - Dropbox.Api.FileProperties.TemplateFilter.#ctor
+  - Dropbox.Api.FileProperties.TemplateFilter.AsFilterNone
+  - Dropbox.Api.FileProperties.TemplateFilter.AsFilterSome
+  - Dropbox.Api.FileProperties.TemplateFilter.AsOther
+  - Dropbox.Api.FileProperties.TemplateFilter.IsFilterNone
+  - Dropbox.Api.FileProperties.TemplateFilter.IsFilterSome
+  - Dropbox.Api.FileProperties.TemplateFilter.IsOther
+  langs:
+  - csharp
+  - vb
+  name: TemplateFilter
+  nameWithType: TemplateFilter
+  fullName: Dropbox.Api.FileProperties.TemplateFilter
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/TemplateFilter.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TemplateFilter
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/TemplateFilter.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>The template filter object</p>\n"
+  example: []
+  syntax:
+    content: 'public class TemplateFilter : object'
+    content.vb: >-
+      Public Class TemplateFilter
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.FileProperties.TemplateFilter.FilterNone
+  - Dropbox.Api.FileProperties.TemplateFilter.FilterSome
+  - Dropbox.Api.FileProperties.TemplateFilter.Other
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.FileProperties.TemplateFilter.#ctor
+  commentId: M:Dropbox.Api.FileProperties.TemplateFilter.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.FileProperties.TemplateFilter
+  langs:
+  - csharp
+  - vb
+  name: TemplateFilter()
+  nameWithType: TemplateFilter.TemplateFilter()
+  fullName: Dropbox.Api.FileProperties.TemplateFilter.TemplateFilter()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/TemplateFilter.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/TemplateFilter.cs
+    startLine: 32
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.FileProperties.TemplateFilter\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public TemplateFilter()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.FileProperties.TemplateFilter.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileProperties.TemplateFilter.IsFilterNone
+  commentId: P:Dropbox.Api.FileProperties.TemplateFilter.IsFilterNone
+  id: IsFilterNone
+  parent: Dropbox.Api.FileProperties.TemplateFilter
+  langs:
+  - csharp
+  - vb
+  name: IsFilterNone
+  nameWithType: TemplateFilter.IsFilterNone
+  fullName: Dropbox.Api.FileProperties.TemplateFilter.IsFilterNone
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/TemplateFilter.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsFilterNone
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/TemplateFilter.cs
+    startLine: 39
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Gets a value indicating whether this instance is FilterNone</p>\n"
+  example: []
+  syntax:
+    content: public bool IsFilterNone { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsFilterNone As Boolean
+  overload: Dropbox.Api.FileProperties.TemplateFilter.IsFilterNone*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileProperties.TemplateFilter.AsFilterNone
+  commentId: P:Dropbox.Api.FileProperties.TemplateFilter.AsFilterNone
+  id: AsFilterNone
+  parent: Dropbox.Api.FileProperties.TemplateFilter
+  langs:
+  - csharp
+  - vb
+  name: AsFilterNone
+  nameWithType: TemplateFilter.AsFilterNone
+  fullName: Dropbox.Api.FileProperties.TemplateFilter.AsFilterNone
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/TemplateFilter.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsFilterNone
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/TemplateFilter.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Gets this instance as a FilterNone, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public TemplateFilter.FilterNone AsFilterNone { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.FileProperties.TemplateFilter.FilterNone
+    content.vb: Public ReadOnly Property AsFilterNone As TemplateFilter.FilterNone
+  overload: Dropbox.Api.FileProperties.TemplateFilter.AsFilterNone*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileProperties.TemplateFilter.IsFilterSome
+  commentId: P:Dropbox.Api.FileProperties.TemplateFilter.IsFilterSome
+  id: IsFilterSome
+  parent: Dropbox.Api.FileProperties.TemplateFilter
+  langs:
+  - csharp
+  - vb
+  name: IsFilterSome
+  nameWithType: TemplateFilter.IsFilterSome
+  fullName: Dropbox.Api.FileProperties.TemplateFilter.IsFilterSome
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/TemplateFilter.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsFilterSome
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/TemplateFilter.cs
+    startLine: 61
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Gets a value indicating whether this instance is FilterSome</p>\n"
+  example: []
+  syntax:
+    content: public bool IsFilterSome { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsFilterSome As Boolean
+  overload: Dropbox.Api.FileProperties.TemplateFilter.IsFilterSome*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileProperties.TemplateFilter.AsFilterSome
+  commentId: P:Dropbox.Api.FileProperties.TemplateFilter.AsFilterSome
+  id: AsFilterSome
+  parent: Dropbox.Api.FileProperties.TemplateFilter
+  langs:
+  - csharp
+  - vb
+  name: AsFilterSome
+  nameWithType: TemplateFilter.AsFilterSome
+  fullName: Dropbox.Api.FileProperties.TemplateFilter.AsFilterSome
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/TemplateFilter.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsFilterSome
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/TemplateFilter.cs
+    startLine: 72
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Gets this instance as a FilterSome, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public TemplateFilter.FilterSome AsFilterSome { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.FileProperties.TemplateFilter.FilterSome
+    content.vb: Public ReadOnly Property AsFilterSome As TemplateFilter.FilterSome
+  overload: Dropbox.Api.FileProperties.TemplateFilter.AsFilterSome*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileProperties.TemplateFilter.IsOther
+  commentId: P:Dropbox.Api.FileProperties.TemplateFilter.IsOther
+  id: IsOther
+  parent: Dropbox.Api.FileProperties.TemplateFilter
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: TemplateFilter.IsOther
+  fullName: Dropbox.Api.FileProperties.TemplateFilter.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/TemplateFilter.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/TemplateFilter.cs
+    startLine: 83
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.FileProperties.TemplateFilter.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileProperties.TemplateFilter.AsOther
+  commentId: P:Dropbox.Api.FileProperties.TemplateFilter.AsOther
+  id: AsOther
+  parent: Dropbox.Api.FileProperties.TemplateFilter
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: TemplateFilter.AsOther
+  fullName: Dropbox.Api.FileProperties.TemplateFilter.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/TemplateFilter.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/TemplateFilter.cs
+    startLine: 94
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public TemplateFilter.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.FileProperties.TemplateFilter.Other
+    content.vb: Public ReadOnly Property AsOther As TemplateFilter.Other
+  overload: Dropbox.Api.FileProperties.TemplateFilter.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.FileProperties
+  commentId: N:Dropbox.Api.FileProperties
+  name: Dropbox.Api.FileProperties
+  nameWithType: Dropbox.Api.FileProperties
+  fullName: Dropbox.Api.FileProperties
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.FileProperties.TemplateFilter
+  commentId: T:Dropbox.Api.FileProperties.TemplateFilter
+  parent: Dropbox.Api.FileProperties
+  name: TemplateFilter
+  nameWithType: TemplateFilter
+  fullName: Dropbox.Api.FileProperties.TemplateFilter
+- uid: Dropbox.Api.FileProperties.TemplateFilter.#ctor*
+  commentId: Overload:Dropbox.Api.FileProperties.TemplateFilter.#ctor
+  name: TemplateFilter
+  nameWithType: TemplateFilter.TemplateFilter
+  fullName: Dropbox.Api.FileProperties.TemplateFilter.TemplateFilter
+- uid: Dropbox.Api.FileProperties.TemplateFilter.IsFilterNone*
+  commentId: Overload:Dropbox.Api.FileProperties.TemplateFilter.IsFilterNone
+  name: IsFilterNone
+  nameWithType: TemplateFilter.IsFilterNone
+  fullName: Dropbox.Api.FileProperties.TemplateFilter.IsFilterNone
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.FileProperties.TemplateFilter.AsFilterNone*
+  commentId: Overload:Dropbox.Api.FileProperties.TemplateFilter.AsFilterNone
+  name: AsFilterNone
+  nameWithType: TemplateFilter.AsFilterNone
+  fullName: Dropbox.Api.FileProperties.TemplateFilter.AsFilterNone
+- uid: Dropbox.Api.FileProperties.TemplateFilter.FilterNone
+  commentId: T:Dropbox.Api.FileProperties.TemplateFilter.FilterNone
+  parent: Dropbox.Api.FileProperties
+  name: TemplateFilter.FilterNone
+  nameWithType: TemplateFilter.FilterNone
+  fullName: Dropbox.Api.FileProperties.TemplateFilter.FilterNone
+- uid: Dropbox.Api.FileProperties.TemplateFilter.IsFilterSome*
+  commentId: Overload:Dropbox.Api.FileProperties.TemplateFilter.IsFilterSome
+  name: IsFilterSome
+  nameWithType: TemplateFilter.IsFilterSome
+  fullName: Dropbox.Api.FileProperties.TemplateFilter.IsFilterSome
+- uid: Dropbox.Api.FileProperties.TemplateFilter.AsFilterSome*
+  commentId: Overload:Dropbox.Api.FileProperties.TemplateFilter.AsFilterSome
+  name: AsFilterSome
+  nameWithType: TemplateFilter.AsFilterSome
+  fullName: Dropbox.Api.FileProperties.TemplateFilter.AsFilterSome
+- uid: Dropbox.Api.FileProperties.TemplateFilter.FilterSome
+  commentId: T:Dropbox.Api.FileProperties.TemplateFilter.FilterSome
+  parent: Dropbox.Api.FileProperties
+  name: TemplateFilter.FilterSome
+  nameWithType: TemplateFilter.FilterSome
+  fullName: Dropbox.Api.FileProperties.TemplateFilter.FilterSome
+- uid: Dropbox.Api.FileProperties.TemplateFilter.IsOther*
+  commentId: Overload:Dropbox.Api.FileProperties.TemplateFilter.IsOther
+  name: IsOther
+  nameWithType: TemplateFilter.IsOther
+  fullName: Dropbox.Api.FileProperties.TemplateFilter.IsOther
+- uid: Dropbox.Api.FileProperties.TemplateFilter.AsOther*
+  commentId: Overload:Dropbox.Api.FileProperties.TemplateFilter.AsOther
+  name: AsOther
+  nameWithType: TemplateFilter.AsOther
+  fullName: Dropbox.Api.FileProperties.TemplateFilter.AsOther
+- uid: Dropbox.Api.FileProperties.TemplateFilter.Other
+  commentId: T:Dropbox.Api.FileProperties.TemplateFilter.Other
+  parent: Dropbox.Api.FileProperties
+  name: TemplateFilter.Other
+  nameWithType: TemplateFilter.Other
+  fullName: Dropbox.Api.FileProperties.TemplateFilter.Other
+shouldSkipMarkup: true

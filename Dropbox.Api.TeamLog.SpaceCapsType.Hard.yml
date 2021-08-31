@@ -1,0 +1,162 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.SpaceCapsType.Hard
+  commentId: T:Dropbox.Api.TeamLog.SpaceCapsType.Hard
+  id: SpaceCapsType.Hard
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.SpaceCapsType.Hard.Instance
+  langs:
+  - csharp
+  - vb
+  name: SpaceCapsType.Hard
+  nameWithType: SpaceCapsType.Hard
+  fullName: Dropbox.Api.TeamLog.SpaceCapsType.Hard
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SpaceCapsType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Hard
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SpaceCapsType.cs
+    startLine: 211
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The hard object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Hard : SpaceCapsType'
+    content.vb: >-
+      Public NotInheritable Class Hard
+          Inherits SpaceCapsType
+  inheritance:
+  - System.Object
+  - Dropbox.Api.TeamLog.SpaceCapsType
+  inheritedMembers:
+  - Dropbox.Api.TeamLog.SpaceCapsType.IsHard
+  - Dropbox.Api.TeamLog.SpaceCapsType.AsHard
+  - Dropbox.Api.TeamLog.SpaceCapsType.IsOff
+  - Dropbox.Api.TeamLog.SpaceCapsType.AsOff
+  - Dropbox.Api.TeamLog.SpaceCapsType.IsSoft
+  - Dropbox.Api.TeamLog.SpaceCapsType.AsSoft
+  - Dropbox.Api.TeamLog.SpaceCapsType.IsOther
+  - Dropbox.Api.TeamLog.SpaceCapsType.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.TeamLog.SpaceCapsType.Hard.Instance
+  commentId: F:Dropbox.Api.TeamLog.SpaceCapsType.Hard.Instance
+  id: Instance
+  parent: Dropbox.Api.TeamLog.SpaceCapsType.Hard
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: SpaceCapsType.Hard.Instance
+  fullName: Dropbox.Api.TeamLog.SpaceCapsType.Hard.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SpaceCapsType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SpaceCapsType.cs
+    startLine: 235
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>A singleton instance of Hard</p>\n"
+  example: []
+  syntax:
+    content: public static readonly SpaceCapsType.Hard Instance
+    return:
+      type: Dropbox.Api.TeamLog.SpaceCapsType.Hard
+    content.vb: Public Shared ReadOnly Instance As SpaceCapsType.Hard
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.SpaceCapsType
+  commentId: T:Dropbox.Api.TeamLog.SpaceCapsType
+  parent: Dropbox.Api.TeamLog
+  name: SpaceCapsType
+  nameWithType: SpaceCapsType
+  fullName: Dropbox.Api.TeamLog.SpaceCapsType
+- uid: Dropbox.Api.TeamLog.SpaceCapsType.IsHard
+  commentId: P:Dropbox.Api.TeamLog.SpaceCapsType.IsHard
+  parent: Dropbox.Api.TeamLog.SpaceCapsType
+  name: IsHard
+  nameWithType: SpaceCapsType.IsHard
+  fullName: Dropbox.Api.TeamLog.SpaceCapsType.IsHard
+- uid: Dropbox.Api.TeamLog.SpaceCapsType.AsHard
+  commentId: P:Dropbox.Api.TeamLog.SpaceCapsType.AsHard
+  parent: Dropbox.Api.TeamLog.SpaceCapsType
+  name: AsHard
+  nameWithType: SpaceCapsType.AsHard
+  fullName: Dropbox.Api.TeamLog.SpaceCapsType.AsHard
+- uid: Dropbox.Api.TeamLog.SpaceCapsType.IsOff
+  commentId: P:Dropbox.Api.TeamLog.SpaceCapsType.IsOff
+  parent: Dropbox.Api.TeamLog.SpaceCapsType
+  name: IsOff
+  nameWithType: SpaceCapsType.IsOff
+  fullName: Dropbox.Api.TeamLog.SpaceCapsType.IsOff
+- uid: Dropbox.Api.TeamLog.SpaceCapsType.AsOff
+  commentId: P:Dropbox.Api.TeamLog.SpaceCapsType.AsOff
+  parent: Dropbox.Api.TeamLog.SpaceCapsType
+  name: AsOff
+  nameWithType: SpaceCapsType.AsOff
+  fullName: Dropbox.Api.TeamLog.SpaceCapsType.AsOff
+- uid: Dropbox.Api.TeamLog.SpaceCapsType.IsSoft
+  commentId: P:Dropbox.Api.TeamLog.SpaceCapsType.IsSoft
+  parent: Dropbox.Api.TeamLog.SpaceCapsType
+  name: IsSoft
+  nameWithType: SpaceCapsType.IsSoft
+  fullName: Dropbox.Api.TeamLog.SpaceCapsType.IsSoft
+- uid: Dropbox.Api.TeamLog.SpaceCapsType.AsSoft
+  commentId: P:Dropbox.Api.TeamLog.SpaceCapsType.AsSoft
+  parent: Dropbox.Api.TeamLog.SpaceCapsType
+  name: AsSoft
+  nameWithType: SpaceCapsType.AsSoft
+  fullName: Dropbox.Api.TeamLog.SpaceCapsType.AsSoft
+- uid: Dropbox.Api.TeamLog.SpaceCapsType.IsOther
+  commentId: P:Dropbox.Api.TeamLog.SpaceCapsType.IsOther
+  parent: Dropbox.Api.TeamLog.SpaceCapsType
+  name: IsOther
+  nameWithType: SpaceCapsType.IsOther
+  fullName: Dropbox.Api.TeamLog.SpaceCapsType.IsOther
+- uid: Dropbox.Api.TeamLog.SpaceCapsType.AsOther
+  commentId: P:Dropbox.Api.TeamLog.SpaceCapsType.AsOther
+  parent: Dropbox.Api.TeamLog.SpaceCapsType
+  name: AsOther
+  nameWithType: SpaceCapsType.AsOther
+  fullName: Dropbox.Api.TeamLog.SpaceCapsType.AsOther
+- uid: Dropbox.Api.TeamLog.SpaceCapsType.Hard
+  commentId: T:Dropbox.Api.TeamLog.SpaceCapsType.Hard
+  parent: Dropbox.Api.TeamLog
+  name: SpaceCapsType.Hard
+  nameWithType: SpaceCapsType.Hard
+  fullName: Dropbox.Api.TeamLog.SpaceCapsType.Hard
+shouldSkipMarkup: true

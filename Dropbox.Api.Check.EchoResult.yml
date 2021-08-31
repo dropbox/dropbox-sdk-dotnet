@@ -1,0 +1,190 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Check.EchoResult
+  commentId: T:Dropbox.Api.Check.EchoResult
+  id: EchoResult
+  parent: Dropbox.Api.Check
+  children:
+  - Dropbox.Api.Check.EchoResult.#ctor
+  - Dropbox.Api.Check.EchoResult.#ctor(System.String)
+  - Dropbox.Api.Check.EchoResult.Result
+  langs:
+  - csharp
+  - vb
+  name: EchoResult
+  nameWithType: EchoResult
+  fullName: Dropbox.Api.Check.EchoResult
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Check/EchoResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: EchoResult
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Check/EchoResult.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Check
+  summary: "\n<p>EchoResult contains the result returned from the Dropbox servers.</p>\n"
+  example: []
+  syntax:
+    content: 'public class EchoResult : object'
+    content.vb: >-
+      Public Class EchoResult
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Check.EchoResult.#ctor(System.String)
+  commentId: M:Dropbox.Api.Check.EchoResult.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.Check.EchoResult
+  langs:
+  - csharp
+  - vb
+  name: EchoResult(String)
+  nameWithType: EchoResult.EchoResult(String)
+  fullName: Dropbox.Api.Check.EchoResult.EchoResult(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Check/EchoResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Check/EchoResult.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Check
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Check.EchoResult\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public EchoResult(string result = "")
+    parameters:
+    - id: result
+      type: System.String
+      description: >-
+        If everything worked correctly, this would be the same as
+
+        query.
+    content.vb: Public Sub New(result As String = "")
+  overload: Dropbox.Api.Check.EchoResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Check.EchoResult.#ctor
+  commentId: M:Dropbox.Api.Check.EchoResult.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Check.EchoResult
+  langs:
+  - csharp
+  - vb
+  name: EchoResult()
+  nameWithType: EchoResult.EchoResult()
+  fullName: Dropbox.Api.Check.EchoResult.EchoResult()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Check/EchoResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Check/EchoResult.cs
+    startLine: 49
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Check
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Check.EchoResult\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public EchoResult()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Check.EchoResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Check.EchoResult.Result
+  commentId: P:Dropbox.Api.Check.EchoResult.Result
+  id: Result
+  parent: Dropbox.Api.Check.EchoResult
+  langs:
+  - csharp
+  - vb
+  name: Result
+  nameWithType: EchoResult.Result
+  fullName: Dropbox.Api.Check.EchoResult.Result
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Check/EchoResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Result
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Check/EchoResult.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Check
+  summary: "\n<p>If everything worked correctly, this would be the same as query.</p>\n"
+  example: []
+  syntax:
+    content: public string Result { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Result As String
+  overload: Dropbox.Api.Check.EchoResult.Result*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Check
+  commentId: N:Dropbox.Api.Check
+  name: Dropbox.Api.Check
+  nameWithType: Dropbox.Api.Check
+  fullName: Dropbox.Api.Check
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Check.EchoResult
+  commentId: T:Dropbox.Api.Check.EchoResult
+  parent: Dropbox.Api.Check
+  name: EchoResult
+  nameWithType: EchoResult
+  fullName: Dropbox.Api.Check.EchoResult
+- uid: Dropbox.Api.Check.EchoResult.#ctor*
+  commentId: Overload:Dropbox.Api.Check.EchoResult.#ctor
+  name: EchoResult
+  nameWithType: EchoResult.EchoResult
+  fullName: Dropbox.Api.Check.EchoResult.EchoResult
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Check.EchoResult.Result*
+  commentId: Overload:Dropbox.Api.Check.EchoResult.Result
+  name: Result
+  nameWithType: EchoResult.Result
+  fullName: Dropbox.Api.Check.EchoResult.Result
+shouldSkipMarkup: true

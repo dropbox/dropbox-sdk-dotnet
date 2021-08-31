@@ -1,0 +1,148 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.PolicyType.Retention
+  commentId: T:Dropbox.Api.TeamLog.PolicyType.Retention
+  id: PolicyType.Retention
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.PolicyType.Retention.Instance
+  langs:
+  - csharp
+  - vb
+  name: PolicyType.Retention
+  nameWithType: PolicyType.Retention
+  fullName: Dropbox.Api.TeamLog.PolicyType.Retention
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PolicyType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Retention
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PolicyType.cs
+    startLine: 251
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The retention object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Retention : PolicyType'
+    content.vb: >-
+      Public NotInheritable Class Retention
+          Inherits PolicyType
+  inheritance:
+  - System.Object
+  - Dropbox.Api.TeamLog.PolicyType
+  inheritedMembers:
+  - Dropbox.Api.TeamLog.PolicyType.IsDisposition
+  - Dropbox.Api.TeamLog.PolicyType.AsDisposition
+  - Dropbox.Api.TeamLog.PolicyType.IsRetention
+  - Dropbox.Api.TeamLog.PolicyType.AsRetention
+  - Dropbox.Api.TeamLog.PolicyType.IsOther
+  - Dropbox.Api.TeamLog.PolicyType.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.TeamLog.PolicyType.Retention.Instance
+  commentId: F:Dropbox.Api.TeamLog.PolicyType.Retention.Instance
+  id: Instance
+  parent: Dropbox.Api.TeamLog.PolicyType.Retention
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: PolicyType.Retention.Instance
+  fullName: Dropbox.Api.TeamLog.PolicyType.Retention.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PolicyType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PolicyType.cs
+    startLine: 275
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>A singleton instance of Retention</p>\n"
+  example: []
+  syntax:
+    content: public static readonly PolicyType.Retention Instance
+    return:
+      type: Dropbox.Api.TeamLog.PolicyType.Retention
+    content.vb: Public Shared ReadOnly Instance As PolicyType.Retention
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.PolicyType
+  commentId: T:Dropbox.Api.TeamLog.PolicyType
+  parent: Dropbox.Api.TeamLog
+  name: PolicyType
+  nameWithType: PolicyType
+  fullName: Dropbox.Api.TeamLog.PolicyType
+- uid: Dropbox.Api.TeamLog.PolicyType.IsDisposition
+  commentId: P:Dropbox.Api.TeamLog.PolicyType.IsDisposition
+  parent: Dropbox.Api.TeamLog.PolicyType
+  name: IsDisposition
+  nameWithType: PolicyType.IsDisposition
+  fullName: Dropbox.Api.TeamLog.PolicyType.IsDisposition
+- uid: Dropbox.Api.TeamLog.PolicyType.AsDisposition
+  commentId: P:Dropbox.Api.TeamLog.PolicyType.AsDisposition
+  parent: Dropbox.Api.TeamLog.PolicyType
+  name: AsDisposition
+  nameWithType: PolicyType.AsDisposition
+  fullName: Dropbox.Api.TeamLog.PolicyType.AsDisposition
+- uid: Dropbox.Api.TeamLog.PolicyType.IsRetention
+  commentId: P:Dropbox.Api.TeamLog.PolicyType.IsRetention
+  parent: Dropbox.Api.TeamLog.PolicyType
+  name: IsRetention
+  nameWithType: PolicyType.IsRetention
+  fullName: Dropbox.Api.TeamLog.PolicyType.IsRetention
+- uid: Dropbox.Api.TeamLog.PolicyType.AsRetention
+  commentId: P:Dropbox.Api.TeamLog.PolicyType.AsRetention
+  parent: Dropbox.Api.TeamLog.PolicyType
+  name: AsRetention
+  nameWithType: PolicyType.AsRetention
+  fullName: Dropbox.Api.TeamLog.PolicyType.AsRetention
+- uid: Dropbox.Api.TeamLog.PolicyType.IsOther
+  commentId: P:Dropbox.Api.TeamLog.PolicyType.IsOther
+  parent: Dropbox.Api.TeamLog.PolicyType
+  name: IsOther
+  nameWithType: PolicyType.IsOther
+  fullName: Dropbox.Api.TeamLog.PolicyType.IsOther
+- uid: Dropbox.Api.TeamLog.PolicyType.AsOther
+  commentId: P:Dropbox.Api.TeamLog.PolicyType.AsOther
+  parent: Dropbox.Api.TeamLog.PolicyType
+  name: AsOther
+  nameWithType: PolicyType.AsOther
+  fullName: Dropbox.Api.TeamLog.PolicyType.AsOther
+- uid: Dropbox.Api.TeamLog.PolicyType.Retention
+  commentId: T:Dropbox.Api.TeamLog.PolicyType.Retention
+  parent: Dropbox.Api.TeamLog
+  name: PolicyType.Retention
+  nameWithType: PolicyType.Retention
+  fullName: Dropbox.Api.TeamLog.PolicyType.Retention
+shouldSkipMarkup: true

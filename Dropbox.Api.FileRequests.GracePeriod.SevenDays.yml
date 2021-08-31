@@ -1,0 +1,190 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.FileRequests.GracePeriod.SevenDays
+  commentId: T:Dropbox.Api.FileRequests.GracePeriod.SevenDays
+  id: GracePeriod.SevenDays
+  parent: Dropbox.Api.FileRequests
+  children:
+  - Dropbox.Api.FileRequests.GracePeriod.SevenDays.Instance
+  langs:
+  - csharp
+  - vb
+  name: GracePeriod.SevenDays
+  nameWithType: GracePeriod.SevenDays
+  fullName: Dropbox.Api.FileRequests.GracePeriod.SevenDays
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/GracePeriod.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SevenDays
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/GracePeriod.cs
+    startLine: 409
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>The seven days object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class SevenDays : GracePeriod'
+    content.vb: >-
+      Public NotInheritable Class SevenDays
+          Inherits GracePeriod
+  inheritance:
+  - System.Object
+  - Dropbox.Api.FileRequests.GracePeriod
+  inheritedMembers:
+  - Dropbox.Api.FileRequests.GracePeriod.IsOneDay
+  - Dropbox.Api.FileRequests.GracePeriod.AsOneDay
+  - Dropbox.Api.FileRequests.GracePeriod.IsTwoDays
+  - Dropbox.Api.FileRequests.GracePeriod.AsTwoDays
+  - Dropbox.Api.FileRequests.GracePeriod.IsSevenDays
+  - Dropbox.Api.FileRequests.GracePeriod.AsSevenDays
+  - Dropbox.Api.FileRequests.GracePeriod.IsThirtyDays
+  - Dropbox.Api.FileRequests.GracePeriod.AsThirtyDays
+  - Dropbox.Api.FileRequests.GracePeriod.IsAlways
+  - Dropbox.Api.FileRequests.GracePeriod.AsAlways
+  - Dropbox.Api.FileRequests.GracePeriod.IsOther
+  - Dropbox.Api.FileRequests.GracePeriod.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.FileRequests.GracePeriod.SevenDays.Instance
+  commentId: F:Dropbox.Api.FileRequests.GracePeriod.SevenDays.Instance
+  id: Instance
+  parent: Dropbox.Api.FileRequests.GracePeriod.SevenDays
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: GracePeriod.SevenDays.Instance
+  fullName: Dropbox.Api.FileRequests.GracePeriod.SevenDays.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/GracePeriod.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/GracePeriod.cs
+    startLine: 433
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>A singleton instance of SevenDays</p>\n"
+  example: []
+  syntax:
+    content: public static readonly GracePeriod.SevenDays Instance
+    return:
+      type: Dropbox.Api.FileRequests.GracePeriod.SevenDays
+    content.vb: Public Shared ReadOnly Instance As GracePeriod.SevenDays
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.FileRequests
+  commentId: N:Dropbox.Api.FileRequests
+  name: Dropbox.Api.FileRequests
+  nameWithType: Dropbox.Api.FileRequests
+  fullName: Dropbox.Api.FileRequests
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.FileRequests.GracePeriod
+  commentId: T:Dropbox.Api.FileRequests.GracePeriod
+  parent: Dropbox.Api.FileRequests
+  name: GracePeriod
+  nameWithType: GracePeriod
+  fullName: Dropbox.Api.FileRequests.GracePeriod
+- uid: Dropbox.Api.FileRequests.GracePeriod.IsOneDay
+  commentId: P:Dropbox.Api.FileRequests.GracePeriod.IsOneDay
+  parent: Dropbox.Api.FileRequests.GracePeriod
+  name: IsOneDay
+  nameWithType: GracePeriod.IsOneDay
+  fullName: Dropbox.Api.FileRequests.GracePeriod.IsOneDay
+- uid: Dropbox.Api.FileRequests.GracePeriod.AsOneDay
+  commentId: P:Dropbox.Api.FileRequests.GracePeriod.AsOneDay
+  parent: Dropbox.Api.FileRequests.GracePeriod
+  name: AsOneDay
+  nameWithType: GracePeriod.AsOneDay
+  fullName: Dropbox.Api.FileRequests.GracePeriod.AsOneDay
+- uid: Dropbox.Api.FileRequests.GracePeriod.IsTwoDays
+  commentId: P:Dropbox.Api.FileRequests.GracePeriod.IsTwoDays
+  parent: Dropbox.Api.FileRequests.GracePeriod
+  name: IsTwoDays
+  nameWithType: GracePeriod.IsTwoDays
+  fullName: Dropbox.Api.FileRequests.GracePeriod.IsTwoDays
+- uid: Dropbox.Api.FileRequests.GracePeriod.AsTwoDays
+  commentId: P:Dropbox.Api.FileRequests.GracePeriod.AsTwoDays
+  parent: Dropbox.Api.FileRequests.GracePeriod
+  name: AsTwoDays
+  nameWithType: GracePeriod.AsTwoDays
+  fullName: Dropbox.Api.FileRequests.GracePeriod.AsTwoDays
+- uid: Dropbox.Api.FileRequests.GracePeriod.IsSevenDays
+  commentId: P:Dropbox.Api.FileRequests.GracePeriod.IsSevenDays
+  parent: Dropbox.Api.FileRequests.GracePeriod
+  name: IsSevenDays
+  nameWithType: GracePeriod.IsSevenDays
+  fullName: Dropbox.Api.FileRequests.GracePeriod.IsSevenDays
+- uid: Dropbox.Api.FileRequests.GracePeriod.AsSevenDays
+  commentId: P:Dropbox.Api.FileRequests.GracePeriod.AsSevenDays
+  parent: Dropbox.Api.FileRequests.GracePeriod
+  name: AsSevenDays
+  nameWithType: GracePeriod.AsSevenDays
+  fullName: Dropbox.Api.FileRequests.GracePeriod.AsSevenDays
+- uid: Dropbox.Api.FileRequests.GracePeriod.IsThirtyDays
+  commentId: P:Dropbox.Api.FileRequests.GracePeriod.IsThirtyDays
+  parent: Dropbox.Api.FileRequests.GracePeriod
+  name: IsThirtyDays
+  nameWithType: GracePeriod.IsThirtyDays
+  fullName: Dropbox.Api.FileRequests.GracePeriod.IsThirtyDays
+- uid: Dropbox.Api.FileRequests.GracePeriod.AsThirtyDays
+  commentId: P:Dropbox.Api.FileRequests.GracePeriod.AsThirtyDays
+  parent: Dropbox.Api.FileRequests.GracePeriod
+  name: AsThirtyDays
+  nameWithType: GracePeriod.AsThirtyDays
+  fullName: Dropbox.Api.FileRequests.GracePeriod.AsThirtyDays
+- uid: Dropbox.Api.FileRequests.GracePeriod.IsAlways
+  commentId: P:Dropbox.Api.FileRequests.GracePeriod.IsAlways
+  parent: Dropbox.Api.FileRequests.GracePeriod
+  name: IsAlways
+  nameWithType: GracePeriod.IsAlways
+  fullName: Dropbox.Api.FileRequests.GracePeriod.IsAlways
+- uid: Dropbox.Api.FileRequests.GracePeriod.AsAlways
+  commentId: P:Dropbox.Api.FileRequests.GracePeriod.AsAlways
+  parent: Dropbox.Api.FileRequests.GracePeriod
+  name: AsAlways
+  nameWithType: GracePeriod.AsAlways
+  fullName: Dropbox.Api.FileRequests.GracePeriod.AsAlways
+- uid: Dropbox.Api.FileRequests.GracePeriod.IsOther
+  commentId: P:Dropbox.Api.FileRequests.GracePeriod.IsOther
+  parent: Dropbox.Api.FileRequests.GracePeriod
+  name: IsOther
+  nameWithType: GracePeriod.IsOther
+  fullName: Dropbox.Api.FileRequests.GracePeriod.IsOther
+- uid: Dropbox.Api.FileRequests.GracePeriod.AsOther
+  commentId: P:Dropbox.Api.FileRequests.GracePeriod.AsOther
+  parent: Dropbox.Api.FileRequests.GracePeriod
+  name: AsOther
+  nameWithType: GracePeriod.AsOther
+  fullName: Dropbox.Api.FileRequests.GracePeriod.AsOther
+- uid: Dropbox.Api.FileRequests.GracePeriod.SevenDays
+  commentId: T:Dropbox.Api.FileRequests.GracePeriod.SevenDays
+  parent: Dropbox.Api.FileRequests
+  name: GracePeriod.SevenDays
+  nameWithType: GracePeriod.SevenDays
+  fullName: Dropbox.Api.FileRequests.GracePeriod.SevenDays
+shouldSkipMarkup: true

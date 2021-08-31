@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.CreateFolderBatchResultEntry.Success
+  commentId: T:Dropbox.Api.Files.CreateFolderBatchResultEntry.Success
+  id: CreateFolderBatchResultEntry.Success
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.CreateFolderBatchResultEntry.Success.#ctor(Dropbox.Api.Files.CreateFolderEntryResult)
+  - Dropbox.Api.Files.CreateFolderBatchResultEntry.Success.Value
+  langs:
+  - csharp
+  - vb
+  name: CreateFolderBatchResultEntry.Success
+  nameWithType: CreateFolderBatchResultEntry.Success
+  fullName: Dropbox.Api.Files.CreateFolderBatchResultEntry.Success
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/CreateFolderBatchResultEntry.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Success
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/CreateFolderBatchResultEntry.cs
+    startLine: 155
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The success object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Success : CreateFolderBatchResultEntry'
+    content.vb: >-
+      Public NotInheritable Class Success
+          Inherits CreateFolderBatchResultEntry
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Files.CreateFolderBatchResultEntry
+  inheritedMembers:
+  - Dropbox.Api.Files.CreateFolderBatchResultEntry.IsSuccess
+  - Dropbox.Api.Files.CreateFolderBatchResultEntry.AsSuccess
+  - Dropbox.Api.Files.CreateFolderBatchResultEntry.IsFailure
+  - Dropbox.Api.Files.CreateFolderBatchResultEntry.AsFailure
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Files.CreateFolderBatchResultEntry.Success.#ctor(Dropbox.Api.Files.CreateFolderEntryResult)
+  commentId: M:Dropbox.Api.Files.CreateFolderBatchResultEntry.Success.#ctor(Dropbox.Api.Files.CreateFolderEntryResult)
+  id: '#ctor(Dropbox.Api.Files.CreateFolderEntryResult)'
+  parent: Dropbox.Api.Files.CreateFolderBatchResultEntry.Success
+  langs:
+  - csharp
+  - vb
+  name: Success(CreateFolderEntryResult)
+  nameWithType: CreateFolderBatchResultEntry.Success.Success(CreateFolderEntryResult)
+  fullName: Dropbox.Api.Files.CreateFolderBatchResultEntry.Success.Success(Dropbox.Api.Files.CreateFolderEntryResult)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/CreateFolderBatchResultEntry.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/CreateFolderBatchResultEntry.cs
+    startLine: 173
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.CreateFolderBatchResultEntry.Success\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public Success(CreateFolderEntryResult value)
+    parameters:
+    - id: value
+      type: Dropbox.Api.Files.CreateFolderEntryResult
+      description: The value
+    content.vb: Public Sub New(value As CreateFolderEntryResult)
+  overload: Dropbox.Api.Files.CreateFolderBatchResultEntry.Success.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.CreateFolderBatchResultEntry.Success.Value
+  commentId: P:Dropbox.Api.Files.CreateFolderBatchResultEntry.Success.Value
+  id: Value
+  parent: Dropbox.Api.Files.CreateFolderBatchResultEntry.Success
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: CreateFolderBatchResultEntry.Success.Value
+  fullName: Dropbox.Api.Files.CreateFolderBatchResultEntry.Success.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/CreateFolderBatchResultEntry.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/CreateFolderBatchResultEntry.cs
+    startLine: 187
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public CreateFolderEntryResult Value { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.CreateFolderEntryResult
+    content.vb: Public ReadOnly Property Value As CreateFolderEntryResult
+  overload: Dropbox.Api.Files.CreateFolderBatchResultEntry.Success.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.CreateFolderBatchResultEntry
+  commentId: T:Dropbox.Api.Files.CreateFolderBatchResultEntry
+  parent: Dropbox.Api.Files
+  name: CreateFolderBatchResultEntry
+  nameWithType: CreateFolderBatchResultEntry
+  fullName: Dropbox.Api.Files.CreateFolderBatchResultEntry
+- uid: Dropbox.Api.Files.CreateFolderBatchResultEntry.IsSuccess
+  commentId: P:Dropbox.Api.Files.CreateFolderBatchResultEntry.IsSuccess
+  parent: Dropbox.Api.Files.CreateFolderBatchResultEntry
+  name: IsSuccess
+  nameWithType: CreateFolderBatchResultEntry.IsSuccess
+  fullName: Dropbox.Api.Files.CreateFolderBatchResultEntry.IsSuccess
+- uid: Dropbox.Api.Files.CreateFolderBatchResultEntry.AsSuccess
+  commentId: P:Dropbox.Api.Files.CreateFolderBatchResultEntry.AsSuccess
+  parent: Dropbox.Api.Files.CreateFolderBatchResultEntry
+  name: AsSuccess
+  nameWithType: CreateFolderBatchResultEntry.AsSuccess
+  fullName: Dropbox.Api.Files.CreateFolderBatchResultEntry.AsSuccess
+- uid: Dropbox.Api.Files.CreateFolderBatchResultEntry.IsFailure
+  commentId: P:Dropbox.Api.Files.CreateFolderBatchResultEntry.IsFailure
+  parent: Dropbox.Api.Files.CreateFolderBatchResultEntry
+  name: IsFailure
+  nameWithType: CreateFolderBatchResultEntry.IsFailure
+  fullName: Dropbox.Api.Files.CreateFolderBatchResultEntry.IsFailure
+- uid: Dropbox.Api.Files.CreateFolderBatchResultEntry.AsFailure
+  commentId: P:Dropbox.Api.Files.CreateFolderBatchResultEntry.AsFailure
+  parent: Dropbox.Api.Files.CreateFolderBatchResultEntry
+  name: AsFailure
+  nameWithType: CreateFolderBatchResultEntry.AsFailure
+  fullName: Dropbox.Api.Files.CreateFolderBatchResultEntry.AsFailure
+- uid: Dropbox.Api.Files.CreateFolderBatchResultEntry.Success
+  commentId: T:Dropbox.Api.Files.CreateFolderBatchResultEntry.Success
+  parent: Dropbox.Api.Files
+  name: CreateFolderBatchResultEntry.Success
+  nameWithType: CreateFolderBatchResultEntry.Success
+  fullName: Dropbox.Api.Files.CreateFolderBatchResultEntry.Success
+- uid: Dropbox.Api.Files.CreateFolderBatchResultEntry.Success.#ctor*
+  commentId: Overload:Dropbox.Api.Files.CreateFolderBatchResultEntry.Success.#ctor
+  name: Success
+  nameWithType: CreateFolderBatchResultEntry.Success.Success
+  fullName: Dropbox.Api.Files.CreateFolderBatchResultEntry.Success.Success
+- uid: Dropbox.Api.Files.CreateFolderEntryResult
+  commentId: T:Dropbox.Api.Files.CreateFolderEntryResult
+  parent: Dropbox.Api.Files
+  name: CreateFolderEntryResult
+  nameWithType: CreateFolderEntryResult
+  fullName: Dropbox.Api.Files.CreateFolderEntryResult
+- uid: Dropbox.Api.Files.CreateFolderBatchResultEntry.Success.Value*
+  commentId: Overload:Dropbox.Api.Files.CreateFolderBatchResultEntry.Success.Value
+  name: Value
+  nameWithType: CreateFolderBatchResultEntry.Success.Value
+  fullName: Dropbox.Api.Files.CreateFolderBatchResultEntry.Success.Value
+shouldSkipMarkup: true

@@ -1,0 +1,518 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.ApiApp
+  commentId: T:Dropbox.Api.Team.ApiApp
+  id: ApiApp
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.ApiApp.#ctor
+  - Dropbox.Api.Team.ApiApp.#ctor(System.String,System.String,System.Boolean,System.String,System.String,System.Nullable{System.DateTime})
+  - Dropbox.Api.Team.ApiApp.AppId
+  - Dropbox.Api.Team.ApiApp.AppName
+  - Dropbox.Api.Team.ApiApp.IsAppFolder
+  - Dropbox.Api.Team.ApiApp.Linked
+  - Dropbox.Api.Team.ApiApp.Publisher
+  - Dropbox.Api.Team.ApiApp.PublisherUrl
+  langs:
+  - csharp
+  - vb
+  name: ApiApp
+  nameWithType: ApiApp
+  fullName: Dropbox.Api.Team.ApiApp
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ApiApp.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ApiApp
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ApiApp.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Information on linked third party applications.</p>\n"
+  example: []
+  syntax:
+    content: 'public class ApiApp : object'
+    content.vb: >-
+      Public Class ApiApp
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.ApiApp.#ctor(System.String,System.String,System.Boolean,System.String,System.String,System.Nullable{System.DateTime})
+  commentId: M:Dropbox.Api.Team.ApiApp.#ctor(System.String,System.String,System.Boolean,System.String,System.String,System.Nullable{System.DateTime})
+  id: '#ctor(System.String,System.String,System.Boolean,System.String,System.String,System.Nullable{System.DateTime})'
+  parent: Dropbox.Api.Team.ApiApp
+  langs:
+  - csharp
+  - vb
+  name: ApiApp(String, String, Boolean, String, String, Nullable<System.DateTime>)
+  nameWithType: ApiApp.ApiApp(String, String, Boolean, String, String, Nullable<System.DateTime>)
+  fullName: Dropbox.Api.Team.ApiApp.ApiApp(System.String, System.String, System.Boolean, System.String, System.String, System.Nullable<System.DateTime>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ApiApp.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ApiApp.cs
+    startLine: 39
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.ApiApp\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public ApiApp(string appId, string appName, bool isAppFolder, string publisher = null, string publisherUrl = null, System.DateTime? linked = null)
+    parameters:
+    - id: appId
+      type: System.String
+      description: The application unique id.
+    - id: appName
+      type: System.String
+      description: The application name.
+    - id: isAppFolder
+      type: System.Boolean
+      description: >-
+        Whether the linked application uses a dedicated
+
+        folder.
+    - id: publisher
+      type: System.String
+      description: The application publisher name.
+    - id: publisherUrl
+      type: System.String
+      description: The publisher&apos;s URL.
+    - id: linked
+      type: System.Nullable{System.DateTime}
+      description: The time this application was linked.
+    content.vb: Public Sub New(appId As String, appName As String, isAppFolder As Boolean, publisher As String = Nothing, publisherUrl As String = Nothing, linked As System.DateTime? = Nothing)
+  overload: Dropbox.Api.Team.ApiApp.#ctor*
+  nameWithType.vb: ApiApp.ApiApp(String, String, Boolean, String, String, Nullable(Of System.DateTime))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Team.ApiApp.ApiApp(System.String, System.String, System.Boolean, System.String, System.String, System.Nullable(Of System.DateTime))
+  name.vb: ApiApp(String, String, Boolean, String, String, Nullable(Of System.DateTime))
+- uid: Dropbox.Api.Team.ApiApp.#ctor
+  commentId: M:Dropbox.Api.Team.ApiApp.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.ApiApp
+  langs:
+  - csharp
+  - vb
+  name: ApiApp()
+  nameWithType: ApiApp.ApiApp()
+  fullName: Dropbox.Api.Team.ApiApp.ApiApp()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ApiApp.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ApiApp.cs
+    startLine: 69
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.ApiApp\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public ApiApp()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.ApiApp.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.ApiApp.AppId
+  commentId: P:Dropbox.Api.Team.ApiApp.AppId
+  id: AppId
+  parent: Dropbox.Api.Team.ApiApp
+  langs:
+  - csharp
+  - vb
+  name: AppId
+  nameWithType: ApiApp.AppId
+  fullName: Dropbox.Api.Team.ApiApp.AppId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ApiApp.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AppId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ApiApp.cs
+    startLine: 77
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The application unique id.</p>\n"
+  example: []
+  syntax:
+    content: public string AppId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property AppId As String
+  overload: Dropbox.Api.Team.ApiApp.AppId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.ApiApp.AppName
+  commentId: P:Dropbox.Api.Team.ApiApp.AppName
+  id: AppName
+  parent: Dropbox.Api.Team.ApiApp
+  langs:
+  - csharp
+  - vb
+  name: AppName
+  nameWithType: ApiApp.AppName
+  fullName: Dropbox.Api.Team.ApiApp.AppName
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ApiApp.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AppName
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ApiApp.cs
+    startLine: 82
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The application name.</p>\n"
+  example: []
+  syntax:
+    content: public string AppName { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property AppName As String
+  overload: Dropbox.Api.Team.ApiApp.AppName*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.ApiApp.IsAppFolder
+  commentId: P:Dropbox.Api.Team.ApiApp.IsAppFolder
+  id: IsAppFolder
+  parent: Dropbox.Api.Team.ApiApp
+  langs:
+  - csharp
+  - vb
+  name: IsAppFolder
+  nameWithType: ApiApp.IsAppFolder
+  fullName: Dropbox.Api.Team.ApiApp.IsAppFolder
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ApiApp.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsAppFolder
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ApiApp.cs
+    startLine: 87
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Whether the linked application uses a dedicated folder.</p>\n"
+  example: []
+  syntax:
+    content: public bool IsAppFolder { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsAppFolder As Boolean
+  overload: Dropbox.Api.Team.ApiApp.IsAppFolder*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.ApiApp.Publisher
+  commentId: P:Dropbox.Api.Team.ApiApp.Publisher
+  id: Publisher
+  parent: Dropbox.Api.Team.ApiApp
+  langs:
+  - csharp
+  - vb
+  name: Publisher
+  nameWithType: ApiApp.Publisher
+  fullName: Dropbox.Api.Team.ApiApp.Publisher
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ApiApp.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Publisher
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ApiApp.cs
+    startLine: 92
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The application publisher name.</p>\n"
+  example: []
+  syntax:
+    content: public string Publisher { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Publisher As String
+  overload: Dropbox.Api.Team.ApiApp.Publisher*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.ApiApp.PublisherUrl
+  commentId: P:Dropbox.Api.Team.ApiApp.PublisherUrl
+  id: PublisherUrl
+  parent: Dropbox.Api.Team.ApiApp
+  langs:
+  - csharp
+  - vb
+  name: PublisherUrl
+  nameWithType: ApiApp.PublisherUrl
+  fullName: Dropbox.Api.Team.ApiApp.PublisherUrl
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ApiApp.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PublisherUrl
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ApiApp.cs
+    startLine: 97
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The publisher&apos;s URL.</p>\n"
+  example: []
+  syntax:
+    content: public string PublisherUrl { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property PublisherUrl As String
+  overload: Dropbox.Api.Team.ApiApp.PublisherUrl*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.ApiApp.Linked
+  commentId: P:Dropbox.Api.Team.ApiApp.Linked
+  id: Linked
+  parent: Dropbox.Api.Team.ApiApp
+  langs:
+  - csharp
+  - vb
+  name: Linked
+  nameWithType: ApiApp.Linked
+  fullName: Dropbox.Api.Team.ApiApp.Linked
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ApiApp.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Linked
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ApiApp.cs
+    startLine: 102
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The time this application was linked.</p>\n"
+  example: []
+  syntax:
+    content: public System.DateTime? Linked { get; protected set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property Linked As System.DateTime?
+  overload: Dropbox.Api.Team.ApiApp.Linked*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.ApiApp
+  commentId: T:Dropbox.Api.Team.ApiApp
+  name: ApiApp
+  nameWithType: ApiApp
+  fullName: Dropbox.Api.Team.ApiApp
+- uid: Dropbox.Api.Team.ApiApp.#ctor*
+  commentId: Overload:Dropbox.Api.Team.ApiApp.#ctor
+  name: ApiApp
+  nameWithType: ApiApp.ApiApp
+  fullName: Dropbox.Api.Team.ApiApp.ApiApp
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.Nullable{System.DateTime}
+  commentId: '!:System.Nullable{System.DateTime}'
+  definition: System.Nullable`1
+  name: Nullable<System.DateTime>
+  nameWithType: Nullable<System.DateTime>
+  fullName: System.Nullable<System.DateTime>
+  nameWithType.vb: Nullable(Of System.DateTime)
+  fullName.vb: System.Nullable(Of System.DateTime)
+  name.vb: Nullable(Of System.DateTime)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.DateTime
+    name: System.DateTime
+    nameWithType: System.DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.DateTime
+    name: System.DateTime
+    nameWithType: System.DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  isExternal: true
+  name: Nullable<>
+  nameWithType: Nullable<>
+  fullName: System.Nullable<>
+  nameWithType.vb: Nullable(Of )
+  fullName.vb: System.Nullable(Of )
+  name.vb: Nullable(Of )
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Team.ApiApp.AppId*
+  commentId: Overload:Dropbox.Api.Team.ApiApp.AppId
+  name: AppId
+  nameWithType: ApiApp.AppId
+  fullName: Dropbox.Api.Team.ApiApp.AppId
+- uid: Dropbox.Api.Team.ApiApp.AppName*
+  commentId: Overload:Dropbox.Api.Team.ApiApp.AppName
+  name: AppName
+  nameWithType: ApiApp.AppName
+  fullName: Dropbox.Api.Team.ApiApp.AppName
+- uid: Dropbox.Api.Team.ApiApp.IsAppFolder*
+  commentId: Overload:Dropbox.Api.Team.ApiApp.IsAppFolder
+  name: IsAppFolder
+  nameWithType: ApiApp.IsAppFolder
+  fullName: Dropbox.Api.Team.ApiApp.IsAppFolder
+- uid: Dropbox.Api.Team.ApiApp.Publisher*
+  commentId: Overload:Dropbox.Api.Team.ApiApp.Publisher
+  name: Publisher
+  nameWithType: ApiApp.Publisher
+  fullName: Dropbox.Api.Team.ApiApp.Publisher
+- uid: Dropbox.Api.Team.ApiApp.PublisherUrl*
+  commentId: Overload:Dropbox.Api.Team.ApiApp.PublisherUrl
+  name: PublisherUrl
+  nameWithType: ApiApp.PublisherUrl
+  fullName: Dropbox.Api.Team.ApiApp.PublisherUrl
+- uid: Dropbox.Api.Team.ApiApp.Linked*
+  commentId: Overload:Dropbox.Api.Team.ApiApp.Linked
+  name: Linked
+  nameWithType: ApiApp.Linked
+  fullName: Dropbox.Api.Team.ApiApp.Linked
+shouldSkipMarkup: true

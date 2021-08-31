@@ -1,0 +1,601 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Paper.ListUsersOnFolderResponse
+  commentId: T:Dropbox.Api.Paper.ListUsersOnFolderResponse
+  id: ListUsersOnFolderResponse
+  parent: Dropbox.Api.Paper
+  children:
+  - Dropbox.Api.Paper.ListUsersOnFolderResponse.#ctor
+  - Dropbox.Api.Paper.ListUsersOnFolderResponse.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.InviteeInfo},System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.UserInfo},Dropbox.Api.Paper.Cursor,System.Boolean)
+  - Dropbox.Api.Paper.ListUsersOnFolderResponse.Cursor
+  - Dropbox.Api.Paper.ListUsersOnFolderResponse.HasMore
+  - Dropbox.Api.Paper.ListUsersOnFolderResponse.Invitees
+  - Dropbox.Api.Paper.ListUsersOnFolderResponse.Users
+  langs:
+  - csharp
+  - vb
+  name: ListUsersOnFolderResponse
+  nameWithType: ListUsersOnFolderResponse
+  fullName: Dropbox.Api.Paper.ListUsersOnFolderResponse
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/ListUsersOnFolderResponse.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ListUsersOnFolderResponse
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/ListUsersOnFolderResponse.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>The list users on folder response object</p>\n"
+  example: []
+  syntax:
+    content: 'public class ListUsersOnFolderResponse : object'
+    content.vb: >-
+      Public Class ListUsersOnFolderResponse
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Paper.ListUsersOnFolderResponse.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.InviteeInfo},System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.UserInfo},Dropbox.Api.Paper.Cursor,System.Boolean)
+  commentId: M:Dropbox.Api.Paper.ListUsersOnFolderResponse.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.InviteeInfo},System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.UserInfo},Dropbox.Api.Paper.Cursor,System.Boolean)
+  id: '#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.InviteeInfo},System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.UserInfo},Dropbox.Api.Paper.Cursor,System.Boolean)'
+  parent: Dropbox.Api.Paper.ListUsersOnFolderResponse
+  langs:
+  - csharp
+  - vb
+  name: ListUsersOnFolderResponse(System.Collections.Generic.IEnumerable<InviteeInfo>, System.Collections.Generic.IEnumerable<UserInfo>, Cursor, Boolean)
+  nameWithType: ListUsersOnFolderResponse.ListUsersOnFolderResponse(System.Collections.Generic.IEnumerable<InviteeInfo>, System.Collections.Generic.IEnumerable<UserInfo>, Cursor, Boolean)
+  fullName: Dropbox.Api.Paper.ListUsersOnFolderResponse.ListUsersOnFolderResponse(System.Collections.Generic.IEnumerable<Dropbox.Api.Sharing.InviteeInfo>, System.Collections.Generic.IEnumerable<Dropbox.Api.Sharing.UserInfo>, Dropbox.Api.Paper.Cursor, System.Boolean)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/ListUsersOnFolderResponse.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/ListUsersOnFolderResponse.cs
+    startLine: 49
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Paper.ListUsersOnFolderResponse\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public ListUsersOnFolderResponse(System.Collections.Generic.IEnumerable<InviteeInfo> invitees, System.Collections.Generic.IEnumerable<UserInfo> users, Cursor cursor, bool hasMore)
+    parameters:
+    - id: invitees
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.InviteeInfo}
+      description: >-
+        List of email addresses that are invited on the Paper
+
+        folder.
+    - id: users
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.UserInfo}
+      description: List of users that are invited on the Paper folder.
+    - id: cursor
+      type: Dropbox.Api.Paper.Cursor
+      description: >-
+        Pass the cursor into <xref href="Dropbox.Api.Paper.Routes.PaperUserRoutes.DocsFolderUsersListContinueAsync(Dropbox.Api.Paper.ListUsersOnFolderContinueArgs)" data-throw-if-not-resolved="false"></xref>
+
+        to paginate through all users. The cursor preserves all properties as specified in
+
+        the original call to <xref href="Dropbox.Api.Paper.Routes.PaperUserRoutes.DocsFolderUsersListAsync(Dropbox.Api.Paper.ListUsersOnFolderArgs)" data-throw-if-not-resolved="false"></xref>.
+    - id: hasMore
+      type: System.Boolean
+      description: >-
+        Will be set to True if a subsequent call with the provided
+
+        cursor to <xref href="Dropbox.Api.Paper.Routes.PaperUserRoutes.DocsFolderUsersListContinueAsync(Dropbox.Api.Paper.ListUsersOnFolderContinueArgs)" data-throw-if-not-resolved="false"></xref>
+
+        returns immediately with some results. If set to False please allow some delay
+
+        before making another call to <xref href="Dropbox.Api.Paper.Routes.PaperUserRoutes.DocsFolderUsersListContinueAsync(Dropbox.Api.Paper.ListUsersOnFolderContinueArgs)" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Sub New(invitees As System.Collections.Generic.IEnumerable(Of InviteeInfo), users As System.Collections.Generic.IEnumerable(Of UserInfo), cursor As Cursor, hasMore As Boolean)
+  overload: Dropbox.Api.Paper.ListUsersOnFolderResponse.#ctor*
+  nameWithType.vb: ListUsersOnFolderResponse.ListUsersOnFolderResponse(System.Collections.Generic.IEnumerable(Of InviteeInfo), System.Collections.Generic.IEnumerable(Of UserInfo), Cursor, Boolean)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Paper.ListUsersOnFolderResponse.ListUsersOnFolderResponse(System.Collections.Generic.IEnumerable(Of Dropbox.Api.Sharing.InviteeInfo), System.Collections.Generic.IEnumerable(Of Dropbox.Api.Sharing.UserInfo), Dropbox.Api.Paper.Cursor, System.Boolean)
+  name.vb: ListUsersOnFolderResponse(System.Collections.Generic.IEnumerable(Of InviteeInfo), System.Collections.Generic.IEnumerable(Of UserInfo), Cursor, Boolean)
+- uid: Dropbox.Api.Paper.ListUsersOnFolderResponse.#ctor
+  commentId: M:Dropbox.Api.Paper.ListUsersOnFolderResponse.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Paper.ListUsersOnFolderResponse
+  langs:
+  - csharp
+  - vb
+  name: ListUsersOnFolderResponse()
+  nameWithType: ListUsersOnFolderResponse.ListUsersOnFolderResponse()
+  fullName: Dropbox.Api.Paper.ListUsersOnFolderResponse.ListUsersOnFolderResponse()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/ListUsersOnFolderResponse.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/ListUsersOnFolderResponse.cs
+    startLine: 85
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Paper.ListUsersOnFolderResponse\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public ListUsersOnFolderResponse()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Paper.ListUsersOnFolderResponse.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Paper.ListUsersOnFolderResponse.Invitees
+  commentId: P:Dropbox.Api.Paper.ListUsersOnFolderResponse.Invitees
+  id: Invitees
+  parent: Dropbox.Api.Paper.ListUsersOnFolderResponse
+  langs:
+  - csharp
+  - vb
+  name: Invitees
+  nameWithType: ListUsersOnFolderResponse.Invitees
+  fullName: Dropbox.Api.Paper.ListUsersOnFolderResponse.Invitees
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/ListUsersOnFolderResponse.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Invitees
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/ListUsersOnFolderResponse.cs
+    startLine: 93
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>List of email addresses that are invited on the Paper folder.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<InviteeInfo> Invitees { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{Dropbox.Api.Sharing.InviteeInfo}
+    content.vb: Public Property Invitees As System.Collections.Generic.IList(Of InviteeInfo)
+  overload: Dropbox.Api.Paper.ListUsersOnFolderResponse.Invitees*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Paper.ListUsersOnFolderResponse.Users
+  commentId: P:Dropbox.Api.Paper.ListUsersOnFolderResponse.Users
+  id: Users
+  parent: Dropbox.Api.Paper.ListUsersOnFolderResponse
+  langs:
+  - csharp
+  - vb
+  name: Users
+  nameWithType: ListUsersOnFolderResponse.Users
+  fullName: Dropbox.Api.Paper.ListUsersOnFolderResponse.Users
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/ListUsersOnFolderResponse.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Users
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/ListUsersOnFolderResponse.cs
+    startLine: 98
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>List of users that are invited on the Paper folder.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<UserInfo> Users { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{Dropbox.Api.Sharing.UserInfo}
+    content.vb: Public Property Users As System.Collections.Generic.IList(Of UserInfo)
+  overload: Dropbox.Api.Paper.ListUsersOnFolderResponse.Users*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Paper.ListUsersOnFolderResponse.Cursor
+  commentId: P:Dropbox.Api.Paper.ListUsersOnFolderResponse.Cursor
+  id: Cursor
+  parent: Dropbox.Api.Paper.ListUsersOnFolderResponse
+  langs:
+  - csharp
+  - vb
+  name: Cursor
+  nameWithType: ListUsersOnFolderResponse.Cursor
+  fullName: Dropbox.Api.Paper.ListUsersOnFolderResponse.Cursor
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/ListUsersOnFolderResponse.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Cursor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/ListUsersOnFolderResponse.cs
+    startLine: 107
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Pass the cursor into <xref href=\"Dropbox.Api.Paper.Routes.PaperUserRoutes.DocsFolderUsersListContinueAsync(Dropbox.Api.Paper.ListUsersOnFolderContinueArgs)\" data-throw-if-not-resolved=\"false\"></xref>\nto paginate through all users. The cursor preserves all properties as specified in\nthe original call to <xref href=\"Dropbox.Api.Paper.Routes.PaperUserRoutes.DocsFolderUsersListAsync(Dropbox.Api.Paper.ListUsersOnFolderArgs)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+  example: []
+  syntax:
+    content: public Cursor Cursor { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Paper.Cursor
+    content.vb: Public Property Cursor As Cursor
+  overload: Dropbox.Api.Paper.ListUsersOnFolderResponse.Cursor*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Paper.ListUsersOnFolderResponse.HasMore
+  commentId: P:Dropbox.Api.Paper.ListUsersOnFolderResponse.HasMore
+  id: HasMore
+  parent: Dropbox.Api.Paper.ListUsersOnFolderResponse
+  langs:
+  - csharp
+  - vb
+  name: HasMore
+  nameWithType: ListUsersOnFolderResponse.HasMore
+  fullName: Dropbox.Api.Paper.ListUsersOnFolderResponse.HasMore
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/ListUsersOnFolderResponse.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: HasMore
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/ListUsersOnFolderResponse.cs
+    startLine: 117
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Will be set to True if a subsequent call with the provided cursor to <xref href=\"Dropbox.Api.Paper.Routes.PaperUserRoutes.DocsFolderUsersListContinueAsync(Dropbox.Api.Paper.ListUsersOnFolderContinueArgs)\" data-throw-if-not-resolved=\"false\"></xref>\nreturns immediately with some results. If set to False please allow some delay\nbefore making another call to <xref href=\"Dropbox.Api.Paper.Routes.PaperUserRoutes.DocsFolderUsersListContinueAsync(Dropbox.Api.Paper.ListUsersOnFolderContinueArgs)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+  example: []
+  syntax:
+    content: public bool HasMore { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property HasMore As Boolean
+  overload: Dropbox.Api.Paper.ListUsersOnFolderResponse.HasMore*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Paper
+  commentId: N:Dropbox.Api.Paper
+  name: Dropbox.Api.Paper
+  nameWithType: Dropbox.Api.Paper
+  fullName: Dropbox.Api.Paper
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Paper.ListUsersOnFolderResponse
+  commentId: T:Dropbox.Api.Paper.ListUsersOnFolderResponse
+  parent: Dropbox.Api.Paper
+  name: ListUsersOnFolderResponse
+  nameWithType: ListUsersOnFolderResponse
+  fullName: Dropbox.Api.Paper.ListUsersOnFolderResponse
+- uid: Dropbox.Api.Paper.Routes.PaperUserRoutes.DocsFolderUsersListContinueAsync(Dropbox.Api.Paper.ListUsersOnFolderContinueArgs)
+  commentId: M:Dropbox.Api.Paper.Routes.PaperUserRoutes.DocsFolderUsersListContinueAsync(Dropbox.Api.Paper.ListUsersOnFolderContinueArgs)
+  isExternal: true
+- uid: Dropbox.Api.Paper.Routes.PaperUserRoutes.DocsFolderUsersListAsync(Dropbox.Api.Paper.ListUsersOnFolderArgs)
+  commentId: M:Dropbox.Api.Paper.Routes.PaperUserRoutes.DocsFolderUsersListAsync(Dropbox.Api.Paper.ListUsersOnFolderArgs)
+  isExternal: true
+- uid: Dropbox.Api.Paper.ListUsersOnFolderResponse.#ctor*
+  commentId: Overload:Dropbox.Api.Paper.ListUsersOnFolderResponse.#ctor
+  name: ListUsersOnFolderResponse
+  nameWithType: ListUsersOnFolderResponse.ListUsersOnFolderResponse
+  fullName: Dropbox.Api.Paper.ListUsersOnFolderResponse.ListUsersOnFolderResponse
+- uid: System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.InviteeInfo}
+  commentId: '!:System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.InviteeInfo}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<InviteeInfo>
+  nameWithType: System.Collections.Generic.IEnumerable<InviteeInfo>
+  fullName: System.Collections.Generic.IEnumerable<Dropbox.Api.Sharing.InviteeInfo>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of InviteeInfo)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Dropbox.Api.Sharing.InviteeInfo)
+  name.vb: System.Collections.Generic.IEnumerable(Of InviteeInfo)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Sharing.InviteeInfo
+    name: InviteeInfo
+    nameWithType: InviteeInfo
+    fullName: Dropbox.Api.Sharing.InviteeInfo
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Sharing.InviteeInfo
+    name: InviteeInfo
+    nameWithType: InviteeInfo
+    fullName: Dropbox.Api.Sharing.InviteeInfo
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.UserInfo}
+  commentId: '!:System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.UserInfo}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<UserInfo>
+  nameWithType: System.Collections.Generic.IEnumerable<UserInfo>
+  fullName: System.Collections.Generic.IEnumerable<Dropbox.Api.Sharing.UserInfo>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of UserInfo)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Dropbox.Api.Sharing.UserInfo)
+  name.vb: System.Collections.Generic.IEnumerable(Of UserInfo)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Sharing.UserInfo
+    name: UserInfo
+    nameWithType: UserInfo
+    fullName: Dropbox.Api.Sharing.UserInfo
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Sharing.UserInfo
+    name: UserInfo
+    nameWithType: UserInfo
+    fullName: Dropbox.Api.Sharing.UserInfo
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Paper.Cursor
+  commentId: T:Dropbox.Api.Paper.Cursor
+  parent: Dropbox.Api.Paper
+  name: Cursor
+  nameWithType: Cursor
+  fullName: Dropbox.Api.Paper.Cursor
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: System.Collections.Generic.IEnumerable<>
+  nameWithType: System.Collections.Generic.IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: System.Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Paper.ListUsersOnFolderResponse.Invitees*
+  commentId: Overload:Dropbox.Api.Paper.ListUsersOnFolderResponse.Invitees
+  name: Invitees
+  nameWithType: ListUsersOnFolderResponse.Invitees
+  fullName: Dropbox.Api.Paper.ListUsersOnFolderResponse.Invitees
+- uid: System.Collections.Generic.IList{Dropbox.Api.Sharing.InviteeInfo}
+  commentId: '!:System.Collections.Generic.IList{Dropbox.Api.Sharing.InviteeInfo}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<InviteeInfo>
+  nameWithType: System.Collections.Generic.IList<InviteeInfo>
+  fullName: System.Collections.Generic.IList<Dropbox.Api.Sharing.InviteeInfo>
+  nameWithType.vb: System.Collections.Generic.IList(Of InviteeInfo)
+  fullName.vb: System.Collections.Generic.IList(Of Dropbox.Api.Sharing.InviteeInfo)
+  name.vb: System.Collections.Generic.IList(Of InviteeInfo)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Sharing.InviteeInfo
+    name: InviteeInfo
+    nameWithType: InviteeInfo
+    fullName: Dropbox.Api.Sharing.InviteeInfo
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Sharing.InviteeInfo
+    name: InviteeInfo
+    nameWithType: InviteeInfo
+    fullName: Dropbox.Api.Sharing.InviteeInfo
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  isExternal: true
+  name: System.Collections.Generic.IList<>
+  nameWithType: System.Collections.Generic.IList<>
+  fullName: System.Collections.Generic.IList<>
+  nameWithType.vb: System.Collections.Generic.IList(Of )
+  fullName.vb: System.Collections.Generic.IList(Of )
+  name.vb: System.Collections.Generic.IList(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Paper.ListUsersOnFolderResponse.Users*
+  commentId: Overload:Dropbox.Api.Paper.ListUsersOnFolderResponse.Users
+  name: Users
+  nameWithType: ListUsersOnFolderResponse.Users
+  fullName: Dropbox.Api.Paper.ListUsersOnFolderResponse.Users
+- uid: System.Collections.Generic.IList{Dropbox.Api.Sharing.UserInfo}
+  commentId: '!:System.Collections.Generic.IList{Dropbox.Api.Sharing.UserInfo}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<UserInfo>
+  nameWithType: System.Collections.Generic.IList<UserInfo>
+  fullName: System.Collections.Generic.IList<Dropbox.Api.Sharing.UserInfo>
+  nameWithType.vb: System.Collections.Generic.IList(Of UserInfo)
+  fullName.vb: System.Collections.Generic.IList(Of Dropbox.Api.Sharing.UserInfo)
+  name.vb: System.Collections.Generic.IList(Of UserInfo)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Sharing.UserInfo
+    name: UserInfo
+    nameWithType: UserInfo
+    fullName: Dropbox.Api.Sharing.UserInfo
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Sharing.UserInfo
+    name: UserInfo
+    nameWithType: UserInfo
+    fullName: Dropbox.Api.Sharing.UserInfo
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Paper.ListUsersOnFolderResponse.Cursor*
+  commentId: Overload:Dropbox.Api.Paper.ListUsersOnFolderResponse.Cursor
+  name: Cursor
+  nameWithType: ListUsersOnFolderResponse.Cursor
+  fullName: Dropbox.Api.Paper.ListUsersOnFolderResponse.Cursor
+- uid: Dropbox.Api.Paper.ListUsersOnFolderResponse.HasMore*
+  commentId: Overload:Dropbox.Api.Paper.ListUsersOnFolderResponse.HasMore
+  name: HasMore
+  nameWithType: ListUsersOnFolderResponse.HasMore
+  fullName: Dropbox.Api.Paper.ListUsersOnFolderResponse.HasMore
+shouldSkipMarkup: true

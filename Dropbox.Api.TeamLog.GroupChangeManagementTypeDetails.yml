@@ -1,0 +1,244 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.GroupChangeManagementTypeDetails
+  commentId: T:Dropbox.Api.TeamLog.GroupChangeManagementTypeDetails
+  id: GroupChangeManagementTypeDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.GroupChangeManagementTypeDetails.#ctor
+  - Dropbox.Api.TeamLog.GroupChangeManagementTypeDetails.#ctor(Dropbox.Api.TeamCommon.GroupManagementType,Dropbox.Api.TeamCommon.GroupManagementType)
+  - Dropbox.Api.TeamLog.GroupChangeManagementTypeDetails.NewValue
+  - Dropbox.Api.TeamLog.GroupChangeManagementTypeDetails.PreviousValue
+  langs:
+  - csharp
+  - vb
+  name: GroupChangeManagementTypeDetails
+  nameWithType: GroupChangeManagementTypeDetails
+  fullName: Dropbox.Api.TeamLog.GroupChangeManagementTypeDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupChangeManagementTypeDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GroupChangeManagementTypeDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupChangeManagementTypeDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Changed group management type.</p>\n"
+  example: []
+  syntax:
+    content: 'public class GroupChangeManagementTypeDetails : object'
+    content.vb: >-
+      Public Class GroupChangeManagementTypeDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.GroupChangeManagementTypeDetails.#ctor(Dropbox.Api.TeamCommon.GroupManagementType,Dropbox.Api.TeamCommon.GroupManagementType)
+  commentId: M:Dropbox.Api.TeamLog.GroupChangeManagementTypeDetails.#ctor(Dropbox.Api.TeamCommon.GroupManagementType,Dropbox.Api.TeamCommon.GroupManagementType)
+  id: '#ctor(Dropbox.Api.TeamCommon.GroupManagementType,Dropbox.Api.TeamCommon.GroupManagementType)'
+  parent: Dropbox.Api.TeamLog.GroupChangeManagementTypeDetails
+  langs:
+  - csharp
+  - vb
+  name: GroupChangeManagementTypeDetails(GroupManagementType, GroupManagementType)
+  nameWithType: GroupChangeManagementTypeDetails.GroupChangeManagementTypeDetails(GroupManagementType, GroupManagementType)
+  fullName: Dropbox.Api.TeamLog.GroupChangeManagementTypeDetails.GroupChangeManagementTypeDetails(Dropbox.Api.TeamCommon.GroupManagementType, Dropbox.Api.TeamCommon.GroupManagementType)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupChangeManagementTypeDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupChangeManagementTypeDetails.cs
+    startLine: 36
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.GroupChangeManagementTypeDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public GroupChangeManagementTypeDetails(GroupManagementType newValue, GroupManagementType previousValue = null)
+    parameters:
+    - id: newValue
+      type: Dropbox.Api.TeamCommon.GroupManagementType
+      description: New group management type.
+    - id: previousValue
+      type: Dropbox.Api.TeamCommon.GroupManagementType
+      description: >-
+        Previous group management type. Might be missing due to
+
+        historical data gap.
+    content.vb: Public Sub New(newValue As GroupManagementType, previousValue As GroupManagementType = Nothing)
+  overload: Dropbox.Api.TeamLog.GroupChangeManagementTypeDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.GroupChangeManagementTypeDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.GroupChangeManagementTypeDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.GroupChangeManagementTypeDetails
+  langs:
+  - csharp
+  - vb
+  name: GroupChangeManagementTypeDetails()
+  nameWithType: GroupChangeManagementTypeDetails.GroupChangeManagementTypeDetails()
+  fullName: Dropbox.Api.TeamLog.GroupChangeManagementTypeDetails.GroupChangeManagementTypeDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupChangeManagementTypeDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupChangeManagementTypeDetails.cs
+    startLine: 54
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.GroupChangeManagementTypeDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public GroupChangeManagementTypeDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.GroupChangeManagementTypeDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.GroupChangeManagementTypeDetails.NewValue
+  commentId: P:Dropbox.Api.TeamLog.GroupChangeManagementTypeDetails.NewValue
+  id: NewValue
+  parent: Dropbox.Api.TeamLog.GroupChangeManagementTypeDetails
+  langs:
+  - csharp
+  - vb
+  name: NewValue
+  nameWithType: GroupChangeManagementTypeDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.GroupChangeManagementTypeDetails.NewValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupChangeManagementTypeDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NewValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupChangeManagementTypeDetails.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>New group management type.</p>\n"
+  example: []
+  syntax:
+    content: public GroupManagementType NewValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamCommon.GroupManagementType
+    content.vb: Public Property NewValue As GroupManagementType
+  overload: Dropbox.Api.TeamLog.GroupChangeManagementTypeDetails.NewValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.GroupChangeManagementTypeDetails.PreviousValue
+  commentId: P:Dropbox.Api.TeamLog.GroupChangeManagementTypeDetails.PreviousValue
+  id: PreviousValue
+  parent: Dropbox.Api.TeamLog.GroupChangeManagementTypeDetails
+  langs:
+  - csharp
+  - vb
+  name: PreviousValue
+  nameWithType: GroupChangeManagementTypeDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.GroupChangeManagementTypeDetails.PreviousValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupChangeManagementTypeDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PreviousValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupChangeManagementTypeDetails.cs
+    startLine: 68
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Previous group management type. Might be missing due to historical data\ngap.</p>\n"
+  example: []
+  syntax:
+    content: public GroupManagementType PreviousValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamCommon.GroupManagementType
+    content.vb: Public Property PreviousValue As GroupManagementType
+  overload: Dropbox.Api.TeamLog.GroupChangeManagementTypeDetails.PreviousValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.GroupChangeManagementTypeDetails
+  commentId: T:Dropbox.Api.TeamLog.GroupChangeManagementTypeDetails
+  parent: Dropbox.Api.TeamLog
+  name: GroupChangeManagementTypeDetails
+  nameWithType: GroupChangeManagementTypeDetails
+  fullName: Dropbox.Api.TeamLog.GroupChangeManagementTypeDetails
+- uid: Dropbox.Api.TeamLog.GroupChangeManagementTypeDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.GroupChangeManagementTypeDetails.#ctor
+  name: GroupChangeManagementTypeDetails
+  nameWithType: GroupChangeManagementTypeDetails.GroupChangeManagementTypeDetails
+  fullName: Dropbox.Api.TeamLog.GroupChangeManagementTypeDetails.GroupChangeManagementTypeDetails
+- uid: Dropbox.Api.TeamCommon.GroupManagementType
+  commentId: T:Dropbox.Api.TeamCommon.GroupManagementType
+  parent: Dropbox.Api.TeamCommon
+  name: GroupManagementType
+  nameWithType: GroupManagementType
+  fullName: Dropbox.Api.TeamCommon.GroupManagementType
+- uid: Dropbox.Api.TeamCommon
+  commentId: N:Dropbox.Api.TeamCommon
+  name: Dropbox.Api.TeamCommon
+  nameWithType: Dropbox.Api.TeamCommon
+  fullName: Dropbox.Api.TeamCommon
+- uid: Dropbox.Api.TeamLog.GroupChangeManagementTypeDetails.NewValue*
+  commentId: Overload:Dropbox.Api.TeamLog.GroupChangeManagementTypeDetails.NewValue
+  name: NewValue
+  nameWithType: GroupChangeManagementTypeDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.GroupChangeManagementTypeDetails.NewValue
+- uid: Dropbox.Api.TeamLog.GroupChangeManagementTypeDetails.PreviousValue*
+  commentId: Overload:Dropbox.Api.TeamLog.GroupChangeManagementTypeDetails.PreviousValue
+  name: PreviousValue
+  nameWithType: GroupChangeManagementTypeDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.GroupChangeManagementTypeDetails.PreviousValue
+shouldSkipMarkup: true

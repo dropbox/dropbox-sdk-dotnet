@@ -1,0 +1,238 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Auth.TokenFromOAuth1Arg
+  commentId: T:Dropbox.Api.Auth.TokenFromOAuth1Arg
+  id: TokenFromOAuth1Arg
+  parent: Dropbox.Api.Auth
+  children:
+  - Dropbox.Api.Auth.TokenFromOAuth1Arg.#ctor
+  - Dropbox.Api.Auth.TokenFromOAuth1Arg.#ctor(System.String,System.String)
+  - Dropbox.Api.Auth.TokenFromOAuth1Arg.Oauth1Token
+  - Dropbox.Api.Auth.TokenFromOAuth1Arg.Oauth1TokenSecret
+  langs:
+  - csharp
+  - vb
+  name: TokenFromOAuth1Arg
+  nameWithType: TokenFromOAuth1Arg
+  fullName: Dropbox.Api.Auth.TokenFromOAuth1Arg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/TokenFromOAuth1Arg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TokenFromOAuth1Arg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/TokenFromOAuth1Arg.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth
+  summary: "\n<p>The token from o auth1 arg object</p>\n"
+  example: []
+  syntax:
+    content: 'public class TokenFromOAuth1Arg : object'
+    content.vb: >-
+      Public Class TokenFromOAuth1Arg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Auth.TokenFromOAuth1Arg.#ctor(System.String,System.String)
+  commentId: M:Dropbox.Api.Auth.TokenFromOAuth1Arg.#ctor(System.String,System.String)
+  id: '#ctor(System.String,System.String)'
+  parent: Dropbox.Api.Auth.TokenFromOAuth1Arg
+  langs:
+  - csharp
+  - vb
+  name: TokenFromOAuth1Arg(String, String)
+  nameWithType: TokenFromOAuth1Arg.TokenFromOAuth1Arg(String, String)
+  fullName: Dropbox.Api.Auth.TokenFromOAuth1Arg.TokenFromOAuth1Arg(System.String, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/TokenFromOAuth1Arg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/TokenFromOAuth1Arg.cs
+    startLine: 36
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Auth.TokenFromOAuth1Arg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public TokenFromOAuth1Arg(string oauth1Token, string oauth1TokenSecret)
+    parameters:
+    - id: oauth1Token
+      type: System.String
+      description: The supplied OAuth 1.0 access token.
+    - id: oauth1TokenSecret
+      type: System.String
+      description: >-
+        The token secret associated with the supplied
+
+        access token.
+    content.vb: Public Sub New(oauth1Token As String, oauth1TokenSecret As String)
+  overload: Dropbox.Api.Auth.TokenFromOAuth1Arg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Auth.TokenFromOAuth1Arg.#ctor
+  commentId: M:Dropbox.Api.Auth.TokenFromOAuth1Arg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Auth.TokenFromOAuth1Arg
+  langs:
+  - csharp
+  - vb
+  name: TokenFromOAuth1Arg()
+  nameWithType: TokenFromOAuth1Arg.TokenFromOAuth1Arg()
+  fullName: Dropbox.Api.Auth.TokenFromOAuth1Arg.TokenFromOAuth1Arg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/TokenFromOAuth1Arg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/TokenFromOAuth1Arg.cs
+    startLine: 67
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Auth.TokenFromOAuth1Arg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public TokenFromOAuth1Arg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Auth.TokenFromOAuth1Arg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Auth.TokenFromOAuth1Arg.Oauth1Token
+  commentId: P:Dropbox.Api.Auth.TokenFromOAuth1Arg.Oauth1Token
+  id: Oauth1Token
+  parent: Dropbox.Api.Auth.TokenFromOAuth1Arg
+  langs:
+  - csharp
+  - vb
+  name: Oauth1Token
+  nameWithType: TokenFromOAuth1Arg.Oauth1Token
+  fullName: Dropbox.Api.Auth.TokenFromOAuth1Arg.Oauth1Token
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/TokenFromOAuth1Arg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Oauth1Token
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/TokenFromOAuth1Arg.cs
+    startLine: 75
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth
+  summary: "\n<p>The supplied OAuth 1.0 access token.</p>\n"
+  example: []
+  syntax:
+    content: public string Oauth1Token { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Oauth1Token As String
+  overload: Dropbox.Api.Auth.TokenFromOAuth1Arg.Oauth1Token*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Auth.TokenFromOAuth1Arg.Oauth1TokenSecret
+  commentId: P:Dropbox.Api.Auth.TokenFromOAuth1Arg.Oauth1TokenSecret
+  id: Oauth1TokenSecret
+  parent: Dropbox.Api.Auth.TokenFromOAuth1Arg
+  langs:
+  - csharp
+  - vb
+  name: Oauth1TokenSecret
+  nameWithType: TokenFromOAuth1Arg.Oauth1TokenSecret
+  fullName: Dropbox.Api.Auth.TokenFromOAuth1Arg.Oauth1TokenSecret
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/TokenFromOAuth1Arg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Oauth1TokenSecret
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/TokenFromOAuth1Arg.cs
+    startLine: 80
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth
+  summary: "\n<p>The token secret associated with the supplied access token.</p>\n"
+  example: []
+  syntax:
+    content: public string Oauth1TokenSecret { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Oauth1TokenSecret As String
+  overload: Dropbox.Api.Auth.TokenFromOAuth1Arg.Oauth1TokenSecret*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Auth
+  commentId: N:Dropbox.Api.Auth
+  name: Dropbox.Api.Auth
+  nameWithType: Dropbox.Api.Auth
+  fullName: Dropbox.Api.Auth
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Auth.TokenFromOAuth1Arg
+  commentId: T:Dropbox.Api.Auth.TokenFromOAuth1Arg
+  parent: Dropbox.Api.Auth
+  name: TokenFromOAuth1Arg
+  nameWithType: TokenFromOAuth1Arg
+  fullName: Dropbox.Api.Auth.TokenFromOAuth1Arg
+- uid: Dropbox.Api.Auth.TokenFromOAuth1Arg.#ctor*
+  commentId: Overload:Dropbox.Api.Auth.TokenFromOAuth1Arg.#ctor
+  name: TokenFromOAuth1Arg
+  nameWithType: TokenFromOAuth1Arg.TokenFromOAuth1Arg
+  fullName: Dropbox.Api.Auth.TokenFromOAuth1Arg.TokenFromOAuth1Arg
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Auth.TokenFromOAuth1Arg.Oauth1Token*
+  commentId: Overload:Dropbox.Api.Auth.TokenFromOAuth1Arg.Oauth1Token
+  name: Oauth1Token
+  nameWithType: TokenFromOAuth1Arg.Oauth1Token
+  fullName: Dropbox.Api.Auth.TokenFromOAuth1Arg.Oauth1Token
+- uid: Dropbox.Api.Auth.TokenFromOAuth1Arg.Oauth1TokenSecret*
+  commentId: Overload:Dropbox.Api.Auth.TokenFromOAuth1Arg.Oauth1TokenSecret
+  name: Oauth1TokenSecret
+  nameWithType: TokenFromOAuth1Arg.Oauth1TokenSecret
+  fullName: Dropbox.Api.Auth.TokenFromOAuth1Arg.Oauth1TokenSecret
+shouldSkipMarkup: true

@@ -1,0 +1,397 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.UserResendEmailsResult
+  commentId: T:Dropbox.Api.Team.UserResendEmailsResult
+  id: UserResendEmailsResult
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.UserResendEmailsResult.#ctor
+  - Dropbox.Api.Team.UserResendEmailsResult.#ctor(Dropbox.Api.Team.UserSelectorArg,System.Collections.Generic.IEnumerable{Dropbox.Api.Team.ResendSecondaryEmailResult})
+  - Dropbox.Api.Team.UserResendEmailsResult.Results
+  - Dropbox.Api.Team.UserResendEmailsResult.User
+  langs:
+  - csharp
+  - vb
+  name: UserResendEmailsResult
+  nameWithType: UserResendEmailsResult
+  fullName: Dropbox.Api.Team.UserResendEmailsResult
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserResendEmailsResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: UserResendEmailsResult
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserResendEmailsResult.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The user resend emails result object</p>\n"
+  example: []
+  syntax:
+    content: 'public class UserResendEmailsResult : object'
+    content.vb: >-
+      Public Class UserResendEmailsResult
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.UserResendEmailsResult.#ctor(Dropbox.Api.Team.UserSelectorArg,System.Collections.Generic.IEnumerable{Dropbox.Api.Team.ResendSecondaryEmailResult})
+  commentId: M:Dropbox.Api.Team.UserResendEmailsResult.#ctor(Dropbox.Api.Team.UserSelectorArg,System.Collections.Generic.IEnumerable{Dropbox.Api.Team.ResendSecondaryEmailResult})
+  id: '#ctor(Dropbox.Api.Team.UserSelectorArg,System.Collections.Generic.IEnumerable{Dropbox.Api.Team.ResendSecondaryEmailResult})'
+  parent: Dropbox.Api.Team.UserResendEmailsResult
+  langs:
+  - csharp
+  - vb
+  name: UserResendEmailsResult(UserSelectorArg, System.Collections.Generic.IEnumerable<ResendSecondaryEmailResult>)
+  nameWithType: UserResendEmailsResult.UserResendEmailsResult(UserSelectorArg, System.Collections.Generic.IEnumerable<ResendSecondaryEmailResult>)
+  fullName: Dropbox.Api.Team.UserResendEmailsResult.UserResendEmailsResult(Dropbox.Api.Team.UserSelectorArg, System.Collections.Generic.IEnumerable<Dropbox.Api.Team.ResendSecondaryEmailResult>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserResendEmailsResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserResendEmailsResult.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.UserResendEmailsResult\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public UserResendEmailsResult(UserSelectorArg user, System.Collections.Generic.IEnumerable<ResendSecondaryEmailResult> results)
+    parameters:
+    - id: user
+      type: Dropbox.Api.Team.UserSelectorArg
+      description: The user
+    - id: results
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.Team.ResendSecondaryEmailResult}
+      description: The results
+    content.vb: Public Sub New(user As UserSelectorArg, results As System.Collections.Generic.IEnumerable(Of ResendSecondaryEmailResult))
+  overload: Dropbox.Api.Team.UserResendEmailsResult.#ctor*
+  nameWithType.vb: UserResendEmailsResult.UserResendEmailsResult(UserSelectorArg, System.Collections.Generic.IEnumerable(Of ResendSecondaryEmailResult))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Team.UserResendEmailsResult.UserResendEmailsResult(Dropbox.Api.Team.UserSelectorArg, System.Collections.Generic.IEnumerable(Of Dropbox.Api.Team.ResendSecondaryEmailResult))
+  name.vb: UserResendEmailsResult(UserSelectorArg, System.Collections.Generic.IEnumerable(Of ResendSecondaryEmailResult))
+- uid: Dropbox.Api.Team.UserResendEmailsResult.#ctor
+  commentId: M:Dropbox.Api.Team.UserResendEmailsResult.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.UserResendEmailsResult
+  langs:
+  - csharp
+  - vb
+  name: UserResendEmailsResult()
+  nameWithType: UserResendEmailsResult.UserResendEmailsResult()
+  fullName: Dropbox.Api.Team.UserResendEmailsResult.UserResendEmailsResult()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserResendEmailsResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserResendEmailsResult.cs
+    startLine: 60
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.UserResendEmailsResult\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public UserResendEmailsResult()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.UserResendEmailsResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.UserResendEmailsResult.User
+  commentId: P:Dropbox.Api.Team.UserResendEmailsResult.User
+  id: User
+  parent: Dropbox.Api.Team.UserResendEmailsResult
+  langs:
+  - csharp
+  - vb
+  name: User
+  nameWithType: UserResendEmailsResult.User
+  fullName: Dropbox.Api.Team.UserResendEmailsResult.User
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserResendEmailsResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: User
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserResendEmailsResult.cs
+    startLine: 68
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets the user of the user resend emails result</p>\n"
+  example: []
+  syntax:
+    content: public UserSelectorArg User { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.UserSelectorArg
+    content.vb: Public Property User As UserSelectorArg
+  overload: Dropbox.Api.Team.UserResendEmailsResult.User*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.UserResendEmailsResult.Results
+  commentId: P:Dropbox.Api.Team.UserResendEmailsResult.Results
+  id: Results
+  parent: Dropbox.Api.Team.UserResendEmailsResult
+  langs:
+  - csharp
+  - vb
+  name: Results
+  nameWithType: UserResendEmailsResult.Results
+  fullName: Dropbox.Api.Team.UserResendEmailsResult.Results
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserResendEmailsResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Results
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserResendEmailsResult.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets the results of the user resend emails result</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<ResendSecondaryEmailResult> Results { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{Dropbox.Api.Team.ResendSecondaryEmailResult}
+    content.vb: Public Property Results As System.Collections.Generic.IList(Of ResendSecondaryEmailResult)
+  overload: Dropbox.Api.Team.UserResendEmailsResult.Results*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.UserResendEmailsResult
+  commentId: T:Dropbox.Api.Team.UserResendEmailsResult
+  parent: Dropbox.Api.Team
+  name: UserResendEmailsResult
+  nameWithType: UserResendEmailsResult
+  fullName: Dropbox.Api.Team.UserResendEmailsResult
+- uid: Dropbox.Api.Team.UserResendEmailsResult.#ctor*
+  commentId: Overload:Dropbox.Api.Team.UserResendEmailsResult.#ctor
+  name: UserResendEmailsResult
+  nameWithType: UserResendEmailsResult.UserResendEmailsResult
+  fullName: Dropbox.Api.Team.UserResendEmailsResult.UserResendEmailsResult
+- uid: Dropbox.Api.Team.UserSelectorArg
+  commentId: T:Dropbox.Api.Team.UserSelectorArg
+  parent: Dropbox.Api.Team
+  name: UserSelectorArg
+  nameWithType: UserSelectorArg
+  fullName: Dropbox.Api.Team.UserSelectorArg
+- uid: System.Collections.Generic.IEnumerable{Dropbox.Api.Team.ResendSecondaryEmailResult}
+  commentId: '!:System.Collections.Generic.IEnumerable{Dropbox.Api.Team.ResendSecondaryEmailResult}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<ResendSecondaryEmailResult>
+  nameWithType: System.Collections.Generic.IEnumerable<ResendSecondaryEmailResult>
+  fullName: System.Collections.Generic.IEnumerable<Dropbox.Api.Team.ResendSecondaryEmailResult>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of ResendSecondaryEmailResult)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Dropbox.Api.Team.ResendSecondaryEmailResult)
+  name.vb: System.Collections.Generic.IEnumerable(Of ResendSecondaryEmailResult)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Team.ResendSecondaryEmailResult
+    name: ResendSecondaryEmailResult
+    nameWithType: ResendSecondaryEmailResult
+    fullName: Dropbox.Api.Team.ResendSecondaryEmailResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Team.ResendSecondaryEmailResult
+    name: ResendSecondaryEmailResult
+    nameWithType: ResendSecondaryEmailResult
+    fullName: Dropbox.Api.Team.ResendSecondaryEmailResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: System.Collections.Generic.IEnumerable<>
+  nameWithType: System.Collections.Generic.IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: System.Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Team.UserResendEmailsResult.User*
+  commentId: Overload:Dropbox.Api.Team.UserResendEmailsResult.User
+  name: User
+  nameWithType: UserResendEmailsResult.User
+  fullName: Dropbox.Api.Team.UserResendEmailsResult.User
+- uid: Dropbox.Api.Team.UserResendEmailsResult.Results*
+  commentId: Overload:Dropbox.Api.Team.UserResendEmailsResult.Results
+  name: Results
+  nameWithType: UserResendEmailsResult.Results
+  fullName: Dropbox.Api.Team.UserResendEmailsResult.Results
+- uid: System.Collections.Generic.IList{Dropbox.Api.Team.ResendSecondaryEmailResult}
+  commentId: '!:System.Collections.Generic.IList{Dropbox.Api.Team.ResendSecondaryEmailResult}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<ResendSecondaryEmailResult>
+  nameWithType: System.Collections.Generic.IList<ResendSecondaryEmailResult>
+  fullName: System.Collections.Generic.IList<Dropbox.Api.Team.ResendSecondaryEmailResult>
+  nameWithType.vb: System.Collections.Generic.IList(Of ResendSecondaryEmailResult)
+  fullName.vb: System.Collections.Generic.IList(Of Dropbox.Api.Team.ResendSecondaryEmailResult)
+  name.vb: System.Collections.Generic.IList(Of ResendSecondaryEmailResult)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Team.ResendSecondaryEmailResult
+    name: ResendSecondaryEmailResult
+    nameWithType: ResendSecondaryEmailResult
+    fullName: Dropbox.Api.Team.ResendSecondaryEmailResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Team.ResendSecondaryEmailResult
+    name: ResendSecondaryEmailResult
+    nameWithType: ResendSecondaryEmailResult
+    fullName: Dropbox.Api.Team.ResendSecondaryEmailResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  isExternal: true
+  name: System.Collections.Generic.IList<>
+  nameWithType: System.Collections.Generic.IList<>
+  fullName: System.Collections.Generic.IList<>
+  nameWithType.vb: System.Collections.Generic.IList(Of )
+  fullName.vb: System.Collections.Generic.IList(Of )
+  name.vb: System.Collections.Generic.IList(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+shouldSkipMarkup: true

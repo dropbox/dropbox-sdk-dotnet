@@ -1,0 +1,567 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.GetSharedLinkFileError
+  commentId: T:Dropbox.Api.Sharing.GetSharedLinkFileError
+  id: GetSharedLinkFileError
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.GetSharedLinkFileError.#ctor
+  - Dropbox.Api.Sharing.GetSharedLinkFileError.AsOther
+  - Dropbox.Api.Sharing.GetSharedLinkFileError.AsSharedLinkAccessDenied
+  - Dropbox.Api.Sharing.GetSharedLinkFileError.AsSharedLinkIsDirectory
+  - Dropbox.Api.Sharing.GetSharedLinkFileError.AsSharedLinkNotFound
+  - Dropbox.Api.Sharing.GetSharedLinkFileError.AsUnsupportedLinkType
+  - Dropbox.Api.Sharing.GetSharedLinkFileError.IsOther
+  - Dropbox.Api.Sharing.GetSharedLinkFileError.IsSharedLinkAccessDenied
+  - Dropbox.Api.Sharing.GetSharedLinkFileError.IsSharedLinkIsDirectory
+  - Dropbox.Api.Sharing.GetSharedLinkFileError.IsSharedLinkNotFound
+  - Dropbox.Api.Sharing.GetSharedLinkFileError.IsUnsupportedLinkType
+  langs:
+  - csharp
+  - vb
+  name: GetSharedLinkFileError
+  nameWithType: GetSharedLinkFileError
+  fullName: Dropbox.Api.Sharing.GetSharedLinkFileError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetSharedLinkFileError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GetSharedLinkFileError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetSharedLinkFileError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The get shared link file error object</p>\n"
+  example: []
+  syntax:
+    content: 'public class GetSharedLinkFileError : object'
+    content.vb: >-
+      Public Class GetSharedLinkFileError
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Sharing.GetSharedLinkFileError.Other
+  - Dropbox.Api.Sharing.GetSharedLinkFileError.SharedLinkAccessDenied
+  - Dropbox.Api.Sharing.GetSharedLinkFileError.SharedLinkIsDirectory
+  - Dropbox.Api.Sharing.GetSharedLinkFileError.SharedLinkNotFound
+  - Dropbox.Api.Sharing.GetSharedLinkFileError.UnsupportedLinkType
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Sharing.GetSharedLinkFileError.#ctor
+  commentId: M:Dropbox.Api.Sharing.GetSharedLinkFileError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Sharing.GetSharedLinkFileError
+  langs:
+  - csharp
+  - vb
+  name: GetSharedLinkFileError()
+  nameWithType: GetSharedLinkFileError.GetSharedLinkFileError()
+  fullName: Dropbox.Api.Sharing.GetSharedLinkFileError.GetSharedLinkFileError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetSharedLinkFileError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetSharedLinkFileError.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.GetSharedLinkFileError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public GetSharedLinkFileError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Sharing.GetSharedLinkFileError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.GetSharedLinkFileError.IsSharedLinkIsDirectory
+  commentId: P:Dropbox.Api.Sharing.GetSharedLinkFileError.IsSharedLinkIsDirectory
+  id: IsSharedLinkIsDirectory
+  parent: Dropbox.Api.Sharing.GetSharedLinkFileError
+  langs:
+  - csharp
+  - vb
+  name: IsSharedLinkIsDirectory
+  nameWithType: GetSharedLinkFileError.IsSharedLinkIsDirectory
+  fullName: Dropbox.Api.Sharing.GetSharedLinkFileError.IsSharedLinkIsDirectory
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetSharedLinkFileError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsSharedLinkIsDirectory
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetSharedLinkFileError.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is SharedLinkIsDirectory</p>\n"
+  example: []
+  syntax:
+    content: public bool IsSharedLinkIsDirectory { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsSharedLinkIsDirectory As Boolean
+  overload: Dropbox.Api.Sharing.GetSharedLinkFileError.IsSharedLinkIsDirectory*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.GetSharedLinkFileError.AsSharedLinkIsDirectory
+  commentId: P:Dropbox.Api.Sharing.GetSharedLinkFileError.AsSharedLinkIsDirectory
+  id: AsSharedLinkIsDirectory
+  parent: Dropbox.Api.Sharing.GetSharedLinkFileError
+  langs:
+  - csharp
+  - vb
+  name: AsSharedLinkIsDirectory
+  nameWithType: GetSharedLinkFileError.AsSharedLinkIsDirectory
+  fullName: Dropbox.Api.Sharing.GetSharedLinkFileError.AsSharedLinkIsDirectory
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetSharedLinkFileError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsSharedLinkIsDirectory
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetSharedLinkFileError.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a SharedLinkIsDirectory, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public GetSharedLinkFileError.SharedLinkIsDirectory AsSharedLinkIsDirectory { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.GetSharedLinkFileError.SharedLinkIsDirectory
+    content.vb: Public ReadOnly Property AsSharedLinkIsDirectory As GetSharedLinkFileError.SharedLinkIsDirectory
+  overload: Dropbox.Api.Sharing.GetSharedLinkFileError.AsSharedLinkIsDirectory*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.GetSharedLinkFileError.IsSharedLinkNotFound
+  commentId: P:Dropbox.Api.Sharing.GetSharedLinkFileError.IsSharedLinkNotFound
+  id: IsSharedLinkNotFound
+  parent: Dropbox.Api.Sharing.GetSharedLinkFileError
+  langs:
+  - csharp
+  - vb
+  name: IsSharedLinkNotFound
+  nameWithType: GetSharedLinkFileError.IsSharedLinkNotFound
+  fullName: Dropbox.Api.Sharing.GetSharedLinkFileError.IsSharedLinkNotFound
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetSharedLinkFileError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsSharedLinkNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetSharedLinkFileError.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is SharedLinkNotFound</p>\n"
+  example: []
+  syntax:
+    content: public bool IsSharedLinkNotFound { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsSharedLinkNotFound As Boolean
+  overload: Dropbox.Api.Sharing.GetSharedLinkFileError.IsSharedLinkNotFound*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.GetSharedLinkFileError.AsSharedLinkNotFound
+  commentId: P:Dropbox.Api.Sharing.GetSharedLinkFileError.AsSharedLinkNotFound
+  id: AsSharedLinkNotFound
+  parent: Dropbox.Api.Sharing.GetSharedLinkFileError
+  langs:
+  - csharp
+  - vb
+  name: AsSharedLinkNotFound
+  nameWithType: GetSharedLinkFileError.AsSharedLinkNotFound
+  fullName: Dropbox.Api.Sharing.GetSharedLinkFileError.AsSharedLinkNotFound
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetSharedLinkFileError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsSharedLinkNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetSharedLinkFileError.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a SharedLinkNotFound, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public GetSharedLinkFileError.SharedLinkNotFound AsSharedLinkNotFound { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.GetSharedLinkFileError.SharedLinkNotFound
+    content.vb: Public ReadOnly Property AsSharedLinkNotFound As GetSharedLinkFileError.SharedLinkNotFound
+  overload: Dropbox.Api.Sharing.GetSharedLinkFileError.AsSharedLinkNotFound*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.GetSharedLinkFileError.IsSharedLinkAccessDenied
+  commentId: P:Dropbox.Api.Sharing.GetSharedLinkFileError.IsSharedLinkAccessDenied
+  id: IsSharedLinkAccessDenied
+  parent: Dropbox.Api.Sharing.GetSharedLinkFileError
+  langs:
+  - csharp
+  - vb
+  name: IsSharedLinkAccessDenied
+  nameWithType: GetSharedLinkFileError.IsSharedLinkAccessDenied
+  fullName: Dropbox.Api.Sharing.GetSharedLinkFileError.IsSharedLinkAccessDenied
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetSharedLinkFileError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsSharedLinkAccessDenied
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetSharedLinkFileError.cs
+    startLine: 85
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is\nSharedLinkAccessDenied</p>\n"
+  example: []
+  syntax:
+    content: public bool IsSharedLinkAccessDenied { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsSharedLinkAccessDenied As Boolean
+  overload: Dropbox.Api.Sharing.GetSharedLinkFileError.IsSharedLinkAccessDenied*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.GetSharedLinkFileError.AsSharedLinkAccessDenied
+  commentId: P:Dropbox.Api.Sharing.GetSharedLinkFileError.AsSharedLinkAccessDenied
+  id: AsSharedLinkAccessDenied
+  parent: Dropbox.Api.Sharing.GetSharedLinkFileError
+  langs:
+  - csharp
+  - vb
+  name: AsSharedLinkAccessDenied
+  nameWithType: GetSharedLinkFileError.AsSharedLinkAccessDenied
+  fullName: Dropbox.Api.Sharing.GetSharedLinkFileError.AsSharedLinkAccessDenied
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetSharedLinkFileError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsSharedLinkAccessDenied
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetSharedLinkFileError.cs
+    startLine: 96
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a SharedLinkAccessDenied, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public GetSharedLinkFileError.SharedLinkAccessDenied AsSharedLinkAccessDenied { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.GetSharedLinkFileError.SharedLinkAccessDenied
+    content.vb: Public ReadOnly Property AsSharedLinkAccessDenied As GetSharedLinkFileError.SharedLinkAccessDenied
+  overload: Dropbox.Api.Sharing.GetSharedLinkFileError.AsSharedLinkAccessDenied*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.GetSharedLinkFileError.IsUnsupportedLinkType
+  commentId: P:Dropbox.Api.Sharing.GetSharedLinkFileError.IsUnsupportedLinkType
+  id: IsUnsupportedLinkType
+  parent: Dropbox.Api.Sharing.GetSharedLinkFileError
+  langs:
+  - csharp
+  - vb
+  name: IsUnsupportedLinkType
+  nameWithType: GetSharedLinkFileError.IsUnsupportedLinkType
+  fullName: Dropbox.Api.Sharing.GetSharedLinkFileError.IsUnsupportedLinkType
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetSharedLinkFileError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsUnsupportedLinkType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetSharedLinkFileError.cs
+    startLine: 107
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is UnsupportedLinkType</p>\n"
+  example: []
+  syntax:
+    content: public bool IsUnsupportedLinkType { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsUnsupportedLinkType As Boolean
+  overload: Dropbox.Api.Sharing.GetSharedLinkFileError.IsUnsupportedLinkType*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.GetSharedLinkFileError.AsUnsupportedLinkType
+  commentId: P:Dropbox.Api.Sharing.GetSharedLinkFileError.AsUnsupportedLinkType
+  id: AsUnsupportedLinkType
+  parent: Dropbox.Api.Sharing.GetSharedLinkFileError
+  langs:
+  - csharp
+  - vb
+  name: AsUnsupportedLinkType
+  nameWithType: GetSharedLinkFileError.AsUnsupportedLinkType
+  fullName: Dropbox.Api.Sharing.GetSharedLinkFileError.AsUnsupportedLinkType
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetSharedLinkFileError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsUnsupportedLinkType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetSharedLinkFileError.cs
+    startLine: 118
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a UnsupportedLinkType, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public GetSharedLinkFileError.UnsupportedLinkType AsUnsupportedLinkType { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.GetSharedLinkFileError.UnsupportedLinkType
+    content.vb: Public ReadOnly Property AsUnsupportedLinkType As GetSharedLinkFileError.UnsupportedLinkType
+  overload: Dropbox.Api.Sharing.GetSharedLinkFileError.AsUnsupportedLinkType*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.GetSharedLinkFileError.IsOther
+  commentId: P:Dropbox.Api.Sharing.GetSharedLinkFileError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Sharing.GetSharedLinkFileError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: GetSharedLinkFileError.IsOther
+  fullName: Dropbox.Api.Sharing.GetSharedLinkFileError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetSharedLinkFileError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetSharedLinkFileError.cs
+    startLine: 129
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Sharing.GetSharedLinkFileError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.GetSharedLinkFileError.AsOther
+  commentId: P:Dropbox.Api.Sharing.GetSharedLinkFileError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Sharing.GetSharedLinkFileError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: GetSharedLinkFileError.AsOther
+  fullName: Dropbox.Api.Sharing.GetSharedLinkFileError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetSharedLinkFileError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetSharedLinkFileError.cs
+    startLine: 140
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public GetSharedLinkFileError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.GetSharedLinkFileError.Other
+    content.vb: Public ReadOnly Property AsOther As GetSharedLinkFileError.Other
+  overload: Dropbox.Api.Sharing.GetSharedLinkFileError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.GetSharedLinkFileError
+  commentId: T:Dropbox.Api.Sharing.GetSharedLinkFileError
+  parent: Dropbox.Api.Sharing
+  name: GetSharedLinkFileError
+  nameWithType: GetSharedLinkFileError
+  fullName: Dropbox.Api.Sharing.GetSharedLinkFileError
+- uid: Dropbox.Api.Sharing.GetSharedLinkFileError.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.GetSharedLinkFileError.#ctor
+  name: GetSharedLinkFileError
+  nameWithType: GetSharedLinkFileError.GetSharedLinkFileError
+  fullName: Dropbox.Api.Sharing.GetSharedLinkFileError.GetSharedLinkFileError
+- uid: Dropbox.Api.Sharing.GetSharedLinkFileError.IsSharedLinkIsDirectory*
+  commentId: Overload:Dropbox.Api.Sharing.GetSharedLinkFileError.IsSharedLinkIsDirectory
+  name: IsSharedLinkIsDirectory
+  nameWithType: GetSharedLinkFileError.IsSharedLinkIsDirectory
+  fullName: Dropbox.Api.Sharing.GetSharedLinkFileError.IsSharedLinkIsDirectory
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Sharing.GetSharedLinkFileError.AsSharedLinkIsDirectory*
+  commentId: Overload:Dropbox.Api.Sharing.GetSharedLinkFileError.AsSharedLinkIsDirectory
+  name: AsSharedLinkIsDirectory
+  nameWithType: GetSharedLinkFileError.AsSharedLinkIsDirectory
+  fullName: Dropbox.Api.Sharing.GetSharedLinkFileError.AsSharedLinkIsDirectory
+- uid: Dropbox.Api.Sharing.GetSharedLinkFileError.SharedLinkIsDirectory
+  commentId: T:Dropbox.Api.Sharing.GetSharedLinkFileError.SharedLinkIsDirectory
+  parent: Dropbox.Api.Sharing
+  name: GetSharedLinkFileError.SharedLinkIsDirectory
+  nameWithType: GetSharedLinkFileError.SharedLinkIsDirectory
+  fullName: Dropbox.Api.Sharing.GetSharedLinkFileError.SharedLinkIsDirectory
+- uid: Dropbox.Api.Sharing.GetSharedLinkFileError.IsSharedLinkNotFound*
+  commentId: Overload:Dropbox.Api.Sharing.GetSharedLinkFileError.IsSharedLinkNotFound
+  name: IsSharedLinkNotFound
+  nameWithType: GetSharedLinkFileError.IsSharedLinkNotFound
+  fullName: Dropbox.Api.Sharing.GetSharedLinkFileError.IsSharedLinkNotFound
+- uid: Dropbox.Api.Sharing.GetSharedLinkFileError.AsSharedLinkNotFound*
+  commentId: Overload:Dropbox.Api.Sharing.GetSharedLinkFileError.AsSharedLinkNotFound
+  name: AsSharedLinkNotFound
+  nameWithType: GetSharedLinkFileError.AsSharedLinkNotFound
+  fullName: Dropbox.Api.Sharing.GetSharedLinkFileError.AsSharedLinkNotFound
+- uid: Dropbox.Api.Sharing.GetSharedLinkFileError.SharedLinkNotFound
+  commentId: T:Dropbox.Api.Sharing.GetSharedLinkFileError.SharedLinkNotFound
+  parent: Dropbox.Api.Sharing
+  name: GetSharedLinkFileError.SharedLinkNotFound
+  nameWithType: GetSharedLinkFileError.SharedLinkNotFound
+  fullName: Dropbox.Api.Sharing.GetSharedLinkFileError.SharedLinkNotFound
+- uid: Dropbox.Api.Sharing.GetSharedLinkFileError.IsSharedLinkAccessDenied*
+  commentId: Overload:Dropbox.Api.Sharing.GetSharedLinkFileError.IsSharedLinkAccessDenied
+  name: IsSharedLinkAccessDenied
+  nameWithType: GetSharedLinkFileError.IsSharedLinkAccessDenied
+  fullName: Dropbox.Api.Sharing.GetSharedLinkFileError.IsSharedLinkAccessDenied
+- uid: Dropbox.Api.Sharing.GetSharedLinkFileError.AsSharedLinkAccessDenied*
+  commentId: Overload:Dropbox.Api.Sharing.GetSharedLinkFileError.AsSharedLinkAccessDenied
+  name: AsSharedLinkAccessDenied
+  nameWithType: GetSharedLinkFileError.AsSharedLinkAccessDenied
+  fullName: Dropbox.Api.Sharing.GetSharedLinkFileError.AsSharedLinkAccessDenied
+- uid: Dropbox.Api.Sharing.GetSharedLinkFileError.SharedLinkAccessDenied
+  commentId: T:Dropbox.Api.Sharing.GetSharedLinkFileError.SharedLinkAccessDenied
+  parent: Dropbox.Api.Sharing
+  name: GetSharedLinkFileError.SharedLinkAccessDenied
+  nameWithType: GetSharedLinkFileError.SharedLinkAccessDenied
+  fullName: Dropbox.Api.Sharing.GetSharedLinkFileError.SharedLinkAccessDenied
+- uid: Dropbox.Api.Sharing.GetSharedLinkFileError.IsUnsupportedLinkType*
+  commentId: Overload:Dropbox.Api.Sharing.GetSharedLinkFileError.IsUnsupportedLinkType
+  name: IsUnsupportedLinkType
+  nameWithType: GetSharedLinkFileError.IsUnsupportedLinkType
+  fullName: Dropbox.Api.Sharing.GetSharedLinkFileError.IsUnsupportedLinkType
+- uid: Dropbox.Api.Sharing.GetSharedLinkFileError.AsUnsupportedLinkType*
+  commentId: Overload:Dropbox.Api.Sharing.GetSharedLinkFileError.AsUnsupportedLinkType
+  name: AsUnsupportedLinkType
+  nameWithType: GetSharedLinkFileError.AsUnsupportedLinkType
+  fullName: Dropbox.Api.Sharing.GetSharedLinkFileError.AsUnsupportedLinkType
+- uid: Dropbox.Api.Sharing.GetSharedLinkFileError.UnsupportedLinkType
+  commentId: T:Dropbox.Api.Sharing.GetSharedLinkFileError.UnsupportedLinkType
+  parent: Dropbox.Api.Sharing
+  name: GetSharedLinkFileError.UnsupportedLinkType
+  nameWithType: GetSharedLinkFileError.UnsupportedLinkType
+  fullName: Dropbox.Api.Sharing.GetSharedLinkFileError.UnsupportedLinkType
+- uid: Dropbox.Api.Sharing.GetSharedLinkFileError.IsOther*
+  commentId: Overload:Dropbox.Api.Sharing.GetSharedLinkFileError.IsOther
+  name: IsOther
+  nameWithType: GetSharedLinkFileError.IsOther
+  fullName: Dropbox.Api.Sharing.GetSharedLinkFileError.IsOther
+- uid: Dropbox.Api.Sharing.GetSharedLinkFileError.AsOther*
+  commentId: Overload:Dropbox.Api.Sharing.GetSharedLinkFileError.AsOther
+  name: AsOther
+  nameWithType: GetSharedLinkFileError.AsOther
+  fullName: Dropbox.Api.Sharing.GetSharedLinkFileError.AsOther
+- uid: Dropbox.Api.Sharing.GetSharedLinkFileError.Other
+  commentId: T:Dropbox.Api.Sharing.GetSharedLinkFileError.Other
+  parent: Dropbox.Api.Sharing
+  name: GetSharedLinkFileError.Other
+  nameWithType: GetSharedLinkFileError.Other
+  fullName: Dropbox.Api.Sharing.GetSharedLinkFileError.Other
+shouldSkipMarkup: true

@@ -1,0 +1,190 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.MissingDetails
+  commentId: T:Dropbox.Api.TeamLog.MissingDetails
+  id: MissingDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.MissingDetails.#ctor
+  - Dropbox.Api.TeamLog.MissingDetails.#ctor(System.String)
+  - Dropbox.Api.TeamLog.MissingDetails.SourceEventFields
+  langs:
+  - csharp
+  - vb
+  name: MissingDetails
+  nameWithType: MissingDetails
+  fullName: Dropbox.Api.TeamLog.MissingDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MissingDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: MissingDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MissingDetails.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>An indication that an error occurred while retrieving the event. Some attributes\nof the event may be omitted as a result.</p>\n"
+  example: []
+  syntax:
+    content: 'public class MissingDetails : object'
+    content.vb: >-
+      Public Class MissingDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.MissingDetails.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.MissingDetails.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.MissingDetails
+  langs:
+  - csharp
+  - vb
+  name: MissingDetails(String)
+  nameWithType: MissingDetails.MissingDetails(String)
+  fullName: Dropbox.Api.TeamLog.MissingDetails.MissingDetails(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MissingDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MissingDetails.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.MissingDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public MissingDetails(string sourceEventFields = null)
+    parameters:
+    - id: sourceEventFields
+      type: System.String
+      description: >-
+        All the data that could be retrieved and converted
+
+        from the source event.
+    content.vb: Public Sub New(sourceEventFields As String = Nothing)
+  overload: Dropbox.Api.TeamLog.MissingDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.MissingDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.MissingDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.MissingDetails
+  langs:
+  - csharp
+  - vb
+  name: MissingDetails()
+  nameWithType: MissingDetails.MissingDetails()
+  fullName: Dropbox.Api.TeamLog.MissingDetails.MissingDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MissingDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MissingDetails.cs
+    startLine: 45
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.MissingDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public MissingDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.MissingDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.MissingDetails.SourceEventFields
+  commentId: P:Dropbox.Api.TeamLog.MissingDetails.SourceEventFields
+  id: SourceEventFields
+  parent: Dropbox.Api.TeamLog.MissingDetails
+  langs:
+  - csharp
+  - vb
+  name: SourceEventFields
+  nameWithType: MissingDetails.SourceEventFields
+  fullName: Dropbox.Api.TeamLog.MissingDetails.SourceEventFields
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MissingDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SourceEventFields
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MissingDetails.cs
+    startLine: 54
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>All the data that could be retrieved and converted from the source\nevent.</p>\n"
+  example: []
+  syntax:
+    content: public string SourceEventFields { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SourceEventFields As String
+  overload: Dropbox.Api.TeamLog.MissingDetails.SourceEventFields*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.MissingDetails
+  commentId: T:Dropbox.Api.TeamLog.MissingDetails
+  parent: Dropbox.Api.TeamLog
+  name: MissingDetails
+  nameWithType: MissingDetails
+  fullName: Dropbox.Api.TeamLog.MissingDetails
+- uid: Dropbox.Api.TeamLog.MissingDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.MissingDetails.#ctor
+  name: MissingDetails
+  nameWithType: MissingDetails.MissingDetails
+  fullName: Dropbox.Api.TeamLog.MissingDetails.MissingDetails
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.MissingDetails.SourceEventFields*
+  commentId: Overload:Dropbox.Api.TeamLog.MissingDetails.SourceEventFields
+  name: SourceEventFields
+  nameWithType: MissingDetails.SourceEventFields
+  fullName: Dropbox.Api.TeamLog.MissingDetails.SourceEventFields
+shouldSkipMarkup: true

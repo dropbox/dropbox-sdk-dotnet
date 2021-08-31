@@ -1,0 +1,148 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestReminderExtraDetails.Other
+  commentId: T:Dropbox.Api.TeamLog.TeamMergeRequestReminderExtraDetails.Other
+  id: TeamMergeRequestReminderExtraDetails.Other
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.TeamMergeRequestReminderExtraDetails.Other.Instance
+  langs:
+  - csharp
+  - vb
+  name: TeamMergeRequestReminderExtraDetails.Other
+  nameWithType: TeamMergeRequestReminderExtraDetails.Other
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestReminderExtraDetails.Other
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestReminderExtraDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Other
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestReminderExtraDetails.cs
+    startLine: 361
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The other object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Other : TeamMergeRequestReminderExtraDetails'
+    content.vb: >-
+      Public NotInheritable Class Other
+          Inherits TeamMergeRequestReminderExtraDetails
+  inheritance:
+  - System.Object
+  - Dropbox.Api.TeamLog.TeamMergeRequestReminderExtraDetails
+  inheritedMembers:
+  - Dropbox.Api.TeamLog.TeamMergeRequestReminderExtraDetails.IsPrimaryTeam
+  - Dropbox.Api.TeamLog.TeamMergeRequestReminderExtraDetails.AsPrimaryTeam
+  - Dropbox.Api.TeamLog.TeamMergeRequestReminderExtraDetails.IsSecondaryTeam
+  - Dropbox.Api.TeamLog.TeamMergeRequestReminderExtraDetails.AsSecondaryTeam
+  - Dropbox.Api.TeamLog.TeamMergeRequestReminderExtraDetails.IsOther
+  - Dropbox.Api.TeamLog.TeamMergeRequestReminderExtraDetails.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestReminderExtraDetails.Other.Instance
+  commentId: F:Dropbox.Api.TeamLog.TeamMergeRequestReminderExtraDetails.Other.Instance
+  id: Instance
+  parent: Dropbox.Api.TeamLog.TeamMergeRequestReminderExtraDetails.Other
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: TeamMergeRequestReminderExtraDetails.Other.Instance
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestReminderExtraDetails.Other.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestReminderExtraDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestReminderExtraDetails.cs
+    startLine: 385
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>A singleton instance of Other</p>\n"
+  example: []
+  syntax:
+    content: public static readonly TeamMergeRequestReminderExtraDetails.Other Instance
+    return:
+      type: Dropbox.Api.TeamLog.TeamMergeRequestReminderExtraDetails.Other
+    content.vb: Public Shared ReadOnly Instance As TeamMergeRequestReminderExtraDetails.Other
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestReminderExtraDetails
+  commentId: T:Dropbox.Api.TeamLog.TeamMergeRequestReminderExtraDetails
+  parent: Dropbox.Api.TeamLog
+  name: TeamMergeRequestReminderExtraDetails
+  nameWithType: TeamMergeRequestReminderExtraDetails
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestReminderExtraDetails
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestReminderExtraDetails.IsPrimaryTeam
+  commentId: P:Dropbox.Api.TeamLog.TeamMergeRequestReminderExtraDetails.IsPrimaryTeam
+  parent: Dropbox.Api.TeamLog.TeamMergeRequestReminderExtraDetails
+  name: IsPrimaryTeam
+  nameWithType: TeamMergeRequestReminderExtraDetails.IsPrimaryTeam
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestReminderExtraDetails.IsPrimaryTeam
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestReminderExtraDetails.AsPrimaryTeam
+  commentId: P:Dropbox.Api.TeamLog.TeamMergeRequestReminderExtraDetails.AsPrimaryTeam
+  parent: Dropbox.Api.TeamLog.TeamMergeRequestReminderExtraDetails
+  name: AsPrimaryTeam
+  nameWithType: TeamMergeRequestReminderExtraDetails.AsPrimaryTeam
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestReminderExtraDetails.AsPrimaryTeam
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestReminderExtraDetails.IsSecondaryTeam
+  commentId: P:Dropbox.Api.TeamLog.TeamMergeRequestReminderExtraDetails.IsSecondaryTeam
+  parent: Dropbox.Api.TeamLog.TeamMergeRequestReminderExtraDetails
+  name: IsSecondaryTeam
+  nameWithType: TeamMergeRequestReminderExtraDetails.IsSecondaryTeam
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestReminderExtraDetails.IsSecondaryTeam
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestReminderExtraDetails.AsSecondaryTeam
+  commentId: P:Dropbox.Api.TeamLog.TeamMergeRequestReminderExtraDetails.AsSecondaryTeam
+  parent: Dropbox.Api.TeamLog.TeamMergeRequestReminderExtraDetails
+  name: AsSecondaryTeam
+  nameWithType: TeamMergeRequestReminderExtraDetails.AsSecondaryTeam
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestReminderExtraDetails.AsSecondaryTeam
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestReminderExtraDetails.IsOther
+  commentId: P:Dropbox.Api.TeamLog.TeamMergeRequestReminderExtraDetails.IsOther
+  parent: Dropbox.Api.TeamLog.TeamMergeRequestReminderExtraDetails
+  name: IsOther
+  nameWithType: TeamMergeRequestReminderExtraDetails.IsOther
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestReminderExtraDetails.IsOther
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestReminderExtraDetails.AsOther
+  commentId: P:Dropbox.Api.TeamLog.TeamMergeRequestReminderExtraDetails.AsOther
+  parent: Dropbox.Api.TeamLog.TeamMergeRequestReminderExtraDetails
+  name: AsOther
+  nameWithType: TeamMergeRequestReminderExtraDetails.AsOther
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestReminderExtraDetails.AsOther
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestReminderExtraDetails.Other
+  commentId: T:Dropbox.Api.TeamLog.TeamMergeRequestReminderExtraDetails.Other
+  parent: Dropbox.Api.TeamLog
+  name: TeamMergeRequestReminderExtraDetails.Other
+  nameWithType: TeamMergeRequestReminderExtraDetails.Other
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestReminderExtraDetails.Other
+shouldSkipMarkup: true

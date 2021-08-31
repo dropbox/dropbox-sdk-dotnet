@@ -1,0 +1,215 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.RemoveFileMemberError.AccessError
+  commentId: T:Dropbox.Api.Sharing.RemoveFileMemberError.AccessError
+  id: RemoveFileMemberError.AccessError
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.RemoveFileMemberError.AccessError.#ctor(Dropbox.Api.Sharing.SharingFileAccessError)
+  - Dropbox.Api.Sharing.RemoveFileMemberError.AccessError.Value
+  langs:
+  - csharp
+  - vb
+  name: RemoveFileMemberError.AccessError
+  nameWithType: RemoveFileMemberError.AccessError
+  fullName: Dropbox.Api.Sharing.RemoveFileMemberError.AccessError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RemoveFileMemberError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AccessError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RemoveFileMemberError.cs
+    startLine: 310
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The access error object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class AccessError : RemoveFileMemberError'
+    content.vb: >-
+      Public NotInheritable Class AccessError
+          Inherits RemoveFileMemberError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Sharing.RemoveFileMemberError
+  inheritedMembers:
+  - Dropbox.Api.Sharing.RemoveFileMemberError.IsUserError
+  - Dropbox.Api.Sharing.RemoveFileMemberError.AsUserError
+  - Dropbox.Api.Sharing.RemoveFileMemberError.IsAccessError
+  - Dropbox.Api.Sharing.RemoveFileMemberError.AsAccessError
+  - Dropbox.Api.Sharing.RemoveFileMemberError.IsNoExplicitAccess
+  - Dropbox.Api.Sharing.RemoveFileMemberError.AsNoExplicitAccess
+  - Dropbox.Api.Sharing.RemoveFileMemberError.IsOther
+  - Dropbox.Api.Sharing.RemoveFileMemberError.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Sharing.RemoveFileMemberError.AccessError.#ctor(Dropbox.Api.Sharing.SharingFileAccessError)
+  commentId: M:Dropbox.Api.Sharing.RemoveFileMemberError.AccessError.#ctor(Dropbox.Api.Sharing.SharingFileAccessError)
+  id: '#ctor(Dropbox.Api.Sharing.SharingFileAccessError)'
+  parent: Dropbox.Api.Sharing.RemoveFileMemberError.AccessError
+  langs:
+  - csharp
+  - vb
+  name: AccessError(SharingFileAccessError)
+  nameWithType: RemoveFileMemberError.AccessError.AccessError(SharingFileAccessError)
+  fullName: Dropbox.Api.Sharing.RemoveFileMemberError.AccessError.AccessError(Dropbox.Api.Sharing.SharingFileAccessError)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RemoveFileMemberError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RemoveFileMemberError.cs
+    startLine: 329
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.RemoveFileMemberError.AccessError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public AccessError(SharingFileAccessError value)
+    parameters:
+    - id: value
+      type: Dropbox.Api.Sharing.SharingFileAccessError
+      description: The value
+    content.vb: Public Sub New(value As SharingFileAccessError)
+  overload: Dropbox.Api.Sharing.RemoveFileMemberError.AccessError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.RemoveFileMemberError.AccessError.Value
+  commentId: P:Dropbox.Api.Sharing.RemoveFileMemberError.AccessError.Value
+  id: Value
+  parent: Dropbox.Api.Sharing.RemoveFileMemberError.AccessError
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: RemoveFileMemberError.AccessError.Value
+  fullName: Dropbox.Api.Sharing.RemoveFileMemberError.AccessError.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RemoveFileMemberError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RemoveFileMemberError.cs
+    startLine: 344
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public SharingFileAccessError Value { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.SharingFileAccessError
+    content.vb: Public ReadOnly Property Value As SharingFileAccessError
+  overload: Dropbox.Api.Sharing.RemoveFileMemberError.AccessError.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.RemoveFileMemberError
+  commentId: T:Dropbox.Api.Sharing.RemoveFileMemberError
+  parent: Dropbox.Api.Sharing
+  name: RemoveFileMemberError
+  nameWithType: RemoveFileMemberError
+  fullName: Dropbox.Api.Sharing.RemoveFileMemberError
+- uid: Dropbox.Api.Sharing.RemoveFileMemberError.IsUserError
+  commentId: P:Dropbox.Api.Sharing.RemoveFileMemberError.IsUserError
+  parent: Dropbox.Api.Sharing.RemoveFileMemberError
+  name: IsUserError
+  nameWithType: RemoveFileMemberError.IsUserError
+  fullName: Dropbox.Api.Sharing.RemoveFileMemberError.IsUserError
+- uid: Dropbox.Api.Sharing.RemoveFileMemberError.AsUserError
+  commentId: P:Dropbox.Api.Sharing.RemoveFileMemberError.AsUserError
+  parent: Dropbox.Api.Sharing.RemoveFileMemberError
+  name: AsUserError
+  nameWithType: RemoveFileMemberError.AsUserError
+  fullName: Dropbox.Api.Sharing.RemoveFileMemberError.AsUserError
+- uid: Dropbox.Api.Sharing.RemoveFileMemberError.IsAccessError
+  commentId: P:Dropbox.Api.Sharing.RemoveFileMemberError.IsAccessError
+  parent: Dropbox.Api.Sharing.RemoveFileMemberError
+  name: IsAccessError
+  nameWithType: RemoveFileMemberError.IsAccessError
+  fullName: Dropbox.Api.Sharing.RemoveFileMemberError.IsAccessError
+- uid: Dropbox.Api.Sharing.RemoveFileMemberError.AsAccessError
+  commentId: P:Dropbox.Api.Sharing.RemoveFileMemberError.AsAccessError
+  parent: Dropbox.Api.Sharing.RemoveFileMemberError
+  name: AsAccessError
+  nameWithType: RemoveFileMemberError.AsAccessError
+  fullName: Dropbox.Api.Sharing.RemoveFileMemberError.AsAccessError
+- uid: Dropbox.Api.Sharing.RemoveFileMemberError.IsNoExplicitAccess
+  commentId: P:Dropbox.Api.Sharing.RemoveFileMemberError.IsNoExplicitAccess
+  parent: Dropbox.Api.Sharing.RemoveFileMemberError
+  name: IsNoExplicitAccess
+  nameWithType: RemoveFileMemberError.IsNoExplicitAccess
+  fullName: Dropbox.Api.Sharing.RemoveFileMemberError.IsNoExplicitAccess
+- uid: Dropbox.Api.Sharing.RemoveFileMemberError.AsNoExplicitAccess
+  commentId: P:Dropbox.Api.Sharing.RemoveFileMemberError.AsNoExplicitAccess
+  parent: Dropbox.Api.Sharing.RemoveFileMemberError
+  name: AsNoExplicitAccess
+  nameWithType: RemoveFileMemberError.AsNoExplicitAccess
+  fullName: Dropbox.Api.Sharing.RemoveFileMemberError.AsNoExplicitAccess
+- uid: Dropbox.Api.Sharing.RemoveFileMemberError.IsOther
+  commentId: P:Dropbox.Api.Sharing.RemoveFileMemberError.IsOther
+  parent: Dropbox.Api.Sharing.RemoveFileMemberError
+  name: IsOther
+  nameWithType: RemoveFileMemberError.IsOther
+  fullName: Dropbox.Api.Sharing.RemoveFileMemberError.IsOther
+- uid: Dropbox.Api.Sharing.RemoveFileMemberError.AsOther
+  commentId: P:Dropbox.Api.Sharing.RemoveFileMemberError.AsOther
+  parent: Dropbox.Api.Sharing.RemoveFileMemberError
+  name: AsOther
+  nameWithType: RemoveFileMemberError.AsOther
+  fullName: Dropbox.Api.Sharing.RemoveFileMemberError.AsOther
+- uid: Dropbox.Api.Sharing.RemoveFileMemberError.AccessError
+  commentId: T:Dropbox.Api.Sharing.RemoveFileMemberError.AccessError
+  parent: Dropbox.Api.Sharing
+  name: RemoveFileMemberError.AccessError
+  nameWithType: RemoveFileMemberError.AccessError
+  fullName: Dropbox.Api.Sharing.RemoveFileMemberError.AccessError
+- uid: Dropbox.Api.Sharing.RemoveFileMemberError.AccessError.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.RemoveFileMemberError.AccessError.#ctor
+  name: AccessError
+  nameWithType: RemoveFileMemberError.AccessError.AccessError
+  fullName: Dropbox.Api.Sharing.RemoveFileMemberError.AccessError.AccessError
+- uid: Dropbox.Api.Sharing.SharingFileAccessError
+  commentId: T:Dropbox.Api.Sharing.SharingFileAccessError
+  parent: Dropbox.Api.Sharing
+  name: SharingFileAccessError
+  nameWithType: SharingFileAccessError
+  fullName: Dropbox.Api.Sharing.SharingFileAccessError
+- uid: Dropbox.Api.Sharing.RemoveFileMemberError.AccessError.Value*
+  commentId: Overload:Dropbox.Api.Sharing.RemoveFileMemberError.AccessError.Value
+  name: Value
+  nameWithType: RemoveFileMemberError.AccessError.Value
+  fullName: Dropbox.Api.Sharing.RemoveFileMemberError.AccessError.Value
+shouldSkipMarkup: true

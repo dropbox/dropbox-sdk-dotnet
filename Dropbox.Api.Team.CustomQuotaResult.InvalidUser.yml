@@ -1,0 +1,201 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.CustomQuotaResult.InvalidUser
+  commentId: T:Dropbox.Api.Team.CustomQuotaResult.InvalidUser
+  id: CustomQuotaResult.InvalidUser
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.CustomQuotaResult.InvalidUser.#ctor(Dropbox.Api.Team.UserSelectorArg)
+  - Dropbox.Api.Team.CustomQuotaResult.InvalidUser.Value
+  langs:
+  - csharp
+  - vb
+  name: CustomQuotaResult.InvalidUser
+  nameWithType: CustomQuotaResult.InvalidUser
+  fullName: Dropbox.Api.Team.CustomQuotaResult.InvalidUser
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/CustomQuotaResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: InvalidUser
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/CustomQuotaResult.cs
+    startLine: 269
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Invalid user (not in team).</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class InvalidUser : CustomQuotaResult'
+    content.vb: >-
+      Public NotInheritable Class InvalidUser
+          Inherits CustomQuotaResult
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.CustomQuotaResult
+  inheritedMembers:
+  - Dropbox.Api.Team.CustomQuotaResult.IsSuccess
+  - Dropbox.Api.Team.CustomQuotaResult.AsSuccess
+  - Dropbox.Api.Team.CustomQuotaResult.IsInvalidUser
+  - Dropbox.Api.Team.CustomQuotaResult.AsInvalidUser
+  - Dropbox.Api.Team.CustomQuotaResult.IsOther
+  - Dropbox.Api.Team.CustomQuotaResult.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Team.CustomQuotaResult.InvalidUser.#ctor(Dropbox.Api.Team.UserSelectorArg)
+  commentId: M:Dropbox.Api.Team.CustomQuotaResult.InvalidUser.#ctor(Dropbox.Api.Team.UserSelectorArg)
+  id: '#ctor(Dropbox.Api.Team.UserSelectorArg)'
+  parent: Dropbox.Api.Team.CustomQuotaResult.InvalidUser
+  langs:
+  - csharp
+  - vb
+  name: InvalidUser(UserSelectorArg)
+  nameWithType: CustomQuotaResult.InvalidUser.InvalidUser(UserSelectorArg)
+  fullName: Dropbox.Api.Team.CustomQuotaResult.InvalidUser.InvalidUser(Dropbox.Api.Team.UserSelectorArg)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/CustomQuotaResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/CustomQuotaResult.cs
+    startLine: 288
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.CustomQuotaResult.InvalidUser\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public InvalidUser(UserSelectorArg value)
+    parameters:
+    - id: value
+      type: Dropbox.Api.Team.UserSelectorArg
+      description: The value
+    content.vb: Public Sub New(value As UserSelectorArg)
+  overload: Dropbox.Api.Team.CustomQuotaResult.InvalidUser.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.CustomQuotaResult.InvalidUser.Value
+  commentId: P:Dropbox.Api.Team.CustomQuotaResult.InvalidUser.Value
+  id: Value
+  parent: Dropbox.Api.Team.CustomQuotaResult.InvalidUser
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: CustomQuotaResult.InvalidUser.Value
+  fullName: Dropbox.Api.Team.CustomQuotaResult.InvalidUser.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/CustomQuotaResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/CustomQuotaResult.cs
+    startLine: 303
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public UserSelectorArg Value { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.UserSelectorArg
+    content.vb: Public ReadOnly Property Value As UserSelectorArg
+  overload: Dropbox.Api.Team.CustomQuotaResult.InvalidUser.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.CustomQuotaResult
+  commentId: T:Dropbox.Api.Team.CustomQuotaResult
+  parent: Dropbox.Api.Team
+  name: CustomQuotaResult
+  nameWithType: CustomQuotaResult
+  fullName: Dropbox.Api.Team.CustomQuotaResult
+- uid: Dropbox.Api.Team.CustomQuotaResult.IsSuccess
+  commentId: P:Dropbox.Api.Team.CustomQuotaResult.IsSuccess
+  parent: Dropbox.Api.Team.CustomQuotaResult
+  name: IsSuccess
+  nameWithType: CustomQuotaResult.IsSuccess
+  fullName: Dropbox.Api.Team.CustomQuotaResult.IsSuccess
+- uid: Dropbox.Api.Team.CustomQuotaResult.AsSuccess
+  commentId: P:Dropbox.Api.Team.CustomQuotaResult.AsSuccess
+  parent: Dropbox.Api.Team.CustomQuotaResult
+  name: AsSuccess
+  nameWithType: CustomQuotaResult.AsSuccess
+  fullName: Dropbox.Api.Team.CustomQuotaResult.AsSuccess
+- uid: Dropbox.Api.Team.CustomQuotaResult.IsInvalidUser
+  commentId: P:Dropbox.Api.Team.CustomQuotaResult.IsInvalidUser
+  parent: Dropbox.Api.Team.CustomQuotaResult
+  name: IsInvalidUser
+  nameWithType: CustomQuotaResult.IsInvalidUser
+  fullName: Dropbox.Api.Team.CustomQuotaResult.IsInvalidUser
+- uid: Dropbox.Api.Team.CustomQuotaResult.AsInvalidUser
+  commentId: P:Dropbox.Api.Team.CustomQuotaResult.AsInvalidUser
+  parent: Dropbox.Api.Team.CustomQuotaResult
+  name: AsInvalidUser
+  nameWithType: CustomQuotaResult.AsInvalidUser
+  fullName: Dropbox.Api.Team.CustomQuotaResult.AsInvalidUser
+- uid: Dropbox.Api.Team.CustomQuotaResult.IsOther
+  commentId: P:Dropbox.Api.Team.CustomQuotaResult.IsOther
+  parent: Dropbox.Api.Team.CustomQuotaResult
+  name: IsOther
+  nameWithType: CustomQuotaResult.IsOther
+  fullName: Dropbox.Api.Team.CustomQuotaResult.IsOther
+- uid: Dropbox.Api.Team.CustomQuotaResult.AsOther
+  commentId: P:Dropbox.Api.Team.CustomQuotaResult.AsOther
+  parent: Dropbox.Api.Team.CustomQuotaResult
+  name: AsOther
+  nameWithType: CustomQuotaResult.AsOther
+  fullName: Dropbox.Api.Team.CustomQuotaResult.AsOther
+- uid: Dropbox.Api.Team.CustomQuotaResult.InvalidUser
+  commentId: T:Dropbox.Api.Team.CustomQuotaResult.InvalidUser
+  parent: Dropbox.Api.Team
+  name: CustomQuotaResult.InvalidUser
+  nameWithType: CustomQuotaResult.InvalidUser
+  fullName: Dropbox.Api.Team.CustomQuotaResult.InvalidUser
+- uid: Dropbox.Api.Team.CustomQuotaResult.InvalidUser.#ctor*
+  commentId: Overload:Dropbox.Api.Team.CustomQuotaResult.InvalidUser.#ctor
+  name: InvalidUser
+  nameWithType: CustomQuotaResult.InvalidUser.InvalidUser
+  fullName: Dropbox.Api.Team.CustomQuotaResult.InvalidUser.InvalidUser
+- uid: Dropbox.Api.Team.UserSelectorArg
+  commentId: T:Dropbox.Api.Team.UserSelectorArg
+  parent: Dropbox.Api.Team
+  name: UserSelectorArg
+  nameWithType: UserSelectorArg
+  fullName: Dropbox.Api.Team.UserSelectorArg
+- uid: Dropbox.Api.Team.CustomQuotaResult.InvalidUser.Value*
+  commentId: Overload:Dropbox.Api.Team.CustomQuotaResult.InvalidUser.Value
+  name: Value
+  nameWithType: CustomQuotaResult.InvalidUser.Value
+  fullName: Dropbox.Api.Team.CustomQuotaResult.InvalidUser.Value
+shouldSkipMarkup: true

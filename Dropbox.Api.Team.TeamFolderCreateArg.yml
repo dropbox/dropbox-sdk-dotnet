@@ -1,0 +1,249 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.TeamFolderCreateArg
+  commentId: T:Dropbox.Api.Team.TeamFolderCreateArg
+  id: TeamFolderCreateArg
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.TeamFolderCreateArg.#ctor
+  - Dropbox.Api.Team.TeamFolderCreateArg.#ctor(System.String,Dropbox.Api.Files.SyncSettingArg)
+  - Dropbox.Api.Team.TeamFolderCreateArg.Name
+  - Dropbox.Api.Team.TeamFolderCreateArg.SyncSetting
+  langs:
+  - csharp
+  - vb
+  name: TeamFolderCreateArg
+  nameWithType: TeamFolderCreateArg
+  fullName: Dropbox.Api.Team.TeamFolderCreateArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderCreateArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TeamFolderCreateArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderCreateArg.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The team folder create arg object</p>\n"
+  example: []
+  syntax:
+    content: 'public class TeamFolderCreateArg : object'
+    content.vb: >-
+      Public Class TeamFolderCreateArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.TeamFolderCreateArg.#ctor(System.String,Dropbox.Api.Files.SyncSettingArg)
+  commentId: M:Dropbox.Api.Team.TeamFolderCreateArg.#ctor(System.String,Dropbox.Api.Files.SyncSettingArg)
+  id: '#ctor(System.String,Dropbox.Api.Files.SyncSettingArg)'
+  parent: Dropbox.Api.Team.TeamFolderCreateArg
+  langs:
+  - csharp
+  - vb
+  name: TeamFolderCreateArg(String, SyncSettingArg)
+  nameWithType: TeamFolderCreateArg.TeamFolderCreateArg(String, SyncSettingArg)
+  fullName: Dropbox.Api.Team.TeamFolderCreateArg.TeamFolderCreateArg(System.String, Dropbox.Api.Files.SyncSettingArg)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderCreateArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderCreateArg.cs
+    startLine: 36
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.TeamFolderCreateArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public TeamFolderCreateArg(string name, SyncSettingArg syncSetting = null)
+    parameters:
+    - id: name
+      type: System.String
+      description: Name for the new team folder.
+    - id: syncSetting
+      type: Dropbox.Api.Files.SyncSettingArg
+      description: >-
+        The sync setting to apply to this team folder. Only
+
+        permitted if the team has team selective sync enabled.
+    content.vb: Public Sub New(name As String, syncSetting As SyncSettingArg = Nothing)
+  overload: Dropbox.Api.Team.TeamFolderCreateArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.TeamFolderCreateArg.#ctor
+  commentId: M:Dropbox.Api.Team.TeamFolderCreateArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.TeamFolderCreateArg
+  langs:
+  - csharp
+  - vb
+  name: TeamFolderCreateArg()
+  nameWithType: TeamFolderCreateArg.TeamFolderCreateArg()
+  fullName: Dropbox.Api.Team.TeamFolderCreateArg.TeamFolderCreateArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderCreateArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderCreateArg.cs
+    startLine: 54
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.TeamFolderCreateArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public TeamFolderCreateArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.TeamFolderCreateArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.TeamFolderCreateArg.Name
+  commentId: P:Dropbox.Api.Team.TeamFolderCreateArg.Name
+  id: Name
+  parent: Dropbox.Api.Team.TeamFolderCreateArg
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: TeamFolderCreateArg.Name
+  fullName: Dropbox.Api.Team.TeamFolderCreateArg.Name
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderCreateArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Name
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderCreateArg.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Name for the new team folder.</p>\n"
+  example: []
+  syntax:
+    content: public string Name { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: Dropbox.Api.Team.TeamFolderCreateArg.Name*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.TeamFolderCreateArg.SyncSetting
+  commentId: P:Dropbox.Api.Team.TeamFolderCreateArg.SyncSetting
+  id: SyncSetting
+  parent: Dropbox.Api.Team.TeamFolderCreateArg
+  langs:
+  - csharp
+  - vb
+  name: SyncSetting
+  nameWithType: TeamFolderCreateArg.SyncSetting
+  fullName: Dropbox.Api.Team.TeamFolderCreateArg.SyncSetting
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderCreateArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SyncSetting
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderCreateArg.cs
+    startLine: 68
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The sync setting to apply to this team folder. Only permitted if the team has\nteam selective sync enabled.</p>\n"
+  example: []
+  syntax:
+    content: public SyncSettingArg SyncSetting { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.SyncSettingArg
+    content.vb: Public Property SyncSetting As SyncSettingArg
+  overload: Dropbox.Api.Team.TeamFolderCreateArg.SyncSetting*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.TeamFolderCreateArg
+  commentId: T:Dropbox.Api.Team.TeamFolderCreateArg
+  parent: Dropbox.Api.Team
+  name: TeamFolderCreateArg
+  nameWithType: TeamFolderCreateArg
+  fullName: Dropbox.Api.Team.TeamFolderCreateArg
+- uid: Dropbox.Api.Team.TeamFolderCreateArg.#ctor*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderCreateArg.#ctor
+  name: TeamFolderCreateArg
+  nameWithType: TeamFolderCreateArg.TeamFolderCreateArg
+  fullName: Dropbox.Api.Team.TeamFolderCreateArg.TeamFolderCreateArg
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Files.SyncSettingArg
+  commentId: T:Dropbox.Api.Files.SyncSettingArg
+  parent: Dropbox.Api.Files
+  name: SyncSettingArg
+  nameWithType: SyncSettingArg
+  fullName: Dropbox.Api.Files.SyncSettingArg
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: Dropbox.Api.Team.TeamFolderCreateArg.Name*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderCreateArg.Name
+  name: Name
+  nameWithType: TeamFolderCreateArg.Name
+  fullName: Dropbox.Api.Team.TeamFolderCreateArg.Name
+- uid: Dropbox.Api.Team.TeamFolderCreateArg.SyncSetting*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderCreateArg.SyncSetting
+  name: SyncSetting
+  nameWithType: TeamFolderCreateArg.SyncSetting
+  fullName: Dropbox.Api.Team.TeamFolderCreateArg.SyncSetting
+shouldSkipMarkup: true

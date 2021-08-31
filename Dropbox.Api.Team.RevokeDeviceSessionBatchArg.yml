@@ -1,0 +1,343 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.RevokeDeviceSessionBatchArg
+  commentId: T:Dropbox.Api.Team.RevokeDeviceSessionBatchArg
+  id: RevokeDeviceSessionBatchArg
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.RevokeDeviceSessionBatchArg.#ctor
+  - Dropbox.Api.Team.RevokeDeviceSessionBatchArg.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Team.RevokeDeviceSessionArg})
+  - Dropbox.Api.Team.RevokeDeviceSessionBatchArg.RevokeDevices
+  langs:
+  - csharp
+  - vb
+  name: RevokeDeviceSessionBatchArg
+  nameWithType: RevokeDeviceSessionBatchArg
+  fullName: Dropbox.Api.Team.RevokeDeviceSessionBatchArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeDeviceSessionBatchArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: RevokeDeviceSessionBatchArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeDeviceSessionBatchArg.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The revoke device session batch arg object</p>\n"
+  example: []
+  syntax:
+    content: 'public class RevokeDeviceSessionBatchArg : object'
+    content.vb: >-
+      Public Class RevokeDeviceSessionBatchArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.RevokeDeviceSessionBatchArg.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Team.RevokeDeviceSessionArg})
+  commentId: M:Dropbox.Api.Team.RevokeDeviceSessionBatchArg.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Team.RevokeDeviceSessionArg})
+  id: '#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Team.RevokeDeviceSessionArg})'
+  parent: Dropbox.Api.Team.RevokeDeviceSessionBatchArg
+  langs:
+  - csharp
+  - vb
+  name: RevokeDeviceSessionBatchArg(System.Collections.Generic.IEnumerable<RevokeDeviceSessionArg>)
+  nameWithType: RevokeDeviceSessionBatchArg.RevokeDeviceSessionBatchArg(System.Collections.Generic.IEnumerable<RevokeDeviceSessionArg>)
+  fullName: Dropbox.Api.Team.RevokeDeviceSessionBatchArg.RevokeDeviceSessionBatchArg(System.Collections.Generic.IEnumerable<Dropbox.Api.Team.RevokeDeviceSessionArg>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeDeviceSessionBatchArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeDeviceSessionBatchArg.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.RevokeDeviceSessionBatchArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public RevokeDeviceSessionBatchArg(System.Collections.Generic.IEnumerable<RevokeDeviceSessionArg> revokeDevices)
+    parameters:
+    - id: revokeDevices
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.Team.RevokeDeviceSessionArg}
+      description: The revoke devices
+    content.vb: Public Sub New(revokeDevices As System.Collections.Generic.IEnumerable(Of RevokeDeviceSessionArg))
+  overload: Dropbox.Api.Team.RevokeDeviceSessionBatchArg.#ctor*
+  nameWithType.vb: RevokeDeviceSessionBatchArg.RevokeDeviceSessionBatchArg(System.Collections.Generic.IEnumerable(Of RevokeDeviceSessionArg))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Team.RevokeDeviceSessionBatchArg.RevokeDeviceSessionBatchArg(System.Collections.Generic.IEnumerable(Of Dropbox.Api.Team.RevokeDeviceSessionArg))
+  name.vb: RevokeDeviceSessionBatchArg(System.Collections.Generic.IEnumerable(Of RevokeDeviceSessionArg))
+- uid: Dropbox.Api.Team.RevokeDeviceSessionBatchArg.#ctor
+  commentId: M:Dropbox.Api.Team.RevokeDeviceSessionBatchArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.RevokeDeviceSessionBatchArg
+  langs:
+  - csharp
+  - vb
+  name: RevokeDeviceSessionBatchArg()
+  nameWithType: RevokeDeviceSessionBatchArg.RevokeDeviceSessionBatchArg()
+  fullName: Dropbox.Api.Team.RevokeDeviceSessionBatchArg.RevokeDeviceSessionBatchArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeDeviceSessionBatchArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeDeviceSessionBatchArg.cs
+    startLine: 52
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.RevokeDeviceSessionBatchArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public RevokeDeviceSessionBatchArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.RevokeDeviceSessionBatchArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.RevokeDeviceSessionBatchArg.RevokeDevices
+  commentId: P:Dropbox.Api.Team.RevokeDeviceSessionBatchArg.RevokeDevices
+  id: RevokeDevices
+  parent: Dropbox.Api.Team.RevokeDeviceSessionBatchArg
+  langs:
+  - csharp
+  - vb
+  name: RevokeDevices
+  nameWithType: RevokeDeviceSessionBatchArg.RevokeDevices
+  fullName: Dropbox.Api.Team.RevokeDeviceSessionBatchArg.RevokeDevices
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeDeviceSessionBatchArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: RevokeDevices
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeDeviceSessionBatchArg.cs
+    startLine: 60
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets the revoke devices of the revoke device session batch arg</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<RevokeDeviceSessionArg> RevokeDevices { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{Dropbox.Api.Team.RevokeDeviceSessionArg}
+    content.vb: Public Property RevokeDevices As System.Collections.Generic.IList(Of RevokeDeviceSessionArg)
+  overload: Dropbox.Api.Team.RevokeDeviceSessionBatchArg.RevokeDevices*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.RevokeDeviceSessionBatchArg
+  commentId: T:Dropbox.Api.Team.RevokeDeviceSessionBatchArg
+  parent: Dropbox.Api.Team
+  name: RevokeDeviceSessionBatchArg
+  nameWithType: RevokeDeviceSessionBatchArg
+  fullName: Dropbox.Api.Team.RevokeDeviceSessionBatchArg
+- uid: Dropbox.Api.Team.RevokeDeviceSessionBatchArg.#ctor*
+  commentId: Overload:Dropbox.Api.Team.RevokeDeviceSessionBatchArg.#ctor
+  name: RevokeDeviceSessionBatchArg
+  nameWithType: RevokeDeviceSessionBatchArg.RevokeDeviceSessionBatchArg
+  fullName: Dropbox.Api.Team.RevokeDeviceSessionBatchArg.RevokeDeviceSessionBatchArg
+- uid: System.Collections.Generic.IEnumerable{Dropbox.Api.Team.RevokeDeviceSessionArg}
+  commentId: '!:System.Collections.Generic.IEnumerable{Dropbox.Api.Team.RevokeDeviceSessionArg}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<RevokeDeviceSessionArg>
+  nameWithType: System.Collections.Generic.IEnumerable<RevokeDeviceSessionArg>
+  fullName: System.Collections.Generic.IEnumerable<Dropbox.Api.Team.RevokeDeviceSessionArg>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of RevokeDeviceSessionArg)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Dropbox.Api.Team.RevokeDeviceSessionArg)
+  name.vb: System.Collections.Generic.IEnumerable(Of RevokeDeviceSessionArg)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Team.RevokeDeviceSessionArg
+    name: RevokeDeviceSessionArg
+    nameWithType: RevokeDeviceSessionArg
+    fullName: Dropbox.Api.Team.RevokeDeviceSessionArg
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Team.RevokeDeviceSessionArg
+    name: RevokeDeviceSessionArg
+    nameWithType: RevokeDeviceSessionArg
+    fullName: Dropbox.Api.Team.RevokeDeviceSessionArg
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: System.Collections.Generic.IEnumerable<>
+  nameWithType: System.Collections.Generic.IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: System.Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Team.RevokeDeviceSessionBatchArg.RevokeDevices*
+  commentId: Overload:Dropbox.Api.Team.RevokeDeviceSessionBatchArg.RevokeDevices
+  name: RevokeDevices
+  nameWithType: RevokeDeviceSessionBatchArg.RevokeDevices
+  fullName: Dropbox.Api.Team.RevokeDeviceSessionBatchArg.RevokeDevices
+- uid: System.Collections.Generic.IList{Dropbox.Api.Team.RevokeDeviceSessionArg}
+  commentId: '!:System.Collections.Generic.IList{Dropbox.Api.Team.RevokeDeviceSessionArg}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<RevokeDeviceSessionArg>
+  nameWithType: System.Collections.Generic.IList<RevokeDeviceSessionArg>
+  fullName: System.Collections.Generic.IList<Dropbox.Api.Team.RevokeDeviceSessionArg>
+  nameWithType.vb: System.Collections.Generic.IList(Of RevokeDeviceSessionArg)
+  fullName.vb: System.Collections.Generic.IList(Of Dropbox.Api.Team.RevokeDeviceSessionArg)
+  name.vb: System.Collections.Generic.IList(Of RevokeDeviceSessionArg)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Team.RevokeDeviceSessionArg
+    name: RevokeDeviceSessionArg
+    nameWithType: RevokeDeviceSessionArg
+    fullName: Dropbox.Api.Team.RevokeDeviceSessionArg
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Team.RevokeDeviceSessionArg
+    name: RevokeDeviceSessionArg
+    nameWithType: RevokeDeviceSessionArg
+    fullName: Dropbox.Api.Team.RevokeDeviceSessionArg
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  isExternal: true
+  name: System.Collections.Generic.IList<>
+  nameWithType: System.Collections.Generic.IList<>
+  fullName: System.Collections.Generic.IList<>
+  nameWithType.vb: System.Collections.Generic.IList(Of )
+  fullName.vb: System.Collections.Generic.IList(Of )
+  name.vb: System.Collections.Generic.IList(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+shouldSkipMarkup: true

@@ -1,0 +1,438 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.PaperUpdateArg
+  commentId: T:Dropbox.Api.Files.PaperUpdateArg
+  id: PaperUpdateArg
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.PaperUpdateArg.#ctor
+  - Dropbox.Api.Files.PaperUpdateArg.#ctor(System.String,Dropbox.Api.Files.ImportFormat,Dropbox.Api.Files.PaperDocUpdatePolicy,System.Nullable{System.Int64})
+  - Dropbox.Api.Files.PaperUpdateArg.DocUpdatePolicy
+  - Dropbox.Api.Files.PaperUpdateArg.ImportFormat
+  - Dropbox.Api.Files.PaperUpdateArg.PaperRevision
+  - Dropbox.Api.Files.PaperUpdateArg.Path
+  langs:
+  - csharp
+  - vb
+  name: PaperUpdateArg
+  nameWithType: PaperUpdateArg
+  fullName: Dropbox.Api.Files.PaperUpdateArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperUpdateArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PaperUpdateArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperUpdateArg.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The paper update arg object</p>\n"
+  example: []
+  syntax:
+    content: 'public class PaperUpdateArg : object'
+    content.vb: >-
+      Public Class PaperUpdateArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.PaperUpdateArg.#ctor(System.String,Dropbox.Api.Files.ImportFormat,Dropbox.Api.Files.PaperDocUpdatePolicy,System.Nullable{System.Int64})
+  commentId: M:Dropbox.Api.Files.PaperUpdateArg.#ctor(System.String,Dropbox.Api.Files.ImportFormat,Dropbox.Api.Files.PaperDocUpdatePolicy,System.Nullable{System.Int64})
+  id: '#ctor(System.String,Dropbox.Api.Files.ImportFormat,Dropbox.Api.Files.PaperDocUpdatePolicy,System.Nullable{System.Int64})'
+  parent: Dropbox.Api.Files.PaperUpdateArg
+  langs:
+  - csharp
+  - vb
+  name: PaperUpdateArg(String, ImportFormat, PaperDocUpdatePolicy, Nullable<Int64>)
+  nameWithType: PaperUpdateArg.PaperUpdateArg(String, ImportFormat, PaperDocUpdatePolicy, Nullable<Int64>)
+  fullName: Dropbox.Api.Files.PaperUpdateArg.PaperUpdateArg(System.String, Dropbox.Api.Files.ImportFormat, Dropbox.Api.Files.PaperDocUpdatePolicy, System.Nullable<System.Int64>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperUpdateArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperUpdateArg.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.PaperUpdateArg\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public PaperUpdateArg(string path, ImportFormat importFormat, PaperDocUpdatePolicy docUpdatePolicy, long? paperRevision = null)
+    parameters:
+    - id: path
+      type: System.String
+      description: >-
+        Path in the user&apos;s Dropbox to update. The path must correspond
+
+        to a Paper doc or an error will be returned.
+    - id: importFormat
+      type: Dropbox.Api.Files.ImportFormat
+      description: The format of the provided data.
+    - id: docUpdatePolicy
+      type: Dropbox.Api.Files.PaperDocUpdatePolicy
+      description: >-
+        How the provided content should be applied to the
+
+        doc.
+    - id: paperRevision
+      type: System.Nullable{System.Int64}
+      description: >-
+        The latest doc revision. Required when
+
+        doc_update_policy is update. This value must match the current revision of the doc
+
+        or error revision_mismatch will be returned.
+    content.vb: Public Sub New(path As String, importFormat As ImportFormat, docUpdatePolicy As PaperDocUpdatePolicy, paperRevision As Long? = Nothing)
+  overload: Dropbox.Api.Files.PaperUpdateArg.#ctor*
+  nameWithType.vb: PaperUpdateArg.PaperUpdateArg(String, ImportFormat, PaperDocUpdatePolicy, Nullable(Of Int64))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Files.PaperUpdateArg.PaperUpdateArg(System.String, Dropbox.Api.Files.ImportFormat, Dropbox.Api.Files.PaperDocUpdatePolicy, System.Nullable(Of System.Int64))
+  name.vb: PaperUpdateArg(String, ImportFormat, PaperDocUpdatePolicy, Nullable(Of Int64))
+- uid: Dropbox.Api.Files.PaperUpdateArg.#ctor
+  commentId: M:Dropbox.Api.Files.PaperUpdateArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.PaperUpdateArg
+  langs:
+  - csharp
+  - vb
+  name: PaperUpdateArg()
+  nameWithType: PaperUpdateArg.PaperUpdateArg()
+  fullName: Dropbox.Api.Files.PaperUpdateArg.PaperUpdateArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperUpdateArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperUpdateArg.cs
+    startLine: 75
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.PaperUpdateArg\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public PaperUpdateArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.PaperUpdateArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.PaperUpdateArg.Path
+  commentId: P:Dropbox.Api.Files.PaperUpdateArg.Path
+  id: Path
+  parent: Dropbox.Api.Files.PaperUpdateArg
+  langs:
+  - csharp
+  - vb
+  name: Path
+  nameWithType: PaperUpdateArg.Path
+  fullName: Dropbox.Api.Files.PaperUpdateArg.Path
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperUpdateArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Path
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperUpdateArg.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Path in the user&apos;s Dropbox to update. The path must correspond to a Paper doc\nor an error will be returned.</p>\n"
+  example: []
+  syntax:
+    content: public string Path { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Path As String
+  overload: Dropbox.Api.Files.PaperUpdateArg.Path*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.PaperUpdateArg.ImportFormat
+  commentId: P:Dropbox.Api.Files.PaperUpdateArg.ImportFormat
+  id: ImportFormat
+  parent: Dropbox.Api.Files.PaperUpdateArg
+  langs:
+  - csharp
+  - vb
+  name: ImportFormat
+  nameWithType: PaperUpdateArg.ImportFormat
+  fullName: Dropbox.Api.Files.PaperUpdateArg.ImportFormat
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperUpdateArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ImportFormat
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperUpdateArg.cs
+    startLine: 89
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The format of the provided data.</p>\n"
+  example: []
+  syntax:
+    content: public ImportFormat ImportFormat { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.ImportFormat
+    content.vb: Public Property ImportFormat As ImportFormat
+  overload: Dropbox.Api.Files.PaperUpdateArg.ImportFormat*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.PaperUpdateArg.DocUpdatePolicy
+  commentId: P:Dropbox.Api.Files.PaperUpdateArg.DocUpdatePolicy
+  id: DocUpdatePolicy
+  parent: Dropbox.Api.Files.PaperUpdateArg
+  langs:
+  - csharp
+  - vb
+  name: DocUpdatePolicy
+  nameWithType: PaperUpdateArg.DocUpdatePolicy
+  fullName: Dropbox.Api.Files.PaperUpdateArg.DocUpdatePolicy
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperUpdateArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: DocUpdatePolicy
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperUpdateArg.cs
+    startLine: 94
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>How the provided content should be applied to the doc.</p>\n"
+  example: []
+  syntax:
+    content: public PaperDocUpdatePolicy DocUpdatePolicy { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.PaperDocUpdatePolicy
+    content.vb: Public Property DocUpdatePolicy As PaperDocUpdatePolicy
+  overload: Dropbox.Api.Files.PaperUpdateArg.DocUpdatePolicy*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.PaperUpdateArg.PaperRevision
+  commentId: P:Dropbox.Api.Files.PaperUpdateArg.PaperRevision
+  id: PaperRevision
+  parent: Dropbox.Api.Files.PaperUpdateArg
+  langs:
+  - csharp
+  - vb
+  name: PaperRevision
+  nameWithType: PaperUpdateArg.PaperRevision
+  fullName: Dropbox.Api.Files.PaperUpdateArg.PaperRevision
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperUpdateArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PaperRevision
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperUpdateArg.cs
+    startLine: 101
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The latest doc revision. Required when doc_update_policy is update. This\nvalue must match the current revision of the doc or error revision_mismatch will be\nreturned.</p>\n"
+  example: []
+  syntax:
+    content: public long? PaperRevision { get; protected set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int64}
+    content.vb: Public Property PaperRevision As Long?
+  overload: Dropbox.Api.Files.PaperUpdateArg.PaperRevision*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.PaperUpdateArg
+  commentId: T:Dropbox.Api.Files.PaperUpdateArg
+  parent: Dropbox.Api.Files
+  name: PaperUpdateArg
+  nameWithType: PaperUpdateArg
+  fullName: Dropbox.Api.Files.PaperUpdateArg
+- uid: Dropbox.Api.Files.PaperUpdateArg.#ctor*
+  commentId: Overload:Dropbox.Api.Files.PaperUpdateArg.#ctor
+  name: PaperUpdateArg
+  nameWithType: PaperUpdateArg.PaperUpdateArg
+  fullName: Dropbox.Api.Files.PaperUpdateArg.PaperUpdateArg
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Files.ImportFormat
+  commentId: T:Dropbox.Api.Files.ImportFormat
+  parent: Dropbox.Api.Files
+  name: ImportFormat
+  nameWithType: ImportFormat
+  fullName: Dropbox.Api.Files.ImportFormat
+- uid: Dropbox.Api.Files.PaperDocUpdatePolicy
+  commentId: T:Dropbox.Api.Files.PaperDocUpdatePolicy
+  parent: Dropbox.Api.Files
+  name: PaperDocUpdatePolicy
+  nameWithType: PaperDocUpdatePolicy
+  fullName: Dropbox.Api.Files.PaperDocUpdatePolicy
+- uid: System.Nullable{System.Int64}
+  commentId: '!:System.Nullable{System.Int64}'
+  definition: System.Nullable`1
+  name: Nullable<Int64>
+  nameWithType: Nullable<Int64>
+  fullName: System.Nullable<System.Int64>
+  nameWithType.vb: Nullable(Of Int64)
+  fullName.vb: System.Nullable(Of System.Int64)
+  name.vb: Nullable(Of Int64)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Int64
+    name: Int64
+    nameWithType: Int64
+    fullName: System.Int64
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Int64
+    name: Int64
+    nameWithType: Int64
+    fullName: System.Int64
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  isExternal: true
+  name: Nullable<>
+  nameWithType: Nullable<>
+  fullName: System.Nullable<>
+  nameWithType.vb: Nullable(Of )
+  fullName.vb: System.Nullable(Of )
+  name.vb: Nullable(Of )
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Files.PaperUpdateArg.Path*
+  commentId: Overload:Dropbox.Api.Files.PaperUpdateArg.Path
+  name: Path
+  nameWithType: PaperUpdateArg.Path
+  fullName: Dropbox.Api.Files.PaperUpdateArg.Path
+- uid: Dropbox.Api.Files.PaperUpdateArg.ImportFormat*
+  commentId: Overload:Dropbox.Api.Files.PaperUpdateArg.ImportFormat
+  name: ImportFormat
+  nameWithType: PaperUpdateArg.ImportFormat
+  fullName: Dropbox.Api.Files.PaperUpdateArg.ImportFormat
+- uid: Dropbox.Api.Files.PaperUpdateArg.DocUpdatePolicy*
+  commentId: Overload:Dropbox.Api.Files.PaperUpdateArg.DocUpdatePolicy
+  name: DocUpdatePolicy
+  nameWithType: PaperUpdateArg.DocUpdatePolicy
+  fullName: Dropbox.Api.Files.PaperUpdateArg.DocUpdatePolicy
+- uid: Dropbox.Api.Files.PaperUpdateArg.PaperRevision*
+  commentId: Overload:Dropbox.Api.Files.PaperUpdateArg.PaperRevision
+  name: PaperRevision
+  nameWithType: PaperUpdateArg.PaperRevision
+  fullName: Dropbox.Api.Files.PaperUpdateArg.PaperRevision
+shouldSkipMarkup: true

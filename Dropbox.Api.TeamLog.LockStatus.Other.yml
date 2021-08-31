@@ -1,0 +1,148 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.LockStatus.Other
+  commentId: T:Dropbox.Api.TeamLog.LockStatus.Other
+  id: LockStatus.Other
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.LockStatus.Other.Instance
+  langs:
+  - csharp
+  - vb
+  name: LockStatus.Other
+  nameWithType: LockStatus.Other
+  fullName: Dropbox.Api.TeamLog.LockStatus.Other
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LockStatus.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Other
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LockStatus.cs
+    startLine: 319
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The other object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Other : LockStatus'
+    content.vb: >-
+      Public NotInheritable Class Other
+          Inherits LockStatus
+  inheritance:
+  - System.Object
+  - Dropbox.Api.TeamLog.LockStatus
+  inheritedMembers:
+  - Dropbox.Api.TeamLog.LockStatus.IsLocked
+  - Dropbox.Api.TeamLog.LockStatus.AsLocked
+  - Dropbox.Api.TeamLog.LockStatus.IsUnlocked
+  - Dropbox.Api.TeamLog.LockStatus.AsUnlocked
+  - Dropbox.Api.TeamLog.LockStatus.IsOther
+  - Dropbox.Api.TeamLog.LockStatus.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.TeamLog.LockStatus.Other.Instance
+  commentId: F:Dropbox.Api.TeamLog.LockStatus.Other.Instance
+  id: Instance
+  parent: Dropbox.Api.TeamLog.LockStatus.Other
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: LockStatus.Other.Instance
+  fullName: Dropbox.Api.TeamLog.LockStatus.Other.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LockStatus.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LockStatus.cs
+    startLine: 343
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>A singleton instance of Other</p>\n"
+  example: []
+  syntax:
+    content: public static readonly LockStatus.Other Instance
+    return:
+      type: Dropbox.Api.TeamLog.LockStatus.Other
+    content.vb: Public Shared ReadOnly Instance As LockStatus.Other
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.LockStatus
+  commentId: T:Dropbox.Api.TeamLog.LockStatus
+  parent: Dropbox.Api.TeamLog
+  name: LockStatus
+  nameWithType: LockStatus
+  fullName: Dropbox.Api.TeamLog.LockStatus
+- uid: Dropbox.Api.TeamLog.LockStatus.IsLocked
+  commentId: P:Dropbox.Api.TeamLog.LockStatus.IsLocked
+  parent: Dropbox.Api.TeamLog.LockStatus
+  name: IsLocked
+  nameWithType: LockStatus.IsLocked
+  fullName: Dropbox.Api.TeamLog.LockStatus.IsLocked
+- uid: Dropbox.Api.TeamLog.LockStatus.AsLocked
+  commentId: P:Dropbox.Api.TeamLog.LockStatus.AsLocked
+  parent: Dropbox.Api.TeamLog.LockStatus
+  name: AsLocked
+  nameWithType: LockStatus.AsLocked
+  fullName: Dropbox.Api.TeamLog.LockStatus.AsLocked
+- uid: Dropbox.Api.TeamLog.LockStatus.IsUnlocked
+  commentId: P:Dropbox.Api.TeamLog.LockStatus.IsUnlocked
+  parent: Dropbox.Api.TeamLog.LockStatus
+  name: IsUnlocked
+  nameWithType: LockStatus.IsUnlocked
+  fullName: Dropbox.Api.TeamLog.LockStatus.IsUnlocked
+- uid: Dropbox.Api.TeamLog.LockStatus.AsUnlocked
+  commentId: P:Dropbox.Api.TeamLog.LockStatus.AsUnlocked
+  parent: Dropbox.Api.TeamLog.LockStatus
+  name: AsUnlocked
+  nameWithType: LockStatus.AsUnlocked
+  fullName: Dropbox.Api.TeamLog.LockStatus.AsUnlocked
+- uid: Dropbox.Api.TeamLog.LockStatus.IsOther
+  commentId: P:Dropbox.Api.TeamLog.LockStatus.IsOther
+  parent: Dropbox.Api.TeamLog.LockStatus
+  name: IsOther
+  nameWithType: LockStatus.IsOther
+  fullName: Dropbox.Api.TeamLog.LockStatus.IsOther
+- uid: Dropbox.Api.TeamLog.LockStatus.AsOther
+  commentId: P:Dropbox.Api.TeamLog.LockStatus.AsOther
+  parent: Dropbox.Api.TeamLog.LockStatus
+  name: AsOther
+  nameWithType: LockStatus.AsOther
+  fullName: Dropbox.Api.TeamLog.LockStatus.AsOther
+- uid: Dropbox.Api.TeamLog.LockStatus.Other
+  commentId: T:Dropbox.Api.TeamLog.LockStatus.Other
+  parent: Dropbox.Api.TeamLog
+  name: LockStatus.Other
+  nameWithType: LockStatus.Other
+  fullName: Dropbox.Api.TeamLog.LockStatus.Other
+shouldSkipMarkup: true

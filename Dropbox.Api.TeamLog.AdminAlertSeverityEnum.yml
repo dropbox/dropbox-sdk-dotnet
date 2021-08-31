@@ -1,0 +1,660 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.AdminAlertSeverityEnum
+  commentId: T:Dropbox.Api.TeamLog.AdminAlertSeverityEnum
+  id: AdminAlertSeverityEnum
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.AdminAlertSeverityEnum.#ctor
+  - Dropbox.Api.TeamLog.AdminAlertSeverityEnum.AsHigh
+  - Dropbox.Api.TeamLog.AdminAlertSeverityEnum.AsInfo
+  - Dropbox.Api.TeamLog.AdminAlertSeverityEnum.AsLow
+  - Dropbox.Api.TeamLog.AdminAlertSeverityEnum.AsMedium
+  - Dropbox.Api.TeamLog.AdminAlertSeverityEnum.AsNa
+  - Dropbox.Api.TeamLog.AdminAlertSeverityEnum.AsOther
+  - Dropbox.Api.TeamLog.AdminAlertSeverityEnum.IsHigh
+  - Dropbox.Api.TeamLog.AdminAlertSeverityEnum.IsInfo
+  - Dropbox.Api.TeamLog.AdminAlertSeverityEnum.IsLow
+  - Dropbox.Api.TeamLog.AdminAlertSeverityEnum.IsMedium
+  - Dropbox.Api.TeamLog.AdminAlertSeverityEnum.IsNa
+  - Dropbox.Api.TeamLog.AdminAlertSeverityEnum.IsOther
+  langs:
+  - csharp
+  - vb
+  name: AdminAlertSeverityEnum
+  nameWithType: AdminAlertSeverityEnum
+  fullName: Dropbox.Api.TeamLog.AdminAlertSeverityEnum
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertSeverityEnum.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AdminAlertSeverityEnum
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertSeverityEnum.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Alert severity</p>\n"
+  example: []
+  syntax:
+    content: 'public class AdminAlertSeverityEnum : object'
+    content.vb: >-
+      Public Class AdminAlertSeverityEnum
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.TeamLog.AdminAlertSeverityEnum.High
+  - Dropbox.Api.TeamLog.AdminAlertSeverityEnum.Info
+  - Dropbox.Api.TeamLog.AdminAlertSeverityEnum.Low
+  - Dropbox.Api.TeamLog.AdminAlertSeverityEnum.Medium
+  - Dropbox.Api.TeamLog.AdminAlertSeverityEnum.Na
+  - Dropbox.Api.TeamLog.AdminAlertSeverityEnum.Other
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.#ctor
+  commentId: M:Dropbox.Api.TeamLog.AdminAlertSeverityEnum.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.AdminAlertSeverityEnum
+  langs:
+  - csharp
+  - vb
+  name: AdminAlertSeverityEnum()
+  nameWithType: AdminAlertSeverityEnum.AdminAlertSeverityEnum()
+  fullName: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.AdminAlertSeverityEnum()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertSeverityEnum.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertSeverityEnum.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.AdminAlertSeverityEnum\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public AdminAlertSeverityEnum()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.IsHigh
+  commentId: P:Dropbox.Api.TeamLog.AdminAlertSeverityEnum.IsHigh
+  id: IsHigh
+  parent: Dropbox.Api.TeamLog.AdminAlertSeverityEnum
+  langs:
+  - csharp
+  - vb
+  name: IsHigh
+  nameWithType: AdminAlertSeverityEnum.IsHigh
+  fullName: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.IsHigh
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertSeverityEnum.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsHigh
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertSeverityEnum.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is High</p>\n"
+  example: []
+  syntax:
+    content: public bool IsHigh { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsHigh As Boolean
+  overload: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.IsHigh*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.AsHigh
+  commentId: P:Dropbox.Api.TeamLog.AdminAlertSeverityEnum.AsHigh
+  id: AsHigh
+  parent: Dropbox.Api.TeamLog.AdminAlertSeverityEnum
+  langs:
+  - csharp
+  - vb
+  name: AsHigh
+  nameWithType: AdminAlertSeverityEnum.AsHigh
+  fullName: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.AsHigh
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertSeverityEnum.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsHigh
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertSeverityEnum.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a High, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public AdminAlertSeverityEnum.High AsHigh { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.High
+    content.vb: Public ReadOnly Property AsHigh As AdminAlertSeverityEnum.High
+  overload: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.AsHigh*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.IsInfo
+  commentId: P:Dropbox.Api.TeamLog.AdminAlertSeverityEnum.IsInfo
+  id: IsInfo
+  parent: Dropbox.Api.TeamLog.AdminAlertSeverityEnum
+  langs:
+  - csharp
+  - vb
+  name: IsInfo
+  nameWithType: AdminAlertSeverityEnum.IsInfo
+  fullName: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.IsInfo
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertSeverityEnum.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsInfo
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertSeverityEnum.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Info</p>\n"
+  example: []
+  syntax:
+    content: public bool IsInfo { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsInfo As Boolean
+  overload: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.IsInfo*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.AsInfo
+  commentId: P:Dropbox.Api.TeamLog.AdminAlertSeverityEnum.AsInfo
+  id: AsInfo
+  parent: Dropbox.Api.TeamLog.AdminAlertSeverityEnum
+  langs:
+  - csharp
+  - vb
+  name: AsInfo
+  nameWithType: AdminAlertSeverityEnum.AsInfo
+  fullName: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.AsInfo
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertSeverityEnum.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsInfo
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertSeverityEnum.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Info, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public AdminAlertSeverityEnum.Info AsInfo { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.Info
+    content.vb: Public ReadOnly Property AsInfo As AdminAlertSeverityEnum.Info
+  overload: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.AsInfo*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.IsLow
+  commentId: P:Dropbox.Api.TeamLog.AdminAlertSeverityEnum.IsLow
+  id: IsLow
+  parent: Dropbox.Api.TeamLog.AdminAlertSeverityEnum
+  langs:
+  - csharp
+  - vb
+  name: IsLow
+  nameWithType: AdminAlertSeverityEnum.IsLow
+  fullName: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.IsLow
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertSeverityEnum.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsLow
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertSeverityEnum.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Low</p>\n"
+  example: []
+  syntax:
+    content: public bool IsLow { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsLow As Boolean
+  overload: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.IsLow*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.AsLow
+  commentId: P:Dropbox.Api.TeamLog.AdminAlertSeverityEnum.AsLow
+  id: AsLow
+  parent: Dropbox.Api.TeamLog.AdminAlertSeverityEnum
+  langs:
+  - csharp
+  - vb
+  name: AsLow
+  nameWithType: AdminAlertSeverityEnum.AsLow
+  fullName: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.AsLow
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertSeverityEnum.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsLow
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertSeverityEnum.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Low, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public AdminAlertSeverityEnum.Low AsLow { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.Low
+    content.vb: Public ReadOnly Property AsLow As AdminAlertSeverityEnum.Low
+  overload: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.AsLow*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.IsMedium
+  commentId: P:Dropbox.Api.TeamLog.AdminAlertSeverityEnum.IsMedium
+  id: IsMedium
+  parent: Dropbox.Api.TeamLog.AdminAlertSeverityEnum
+  langs:
+  - csharp
+  - vb
+  name: IsMedium
+  nameWithType: AdminAlertSeverityEnum.IsMedium
+  fullName: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.IsMedium
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertSeverityEnum.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsMedium
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertSeverityEnum.cs
+    startLine: 106
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Medium</p>\n"
+  example: []
+  syntax:
+    content: public bool IsMedium { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsMedium As Boolean
+  overload: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.IsMedium*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.AsMedium
+  commentId: P:Dropbox.Api.TeamLog.AdminAlertSeverityEnum.AsMedium
+  id: AsMedium
+  parent: Dropbox.Api.TeamLog.AdminAlertSeverityEnum
+  langs:
+  - csharp
+  - vb
+  name: AsMedium
+  nameWithType: AdminAlertSeverityEnum.AsMedium
+  fullName: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.AsMedium
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertSeverityEnum.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsMedium
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertSeverityEnum.cs
+    startLine: 117
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Medium, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public AdminAlertSeverityEnum.Medium AsMedium { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.Medium
+    content.vb: Public ReadOnly Property AsMedium As AdminAlertSeverityEnum.Medium
+  overload: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.AsMedium*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.IsNa
+  commentId: P:Dropbox.Api.TeamLog.AdminAlertSeverityEnum.IsNa
+  id: IsNa
+  parent: Dropbox.Api.TeamLog.AdminAlertSeverityEnum
+  langs:
+  - csharp
+  - vb
+  name: IsNa
+  nameWithType: AdminAlertSeverityEnum.IsNa
+  fullName: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.IsNa
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertSeverityEnum.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsNa
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertSeverityEnum.cs
+    startLine: 128
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Na</p>\n"
+  example: []
+  syntax:
+    content: public bool IsNa { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsNa As Boolean
+  overload: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.IsNa*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.AsNa
+  commentId: P:Dropbox.Api.TeamLog.AdminAlertSeverityEnum.AsNa
+  id: AsNa
+  parent: Dropbox.Api.TeamLog.AdminAlertSeverityEnum
+  langs:
+  - csharp
+  - vb
+  name: AsNa
+  nameWithType: AdminAlertSeverityEnum.AsNa
+  fullName: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.AsNa
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertSeverityEnum.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsNa
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertSeverityEnum.cs
+    startLine: 139
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Na, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public AdminAlertSeverityEnum.Na AsNa { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.Na
+    content.vb: Public ReadOnly Property AsNa As AdminAlertSeverityEnum.Na
+  overload: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.AsNa*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.IsOther
+  commentId: P:Dropbox.Api.TeamLog.AdminAlertSeverityEnum.IsOther
+  id: IsOther
+  parent: Dropbox.Api.TeamLog.AdminAlertSeverityEnum
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: AdminAlertSeverityEnum.IsOther
+  fullName: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertSeverityEnum.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertSeverityEnum.cs
+    startLine: 150
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.AsOther
+  commentId: P:Dropbox.Api.TeamLog.AdminAlertSeverityEnum.AsOther
+  id: AsOther
+  parent: Dropbox.Api.TeamLog.AdminAlertSeverityEnum
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: AdminAlertSeverityEnum.AsOther
+  fullName: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertSeverityEnum.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertSeverityEnum.cs
+    startLine: 161
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public AdminAlertSeverityEnum.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.Other
+    content.vb: Public ReadOnly Property AsOther As AdminAlertSeverityEnum.Other
+  overload: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.AdminAlertSeverityEnum
+  commentId: T:Dropbox.Api.TeamLog.AdminAlertSeverityEnum
+  parent: Dropbox.Api.TeamLog
+  name: AdminAlertSeverityEnum
+  nameWithType: AdminAlertSeverityEnum
+  fullName: Dropbox.Api.TeamLog.AdminAlertSeverityEnum
+- uid: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.AdminAlertSeverityEnum.#ctor
+  name: AdminAlertSeverityEnum
+  nameWithType: AdminAlertSeverityEnum.AdminAlertSeverityEnum
+  fullName: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.AdminAlertSeverityEnum
+- uid: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.IsHigh*
+  commentId: Overload:Dropbox.Api.TeamLog.AdminAlertSeverityEnum.IsHigh
+  name: IsHigh
+  nameWithType: AdminAlertSeverityEnum.IsHigh
+  fullName: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.IsHigh
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.AsHigh*
+  commentId: Overload:Dropbox.Api.TeamLog.AdminAlertSeverityEnum.AsHigh
+  name: AsHigh
+  nameWithType: AdminAlertSeverityEnum.AsHigh
+  fullName: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.AsHigh
+- uid: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.High
+  commentId: T:Dropbox.Api.TeamLog.AdminAlertSeverityEnum.High
+  parent: Dropbox.Api.TeamLog
+  name: AdminAlertSeverityEnum.High
+  nameWithType: AdminAlertSeverityEnum.High
+  fullName: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.High
+- uid: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.IsInfo*
+  commentId: Overload:Dropbox.Api.TeamLog.AdminAlertSeverityEnum.IsInfo
+  name: IsInfo
+  nameWithType: AdminAlertSeverityEnum.IsInfo
+  fullName: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.IsInfo
+- uid: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.AsInfo*
+  commentId: Overload:Dropbox.Api.TeamLog.AdminAlertSeverityEnum.AsInfo
+  name: AsInfo
+  nameWithType: AdminAlertSeverityEnum.AsInfo
+  fullName: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.AsInfo
+- uid: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.Info
+  commentId: T:Dropbox.Api.TeamLog.AdminAlertSeverityEnum.Info
+  parent: Dropbox.Api.TeamLog
+  name: AdminAlertSeverityEnum.Info
+  nameWithType: AdminAlertSeverityEnum.Info
+  fullName: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.Info
+- uid: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.IsLow*
+  commentId: Overload:Dropbox.Api.TeamLog.AdminAlertSeverityEnum.IsLow
+  name: IsLow
+  nameWithType: AdminAlertSeverityEnum.IsLow
+  fullName: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.IsLow
+- uid: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.AsLow*
+  commentId: Overload:Dropbox.Api.TeamLog.AdminAlertSeverityEnum.AsLow
+  name: AsLow
+  nameWithType: AdminAlertSeverityEnum.AsLow
+  fullName: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.AsLow
+- uid: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.Low
+  commentId: T:Dropbox.Api.TeamLog.AdminAlertSeverityEnum.Low
+  parent: Dropbox.Api.TeamLog
+  name: AdminAlertSeverityEnum.Low
+  nameWithType: AdminAlertSeverityEnum.Low
+  fullName: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.Low
+- uid: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.IsMedium*
+  commentId: Overload:Dropbox.Api.TeamLog.AdminAlertSeverityEnum.IsMedium
+  name: IsMedium
+  nameWithType: AdminAlertSeverityEnum.IsMedium
+  fullName: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.IsMedium
+- uid: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.AsMedium*
+  commentId: Overload:Dropbox.Api.TeamLog.AdminAlertSeverityEnum.AsMedium
+  name: AsMedium
+  nameWithType: AdminAlertSeverityEnum.AsMedium
+  fullName: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.AsMedium
+- uid: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.Medium
+  commentId: T:Dropbox.Api.TeamLog.AdminAlertSeverityEnum.Medium
+  parent: Dropbox.Api.TeamLog
+  name: AdminAlertSeverityEnum.Medium
+  nameWithType: AdminAlertSeverityEnum.Medium
+  fullName: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.Medium
+- uid: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.IsNa*
+  commentId: Overload:Dropbox.Api.TeamLog.AdminAlertSeverityEnum.IsNa
+  name: IsNa
+  nameWithType: AdminAlertSeverityEnum.IsNa
+  fullName: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.IsNa
+- uid: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.AsNa*
+  commentId: Overload:Dropbox.Api.TeamLog.AdminAlertSeverityEnum.AsNa
+  name: AsNa
+  nameWithType: AdminAlertSeverityEnum.AsNa
+  fullName: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.AsNa
+- uid: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.Na
+  commentId: T:Dropbox.Api.TeamLog.AdminAlertSeverityEnum.Na
+  parent: Dropbox.Api.TeamLog
+  name: AdminAlertSeverityEnum.Na
+  nameWithType: AdminAlertSeverityEnum.Na
+  fullName: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.Na
+- uid: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.IsOther*
+  commentId: Overload:Dropbox.Api.TeamLog.AdminAlertSeverityEnum.IsOther
+  name: IsOther
+  nameWithType: AdminAlertSeverityEnum.IsOther
+  fullName: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.IsOther
+- uid: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.AsOther*
+  commentId: Overload:Dropbox.Api.TeamLog.AdminAlertSeverityEnum.AsOther
+  name: AsOther
+  nameWithType: AdminAlertSeverityEnum.AsOther
+  fullName: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.AsOther
+- uid: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.Other
+  commentId: T:Dropbox.Api.TeamLog.AdminAlertSeverityEnum.Other
+  parent: Dropbox.Api.TeamLog
+  name: AdminAlertSeverityEnum.Other
+  nameWithType: AdminAlertSeverityEnum.Other
+  fullName: Dropbox.Api.TeamLog.AdminAlertSeverityEnum.Other
+shouldSkipMarkup: true

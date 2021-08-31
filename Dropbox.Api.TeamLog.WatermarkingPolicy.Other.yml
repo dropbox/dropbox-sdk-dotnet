@@ -1,0 +1,148 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.WatermarkingPolicy.Other
+  commentId: T:Dropbox.Api.TeamLog.WatermarkingPolicy.Other
+  id: WatermarkingPolicy.Other
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.WatermarkingPolicy.Other.Instance
+  langs:
+  - csharp
+  - vb
+  name: WatermarkingPolicy.Other
+  nameWithType: WatermarkingPolicy.Other
+  fullName: Dropbox.Api.TeamLog.WatermarkingPolicy.Other
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/WatermarkingPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Other
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/WatermarkingPolicy.cs
+    startLine: 320
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The other object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Other : WatermarkingPolicy'
+    content.vb: >-
+      Public NotInheritable Class Other
+          Inherits WatermarkingPolicy
+  inheritance:
+  - System.Object
+  - Dropbox.Api.TeamLog.WatermarkingPolicy
+  inheritedMembers:
+  - Dropbox.Api.TeamLog.WatermarkingPolicy.IsDisabled
+  - Dropbox.Api.TeamLog.WatermarkingPolicy.AsDisabled
+  - Dropbox.Api.TeamLog.WatermarkingPolicy.IsEnabled
+  - Dropbox.Api.TeamLog.WatermarkingPolicy.AsEnabled
+  - Dropbox.Api.TeamLog.WatermarkingPolicy.IsOther
+  - Dropbox.Api.TeamLog.WatermarkingPolicy.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.TeamLog.WatermarkingPolicy.Other.Instance
+  commentId: F:Dropbox.Api.TeamLog.WatermarkingPolicy.Other.Instance
+  id: Instance
+  parent: Dropbox.Api.TeamLog.WatermarkingPolicy.Other
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: WatermarkingPolicy.Other.Instance
+  fullName: Dropbox.Api.TeamLog.WatermarkingPolicy.Other.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/WatermarkingPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/WatermarkingPolicy.cs
+    startLine: 344
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>A singleton instance of Other</p>\n"
+  example: []
+  syntax:
+    content: public static readonly WatermarkingPolicy.Other Instance
+    return:
+      type: Dropbox.Api.TeamLog.WatermarkingPolicy.Other
+    content.vb: Public Shared ReadOnly Instance As WatermarkingPolicy.Other
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.WatermarkingPolicy
+  commentId: T:Dropbox.Api.TeamLog.WatermarkingPolicy
+  parent: Dropbox.Api.TeamLog
+  name: WatermarkingPolicy
+  nameWithType: WatermarkingPolicy
+  fullName: Dropbox.Api.TeamLog.WatermarkingPolicy
+- uid: Dropbox.Api.TeamLog.WatermarkingPolicy.IsDisabled
+  commentId: P:Dropbox.Api.TeamLog.WatermarkingPolicy.IsDisabled
+  parent: Dropbox.Api.TeamLog.WatermarkingPolicy
+  name: IsDisabled
+  nameWithType: WatermarkingPolicy.IsDisabled
+  fullName: Dropbox.Api.TeamLog.WatermarkingPolicy.IsDisabled
+- uid: Dropbox.Api.TeamLog.WatermarkingPolicy.AsDisabled
+  commentId: P:Dropbox.Api.TeamLog.WatermarkingPolicy.AsDisabled
+  parent: Dropbox.Api.TeamLog.WatermarkingPolicy
+  name: AsDisabled
+  nameWithType: WatermarkingPolicy.AsDisabled
+  fullName: Dropbox.Api.TeamLog.WatermarkingPolicy.AsDisabled
+- uid: Dropbox.Api.TeamLog.WatermarkingPolicy.IsEnabled
+  commentId: P:Dropbox.Api.TeamLog.WatermarkingPolicy.IsEnabled
+  parent: Dropbox.Api.TeamLog.WatermarkingPolicy
+  name: IsEnabled
+  nameWithType: WatermarkingPolicy.IsEnabled
+  fullName: Dropbox.Api.TeamLog.WatermarkingPolicy.IsEnabled
+- uid: Dropbox.Api.TeamLog.WatermarkingPolicy.AsEnabled
+  commentId: P:Dropbox.Api.TeamLog.WatermarkingPolicy.AsEnabled
+  parent: Dropbox.Api.TeamLog.WatermarkingPolicy
+  name: AsEnabled
+  nameWithType: WatermarkingPolicy.AsEnabled
+  fullName: Dropbox.Api.TeamLog.WatermarkingPolicy.AsEnabled
+- uid: Dropbox.Api.TeamLog.WatermarkingPolicy.IsOther
+  commentId: P:Dropbox.Api.TeamLog.WatermarkingPolicy.IsOther
+  parent: Dropbox.Api.TeamLog.WatermarkingPolicy
+  name: IsOther
+  nameWithType: WatermarkingPolicy.IsOther
+  fullName: Dropbox.Api.TeamLog.WatermarkingPolicy.IsOther
+- uid: Dropbox.Api.TeamLog.WatermarkingPolicy.AsOther
+  commentId: P:Dropbox.Api.TeamLog.WatermarkingPolicy.AsOther
+  parent: Dropbox.Api.TeamLog.WatermarkingPolicy
+  name: AsOther
+  nameWithType: WatermarkingPolicy.AsOther
+  fullName: Dropbox.Api.TeamLog.WatermarkingPolicy.AsOther
+- uid: Dropbox.Api.TeamLog.WatermarkingPolicy.Other
+  commentId: T:Dropbox.Api.TeamLog.WatermarkingPolicy.Other
+  parent: Dropbox.Api.TeamLog
+  name: WatermarkingPolicy.Other
+  nameWithType: WatermarkingPolicy.Other
+  fullName: Dropbox.Api.TeamLog.WatermarkingPolicy.Other
+shouldSkipMarkup: true

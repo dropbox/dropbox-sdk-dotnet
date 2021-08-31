@@ -1,0 +1,96 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.FileRestoreDetails
+  commentId: T:Dropbox.Api.TeamLog.FileRestoreDetails
+  id: FileRestoreDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.FileRestoreDetails.#ctor
+  langs:
+  - csharp
+  - vb
+  name: FileRestoreDetails
+  nameWithType: FileRestoreDetails
+  fullName: Dropbox.Api.TeamLog.FileRestoreDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRestoreDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: FileRestoreDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRestoreDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Restored deleted files and/or folders.</p>\n"
+  example: []
+  syntax:
+    content: 'public class FileRestoreDetails : object'
+    content.vb: >-
+      Public Class FileRestoreDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.FileRestoreDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.FileRestoreDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.FileRestoreDetails
+  langs:
+  - csharp
+  - vb
+  name: FileRestoreDetails()
+  nameWithType: FileRestoreDetails.FileRestoreDetails()
+  fullName: Dropbox.Api.TeamLog.FileRestoreDetails.FileRestoreDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRestoreDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRestoreDetails.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.FileRestoreDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public FileRestoreDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.FileRestoreDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.FileRestoreDetails
+  commentId: T:Dropbox.Api.TeamLog.FileRestoreDetails
+  parent: Dropbox.Api.TeamLog
+  name: FileRestoreDetails
+  nameWithType: FileRestoreDetails
+  fullName: Dropbox.Api.TeamLog.FileRestoreDetails
+- uid: Dropbox.Api.TeamLog.FileRestoreDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.FileRestoreDetails.#ctor
+  name: FileRestoreDetails
+  nameWithType: FileRestoreDetails.FileRestoreDetails
+  fullName: Dropbox.Api.TeamLog.FileRestoreDetails.FileRestoreDetails
+shouldSkipMarkup: true

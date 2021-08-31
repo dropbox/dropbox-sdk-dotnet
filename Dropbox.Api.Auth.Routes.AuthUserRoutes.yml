@@ -1,0 +1,212 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Auth.Routes.AuthUserRoutes
+  commentId: T:Dropbox.Api.Auth.Routes.AuthUserRoutes
+  id: AuthUserRoutes
+  parent: Dropbox.Api.Auth.Routes
+  children:
+  - Dropbox.Api.Auth.Routes.AuthUserRoutes.BeginTokenRevoke(System.AsyncCallback,System.Object)
+  - Dropbox.Api.Auth.Routes.AuthUserRoutes.EndTokenRevoke(System.IAsyncResult)
+  - Dropbox.Api.Auth.Routes.AuthUserRoutes.TokenRevokeAsync
+  langs:
+  - csharp
+  - vb
+  name: AuthUserRoutes
+  nameWithType: AuthUserRoutes
+  fullName: Dropbox.Api.Auth.Routes.AuthUserRoutes
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AuthUserRoutes
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthUserRoutes.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth.Routes
+  summary: "\n<p>The routes for the <xref href=\"Dropbox.Api.Auth\" data-throw-if-not-resolved=\"false\"></xref> namespace</p>\n"
+  example: []
+  syntax:
+    content: 'public class AuthUserRoutes : object'
+    content.vb: >-
+      Public Class AuthUserRoutes
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Auth.Routes.AuthUserRoutes.TokenRevokeAsync
+  commentId: M:Dropbox.Api.Auth.Routes.AuthUserRoutes.TokenRevokeAsync
+  id: TokenRevokeAsync
+  parent: Dropbox.Api.Auth.Routes.AuthUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: TokenRevokeAsync()
+  nameWithType: AuthUserRoutes.TokenRevokeAsync()
+  fullName: Dropbox.Api.Auth.Routes.AuthUserRoutes.TokenRevokeAsync()
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TokenRevokeAsync
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthUserRoutes.cs
+    startLine: 37
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth.Routes
+  summary: "\n<p>Disables the access token used to authenticate the call. If there is a\ncorresponding refresh token for the access token, this disables that refresh token,\nas well as any other access tokens for that refresh token.</p>\n"
+  example: []
+  syntax:
+    content: public System.Threading.Tasks.Task TokenRevokeAsync()
+    return:
+      type: System.Threading.Tasks.Task
+      description: The task that represents the asynchronous send operation.
+    content.vb: Public Function TokenRevokeAsync As System.Threading.Tasks.Task
+  overload: Dropbox.Api.Auth.Routes.AuthUserRoutes.TokenRevokeAsync*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Auth.Routes.AuthUserRoutes.BeginTokenRevoke(System.AsyncCallback,System.Object)
+  commentId: M:Dropbox.Api.Auth.Routes.AuthUserRoutes.BeginTokenRevoke(System.AsyncCallback,System.Object)
+  id: BeginTokenRevoke(System.AsyncCallback,System.Object)
+  parent: Dropbox.Api.Auth.Routes.AuthUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: BeginTokenRevoke(System.AsyncCallback, Object)
+  nameWithType: AuthUserRoutes.BeginTokenRevoke(System.AsyncCallback, Object)
+  fullName: Dropbox.Api.Auth.Routes.AuthUserRoutes.BeginTokenRevoke(System.AsyncCallback, System.Object)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: BeginTokenRevoke
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthUserRoutes.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth.Routes
+  summary: "\n<p>Begins an asynchronous send to the token revoke route.</p>\n"
+  example: []
+  syntax:
+    content: public System.IAsyncResult BeginTokenRevoke(System.AsyncCallback callback, object state = null)
+    parameters:
+    - id: callback
+      type: System.AsyncCallback
+      description: >-
+        The method to be called when the asynchronous send is
+
+        completed.
+    - id: state
+      type: System.Object
+      description: >-
+        A user provided object that distinguished this send from other
+
+        send requests.
+    return:
+      type: System.IAsyncResult
+      description: An object that represents the asynchronous send request.
+    content.vb: Public Function BeginTokenRevoke(callback As System.AsyncCallback, state As Object = Nothing) As System.IAsyncResult
+  overload: Dropbox.Api.Auth.Routes.AuthUserRoutes.BeginTokenRevoke*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Auth.Routes.AuthUserRoutes.EndTokenRevoke(System.IAsyncResult)
+  commentId: M:Dropbox.Api.Auth.Routes.AuthUserRoutes.EndTokenRevoke(System.IAsyncResult)
+  id: EndTokenRevoke(System.IAsyncResult)
+  parent: Dropbox.Api.Auth.Routes.AuthUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: EndTokenRevoke(System.IAsyncResult)
+  nameWithType: AuthUserRoutes.EndTokenRevoke(System.IAsyncResult)
+  fullName: Dropbox.Api.Auth.Routes.AuthUserRoutes.EndTokenRevoke(System.IAsyncResult)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: EndTokenRevoke
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthUserRoutes.cs
+    startLine: 63
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth.Routes
+  summary: "\n<p>Waits for the pending asynchronous send to the token revoke route to\ncomplete</p>\n"
+  example: []
+  syntax:
+    content: public void EndTokenRevoke(System.IAsyncResult asyncResult)
+    parameters:
+    - id: asyncResult
+      type: System.IAsyncResult
+      description: >-
+        The reference to the pending asynchronous send
+
+        request
+    content.vb: Public Sub EndTokenRevoke(asyncResult As System.IAsyncResult)
+  overload: Dropbox.Api.Auth.Routes.AuthUserRoutes.EndTokenRevoke*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Dropbox.Api.Auth
+  commentId: N:Dropbox.Api.Auth
+  name: Dropbox.Api.Auth
+  nameWithType: Dropbox.Api.Auth
+  fullName: Dropbox.Api.Auth
+- uid: Dropbox.Api.Auth.Routes
+  commentId: N:Dropbox.Api.Auth.Routes
+  name: Dropbox.Api.Auth.Routes
+  nameWithType: Dropbox.Api.Auth.Routes
+  fullName: Dropbox.Api.Auth.Routes
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Auth.Routes.AuthUserRoutes.TokenRevokeAsync*
+  commentId: Overload:Dropbox.Api.Auth.Routes.AuthUserRoutes.TokenRevokeAsync
+  name: TokenRevokeAsync
+  nameWithType: AuthUserRoutes.TokenRevokeAsync
+  fullName: Dropbox.Api.Auth.Routes.AuthUserRoutes.TokenRevokeAsync
+- uid: System.Threading.Tasks.Task
+  isExternal: true
+  name: System.Threading.Tasks.Task
+  nameWithType: System.Threading.Tasks.Task
+  fullName: System.Threading.Tasks.Task
+- uid: Dropbox.Api.Auth.Routes.AuthUserRoutes.BeginTokenRevoke*
+  commentId: Overload:Dropbox.Api.Auth.Routes.AuthUserRoutes.BeginTokenRevoke
+  name: BeginTokenRevoke
+  nameWithType: AuthUserRoutes.BeginTokenRevoke
+  fullName: Dropbox.Api.Auth.Routes.AuthUserRoutes.BeginTokenRevoke
+- uid: System.AsyncCallback
+  isExternal: true
+  name: System.AsyncCallback
+  nameWithType: System.AsyncCallback
+  fullName: System.AsyncCallback
+- uid: System.IAsyncResult
+  isExternal: true
+  name: System.IAsyncResult
+  nameWithType: System.IAsyncResult
+  fullName: System.IAsyncResult
+- uid: Dropbox.Api.Auth.Routes.AuthUserRoutes.EndTokenRevoke*
+  commentId: Overload:Dropbox.Api.Auth.Routes.AuthUserRoutes.EndTokenRevoke
+  name: EndTokenRevoke
+  nameWithType: AuthUserRoutes.EndTokenRevoke
+  fullName: Dropbox.Api.Auth.Routes.AuthUserRoutes.EndTokenRevoke
+shouldSkipMarkup: true

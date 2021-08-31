@@ -1,0 +1,96 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.OpenNoteSharedDetails
+  commentId: T:Dropbox.Api.TeamLog.OpenNoteSharedDetails
+  id: OpenNoteSharedDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.OpenNoteSharedDetails.#ctor
+  langs:
+  - csharp
+  - vb
+  name: OpenNoteSharedDetails
+  nameWithType: OpenNoteSharedDetails
+  fullName: Dropbox.Api.TeamLog.OpenNoteSharedDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/OpenNoteSharedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: OpenNoteSharedDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/OpenNoteSharedDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Opened shared Paper doc.</p>\n"
+  example: []
+  syntax:
+    content: 'public class OpenNoteSharedDetails : object'
+    content.vb: >-
+      Public Class OpenNoteSharedDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.OpenNoteSharedDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.OpenNoteSharedDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.OpenNoteSharedDetails
+  langs:
+  - csharp
+  - vb
+  name: OpenNoteSharedDetails()
+  nameWithType: OpenNoteSharedDetails.OpenNoteSharedDetails()
+  fullName: Dropbox.Api.TeamLog.OpenNoteSharedDetails.OpenNoteSharedDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/OpenNoteSharedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/OpenNoteSharedDetails.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.OpenNoteSharedDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public OpenNoteSharedDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.OpenNoteSharedDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.OpenNoteSharedDetails
+  commentId: T:Dropbox.Api.TeamLog.OpenNoteSharedDetails
+  parent: Dropbox.Api.TeamLog
+  name: OpenNoteSharedDetails
+  nameWithType: OpenNoteSharedDetails
+  fullName: Dropbox.Api.TeamLog.OpenNoteSharedDetails
+- uid: Dropbox.Api.TeamLog.OpenNoteSharedDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.OpenNoteSharedDetails.#ctor
+  name: OpenNoteSharedDetails
+  nameWithType: OpenNoteSharedDetails.OpenNoteSharedDetails
+  fullName: Dropbox.Api.TeamLog.OpenNoteSharedDetails.OpenNoteSharedDetails
+shouldSkipMarkup: true

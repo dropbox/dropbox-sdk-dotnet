@@ -1,0 +1,191 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.SharedLinkDisableDetails
+  commentId: T:Dropbox.Api.TeamLog.SharedLinkDisableDetails
+  id: SharedLinkDisableDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.SharedLinkDisableDetails.#ctor
+  - Dropbox.Api.TeamLog.SharedLinkDisableDetails.#ctor(Dropbox.Api.TeamLog.UserLogInfo)
+  - Dropbox.Api.TeamLog.SharedLinkDisableDetails.SharedLinkOwner
+  langs:
+  - csharp
+  - vb
+  name: SharedLinkDisableDetails
+  nameWithType: SharedLinkDisableDetails
+  fullName: Dropbox.Api.TeamLog.SharedLinkDisableDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedLinkDisableDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SharedLinkDisableDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedLinkDisableDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Removed shared link.</p>\n"
+  example: []
+  syntax:
+    content: 'public class SharedLinkDisableDetails : object'
+    content.vb: >-
+      Public Class SharedLinkDisableDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.SharedLinkDisableDetails.#ctor(Dropbox.Api.TeamLog.UserLogInfo)
+  commentId: M:Dropbox.Api.TeamLog.SharedLinkDisableDetails.#ctor(Dropbox.Api.TeamLog.UserLogInfo)
+  id: '#ctor(Dropbox.Api.TeamLog.UserLogInfo)'
+  parent: Dropbox.Api.TeamLog.SharedLinkDisableDetails
+  langs:
+  - csharp
+  - vb
+  name: SharedLinkDisableDetails(UserLogInfo)
+  nameWithType: SharedLinkDisableDetails.SharedLinkDisableDetails(UserLogInfo)
+  fullName: Dropbox.Api.TeamLog.SharedLinkDisableDetails.SharedLinkDisableDetails(Dropbox.Api.TeamLog.UserLogInfo)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedLinkDisableDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedLinkDisableDetails.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SharedLinkDisableDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public SharedLinkDisableDetails(UserLogInfo sharedLinkOwner = null)
+    parameters:
+    - id: sharedLinkOwner
+      type: Dropbox.Api.TeamLog.UserLogInfo
+      description: >-
+        Shared link owner details. Might be missing due to
+
+        historical data gap.
+    content.vb: Public Sub New(sharedLinkOwner As UserLogInfo = Nothing)
+  overload: Dropbox.Api.TeamLog.SharedLinkDisableDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SharedLinkDisableDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.SharedLinkDisableDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.SharedLinkDisableDetails
+  langs:
+  - csharp
+  - vb
+  name: SharedLinkDisableDetails()
+  nameWithType: SharedLinkDisableDetails.SharedLinkDisableDetails()
+  fullName: Dropbox.Api.TeamLog.SharedLinkDisableDetails.SharedLinkDisableDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedLinkDisableDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedLinkDisableDetails.cs
+    startLine: 46
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SharedLinkDisableDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public SharedLinkDisableDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.SharedLinkDisableDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SharedLinkDisableDetails.SharedLinkOwner
+  commentId: P:Dropbox.Api.TeamLog.SharedLinkDisableDetails.SharedLinkOwner
+  id: SharedLinkOwner
+  parent: Dropbox.Api.TeamLog.SharedLinkDisableDetails
+  langs:
+  - csharp
+  - vb
+  name: SharedLinkOwner
+  nameWithType: SharedLinkDisableDetails.SharedLinkOwner
+  fullName: Dropbox.Api.TeamLog.SharedLinkDisableDetails.SharedLinkOwner
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedLinkDisableDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SharedLinkOwner
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedLinkDisableDetails.cs
+    startLine: 55
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Shared link owner details. Might be missing due to historical data\ngap.</p>\n"
+  example: []
+  syntax:
+    content: public UserLogInfo SharedLinkOwner { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.UserLogInfo
+    content.vb: Public Property SharedLinkOwner As UserLogInfo
+  overload: Dropbox.Api.TeamLog.SharedLinkDisableDetails.SharedLinkOwner*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.SharedLinkDisableDetails
+  commentId: T:Dropbox.Api.TeamLog.SharedLinkDisableDetails
+  parent: Dropbox.Api.TeamLog
+  name: SharedLinkDisableDetails
+  nameWithType: SharedLinkDisableDetails
+  fullName: Dropbox.Api.TeamLog.SharedLinkDisableDetails
+- uid: Dropbox.Api.TeamLog.SharedLinkDisableDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedLinkDisableDetails.#ctor
+  name: SharedLinkDisableDetails
+  nameWithType: SharedLinkDisableDetails.SharedLinkDisableDetails
+  fullName: Dropbox.Api.TeamLog.SharedLinkDisableDetails.SharedLinkDisableDetails
+- uid: Dropbox.Api.TeamLog.UserLogInfo
+  commentId: T:Dropbox.Api.TeamLog.UserLogInfo
+  parent: Dropbox.Api.TeamLog
+  name: UserLogInfo
+  nameWithType: UserLogInfo
+  fullName: Dropbox.Api.TeamLog.UserLogInfo
+- uid: Dropbox.Api.TeamLog.SharedLinkDisableDetails.SharedLinkOwner*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedLinkDisableDetails.SharedLinkOwner
+  name: SharedLinkOwner
+  nameWithType: SharedLinkDisableDetails.SharedLinkOwner
+  fullName: Dropbox.Api.TeamLog.SharedLinkDisableDetails.SharedLinkOwner
+shouldSkipMarkup: true

@@ -1,0 +1,507 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.FileProperties.UpdateTemplateArg
+  commentId: T:Dropbox.Api.FileProperties.UpdateTemplateArg
+  id: UpdateTemplateArg
+  parent: Dropbox.Api.FileProperties
+  children:
+  - Dropbox.Api.FileProperties.UpdateTemplateArg.#ctor
+  - Dropbox.Api.FileProperties.UpdateTemplateArg.#ctor(System.String,System.String,System.String,System.Collections.Generic.IEnumerable{Dropbox.Api.FileProperties.PropertyFieldTemplate})
+  - Dropbox.Api.FileProperties.UpdateTemplateArg.AddFields
+  - Dropbox.Api.FileProperties.UpdateTemplateArg.Description
+  - Dropbox.Api.FileProperties.UpdateTemplateArg.Name
+  - Dropbox.Api.FileProperties.UpdateTemplateArg.TemplateId
+  langs:
+  - csharp
+  - vb
+  name: UpdateTemplateArg
+  nameWithType: UpdateTemplateArg
+  fullName: Dropbox.Api.FileProperties.UpdateTemplateArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/UpdateTemplateArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: UpdateTemplateArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/UpdateTemplateArg.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>The update template arg object</p>\n"
+  example: []
+  syntax:
+    content: 'public class UpdateTemplateArg : object'
+    content.vb: >-
+      Public Class UpdateTemplateArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.FileProperties.UpdateTemplateArg.#ctor(System.String,System.String,System.String,System.Collections.Generic.IEnumerable{Dropbox.Api.FileProperties.PropertyFieldTemplate})
+  commentId: M:Dropbox.Api.FileProperties.UpdateTemplateArg.#ctor(System.String,System.String,System.String,System.Collections.Generic.IEnumerable{Dropbox.Api.FileProperties.PropertyFieldTemplate})
+  id: '#ctor(System.String,System.String,System.String,System.Collections.Generic.IEnumerable{Dropbox.Api.FileProperties.PropertyFieldTemplate})'
+  parent: Dropbox.Api.FileProperties.UpdateTemplateArg
+  langs:
+  - csharp
+  - vb
+  name: UpdateTemplateArg(String, String, String, System.Collections.Generic.IEnumerable<PropertyFieldTemplate>)
+  nameWithType: UpdateTemplateArg.UpdateTemplateArg(String, String, String, System.Collections.Generic.IEnumerable<PropertyFieldTemplate>)
+  fullName: Dropbox.Api.FileProperties.UpdateTemplateArg.UpdateTemplateArg(System.String, System.String, System.String, System.Collections.Generic.IEnumerable<Dropbox.Api.FileProperties.PropertyFieldTemplate>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/UpdateTemplateArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/UpdateTemplateArg.cs
+    startLine: 44
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.FileProperties.UpdateTemplateArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public UpdateTemplateArg(string templateId, string name = null, string description = null, System.Collections.Generic.IEnumerable<PropertyFieldTemplate> addFields = null)
+    parameters:
+    - id: templateId
+      type: System.String
+      description: An identifier for template added by  See <xref href="Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.TemplatesAddForUserAsync(Dropbox.Api.FileProperties.AddTemplateArg)" data-throw-if-not-resolved="false"></xref> or <xref href="Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesAddForTeamAsync(Dropbox.Api.FileProperties.AddTemplateArg)" data-throw-if-not-resolved="false"></xref>.
+    - id: name
+      type: System.String
+      description: >-
+        A display name for the template. template names can be up to 256
+
+        bytes.
+    - id: description
+      type: System.String
+      description: >-
+        Description for the new template. Template descriptions
+
+        can be up to 1024 bytes.
+    - id: addFields
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.FileProperties.PropertyFieldTemplate}
+      description: >-
+        Property field templates to be added to the group template.
+
+        There can be up to 32 properties in a single template.
+    content.vb: Public Sub New(templateId As String, name As String = Nothing, description As String = Nothing, addFields As System.Collections.Generic.IEnumerable(Of PropertyFieldTemplate) = Nothing)
+  overload: Dropbox.Api.FileProperties.UpdateTemplateArg.#ctor*
+  nameWithType.vb: UpdateTemplateArg.UpdateTemplateArg(String, String, String, System.Collections.Generic.IEnumerable(Of PropertyFieldTemplate))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.FileProperties.UpdateTemplateArg.UpdateTemplateArg(System.String, System.String, System.String, System.Collections.Generic.IEnumerable(Of Dropbox.Api.FileProperties.PropertyFieldTemplate))
+  name.vb: UpdateTemplateArg(String, String, String, System.Collections.Generic.IEnumerable(Of PropertyFieldTemplate))
+- uid: Dropbox.Api.FileProperties.UpdateTemplateArg.#ctor
+  commentId: M:Dropbox.Api.FileProperties.UpdateTemplateArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.FileProperties.UpdateTemplateArg
+  langs:
+  - csharp
+  - vb
+  name: UpdateTemplateArg()
+  nameWithType: UpdateTemplateArg.UpdateTemplateArg()
+  fullName: Dropbox.Api.FileProperties.UpdateTemplateArg.UpdateTemplateArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/UpdateTemplateArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/UpdateTemplateArg.cs
+    startLine: 76
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.FileProperties.UpdateTemplateArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public UpdateTemplateArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.FileProperties.UpdateTemplateArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileProperties.UpdateTemplateArg.TemplateId
+  commentId: P:Dropbox.Api.FileProperties.UpdateTemplateArg.TemplateId
+  id: TemplateId
+  parent: Dropbox.Api.FileProperties.UpdateTemplateArg
+  langs:
+  - csharp
+  - vb
+  name: TemplateId
+  nameWithType: UpdateTemplateArg.TemplateId
+  fullName: Dropbox.Api.FileProperties.UpdateTemplateArg.TemplateId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/UpdateTemplateArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TemplateId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/UpdateTemplateArg.cs
+    startLine: 88
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>An identifier for template added by  See <xref href=\"Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.TemplatesAddForUserAsync(Dropbox.Api.FileProperties.AddTemplateArg)\" data-throw-if-not-resolved=\"false\"></xref> or <xref href=\"Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesAddForTeamAsync(Dropbox.Api.FileProperties.AddTemplateArg)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+  example: []
+  syntax:
+    content: public string TemplateId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property TemplateId As String
+  overload: Dropbox.Api.FileProperties.UpdateTemplateArg.TemplateId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.FileProperties.UpdateTemplateArg.Name
+  commentId: P:Dropbox.Api.FileProperties.UpdateTemplateArg.Name
+  id: Name
+  parent: Dropbox.Api.FileProperties.UpdateTemplateArg
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: UpdateTemplateArg.Name
+  fullName: Dropbox.Api.FileProperties.UpdateTemplateArg.Name
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/UpdateTemplateArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Name
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/UpdateTemplateArg.cs
+    startLine: 94
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>A display name for the template. template names can be up to 256\nbytes.</p>\n"
+  example: []
+  syntax:
+    content: public string Name { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: Dropbox.Api.FileProperties.UpdateTemplateArg.Name*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.FileProperties.UpdateTemplateArg.Description
+  commentId: P:Dropbox.Api.FileProperties.UpdateTemplateArg.Description
+  id: Description
+  parent: Dropbox.Api.FileProperties.UpdateTemplateArg
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: UpdateTemplateArg.Description
+  fullName: Dropbox.Api.FileProperties.UpdateTemplateArg.Description
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/UpdateTemplateArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Description
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/UpdateTemplateArg.cs
+    startLine: 100
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Description for the new template. Template descriptions can be up to 1024\nbytes.</p>\n"
+  example: []
+  syntax:
+    content: public string Description { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Dropbox.Api.FileProperties.UpdateTemplateArg.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.FileProperties.UpdateTemplateArg.AddFields
+  commentId: P:Dropbox.Api.FileProperties.UpdateTemplateArg.AddFields
+  id: AddFields
+  parent: Dropbox.Api.FileProperties.UpdateTemplateArg
+  langs:
+  - csharp
+  - vb
+  name: AddFields
+  nameWithType: UpdateTemplateArg.AddFields
+  fullName: Dropbox.Api.FileProperties.UpdateTemplateArg.AddFields
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/UpdateTemplateArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AddFields
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/UpdateTemplateArg.cs
+    startLine: 106
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Property field templates to be added to the group template. There can be up\nto 32 properties in a single template.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<PropertyFieldTemplate> AddFields { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{Dropbox.Api.FileProperties.PropertyFieldTemplate}
+    content.vb: Public Property AddFields As System.Collections.Generic.IList(Of PropertyFieldTemplate)
+  overload: Dropbox.Api.FileProperties.UpdateTemplateArg.AddFields*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.FileProperties
+  commentId: N:Dropbox.Api.FileProperties
+  name: Dropbox.Api.FileProperties
+  nameWithType: Dropbox.Api.FileProperties
+  fullName: Dropbox.Api.FileProperties
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.FileProperties.UpdateTemplateArg
+  commentId: T:Dropbox.Api.FileProperties.UpdateTemplateArg
+  parent: Dropbox.Api.FileProperties
+  name: UpdateTemplateArg
+  nameWithType: UpdateTemplateArg
+  fullName: Dropbox.Api.FileProperties.UpdateTemplateArg
+- uid: Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.TemplatesAddForUserAsync(Dropbox.Api.FileProperties.AddTemplateArg)
+  commentId: M:Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.TemplatesAddForUserAsync(Dropbox.Api.FileProperties.AddTemplateArg)
+  isExternal: true
+- uid: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesAddForTeamAsync(Dropbox.Api.FileProperties.AddTemplateArg)
+  commentId: M:Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesAddForTeamAsync(Dropbox.Api.FileProperties.AddTemplateArg)
+  isExternal: true
+- uid: Dropbox.Api.FileProperties.UpdateTemplateArg.#ctor*
+  commentId: Overload:Dropbox.Api.FileProperties.UpdateTemplateArg.#ctor
+  name: UpdateTemplateArg
+  nameWithType: UpdateTemplateArg.UpdateTemplateArg
+  fullName: Dropbox.Api.FileProperties.UpdateTemplateArg.UpdateTemplateArg
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Collections.Generic.IEnumerable{Dropbox.Api.FileProperties.PropertyFieldTemplate}
+  commentId: '!:System.Collections.Generic.IEnumerable{Dropbox.Api.FileProperties.PropertyFieldTemplate}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<PropertyFieldTemplate>
+  nameWithType: System.Collections.Generic.IEnumerable<PropertyFieldTemplate>
+  fullName: System.Collections.Generic.IEnumerable<Dropbox.Api.FileProperties.PropertyFieldTemplate>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of PropertyFieldTemplate)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Dropbox.Api.FileProperties.PropertyFieldTemplate)
+  name.vb: System.Collections.Generic.IEnumerable(Of PropertyFieldTemplate)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.FileProperties.PropertyFieldTemplate
+    name: PropertyFieldTemplate
+    nameWithType: PropertyFieldTemplate
+    fullName: Dropbox.Api.FileProperties.PropertyFieldTemplate
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.FileProperties.PropertyFieldTemplate
+    name: PropertyFieldTemplate
+    nameWithType: PropertyFieldTemplate
+    fullName: Dropbox.Api.FileProperties.PropertyFieldTemplate
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: System.Collections.Generic.IEnumerable<>
+  nameWithType: System.Collections.Generic.IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: System.Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.FileProperties.UpdateTemplateArg.TemplateId*
+  commentId: Overload:Dropbox.Api.FileProperties.UpdateTemplateArg.TemplateId
+  name: TemplateId
+  nameWithType: UpdateTemplateArg.TemplateId
+  fullName: Dropbox.Api.FileProperties.UpdateTemplateArg.TemplateId
+- uid: Dropbox.Api.FileProperties.UpdateTemplateArg.Name*
+  commentId: Overload:Dropbox.Api.FileProperties.UpdateTemplateArg.Name
+  name: Name
+  nameWithType: UpdateTemplateArg.Name
+  fullName: Dropbox.Api.FileProperties.UpdateTemplateArg.Name
+- uid: Dropbox.Api.FileProperties.UpdateTemplateArg.Description*
+  commentId: Overload:Dropbox.Api.FileProperties.UpdateTemplateArg.Description
+  name: Description
+  nameWithType: UpdateTemplateArg.Description
+  fullName: Dropbox.Api.FileProperties.UpdateTemplateArg.Description
+- uid: Dropbox.Api.FileProperties.UpdateTemplateArg.AddFields*
+  commentId: Overload:Dropbox.Api.FileProperties.UpdateTemplateArg.AddFields
+  name: AddFields
+  nameWithType: UpdateTemplateArg.AddFields
+  fullName: Dropbox.Api.FileProperties.UpdateTemplateArg.AddFields
+- uid: System.Collections.Generic.IList{Dropbox.Api.FileProperties.PropertyFieldTemplate}
+  commentId: '!:System.Collections.Generic.IList{Dropbox.Api.FileProperties.PropertyFieldTemplate}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<PropertyFieldTemplate>
+  nameWithType: System.Collections.Generic.IList<PropertyFieldTemplate>
+  fullName: System.Collections.Generic.IList<Dropbox.Api.FileProperties.PropertyFieldTemplate>
+  nameWithType.vb: System.Collections.Generic.IList(Of PropertyFieldTemplate)
+  fullName.vb: System.Collections.Generic.IList(Of Dropbox.Api.FileProperties.PropertyFieldTemplate)
+  name.vb: System.Collections.Generic.IList(Of PropertyFieldTemplate)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.FileProperties.PropertyFieldTemplate
+    name: PropertyFieldTemplate
+    nameWithType: PropertyFieldTemplate
+    fullName: Dropbox.Api.FileProperties.PropertyFieldTemplate
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.FileProperties.PropertyFieldTemplate
+    name: PropertyFieldTemplate
+    nameWithType: PropertyFieldTemplate
+    fullName: Dropbox.Api.FileProperties.PropertyFieldTemplate
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  isExternal: true
+  name: System.Collections.Generic.IList<>
+  nameWithType: System.Collections.Generic.IList<>
+  fullName: System.Collections.Generic.IList<>
+  nameWithType.vb: System.Collections.Generic.IList(Of )
+  fullName.vb: System.Collections.Generic.IList(Of )
+  name.vb: System.Collections.Generic.IList(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+shouldSkipMarkup: true

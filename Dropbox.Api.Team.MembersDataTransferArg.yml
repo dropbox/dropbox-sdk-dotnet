@@ -1,0 +1,263 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.MembersDataTransferArg
+  commentId: T:Dropbox.Api.Team.MembersDataTransferArg
+  id: MembersDataTransferArg
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.MembersDataTransferArg.#ctor
+  - Dropbox.Api.Team.MembersDataTransferArg.#ctor(Dropbox.Api.Team.UserSelectorArg,Dropbox.Api.Team.UserSelectorArg,Dropbox.Api.Team.UserSelectorArg)
+  - Dropbox.Api.Team.MembersDataTransferArg.TransferAdminId
+  - Dropbox.Api.Team.MembersDataTransferArg.TransferDestId
+  langs:
+  - csharp
+  - vb
+  name: MembersDataTransferArg
+  nameWithType: MembersDataTransferArg
+  fullName: Dropbox.Api.Team.MembersDataTransferArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersDataTransferArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: MembersDataTransferArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersDataTransferArg.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The members data transfer arg object</p>\n"
+  example: []
+  syntax:
+    content: 'public class MembersDataTransferArg : MembersDeactivateBaseArg'
+    content.vb: >-
+      Public Class MembersDataTransferArg
+          Inherits MembersDeactivateBaseArg
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.MembersDeactivateBaseArg
+  inheritedMembers:
+  - Dropbox.Api.Team.MembersDeactivateBaseArg.User
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.MembersDataTransferArg.#ctor(Dropbox.Api.Team.UserSelectorArg,Dropbox.Api.Team.UserSelectorArg,Dropbox.Api.Team.UserSelectorArg)
+  commentId: M:Dropbox.Api.Team.MembersDataTransferArg.#ctor(Dropbox.Api.Team.UserSelectorArg,Dropbox.Api.Team.UserSelectorArg,Dropbox.Api.Team.UserSelectorArg)
+  id: '#ctor(Dropbox.Api.Team.UserSelectorArg,Dropbox.Api.Team.UserSelectorArg,Dropbox.Api.Team.UserSelectorArg)'
+  parent: Dropbox.Api.Team.MembersDataTransferArg
+  langs:
+  - csharp
+  - vb
+  name: MembersDataTransferArg(UserSelectorArg, UserSelectorArg, UserSelectorArg)
+  nameWithType: MembersDataTransferArg.MembersDataTransferArg(UserSelectorArg, UserSelectorArg, UserSelectorArg)
+  fullName: Dropbox.Api.Team.MembersDataTransferArg.MembersDataTransferArg(Dropbox.Api.Team.UserSelectorArg, Dropbox.Api.Team.UserSelectorArg, Dropbox.Api.Team.UserSelectorArg)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersDataTransferArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersDataTransferArg.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.MembersDataTransferArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public MembersDataTransferArg(UserSelectorArg user, UserSelectorArg transferDestId, UserSelectorArg transferAdminId)
+    parameters:
+    - id: user
+      type: Dropbox.Api.Team.UserSelectorArg
+      description: >-
+        Identity of user to remove/suspend/have their files
+
+        moved.
+    - id: transferDestId
+      type: Dropbox.Api.Team.UserSelectorArg
+      description: >-
+        Files from the deleted member account will be
+
+        transferred to this user.
+    - id: transferAdminId
+      type: Dropbox.Api.Team.UserSelectorArg
+      description: >-
+        Errors during the transfer process will be sent via
+
+        email to this user.
+    content.vb: Public Sub New(user As UserSelectorArg, transferDestId As UserSelectorArg, transferAdminId As UserSelectorArg)
+  overload: Dropbox.Api.Team.MembersDataTransferArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.MembersDataTransferArg.#ctor
+  commentId: M:Dropbox.Api.Team.MembersDataTransferArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.MembersDataTransferArg
+  langs:
+  - csharp
+  - vb
+  name: MembersDataTransferArg()
+  nameWithType: MembersDataTransferArg.MembersDataTransferArg()
+  fullName: Dropbox.Api.Team.MembersDataTransferArg.MembersDataTransferArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersDataTransferArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersDataTransferArg.cs
+    startLine: 65
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.MembersDataTransferArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public MembersDataTransferArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.MembersDataTransferArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.MembersDataTransferArg.TransferDestId
+  commentId: P:Dropbox.Api.Team.MembersDataTransferArg.TransferDestId
+  id: TransferDestId
+  parent: Dropbox.Api.Team.MembersDataTransferArg
+  langs:
+  - csharp
+  - vb
+  name: TransferDestId
+  nameWithType: MembersDataTransferArg.TransferDestId
+  fullName: Dropbox.Api.Team.MembersDataTransferArg.TransferDestId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersDataTransferArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TransferDestId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersDataTransferArg.cs
+    startLine: 74
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Files from the deleted member account will be transferred to this\nuser.</p>\n"
+  example: []
+  syntax:
+    content: public UserSelectorArg TransferDestId { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.UserSelectorArg
+    content.vb: Public Property TransferDestId As UserSelectorArg
+  overload: Dropbox.Api.Team.MembersDataTransferArg.TransferDestId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.MembersDataTransferArg.TransferAdminId
+  commentId: P:Dropbox.Api.Team.MembersDataTransferArg.TransferAdminId
+  id: TransferAdminId
+  parent: Dropbox.Api.Team.MembersDataTransferArg
+  langs:
+  - csharp
+  - vb
+  name: TransferAdminId
+  nameWithType: MembersDataTransferArg.TransferAdminId
+  fullName: Dropbox.Api.Team.MembersDataTransferArg.TransferAdminId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersDataTransferArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TransferAdminId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersDataTransferArg.cs
+    startLine: 80
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Errors during the transfer process will be sent via email to this\nuser.</p>\n"
+  example: []
+  syntax:
+    content: public UserSelectorArg TransferAdminId { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.UserSelectorArg
+    content.vb: Public Property TransferAdminId As UserSelectorArg
+  overload: Dropbox.Api.Team.MembersDataTransferArg.TransferAdminId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.MembersDeactivateBaseArg
+  commentId: T:Dropbox.Api.Team.MembersDeactivateBaseArg
+  parent: Dropbox.Api.Team
+  name: MembersDeactivateBaseArg
+  nameWithType: MembersDeactivateBaseArg
+  fullName: Dropbox.Api.Team.MembersDeactivateBaseArg
+- uid: Dropbox.Api.Team.MembersDeactivateBaseArg.User
+  commentId: P:Dropbox.Api.Team.MembersDeactivateBaseArg.User
+  parent: Dropbox.Api.Team.MembersDeactivateBaseArg
+  name: User
+  nameWithType: MembersDeactivateBaseArg.User
+  fullName: Dropbox.Api.Team.MembersDeactivateBaseArg.User
+- uid: Dropbox.Api.Team.MembersDataTransferArg
+  commentId: T:Dropbox.Api.Team.MembersDataTransferArg
+  parent: Dropbox.Api.Team
+  name: MembersDataTransferArg
+  nameWithType: MembersDataTransferArg
+  fullName: Dropbox.Api.Team.MembersDataTransferArg
+- uid: Dropbox.Api.Team.MembersDataTransferArg.#ctor*
+  commentId: Overload:Dropbox.Api.Team.MembersDataTransferArg.#ctor
+  name: MembersDataTransferArg
+  nameWithType: MembersDataTransferArg.MembersDataTransferArg
+  fullName: Dropbox.Api.Team.MembersDataTransferArg.MembersDataTransferArg
+- uid: Dropbox.Api.Team.UserSelectorArg
+  commentId: T:Dropbox.Api.Team.UserSelectorArg
+  parent: Dropbox.Api.Team
+  name: UserSelectorArg
+  nameWithType: UserSelectorArg
+  fullName: Dropbox.Api.Team.UserSelectorArg
+- uid: Dropbox.Api.Team.MembersDataTransferArg.TransferDestId*
+  commentId: Overload:Dropbox.Api.Team.MembersDataTransferArg.TransferDestId
+  name: TransferDestId
+  nameWithType: MembersDataTransferArg.TransferDestId
+  fullName: Dropbox.Api.Team.MembersDataTransferArg.TransferDestId
+- uid: Dropbox.Api.Team.MembersDataTransferArg.TransferAdminId*
+  commentId: Overload:Dropbox.Api.Team.MembersDataTransferArg.TransferAdminId
+  name: TransferAdminId
+  nameWithType: MembersDataTransferArg.TransferAdminId
+  fullName: Dropbox.Api.Team.MembersDataTransferArg.TransferAdminId
+shouldSkipMarkup: true

@@ -1,0 +1,245 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.RelinquishFolderMembershipArg
+  commentId: T:Dropbox.Api.Sharing.RelinquishFolderMembershipArg
+  id: RelinquishFolderMembershipArg
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.RelinquishFolderMembershipArg.#ctor
+  - Dropbox.Api.Sharing.RelinquishFolderMembershipArg.#ctor(System.String,System.Boolean)
+  - Dropbox.Api.Sharing.RelinquishFolderMembershipArg.LeaveACopy
+  - Dropbox.Api.Sharing.RelinquishFolderMembershipArg.SharedFolderId
+  langs:
+  - csharp
+  - vb
+  name: RelinquishFolderMembershipArg
+  nameWithType: RelinquishFolderMembershipArg
+  fullName: Dropbox.Api.Sharing.RelinquishFolderMembershipArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RelinquishFolderMembershipArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: RelinquishFolderMembershipArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RelinquishFolderMembershipArg.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The relinquish folder membership arg object</p>\n"
+  example: []
+  syntax:
+    content: 'public class RelinquishFolderMembershipArg : object'
+    content.vb: >-
+      Public Class RelinquishFolderMembershipArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Sharing.RelinquishFolderMembershipArg.#ctor(System.String,System.Boolean)
+  commentId: M:Dropbox.Api.Sharing.RelinquishFolderMembershipArg.#ctor(System.String,System.Boolean)
+  id: '#ctor(System.String,System.Boolean)'
+  parent: Dropbox.Api.Sharing.RelinquishFolderMembershipArg
+  langs:
+  - csharp
+  - vb
+  name: RelinquishFolderMembershipArg(String, Boolean)
+  nameWithType: RelinquishFolderMembershipArg.RelinquishFolderMembershipArg(String, Boolean)
+  fullName: Dropbox.Api.Sharing.RelinquishFolderMembershipArg.RelinquishFolderMembershipArg(System.String, System.Boolean)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RelinquishFolderMembershipArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RelinquishFolderMembershipArg.cs
+    startLine: 37
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.RelinquishFolderMembershipArg\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public RelinquishFolderMembershipArg(string sharedFolderId, bool leaveACopy = false)
+    parameters:
+    - id: sharedFolderId
+      type: System.String
+      description: The ID for the shared folder.
+    - id: leaveACopy
+      type: System.Boolean
+      description: >-
+        Keep a copy of the folder&apos;s contents upon relinquishing
+
+        membership. This must be set to false when the folder is within a team folder or
+
+        another shared folder.
+    content.vb: Public Sub New(sharedFolderId As String, leaveACopy As Boolean = False)
+  overload: Dropbox.Api.Sharing.RelinquishFolderMembershipArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.RelinquishFolderMembershipArg.#ctor
+  commentId: M:Dropbox.Api.Sharing.RelinquishFolderMembershipArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Sharing.RelinquishFolderMembershipArg
+  langs:
+  - csharp
+  - vb
+  name: RelinquishFolderMembershipArg()
+  nameWithType: RelinquishFolderMembershipArg.RelinquishFolderMembershipArg()
+  fullName: Dropbox.Api.Sharing.RelinquishFolderMembershipArg.RelinquishFolderMembershipArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RelinquishFolderMembershipArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RelinquishFolderMembershipArg.cs
+    startLine: 59
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.RelinquishFolderMembershipArg\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public RelinquishFolderMembershipArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Sharing.RelinquishFolderMembershipArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.RelinquishFolderMembershipArg.SharedFolderId
+  commentId: P:Dropbox.Api.Sharing.RelinquishFolderMembershipArg.SharedFolderId
+  id: SharedFolderId
+  parent: Dropbox.Api.Sharing.RelinquishFolderMembershipArg
+  langs:
+  - csharp
+  - vb
+  name: SharedFolderId
+  nameWithType: RelinquishFolderMembershipArg.SharedFolderId
+  fullName: Dropbox.Api.Sharing.RelinquishFolderMembershipArg.SharedFolderId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RelinquishFolderMembershipArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SharedFolderId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RelinquishFolderMembershipArg.cs
+    startLine: 68
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The ID for the shared folder.</p>\n"
+  example: []
+  syntax:
+    content: public string SharedFolderId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SharedFolderId As String
+  overload: Dropbox.Api.Sharing.RelinquishFolderMembershipArg.SharedFolderId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.RelinquishFolderMembershipArg.LeaveACopy
+  commentId: P:Dropbox.Api.Sharing.RelinquishFolderMembershipArg.LeaveACopy
+  id: LeaveACopy
+  parent: Dropbox.Api.Sharing.RelinquishFolderMembershipArg
+  langs:
+  - csharp
+  - vb
+  name: LeaveACopy
+  nameWithType: RelinquishFolderMembershipArg.LeaveACopy
+  fullName: Dropbox.Api.Sharing.RelinquishFolderMembershipArg.LeaveACopy
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RelinquishFolderMembershipArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: LeaveACopy
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RelinquishFolderMembershipArg.cs
+    startLine: 75
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Keep a copy of the folder&apos;s contents upon relinquishing membership. This must\nbe set to false when the folder is within a team folder or another shared\nfolder.</p>\n"
+  example: []
+  syntax:
+    content: public bool LeaveACopy { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property LeaveACopy As Boolean
+  overload: Dropbox.Api.Sharing.RelinquishFolderMembershipArg.LeaveACopy*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.RelinquishFolderMembershipArg
+  commentId: T:Dropbox.Api.Sharing.RelinquishFolderMembershipArg
+  parent: Dropbox.Api.Sharing
+  name: RelinquishFolderMembershipArg
+  nameWithType: RelinquishFolderMembershipArg
+  fullName: Dropbox.Api.Sharing.RelinquishFolderMembershipArg
+- uid: Dropbox.Api.Sharing.RelinquishFolderMembershipArg.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.RelinquishFolderMembershipArg.#ctor
+  name: RelinquishFolderMembershipArg
+  nameWithType: RelinquishFolderMembershipArg.RelinquishFolderMembershipArg
+  fullName: Dropbox.Api.Sharing.RelinquishFolderMembershipArg.RelinquishFolderMembershipArg
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Sharing.RelinquishFolderMembershipArg.SharedFolderId*
+  commentId: Overload:Dropbox.Api.Sharing.RelinquishFolderMembershipArg.SharedFolderId
+  name: SharedFolderId
+  nameWithType: RelinquishFolderMembershipArg.SharedFolderId
+  fullName: Dropbox.Api.Sharing.RelinquishFolderMembershipArg.SharedFolderId
+- uid: Dropbox.Api.Sharing.RelinquishFolderMembershipArg.LeaveACopy*
+  commentId: Overload:Dropbox.Api.Sharing.RelinquishFolderMembershipArg.LeaveACopy
+  name: LeaveACopy
+  nameWithType: RelinquishFolderMembershipArg.LeaveACopy
+  fullName: Dropbox.Api.Sharing.RelinquishFolderMembershipArg.LeaveACopy
+shouldSkipMarkup: true

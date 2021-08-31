@@ -1,0 +1,238 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.SecondaryTeamRequestAcceptedDetails
+  commentId: T:Dropbox.Api.TeamLog.SecondaryTeamRequestAcceptedDetails
+  id: SecondaryTeamRequestAcceptedDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.SecondaryTeamRequestAcceptedDetails.#ctor
+  - Dropbox.Api.TeamLog.SecondaryTeamRequestAcceptedDetails.#ctor(System.String,System.String)
+  - Dropbox.Api.TeamLog.SecondaryTeamRequestAcceptedDetails.PrimaryTeam
+  - Dropbox.Api.TeamLog.SecondaryTeamRequestAcceptedDetails.SentBy
+  langs:
+  - csharp
+  - vb
+  name: SecondaryTeamRequestAcceptedDetails
+  nameWithType: SecondaryTeamRequestAcceptedDetails
+  fullName: Dropbox.Api.TeamLog.SecondaryTeamRequestAcceptedDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SecondaryTeamRequestAcceptedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SecondaryTeamRequestAcceptedDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SecondaryTeamRequestAcceptedDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Team merge request acceptance details shown to the secondary team</p>\n"
+  example: []
+  syntax:
+    content: 'public class SecondaryTeamRequestAcceptedDetails : object'
+    content.vb: >-
+      Public Class SecondaryTeamRequestAcceptedDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.SecondaryTeamRequestAcceptedDetails.#ctor(System.String,System.String)
+  commentId: M:Dropbox.Api.TeamLog.SecondaryTeamRequestAcceptedDetails.#ctor(System.String,System.String)
+  id: '#ctor(System.String,System.String)'
+  parent: Dropbox.Api.TeamLog.SecondaryTeamRequestAcceptedDetails
+  langs:
+  - csharp
+  - vb
+  name: SecondaryTeamRequestAcceptedDetails(String, String)
+  nameWithType: SecondaryTeamRequestAcceptedDetails.SecondaryTeamRequestAcceptedDetails(String, String)
+  fullName: Dropbox.Api.TeamLog.SecondaryTeamRequestAcceptedDetails.SecondaryTeamRequestAcceptedDetails(System.String, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SecondaryTeamRequestAcceptedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SecondaryTeamRequestAcceptedDetails.cs
+    startLine: 36
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SecondaryTeamRequestAcceptedDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public SecondaryTeamRequestAcceptedDetails(string primaryTeam, string sentBy)
+    parameters:
+    - id: primaryTeam
+      type: System.String
+      description: The primary team name.
+    - id: sentBy
+      type: System.String
+      description: >-
+        The name of the secondary team admin who sent the request
+
+        originally.
+    content.vb: Public Sub New(primaryTeam As String, sentBy As String)
+  overload: Dropbox.Api.TeamLog.SecondaryTeamRequestAcceptedDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SecondaryTeamRequestAcceptedDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.SecondaryTeamRequestAcceptedDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.SecondaryTeamRequestAcceptedDetails
+  langs:
+  - csharp
+  - vb
+  name: SecondaryTeamRequestAcceptedDetails()
+  nameWithType: SecondaryTeamRequestAcceptedDetails.SecondaryTeamRequestAcceptedDetails()
+  fullName: Dropbox.Api.TeamLog.SecondaryTeamRequestAcceptedDetails.SecondaryTeamRequestAcceptedDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SecondaryTeamRequestAcceptedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SecondaryTeamRequestAcceptedDetails.cs
+    startLine: 59
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SecondaryTeamRequestAcceptedDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public SecondaryTeamRequestAcceptedDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.SecondaryTeamRequestAcceptedDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SecondaryTeamRequestAcceptedDetails.PrimaryTeam
+  commentId: P:Dropbox.Api.TeamLog.SecondaryTeamRequestAcceptedDetails.PrimaryTeam
+  id: PrimaryTeam
+  parent: Dropbox.Api.TeamLog.SecondaryTeamRequestAcceptedDetails
+  langs:
+  - csharp
+  - vb
+  name: PrimaryTeam
+  nameWithType: SecondaryTeamRequestAcceptedDetails.PrimaryTeam
+  fullName: Dropbox.Api.TeamLog.SecondaryTeamRequestAcceptedDetails.PrimaryTeam
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SecondaryTeamRequestAcceptedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PrimaryTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SecondaryTeamRequestAcceptedDetails.cs
+    startLine: 67
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The primary team name.</p>\n"
+  example: []
+  syntax:
+    content: public string PrimaryTeam { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property PrimaryTeam As String
+  overload: Dropbox.Api.TeamLog.SecondaryTeamRequestAcceptedDetails.PrimaryTeam*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.SecondaryTeamRequestAcceptedDetails.SentBy
+  commentId: P:Dropbox.Api.TeamLog.SecondaryTeamRequestAcceptedDetails.SentBy
+  id: SentBy
+  parent: Dropbox.Api.TeamLog.SecondaryTeamRequestAcceptedDetails
+  langs:
+  - csharp
+  - vb
+  name: SentBy
+  nameWithType: SecondaryTeamRequestAcceptedDetails.SentBy
+  fullName: Dropbox.Api.TeamLog.SecondaryTeamRequestAcceptedDetails.SentBy
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SecondaryTeamRequestAcceptedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SentBy
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SecondaryTeamRequestAcceptedDetails.cs
+    startLine: 72
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The name of the secondary team admin who sent the request originally.</p>\n"
+  example: []
+  syntax:
+    content: public string SentBy { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SentBy As String
+  overload: Dropbox.Api.TeamLog.SecondaryTeamRequestAcceptedDetails.SentBy*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.SecondaryTeamRequestAcceptedDetails
+  commentId: T:Dropbox.Api.TeamLog.SecondaryTeamRequestAcceptedDetails
+  parent: Dropbox.Api.TeamLog
+  name: SecondaryTeamRequestAcceptedDetails
+  nameWithType: SecondaryTeamRequestAcceptedDetails
+  fullName: Dropbox.Api.TeamLog.SecondaryTeamRequestAcceptedDetails
+- uid: Dropbox.Api.TeamLog.SecondaryTeamRequestAcceptedDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.SecondaryTeamRequestAcceptedDetails.#ctor
+  name: SecondaryTeamRequestAcceptedDetails
+  nameWithType: SecondaryTeamRequestAcceptedDetails.SecondaryTeamRequestAcceptedDetails
+  fullName: Dropbox.Api.TeamLog.SecondaryTeamRequestAcceptedDetails.SecondaryTeamRequestAcceptedDetails
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.SecondaryTeamRequestAcceptedDetails.PrimaryTeam*
+  commentId: Overload:Dropbox.Api.TeamLog.SecondaryTeamRequestAcceptedDetails.PrimaryTeam
+  name: PrimaryTeam
+  nameWithType: SecondaryTeamRequestAcceptedDetails.PrimaryTeam
+  fullName: Dropbox.Api.TeamLog.SecondaryTeamRequestAcceptedDetails.PrimaryTeam
+- uid: Dropbox.Api.TeamLog.SecondaryTeamRequestAcceptedDetails.SentBy*
+  commentId: Overload:Dropbox.Api.TeamLog.SecondaryTeamRequestAcceptedDetails.SentBy
+  name: SentBy
+  nameWithType: SecondaryTeamRequestAcceptedDetails.SentBy
+  fullName: Dropbox.Api.TeamLog.SecondaryTeamRequestAcceptedDetails.SentBy
+shouldSkipMarkup: true

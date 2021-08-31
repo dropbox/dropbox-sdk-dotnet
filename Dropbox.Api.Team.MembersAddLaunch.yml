@@ -1,0 +1,288 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.MembersAddLaunch
+  commentId: T:Dropbox.Api.Team.MembersAddLaunch
+  id: MembersAddLaunch
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.MembersAddLaunch.#ctor
+  - Dropbox.Api.Team.MembersAddLaunch.AsAsyncJobId
+  - Dropbox.Api.Team.MembersAddLaunch.AsComplete
+  - Dropbox.Api.Team.MembersAddLaunch.IsAsyncJobId
+  - Dropbox.Api.Team.MembersAddLaunch.IsComplete
+  langs:
+  - csharp
+  - vb
+  name: MembersAddLaunch
+  nameWithType: MembersAddLaunch
+  fullName: Dropbox.Api.Team.MembersAddLaunch
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersAddLaunch.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: MembersAddLaunch
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersAddLaunch.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The members add launch object</p>\n"
+  example: []
+  syntax:
+    content: 'public class MembersAddLaunch : object'
+    content.vb: >-
+      Public Class MembersAddLaunch
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Team.MembersAddLaunch.AsyncJobId
+  - Dropbox.Api.Team.MembersAddLaunch.Complete
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.MembersAddLaunch.#ctor
+  commentId: M:Dropbox.Api.Team.MembersAddLaunch.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.MembersAddLaunch
+  langs:
+  - csharp
+  - vb
+  name: MembersAddLaunch()
+  nameWithType: MembersAddLaunch.MembersAddLaunch()
+  fullName: Dropbox.Api.Team.MembersAddLaunch.MembersAddLaunch()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersAddLaunch.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersAddLaunch.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.MembersAddLaunch\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public MembersAddLaunch()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.MembersAddLaunch.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.MembersAddLaunch.IsComplete
+  commentId: P:Dropbox.Api.Team.MembersAddLaunch.IsComplete
+  id: IsComplete
+  parent: Dropbox.Api.Team.MembersAddLaunch
+  langs:
+  - csharp
+  - vb
+  name: IsComplete
+  nameWithType: MembersAddLaunch.IsComplete
+  fullName: Dropbox.Api.Team.MembersAddLaunch.IsComplete
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersAddLaunch.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsComplete
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersAddLaunch.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is Complete</p>\n"
+  example: []
+  syntax:
+    content: public bool IsComplete { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsComplete As Boolean
+  overload: Dropbox.Api.Team.MembersAddLaunch.IsComplete*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersAddLaunch.AsComplete
+  commentId: P:Dropbox.Api.Team.MembersAddLaunch.AsComplete
+  id: AsComplete
+  parent: Dropbox.Api.Team.MembersAddLaunch
+  langs:
+  - csharp
+  - vb
+  name: AsComplete
+  nameWithType: MembersAddLaunch.AsComplete
+  fullName: Dropbox.Api.Team.MembersAddLaunch.AsComplete
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersAddLaunch.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsComplete
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersAddLaunch.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a Complete, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MembersAddLaunch.Complete AsComplete { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.MembersAddLaunch.Complete
+    content.vb: Public ReadOnly Property AsComplete As MembersAddLaunch.Complete
+  overload: Dropbox.Api.Team.MembersAddLaunch.AsComplete*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersAddLaunch.IsAsyncJobId
+  commentId: P:Dropbox.Api.Team.MembersAddLaunch.IsAsyncJobId
+  id: IsAsyncJobId
+  parent: Dropbox.Api.Team.MembersAddLaunch
+  langs:
+  - csharp
+  - vb
+  name: IsAsyncJobId
+  nameWithType: MembersAddLaunch.IsAsyncJobId
+  fullName: Dropbox.Api.Team.MembersAddLaunch.IsAsyncJobId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersAddLaunch.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsAsyncJobId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersAddLaunch.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is AsyncJobId</p>\n"
+  example: []
+  syntax:
+    content: public bool IsAsyncJobId { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsAsyncJobId As Boolean
+  overload: Dropbox.Api.Team.MembersAddLaunch.IsAsyncJobId*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersAddLaunch.AsAsyncJobId
+  commentId: P:Dropbox.Api.Team.MembersAddLaunch.AsAsyncJobId
+  id: AsAsyncJobId
+  parent: Dropbox.Api.Team.MembersAddLaunch
+  langs:
+  - csharp
+  - vb
+  name: AsAsyncJobId
+  nameWithType: MembersAddLaunch.AsAsyncJobId
+  fullName: Dropbox.Api.Team.MembersAddLaunch.AsAsyncJobId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersAddLaunch.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsAsyncJobId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersAddLaunch.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a AsyncJobId, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MembersAddLaunch.AsyncJobId AsAsyncJobId { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.MembersAddLaunch.AsyncJobId
+    content.vb: Public ReadOnly Property AsAsyncJobId As MembersAddLaunch.AsyncJobId
+  overload: Dropbox.Api.Team.MembersAddLaunch.AsAsyncJobId*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.MembersAddLaunch
+  commentId: T:Dropbox.Api.Team.MembersAddLaunch
+  parent: Dropbox.Api.Team
+  name: MembersAddLaunch
+  nameWithType: MembersAddLaunch
+  fullName: Dropbox.Api.Team.MembersAddLaunch
+- uid: Dropbox.Api.Team.MembersAddLaunch.#ctor*
+  commentId: Overload:Dropbox.Api.Team.MembersAddLaunch.#ctor
+  name: MembersAddLaunch
+  nameWithType: MembersAddLaunch.MembersAddLaunch
+  fullName: Dropbox.Api.Team.MembersAddLaunch.MembersAddLaunch
+- uid: Dropbox.Api.Team.MembersAddLaunch.IsComplete*
+  commentId: Overload:Dropbox.Api.Team.MembersAddLaunch.IsComplete
+  name: IsComplete
+  nameWithType: MembersAddLaunch.IsComplete
+  fullName: Dropbox.Api.Team.MembersAddLaunch.IsComplete
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Team.MembersAddLaunch.AsComplete*
+  commentId: Overload:Dropbox.Api.Team.MembersAddLaunch.AsComplete
+  name: AsComplete
+  nameWithType: MembersAddLaunch.AsComplete
+  fullName: Dropbox.Api.Team.MembersAddLaunch.AsComplete
+- uid: Dropbox.Api.Team.MembersAddLaunch.Complete
+  commentId: T:Dropbox.Api.Team.MembersAddLaunch.Complete
+  parent: Dropbox.Api.Team
+  name: MembersAddLaunch.Complete
+  nameWithType: MembersAddLaunch.Complete
+  fullName: Dropbox.Api.Team.MembersAddLaunch.Complete
+- uid: Dropbox.Api.Team.MembersAddLaunch.IsAsyncJobId*
+  commentId: Overload:Dropbox.Api.Team.MembersAddLaunch.IsAsyncJobId
+  name: IsAsyncJobId
+  nameWithType: MembersAddLaunch.IsAsyncJobId
+  fullName: Dropbox.Api.Team.MembersAddLaunch.IsAsyncJobId
+- uid: Dropbox.Api.Team.MembersAddLaunch.AsAsyncJobId*
+  commentId: Overload:Dropbox.Api.Team.MembersAddLaunch.AsAsyncJobId
+  name: AsAsyncJobId
+  nameWithType: MembersAddLaunch.AsAsyncJobId
+  fullName: Dropbox.Api.Team.MembersAddLaunch.AsAsyncJobId
+- uid: Dropbox.Api.Team.MembersAddLaunch.AsyncJobId
+  commentId: T:Dropbox.Api.Team.MembersAddLaunch.AsyncJobId
+  parent: Dropbox.Api.Team
+  name: MembersAddLaunch.AsyncJobId
+  nameWithType: MembersAddLaunch.AsyncJobId
+  fullName: Dropbox.Api.Team.MembersAddLaunch.AsyncJobId
+shouldSkipMarkup: true

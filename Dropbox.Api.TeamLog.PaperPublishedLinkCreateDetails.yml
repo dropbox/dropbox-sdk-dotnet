@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.PaperPublishedLinkCreateDetails
+  commentId: T:Dropbox.Api.TeamLog.PaperPublishedLinkCreateDetails
+  id: PaperPublishedLinkCreateDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.PaperPublishedLinkCreateDetails.#ctor
+  - Dropbox.Api.TeamLog.PaperPublishedLinkCreateDetails.#ctor(System.String)
+  - Dropbox.Api.TeamLog.PaperPublishedLinkCreateDetails.EventUuid
+  langs:
+  - csharp
+  - vb
+  name: PaperPublishedLinkCreateDetails
+  nameWithType: PaperPublishedLinkCreateDetails
+  fullName: Dropbox.Api.TeamLog.PaperPublishedLinkCreateDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperPublishedLinkCreateDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PaperPublishedLinkCreateDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperPublishedLinkCreateDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Published doc.</p>\n"
+  example: []
+  syntax:
+    content: 'public class PaperPublishedLinkCreateDetails : object'
+    content.vb: >-
+      Public Class PaperPublishedLinkCreateDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.PaperPublishedLinkCreateDetails.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.PaperPublishedLinkCreateDetails.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.PaperPublishedLinkCreateDetails
+  langs:
+  - csharp
+  - vb
+  name: PaperPublishedLinkCreateDetails(String)
+  nameWithType: PaperPublishedLinkCreateDetails.PaperPublishedLinkCreateDetails(String)
+  fullName: Dropbox.Api.TeamLog.PaperPublishedLinkCreateDetails.PaperPublishedLinkCreateDetails(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperPublishedLinkCreateDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperPublishedLinkCreateDetails.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.PaperPublishedLinkCreateDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public PaperPublishedLinkCreateDetails(string eventUuid)
+    parameters:
+    - id: eventUuid
+      type: System.String
+      description: Event unique identifier.
+    content.vb: Public Sub New(eventUuid As String)
+  overload: Dropbox.Api.TeamLog.PaperPublishedLinkCreateDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.PaperPublishedLinkCreateDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.PaperPublishedLinkCreateDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.PaperPublishedLinkCreateDetails
+  langs:
+  - csharp
+  - vb
+  name: PaperPublishedLinkCreateDetails()
+  nameWithType: PaperPublishedLinkCreateDetails.PaperPublishedLinkCreateDetails()
+  fullName: Dropbox.Api.TeamLog.PaperPublishedLinkCreateDetails.PaperPublishedLinkCreateDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperPublishedLinkCreateDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperPublishedLinkCreateDetails.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.PaperPublishedLinkCreateDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public PaperPublishedLinkCreateDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.PaperPublishedLinkCreateDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.PaperPublishedLinkCreateDetails.EventUuid
+  commentId: P:Dropbox.Api.TeamLog.PaperPublishedLinkCreateDetails.EventUuid
+  id: EventUuid
+  parent: Dropbox.Api.TeamLog.PaperPublishedLinkCreateDetails
+  langs:
+  - csharp
+  - vb
+  name: EventUuid
+  nameWithType: PaperPublishedLinkCreateDetails.EventUuid
+  fullName: Dropbox.Api.TeamLog.PaperPublishedLinkCreateDetails.EventUuid
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperPublishedLinkCreateDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: EventUuid
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperPublishedLinkCreateDetails.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Event unique identifier.</p>\n"
+  example: []
+  syntax:
+    content: public string EventUuid { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property EventUuid As String
+  overload: Dropbox.Api.TeamLog.PaperPublishedLinkCreateDetails.EventUuid*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.PaperPublishedLinkCreateDetails
+  commentId: T:Dropbox.Api.TeamLog.PaperPublishedLinkCreateDetails
+  parent: Dropbox.Api.TeamLog
+  name: PaperPublishedLinkCreateDetails
+  nameWithType: PaperPublishedLinkCreateDetails
+  fullName: Dropbox.Api.TeamLog.PaperPublishedLinkCreateDetails
+- uid: Dropbox.Api.TeamLog.PaperPublishedLinkCreateDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.PaperPublishedLinkCreateDetails.#ctor
+  name: PaperPublishedLinkCreateDetails
+  nameWithType: PaperPublishedLinkCreateDetails.PaperPublishedLinkCreateDetails
+  fullName: Dropbox.Api.TeamLog.PaperPublishedLinkCreateDetails.PaperPublishedLinkCreateDetails
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.PaperPublishedLinkCreateDetails.EventUuid*
+  commentId: Overload:Dropbox.Api.TeamLog.PaperPublishedLinkCreateDetails.EventUuid
+  name: EventUuid
+  nameWithType: PaperPublishedLinkCreateDetails.EventUuid
+  fullName: Dropbox.Api.TeamLog.PaperPublishedLinkCreateDetails.EventUuid
+shouldSkipMarkup: true

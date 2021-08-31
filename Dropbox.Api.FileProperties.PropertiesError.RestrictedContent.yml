@@ -1,0 +1,176 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.FileProperties.PropertiesError.RestrictedContent
+  commentId: T:Dropbox.Api.FileProperties.PropertiesError.RestrictedContent
+  id: PropertiesError.RestrictedContent
+  parent: Dropbox.Api.FileProperties
+  children:
+  - Dropbox.Api.FileProperties.PropertiesError.RestrictedContent.Instance
+  langs:
+  - csharp
+  - vb
+  name: PropertiesError.RestrictedContent
+  nameWithType: PropertiesError.RestrictedContent
+  fullName: Dropbox.Api.FileProperties.PropertiesError.RestrictedContent
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertiesError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: RestrictedContent
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertiesError.cs
+    startLine: 510
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>You do not have permission to modify this template.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class RestrictedContent : PropertiesError'
+    content.vb: >-
+      Public NotInheritable Class RestrictedContent
+          Inherits PropertiesError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.FileProperties.PropertiesError
+  inheritedMembers:
+  - Dropbox.Api.FileProperties.PropertiesError.IsPath
+  - Dropbox.Api.FileProperties.PropertiesError.AsPath
+  - Dropbox.Api.FileProperties.PropertiesError.IsUnsupportedFolder
+  - Dropbox.Api.FileProperties.PropertiesError.AsUnsupportedFolder
+  - Dropbox.Api.FileProperties.PropertiesError.IsTemplateNotFound
+  - Dropbox.Api.FileProperties.PropertiesError.AsTemplateNotFound
+  - Dropbox.Api.FileProperties.PropertiesError.IsRestrictedContent
+  - Dropbox.Api.FileProperties.PropertiesError.AsRestrictedContent
+  - Dropbox.Api.FileProperties.PropertiesError.IsOther
+  - Dropbox.Api.FileProperties.PropertiesError.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.FileProperties.PropertiesError.RestrictedContent.Instance
+  commentId: F:Dropbox.Api.FileProperties.PropertiesError.RestrictedContent.Instance
+  id: Instance
+  parent: Dropbox.Api.FileProperties.PropertiesError.RestrictedContent
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: PropertiesError.RestrictedContent.Instance
+  fullName: Dropbox.Api.FileProperties.PropertiesError.RestrictedContent.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertiesError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertiesError.cs
+    startLine: 535
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>A singleton instance of RestrictedContent</p>\n"
+  example: []
+  syntax:
+    content: public static readonly PropertiesError.RestrictedContent Instance
+    return:
+      type: Dropbox.Api.FileProperties.PropertiesError.RestrictedContent
+    content.vb: Public Shared ReadOnly Instance As PropertiesError.RestrictedContent
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.FileProperties
+  commentId: N:Dropbox.Api.FileProperties
+  name: Dropbox.Api.FileProperties
+  nameWithType: Dropbox.Api.FileProperties
+  fullName: Dropbox.Api.FileProperties
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.FileProperties.PropertiesError
+  commentId: T:Dropbox.Api.FileProperties.PropertiesError
+  parent: Dropbox.Api.FileProperties
+  name: PropertiesError
+  nameWithType: PropertiesError
+  fullName: Dropbox.Api.FileProperties.PropertiesError
+- uid: Dropbox.Api.FileProperties.PropertiesError.IsPath
+  commentId: P:Dropbox.Api.FileProperties.PropertiesError.IsPath
+  parent: Dropbox.Api.FileProperties.PropertiesError
+  name: IsPath
+  nameWithType: PropertiesError.IsPath
+  fullName: Dropbox.Api.FileProperties.PropertiesError.IsPath
+- uid: Dropbox.Api.FileProperties.PropertiesError.AsPath
+  commentId: P:Dropbox.Api.FileProperties.PropertiesError.AsPath
+  parent: Dropbox.Api.FileProperties.PropertiesError
+  name: AsPath
+  nameWithType: PropertiesError.AsPath
+  fullName: Dropbox.Api.FileProperties.PropertiesError.AsPath
+- uid: Dropbox.Api.FileProperties.PropertiesError.IsUnsupportedFolder
+  commentId: P:Dropbox.Api.FileProperties.PropertiesError.IsUnsupportedFolder
+  parent: Dropbox.Api.FileProperties.PropertiesError
+  name: IsUnsupportedFolder
+  nameWithType: PropertiesError.IsUnsupportedFolder
+  fullName: Dropbox.Api.FileProperties.PropertiesError.IsUnsupportedFolder
+- uid: Dropbox.Api.FileProperties.PropertiesError.AsUnsupportedFolder
+  commentId: P:Dropbox.Api.FileProperties.PropertiesError.AsUnsupportedFolder
+  parent: Dropbox.Api.FileProperties.PropertiesError
+  name: AsUnsupportedFolder
+  nameWithType: PropertiesError.AsUnsupportedFolder
+  fullName: Dropbox.Api.FileProperties.PropertiesError.AsUnsupportedFolder
+- uid: Dropbox.Api.FileProperties.PropertiesError.IsTemplateNotFound
+  commentId: P:Dropbox.Api.FileProperties.PropertiesError.IsTemplateNotFound
+  parent: Dropbox.Api.FileProperties.PropertiesError
+  name: IsTemplateNotFound
+  nameWithType: PropertiesError.IsTemplateNotFound
+  fullName: Dropbox.Api.FileProperties.PropertiesError.IsTemplateNotFound
+- uid: Dropbox.Api.FileProperties.PropertiesError.AsTemplateNotFound
+  commentId: P:Dropbox.Api.FileProperties.PropertiesError.AsTemplateNotFound
+  parent: Dropbox.Api.FileProperties.PropertiesError
+  name: AsTemplateNotFound
+  nameWithType: PropertiesError.AsTemplateNotFound
+  fullName: Dropbox.Api.FileProperties.PropertiesError.AsTemplateNotFound
+- uid: Dropbox.Api.FileProperties.PropertiesError.IsRestrictedContent
+  commentId: P:Dropbox.Api.FileProperties.PropertiesError.IsRestrictedContent
+  parent: Dropbox.Api.FileProperties.PropertiesError
+  name: IsRestrictedContent
+  nameWithType: PropertiesError.IsRestrictedContent
+  fullName: Dropbox.Api.FileProperties.PropertiesError.IsRestrictedContent
+- uid: Dropbox.Api.FileProperties.PropertiesError.AsRestrictedContent
+  commentId: P:Dropbox.Api.FileProperties.PropertiesError.AsRestrictedContent
+  parent: Dropbox.Api.FileProperties.PropertiesError
+  name: AsRestrictedContent
+  nameWithType: PropertiesError.AsRestrictedContent
+  fullName: Dropbox.Api.FileProperties.PropertiesError.AsRestrictedContent
+- uid: Dropbox.Api.FileProperties.PropertiesError.IsOther
+  commentId: P:Dropbox.Api.FileProperties.PropertiesError.IsOther
+  parent: Dropbox.Api.FileProperties.PropertiesError
+  name: IsOther
+  nameWithType: PropertiesError.IsOther
+  fullName: Dropbox.Api.FileProperties.PropertiesError.IsOther
+- uid: Dropbox.Api.FileProperties.PropertiesError.AsOther
+  commentId: P:Dropbox.Api.FileProperties.PropertiesError.AsOther
+  parent: Dropbox.Api.FileProperties.PropertiesError
+  name: AsOther
+  nameWithType: PropertiesError.AsOther
+  fullName: Dropbox.Api.FileProperties.PropertiesError.AsOther
+- uid: Dropbox.Api.FileProperties.PropertiesError.RestrictedContent
+  commentId: T:Dropbox.Api.FileProperties.PropertiesError.RestrictedContent
+  parent: Dropbox.Api.FileProperties
+  name: PropertiesError.RestrictedContent
+  nameWithType: PropertiesError.RestrictedContent
+  fullName: Dropbox.Api.FileProperties.PropertiesError.RestrictedContent
+shouldSkipMarkup: true

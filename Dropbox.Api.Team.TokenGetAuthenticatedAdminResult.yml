@@ -1,0 +1,191 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.TokenGetAuthenticatedAdminResult
+  commentId: T:Dropbox.Api.Team.TokenGetAuthenticatedAdminResult
+  id: TokenGetAuthenticatedAdminResult
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.TokenGetAuthenticatedAdminResult.#ctor
+  - Dropbox.Api.Team.TokenGetAuthenticatedAdminResult.#ctor(Dropbox.Api.Team.TeamMemberProfile)
+  - Dropbox.Api.Team.TokenGetAuthenticatedAdminResult.AdminProfile
+  langs:
+  - csharp
+  - vb
+  name: TokenGetAuthenticatedAdminResult
+  nameWithType: TokenGetAuthenticatedAdminResult
+  fullName: Dropbox.Api.Team.TokenGetAuthenticatedAdminResult
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TokenGetAuthenticatedAdminResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TokenGetAuthenticatedAdminResult
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TokenGetAuthenticatedAdminResult.cs
+    startLine: 17
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Results for <xref href=\"Dropbox.Api.Team.Routes.TeamTeamRoutes.TokenGetAuthenticatedAdminAsync\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+  example: []
+  syntax:
+    content: 'public class TokenGetAuthenticatedAdminResult : object'
+    content.vb: >-
+      Public Class TokenGetAuthenticatedAdminResult
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.TokenGetAuthenticatedAdminResult.#ctor(Dropbox.Api.Team.TeamMemberProfile)
+  commentId: M:Dropbox.Api.Team.TokenGetAuthenticatedAdminResult.#ctor(Dropbox.Api.Team.TeamMemberProfile)
+  id: '#ctor(Dropbox.Api.Team.TeamMemberProfile)'
+  parent: Dropbox.Api.Team.TokenGetAuthenticatedAdminResult
+  langs:
+  - csharp
+  - vb
+  name: TokenGetAuthenticatedAdminResult(TeamMemberProfile)
+  nameWithType: TokenGetAuthenticatedAdminResult.TokenGetAuthenticatedAdminResult(TeamMemberProfile)
+  fullName: Dropbox.Api.Team.TokenGetAuthenticatedAdminResult.TokenGetAuthenticatedAdminResult(Dropbox.Api.Team.TeamMemberProfile)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TokenGetAuthenticatedAdminResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TokenGetAuthenticatedAdminResult.cs
+    startLine: 36
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.TokenGetAuthenticatedAdminResult\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public TokenGetAuthenticatedAdminResult(TeamMemberProfile adminProfile)
+    parameters:
+    - id: adminProfile
+      type: Dropbox.Api.Team.TeamMemberProfile
+      description: The admin who authorized the token.
+    content.vb: Public Sub New(adminProfile As TeamMemberProfile)
+  overload: Dropbox.Api.Team.TokenGetAuthenticatedAdminResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.TokenGetAuthenticatedAdminResult.#ctor
+  commentId: M:Dropbox.Api.Team.TokenGetAuthenticatedAdminResult.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.TokenGetAuthenticatedAdminResult
+  langs:
+  - csharp
+  - vb
+  name: TokenGetAuthenticatedAdminResult()
+  nameWithType: TokenGetAuthenticatedAdminResult.TokenGetAuthenticatedAdminResult()
+  fullName: Dropbox.Api.Team.TokenGetAuthenticatedAdminResult.TokenGetAuthenticatedAdminResult()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TokenGetAuthenticatedAdminResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TokenGetAuthenticatedAdminResult.cs
+    startLine: 52
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.TokenGetAuthenticatedAdminResult\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public TokenGetAuthenticatedAdminResult()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.TokenGetAuthenticatedAdminResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.TokenGetAuthenticatedAdminResult.AdminProfile
+  commentId: P:Dropbox.Api.Team.TokenGetAuthenticatedAdminResult.AdminProfile
+  id: AdminProfile
+  parent: Dropbox.Api.Team.TokenGetAuthenticatedAdminResult
+  langs:
+  - csharp
+  - vb
+  name: AdminProfile
+  nameWithType: TokenGetAuthenticatedAdminResult.AdminProfile
+  fullName: Dropbox.Api.Team.TokenGetAuthenticatedAdminResult.AdminProfile
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TokenGetAuthenticatedAdminResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AdminProfile
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TokenGetAuthenticatedAdminResult.cs
+    startLine: 60
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The admin who authorized the token.</p>\n"
+  example: []
+  syntax:
+    content: public TeamMemberProfile AdminProfile { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.TeamMemberProfile
+    content.vb: Public Property AdminProfile As TeamMemberProfile
+  overload: Dropbox.Api.Team.TokenGetAuthenticatedAdminResult.AdminProfile*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Team.Routes.TeamTeamRoutes.TokenGetAuthenticatedAdminAsync
+  commentId: M:Dropbox.Api.Team.Routes.TeamTeamRoutes.TokenGetAuthenticatedAdminAsync
+  isExternal: true
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.TokenGetAuthenticatedAdminResult
+  commentId: T:Dropbox.Api.Team.TokenGetAuthenticatedAdminResult
+  parent: Dropbox.Api.Team
+  name: TokenGetAuthenticatedAdminResult
+  nameWithType: TokenGetAuthenticatedAdminResult
+  fullName: Dropbox.Api.Team.TokenGetAuthenticatedAdminResult
+- uid: Dropbox.Api.Team.TokenGetAuthenticatedAdminResult.#ctor*
+  commentId: Overload:Dropbox.Api.Team.TokenGetAuthenticatedAdminResult.#ctor
+  name: TokenGetAuthenticatedAdminResult
+  nameWithType: TokenGetAuthenticatedAdminResult.TokenGetAuthenticatedAdminResult
+  fullName: Dropbox.Api.Team.TokenGetAuthenticatedAdminResult.TokenGetAuthenticatedAdminResult
+- uid: Dropbox.Api.Team.TeamMemberProfile
+  commentId: T:Dropbox.Api.Team.TeamMemberProfile
+  parent: Dropbox.Api.Team
+  name: TeamMemberProfile
+  nameWithType: TeamMemberProfile
+  fullName: Dropbox.Api.Team.TeamMemberProfile
+- uid: Dropbox.Api.Team.TokenGetAuthenticatedAdminResult.AdminProfile*
+  commentId: Overload:Dropbox.Api.Team.TokenGetAuthenticatedAdminResult.AdminProfile
+  name: AdminProfile
+  nameWithType: TokenGetAuthenticatedAdminResult.AdminProfile
+  fullName: Dropbox.Api.Team.TokenGetAuthenticatedAdminResult.AdminProfile
+shouldSkipMarkup: true

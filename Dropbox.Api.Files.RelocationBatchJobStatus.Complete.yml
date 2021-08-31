@@ -1,0 +1,201 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.RelocationBatchJobStatus.Complete
+  commentId: T:Dropbox.Api.Files.RelocationBatchJobStatus.Complete
+  id: RelocationBatchJobStatus.Complete
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.RelocationBatchJobStatus.Complete.#ctor(Dropbox.Api.Files.RelocationBatchResult)
+  - Dropbox.Api.Files.RelocationBatchJobStatus.Complete.Value
+  langs:
+  - csharp
+  - vb
+  name: RelocationBatchJobStatus.Complete
+  nameWithType: RelocationBatchJobStatus.Complete
+  fullName: Dropbox.Api.Files.RelocationBatchJobStatus.Complete
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchJobStatus.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Complete
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchJobStatus.cs
+    startLine: 185
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The copy or move batch job has finished.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Complete : RelocationBatchJobStatus'
+    content.vb: >-
+      Public NotInheritable Class Complete
+          Inherits RelocationBatchJobStatus
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Files.RelocationBatchJobStatus
+  inheritedMembers:
+  - Dropbox.Api.Files.RelocationBatchJobStatus.IsComplete
+  - Dropbox.Api.Files.RelocationBatchJobStatus.AsComplete
+  - Dropbox.Api.Files.RelocationBatchJobStatus.IsFailed
+  - Dropbox.Api.Files.RelocationBatchJobStatus.AsFailed
+  - Dropbox.Api.Files.RelocationBatchJobStatus.IsInProgress
+  - Dropbox.Api.Files.RelocationBatchJobStatus.AsInProgress
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Files.RelocationBatchJobStatus.Complete.#ctor(Dropbox.Api.Files.RelocationBatchResult)
+  commentId: M:Dropbox.Api.Files.RelocationBatchJobStatus.Complete.#ctor(Dropbox.Api.Files.RelocationBatchResult)
+  id: '#ctor(Dropbox.Api.Files.RelocationBatchResult)'
+  parent: Dropbox.Api.Files.RelocationBatchJobStatus.Complete
+  langs:
+  - csharp
+  - vb
+  name: Complete(RelocationBatchResult)
+  nameWithType: RelocationBatchJobStatus.Complete.Complete(RelocationBatchResult)
+  fullName: Dropbox.Api.Files.RelocationBatchJobStatus.Complete.Complete(Dropbox.Api.Files.RelocationBatchResult)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchJobStatus.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchJobStatus.cs
+    startLine: 203
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.RelocationBatchJobStatus.Complete\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public Complete(RelocationBatchResult value)
+    parameters:
+    - id: value
+      type: Dropbox.Api.Files.RelocationBatchResult
+      description: The value
+    content.vb: Public Sub New(value As RelocationBatchResult)
+  overload: Dropbox.Api.Files.RelocationBatchJobStatus.Complete.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.RelocationBatchJobStatus.Complete.Value
+  commentId: P:Dropbox.Api.Files.RelocationBatchJobStatus.Complete.Value
+  id: Value
+  parent: Dropbox.Api.Files.RelocationBatchJobStatus.Complete
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: RelocationBatchJobStatus.Complete.Value
+  fullName: Dropbox.Api.Files.RelocationBatchJobStatus.Complete.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchJobStatus.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchJobStatus.cs
+    startLine: 217
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public RelocationBatchResult Value { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.RelocationBatchResult
+    content.vb: Public ReadOnly Property Value As RelocationBatchResult
+  overload: Dropbox.Api.Files.RelocationBatchJobStatus.Complete.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.RelocationBatchJobStatus
+  commentId: T:Dropbox.Api.Files.RelocationBatchJobStatus
+  parent: Dropbox.Api.Files
+  name: RelocationBatchJobStatus
+  nameWithType: RelocationBatchJobStatus
+  fullName: Dropbox.Api.Files.RelocationBatchJobStatus
+- uid: Dropbox.Api.Files.RelocationBatchJobStatus.IsComplete
+  commentId: P:Dropbox.Api.Files.RelocationBatchJobStatus.IsComplete
+  parent: Dropbox.Api.Files.RelocationBatchJobStatus
+  name: IsComplete
+  nameWithType: RelocationBatchJobStatus.IsComplete
+  fullName: Dropbox.Api.Files.RelocationBatchJobStatus.IsComplete
+- uid: Dropbox.Api.Files.RelocationBatchJobStatus.AsComplete
+  commentId: P:Dropbox.Api.Files.RelocationBatchJobStatus.AsComplete
+  parent: Dropbox.Api.Files.RelocationBatchJobStatus
+  name: AsComplete
+  nameWithType: RelocationBatchJobStatus.AsComplete
+  fullName: Dropbox.Api.Files.RelocationBatchJobStatus.AsComplete
+- uid: Dropbox.Api.Files.RelocationBatchJobStatus.IsFailed
+  commentId: P:Dropbox.Api.Files.RelocationBatchJobStatus.IsFailed
+  parent: Dropbox.Api.Files.RelocationBatchJobStatus
+  name: IsFailed
+  nameWithType: RelocationBatchJobStatus.IsFailed
+  fullName: Dropbox.Api.Files.RelocationBatchJobStatus.IsFailed
+- uid: Dropbox.Api.Files.RelocationBatchJobStatus.AsFailed
+  commentId: P:Dropbox.Api.Files.RelocationBatchJobStatus.AsFailed
+  parent: Dropbox.Api.Files.RelocationBatchJobStatus
+  name: AsFailed
+  nameWithType: RelocationBatchJobStatus.AsFailed
+  fullName: Dropbox.Api.Files.RelocationBatchJobStatus.AsFailed
+- uid: Dropbox.Api.Files.RelocationBatchJobStatus.IsInProgress
+  commentId: P:Dropbox.Api.Files.RelocationBatchJobStatus.IsInProgress
+  parent: Dropbox.Api.Files.RelocationBatchJobStatus
+  name: IsInProgress
+  nameWithType: RelocationBatchJobStatus.IsInProgress
+  fullName: Dropbox.Api.Files.RelocationBatchJobStatus.IsInProgress
+- uid: Dropbox.Api.Files.RelocationBatchJobStatus.AsInProgress
+  commentId: P:Dropbox.Api.Files.RelocationBatchJobStatus.AsInProgress
+  parent: Dropbox.Api.Files.RelocationBatchJobStatus
+  name: AsInProgress
+  nameWithType: RelocationBatchJobStatus.AsInProgress
+  fullName: Dropbox.Api.Files.RelocationBatchJobStatus.AsInProgress
+- uid: Dropbox.Api.Files.RelocationBatchJobStatus.Complete
+  commentId: T:Dropbox.Api.Files.RelocationBatchJobStatus.Complete
+  parent: Dropbox.Api.Files
+  name: RelocationBatchJobStatus.Complete
+  nameWithType: RelocationBatchJobStatus.Complete
+  fullName: Dropbox.Api.Files.RelocationBatchJobStatus.Complete
+- uid: Dropbox.Api.Files.RelocationBatchJobStatus.Complete.#ctor*
+  commentId: Overload:Dropbox.Api.Files.RelocationBatchJobStatus.Complete.#ctor
+  name: Complete
+  nameWithType: RelocationBatchJobStatus.Complete.Complete
+  fullName: Dropbox.Api.Files.RelocationBatchJobStatus.Complete.Complete
+- uid: Dropbox.Api.Files.RelocationBatchResult
+  commentId: T:Dropbox.Api.Files.RelocationBatchResult
+  parent: Dropbox.Api.Files
+  name: RelocationBatchResult
+  nameWithType: RelocationBatchResult
+  fullName: Dropbox.Api.Files.RelocationBatchResult
+- uid: Dropbox.Api.Files.RelocationBatchJobStatus.Complete.Value*
+  commentId: Overload:Dropbox.Api.Files.RelocationBatchJobStatus.Complete.Value
+  name: Value
+  nameWithType: RelocationBatchJobStatus.Complete.Value
+  fullName: Dropbox.Api.Files.RelocationBatchJobStatus.Complete.Value
+shouldSkipMarkup: true

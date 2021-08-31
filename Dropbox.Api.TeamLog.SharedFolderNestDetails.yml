@@ -1,0 +1,331 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.SharedFolderNestDetails
+  commentId: T:Dropbox.Api.TeamLog.SharedFolderNestDetails
+  id: SharedFolderNestDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.SharedFolderNestDetails.#ctor
+  - Dropbox.Api.TeamLog.SharedFolderNestDetails.#ctor(System.String,System.String,System.String,System.String)
+  - Dropbox.Api.TeamLog.SharedFolderNestDetails.NewNsPath
+  - Dropbox.Api.TeamLog.SharedFolderNestDetails.NewParentNsId
+  - Dropbox.Api.TeamLog.SharedFolderNestDetails.PreviousNsPath
+  - Dropbox.Api.TeamLog.SharedFolderNestDetails.PreviousParentNsId
+  langs:
+  - csharp
+  - vb
+  name: SharedFolderNestDetails
+  nameWithType: SharedFolderNestDetails
+  fullName: Dropbox.Api.TeamLog.SharedFolderNestDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderNestDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SharedFolderNestDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderNestDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Changed parent of shared folder.</p>\n"
+  example: []
+  syntax:
+    content: 'public class SharedFolderNestDetails : object'
+    content.vb: >-
+      Public Class SharedFolderNestDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.SharedFolderNestDetails.#ctor(System.String,System.String,System.String,System.String)
+  commentId: M:Dropbox.Api.TeamLog.SharedFolderNestDetails.#ctor(System.String,System.String,System.String,System.String)
+  id: '#ctor(System.String,System.String,System.String,System.String)'
+  parent: Dropbox.Api.TeamLog.SharedFolderNestDetails
+  langs:
+  - csharp
+  - vb
+  name: SharedFolderNestDetails(String, String, String, String)
+  nameWithType: SharedFolderNestDetails.SharedFolderNestDetails(String, String, String, String)
+  fullName: Dropbox.Api.TeamLog.SharedFolderNestDetails.SharedFolderNestDetails(System.String, System.String, System.String, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderNestDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderNestDetails.cs
+    startLine: 37
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SharedFolderNestDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public SharedFolderNestDetails(string previousParentNsId = null, string newParentNsId = null, string previousNsPath = null, string newNsPath = null)
+    parameters:
+    - id: previousParentNsId
+      type: System.String
+      description: Previous parent namespace ID.
+    - id: newParentNsId
+      type: System.String
+      description: New parent namespace ID.
+    - id: previousNsPath
+      type: System.String
+      description: Previous namespace path.
+    - id: newNsPath
+      type: System.String
+      description: New namespace path.
+    content.vb: Public Sub New(previousParentNsId As String = Nothing, newParentNsId As String = Nothing, previousNsPath As String = Nothing, newNsPath As String = Nothing)
+  overload: Dropbox.Api.TeamLog.SharedFolderNestDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SharedFolderNestDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.SharedFolderNestDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.SharedFolderNestDetails
+  langs:
+  - csharp
+  - vb
+  name: SharedFolderNestDetails()
+  nameWithType: SharedFolderNestDetails.SharedFolderNestDetails()
+  fullName: Dropbox.Api.TeamLog.SharedFolderNestDetails.SharedFolderNestDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderNestDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderNestDetails.cs
+    startLine: 54
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SharedFolderNestDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public SharedFolderNestDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.SharedFolderNestDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SharedFolderNestDetails.PreviousParentNsId
+  commentId: P:Dropbox.Api.TeamLog.SharedFolderNestDetails.PreviousParentNsId
+  id: PreviousParentNsId
+  parent: Dropbox.Api.TeamLog.SharedFolderNestDetails
+  langs:
+  - csharp
+  - vb
+  name: PreviousParentNsId
+  nameWithType: SharedFolderNestDetails.PreviousParentNsId
+  fullName: Dropbox.Api.TeamLog.SharedFolderNestDetails.PreviousParentNsId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderNestDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PreviousParentNsId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderNestDetails.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Previous parent namespace ID.</p>\n"
+  example: []
+  syntax:
+    content: public string PreviousParentNsId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property PreviousParentNsId As String
+  overload: Dropbox.Api.TeamLog.SharedFolderNestDetails.PreviousParentNsId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.SharedFolderNestDetails.NewParentNsId
+  commentId: P:Dropbox.Api.TeamLog.SharedFolderNestDetails.NewParentNsId
+  id: NewParentNsId
+  parent: Dropbox.Api.TeamLog.SharedFolderNestDetails
+  langs:
+  - csharp
+  - vb
+  name: NewParentNsId
+  nameWithType: SharedFolderNestDetails.NewParentNsId
+  fullName: Dropbox.Api.TeamLog.SharedFolderNestDetails.NewParentNsId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderNestDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NewParentNsId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderNestDetails.cs
+    startLine: 67
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>New parent namespace ID.</p>\n"
+  example: []
+  syntax:
+    content: public string NewParentNsId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property NewParentNsId As String
+  overload: Dropbox.Api.TeamLog.SharedFolderNestDetails.NewParentNsId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.SharedFolderNestDetails.PreviousNsPath
+  commentId: P:Dropbox.Api.TeamLog.SharedFolderNestDetails.PreviousNsPath
+  id: PreviousNsPath
+  parent: Dropbox.Api.TeamLog.SharedFolderNestDetails
+  langs:
+  - csharp
+  - vb
+  name: PreviousNsPath
+  nameWithType: SharedFolderNestDetails.PreviousNsPath
+  fullName: Dropbox.Api.TeamLog.SharedFolderNestDetails.PreviousNsPath
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderNestDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PreviousNsPath
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderNestDetails.cs
+    startLine: 72
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Previous namespace path.</p>\n"
+  example: []
+  syntax:
+    content: public string PreviousNsPath { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property PreviousNsPath As String
+  overload: Dropbox.Api.TeamLog.SharedFolderNestDetails.PreviousNsPath*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.SharedFolderNestDetails.NewNsPath
+  commentId: P:Dropbox.Api.TeamLog.SharedFolderNestDetails.NewNsPath
+  id: NewNsPath
+  parent: Dropbox.Api.TeamLog.SharedFolderNestDetails
+  langs:
+  - csharp
+  - vb
+  name: NewNsPath
+  nameWithType: SharedFolderNestDetails.NewNsPath
+  fullName: Dropbox.Api.TeamLog.SharedFolderNestDetails.NewNsPath
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderNestDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NewNsPath
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderNestDetails.cs
+    startLine: 77
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>New namespace path.</p>\n"
+  example: []
+  syntax:
+    content: public string NewNsPath { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property NewNsPath As String
+  overload: Dropbox.Api.TeamLog.SharedFolderNestDetails.NewNsPath*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.SharedFolderNestDetails
+  commentId: T:Dropbox.Api.TeamLog.SharedFolderNestDetails
+  parent: Dropbox.Api.TeamLog
+  name: SharedFolderNestDetails
+  nameWithType: SharedFolderNestDetails
+  fullName: Dropbox.Api.TeamLog.SharedFolderNestDetails
+- uid: Dropbox.Api.TeamLog.SharedFolderNestDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedFolderNestDetails.#ctor
+  name: SharedFolderNestDetails
+  nameWithType: SharedFolderNestDetails.SharedFolderNestDetails
+  fullName: Dropbox.Api.TeamLog.SharedFolderNestDetails.SharedFolderNestDetails
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.SharedFolderNestDetails.PreviousParentNsId*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedFolderNestDetails.PreviousParentNsId
+  name: PreviousParentNsId
+  nameWithType: SharedFolderNestDetails.PreviousParentNsId
+  fullName: Dropbox.Api.TeamLog.SharedFolderNestDetails.PreviousParentNsId
+- uid: Dropbox.Api.TeamLog.SharedFolderNestDetails.NewParentNsId*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedFolderNestDetails.NewParentNsId
+  name: NewParentNsId
+  nameWithType: SharedFolderNestDetails.NewParentNsId
+  fullName: Dropbox.Api.TeamLog.SharedFolderNestDetails.NewParentNsId
+- uid: Dropbox.Api.TeamLog.SharedFolderNestDetails.PreviousNsPath*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedFolderNestDetails.PreviousNsPath
+  name: PreviousNsPath
+  nameWithType: SharedFolderNestDetails.PreviousNsPath
+  fullName: Dropbox.Api.TeamLog.SharedFolderNestDetails.PreviousNsPath
+- uid: Dropbox.Api.TeamLog.SharedFolderNestDetails.NewNsPath*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedFolderNestDetails.NewNsPath
+  name: NewNsPath
+  nameWithType: SharedFolderNestDetails.NewNsPath
+  fullName: Dropbox.Api.TeamLog.SharedFolderNestDetails.NewNsPath
+shouldSkipMarkup: true

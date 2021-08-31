@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.MemberChangeEmailType
+  commentId: T:Dropbox.Api.TeamLog.MemberChangeEmailType
+  id: MemberChangeEmailType
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.MemberChangeEmailType.#ctor
+  - Dropbox.Api.TeamLog.MemberChangeEmailType.#ctor(System.String)
+  - Dropbox.Api.TeamLog.MemberChangeEmailType.Description
+  langs:
+  - csharp
+  - vb
+  name: MemberChangeEmailType
+  nameWithType: MemberChangeEmailType
+  fullName: Dropbox.Api.TeamLog.MemberChangeEmailType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberChangeEmailType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: MemberChangeEmailType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberChangeEmailType.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The member change email type object</p>\n"
+  example: []
+  syntax:
+    content: 'public class MemberChangeEmailType : object'
+    content.vb: >-
+      Public Class MemberChangeEmailType
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.MemberChangeEmailType.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.MemberChangeEmailType.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.MemberChangeEmailType
+  langs:
+  - csharp
+  - vb
+  name: MemberChangeEmailType(String)
+  nameWithType: MemberChangeEmailType.MemberChangeEmailType(String)
+  fullName: Dropbox.Api.TeamLog.MemberChangeEmailType.MemberChangeEmailType(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberChangeEmailType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberChangeEmailType.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.MemberChangeEmailType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public MemberChangeEmailType(string description)
+    parameters:
+    - id: description
+      type: System.String
+      description: The description
+    content.vb: Public Sub New(description As String)
+  overload: Dropbox.Api.TeamLog.MemberChangeEmailType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.MemberChangeEmailType.#ctor
+  commentId: M:Dropbox.Api.TeamLog.MemberChangeEmailType.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.MemberChangeEmailType
+  langs:
+  - csharp
+  - vb
+  name: MemberChangeEmailType()
+  nameWithType: MemberChangeEmailType.MemberChangeEmailType()
+  fullName: Dropbox.Api.TeamLog.MemberChangeEmailType.MemberChangeEmailType()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberChangeEmailType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberChangeEmailType.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.MemberChangeEmailType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public MemberChangeEmailType()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.MemberChangeEmailType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.MemberChangeEmailType.Description
+  commentId: P:Dropbox.Api.TeamLog.MemberChangeEmailType.Description
+  id: Description
+  parent: Dropbox.Api.TeamLog.MemberChangeEmailType
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: MemberChangeEmailType.Description
+  fullName: Dropbox.Api.TeamLog.MemberChangeEmailType.Description
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberChangeEmailType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Description
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberChangeEmailType.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets the description of the member change email type</p>\n"
+  example: []
+  syntax:
+    content: public string Description { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Dropbox.Api.TeamLog.MemberChangeEmailType.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.MemberChangeEmailType
+  commentId: T:Dropbox.Api.TeamLog.MemberChangeEmailType
+  parent: Dropbox.Api.TeamLog
+  name: MemberChangeEmailType
+  nameWithType: MemberChangeEmailType
+  fullName: Dropbox.Api.TeamLog.MemberChangeEmailType
+- uid: Dropbox.Api.TeamLog.MemberChangeEmailType.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberChangeEmailType.#ctor
+  name: MemberChangeEmailType
+  nameWithType: MemberChangeEmailType.MemberChangeEmailType
+  fullName: Dropbox.Api.TeamLog.MemberChangeEmailType.MemberChangeEmailType
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.MemberChangeEmailType.Description*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberChangeEmailType.Description
+  name: Description
+  nameWithType: MemberChangeEmailType.Description
+  fullName: Dropbox.Api.TeamLog.MemberChangeEmailType.Description
+shouldSkipMarkup: true

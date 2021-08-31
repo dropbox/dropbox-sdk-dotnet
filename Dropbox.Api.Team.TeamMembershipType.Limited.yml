@@ -1,0 +1,134 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.TeamMembershipType.Limited
+  commentId: T:Dropbox.Api.Team.TeamMembershipType.Limited
+  id: TeamMembershipType.Limited
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.TeamMembershipType.Limited.Instance
+  langs:
+  - csharp
+  - vb
+  name: TeamMembershipType.Limited
+  nameWithType: TeamMembershipType.Limited
+  fullName: Dropbox.Api.Team.TeamMembershipType.Limited
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamMembershipType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Limited
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamMembershipType.cs
+    startLine: 225
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>User does not have access to the shared quota and team admins have restricted\nadministrative control.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Limited : TeamMembershipType'
+    content.vb: >-
+      Public NotInheritable Class Limited
+          Inherits TeamMembershipType
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.TeamMembershipType
+  inheritedMembers:
+  - Dropbox.Api.Team.TeamMembershipType.IsFull
+  - Dropbox.Api.Team.TeamMembershipType.AsFull
+  - Dropbox.Api.Team.TeamMembershipType.IsLimited
+  - Dropbox.Api.Team.TeamMembershipType.AsLimited
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Team.TeamMembershipType.Limited.Instance
+  commentId: F:Dropbox.Api.Team.TeamMembershipType.Limited.Instance
+  id: Instance
+  parent: Dropbox.Api.Team.TeamMembershipType.Limited
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: TeamMembershipType.Limited.Instance
+  fullName: Dropbox.Api.Team.TeamMembershipType.Limited.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamMembershipType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamMembershipType.cs
+    startLine: 249
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>A singleton instance of Limited</p>\n"
+  example: []
+  syntax:
+    content: public static readonly TeamMembershipType.Limited Instance
+    return:
+      type: Dropbox.Api.Team.TeamMembershipType.Limited
+    content.vb: Public Shared ReadOnly Instance As TeamMembershipType.Limited
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.TeamMembershipType
+  commentId: T:Dropbox.Api.Team.TeamMembershipType
+  parent: Dropbox.Api.Team
+  name: TeamMembershipType
+  nameWithType: TeamMembershipType
+  fullName: Dropbox.Api.Team.TeamMembershipType
+- uid: Dropbox.Api.Team.TeamMembershipType.IsFull
+  commentId: P:Dropbox.Api.Team.TeamMembershipType.IsFull
+  parent: Dropbox.Api.Team.TeamMembershipType
+  name: IsFull
+  nameWithType: TeamMembershipType.IsFull
+  fullName: Dropbox.Api.Team.TeamMembershipType.IsFull
+- uid: Dropbox.Api.Team.TeamMembershipType.AsFull
+  commentId: P:Dropbox.Api.Team.TeamMembershipType.AsFull
+  parent: Dropbox.Api.Team.TeamMembershipType
+  name: AsFull
+  nameWithType: TeamMembershipType.AsFull
+  fullName: Dropbox.Api.Team.TeamMembershipType.AsFull
+- uid: Dropbox.Api.Team.TeamMembershipType.IsLimited
+  commentId: P:Dropbox.Api.Team.TeamMembershipType.IsLimited
+  parent: Dropbox.Api.Team.TeamMembershipType
+  name: IsLimited
+  nameWithType: TeamMembershipType.IsLimited
+  fullName: Dropbox.Api.Team.TeamMembershipType.IsLimited
+- uid: Dropbox.Api.Team.TeamMembershipType.AsLimited
+  commentId: P:Dropbox.Api.Team.TeamMembershipType.AsLimited
+  parent: Dropbox.Api.Team.TeamMembershipType
+  name: AsLimited
+  nameWithType: TeamMembershipType.AsLimited
+  fullName: Dropbox.Api.Team.TeamMembershipType.AsLimited
+- uid: Dropbox.Api.Team.TeamMembershipType.Limited
+  commentId: T:Dropbox.Api.Team.TeamMembershipType.Limited
+  parent: Dropbox.Api.Team
+  name: TeamMembershipType.Limited
+  nameWithType: TeamMembershipType.Limited
+  fullName: Dropbox.Api.Team.TeamMembershipType.Limited
+shouldSkipMarkup: true

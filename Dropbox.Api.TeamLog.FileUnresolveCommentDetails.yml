@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.FileUnresolveCommentDetails
+  commentId: T:Dropbox.Api.TeamLog.FileUnresolveCommentDetails
+  id: FileUnresolveCommentDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.FileUnresolveCommentDetails.#ctor
+  - Dropbox.Api.TeamLog.FileUnresolveCommentDetails.#ctor(System.String)
+  - Dropbox.Api.TeamLog.FileUnresolveCommentDetails.CommentText
+  langs:
+  - csharp
+  - vb
+  name: FileUnresolveCommentDetails
+  nameWithType: FileUnresolveCommentDetails
+  fullName: Dropbox.Api.TeamLog.FileUnresolveCommentDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileUnresolveCommentDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: FileUnresolveCommentDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileUnresolveCommentDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Unresolved file comment.</p>\n"
+  example: []
+  syntax:
+    content: 'public class FileUnresolveCommentDetails : object'
+    content.vb: >-
+      Public Class FileUnresolveCommentDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.FileUnresolveCommentDetails.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.FileUnresolveCommentDetails.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.FileUnresolveCommentDetails
+  langs:
+  - csharp
+  - vb
+  name: FileUnresolveCommentDetails(String)
+  nameWithType: FileUnresolveCommentDetails.FileUnresolveCommentDetails(String)
+  fullName: Dropbox.Api.TeamLog.FileUnresolveCommentDetails.FileUnresolveCommentDetails(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileUnresolveCommentDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileUnresolveCommentDetails.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.FileUnresolveCommentDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public FileUnresolveCommentDetails(string commentText = null)
+    parameters:
+    - id: commentText
+      type: System.String
+      description: Comment text.
+    content.vb: Public Sub New(commentText As String = Nothing)
+  overload: Dropbox.Api.TeamLog.FileUnresolveCommentDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.FileUnresolveCommentDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.FileUnresolveCommentDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.FileUnresolveCommentDetails
+  langs:
+  - csharp
+  - vb
+  name: FileUnresolveCommentDetails()
+  nameWithType: FileUnresolveCommentDetails.FileUnresolveCommentDetails()
+  fullName: Dropbox.Api.TeamLog.FileUnresolveCommentDetails.FileUnresolveCommentDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileUnresolveCommentDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileUnresolveCommentDetails.cs
+    startLine: 45
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.FileUnresolveCommentDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public FileUnresolveCommentDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.FileUnresolveCommentDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.FileUnresolveCommentDetails.CommentText
+  commentId: P:Dropbox.Api.TeamLog.FileUnresolveCommentDetails.CommentText
+  id: CommentText
+  parent: Dropbox.Api.TeamLog.FileUnresolveCommentDetails
+  langs:
+  - csharp
+  - vb
+  name: CommentText
+  nameWithType: FileUnresolveCommentDetails.CommentText
+  fullName: Dropbox.Api.TeamLog.FileUnresolveCommentDetails.CommentText
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileUnresolveCommentDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: CommentText
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileUnresolveCommentDetails.cs
+    startLine: 53
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Comment text.</p>\n"
+  example: []
+  syntax:
+    content: public string CommentText { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property CommentText As String
+  overload: Dropbox.Api.TeamLog.FileUnresolveCommentDetails.CommentText*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.FileUnresolveCommentDetails
+  commentId: T:Dropbox.Api.TeamLog.FileUnresolveCommentDetails
+  parent: Dropbox.Api.TeamLog
+  name: FileUnresolveCommentDetails
+  nameWithType: FileUnresolveCommentDetails
+  fullName: Dropbox.Api.TeamLog.FileUnresolveCommentDetails
+- uid: Dropbox.Api.TeamLog.FileUnresolveCommentDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.FileUnresolveCommentDetails.#ctor
+  name: FileUnresolveCommentDetails
+  nameWithType: FileUnresolveCommentDetails.FileUnresolveCommentDetails
+  fullName: Dropbox.Api.TeamLog.FileUnresolveCommentDetails.FileUnresolveCommentDetails
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.FileUnresolveCommentDetails.CommentText*
+  commentId: Overload:Dropbox.Api.TeamLog.FileUnresolveCommentDetails.CommentText
+  name: CommentText
+  nameWithType: FileUnresolveCommentDetails.CommentText
+  fullName: Dropbox.Api.TeamLog.FileUnresolveCommentDetails.CommentText
+shouldSkipMarkup: true

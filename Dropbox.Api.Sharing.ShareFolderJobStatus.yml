@@ -1,0 +1,381 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.ShareFolderJobStatus
+  commentId: T:Dropbox.Api.Sharing.ShareFolderJobStatus
+  id: ShareFolderJobStatus
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.ShareFolderJobStatus.#ctor
+  - Dropbox.Api.Sharing.ShareFolderJobStatus.AsComplete
+  - Dropbox.Api.Sharing.ShareFolderJobStatus.AsFailed
+  - Dropbox.Api.Sharing.ShareFolderJobStatus.AsInProgress
+  - Dropbox.Api.Sharing.ShareFolderJobStatus.IsComplete
+  - Dropbox.Api.Sharing.ShareFolderJobStatus.IsFailed
+  - Dropbox.Api.Sharing.ShareFolderJobStatus.IsInProgress
+  langs:
+  - csharp
+  - vb
+  name: ShareFolderJobStatus
+  nameWithType: ShareFolderJobStatus
+  fullName: Dropbox.Api.Sharing.ShareFolderJobStatus
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ShareFolderJobStatus.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ShareFolderJobStatus
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ShareFolderJobStatus.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The share folder job status object</p>\n"
+  example: []
+  syntax:
+    content: 'public class ShareFolderJobStatus : object'
+    content.vb: >-
+      Public Class ShareFolderJobStatus
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Sharing.ShareFolderJobStatus.Complete
+  - Dropbox.Api.Sharing.ShareFolderJobStatus.Failed
+  - Dropbox.Api.Sharing.ShareFolderJobStatus.InProgress
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Sharing.ShareFolderJobStatus.#ctor
+  commentId: M:Dropbox.Api.Sharing.ShareFolderJobStatus.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Sharing.ShareFolderJobStatus
+  langs:
+  - csharp
+  - vb
+  name: ShareFolderJobStatus()
+  nameWithType: ShareFolderJobStatus.ShareFolderJobStatus()
+  fullName: Dropbox.Api.Sharing.ShareFolderJobStatus.ShareFolderJobStatus()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ShareFolderJobStatus.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ShareFolderJobStatus.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.ShareFolderJobStatus\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public ShareFolderJobStatus()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Sharing.ShareFolderJobStatus.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.ShareFolderJobStatus.IsComplete
+  commentId: P:Dropbox.Api.Sharing.ShareFolderJobStatus.IsComplete
+  id: IsComplete
+  parent: Dropbox.Api.Sharing.ShareFolderJobStatus
+  langs:
+  - csharp
+  - vb
+  name: IsComplete
+  nameWithType: ShareFolderJobStatus.IsComplete
+  fullName: Dropbox.Api.Sharing.ShareFolderJobStatus.IsComplete
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ShareFolderJobStatus.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsComplete
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ShareFolderJobStatus.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is Complete</p>\n"
+  example: []
+  syntax:
+    content: public bool IsComplete { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsComplete As Boolean
+  overload: Dropbox.Api.Sharing.ShareFolderJobStatus.IsComplete*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.ShareFolderJobStatus.AsComplete
+  commentId: P:Dropbox.Api.Sharing.ShareFolderJobStatus.AsComplete
+  id: AsComplete
+  parent: Dropbox.Api.Sharing.ShareFolderJobStatus
+  langs:
+  - csharp
+  - vb
+  name: AsComplete
+  nameWithType: ShareFolderJobStatus.AsComplete
+  fullName: Dropbox.Api.Sharing.ShareFolderJobStatus.AsComplete
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ShareFolderJobStatus.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsComplete
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ShareFolderJobStatus.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a Complete, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ShareFolderJobStatus.Complete AsComplete { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.ShareFolderJobStatus.Complete
+    content.vb: Public ReadOnly Property AsComplete As ShareFolderJobStatus.Complete
+  overload: Dropbox.Api.Sharing.ShareFolderJobStatus.AsComplete*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.ShareFolderJobStatus.IsFailed
+  commentId: P:Dropbox.Api.Sharing.ShareFolderJobStatus.IsFailed
+  id: IsFailed
+  parent: Dropbox.Api.Sharing.ShareFolderJobStatus
+  langs:
+  - csharp
+  - vb
+  name: IsFailed
+  nameWithType: ShareFolderJobStatus.IsFailed
+  fullName: Dropbox.Api.Sharing.ShareFolderJobStatus.IsFailed
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ShareFolderJobStatus.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsFailed
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ShareFolderJobStatus.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is Failed</p>\n"
+  example: []
+  syntax:
+    content: public bool IsFailed { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsFailed As Boolean
+  overload: Dropbox.Api.Sharing.ShareFolderJobStatus.IsFailed*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.ShareFolderJobStatus.AsFailed
+  commentId: P:Dropbox.Api.Sharing.ShareFolderJobStatus.AsFailed
+  id: AsFailed
+  parent: Dropbox.Api.Sharing.ShareFolderJobStatus
+  langs:
+  - csharp
+  - vb
+  name: AsFailed
+  nameWithType: ShareFolderJobStatus.AsFailed
+  fullName: Dropbox.Api.Sharing.ShareFolderJobStatus.AsFailed
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ShareFolderJobStatus.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsFailed
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ShareFolderJobStatus.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a Failed, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ShareFolderJobStatus.Failed AsFailed { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.ShareFolderJobStatus.Failed
+    content.vb: Public ReadOnly Property AsFailed As ShareFolderJobStatus.Failed
+  overload: Dropbox.Api.Sharing.ShareFolderJobStatus.AsFailed*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.ShareFolderJobStatus.IsInProgress
+  commentId: P:Dropbox.Api.Sharing.ShareFolderJobStatus.IsInProgress
+  id: IsInProgress
+  parent: Dropbox.Api.Sharing.ShareFolderJobStatus
+  langs:
+  - csharp
+  - vb
+  name: IsInProgress
+  nameWithType: ShareFolderJobStatus.IsInProgress
+  fullName: Dropbox.Api.Sharing.ShareFolderJobStatus.IsInProgress
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ShareFolderJobStatus.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsInProgress
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ShareFolderJobStatus.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is InProgress</p>\n"
+  example: []
+  syntax:
+    content: public bool IsInProgress { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsInProgress As Boolean
+  overload: Dropbox.Api.Sharing.ShareFolderJobStatus.IsInProgress*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.ShareFolderJobStatus.AsInProgress
+  commentId: P:Dropbox.Api.Sharing.ShareFolderJobStatus.AsInProgress
+  id: AsInProgress
+  parent: Dropbox.Api.Sharing.ShareFolderJobStatus
+  langs:
+  - csharp
+  - vb
+  name: AsInProgress
+  nameWithType: ShareFolderJobStatus.AsInProgress
+  fullName: Dropbox.Api.Sharing.ShareFolderJobStatus.AsInProgress
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ShareFolderJobStatus.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsInProgress
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ShareFolderJobStatus.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a InProgress, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ShareFolderJobStatus.InProgress AsInProgress { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.ShareFolderJobStatus.InProgress
+    content.vb: Public ReadOnly Property AsInProgress As ShareFolderJobStatus.InProgress
+  overload: Dropbox.Api.Sharing.ShareFolderJobStatus.AsInProgress*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.ShareFolderJobStatus
+  commentId: T:Dropbox.Api.Sharing.ShareFolderJobStatus
+  parent: Dropbox.Api.Sharing
+  name: ShareFolderJobStatus
+  nameWithType: ShareFolderJobStatus
+  fullName: Dropbox.Api.Sharing.ShareFolderJobStatus
+- uid: Dropbox.Api.Sharing.ShareFolderJobStatus.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.ShareFolderJobStatus.#ctor
+  name: ShareFolderJobStatus
+  nameWithType: ShareFolderJobStatus.ShareFolderJobStatus
+  fullName: Dropbox.Api.Sharing.ShareFolderJobStatus.ShareFolderJobStatus
+- uid: Dropbox.Api.Sharing.ShareFolderJobStatus.IsComplete*
+  commentId: Overload:Dropbox.Api.Sharing.ShareFolderJobStatus.IsComplete
+  name: IsComplete
+  nameWithType: ShareFolderJobStatus.IsComplete
+  fullName: Dropbox.Api.Sharing.ShareFolderJobStatus.IsComplete
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Sharing.ShareFolderJobStatus.AsComplete*
+  commentId: Overload:Dropbox.Api.Sharing.ShareFolderJobStatus.AsComplete
+  name: AsComplete
+  nameWithType: ShareFolderJobStatus.AsComplete
+  fullName: Dropbox.Api.Sharing.ShareFolderJobStatus.AsComplete
+- uid: Dropbox.Api.Sharing.ShareFolderJobStatus.Complete
+  commentId: T:Dropbox.Api.Sharing.ShareFolderJobStatus.Complete
+  parent: Dropbox.Api.Sharing
+  name: ShareFolderJobStatus.Complete
+  nameWithType: ShareFolderJobStatus.Complete
+  fullName: Dropbox.Api.Sharing.ShareFolderJobStatus.Complete
+- uid: Dropbox.Api.Sharing.ShareFolderJobStatus.IsFailed*
+  commentId: Overload:Dropbox.Api.Sharing.ShareFolderJobStatus.IsFailed
+  name: IsFailed
+  nameWithType: ShareFolderJobStatus.IsFailed
+  fullName: Dropbox.Api.Sharing.ShareFolderJobStatus.IsFailed
+- uid: Dropbox.Api.Sharing.ShareFolderJobStatus.AsFailed*
+  commentId: Overload:Dropbox.Api.Sharing.ShareFolderJobStatus.AsFailed
+  name: AsFailed
+  nameWithType: ShareFolderJobStatus.AsFailed
+  fullName: Dropbox.Api.Sharing.ShareFolderJobStatus.AsFailed
+- uid: Dropbox.Api.Sharing.ShareFolderJobStatus.Failed
+  commentId: T:Dropbox.Api.Sharing.ShareFolderJobStatus.Failed
+  parent: Dropbox.Api.Sharing
+  name: ShareFolderJobStatus.Failed
+  nameWithType: ShareFolderJobStatus.Failed
+  fullName: Dropbox.Api.Sharing.ShareFolderJobStatus.Failed
+- uid: Dropbox.Api.Sharing.ShareFolderJobStatus.IsInProgress*
+  commentId: Overload:Dropbox.Api.Sharing.ShareFolderJobStatus.IsInProgress
+  name: IsInProgress
+  nameWithType: ShareFolderJobStatus.IsInProgress
+  fullName: Dropbox.Api.Sharing.ShareFolderJobStatus.IsInProgress
+- uid: Dropbox.Api.Sharing.ShareFolderJobStatus.AsInProgress*
+  commentId: Overload:Dropbox.Api.Sharing.ShareFolderJobStatus.AsInProgress
+  name: AsInProgress
+  nameWithType: ShareFolderJobStatus.AsInProgress
+  fullName: Dropbox.Api.Sharing.ShareFolderJobStatus.AsInProgress
+- uid: Dropbox.Api.Sharing.ShareFolderJobStatus.InProgress
+  commentId: T:Dropbox.Api.Sharing.ShareFolderJobStatus.InProgress
+  parent: Dropbox.Api.Sharing
+  name: ShareFolderJobStatus.InProgress
+  nameWithType: ShareFolderJobStatus.InProgress
+  fullName: Dropbox.Api.Sharing.ShareFolderJobStatus.InProgress
+shouldSkipMarkup: true

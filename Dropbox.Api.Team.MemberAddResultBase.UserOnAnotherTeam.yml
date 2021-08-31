@@ -1,0 +1,298 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.MemberAddResultBase.UserOnAnotherTeam
+  commentId: T:Dropbox.Api.Team.MemberAddResultBase.UserOnAnotherTeam
+  id: MemberAddResultBase.UserOnAnotherTeam
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.MemberAddResultBase.UserOnAnotherTeam.#ctor(System.String)
+  - Dropbox.Api.Team.MemberAddResultBase.UserOnAnotherTeam.Value
+  langs:
+  - csharp
+  - vb
+  name: MemberAddResultBase.UserOnAnotherTeam
+  nameWithType: MemberAddResultBase.UserOnAnotherTeam
+  fullName: Dropbox.Api.Team.MemberAddResultBase.UserOnAnotherTeam
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MemberAddResultBase.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: UserOnAnotherTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MemberAddResultBase.cs
+    startLine: 696
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>User is already on another team. The provided email address is associated\nwith a user that is already a member or invited to another team.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class UserOnAnotherTeam : MemberAddResultBase'
+    content.vb: >-
+      Public NotInheritable Class UserOnAnotherTeam
+          Inherits MemberAddResultBase
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.MemberAddResultBase
+  inheritedMembers:
+  - Dropbox.Api.Team.MemberAddResultBase.IsTeamLicenseLimit
+  - Dropbox.Api.Team.MemberAddResultBase.AsTeamLicenseLimit
+  - Dropbox.Api.Team.MemberAddResultBase.IsFreeTeamMemberLimitReached
+  - Dropbox.Api.Team.MemberAddResultBase.AsFreeTeamMemberLimitReached
+  - Dropbox.Api.Team.MemberAddResultBase.IsUserAlreadyOnTeam
+  - Dropbox.Api.Team.MemberAddResultBase.AsUserAlreadyOnTeam
+  - Dropbox.Api.Team.MemberAddResultBase.IsUserOnAnotherTeam
+  - Dropbox.Api.Team.MemberAddResultBase.AsUserOnAnotherTeam
+  - Dropbox.Api.Team.MemberAddResultBase.IsUserAlreadyPaired
+  - Dropbox.Api.Team.MemberAddResultBase.AsUserAlreadyPaired
+  - Dropbox.Api.Team.MemberAddResultBase.IsUserMigrationFailed
+  - Dropbox.Api.Team.MemberAddResultBase.AsUserMigrationFailed
+  - Dropbox.Api.Team.MemberAddResultBase.IsDuplicateExternalMemberId
+  - Dropbox.Api.Team.MemberAddResultBase.AsDuplicateExternalMemberId
+  - Dropbox.Api.Team.MemberAddResultBase.IsDuplicateMemberPersistentId
+  - Dropbox.Api.Team.MemberAddResultBase.AsDuplicateMemberPersistentId
+  - Dropbox.Api.Team.MemberAddResultBase.IsPersistentIdDisabled
+  - Dropbox.Api.Team.MemberAddResultBase.AsPersistentIdDisabled
+  - Dropbox.Api.Team.MemberAddResultBase.IsUserCreationFailed
+  - Dropbox.Api.Team.MemberAddResultBase.AsUserCreationFailed
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Team.MemberAddResultBase.UserOnAnotherTeam.#ctor(System.String)
+  commentId: M:Dropbox.Api.Team.MemberAddResultBase.UserOnAnotherTeam.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.Team.MemberAddResultBase.UserOnAnotherTeam
+  langs:
+  - csharp
+  - vb
+  name: UserOnAnotherTeam(String)
+  nameWithType: MemberAddResultBase.UserOnAnotherTeam.UserOnAnotherTeam(String)
+  fullName: Dropbox.Api.Team.MemberAddResultBase.UserOnAnotherTeam.UserOnAnotherTeam(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MemberAddResultBase.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MemberAddResultBase.cs
+    startLine: 715
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.MemberAddResultBase.UserOnAnotherTeam\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public UserOnAnotherTeam(string value)
+    parameters:
+    - id: value
+      type: System.String
+      description: The value
+    content.vb: Public Sub New(value As String)
+  overload: Dropbox.Api.Team.MemberAddResultBase.UserOnAnotherTeam.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.MemberAddResultBase.UserOnAnotherTeam.Value
+  commentId: P:Dropbox.Api.Team.MemberAddResultBase.UserOnAnotherTeam.Value
+  id: Value
+  parent: Dropbox.Api.Team.MemberAddResultBase.UserOnAnotherTeam
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: MemberAddResultBase.UserOnAnotherTeam.Value
+  fullName: Dropbox.Api.Team.MemberAddResultBase.UserOnAnotherTeam.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MemberAddResultBase.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MemberAddResultBase.cs
+    startLine: 730
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public string Value { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Value As String
+  overload: Dropbox.Api.Team.MemberAddResultBase.UserOnAnotherTeam.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.MemberAddResultBase
+  commentId: T:Dropbox.Api.Team.MemberAddResultBase
+  parent: Dropbox.Api.Team
+  name: MemberAddResultBase
+  nameWithType: MemberAddResultBase
+  fullName: Dropbox.Api.Team.MemberAddResultBase
+- uid: Dropbox.Api.Team.MemberAddResultBase.IsTeamLicenseLimit
+  commentId: P:Dropbox.Api.Team.MemberAddResultBase.IsTeamLicenseLimit
+  parent: Dropbox.Api.Team.MemberAddResultBase
+  name: IsTeamLicenseLimit
+  nameWithType: MemberAddResultBase.IsTeamLicenseLimit
+  fullName: Dropbox.Api.Team.MemberAddResultBase.IsTeamLicenseLimit
+- uid: Dropbox.Api.Team.MemberAddResultBase.AsTeamLicenseLimit
+  commentId: P:Dropbox.Api.Team.MemberAddResultBase.AsTeamLicenseLimit
+  parent: Dropbox.Api.Team.MemberAddResultBase
+  name: AsTeamLicenseLimit
+  nameWithType: MemberAddResultBase.AsTeamLicenseLimit
+  fullName: Dropbox.Api.Team.MemberAddResultBase.AsTeamLicenseLimit
+- uid: Dropbox.Api.Team.MemberAddResultBase.IsFreeTeamMemberLimitReached
+  commentId: P:Dropbox.Api.Team.MemberAddResultBase.IsFreeTeamMemberLimitReached
+  parent: Dropbox.Api.Team.MemberAddResultBase
+  name: IsFreeTeamMemberLimitReached
+  nameWithType: MemberAddResultBase.IsFreeTeamMemberLimitReached
+  fullName: Dropbox.Api.Team.MemberAddResultBase.IsFreeTeamMemberLimitReached
+- uid: Dropbox.Api.Team.MemberAddResultBase.AsFreeTeamMemberLimitReached
+  commentId: P:Dropbox.Api.Team.MemberAddResultBase.AsFreeTeamMemberLimitReached
+  parent: Dropbox.Api.Team.MemberAddResultBase
+  name: AsFreeTeamMemberLimitReached
+  nameWithType: MemberAddResultBase.AsFreeTeamMemberLimitReached
+  fullName: Dropbox.Api.Team.MemberAddResultBase.AsFreeTeamMemberLimitReached
+- uid: Dropbox.Api.Team.MemberAddResultBase.IsUserAlreadyOnTeam
+  commentId: P:Dropbox.Api.Team.MemberAddResultBase.IsUserAlreadyOnTeam
+  parent: Dropbox.Api.Team.MemberAddResultBase
+  name: IsUserAlreadyOnTeam
+  nameWithType: MemberAddResultBase.IsUserAlreadyOnTeam
+  fullName: Dropbox.Api.Team.MemberAddResultBase.IsUserAlreadyOnTeam
+- uid: Dropbox.Api.Team.MemberAddResultBase.AsUserAlreadyOnTeam
+  commentId: P:Dropbox.Api.Team.MemberAddResultBase.AsUserAlreadyOnTeam
+  parent: Dropbox.Api.Team.MemberAddResultBase
+  name: AsUserAlreadyOnTeam
+  nameWithType: MemberAddResultBase.AsUserAlreadyOnTeam
+  fullName: Dropbox.Api.Team.MemberAddResultBase.AsUserAlreadyOnTeam
+- uid: Dropbox.Api.Team.MemberAddResultBase.IsUserOnAnotherTeam
+  commentId: P:Dropbox.Api.Team.MemberAddResultBase.IsUserOnAnotherTeam
+  parent: Dropbox.Api.Team.MemberAddResultBase
+  name: IsUserOnAnotherTeam
+  nameWithType: MemberAddResultBase.IsUserOnAnotherTeam
+  fullName: Dropbox.Api.Team.MemberAddResultBase.IsUserOnAnotherTeam
+- uid: Dropbox.Api.Team.MemberAddResultBase.AsUserOnAnotherTeam
+  commentId: P:Dropbox.Api.Team.MemberAddResultBase.AsUserOnAnotherTeam
+  parent: Dropbox.Api.Team.MemberAddResultBase
+  name: AsUserOnAnotherTeam
+  nameWithType: MemberAddResultBase.AsUserOnAnotherTeam
+  fullName: Dropbox.Api.Team.MemberAddResultBase.AsUserOnAnotherTeam
+- uid: Dropbox.Api.Team.MemberAddResultBase.IsUserAlreadyPaired
+  commentId: P:Dropbox.Api.Team.MemberAddResultBase.IsUserAlreadyPaired
+  parent: Dropbox.Api.Team.MemberAddResultBase
+  name: IsUserAlreadyPaired
+  nameWithType: MemberAddResultBase.IsUserAlreadyPaired
+  fullName: Dropbox.Api.Team.MemberAddResultBase.IsUserAlreadyPaired
+- uid: Dropbox.Api.Team.MemberAddResultBase.AsUserAlreadyPaired
+  commentId: P:Dropbox.Api.Team.MemberAddResultBase.AsUserAlreadyPaired
+  parent: Dropbox.Api.Team.MemberAddResultBase
+  name: AsUserAlreadyPaired
+  nameWithType: MemberAddResultBase.AsUserAlreadyPaired
+  fullName: Dropbox.Api.Team.MemberAddResultBase.AsUserAlreadyPaired
+- uid: Dropbox.Api.Team.MemberAddResultBase.IsUserMigrationFailed
+  commentId: P:Dropbox.Api.Team.MemberAddResultBase.IsUserMigrationFailed
+  parent: Dropbox.Api.Team.MemberAddResultBase
+  name: IsUserMigrationFailed
+  nameWithType: MemberAddResultBase.IsUserMigrationFailed
+  fullName: Dropbox.Api.Team.MemberAddResultBase.IsUserMigrationFailed
+- uid: Dropbox.Api.Team.MemberAddResultBase.AsUserMigrationFailed
+  commentId: P:Dropbox.Api.Team.MemberAddResultBase.AsUserMigrationFailed
+  parent: Dropbox.Api.Team.MemberAddResultBase
+  name: AsUserMigrationFailed
+  nameWithType: MemberAddResultBase.AsUserMigrationFailed
+  fullName: Dropbox.Api.Team.MemberAddResultBase.AsUserMigrationFailed
+- uid: Dropbox.Api.Team.MemberAddResultBase.IsDuplicateExternalMemberId
+  commentId: P:Dropbox.Api.Team.MemberAddResultBase.IsDuplicateExternalMemberId
+  parent: Dropbox.Api.Team.MemberAddResultBase
+  name: IsDuplicateExternalMemberId
+  nameWithType: MemberAddResultBase.IsDuplicateExternalMemberId
+  fullName: Dropbox.Api.Team.MemberAddResultBase.IsDuplicateExternalMemberId
+- uid: Dropbox.Api.Team.MemberAddResultBase.AsDuplicateExternalMemberId
+  commentId: P:Dropbox.Api.Team.MemberAddResultBase.AsDuplicateExternalMemberId
+  parent: Dropbox.Api.Team.MemberAddResultBase
+  name: AsDuplicateExternalMemberId
+  nameWithType: MemberAddResultBase.AsDuplicateExternalMemberId
+  fullName: Dropbox.Api.Team.MemberAddResultBase.AsDuplicateExternalMemberId
+- uid: Dropbox.Api.Team.MemberAddResultBase.IsDuplicateMemberPersistentId
+  commentId: P:Dropbox.Api.Team.MemberAddResultBase.IsDuplicateMemberPersistentId
+  parent: Dropbox.Api.Team.MemberAddResultBase
+  name: IsDuplicateMemberPersistentId
+  nameWithType: MemberAddResultBase.IsDuplicateMemberPersistentId
+  fullName: Dropbox.Api.Team.MemberAddResultBase.IsDuplicateMemberPersistentId
+- uid: Dropbox.Api.Team.MemberAddResultBase.AsDuplicateMemberPersistentId
+  commentId: P:Dropbox.Api.Team.MemberAddResultBase.AsDuplicateMemberPersistentId
+  parent: Dropbox.Api.Team.MemberAddResultBase
+  name: AsDuplicateMemberPersistentId
+  nameWithType: MemberAddResultBase.AsDuplicateMemberPersistentId
+  fullName: Dropbox.Api.Team.MemberAddResultBase.AsDuplicateMemberPersistentId
+- uid: Dropbox.Api.Team.MemberAddResultBase.IsPersistentIdDisabled
+  commentId: P:Dropbox.Api.Team.MemberAddResultBase.IsPersistentIdDisabled
+  parent: Dropbox.Api.Team.MemberAddResultBase
+  name: IsPersistentIdDisabled
+  nameWithType: MemberAddResultBase.IsPersistentIdDisabled
+  fullName: Dropbox.Api.Team.MemberAddResultBase.IsPersistentIdDisabled
+- uid: Dropbox.Api.Team.MemberAddResultBase.AsPersistentIdDisabled
+  commentId: P:Dropbox.Api.Team.MemberAddResultBase.AsPersistentIdDisabled
+  parent: Dropbox.Api.Team.MemberAddResultBase
+  name: AsPersistentIdDisabled
+  nameWithType: MemberAddResultBase.AsPersistentIdDisabled
+  fullName: Dropbox.Api.Team.MemberAddResultBase.AsPersistentIdDisabled
+- uid: Dropbox.Api.Team.MemberAddResultBase.IsUserCreationFailed
+  commentId: P:Dropbox.Api.Team.MemberAddResultBase.IsUserCreationFailed
+  parent: Dropbox.Api.Team.MemberAddResultBase
+  name: IsUserCreationFailed
+  nameWithType: MemberAddResultBase.IsUserCreationFailed
+  fullName: Dropbox.Api.Team.MemberAddResultBase.IsUserCreationFailed
+- uid: Dropbox.Api.Team.MemberAddResultBase.AsUserCreationFailed
+  commentId: P:Dropbox.Api.Team.MemberAddResultBase.AsUserCreationFailed
+  parent: Dropbox.Api.Team.MemberAddResultBase
+  name: AsUserCreationFailed
+  nameWithType: MemberAddResultBase.AsUserCreationFailed
+  fullName: Dropbox.Api.Team.MemberAddResultBase.AsUserCreationFailed
+- uid: Dropbox.Api.Team.MemberAddResultBase.UserOnAnotherTeam
+  commentId: T:Dropbox.Api.Team.MemberAddResultBase.UserOnAnotherTeam
+  parent: Dropbox.Api.Team
+  name: MemberAddResultBase.UserOnAnotherTeam
+  nameWithType: MemberAddResultBase.UserOnAnotherTeam
+  fullName: Dropbox.Api.Team.MemberAddResultBase.UserOnAnotherTeam
+- uid: Dropbox.Api.Team.MemberAddResultBase.UserOnAnotherTeam.#ctor*
+  commentId: Overload:Dropbox.Api.Team.MemberAddResultBase.UserOnAnotherTeam.#ctor
+  name: UserOnAnotherTeam
+  nameWithType: MemberAddResultBase.UserOnAnotherTeam.UserOnAnotherTeam
+  fullName: Dropbox.Api.Team.MemberAddResultBase.UserOnAnotherTeam.UserOnAnotherTeam
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Team.MemberAddResultBase.UserOnAnotherTeam.Value*
+  commentId: Overload:Dropbox.Api.Team.MemberAddResultBase.UserOnAnotherTeam.Value
+  name: Value
+  nameWithType: MemberAddResultBase.UserOnAnotherTeam.Value
+  fullName: Dropbox.Api.Team.MemberAddResultBase.UserOnAnotherTeam.Value
+shouldSkipMarkup: true

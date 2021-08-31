@@ -1,0 +1,201 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.RevokeDeviceSessionArg.WebSession
+  commentId: T:Dropbox.Api.Team.RevokeDeviceSessionArg.WebSession
+  id: RevokeDeviceSessionArg.WebSession
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.RevokeDeviceSessionArg.WebSession.#ctor(Dropbox.Api.Team.DeviceSessionArg)
+  - Dropbox.Api.Team.RevokeDeviceSessionArg.WebSession.Value
+  langs:
+  - csharp
+  - vb
+  name: RevokeDeviceSessionArg.WebSession
+  nameWithType: RevokeDeviceSessionArg.WebSession
+  fullName: Dropbox.Api.Team.RevokeDeviceSessionArg.WebSession
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeDeviceSessionArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: WebSession
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeDeviceSessionArg.cs
+    startLine: 185
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>End an active session.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class WebSession : RevokeDeviceSessionArg'
+    content.vb: >-
+      Public NotInheritable Class WebSession
+          Inherits RevokeDeviceSessionArg
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.RevokeDeviceSessionArg
+  inheritedMembers:
+  - Dropbox.Api.Team.RevokeDeviceSessionArg.IsWebSession
+  - Dropbox.Api.Team.RevokeDeviceSessionArg.AsWebSession
+  - Dropbox.Api.Team.RevokeDeviceSessionArg.IsDesktopClient
+  - Dropbox.Api.Team.RevokeDeviceSessionArg.AsDesktopClient
+  - Dropbox.Api.Team.RevokeDeviceSessionArg.IsMobileClient
+  - Dropbox.Api.Team.RevokeDeviceSessionArg.AsMobileClient
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Team.RevokeDeviceSessionArg.WebSession.#ctor(Dropbox.Api.Team.DeviceSessionArg)
+  commentId: M:Dropbox.Api.Team.RevokeDeviceSessionArg.WebSession.#ctor(Dropbox.Api.Team.DeviceSessionArg)
+  id: '#ctor(Dropbox.Api.Team.DeviceSessionArg)'
+  parent: Dropbox.Api.Team.RevokeDeviceSessionArg.WebSession
+  langs:
+  - csharp
+  - vb
+  name: WebSession(DeviceSessionArg)
+  nameWithType: RevokeDeviceSessionArg.WebSession.WebSession(DeviceSessionArg)
+  fullName: Dropbox.Api.Team.RevokeDeviceSessionArg.WebSession.WebSession(Dropbox.Api.Team.DeviceSessionArg)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeDeviceSessionArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeDeviceSessionArg.cs
+    startLine: 203
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.RevokeDeviceSessionArg.WebSession\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public WebSession(DeviceSessionArg value)
+    parameters:
+    - id: value
+      type: Dropbox.Api.Team.DeviceSessionArg
+      description: The value
+    content.vb: Public Sub New(value As DeviceSessionArg)
+  overload: Dropbox.Api.Team.RevokeDeviceSessionArg.WebSession.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.RevokeDeviceSessionArg.WebSession.Value
+  commentId: P:Dropbox.Api.Team.RevokeDeviceSessionArg.WebSession.Value
+  id: Value
+  parent: Dropbox.Api.Team.RevokeDeviceSessionArg.WebSession
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: RevokeDeviceSessionArg.WebSession.Value
+  fullName: Dropbox.Api.Team.RevokeDeviceSessionArg.WebSession.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeDeviceSessionArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeDeviceSessionArg.cs
+    startLine: 217
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public DeviceSessionArg Value { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.DeviceSessionArg
+    content.vb: Public ReadOnly Property Value As DeviceSessionArg
+  overload: Dropbox.Api.Team.RevokeDeviceSessionArg.WebSession.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.RevokeDeviceSessionArg
+  commentId: T:Dropbox.Api.Team.RevokeDeviceSessionArg
+  parent: Dropbox.Api.Team
+  name: RevokeDeviceSessionArg
+  nameWithType: RevokeDeviceSessionArg
+  fullName: Dropbox.Api.Team.RevokeDeviceSessionArg
+- uid: Dropbox.Api.Team.RevokeDeviceSessionArg.IsWebSession
+  commentId: P:Dropbox.Api.Team.RevokeDeviceSessionArg.IsWebSession
+  parent: Dropbox.Api.Team.RevokeDeviceSessionArg
+  name: IsWebSession
+  nameWithType: RevokeDeviceSessionArg.IsWebSession
+  fullName: Dropbox.Api.Team.RevokeDeviceSessionArg.IsWebSession
+- uid: Dropbox.Api.Team.RevokeDeviceSessionArg.AsWebSession
+  commentId: P:Dropbox.Api.Team.RevokeDeviceSessionArg.AsWebSession
+  parent: Dropbox.Api.Team.RevokeDeviceSessionArg
+  name: AsWebSession
+  nameWithType: RevokeDeviceSessionArg.AsWebSession
+  fullName: Dropbox.Api.Team.RevokeDeviceSessionArg.AsWebSession
+- uid: Dropbox.Api.Team.RevokeDeviceSessionArg.IsDesktopClient
+  commentId: P:Dropbox.Api.Team.RevokeDeviceSessionArg.IsDesktopClient
+  parent: Dropbox.Api.Team.RevokeDeviceSessionArg
+  name: IsDesktopClient
+  nameWithType: RevokeDeviceSessionArg.IsDesktopClient
+  fullName: Dropbox.Api.Team.RevokeDeviceSessionArg.IsDesktopClient
+- uid: Dropbox.Api.Team.RevokeDeviceSessionArg.AsDesktopClient
+  commentId: P:Dropbox.Api.Team.RevokeDeviceSessionArg.AsDesktopClient
+  parent: Dropbox.Api.Team.RevokeDeviceSessionArg
+  name: AsDesktopClient
+  nameWithType: RevokeDeviceSessionArg.AsDesktopClient
+  fullName: Dropbox.Api.Team.RevokeDeviceSessionArg.AsDesktopClient
+- uid: Dropbox.Api.Team.RevokeDeviceSessionArg.IsMobileClient
+  commentId: P:Dropbox.Api.Team.RevokeDeviceSessionArg.IsMobileClient
+  parent: Dropbox.Api.Team.RevokeDeviceSessionArg
+  name: IsMobileClient
+  nameWithType: RevokeDeviceSessionArg.IsMobileClient
+  fullName: Dropbox.Api.Team.RevokeDeviceSessionArg.IsMobileClient
+- uid: Dropbox.Api.Team.RevokeDeviceSessionArg.AsMobileClient
+  commentId: P:Dropbox.Api.Team.RevokeDeviceSessionArg.AsMobileClient
+  parent: Dropbox.Api.Team.RevokeDeviceSessionArg
+  name: AsMobileClient
+  nameWithType: RevokeDeviceSessionArg.AsMobileClient
+  fullName: Dropbox.Api.Team.RevokeDeviceSessionArg.AsMobileClient
+- uid: Dropbox.Api.Team.RevokeDeviceSessionArg.WebSession
+  commentId: T:Dropbox.Api.Team.RevokeDeviceSessionArg.WebSession
+  parent: Dropbox.Api.Team
+  name: RevokeDeviceSessionArg.WebSession
+  nameWithType: RevokeDeviceSessionArg.WebSession
+  fullName: Dropbox.Api.Team.RevokeDeviceSessionArg.WebSession
+- uid: Dropbox.Api.Team.RevokeDeviceSessionArg.WebSession.#ctor*
+  commentId: Overload:Dropbox.Api.Team.RevokeDeviceSessionArg.WebSession.#ctor
+  name: WebSession
+  nameWithType: RevokeDeviceSessionArg.WebSession.WebSession
+  fullName: Dropbox.Api.Team.RevokeDeviceSessionArg.WebSession.WebSession
+- uid: Dropbox.Api.Team.DeviceSessionArg
+  commentId: T:Dropbox.Api.Team.DeviceSessionArg
+  parent: Dropbox.Api.Team
+  name: DeviceSessionArg
+  nameWithType: DeviceSessionArg
+  fullName: Dropbox.Api.Team.DeviceSessionArg
+- uid: Dropbox.Api.Team.RevokeDeviceSessionArg.WebSession.Value*
+  commentId: Overload:Dropbox.Api.Team.RevokeDeviceSessionArg.WebSession.Value
+  name: Value
+  nameWithType: RevokeDeviceSessionArg.WebSession.Value
+  fullName: Dropbox.Api.Team.RevokeDeviceSessionArg.WebSession.Value
+shouldSkipMarkup: true

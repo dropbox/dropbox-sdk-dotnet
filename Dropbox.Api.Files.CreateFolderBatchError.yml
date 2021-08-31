@@ -1,0 +1,288 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.CreateFolderBatchError
+  commentId: T:Dropbox.Api.Files.CreateFolderBatchError
+  id: CreateFolderBatchError
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.CreateFolderBatchError.#ctor
+  - Dropbox.Api.Files.CreateFolderBatchError.AsOther
+  - Dropbox.Api.Files.CreateFolderBatchError.AsTooManyFiles
+  - Dropbox.Api.Files.CreateFolderBatchError.IsOther
+  - Dropbox.Api.Files.CreateFolderBatchError.IsTooManyFiles
+  langs:
+  - csharp
+  - vb
+  name: CreateFolderBatchError
+  nameWithType: CreateFolderBatchError
+  fullName: Dropbox.Api.Files.CreateFolderBatchError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/CreateFolderBatchError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: CreateFolderBatchError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/CreateFolderBatchError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The create folder batch error object</p>\n"
+  example: []
+  syntax:
+    content: 'public class CreateFolderBatchError : object'
+    content.vb: >-
+      Public Class CreateFolderBatchError
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Files.CreateFolderBatchError.Other
+  - Dropbox.Api.Files.CreateFolderBatchError.TooManyFiles
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.CreateFolderBatchError.#ctor
+  commentId: M:Dropbox.Api.Files.CreateFolderBatchError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.CreateFolderBatchError
+  langs:
+  - csharp
+  - vb
+  name: CreateFolderBatchError()
+  nameWithType: CreateFolderBatchError.CreateFolderBatchError()
+  fullName: Dropbox.Api.Files.CreateFolderBatchError.CreateFolderBatchError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/CreateFolderBatchError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/CreateFolderBatchError.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.CreateFolderBatchError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public CreateFolderBatchError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.CreateFolderBatchError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.CreateFolderBatchError.IsTooManyFiles
+  commentId: P:Dropbox.Api.Files.CreateFolderBatchError.IsTooManyFiles
+  id: IsTooManyFiles
+  parent: Dropbox.Api.Files.CreateFolderBatchError
+  langs:
+  - csharp
+  - vb
+  name: IsTooManyFiles
+  nameWithType: CreateFolderBatchError.IsTooManyFiles
+  fullName: Dropbox.Api.Files.CreateFolderBatchError.IsTooManyFiles
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/CreateFolderBatchError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsTooManyFiles
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/CreateFolderBatchError.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is TooManyFiles</p>\n"
+  example: []
+  syntax:
+    content: public bool IsTooManyFiles { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsTooManyFiles As Boolean
+  overload: Dropbox.Api.Files.CreateFolderBatchError.IsTooManyFiles*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.CreateFolderBatchError.AsTooManyFiles
+  commentId: P:Dropbox.Api.Files.CreateFolderBatchError.AsTooManyFiles
+  id: AsTooManyFiles
+  parent: Dropbox.Api.Files.CreateFolderBatchError
+  langs:
+  - csharp
+  - vb
+  name: AsTooManyFiles
+  nameWithType: CreateFolderBatchError.AsTooManyFiles
+  fullName: Dropbox.Api.Files.CreateFolderBatchError.AsTooManyFiles
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/CreateFolderBatchError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsTooManyFiles
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/CreateFolderBatchError.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a TooManyFiles, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public CreateFolderBatchError.TooManyFiles AsTooManyFiles { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.CreateFolderBatchError.TooManyFiles
+    content.vb: Public ReadOnly Property AsTooManyFiles As CreateFolderBatchError.TooManyFiles
+  overload: Dropbox.Api.Files.CreateFolderBatchError.AsTooManyFiles*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.CreateFolderBatchError.IsOther
+  commentId: P:Dropbox.Api.Files.CreateFolderBatchError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Files.CreateFolderBatchError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: CreateFolderBatchError.IsOther
+  fullName: Dropbox.Api.Files.CreateFolderBatchError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/CreateFolderBatchError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/CreateFolderBatchError.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Files.CreateFolderBatchError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.CreateFolderBatchError.AsOther
+  commentId: P:Dropbox.Api.Files.CreateFolderBatchError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Files.CreateFolderBatchError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: CreateFolderBatchError.AsOther
+  fullName: Dropbox.Api.Files.CreateFolderBatchError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/CreateFolderBatchError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/CreateFolderBatchError.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public CreateFolderBatchError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.CreateFolderBatchError.Other
+    content.vb: Public ReadOnly Property AsOther As CreateFolderBatchError.Other
+  overload: Dropbox.Api.Files.CreateFolderBatchError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.CreateFolderBatchError
+  commentId: T:Dropbox.Api.Files.CreateFolderBatchError
+  parent: Dropbox.Api.Files
+  name: CreateFolderBatchError
+  nameWithType: CreateFolderBatchError
+  fullName: Dropbox.Api.Files.CreateFolderBatchError
+- uid: Dropbox.Api.Files.CreateFolderBatchError.#ctor*
+  commentId: Overload:Dropbox.Api.Files.CreateFolderBatchError.#ctor
+  name: CreateFolderBatchError
+  nameWithType: CreateFolderBatchError.CreateFolderBatchError
+  fullName: Dropbox.Api.Files.CreateFolderBatchError.CreateFolderBatchError
+- uid: Dropbox.Api.Files.CreateFolderBatchError.IsTooManyFiles*
+  commentId: Overload:Dropbox.Api.Files.CreateFolderBatchError.IsTooManyFiles
+  name: IsTooManyFiles
+  nameWithType: CreateFolderBatchError.IsTooManyFiles
+  fullName: Dropbox.Api.Files.CreateFolderBatchError.IsTooManyFiles
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Files.CreateFolderBatchError.AsTooManyFiles*
+  commentId: Overload:Dropbox.Api.Files.CreateFolderBatchError.AsTooManyFiles
+  name: AsTooManyFiles
+  nameWithType: CreateFolderBatchError.AsTooManyFiles
+  fullName: Dropbox.Api.Files.CreateFolderBatchError.AsTooManyFiles
+- uid: Dropbox.Api.Files.CreateFolderBatchError.TooManyFiles
+  commentId: T:Dropbox.Api.Files.CreateFolderBatchError.TooManyFiles
+  parent: Dropbox.Api.Files
+  name: CreateFolderBatchError.TooManyFiles
+  nameWithType: CreateFolderBatchError.TooManyFiles
+  fullName: Dropbox.Api.Files.CreateFolderBatchError.TooManyFiles
+- uid: Dropbox.Api.Files.CreateFolderBatchError.IsOther*
+  commentId: Overload:Dropbox.Api.Files.CreateFolderBatchError.IsOther
+  name: IsOther
+  nameWithType: CreateFolderBatchError.IsOther
+  fullName: Dropbox.Api.Files.CreateFolderBatchError.IsOther
+- uid: Dropbox.Api.Files.CreateFolderBatchError.AsOther*
+  commentId: Overload:Dropbox.Api.Files.CreateFolderBatchError.AsOther
+  name: AsOther
+  nameWithType: CreateFolderBatchError.AsOther
+  fullName: Dropbox.Api.Files.CreateFolderBatchError.AsOther
+- uid: Dropbox.Api.Files.CreateFolderBatchError.Other
+  commentId: T:Dropbox.Api.Files.CreateFolderBatchError.Other
+  parent: Dropbox.Api.Files
+  name: CreateFolderBatchError.Other
+  nameWithType: CreateFolderBatchError.Other
+  fullName: Dropbox.Api.Files.CreateFolderBatchError.Other
+shouldSkipMarkup: true

@@ -1,0 +1,381 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy
+  commentId: T:Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy
+  id: ShowcaseEnabledPolicy
+  parent: Dropbox.Api.TeamPolicies
+  children:
+  - Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.#ctor
+  - Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.AsDisabled
+  - Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.AsEnabled
+  - Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.AsOther
+  - Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.IsDisabled
+  - Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.IsEnabled
+  - Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.IsOther
+  langs:
+  - csharp
+  - vb
+  name: ShowcaseEnabledPolicy
+  nameWithType: ShowcaseEnabledPolicy
+  fullName: Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/ShowcaseEnabledPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ShowcaseEnabledPolicy
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/ShowcaseEnabledPolicy.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>The showcase enabled policy object</p>\n"
+  example: []
+  syntax:
+    content: 'public class ShowcaseEnabledPolicy : object'
+    content.vb: >-
+      Public Class ShowcaseEnabledPolicy
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.Disabled
+  - Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.Enabled
+  - Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.Other
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.#ctor
+  commentId: M:Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy
+  langs:
+  - csharp
+  - vb
+  name: ShowcaseEnabledPolicy()
+  nameWithType: ShowcaseEnabledPolicy.ShowcaseEnabledPolicy()
+  fullName: Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.ShowcaseEnabledPolicy()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/ShowcaseEnabledPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/ShowcaseEnabledPolicy.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public ShowcaseEnabledPolicy()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.IsDisabled
+  commentId: P:Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.IsDisabled
+  id: IsDisabled
+  parent: Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy
+  langs:
+  - csharp
+  - vb
+  name: IsDisabled
+  nameWithType: ShowcaseEnabledPolicy.IsDisabled
+  fullName: Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.IsDisabled
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/ShowcaseEnabledPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsDisabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/ShowcaseEnabledPolicy.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Gets a value indicating whether this instance is Disabled</p>\n"
+  example: []
+  syntax:
+    content: public bool IsDisabled { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsDisabled As Boolean
+  overload: Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.IsDisabled*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.AsDisabled
+  commentId: P:Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.AsDisabled
+  id: AsDisabled
+  parent: Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy
+  langs:
+  - csharp
+  - vb
+  name: AsDisabled
+  nameWithType: ShowcaseEnabledPolicy.AsDisabled
+  fullName: Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.AsDisabled
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/ShowcaseEnabledPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsDisabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/ShowcaseEnabledPolicy.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Gets this instance as a Disabled, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ShowcaseEnabledPolicy.Disabled AsDisabled { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.Disabled
+    content.vb: Public ReadOnly Property AsDisabled As ShowcaseEnabledPolicy.Disabled
+  overload: Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.AsDisabled*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.IsEnabled
+  commentId: P:Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.IsEnabled
+  id: IsEnabled
+  parent: Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy
+  langs:
+  - csharp
+  - vb
+  name: IsEnabled
+  nameWithType: ShowcaseEnabledPolicy.IsEnabled
+  fullName: Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.IsEnabled
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/ShowcaseEnabledPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsEnabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/ShowcaseEnabledPolicy.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Gets a value indicating whether this instance is Enabled</p>\n"
+  example: []
+  syntax:
+    content: public bool IsEnabled { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsEnabled As Boolean
+  overload: Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.IsEnabled*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.AsEnabled
+  commentId: P:Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.AsEnabled
+  id: AsEnabled
+  parent: Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy
+  langs:
+  - csharp
+  - vb
+  name: AsEnabled
+  nameWithType: ShowcaseEnabledPolicy.AsEnabled
+  fullName: Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.AsEnabled
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/ShowcaseEnabledPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsEnabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/ShowcaseEnabledPolicy.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Gets this instance as a Enabled, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ShowcaseEnabledPolicy.Enabled AsEnabled { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.Enabled
+    content.vb: Public ReadOnly Property AsEnabled As ShowcaseEnabledPolicy.Enabled
+  overload: Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.AsEnabled*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.IsOther
+  commentId: P:Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.IsOther
+  id: IsOther
+  parent: Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: ShowcaseEnabledPolicy.IsOther
+  fullName: Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/ShowcaseEnabledPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/ShowcaseEnabledPolicy.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.AsOther
+  commentId: P:Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.AsOther
+  id: AsOther
+  parent: Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: ShowcaseEnabledPolicy.AsOther
+  fullName: Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/ShowcaseEnabledPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/ShowcaseEnabledPolicy.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ShowcaseEnabledPolicy.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.Other
+    content.vb: Public ReadOnly Property AsOther As ShowcaseEnabledPolicy.Other
+  overload: Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamPolicies
+  commentId: N:Dropbox.Api.TeamPolicies
+  name: Dropbox.Api.TeamPolicies
+  nameWithType: Dropbox.Api.TeamPolicies
+  fullName: Dropbox.Api.TeamPolicies
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy
+  commentId: T:Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy
+  parent: Dropbox.Api.TeamPolicies
+  name: ShowcaseEnabledPolicy
+  nameWithType: ShowcaseEnabledPolicy
+  fullName: Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy
+- uid: Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.#ctor*
+  commentId: Overload:Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.#ctor
+  name: ShowcaseEnabledPolicy
+  nameWithType: ShowcaseEnabledPolicy.ShowcaseEnabledPolicy
+  fullName: Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.ShowcaseEnabledPolicy
+- uid: Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.IsDisabled*
+  commentId: Overload:Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.IsDisabled
+  name: IsDisabled
+  nameWithType: ShowcaseEnabledPolicy.IsDisabled
+  fullName: Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.IsDisabled
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.AsDisabled*
+  commentId: Overload:Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.AsDisabled
+  name: AsDisabled
+  nameWithType: ShowcaseEnabledPolicy.AsDisabled
+  fullName: Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.AsDisabled
+- uid: Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.Disabled
+  commentId: T:Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.Disabled
+  parent: Dropbox.Api.TeamPolicies
+  name: ShowcaseEnabledPolicy.Disabled
+  nameWithType: ShowcaseEnabledPolicy.Disabled
+  fullName: Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.Disabled
+- uid: Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.IsEnabled*
+  commentId: Overload:Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.IsEnabled
+  name: IsEnabled
+  nameWithType: ShowcaseEnabledPolicy.IsEnabled
+  fullName: Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.IsEnabled
+- uid: Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.AsEnabled*
+  commentId: Overload:Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.AsEnabled
+  name: AsEnabled
+  nameWithType: ShowcaseEnabledPolicy.AsEnabled
+  fullName: Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.AsEnabled
+- uid: Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.Enabled
+  commentId: T:Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.Enabled
+  parent: Dropbox.Api.TeamPolicies
+  name: ShowcaseEnabledPolicy.Enabled
+  nameWithType: ShowcaseEnabledPolicy.Enabled
+  fullName: Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.Enabled
+- uid: Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.IsOther*
+  commentId: Overload:Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.IsOther
+  name: IsOther
+  nameWithType: ShowcaseEnabledPolicy.IsOther
+  fullName: Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.IsOther
+- uid: Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.AsOther*
+  commentId: Overload:Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.AsOther
+  name: AsOther
+  nameWithType: ShowcaseEnabledPolicy.AsOther
+  fullName: Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.AsOther
+- uid: Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.Other
+  commentId: T:Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.Other
+  parent: Dropbox.Api.TeamPolicies
+  name: ShowcaseEnabledPolicy.Other
+  nameWithType: ShowcaseEnabledPolicy.Other
+  fullName: Dropbox.Api.TeamPolicies.ShowcaseEnabledPolicy.Other
+shouldSkipMarkup: true

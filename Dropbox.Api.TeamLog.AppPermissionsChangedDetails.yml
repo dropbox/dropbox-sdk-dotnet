@@ -1,0 +1,343 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.AppPermissionsChangedDetails
+  commentId: T:Dropbox.Api.TeamLog.AppPermissionsChangedDetails
+  id: AppPermissionsChangedDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.AppPermissionsChangedDetails.#ctor
+  - Dropbox.Api.TeamLog.AppPermissionsChangedDetails.#ctor(Dropbox.Api.TeamLog.AdminConsoleAppPolicy,Dropbox.Api.TeamLog.AdminConsoleAppPolicy,System.String,Dropbox.Api.TeamLog.AdminConsoleAppPermission)
+  - Dropbox.Api.TeamLog.AppPermissionsChangedDetails.AppName
+  - Dropbox.Api.TeamLog.AppPermissionsChangedDetails.NewValue
+  - Dropbox.Api.TeamLog.AppPermissionsChangedDetails.Permission
+  - Dropbox.Api.TeamLog.AppPermissionsChangedDetails.PreviousValue
+  langs:
+  - csharp
+  - vb
+  name: AppPermissionsChangedDetails
+  nameWithType: AppPermissionsChangedDetails
+  fullName: Dropbox.Api.TeamLog.AppPermissionsChangedDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AppPermissionsChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AppPermissionsChangedDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AppPermissionsChangedDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Changed app permissions.</p>\n"
+  example: []
+  syntax:
+    content: 'public class AppPermissionsChangedDetails : object'
+    content.vb: >-
+      Public Class AppPermissionsChangedDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.AppPermissionsChangedDetails.#ctor(Dropbox.Api.TeamLog.AdminConsoleAppPolicy,Dropbox.Api.TeamLog.AdminConsoleAppPolicy,System.String,Dropbox.Api.TeamLog.AdminConsoleAppPermission)
+  commentId: M:Dropbox.Api.TeamLog.AppPermissionsChangedDetails.#ctor(Dropbox.Api.TeamLog.AdminConsoleAppPolicy,Dropbox.Api.TeamLog.AdminConsoleAppPolicy,System.String,Dropbox.Api.TeamLog.AdminConsoleAppPermission)
+  id: '#ctor(Dropbox.Api.TeamLog.AdminConsoleAppPolicy,Dropbox.Api.TeamLog.AdminConsoleAppPolicy,System.String,Dropbox.Api.TeamLog.AdminConsoleAppPermission)'
+  parent: Dropbox.Api.TeamLog.AppPermissionsChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: AppPermissionsChangedDetails(AdminConsoleAppPolicy, AdminConsoleAppPolicy, String, AdminConsoleAppPermission)
+  nameWithType: AppPermissionsChangedDetails.AppPermissionsChangedDetails(AdminConsoleAppPolicy, AdminConsoleAppPolicy, String, AdminConsoleAppPermission)
+  fullName: Dropbox.Api.TeamLog.AppPermissionsChangedDetails.AppPermissionsChangedDetails(Dropbox.Api.TeamLog.AdminConsoleAppPolicy, Dropbox.Api.TeamLog.AdminConsoleAppPolicy, System.String, Dropbox.Api.TeamLog.AdminConsoleAppPermission)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AppPermissionsChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AppPermissionsChangedDetails.cs
+    startLine: 37
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.AppPermissionsChangedDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public AppPermissionsChangedDetails(AdminConsoleAppPolicy previousValue, AdminConsoleAppPolicy newValue, string appName = null, AdminConsoleAppPermission permission = null)
+    parameters:
+    - id: previousValue
+      type: Dropbox.Api.TeamLog.AdminConsoleAppPolicy
+      description: Previous policy.
+    - id: newValue
+      type: Dropbox.Api.TeamLog.AdminConsoleAppPolicy
+      description: New policy.
+    - id: appName
+      type: System.String
+      description: Name of the app.
+    - id: permission
+      type: Dropbox.Api.TeamLog.AdminConsoleAppPermission
+      description: Permission that was changed.
+    content.vb: Public Sub New(previousValue As AdminConsoleAppPolicy, newValue As AdminConsoleAppPolicy, appName As String = Nothing, permission As AdminConsoleAppPermission = Nothing)
+  overload: Dropbox.Api.TeamLog.AppPermissionsChangedDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.AppPermissionsChangedDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.AppPermissionsChangedDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.AppPermissionsChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: AppPermissionsChangedDetails()
+  nameWithType: AppPermissionsChangedDetails.AppPermissionsChangedDetails()
+  fullName: Dropbox.Api.TeamLog.AppPermissionsChangedDetails.AppPermissionsChangedDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AppPermissionsChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AppPermissionsChangedDetails.cs
+    startLine: 64
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.AppPermissionsChangedDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public AppPermissionsChangedDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.AppPermissionsChangedDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.AppPermissionsChangedDetails.PreviousValue
+  commentId: P:Dropbox.Api.TeamLog.AppPermissionsChangedDetails.PreviousValue
+  id: PreviousValue
+  parent: Dropbox.Api.TeamLog.AppPermissionsChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: PreviousValue
+  nameWithType: AppPermissionsChangedDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.AppPermissionsChangedDetails.PreviousValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AppPermissionsChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PreviousValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AppPermissionsChangedDetails.cs
+    startLine: 72
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Previous policy.</p>\n"
+  example: []
+  syntax:
+    content: public AdminConsoleAppPolicy PreviousValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.AdminConsoleAppPolicy
+    content.vb: Public Property PreviousValue As AdminConsoleAppPolicy
+  overload: Dropbox.Api.TeamLog.AppPermissionsChangedDetails.PreviousValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.AppPermissionsChangedDetails.NewValue
+  commentId: P:Dropbox.Api.TeamLog.AppPermissionsChangedDetails.NewValue
+  id: NewValue
+  parent: Dropbox.Api.TeamLog.AppPermissionsChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: NewValue
+  nameWithType: AppPermissionsChangedDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.AppPermissionsChangedDetails.NewValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AppPermissionsChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NewValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AppPermissionsChangedDetails.cs
+    startLine: 77
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>New policy.</p>\n"
+  example: []
+  syntax:
+    content: public AdminConsoleAppPolicy NewValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.AdminConsoleAppPolicy
+    content.vb: Public Property NewValue As AdminConsoleAppPolicy
+  overload: Dropbox.Api.TeamLog.AppPermissionsChangedDetails.NewValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.AppPermissionsChangedDetails.AppName
+  commentId: P:Dropbox.Api.TeamLog.AppPermissionsChangedDetails.AppName
+  id: AppName
+  parent: Dropbox.Api.TeamLog.AppPermissionsChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: AppName
+  nameWithType: AppPermissionsChangedDetails.AppName
+  fullName: Dropbox.Api.TeamLog.AppPermissionsChangedDetails.AppName
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AppPermissionsChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AppName
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AppPermissionsChangedDetails.cs
+    startLine: 82
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Name of the app.</p>\n"
+  example: []
+  syntax:
+    content: public string AppName { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property AppName As String
+  overload: Dropbox.Api.TeamLog.AppPermissionsChangedDetails.AppName*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.AppPermissionsChangedDetails.Permission
+  commentId: P:Dropbox.Api.TeamLog.AppPermissionsChangedDetails.Permission
+  id: Permission
+  parent: Dropbox.Api.TeamLog.AppPermissionsChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: Permission
+  nameWithType: AppPermissionsChangedDetails.Permission
+  fullName: Dropbox.Api.TeamLog.AppPermissionsChangedDetails.Permission
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AppPermissionsChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Permission
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AppPermissionsChangedDetails.cs
+    startLine: 87
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Permission that was changed.</p>\n"
+  example: []
+  syntax:
+    content: public AdminConsoleAppPermission Permission { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.AdminConsoleAppPermission
+    content.vb: Public Property Permission As AdminConsoleAppPermission
+  overload: Dropbox.Api.TeamLog.AppPermissionsChangedDetails.Permission*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.AppPermissionsChangedDetails
+  commentId: T:Dropbox.Api.TeamLog.AppPermissionsChangedDetails
+  parent: Dropbox.Api.TeamLog
+  name: AppPermissionsChangedDetails
+  nameWithType: AppPermissionsChangedDetails
+  fullName: Dropbox.Api.TeamLog.AppPermissionsChangedDetails
+- uid: Dropbox.Api.TeamLog.AppPermissionsChangedDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.AppPermissionsChangedDetails.#ctor
+  name: AppPermissionsChangedDetails
+  nameWithType: AppPermissionsChangedDetails.AppPermissionsChangedDetails
+  fullName: Dropbox.Api.TeamLog.AppPermissionsChangedDetails.AppPermissionsChangedDetails
+- uid: Dropbox.Api.TeamLog.AdminConsoleAppPolicy
+  commentId: T:Dropbox.Api.TeamLog.AdminConsoleAppPolicy
+  parent: Dropbox.Api.TeamLog
+  name: AdminConsoleAppPolicy
+  nameWithType: AdminConsoleAppPolicy
+  fullName: Dropbox.Api.TeamLog.AdminConsoleAppPolicy
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.AdminConsoleAppPermission
+  commentId: T:Dropbox.Api.TeamLog.AdminConsoleAppPermission
+  parent: Dropbox.Api.TeamLog
+  name: AdminConsoleAppPermission
+  nameWithType: AdminConsoleAppPermission
+  fullName: Dropbox.Api.TeamLog.AdminConsoleAppPermission
+- uid: Dropbox.Api.TeamLog.AppPermissionsChangedDetails.PreviousValue*
+  commentId: Overload:Dropbox.Api.TeamLog.AppPermissionsChangedDetails.PreviousValue
+  name: PreviousValue
+  nameWithType: AppPermissionsChangedDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.AppPermissionsChangedDetails.PreviousValue
+- uid: Dropbox.Api.TeamLog.AppPermissionsChangedDetails.NewValue*
+  commentId: Overload:Dropbox.Api.TeamLog.AppPermissionsChangedDetails.NewValue
+  name: NewValue
+  nameWithType: AppPermissionsChangedDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.AppPermissionsChangedDetails.NewValue
+- uid: Dropbox.Api.TeamLog.AppPermissionsChangedDetails.AppName*
+  commentId: Overload:Dropbox.Api.TeamLog.AppPermissionsChangedDetails.AppName
+  name: AppName
+  nameWithType: AppPermissionsChangedDetails.AppName
+  fullName: Dropbox.Api.TeamLog.AppPermissionsChangedDetails.AppName
+- uid: Dropbox.Api.TeamLog.AppPermissionsChangedDetails.Permission*
+  commentId: Overload:Dropbox.Api.TeamLog.AppPermissionsChangedDetails.Permission
+  name: Permission
+  nameWithType: AppPermissionsChangedDetails.Permission
+  fullName: Dropbox.Api.TeamLog.AppPermissionsChangedDetails.Permission
+shouldSkipMarkup: true

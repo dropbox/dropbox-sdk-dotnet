@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.FileLikeCommentType
+  commentId: T:Dropbox.Api.TeamLog.FileLikeCommentType
+  id: FileLikeCommentType
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.FileLikeCommentType.#ctor
+  - Dropbox.Api.TeamLog.FileLikeCommentType.#ctor(System.String)
+  - Dropbox.Api.TeamLog.FileLikeCommentType.Description
+  langs:
+  - csharp
+  - vb
+  name: FileLikeCommentType
+  nameWithType: FileLikeCommentType
+  fullName: Dropbox.Api.TeamLog.FileLikeCommentType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileLikeCommentType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: FileLikeCommentType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileLikeCommentType.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The file like comment type object</p>\n"
+  example: []
+  syntax:
+    content: 'public class FileLikeCommentType : object'
+    content.vb: >-
+      Public Class FileLikeCommentType
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.FileLikeCommentType.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.FileLikeCommentType.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.FileLikeCommentType
+  langs:
+  - csharp
+  - vb
+  name: FileLikeCommentType(String)
+  nameWithType: FileLikeCommentType.FileLikeCommentType(String)
+  fullName: Dropbox.Api.TeamLog.FileLikeCommentType.FileLikeCommentType(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileLikeCommentType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileLikeCommentType.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.FileLikeCommentType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public FileLikeCommentType(string description)
+    parameters:
+    - id: description
+      type: System.String
+      description: The description
+    content.vb: Public Sub New(description As String)
+  overload: Dropbox.Api.TeamLog.FileLikeCommentType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.FileLikeCommentType.#ctor
+  commentId: M:Dropbox.Api.TeamLog.FileLikeCommentType.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.FileLikeCommentType
+  langs:
+  - csharp
+  - vb
+  name: FileLikeCommentType()
+  nameWithType: FileLikeCommentType.FileLikeCommentType()
+  fullName: Dropbox.Api.TeamLog.FileLikeCommentType.FileLikeCommentType()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileLikeCommentType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileLikeCommentType.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.FileLikeCommentType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public FileLikeCommentType()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.FileLikeCommentType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.FileLikeCommentType.Description
+  commentId: P:Dropbox.Api.TeamLog.FileLikeCommentType.Description
+  id: Description
+  parent: Dropbox.Api.TeamLog.FileLikeCommentType
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: FileLikeCommentType.Description
+  fullName: Dropbox.Api.TeamLog.FileLikeCommentType.Description
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileLikeCommentType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Description
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileLikeCommentType.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets the description of the file like comment type</p>\n"
+  example: []
+  syntax:
+    content: public string Description { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Dropbox.Api.TeamLog.FileLikeCommentType.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.FileLikeCommentType
+  commentId: T:Dropbox.Api.TeamLog.FileLikeCommentType
+  parent: Dropbox.Api.TeamLog
+  name: FileLikeCommentType
+  nameWithType: FileLikeCommentType
+  fullName: Dropbox.Api.TeamLog.FileLikeCommentType
+- uid: Dropbox.Api.TeamLog.FileLikeCommentType.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.FileLikeCommentType.#ctor
+  name: FileLikeCommentType
+  nameWithType: FileLikeCommentType.FileLikeCommentType
+  fullName: Dropbox.Api.TeamLog.FileLikeCommentType.FileLikeCommentType
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.FileLikeCommentType.Description*
+  commentId: Overload:Dropbox.Api.TeamLog.FileLikeCommentType.Description
+  name: Description
+  nameWithType: FileLikeCommentType.Description
+  fullName: Dropbox.Api.TeamLog.FileLikeCommentType.Description
+shouldSkipMarkup: true

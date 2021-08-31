@@ -1,0 +1,218 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.AdminAlertCategoryEnum.InformationGovernance
+  commentId: T:Dropbox.Api.TeamLog.AdminAlertCategoryEnum.InformationGovernance
+  id: AdminAlertCategoryEnum.InformationGovernance
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.AdminAlertCategoryEnum.InformationGovernance.Instance
+  langs:
+  - csharp
+  - vb
+  name: AdminAlertCategoryEnum.InformationGovernance
+  nameWithType: AdminAlertCategoryEnum.InformationGovernance
+  fullName: Dropbox.Api.TeamLog.AdminAlertCategoryEnum.InformationGovernance
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertCategoryEnum.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: InformationGovernance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertCategoryEnum.cs
+    startLine: 474
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The information governance object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class InformationGovernance : AdminAlertCategoryEnum'
+    content.vb: >-
+      Public NotInheritable Class InformationGovernance
+          Inherits AdminAlertCategoryEnum
+  inheritance:
+  - System.Object
+  - Dropbox.Api.TeamLog.AdminAlertCategoryEnum
+  inheritedMembers:
+  - Dropbox.Api.TeamLog.AdminAlertCategoryEnum.IsAccountTakeover
+  - Dropbox.Api.TeamLog.AdminAlertCategoryEnum.AsAccountTakeover
+  - Dropbox.Api.TeamLog.AdminAlertCategoryEnum.IsDataLossProtection
+  - Dropbox.Api.TeamLog.AdminAlertCategoryEnum.AsDataLossProtection
+  - Dropbox.Api.TeamLog.AdminAlertCategoryEnum.IsInformationGovernance
+  - Dropbox.Api.TeamLog.AdminAlertCategoryEnum.AsInformationGovernance
+  - Dropbox.Api.TeamLog.AdminAlertCategoryEnum.IsMalwareSharing
+  - Dropbox.Api.TeamLog.AdminAlertCategoryEnum.AsMalwareSharing
+  - Dropbox.Api.TeamLog.AdminAlertCategoryEnum.IsMassiveFileOperation
+  - Dropbox.Api.TeamLog.AdminAlertCategoryEnum.AsMassiveFileOperation
+  - Dropbox.Api.TeamLog.AdminAlertCategoryEnum.IsNa
+  - Dropbox.Api.TeamLog.AdminAlertCategoryEnum.AsNa
+  - Dropbox.Api.TeamLog.AdminAlertCategoryEnum.IsThreatManagement
+  - Dropbox.Api.TeamLog.AdminAlertCategoryEnum.AsThreatManagement
+  - Dropbox.Api.TeamLog.AdminAlertCategoryEnum.IsOther
+  - Dropbox.Api.TeamLog.AdminAlertCategoryEnum.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.TeamLog.AdminAlertCategoryEnum.InformationGovernance.Instance
+  commentId: F:Dropbox.Api.TeamLog.AdminAlertCategoryEnum.InformationGovernance.Instance
+  id: Instance
+  parent: Dropbox.Api.TeamLog.AdminAlertCategoryEnum.InformationGovernance
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: AdminAlertCategoryEnum.InformationGovernance.Instance
+  fullName: Dropbox.Api.TeamLog.AdminAlertCategoryEnum.InformationGovernance.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertCategoryEnum.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertCategoryEnum.cs
+    startLine: 499
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>A singleton instance of InformationGovernance</p>\n"
+  example: []
+  syntax:
+    content: public static readonly AdminAlertCategoryEnum.InformationGovernance Instance
+    return:
+      type: Dropbox.Api.TeamLog.AdminAlertCategoryEnum.InformationGovernance
+    content.vb: Public Shared ReadOnly Instance As AdminAlertCategoryEnum.InformationGovernance
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.AdminAlertCategoryEnum
+  commentId: T:Dropbox.Api.TeamLog.AdminAlertCategoryEnum
+  parent: Dropbox.Api.TeamLog
+  name: AdminAlertCategoryEnum
+  nameWithType: AdminAlertCategoryEnum
+  fullName: Dropbox.Api.TeamLog.AdminAlertCategoryEnum
+- uid: Dropbox.Api.TeamLog.AdminAlertCategoryEnum.IsAccountTakeover
+  commentId: P:Dropbox.Api.TeamLog.AdminAlertCategoryEnum.IsAccountTakeover
+  parent: Dropbox.Api.TeamLog.AdminAlertCategoryEnum
+  name: IsAccountTakeover
+  nameWithType: AdminAlertCategoryEnum.IsAccountTakeover
+  fullName: Dropbox.Api.TeamLog.AdminAlertCategoryEnum.IsAccountTakeover
+- uid: Dropbox.Api.TeamLog.AdminAlertCategoryEnum.AsAccountTakeover
+  commentId: P:Dropbox.Api.TeamLog.AdminAlertCategoryEnum.AsAccountTakeover
+  parent: Dropbox.Api.TeamLog.AdminAlertCategoryEnum
+  name: AsAccountTakeover
+  nameWithType: AdminAlertCategoryEnum.AsAccountTakeover
+  fullName: Dropbox.Api.TeamLog.AdminAlertCategoryEnum.AsAccountTakeover
+- uid: Dropbox.Api.TeamLog.AdminAlertCategoryEnum.IsDataLossProtection
+  commentId: P:Dropbox.Api.TeamLog.AdminAlertCategoryEnum.IsDataLossProtection
+  parent: Dropbox.Api.TeamLog.AdminAlertCategoryEnum
+  name: IsDataLossProtection
+  nameWithType: AdminAlertCategoryEnum.IsDataLossProtection
+  fullName: Dropbox.Api.TeamLog.AdminAlertCategoryEnum.IsDataLossProtection
+- uid: Dropbox.Api.TeamLog.AdminAlertCategoryEnum.AsDataLossProtection
+  commentId: P:Dropbox.Api.TeamLog.AdminAlertCategoryEnum.AsDataLossProtection
+  parent: Dropbox.Api.TeamLog.AdminAlertCategoryEnum
+  name: AsDataLossProtection
+  nameWithType: AdminAlertCategoryEnum.AsDataLossProtection
+  fullName: Dropbox.Api.TeamLog.AdminAlertCategoryEnum.AsDataLossProtection
+- uid: Dropbox.Api.TeamLog.AdminAlertCategoryEnum.IsInformationGovernance
+  commentId: P:Dropbox.Api.TeamLog.AdminAlertCategoryEnum.IsInformationGovernance
+  parent: Dropbox.Api.TeamLog.AdminAlertCategoryEnum
+  name: IsInformationGovernance
+  nameWithType: AdminAlertCategoryEnum.IsInformationGovernance
+  fullName: Dropbox.Api.TeamLog.AdminAlertCategoryEnum.IsInformationGovernance
+- uid: Dropbox.Api.TeamLog.AdminAlertCategoryEnum.AsInformationGovernance
+  commentId: P:Dropbox.Api.TeamLog.AdminAlertCategoryEnum.AsInformationGovernance
+  parent: Dropbox.Api.TeamLog.AdminAlertCategoryEnum
+  name: AsInformationGovernance
+  nameWithType: AdminAlertCategoryEnum.AsInformationGovernance
+  fullName: Dropbox.Api.TeamLog.AdminAlertCategoryEnum.AsInformationGovernance
+- uid: Dropbox.Api.TeamLog.AdminAlertCategoryEnum.IsMalwareSharing
+  commentId: P:Dropbox.Api.TeamLog.AdminAlertCategoryEnum.IsMalwareSharing
+  parent: Dropbox.Api.TeamLog.AdminAlertCategoryEnum
+  name: IsMalwareSharing
+  nameWithType: AdminAlertCategoryEnum.IsMalwareSharing
+  fullName: Dropbox.Api.TeamLog.AdminAlertCategoryEnum.IsMalwareSharing
+- uid: Dropbox.Api.TeamLog.AdminAlertCategoryEnum.AsMalwareSharing
+  commentId: P:Dropbox.Api.TeamLog.AdminAlertCategoryEnum.AsMalwareSharing
+  parent: Dropbox.Api.TeamLog.AdminAlertCategoryEnum
+  name: AsMalwareSharing
+  nameWithType: AdminAlertCategoryEnum.AsMalwareSharing
+  fullName: Dropbox.Api.TeamLog.AdminAlertCategoryEnum.AsMalwareSharing
+- uid: Dropbox.Api.TeamLog.AdminAlertCategoryEnum.IsMassiveFileOperation
+  commentId: P:Dropbox.Api.TeamLog.AdminAlertCategoryEnum.IsMassiveFileOperation
+  parent: Dropbox.Api.TeamLog.AdminAlertCategoryEnum
+  name: IsMassiveFileOperation
+  nameWithType: AdminAlertCategoryEnum.IsMassiveFileOperation
+  fullName: Dropbox.Api.TeamLog.AdminAlertCategoryEnum.IsMassiveFileOperation
+- uid: Dropbox.Api.TeamLog.AdminAlertCategoryEnum.AsMassiveFileOperation
+  commentId: P:Dropbox.Api.TeamLog.AdminAlertCategoryEnum.AsMassiveFileOperation
+  parent: Dropbox.Api.TeamLog.AdminAlertCategoryEnum
+  name: AsMassiveFileOperation
+  nameWithType: AdminAlertCategoryEnum.AsMassiveFileOperation
+  fullName: Dropbox.Api.TeamLog.AdminAlertCategoryEnum.AsMassiveFileOperation
+- uid: Dropbox.Api.TeamLog.AdminAlertCategoryEnum.IsNa
+  commentId: P:Dropbox.Api.TeamLog.AdminAlertCategoryEnum.IsNa
+  parent: Dropbox.Api.TeamLog.AdminAlertCategoryEnum
+  name: IsNa
+  nameWithType: AdminAlertCategoryEnum.IsNa
+  fullName: Dropbox.Api.TeamLog.AdminAlertCategoryEnum.IsNa
+- uid: Dropbox.Api.TeamLog.AdminAlertCategoryEnum.AsNa
+  commentId: P:Dropbox.Api.TeamLog.AdminAlertCategoryEnum.AsNa
+  parent: Dropbox.Api.TeamLog.AdminAlertCategoryEnum
+  name: AsNa
+  nameWithType: AdminAlertCategoryEnum.AsNa
+  fullName: Dropbox.Api.TeamLog.AdminAlertCategoryEnum.AsNa
+- uid: Dropbox.Api.TeamLog.AdminAlertCategoryEnum.IsThreatManagement
+  commentId: P:Dropbox.Api.TeamLog.AdminAlertCategoryEnum.IsThreatManagement
+  parent: Dropbox.Api.TeamLog.AdminAlertCategoryEnum
+  name: IsThreatManagement
+  nameWithType: AdminAlertCategoryEnum.IsThreatManagement
+  fullName: Dropbox.Api.TeamLog.AdminAlertCategoryEnum.IsThreatManagement
+- uid: Dropbox.Api.TeamLog.AdminAlertCategoryEnum.AsThreatManagement
+  commentId: P:Dropbox.Api.TeamLog.AdminAlertCategoryEnum.AsThreatManagement
+  parent: Dropbox.Api.TeamLog.AdminAlertCategoryEnum
+  name: AsThreatManagement
+  nameWithType: AdminAlertCategoryEnum.AsThreatManagement
+  fullName: Dropbox.Api.TeamLog.AdminAlertCategoryEnum.AsThreatManagement
+- uid: Dropbox.Api.TeamLog.AdminAlertCategoryEnum.IsOther
+  commentId: P:Dropbox.Api.TeamLog.AdminAlertCategoryEnum.IsOther
+  parent: Dropbox.Api.TeamLog.AdminAlertCategoryEnum
+  name: IsOther
+  nameWithType: AdminAlertCategoryEnum.IsOther
+  fullName: Dropbox.Api.TeamLog.AdminAlertCategoryEnum.IsOther
+- uid: Dropbox.Api.TeamLog.AdminAlertCategoryEnum.AsOther
+  commentId: P:Dropbox.Api.TeamLog.AdminAlertCategoryEnum.AsOther
+  parent: Dropbox.Api.TeamLog.AdminAlertCategoryEnum
+  name: AsOther
+  nameWithType: AdminAlertCategoryEnum.AsOther
+  fullName: Dropbox.Api.TeamLog.AdminAlertCategoryEnum.AsOther
+- uid: Dropbox.Api.TeamLog.AdminAlertCategoryEnum.InformationGovernance
+  commentId: T:Dropbox.Api.TeamLog.AdminAlertCategoryEnum.InformationGovernance
+  parent: Dropbox.Api.TeamLog
+  name: AdminAlertCategoryEnum.InformationGovernance
+  nameWithType: AdminAlertCategoryEnum.InformationGovernance
+  fullName: Dropbox.Api.TeamLog.AdminAlertCategoryEnum.InformationGovernance
+shouldSkipMarkup: true

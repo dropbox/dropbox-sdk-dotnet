@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.TeamNamespacesListArg
+  commentId: T:Dropbox.Api.Team.TeamNamespacesListArg
+  id: TeamNamespacesListArg
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.TeamNamespacesListArg.#ctor
+  - Dropbox.Api.Team.TeamNamespacesListArg.#ctor(System.UInt32)
+  - Dropbox.Api.Team.TeamNamespacesListArg.Limit
+  langs:
+  - csharp
+  - vb
+  name: TeamNamespacesListArg
+  nameWithType: TeamNamespacesListArg
+  fullName: Dropbox.Api.Team.TeamNamespacesListArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamNamespacesListArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TeamNamespacesListArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamNamespacesListArg.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The team namespaces list arg object</p>\n"
+  example: []
+  syntax:
+    content: 'public class TeamNamespacesListArg : object'
+    content.vb: >-
+      Public Class TeamNamespacesListArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.TeamNamespacesListArg.#ctor(System.UInt32)
+  commentId: M:Dropbox.Api.Team.TeamNamespacesListArg.#ctor(System.UInt32)
+  id: '#ctor(System.UInt32)'
+  parent: Dropbox.Api.Team.TeamNamespacesListArg
+  langs:
+  - csharp
+  - vb
+  name: TeamNamespacesListArg(UInt32)
+  nameWithType: TeamNamespacesListArg.TeamNamespacesListArg(UInt32)
+  fullName: Dropbox.Api.Team.TeamNamespacesListArg.TeamNamespacesListArg(System.UInt32)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamNamespacesListArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamNamespacesListArg.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.TeamNamespacesListArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public TeamNamespacesListArg(uint limit = null)
+    parameters:
+    - id: limit
+      type: System.UInt32
+      description: Specifying a value here has no effect.
+    content.vb: Public Sub New(limit As UInteger = Nothing)
+  overload: Dropbox.Api.Team.TeamNamespacesListArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.TeamNamespacesListArg.#ctor
+  commentId: M:Dropbox.Api.Team.TeamNamespacesListArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.TeamNamespacesListArg
+  langs:
+  - csharp
+  - vb
+  name: TeamNamespacesListArg()
+  nameWithType: TeamNamespacesListArg.TeamNamespacesListArg()
+  fullName: Dropbox.Api.Team.TeamNamespacesListArg.TeamNamespacesListArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamNamespacesListArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamNamespacesListArg.cs
+    startLine: 54
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.TeamNamespacesListArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public TeamNamespacesListArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.TeamNamespacesListArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.TeamNamespacesListArg.Limit
+  commentId: P:Dropbox.Api.Team.TeamNamespacesListArg.Limit
+  id: Limit
+  parent: Dropbox.Api.Team.TeamNamespacesListArg
+  langs:
+  - csharp
+  - vb
+  name: Limit
+  nameWithType: TeamNamespacesListArg.Limit
+  fullName: Dropbox.Api.Team.TeamNamespacesListArg.Limit
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamNamespacesListArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Limit
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamNamespacesListArg.cs
+    startLine: 63
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Specifying a value here has no effect.</p>\n"
+  example: []
+  syntax:
+    content: public uint Limit { get; protected set; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public Property Limit As UInteger
+  overload: Dropbox.Api.Team.TeamNamespacesListArg.Limit*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.TeamNamespacesListArg
+  commentId: T:Dropbox.Api.Team.TeamNamespacesListArg
+  parent: Dropbox.Api.Team
+  name: TeamNamespacesListArg
+  nameWithType: TeamNamespacesListArg
+  fullName: Dropbox.Api.Team.TeamNamespacesListArg
+- uid: Dropbox.Api.Team.TeamNamespacesListArg.#ctor*
+  commentId: Overload:Dropbox.Api.Team.TeamNamespacesListArg.#ctor
+  name: TeamNamespacesListArg
+  nameWithType: TeamNamespacesListArg.TeamNamespacesListArg
+  fullName: Dropbox.Api.Team.TeamNamespacesListArg.TeamNamespacesListArg
+- uid: System.UInt32
+  isExternal: true
+  name: UInt32
+  nameWithType: UInt32
+  fullName: System.UInt32
+- uid: Dropbox.Api.Team.TeamNamespacesListArg.Limit*
+  commentId: Overload:Dropbox.Api.Team.TeamNamespacesListArg.Limit
+  name: Limit
+  nameWithType: TeamNamespacesListArg.Limit
+  fullName: Dropbox.Api.Team.TeamNamespacesListArg.Limit
+shouldSkipMarkup: true

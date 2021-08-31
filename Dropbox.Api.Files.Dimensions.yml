@@ -1,0 +1,235 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.Dimensions
+  commentId: T:Dropbox.Api.Files.Dimensions
+  id: Dimensions
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.Dimensions.#ctor
+  - Dropbox.Api.Files.Dimensions.#ctor(System.UInt64,System.UInt64)
+  - Dropbox.Api.Files.Dimensions.Height
+  - Dropbox.Api.Files.Dimensions.Width
+  langs:
+  - csharp
+  - vb
+  name: Dimensions
+  nameWithType: Dimensions
+  fullName: Dropbox.Api.Files.Dimensions
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/Dimensions.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Dimensions
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/Dimensions.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Dimensions for a photo or video.</p>\n"
+  example: []
+  syntax:
+    content: 'public class Dimensions : object'
+    content.vb: >-
+      Public Class Dimensions
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.Dimensions.#ctor(System.UInt64,System.UInt64)
+  commentId: M:Dropbox.Api.Files.Dimensions.#ctor(System.UInt64,System.UInt64)
+  id: '#ctor(System.UInt64,System.UInt64)'
+  parent: Dropbox.Api.Files.Dimensions
+  langs:
+  - csharp
+  - vb
+  name: Dimensions(UInt64, UInt64)
+  nameWithType: Dimensions.Dimensions(UInt64, UInt64)
+  fullName: Dropbox.Api.Files.Dimensions.Dimensions(System.UInt64, System.UInt64)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/Dimensions.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/Dimensions.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.Dimensions\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public Dimensions(ulong height, ulong width)
+    parameters:
+    - id: height
+      type: System.UInt64
+      description: Height of the photo/video.
+    - id: width
+      type: System.UInt64
+      description: Width of the photo/video.
+    content.vb: Public Sub New(height As ULong, width As ULong)
+  overload: Dropbox.Api.Files.Dimensions.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.Dimensions.#ctor
+  commentId: M:Dropbox.Api.Files.Dimensions.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.Dimensions
+  langs:
+  - csharp
+  - vb
+  name: Dimensions()
+  nameWithType: Dimensions.Dimensions()
+  fullName: Dropbox.Api.Files.Dimensions.Dimensions()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/Dimensions.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/Dimensions.cs
+    startLine: 46
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.Dimensions\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public Dimensions()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.Dimensions.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.Dimensions.Height
+  commentId: P:Dropbox.Api.Files.Dimensions.Height
+  id: Height
+  parent: Dropbox.Api.Files.Dimensions
+  langs:
+  - csharp
+  - vb
+  name: Height
+  nameWithType: Dimensions.Height
+  fullName: Dropbox.Api.Files.Dimensions.Height
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/Dimensions.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Height
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/Dimensions.cs
+    startLine: 54
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Height of the photo/video.</p>\n"
+  example: []
+  syntax:
+    content: public ulong Height { get; protected set; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: Public Property Height As ULong
+  overload: Dropbox.Api.Files.Dimensions.Height*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.Dimensions.Width
+  commentId: P:Dropbox.Api.Files.Dimensions.Width
+  id: Width
+  parent: Dropbox.Api.Files.Dimensions
+  langs:
+  - csharp
+  - vb
+  name: Width
+  nameWithType: Dimensions.Width
+  fullName: Dropbox.Api.Files.Dimensions.Width
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/Dimensions.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Width
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/Dimensions.cs
+    startLine: 59
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Width of the photo/video.</p>\n"
+  example: []
+  syntax:
+    content: public ulong Width { get; protected set; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: Public Property Width As ULong
+  overload: Dropbox.Api.Files.Dimensions.Width*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.Dimensions
+  commentId: T:Dropbox.Api.Files.Dimensions
+  parent: Dropbox.Api.Files
+  name: Dimensions
+  nameWithType: Dimensions
+  fullName: Dropbox.Api.Files.Dimensions
+- uid: Dropbox.Api.Files.Dimensions.#ctor*
+  commentId: Overload:Dropbox.Api.Files.Dimensions.#ctor
+  name: Dimensions
+  nameWithType: Dimensions.Dimensions
+  fullName: Dropbox.Api.Files.Dimensions.Dimensions
+- uid: System.UInt64
+  isExternal: true
+  name: UInt64
+  nameWithType: UInt64
+  fullName: System.UInt64
+- uid: Dropbox.Api.Files.Dimensions.Height*
+  commentId: Overload:Dropbox.Api.Files.Dimensions.Height
+  name: Height
+  nameWithType: Dimensions.Height
+  fullName: Dropbox.Api.Files.Dimensions.Height
+- uid: Dropbox.Api.Files.Dimensions.Width*
+  commentId: Overload:Dropbox.Api.Files.Dimensions.Width
+  name: Width
+  nameWithType: Dimensions.Width
+  fullName: Dropbox.Api.Files.Dimensions.Width
+shouldSkipMarkup: true

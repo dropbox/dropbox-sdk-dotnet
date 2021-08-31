@@ -1,0 +1,162 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.AdminTier.SupportAdmin
+  commentId: T:Dropbox.Api.Team.AdminTier.SupportAdmin
+  id: AdminTier.SupportAdmin
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.AdminTier.SupportAdmin.Instance
+  langs:
+  - csharp
+  - vb
+  name: AdminTier.SupportAdmin
+  nameWithType: AdminTier.SupportAdmin
+  fullName: Dropbox.Api.Team.AdminTier.SupportAdmin
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/AdminTier.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SupportAdmin
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/AdminTier.cs
+    startLine: 355
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>User can do a limited set of common support tasks for existing users. Note:\nDropbox is adding new types of admin roles; these may display as\nsupport_admin.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class SupportAdmin : AdminTier'
+    content.vb: >-
+      Public NotInheritable Class SupportAdmin
+          Inherits AdminTier
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.AdminTier
+  inheritedMembers:
+  - Dropbox.Api.Team.AdminTier.IsTeamAdmin
+  - Dropbox.Api.Team.AdminTier.AsTeamAdmin
+  - Dropbox.Api.Team.AdminTier.IsUserManagementAdmin
+  - Dropbox.Api.Team.AdminTier.AsUserManagementAdmin
+  - Dropbox.Api.Team.AdminTier.IsSupportAdmin
+  - Dropbox.Api.Team.AdminTier.AsSupportAdmin
+  - Dropbox.Api.Team.AdminTier.IsMemberOnly
+  - Dropbox.Api.Team.AdminTier.AsMemberOnly
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Team.AdminTier.SupportAdmin.Instance
+  commentId: F:Dropbox.Api.Team.AdminTier.SupportAdmin.Instance
+  id: Instance
+  parent: Dropbox.Api.Team.AdminTier.SupportAdmin
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: AdminTier.SupportAdmin.Instance
+  fullName: Dropbox.Api.Team.AdminTier.SupportAdmin.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/AdminTier.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/AdminTier.cs
+    startLine: 380
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>A singleton instance of SupportAdmin</p>\n"
+  example: []
+  syntax:
+    content: public static readonly AdminTier.SupportAdmin Instance
+    return:
+      type: Dropbox.Api.Team.AdminTier.SupportAdmin
+    content.vb: Public Shared ReadOnly Instance As AdminTier.SupportAdmin
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.AdminTier
+  commentId: T:Dropbox.Api.Team.AdminTier
+  parent: Dropbox.Api.Team
+  name: AdminTier
+  nameWithType: AdminTier
+  fullName: Dropbox.Api.Team.AdminTier
+- uid: Dropbox.Api.Team.AdminTier.IsTeamAdmin
+  commentId: P:Dropbox.Api.Team.AdminTier.IsTeamAdmin
+  parent: Dropbox.Api.Team.AdminTier
+  name: IsTeamAdmin
+  nameWithType: AdminTier.IsTeamAdmin
+  fullName: Dropbox.Api.Team.AdminTier.IsTeamAdmin
+- uid: Dropbox.Api.Team.AdminTier.AsTeamAdmin
+  commentId: P:Dropbox.Api.Team.AdminTier.AsTeamAdmin
+  parent: Dropbox.Api.Team.AdminTier
+  name: AsTeamAdmin
+  nameWithType: AdminTier.AsTeamAdmin
+  fullName: Dropbox.Api.Team.AdminTier.AsTeamAdmin
+- uid: Dropbox.Api.Team.AdminTier.IsUserManagementAdmin
+  commentId: P:Dropbox.Api.Team.AdminTier.IsUserManagementAdmin
+  parent: Dropbox.Api.Team.AdminTier
+  name: IsUserManagementAdmin
+  nameWithType: AdminTier.IsUserManagementAdmin
+  fullName: Dropbox.Api.Team.AdminTier.IsUserManagementAdmin
+- uid: Dropbox.Api.Team.AdminTier.AsUserManagementAdmin
+  commentId: P:Dropbox.Api.Team.AdminTier.AsUserManagementAdmin
+  parent: Dropbox.Api.Team.AdminTier
+  name: AsUserManagementAdmin
+  nameWithType: AdminTier.AsUserManagementAdmin
+  fullName: Dropbox.Api.Team.AdminTier.AsUserManagementAdmin
+- uid: Dropbox.Api.Team.AdminTier.IsSupportAdmin
+  commentId: P:Dropbox.Api.Team.AdminTier.IsSupportAdmin
+  parent: Dropbox.Api.Team.AdminTier
+  name: IsSupportAdmin
+  nameWithType: AdminTier.IsSupportAdmin
+  fullName: Dropbox.Api.Team.AdminTier.IsSupportAdmin
+- uid: Dropbox.Api.Team.AdminTier.AsSupportAdmin
+  commentId: P:Dropbox.Api.Team.AdminTier.AsSupportAdmin
+  parent: Dropbox.Api.Team.AdminTier
+  name: AsSupportAdmin
+  nameWithType: AdminTier.AsSupportAdmin
+  fullName: Dropbox.Api.Team.AdminTier.AsSupportAdmin
+- uid: Dropbox.Api.Team.AdminTier.IsMemberOnly
+  commentId: P:Dropbox.Api.Team.AdminTier.IsMemberOnly
+  parent: Dropbox.Api.Team.AdminTier
+  name: IsMemberOnly
+  nameWithType: AdminTier.IsMemberOnly
+  fullName: Dropbox.Api.Team.AdminTier.IsMemberOnly
+- uid: Dropbox.Api.Team.AdminTier.AsMemberOnly
+  commentId: P:Dropbox.Api.Team.AdminTier.AsMemberOnly
+  parent: Dropbox.Api.Team.AdminTier
+  name: AsMemberOnly
+  nameWithType: AdminTier.AsMemberOnly
+  fullName: Dropbox.Api.Team.AdminTier.AsMemberOnly
+- uid: Dropbox.Api.Team.AdminTier.SupportAdmin
+  commentId: T:Dropbox.Api.Team.AdminTier.SupportAdmin
+  parent: Dropbox.Api.Team
+  name: AdminTier.SupportAdmin
+  nameWithType: AdminTier.SupportAdmin
+  fullName: Dropbox.Api.Team.AdminTier.SupportAdmin
+shouldSkipMarkup: true

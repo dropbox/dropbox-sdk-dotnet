@@ -1,0 +1,247 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.FileRequestDeleteDetails
+  commentId: T:Dropbox.Api.TeamLog.FileRequestDeleteDetails
+  id: FileRequestDeleteDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.FileRequestDeleteDetails.#ctor
+  - Dropbox.Api.TeamLog.FileRequestDeleteDetails.#ctor(System.String,Dropbox.Api.TeamLog.FileRequestDetails)
+  - Dropbox.Api.TeamLog.FileRequestDeleteDetails.FileRequestId
+  - Dropbox.Api.TeamLog.FileRequestDeleteDetails.PreviousDetails
+  langs:
+  - csharp
+  - vb
+  name: FileRequestDeleteDetails
+  nameWithType: FileRequestDeleteDetails
+  fullName: Dropbox.Api.TeamLog.FileRequestDeleteDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestDeleteDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: FileRequestDeleteDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestDeleteDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Delete file request.</p>\n"
+  example: []
+  syntax:
+    content: 'public class FileRequestDeleteDetails : object'
+    content.vb: >-
+      Public Class FileRequestDeleteDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.FileRequestDeleteDetails.#ctor(System.String,Dropbox.Api.TeamLog.FileRequestDetails)
+  commentId: M:Dropbox.Api.TeamLog.FileRequestDeleteDetails.#ctor(System.String,Dropbox.Api.TeamLog.FileRequestDetails)
+  id: '#ctor(System.String,Dropbox.Api.TeamLog.FileRequestDetails)'
+  parent: Dropbox.Api.TeamLog.FileRequestDeleteDetails
+  langs:
+  - csharp
+  - vb
+  name: FileRequestDeleteDetails(String, FileRequestDetails)
+  nameWithType: FileRequestDeleteDetails.FileRequestDeleteDetails(String, FileRequestDetails)
+  fullName: Dropbox.Api.TeamLog.FileRequestDeleteDetails.FileRequestDeleteDetails(System.String, Dropbox.Api.TeamLog.FileRequestDetails)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestDeleteDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestDeleteDetails.cs
+    startLine: 37
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.FileRequestDeleteDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public FileRequestDeleteDetails(string fileRequestId = null, FileRequestDetails previousDetails = null)
+    parameters:
+    - id: fileRequestId
+      type: System.String
+      description: >-
+        File request id. Might be missing due to historical
+
+        data gap.
+    - id: previousDetails
+      type: Dropbox.Api.TeamLog.FileRequestDetails
+      description: >-
+        Previous file request details. Might be missing due
+
+        to historical data gap.
+    content.vb: Public Sub New(fileRequestId As String = Nothing, previousDetails As FileRequestDetails = Nothing)
+  overload: Dropbox.Api.TeamLog.FileRequestDeleteDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.FileRequestDeleteDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.FileRequestDeleteDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.FileRequestDeleteDetails
+  langs:
+  - csharp
+  - vb
+  name: FileRequestDeleteDetails()
+  nameWithType: FileRequestDeleteDetails.FileRequestDeleteDetails()
+  fullName: Dropbox.Api.TeamLog.FileRequestDeleteDetails.FileRequestDeleteDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestDeleteDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestDeleteDetails.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.FileRequestDeleteDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public FileRequestDeleteDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.FileRequestDeleteDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.FileRequestDeleteDetails.FileRequestId
+  commentId: P:Dropbox.Api.TeamLog.FileRequestDeleteDetails.FileRequestId
+  id: FileRequestId
+  parent: Dropbox.Api.TeamLog.FileRequestDeleteDetails
+  langs:
+  - csharp
+  - vb
+  name: FileRequestId
+  nameWithType: FileRequestDeleteDetails.FileRequestId
+  fullName: Dropbox.Api.TeamLog.FileRequestDeleteDetails.FileRequestId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestDeleteDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: FileRequestId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestDeleteDetails.cs
+    startLine: 70
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>File request id. Might be missing due to historical data gap.</p>\n"
+  example: []
+  syntax:
+    content: public string FileRequestId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property FileRequestId As String
+  overload: Dropbox.Api.TeamLog.FileRequestDeleteDetails.FileRequestId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.FileRequestDeleteDetails.PreviousDetails
+  commentId: P:Dropbox.Api.TeamLog.FileRequestDeleteDetails.PreviousDetails
+  id: PreviousDetails
+  parent: Dropbox.Api.TeamLog.FileRequestDeleteDetails
+  langs:
+  - csharp
+  - vb
+  name: PreviousDetails
+  nameWithType: FileRequestDeleteDetails.PreviousDetails
+  fullName: Dropbox.Api.TeamLog.FileRequestDeleteDetails.PreviousDetails
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestDeleteDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PreviousDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestDeleteDetails.cs
+    startLine: 76
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Previous file request details. Might be missing due to historical data\ngap.</p>\n"
+  example: []
+  syntax:
+    content: public FileRequestDetails PreviousDetails { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.FileRequestDetails
+    content.vb: Public Property PreviousDetails As FileRequestDetails
+  overload: Dropbox.Api.TeamLog.FileRequestDeleteDetails.PreviousDetails*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.FileRequestDeleteDetails
+  commentId: T:Dropbox.Api.TeamLog.FileRequestDeleteDetails
+  parent: Dropbox.Api.TeamLog
+  name: FileRequestDeleteDetails
+  nameWithType: FileRequestDeleteDetails
+  fullName: Dropbox.Api.TeamLog.FileRequestDeleteDetails
+- uid: Dropbox.Api.TeamLog.FileRequestDeleteDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.FileRequestDeleteDetails.#ctor
+  name: FileRequestDeleteDetails
+  nameWithType: FileRequestDeleteDetails.FileRequestDeleteDetails
+  fullName: Dropbox.Api.TeamLog.FileRequestDeleteDetails.FileRequestDeleteDetails
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.FileRequestDetails
+  commentId: T:Dropbox.Api.TeamLog.FileRequestDetails
+  parent: Dropbox.Api.TeamLog
+  name: FileRequestDetails
+  nameWithType: FileRequestDetails
+  fullName: Dropbox.Api.TeamLog.FileRequestDetails
+- uid: Dropbox.Api.TeamLog.FileRequestDeleteDetails.FileRequestId*
+  commentId: Overload:Dropbox.Api.TeamLog.FileRequestDeleteDetails.FileRequestId
+  name: FileRequestId
+  nameWithType: FileRequestDeleteDetails.FileRequestId
+  fullName: Dropbox.Api.TeamLog.FileRequestDeleteDetails.FileRequestId
+- uid: Dropbox.Api.TeamLog.FileRequestDeleteDetails.PreviousDetails*
+  commentId: Overload:Dropbox.Api.TeamLog.FileRequestDeleteDetails.PreviousDetails
+  name: PreviousDetails
+  nameWithType: FileRequestDeleteDetails.PreviousDetails
+  fullName: Dropbox.Api.TeamLog.FileRequestDeleteDetails.PreviousDetails
+shouldSkipMarkup: true

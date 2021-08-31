@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.WebSessionsChangeActiveSessionLimitType
+  commentId: T:Dropbox.Api.TeamLog.WebSessionsChangeActiveSessionLimitType
+  id: WebSessionsChangeActiveSessionLimitType
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.WebSessionsChangeActiveSessionLimitType.#ctor
+  - Dropbox.Api.TeamLog.WebSessionsChangeActiveSessionLimitType.#ctor(System.String)
+  - Dropbox.Api.TeamLog.WebSessionsChangeActiveSessionLimitType.Description
+  langs:
+  - csharp
+  - vb
+  name: WebSessionsChangeActiveSessionLimitType
+  nameWithType: WebSessionsChangeActiveSessionLimitType
+  fullName: Dropbox.Api.TeamLog.WebSessionsChangeActiveSessionLimitType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/WebSessionsChangeActiveSessionLimitType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: WebSessionsChangeActiveSessionLimitType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/WebSessionsChangeActiveSessionLimitType.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The web sessions change active session limit type object</p>\n"
+  example: []
+  syntax:
+    content: 'public class WebSessionsChangeActiveSessionLimitType : object'
+    content.vb: >-
+      Public Class WebSessionsChangeActiveSessionLimitType
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.WebSessionsChangeActiveSessionLimitType.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.WebSessionsChangeActiveSessionLimitType.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.WebSessionsChangeActiveSessionLimitType
+  langs:
+  - csharp
+  - vb
+  name: WebSessionsChangeActiveSessionLimitType(String)
+  nameWithType: WebSessionsChangeActiveSessionLimitType.WebSessionsChangeActiveSessionLimitType(String)
+  fullName: Dropbox.Api.TeamLog.WebSessionsChangeActiveSessionLimitType.WebSessionsChangeActiveSessionLimitType(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/WebSessionsChangeActiveSessionLimitType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/WebSessionsChangeActiveSessionLimitType.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.WebSessionsChangeActiveSessionLimitType\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public WebSessionsChangeActiveSessionLimitType(string description)
+    parameters:
+    - id: description
+      type: System.String
+      description: The description
+    content.vb: Public Sub New(description As String)
+  overload: Dropbox.Api.TeamLog.WebSessionsChangeActiveSessionLimitType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.WebSessionsChangeActiveSessionLimitType.#ctor
+  commentId: M:Dropbox.Api.TeamLog.WebSessionsChangeActiveSessionLimitType.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.WebSessionsChangeActiveSessionLimitType
+  langs:
+  - csharp
+  - vb
+  name: WebSessionsChangeActiveSessionLimitType()
+  nameWithType: WebSessionsChangeActiveSessionLimitType.WebSessionsChangeActiveSessionLimitType()
+  fullName: Dropbox.Api.TeamLog.WebSessionsChangeActiveSessionLimitType.WebSessionsChangeActiveSessionLimitType()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/WebSessionsChangeActiveSessionLimitType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/WebSessionsChangeActiveSessionLimitType.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.WebSessionsChangeActiveSessionLimitType\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public WebSessionsChangeActiveSessionLimitType()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.WebSessionsChangeActiveSessionLimitType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.WebSessionsChangeActiveSessionLimitType.Description
+  commentId: P:Dropbox.Api.TeamLog.WebSessionsChangeActiveSessionLimitType.Description
+  id: Description
+  parent: Dropbox.Api.TeamLog.WebSessionsChangeActiveSessionLimitType
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: WebSessionsChangeActiveSessionLimitType.Description
+  fullName: Dropbox.Api.TeamLog.WebSessionsChangeActiveSessionLimitType.Description
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/WebSessionsChangeActiveSessionLimitType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Description
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/WebSessionsChangeActiveSessionLimitType.cs
+    startLine: 59
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets the description of the web sessions change active session limit\ntype</p>\n"
+  example: []
+  syntax:
+    content: public string Description { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Dropbox.Api.TeamLog.WebSessionsChangeActiveSessionLimitType.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.WebSessionsChangeActiveSessionLimitType
+  commentId: T:Dropbox.Api.TeamLog.WebSessionsChangeActiveSessionLimitType
+  parent: Dropbox.Api.TeamLog
+  name: WebSessionsChangeActiveSessionLimitType
+  nameWithType: WebSessionsChangeActiveSessionLimitType
+  fullName: Dropbox.Api.TeamLog.WebSessionsChangeActiveSessionLimitType
+- uid: Dropbox.Api.TeamLog.WebSessionsChangeActiveSessionLimitType.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.WebSessionsChangeActiveSessionLimitType.#ctor
+  name: WebSessionsChangeActiveSessionLimitType
+  nameWithType: WebSessionsChangeActiveSessionLimitType.WebSessionsChangeActiveSessionLimitType
+  fullName: Dropbox.Api.TeamLog.WebSessionsChangeActiveSessionLimitType.WebSessionsChangeActiveSessionLimitType
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.WebSessionsChangeActiveSessionLimitType.Description*
+  commentId: Overload:Dropbox.Api.TeamLog.WebSessionsChangeActiveSessionLimitType.Description
+  name: Description
+  nameWithType: WebSessionsChangeActiveSessionLimitType.Description
+  fullName: Dropbox.Api.TeamLog.WebSessionsChangeActiveSessionLimitType.Description
+shouldSkipMarkup: true

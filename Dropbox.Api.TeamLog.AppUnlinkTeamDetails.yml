@@ -1,0 +1,188 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.AppUnlinkTeamDetails
+  commentId: T:Dropbox.Api.TeamLog.AppUnlinkTeamDetails
+  id: AppUnlinkTeamDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.AppUnlinkTeamDetails.#ctor
+  - Dropbox.Api.TeamLog.AppUnlinkTeamDetails.#ctor(Dropbox.Api.TeamLog.AppLogInfo)
+  - Dropbox.Api.TeamLog.AppUnlinkTeamDetails.AppInfo
+  langs:
+  - csharp
+  - vb
+  name: AppUnlinkTeamDetails
+  nameWithType: AppUnlinkTeamDetails
+  fullName: Dropbox.Api.TeamLog.AppUnlinkTeamDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AppUnlinkTeamDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AppUnlinkTeamDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AppUnlinkTeamDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Unlinked app for team.</p>\n"
+  example: []
+  syntax:
+    content: 'public class AppUnlinkTeamDetails : object'
+    content.vb: >-
+      Public Class AppUnlinkTeamDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.AppUnlinkTeamDetails.#ctor(Dropbox.Api.TeamLog.AppLogInfo)
+  commentId: M:Dropbox.Api.TeamLog.AppUnlinkTeamDetails.#ctor(Dropbox.Api.TeamLog.AppLogInfo)
+  id: '#ctor(Dropbox.Api.TeamLog.AppLogInfo)'
+  parent: Dropbox.Api.TeamLog.AppUnlinkTeamDetails
+  langs:
+  - csharp
+  - vb
+  name: AppUnlinkTeamDetails(AppLogInfo)
+  nameWithType: AppUnlinkTeamDetails.AppUnlinkTeamDetails(AppLogInfo)
+  fullName: Dropbox.Api.TeamLog.AppUnlinkTeamDetails.AppUnlinkTeamDetails(Dropbox.Api.TeamLog.AppLogInfo)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AppUnlinkTeamDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AppUnlinkTeamDetails.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.AppUnlinkTeamDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public AppUnlinkTeamDetails(AppLogInfo appInfo)
+    parameters:
+    - id: appInfo
+      type: Dropbox.Api.TeamLog.AppLogInfo
+      description: Relevant application details.
+    content.vb: Public Sub New(appInfo As AppLogInfo)
+  overload: Dropbox.Api.TeamLog.AppUnlinkTeamDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.AppUnlinkTeamDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.AppUnlinkTeamDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.AppUnlinkTeamDetails
+  langs:
+  - csharp
+  - vb
+  name: AppUnlinkTeamDetails()
+  nameWithType: AppUnlinkTeamDetails.AppUnlinkTeamDetails()
+  fullName: Dropbox.Api.TeamLog.AppUnlinkTeamDetails.AppUnlinkTeamDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AppUnlinkTeamDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AppUnlinkTeamDetails.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.AppUnlinkTeamDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public AppUnlinkTeamDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.AppUnlinkTeamDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.AppUnlinkTeamDetails.AppInfo
+  commentId: P:Dropbox.Api.TeamLog.AppUnlinkTeamDetails.AppInfo
+  id: AppInfo
+  parent: Dropbox.Api.TeamLog.AppUnlinkTeamDetails
+  langs:
+  - csharp
+  - vb
+  name: AppInfo
+  nameWithType: AppUnlinkTeamDetails.AppInfo
+  fullName: Dropbox.Api.TeamLog.AppUnlinkTeamDetails.AppInfo
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AppUnlinkTeamDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AppInfo
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AppUnlinkTeamDetails.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Relevant application details.</p>\n"
+  example: []
+  syntax:
+    content: public AppLogInfo AppInfo { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.AppLogInfo
+    content.vb: Public Property AppInfo As AppLogInfo
+  overload: Dropbox.Api.TeamLog.AppUnlinkTeamDetails.AppInfo*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.AppUnlinkTeamDetails
+  commentId: T:Dropbox.Api.TeamLog.AppUnlinkTeamDetails
+  parent: Dropbox.Api.TeamLog
+  name: AppUnlinkTeamDetails
+  nameWithType: AppUnlinkTeamDetails
+  fullName: Dropbox.Api.TeamLog.AppUnlinkTeamDetails
+- uid: Dropbox.Api.TeamLog.AppUnlinkTeamDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.AppUnlinkTeamDetails.#ctor
+  name: AppUnlinkTeamDetails
+  nameWithType: AppUnlinkTeamDetails.AppUnlinkTeamDetails
+  fullName: Dropbox.Api.TeamLog.AppUnlinkTeamDetails.AppUnlinkTeamDetails
+- uid: Dropbox.Api.TeamLog.AppLogInfo
+  commentId: T:Dropbox.Api.TeamLog.AppLogInfo
+  parent: Dropbox.Api.TeamLog
+  name: AppLogInfo
+  nameWithType: AppLogInfo
+  fullName: Dropbox.Api.TeamLog.AppLogInfo
+- uid: Dropbox.Api.TeamLog.AppUnlinkTeamDetails.AppInfo*
+  commentId: Overload:Dropbox.Api.TeamLog.AppUnlinkTeamDetails.AppInfo
+  name: AppInfo
+  nameWithType: AppUnlinkTeamDetails.AppInfo
+  fullName: Dropbox.Api.TeamLog.AppUnlinkTeamDetails.AppInfo
+shouldSkipMarkup: true

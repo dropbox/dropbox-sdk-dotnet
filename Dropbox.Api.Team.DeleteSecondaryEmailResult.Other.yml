@@ -1,0 +1,162 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.DeleteSecondaryEmailResult.Other
+  commentId: T:Dropbox.Api.Team.DeleteSecondaryEmailResult.Other
+  id: DeleteSecondaryEmailResult.Other
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.DeleteSecondaryEmailResult.Other.Instance
+  langs:
+  - csharp
+  - vb
+  name: DeleteSecondaryEmailResult.Other
+  nameWithType: DeleteSecondaryEmailResult.Other
+  fullName: Dropbox.Api.Team.DeleteSecondaryEmailResult.Other
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DeleteSecondaryEmailResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Other
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DeleteSecondaryEmailResult.cs
+    startLine: 508
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The other object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Other : DeleteSecondaryEmailResult'
+    content.vb: >-
+      Public NotInheritable Class Other
+          Inherits DeleteSecondaryEmailResult
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.DeleteSecondaryEmailResult
+  inheritedMembers:
+  - Dropbox.Api.Team.DeleteSecondaryEmailResult.IsSuccess
+  - Dropbox.Api.Team.DeleteSecondaryEmailResult.AsSuccess
+  - Dropbox.Api.Team.DeleteSecondaryEmailResult.IsNotFound
+  - Dropbox.Api.Team.DeleteSecondaryEmailResult.AsNotFound
+  - Dropbox.Api.Team.DeleteSecondaryEmailResult.IsCannotRemovePrimary
+  - Dropbox.Api.Team.DeleteSecondaryEmailResult.AsCannotRemovePrimary
+  - Dropbox.Api.Team.DeleteSecondaryEmailResult.IsOther
+  - Dropbox.Api.Team.DeleteSecondaryEmailResult.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Team.DeleteSecondaryEmailResult.Other.Instance
+  commentId: F:Dropbox.Api.Team.DeleteSecondaryEmailResult.Other.Instance
+  id: Instance
+  parent: Dropbox.Api.Team.DeleteSecondaryEmailResult.Other
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: DeleteSecondaryEmailResult.Other.Instance
+  fullName: Dropbox.Api.Team.DeleteSecondaryEmailResult.Other.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DeleteSecondaryEmailResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DeleteSecondaryEmailResult.cs
+    startLine: 532
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>A singleton instance of Other</p>\n"
+  example: []
+  syntax:
+    content: public static readonly DeleteSecondaryEmailResult.Other Instance
+    return:
+      type: Dropbox.Api.Team.DeleteSecondaryEmailResult.Other
+    content.vb: Public Shared ReadOnly Instance As DeleteSecondaryEmailResult.Other
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.DeleteSecondaryEmailResult
+  commentId: T:Dropbox.Api.Team.DeleteSecondaryEmailResult
+  parent: Dropbox.Api.Team
+  name: DeleteSecondaryEmailResult
+  nameWithType: DeleteSecondaryEmailResult
+  fullName: Dropbox.Api.Team.DeleteSecondaryEmailResult
+- uid: Dropbox.Api.Team.DeleteSecondaryEmailResult.IsSuccess
+  commentId: P:Dropbox.Api.Team.DeleteSecondaryEmailResult.IsSuccess
+  parent: Dropbox.Api.Team.DeleteSecondaryEmailResult
+  name: IsSuccess
+  nameWithType: DeleteSecondaryEmailResult.IsSuccess
+  fullName: Dropbox.Api.Team.DeleteSecondaryEmailResult.IsSuccess
+- uid: Dropbox.Api.Team.DeleteSecondaryEmailResult.AsSuccess
+  commentId: P:Dropbox.Api.Team.DeleteSecondaryEmailResult.AsSuccess
+  parent: Dropbox.Api.Team.DeleteSecondaryEmailResult
+  name: AsSuccess
+  nameWithType: DeleteSecondaryEmailResult.AsSuccess
+  fullName: Dropbox.Api.Team.DeleteSecondaryEmailResult.AsSuccess
+- uid: Dropbox.Api.Team.DeleteSecondaryEmailResult.IsNotFound
+  commentId: P:Dropbox.Api.Team.DeleteSecondaryEmailResult.IsNotFound
+  parent: Dropbox.Api.Team.DeleteSecondaryEmailResult
+  name: IsNotFound
+  nameWithType: DeleteSecondaryEmailResult.IsNotFound
+  fullName: Dropbox.Api.Team.DeleteSecondaryEmailResult.IsNotFound
+- uid: Dropbox.Api.Team.DeleteSecondaryEmailResult.AsNotFound
+  commentId: P:Dropbox.Api.Team.DeleteSecondaryEmailResult.AsNotFound
+  parent: Dropbox.Api.Team.DeleteSecondaryEmailResult
+  name: AsNotFound
+  nameWithType: DeleteSecondaryEmailResult.AsNotFound
+  fullName: Dropbox.Api.Team.DeleteSecondaryEmailResult.AsNotFound
+- uid: Dropbox.Api.Team.DeleteSecondaryEmailResult.IsCannotRemovePrimary
+  commentId: P:Dropbox.Api.Team.DeleteSecondaryEmailResult.IsCannotRemovePrimary
+  parent: Dropbox.Api.Team.DeleteSecondaryEmailResult
+  name: IsCannotRemovePrimary
+  nameWithType: DeleteSecondaryEmailResult.IsCannotRemovePrimary
+  fullName: Dropbox.Api.Team.DeleteSecondaryEmailResult.IsCannotRemovePrimary
+- uid: Dropbox.Api.Team.DeleteSecondaryEmailResult.AsCannotRemovePrimary
+  commentId: P:Dropbox.Api.Team.DeleteSecondaryEmailResult.AsCannotRemovePrimary
+  parent: Dropbox.Api.Team.DeleteSecondaryEmailResult
+  name: AsCannotRemovePrimary
+  nameWithType: DeleteSecondaryEmailResult.AsCannotRemovePrimary
+  fullName: Dropbox.Api.Team.DeleteSecondaryEmailResult.AsCannotRemovePrimary
+- uid: Dropbox.Api.Team.DeleteSecondaryEmailResult.IsOther
+  commentId: P:Dropbox.Api.Team.DeleteSecondaryEmailResult.IsOther
+  parent: Dropbox.Api.Team.DeleteSecondaryEmailResult
+  name: IsOther
+  nameWithType: DeleteSecondaryEmailResult.IsOther
+  fullName: Dropbox.Api.Team.DeleteSecondaryEmailResult.IsOther
+- uid: Dropbox.Api.Team.DeleteSecondaryEmailResult.AsOther
+  commentId: P:Dropbox.Api.Team.DeleteSecondaryEmailResult.AsOther
+  parent: Dropbox.Api.Team.DeleteSecondaryEmailResult
+  name: AsOther
+  nameWithType: DeleteSecondaryEmailResult.AsOther
+  fullName: Dropbox.Api.Team.DeleteSecondaryEmailResult.AsOther
+- uid: Dropbox.Api.Team.DeleteSecondaryEmailResult.Other
+  commentId: T:Dropbox.Api.Team.DeleteSecondaryEmailResult.Other
+  parent: Dropbox.Api.Team
+  name: DeleteSecondaryEmailResult.Other
+  nameWithType: DeleteSecondaryEmailResult.Other
+  fullName: Dropbox.Api.Team.DeleteSecondaryEmailResult.Other
+shouldSkipMarkup: true

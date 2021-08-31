@@ -1,0 +1,567 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.MembersUnsuspendError
+  commentId: T:Dropbox.Api.Team.MembersUnsuspendError
+  id: MembersUnsuspendError
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.MembersUnsuspendError.#ctor
+  - Dropbox.Api.Team.MembersUnsuspendError.AsOther
+  - Dropbox.Api.Team.MembersUnsuspendError.AsTeamLicenseLimit
+  - Dropbox.Api.Team.MembersUnsuspendError.AsUnsuspendNonSuspendedMember
+  - Dropbox.Api.Team.MembersUnsuspendError.AsUserNotFound
+  - Dropbox.Api.Team.MembersUnsuspendError.AsUserNotInTeam
+  - Dropbox.Api.Team.MembersUnsuspendError.IsOther
+  - Dropbox.Api.Team.MembersUnsuspendError.IsTeamLicenseLimit
+  - Dropbox.Api.Team.MembersUnsuspendError.IsUnsuspendNonSuspendedMember
+  - Dropbox.Api.Team.MembersUnsuspendError.IsUserNotFound
+  - Dropbox.Api.Team.MembersUnsuspendError.IsUserNotInTeam
+  langs:
+  - csharp
+  - vb
+  name: MembersUnsuspendError
+  nameWithType: MembersUnsuspendError
+  fullName: Dropbox.Api.Team.MembersUnsuspendError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersUnsuspendError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: MembersUnsuspendError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersUnsuspendError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The members unsuspend error object</p>\n"
+  example: []
+  syntax:
+    content: 'public class MembersUnsuspendError : object'
+    content.vb: >-
+      Public Class MembersUnsuspendError
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Team.MembersUnsuspendError.Other
+  - Dropbox.Api.Team.MembersUnsuspendError.TeamLicenseLimit
+  - Dropbox.Api.Team.MembersUnsuspendError.UnsuspendNonSuspendedMember
+  - Dropbox.Api.Team.MembersUnsuspendError.UserNotFound
+  - Dropbox.Api.Team.MembersUnsuspendError.UserNotInTeam
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.MembersUnsuspendError.#ctor
+  commentId: M:Dropbox.Api.Team.MembersUnsuspendError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.MembersUnsuspendError
+  langs:
+  - csharp
+  - vb
+  name: MembersUnsuspendError()
+  nameWithType: MembersUnsuspendError.MembersUnsuspendError()
+  fullName: Dropbox.Api.Team.MembersUnsuspendError.MembersUnsuspendError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersUnsuspendError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersUnsuspendError.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.MembersUnsuspendError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public MembersUnsuspendError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.MembersUnsuspendError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.MembersUnsuspendError.IsUnsuspendNonSuspendedMember
+  commentId: P:Dropbox.Api.Team.MembersUnsuspendError.IsUnsuspendNonSuspendedMember
+  id: IsUnsuspendNonSuspendedMember
+  parent: Dropbox.Api.Team.MembersUnsuspendError
+  langs:
+  - csharp
+  - vb
+  name: IsUnsuspendNonSuspendedMember
+  nameWithType: MembersUnsuspendError.IsUnsuspendNonSuspendedMember
+  fullName: Dropbox.Api.Team.MembersUnsuspendError.IsUnsuspendNonSuspendedMember
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersUnsuspendError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsUnsuspendNonSuspendedMember
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersUnsuspendError.cs
+    startLine: 41
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is\nUnsuspendNonSuspendedMember</p>\n"
+  example: []
+  syntax:
+    content: public bool IsUnsuspendNonSuspendedMember { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsUnsuspendNonSuspendedMember As Boolean
+  overload: Dropbox.Api.Team.MembersUnsuspendError.IsUnsuspendNonSuspendedMember*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersUnsuspendError.AsUnsuspendNonSuspendedMember
+  commentId: P:Dropbox.Api.Team.MembersUnsuspendError.AsUnsuspendNonSuspendedMember
+  id: AsUnsuspendNonSuspendedMember
+  parent: Dropbox.Api.Team.MembersUnsuspendError
+  langs:
+  - csharp
+  - vb
+  name: AsUnsuspendNonSuspendedMember
+  nameWithType: MembersUnsuspendError.AsUnsuspendNonSuspendedMember
+  fullName: Dropbox.Api.Team.MembersUnsuspendError.AsUnsuspendNonSuspendedMember
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersUnsuspendError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsUnsuspendNonSuspendedMember
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersUnsuspendError.cs
+    startLine: 52
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a UnsuspendNonSuspendedMember, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MembersUnsuspendError.UnsuspendNonSuspendedMember AsUnsuspendNonSuspendedMember { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.MembersUnsuspendError.UnsuspendNonSuspendedMember
+    content.vb: Public ReadOnly Property AsUnsuspendNonSuspendedMember As MembersUnsuspendError.UnsuspendNonSuspendedMember
+  overload: Dropbox.Api.Team.MembersUnsuspendError.AsUnsuspendNonSuspendedMember*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersUnsuspendError.IsTeamLicenseLimit
+  commentId: P:Dropbox.Api.Team.MembersUnsuspendError.IsTeamLicenseLimit
+  id: IsTeamLicenseLimit
+  parent: Dropbox.Api.Team.MembersUnsuspendError
+  langs:
+  - csharp
+  - vb
+  name: IsTeamLicenseLimit
+  nameWithType: MembersUnsuspendError.IsTeamLicenseLimit
+  fullName: Dropbox.Api.Team.MembersUnsuspendError.IsTeamLicenseLimit
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersUnsuspendError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsTeamLicenseLimit
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersUnsuspendError.cs
+    startLine: 63
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is TeamLicenseLimit</p>\n"
+  example: []
+  syntax:
+    content: public bool IsTeamLicenseLimit { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsTeamLicenseLimit As Boolean
+  overload: Dropbox.Api.Team.MembersUnsuspendError.IsTeamLicenseLimit*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersUnsuspendError.AsTeamLicenseLimit
+  commentId: P:Dropbox.Api.Team.MembersUnsuspendError.AsTeamLicenseLimit
+  id: AsTeamLicenseLimit
+  parent: Dropbox.Api.Team.MembersUnsuspendError
+  langs:
+  - csharp
+  - vb
+  name: AsTeamLicenseLimit
+  nameWithType: MembersUnsuspendError.AsTeamLicenseLimit
+  fullName: Dropbox.Api.Team.MembersUnsuspendError.AsTeamLicenseLimit
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersUnsuspendError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsTeamLicenseLimit
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersUnsuspendError.cs
+    startLine: 74
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a TeamLicenseLimit, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MembersUnsuspendError.TeamLicenseLimit AsTeamLicenseLimit { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.MembersUnsuspendError.TeamLicenseLimit
+    content.vb: Public ReadOnly Property AsTeamLicenseLimit As MembersUnsuspendError.TeamLicenseLimit
+  overload: Dropbox.Api.Team.MembersUnsuspendError.AsTeamLicenseLimit*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersUnsuspendError.IsUserNotInTeam
+  commentId: P:Dropbox.Api.Team.MembersUnsuspendError.IsUserNotInTeam
+  id: IsUserNotInTeam
+  parent: Dropbox.Api.Team.MembersUnsuspendError
+  langs:
+  - csharp
+  - vb
+  name: IsUserNotInTeam
+  nameWithType: MembersUnsuspendError.IsUserNotInTeam
+  fullName: Dropbox.Api.Team.MembersUnsuspendError.IsUserNotInTeam
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersUnsuspendError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsUserNotInTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersUnsuspendError.cs
+    startLine: 85
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is UserNotInTeam</p>\n"
+  example: []
+  syntax:
+    content: public bool IsUserNotInTeam { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsUserNotInTeam As Boolean
+  overload: Dropbox.Api.Team.MembersUnsuspendError.IsUserNotInTeam*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersUnsuspendError.AsUserNotInTeam
+  commentId: P:Dropbox.Api.Team.MembersUnsuspendError.AsUserNotInTeam
+  id: AsUserNotInTeam
+  parent: Dropbox.Api.Team.MembersUnsuspendError
+  langs:
+  - csharp
+  - vb
+  name: AsUserNotInTeam
+  nameWithType: MembersUnsuspendError.AsUserNotInTeam
+  fullName: Dropbox.Api.Team.MembersUnsuspendError.AsUserNotInTeam
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersUnsuspendError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsUserNotInTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersUnsuspendError.cs
+    startLine: 96
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a UserNotInTeam, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MembersUnsuspendError.UserNotInTeam AsUserNotInTeam { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.MembersUnsuspendError.UserNotInTeam
+    content.vb: Public ReadOnly Property AsUserNotInTeam As MembersUnsuspendError.UserNotInTeam
+  overload: Dropbox.Api.Team.MembersUnsuspendError.AsUserNotInTeam*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersUnsuspendError.IsOther
+  commentId: P:Dropbox.Api.Team.MembersUnsuspendError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Team.MembersUnsuspendError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: MembersUnsuspendError.IsOther
+  fullName: Dropbox.Api.Team.MembersUnsuspendError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersUnsuspendError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersUnsuspendError.cs
+    startLine: 107
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Team.MembersUnsuspendError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersUnsuspendError.AsOther
+  commentId: P:Dropbox.Api.Team.MembersUnsuspendError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Team.MembersUnsuspendError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: MembersUnsuspendError.AsOther
+  fullName: Dropbox.Api.Team.MembersUnsuspendError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersUnsuspendError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersUnsuspendError.cs
+    startLine: 118
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MembersUnsuspendError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.MembersUnsuspendError.Other
+    content.vb: Public ReadOnly Property AsOther As MembersUnsuspendError.Other
+  overload: Dropbox.Api.Team.MembersUnsuspendError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersUnsuspendError.IsUserNotFound
+  commentId: P:Dropbox.Api.Team.MembersUnsuspendError.IsUserNotFound
+  id: IsUserNotFound
+  parent: Dropbox.Api.Team.MembersUnsuspendError
+  langs:
+  - csharp
+  - vb
+  name: IsUserNotFound
+  nameWithType: MembersUnsuspendError.IsUserNotFound
+  fullName: Dropbox.Api.Team.MembersUnsuspendError.IsUserNotFound
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersUnsuspendError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsUserNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersUnsuspendError.cs
+    startLine: 129
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is UserNotFound</p>\n"
+  example: []
+  syntax:
+    content: public bool IsUserNotFound { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsUserNotFound As Boolean
+  overload: Dropbox.Api.Team.MembersUnsuspendError.IsUserNotFound*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersUnsuspendError.AsUserNotFound
+  commentId: P:Dropbox.Api.Team.MembersUnsuspendError.AsUserNotFound
+  id: AsUserNotFound
+  parent: Dropbox.Api.Team.MembersUnsuspendError
+  langs:
+  - csharp
+  - vb
+  name: AsUserNotFound
+  nameWithType: MembersUnsuspendError.AsUserNotFound
+  fullName: Dropbox.Api.Team.MembersUnsuspendError.AsUserNotFound
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersUnsuspendError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsUserNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersUnsuspendError.cs
+    startLine: 140
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a UserNotFound, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MembersUnsuspendError.UserNotFound AsUserNotFound { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.MembersUnsuspendError.UserNotFound
+    content.vb: Public ReadOnly Property AsUserNotFound As MembersUnsuspendError.UserNotFound
+  overload: Dropbox.Api.Team.MembersUnsuspendError.AsUserNotFound*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.MembersUnsuspendError
+  commentId: T:Dropbox.Api.Team.MembersUnsuspendError
+  parent: Dropbox.Api.Team
+  name: MembersUnsuspendError
+  nameWithType: MembersUnsuspendError
+  fullName: Dropbox.Api.Team.MembersUnsuspendError
+- uid: Dropbox.Api.Team.MembersUnsuspendError.#ctor*
+  commentId: Overload:Dropbox.Api.Team.MembersUnsuspendError.#ctor
+  name: MembersUnsuspendError
+  nameWithType: MembersUnsuspendError.MembersUnsuspendError
+  fullName: Dropbox.Api.Team.MembersUnsuspendError.MembersUnsuspendError
+- uid: Dropbox.Api.Team.MembersUnsuspendError.IsUnsuspendNonSuspendedMember*
+  commentId: Overload:Dropbox.Api.Team.MembersUnsuspendError.IsUnsuspendNonSuspendedMember
+  name: IsUnsuspendNonSuspendedMember
+  nameWithType: MembersUnsuspendError.IsUnsuspendNonSuspendedMember
+  fullName: Dropbox.Api.Team.MembersUnsuspendError.IsUnsuspendNonSuspendedMember
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Team.MembersUnsuspendError.AsUnsuspendNonSuspendedMember*
+  commentId: Overload:Dropbox.Api.Team.MembersUnsuspendError.AsUnsuspendNonSuspendedMember
+  name: AsUnsuspendNonSuspendedMember
+  nameWithType: MembersUnsuspendError.AsUnsuspendNonSuspendedMember
+  fullName: Dropbox.Api.Team.MembersUnsuspendError.AsUnsuspendNonSuspendedMember
+- uid: Dropbox.Api.Team.MembersUnsuspendError.UnsuspendNonSuspendedMember
+  commentId: T:Dropbox.Api.Team.MembersUnsuspendError.UnsuspendNonSuspendedMember
+  parent: Dropbox.Api.Team
+  name: MembersUnsuspendError.UnsuspendNonSuspendedMember
+  nameWithType: MembersUnsuspendError.UnsuspendNonSuspendedMember
+  fullName: Dropbox.Api.Team.MembersUnsuspendError.UnsuspendNonSuspendedMember
+- uid: Dropbox.Api.Team.MembersUnsuspendError.IsTeamLicenseLimit*
+  commentId: Overload:Dropbox.Api.Team.MembersUnsuspendError.IsTeamLicenseLimit
+  name: IsTeamLicenseLimit
+  nameWithType: MembersUnsuspendError.IsTeamLicenseLimit
+  fullName: Dropbox.Api.Team.MembersUnsuspendError.IsTeamLicenseLimit
+- uid: Dropbox.Api.Team.MembersUnsuspendError.AsTeamLicenseLimit*
+  commentId: Overload:Dropbox.Api.Team.MembersUnsuspendError.AsTeamLicenseLimit
+  name: AsTeamLicenseLimit
+  nameWithType: MembersUnsuspendError.AsTeamLicenseLimit
+  fullName: Dropbox.Api.Team.MembersUnsuspendError.AsTeamLicenseLimit
+- uid: Dropbox.Api.Team.MembersUnsuspendError.TeamLicenseLimit
+  commentId: T:Dropbox.Api.Team.MembersUnsuspendError.TeamLicenseLimit
+  parent: Dropbox.Api.Team
+  name: MembersUnsuspendError.TeamLicenseLimit
+  nameWithType: MembersUnsuspendError.TeamLicenseLimit
+  fullName: Dropbox.Api.Team.MembersUnsuspendError.TeamLicenseLimit
+- uid: Dropbox.Api.Team.MembersUnsuspendError.IsUserNotInTeam*
+  commentId: Overload:Dropbox.Api.Team.MembersUnsuspendError.IsUserNotInTeam
+  name: IsUserNotInTeam
+  nameWithType: MembersUnsuspendError.IsUserNotInTeam
+  fullName: Dropbox.Api.Team.MembersUnsuspendError.IsUserNotInTeam
+- uid: Dropbox.Api.Team.MembersUnsuspendError.AsUserNotInTeam*
+  commentId: Overload:Dropbox.Api.Team.MembersUnsuspendError.AsUserNotInTeam
+  name: AsUserNotInTeam
+  nameWithType: MembersUnsuspendError.AsUserNotInTeam
+  fullName: Dropbox.Api.Team.MembersUnsuspendError.AsUserNotInTeam
+- uid: Dropbox.Api.Team.MembersUnsuspendError.UserNotInTeam
+  commentId: T:Dropbox.Api.Team.MembersUnsuspendError.UserNotInTeam
+  parent: Dropbox.Api.Team
+  name: MembersUnsuspendError.UserNotInTeam
+  nameWithType: MembersUnsuspendError.UserNotInTeam
+  fullName: Dropbox.Api.Team.MembersUnsuspendError.UserNotInTeam
+- uid: Dropbox.Api.Team.MembersUnsuspendError.IsOther*
+  commentId: Overload:Dropbox.Api.Team.MembersUnsuspendError.IsOther
+  name: IsOther
+  nameWithType: MembersUnsuspendError.IsOther
+  fullName: Dropbox.Api.Team.MembersUnsuspendError.IsOther
+- uid: Dropbox.Api.Team.MembersUnsuspendError.AsOther*
+  commentId: Overload:Dropbox.Api.Team.MembersUnsuspendError.AsOther
+  name: AsOther
+  nameWithType: MembersUnsuspendError.AsOther
+  fullName: Dropbox.Api.Team.MembersUnsuspendError.AsOther
+- uid: Dropbox.Api.Team.MembersUnsuspendError.Other
+  commentId: T:Dropbox.Api.Team.MembersUnsuspendError.Other
+  parent: Dropbox.Api.Team
+  name: MembersUnsuspendError.Other
+  nameWithType: MembersUnsuspendError.Other
+  fullName: Dropbox.Api.Team.MembersUnsuspendError.Other
+- uid: Dropbox.Api.Team.MembersUnsuspendError.IsUserNotFound*
+  commentId: Overload:Dropbox.Api.Team.MembersUnsuspendError.IsUserNotFound
+  name: IsUserNotFound
+  nameWithType: MembersUnsuspendError.IsUserNotFound
+  fullName: Dropbox.Api.Team.MembersUnsuspendError.IsUserNotFound
+- uid: Dropbox.Api.Team.MembersUnsuspendError.AsUserNotFound*
+  commentId: Overload:Dropbox.Api.Team.MembersUnsuspendError.AsUserNotFound
+  name: AsUserNotFound
+  nameWithType: MembersUnsuspendError.AsUserNotFound
+  fullName: Dropbox.Api.Team.MembersUnsuspendError.AsUserNotFound
+- uid: Dropbox.Api.Team.MembersUnsuspendError.UserNotFound
+  commentId: T:Dropbox.Api.Team.MembersUnsuspendError.UserNotFound
+  parent: Dropbox.Api.Team
+  name: MembersUnsuspendError.UserNotFound
+  nameWithType: MembersUnsuspendError.UserNotFound
+  fullName: Dropbox.Api.Team.MembersUnsuspendError.UserNotFound
+shouldSkipMarkup: true

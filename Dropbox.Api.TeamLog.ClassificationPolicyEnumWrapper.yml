@@ -1,0 +1,567 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper
+  commentId: T:Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper
+  id: ClassificationPolicyEnumWrapper
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.#ctor
+  - Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.AsDisabled
+  - Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.AsEnabled
+  - Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.AsMemberAndTeamFolders
+  - Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.AsOther
+  - Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.AsTeamFolders
+  - Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.IsDisabled
+  - Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.IsEnabled
+  - Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.IsMemberAndTeamFolders
+  - Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.IsOther
+  - Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.IsTeamFolders
+  langs:
+  - csharp
+  - vb
+  name: ClassificationPolicyEnumWrapper
+  nameWithType: ClassificationPolicyEnumWrapper
+  fullName: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ClassificationPolicyEnumWrapper.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ClassificationPolicyEnumWrapper
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ClassificationPolicyEnumWrapper.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Policy for controlling team access to the classification feature</p>\n"
+  example: []
+  syntax:
+    content: 'public class ClassificationPolicyEnumWrapper : object'
+    content.vb: >-
+      Public Class ClassificationPolicyEnumWrapper
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.Disabled
+  - Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.Enabled
+  - Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.MemberAndTeamFolders
+  - Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.Other
+  - Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.TeamFolders
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.#ctor
+  commentId: M:Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper
+  langs:
+  - csharp
+  - vb
+  name: ClassificationPolicyEnumWrapper()
+  nameWithType: ClassificationPolicyEnumWrapper.ClassificationPolicyEnumWrapper()
+  fullName: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.ClassificationPolicyEnumWrapper()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ClassificationPolicyEnumWrapper.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ClassificationPolicyEnumWrapper.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public ClassificationPolicyEnumWrapper()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.IsDisabled
+  commentId: P:Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.IsDisabled
+  id: IsDisabled
+  parent: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper
+  langs:
+  - csharp
+  - vb
+  name: IsDisabled
+  nameWithType: ClassificationPolicyEnumWrapper.IsDisabled
+  fullName: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.IsDisabled
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ClassificationPolicyEnumWrapper.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsDisabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ClassificationPolicyEnumWrapper.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Disabled</p>\n"
+  example: []
+  syntax:
+    content: public bool IsDisabled { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsDisabled As Boolean
+  overload: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.IsDisabled*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.AsDisabled
+  commentId: P:Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.AsDisabled
+  id: AsDisabled
+  parent: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper
+  langs:
+  - csharp
+  - vb
+  name: AsDisabled
+  nameWithType: ClassificationPolicyEnumWrapper.AsDisabled
+  fullName: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.AsDisabled
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ClassificationPolicyEnumWrapper.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsDisabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ClassificationPolicyEnumWrapper.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Disabled, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ClassificationPolicyEnumWrapper.Disabled AsDisabled { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.Disabled
+    content.vb: Public ReadOnly Property AsDisabled As ClassificationPolicyEnumWrapper.Disabled
+  overload: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.AsDisabled*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.IsEnabled
+  commentId: P:Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.IsEnabled
+  id: IsEnabled
+  parent: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper
+  langs:
+  - csharp
+  - vb
+  name: IsEnabled
+  nameWithType: ClassificationPolicyEnumWrapper.IsEnabled
+  fullName: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.IsEnabled
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ClassificationPolicyEnumWrapper.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsEnabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ClassificationPolicyEnumWrapper.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Enabled</p>\n"
+  example: []
+  syntax:
+    content: public bool IsEnabled { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsEnabled As Boolean
+  overload: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.IsEnabled*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.AsEnabled
+  commentId: P:Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.AsEnabled
+  id: AsEnabled
+  parent: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper
+  langs:
+  - csharp
+  - vb
+  name: AsEnabled
+  nameWithType: ClassificationPolicyEnumWrapper.AsEnabled
+  fullName: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.AsEnabled
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ClassificationPolicyEnumWrapper.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsEnabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ClassificationPolicyEnumWrapper.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Enabled, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ClassificationPolicyEnumWrapper.Enabled AsEnabled { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.Enabled
+    content.vb: Public ReadOnly Property AsEnabled As ClassificationPolicyEnumWrapper.Enabled
+  overload: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.AsEnabled*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.IsMemberAndTeamFolders
+  commentId: P:Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.IsMemberAndTeamFolders
+  id: IsMemberAndTeamFolders
+  parent: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper
+  langs:
+  - csharp
+  - vb
+  name: IsMemberAndTeamFolders
+  nameWithType: ClassificationPolicyEnumWrapper.IsMemberAndTeamFolders
+  fullName: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.IsMemberAndTeamFolders
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ClassificationPolicyEnumWrapper.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsMemberAndTeamFolders
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ClassificationPolicyEnumWrapper.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is MemberAndTeamFolders</p>\n"
+  example: []
+  syntax:
+    content: public bool IsMemberAndTeamFolders { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsMemberAndTeamFolders As Boolean
+  overload: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.IsMemberAndTeamFolders*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.AsMemberAndTeamFolders
+  commentId: P:Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.AsMemberAndTeamFolders
+  id: AsMemberAndTeamFolders
+  parent: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper
+  langs:
+  - csharp
+  - vb
+  name: AsMemberAndTeamFolders
+  nameWithType: ClassificationPolicyEnumWrapper.AsMemberAndTeamFolders
+  fullName: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.AsMemberAndTeamFolders
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ClassificationPolicyEnumWrapper.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsMemberAndTeamFolders
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ClassificationPolicyEnumWrapper.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a MemberAndTeamFolders, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ClassificationPolicyEnumWrapper.MemberAndTeamFolders AsMemberAndTeamFolders { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.MemberAndTeamFolders
+    content.vb: Public ReadOnly Property AsMemberAndTeamFolders As ClassificationPolicyEnumWrapper.MemberAndTeamFolders
+  overload: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.AsMemberAndTeamFolders*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.IsTeamFolders
+  commentId: P:Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.IsTeamFolders
+  id: IsTeamFolders
+  parent: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper
+  langs:
+  - csharp
+  - vb
+  name: IsTeamFolders
+  nameWithType: ClassificationPolicyEnumWrapper.IsTeamFolders
+  fullName: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.IsTeamFolders
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ClassificationPolicyEnumWrapper.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsTeamFolders
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ClassificationPolicyEnumWrapper.cs
+    startLine: 106
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is TeamFolders</p>\n"
+  example: []
+  syntax:
+    content: public bool IsTeamFolders { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsTeamFolders As Boolean
+  overload: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.IsTeamFolders*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.AsTeamFolders
+  commentId: P:Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.AsTeamFolders
+  id: AsTeamFolders
+  parent: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper
+  langs:
+  - csharp
+  - vb
+  name: AsTeamFolders
+  nameWithType: ClassificationPolicyEnumWrapper.AsTeamFolders
+  fullName: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.AsTeamFolders
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ClassificationPolicyEnumWrapper.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsTeamFolders
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ClassificationPolicyEnumWrapper.cs
+    startLine: 117
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a TeamFolders, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ClassificationPolicyEnumWrapper.TeamFolders AsTeamFolders { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.TeamFolders
+    content.vb: Public ReadOnly Property AsTeamFolders As ClassificationPolicyEnumWrapper.TeamFolders
+  overload: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.AsTeamFolders*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.IsOther
+  commentId: P:Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.IsOther
+  id: IsOther
+  parent: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: ClassificationPolicyEnumWrapper.IsOther
+  fullName: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ClassificationPolicyEnumWrapper.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ClassificationPolicyEnumWrapper.cs
+    startLine: 128
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.AsOther
+  commentId: P:Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.AsOther
+  id: AsOther
+  parent: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: ClassificationPolicyEnumWrapper.AsOther
+  fullName: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ClassificationPolicyEnumWrapper.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ClassificationPolicyEnumWrapper.cs
+    startLine: 139
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ClassificationPolicyEnumWrapper.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.Other
+    content.vb: Public ReadOnly Property AsOther As ClassificationPolicyEnumWrapper.Other
+  overload: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper
+  commentId: T:Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper
+  parent: Dropbox.Api.TeamLog
+  name: ClassificationPolicyEnumWrapper
+  nameWithType: ClassificationPolicyEnumWrapper
+  fullName: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper
+- uid: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.#ctor
+  name: ClassificationPolicyEnumWrapper
+  nameWithType: ClassificationPolicyEnumWrapper.ClassificationPolicyEnumWrapper
+  fullName: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.ClassificationPolicyEnumWrapper
+- uid: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.IsDisabled*
+  commentId: Overload:Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.IsDisabled
+  name: IsDisabled
+  nameWithType: ClassificationPolicyEnumWrapper.IsDisabled
+  fullName: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.IsDisabled
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.AsDisabled*
+  commentId: Overload:Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.AsDisabled
+  name: AsDisabled
+  nameWithType: ClassificationPolicyEnumWrapper.AsDisabled
+  fullName: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.AsDisabled
+- uid: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.Disabled
+  commentId: T:Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.Disabled
+  parent: Dropbox.Api.TeamLog
+  name: ClassificationPolicyEnumWrapper.Disabled
+  nameWithType: ClassificationPolicyEnumWrapper.Disabled
+  fullName: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.Disabled
+- uid: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.IsEnabled*
+  commentId: Overload:Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.IsEnabled
+  name: IsEnabled
+  nameWithType: ClassificationPolicyEnumWrapper.IsEnabled
+  fullName: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.IsEnabled
+- uid: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.AsEnabled*
+  commentId: Overload:Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.AsEnabled
+  name: AsEnabled
+  nameWithType: ClassificationPolicyEnumWrapper.AsEnabled
+  fullName: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.AsEnabled
+- uid: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.Enabled
+  commentId: T:Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.Enabled
+  parent: Dropbox.Api.TeamLog
+  name: ClassificationPolicyEnumWrapper.Enabled
+  nameWithType: ClassificationPolicyEnumWrapper.Enabled
+  fullName: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.Enabled
+- uid: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.IsMemberAndTeamFolders*
+  commentId: Overload:Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.IsMemberAndTeamFolders
+  name: IsMemberAndTeamFolders
+  nameWithType: ClassificationPolicyEnumWrapper.IsMemberAndTeamFolders
+  fullName: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.IsMemberAndTeamFolders
+- uid: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.AsMemberAndTeamFolders*
+  commentId: Overload:Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.AsMemberAndTeamFolders
+  name: AsMemberAndTeamFolders
+  nameWithType: ClassificationPolicyEnumWrapper.AsMemberAndTeamFolders
+  fullName: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.AsMemberAndTeamFolders
+- uid: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.MemberAndTeamFolders
+  commentId: T:Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.MemberAndTeamFolders
+  parent: Dropbox.Api.TeamLog
+  name: ClassificationPolicyEnumWrapper.MemberAndTeamFolders
+  nameWithType: ClassificationPolicyEnumWrapper.MemberAndTeamFolders
+  fullName: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.MemberAndTeamFolders
+- uid: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.IsTeamFolders*
+  commentId: Overload:Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.IsTeamFolders
+  name: IsTeamFolders
+  nameWithType: ClassificationPolicyEnumWrapper.IsTeamFolders
+  fullName: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.IsTeamFolders
+- uid: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.AsTeamFolders*
+  commentId: Overload:Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.AsTeamFolders
+  name: AsTeamFolders
+  nameWithType: ClassificationPolicyEnumWrapper.AsTeamFolders
+  fullName: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.AsTeamFolders
+- uid: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.TeamFolders
+  commentId: T:Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.TeamFolders
+  parent: Dropbox.Api.TeamLog
+  name: ClassificationPolicyEnumWrapper.TeamFolders
+  nameWithType: ClassificationPolicyEnumWrapper.TeamFolders
+  fullName: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.TeamFolders
+- uid: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.IsOther*
+  commentId: Overload:Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.IsOther
+  name: IsOther
+  nameWithType: ClassificationPolicyEnumWrapper.IsOther
+  fullName: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.IsOther
+- uid: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.AsOther*
+  commentId: Overload:Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.AsOther
+  name: AsOther
+  nameWithType: ClassificationPolicyEnumWrapper.AsOther
+  fullName: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.AsOther
+- uid: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.Other
+  commentId: T:Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.Other
+  parent: Dropbox.Api.TeamLog
+  name: ClassificationPolicyEnumWrapper.Other
+  nameWithType: ClassificationPolicyEnumWrapper.Other
+  fullName: Dropbox.Api.TeamLog.ClassificationPolicyEnumWrapper.Other
+shouldSkipMarkup: true

@@ -1,0 +1,381 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.PathOrLink
+  commentId: T:Dropbox.Api.Files.PathOrLink
+  id: PathOrLink
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.PathOrLink.#ctor
+  - Dropbox.Api.Files.PathOrLink.AsLink
+  - Dropbox.Api.Files.PathOrLink.AsOther
+  - Dropbox.Api.Files.PathOrLink.AsPath
+  - Dropbox.Api.Files.PathOrLink.IsLink
+  - Dropbox.Api.Files.PathOrLink.IsOther
+  - Dropbox.Api.Files.PathOrLink.IsPath
+  langs:
+  - csharp
+  - vb
+  name: PathOrLink
+  nameWithType: PathOrLink
+  fullName: Dropbox.Api.Files.PathOrLink
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PathOrLink.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PathOrLink
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PathOrLink.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The path or link object</p>\n"
+  example: []
+  syntax:
+    content: 'public class PathOrLink : object'
+    content.vb: >-
+      Public Class PathOrLink
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Files.PathOrLink.Link
+  - Dropbox.Api.Files.PathOrLink.Other
+  - Dropbox.Api.Files.PathOrLink.Path
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.PathOrLink.#ctor
+  commentId: M:Dropbox.Api.Files.PathOrLink.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.PathOrLink
+  langs:
+  - csharp
+  - vb
+  name: PathOrLink()
+  nameWithType: PathOrLink.PathOrLink()
+  fullName: Dropbox.Api.Files.PathOrLink.PathOrLink()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PathOrLink.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PathOrLink.cs
+    startLine: 32
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.PathOrLink\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public PathOrLink()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.PathOrLink.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.PathOrLink.IsPath
+  commentId: P:Dropbox.Api.Files.PathOrLink.IsPath
+  id: IsPath
+  parent: Dropbox.Api.Files.PathOrLink
+  langs:
+  - csharp
+  - vb
+  name: IsPath
+  nameWithType: PathOrLink.IsPath
+  fullName: Dropbox.Api.Files.PathOrLink.IsPath
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PathOrLink.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsPath
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PathOrLink.cs
+    startLine: 39
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is Path</p>\n"
+  example: []
+  syntax:
+    content: public bool IsPath { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsPath As Boolean
+  overload: Dropbox.Api.Files.PathOrLink.IsPath*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.PathOrLink.AsPath
+  commentId: P:Dropbox.Api.Files.PathOrLink.AsPath
+  id: AsPath
+  parent: Dropbox.Api.Files.PathOrLink
+  langs:
+  - csharp
+  - vb
+  name: AsPath
+  nameWithType: PathOrLink.AsPath
+  fullName: Dropbox.Api.Files.PathOrLink.AsPath
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PathOrLink.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsPath
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PathOrLink.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a Path, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PathOrLink.Path AsPath { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.PathOrLink.Path
+    content.vb: Public ReadOnly Property AsPath As PathOrLink.Path
+  overload: Dropbox.Api.Files.PathOrLink.AsPath*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.PathOrLink.IsLink
+  commentId: P:Dropbox.Api.Files.PathOrLink.IsLink
+  id: IsLink
+  parent: Dropbox.Api.Files.PathOrLink
+  langs:
+  - csharp
+  - vb
+  name: IsLink
+  nameWithType: PathOrLink.IsLink
+  fullName: Dropbox.Api.Files.PathOrLink.IsLink
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PathOrLink.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsLink
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PathOrLink.cs
+    startLine: 61
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is Link</p>\n"
+  example: []
+  syntax:
+    content: public bool IsLink { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsLink As Boolean
+  overload: Dropbox.Api.Files.PathOrLink.IsLink*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.PathOrLink.AsLink
+  commentId: P:Dropbox.Api.Files.PathOrLink.AsLink
+  id: AsLink
+  parent: Dropbox.Api.Files.PathOrLink
+  langs:
+  - csharp
+  - vb
+  name: AsLink
+  nameWithType: PathOrLink.AsLink
+  fullName: Dropbox.Api.Files.PathOrLink.AsLink
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PathOrLink.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsLink
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PathOrLink.cs
+    startLine: 72
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a Link, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PathOrLink.Link AsLink { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.PathOrLink.Link
+    content.vb: Public ReadOnly Property AsLink As PathOrLink.Link
+  overload: Dropbox.Api.Files.PathOrLink.AsLink*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.PathOrLink.IsOther
+  commentId: P:Dropbox.Api.Files.PathOrLink.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Files.PathOrLink
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: PathOrLink.IsOther
+  fullName: Dropbox.Api.Files.PathOrLink.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PathOrLink.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PathOrLink.cs
+    startLine: 83
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Files.PathOrLink.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.PathOrLink.AsOther
+  commentId: P:Dropbox.Api.Files.PathOrLink.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Files.PathOrLink
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: PathOrLink.AsOther
+  fullName: Dropbox.Api.Files.PathOrLink.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PathOrLink.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PathOrLink.cs
+    startLine: 94
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PathOrLink.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.PathOrLink.Other
+    content.vb: Public ReadOnly Property AsOther As PathOrLink.Other
+  overload: Dropbox.Api.Files.PathOrLink.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.PathOrLink
+  commentId: T:Dropbox.Api.Files.PathOrLink
+  parent: Dropbox.Api.Files
+  name: PathOrLink
+  nameWithType: PathOrLink
+  fullName: Dropbox.Api.Files.PathOrLink
+- uid: Dropbox.Api.Files.PathOrLink.#ctor*
+  commentId: Overload:Dropbox.Api.Files.PathOrLink.#ctor
+  name: PathOrLink
+  nameWithType: PathOrLink.PathOrLink
+  fullName: Dropbox.Api.Files.PathOrLink.PathOrLink
+- uid: Dropbox.Api.Files.PathOrLink.IsPath*
+  commentId: Overload:Dropbox.Api.Files.PathOrLink.IsPath
+  name: IsPath
+  nameWithType: PathOrLink.IsPath
+  fullName: Dropbox.Api.Files.PathOrLink.IsPath
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Files.PathOrLink.AsPath*
+  commentId: Overload:Dropbox.Api.Files.PathOrLink.AsPath
+  name: AsPath
+  nameWithType: PathOrLink.AsPath
+  fullName: Dropbox.Api.Files.PathOrLink.AsPath
+- uid: Dropbox.Api.Files.PathOrLink.Path
+  commentId: T:Dropbox.Api.Files.PathOrLink.Path
+  parent: Dropbox.Api.Files
+  name: PathOrLink.Path
+  nameWithType: PathOrLink.Path
+  fullName: Dropbox.Api.Files.PathOrLink.Path
+- uid: Dropbox.Api.Files.PathOrLink.IsLink*
+  commentId: Overload:Dropbox.Api.Files.PathOrLink.IsLink
+  name: IsLink
+  nameWithType: PathOrLink.IsLink
+  fullName: Dropbox.Api.Files.PathOrLink.IsLink
+- uid: Dropbox.Api.Files.PathOrLink.AsLink*
+  commentId: Overload:Dropbox.Api.Files.PathOrLink.AsLink
+  name: AsLink
+  nameWithType: PathOrLink.AsLink
+  fullName: Dropbox.Api.Files.PathOrLink.AsLink
+- uid: Dropbox.Api.Files.PathOrLink.Link
+  commentId: T:Dropbox.Api.Files.PathOrLink.Link
+  parent: Dropbox.Api.Files
+  name: PathOrLink.Link
+  nameWithType: PathOrLink.Link
+  fullName: Dropbox.Api.Files.PathOrLink.Link
+- uid: Dropbox.Api.Files.PathOrLink.IsOther*
+  commentId: Overload:Dropbox.Api.Files.PathOrLink.IsOther
+  name: IsOther
+  nameWithType: PathOrLink.IsOther
+  fullName: Dropbox.Api.Files.PathOrLink.IsOther
+- uid: Dropbox.Api.Files.PathOrLink.AsOther*
+  commentId: Overload:Dropbox.Api.Files.PathOrLink.AsOther
+  name: AsOther
+  nameWithType: PathOrLink.AsOther
+  fullName: Dropbox.Api.Files.PathOrLink.AsOther
+- uid: Dropbox.Api.Files.PathOrLink.Other
+  commentId: T:Dropbox.Api.Files.PathOrLink.Other
+  parent: Dropbox.Api.Files
+  name: PathOrLink.Other
+  nameWithType: PathOrLink.Other
+  fullName: Dropbox.Api.Files.PathOrLink.Other
+shouldSkipMarkup: true

@@ -1,0 +1,423 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.CommitInfoWithProperties
+  commentId: T:Dropbox.Api.Files.CommitInfoWithProperties
+  id: CommitInfoWithProperties
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.CommitInfoWithProperties.#ctor
+  - Dropbox.Api.Files.CommitInfoWithProperties.#ctor(System.String,Dropbox.Api.Files.WriteMode,System.Boolean,System.Nullable{System.DateTime},System.Boolean,System.Collections.Generic.IEnumerable{Dropbox.Api.FileProperties.PropertyGroup},System.Boolean)
+  langs:
+  - csharp
+  - vb
+  name: CommitInfoWithProperties
+  nameWithType: CommitInfoWithProperties
+  fullName: Dropbox.Api.Files.CommitInfoWithProperties
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/CommitInfoWithProperties.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: CommitInfoWithProperties
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/CommitInfoWithProperties.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The commit info with properties object</p>\n"
+  example: []
+  syntax:
+    content: 'public class CommitInfoWithProperties : CommitInfo'
+    content.vb: >-
+      Public Class CommitInfoWithProperties
+          Inherits CommitInfo
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Files.CommitInfo
+  inheritedMembers:
+  - Dropbox.Api.Files.CommitInfo.Path
+  - Dropbox.Api.Files.CommitInfo.Mode
+  - Dropbox.Api.Files.CommitInfo.Autorename
+  - Dropbox.Api.Files.CommitInfo.ClientModified
+  - Dropbox.Api.Files.CommitInfo.Mute
+  - Dropbox.Api.Files.CommitInfo.PropertyGroups
+  - Dropbox.Api.Files.CommitInfo.StrictConflict
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.CommitInfoWithProperties.#ctor(System.String,Dropbox.Api.Files.WriteMode,System.Boolean,System.Nullable{System.DateTime},System.Boolean,System.Collections.Generic.IEnumerable{Dropbox.Api.FileProperties.PropertyGroup},System.Boolean)
+  commentId: M:Dropbox.Api.Files.CommitInfoWithProperties.#ctor(System.String,Dropbox.Api.Files.WriteMode,System.Boolean,System.Nullable{System.DateTime},System.Boolean,System.Collections.Generic.IEnumerable{Dropbox.Api.FileProperties.PropertyGroup},System.Boolean)
+  id: '#ctor(System.String,Dropbox.Api.Files.WriteMode,System.Boolean,System.Nullable{System.DateTime},System.Boolean,System.Collections.Generic.IEnumerable{Dropbox.Api.FileProperties.PropertyGroup},System.Boolean)'
+  parent: Dropbox.Api.Files.CommitInfoWithProperties
+  langs:
+  - csharp
+  - vb
+  name: CommitInfoWithProperties(String, WriteMode, Boolean, Nullable<System.DateTime>, Boolean, System.Collections.Generic.IEnumerable<PropertyGroup>, Boolean)
+  nameWithType: CommitInfoWithProperties.CommitInfoWithProperties(String, WriteMode, Boolean, Nullable<System.DateTime>, Boolean, System.Collections.Generic.IEnumerable<PropertyGroup>, Boolean)
+  fullName: Dropbox.Api.Files.CommitInfoWithProperties.CommitInfoWithProperties(System.String, Dropbox.Api.Files.WriteMode, System.Boolean, System.Nullable<System.DateTime>, System.Boolean, System.Collections.Generic.IEnumerable<Dropbox.Api.FileProperties.PropertyGroup>, System.Boolean)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/CommitInfoWithProperties.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/CommitInfoWithProperties.cs
+    startLine: 55
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.CommitInfoWithProperties\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public CommitInfoWithProperties(string path, WriteMode mode = null, bool autorename = false, System.DateTime? clientModified = null, bool mute = false, System.Collections.Generic.IEnumerable<PropertyGroup> propertyGroups = null, bool strictConflict = false)
+    parameters:
+    - id: path
+      type: System.String
+      description: Path in the user&apos;s Dropbox to save the file.
+    - id: mode
+      type: Dropbox.Api.Files.WriteMode
+      description: Selects what to do if the file already exists.
+    - id: autorename
+      type: System.Boolean
+      description: >-
+        If there&apos;s a conflict, as determined by <code data-dev-comment-type="paramref" class="paramref">mode</code>, have the Dropbox server try to autorename the file to avoid
+
+        conflict.
+    - id: clientModified
+      type: System.Nullable{System.DateTime}
+      description: >-
+        The value to store as the <code data-dev-comment-type="paramref" class="paramref">clientModified</code> timestamp. Dropbox automatically records the time at which
+
+        the file was written to the Dropbox servers. It can also record an additional
+
+        timestamp, provided by Dropbox desktop clients, mobile clients, and API apps of
+
+        when the file was actually created or modified.
+    - id: mute
+      type: System.Boolean
+      description: >-
+        Normally, users are made aware of any file modifications in
+
+        their Dropbox account via notifications in the client software. If <code>true</code>,
+
+        this tells the clients that this modification shouldn&apos;t result in a user
+
+        notification.
+    - id: propertyGroups
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.FileProperties.PropertyGroup}
+      description: List of custom properties to add to file.
+    - id: strictConflict
+      type: System.Boolean
+      description: >-
+        Be more strict about how each <xref href="Dropbox.Api.Files.WriteMode" data-throw-if-not-resolved="false"></xref>
+
+        detects conflict. For example, always return a conflict error when <code data-dev-comment-type="paramref" class="paramref">mode</code> = <xref href="Dropbox.Api.Files.WriteMode.Update" data-throw-if-not-resolved="false"></xref> and the given
+
+        &quot;rev&quot; doesn&apos;t match the existing file&apos;s &quot;rev&quot;, even if the existing file has been
+
+        deleted. This also forces a conflict even when the target path refers to a file
+
+        with identical contents.
+    content.vb: Public Sub New(path As String, mode As WriteMode = Nothing, autorename As Boolean = False, clientModified As System.DateTime? = Nothing, mute As Boolean = False, propertyGroups As System.Collections.Generic.IEnumerable(Of PropertyGroup) = Nothing, strictConflict As Boolean = False)
+  overload: Dropbox.Api.Files.CommitInfoWithProperties.#ctor*
+  nameWithType.vb: CommitInfoWithProperties.CommitInfoWithProperties(String, WriteMode, Boolean, Nullable(Of System.DateTime), Boolean, System.Collections.Generic.IEnumerable(Of PropertyGroup), Boolean)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Files.CommitInfoWithProperties.CommitInfoWithProperties(System.String, Dropbox.Api.Files.WriteMode, System.Boolean, System.Nullable(Of System.DateTime), System.Boolean, System.Collections.Generic.IEnumerable(Of Dropbox.Api.FileProperties.PropertyGroup), System.Boolean)
+  name.vb: CommitInfoWithProperties(String, WriteMode, Boolean, Nullable(Of System.DateTime), Boolean, System.Collections.Generic.IEnumerable(Of PropertyGroup), Boolean)
+- uid: Dropbox.Api.Files.CommitInfoWithProperties.#ctor
+  commentId: M:Dropbox.Api.Files.CommitInfoWithProperties.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.CommitInfoWithProperties
+  langs:
+  - csharp
+  - vb
+  name: CommitInfoWithProperties()
+  nameWithType: CommitInfoWithProperties.CommitInfoWithProperties()
+  fullName: Dropbox.Api.Files.CommitInfoWithProperties.CommitInfoWithProperties()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/CommitInfoWithProperties.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/CommitInfoWithProperties.cs
+    startLine: 72
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.CommitInfoWithProperties\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public CommitInfoWithProperties()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.CommitInfoWithProperties.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.CommitInfo
+  commentId: T:Dropbox.Api.Files.CommitInfo
+  parent: Dropbox.Api.Files
+  name: CommitInfo
+  nameWithType: CommitInfo
+  fullName: Dropbox.Api.Files.CommitInfo
+- uid: Dropbox.Api.Files.CommitInfo.Path
+  commentId: P:Dropbox.Api.Files.CommitInfo.Path
+  parent: Dropbox.Api.Files.CommitInfo
+  name: Path
+  nameWithType: CommitInfo.Path
+  fullName: Dropbox.Api.Files.CommitInfo.Path
+- uid: Dropbox.Api.Files.CommitInfo.Mode
+  commentId: P:Dropbox.Api.Files.CommitInfo.Mode
+  parent: Dropbox.Api.Files.CommitInfo
+  name: Mode
+  nameWithType: CommitInfo.Mode
+  fullName: Dropbox.Api.Files.CommitInfo.Mode
+- uid: Dropbox.Api.Files.CommitInfo.Autorename
+  commentId: P:Dropbox.Api.Files.CommitInfo.Autorename
+  parent: Dropbox.Api.Files.CommitInfo
+  name: Autorename
+  nameWithType: CommitInfo.Autorename
+  fullName: Dropbox.Api.Files.CommitInfo.Autorename
+- uid: Dropbox.Api.Files.CommitInfo.ClientModified
+  commentId: P:Dropbox.Api.Files.CommitInfo.ClientModified
+  parent: Dropbox.Api.Files.CommitInfo
+  name: ClientModified
+  nameWithType: CommitInfo.ClientModified
+  fullName: Dropbox.Api.Files.CommitInfo.ClientModified
+- uid: Dropbox.Api.Files.CommitInfo.Mute
+  commentId: P:Dropbox.Api.Files.CommitInfo.Mute
+  parent: Dropbox.Api.Files.CommitInfo
+  name: Mute
+  nameWithType: CommitInfo.Mute
+  fullName: Dropbox.Api.Files.CommitInfo.Mute
+- uid: Dropbox.Api.Files.CommitInfo.PropertyGroups
+  commentId: P:Dropbox.Api.Files.CommitInfo.PropertyGroups
+  parent: Dropbox.Api.Files.CommitInfo
+  name: PropertyGroups
+  nameWithType: CommitInfo.PropertyGroups
+  fullName: Dropbox.Api.Files.CommitInfo.PropertyGroups
+- uid: Dropbox.Api.Files.CommitInfo.StrictConflict
+  commentId: P:Dropbox.Api.Files.CommitInfo.StrictConflict
+  parent: Dropbox.Api.Files.CommitInfo
+  name: StrictConflict
+  nameWithType: CommitInfo.StrictConflict
+  fullName: Dropbox.Api.Files.CommitInfo.StrictConflict
+- uid: Dropbox.Api.Files.CommitInfoWithProperties
+  commentId: T:Dropbox.Api.Files.CommitInfoWithProperties
+  parent: Dropbox.Api.Files
+  name: CommitInfoWithProperties
+  nameWithType: CommitInfoWithProperties
+  fullName: Dropbox.Api.Files.CommitInfoWithProperties
+- uid: Dropbox.Api.Files.WriteMode
+  commentId: T:Dropbox.Api.Files.WriteMode
+  parent: Dropbox.Api.Files
+  name: WriteMode
+  nameWithType: WriteMode
+  fullName: Dropbox.Api.Files.WriteMode
+- uid: Dropbox.Api.Files.WriteMode.Update
+  commentId: T:Dropbox.Api.Files.WriteMode.Update
+  parent: Dropbox.Api.Files
+  name: WriteMode.Update
+  nameWithType: WriteMode.Update
+  fullName: Dropbox.Api.Files.WriteMode.Update
+- uid: Dropbox.Api.Files.CommitInfoWithProperties.#ctor*
+  commentId: Overload:Dropbox.Api.Files.CommitInfoWithProperties.#ctor
+  name: CommitInfoWithProperties
+  nameWithType: CommitInfoWithProperties.CommitInfoWithProperties
+  fullName: Dropbox.Api.Files.CommitInfoWithProperties.CommitInfoWithProperties
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.Nullable{System.DateTime}
+  commentId: '!:System.Nullable{System.DateTime}'
+  definition: System.Nullable`1
+  name: Nullable<System.DateTime>
+  nameWithType: Nullable<System.DateTime>
+  fullName: System.Nullable<System.DateTime>
+  nameWithType.vb: Nullable(Of System.DateTime)
+  fullName.vb: System.Nullable(Of System.DateTime)
+  name.vb: Nullable(Of System.DateTime)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.DateTime
+    name: System.DateTime
+    nameWithType: System.DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.DateTime
+    name: System.DateTime
+    nameWithType: System.DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable{Dropbox.Api.FileProperties.PropertyGroup}
+  commentId: '!:System.Collections.Generic.IEnumerable{Dropbox.Api.FileProperties.PropertyGroup}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<PropertyGroup>
+  nameWithType: System.Collections.Generic.IEnumerable<PropertyGroup>
+  fullName: System.Collections.Generic.IEnumerable<Dropbox.Api.FileProperties.PropertyGroup>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of PropertyGroup)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Dropbox.Api.FileProperties.PropertyGroup)
+  name.vb: System.Collections.Generic.IEnumerable(Of PropertyGroup)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.FileProperties.PropertyGroup
+    name: PropertyGroup
+    nameWithType: PropertyGroup
+    fullName: Dropbox.Api.FileProperties.PropertyGroup
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.FileProperties.PropertyGroup
+    name: PropertyGroup
+    nameWithType: PropertyGroup
+    fullName: Dropbox.Api.FileProperties.PropertyGroup
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  isExternal: true
+  name: Nullable<>
+  nameWithType: Nullable<>
+  fullName: System.Nullable<>
+  nameWithType.vb: Nullable(Of )
+  fullName.vb: System.Nullable(Of )
+  name.vb: Nullable(Of )
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: System.Collections.Generic.IEnumerable<>
+  nameWithType: System.Collections.Generic.IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: System.Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+shouldSkipMarkup: true

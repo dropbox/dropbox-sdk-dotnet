@@ -1,0 +1,409 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.FileProperties.RemovePropertiesArg
+  commentId: T:Dropbox.Api.FileProperties.RemovePropertiesArg
+  id: RemovePropertiesArg
+  parent: Dropbox.Api.FileProperties
+  children:
+  - Dropbox.Api.FileProperties.RemovePropertiesArg.#ctor
+  - Dropbox.Api.FileProperties.RemovePropertiesArg.#ctor(System.String,System.Collections.Generic.IEnumerable{System.String})
+  - Dropbox.Api.FileProperties.RemovePropertiesArg.Path
+  - Dropbox.Api.FileProperties.RemovePropertiesArg.PropertyTemplateIds
+  langs:
+  - csharp
+  - vb
+  name: RemovePropertiesArg
+  nameWithType: RemovePropertiesArg
+  fullName: Dropbox.Api.FileProperties.RemovePropertiesArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/RemovePropertiesArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: RemovePropertiesArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/RemovePropertiesArg.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>The remove properties arg object</p>\n"
+  example: []
+  syntax:
+    content: 'public class RemovePropertiesArg : object'
+    content.vb: >-
+      Public Class RemovePropertiesArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.FileProperties.RemovePropertiesArg.#ctor(System.String,System.Collections.Generic.IEnumerable{System.String})
+  commentId: M:Dropbox.Api.FileProperties.RemovePropertiesArg.#ctor(System.String,System.Collections.Generic.IEnumerable{System.String})
+  id: '#ctor(System.String,System.Collections.Generic.IEnumerable{System.String})'
+  parent: Dropbox.Api.FileProperties.RemovePropertiesArg
+  langs:
+  - csharp
+  - vb
+  name: RemovePropertiesArg(String, System.Collections.Generic.IEnumerable<String>)
+  nameWithType: RemovePropertiesArg.RemovePropertiesArg(String, System.Collections.Generic.IEnumerable<String>)
+  fullName: Dropbox.Api.FileProperties.RemovePropertiesArg.RemovePropertiesArg(System.String, System.Collections.Generic.IEnumerable<System.String>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/RemovePropertiesArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/RemovePropertiesArg.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.FileProperties.RemovePropertiesArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public RemovePropertiesArg(string path, System.Collections.Generic.IEnumerable<string> propertyTemplateIds)
+    parameters:
+    - id: path
+      type: System.String
+      description: A unique identifier for the file or folder.
+    - id: propertyTemplateIds
+      type: System.Collections.Generic.IEnumerable{System.String}
+      description: >-
+        A list of identifiers for a template created by
+
+        <xref href="Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.TemplatesAddForUserAsync(Dropbox.Api.FileProperties.AddTemplateArg)" data-throw-if-not-resolved="false"></xref> or <xref href="Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesAddForTeamAsync(Dropbox.Api.FileProperties.AddTemplateArg)" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Sub New(path As String, propertyTemplateIds As System.Collections.Generic.IEnumerable(Of String))
+  overload: Dropbox.Api.FileProperties.RemovePropertiesArg.#ctor*
+  nameWithType.vb: RemovePropertiesArg.RemovePropertiesArg(String, System.Collections.Generic.IEnumerable(Of String))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.FileProperties.RemovePropertiesArg.RemovePropertiesArg(System.String, System.Collections.Generic.IEnumerable(Of System.String))
+  name.vb: RemovePropertiesArg(String, System.Collections.Generic.IEnumerable(Of String))
+- uid: Dropbox.Api.FileProperties.RemovePropertiesArg.#ctor
+  commentId: M:Dropbox.Api.FileProperties.RemovePropertiesArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.FileProperties.RemovePropertiesArg
+  langs:
+  - csharp
+  - vb
+  name: RemovePropertiesArg()
+  nameWithType: RemovePropertiesArg.RemovePropertiesArg()
+  fullName: Dropbox.Api.FileProperties.RemovePropertiesArg.RemovePropertiesArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/RemovePropertiesArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/RemovePropertiesArg.cs
+    startLine: 69
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.FileProperties.RemovePropertiesArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public RemovePropertiesArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.FileProperties.RemovePropertiesArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileProperties.RemovePropertiesArg.Path
+  commentId: P:Dropbox.Api.FileProperties.RemovePropertiesArg.Path
+  id: Path
+  parent: Dropbox.Api.FileProperties.RemovePropertiesArg
+  langs:
+  - csharp
+  - vb
+  name: Path
+  nameWithType: RemovePropertiesArg.Path
+  fullName: Dropbox.Api.FileProperties.RemovePropertiesArg.Path
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/RemovePropertiesArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Path
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/RemovePropertiesArg.cs
+    startLine: 77
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>A unique identifier for the file or folder.</p>\n"
+  example: []
+  syntax:
+    content: public string Path { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Path As String
+  overload: Dropbox.Api.FileProperties.RemovePropertiesArg.Path*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.FileProperties.RemovePropertiesArg.PropertyTemplateIds
+  commentId: P:Dropbox.Api.FileProperties.RemovePropertiesArg.PropertyTemplateIds
+  id: PropertyTemplateIds
+  parent: Dropbox.Api.FileProperties.RemovePropertiesArg
+  langs:
+  - csharp
+  - vb
+  name: PropertyTemplateIds
+  nameWithType: RemovePropertiesArg.PropertyTemplateIds
+  fullName: Dropbox.Api.FileProperties.RemovePropertiesArg.PropertyTemplateIds
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/RemovePropertiesArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PropertyTemplateIds
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/RemovePropertiesArg.cs
+    startLine: 86
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>A list of identifiers for a template created by <xref href=\"Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.TemplatesAddForUserAsync(Dropbox.Api.FileProperties.AddTemplateArg)\" data-throw-if-not-resolved=\"false\"></xref> or <xref href=\"Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesAddForTeamAsync(Dropbox.Api.FileProperties.AddTemplateArg)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<string> PropertyTemplateIds { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{System.String}
+    content.vb: Public Property PropertyTemplateIds As System.Collections.Generic.IList(Of String)
+  overload: Dropbox.Api.FileProperties.RemovePropertiesArg.PropertyTemplateIds*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.FileProperties
+  commentId: N:Dropbox.Api.FileProperties
+  name: Dropbox.Api.FileProperties
+  nameWithType: Dropbox.Api.FileProperties
+  fullName: Dropbox.Api.FileProperties
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.FileProperties.RemovePropertiesArg
+  commentId: T:Dropbox.Api.FileProperties.RemovePropertiesArg
+  parent: Dropbox.Api.FileProperties
+  name: RemovePropertiesArg
+  nameWithType: RemovePropertiesArg
+  fullName: Dropbox.Api.FileProperties.RemovePropertiesArg
+- uid: Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.TemplatesAddForUserAsync(Dropbox.Api.FileProperties.AddTemplateArg)
+  commentId: M:Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.TemplatesAddForUserAsync(Dropbox.Api.FileProperties.AddTemplateArg)
+  isExternal: true
+- uid: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesAddForTeamAsync(Dropbox.Api.FileProperties.AddTemplateArg)
+  commentId: M:Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesAddForTeamAsync(Dropbox.Api.FileProperties.AddTemplateArg)
+  isExternal: true
+- uid: Dropbox.Api.FileProperties.RemovePropertiesArg.#ctor*
+  commentId: Overload:Dropbox.Api.FileProperties.RemovePropertiesArg.#ctor
+  name: RemovePropertiesArg
+  nameWithType: RemovePropertiesArg.RemovePropertiesArg
+  fullName: Dropbox.Api.FileProperties.RemovePropertiesArg.RemovePropertiesArg
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: '!:System.Collections.Generic.IEnumerable{System.String}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<String>
+  nameWithType: System.Collections.Generic.IEnumerable<String>
+  fullName: System.Collections.Generic.IEnumerable<System.String>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of String)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.String)
+  name.vb: System.Collections.Generic.IEnumerable(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: System.Collections.Generic.IEnumerable<>
+  nameWithType: System.Collections.Generic.IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: System.Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.FileProperties.RemovePropertiesArg.Path*
+  commentId: Overload:Dropbox.Api.FileProperties.RemovePropertiesArg.Path
+  name: Path
+  nameWithType: RemovePropertiesArg.Path
+  fullName: Dropbox.Api.FileProperties.RemovePropertiesArg.Path
+- uid: Dropbox.Api.FileProperties.RemovePropertiesArg.PropertyTemplateIds*
+  commentId: Overload:Dropbox.Api.FileProperties.RemovePropertiesArg.PropertyTemplateIds
+  name: PropertyTemplateIds
+  nameWithType: RemovePropertiesArg.PropertyTemplateIds
+  fullName: Dropbox.Api.FileProperties.RemovePropertiesArg.PropertyTemplateIds
+- uid: System.Collections.Generic.IList{System.String}
+  commentId: '!:System.Collections.Generic.IList{System.String}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<String>
+  nameWithType: System.Collections.Generic.IList<String>
+  fullName: System.Collections.Generic.IList<System.String>
+  nameWithType.vb: System.Collections.Generic.IList(Of String)
+  fullName.vb: System.Collections.Generic.IList(Of System.String)
+  name.vb: System.Collections.Generic.IList(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  isExternal: true
+  name: System.Collections.Generic.IList<>
+  nameWithType: System.Collections.Generic.IList<>
+  fullName: System.Collections.Generic.IList<>
+  nameWithType.vb: System.Collections.Generic.IList(Of )
+  fullName.vb: System.Collections.Generic.IList(Of )
+  name.vb: System.Collections.Generic.IList(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+shouldSkipMarkup: true

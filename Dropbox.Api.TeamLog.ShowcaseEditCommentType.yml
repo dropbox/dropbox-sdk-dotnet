@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.ShowcaseEditCommentType
+  commentId: T:Dropbox.Api.TeamLog.ShowcaseEditCommentType
+  id: ShowcaseEditCommentType
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.ShowcaseEditCommentType.#ctor
+  - Dropbox.Api.TeamLog.ShowcaseEditCommentType.#ctor(System.String)
+  - Dropbox.Api.TeamLog.ShowcaseEditCommentType.Description
+  langs:
+  - csharp
+  - vb
+  name: ShowcaseEditCommentType
+  nameWithType: ShowcaseEditCommentType
+  fullName: Dropbox.Api.TeamLog.ShowcaseEditCommentType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseEditCommentType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ShowcaseEditCommentType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseEditCommentType.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The showcase edit comment type object</p>\n"
+  example: []
+  syntax:
+    content: 'public class ShowcaseEditCommentType : object'
+    content.vb: >-
+      Public Class ShowcaseEditCommentType
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.ShowcaseEditCommentType.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.ShowcaseEditCommentType.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.ShowcaseEditCommentType
+  langs:
+  - csharp
+  - vb
+  name: ShowcaseEditCommentType(String)
+  nameWithType: ShowcaseEditCommentType.ShowcaseEditCommentType(String)
+  fullName: Dropbox.Api.TeamLog.ShowcaseEditCommentType.ShowcaseEditCommentType(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseEditCommentType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseEditCommentType.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.ShowcaseEditCommentType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public ShowcaseEditCommentType(string description)
+    parameters:
+    - id: description
+      type: System.String
+      description: The description
+    content.vb: Public Sub New(description As String)
+  overload: Dropbox.Api.TeamLog.ShowcaseEditCommentType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.ShowcaseEditCommentType.#ctor
+  commentId: M:Dropbox.Api.TeamLog.ShowcaseEditCommentType.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.ShowcaseEditCommentType
+  langs:
+  - csharp
+  - vb
+  name: ShowcaseEditCommentType()
+  nameWithType: ShowcaseEditCommentType.ShowcaseEditCommentType()
+  fullName: Dropbox.Api.TeamLog.ShowcaseEditCommentType.ShowcaseEditCommentType()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseEditCommentType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseEditCommentType.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.ShowcaseEditCommentType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public ShowcaseEditCommentType()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.ShowcaseEditCommentType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.ShowcaseEditCommentType.Description
+  commentId: P:Dropbox.Api.TeamLog.ShowcaseEditCommentType.Description
+  id: Description
+  parent: Dropbox.Api.TeamLog.ShowcaseEditCommentType
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: ShowcaseEditCommentType.Description
+  fullName: Dropbox.Api.TeamLog.ShowcaseEditCommentType.Description
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseEditCommentType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Description
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseEditCommentType.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets the description of the showcase edit comment type</p>\n"
+  example: []
+  syntax:
+    content: public string Description { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Dropbox.Api.TeamLog.ShowcaseEditCommentType.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.ShowcaseEditCommentType
+  commentId: T:Dropbox.Api.TeamLog.ShowcaseEditCommentType
+  parent: Dropbox.Api.TeamLog
+  name: ShowcaseEditCommentType
+  nameWithType: ShowcaseEditCommentType
+  fullName: Dropbox.Api.TeamLog.ShowcaseEditCommentType
+- uid: Dropbox.Api.TeamLog.ShowcaseEditCommentType.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.ShowcaseEditCommentType.#ctor
+  name: ShowcaseEditCommentType
+  nameWithType: ShowcaseEditCommentType.ShowcaseEditCommentType
+  fullName: Dropbox.Api.TeamLog.ShowcaseEditCommentType.ShowcaseEditCommentType
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.ShowcaseEditCommentType.Description*
+  commentId: Overload:Dropbox.Api.TeamLog.ShowcaseEditCommentType.Description
+  name: Description
+  nameWithType: ShowcaseEditCommentType.Description
+  fullName: Dropbox.Api.TeamLog.ShowcaseEditCommentType.Description
+shouldSkipMarkup: true

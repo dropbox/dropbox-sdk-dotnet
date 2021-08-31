@@ -1,0 +1,148 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.DeviceType.Mobile
+  commentId: T:Dropbox.Api.TeamLog.DeviceType.Mobile
+  id: DeviceType.Mobile
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.DeviceType.Mobile.Instance
+  langs:
+  - csharp
+  - vb
+  name: DeviceType.Mobile
+  nameWithType: DeviceType.Mobile
+  fullName: Dropbox.Api.TeamLog.DeviceType.Mobile
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Mobile
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceType.cs
+    startLine: 250
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The mobile object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Mobile : DeviceType'
+    content.vb: >-
+      Public NotInheritable Class Mobile
+          Inherits DeviceType
+  inheritance:
+  - System.Object
+  - Dropbox.Api.TeamLog.DeviceType
+  inheritedMembers:
+  - Dropbox.Api.TeamLog.DeviceType.IsDesktop
+  - Dropbox.Api.TeamLog.DeviceType.AsDesktop
+  - Dropbox.Api.TeamLog.DeviceType.IsMobile
+  - Dropbox.Api.TeamLog.DeviceType.AsMobile
+  - Dropbox.Api.TeamLog.DeviceType.IsOther
+  - Dropbox.Api.TeamLog.DeviceType.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.TeamLog.DeviceType.Mobile.Instance
+  commentId: F:Dropbox.Api.TeamLog.DeviceType.Mobile.Instance
+  id: Instance
+  parent: Dropbox.Api.TeamLog.DeviceType.Mobile
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: DeviceType.Mobile.Instance
+  fullName: Dropbox.Api.TeamLog.DeviceType.Mobile.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceType.cs
+    startLine: 274
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>A singleton instance of Mobile</p>\n"
+  example: []
+  syntax:
+    content: public static readonly DeviceType.Mobile Instance
+    return:
+      type: Dropbox.Api.TeamLog.DeviceType.Mobile
+    content.vb: Public Shared ReadOnly Instance As DeviceType.Mobile
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.DeviceType
+  commentId: T:Dropbox.Api.TeamLog.DeviceType
+  parent: Dropbox.Api.TeamLog
+  name: DeviceType
+  nameWithType: DeviceType
+  fullName: Dropbox.Api.TeamLog.DeviceType
+- uid: Dropbox.Api.TeamLog.DeviceType.IsDesktop
+  commentId: P:Dropbox.Api.TeamLog.DeviceType.IsDesktop
+  parent: Dropbox.Api.TeamLog.DeviceType
+  name: IsDesktop
+  nameWithType: DeviceType.IsDesktop
+  fullName: Dropbox.Api.TeamLog.DeviceType.IsDesktop
+- uid: Dropbox.Api.TeamLog.DeviceType.AsDesktop
+  commentId: P:Dropbox.Api.TeamLog.DeviceType.AsDesktop
+  parent: Dropbox.Api.TeamLog.DeviceType
+  name: AsDesktop
+  nameWithType: DeviceType.AsDesktop
+  fullName: Dropbox.Api.TeamLog.DeviceType.AsDesktop
+- uid: Dropbox.Api.TeamLog.DeviceType.IsMobile
+  commentId: P:Dropbox.Api.TeamLog.DeviceType.IsMobile
+  parent: Dropbox.Api.TeamLog.DeviceType
+  name: IsMobile
+  nameWithType: DeviceType.IsMobile
+  fullName: Dropbox.Api.TeamLog.DeviceType.IsMobile
+- uid: Dropbox.Api.TeamLog.DeviceType.AsMobile
+  commentId: P:Dropbox.Api.TeamLog.DeviceType.AsMobile
+  parent: Dropbox.Api.TeamLog.DeviceType
+  name: AsMobile
+  nameWithType: DeviceType.AsMobile
+  fullName: Dropbox.Api.TeamLog.DeviceType.AsMobile
+- uid: Dropbox.Api.TeamLog.DeviceType.IsOther
+  commentId: P:Dropbox.Api.TeamLog.DeviceType.IsOther
+  parent: Dropbox.Api.TeamLog.DeviceType
+  name: IsOther
+  nameWithType: DeviceType.IsOther
+  fullName: Dropbox.Api.TeamLog.DeviceType.IsOther
+- uid: Dropbox.Api.TeamLog.DeviceType.AsOther
+  commentId: P:Dropbox.Api.TeamLog.DeviceType.AsOther
+  parent: Dropbox.Api.TeamLog.DeviceType
+  name: AsOther
+  nameWithType: DeviceType.AsOther
+  fullName: Dropbox.Api.TeamLog.DeviceType.AsOther
+- uid: Dropbox.Api.TeamLog.DeviceType.Mobile
+  commentId: T:Dropbox.Api.TeamLog.DeviceType.Mobile
+  parent: Dropbox.Api.TeamLog
+  name: DeviceType.Mobile
+  nameWithType: DeviceType.Mobile
+  fullName: Dropbox.Api.TeamLog.DeviceType.Mobile
+shouldSkipMarkup: true

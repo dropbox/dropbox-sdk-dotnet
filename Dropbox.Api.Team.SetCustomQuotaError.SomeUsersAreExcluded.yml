@@ -1,0 +1,148 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.SetCustomQuotaError.SomeUsersAreExcluded
+  commentId: T:Dropbox.Api.Team.SetCustomQuotaError.SomeUsersAreExcluded
+  id: SetCustomQuotaError.SomeUsersAreExcluded
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.SetCustomQuotaError.SomeUsersAreExcluded.Instance
+  langs:
+  - csharp
+  - vb
+  name: SetCustomQuotaError.SomeUsersAreExcluded
+  nameWithType: SetCustomQuotaError.SomeUsersAreExcluded
+  fullName: Dropbox.Api.Team.SetCustomQuotaError.SomeUsersAreExcluded
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/SetCustomQuotaError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SomeUsersAreExcluded
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/SetCustomQuotaError.cs
+    startLine: 185
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Some of the users are on the excluded users list and can&apos;t have custom quota\nset.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class SomeUsersAreExcluded : SetCustomQuotaError'
+    content.vb: >-
+      Public NotInheritable Class SomeUsersAreExcluded
+          Inherits SetCustomQuotaError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.SetCustomQuotaError
+  inheritedMembers:
+  - Dropbox.Api.Team.SetCustomQuotaError.IsSomeUsersAreExcluded
+  - Dropbox.Api.Team.SetCustomQuotaError.AsSomeUsersAreExcluded
+  - Dropbox.Api.Team.SetCustomQuotaError.IsTooManyUsers
+  - Dropbox.Api.Team.SetCustomQuotaError.AsTooManyUsers
+  - Dropbox.Api.Team.SetCustomQuotaError.IsOther
+  - Dropbox.Api.Team.SetCustomQuotaError.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Team.SetCustomQuotaError.SomeUsersAreExcluded.Instance
+  commentId: F:Dropbox.Api.Team.SetCustomQuotaError.SomeUsersAreExcluded.Instance
+  id: Instance
+  parent: Dropbox.Api.Team.SetCustomQuotaError.SomeUsersAreExcluded
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: SetCustomQuotaError.SomeUsersAreExcluded.Instance
+  fullName: Dropbox.Api.Team.SetCustomQuotaError.SomeUsersAreExcluded.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/SetCustomQuotaError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/SetCustomQuotaError.cs
+    startLine: 210
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>A singleton instance of SomeUsersAreExcluded</p>\n"
+  example: []
+  syntax:
+    content: public static readonly SetCustomQuotaError.SomeUsersAreExcluded Instance
+    return:
+      type: Dropbox.Api.Team.SetCustomQuotaError.SomeUsersAreExcluded
+    content.vb: Public Shared ReadOnly Instance As SetCustomQuotaError.SomeUsersAreExcluded
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.SetCustomQuotaError
+  commentId: T:Dropbox.Api.Team.SetCustomQuotaError
+  parent: Dropbox.Api.Team
+  name: SetCustomQuotaError
+  nameWithType: SetCustomQuotaError
+  fullName: Dropbox.Api.Team.SetCustomQuotaError
+- uid: Dropbox.Api.Team.SetCustomQuotaError.IsSomeUsersAreExcluded
+  commentId: P:Dropbox.Api.Team.SetCustomQuotaError.IsSomeUsersAreExcluded
+  parent: Dropbox.Api.Team.SetCustomQuotaError
+  name: IsSomeUsersAreExcluded
+  nameWithType: SetCustomQuotaError.IsSomeUsersAreExcluded
+  fullName: Dropbox.Api.Team.SetCustomQuotaError.IsSomeUsersAreExcluded
+- uid: Dropbox.Api.Team.SetCustomQuotaError.AsSomeUsersAreExcluded
+  commentId: P:Dropbox.Api.Team.SetCustomQuotaError.AsSomeUsersAreExcluded
+  parent: Dropbox.Api.Team.SetCustomQuotaError
+  name: AsSomeUsersAreExcluded
+  nameWithType: SetCustomQuotaError.AsSomeUsersAreExcluded
+  fullName: Dropbox.Api.Team.SetCustomQuotaError.AsSomeUsersAreExcluded
+- uid: Dropbox.Api.Team.SetCustomQuotaError.IsTooManyUsers
+  commentId: P:Dropbox.Api.Team.SetCustomQuotaError.IsTooManyUsers
+  parent: Dropbox.Api.Team.SetCustomQuotaError
+  name: IsTooManyUsers
+  nameWithType: SetCustomQuotaError.IsTooManyUsers
+  fullName: Dropbox.Api.Team.SetCustomQuotaError.IsTooManyUsers
+- uid: Dropbox.Api.Team.SetCustomQuotaError.AsTooManyUsers
+  commentId: P:Dropbox.Api.Team.SetCustomQuotaError.AsTooManyUsers
+  parent: Dropbox.Api.Team.SetCustomQuotaError
+  name: AsTooManyUsers
+  nameWithType: SetCustomQuotaError.AsTooManyUsers
+  fullName: Dropbox.Api.Team.SetCustomQuotaError.AsTooManyUsers
+- uid: Dropbox.Api.Team.SetCustomQuotaError.IsOther
+  commentId: P:Dropbox.Api.Team.SetCustomQuotaError.IsOther
+  parent: Dropbox.Api.Team.SetCustomQuotaError
+  name: IsOther
+  nameWithType: SetCustomQuotaError.IsOther
+  fullName: Dropbox.Api.Team.SetCustomQuotaError.IsOther
+- uid: Dropbox.Api.Team.SetCustomQuotaError.AsOther
+  commentId: P:Dropbox.Api.Team.SetCustomQuotaError.AsOther
+  parent: Dropbox.Api.Team.SetCustomQuotaError
+  name: AsOther
+  nameWithType: SetCustomQuotaError.AsOther
+  fullName: Dropbox.Api.Team.SetCustomQuotaError.AsOther
+- uid: Dropbox.Api.Team.SetCustomQuotaError.SomeUsersAreExcluded
+  commentId: T:Dropbox.Api.Team.SetCustomQuotaError.SomeUsersAreExcluded
+  parent: Dropbox.Api.Team
+  name: SetCustomQuotaError.SomeUsersAreExcluded
+  nameWithType: SetCustomQuotaError.SomeUsersAreExcluded
+  fullName: Dropbox.Api.Team.SetCustomQuotaError.SomeUsersAreExcluded
+shouldSkipMarkup: true

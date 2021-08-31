@@ -1,0 +1,240 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.MembersListArg
+  commentId: T:Dropbox.Api.Team.MembersListArg
+  id: MembersListArg
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.MembersListArg.#ctor
+  - Dropbox.Api.Team.MembersListArg.#ctor(System.UInt32,System.Boolean)
+  - Dropbox.Api.Team.MembersListArg.IncludeRemoved
+  - Dropbox.Api.Team.MembersListArg.Limit
+  langs:
+  - csharp
+  - vb
+  name: MembersListArg
+  nameWithType: MembersListArg
+  fullName: Dropbox.Api.Team.MembersListArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersListArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: MembersListArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersListArg.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The members list arg object</p>\n"
+  example: []
+  syntax:
+    content: 'public class MembersListArg : object'
+    content.vb: >-
+      Public Class MembersListArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.MembersListArg.#ctor(System.UInt32,System.Boolean)
+  commentId: M:Dropbox.Api.Team.MembersListArg.#ctor(System.UInt32,System.Boolean)
+  id: '#ctor(System.UInt32,System.Boolean)'
+  parent: Dropbox.Api.Team.MembersListArg
+  langs:
+  - csharp
+  - vb
+  name: MembersListArg(UInt32, Boolean)
+  nameWithType: MembersListArg.MembersListArg(UInt32, Boolean)
+  fullName: Dropbox.Api.Team.MembersListArg.MembersListArg(System.UInt32, System.Boolean)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersListArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersListArg.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.MembersListArg\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public MembersListArg(uint limit = null, bool includeRemoved = false)
+    parameters:
+    - id: limit
+      type: System.UInt32
+      description: Number of results to return per call.
+    - id: includeRemoved
+      type: System.Boolean
+      description: Whether to return removed members.
+    content.vb: Public Sub New(limit As UInteger = Nothing, includeRemoved As Boolean = False)
+  overload: Dropbox.Api.Team.MembersListArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.MembersListArg.#ctor
+  commentId: M:Dropbox.Api.Team.MembersListArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.MembersListArg
+  langs:
+  - csharp
+  - vb
+  name: MembersListArg()
+  nameWithType: MembersListArg.MembersListArg()
+  fullName: Dropbox.Api.Team.MembersListArg.MembersListArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersListArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersListArg.cs
+    startLine: 55
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.MembersListArg\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public MembersListArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.MembersListArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.MembersListArg.Limit
+  commentId: P:Dropbox.Api.Team.MembersListArg.Limit
+  id: Limit
+  parent: Dropbox.Api.Team.MembersListArg
+  langs:
+  - csharp
+  - vb
+  name: Limit
+  nameWithType: MembersListArg.Limit
+  fullName: Dropbox.Api.Team.MembersListArg.Limit
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersListArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Limit
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersListArg.cs
+    startLine: 65
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Number of results to return per call.</p>\n"
+  example: []
+  syntax:
+    content: public uint Limit { get; protected set; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public Property Limit As UInteger
+  overload: Dropbox.Api.Team.MembersListArg.Limit*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.MembersListArg.IncludeRemoved
+  commentId: P:Dropbox.Api.Team.MembersListArg.IncludeRemoved
+  id: IncludeRemoved
+  parent: Dropbox.Api.Team.MembersListArg
+  langs:
+  - csharp
+  - vb
+  name: IncludeRemoved
+  nameWithType: MembersListArg.IncludeRemoved
+  fullName: Dropbox.Api.Team.MembersListArg.IncludeRemoved
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersListArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IncludeRemoved
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersListArg.cs
+    startLine: 70
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Whether to return removed members.</p>\n"
+  example: []
+  syntax:
+    content: public bool IncludeRemoved { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IncludeRemoved As Boolean
+  overload: Dropbox.Api.Team.MembersListArg.IncludeRemoved*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.MembersListArg
+  commentId: T:Dropbox.Api.Team.MembersListArg
+  parent: Dropbox.Api.Team
+  name: MembersListArg
+  nameWithType: MembersListArg
+  fullName: Dropbox.Api.Team.MembersListArg
+- uid: Dropbox.Api.Team.MembersListArg.#ctor*
+  commentId: Overload:Dropbox.Api.Team.MembersListArg.#ctor
+  name: MembersListArg
+  nameWithType: MembersListArg.MembersListArg
+  fullName: Dropbox.Api.Team.MembersListArg.MembersListArg
+- uid: System.UInt32
+  isExternal: true
+  name: UInt32
+  nameWithType: UInt32
+  fullName: System.UInt32
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Team.MembersListArg.Limit*
+  commentId: Overload:Dropbox.Api.Team.MembersListArg.Limit
+  name: Limit
+  nameWithType: MembersListArg.Limit
+  fullName: Dropbox.Api.Team.MembersListArg.Limit
+- uid: Dropbox.Api.Team.MembersListArg.IncludeRemoved*
+  commentId: Overload:Dropbox.Api.Team.MembersListArg.IncludeRemoved
+  name: IncludeRemoved
+  nameWithType: MembersListArg.IncludeRemoved
+  fullName: Dropbox.Api.Team.MembersListArg.IncludeRemoved
+shouldSkipMarkup: true

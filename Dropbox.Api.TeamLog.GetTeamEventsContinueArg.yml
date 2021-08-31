@@ -1,0 +1,190 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.GetTeamEventsContinueArg
+  commentId: T:Dropbox.Api.TeamLog.GetTeamEventsContinueArg
+  id: GetTeamEventsContinueArg
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.GetTeamEventsContinueArg.#ctor
+  - Dropbox.Api.TeamLog.GetTeamEventsContinueArg.#ctor(System.String)
+  - Dropbox.Api.TeamLog.GetTeamEventsContinueArg.Cursor
+  langs:
+  - csharp
+  - vb
+  name: GetTeamEventsContinueArg
+  nameWithType: GetTeamEventsContinueArg
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsContinueArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GetTeamEventsContinueArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GetTeamEventsContinueArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GetTeamEventsContinueArg.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The get team events continue arg object</p>\n"
+  example: []
+  syntax:
+    content: 'public class GetTeamEventsContinueArg : object'
+    content.vb: >-
+      Public Class GetTeamEventsContinueArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.GetTeamEventsContinueArg.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.GetTeamEventsContinueArg.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.GetTeamEventsContinueArg
+  langs:
+  - csharp
+  - vb
+  name: GetTeamEventsContinueArg(String)
+  nameWithType: GetTeamEventsContinueArg.GetTeamEventsContinueArg(String)
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsContinueArg.GetTeamEventsContinueArg(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GetTeamEventsContinueArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GetTeamEventsContinueArg.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.GetTeamEventsContinueArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public GetTeamEventsContinueArg(string cursor)
+    parameters:
+    - id: cursor
+      type: System.String
+      description: >-
+        Indicates from what point to get the next set of
+
+        events.
+    content.vb: Public Sub New(cursor As String)
+  overload: Dropbox.Api.TeamLog.GetTeamEventsContinueArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.GetTeamEventsContinueArg.#ctor
+  commentId: M:Dropbox.Api.TeamLog.GetTeamEventsContinueArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.GetTeamEventsContinueArg
+  langs:
+  - csharp
+  - vb
+  name: GetTeamEventsContinueArg()
+  nameWithType: GetTeamEventsContinueArg.GetTeamEventsContinueArg()
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsContinueArg.GetTeamEventsContinueArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GetTeamEventsContinueArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GetTeamEventsContinueArg.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.GetTeamEventsContinueArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public GetTeamEventsContinueArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.GetTeamEventsContinueArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.GetTeamEventsContinueArg.Cursor
+  commentId: P:Dropbox.Api.TeamLog.GetTeamEventsContinueArg.Cursor
+  id: Cursor
+  parent: Dropbox.Api.TeamLog.GetTeamEventsContinueArg
+  langs:
+  - csharp
+  - vb
+  name: Cursor
+  nameWithType: GetTeamEventsContinueArg.Cursor
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsContinueArg.Cursor
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GetTeamEventsContinueArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Cursor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GetTeamEventsContinueArg.cs
+    startLine: 59
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Indicates from what point to get the next set of events.</p>\n"
+  example: []
+  syntax:
+    content: public string Cursor { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Cursor As String
+  overload: Dropbox.Api.TeamLog.GetTeamEventsContinueArg.Cursor*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.GetTeamEventsContinueArg
+  commentId: T:Dropbox.Api.TeamLog.GetTeamEventsContinueArg
+  parent: Dropbox.Api.TeamLog
+  name: GetTeamEventsContinueArg
+  nameWithType: GetTeamEventsContinueArg
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsContinueArg
+- uid: Dropbox.Api.TeamLog.GetTeamEventsContinueArg.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.GetTeamEventsContinueArg.#ctor
+  name: GetTeamEventsContinueArg
+  nameWithType: GetTeamEventsContinueArg.GetTeamEventsContinueArg
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsContinueArg.GetTeamEventsContinueArg
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.GetTeamEventsContinueArg.Cursor*
+  commentId: Overload:Dropbox.Api.TeamLog.GetTeamEventsContinueArg.Cursor
+  name: Cursor
+  nameWithType: GetTeamEventsContinueArg.Cursor
+  fullName: Dropbox.Api.TeamLog.GetTeamEventsContinueArg.Cursor
+shouldSkipMarkup: true

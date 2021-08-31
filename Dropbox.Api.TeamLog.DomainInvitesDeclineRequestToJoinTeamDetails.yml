@@ -1,0 +1,96 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.DomainInvitesDeclineRequestToJoinTeamDetails
+  commentId: T:Dropbox.Api.TeamLog.DomainInvitesDeclineRequestToJoinTeamDetails
+  id: DomainInvitesDeclineRequestToJoinTeamDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.DomainInvitesDeclineRequestToJoinTeamDetails.#ctor
+  langs:
+  - csharp
+  - vb
+  name: DomainInvitesDeclineRequestToJoinTeamDetails
+  nameWithType: DomainInvitesDeclineRequestToJoinTeamDetails
+  fullName: Dropbox.Api.TeamLog.DomainInvitesDeclineRequestToJoinTeamDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DomainInvitesDeclineRequestToJoinTeamDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: DomainInvitesDeclineRequestToJoinTeamDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DomainInvitesDeclineRequestToJoinTeamDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Declined user&apos;s request to join team.</p>\n"
+  example: []
+  syntax:
+    content: 'public class DomainInvitesDeclineRequestToJoinTeamDetails : object'
+    content.vb: >-
+      Public Class DomainInvitesDeclineRequestToJoinTeamDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.DomainInvitesDeclineRequestToJoinTeamDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.DomainInvitesDeclineRequestToJoinTeamDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.DomainInvitesDeclineRequestToJoinTeamDetails
+  langs:
+  - csharp
+  - vb
+  name: DomainInvitesDeclineRequestToJoinTeamDetails()
+  nameWithType: DomainInvitesDeclineRequestToJoinTeamDetails.DomainInvitesDeclineRequestToJoinTeamDetails()
+  fullName: Dropbox.Api.TeamLog.DomainInvitesDeclineRequestToJoinTeamDetails.DomainInvitesDeclineRequestToJoinTeamDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DomainInvitesDeclineRequestToJoinTeamDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DomainInvitesDeclineRequestToJoinTeamDetails.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.DomainInvitesDeclineRequestToJoinTeamDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public DomainInvitesDeclineRequestToJoinTeamDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.DomainInvitesDeclineRequestToJoinTeamDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.DomainInvitesDeclineRequestToJoinTeamDetails
+  commentId: T:Dropbox.Api.TeamLog.DomainInvitesDeclineRequestToJoinTeamDetails
+  parent: Dropbox.Api.TeamLog
+  name: DomainInvitesDeclineRequestToJoinTeamDetails
+  nameWithType: DomainInvitesDeclineRequestToJoinTeamDetails
+  fullName: Dropbox.Api.TeamLog.DomainInvitesDeclineRequestToJoinTeamDetails
+- uid: Dropbox.Api.TeamLog.DomainInvitesDeclineRequestToJoinTeamDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.DomainInvitesDeclineRequestToJoinTeamDetails.#ctor
+  name: DomainInvitesDeclineRequestToJoinTeamDetails
+  nameWithType: DomainInvitesDeclineRequestToJoinTeamDetails.DomainInvitesDeclineRequestToJoinTeamDetails
+  fullName: Dropbox.Api.TeamLog.DomainInvitesDeclineRequestToJoinTeamDetails.DomainInvitesDeclineRequestToJoinTeamDetails
+shouldSkipMarkup: true

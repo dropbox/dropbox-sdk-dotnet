@@ -1,0 +1,474 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError
+  commentId: T:Dropbox.Api.Team.TeamFolderPermanentlyDeleteError
+  id: TeamFolderPermanentlyDeleteError
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.#ctor
+  - Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AsAccessError
+  - Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AsOther
+  - Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AsStatusError
+  - Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AsTeamSharedDropboxError
+  - Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.IsAccessError
+  - Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.IsOther
+  - Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.IsStatusError
+  - Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.IsTeamSharedDropboxError
+  langs:
+  - csharp
+  - vb
+  name: TeamFolderPermanentlyDeleteError
+  nameWithType: TeamFolderPermanentlyDeleteError
+  fullName: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderPermanentlyDeleteError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TeamFolderPermanentlyDeleteError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderPermanentlyDeleteError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The team folder permanently delete error object</p>\n"
+  example: []
+  syntax:
+    content: 'public class TeamFolderPermanentlyDeleteError : object'
+    content.vb: >-
+      Public Class TeamFolderPermanentlyDeleteError
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AccessError
+  - Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.Other
+  - Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.StatusError
+  - Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.TeamSharedDropboxError
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.#ctor
+  commentId: M:Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError
+  langs:
+  - csharp
+  - vb
+  name: TeamFolderPermanentlyDeleteError()
+  nameWithType: TeamFolderPermanentlyDeleteError.TeamFolderPermanentlyDeleteError()
+  fullName: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.TeamFolderPermanentlyDeleteError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderPermanentlyDeleteError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderPermanentlyDeleteError.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.TeamFolderPermanentlyDeleteError\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public TeamFolderPermanentlyDeleteError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.IsAccessError
+  commentId: P:Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.IsAccessError
+  id: IsAccessError
+  parent: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError
+  langs:
+  - csharp
+  - vb
+  name: IsAccessError
+  nameWithType: TeamFolderPermanentlyDeleteError.IsAccessError
+  fullName: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.IsAccessError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderPermanentlyDeleteError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsAccessError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderPermanentlyDeleteError.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is AccessError</p>\n"
+  example: []
+  syntax:
+    content: public bool IsAccessError { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsAccessError As Boolean
+  overload: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.IsAccessError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AsAccessError
+  commentId: P:Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AsAccessError
+  id: AsAccessError
+  parent: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError
+  langs:
+  - csharp
+  - vb
+  name: AsAccessError
+  nameWithType: TeamFolderPermanentlyDeleteError.AsAccessError
+  fullName: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AsAccessError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderPermanentlyDeleteError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsAccessError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderPermanentlyDeleteError.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a AccessError, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public TeamFolderPermanentlyDeleteError.AccessError AsAccessError { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AccessError
+    content.vb: Public ReadOnly Property AsAccessError As TeamFolderPermanentlyDeleteError.AccessError
+  overload: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AsAccessError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.IsStatusError
+  commentId: P:Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.IsStatusError
+  id: IsStatusError
+  parent: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError
+  langs:
+  - csharp
+  - vb
+  name: IsStatusError
+  nameWithType: TeamFolderPermanentlyDeleteError.IsStatusError
+  fullName: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.IsStatusError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderPermanentlyDeleteError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsStatusError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderPermanentlyDeleteError.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is StatusError</p>\n"
+  example: []
+  syntax:
+    content: public bool IsStatusError { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsStatusError As Boolean
+  overload: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.IsStatusError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AsStatusError
+  commentId: P:Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AsStatusError
+  id: AsStatusError
+  parent: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError
+  langs:
+  - csharp
+  - vb
+  name: AsStatusError
+  nameWithType: TeamFolderPermanentlyDeleteError.AsStatusError
+  fullName: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AsStatusError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderPermanentlyDeleteError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsStatusError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderPermanentlyDeleteError.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a StatusError, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public TeamFolderPermanentlyDeleteError.StatusError AsStatusError { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.StatusError
+    content.vb: Public ReadOnly Property AsStatusError As TeamFolderPermanentlyDeleteError.StatusError
+  overload: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AsStatusError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.IsTeamSharedDropboxError
+  commentId: P:Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.IsTeamSharedDropboxError
+  id: IsTeamSharedDropboxError
+  parent: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError
+  langs:
+  - csharp
+  - vb
+  name: IsTeamSharedDropboxError
+  nameWithType: TeamFolderPermanentlyDeleteError.IsTeamSharedDropboxError
+  fullName: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.IsTeamSharedDropboxError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderPermanentlyDeleteError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsTeamSharedDropboxError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderPermanentlyDeleteError.cs
+    startLine: 85
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is\nTeamSharedDropboxError</p>\n"
+  example: []
+  syntax:
+    content: public bool IsTeamSharedDropboxError { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsTeamSharedDropboxError As Boolean
+  overload: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.IsTeamSharedDropboxError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AsTeamSharedDropboxError
+  commentId: P:Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AsTeamSharedDropboxError
+  id: AsTeamSharedDropboxError
+  parent: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError
+  langs:
+  - csharp
+  - vb
+  name: AsTeamSharedDropboxError
+  nameWithType: TeamFolderPermanentlyDeleteError.AsTeamSharedDropboxError
+  fullName: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AsTeamSharedDropboxError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderPermanentlyDeleteError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsTeamSharedDropboxError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderPermanentlyDeleteError.cs
+    startLine: 96
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a TeamSharedDropboxError, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public TeamFolderPermanentlyDeleteError.TeamSharedDropboxError AsTeamSharedDropboxError { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.TeamSharedDropboxError
+    content.vb: Public ReadOnly Property AsTeamSharedDropboxError As TeamFolderPermanentlyDeleteError.TeamSharedDropboxError
+  overload: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AsTeamSharedDropboxError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.IsOther
+  commentId: P:Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: TeamFolderPermanentlyDeleteError.IsOther
+  fullName: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderPermanentlyDeleteError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderPermanentlyDeleteError.cs
+    startLine: 107
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AsOther
+  commentId: P:Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: TeamFolderPermanentlyDeleteError.AsOther
+  fullName: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderPermanentlyDeleteError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderPermanentlyDeleteError.cs
+    startLine: 118
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public TeamFolderPermanentlyDeleteError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.Other
+    content.vb: Public ReadOnly Property AsOther As TeamFolderPermanentlyDeleteError.Other
+  overload: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError
+  commentId: T:Dropbox.Api.Team.TeamFolderPermanentlyDeleteError
+  parent: Dropbox.Api.Team
+  name: TeamFolderPermanentlyDeleteError
+  nameWithType: TeamFolderPermanentlyDeleteError
+  fullName: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError
+- uid: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.#ctor*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.#ctor
+  name: TeamFolderPermanentlyDeleteError
+  nameWithType: TeamFolderPermanentlyDeleteError.TeamFolderPermanentlyDeleteError
+  fullName: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.TeamFolderPermanentlyDeleteError
+- uid: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.IsAccessError*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.IsAccessError
+  name: IsAccessError
+  nameWithType: TeamFolderPermanentlyDeleteError.IsAccessError
+  fullName: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.IsAccessError
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AsAccessError*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AsAccessError
+  name: AsAccessError
+  nameWithType: TeamFolderPermanentlyDeleteError.AsAccessError
+  fullName: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AsAccessError
+- uid: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AccessError
+  commentId: T:Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AccessError
+  parent: Dropbox.Api.Team
+  name: TeamFolderPermanentlyDeleteError.AccessError
+  nameWithType: TeamFolderPermanentlyDeleteError.AccessError
+  fullName: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AccessError
+- uid: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.IsStatusError*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.IsStatusError
+  name: IsStatusError
+  nameWithType: TeamFolderPermanentlyDeleteError.IsStatusError
+  fullName: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.IsStatusError
+- uid: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AsStatusError*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AsStatusError
+  name: AsStatusError
+  nameWithType: TeamFolderPermanentlyDeleteError.AsStatusError
+  fullName: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AsStatusError
+- uid: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.StatusError
+  commentId: T:Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.StatusError
+  parent: Dropbox.Api.Team
+  name: TeamFolderPermanentlyDeleteError.StatusError
+  nameWithType: TeamFolderPermanentlyDeleteError.StatusError
+  fullName: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.StatusError
+- uid: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.IsTeamSharedDropboxError*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.IsTeamSharedDropboxError
+  name: IsTeamSharedDropboxError
+  nameWithType: TeamFolderPermanentlyDeleteError.IsTeamSharedDropboxError
+  fullName: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.IsTeamSharedDropboxError
+- uid: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AsTeamSharedDropboxError*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AsTeamSharedDropboxError
+  name: AsTeamSharedDropboxError
+  nameWithType: TeamFolderPermanentlyDeleteError.AsTeamSharedDropboxError
+  fullName: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AsTeamSharedDropboxError
+- uid: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.TeamSharedDropboxError
+  commentId: T:Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.TeamSharedDropboxError
+  parent: Dropbox.Api.Team
+  name: TeamFolderPermanentlyDeleteError.TeamSharedDropboxError
+  nameWithType: TeamFolderPermanentlyDeleteError.TeamSharedDropboxError
+  fullName: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.TeamSharedDropboxError
+- uid: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.IsOther*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.IsOther
+  name: IsOther
+  nameWithType: TeamFolderPermanentlyDeleteError.IsOther
+  fullName: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.IsOther
+- uid: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AsOther*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AsOther
+  name: AsOther
+  nameWithType: TeamFolderPermanentlyDeleteError.AsOther
+  fullName: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.AsOther
+- uid: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.Other
+  commentId: T:Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.Other
+  parent: Dropbox.Api.Team
+  name: TeamFolderPermanentlyDeleteError.Other
+  nameWithType: TeamFolderPermanentlyDeleteError.Other
+  fullName: Dropbox.Api.Team.TeamFolderPermanentlyDeleteError.Other
+shouldSkipMarkup: true

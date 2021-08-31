@@ -1,0 +1,199 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.WebSessionLogInfo
+  commentId: T:Dropbox.Api.TeamLog.WebSessionLogInfo
+  id: WebSessionLogInfo
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.WebSessionLogInfo.#ctor
+  - Dropbox.Api.TeamLog.WebSessionLogInfo.#ctor(System.String)
+  langs:
+  - csharp
+  - vb
+  name: WebSessionLogInfo
+  nameWithType: WebSessionLogInfo
+  fullName: Dropbox.Api.TeamLog.WebSessionLogInfo
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/WebSessionLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: WebSessionLogInfo
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/WebSessionLogInfo.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Web session.</p>\n"
+  example: []
+  syntax:
+    content: 'public class WebSessionLogInfo : SessionLogInfo'
+    content.vb: >-
+      Public Class WebSessionLogInfo
+          Inherits SessionLogInfo
+  inheritance:
+  - System.Object
+  - Dropbox.Api.TeamLog.SessionLogInfo
+  inheritedMembers:
+  - Dropbox.Api.TeamLog.SessionLogInfo.IsWeb
+  - Dropbox.Api.TeamLog.SessionLogInfo.AsWeb
+  - Dropbox.Api.TeamLog.SessionLogInfo.IsDesktop
+  - Dropbox.Api.TeamLog.SessionLogInfo.AsDesktop
+  - Dropbox.Api.TeamLog.SessionLogInfo.IsMobile
+  - Dropbox.Api.TeamLog.SessionLogInfo.AsMobile
+  - Dropbox.Api.TeamLog.SessionLogInfo.SessionId
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.WebSessionLogInfo.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.WebSessionLogInfo.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.WebSessionLogInfo
+  langs:
+  - csharp
+  - vb
+  name: WebSessionLogInfo(String)
+  nameWithType: WebSessionLogInfo.WebSessionLogInfo(String)
+  fullName: Dropbox.Api.TeamLog.WebSessionLogInfo.WebSessionLogInfo(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/WebSessionLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/WebSessionLogInfo.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.WebSessionLogInfo\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public WebSessionLogInfo(string sessionId = null)
+    parameters:
+    - id: sessionId
+      type: System.String
+      description: Session ID.
+    content.vb: Public Sub New(sessionId As String = Nothing)
+  overload: Dropbox.Api.TeamLog.WebSessionLogInfo.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.WebSessionLogInfo.#ctor
+  commentId: M:Dropbox.Api.TeamLog.WebSessionLogInfo.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.WebSessionLogInfo
+  langs:
+  - csharp
+  - vb
+  name: WebSessionLogInfo()
+  nameWithType: WebSessionLogInfo.WebSessionLogInfo()
+  fullName: Dropbox.Api.TeamLog.WebSessionLogInfo.WebSessionLogInfo()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/WebSessionLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/WebSessionLogInfo.cs
+    startLine: 46
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.WebSessionLogInfo\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public WebSessionLogInfo()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.WebSessionLogInfo.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.SessionLogInfo
+  commentId: T:Dropbox.Api.TeamLog.SessionLogInfo
+  parent: Dropbox.Api.TeamLog
+  name: SessionLogInfo
+  nameWithType: SessionLogInfo
+  fullName: Dropbox.Api.TeamLog.SessionLogInfo
+- uid: Dropbox.Api.TeamLog.SessionLogInfo.IsWeb
+  commentId: P:Dropbox.Api.TeamLog.SessionLogInfo.IsWeb
+  parent: Dropbox.Api.TeamLog.SessionLogInfo
+  name: IsWeb
+  nameWithType: SessionLogInfo.IsWeb
+  fullName: Dropbox.Api.TeamLog.SessionLogInfo.IsWeb
+- uid: Dropbox.Api.TeamLog.SessionLogInfo.AsWeb
+  commentId: P:Dropbox.Api.TeamLog.SessionLogInfo.AsWeb
+  parent: Dropbox.Api.TeamLog.SessionLogInfo
+  name: AsWeb
+  nameWithType: SessionLogInfo.AsWeb
+  fullName: Dropbox.Api.TeamLog.SessionLogInfo.AsWeb
+- uid: Dropbox.Api.TeamLog.SessionLogInfo.IsDesktop
+  commentId: P:Dropbox.Api.TeamLog.SessionLogInfo.IsDesktop
+  parent: Dropbox.Api.TeamLog.SessionLogInfo
+  name: IsDesktop
+  nameWithType: SessionLogInfo.IsDesktop
+  fullName: Dropbox.Api.TeamLog.SessionLogInfo.IsDesktop
+- uid: Dropbox.Api.TeamLog.SessionLogInfo.AsDesktop
+  commentId: P:Dropbox.Api.TeamLog.SessionLogInfo.AsDesktop
+  parent: Dropbox.Api.TeamLog.SessionLogInfo
+  name: AsDesktop
+  nameWithType: SessionLogInfo.AsDesktop
+  fullName: Dropbox.Api.TeamLog.SessionLogInfo.AsDesktop
+- uid: Dropbox.Api.TeamLog.SessionLogInfo.IsMobile
+  commentId: P:Dropbox.Api.TeamLog.SessionLogInfo.IsMobile
+  parent: Dropbox.Api.TeamLog.SessionLogInfo
+  name: IsMobile
+  nameWithType: SessionLogInfo.IsMobile
+  fullName: Dropbox.Api.TeamLog.SessionLogInfo.IsMobile
+- uid: Dropbox.Api.TeamLog.SessionLogInfo.AsMobile
+  commentId: P:Dropbox.Api.TeamLog.SessionLogInfo.AsMobile
+  parent: Dropbox.Api.TeamLog.SessionLogInfo
+  name: AsMobile
+  nameWithType: SessionLogInfo.AsMobile
+  fullName: Dropbox.Api.TeamLog.SessionLogInfo.AsMobile
+- uid: Dropbox.Api.TeamLog.SessionLogInfo.SessionId
+  commentId: P:Dropbox.Api.TeamLog.SessionLogInfo.SessionId
+  parent: Dropbox.Api.TeamLog.SessionLogInfo
+  name: SessionId
+  nameWithType: SessionLogInfo.SessionId
+  fullName: Dropbox.Api.TeamLog.SessionLogInfo.SessionId
+- uid: Dropbox.Api.TeamLog.WebSessionLogInfo
+  commentId: T:Dropbox.Api.TeamLog.WebSessionLogInfo
+  parent: Dropbox.Api.TeamLog
+  name: WebSessionLogInfo
+  nameWithType: WebSessionLogInfo
+  fullName: Dropbox.Api.TeamLog.WebSessionLogInfo
+- uid: Dropbox.Api.TeamLog.WebSessionLogInfo.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.WebSessionLogInfo.#ctor
+  name: WebSessionLogInfo
+  nameWithType: WebSessionLogInfo.WebSessionLogInfo
+  fullName: Dropbox.Api.TeamLog.WebSessionLogInfo.WebSessionLogInfo
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+shouldSkipMarkup: true

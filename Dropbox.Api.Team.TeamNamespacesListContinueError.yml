@@ -1,0 +1,381 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.TeamNamespacesListContinueError
+  commentId: T:Dropbox.Api.Team.TeamNamespacesListContinueError
+  id: TeamNamespacesListContinueError
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.TeamNamespacesListContinueError.#ctor
+  - Dropbox.Api.Team.TeamNamespacesListContinueError.AsInvalidArg
+  - Dropbox.Api.Team.TeamNamespacesListContinueError.AsInvalidCursor
+  - Dropbox.Api.Team.TeamNamespacesListContinueError.AsOther
+  - Dropbox.Api.Team.TeamNamespacesListContinueError.IsInvalidArg
+  - Dropbox.Api.Team.TeamNamespacesListContinueError.IsInvalidCursor
+  - Dropbox.Api.Team.TeamNamespacesListContinueError.IsOther
+  langs:
+  - csharp
+  - vb
+  name: TeamNamespacesListContinueError
+  nameWithType: TeamNamespacesListContinueError
+  fullName: Dropbox.Api.Team.TeamNamespacesListContinueError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamNamespacesListContinueError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TeamNamespacesListContinueError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamNamespacesListContinueError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The team namespaces list continue error object</p>\n"
+  example: []
+  syntax:
+    content: 'public class TeamNamespacesListContinueError : object'
+    content.vb: >-
+      Public Class TeamNamespacesListContinueError
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Team.TeamNamespacesListContinueError.InvalidArg
+  - Dropbox.Api.Team.TeamNamespacesListContinueError.InvalidCursor
+  - Dropbox.Api.Team.TeamNamespacesListContinueError.Other
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.TeamNamespacesListContinueError.#ctor
+  commentId: M:Dropbox.Api.Team.TeamNamespacesListContinueError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.TeamNamespacesListContinueError
+  langs:
+  - csharp
+  - vb
+  name: TeamNamespacesListContinueError()
+  nameWithType: TeamNamespacesListContinueError.TeamNamespacesListContinueError()
+  fullName: Dropbox.Api.Team.TeamNamespacesListContinueError.TeamNamespacesListContinueError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamNamespacesListContinueError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamNamespacesListContinueError.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.TeamNamespacesListContinueError\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public TeamNamespacesListContinueError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.TeamNamespacesListContinueError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.TeamNamespacesListContinueError.IsInvalidCursor
+  commentId: P:Dropbox.Api.Team.TeamNamespacesListContinueError.IsInvalidCursor
+  id: IsInvalidCursor
+  parent: Dropbox.Api.Team.TeamNamespacesListContinueError
+  langs:
+  - csharp
+  - vb
+  name: IsInvalidCursor
+  nameWithType: TeamNamespacesListContinueError.IsInvalidCursor
+  fullName: Dropbox.Api.Team.TeamNamespacesListContinueError.IsInvalidCursor
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamNamespacesListContinueError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsInvalidCursor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamNamespacesListContinueError.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is InvalidCursor</p>\n"
+  example: []
+  syntax:
+    content: public bool IsInvalidCursor { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsInvalidCursor As Boolean
+  overload: Dropbox.Api.Team.TeamNamespacesListContinueError.IsInvalidCursor*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.TeamNamespacesListContinueError.AsInvalidCursor
+  commentId: P:Dropbox.Api.Team.TeamNamespacesListContinueError.AsInvalidCursor
+  id: AsInvalidCursor
+  parent: Dropbox.Api.Team.TeamNamespacesListContinueError
+  langs:
+  - csharp
+  - vb
+  name: AsInvalidCursor
+  nameWithType: TeamNamespacesListContinueError.AsInvalidCursor
+  fullName: Dropbox.Api.Team.TeamNamespacesListContinueError.AsInvalidCursor
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamNamespacesListContinueError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsInvalidCursor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamNamespacesListContinueError.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a InvalidCursor, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public TeamNamespacesListContinueError.InvalidCursor AsInvalidCursor { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.TeamNamespacesListContinueError.InvalidCursor
+    content.vb: Public ReadOnly Property AsInvalidCursor As TeamNamespacesListContinueError.InvalidCursor
+  overload: Dropbox.Api.Team.TeamNamespacesListContinueError.AsInvalidCursor*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.TeamNamespacesListContinueError.IsInvalidArg
+  commentId: P:Dropbox.Api.Team.TeamNamespacesListContinueError.IsInvalidArg
+  id: IsInvalidArg
+  parent: Dropbox.Api.Team.TeamNamespacesListContinueError
+  langs:
+  - csharp
+  - vb
+  name: IsInvalidArg
+  nameWithType: TeamNamespacesListContinueError.IsInvalidArg
+  fullName: Dropbox.Api.Team.TeamNamespacesListContinueError.IsInvalidArg
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamNamespacesListContinueError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsInvalidArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamNamespacesListContinueError.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is InvalidArg</p>\n"
+  example: []
+  syntax:
+    content: public bool IsInvalidArg { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsInvalidArg As Boolean
+  overload: Dropbox.Api.Team.TeamNamespacesListContinueError.IsInvalidArg*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.TeamNamespacesListContinueError.AsInvalidArg
+  commentId: P:Dropbox.Api.Team.TeamNamespacesListContinueError.AsInvalidArg
+  id: AsInvalidArg
+  parent: Dropbox.Api.Team.TeamNamespacesListContinueError
+  langs:
+  - csharp
+  - vb
+  name: AsInvalidArg
+  nameWithType: TeamNamespacesListContinueError.AsInvalidArg
+  fullName: Dropbox.Api.Team.TeamNamespacesListContinueError.AsInvalidArg
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamNamespacesListContinueError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsInvalidArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamNamespacesListContinueError.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a InvalidArg, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public TeamNamespacesListContinueError.InvalidArg AsInvalidArg { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.TeamNamespacesListContinueError.InvalidArg
+    content.vb: Public ReadOnly Property AsInvalidArg As TeamNamespacesListContinueError.InvalidArg
+  overload: Dropbox.Api.Team.TeamNamespacesListContinueError.AsInvalidArg*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.TeamNamespacesListContinueError.IsOther
+  commentId: P:Dropbox.Api.Team.TeamNamespacesListContinueError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Team.TeamNamespacesListContinueError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: TeamNamespacesListContinueError.IsOther
+  fullName: Dropbox.Api.Team.TeamNamespacesListContinueError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamNamespacesListContinueError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamNamespacesListContinueError.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Team.TeamNamespacesListContinueError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.TeamNamespacesListContinueError.AsOther
+  commentId: P:Dropbox.Api.Team.TeamNamespacesListContinueError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Team.TeamNamespacesListContinueError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: TeamNamespacesListContinueError.AsOther
+  fullName: Dropbox.Api.Team.TeamNamespacesListContinueError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamNamespacesListContinueError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamNamespacesListContinueError.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public TeamNamespacesListContinueError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.TeamNamespacesListContinueError.Other
+    content.vb: Public ReadOnly Property AsOther As TeamNamespacesListContinueError.Other
+  overload: Dropbox.Api.Team.TeamNamespacesListContinueError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.TeamNamespacesListContinueError
+  commentId: T:Dropbox.Api.Team.TeamNamespacesListContinueError
+  parent: Dropbox.Api.Team
+  name: TeamNamespacesListContinueError
+  nameWithType: TeamNamespacesListContinueError
+  fullName: Dropbox.Api.Team.TeamNamespacesListContinueError
+- uid: Dropbox.Api.Team.TeamNamespacesListContinueError.#ctor*
+  commentId: Overload:Dropbox.Api.Team.TeamNamespacesListContinueError.#ctor
+  name: TeamNamespacesListContinueError
+  nameWithType: TeamNamespacesListContinueError.TeamNamespacesListContinueError
+  fullName: Dropbox.Api.Team.TeamNamespacesListContinueError.TeamNamespacesListContinueError
+- uid: Dropbox.Api.Team.TeamNamespacesListContinueError.IsInvalidCursor*
+  commentId: Overload:Dropbox.Api.Team.TeamNamespacesListContinueError.IsInvalidCursor
+  name: IsInvalidCursor
+  nameWithType: TeamNamespacesListContinueError.IsInvalidCursor
+  fullName: Dropbox.Api.Team.TeamNamespacesListContinueError.IsInvalidCursor
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Team.TeamNamespacesListContinueError.AsInvalidCursor*
+  commentId: Overload:Dropbox.Api.Team.TeamNamespacesListContinueError.AsInvalidCursor
+  name: AsInvalidCursor
+  nameWithType: TeamNamespacesListContinueError.AsInvalidCursor
+  fullName: Dropbox.Api.Team.TeamNamespacesListContinueError.AsInvalidCursor
+- uid: Dropbox.Api.Team.TeamNamespacesListContinueError.InvalidCursor
+  commentId: T:Dropbox.Api.Team.TeamNamespacesListContinueError.InvalidCursor
+  parent: Dropbox.Api.Team
+  name: TeamNamespacesListContinueError.InvalidCursor
+  nameWithType: TeamNamespacesListContinueError.InvalidCursor
+  fullName: Dropbox.Api.Team.TeamNamespacesListContinueError.InvalidCursor
+- uid: Dropbox.Api.Team.TeamNamespacesListContinueError.IsInvalidArg*
+  commentId: Overload:Dropbox.Api.Team.TeamNamespacesListContinueError.IsInvalidArg
+  name: IsInvalidArg
+  nameWithType: TeamNamespacesListContinueError.IsInvalidArg
+  fullName: Dropbox.Api.Team.TeamNamespacesListContinueError.IsInvalidArg
+- uid: Dropbox.Api.Team.TeamNamespacesListContinueError.AsInvalidArg*
+  commentId: Overload:Dropbox.Api.Team.TeamNamespacesListContinueError.AsInvalidArg
+  name: AsInvalidArg
+  nameWithType: TeamNamespacesListContinueError.AsInvalidArg
+  fullName: Dropbox.Api.Team.TeamNamespacesListContinueError.AsInvalidArg
+- uid: Dropbox.Api.Team.TeamNamespacesListContinueError.InvalidArg
+  commentId: T:Dropbox.Api.Team.TeamNamespacesListContinueError.InvalidArg
+  parent: Dropbox.Api.Team
+  name: TeamNamespacesListContinueError.InvalidArg
+  nameWithType: TeamNamespacesListContinueError.InvalidArg
+  fullName: Dropbox.Api.Team.TeamNamespacesListContinueError.InvalidArg
+- uid: Dropbox.Api.Team.TeamNamespacesListContinueError.IsOther*
+  commentId: Overload:Dropbox.Api.Team.TeamNamespacesListContinueError.IsOther
+  name: IsOther
+  nameWithType: TeamNamespacesListContinueError.IsOther
+  fullName: Dropbox.Api.Team.TeamNamespacesListContinueError.IsOther
+- uid: Dropbox.Api.Team.TeamNamespacesListContinueError.AsOther*
+  commentId: Overload:Dropbox.Api.Team.TeamNamespacesListContinueError.AsOther
+  name: AsOther
+  nameWithType: TeamNamespacesListContinueError.AsOther
+  fullName: Dropbox.Api.Team.TeamNamespacesListContinueError.AsOther
+- uid: Dropbox.Api.Team.TeamNamespacesListContinueError.Other
+  commentId: T:Dropbox.Api.Team.TeamNamespacesListContinueError.Other
+  parent: Dropbox.Api.Team
+  name: TeamNamespacesListContinueError.Other
+  nameWithType: TeamNamespacesListContinueError.Other
+  fullName: Dropbox.Api.Team.TeamNamespacesListContinueError.Other
+shouldSkipMarkup: true

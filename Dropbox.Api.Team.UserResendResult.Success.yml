@@ -1,0 +1,201 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.UserResendResult.Success
+  commentId: T:Dropbox.Api.Team.UserResendResult.Success
+  id: UserResendResult.Success
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.UserResendResult.Success.#ctor(Dropbox.Api.Team.UserResendEmailsResult)
+  - Dropbox.Api.Team.UserResendResult.Success.Value
+  langs:
+  - csharp
+  - vb
+  name: UserResendResult.Success
+  nameWithType: UserResendResult.Success
+  fullName: Dropbox.Api.Team.UserResendResult.Success
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserResendResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Success
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserResendResult.cs
+    startLine: 186
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Describes a user and the results for each attempt to resend verification\nemails.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Success : UserResendResult'
+    content.vb: >-
+      Public NotInheritable Class Success
+          Inherits UserResendResult
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.UserResendResult
+  inheritedMembers:
+  - Dropbox.Api.Team.UserResendResult.IsSuccess
+  - Dropbox.Api.Team.UserResendResult.AsSuccess
+  - Dropbox.Api.Team.UserResendResult.IsInvalidUser
+  - Dropbox.Api.Team.UserResendResult.AsInvalidUser
+  - Dropbox.Api.Team.UserResendResult.IsOther
+  - Dropbox.Api.Team.UserResendResult.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Team.UserResendResult.Success.#ctor(Dropbox.Api.Team.UserResendEmailsResult)
+  commentId: M:Dropbox.Api.Team.UserResendResult.Success.#ctor(Dropbox.Api.Team.UserResendEmailsResult)
+  id: '#ctor(Dropbox.Api.Team.UserResendEmailsResult)'
+  parent: Dropbox.Api.Team.UserResendResult.Success
+  langs:
+  - csharp
+  - vb
+  name: Success(UserResendEmailsResult)
+  nameWithType: UserResendResult.Success.Success(UserResendEmailsResult)
+  fullName: Dropbox.Api.Team.UserResendResult.Success.Success(Dropbox.Api.Team.UserResendEmailsResult)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserResendResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserResendResult.cs
+    startLine: 204
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.UserResendResult.Success\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public Success(UserResendEmailsResult value)
+    parameters:
+    - id: value
+      type: Dropbox.Api.Team.UserResendEmailsResult
+      description: The value
+    content.vb: Public Sub New(value As UserResendEmailsResult)
+  overload: Dropbox.Api.Team.UserResendResult.Success.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.UserResendResult.Success.Value
+  commentId: P:Dropbox.Api.Team.UserResendResult.Success.Value
+  id: Value
+  parent: Dropbox.Api.Team.UserResendResult.Success
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: UserResendResult.Success.Value
+  fullName: Dropbox.Api.Team.UserResendResult.Success.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserResendResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserResendResult.cs
+    startLine: 218
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public UserResendEmailsResult Value { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.UserResendEmailsResult
+    content.vb: Public ReadOnly Property Value As UserResendEmailsResult
+  overload: Dropbox.Api.Team.UserResendResult.Success.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.UserResendResult
+  commentId: T:Dropbox.Api.Team.UserResendResult
+  parent: Dropbox.Api.Team
+  name: UserResendResult
+  nameWithType: UserResendResult
+  fullName: Dropbox.Api.Team.UserResendResult
+- uid: Dropbox.Api.Team.UserResendResult.IsSuccess
+  commentId: P:Dropbox.Api.Team.UserResendResult.IsSuccess
+  parent: Dropbox.Api.Team.UserResendResult
+  name: IsSuccess
+  nameWithType: UserResendResult.IsSuccess
+  fullName: Dropbox.Api.Team.UserResendResult.IsSuccess
+- uid: Dropbox.Api.Team.UserResendResult.AsSuccess
+  commentId: P:Dropbox.Api.Team.UserResendResult.AsSuccess
+  parent: Dropbox.Api.Team.UserResendResult
+  name: AsSuccess
+  nameWithType: UserResendResult.AsSuccess
+  fullName: Dropbox.Api.Team.UserResendResult.AsSuccess
+- uid: Dropbox.Api.Team.UserResendResult.IsInvalidUser
+  commentId: P:Dropbox.Api.Team.UserResendResult.IsInvalidUser
+  parent: Dropbox.Api.Team.UserResendResult
+  name: IsInvalidUser
+  nameWithType: UserResendResult.IsInvalidUser
+  fullName: Dropbox.Api.Team.UserResendResult.IsInvalidUser
+- uid: Dropbox.Api.Team.UserResendResult.AsInvalidUser
+  commentId: P:Dropbox.Api.Team.UserResendResult.AsInvalidUser
+  parent: Dropbox.Api.Team.UserResendResult
+  name: AsInvalidUser
+  nameWithType: UserResendResult.AsInvalidUser
+  fullName: Dropbox.Api.Team.UserResendResult.AsInvalidUser
+- uid: Dropbox.Api.Team.UserResendResult.IsOther
+  commentId: P:Dropbox.Api.Team.UserResendResult.IsOther
+  parent: Dropbox.Api.Team.UserResendResult
+  name: IsOther
+  nameWithType: UserResendResult.IsOther
+  fullName: Dropbox.Api.Team.UserResendResult.IsOther
+- uid: Dropbox.Api.Team.UserResendResult.AsOther
+  commentId: P:Dropbox.Api.Team.UserResendResult.AsOther
+  parent: Dropbox.Api.Team.UserResendResult
+  name: AsOther
+  nameWithType: UserResendResult.AsOther
+  fullName: Dropbox.Api.Team.UserResendResult.AsOther
+- uid: Dropbox.Api.Team.UserResendResult.Success
+  commentId: T:Dropbox.Api.Team.UserResendResult.Success
+  parent: Dropbox.Api.Team
+  name: UserResendResult.Success
+  nameWithType: UserResendResult.Success
+  fullName: Dropbox.Api.Team.UserResendResult.Success
+- uid: Dropbox.Api.Team.UserResendResult.Success.#ctor*
+  commentId: Overload:Dropbox.Api.Team.UserResendResult.Success.#ctor
+  name: Success
+  nameWithType: UserResendResult.Success.Success
+  fullName: Dropbox.Api.Team.UserResendResult.Success.Success
+- uid: Dropbox.Api.Team.UserResendEmailsResult
+  commentId: T:Dropbox.Api.Team.UserResendEmailsResult
+  parent: Dropbox.Api.Team
+  name: UserResendEmailsResult
+  nameWithType: UserResendEmailsResult
+  fullName: Dropbox.Api.Team.UserResendEmailsResult
+- uid: Dropbox.Api.Team.UserResendResult.Success.Value*
+  commentId: Overload:Dropbox.Api.Team.UserResendResult.Success.Value
+  name: Value
+  nameWithType: UserResendResult.Success.Value
+  fullName: Dropbox.Api.Team.UserResendResult.Success.Value
+shouldSkipMarkup: true

@@ -1,0 +1,242 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.MemberChangeResellerRoleDetails
+  commentId: T:Dropbox.Api.TeamLog.MemberChangeResellerRoleDetails
+  id: MemberChangeResellerRoleDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.MemberChangeResellerRoleDetails.#ctor
+  - Dropbox.Api.TeamLog.MemberChangeResellerRoleDetails.#ctor(Dropbox.Api.TeamLog.ResellerRole,Dropbox.Api.TeamLog.ResellerRole)
+  - Dropbox.Api.TeamLog.MemberChangeResellerRoleDetails.NewValue
+  - Dropbox.Api.TeamLog.MemberChangeResellerRoleDetails.PreviousValue
+  langs:
+  - csharp
+  - vb
+  name: MemberChangeResellerRoleDetails
+  nameWithType: MemberChangeResellerRoleDetails
+  fullName: Dropbox.Api.TeamLog.MemberChangeResellerRoleDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberChangeResellerRoleDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: MemberChangeResellerRoleDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberChangeResellerRoleDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Changed team member reseller role.</p>\n"
+  example: []
+  syntax:
+    content: 'public class MemberChangeResellerRoleDetails : object'
+    content.vb: >-
+      Public Class MemberChangeResellerRoleDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.MemberChangeResellerRoleDetails.#ctor(Dropbox.Api.TeamLog.ResellerRole,Dropbox.Api.TeamLog.ResellerRole)
+  commentId: M:Dropbox.Api.TeamLog.MemberChangeResellerRoleDetails.#ctor(Dropbox.Api.TeamLog.ResellerRole,Dropbox.Api.TeamLog.ResellerRole)
+  id: '#ctor(Dropbox.Api.TeamLog.ResellerRole,Dropbox.Api.TeamLog.ResellerRole)'
+  parent: Dropbox.Api.TeamLog.MemberChangeResellerRoleDetails
+  langs:
+  - csharp
+  - vb
+  name: MemberChangeResellerRoleDetails(ResellerRole, ResellerRole)
+  nameWithType: MemberChangeResellerRoleDetails.MemberChangeResellerRoleDetails(ResellerRole, ResellerRole)
+  fullName: Dropbox.Api.TeamLog.MemberChangeResellerRoleDetails.MemberChangeResellerRoleDetails(Dropbox.Api.TeamLog.ResellerRole, Dropbox.Api.TeamLog.ResellerRole)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberChangeResellerRoleDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberChangeResellerRoleDetails.cs
+    startLine: 37
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.MemberChangeResellerRoleDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public MemberChangeResellerRoleDetails(ResellerRole newValue, ResellerRole previousValue)
+    parameters:
+    - id: newValue
+      type: Dropbox.Api.TeamLog.ResellerRole
+      description: >-
+        New reseller role. This field is relevant when the reseller
+
+        role is changed.
+    - id: previousValue
+      type: Dropbox.Api.TeamLog.ResellerRole
+      description: >-
+        Previous reseller role. This field is relevant when the
+
+        reseller role is changed or when the reseller role is removed.
+    content.vb: Public Sub New(newValue As ResellerRole, previousValue As ResellerRole)
+  overload: Dropbox.Api.TeamLog.MemberChangeResellerRoleDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.MemberChangeResellerRoleDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.MemberChangeResellerRoleDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.MemberChangeResellerRoleDetails
+  langs:
+  - csharp
+  - vb
+  name: MemberChangeResellerRoleDetails()
+  nameWithType: MemberChangeResellerRoleDetails.MemberChangeResellerRoleDetails()
+  fullName: Dropbox.Api.TeamLog.MemberChangeResellerRoleDetails.MemberChangeResellerRoleDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberChangeResellerRoleDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberChangeResellerRoleDetails.cs
+    startLine: 60
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.MemberChangeResellerRoleDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public MemberChangeResellerRoleDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.MemberChangeResellerRoleDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.MemberChangeResellerRoleDetails.NewValue
+  commentId: P:Dropbox.Api.TeamLog.MemberChangeResellerRoleDetails.NewValue
+  id: NewValue
+  parent: Dropbox.Api.TeamLog.MemberChangeResellerRoleDetails
+  langs:
+  - csharp
+  - vb
+  name: NewValue
+  nameWithType: MemberChangeResellerRoleDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.MemberChangeResellerRoleDetails.NewValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberChangeResellerRoleDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NewValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberChangeResellerRoleDetails.cs
+    startLine: 69
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>New reseller role. This field is relevant when the reseller role is\nchanged.</p>\n"
+  example: []
+  syntax:
+    content: public ResellerRole NewValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.ResellerRole
+    content.vb: Public Property NewValue As ResellerRole
+  overload: Dropbox.Api.TeamLog.MemberChangeResellerRoleDetails.NewValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.MemberChangeResellerRoleDetails.PreviousValue
+  commentId: P:Dropbox.Api.TeamLog.MemberChangeResellerRoleDetails.PreviousValue
+  id: PreviousValue
+  parent: Dropbox.Api.TeamLog.MemberChangeResellerRoleDetails
+  langs:
+  - csharp
+  - vb
+  name: PreviousValue
+  nameWithType: MemberChangeResellerRoleDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.MemberChangeResellerRoleDetails.PreviousValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberChangeResellerRoleDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PreviousValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberChangeResellerRoleDetails.cs
+    startLine: 75
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Previous reseller role. This field is relevant when the reseller role is\nchanged or when the reseller role is removed.</p>\n"
+  example: []
+  syntax:
+    content: public ResellerRole PreviousValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.ResellerRole
+    content.vb: Public Property PreviousValue As ResellerRole
+  overload: Dropbox.Api.TeamLog.MemberChangeResellerRoleDetails.PreviousValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.MemberChangeResellerRoleDetails
+  commentId: T:Dropbox.Api.TeamLog.MemberChangeResellerRoleDetails
+  parent: Dropbox.Api.TeamLog
+  name: MemberChangeResellerRoleDetails
+  nameWithType: MemberChangeResellerRoleDetails
+  fullName: Dropbox.Api.TeamLog.MemberChangeResellerRoleDetails
+- uid: Dropbox.Api.TeamLog.MemberChangeResellerRoleDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberChangeResellerRoleDetails.#ctor
+  name: MemberChangeResellerRoleDetails
+  nameWithType: MemberChangeResellerRoleDetails.MemberChangeResellerRoleDetails
+  fullName: Dropbox.Api.TeamLog.MemberChangeResellerRoleDetails.MemberChangeResellerRoleDetails
+- uid: Dropbox.Api.TeamLog.ResellerRole
+  commentId: T:Dropbox.Api.TeamLog.ResellerRole
+  parent: Dropbox.Api.TeamLog
+  name: ResellerRole
+  nameWithType: ResellerRole
+  fullName: Dropbox.Api.TeamLog.ResellerRole
+- uid: Dropbox.Api.TeamLog.MemberChangeResellerRoleDetails.NewValue*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberChangeResellerRoleDetails.NewValue
+  name: NewValue
+  nameWithType: MemberChangeResellerRoleDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.MemberChangeResellerRoleDetails.NewValue
+- uid: Dropbox.Api.TeamLog.MemberChangeResellerRoleDetails.PreviousValue*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberChangeResellerRoleDetails.PreviousValue
+  name: PreviousValue
+  nameWithType: MemberChangeResellerRoleDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.MemberChangeResellerRoleDetails.PreviousValue
+shouldSkipMarkup: true

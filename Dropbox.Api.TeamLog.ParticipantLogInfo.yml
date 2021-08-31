@@ -1,0 +1,381 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.ParticipantLogInfo
+  commentId: T:Dropbox.Api.TeamLog.ParticipantLogInfo
+  id: ParticipantLogInfo
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.ParticipantLogInfo.#ctor
+  - Dropbox.Api.TeamLog.ParticipantLogInfo.AsGroup
+  - Dropbox.Api.TeamLog.ParticipantLogInfo.AsOther
+  - Dropbox.Api.TeamLog.ParticipantLogInfo.AsUser
+  - Dropbox.Api.TeamLog.ParticipantLogInfo.IsGroup
+  - Dropbox.Api.TeamLog.ParticipantLogInfo.IsOther
+  - Dropbox.Api.TeamLog.ParticipantLogInfo.IsUser
+  langs:
+  - csharp
+  - vb
+  name: ParticipantLogInfo
+  nameWithType: ParticipantLogInfo
+  fullName: Dropbox.Api.TeamLog.ParticipantLogInfo
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ParticipantLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ParticipantLogInfo
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ParticipantLogInfo.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>A user or group</p>\n"
+  example: []
+  syntax:
+    content: 'public class ParticipantLogInfo : object'
+    content.vb: >-
+      Public Class ParticipantLogInfo
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.TeamLog.ParticipantLogInfo.Group
+  - Dropbox.Api.TeamLog.ParticipantLogInfo.Other
+  - Dropbox.Api.TeamLog.ParticipantLogInfo.User
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.ParticipantLogInfo.#ctor
+  commentId: M:Dropbox.Api.TeamLog.ParticipantLogInfo.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.ParticipantLogInfo
+  langs:
+  - csharp
+  - vb
+  name: ParticipantLogInfo()
+  nameWithType: ParticipantLogInfo.ParticipantLogInfo()
+  fullName: Dropbox.Api.TeamLog.ParticipantLogInfo.ParticipantLogInfo()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ParticipantLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ParticipantLogInfo.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.ParticipantLogInfo\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public ParticipantLogInfo()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.ParticipantLogInfo.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.ParticipantLogInfo.IsGroup
+  commentId: P:Dropbox.Api.TeamLog.ParticipantLogInfo.IsGroup
+  id: IsGroup
+  parent: Dropbox.Api.TeamLog.ParticipantLogInfo
+  langs:
+  - csharp
+  - vb
+  name: IsGroup
+  nameWithType: ParticipantLogInfo.IsGroup
+  fullName: Dropbox.Api.TeamLog.ParticipantLogInfo.IsGroup
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ParticipantLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsGroup
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ParticipantLogInfo.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Group</p>\n"
+  example: []
+  syntax:
+    content: public bool IsGroup { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsGroup As Boolean
+  overload: Dropbox.Api.TeamLog.ParticipantLogInfo.IsGroup*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.ParticipantLogInfo.AsGroup
+  commentId: P:Dropbox.Api.TeamLog.ParticipantLogInfo.AsGroup
+  id: AsGroup
+  parent: Dropbox.Api.TeamLog.ParticipantLogInfo
+  langs:
+  - csharp
+  - vb
+  name: AsGroup
+  nameWithType: ParticipantLogInfo.AsGroup
+  fullName: Dropbox.Api.TeamLog.ParticipantLogInfo.AsGroup
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ParticipantLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsGroup
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ParticipantLogInfo.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Group, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ParticipantLogInfo.Group AsGroup { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.ParticipantLogInfo.Group
+    content.vb: Public ReadOnly Property AsGroup As ParticipantLogInfo.Group
+  overload: Dropbox.Api.TeamLog.ParticipantLogInfo.AsGroup*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.ParticipantLogInfo.IsUser
+  commentId: P:Dropbox.Api.TeamLog.ParticipantLogInfo.IsUser
+  id: IsUser
+  parent: Dropbox.Api.TeamLog.ParticipantLogInfo
+  langs:
+  - csharp
+  - vb
+  name: IsUser
+  nameWithType: ParticipantLogInfo.IsUser
+  fullName: Dropbox.Api.TeamLog.ParticipantLogInfo.IsUser
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ParticipantLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsUser
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ParticipantLogInfo.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is User</p>\n"
+  example: []
+  syntax:
+    content: public bool IsUser { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsUser As Boolean
+  overload: Dropbox.Api.TeamLog.ParticipantLogInfo.IsUser*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.ParticipantLogInfo.AsUser
+  commentId: P:Dropbox.Api.TeamLog.ParticipantLogInfo.AsUser
+  id: AsUser
+  parent: Dropbox.Api.TeamLog.ParticipantLogInfo
+  langs:
+  - csharp
+  - vb
+  name: AsUser
+  nameWithType: ParticipantLogInfo.AsUser
+  fullName: Dropbox.Api.TeamLog.ParticipantLogInfo.AsUser
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ParticipantLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsUser
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ParticipantLogInfo.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a User, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ParticipantLogInfo.User AsUser { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.ParticipantLogInfo.User
+    content.vb: Public ReadOnly Property AsUser As ParticipantLogInfo.User
+  overload: Dropbox.Api.TeamLog.ParticipantLogInfo.AsUser*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.ParticipantLogInfo.IsOther
+  commentId: P:Dropbox.Api.TeamLog.ParticipantLogInfo.IsOther
+  id: IsOther
+  parent: Dropbox.Api.TeamLog.ParticipantLogInfo
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: ParticipantLogInfo.IsOther
+  fullName: Dropbox.Api.TeamLog.ParticipantLogInfo.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ParticipantLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ParticipantLogInfo.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.TeamLog.ParticipantLogInfo.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.ParticipantLogInfo.AsOther
+  commentId: P:Dropbox.Api.TeamLog.ParticipantLogInfo.AsOther
+  id: AsOther
+  parent: Dropbox.Api.TeamLog.ParticipantLogInfo
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: ParticipantLogInfo.AsOther
+  fullName: Dropbox.Api.TeamLog.ParticipantLogInfo.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ParticipantLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ParticipantLogInfo.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ParticipantLogInfo.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.ParticipantLogInfo.Other
+    content.vb: Public ReadOnly Property AsOther As ParticipantLogInfo.Other
+  overload: Dropbox.Api.TeamLog.ParticipantLogInfo.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.ParticipantLogInfo
+  commentId: T:Dropbox.Api.TeamLog.ParticipantLogInfo
+  parent: Dropbox.Api.TeamLog
+  name: ParticipantLogInfo
+  nameWithType: ParticipantLogInfo
+  fullName: Dropbox.Api.TeamLog.ParticipantLogInfo
+- uid: Dropbox.Api.TeamLog.ParticipantLogInfo.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.ParticipantLogInfo.#ctor
+  name: ParticipantLogInfo
+  nameWithType: ParticipantLogInfo.ParticipantLogInfo
+  fullName: Dropbox.Api.TeamLog.ParticipantLogInfo.ParticipantLogInfo
+- uid: Dropbox.Api.TeamLog.ParticipantLogInfo.IsGroup*
+  commentId: Overload:Dropbox.Api.TeamLog.ParticipantLogInfo.IsGroup
+  name: IsGroup
+  nameWithType: ParticipantLogInfo.IsGroup
+  fullName: Dropbox.Api.TeamLog.ParticipantLogInfo.IsGroup
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.TeamLog.ParticipantLogInfo.AsGroup*
+  commentId: Overload:Dropbox.Api.TeamLog.ParticipantLogInfo.AsGroup
+  name: AsGroup
+  nameWithType: ParticipantLogInfo.AsGroup
+  fullName: Dropbox.Api.TeamLog.ParticipantLogInfo.AsGroup
+- uid: Dropbox.Api.TeamLog.ParticipantLogInfo.Group
+  commentId: T:Dropbox.Api.TeamLog.ParticipantLogInfo.Group
+  parent: Dropbox.Api.TeamLog
+  name: ParticipantLogInfo.Group
+  nameWithType: ParticipantLogInfo.Group
+  fullName: Dropbox.Api.TeamLog.ParticipantLogInfo.Group
+- uid: Dropbox.Api.TeamLog.ParticipantLogInfo.IsUser*
+  commentId: Overload:Dropbox.Api.TeamLog.ParticipantLogInfo.IsUser
+  name: IsUser
+  nameWithType: ParticipantLogInfo.IsUser
+  fullName: Dropbox.Api.TeamLog.ParticipantLogInfo.IsUser
+- uid: Dropbox.Api.TeamLog.ParticipantLogInfo.AsUser*
+  commentId: Overload:Dropbox.Api.TeamLog.ParticipantLogInfo.AsUser
+  name: AsUser
+  nameWithType: ParticipantLogInfo.AsUser
+  fullName: Dropbox.Api.TeamLog.ParticipantLogInfo.AsUser
+- uid: Dropbox.Api.TeamLog.ParticipantLogInfo.User
+  commentId: T:Dropbox.Api.TeamLog.ParticipantLogInfo.User
+  parent: Dropbox.Api.TeamLog
+  name: ParticipantLogInfo.User
+  nameWithType: ParticipantLogInfo.User
+  fullName: Dropbox.Api.TeamLog.ParticipantLogInfo.User
+- uid: Dropbox.Api.TeamLog.ParticipantLogInfo.IsOther*
+  commentId: Overload:Dropbox.Api.TeamLog.ParticipantLogInfo.IsOther
+  name: IsOther
+  nameWithType: ParticipantLogInfo.IsOther
+  fullName: Dropbox.Api.TeamLog.ParticipantLogInfo.IsOther
+- uid: Dropbox.Api.TeamLog.ParticipantLogInfo.AsOther*
+  commentId: Overload:Dropbox.Api.TeamLog.ParticipantLogInfo.AsOther
+  name: AsOther
+  nameWithType: ParticipantLogInfo.AsOther
+  fullName: Dropbox.Api.TeamLog.ParticipantLogInfo.AsOther
+- uid: Dropbox.Api.TeamLog.ParticipantLogInfo.Other
+  commentId: T:Dropbox.Api.TeamLog.ParticipantLogInfo.Other
+  parent: Dropbox.Api.TeamLog
+  name: ParticipantLogInfo.Other
+  nameWithType: ParticipantLogInfo.Other
+  fullName: Dropbox.Api.TeamLog.ParticipantLogInfo.Other
+shouldSkipMarkup: true

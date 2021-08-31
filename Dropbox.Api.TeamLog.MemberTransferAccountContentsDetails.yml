@@ -1,0 +1,96 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.MemberTransferAccountContentsDetails
+  commentId: T:Dropbox.Api.TeamLog.MemberTransferAccountContentsDetails
+  id: MemberTransferAccountContentsDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.MemberTransferAccountContentsDetails.#ctor
+  langs:
+  - csharp
+  - vb
+  name: MemberTransferAccountContentsDetails
+  nameWithType: MemberTransferAccountContentsDetails
+  fullName: Dropbox.Api.TeamLog.MemberTransferAccountContentsDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberTransferAccountContentsDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: MemberTransferAccountContentsDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberTransferAccountContentsDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Transferred contents of deleted member account to another member.</p>\n"
+  example: []
+  syntax:
+    content: 'public class MemberTransferAccountContentsDetails : object'
+    content.vb: >-
+      Public Class MemberTransferAccountContentsDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.MemberTransferAccountContentsDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.MemberTransferAccountContentsDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.MemberTransferAccountContentsDetails
+  langs:
+  - csharp
+  - vb
+  name: MemberTransferAccountContentsDetails()
+  nameWithType: MemberTransferAccountContentsDetails.MemberTransferAccountContentsDetails()
+  fullName: Dropbox.Api.TeamLog.MemberTransferAccountContentsDetails.MemberTransferAccountContentsDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberTransferAccountContentsDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberTransferAccountContentsDetails.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.MemberTransferAccountContentsDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public MemberTransferAccountContentsDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.MemberTransferAccountContentsDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.MemberTransferAccountContentsDetails
+  commentId: T:Dropbox.Api.TeamLog.MemberTransferAccountContentsDetails
+  parent: Dropbox.Api.TeamLog
+  name: MemberTransferAccountContentsDetails
+  nameWithType: MemberTransferAccountContentsDetails
+  fullName: Dropbox.Api.TeamLog.MemberTransferAccountContentsDetails
+- uid: Dropbox.Api.TeamLog.MemberTransferAccountContentsDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberTransferAccountContentsDetails.#ctor
+  name: MemberTransferAccountContentsDetails
+  nameWithType: MemberTransferAccountContentsDetails.MemberTransferAccountContentsDetails
+  fullName: Dropbox.Api.TeamLog.MemberTransferAccountContentsDetails.MemberTransferAccountContentsDetails
+shouldSkipMarkup: true

@@ -1,0 +1,343 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.AdminAlertingTriggeredAlertDetails
+  commentId: T:Dropbox.Api.TeamLog.AdminAlertingTriggeredAlertDetails
+  id: AdminAlertingTriggeredAlertDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.AdminAlertingTriggeredAlertDetails.#ctor
+  - Dropbox.Api.TeamLog.AdminAlertingTriggeredAlertDetails.#ctor(System.String,Dropbox.Api.TeamLog.AdminAlertSeverityEnum,Dropbox.Api.TeamLog.AdminAlertCategoryEnum,System.String)
+  - Dropbox.Api.TeamLog.AdminAlertingTriggeredAlertDetails.AlertCategory
+  - Dropbox.Api.TeamLog.AdminAlertingTriggeredAlertDetails.AlertInstanceId
+  - Dropbox.Api.TeamLog.AdminAlertingTriggeredAlertDetails.AlertName
+  - Dropbox.Api.TeamLog.AdminAlertingTriggeredAlertDetails.AlertSeverity
+  langs:
+  - csharp
+  - vb
+  name: AdminAlertingTriggeredAlertDetails
+  nameWithType: AdminAlertingTriggeredAlertDetails
+  fullName: Dropbox.Api.TeamLog.AdminAlertingTriggeredAlertDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertingTriggeredAlertDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AdminAlertingTriggeredAlertDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertingTriggeredAlertDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Triggered security alert.</p>\n"
+  example: []
+  syntax:
+    content: 'public class AdminAlertingTriggeredAlertDetails : object'
+    content.vb: >-
+      Public Class AdminAlertingTriggeredAlertDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.AdminAlertingTriggeredAlertDetails.#ctor(System.String,Dropbox.Api.TeamLog.AdminAlertSeverityEnum,Dropbox.Api.TeamLog.AdminAlertCategoryEnum,System.String)
+  commentId: M:Dropbox.Api.TeamLog.AdminAlertingTriggeredAlertDetails.#ctor(System.String,Dropbox.Api.TeamLog.AdminAlertSeverityEnum,Dropbox.Api.TeamLog.AdminAlertCategoryEnum,System.String)
+  id: '#ctor(System.String,Dropbox.Api.TeamLog.AdminAlertSeverityEnum,Dropbox.Api.TeamLog.AdminAlertCategoryEnum,System.String)'
+  parent: Dropbox.Api.TeamLog.AdminAlertingTriggeredAlertDetails
+  langs:
+  - csharp
+  - vb
+  name: AdminAlertingTriggeredAlertDetails(String, AdminAlertSeverityEnum, AdminAlertCategoryEnum, String)
+  nameWithType: AdminAlertingTriggeredAlertDetails.AdminAlertingTriggeredAlertDetails(String, AdminAlertSeverityEnum, AdminAlertCategoryEnum, String)
+  fullName: Dropbox.Api.TeamLog.AdminAlertingTriggeredAlertDetails.AdminAlertingTriggeredAlertDetails(System.String, Dropbox.Api.TeamLog.AdminAlertSeverityEnum, Dropbox.Api.TeamLog.AdminAlertCategoryEnum, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertingTriggeredAlertDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertingTriggeredAlertDetails.cs
+    startLine: 37
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.AdminAlertingTriggeredAlertDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public AdminAlertingTriggeredAlertDetails(string alertName, AdminAlertSeverityEnum alertSeverity, AdminAlertCategoryEnum alertCategory, string alertInstanceId)
+    parameters:
+    - id: alertName
+      type: System.String
+      description: Alert name.
+    - id: alertSeverity
+      type: Dropbox.Api.TeamLog.AdminAlertSeverityEnum
+      description: Alert severity.
+    - id: alertCategory
+      type: Dropbox.Api.TeamLog.AdminAlertCategoryEnum
+      description: Alert category.
+    - id: alertInstanceId
+      type: System.String
+      description: Alert ID.
+    content.vb: Public Sub New(alertName As String, alertSeverity As AdminAlertSeverityEnum, alertCategory As AdminAlertCategoryEnum, alertInstanceId As String)
+  overload: Dropbox.Api.TeamLog.AdminAlertingTriggeredAlertDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.AdminAlertingTriggeredAlertDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.AdminAlertingTriggeredAlertDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.AdminAlertingTriggeredAlertDetails
+  langs:
+  - csharp
+  - vb
+  name: AdminAlertingTriggeredAlertDetails()
+  nameWithType: AdminAlertingTriggeredAlertDetails.AdminAlertingTriggeredAlertDetails()
+  fullName: Dropbox.Api.TeamLog.AdminAlertingTriggeredAlertDetails.AdminAlertingTriggeredAlertDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertingTriggeredAlertDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertingTriggeredAlertDetails.cs
+    startLine: 74
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.AdminAlertingTriggeredAlertDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public AdminAlertingTriggeredAlertDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.AdminAlertingTriggeredAlertDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.AdminAlertingTriggeredAlertDetails.AlertName
+  commentId: P:Dropbox.Api.TeamLog.AdminAlertingTriggeredAlertDetails.AlertName
+  id: AlertName
+  parent: Dropbox.Api.TeamLog.AdminAlertingTriggeredAlertDetails
+  langs:
+  - csharp
+  - vb
+  name: AlertName
+  nameWithType: AdminAlertingTriggeredAlertDetails.AlertName
+  fullName: Dropbox.Api.TeamLog.AdminAlertingTriggeredAlertDetails.AlertName
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertingTriggeredAlertDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AlertName
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertingTriggeredAlertDetails.cs
+    startLine: 82
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Alert name.</p>\n"
+  example: []
+  syntax:
+    content: public string AlertName { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property AlertName As String
+  overload: Dropbox.Api.TeamLog.AdminAlertingTriggeredAlertDetails.AlertName*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.AdminAlertingTriggeredAlertDetails.AlertSeverity
+  commentId: P:Dropbox.Api.TeamLog.AdminAlertingTriggeredAlertDetails.AlertSeverity
+  id: AlertSeverity
+  parent: Dropbox.Api.TeamLog.AdminAlertingTriggeredAlertDetails
+  langs:
+  - csharp
+  - vb
+  name: AlertSeverity
+  nameWithType: AdminAlertingTriggeredAlertDetails.AlertSeverity
+  fullName: Dropbox.Api.TeamLog.AdminAlertingTriggeredAlertDetails.AlertSeverity
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertingTriggeredAlertDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AlertSeverity
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertingTriggeredAlertDetails.cs
+    startLine: 87
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Alert severity.</p>\n"
+  example: []
+  syntax:
+    content: public AdminAlertSeverityEnum AlertSeverity { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.AdminAlertSeverityEnum
+    content.vb: Public Property AlertSeverity As AdminAlertSeverityEnum
+  overload: Dropbox.Api.TeamLog.AdminAlertingTriggeredAlertDetails.AlertSeverity*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.AdminAlertingTriggeredAlertDetails.AlertCategory
+  commentId: P:Dropbox.Api.TeamLog.AdminAlertingTriggeredAlertDetails.AlertCategory
+  id: AlertCategory
+  parent: Dropbox.Api.TeamLog.AdminAlertingTriggeredAlertDetails
+  langs:
+  - csharp
+  - vb
+  name: AlertCategory
+  nameWithType: AdminAlertingTriggeredAlertDetails.AlertCategory
+  fullName: Dropbox.Api.TeamLog.AdminAlertingTriggeredAlertDetails.AlertCategory
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertingTriggeredAlertDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AlertCategory
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertingTriggeredAlertDetails.cs
+    startLine: 92
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Alert category.</p>\n"
+  example: []
+  syntax:
+    content: public AdminAlertCategoryEnum AlertCategory { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.AdminAlertCategoryEnum
+    content.vb: Public Property AlertCategory As AdminAlertCategoryEnum
+  overload: Dropbox.Api.TeamLog.AdminAlertingTriggeredAlertDetails.AlertCategory*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.AdminAlertingTriggeredAlertDetails.AlertInstanceId
+  commentId: P:Dropbox.Api.TeamLog.AdminAlertingTriggeredAlertDetails.AlertInstanceId
+  id: AlertInstanceId
+  parent: Dropbox.Api.TeamLog.AdminAlertingTriggeredAlertDetails
+  langs:
+  - csharp
+  - vb
+  name: AlertInstanceId
+  nameWithType: AdminAlertingTriggeredAlertDetails.AlertInstanceId
+  fullName: Dropbox.Api.TeamLog.AdminAlertingTriggeredAlertDetails.AlertInstanceId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertingTriggeredAlertDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AlertInstanceId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertingTriggeredAlertDetails.cs
+    startLine: 97
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Alert ID.</p>\n"
+  example: []
+  syntax:
+    content: public string AlertInstanceId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property AlertInstanceId As String
+  overload: Dropbox.Api.TeamLog.AdminAlertingTriggeredAlertDetails.AlertInstanceId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.AdminAlertingTriggeredAlertDetails
+  commentId: T:Dropbox.Api.TeamLog.AdminAlertingTriggeredAlertDetails
+  parent: Dropbox.Api.TeamLog
+  name: AdminAlertingTriggeredAlertDetails
+  nameWithType: AdminAlertingTriggeredAlertDetails
+  fullName: Dropbox.Api.TeamLog.AdminAlertingTriggeredAlertDetails
+- uid: Dropbox.Api.TeamLog.AdminAlertingTriggeredAlertDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.AdminAlertingTriggeredAlertDetails.#ctor
+  name: AdminAlertingTriggeredAlertDetails
+  nameWithType: AdminAlertingTriggeredAlertDetails.AdminAlertingTriggeredAlertDetails
+  fullName: Dropbox.Api.TeamLog.AdminAlertingTriggeredAlertDetails.AdminAlertingTriggeredAlertDetails
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.AdminAlertSeverityEnum
+  commentId: T:Dropbox.Api.TeamLog.AdminAlertSeverityEnum
+  parent: Dropbox.Api.TeamLog
+  name: AdminAlertSeverityEnum
+  nameWithType: AdminAlertSeverityEnum
+  fullName: Dropbox.Api.TeamLog.AdminAlertSeverityEnum
+- uid: Dropbox.Api.TeamLog.AdminAlertCategoryEnum
+  commentId: T:Dropbox.Api.TeamLog.AdminAlertCategoryEnum
+  parent: Dropbox.Api.TeamLog
+  name: AdminAlertCategoryEnum
+  nameWithType: AdminAlertCategoryEnum
+  fullName: Dropbox.Api.TeamLog.AdminAlertCategoryEnum
+- uid: Dropbox.Api.TeamLog.AdminAlertingTriggeredAlertDetails.AlertName*
+  commentId: Overload:Dropbox.Api.TeamLog.AdminAlertingTriggeredAlertDetails.AlertName
+  name: AlertName
+  nameWithType: AdminAlertingTriggeredAlertDetails.AlertName
+  fullName: Dropbox.Api.TeamLog.AdminAlertingTriggeredAlertDetails.AlertName
+- uid: Dropbox.Api.TeamLog.AdminAlertingTriggeredAlertDetails.AlertSeverity*
+  commentId: Overload:Dropbox.Api.TeamLog.AdminAlertingTriggeredAlertDetails.AlertSeverity
+  name: AlertSeverity
+  nameWithType: AdminAlertingTriggeredAlertDetails.AlertSeverity
+  fullName: Dropbox.Api.TeamLog.AdminAlertingTriggeredAlertDetails.AlertSeverity
+- uid: Dropbox.Api.TeamLog.AdminAlertingTriggeredAlertDetails.AlertCategory*
+  commentId: Overload:Dropbox.Api.TeamLog.AdminAlertingTriggeredAlertDetails.AlertCategory
+  name: AlertCategory
+  nameWithType: AdminAlertingTriggeredAlertDetails.AlertCategory
+  fullName: Dropbox.Api.TeamLog.AdminAlertingTriggeredAlertDetails.AlertCategory
+- uid: Dropbox.Api.TeamLog.AdminAlertingTriggeredAlertDetails.AlertInstanceId*
+  commentId: Overload:Dropbox.Api.TeamLog.AdminAlertingTriggeredAlertDetails.AlertInstanceId
+  name: AlertInstanceId
+  nameWithType: AdminAlertingTriggeredAlertDetails.AlertInstanceId
+  fullName: Dropbox.Api.TeamLog.AdminAlertingTriggeredAlertDetails.AlertInstanceId
+shouldSkipMarkup: true

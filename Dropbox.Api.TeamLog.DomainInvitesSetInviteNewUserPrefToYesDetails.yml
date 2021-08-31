@@ -1,0 +1,96 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.DomainInvitesSetInviteNewUserPrefToYesDetails
+  commentId: T:Dropbox.Api.TeamLog.DomainInvitesSetInviteNewUserPrefToYesDetails
+  id: DomainInvitesSetInviteNewUserPrefToYesDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.DomainInvitesSetInviteNewUserPrefToYesDetails.#ctor
+  langs:
+  - csharp
+  - vb
+  name: DomainInvitesSetInviteNewUserPrefToYesDetails
+  nameWithType: DomainInvitesSetInviteNewUserPrefToYesDetails
+  fullName: Dropbox.Api.TeamLog.DomainInvitesSetInviteNewUserPrefToYesDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DomainInvitesSetInviteNewUserPrefToYesDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: DomainInvitesSetInviteNewUserPrefToYesDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DomainInvitesSetInviteNewUserPrefToYesDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Enabled &quot;Automatically invite new users&quot;.</p>\n"
+  example: []
+  syntax:
+    content: 'public class DomainInvitesSetInviteNewUserPrefToYesDetails : object'
+    content.vb: >-
+      Public Class DomainInvitesSetInviteNewUserPrefToYesDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.DomainInvitesSetInviteNewUserPrefToYesDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.DomainInvitesSetInviteNewUserPrefToYesDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.DomainInvitesSetInviteNewUserPrefToYesDetails
+  langs:
+  - csharp
+  - vb
+  name: DomainInvitesSetInviteNewUserPrefToYesDetails()
+  nameWithType: DomainInvitesSetInviteNewUserPrefToYesDetails.DomainInvitesSetInviteNewUserPrefToYesDetails()
+  fullName: Dropbox.Api.TeamLog.DomainInvitesSetInviteNewUserPrefToYesDetails.DomainInvitesSetInviteNewUserPrefToYesDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DomainInvitesSetInviteNewUserPrefToYesDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DomainInvitesSetInviteNewUserPrefToYesDetails.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.DomainInvitesSetInviteNewUserPrefToYesDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public DomainInvitesSetInviteNewUserPrefToYesDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.DomainInvitesSetInviteNewUserPrefToYesDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.DomainInvitesSetInviteNewUserPrefToYesDetails
+  commentId: T:Dropbox.Api.TeamLog.DomainInvitesSetInviteNewUserPrefToYesDetails
+  parent: Dropbox.Api.TeamLog
+  name: DomainInvitesSetInviteNewUserPrefToYesDetails
+  nameWithType: DomainInvitesSetInviteNewUserPrefToYesDetails
+  fullName: Dropbox.Api.TeamLog.DomainInvitesSetInviteNewUserPrefToYesDetails
+- uid: Dropbox.Api.TeamLog.DomainInvitesSetInviteNewUserPrefToYesDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.DomainInvitesSetInviteNewUserPrefToYesDetails.#ctor
+  name: DomainInvitesSetInviteNewUserPrefToYesDetails
+  nameWithType: DomainInvitesSetInviteNewUserPrefToYesDetails.DomainInvitesSetInviteNewUserPrefToYesDetails
+  fullName: Dropbox.Api.TeamLog.DomainInvitesSetInviteNewUserPrefToYesDetails.DomainInvitesSetInviteNewUserPrefToYesDetails
+shouldSkipMarkup: true

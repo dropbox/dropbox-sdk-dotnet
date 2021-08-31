@@ -1,0 +1,96 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.GroupMovedDetails
+  commentId: T:Dropbox.Api.TeamLog.GroupMovedDetails
+  id: GroupMovedDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.GroupMovedDetails.#ctor
+  langs:
+  - csharp
+  - vb
+  name: GroupMovedDetails
+  nameWithType: GroupMovedDetails
+  fullName: Dropbox.Api.TeamLog.GroupMovedDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupMovedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GroupMovedDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupMovedDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Moved group.</p>\n"
+  example: []
+  syntax:
+    content: 'public class GroupMovedDetails : object'
+    content.vb: >-
+      Public Class GroupMovedDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.GroupMovedDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.GroupMovedDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.GroupMovedDetails
+  langs:
+  - csharp
+  - vb
+  name: GroupMovedDetails()
+  nameWithType: GroupMovedDetails.GroupMovedDetails()
+  fullName: Dropbox.Api.TeamLog.GroupMovedDetails.GroupMovedDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupMovedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupMovedDetails.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.GroupMovedDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public GroupMovedDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.GroupMovedDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.GroupMovedDetails
+  commentId: T:Dropbox.Api.TeamLog.GroupMovedDetails
+  parent: Dropbox.Api.TeamLog
+  name: GroupMovedDetails
+  nameWithType: GroupMovedDetails
+  fullName: Dropbox.Api.TeamLog.GroupMovedDetails
+- uid: Dropbox.Api.TeamLog.GroupMovedDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.GroupMovedDetails.#ctor
+  name: GroupMovedDetails
+  nameWithType: GroupMovedDetails.GroupMovedDetails
+  fullName: Dropbox.Api.TeamLog.GroupMovedDetails.GroupMovedDetails
+shouldSkipMarkup: true

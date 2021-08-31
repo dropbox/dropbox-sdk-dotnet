@@ -1,0 +1,148 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamPolicies.OfficeAddInPolicy.Disabled
+  commentId: T:Dropbox.Api.TeamPolicies.OfficeAddInPolicy.Disabled
+  id: OfficeAddInPolicy.Disabled
+  parent: Dropbox.Api.TeamPolicies
+  children:
+  - Dropbox.Api.TeamPolicies.OfficeAddInPolicy.Disabled.Instance
+  langs:
+  - csharp
+  - vb
+  name: OfficeAddInPolicy.Disabled
+  nameWithType: OfficeAddInPolicy.Disabled
+  fullName: Dropbox.Api.TeamPolicies.OfficeAddInPolicy.Disabled
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/OfficeAddInPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Disabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/OfficeAddInPolicy.cs
+    startLine: 182
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Office Add-In is disabled.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Disabled : OfficeAddInPolicy'
+    content.vb: >-
+      Public NotInheritable Class Disabled
+          Inherits OfficeAddInPolicy
+  inheritance:
+  - System.Object
+  - Dropbox.Api.TeamPolicies.OfficeAddInPolicy
+  inheritedMembers:
+  - Dropbox.Api.TeamPolicies.OfficeAddInPolicy.IsDisabled
+  - Dropbox.Api.TeamPolicies.OfficeAddInPolicy.AsDisabled
+  - Dropbox.Api.TeamPolicies.OfficeAddInPolicy.IsEnabled
+  - Dropbox.Api.TeamPolicies.OfficeAddInPolicy.AsEnabled
+  - Dropbox.Api.TeamPolicies.OfficeAddInPolicy.IsOther
+  - Dropbox.Api.TeamPolicies.OfficeAddInPolicy.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.TeamPolicies.OfficeAddInPolicy.Disabled.Instance
+  commentId: F:Dropbox.Api.TeamPolicies.OfficeAddInPolicy.Disabled.Instance
+  id: Instance
+  parent: Dropbox.Api.TeamPolicies.OfficeAddInPolicy.Disabled
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: OfficeAddInPolicy.Disabled.Instance
+  fullName: Dropbox.Api.TeamPolicies.OfficeAddInPolicy.Disabled.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/OfficeAddInPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/OfficeAddInPolicy.cs
+    startLine: 206
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>A singleton instance of Disabled</p>\n"
+  example: []
+  syntax:
+    content: public static readonly OfficeAddInPolicy.Disabled Instance
+    return:
+      type: Dropbox.Api.TeamPolicies.OfficeAddInPolicy.Disabled
+    content.vb: Public Shared ReadOnly Instance As OfficeAddInPolicy.Disabled
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamPolicies
+  commentId: N:Dropbox.Api.TeamPolicies
+  name: Dropbox.Api.TeamPolicies
+  nameWithType: Dropbox.Api.TeamPolicies
+  fullName: Dropbox.Api.TeamPolicies
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamPolicies.OfficeAddInPolicy
+  commentId: T:Dropbox.Api.TeamPolicies.OfficeAddInPolicy
+  parent: Dropbox.Api.TeamPolicies
+  name: OfficeAddInPolicy
+  nameWithType: OfficeAddInPolicy
+  fullName: Dropbox.Api.TeamPolicies.OfficeAddInPolicy
+- uid: Dropbox.Api.TeamPolicies.OfficeAddInPolicy.IsDisabled
+  commentId: P:Dropbox.Api.TeamPolicies.OfficeAddInPolicy.IsDisabled
+  parent: Dropbox.Api.TeamPolicies.OfficeAddInPolicy
+  name: IsDisabled
+  nameWithType: OfficeAddInPolicy.IsDisabled
+  fullName: Dropbox.Api.TeamPolicies.OfficeAddInPolicy.IsDisabled
+- uid: Dropbox.Api.TeamPolicies.OfficeAddInPolicy.AsDisabled
+  commentId: P:Dropbox.Api.TeamPolicies.OfficeAddInPolicy.AsDisabled
+  parent: Dropbox.Api.TeamPolicies.OfficeAddInPolicy
+  name: AsDisabled
+  nameWithType: OfficeAddInPolicy.AsDisabled
+  fullName: Dropbox.Api.TeamPolicies.OfficeAddInPolicy.AsDisabled
+- uid: Dropbox.Api.TeamPolicies.OfficeAddInPolicy.IsEnabled
+  commentId: P:Dropbox.Api.TeamPolicies.OfficeAddInPolicy.IsEnabled
+  parent: Dropbox.Api.TeamPolicies.OfficeAddInPolicy
+  name: IsEnabled
+  nameWithType: OfficeAddInPolicy.IsEnabled
+  fullName: Dropbox.Api.TeamPolicies.OfficeAddInPolicy.IsEnabled
+- uid: Dropbox.Api.TeamPolicies.OfficeAddInPolicy.AsEnabled
+  commentId: P:Dropbox.Api.TeamPolicies.OfficeAddInPolicy.AsEnabled
+  parent: Dropbox.Api.TeamPolicies.OfficeAddInPolicy
+  name: AsEnabled
+  nameWithType: OfficeAddInPolicy.AsEnabled
+  fullName: Dropbox.Api.TeamPolicies.OfficeAddInPolicy.AsEnabled
+- uid: Dropbox.Api.TeamPolicies.OfficeAddInPolicy.IsOther
+  commentId: P:Dropbox.Api.TeamPolicies.OfficeAddInPolicy.IsOther
+  parent: Dropbox.Api.TeamPolicies.OfficeAddInPolicy
+  name: IsOther
+  nameWithType: OfficeAddInPolicy.IsOther
+  fullName: Dropbox.Api.TeamPolicies.OfficeAddInPolicy.IsOther
+- uid: Dropbox.Api.TeamPolicies.OfficeAddInPolicy.AsOther
+  commentId: P:Dropbox.Api.TeamPolicies.OfficeAddInPolicy.AsOther
+  parent: Dropbox.Api.TeamPolicies.OfficeAddInPolicy
+  name: AsOther
+  nameWithType: OfficeAddInPolicy.AsOther
+  fullName: Dropbox.Api.TeamPolicies.OfficeAddInPolicy.AsOther
+- uid: Dropbox.Api.TeamPolicies.OfficeAddInPolicy.Disabled
+  commentId: T:Dropbox.Api.TeamPolicies.OfficeAddInPolicy.Disabled
+  parent: Dropbox.Api.TeamPolicies
+  name: OfficeAddInPolicy.Disabled
+  nameWithType: OfficeAddInPolicy.Disabled
+  fullName: Dropbox.Api.TeamPolicies.OfficeAddInPolicy.Disabled
+shouldSkipMarkup: true

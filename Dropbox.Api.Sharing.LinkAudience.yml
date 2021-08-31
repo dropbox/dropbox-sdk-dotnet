@@ -1,0 +1,660 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.LinkAudience
+  commentId: T:Dropbox.Api.Sharing.LinkAudience
+  id: LinkAudience
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.LinkAudience.#ctor
+  - Dropbox.Api.Sharing.LinkAudience.AsMembers
+  - Dropbox.Api.Sharing.LinkAudience.AsNoOne
+  - Dropbox.Api.Sharing.LinkAudience.AsOther
+  - Dropbox.Api.Sharing.LinkAudience.AsPassword
+  - Dropbox.Api.Sharing.LinkAudience.AsPublic
+  - Dropbox.Api.Sharing.LinkAudience.AsTeam
+  - Dropbox.Api.Sharing.LinkAudience.IsMembers
+  - Dropbox.Api.Sharing.LinkAudience.IsNoOne
+  - Dropbox.Api.Sharing.LinkAudience.IsOther
+  - Dropbox.Api.Sharing.LinkAudience.IsPassword
+  - Dropbox.Api.Sharing.LinkAudience.IsPublic
+  - Dropbox.Api.Sharing.LinkAudience.IsTeam
+  langs:
+  - csharp
+  - vb
+  name: LinkAudience
+  nameWithType: LinkAudience
+  fullName: Dropbox.Api.Sharing.LinkAudience
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAudience.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: LinkAudience
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAudience.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The link audience object</p>\n"
+  example: []
+  syntax:
+    content: 'public class LinkAudience : object'
+    content.vb: >-
+      Public Class LinkAudience
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Sharing.LinkAudience.Members
+  - Dropbox.Api.Sharing.LinkAudience.NoOne
+  - Dropbox.Api.Sharing.LinkAudience.Other
+  - Dropbox.Api.Sharing.LinkAudience.Password
+  - Dropbox.Api.Sharing.LinkAudience.Public
+  - Dropbox.Api.Sharing.LinkAudience.Team
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Sharing.LinkAudience.#ctor
+  commentId: M:Dropbox.Api.Sharing.LinkAudience.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Sharing.LinkAudience
+  langs:
+  - csharp
+  - vb
+  name: LinkAudience()
+  nameWithType: LinkAudience.LinkAudience()
+  fullName: Dropbox.Api.Sharing.LinkAudience.LinkAudience()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAudience.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAudience.cs
+    startLine: 32
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.LinkAudience\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public LinkAudience()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Sharing.LinkAudience.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.LinkAudience.IsPublic
+  commentId: P:Dropbox.Api.Sharing.LinkAudience.IsPublic
+  id: IsPublic
+  parent: Dropbox.Api.Sharing.LinkAudience
+  langs:
+  - csharp
+  - vb
+  name: IsPublic
+  nameWithType: LinkAudience.IsPublic
+  fullName: Dropbox.Api.Sharing.LinkAudience.IsPublic
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAudience.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsPublic
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAudience.cs
+    startLine: 39
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is Public</p>\n"
+  example: []
+  syntax:
+    content: public bool IsPublic { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsPublic As Boolean
+  overload: Dropbox.Api.Sharing.LinkAudience.IsPublic*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.LinkAudience.AsPublic
+  commentId: P:Dropbox.Api.Sharing.LinkAudience.AsPublic
+  id: AsPublic
+  parent: Dropbox.Api.Sharing.LinkAudience
+  langs:
+  - csharp
+  - vb
+  name: AsPublic
+  nameWithType: LinkAudience.AsPublic
+  fullName: Dropbox.Api.Sharing.LinkAudience.AsPublic
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAudience.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsPublic
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAudience.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a Public, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public LinkAudience.Public AsPublic { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.LinkAudience.Public
+    content.vb: Public ReadOnly Property AsPublic As LinkAudience.Public
+  overload: Dropbox.Api.Sharing.LinkAudience.AsPublic*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.LinkAudience.IsTeam
+  commentId: P:Dropbox.Api.Sharing.LinkAudience.IsTeam
+  id: IsTeam
+  parent: Dropbox.Api.Sharing.LinkAudience
+  langs:
+  - csharp
+  - vb
+  name: IsTeam
+  nameWithType: LinkAudience.IsTeam
+  fullName: Dropbox.Api.Sharing.LinkAudience.IsTeam
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAudience.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAudience.cs
+    startLine: 61
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is Team</p>\n"
+  example: []
+  syntax:
+    content: public bool IsTeam { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsTeam As Boolean
+  overload: Dropbox.Api.Sharing.LinkAudience.IsTeam*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.LinkAudience.AsTeam
+  commentId: P:Dropbox.Api.Sharing.LinkAudience.AsTeam
+  id: AsTeam
+  parent: Dropbox.Api.Sharing.LinkAudience
+  langs:
+  - csharp
+  - vb
+  name: AsTeam
+  nameWithType: LinkAudience.AsTeam
+  fullName: Dropbox.Api.Sharing.LinkAudience.AsTeam
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAudience.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAudience.cs
+    startLine: 72
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a Team, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public LinkAudience.Team AsTeam { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.LinkAudience.Team
+    content.vb: Public ReadOnly Property AsTeam As LinkAudience.Team
+  overload: Dropbox.Api.Sharing.LinkAudience.AsTeam*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.LinkAudience.IsNoOne
+  commentId: P:Dropbox.Api.Sharing.LinkAudience.IsNoOne
+  id: IsNoOne
+  parent: Dropbox.Api.Sharing.LinkAudience
+  langs:
+  - csharp
+  - vb
+  name: IsNoOne
+  nameWithType: LinkAudience.IsNoOne
+  fullName: Dropbox.Api.Sharing.LinkAudience.IsNoOne
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAudience.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsNoOne
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAudience.cs
+    startLine: 83
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is NoOne</p>\n"
+  example: []
+  syntax:
+    content: public bool IsNoOne { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsNoOne As Boolean
+  overload: Dropbox.Api.Sharing.LinkAudience.IsNoOne*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.LinkAudience.AsNoOne
+  commentId: P:Dropbox.Api.Sharing.LinkAudience.AsNoOne
+  id: AsNoOne
+  parent: Dropbox.Api.Sharing.LinkAudience
+  langs:
+  - csharp
+  - vb
+  name: AsNoOne
+  nameWithType: LinkAudience.AsNoOne
+  fullName: Dropbox.Api.Sharing.LinkAudience.AsNoOne
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAudience.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsNoOne
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAudience.cs
+    startLine: 94
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a NoOne, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public LinkAudience.NoOne AsNoOne { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.LinkAudience.NoOne
+    content.vb: Public ReadOnly Property AsNoOne As LinkAudience.NoOne
+  overload: Dropbox.Api.Sharing.LinkAudience.AsNoOne*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.LinkAudience.IsPassword
+  commentId: P:Dropbox.Api.Sharing.LinkAudience.IsPassword
+  id: IsPassword
+  parent: Dropbox.Api.Sharing.LinkAudience
+  langs:
+  - csharp
+  - vb
+  name: IsPassword
+  nameWithType: LinkAudience.IsPassword
+  fullName: Dropbox.Api.Sharing.LinkAudience.IsPassword
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAudience.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsPassword
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAudience.cs
+    startLine: 105
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is Password</p>\n"
+  example: []
+  syntax:
+    content: public bool IsPassword { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsPassword As Boolean
+  overload: Dropbox.Api.Sharing.LinkAudience.IsPassword*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.LinkAudience.AsPassword
+  commentId: P:Dropbox.Api.Sharing.LinkAudience.AsPassword
+  id: AsPassword
+  parent: Dropbox.Api.Sharing.LinkAudience
+  langs:
+  - csharp
+  - vb
+  name: AsPassword
+  nameWithType: LinkAudience.AsPassword
+  fullName: Dropbox.Api.Sharing.LinkAudience.AsPassword
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAudience.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsPassword
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAudience.cs
+    startLine: 116
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a Password, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public LinkAudience.Password AsPassword { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.LinkAudience.Password
+    content.vb: Public ReadOnly Property AsPassword As LinkAudience.Password
+  overload: Dropbox.Api.Sharing.LinkAudience.AsPassword*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.LinkAudience.IsMembers
+  commentId: P:Dropbox.Api.Sharing.LinkAudience.IsMembers
+  id: IsMembers
+  parent: Dropbox.Api.Sharing.LinkAudience
+  langs:
+  - csharp
+  - vb
+  name: IsMembers
+  nameWithType: LinkAudience.IsMembers
+  fullName: Dropbox.Api.Sharing.LinkAudience.IsMembers
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAudience.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsMembers
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAudience.cs
+    startLine: 127
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is Members</p>\n"
+  example: []
+  syntax:
+    content: public bool IsMembers { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsMembers As Boolean
+  overload: Dropbox.Api.Sharing.LinkAudience.IsMembers*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.LinkAudience.AsMembers
+  commentId: P:Dropbox.Api.Sharing.LinkAudience.AsMembers
+  id: AsMembers
+  parent: Dropbox.Api.Sharing.LinkAudience
+  langs:
+  - csharp
+  - vb
+  name: AsMembers
+  nameWithType: LinkAudience.AsMembers
+  fullName: Dropbox.Api.Sharing.LinkAudience.AsMembers
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAudience.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsMembers
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAudience.cs
+    startLine: 138
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a Members, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public LinkAudience.Members AsMembers { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.LinkAudience.Members
+    content.vb: Public ReadOnly Property AsMembers As LinkAudience.Members
+  overload: Dropbox.Api.Sharing.LinkAudience.AsMembers*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.LinkAudience.IsOther
+  commentId: P:Dropbox.Api.Sharing.LinkAudience.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Sharing.LinkAudience
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: LinkAudience.IsOther
+  fullName: Dropbox.Api.Sharing.LinkAudience.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAudience.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAudience.cs
+    startLine: 149
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Sharing.LinkAudience.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.LinkAudience.AsOther
+  commentId: P:Dropbox.Api.Sharing.LinkAudience.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Sharing.LinkAudience
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: LinkAudience.AsOther
+  fullName: Dropbox.Api.Sharing.LinkAudience.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAudience.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkAudience.cs
+    startLine: 160
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public LinkAudience.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.LinkAudience.Other
+    content.vb: Public ReadOnly Property AsOther As LinkAudience.Other
+  overload: Dropbox.Api.Sharing.LinkAudience.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.LinkAudience
+  commentId: T:Dropbox.Api.Sharing.LinkAudience
+  parent: Dropbox.Api.Sharing
+  name: LinkAudience
+  nameWithType: LinkAudience
+  fullName: Dropbox.Api.Sharing.LinkAudience
+- uid: Dropbox.Api.Sharing.LinkAudience.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.LinkAudience.#ctor
+  name: LinkAudience
+  nameWithType: LinkAudience.LinkAudience
+  fullName: Dropbox.Api.Sharing.LinkAudience.LinkAudience
+- uid: Dropbox.Api.Sharing.LinkAudience.IsPublic*
+  commentId: Overload:Dropbox.Api.Sharing.LinkAudience.IsPublic
+  name: IsPublic
+  nameWithType: LinkAudience.IsPublic
+  fullName: Dropbox.Api.Sharing.LinkAudience.IsPublic
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Sharing.LinkAudience.AsPublic*
+  commentId: Overload:Dropbox.Api.Sharing.LinkAudience.AsPublic
+  name: AsPublic
+  nameWithType: LinkAudience.AsPublic
+  fullName: Dropbox.Api.Sharing.LinkAudience.AsPublic
+- uid: Dropbox.Api.Sharing.LinkAudience.Public
+  commentId: T:Dropbox.Api.Sharing.LinkAudience.Public
+  parent: Dropbox.Api.Sharing
+  name: LinkAudience.Public
+  nameWithType: LinkAudience.Public
+  fullName: Dropbox.Api.Sharing.LinkAudience.Public
+- uid: Dropbox.Api.Sharing.LinkAudience.IsTeam*
+  commentId: Overload:Dropbox.Api.Sharing.LinkAudience.IsTeam
+  name: IsTeam
+  nameWithType: LinkAudience.IsTeam
+  fullName: Dropbox.Api.Sharing.LinkAudience.IsTeam
+- uid: Dropbox.Api.Sharing.LinkAudience.AsTeam*
+  commentId: Overload:Dropbox.Api.Sharing.LinkAudience.AsTeam
+  name: AsTeam
+  nameWithType: LinkAudience.AsTeam
+  fullName: Dropbox.Api.Sharing.LinkAudience.AsTeam
+- uid: Dropbox.Api.Sharing.LinkAudience.Team
+  commentId: T:Dropbox.Api.Sharing.LinkAudience.Team
+  parent: Dropbox.Api.Sharing
+  name: LinkAudience.Team
+  nameWithType: LinkAudience.Team
+  fullName: Dropbox.Api.Sharing.LinkAudience.Team
+- uid: Dropbox.Api.Sharing.LinkAudience.IsNoOne*
+  commentId: Overload:Dropbox.Api.Sharing.LinkAudience.IsNoOne
+  name: IsNoOne
+  nameWithType: LinkAudience.IsNoOne
+  fullName: Dropbox.Api.Sharing.LinkAudience.IsNoOne
+- uid: Dropbox.Api.Sharing.LinkAudience.AsNoOne*
+  commentId: Overload:Dropbox.Api.Sharing.LinkAudience.AsNoOne
+  name: AsNoOne
+  nameWithType: LinkAudience.AsNoOne
+  fullName: Dropbox.Api.Sharing.LinkAudience.AsNoOne
+- uid: Dropbox.Api.Sharing.LinkAudience.NoOne
+  commentId: T:Dropbox.Api.Sharing.LinkAudience.NoOne
+  parent: Dropbox.Api.Sharing
+  name: LinkAudience.NoOne
+  nameWithType: LinkAudience.NoOne
+  fullName: Dropbox.Api.Sharing.LinkAudience.NoOne
+- uid: Dropbox.Api.Sharing.LinkAudience.IsPassword*
+  commentId: Overload:Dropbox.Api.Sharing.LinkAudience.IsPassword
+  name: IsPassword
+  nameWithType: LinkAudience.IsPassword
+  fullName: Dropbox.Api.Sharing.LinkAudience.IsPassword
+- uid: Dropbox.Api.Sharing.LinkAudience.AsPassword*
+  commentId: Overload:Dropbox.Api.Sharing.LinkAudience.AsPassword
+  name: AsPassword
+  nameWithType: LinkAudience.AsPassword
+  fullName: Dropbox.Api.Sharing.LinkAudience.AsPassword
+- uid: Dropbox.Api.Sharing.LinkAudience.Password
+  commentId: T:Dropbox.Api.Sharing.LinkAudience.Password
+  parent: Dropbox.Api.Sharing
+  name: LinkAudience.Password
+  nameWithType: LinkAudience.Password
+  fullName: Dropbox.Api.Sharing.LinkAudience.Password
+- uid: Dropbox.Api.Sharing.LinkAudience.IsMembers*
+  commentId: Overload:Dropbox.Api.Sharing.LinkAudience.IsMembers
+  name: IsMembers
+  nameWithType: LinkAudience.IsMembers
+  fullName: Dropbox.Api.Sharing.LinkAudience.IsMembers
+- uid: Dropbox.Api.Sharing.LinkAudience.AsMembers*
+  commentId: Overload:Dropbox.Api.Sharing.LinkAudience.AsMembers
+  name: AsMembers
+  nameWithType: LinkAudience.AsMembers
+  fullName: Dropbox.Api.Sharing.LinkAudience.AsMembers
+- uid: Dropbox.Api.Sharing.LinkAudience.Members
+  commentId: T:Dropbox.Api.Sharing.LinkAudience.Members
+  parent: Dropbox.Api.Sharing
+  name: LinkAudience.Members
+  nameWithType: LinkAudience.Members
+  fullName: Dropbox.Api.Sharing.LinkAudience.Members
+- uid: Dropbox.Api.Sharing.LinkAudience.IsOther*
+  commentId: Overload:Dropbox.Api.Sharing.LinkAudience.IsOther
+  name: IsOther
+  nameWithType: LinkAudience.IsOther
+  fullName: Dropbox.Api.Sharing.LinkAudience.IsOther
+- uid: Dropbox.Api.Sharing.LinkAudience.AsOther*
+  commentId: Overload:Dropbox.Api.Sharing.LinkAudience.AsOther
+  name: AsOther
+  nameWithType: LinkAudience.AsOther
+  fullName: Dropbox.Api.Sharing.LinkAudience.AsOther
+- uid: Dropbox.Api.Sharing.LinkAudience.Other
+  commentId: T:Dropbox.Api.Sharing.LinkAudience.Other
+  parent: Dropbox.Api.Sharing
+  name: LinkAudience.Other
+  nameWithType: LinkAudience.Other
+  fullName: Dropbox.Api.Sharing.LinkAudience.Other
+shouldSkipMarkup: true

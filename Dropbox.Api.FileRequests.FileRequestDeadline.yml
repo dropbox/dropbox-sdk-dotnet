@@ -1,0 +1,244 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.FileRequests.FileRequestDeadline
+  commentId: T:Dropbox.Api.FileRequests.FileRequestDeadline
+  id: FileRequestDeadline
+  parent: Dropbox.Api.FileRequests
+  children:
+  - Dropbox.Api.FileRequests.FileRequestDeadline.#ctor
+  - Dropbox.Api.FileRequests.FileRequestDeadline.#ctor(System.DateTime,Dropbox.Api.FileRequests.GracePeriod)
+  - Dropbox.Api.FileRequests.FileRequestDeadline.AllowLateUploads
+  - Dropbox.Api.FileRequests.FileRequestDeadline.Deadline
+  langs:
+  - csharp
+  - vb
+  name: FileRequestDeadline
+  nameWithType: FileRequestDeadline
+  fullName: Dropbox.Api.FileRequests.FileRequestDeadline
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestDeadline.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: FileRequestDeadline
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestDeadline.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>The file request deadline object</p>\n"
+  example: []
+  syntax:
+    content: 'public class FileRequestDeadline : object'
+    content.vb: >-
+      Public Class FileRequestDeadline
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.FileRequests.FileRequestDeadline.#ctor(System.DateTime,Dropbox.Api.FileRequests.GracePeriod)
+  commentId: M:Dropbox.Api.FileRequests.FileRequestDeadline.#ctor(System.DateTime,Dropbox.Api.FileRequests.GracePeriod)
+  id: '#ctor(System.DateTime,Dropbox.Api.FileRequests.GracePeriod)'
+  parent: Dropbox.Api.FileRequests.FileRequestDeadline
+  langs:
+  - csharp
+  - vb
+  name: FileRequestDeadline(System.DateTime, GracePeriod)
+  nameWithType: FileRequestDeadline.FileRequestDeadline(System.DateTime, GracePeriod)
+  fullName: Dropbox.Api.FileRequests.FileRequestDeadline.FileRequestDeadline(System.DateTime, Dropbox.Api.FileRequests.GracePeriod)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestDeadline.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestDeadline.cs
+    startLine: 36
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.FileRequests.FileRequestDeadline\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public FileRequestDeadline(System.DateTime deadline, GracePeriod allowLateUploads = null)
+    parameters:
+    - id: deadline
+      type: System.DateTime
+      description: The deadline for this file request.
+    - id: allowLateUploads
+      type: Dropbox.Api.FileRequests.GracePeriod
+      description: >-
+        If set, allow uploads after the deadline has passed.
+
+        These     uploads will be marked overdue.
+    content.vb: Public Sub New(deadline As System.DateTime, allowLateUploads As GracePeriod = Nothing)
+  overload: Dropbox.Api.FileRequests.FileRequestDeadline.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileRequests.FileRequestDeadline.#ctor
+  commentId: M:Dropbox.Api.FileRequests.FileRequestDeadline.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.FileRequests.FileRequestDeadline
+  langs:
+  - csharp
+  - vb
+  name: FileRequestDeadline()
+  nameWithType: FileRequestDeadline.FileRequestDeadline()
+  fullName: Dropbox.Api.FileRequests.FileRequestDeadline.FileRequestDeadline()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestDeadline.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestDeadline.cs
+    startLine: 49
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.FileRequests.FileRequestDeadline\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public FileRequestDeadline()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.FileRequests.FileRequestDeadline.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileRequests.FileRequestDeadline.Deadline
+  commentId: P:Dropbox.Api.FileRequests.FileRequestDeadline.Deadline
+  id: Deadline
+  parent: Dropbox.Api.FileRequests.FileRequestDeadline
+  langs:
+  - csharp
+  - vb
+  name: Deadline
+  nameWithType: FileRequestDeadline.Deadline
+  fullName: Dropbox.Api.FileRequests.FileRequestDeadline.Deadline
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestDeadline.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Deadline
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestDeadline.cs
+    startLine: 57
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>The deadline for this file request.</p>\n"
+  example: []
+  syntax:
+    content: public System.DateTime Deadline { get; protected set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Property Deadline As System.DateTime
+  overload: Dropbox.Api.FileRequests.FileRequestDeadline.Deadline*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.FileRequests.FileRequestDeadline.AllowLateUploads
+  commentId: P:Dropbox.Api.FileRequests.FileRequestDeadline.AllowLateUploads
+  id: AllowLateUploads
+  parent: Dropbox.Api.FileRequests.FileRequestDeadline
+  langs:
+  - csharp
+  - vb
+  name: AllowLateUploads
+  nameWithType: FileRequestDeadline.AllowLateUploads
+  fullName: Dropbox.Api.FileRequests.FileRequestDeadline.AllowLateUploads
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestDeadline.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AllowLateUploads
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/FileRequestDeadline.cs
+    startLine: 63
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>If set, allow uploads after the deadline has passed. These     uploads will\nbe marked overdue.</p>\n"
+  example: []
+  syntax:
+    content: public GracePeriod AllowLateUploads { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.FileRequests.GracePeriod
+    content.vb: Public Property AllowLateUploads As GracePeriod
+  overload: Dropbox.Api.FileRequests.FileRequestDeadline.AllowLateUploads*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.FileRequests
+  commentId: N:Dropbox.Api.FileRequests
+  name: Dropbox.Api.FileRequests
+  nameWithType: Dropbox.Api.FileRequests
+  fullName: Dropbox.Api.FileRequests
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.FileRequests.FileRequestDeadline
+  commentId: T:Dropbox.Api.FileRequests.FileRequestDeadline
+  parent: Dropbox.Api.FileRequests
+  name: FileRequestDeadline
+  nameWithType: FileRequestDeadline
+  fullName: Dropbox.Api.FileRequests.FileRequestDeadline
+- uid: Dropbox.Api.FileRequests.FileRequestDeadline.#ctor*
+  commentId: Overload:Dropbox.Api.FileRequests.FileRequestDeadline.#ctor
+  name: FileRequestDeadline
+  nameWithType: FileRequestDeadline.FileRequestDeadline
+  fullName: Dropbox.Api.FileRequests.FileRequestDeadline.FileRequestDeadline
+- uid: System.DateTime
+  isExternal: true
+  name: System.DateTime
+  nameWithType: System.DateTime
+  fullName: System.DateTime
+- uid: Dropbox.Api.FileRequests.GracePeriod
+  commentId: T:Dropbox.Api.FileRequests.GracePeriod
+  parent: Dropbox.Api.FileRequests
+  name: GracePeriod
+  nameWithType: GracePeriod
+  fullName: Dropbox.Api.FileRequests.GracePeriod
+- uid: Dropbox.Api.FileRequests.FileRequestDeadline.Deadline*
+  commentId: Overload:Dropbox.Api.FileRequests.FileRequestDeadline.Deadline
+  name: Deadline
+  nameWithType: FileRequestDeadline.Deadline
+  fullName: Dropbox.Api.FileRequests.FileRequestDeadline.Deadline
+- uid: Dropbox.Api.FileRequests.FileRequestDeadline.AllowLateUploads*
+  commentId: Overload:Dropbox.Api.FileRequests.FileRequestDeadline.AllowLateUploads
+  name: AllowLateUploads
+  nameWithType: FileRequestDeadline.AllowLateUploads
+  fullName: Dropbox.Api.FileRequests.FileRequestDeadline.AllowLateUploads
+shouldSkipMarkup: true

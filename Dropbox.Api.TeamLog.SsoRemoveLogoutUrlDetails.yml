@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.SsoRemoveLogoutUrlDetails
+  commentId: T:Dropbox.Api.TeamLog.SsoRemoveLogoutUrlDetails
+  id: SsoRemoveLogoutUrlDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.SsoRemoveLogoutUrlDetails.#ctor
+  - Dropbox.Api.TeamLog.SsoRemoveLogoutUrlDetails.#ctor(System.String)
+  - Dropbox.Api.TeamLog.SsoRemoveLogoutUrlDetails.PreviousValue
+  langs:
+  - csharp
+  - vb
+  name: SsoRemoveLogoutUrlDetails
+  nameWithType: SsoRemoveLogoutUrlDetails
+  fullName: Dropbox.Api.TeamLog.SsoRemoveLogoutUrlDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SsoRemoveLogoutUrlDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SsoRemoveLogoutUrlDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SsoRemoveLogoutUrlDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Removed sign-out URL for SSO.</p>\n"
+  example: []
+  syntax:
+    content: 'public class SsoRemoveLogoutUrlDetails : object'
+    content.vb: >-
+      Public Class SsoRemoveLogoutUrlDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.SsoRemoveLogoutUrlDetails.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.SsoRemoveLogoutUrlDetails.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.SsoRemoveLogoutUrlDetails
+  langs:
+  - csharp
+  - vb
+  name: SsoRemoveLogoutUrlDetails(String)
+  nameWithType: SsoRemoveLogoutUrlDetails.SsoRemoveLogoutUrlDetails(String)
+  fullName: Dropbox.Api.TeamLog.SsoRemoveLogoutUrlDetails.SsoRemoveLogoutUrlDetails(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SsoRemoveLogoutUrlDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SsoRemoveLogoutUrlDetails.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SsoRemoveLogoutUrlDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public SsoRemoveLogoutUrlDetails(string previousValue)
+    parameters:
+    - id: previousValue
+      type: System.String
+      description: Previous single sign-on logout URL.
+    content.vb: Public Sub New(previousValue As String)
+  overload: Dropbox.Api.TeamLog.SsoRemoveLogoutUrlDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SsoRemoveLogoutUrlDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.SsoRemoveLogoutUrlDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.SsoRemoveLogoutUrlDetails
+  langs:
+  - csharp
+  - vb
+  name: SsoRemoveLogoutUrlDetails()
+  nameWithType: SsoRemoveLogoutUrlDetails.SsoRemoveLogoutUrlDetails()
+  fullName: Dropbox.Api.TeamLog.SsoRemoveLogoutUrlDetails.SsoRemoveLogoutUrlDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SsoRemoveLogoutUrlDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SsoRemoveLogoutUrlDetails.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SsoRemoveLogoutUrlDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public SsoRemoveLogoutUrlDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.SsoRemoveLogoutUrlDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SsoRemoveLogoutUrlDetails.PreviousValue
+  commentId: P:Dropbox.Api.TeamLog.SsoRemoveLogoutUrlDetails.PreviousValue
+  id: PreviousValue
+  parent: Dropbox.Api.TeamLog.SsoRemoveLogoutUrlDetails
+  langs:
+  - csharp
+  - vb
+  name: PreviousValue
+  nameWithType: SsoRemoveLogoutUrlDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.SsoRemoveLogoutUrlDetails.PreviousValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SsoRemoveLogoutUrlDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PreviousValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SsoRemoveLogoutUrlDetails.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Previous single sign-on logout URL.</p>\n"
+  example: []
+  syntax:
+    content: public string PreviousValue { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property PreviousValue As String
+  overload: Dropbox.Api.TeamLog.SsoRemoveLogoutUrlDetails.PreviousValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.SsoRemoveLogoutUrlDetails
+  commentId: T:Dropbox.Api.TeamLog.SsoRemoveLogoutUrlDetails
+  parent: Dropbox.Api.TeamLog
+  name: SsoRemoveLogoutUrlDetails
+  nameWithType: SsoRemoveLogoutUrlDetails
+  fullName: Dropbox.Api.TeamLog.SsoRemoveLogoutUrlDetails
+- uid: Dropbox.Api.TeamLog.SsoRemoveLogoutUrlDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.SsoRemoveLogoutUrlDetails.#ctor
+  name: SsoRemoveLogoutUrlDetails
+  nameWithType: SsoRemoveLogoutUrlDetails.SsoRemoveLogoutUrlDetails
+  fullName: Dropbox.Api.TeamLog.SsoRemoveLogoutUrlDetails.SsoRemoveLogoutUrlDetails
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.SsoRemoveLogoutUrlDetails.PreviousValue*
+  commentId: Overload:Dropbox.Api.TeamLog.SsoRemoveLogoutUrlDetails.PreviousValue
+  name: PreviousValue
+  nameWithType: SsoRemoveLogoutUrlDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.SsoRemoveLogoutUrlDetails.PreviousValue
+shouldSkipMarkup: true

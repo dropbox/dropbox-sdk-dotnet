@@ -1,0 +1,232 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError.SharedLinkAlreadyExists
+  commentId: T:Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError.SharedLinkAlreadyExists
+  id: CreateSharedLinkWithSettingsError.SharedLinkAlreadyExists
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError.SharedLinkAlreadyExists.#ctor(Dropbox.Api.Sharing.SharedLinkAlreadyExistsMetadata)
+  - Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError.SharedLinkAlreadyExists.Value
+  langs:
+  - csharp
+  - vb
+  name: CreateSharedLinkWithSettingsError.SharedLinkAlreadyExists
+  nameWithType: CreateSharedLinkWithSettingsError.SharedLinkAlreadyExists
+  fullName: Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError.SharedLinkAlreadyExists
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/CreateSharedLinkWithSettingsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SharedLinkAlreadyExists
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/CreateSharedLinkWithSettingsError.cs
+    startLine: 416
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The shared link already exists. You can call <xref href=\"Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListSharedLinksAsync(Dropbox.Api.Sharing.ListSharedLinksArg)\" data-throw-if-not-resolved=\"false\"></xref> to get\nthe  existing link, or use the provided metadata if it is returned.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class SharedLinkAlreadyExists : CreateSharedLinkWithSettingsError'
+    content.vb: >-
+      Public NotInheritable Class SharedLinkAlreadyExists
+          Inherits CreateSharedLinkWithSettingsError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError
+  inheritedMembers:
+  - Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError.IsPath
+  - Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError.AsPath
+  - Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError.IsEmailNotVerified
+  - Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError.AsEmailNotVerified
+  - Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError.IsSharedLinkAlreadyExists
+  - Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError.AsSharedLinkAlreadyExists
+  - Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError.IsSettingsError
+  - Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError.AsSettingsError
+  - Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError.IsAccessDenied
+  - Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError.AsAccessDenied
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError.SharedLinkAlreadyExists.#ctor(Dropbox.Api.Sharing.SharedLinkAlreadyExistsMetadata)
+  commentId: M:Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError.SharedLinkAlreadyExists.#ctor(Dropbox.Api.Sharing.SharedLinkAlreadyExistsMetadata)
+  id: '#ctor(Dropbox.Api.Sharing.SharedLinkAlreadyExistsMetadata)'
+  parent: Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError.SharedLinkAlreadyExists
+  langs:
+  - csharp
+  - vb
+  name: SharedLinkAlreadyExists(SharedLinkAlreadyExistsMetadata)
+  nameWithType: CreateSharedLinkWithSettingsError.SharedLinkAlreadyExists.SharedLinkAlreadyExists(SharedLinkAlreadyExistsMetadata)
+  fullName: Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError.SharedLinkAlreadyExists.SharedLinkAlreadyExists(Dropbox.Api.Sharing.SharedLinkAlreadyExistsMetadata)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/CreateSharedLinkWithSettingsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/CreateSharedLinkWithSettingsError.cs
+    startLine: 435
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError.SharedLinkAlreadyExists\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public SharedLinkAlreadyExists(SharedLinkAlreadyExistsMetadata value)
+    parameters:
+    - id: value
+      type: Dropbox.Api.Sharing.SharedLinkAlreadyExistsMetadata
+      description: The value
+    content.vb: Public Sub New(value As SharedLinkAlreadyExistsMetadata)
+  overload: Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError.SharedLinkAlreadyExists.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError.SharedLinkAlreadyExists.Value
+  commentId: P:Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError.SharedLinkAlreadyExists.Value
+  id: Value
+  parent: Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError.SharedLinkAlreadyExists
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: CreateSharedLinkWithSettingsError.SharedLinkAlreadyExists.Value
+  fullName: Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError.SharedLinkAlreadyExists.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/CreateSharedLinkWithSettingsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/CreateSharedLinkWithSettingsError.cs
+    startLine: 450
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public SharedLinkAlreadyExistsMetadata Value { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.SharedLinkAlreadyExistsMetadata
+    content.vb: Public ReadOnly Property Value As SharedLinkAlreadyExistsMetadata
+  overload: Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError.SharedLinkAlreadyExists.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListSharedLinksAsync(Dropbox.Api.Sharing.ListSharedLinksArg)
+  commentId: M:Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListSharedLinksAsync(Dropbox.Api.Sharing.ListSharedLinksArg)
+  isExternal: true
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError
+  commentId: T:Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError
+  parent: Dropbox.Api.Sharing
+  name: CreateSharedLinkWithSettingsError
+  nameWithType: CreateSharedLinkWithSettingsError
+  fullName: Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError
+- uid: Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError.IsPath
+  commentId: P:Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError.IsPath
+  parent: Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError
+  name: IsPath
+  nameWithType: CreateSharedLinkWithSettingsError.IsPath
+  fullName: Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError.IsPath
+- uid: Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError.AsPath
+  commentId: P:Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError.AsPath
+  parent: Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError
+  name: AsPath
+  nameWithType: CreateSharedLinkWithSettingsError.AsPath
+  fullName: Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError.AsPath
+- uid: Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError.IsEmailNotVerified
+  commentId: P:Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError.IsEmailNotVerified
+  parent: Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError
+  name: IsEmailNotVerified
+  nameWithType: CreateSharedLinkWithSettingsError.IsEmailNotVerified
+  fullName: Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError.IsEmailNotVerified
+- uid: Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError.AsEmailNotVerified
+  commentId: P:Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError.AsEmailNotVerified
+  parent: Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError
+  name: AsEmailNotVerified
+  nameWithType: CreateSharedLinkWithSettingsError.AsEmailNotVerified
+  fullName: Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError.AsEmailNotVerified
+- uid: Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError.IsSharedLinkAlreadyExists
+  commentId: P:Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError.IsSharedLinkAlreadyExists
+  parent: Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError
+  name: IsSharedLinkAlreadyExists
+  nameWithType: CreateSharedLinkWithSettingsError.IsSharedLinkAlreadyExists
+  fullName: Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError.IsSharedLinkAlreadyExists
+- uid: Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError.AsSharedLinkAlreadyExists
+  commentId: P:Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError.AsSharedLinkAlreadyExists
+  parent: Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError
+  name: AsSharedLinkAlreadyExists
+  nameWithType: CreateSharedLinkWithSettingsError.AsSharedLinkAlreadyExists
+  fullName: Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError.AsSharedLinkAlreadyExists
+- uid: Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError.IsSettingsError
+  commentId: P:Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError.IsSettingsError
+  parent: Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError
+  name: IsSettingsError
+  nameWithType: CreateSharedLinkWithSettingsError.IsSettingsError
+  fullName: Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError.IsSettingsError
+- uid: Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError.AsSettingsError
+  commentId: P:Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError.AsSettingsError
+  parent: Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError
+  name: AsSettingsError
+  nameWithType: CreateSharedLinkWithSettingsError.AsSettingsError
+  fullName: Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError.AsSettingsError
+- uid: Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError.IsAccessDenied
+  commentId: P:Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError.IsAccessDenied
+  parent: Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError
+  name: IsAccessDenied
+  nameWithType: CreateSharedLinkWithSettingsError.IsAccessDenied
+  fullName: Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError.IsAccessDenied
+- uid: Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError.AsAccessDenied
+  commentId: P:Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError.AsAccessDenied
+  parent: Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError
+  name: AsAccessDenied
+  nameWithType: CreateSharedLinkWithSettingsError.AsAccessDenied
+  fullName: Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError.AsAccessDenied
+- uid: Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError.SharedLinkAlreadyExists
+  commentId: T:Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError.SharedLinkAlreadyExists
+  parent: Dropbox.Api.Sharing
+  name: CreateSharedLinkWithSettingsError.SharedLinkAlreadyExists
+  nameWithType: CreateSharedLinkWithSettingsError.SharedLinkAlreadyExists
+  fullName: Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError.SharedLinkAlreadyExists
+- uid: Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError.SharedLinkAlreadyExists.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError.SharedLinkAlreadyExists.#ctor
+  name: SharedLinkAlreadyExists
+  nameWithType: CreateSharedLinkWithSettingsError.SharedLinkAlreadyExists.SharedLinkAlreadyExists
+  fullName: Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError.SharedLinkAlreadyExists.SharedLinkAlreadyExists
+- uid: Dropbox.Api.Sharing.SharedLinkAlreadyExistsMetadata
+  commentId: T:Dropbox.Api.Sharing.SharedLinkAlreadyExistsMetadata
+  parent: Dropbox.Api.Sharing
+  name: SharedLinkAlreadyExistsMetadata
+  nameWithType: SharedLinkAlreadyExistsMetadata
+  fullName: Dropbox.Api.Sharing.SharedLinkAlreadyExistsMetadata
+- uid: Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError.SharedLinkAlreadyExists.Value*
+  commentId: Overload:Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError.SharedLinkAlreadyExists.Value
+  name: Value
+  nameWithType: CreateSharedLinkWithSettingsError.SharedLinkAlreadyExists.Value
+  fullName: Dropbox.Api.Sharing.CreateSharedLinkWithSettingsError.SharedLinkAlreadyExists.Value
+shouldSkipMarkup: true

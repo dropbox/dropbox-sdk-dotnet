@@ -1,0 +1,567 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.MemberRemoveActionType
+  commentId: T:Dropbox.Api.TeamLog.MemberRemoveActionType
+  id: MemberRemoveActionType
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.MemberRemoveActionType.#ctor
+  - Dropbox.Api.TeamLog.MemberRemoveActionType.AsDelete
+  - Dropbox.Api.TeamLog.MemberRemoveActionType.AsLeave
+  - Dropbox.Api.TeamLog.MemberRemoveActionType.AsOffboard
+  - Dropbox.Api.TeamLog.MemberRemoveActionType.AsOffboardAndRetainTeamFolders
+  - Dropbox.Api.TeamLog.MemberRemoveActionType.AsOther
+  - Dropbox.Api.TeamLog.MemberRemoveActionType.IsDelete
+  - Dropbox.Api.TeamLog.MemberRemoveActionType.IsLeave
+  - Dropbox.Api.TeamLog.MemberRemoveActionType.IsOffboard
+  - Dropbox.Api.TeamLog.MemberRemoveActionType.IsOffboardAndRetainTeamFolders
+  - Dropbox.Api.TeamLog.MemberRemoveActionType.IsOther
+  langs:
+  - csharp
+  - vb
+  name: MemberRemoveActionType
+  nameWithType: MemberRemoveActionType
+  fullName: Dropbox.Api.TeamLog.MemberRemoveActionType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberRemoveActionType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: MemberRemoveActionType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberRemoveActionType.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The member remove action type object</p>\n"
+  example: []
+  syntax:
+    content: 'public class MemberRemoveActionType : object'
+    content.vb: >-
+      Public Class MemberRemoveActionType
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.TeamLog.MemberRemoveActionType.Delete
+  - Dropbox.Api.TeamLog.MemberRemoveActionType.Leave
+  - Dropbox.Api.TeamLog.MemberRemoveActionType.Offboard
+  - Dropbox.Api.TeamLog.MemberRemoveActionType.OffboardAndRetainTeamFolders
+  - Dropbox.Api.TeamLog.MemberRemoveActionType.Other
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.MemberRemoveActionType.#ctor
+  commentId: M:Dropbox.Api.TeamLog.MemberRemoveActionType.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.MemberRemoveActionType
+  langs:
+  - csharp
+  - vb
+  name: MemberRemoveActionType()
+  nameWithType: MemberRemoveActionType.MemberRemoveActionType()
+  fullName: Dropbox.Api.TeamLog.MemberRemoveActionType.MemberRemoveActionType()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberRemoveActionType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberRemoveActionType.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.MemberRemoveActionType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public MemberRemoveActionType()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.MemberRemoveActionType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.MemberRemoveActionType.IsDelete
+  commentId: P:Dropbox.Api.TeamLog.MemberRemoveActionType.IsDelete
+  id: IsDelete
+  parent: Dropbox.Api.TeamLog.MemberRemoveActionType
+  langs:
+  - csharp
+  - vb
+  name: IsDelete
+  nameWithType: MemberRemoveActionType.IsDelete
+  fullName: Dropbox.Api.TeamLog.MemberRemoveActionType.IsDelete
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberRemoveActionType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsDelete
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberRemoveActionType.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Delete</p>\n"
+  example: []
+  syntax:
+    content: public bool IsDelete { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsDelete As Boolean
+  overload: Dropbox.Api.TeamLog.MemberRemoveActionType.IsDelete*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.MemberRemoveActionType.AsDelete
+  commentId: P:Dropbox.Api.TeamLog.MemberRemoveActionType.AsDelete
+  id: AsDelete
+  parent: Dropbox.Api.TeamLog.MemberRemoveActionType
+  langs:
+  - csharp
+  - vb
+  name: AsDelete
+  nameWithType: MemberRemoveActionType.AsDelete
+  fullName: Dropbox.Api.TeamLog.MemberRemoveActionType.AsDelete
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberRemoveActionType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsDelete
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberRemoveActionType.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Delete, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MemberRemoveActionType.Delete AsDelete { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.MemberRemoveActionType.Delete
+    content.vb: Public ReadOnly Property AsDelete As MemberRemoveActionType.Delete
+  overload: Dropbox.Api.TeamLog.MemberRemoveActionType.AsDelete*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.MemberRemoveActionType.IsLeave
+  commentId: P:Dropbox.Api.TeamLog.MemberRemoveActionType.IsLeave
+  id: IsLeave
+  parent: Dropbox.Api.TeamLog.MemberRemoveActionType
+  langs:
+  - csharp
+  - vb
+  name: IsLeave
+  nameWithType: MemberRemoveActionType.IsLeave
+  fullName: Dropbox.Api.TeamLog.MemberRemoveActionType.IsLeave
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberRemoveActionType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsLeave
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberRemoveActionType.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Leave</p>\n"
+  example: []
+  syntax:
+    content: public bool IsLeave { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsLeave As Boolean
+  overload: Dropbox.Api.TeamLog.MemberRemoveActionType.IsLeave*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.MemberRemoveActionType.AsLeave
+  commentId: P:Dropbox.Api.TeamLog.MemberRemoveActionType.AsLeave
+  id: AsLeave
+  parent: Dropbox.Api.TeamLog.MemberRemoveActionType
+  langs:
+  - csharp
+  - vb
+  name: AsLeave
+  nameWithType: MemberRemoveActionType.AsLeave
+  fullName: Dropbox.Api.TeamLog.MemberRemoveActionType.AsLeave
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberRemoveActionType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsLeave
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberRemoveActionType.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Leave, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MemberRemoveActionType.Leave AsLeave { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.MemberRemoveActionType.Leave
+    content.vb: Public ReadOnly Property AsLeave As MemberRemoveActionType.Leave
+  overload: Dropbox.Api.TeamLog.MemberRemoveActionType.AsLeave*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.MemberRemoveActionType.IsOffboard
+  commentId: P:Dropbox.Api.TeamLog.MemberRemoveActionType.IsOffboard
+  id: IsOffboard
+  parent: Dropbox.Api.TeamLog.MemberRemoveActionType
+  langs:
+  - csharp
+  - vb
+  name: IsOffboard
+  nameWithType: MemberRemoveActionType.IsOffboard
+  fullName: Dropbox.Api.TeamLog.MemberRemoveActionType.IsOffboard
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberRemoveActionType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOffboard
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberRemoveActionType.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Offboard</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOffboard { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOffboard As Boolean
+  overload: Dropbox.Api.TeamLog.MemberRemoveActionType.IsOffboard*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.MemberRemoveActionType.AsOffboard
+  commentId: P:Dropbox.Api.TeamLog.MemberRemoveActionType.AsOffboard
+  id: AsOffboard
+  parent: Dropbox.Api.TeamLog.MemberRemoveActionType
+  langs:
+  - csharp
+  - vb
+  name: AsOffboard
+  nameWithType: MemberRemoveActionType.AsOffboard
+  fullName: Dropbox.Api.TeamLog.MemberRemoveActionType.AsOffboard
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberRemoveActionType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOffboard
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberRemoveActionType.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Offboard, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MemberRemoveActionType.Offboard AsOffboard { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.MemberRemoveActionType.Offboard
+    content.vb: Public ReadOnly Property AsOffboard As MemberRemoveActionType.Offboard
+  overload: Dropbox.Api.TeamLog.MemberRemoveActionType.AsOffboard*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.MemberRemoveActionType.IsOffboardAndRetainTeamFolders
+  commentId: P:Dropbox.Api.TeamLog.MemberRemoveActionType.IsOffboardAndRetainTeamFolders
+  id: IsOffboardAndRetainTeamFolders
+  parent: Dropbox.Api.TeamLog.MemberRemoveActionType
+  langs:
+  - csharp
+  - vb
+  name: IsOffboardAndRetainTeamFolders
+  nameWithType: MemberRemoveActionType.IsOffboardAndRetainTeamFolders
+  fullName: Dropbox.Api.TeamLog.MemberRemoveActionType.IsOffboardAndRetainTeamFolders
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberRemoveActionType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOffboardAndRetainTeamFolders
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberRemoveActionType.cs
+    startLine: 107
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is\nOffboardAndRetainTeamFolders</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOffboardAndRetainTeamFolders { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOffboardAndRetainTeamFolders As Boolean
+  overload: Dropbox.Api.TeamLog.MemberRemoveActionType.IsOffboardAndRetainTeamFolders*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.MemberRemoveActionType.AsOffboardAndRetainTeamFolders
+  commentId: P:Dropbox.Api.TeamLog.MemberRemoveActionType.AsOffboardAndRetainTeamFolders
+  id: AsOffboardAndRetainTeamFolders
+  parent: Dropbox.Api.TeamLog.MemberRemoveActionType
+  langs:
+  - csharp
+  - vb
+  name: AsOffboardAndRetainTeamFolders
+  nameWithType: MemberRemoveActionType.AsOffboardAndRetainTeamFolders
+  fullName: Dropbox.Api.TeamLog.MemberRemoveActionType.AsOffboardAndRetainTeamFolders
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberRemoveActionType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOffboardAndRetainTeamFolders
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberRemoveActionType.cs
+    startLine: 118
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a OffboardAndRetainTeamFolders, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MemberRemoveActionType.OffboardAndRetainTeamFolders AsOffboardAndRetainTeamFolders { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.MemberRemoveActionType.OffboardAndRetainTeamFolders
+    content.vb: Public ReadOnly Property AsOffboardAndRetainTeamFolders As MemberRemoveActionType.OffboardAndRetainTeamFolders
+  overload: Dropbox.Api.TeamLog.MemberRemoveActionType.AsOffboardAndRetainTeamFolders*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.MemberRemoveActionType.IsOther
+  commentId: P:Dropbox.Api.TeamLog.MemberRemoveActionType.IsOther
+  id: IsOther
+  parent: Dropbox.Api.TeamLog.MemberRemoveActionType
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: MemberRemoveActionType.IsOther
+  fullName: Dropbox.Api.TeamLog.MemberRemoveActionType.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberRemoveActionType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberRemoveActionType.cs
+    startLine: 129
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.TeamLog.MemberRemoveActionType.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.MemberRemoveActionType.AsOther
+  commentId: P:Dropbox.Api.TeamLog.MemberRemoveActionType.AsOther
+  id: AsOther
+  parent: Dropbox.Api.TeamLog.MemberRemoveActionType
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: MemberRemoveActionType.AsOther
+  fullName: Dropbox.Api.TeamLog.MemberRemoveActionType.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberRemoveActionType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberRemoveActionType.cs
+    startLine: 140
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MemberRemoveActionType.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.MemberRemoveActionType.Other
+    content.vb: Public ReadOnly Property AsOther As MemberRemoveActionType.Other
+  overload: Dropbox.Api.TeamLog.MemberRemoveActionType.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.MemberRemoveActionType
+  commentId: T:Dropbox.Api.TeamLog.MemberRemoveActionType
+  parent: Dropbox.Api.TeamLog
+  name: MemberRemoveActionType
+  nameWithType: MemberRemoveActionType
+  fullName: Dropbox.Api.TeamLog.MemberRemoveActionType
+- uid: Dropbox.Api.TeamLog.MemberRemoveActionType.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberRemoveActionType.#ctor
+  name: MemberRemoveActionType
+  nameWithType: MemberRemoveActionType.MemberRemoveActionType
+  fullName: Dropbox.Api.TeamLog.MemberRemoveActionType.MemberRemoveActionType
+- uid: Dropbox.Api.TeamLog.MemberRemoveActionType.IsDelete*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberRemoveActionType.IsDelete
+  name: IsDelete
+  nameWithType: MemberRemoveActionType.IsDelete
+  fullName: Dropbox.Api.TeamLog.MemberRemoveActionType.IsDelete
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.TeamLog.MemberRemoveActionType.AsDelete*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberRemoveActionType.AsDelete
+  name: AsDelete
+  nameWithType: MemberRemoveActionType.AsDelete
+  fullName: Dropbox.Api.TeamLog.MemberRemoveActionType.AsDelete
+- uid: Dropbox.Api.TeamLog.MemberRemoveActionType.Delete
+  commentId: T:Dropbox.Api.TeamLog.MemberRemoveActionType.Delete
+  parent: Dropbox.Api.TeamLog
+  name: MemberRemoveActionType.Delete
+  nameWithType: MemberRemoveActionType.Delete
+  fullName: Dropbox.Api.TeamLog.MemberRemoveActionType.Delete
+- uid: Dropbox.Api.TeamLog.MemberRemoveActionType.IsLeave*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberRemoveActionType.IsLeave
+  name: IsLeave
+  nameWithType: MemberRemoveActionType.IsLeave
+  fullName: Dropbox.Api.TeamLog.MemberRemoveActionType.IsLeave
+- uid: Dropbox.Api.TeamLog.MemberRemoveActionType.AsLeave*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberRemoveActionType.AsLeave
+  name: AsLeave
+  nameWithType: MemberRemoveActionType.AsLeave
+  fullName: Dropbox.Api.TeamLog.MemberRemoveActionType.AsLeave
+- uid: Dropbox.Api.TeamLog.MemberRemoveActionType.Leave
+  commentId: T:Dropbox.Api.TeamLog.MemberRemoveActionType.Leave
+  parent: Dropbox.Api.TeamLog
+  name: MemberRemoveActionType.Leave
+  nameWithType: MemberRemoveActionType.Leave
+  fullName: Dropbox.Api.TeamLog.MemberRemoveActionType.Leave
+- uid: Dropbox.Api.TeamLog.MemberRemoveActionType.IsOffboard*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberRemoveActionType.IsOffboard
+  name: IsOffboard
+  nameWithType: MemberRemoveActionType.IsOffboard
+  fullName: Dropbox.Api.TeamLog.MemberRemoveActionType.IsOffboard
+- uid: Dropbox.Api.TeamLog.MemberRemoveActionType.AsOffboard*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberRemoveActionType.AsOffboard
+  name: AsOffboard
+  nameWithType: MemberRemoveActionType.AsOffboard
+  fullName: Dropbox.Api.TeamLog.MemberRemoveActionType.AsOffboard
+- uid: Dropbox.Api.TeamLog.MemberRemoveActionType.Offboard
+  commentId: T:Dropbox.Api.TeamLog.MemberRemoveActionType.Offboard
+  parent: Dropbox.Api.TeamLog
+  name: MemberRemoveActionType.Offboard
+  nameWithType: MemberRemoveActionType.Offboard
+  fullName: Dropbox.Api.TeamLog.MemberRemoveActionType.Offboard
+- uid: Dropbox.Api.TeamLog.MemberRemoveActionType.IsOffboardAndRetainTeamFolders*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberRemoveActionType.IsOffboardAndRetainTeamFolders
+  name: IsOffboardAndRetainTeamFolders
+  nameWithType: MemberRemoveActionType.IsOffboardAndRetainTeamFolders
+  fullName: Dropbox.Api.TeamLog.MemberRemoveActionType.IsOffboardAndRetainTeamFolders
+- uid: Dropbox.Api.TeamLog.MemberRemoveActionType.AsOffboardAndRetainTeamFolders*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberRemoveActionType.AsOffboardAndRetainTeamFolders
+  name: AsOffboardAndRetainTeamFolders
+  nameWithType: MemberRemoveActionType.AsOffboardAndRetainTeamFolders
+  fullName: Dropbox.Api.TeamLog.MemberRemoveActionType.AsOffboardAndRetainTeamFolders
+- uid: Dropbox.Api.TeamLog.MemberRemoveActionType.OffboardAndRetainTeamFolders
+  commentId: T:Dropbox.Api.TeamLog.MemberRemoveActionType.OffboardAndRetainTeamFolders
+  parent: Dropbox.Api.TeamLog
+  name: MemberRemoveActionType.OffboardAndRetainTeamFolders
+  nameWithType: MemberRemoveActionType.OffboardAndRetainTeamFolders
+  fullName: Dropbox.Api.TeamLog.MemberRemoveActionType.OffboardAndRetainTeamFolders
+- uid: Dropbox.Api.TeamLog.MemberRemoveActionType.IsOther*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberRemoveActionType.IsOther
+  name: IsOther
+  nameWithType: MemberRemoveActionType.IsOther
+  fullName: Dropbox.Api.TeamLog.MemberRemoveActionType.IsOther
+- uid: Dropbox.Api.TeamLog.MemberRemoveActionType.AsOther*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberRemoveActionType.AsOther
+  name: AsOther
+  nameWithType: MemberRemoveActionType.AsOther
+  fullName: Dropbox.Api.TeamLog.MemberRemoveActionType.AsOther
+- uid: Dropbox.Api.TeamLog.MemberRemoveActionType.Other
+  commentId: T:Dropbox.Api.TeamLog.MemberRemoveActionType.Other
+  parent: Dropbox.Api.TeamLog
+  name: MemberRemoveActionType.Other
+  nameWithType: MemberRemoveActionType.Other
+  fullName: Dropbox.Api.TeamLog.MemberRemoveActionType.Other
+shouldSkipMarkup: true

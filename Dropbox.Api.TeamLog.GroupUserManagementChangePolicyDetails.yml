@@ -1,0 +1,244 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.GroupUserManagementChangePolicyDetails
+  commentId: T:Dropbox.Api.TeamLog.GroupUserManagementChangePolicyDetails
+  id: GroupUserManagementChangePolicyDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.GroupUserManagementChangePolicyDetails.#ctor
+  - Dropbox.Api.TeamLog.GroupUserManagementChangePolicyDetails.#ctor(Dropbox.Api.TeamPolicies.GroupCreation,Dropbox.Api.TeamPolicies.GroupCreation)
+  - Dropbox.Api.TeamLog.GroupUserManagementChangePolicyDetails.NewValue
+  - Dropbox.Api.TeamLog.GroupUserManagementChangePolicyDetails.PreviousValue
+  langs:
+  - csharp
+  - vb
+  name: GroupUserManagementChangePolicyDetails
+  nameWithType: GroupUserManagementChangePolicyDetails
+  fullName: Dropbox.Api.TeamLog.GroupUserManagementChangePolicyDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupUserManagementChangePolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GroupUserManagementChangePolicyDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupUserManagementChangePolicyDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Changed who can create groups.</p>\n"
+  example: []
+  syntax:
+    content: 'public class GroupUserManagementChangePolicyDetails : object'
+    content.vb: >-
+      Public Class GroupUserManagementChangePolicyDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.GroupUserManagementChangePolicyDetails.#ctor(Dropbox.Api.TeamPolicies.GroupCreation,Dropbox.Api.TeamPolicies.GroupCreation)
+  commentId: M:Dropbox.Api.TeamLog.GroupUserManagementChangePolicyDetails.#ctor(Dropbox.Api.TeamPolicies.GroupCreation,Dropbox.Api.TeamPolicies.GroupCreation)
+  id: '#ctor(Dropbox.Api.TeamPolicies.GroupCreation,Dropbox.Api.TeamPolicies.GroupCreation)'
+  parent: Dropbox.Api.TeamLog.GroupUserManagementChangePolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: GroupUserManagementChangePolicyDetails(GroupCreation, GroupCreation)
+  nameWithType: GroupUserManagementChangePolicyDetails.GroupUserManagementChangePolicyDetails(GroupCreation, GroupCreation)
+  fullName: Dropbox.Api.TeamLog.GroupUserManagementChangePolicyDetails.GroupUserManagementChangePolicyDetails(Dropbox.Api.TeamPolicies.GroupCreation, Dropbox.Api.TeamPolicies.GroupCreation)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupUserManagementChangePolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupUserManagementChangePolicyDetails.cs
+    startLine: 36
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.GroupUserManagementChangePolicyDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public GroupUserManagementChangePolicyDetails(GroupCreation newValue, GroupCreation previousValue = null)
+    parameters:
+    - id: newValue
+      type: Dropbox.Api.TeamPolicies.GroupCreation
+      description: New group users management policy.
+    - id: previousValue
+      type: Dropbox.Api.TeamPolicies.GroupCreation
+      description: >-
+        Previous group users management policy. Might be
+
+        missing due to historical data gap.
+    content.vb: Public Sub New(newValue As GroupCreation, previousValue As GroupCreation = Nothing)
+  overload: Dropbox.Api.TeamLog.GroupUserManagementChangePolicyDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.GroupUserManagementChangePolicyDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.GroupUserManagementChangePolicyDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.GroupUserManagementChangePolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: GroupUserManagementChangePolicyDetails()
+  nameWithType: GroupUserManagementChangePolicyDetails.GroupUserManagementChangePolicyDetails()
+  fullName: Dropbox.Api.TeamLog.GroupUserManagementChangePolicyDetails.GroupUserManagementChangePolicyDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupUserManagementChangePolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupUserManagementChangePolicyDetails.cs
+    startLine: 54
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.GroupUserManagementChangePolicyDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public GroupUserManagementChangePolicyDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.GroupUserManagementChangePolicyDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.GroupUserManagementChangePolicyDetails.NewValue
+  commentId: P:Dropbox.Api.TeamLog.GroupUserManagementChangePolicyDetails.NewValue
+  id: NewValue
+  parent: Dropbox.Api.TeamLog.GroupUserManagementChangePolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: NewValue
+  nameWithType: GroupUserManagementChangePolicyDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.GroupUserManagementChangePolicyDetails.NewValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupUserManagementChangePolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NewValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupUserManagementChangePolicyDetails.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>New group users management policy.</p>\n"
+  example: []
+  syntax:
+    content: public GroupCreation NewValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamPolicies.GroupCreation
+    content.vb: Public Property NewValue As GroupCreation
+  overload: Dropbox.Api.TeamLog.GroupUserManagementChangePolicyDetails.NewValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.GroupUserManagementChangePolicyDetails.PreviousValue
+  commentId: P:Dropbox.Api.TeamLog.GroupUserManagementChangePolicyDetails.PreviousValue
+  id: PreviousValue
+  parent: Dropbox.Api.TeamLog.GroupUserManagementChangePolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: PreviousValue
+  nameWithType: GroupUserManagementChangePolicyDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.GroupUserManagementChangePolicyDetails.PreviousValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupUserManagementChangePolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PreviousValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupUserManagementChangePolicyDetails.cs
+    startLine: 68
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Previous group users management policy. Might be missing due to historical\ndata gap.</p>\n"
+  example: []
+  syntax:
+    content: public GroupCreation PreviousValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamPolicies.GroupCreation
+    content.vb: Public Property PreviousValue As GroupCreation
+  overload: Dropbox.Api.TeamLog.GroupUserManagementChangePolicyDetails.PreviousValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.GroupUserManagementChangePolicyDetails
+  commentId: T:Dropbox.Api.TeamLog.GroupUserManagementChangePolicyDetails
+  parent: Dropbox.Api.TeamLog
+  name: GroupUserManagementChangePolicyDetails
+  nameWithType: GroupUserManagementChangePolicyDetails
+  fullName: Dropbox.Api.TeamLog.GroupUserManagementChangePolicyDetails
+- uid: Dropbox.Api.TeamLog.GroupUserManagementChangePolicyDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.GroupUserManagementChangePolicyDetails.#ctor
+  name: GroupUserManagementChangePolicyDetails
+  nameWithType: GroupUserManagementChangePolicyDetails.GroupUserManagementChangePolicyDetails
+  fullName: Dropbox.Api.TeamLog.GroupUserManagementChangePolicyDetails.GroupUserManagementChangePolicyDetails
+- uid: Dropbox.Api.TeamPolicies.GroupCreation
+  commentId: T:Dropbox.Api.TeamPolicies.GroupCreation
+  parent: Dropbox.Api.TeamPolicies
+  name: GroupCreation
+  nameWithType: GroupCreation
+  fullName: Dropbox.Api.TeamPolicies.GroupCreation
+- uid: Dropbox.Api.TeamPolicies
+  commentId: N:Dropbox.Api.TeamPolicies
+  name: Dropbox.Api.TeamPolicies
+  nameWithType: Dropbox.Api.TeamPolicies
+  fullName: Dropbox.Api.TeamPolicies
+- uid: Dropbox.Api.TeamLog.GroupUserManagementChangePolicyDetails.NewValue*
+  commentId: Overload:Dropbox.Api.TeamLog.GroupUserManagementChangePolicyDetails.NewValue
+  name: NewValue
+  nameWithType: GroupUserManagementChangePolicyDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.GroupUserManagementChangePolicyDetails.NewValue
+- uid: Dropbox.Api.TeamLog.GroupUserManagementChangePolicyDetails.PreviousValue*
+  commentId: Overload:Dropbox.Api.TeamLog.GroupUserManagementChangePolicyDetails.PreviousValue
+  name: PreviousValue
+  nameWithType: GroupUserManagementChangePolicyDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.GroupUserManagementChangePolicyDetails.PreviousValue
+shouldSkipMarkup: true

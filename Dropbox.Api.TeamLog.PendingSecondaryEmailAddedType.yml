@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.PendingSecondaryEmailAddedType
+  commentId: T:Dropbox.Api.TeamLog.PendingSecondaryEmailAddedType
+  id: PendingSecondaryEmailAddedType
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.PendingSecondaryEmailAddedType.#ctor
+  - Dropbox.Api.TeamLog.PendingSecondaryEmailAddedType.#ctor(System.String)
+  - Dropbox.Api.TeamLog.PendingSecondaryEmailAddedType.Description
+  langs:
+  - csharp
+  - vb
+  name: PendingSecondaryEmailAddedType
+  nameWithType: PendingSecondaryEmailAddedType
+  fullName: Dropbox.Api.TeamLog.PendingSecondaryEmailAddedType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PendingSecondaryEmailAddedType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PendingSecondaryEmailAddedType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PendingSecondaryEmailAddedType.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The pending secondary email added type object</p>\n"
+  example: []
+  syntax:
+    content: 'public class PendingSecondaryEmailAddedType : object'
+    content.vb: >-
+      Public Class PendingSecondaryEmailAddedType
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.PendingSecondaryEmailAddedType.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.PendingSecondaryEmailAddedType.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.PendingSecondaryEmailAddedType
+  langs:
+  - csharp
+  - vb
+  name: PendingSecondaryEmailAddedType(String)
+  nameWithType: PendingSecondaryEmailAddedType.PendingSecondaryEmailAddedType(String)
+  fullName: Dropbox.Api.TeamLog.PendingSecondaryEmailAddedType.PendingSecondaryEmailAddedType(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PendingSecondaryEmailAddedType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PendingSecondaryEmailAddedType.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.PendingSecondaryEmailAddedType\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public PendingSecondaryEmailAddedType(string description)
+    parameters:
+    - id: description
+      type: System.String
+      description: The description
+    content.vb: Public Sub New(description As String)
+  overload: Dropbox.Api.TeamLog.PendingSecondaryEmailAddedType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.PendingSecondaryEmailAddedType.#ctor
+  commentId: M:Dropbox.Api.TeamLog.PendingSecondaryEmailAddedType.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.PendingSecondaryEmailAddedType
+  langs:
+  - csharp
+  - vb
+  name: PendingSecondaryEmailAddedType()
+  nameWithType: PendingSecondaryEmailAddedType.PendingSecondaryEmailAddedType()
+  fullName: Dropbox.Api.TeamLog.PendingSecondaryEmailAddedType.PendingSecondaryEmailAddedType()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PendingSecondaryEmailAddedType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PendingSecondaryEmailAddedType.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.PendingSecondaryEmailAddedType\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public PendingSecondaryEmailAddedType()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.PendingSecondaryEmailAddedType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.PendingSecondaryEmailAddedType.Description
+  commentId: P:Dropbox.Api.TeamLog.PendingSecondaryEmailAddedType.Description
+  id: Description
+  parent: Dropbox.Api.TeamLog.PendingSecondaryEmailAddedType
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: PendingSecondaryEmailAddedType.Description
+  fullName: Dropbox.Api.TeamLog.PendingSecondaryEmailAddedType.Description
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PendingSecondaryEmailAddedType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Description
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PendingSecondaryEmailAddedType.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets the description of the pending secondary email added type</p>\n"
+  example: []
+  syntax:
+    content: public string Description { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Dropbox.Api.TeamLog.PendingSecondaryEmailAddedType.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.PendingSecondaryEmailAddedType
+  commentId: T:Dropbox.Api.TeamLog.PendingSecondaryEmailAddedType
+  parent: Dropbox.Api.TeamLog
+  name: PendingSecondaryEmailAddedType
+  nameWithType: PendingSecondaryEmailAddedType
+  fullName: Dropbox.Api.TeamLog.PendingSecondaryEmailAddedType
+- uid: Dropbox.Api.TeamLog.PendingSecondaryEmailAddedType.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.PendingSecondaryEmailAddedType.#ctor
+  name: PendingSecondaryEmailAddedType
+  nameWithType: PendingSecondaryEmailAddedType.PendingSecondaryEmailAddedType
+  fullName: Dropbox.Api.TeamLog.PendingSecondaryEmailAddedType.PendingSecondaryEmailAddedType
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.PendingSecondaryEmailAddedType.Description*
+  commentId: Overload:Dropbox.Api.TeamLog.PendingSecondaryEmailAddedType.Description
+  name: Description
+  nameWithType: PendingSecondaryEmailAddedType.Description
+  fullName: Dropbox.Api.TeamLog.PendingSecondaryEmailAddedType.Description
+shouldSkipMarkup: true

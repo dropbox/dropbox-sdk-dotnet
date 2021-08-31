@@ -1,0 +1,235 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.CreateTeamInviteLinkDetails
+  commentId: T:Dropbox.Api.TeamLog.CreateTeamInviteLinkDetails
+  id: CreateTeamInviteLinkDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.CreateTeamInviteLinkDetails.#ctor
+  - Dropbox.Api.TeamLog.CreateTeamInviteLinkDetails.#ctor(System.String,System.String)
+  - Dropbox.Api.TeamLog.CreateTeamInviteLinkDetails.ExpiryDate
+  - Dropbox.Api.TeamLog.CreateTeamInviteLinkDetails.LinkUrl
+  langs:
+  - csharp
+  - vb
+  name: CreateTeamInviteLinkDetails
+  nameWithType: CreateTeamInviteLinkDetails
+  fullName: Dropbox.Api.TeamLog.CreateTeamInviteLinkDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/CreateTeamInviteLinkDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: CreateTeamInviteLinkDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/CreateTeamInviteLinkDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Created team invite link.</p>\n"
+  example: []
+  syntax:
+    content: 'public class CreateTeamInviteLinkDetails : object'
+    content.vb: >-
+      Public Class CreateTeamInviteLinkDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.CreateTeamInviteLinkDetails.#ctor(System.String,System.String)
+  commentId: M:Dropbox.Api.TeamLog.CreateTeamInviteLinkDetails.#ctor(System.String,System.String)
+  id: '#ctor(System.String,System.String)'
+  parent: Dropbox.Api.TeamLog.CreateTeamInviteLinkDetails
+  langs:
+  - csharp
+  - vb
+  name: CreateTeamInviteLinkDetails(String, String)
+  nameWithType: CreateTeamInviteLinkDetails.CreateTeamInviteLinkDetails(String, String)
+  fullName: Dropbox.Api.TeamLog.CreateTeamInviteLinkDetails.CreateTeamInviteLinkDetails(System.String, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/CreateTeamInviteLinkDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/CreateTeamInviteLinkDetails.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.CreateTeamInviteLinkDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public CreateTeamInviteLinkDetails(string linkUrl, string expiryDate)
+    parameters:
+    - id: linkUrl
+      type: System.String
+      description: The invite link url that was created.
+    - id: expiryDate
+      type: System.String
+      description: The expiration date of the invite link.
+    content.vb: Public Sub New(linkUrl As String, expiryDate As String)
+  overload: Dropbox.Api.TeamLog.CreateTeamInviteLinkDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.CreateTeamInviteLinkDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.CreateTeamInviteLinkDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.CreateTeamInviteLinkDetails
+  langs:
+  - csharp
+  - vb
+  name: CreateTeamInviteLinkDetails()
+  nameWithType: CreateTeamInviteLinkDetails.CreateTeamInviteLinkDetails()
+  fullName: Dropbox.Api.TeamLog.CreateTeamInviteLinkDetails.CreateTeamInviteLinkDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/CreateTeamInviteLinkDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/CreateTeamInviteLinkDetails.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.CreateTeamInviteLinkDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public CreateTeamInviteLinkDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.CreateTeamInviteLinkDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.CreateTeamInviteLinkDetails.LinkUrl
+  commentId: P:Dropbox.Api.TeamLog.CreateTeamInviteLinkDetails.LinkUrl
+  id: LinkUrl
+  parent: Dropbox.Api.TeamLog.CreateTeamInviteLinkDetails
+  langs:
+  - csharp
+  - vb
+  name: LinkUrl
+  nameWithType: CreateTeamInviteLinkDetails.LinkUrl
+  fullName: Dropbox.Api.TeamLog.CreateTeamInviteLinkDetails.LinkUrl
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/CreateTeamInviteLinkDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: LinkUrl
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/CreateTeamInviteLinkDetails.cs
+    startLine: 66
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The invite link url that was created.</p>\n"
+  example: []
+  syntax:
+    content: public string LinkUrl { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property LinkUrl As String
+  overload: Dropbox.Api.TeamLog.CreateTeamInviteLinkDetails.LinkUrl*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.CreateTeamInviteLinkDetails.ExpiryDate
+  commentId: P:Dropbox.Api.TeamLog.CreateTeamInviteLinkDetails.ExpiryDate
+  id: ExpiryDate
+  parent: Dropbox.Api.TeamLog.CreateTeamInviteLinkDetails
+  langs:
+  - csharp
+  - vb
+  name: ExpiryDate
+  nameWithType: CreateTeamInviteLinkDetails.ExpiryDate
+  fullName: Dropbox.Api.TeamLog.CreateTeamInviteLinkDetails.ExpiryDate
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/CreateTeamInviteLinkDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ExpiryDate
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/CreateTeamInviteLinkDetails.cs
+    startLine: 71
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The expiration date of the invite link.</p>\n"
+  example: []
+  syntax:
+    content: public string ExpiryDate { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ExpiryDate As String
+  overload: Dropbox.Api.TeamLog.CreateTeamInviteLinkDetails.ExpiryDate*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.CreateTeamInviteLinkDetails
+  commentId: T:Dropbox.Api.TeamLog.CreateTeamInviteLinkDetails
+  parent: Dropbox.Api.TeamLog
+  name: CreateTeamInviteLinkDetails
+  nameWithType: CreateTeamInviteLinkDetails
+  fullName: Dropbox.Api.TeamLog.CreateTeamInviteLinkDetails
+- uid: Dropbox.Api.TeamLog.CreateTeamInviteLinkDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.CreateTeamInviteLinkDetails.#ctor
+  name: CreateTeamInviteLinkDetails
+  nameWithType: CreateTeamInviteLinkDetails.CreateTeamInviteLinkDetails
+  fullName: Dropbox.Api.TeamLog.CreateTeamInviteLinkDetails.CreateTeamInviteLinkDetails
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.CreateTeamInviteLinkDetails.LinkUrl*
+  commentId: Overload:Dropbox.Api.TeamLog.CreateTeamInviteLinkDetails.LinkUrl
+  name: LinkUrl
+  nameWithType: CreateTeamInviteLinkDetails.LinkUrl
+  fullName: Dropbox.Api.TeamLog.CreateTeamInviteLinkDetails.LinkUrl
+- uid: Dropbox.Api.TeamLog.CreateTeamInviteLinkDetails.ExpiryDate*
+  commentId: Overload:Dropbox.Api.TeamLog.CreateTeamInviteLinkDetails.ExpiryDate
+  name: ExpiryDate
+  nameWithType: CreateTeamInviteLinkDetails.ExpiryDate
+  fullName: Dropbox.Api.TeamLog.CreateTeamInviteLinkDetails.ExpiryDate
+shouldSkipMarkup: true

@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.GroupsListArg
+  commentId: T:Dropbox.Api.Team.GroupsListArg
+  id: GroupsListArg
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.GroupsListArg.#ctor
+  - Dropbox.Api.Team.GroupsListArg.#ctor(System.UInt32)
+  - Dropbox.Api.Team.GroupsListArg.Limit
+  langs:
+  - csharp
+  - vb
+  name: GroupsListArg
+  nameWithType: GroupsListArg
+  fullName: Dropbox.Api.Team.GroupsListArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsListArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GroupsListArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsListArg.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The groups list arg object</p>\n"
+  example: []
+  syntax:
+    content: 'public class GroupsListArg : object'
+    content.vb: >-
+      Public Class GroupsListArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.GroupsListArg.#ctor(System.UInt32)
+  commentId: M:Dropbox.Api.Team.GroupsListArg.#ctor(System.UInt32)
+  id: '#ctor(System.UInt32)'
+  parent: Dropbox.Api.Team.GroupsListArg
+  langs:
+  - csharp
+  - vb
+  name: GroupsListArg(UInt32)
+  nameWithType: GroupsListArg.GroupsListArg(UInt32)
+  fullName: Dropbox.Api.Team.GroupsListArg.GroupsListArg(System.UInt32)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsListArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsListArg.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.GroupsListArg\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public GroupsListArg(uint limit = null)
+    parameters:
+    - id: limit
+      type: System.UInt32
+      description: Number of results to return per call.
+    content.vb: Public Sub New(limit As UInteger = Nothing)
+  overload: Dropbox.Api.Team.GroupsListArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.GroupsListArg.#ctor
+  commentId: M:Dropbox.Api.Team.GroupsListArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.GroupsListArg
+  langs:
+  - csharp
+  - vb
+  name: GroupsListArg()
+  nameWithType: GroupsListArg.GroupsListArg()
+  fullName: Dropbox.Api.Team.GroupsListArg.GroupsListArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsListArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsListArg.cs
+    startLine: 52
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.GroupsListArg\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public GroupsListArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.GroupsListArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.GroupsListArg.Limit
+  commentId: P:Dropbox.Api.Team.GroupsListArg.Limit
+  id: Limit
+  parent: Dropbox.Api.Team.GroupsListArg
+  langs:
+  - csharp
+  - vb
+  name: Limit
+  nameWithType: GroupsListArg.Limit
+  fullName: Dropbox.Api.Team.GroupsListArg.Limit
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsListArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Limit
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsListArg.cs
+    startLine: 61
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Number of results to return per call.</p>\n"
+  example: []
+  syntax:
+    content: public uint Limit { get; protected set; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public Property Limit As UInteger
+  overload: Dropbox.Api.Team.GroupsListArg.Limit*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.GroupsListArg
+  commentId: T:Dropbox.Api.Team.GroupsListArg
+  parent: Dropbox.Api.Team
+  name: GroupsListArg
+  nameWithType: GroupsListArg
+  fullName: Dropbox.Api.Team.GroupsListArg
+- uid: Dropbox.Api.Team.GroupsListArg.#ctor*
+  commentId: Overload:Dropbox.Api.Team.GroupsListArg.#ctor
+  name: GroupsListArg
+  nameWithType: GroupsListArg.GroupsListArg
+  fullName: Dropbox.Api.Team.GroupsListArg.GroupsListArg
+- uid: System.UInt32
+  isExternal: true
+  name: UInt32
+  nameWithType: UInt32
+  fullName: System.UInt32
+- uid: Dropbox.Api.Team.GroupsListArg.Limit*
+  commentId: Overload:Dropbox.Api.Team.GroupsListArg.Limit
+  name: Limit
+  nameWithType: GroupsListArg.Limit
+  fullName: Dropbox.Api.Team.GroupsListArg.Limit
+shouldSkipMarkup: true

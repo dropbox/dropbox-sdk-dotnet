@@ -1,0 +1,301 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.RemoveFolderMemberArg
+  commentId: T:Dropbox.Api.Sharing.RemoveFolderMemberArg
+  id: RemoveFolderMemberArg
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.RemoveFolderMemberArg.#ctor
+  - Dropbox.Api.Sharing.RemoveFolderMemberArg.#ctor(System.String,Dropbox.Api.Sharing.MemberSelector,System.Boolean)
+  - Dropbox.Api.Sharing.RemoveFolderMemberArg.LeaveACopy
+  - Dropbox.Api.Sharing.RemoveFolderMemberArg.Member
+  - Dropbox.Api.Sharing.RemoveFolderMemberArg.SharedFolderId
+  langs:
+  - csharp
+  - vb
+  name: RemoveFolderMemberArg
+  nameWithType: RemoveFolderMemberArg
+  fullName: Dropbox.Api.Sharing.RemoveFolderMemberArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RemoveFolderMemberArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: RemoveFolderMemberArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RemoveFolderMemberArg.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The remove folder member arg object</p>\n"
+  example: []
+  syntax:
+    content: 'public class RemoveFolderMemberArg : object'
+    content.vb: >-
+      Public Class RemoveFolderMemberArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Sharing.RemoveFolderMemberArg.#ctor(System.String,Dropbox.Api.Sharing.MemberSelector,System.Boolean)
+  commentId: M:Dropbox.Api.Sharing.RemoveFolderMemberArg.#ctor(System.String,Dropbox.Api.Sharing.MemberSelector,System.Boolean)
+  id: '#ctor(System.String,Dropbox.Api.Sharing.MemberSelector,System.Boolean)'
+  parent: Dropbox.Api.Sharing.RemoveFolderMemberArg
+  langs:
+  - csharp
+  - vb
+  name: RemoveFolderMemberArg(String, MemberSelector, Boolean)
+  nameWithType: RemoveFolderMemberArg.RemoveFolderMemberArg(String, MemberSelector, Boolean)
+  fullName: Dropbox.Api.Sharing.RemoveFolderMemberArg.RemoveFolderMemberArg(System.String, Dropbox.Api.Sharing.MemberSelector, System.Boolean)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RemoveFolderMemberArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RemoveFolderMemberArg.cs
+    startLine: 39
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.RemoveFolderMemberArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public RemoveFolderMemberArg(string sharedFolderId, MemberSelector member, bool leaveACopy)
+    parameters:
+    - id: sharedFolderId
+      type: System.String
+      description: The ID for the shared folder.
+    - id: member
+      type: Dropbox.Api.Sharing.MemberSelector
+      description: The member to remove from the folder.
+    - id: leaveACopy
+      type: System.Boolean
+      description: >-
+        If true, the removed user will keep their copy of the
+
+        folder after it&apos;s unshared, assuming it was mounted. Otherwise, it will be removed
+
+        from their Dropbox. This must be set to false when removing a group, or when the
+
+        folder is within a team folder or another shared folder.
+    content.vb: Public Sub New(sharedFolderId As String, member As MemberSelector, leaveACopy As Boolean)
+  overload: Dropbox.Api.Sharing.RemoveFolderMemberArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.RemoveFolderMemberArg.#ctor
+  commentId: M:Dropbox.Api.Sharing.RemoveFolderMemberArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Sharing.RemoveFolderMemberArg
+  langs:
+  - csharp
+  - vb
+  name: RemoveFolderMemberArg()
+  nameWithType: RemoveFolderMemberArg.RemoveFolderMemberArg()
+  fullName: Dropbox.Api.Sharing.RemoveFolderMemberArg.RemoveFolderMemberArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RemoveFolderMemberArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RemoveFolderMemberArg.cs
+    startLine: 68
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.RemoveFolderMemberArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public RemoveFolderMemberArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Sharing.RemoveFolderMemberArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.RemoveFolderMemberArg.SharedFolderId
+  commentId: P:Dropbox.Api.Sharing.RemoveFolderMemberArg.SharedFolderId
+  id: SharedFolderId
+  parent: Dropbox.Api.Sharing.RemoveFolderMemberArg
+  langs:
+  - csharp
+  - vb
+  name: SharedFolderId
+  nameWithType: RemoveFolderMemberArg.SharedFolderId
+  fullName: Dropbox.Api.Sharing.RemoveFolderMemberArg.SharedFolderId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RemoveFolderMemberArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SharedFolderId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RemoveFolderMemberArg.cs
+    startLine: 76
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The ID for the shared folder.</p>\n"
+  example: []
+  syntax:
+    content: public string SharedFolderId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SharedFolderId As String
+  overload: Dropbox.Api.Sharing.RemoveFolderMemberArg.SharedFolderId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.RemoveFolderMemberArg.Member
+  commentId: P:Dropbox.Api.Sharing.RemoveFolderMemberArg.Member
+  id: Member
+  parent: Dropbox.Api.Sharing.RemoveFolderMemberArg
+  langs:
+  - csharp
+  - vb
+  name: Member
+  nameWithType: RemoveFolderMemberArg.Member
+  fullName: Dropbox.Api.Sharing.RemoveFolderMemberArg.Member
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RemoveFolderMemberArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Member
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RemoveFolderMemberArg.cs
+    startLine: 81
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The member to remove from the folder.</p>\n"
+  example: []
+  syntax:
+    content: public MemberSelector Member { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.MemberSelector
+    content.vb: Public Property Member As MemberSelector
+  overload: Dropbox.Api.Sharing.RemoveFolderMemberArg.Member*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.RemoveFolderMemberArg.LeaveACopy
+  commentId: P:Dropbox.Api.Sharing.RemoveFolderMemberArg.LeaveACopy
+  id: LeaveACopy
+  parent: Dropbox.Api.Sharing.RemoveFolderMemberArg
+  langs:
+  - csharp
+  - vb
+  name: LeaveACopy
+  nameWithType: RemoveFolderMemberArg.LeaveACopy
+  fullName: Dropbox.Api.Sharing.RemoveFolderMemberArg.LeaveACopy
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RemoveFolderMemberArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: LeaveACopy
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RemoveFolderMemberArg.cs
+    startLine: 89
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>If true, the removed user will keep their copy of the folder after it&apos;s\nunshared, assuming it was mounted. Otherwise, it will be removed from their\nDropbox. This must be set to false when removing a group, or when the folder is\nwithin a team folder or another shared folder.</p>\n"
+  example: []
+  syntax:
+    content: public bool LeaveACopy { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property LeaveACopy As Boolean
+  overload: Dropbox.Api.Sharing.RemoveFolderMemberArg.LeaveACopy*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.RemoveFolderMemberArg
+  commentId: T:Dropbox.Api.Sharing.RemoveFolderMemberArg
+  parent: Dropbox.Api.Sharing
+  name: RemoveFolderMemberArg
+  nameWithType: RemoveFolderMemberArg
+  fullName: Dropbox.Api.Sharing.RemoveFolderMemberArg
+- uid: Dropbox.Api.Sharing.RemoveFolderMemberArg.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.RemoveFolderMemberArg.#ctor
+  name: RemoveFolderMemberArg
+  nameWithType: RemoveFolderMemberArg.RemoveFolderMemberArg
+  fullName: Dropbox.Api.Sharing.RemoveFolderMemberArg.RemoveFolderMemberArg
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Sharing.MemberSelector
+  commentId: T:Dropbox.Api.Sharing.MemberSelector
+  parent: Dropbox.Api.Sharing
+  name: MemberSelector
+  nameWithType: MemberSelector
+  fullName: Dropbox.Api.Sharing.MemberSelector
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Sharing.RemoveFolderMemberArg.SharedFolderId*
+  commentId: Overload:Dropbox.Api.Sharing.RemoveFolderMemberArg.SharedFolderId
+  name: SharedFolderId
+  nameWithType: RemoveFolderMemberArg.SharedFolderId
+  fullName: Dropbox.Api.Sharing.RemoveFolderMemberArg.SharedFolderId
+- uid: Dropbox.Api.Sharing.RemoveFolderMemberArg.Member*
+  commentId: Overload:Dropbox.Api.Sharing.RemoveFolderMemberArg.Member
+  name: Member
+  nameWithType: RemoveFolderMemberArg.Member
+  fullName: Dropbox.Api.Sharing.RemoveFolderMemberArg.Member
+- uid: Dropbox.Api.Sharing.RemoveFolderMemberArg.LeaveACopy*
+  commentId: Overload:Dropbox.Api.Sharing.RemoveFolderMemberArg.LeaveACopy
+  name: LeaveACopy
+  nameWithType: RemoveFolderMemberArg.LeaveACopy
+  fullName: Dropbox.Api.Sharing.RemoveFolderMemberArg.LeaveACopy
+shouldSkipMarkup: true

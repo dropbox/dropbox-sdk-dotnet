@@ -1,0 +1,384 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.GetFileMetadataError
+  commentId: T:Dropbox.Api.Sharing.GetFileMetadataError
+  id: GetFileMetadataError
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.GetFileMetadataError.#ctor
+  - Dropbox.Api.Sharing.GetFileMetadataError.AsAccessError
+  - Dropbox.Api.Sharing.GetFileMetadataError.AsOther
+  - Dropbox.Api.Sharing.GetFileMetadataError.AsUserError
+  - Dropbox.Api.Sharing.GetFileMetadataError.IsAccessError
+  - Dropbox.Api.Sharing.GetFileMetadataError.IsOther
+  - Dropbox.Api.Sharing.GetFileMetadataError.IsUserError
+  langs:
+  - csharp
+  - vb
+  name: GetFileMetadataError
+  nameWithType: GetFileMetadataError
+  fullName: Dropbox.Api.Sharing.GetFileMetadataError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetFileMetadataError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GetFileMetadataError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetFileMetadataError.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Error result for <xref href=\"Dropbox.Api.Sharing.Routes.SharingUserRoutes.GetFileMetadataAsync(Dropbox.Api.Sharing.GetFileMetadataArg)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+  example: []
+  syntax:
+    content: 'public class GetFileMetadataError : object'
+    content.vb: >-
+      Public Class GetFileMetadataError
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Sharing.GetFileMetadataError.AccessError
+  - Dropbox.Api.Sharing.GetFileMetadataError.Other
+  - Dropbox.Api.Sharing.GetFileMetadataError.UserError
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Sharing.GetFileMetadataError.#ctor
+  commentId: M:Dropbox.Api.Sharing.GetFileMetadataError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Sharing.GetFileMetadataError
+  langs:
+  - csharp
+  - vb
+  name: GetFileMetadataError()
+  nameWithType: GetFileMetadataError.GetFileMetadataError()
+  fullName: Dropbox.Api.Sharing.GetFileMetadataError.GetFileMetadataError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetFileMetadataError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetFileMetadataError.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.GetFileMetadataError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public GetFileMetadataError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Sharing.GetFileMetadataError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.GetFileMetadataError.IsUserError
+  commentId: P:Dropbox.Api.Sharing.GetFileMetadataError.IsUserError
+  id: IsUserError
+  parent: Dropbox.Api.Sharing.GetFileMetadataError
+  langs:
+  - csharp
+  - vb
+  name: IsUserError
+  nameWithType: GetFileMetadataError.IsUserError
+  fullName: Dropbox.Api.Sharing.GetFileMetadataError.IsUserError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetFileMetadataError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsUserError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetFileMetadataError.cs
+    startLine: 41
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is UserError</p>\n"
+  example: []
+  syntax:
+    content: public bool IsUserError { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsUserError As Boolean
+  overload: Dropbox.Api.Sharing.GetFileMetadataError.IsUserError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.GetFileMetadataError.AsUserError
+  commentId: P:Dropbox.Api.Sharing.GetFileMetadataError.AsUserError
+  id: AsUserError
+  parent: Dropbox.Api.Sharing.GetFileMetadataError
+  langs:
+  - csharp
+  - vb
+  name: AsUserError
+  nameWithType: GetFileMetadataError.AsUserError
+  fullName: Dropbox.Api.Sharing.GetFileMetadataError.AsUserError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetFileMetadataError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsUserError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetFileMetadataError.cs
+    startLine: 52
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a UserError, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public GetFileMetadataError.UserError AsUserError { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.GetFileMetadataError.UserError
+    content.vb: Public ReadOnly Property AsUserError As GetFileMetadataError.UserError
+  overload: Dropbox.Api.Sharing.GetFileMetadataError.AsUserError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.GetFileMetadataError.IsAccessError
+  commentId: P:Dropbox.Api.Sharing.GetFileMetadataError.IsAccessError
+  id: IsAccessError
+  parent: Dropbox.Api.Sharing.GetFileMetadataError
+  langs:
+  - csharp
+  - vb
+  name: IsAccessError
+  nameWithType: GetFileMetadataError.IsAccessError
+  fullName: Dropbox.Api.Sharing.GetFileMetadataError.IsAccessError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetFileMetadataError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsAccessError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetFileMetadataError.cs
+    startLine: 63
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is AccessError</p>\n"
+  example: []
+  syntax:
+    content: public bool IsAccessError { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsAccessError As Boolean
+  overload: Dropbox.Api.Sharing.GetFileMetadataError.IsAccessError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.GetFileMetadataError.AsAccessError
+  commentId: P:Dropbox.Api.Sharing.GetFileMetadataError.AsAccessError
+  id: AsAccessError
+  parent: Dropbox.Api.Sharing.GetFileMetadataError
+  langs:
+  - csharp
+  - vb
+  name: AsAccessError
+  nameWithType: GetFileMetadataError.AsAccessError
+  fullName: Dropbox.Api.Sharing.GetFileMetadataError.AsAccessError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetFileMetadataError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsAccessError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetFileMetadataError.cs
+    startLine: 74
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a AccessError, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public GetFileMetadataError.AccessError AsAccessError { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.GetFileMetadataError.AccessError
+    content.vb: Public ReadOnly Property AsAccessError As GetFileMetadataError.AccessError
+  overload: Dropbox.Api.Sharing.GetFileMetadataError.AsAccessError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.GetFileMetadataError.IsOther
+  commentId: P:Dropbox.Api.Sharing.GetFileMetadataError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Sharing.GetFileMetadataError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: GetFileMetadataError.IsOther
+  fullName: Dropbox.Api.Sharing.GetFileMetadataError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetFileMetadataError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetFileMetadataError.cs
+    startLine: 85
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Sharing.GetFileMetadataError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.GetFileMetadataError.AsOther
+  commentId: P:Dropbox.Api.Sharing.GetFileMetadataError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Sharing.GetFileMetadataError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: GetFileMetadataError.AsOther
+  fullName: Dropbox.Api.Sharing.GetFileMetadataError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetFileMetadataError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetFileMetadataError.cs
+    startLine: 96
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public GetFileMetadataError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.GetFileMetadataError.Other
+    content.vb: Public ReadOnly Property AsOther As GetFileMetadataError.Other
+  overload: Dropbox.Api.Sharing.GetFileMetadataError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Sharing.Routes.SharingUserRoutes.GetFileMetadataAsync(Dropbox.Api.Sharing.GetFileMetadataArg)
+  commentId: M:Dropbox.Api.Sharing.Routes.SharingUserRoutes.GetFileMetadataAsync(Dropbox.Api.Sharing.GetFileMetadataArg)
+  isExternal: true
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.GetFileMetadataError
+  commentId: T:Dropbox.Api.Sharing.GetFileMetadataError
+  parent: Dropbox.Api.Sharing
+  name: GetFileMetadataError
+  nameWithType: GetFileMetadataError
+  fullName: Dropbox.Api.Sharing.GetFileMetadataError
+- uid: Dropbox.Api.Sharing.GetFileMetadataError.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.GetFileMetadataError.#ctor
+  name: GetFileMetadataError
+  nameWithType: GetFileMetadataError.GetFileMetadataError
+  fullName: Dropbox.Api.Sharing.GetFileMetadataError.GetFileMetadataError
+- uid: Dropbox.Api.Sharing.GetFileMetadataError.IsUserError*
+  commentId: Overload:Dropbox.Api.Sharing.GetFileMetadataError.IsUserError
+  name: IsUserError
+  nameWithType: GetFileMetadataError.IsUserError
+  fullName: Dropbox.Api.Sharing.GetFileMetadataError.IsUserError
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Sharing.GetFileMetadataError.AsUserError*
+  commentId: Overload:Dropbox.Api.Sharing.GetFileMetadataError.AsUserError
+  name: AsUserError
+  nameWithType: GetFileMetadataError.AsUserError
+  fullName: Dropbox.Api.Sharing.GetFileMetadataError.AsUserError
+- uid: Dropbox.Api.Sharing.GetFileMetadataError.UserError
+  commentId: T:Dropbox.Api.Sharing.GetFileMetadataError.UserError
+  parent: Dropbox.Api.Sharing
+  name: GetFileMetadataError.UserError
+  nameWithType: GetFileMetadataError.UserError
+  fullName: Dropbox.Api.Sharing.GetFileMetadataError.UserError
+- uid: Dropbox.Api.Sharing.GetFileMetadataError.IsAccessError*
+  commentId: Overload:Dropbox.Api.Sharing.GetFileMetadataError.IsAccessError
+  name: IsAccessError
+  nameWithType: GetFileMetadataError.IsAccessError
+  fullName: Dropbox.Api.Sharing.GetFileMetadataError.IsAccessError
+- uid: Dropbox.Api.Sharing.GetFileMetadataError.AsAccessError*
+  commentId: Overload:Dropbox.Api.Sharing.GetFileMetadataError.AsAccessError
+  name: AsAccessError
+  nameWithType: GetFileMetadataError.AsAccessError
+  fullName: Dropbox.Api.Sharing.GetFileMetadataError.AsAccessError
+- uid: Dropbox.Api.Sharing.GetFileMetadataError.AccessError
+  commentId: T:Dropbox.Api.Sharing.GetFileMetadataError.AccessError
+  parent: Dropbox.Api.Sharing
+  name: GetFileMetadataError.AccessError
+  nameWithType: GetFileMetadataError.AccessError
+  fullName: Dropbox.Api.Sharing.GetFileMetadataError.AccessError
+- uid: Dropbox.Api.Sharing.GetFileMetadataError.IsOther*
+  commentId: Overload:Dropbox.Api.Sharing.GetFileMetadataError.IsOther
+  name: IsOther
+  nameWithType: GetFileMetadataError.IsOther
+  fullName: Dropbox.Api.Sharing.GetFileMetadataError.IsOther
+- uid: Dropbox.Api.Sharing.GetFileMetadataError.AsOther*
+  commentId: Overload:Dropbox.Api.Sharing.GetFileMetadataError.AsOther
+  name: AsOther
+  nameWithType: GetFileMetadataError.AsOther
+  fullName: Dropbox.Api.Sharing.GetFileMetadataError.AsOther
+- uid: Dropbox.Api.Sharing.GetFileMetadataError.Other
+  commentId: T:Dropbox.Api.Sharing.GetFileMetadataError.Other
+  parent: Dropbox.Api.Sharing
+  name: GetFileMetadataError.Other
+  nameWithType: GetFileMetadataError.Other
+  fullName: Dropbox.Api.Sharing.GetFileMetadataError.Other
+shouldSkipMarkup: true

@@ -1,0 +1,215 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.DeleteBatchJobStatus.Complete
+  commentId: T:Dropbox.Api.Files.DeleteBatchJobStatus.Complete
+  id: DeleteBatchJobStatus.Complete
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.DeleteBatchJobStatus.Complete.#ctor(Dropbox.Api.Files.DeleteBatchResult)
+  - Dropbox.Api.Files.DeleteBatchJobStatus.Complete.Value
+  langs:
+  - csharp
+  - vb
+  name: DeleteBatchJobStatus.Complete
+  nameWithType: DeleteBatchJobStatus.Complete
+  fullName: Dropbox.Api.Files.DeleteBatchJobStatus.Complete
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/DeleteBatchJobStatus.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Complete
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/DeleteBatchJobStatus.cs
+    startLine: 212
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The batch delete has finished.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Complete : DeleteBatchJobStatus'
+    content.vb: >-
+      Public NotInheritable Class Complete
+          Inherits DeleteBatchJobStatus
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Files.DeleteBatchJobStatus
+  inheritedMembers:
+  - Dropbox.Api.Files.DeleteBatchJobStatus.IsComplete
+  - Dropbox.Api.Files.DeleteBatchJobStatus.AsComplete
+  - Dropbox.Api.Files.DeleteBatchJobStatus.IsFailed
+  - Dropbox.Api.Files.DeleteBatchJobStatus.AsFailed
+  - Dropbox.Api.Files.DeleteBatchJobStatus.IsOther
+  - Dropbox.Api.Files.DeleteBatchJobStatus.AsOther
+  - Dropbox.Api.Files.DeleteBatchJobStatus.IsInProgress
+  - Dropbox.Api.Files.DeleteBatchJobStatus.AsInProgress
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Files.DeleteBatchJobStatus.Complete.#ctor(Dropbox.Api.Files.DeleteBatchResult)
+  commentId: M:Dropbox.Api.Files.DeleteBatchJobStatus.Complete.#ctor(Dropbox.Api.Files.DeleteBatchResult)
+  id: '#ctor(Dropbox.Api.Files.DeleteBatchResult)'
+  parent: Dropbox.Api.Files.DeleteBatchJobStatus.Complete
+  langs:
+  - csharp
+  - vb
+  name: Complete(DeleteBatchResult)
+  nameWithType: DeleteBatchJobStatus.Complete.Complete(DeleteBatchResult)
+  fullName: Dropbox.Api.Files.DeleteBatchJobStatus.Complete.Complete(Dropbox.Api.Files.DeleteBatchResult)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/DeleteBatchJobStatus.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/DeleteBatchJobStatus.cs
+    startLine: 230
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.DeleteBatchJobStatus.Complete\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public Complete(DeleteBatchResult value)
+    parameters:
+    - id: value
+      type: Dropbox.Api.Files.DeleteBatchResult
+      description: The value
+    content.vb: Public Sub New(value As DeleteBatchResult)
+  overload: Dropbox.Api.Files.DeleteBatchJobStatus.Complete.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.DeleteBatchJobStatus.Complete.Value
+  commentId: P:Dropbox.Api.Files.DeleteBatchJobStatus.Complete.Value
+  id: Value
+  parent: Dropbox.Api.Files.DeleteBatchJobStatus.Complete
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: DeleteBatchJobStatus.Complete.Value
+  fullName: Dropbox.Api.Files.DeleteBatchJobStatus.Complete.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/DeleteBatchJobStatus.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/DeleteBatchJobStatus.cs
+    startLine: 244
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public DeleteBatchResult Value { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.DeleteBatchResult
+    content.vb: Public ReadOnly Property Value As DeleteBatchResult
+  overload: Dropbox.Api.Files.DeleteBatchJobStatus.Complete.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.DeleteBatchJobStatus
+  commentId: T:Dropbox.Api.Files.DeleteBatchJobStatus
+  parent: Dropbox.Api.Files
+  name: DeleteBatchJobStatus
+  nameWithType: DeleteBatchJobStatus
+  fullName: Dropbox.Api.Files.DeleteBatchJobStatus
+- uid: Dropbox.Api.Files.DeleteBatchJobStatus.IsComplete
+  commentId: P:Dropbox.Api.Files.DeleteBatchJobStatus.IsComplete
+  parent: Dropbox.Api.Files.DeleteBatchJobStatus
+  name: IsComplete
+  nameWithType: DeleteBatchJobStatus.IsComplete
+  fullName: Dropbox.Api.Files.DeleteBatchJobStatus.IsComplete
+- uid: Dropbox.Api.Files.DeleteBatchJobStatus.AsComplete
+  commentId: P:Dropbox.Api.Files.DeleteBatchJobStatus.AsComplete
+  parent: Dropbox.Api.Files.DeleteBatchJobStatus
+  name: AsComplete
+  nameWithType: DeleteBatchJobStatus.AsComplete
+  fullName: Dropbox.Api.Files.DeleteBatchJobStatus.AsComplete
+- uid: Dropbox.Api.Files.DeleteBatchJobStatus.IsFailed
+  commentId: P:Dropbox.Api.Files.DeleteBatchJobStatus.IsFailed
+  parent: Dropbox.Api.Files.DeleteBatchJobStatus
+  name: IsFailed
+  nameWithType: DeleteBatchJobStatus.IsFailed
+  fullName: Dropbox.Api.Files.DeleteBatchJobStatus.IsFailed
+- uid: Dropbox.Api.Files.DeleteBatchJobStatus.AsFailed
+  commentId: P:Dropbox.Api.Files.DeleteBatchJobStatus.AsFailed
+  parent: Dropbox.Api.Files.DeleteBatchJobStatus
+  name: AsFailed
+  nameWithType: DeleteBatchJobStatus.AsFailed
+  fullName: Dropbox.Api.Files.DeleteBatchJobStatus.AsFailed
+- uid: Dropbox.Api.Files.DeleteBatchJobStatus.IsOther
+  commentId: P:Dropbox.Api.Files.DeleteBatchJobStatus.IsOther
+  parent: Dropbox.Api.Files.DeleteBatchJobStatus
+  name: IsOther
+  nameWithType: DeleteBatchJobStatus.IsOther
+  fullName: Dropbox.Api.Files.DeleteBatchJobStatus.IsOther
+- uid: Dropbox.Api.Files.DeleteBatchJobStatus.AsOther
+  commentId: P:Dropbox.Api.Files.DeleteBatchJobStatus.AsOther
+  parent: Dropbox.Api.Files.DeleteBatchJobStatus
+  name: AsOther
+  nameWithType: DeleteBatchJobStatus.AsOther
+  fullName: Dropbox.Api.Files.DeleteBatchJobStatus.AsOther
+- uid: Dropbox.Api.Files.DeleteBatchJobStatus.IsInProgress
+  commentId: P:Dropbox.Api.Files.DeleteBatchJobStatus.IsInProgress
+  parent: Dropbox.Api.Files.DeleteBatchJobStatus
+  name: IsInProgress
+  nameWithType: DeleteBatchJobStatus.IsInProgress
+  fullName: Dropbox.Api.Files.DeleteBatchJobStatus.IsInProgress
+- uid: Dropbox.Api.Files.DeleteBatchJobStatus.AsInProgress
+  commentId: P:Dropbox.Api.Files.DeleteBatchJobStatus.AsInProgress
+  parent: Dropbox.Api.Files.DeleteBatchJobStatus
+  name: AsInProgress
+  nameWithType: DeleteBatchJobStatus.AsInProgress
+  fullName: Dropbox.Api.Files.DeleteBatchJobStatus.AsInProgress
+- uid: Dropbox.Api.Files.DeleteBatchJobStatus.Complete
+  commentId: T:Dropbox.Api.Files.DeleteBatchJobStatus.Complete
+  parent: Dropbox.Api.Files
+  name: DeleteBatchJobStatus.Complete
+  nameWithType: DeleteBatchJobStatus.Complete
+  fullName: Dropbox.Api.Files.DeleteBatchJobStatus.Complete
+- uid: Dropbox.Api.Files.DeleteBatchJobStatus.Complete.#ctor*
+  commentId: Overload:Dropbox.Api.Files.DeleteBatchJobStatus.Complete.#ctor
+  name: Complete
+  nameWithType: DeleteBatchJobStatus.Complete.Complete
+  fullName: Dropbox.Api.Files.DeleteBatchJobStatus.Complete.Complete
+- uid: Dropbox.Api.Files.DeleteBatchResult
+  commentId: T:Dropbox.Api.Files.DeleteBatchResult
+  parent: Dropbox.Api.Files
+  name: DeleteBatchResult
+  nameWithType: DeleteBatchResult
+  fullName: Dropbox.Api.Files.DeleteBatchResult
+- uid: Dropbox.Api.Files.DeleteBatchJobStatus.Complete.Value*
+  commentId: Overload:Dropbox.Api.Files.DeleteBatchJobStatus.Complete.Value
+  name: Value
+  nameWithType: DeleteBatchJobStatus.Complete.Value
+  fullName: Dropbox.Api.Files.DeleteBatchJobStatus.Complete.Value
+shouldSkipMarkup: true

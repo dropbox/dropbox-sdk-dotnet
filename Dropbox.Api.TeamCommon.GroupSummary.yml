@@ -1,0 +1,475 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamCommon.GroupSummary
+  commentId: T:Dropbox.Api.TeamCommon.GroupSummary
+  id: GroupSummary
+  parent: Dropbox.Api.TeamCommon
+  children:
+  - Dropbox.Api.TeamCommon.GroupSummary.#ctor
+  - Dropbox.Api.TeamCommon.GroupSummary.#ctor(System.String,System.String,Dropbox.Api.TeamCommon.GroupManagementType,System.String,System.Nullable{System.UInt32})
+  - Dropbox.Api.TeamCommon.GroupSummary.GroupExternalId
+  - Dropbox.Api.TeamCommon.GroupSummary.GroupId
+  - Dropbox.Api.TeamCommon.GroupSummary.GroupManagementType
+  - Dropbox.Api.TeamCommon.GroupSummary.GroupName
+  - Dropbox.Api.TeamCommon.GroupSummary.MemberCount
+  langs:
+  - csharp
+  - vb
+  name: GroupSummary
+  nameWithType: GroupSummary
+  fullName: Dropbox.Api.TeamCommon.GroupSummary
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamCommon/GroupSummary.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GroupSummary
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamCommon/GroupSummary.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamCommon
+  summary: "\n<p>Information about a group.</p>\n"
+  example: []
+  syntax:
+    content: 'public class GroupSummary : object'
+    content.vb: >-
+      Public Class GroupSummary
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Sharing.GroupInfo
+  - Dropbox.Api.Team.GroupFullInfo
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamCommon.GroupSummary.#ctor(System.String,System.String,Dropbox.Api.TeamCommon.GroupManagementType,System.String,System.Nullable{System.UInt32})
+  commentId: M:Dropbox.Api.TeamCommon.GroupSummary.#ctor(System.String,System.String,Dropbox.Api.TeamCommon.GroupManagementType,System.String,System.Nullable{System.UInt32})
+  id: '#ctor(System.String,System.String,Dropbox.Api.TeamCommon.GroupManagementType,System.String,System.Nullable{System.UInt32})'
+  parent: Dropbox.Api.TeamCommon.GroupSummary
+  langs:
+  - csharp
+  - vb
+  name: GroupSummary(String, String, GroupManagementType, String, Nullable<UInt32>)
+  nameWithType: GroupSummary.GroupSummary(String, String, GroupManagementType, String, Nullable<UInt32>)
+  fullName: Dropbox.Api.TeamCommon.GroupSummary.GroupSummary(System.String, System.String, Dropbox.Api.TeamCommon.GroupManagementType, System.String, System.Nullable<System.UInt32>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamCommon/GroupSummary.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamCommon/GroupSummary.cs
+    startLine: 38
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamCommon
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamCommon.GroupSummary\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public GroupSummary(string groupName, string groupId, GroupManagementType groupManagementType, string groupExternalId = null, uint? memberCount = null)
+    parameters:
+    - id: groupName
+      type: System.String
+      description: The group name
+    - id: groupId
+      type: System.String
+      description: The group id
+    - id: groupManagementType
+      type: Dropbox.Api.TeamCommon.GroupManagementType
+      description: Who is allowed to manage the group.
+    - id: groupExternalId
+      type: System.String
+      description: >-
+        External ID of group. This is an arbitrary ID that an
+
+        admin can attach to a group.
+    - id: memberCount
+      type: System.Nullable{System.UInt32}
+      description: The number of members in the group.
+    content.vb: Public Sub New(groupName As String, groupId As String, groupManagementType As GroupManagementType, groupExternalId As String = Nothing, memberCount As UInteger? = Nothing)
+  overload: Dropbox.Api.TeamCommon.GroupSummary.#ctor*
+  nameWithType.vb: GroupSummary.GroupSummary(String, String, GroupManagementType, String, Nullable(Of UInt32))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.TeamCommon.GroupSummary.GroupSummary(System.String, System.String, Dropbox.Api.TeamCommon.GroupManagementType, System.String, System.Nullable(Of System.UInt32))
+  name.vb: GroupSummary(String, String, GroupManagementType, String, Nullable(Of UInt32))
+- uid: Dropbox.Api.TeamCommon.GroupSummary.#ctor
+  commentId: M:Dropbox.Api.TeamCommon.GroupSummary.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamCommon.GroupSummary
+  langs:
+  - csharp
+  - vb
+  name: GroupSummary()
+  nameWithType: GroupSummary.GroupSummary()
+  fullName: Dropbox.Api.TeamCommon.GroupSummary.GroupSummary()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamCommon/GroupSummary.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamCommon/GroupSummary.cs
+    startLine: 71
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamCommon
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamCommon.GroupSummary\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public GroupSummary()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamCommon.GroupSummary.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamCommon.GroupSummary.GroupName
+  commentId: P:Dropbox.Api.TeamCommon.GroupSummary.GroupName
+  id: GroupName
+  parent: Dropbox.Api.TeamCommon.GroupSummary
+  langs:
+  - csharp
+  - vb
+  name: GroupName
+  nameWithType: GroupSummary.GroupName
+  fullName: Dropbox.Api.TeamCommon.GroupSummary.GroupName
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamCommon/GroupSummary.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GroupName
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamCommon/GroupSummary.cs
+    startLine: 79
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamCommon
+  summary: "\n<p>Gets the group name of the group summary</p>\n"
+  example: []
+  syntax:
+    content: public string GroupName { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property GroupName As String
+  overload: Dropbox.Api.TeamCommon.GroupSummary.GroupName*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamCommon.GroupSummary.GroupId
+  commentId: P:Dropbox.Api.TeamCommon.GroupSummary.GroupId
+  id: GroupId
+  parent: Dropbox.Api.TeamCommon.GroupSummary
+  langs:
+  - csharp
+  - vb
+  name: GroupId
+  nameWithType: GroupSummary.GroupId
+  fullName: Dropbox.Api.TeamCommon.GroupSummary.GroupId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamCommon/GroupSummary.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GroupId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamCommon/GroupSummary.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamCommon
+  summary: "\n<p>Gets the group id of the group summary</p>\n"
+  example: []
+  syntax:
+    content: public string GroupId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property GroupId As String
+  overload: Dropbox.Api.TeamCommon.GroupSummary.GroupId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamCommon.GroupSummary.GroupManagementType
+  commentId: P:Dropbox.Api.TeamCommon.GroupSummary.GroupManagementType
+  id: GroupManagementType
+  parent: Dropbox.Api.TeamCommon.GroupSummary
+  langs:
+  - csharp
+  - vb
+  name: GroupManagementType
+  nameWithType: GroupSummary.GroupManagementType
+  fullName: Dropbox.Api.TeamCommon.GroupSummary.GroupManagementType
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamCommon/GroupSummary.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GroupManagementType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamCommon/GroupSummary.cs
+    startLine: 89
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamCommon
+  summary: "\n<p>Who is allowed to manage the group.</p>\n"
+  example: []
+  syntax:
+    content: public GroupManagementType GroupManagementType { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamCommon.GroupManagementType
+    content.vb: Public Property GroupManagementType As GroupManagementType
+  overload: Dropbox.Api.TeamCommon.GroupSummary.GroupManagementType*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamCommon.GroupSummary.GroupExternalId
+  commentId: P:Dropbox.Api.TeamCommon.GroupSummary.GroupExternalId
+  id: GroupExternalId
+  parent: Dropbox.Api.TeamCommon.GroupSummary
+  langs:
+  - csharp
+  - vb
+  name: GroupExternalId
+  nameWithType: GroupSummary.GroupExternalId
+  fullName: Dropbox.Api.TeamCommon.GroupSummary.GroupExternalId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamCommon/GroupSummary.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GroupExternalId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamCommon/GroupSummary.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamCommon
+  summary: "\n<p>External ID of group. This is an arbitrary ID that an admin can attach to a\ngroup.</p>\n"
+  example: []
+  syntax:
+    content: public string GroupExternalId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property GroupExternalId As String
+  overload: Dropbox.Api.TeamCommon.GroupSummary.GroupExternalId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamCommon.GroupSummary.MemberCount
+  commentId: P:Dropbox.Api.TeamCommon.GroupSummary.MemberCount
+  id: MemberCount
+  parent: Dropbox.Api.TeamCommon.GroupSummary
+  langs:
+  - csharp
+  - vb
+  name: MemberCount
+  nameWithType: GroupSummary.MemberCount
+  fullName: Dropbox.Api.TeamCommon.GroupSummary.MemberCount
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamCommon/GroupSummary.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: MemberCount
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamCommon/GroupSummary.cs
+    startLine: 100
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamCommon
+  summary: "\n<p>The number of members in the group.</p>\n"
+  example: []
+  syntax:
+    content: public uint? MemberCount { get; protected set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.UInt32}
+    content.vb: Public Property MemberCount As UInteger?
+  overload: Dropbox.Api.TeamCommon.GroupSummary.MemberCount*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamCommon
+  commentId: N:Dropbox.Api.TeamCommon
+  name: Dropbox.Api.TeamCommon
+  nameWithType: Dropbox.Api.TeamCommon
+  fullName: Dropbox.Api.TeamCommon
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamCommon.GroupSummary
+  commentId: T:Dropbox.Api.TeamCommon.GroupSummary
+  parent: Dropbox.Api.TeamCommon
+  name: GroupSummary
+  nameWithType: GroupSummary
+  fullName: Dropbox.Api.TeamCommon.GroupSummary
+- uid: Dropbox.Api.TeamCommon.GroupSummary.#ctor*
+  commentId: Overload:Dropbox.Api.TeamCommon.GroupSummary.#ctor
+  name: GroupSummary
+  nameWithType: GroupSummary.GroupSummary
+  fullName: Dropbox.Api.TeamCommon.GroupSummary.GroupSummary
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamCommon.GroupManagementType
+  commentId: T:Dropbox.Api.TeamCommon.GroupManagementType
+  parent: Dropbox.Api.TeamCommon
+  name: GroupManagementType
+  nameWithType: GroupManagementType
+  fullName: Dropbox.Api.TeamCommon.GroupManagementType
+- uid: System.Nullable{System.UInt32}
+  commentId: '!:System.Nullable{System.UInt32}'
+  definition: System.Nullable`1
+  name: Nullable<UInt32>
+  nameWithType: Nullable<UInt32>
+  fullName: System.Nullable<System.UInt32>
+  nameWithType.vb: Nullable(Of UInt32)
+  fullName.vb: System.Nullable(Of System.UInt32)
+  name.vb: Nullable(Of UInt32)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.UInt32
+    name: UInt32
+    nameWithType: UInt32
+    fullName: System.UInt32
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.UInt32
+    name: UInt32
+    nameWithType: UInt32
+    fullName: System.UInt32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  isExternal: true
+  name: Nullable<>
+  nameWithType: Nullable<>
+  fullName: System.Nullable<>
+  nameWithType.vb: Nullable(Of )
+  fullName.vb: System.Nullable(Of )
+  name.vb: Nullable(Of )
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.TeamCommon.GroupSummary.GroupName*
+  commentId: Overload:Dropbox.Api.TeamCommon.GroupSummary.GroupName
+  name: GroupName
+  nameWithType: GroupSummary.GroupName
+  fullName: Dropbox.Api.TeamCommon.GroupSummary.GroupName
+- uid: Dropbox.Api.TeamCommon.GroupSummary.GroupId*
+  commentId: Overload:Dropbox.Api.TeamCommon.GroupSummary.GroupId
+  name: GroupId
+  nameWithType: GroupSummary.GroupId
+  fullName: Dropbox.Api.TeamCommon.GroupSummary.GroupId
+- uid: Dropbox.Api.TeamCommon.GroupSummary.GroupManagementType*
+  commentId: Overload:Dropbox.Api.TeamCommon.GroupSummary.GroupManagementType
+  name: GroupManagementType
+  nameWithType: GroupSummary.GroupManagementType
+  fullName: Dropbox.Api.TeamCommon.GroupSummary.GroupManagementType
+- uid: Dropbox.Api.TeamCommon.GroupSummary.GroupExternalId*
+  commentId: Overload:Dropbox.Api.TeamCommon.GroupSummary.GroupExternalId
+  name: GroupExternalId
+  nameWithType: GroupSummary.GroupExternalId
+  fullName: Dropbox.Api.TeamCommon.GroupSummary.GroupExternalId
+- uid: Dropbox.Api.TeamCommon.GroupSummary.MemberCount*
+  commentId: Overload:Dropbox.Api.TeamCommon.GroupSummary.MemberCount
+  name: MemberCount
+  nameWithType: GroupSummary.MemberCount
+  fullName: Dropbox.Api.TeamCommon.GroupSummary.MemberCount
+shouldSkipMarkup: true

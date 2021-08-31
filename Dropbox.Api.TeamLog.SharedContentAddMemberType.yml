@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.SharedContentAddMemberType
+  commentId: T:Dropbox.Api.TeamLog.SharedContentAddMemberType
+  id: SharedContentAddMemberType
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.SharedContentAddMemberType.#ctor
+  - Dropbox.Api.TeamLog.SharedContentAddMemberType.#ctor(System.String)
+  - Dropbox.Api.TeamLog.SharedContentAddMemberType.Description
+  langs:
+  - csharp
+  - vb
+  name: SharedContentAddMemberType
+  nameWithType: SharedContentAddMemberType
+  fullName: Dropbox.Api.TeamLog.SharedContentAddMemberType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentAddMemberType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SharedContentAddMemberType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentAddMemberType.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The shared content add member type object</p>\n"
+  example: []
+  syntax:
+    content: 'public class SharedContentAddMemberType : object'
+    content.vb: >-
+      Public Class SharedContentAddMemberType
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.SharedContentAddMemberType.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.SharedContentAddMemberType.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.SharedContentAddMemberType
+  langs:
+  - csharp
+  - vb
+  name: SharedContentAddMemberType(String)
+  nameWithType: SharedContentAddMemberType.SharedContentAddMemberType(String)
+  fullName: Dropbox.Api.TeamLog.SharedContentAddMemberType.SharedContentAddMemberType(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentAddMemberType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentAddMemberType.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SharedContentAddMemberType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public SharedContentAddMemberType(string description)
+    parameters:
+    - id: description
+      type: System.String
+      description: The description
+    content.vb: Public Sub New(description As String)
+  overload: Dropbox.Api.TeamLog.SharedContentAddMemberType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SharedContentAddMemberType.#ctor
+  commentId: M:Dropbox.Api.TeamLog.SharedContentAddMemberType.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.SharedContentAddMemberType
+  langs:
+  - csharp
+  - vb
+  name: SharedContentAddMemberType()
+  nameWithType: SharedContentAddMemberType.SharedContentAddMemberType()
+  fullName: Dropbox.Api.TeamLog.SharedContentAddMemberType.SharedContentAddMemberType()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentAddMemberType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentAddMemberType.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SharedContentAddMemberType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public SharedContentAddMemberType()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.SharedContentAddMemberType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SharedContentAddMemberType.Description
+  commentId: P:Dropbox.Api.TeamLog.SharedContentAddMemberType.Description
+  id: Description
+  parent: Dropbox.Api.TeamLog.SharedContentAddMemberType
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: SharedContentAddMemberType.Description
+  fullName: Dropbox.Api.TeamLog.SharedContentAddMemberType.Description
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentAddMemberType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Description
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentAddMemberType.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets the description of the shared content add member type</p>\n"
+  example: []
+  syntax:
+    content: public string Description { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Dropbox.Api.TeamLog.SharedContentAddMemberType.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.SharedContentAddMemberType
+  commentId: T:Dropbox.Api.TeamLog.SharedContentAddMemberType
+  parent: Dropbox.Api.TeamLog
+  name: SharedContentAddMemberType
+  nameWithType: SharedContentAddMemberType
+  fullName: Dropbox.Api.TeamLog.SharedContentAddMemberType
+- uid: Dropbox.Api.TeamLog.SharedContentAddMemberType.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedContentAddMemberType.#ctor
+  name: SharedContentAddMemberType
+  nameWithType: SharedContentAddMemberType.SharedContentAddMemberType
+  fullName: Dropbox.Api.TeamLog.SharedContentAddMemberType.SharedContentAddMemberType
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.SharedContentAddMemberType.Description*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedContentAddMemberType.Description
+  name: Description
+  nameWithType: SharedContentAddMemberType.Description
+  fullName: Dropbox.Api.TeamLog.SharedContentAddMemberType.Description
+shouldSkipMarkup: true

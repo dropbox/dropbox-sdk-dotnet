@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.TeamFolderDowngradeDetails
+  commentId: T:Dropbox.Api.TeamLog.TeamFolderDowngradeDetails
+  id: TeamFolderDowngradeDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.TeamFolderDowngradeDetails.#ctor
+  - Dropbox.Api.TeamLog.TeamFolderDowngradeDetails.#ctor(System.UInt64)
+  - Dropbox.Api.TeamLog.TeamFolderDowngradeDetails.TargetAssetIndex
+  langs:
+  - csharp
+  - vb
+  name: TeamFolderDowngradeDetails
+  nameWithType: TeamFolderDowngradeDetails
+  fullName: Dropbox.Api.TeamLog.TeamFolderDowngradeDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamFolderDowngradeDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TeamFolderDowngradeDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamFolderDowngradeDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Downgraded team folder to regular shared folder.</p>\n"
+  example: []
+  syntax:
+    content: 'public class TeamFolderDowngradeDetails : object'
+    content.vb: >-
+      Public Class TeamFolderDowngradeDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.TeamFolderDowngradeDetails.#ctor(System.UInt64)
+  commentId: M:Dropbox.Api.TeamLog.TeamFolderDowngradeDetails.#ctor(System.UInt64)
+  id: '#ctor(System.UInt64)'
+  parent: Dropbox.Api.TeamLog.TeamFolderDowngradeDetails
+  langs:
+  - csharp
+  - vb
+  name: TeamFolderDowngradeDetails(UInt64)
+  nameWithType: TeamFolderDowngradeDetails.TeamFolderDowngradeDetails(UInt64)
+  fullName: Dropbox.Api.TeamLog.TeamFolderDowngradeDetails.TeamFolderDowngradeDetails(System.UInt64)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamFolderDowngradeDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamFolderDowngradeDetails.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.TeamFolderDowngradeDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public TeamFolderDowngradeDetails(ulong targetAssetIndex)
+    parameters:
+    - id: targetAssetIndex
+      type: System.UInt64
+      description: Target asset position in the Assets list.
+    content.vb: Public Sub New(targetAssetIndex As ULong)
+  overload: Dropbox.Api.TeamLog.TeamFolderDowngradeDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.TeamFolderDowngradeDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.TeamFolderDowngradeDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.TeamFolderDowngradeDetails
+  langs:
+  - csharp
+  - vb
+  name: TeamFolderDowngradeDetails()
+  nameWithType: TeamFolderDowngradeDetails.TeamFolderDowngradeDetails()
+  fullName: Dropbox.Api.TeamLog.TeamFolderDowngradeDetails.TeamFolderDowngradeDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamFolderDowngradeDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamFolderDowngradeDetails.cs
+    startLine: 45
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.TeamFolderDowngradeDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public TeamFolderDowngradeDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.TeamFolderDowngradeDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.TeamFolderDowngradeDetails.TargetAssetIndex
+  commentId: P:Dropbox.Api.TeamLog.TeamFolderDowngradeDetails.TargetAssetIndex
+  id: TargetAssetIndex
+  parent: Dropbox.Api.TeamLog.TeamFolderDowngradeDetails
+  langs:
+  - csharp
+  - vb
+  name: TargetAssetIndex
+  nameWithType: TeamFolderDowngradeDetails.TargetAssetIndex
+  fullName: Dropbox.Api.TeamLog.TeamFolderDowngradeDetails.TargetAssetIndex
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamFolderDowngradeDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TargetAssetIndex
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamFolderDowngradeDetails.cs
+    startLine: 53
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Target asset position in the Assets list.</p>\n"
+  example: []
+  syntax:
+    content: public ulong TargetAssetIndex { get; protected set; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: Public Property TargetAssetIndex As ULong
+  overload: Dropbox.Api.TeamLog.TeamFolderDowngradeDetails.TargetAssetIndex*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.TeamFolderDowngradeDetails
+  commentId: T:Dropbox.Api.TeamLog.TeamFolderDowngradeDetails
+  parent: Dropbox.Api.TeamLog
+  name: TeamFolderDowngradeDetails
+  nameWithType: TeamFolderDowngradeDetails
+  fullName: Dropbox.Api.TeamLog.TeamFolderDowngradeDetails
+- uid: Dropbox.Api.TeamLog.TeamFolderDowngradeDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.TeamFolderDowngradeDetails.#ctor
+  name: TeamFolderDowngradeDetails
+  nameWithType: TeamFolderDowngradeDetails.TeamFolderDowngradeDetails
+  fullName: Dropbox.Api.TeamLog.TeamFolderDowngradeDetails.TeamFolderDowngradeDetails
+- uid: System.UInt64
+  isExternal: true
+  name: UInt64
+  nameWithType: UInt64
+  fullName: System.UInt64
+- uid: Dropbox.Api.TeamLog.TeamFolderDowngradeDetails.TargetAssetIndex*
+  commentId: Overload:Dropbox.Api.TeamLog.TeamFolderDowngradeDetails.TargetAssetIndex
+  name: TargetAssetIndex
+  nameWithType: TeamFolderDowngradeDetails.TargetAssetIndex
+  fullName: Dropbox.Api.TeamLog.TeamFolderDowngradeDetails.TargetAssetIndex
+shouldSkipMarkup: true

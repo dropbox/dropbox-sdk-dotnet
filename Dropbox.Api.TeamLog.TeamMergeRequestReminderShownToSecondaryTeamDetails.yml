@@ -1,0 +1,190 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestReminderShownToSecondaryTeamDetails
+  commentId: T:Dropbox.Api.TeamLog.TeamMergeRequestReminderShownToSecondaryTeamDetails
+  id: TeamMergeRequestReminderShownToSecondaryTeamDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.TeamMergeRequestReminderShownToSecondaryTeamDetails.#ctor
+  - Dropbox.Api.TeamLog.TeamMergeRequestReminderShownToSecondaryTeamDetails.#ctor(System.String)
+  - Dropbox.Api.TeamLog.TeamMergeRequestReminderShownToSecondaryTeamDetails.SentTo
+  langs:
+  - csharp
+  - vb
+  name: TeamMergeRequestReminderShownToSecondaryTeamDetails
+  nameWithType: TeamMergeRequestReminderShownToSecondaryTeamDetails
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestReminderShownToSecondaryTeamDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestReminderShownToSecondaryTeamDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TeamMergeRequestReminderShownToSecondaryTeamDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestReminderShownToSecondaryTeamDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Sent a team merge request reminder.</p>\n"
+  example: []
+  syntax:
+    content: 'public class TeamMergeRequestReminderShownToSecondaryTeamDetails : object'
+    content.vb: >-
+      Public Class TeamMergeRequestReminderShownToSecondaryTeamDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestReminderShownToSecondaryTeamDetails.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.TeamMergeRequestReminderShownToSecondaryTeamDetails.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.TeamMergeRequestReminderShownToSecondaryTeamDetails
+  langs:
+  - csharp
+  - vb
+  name: TeamMergeRequestReminderShownToSecondaryTeamDetails(String)
+  nameWithType: TeamMergeRequestReminderShownToSecondaryTeamDetails.TeamMergeRequestReminderShownToSecondaryTeamDetails(String)
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestReminderShownToSecondaryTeamDetails.TeamMergeRequestReminderShownToSecondaryTeamDetails(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestReminderShownToSecondaryTeamDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestReminderShownToSecondaryTeamDetails.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.TeamMergeRequestReminderShownToSecondaryTeamDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public TeamMergeRequestReminderShownToSecondaryTeamDetails(string sentTo)
+    parameters:
+    - id: sentTo
+      type: System.String
+      description: >-
+        The email of the primary team admin the request was sent
+
+        to.
+    content.vb: Public Sub New(sentTo As String)
+  overload: Dropbox.Api.TeamLog.TeamMergeRequestReminderShownToSecondaryTeamDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestReminderShownToSecondaryTeamDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.TeamMergeRequestReminderShownToSecondaryTeamDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.TeamMergeRequestReminderShownToSecondaryTeamDetails
+  langs:
+  - csharp
+  - vb
+  name: TeamMergeRequestReminderShownToSecondaryTeamDetails()
+  nameWithType: TeamMergeRequestReminderShownToSecondaryTeamDetails.TeamMergeRequestReminderShownToSecondaryTeamDetails()
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestReminderShownToSecondaryTeamDetails.TeamMergeRequestReminderShownToSecondaryTeamDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestReminderShownToSecondaryTeamDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestReminderShownToSecondaryTeamDetails.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.TeamMergeRequestReminderShownToSecondaryTeamDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public TeamMergeRequestReminderShownToSecondaryTeamDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.TeamMergeRequestReminderShownToSecondaryTeamDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestReminderShownToSecondaryTeamDetails.SentTo
+  commentId: P:Dropbox.Api.TeamLog.TeamMergeRequestReminderShownToSecondaryTeamDetails.SentTo
+  id: SentTo
+  parent: Dropbox.Api.TeamLog.TeamMergeRequestReminderShownToSecondaryTeamDetails
+  langs:
+  - csharp
+  - vb
+  name: SentTo
+  nameWithType: TeamMergeRequestReminderShownToSecondaryTeamDetails.SentTo
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestReminderShownToSecondaryTeamDetails.SentTo
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestReminderShownToSecondaryTeamDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SentTo
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestReminderShownToSecondaryTeamDetails.cs
+    startLine: 59
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The email of the primary team admin the request was sent to.</p>\n"
+  example: []
+  syntax:
+    content: public string SentTo { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SentTo As String
+  overload: Dropbox.Api.TeamLog.TeamMergeRequestReminderShownToSecondaryTeamDetails.SentTo*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestReminderShownToSecondaryTeamDetails
+  commentId: T:Dropbox.Api.TeamLog.TeamMergeRequestReminderShownToSecondaryTeamDetails
+  parent: Dropbox.Api.TeamLog
+  name: TeamMergeRequestReminderShownToSecondaryTeamDetails
+  nameWithType: TeamMergeRequestReminderShownToSecondaryTeamDetails
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestReminderShownToSecondaryTeamDetails
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestReminderShownToSecondaryTeamDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.TeamMergeRequestReminderShownToSecondaryTeamDetails.#ctor
+  name: TeamMergeRequestReminderShownToSecondaryTeamDetails
+  nameWithType: TeamMergeRequestReminderShownToSecondaryTeamDetails.TeamMergeRequestReminderShownToSecondaryTeamDetails
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestReminderShownToSecondaryTeamDetails.TeamMergeRequestReminderShownToSecondaryTeamDetails
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestReminderShownToSecondaryTeamDetails.SentTo*
+  commentId: Overload:Dropbox.Api.TeamLog.TeamMergeRequestReminderShownToSecondaryTeamDetails.SentTo
+  name: SentTo
+  nameWithType: TeamMergeRequestReminderShownToSecondaryTeamDetails.SentTo
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestReminderShownToSecondaryTeamDetails.SentTo
+shouldSkipMarkup: true

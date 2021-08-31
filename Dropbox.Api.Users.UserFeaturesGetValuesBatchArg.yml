@@ -1,0 +1,358 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Users.UserFeaturesGetValuesBatchArg
+  commentId: T:Dropbox.Api.Users.UserFeaturesGetValuesBatchArg
+  id: UserFeaturesGetValuesBatchArg
+  parent: Dropbox.Api.Users
+  children:
+  - Dropbox.Api.Users.UserFeaturesGetValuesBatchArg.#ctor
+  - Dropbox.Api.Users.UserFeaturesGetValuesBatchArg.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Users.UserFeature})
+  - Dropbox.Api.Users.UserFeaturesGetValuesBatchArg.Features
+  langs:
+  - csharp
+  - vb
+  name: UserFeaturesGetValuesBatchArg
+  nameWithType: UserFeaturesGetValuesBatchArg
+  fullName: Dropbox.Api.Users.UserFeaturesGetValuesBatchArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/UserFeaturesGetValuesBatchArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: UserFeaturesGetValuesBatchArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/UserFeaturesGetValuesBatchArg.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users
+  summary: "\n<p>The user features get values batch arg object</p>\n"
+  example: []
+  syntax:
+    content: 'public class UserFeaturesGetValuesBatchArg : object'
+    content.vb: >-
+      Public Class UserFeaturesGetValuesBatchArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Users.UserFeaturesGetValuesBatchArg.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Users.UserFeature})
+  commentId: M:Dropbox.Api.Users.UserFeaturesGetValuesBatchArg.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Users.UserFeature})
+  id: '#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Users.UserFeature})'
+  parent: Dropbox.Api.Users.UserFeaturesGetValuesBatchArg
+  langs:
+  - csharp
+  - vb
+  name: UserFeaturesGetValuesBatchArg(System.Collections.Generic.IEnumerable<UserFeature>)
+  nameWithType: UserFeaturesGetValuesBatchArg.UserFeaturesGetValuesBatchArg(System.Collections.Generic.IEnumerable<UserFeature>)
+  fullName: Dropbox.Api.Users.UserFeaturesGetValuesBatchArg.UserFeaturesGetValuesBatchArg(System.Collections.Generic.IEnumerable<Dropbox.Api.Users.UserFeature>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/UserFeaturesGetValuesBatchArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/UserFeaturesGetValuesBatchArg.cs
+    startLine: 36
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Users.UserFeaturesGetValuesBatchArg\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public UserFeaturesGetValuesBatchArg(System.Collections.Generic.IEnumerable<UserFeature> features)
+    parameters:
+    - id: features
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.Users.UserFeature}
+      description: >-
+        A list of features in <xref href="Dropbox.Api.Users.UserFeature" data-throw-if-not-resolved="false"></xref>. If the
+
+        list is empty, this route will return <xref href="Dropbox.Api.Users.UserFeaturesGetValuesBatchError" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Sub New(features As System.Collections.Generic.IEnumerable(Of UserFeature))
+  overload: Dropbox.Api.Users.UserFeaturesGetValuesBatchArg.#ctor*
+  nameWithType.vb: UserFeaturesGetValuesBatchArg.UserFeaturesGetValuesBatchArg(System.Collections.Generic.IEnumerable(Of UserFeature))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Users.UserFeaturesGetValuesBatchArg.UserFeaturesGetValuesBatchArg(System.Collections.Generic.IEnumerable(Of Dropbox.Api.Users.UserFeature))
+  name.vb: UserFeaturesGetValuesBatchArg(System.Collections.Generic.IEnumerable(Of UserFeature))
+- uid: Dropbox.Api.Users.UserFeaturesGetValuesBatchArg.#ctor
+  commentId: M:Dropbox.Api.Users.UserFeaturesGetValuesBatchArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Users.UserFeaturesGetValuesBatchArg
+  langs:
+  - csharp
+  - vb
+  name: UserFeaturesGetValuesBatchArg()
+  nameWithType: UserFeaturesGetValuesBatchArg.UserFeaturesGetValuesBatchArg()
+  fullName: Dropbox.Api.Users.UserFeaturesGetValuesBatchArg.UserFeaturesGetValuesBatchArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/UserFeaturesGetValuesBatchArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/UserFeaturesGetValuesBatchArg.cs
+    startLine: 54
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Users.UserFeaturesGetValuesBatchArg\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public UserFeaturesGetValuesBatchArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Users.UserFeaturesGetValuesBatchArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Users.UserFeaturesGetValuesBatchArg.Features
+  commentId: P:Dropbox.Api.Users.UserFeaturesGetValuesBatchArg.Features
+  id: Features
+  parent: Dropbox.Api.Users.UserFeaturesGetValuesBatchArg
+  langs:
+  - csharp
+  - vb
+  name: Features
+  nameWithType: UserFeaturesGetValuesBatchArg.Features
+  fullName: Dropbox.Api.Users.UserFeaturesGetValuesBatchArg.Features
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/UserFeaturesGetValuesBatchArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Features
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/UserFeaturesGetValuesBatchArg.cs
+    startLine: 63
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users
+  summary: "\n<p>A list of features in <xref href=\"Dropbox.Api.Users.UserFeature\" data-throw-if-not-resolved=\"false\"></xref>. If the list is empty, this\nroute will return <xref href=\"Dropbox.Api.Users.UserFeaturesGetValuesBatchError\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<UserFeature> Features { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{Dropbox.Api.Users.UserFeature}
+    content.vb: Public Property Features As System.Collections.Generic.IList(Of UserFeature)
+  overload: Dropbox.Api.Users.UserFeaturesGetValuesBatchArg.Features*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Users
+  commentId: N:Dropbox.Api.Users
+  name: Dropbox.Api.Users
+  nameWithType: Dropbox.Api.Users
+  fullName: Dropbox.Api.Users
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Users.UserFeaturesGetValuesBatchArg
+  commentId: T:Dropbox.Api.Users.UserFeaturesGetValuesBatchArg
+  parent: Dropbox.Api.Users
+  name: UserFeaturesGetValuesBatchArg
+  nameWithType: UserFeaturesGetValuesBatchArg
+  fullName: Dropbox.Api.Users.UserFeaturesGetValuesBatchArg
+- uid: Dropbox.Api.Users.UserFeature
+  commentId: T:Dropbox.Api.Users.UserFeature
+  parent: Dropbox.Api.Users
+  name: UserFeature
+  nameWithType: UserFeature
+  fullName: Dropbox.Api.Users.UserFeature
+- uid: Dropbox.Api.Users.UserFeaturesGetValuesBatchError
+  commentId: T:Dropbox.Api.Users.UserFeaturesGetValuesBatchError
+  parent: Dropbox.Api.Users
+  name: UserFeaturesGetValuesBatchError
+  nameWithType: UserFeaturesGetValuesBatchError
+  fullName: Dropbox.Api.Users.UserFeaturesGetValuesBatchError
+- uid: Dropbox.Api.Users.UserFeaturesGetValuesBatchArg.#ctor*
+  commentId: Overload:Dropbox.Api.Users.UserFeaturesGetValuesBatchArg.#ctor
+  name: UserFeaturesGetValuesBatchArg
+  nameWithType: UserFeaturesGetValuesBatchArg.UserFeaturesGetValuesBatchArg
+  fullName: Dropbox.Api.Users.UserFeaturesGetValuesBatchArg.UserFeaturesGetValuesBatchArg
+- uid: System.Collections.Generic.IEnumerable{Dropbox.Api.Users.UserFeature}
+  commentId: '!:System.Collections.Generic.IEnumerable{Dropbox.Api.Users.UserFeature}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<UserFeature>
+  nameWithType: System.Collections.Generic.IEnumerable<UserFeature>
+  fullName: System.Collections.Generic.IEnumerable<Dropbox.Api.Users.UserFeature>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of UserFeature)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Dropbox.Api.Users.UserFeature)
+  name.vb: System.Collections.Generic.IEnumerable(Of UserFeature)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Users.UserFeature
+    name: UserFeature
+    nameWithType: UserFeature
+    fullName: Dropbox.Api.Users.UserFeature
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Users.UserFeature
+    name: UserFeature
+    nameWithType: UserFeature
+    fullName: Dropbox.Api.Users.UserFeature
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: System.Collections.Generic.IEnumerable<>
+  nameWithType: System.Collections.Generic.IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: System.Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Users.UserFeaturesGetValuesBatchArg.Features*
+  commentId: Overload:Dropbox.Api.Users.UserFeaturesGetValuesBatchArg.Features
+  name: Features
+  nameWithType: UserFeaturesGetValuesBatchArg.Features
+  fullName: Dropbox.Api.Users.UserFeaturesGetValuesBatchArg.Features
+- uid: System.Collections.Generic.IList{Dropbox.Api.Users.UserFeature}
+  commentId: '!:System.Collections.Generic.IList{Dropbox.Api.Users.UserFeature}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<UserFeature>
+  nameWithType: System.Collections.Generic.IList<UserFeature>
+  fullName: System.Collections.Generic.IList<Dropbox.Api.Users.UserFeature>
+  nameWithType.vb: System.Collections.Generic.IList(Of UserFeature)
+  fullName.vb: System.Collections.Generic.IList(Of Dropbox.Api.Users.UserFeature)
+  name.vb: System.Collections.Generic.IList(Of UserFeature)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Users.UserFeature
+    name: UserFeature
+    nameWithType: UserFeature
+    fullName: Dropbox.Api.Users.UserFeature
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Users.UserFeature
+    name: UserFeature
+    nameWithType: UserFeature
+    fullName: Dropbox.Api.Users.UserFeature
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  isExternal: true
+  name: System.Collections.Generic.IList<>
+  nameWithType: System.Collections.Generic.IList<>
+  fullName: System.Collections.Generic.IList<>
+  nameWithType.vb: System.Collections.Generic.IList(Of )
+  fullName.vb: System.Collections.Generic.IList(Of )
+  name.vb: System.Collections.Generic.IList(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+shouldSkipMarkup: true

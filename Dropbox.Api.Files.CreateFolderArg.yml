@@ -1,0 +1,243 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.CreateFolderArg
+  commentId: T:Dropbox.Api.Files.CreateFolderArg
+  id: CreateFolderArg
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.CreateFolderArg.#ctor
+  - Dropbox.Api.Files.CreateFolderArg.#ctor(System.String,System.Boolean)
+  - Dropbox.Api.Files.CreateFolderArg.Autorename
+  - Dropbox.Api.Files.CreateFolderArg.Path
+  langs:
+  - csharp
+  - vb
+  name: CreateFolderArg
+  nameWithType: CreateFolderArg
+  fullName: Dropbox.Api.Files.CreateFolderArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/CreateFolderArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: CreateFolderArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/CreateFolderArg.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The create folder arg object</p>\n"
+  example: []
+  syntax:
+    content: 'public class CreateFolderArg : object'
+    content.vb: >-
+      Public Class CreateFolderArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.CreateFolderArg.#ctor(System.String,System.Boolean)
+  commentId: M:Dropbox.Api.Files.CreateFolderArg.#ctor(System.String,System.Boolean)
+  id: '#ctor(System.String,System.Boolean)'
+  parent: Dropbox.Api.Files.CreateFolderArg
+  langs:
+  - csharp
+  - vb
+  name: CreateFolderArg(String, Boolean)
+  nameWithType: CreateFolderArg.CreateFolderArg(String, Boolean)
+  fullName: Dropbox.Api.Files.CreateFolderArg.CreateFolderArg(System.String, System.Boolean)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/CreateFolderArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/CreateFolderArg.cs
+    startLine: 36
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.CreateFolderArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public CreateFolderArg(string path, bool autorename = false)
+    parameters:
+    - id: path
+      type: System.String
+      description: Path in the user&apos;s Dropbox to create.
+    - id: autorename
+      type: System.Boolean
+      description: >-
+        If there&apos;s a conflict, have the Dropbox server try to
+
+        autorename the folder to avoid the conflict.
+    content.vb: Public Sub New(path As String, autorename As Boolean = False)
+  overload: Dropbox.Api.Files.CreateFolderArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.CreateFolderArg.#ctor
+  commentId: M:Dropbox.Api.Files.CreateFolderArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.CreateFolderArg
+  langs:
+  - csharp
+  - vb
+  name: CreateFolderArg()
+  nameWithType: CreateFolderArg.CreateFolderArg()
+  fullName: Dropbox.Api.Files.CreateFolderArg.CreateFolderArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/CreateFolderArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/CreateFolderArg.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.CreateFolderArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public CreateFolderArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.CreateFolderArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.CreateFolderArg.Path
+  commentId: P:Dropbox.Api.Files.CreateFolderArg.Path
+  id: Path
+  parent: Dropbox.Api.Files.CreateFolderArg
+  langs:
+  - csharp
+  - vb
+  name: Path
+  nameWithType: CreateFolderArg.Path
+  fullName: Dropbox.Api.Files.CreateFolderArg.Path
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/CreateFolderArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Path
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/CreateFolderArg.cs
+    startLine: 67
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Path in the user&apos;s Dropbox to create.</p>\n"
+  example: []
+  syntax:
+    content: public string Path { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Path As String
+  overload: Dropbox.Api.Files.CreateFolderArg.Path*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.CreateFolderArg.Autorename
+  commentId: P:Dropbox.Api.Files.CreateFolderArg.Autorename
+  id: Autorename
+  parent: Dropbox.Api.Files.CreateFolderArg
+  langs:
+  - csharp
+  - vb
+  name: Autorename
+  nameWithType: CreateFolderArg.Autorename
+  fullName: Dropbox.Api.Files.CreateFolderArg.Autorename
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/CreateFolderArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Autorename
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/CreateFolderArg.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>If there&apos;s a conflict, have the Dropbox server try to autorename the folder\nto avoid the conflict.</p>\n"
+  example: []
+  syntax:
+    content: public bool Autorename { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property Autorename As Boolean
+  overload: Dropbox.Api.Files.CreateFolderArg.Autorename*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.CreateFolderArg
+  commentId: T:Dropbox.Api.Files.CreateFolderArg
+  parent: Dropbox.Api.Files
+  name: CreateFolderArg
+  nameWithType: CreateFolderArg
+  fullName: Dropbox.Api.Files.CreateFolderArg
+- uid: Dropbox.Api.Files.CreateFolderArg.#ctor*
+  commentId: Overload:Dropbox.Api.Files.CreateFolderArg.#ctor
+  name: CreateFolderArg
+  nameWithType: CreateFolderArg.CreateFolderArg
+  fullName: Dropbox.Api.Files.CreateFolderArg.CreateFolderArg
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Files.CreateFolderArg.Path*
+  commentId: Overload:Dropbox.Api.Files.CreateFolderArg.Path
+  name: Path
+  nameWithType: CreateFolderArg.Path
+  fullName: Dropbox.Api.Files.CreateFolderArg.Path
+- uid: Dropbox.Api.Files.CreateFolderArg.Autorename*
+  commentId: Overload:Dropbox.Api.Files.CreateFolderArg.Autorename
+  name: Autorename
+  nameWithType: CreateFolderArg.Autorename
+  fullName: Dropbox.Api.Files.CreateFolderArg.Autorename
+shouldSkipMarkup: true

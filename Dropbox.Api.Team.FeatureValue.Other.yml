@@ -1,0 +1,176 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.FeatureValue.Other
+  commentId: T:Dropbox.Api.Team.FeatureValue.Other
+  id: FeatureValue.Other
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.FeatureValue.Other.Instance
+  langs:
+  - csharp
+  - vb
+  name: FeatureValue.Other
+  nameWithType: FeatureValue.Other
+  fullName: Dropbox.Api.Team.FeatureValue.Other
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/FeatureValue.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Other
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/FeatureValue.cs
+    startLine: 638
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The other object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Other : FeatureValue'
+    content.vb: >-
+      Public NotInheritable Class Other
+          Inherits FeatureValue
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.FeatureValue
+  inheritedMembers:
+  - Dropbox.Api.Team.FeatureValue.IsUploadApiRateLimit
+  - Dropbox.Api.Team.FeatureValue.AsUploadApiRateLimit
+  - Dropbox.Api.Team.FeatureValue.IsHasTeamSharedDropbox
+  - Dropbox.Api.Team.FeatureValue.AsHasTeamSharedDropbox
+  - Dropbox.Api.Team.FeatureValue.IsHasTeamFileEvents
+  - Dropbox.Api.Team.FeatureValue.AsHasTeamFileEvents
+  - Dropbox.Api.Team.FeatureValue.IsHasTeamSelectiveSync
+  - Dropbox.Api.Team.FeatureValue.AsHasTeamSelectiveSync
+  - Dropbox.Api.Team.FeatureValue.IsOther
+  - Dropbox.Api.Team.FeatureValue.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Team.FeatureValue.Other.Instance
+  commentId: F:Dropbox.Api.Team.FeatureValue.Other.Instance
+  id: Instance
+  parent: Dropbox.Api.Team.FeatureValue.Other
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: FeatureValue.Other.Instance
+  fullName: Dropbox.Api.Team.FeatureValue.Other.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/FeatureValue.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/FeatureValue.cs
+    startLine: 662
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>A singleton instance of Other</p>\n"
+  example: []
+  syntax:
+    content: public static readonly FeatureValue.Other Instance
+    return:
+      type: Dropbox.Api.Team.FeatureValue.Other
+    content.vb: Public Shared ReadOnly Instance As FeatureValue.Other
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.FeatureValue
+  commentId: T:Dropbox.Api.Team.FeatureValue
+  parent: Dropbox.Api.Team
+  name: FeatureValue
+  nameWithType: FeatureValue
+  fullName: Dropbox.Api.Team.FeatureValue
+- uid: Dropbox.Api.Team.FeatureValue.IsUploadApiRateLimit
+  commentId: P:Dropbox.Api.Team.FeatureValue.IsUploadApiRateLimit
+  parent: Dropbox.Api.Team.FeatureValue
+  name: IsUploadApiRateLimit
+  nameWithType: FeatureValue.IsUploadApiRateLimit
+  fullName: Dropbox.Api.Team.FeatureValue.IsUploadApiRateLimit
+- uid: Dropbox.Api.Team.FeatureValue.AsUploadApiRateLimit
+  commentId: P:Dropbox.Api.Team.FeatureValue.AsUploadApiRateLimit
+  parent: Dropbox.Api.Team.FeatureValue
+  name: AsUploadApiRateLimit
+  nameWithType: FeatureValue.AsUploadApiRateLimit
+  fullName: Dropbox.Api.Team.FeatureValue.AsUploadApiRateLimit
+- uid: Dropbox.Api.Team.FeatureValue.IsHasTeamSharedDropbox
+  commentId: P:Dropbox.Api.Team.FeatureValue.IsHasTeamSharedDropbox
+  parent: Dropbox.Api.Team.FeatureValue
+  name: IsHasTeamSharedDropbox
+  nameWithType: FeatureValue.IsHasTeamSharedDropbox
+  fullName: Dropbox.Api.Team.FeatureValue.IsHasTeamSharedDropbox
+- uid: Dropbox.Api.Team.FeatureValue.AsHasTeamSharedDropbox
+  commentId: P:Dropbox.Api.Team.FeatureValue.AsHasTeamSharedDropbox
+  parent: Dropbox.Api.Team.FeatureValue
+  name: AsHasTeamSharedDropbox
+  nameWithType: FeatureValue.AsHasTeamSharedDropbox
+  fullName: Dropbox.Api.Team.FeatureValue.AsHasTeamSharedDropbox
+- uid: Dropbox.Api.Team.FeatureValue.IsHasTeamFileEvents
+  commentId: P:Dropbox.Api.Team.FeatureValue.IsHasTeamFileEvents
+  parent: Dropbox.Api.Team.FeatureValue
+  name: IsHasTeamFileEvents
+  nameWithType: FeatureValue.IsHasTeamFileEvents
+  fullName: Dropbox.Api.Team.FeatureValue.IsHasTeamFileEvents
+- uid: Dropbox.Api.Team.FeatureValue.AsHasTeamFileEvents
+  commentId: P:Dropbox.Api.Team.FeatureValue.AsHasTeamFileEvents
+  parent: Dropbox.Api.Team.FeatureValue
+  name: AsHasTeamFileEvents
+  nameWithType: FeatureValue.AsHasTeamFileEvents
+  fullName: Dropbox.Api.Team.FeatureValue.AsHasTeamFileEvents
+- uid: Dropbox.Api.Team.FeatureValue.IsHasTeamSelectiveSync
+  commentId: P:Dropbox.Api.Team.FeatureValue.IsHasTeamSelectiveSync
+  parent: Dropbox.Api.Team.FeatureValue
+  name: IsHasTeamSelectiveSync
+  nameWithType: FeatureValue.IsHasTeamSelectiveSync
+  fullName: Dropbox.Api.Team.FeatureValue.IsHasTeamSelectiveSync
+- uid: Dropbox.Api.Team.FeatureValue.AsHasTeamSelectiveSync
+  commentId: P:Dropbox.Api.Team.FeatureValue.AsHasTeamSelectiveSync
+  parent: Dropbox.Api.Team.FeatureValue
+  name: AsHasTeamSelectiveSync
+  nameWithType: FeatureValue.AsHasTeamSelectiveSync
+  fullName: Dropbox.Api.Team.FeatureValue.AsHasTeamSelectiveSync
+- uid: Dropbox.Api.Team.FeatureValue.IsOther
+  commentId: P:Dropbox.Api.Team.FeatureValue.IsOther
+  parent: Dropbox.Api.Team.FeatureValue
+  name: IsOther
+  nameWithType: FeatureValue.IsOther
+  fullName: Dropbox.Api.Team.FeatureValue.IsOther
+- uid: Dropbox.Api.Team.FeatureValue.AsOther
+  commentId: P:Dropbox.Api.Team.FeatureValue.AsOther
+  parent: Dropbox.Api.Team.FeatureValue
+  name: AsOther
+  nameWithType: FeatureValue.AsOther
+  fullName: Dropbox.Api.Team.FeatureValue.AsOther
+- uid: Dropbox.Api.Team.FeatureValue.Other
+  commentId: T:Dropbox.Api.Team.FeatureValue.Other
+  parent: Dropbox.Api.Team
+  name: FeatureValue.Other
+  nameWithType: FeatureValue.Other
+  fullName: Dropbox.Api.Team.FeatureValue.Other
+shouldSkipMarkup: true

@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamType
+  commentId: T:Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamType
+  id: TeamMergeRequestCanceledShownToSecondaryTeamType
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamType.#ctor
+  - Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamType.#ctor(System.String)
+  - Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamType.Description
+  langs:
+  - csharp
+  - vb
+  name: TeamMergeRequestCanceledShownToSecondaryTeamType
+  nameWithType: TeamMergeRequestCanceledShownToSecondaryTeamType
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestCanceledShownToSecondaryTeamType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TeamMergeRequestCanceledShownToSecondaryTeamType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestCanceledShownToSecondaryTeamType.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The team merge request canceled shown to secondary team type object</p>\n"
+  example: []
+  syntax:
+    content: 'public class TeamMergeRequestCanceledShownToSecondaryTeamType : object'
+    content.vb: >-
+      Public Class TeamMergeRequestCanceledShownToSecondaryTeamType
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamType.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamType.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamType
+  langs:
+  - csharp
+  - vb
+  name: TeamMergeRequestCanceledShownToSecondaryTeamType(String)
+  nameWithType: TeamMergeRequestCanceledShownToSecondaryTeamType.TeamMergeRequestCanceledShownToSecondaryTeamType(String)
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamType.TeamMergeRequestCanceledShownToSecondaryTeamType(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestCanceledShownToSecondaryTeamType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestCanceledShownToSecondaryTeamType.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamType\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public TeamMergeRequestCanceledShownToSecondaryTeamType(string description)
+    parameters:
+    - id: description
+      type: System.String
+      description: The description
+    content.vb: Public Sub New(description As String)
+  overload: Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamType.#ctor
+  commentId: M:Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamType.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamType
+  langs:
+  - csharp
+  - vb
+  name: TeamMergeRequestCanceledShownToSecondaryTeamType()
+  nameWithType: TeamMergeRequestCanceledShownToSecondaryTeamType.TeamMergeRequestCanceledShownToSecondaryTeamType()
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamType.TeamMergeRequestCanceledShownToSecondaryTeamType()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestCanceledShownToSecondaryTeamType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestCanceledShownToSecondaryTeamType.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamType\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public TeamMergeRequestCanceledShownToSecondaryTeamType()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamType.Description
+  commentId: P:Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamType.Description
+  id: Description
+  parent: Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamType
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: TeamMergeRequestCanceledShownToSecondaryTeamType.Description
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamType.Description
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestCanceledShownToSecondaryTeamType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Description
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestCanceledShownToSecondaryTeamType.cs
+    startLine: 59
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets the description of the team merge request canceled shown to secondary\nteam type</p>\n"
+  example: []
+  syntax:
+    content: public string Description { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamType.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamType
+  commentId: T:Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamType
+  parent: Dropbox.Api.TeamLog
+  name: TeamMergeRequestCanceledShownToSecondaryTeamType
+  nameWithType: TeamMergeRequestCanceledShownToSecondaryTeamType
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamType
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamType.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamType.#ctor
+  name: TeamMergeRequestCanceledShownToSecondaryTeamType
+  nameWithType: TeamMergeRequestCanceledShownToSecondaryTeamType.TeamMergeRequestCanceledShownToSecondaryTeamType
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamType.TeamMergeRequestCanceledShownToSecondaryTeamType
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamType.Description*
+  commentId: Overload:Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamType.Description
+  name: Description
+  nameWithType: TeamMergeRequestCanceledShownToSecondaryTeamType.Description
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestCanceledShownToSecondaryTeamType.Description
+shouldSkipMarkup: true

@@ -1,0 +1,148 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.TokenGetAuthenticatedAdminError.Other
+  commentId: T:Dropbox.Api.Team.TokenGetAuthenticatedAdminError.Other
+  id: TokenGetAuthenticatedAdminError.Other
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.TokenGetAuthenticatedAdminError.Other.Instance
+  langs:
+  - csharp
+  - vb
+  name: TokenGetAuthenticatedAdminError.Other
+  nameWithType: TokenGetAuthenticatedAdminError.Other
+  fullName: Dropbox.Api.Team.TokenGetAuthenticatedAdminError.Other
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TokenGetAuthenticatedAdminError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Other
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TokenGetAuthenticatedAdminError.cs
+    startLine: 328
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The other object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Other : TokenGetAuthenticatedAdminError'
+    content.vb: >-
+      Public NotInheritable Class Other
+          Inherits TokenGetAuthenticatedAdminError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.TokenGetAuthenticatedAdminError
+  inheritedMembers:
+  - Dropbox.Api.Team.TokenGetAuthenticatedAdminError.IsMappingNotFound
+  - Dropbox.Api.Team.TokenGetAuthenticatedAdminError.AsMappingNotFound
+  - Dropbox.Api.Team.TokenGetAuthenticatedAdminError.IsAdminNotActive
+  - Dropbox.Api.Team.TokenGetAuthenticatedAdminError.AsAdminNotActive
+  - Dropbox.Api.Team.TokenGetAuthenticatedAdminError.IsOther
+  - Dropbox.Api.Team.TokenGetAuthenticatedAdminError.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Team.TokenGetAuthenticatedAdminError.Other.Instance
+  commentId: F:Dropbox.Api.Team.TokenGetAuthenticatedAdminError.Other.Instance
+  id: Instance
+  parent: Dropbox.Api.Team.TokenGetAuthenticatedAdminError.Other
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: TokenGetAuthenticatedAdminError.Other.Instance
+  fullName: Dropbox.Api.Team.TokenGetAuthenticatedAdminError.Other.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TokenGetAuthenticatedAdminError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TokenGetAuthenticatedAdminError.cs
+    startLine: 352
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>A singleton instance of Other</p>\n"
+  example: []
+  syntax:
+    content: public static readonly TokenGetAuthenticatedAdminError.Other Instance
+    return:
+      type: Dropbox.Api.Team.TokenGetAuthenticatedAdminError.Other
+    content.vb: Public Shared ReadOnly Instance As TokenGetAuthenticatedAdminError.Other
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.TokenGetAuthenticatedAdminError
+  commentId: T:Dropbox.Api.Team.TokenGetAuthenticatedAdminError
+  parent: Dropbox.Api.Team
+  name: TokenGetAuthenticatedAdminError
+  nameWithType: TokenGetAuthenticatedAdminError
+  fullName: Dropbox.Api.Team.TokenGetAuthenticatedAdminError
+- uid: Dropbox.Api.Team.TokenGetAuthenticatedAdminError.IsMappingNotFound
+  commentId: P:Dropbox.Api.Team.TokenGetAuthenticatedAdminError.IsMappingNotFound
+  parent: Dropbox.Api.Team.TokenGetAuthenticatedAdminError
+  name: IsMappingNotFound
+  nameWithType: TokenGetAuthenticatedAdminError.IsMappingNotFound
+  fullName: Dropbox.Api.Team.TokenGetAuthenticatedAdminError.IsMappingNotFound
+- uid: Dropbox.Api.Team.TokenGetAuthenticatedAdminError.AsMappingNotFound
+  commentId: P:Dropbox.Api.Team.TokenGetAuthenticatedAdminError.AsMappingNotFound
+  parent: Dropbox.Api.Team.TokenGetAuthenticatedAdminError
+  name: AsMappingNotFound
+  nameWithType: TokenGetAuthenticatedAdminError.AsMappingNotFound
+  fullName: Dropbox.Api.Team.TokenGetAuthenticatedAdminError.AsMappingNotFound
+- uid: Dropbox.Api.Team.TokenGetAuthenticatedAdminError.IsAdminNotActive
+  commentId: P:Dropbox.Api.Team.TokenGetAuthenticatedAdminError.IsAdminNotActive
+  parent: Dropbox.Api.Team.TokenGetAuthenticatedAdminError
+  name: IsAdminNotActive
+  nameWithType: TokenGetAuthenticatedAdminError.IsAdminNotActive
+  fullName: Dropbox.Api.Team.TokenGetAuthenticatedAdminError.IsAdminNotActive
+- uid: Dropbox.Api.Team.TokenGetAuthenticatedAdminError.AsAdminNotActive
+  commentId: P:Dropbox.Api.Team.TokenGetAuthenticatedAdminError.AsAdminNotActive
+  parent: Dropbox.Api.Team.TokenGetAuthenticatedAdminError
+  name: AsAdminNotActive
+  nameWithType: TokenGetAuthenticatedAdminError.AsAdminNotActive
+  fullName: Dropbox.Api.Team.TokenGetAuthenticatedAdminError.AsAdminNotActive
+- uid: Dropbox.Api.Team.TokenGetAuthenticatedAdminError.IsOther
+  commentId: P:Dropbox.Api.Team.TokenGetAuthenticatedAdminError.IsOther
+  parent: Dropbox.Api.Team.TokenGetAuthenticatedAdminError
+  name: IsOther
+  nameWithType: TokenGetAuthenticatedAdminError.IsOther
+  fullName: Dropbox.Api.Team.TokenGetAuthenticatedAdminError.IsOther
+- uid: Dropbox.Api.Team.TokenGetAuthenticatedAdminError.AsOther
+  commentId: P:Dropbox.Api.Team.TokenGetAuthenticatedAdminError.AsOther
+  parent: Dropbox.Api.Team.TokenGetAuthenticatedAdminError
+  name: AsOther
+  nameWithType: TokenGetAuthenticatedAdminError.AsOther
+  fullName: Dropbox.Api.Team.TokenGetAuthenticatedAdminError.AsOther
+- uid: Dropbox.Api.Team.TokenGetAuthenticatedAdminError.Other
+  commentId: T:Dropbox.Api.Team.TokenGetAuthenticatedAdminError.Other
+  parent: Dropbox.Api.Team
+  name: TokenGetAuthenticatedAdminError.Other
+  nameWithType: TokenGetAuthenticatedAdminError.Other
+  fullName: Dropbox.Api.Team.TokenGetAuthenticatedAdminError.Other
+shouldSkipMarkup: true

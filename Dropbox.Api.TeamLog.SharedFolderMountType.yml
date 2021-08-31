@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.SharedFolderMountType
+  commentId: T:Dropbox.Api.TeamLog.SharedFolderMountType
+  id: SharedFolderMountType
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.SharedFolderMountType.#ctor
+  - Dropbox.Api.TeamLog.SharedFolderMountType.#ctor(System.String)
+  - Dropbox.Api.TeamLog.SharedFolderMountType.Description
+  langs:
+  - csharp
+  - vb
+  name: SharedFolderMountType
+  nameWithType: SharedFolderMountType
+  fullName: Dropbox.Api.TeamLog.SharedFolderMountType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderMountType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SharedFolderMountType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderMountType.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The shared folder mount type object</p>\n"
+  example: []
+  syntax:
+    content: 'public class SharedFolderMountType : object'
+    content.vb: >-
+      Public Class SharedFolderMountType
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.SharedFolderMountType.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.SharedFolderMountType.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.SharedFolderMountType
+  langs:
+  - csharp
+  - vb
+  name: SharedFolderMountType(String)
+  nameWithType: SharedFolderMountType.SharedFolderMountType(String)
+  fullName: Dropbox.Api.TeamLog.SharedFolderMountType.SharedFolderMountType(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderMountType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderMountType.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SharedFolderMountType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public SharedFolderMountType(string description)
+    parameters:
+    - id: description
+      type: System.String
+      description: The description
+    content.vb: Public Sub New(description As String)
+  overload: Dropbox.Api.TeamLog.SharedFolderMountType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SharedFolderMountType.#ctor
+  commentId: M:Dropbox.Api.TeamLog.SharedFolderMountType.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.SharedFolderMountType
+  langs:
+  - csharp
+  - vb
+  name: SharedFolderMountType()
+  nameWithType: SharedFolderMountType.SharedFolderMountType()
+  fullName: Dropbox.Api.TeamLog.SharedFolderMountType.SharedFolderMountType()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderMountType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderMountType.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SharedFolderMountType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public SharedFolderMountType()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.SharedFolderMountType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SharedFolderMountType.Description
+  commentId: P:Dropbox.Api.TeamLog.SharedFolderMountType.Description
+  id: Description
+  parent: Dropbox.Api.TeamLog.SharedFolderMountType
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: SharedFolderMountType.Description
+  fullName: Dropbox.Api.TeamLog.SharedFolderMountType.Description
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderMountType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Description
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderMountType.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets the description of the shared folder mount type</p>\n"
+  example: []
+  syntax:
+    content: public string Description { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Dropbox.Api.TeamLog.SharedFolderMountType.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.SharedFolderMountType
+  commentId: T:Dropbox.Api.TeamLog.SharedFolderMountType
+  parent: Dropbox.Api.TeamLog
+  name: SharedFolderMountType
+  nameWithType: SharedFolderMountType
+  fullName: Dropbox.Api.TeamLog.SharedFolderMountType
+- uid: Dropbox.Api.TeamLog.SharedFolderMountType.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedFolderMountType.#ctor
+  name: SharedFolderMountType
+  nameWithType: SharedFolderMountType.SharedFolderMountType
+  fullName: Dropbox.Api.TeamLog.SharedFolderMountType.SharedFolderMountType
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.SharedFolderMountType.Description*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedFolderMountType.Description
+  name: Description
+  nameWithType: SharedFolderMountType.Description
+  fullName: Dropbox.Api.TeamLog.SharedFolderMountType.Description
+shouldSkipMarkup: true

@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.AccountCaptureRelinquishAccountDetails
+  commentId: T:Dropbox.Api.TeamLog.AccountCaptureRelinquishAccountDetails
+  id: AccountCaptureRelinquishAccountDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.AccountCaptureRelinquishAccountDetails.#ctor
+  - Dropbox.Api.TeamLog.AccountCaptureRelinquishAccountDetails.#ctor(System.String)
+  - Dropbox.Api.TeamLog.AccountCaptureRelinquishAccountDetails.DomainName
+  langs:
+  - csharp
+  - vb
+  name: AccountCaptureRelinquishAccountDetails
+  nameWithType: AccountCaptureRelinquishAccountDetails
+  fullName: Dropbox.Api.TeamLog.AccountCaptureRelinquishAccountDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AccountCaptureRelinquishAccountDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AccountCaptureRelinquishAccountDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AccountCaptureRelinquishAccountDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Account-captured user changed account email to personal email.</p>\n"
+  example: []
+  syntax:
+    content: 'public class AccountCaptureRelinquishAccountDetails : object'
+    content.vb: >-
+      Public Class AccountCaptureRelinquishAccountDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.AccountCaptureRelinquishAccountDetails.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.AccountCaptureRelinquishAccountDetails.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.AccountCaptureRelinquishAccountDetails
+  langs:
+  - csharp
+  - vb
+  name: AccountCaptureRelinquishAccountDetails(String)
+  nameWithType: AccountCaptureRelinquishAccountDetails.AccountCaptureRelinquishAccountDetails(String)
+  fullName: Dropbox.Api.TeamLog.AccountCaptureRelinquishAccountDetails.AccountCaptureRelinquishAccountDetails(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AccountCaptureRelinquishAccountDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AccountCaptureRelinquishAccountDetails.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.AccountCaptureRelinquishAccountDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public AccountCaptureRelinquishAccountDetails(string domainName)
+    parameters:
+    - id: domainName
+      type: System.String
+      description: Domain name.
+    content.vb: Public Sub New(domainName As String)
+  overload: Dropbox.Api.TeamLog.AccountCaptureRelinquishAccountDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.AccountCaptureRelinquishAccountDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.AccountCaptureRelinquishAccountDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.AccountCaptureRelinquishAccountDetails
+  langs:
+  - csharp
+  - vb
+  name: AccountCaptureRelinquishAccountDetails()
+  nameWithType: AccountCaptureRelinquishAccountDetails.AccountCaptureRelinquishAccountDetails()
+  fullName: Dropbox.Api.TeamLog.AccountCaptureRelinquishAccountDetails.AccountCaptureRelinquishAccountDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AccountCaptureRelinquishAccountDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AccountCaptureRelinquishAccountDetails.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.AccountCaptureRelinquishAccountDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public AccountCaptureRelinquishAccountDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.AccountCaptureRelinquishAccountDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.AccountCaptureRelinquishAccountDetails.DomainName
+  commentId: P:Dropbox.Api.TeamLog.AccountCaptureRelinquishAccountDetails.DomainName
+  id: DomainName
+  parent: Dropbox.Api.TeamLog.AccountCaptureRelinquishAccountDetails
+  langs:
+  - csharp
+  - vb
+  name: DomainName
+  nameWithType: AccountCaptureRelinquishAccountDetails.DomainName
+  fullName: Dropbox.Api.TeamLog.AccountCaptureRelinquishAccountDetails.DomainName
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AccountCaptureRelinquishAccountDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: DomainName
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AccountCaptureRelinquishAccountDetails.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Domain name.</p>\n"
+  example: []
+  syntax:
+    content: public string DomainName { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property DomainName As String
+  overload: Dropbox.Api.TeamLog.AccountCaptureRelinquishAccountDetails.DomainName*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.AccountCaptureRelinquishAccountDetails
+  commentId: T:Dropbox.Api.TeamLog.AccountCaptureRelinquishAccountDetails
+  parent: Dropbox.Api.TeamLog
+  name: AccountCaptureRelinquishAccountDetails
+  nameWithType: AccountCaptureRelinquishAccountDetails
+  fullName: Dropbox.Api.TeamLog.AccountCaptureRelinquishAccountDetails
+- uid: Dropbox.Api.TeamLog.AccountCaptureRelinquishAccountDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.AccountCaptureRelinquishAccountDetails.#ctor
+  name: AccountCaptureRelinquishAccountDetails
+  nameWithType: AccountCaptureRelinquishAccountDetails.AccountCaptureRelinquishAccountDetails
+  fullName: Dropbox.Api.TeamLog.AccountCaptureRelinquishAccountDetails.AccountCaptureRelinquishAccountDetails
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.AccountCaptureRelinquishAccountDetails.DomainName*
+  commentId: Overload:Dropbox.Api.TeamLog.AccountCaptureRelinquishAccountDetails.DomainName
+  name: DomainName
+  nameWithType: AccountCaptureRelinquishAccountDetails.DomainName
+  fullName: Dropbox.Api.TeamLog.AccountCaptureRelinquishAccountDetails.DomainName
+shouldSkipMarkup: true

@@ -1,0 +1,411 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Check.Routes.CheckAppRoutes
+  commentId: T:Dropbox.Api.Check.Routes.CheckAppRoutes
+  id: CheckAppRoutes
+  parent: Dropbox.Api.Check.Routes
+  children:
+  - Dropbox.Api.Check.Routes.CheckAppRoutes.AppAsync(Dropbox.Api.Check.EchoArg)
+  - Dropbox.Api.Check.Routes.CheckAppRoutes.AppAsync(System.String)
+  - Dropbox.Api.Check.Routes.CheckAppRoutes.BeginApp(Dropbox.Api.Check.EchoArg,System.AsyncCallback,System.Object)
+  - Dropbox.Api.Check.Routes.CheckAppRoutes.BeginApp(System.String,System.AsyncCallback,System.Object)
+  - Dropbox.Api.Check.Routes.CheckAppRoutes.EndApp(System.IAsyncResult)
+  langs:
+  - csharp
+  - vb
+  name: CheckAppRoutes
+  nameWithType: CheckAppRoutes
+  fullName: Dropbox.Api.Check.Routes.CheckAppRoutes
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Check/CheckAppRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: CheckAppRoutes
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Check/CheckAppRoutes.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Check.Routes
+  summary: "\n<p>The routes for the <xref href=\"Dropbox.Api.Check\" data-throw-if-not-resolved=\"false\"></xref> namespace</p>\n"
+  example: []
+  syntax:
+    content: 'public class CheckAppRoutes : object'
+    content.vb: >-
+      Public Class CheckAppRoutes
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Check.Routes.CheckAppRoutes.AppAsync(Dropbox.Api.Check.EchoArg)
+  commentId: M:Dropbox.Api.Check.Routes.CheckAppRoutes.AppAsync(Dropbox.Api.Check.EchoArg)
+  id: AppAsync(Dropbox.Api.Check.EchoArg)
+  parent: Dropbox.Api.Check.Routes.CheckAppRoutes
+  langs:
+  - csharp
+  - vb
+  name: AppAsync(EchoArg)
+  nameWithType: CheckAppRoutes.AppAsync(EchoArg)
+  fullName: Dropbox.Api.Check.Routes.CheckAppRoutes.AppAsync(Dropbox.Api.Check.EchoArg)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Check/CheckAppRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AppAsync
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Check/CheckAppRoutes.cs
+    startLine: 41
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Check.Routes
+  summary: "\n<p>This endpoint performs App Authentication, validating the supplied app key\nand secret, and returns the supplied string, to allow you to test your code and\nconnection to the Dropbox API. It has no other effect. If you receive an HTTP 200\nresponse with the supplied query, it indicates at least part of the Dropbox API\ninfrastructure is working and that the app key and secret valid.</p>\n"
+  example: []
+  syntax:
+    content: public System.Threading.Tasks.Task<EchoResult> AppAsync(EchoArg echoArg)
+    parameters:
+    - id: echoArg
+      type: Dropbox.Api.Check.EchoArg
+      description: The request parameters
+    return:
+      type: System.Threading.Tasks.Task{Dropbox.Api.Check.EchoResult}
+      description: >-
+        The task that represents the asynchronous send operation. The TResult
+
+        parameter contains the response from the server.
+    content.vb: Public Function AppAsync(echoArg As EchoArg) As System.Threading.Tasks.Task(Of EchoResult)
+  overload: Dropbox.Api.Check.Routes.CheckAppRoutes.AppAsync*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Check.Routes.CheckAppRoutes.BeginApp(Dropbox.Api.Check.EchoArg,System.AsyncCallback,System.Object)
+  commentId: M:Dropbox.Api.Check.Routes.CheckAppRoutes.BeginApp(Dropbox.Api.Check.EchoArg,System.AsyncCallback,System.Object)
+  id: BeginApp(Dropbox.Api.Check.EchoArg,System.AsyncCallback,System.Object)
+  parent: Dropbox.Api.Check.Routes.CheckAppRoutes
+  langs:
+  - csharp
+  - vb
+  name: BeginApp(EchoArg, System.AsyncCallback, Object)
+  nameWithType: CheckAppRoutes.BeginApp(EchoArg, System.AsyncCallback, Object)
+  fullName: Dropbox.Api.Check.Routes.CheckAppRoutes.BeginApp(Dropbox.Api.Check.EchoArg, System.AsyncCallback, System.Object)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Check/CheckAppRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: BeginApp
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Check/CheckAppRoutes.cs
+    startLine: 55
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Check.Routes
+  summary: "\n<p>Begins an asynchronous send to the app route.</p>\n"
+  example: []
+  syntax:
+    content: public System.IAsyncResult BeginApp(EchoArg echoArg, System.AsyncCallback callback, object state = null)
+    parameters:
+    - id: echoArg
+      type: Dropbox.Api.Check.EchoArg
+      description: The request parameters.
+    - id: callback
+      type: System.AsyncCallback
+      description: >-
+        The method to be called when the asynchronous send is
+
+        completed.
+    - id: state
+      type: System.Object
+      description: >-
+        A user provided object that distinguished this send from other
+
+        send requests.
+    return:
+      type: System.IAsyncResult
+      description: An object that represents the asynchronous send request.
+    content.vb: Public Function BeginApp(echoArg As EchoArg, callback As System.AsyncCallback, state As Object = Nothing) As System.IAsyncResult
+  overload: Dropbox.Api.Check.Routes.CheckAppRoutes.BeginApp*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Check.Routes.CheckAppRoutes.AppAsync(System.String)
+  commentId: M:Dropbox.Api.Check.Routes.CheckAppRoutes.AppAsync(System.String)
+  id: AppAsync(System.String)
+  parent: Dropbox.Api.Check.Routes.CheckAppRoutes
+  langs:
+  - csharp
+  - vb
+  name: AppAsync(String)
+  nameWithType: CheckAppRoutes.AppAsync(String)
+  fullName: Dropbox.Api.Check.Routes.CheckAppRoutes.AppAsync(System.String)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Check/CheckAppRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AppAsync
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Check/CheckAppRoutes.cs
+    startLine: 72
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Check.Routes
+  summary: "\n<p>This endpoint performs App Authentication, validating the supplied app key\nand secret, and returns the supplied string, to allow you to test your code and\nconnection to the Dropbox API. It has no other effect. If you receive an HTTP 200\nresponse with the supplied query, it indicates at least part of the Dropbox API\ninfrastructure is working and that the app key and secret valid.</p>\n"
+  example: []
+  syntax:
+    content: public System.Threading.Tasks.Task<EchoResult> AppAsync(string query = "")
+    parameters:
+    - id: query
+      type: System.String
+      description: The string that you&apos;d like to be echoed back to you.
+    return:
+      type: System.Threading.Tasks.Task{Dropbox.Api.Check.EchoResult}
+      description: >-
+        The task that represents the asynchronous send operation. The TResult
+
+        parameter contains the response from the server.
+    content.vb: Public Function AppAsync(query As String = "") As System.Threading.Tasks.Task(Of EchoResult)
+  overload: Dropbox.Api.Check.Routes.CheckAppRoutes.AppAsync*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Check.Routes.CheckAppRoutes.BeginApp(System.String,System.AsyncCallback,System.Object)
+  commentId: M:Dropbox.Api.Check.Routes.CheckAppRoutes.BeginApp(System.String,System.AsyncCallback,System.Object)
+  id: BeginApp(System.String,System.AsyncCallback,System.Object)
+  parent: Dropbox.Api.Check.Routes.CheckAppRoutes
+  langs:
+  - csharp
+  - vb
+  name: BeginApp(String, System.AsyncCallback, Object)
+  nameWithType: CheckAppRoutes.BeginApp(String, System.AsyncCallback, Object)
+  fullName: Dropbox.Api.Check.Routes.CheckAppRoutes.BeginApp(System.String, System.AsyncCallback, System.Object)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Check/CheckAppRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: BeginApp
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Check/CheckAppRoutes.cs
+    startLine: 88
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Check.Routes
+  summary: "\n<p>Begins an asynchronous send to the app route.</p>\n"
+  example: []
+  syntax:
+    content: public System.IAsyncResult BeginApp(string query = "", System.AsyncCallback callback = null, object callbackState = null)
+    parameters:
+    - id: query
+      type: System.String
+      description: The string that you&apos;d like to be echoed back to you.
+    - id: callback
+      type: System.AsyncCallback
+      description: >-
+        The method to be called when the asynchronous send is
+
+        completed.
+    - id: callbackState
+      type: System.Object
+      description: >-
+        A user provided object that distinguished this send
+
+        from other send requests.
+    return:
+      type: System.IAsyncResult
+      description: An object that represents the asynchronous send request.
+    content.vb: Public Function BeginApp(query As String = "", callback As System.AsyncCallback = Nothing, callbackState As Object = Nothing) As System.IAsyncResult
+  overload: Dropbox.Api.Check.Routes.CheckAppRoutes.BeginApp*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Check.Routes.CheckAppRoutes.EndApp(System.IAsyncResult)
+  commentId: M:Dropbox.Api.Check.Routes.CheckAppRoutes.EndApp(System.IAsyncResult)
+  id: EndApp(System.IAsyncResult)
+  parent: Dropbox.Api.Check.Routes.CheckAppRoutes
+  langs:
+  - csharp
+  - vb
+  name: EndApp(System.IAsyncResult)
+  nameWithType: CheckAppRoutes.EndApp(System.IAsyncResult)
+  fullName: Dropbox.Api.Check.Routes.CheckAppRoutes.EndApp(System.IAsyncResult)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Check/CheckAppRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: EndApp
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Check/CheckAppRoutes.cs
+    startLine: 103
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Check.Routes
+  summary: "\n<p>Waits for the pending asynchronous send to the app route to complete</p>\n"
+  example: []
+  syntax:
+    content: public EchoResult EndApp(System.IAsyncResult asyncResult)
+    parameters:
+    - id: asyncResult
+      type: System.IAsyncResult
+      description: >-
+        The reference to the pending asynchronous send
+
+        request
+    return:
+      type: Dropbox.Api.Check.EchoResult
+      description: The response to the send request
+    content.vb: Public Function EndApp(asyncResult As System.IAsyncResult) As EchoResult
+  overload: Dropbox.Api.Check.Routes.CheckAppRoutes.EndApp*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Dropbox.Api.Check
+  commentId: N:Dropbox.Api.Check
+  name: Dropbox.Api.Check
+  nameWithType: Dropbox.Api.Check
+  fullName: Dropbox.Api.Check
+- uid: Dropbox.Api.Check.Routes
+  commentId: N:Dropbox.Api.Check.Routes
+  name: Dropbox.Api.Check.Routes
+  nameWithType: Dropbox.Api.Check.Routes
+  fullName: Dropbox.Api.Check.Routes
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Check.Routes.CheckAppRoutes.AppAsync*
+  commentId: Overload:Dropbox.Api.Check.Routes.CheckAppRoutes.AppAsync
+  name: AppAsync
+  nameWithType: CheckAppRoutes.AppAsync
+  fullName: Dropbox.Api.Check.Routes.CheckAppRoutes.AppAsync
+- uid: Dropbox.Api.Check.EchoArg
+  commentId: T:Dropbox.Api.Check.EchoArg
+  parent: Dropbox.Api.Check
+  name: EchoArg
+  nameWithType: EchoArg
+  fullName: Dropbox.Api.Check.EchoArg
+- uid: System.Threading.Tasks.Task{Dropbox.Api.Check.EchoResult}
+  commentId: '!:System.Threading.Tasks.Task{Dropbox.Api.Check.EchoResult}'
+  definition: System.Threading.Tasks.Task`1
+  name: System.Threading.Tasks.Task<EchoResult>
+  nameWithType: System.Threading.Tasks.Task<EchoResult>
+  fullName: System.Threading.Tasks.Task<Dropbox.Api.Check.EchoResult>
+  nameWithType.vb: System.Threading.Tasks.Task(Of EchoResult)
+  fullName.vb: System.Threading.Tasks.Task(Of Dropbox.Api.Check.EchoResult)
+  name.vb: System.Threading.Tasks.Task(Of EchoResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: System.Threading.Tasks.Task
+    nameWithType: System.Threading.Tasks.Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Check.EchoResult
+    name: EchoResult
+    nameWithType: EchoResult
+    fullName: Dropbox.Api.Check.EchoResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: System.Threading.Tasks.Task
+    nameWithType: System.Threading.Tasks.Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Check.EchoResult
+    name: EchoResult
+    nameWithType: EchoResult
+    fullName: Dropbox.Api.Check.EchoResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks.Task`1
+  isExternal: true
+  name: System.Threading.Tasks.Task<>
+  nameWithType: System.Threading.Tasks.Task<>
+  fullName: System.Threading.Tasks.Task<>
+  nameWithType.vb: System.Threading.Tasks.Task(Of )
+  fullName.vb: System.Threading.Tasks.Task(Of )
+  name.vb: System.Threading.Tasks.Task(Of )
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: System.Threading.Tasks.Task
+    nameWithType: System.Threading.Tasks.Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: System.Threading.Tasks.Task
+    nameWithType: System.Threading.Tasks.Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Check.Routes.CheckAppRoutes.BeginApp*
+  commentId: Overload:Dropbox.Api.Check.Routes.CheckAppRoutes.BeginApp
+  name: BeginApp
+  nameWithType: CheckAppRoutes.BeginApp
+  fullName: Dropbox.Api.Check.Routes.CheckAppRoutes.BeginApp
+- uid: System.AsyncCallback
+  isExternal: true
+  name: System.AsyncCallback
+  nameWithType: System.AsyncCallback
+  fullName: System.AsyncCallback
+- uid: System.IAsyncResult
+  isExternal: true
+  name: System.IAsyncResult
+  nameWithType: System.IAsyncResult
+  fullName: System.IAsyncResult
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Check.Routes.CheckAppRoutes.EndApp*
+  commentId: Overload:Dropbox.Api.Check.Routes.CheckAppRoutes.EndApp
+  name: EndApp
+  nameWithType: CheckAppRoutes.EndApp
+  fullName: Dropbox.Api.Check.Routes.CheckAppRoutes.EndApp
+- uid: Dropbox.Api.Check.EchoResult
+  commentId: T:Dropbox.Api.Check.EchoResult
+  parent: Dropbox.Api.Check
+  name: EchoResult
+  nameWithType: EchoResult
+  fullName: Dropbox.Api.Check.EchoResult
+shouldSkipMarkup: true

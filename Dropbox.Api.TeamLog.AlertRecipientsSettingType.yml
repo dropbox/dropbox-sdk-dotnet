@@ -1,0 +1,567 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.AlertRecipientsSettingType
+  commentId: T:Dropbox.Api.TeamLog.AlertRecipientsSettingType
+  id: AlertRecipientsSettingType
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.AlertRecipientsSettingType.#ctor
+  - Dropbox.Api.TeamLog.AlertRecipientsSettingType.AsCustomList
+  - Dropbox.Api.TeamLog.AlertRecipientsSettingType.AsInvalid
+  - Dropbox.Api.TeamLog.AlertRecipientsSettingType.AsNone
+  - Dropbox.Api.TeamLog.AlertRecipientsSettingType.AsOther
+  - Dropbox.Api.TeamLog.AlertRecipientsSettingType.AsTeamAdmins
+  - Dropbox.Api.TeamLog.AlertRecipientsSettingType.IsCustomList
+  - Dropbox.Api.TeamLog.AlertRecipientsSettingType.IsInvalid
+  - Dropbox.Api.TeamLog.AlertRecipientsSettingType.IsNone
+  - Dropbox.Api.TeamLog.AlertRecipientsSettingType.IsOther
+  - Dropbox.Api.TeamLog.AlertRecipientsSettingType.IsTeamAdmins
+  langs:
+  - csharp
+  - vb
+  name: AlertRecipientsSettingType
+  nameWithType: AlertRecipientsSettingType
+  fullName: Dropbox.Api.TeamLog.AlertRecipientsSettingType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AlertRecipientsSettingType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AlertRecipientsSettingType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AlertRecipientsSettingType.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Alert recipients setting type</p>\n"
+  example: []
+  syntax:
+    content: 'public class AlertRecipientsSettingType : object'
+    content.vb: >-
+      Public Class AlertRecipientsSettingType
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.TeamLog.AlertRecipientsSettingType.CustomList
+  - Dropbox.Api.TeamLog.AlertRecipientsSettingType.Invalid
+  - Dropbox.Api.TeamLog.AlertRecipientsSettingType.None
+  - Dropbox.Api.TeamLog.AlertRecipientsSettingType.Other
+  - Dropbox.Api.TeamLog.AlertRecipientsSettingType.TeamAdmins
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.AlertRecipientsSettingType.#ctor
+  commentId: M:Dropbox.Api.TeamLog.AlertRecipientsSettingType.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.AlertRecipientsSettingType
+  langs:
+  - csharp
+  - vb
+  name: AlertRecipientsSettingType()
+  nameWithType: AlertRecipientsSettingType.AlertRecipientsSettingType()
+  fullName: Dropbox.Api.TeamLog.AlertRecipientsSettingType.AlertRecipientsSettingType()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AlertRecipientsSettingType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AlertRecipientsSettingType.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.AlertRecipientsSettingType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public AlertRecipientsSettingType()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.AlertRecipientsSettingType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.AlertRecipientsSettingType.IsCustomList
+  commentId: P:Dropbox.Api.TeamLog.AlertRecipientsSettingType.IsCustomList
+  id: IsCustomList
+  parent: Dropbox.Api.TeamLog.AlertRecipientsSettingType
+  langs:
+  - csharp
+  - vb
+  name: IsCustomList
+  nameWithType: AlertRecipientsSettingType.IsCustomList
+  fullName: Dropbox.Api.TeamLog.AlertRecipientsSettingType.IsCustomList
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AlertRecipientsSettingType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsCustomList
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AlertRecipientsSettingType.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is CustomList</p>\n"
+  example: []
+  syntax:
+    content: public bool IsCustomList { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsCustomList As Boolean
+  overload: Dropbox.Api.TeamLog.AlertRecipientsSettingType.IsCustomList*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.AlertRecipientsSettingType.AsCustomList
+  commentId: P:Dropbox.Api.TeamLog.AlertRecipientsSettingType.AsCustomList
+  id: AsCustomList
+  parent: Dropbox.Api.TeamLog.AlertRecipientsSettingType
+  langs:
+  - csharp
+  - vb
+  name: AsCustomList
+  nameWithType: AlertRecipientsSettingType.AsCustomList
+  fullName: Dropbox.Api.TeamLog.AlertRecipientsSettingType.AsCustomList
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AlertRecipientsSettingType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsCustomList
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AlertRecipientsSettingType.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a CustomList, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public AlertRecipientsSettingType.CustomList AsCustomList { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.AlertRecipientsSettingType.CustomList
+    content.vb: Public ReadOnly Property AsCustomList As AlertRecipientsSettingType.CustomList
+  overload: Dropbox.Api.TeamLog.AlertRecipientsSettingType.AsCustomList*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.AlertRecipientsSettingType.IsInvalid
+  commentId: P:Dropbox.Api.TeamLog.AlertRecipientsSettingType.IsInvalid
+  id: IsInvalid
+  parent: Dropbox.Api.TeamLog.AlertRecipientsSettingType
+  langs:
+  - csharp
+  - vb
+  name: IsInvalid
+  nameWithType: AlertRecipientsSettingType.IsInvalid
+  fullName: Dropbox.Api.TeamLog.AlertRecipientsSettingType.IsInvalid
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AlertRecipientsSettingType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsInvalid
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AlertRecipientsSettingType.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Invalid</p>\n"
+  example: []
+  syntax:
+    content: public bool IsInvalid { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsInvalid As Boolean
+  overload: Dropbox.Api.TeamLog.AlertRecipientsSettingType.IsInvalid*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.AlertRecipientsSettingType.AsInvalid
+  commentId: P:Dropbox.Api.TeamLog.AlertRecipientsSettingType.AsInvalid
+  id: AsInvalid
+  parent: Dropbox.Api.TeamLog.AlertRecipientsSettingType
+  langs:
+  - csharp
+  - vb
+  name: AsInvalid
+  nameWithType: AlertRecipientsSettingType.AsInvalid
+  fullName: Dropbox.Api.TeamLog.AlertRecipientsSettingType.AsInvalid
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AlertRecipientsSettingType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsInvalid
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AlertRecipientsSettingType.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Invalid, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public AlertRecipientsSettingType.Invalid AsInvalid { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.AlertRecipientsSettingType.Invalid
+    content.vb: Public ReadOnly Property AsInvalid As AlertRecipientsSettingType.Invalid
+  overload: Dropbox.Api.TeamLog.AlertRecipientsSettingType.AsInvalid*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.AlertRecipientsSettingType.IsNone
+  commentId: P:Dropbox.Api.TeamLog.AlertRecipientsSettingType.IsNone
+  id: IsNone
+  parent: Dropbox.Api.TeamLog.AlertRecipientsSettingType
+  langs:
+  - csharp
+  - vb
+  name: IsNone
+  nameWithType: AlertRecipientsSettingType.IsNone
+  fullName: Dropbox.Api.TeamLog.AlertRecipientsSettingType.IsNone
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AlertRecipientsSettingType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsNone
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AlertRecipientsSettingType.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is None</p>\n"
+  example: []
+  syntax:
+    content: public bool IsNone { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsNone As Boolean
+  overload: Dropbox.Api.TeamLog.AlertRecipientsSettingType.IsNone*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.AlertRecipientsSettingType.AsNone
+  commentId: P:Dropbox.Api.TeamLog.AlertRecipientsSettingType.AsNone
+  id: AsNone
+  parent: Dropbox.Api.TeamLog.AlertRecipientsSettingType
+  langs:
+  - csharp
+  - vb
+  name: AsNone
+  nameWithType: AlertRecipientsSettingType.AsNone
+  fullName: Dropbox.Api.TeamLog.AlertRecipientsSettingType.AsNone
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AlertRecipientsSettingType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsNone
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AlertRecipientsSettingType.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a None, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public AlertRecipientsSettingType.None AsNone { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.AlertRecipientsSettingType.None
+    content.vb: Public ReadOnly Property AsNone As AlertRecipientsSettingType.None
+  overload: Dropbox.Api.TeamLog.AlertRecipientsSettingType.AsNone*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.AlertRecipientsSettingType.IsTeamAdmins
+  commentId: P:Dropbox.Api.TeamLog.AlertRecipientsSettingType.IsTeamAdmins
+  id: IsTeamAdmins
+  parent: Dropbox.Api.TeamLog.AlertRecipientsSettingType
+  langs:
+  - csharp
+  - vb
+  name: IsTeamAdmins
+  nameWithType: AlertRecipientsSettingType.IsTeamAdmins
+  fullName: Dropbox.Api.TeamLog.AlertRecipientsSettingType.IsTeamAdmins
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AlertRecipientsSettingType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsTeamAdmins
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AlertRecipientsSettingType.cs
+    startLine: 106
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is TeamAdmins</p>\n"
+  example: []
+  syntax:
+    content: public bool IsTeamAdmins { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsTeamAdmins As Boolean
+  overload: Dropbox.Api.TeamLog.AlertRecipientsSettingType.IsTeamAdmins*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.AlertRecipientsSettingType.AsTeamAdmins
+  commentId: P:Dropbox.Api.TeamLog.AlertRecipientsSettingType.AsTeamAdmins
+  id: AsTeamAdmins
+  parent: Dropbox.Api.TeamLog.AlertRecipientsSettingType
+  langs:
+  - csharp
+  - vb
+  name: AsTeamAdmins
+  nameWithType: AlertRecipientsSettingType.AsTeamAdmins
+  fullName: Dropbox.Api.TeamLog.AlertRecipientsSettingType.AsTeamAdmins
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AlertRecipientsSettingType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsTeamAdmins
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AlertRecipientsSettingType.cs
+    startLine: 117
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a TeamAdmins, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public AlertRecipientsSettingType.TeamAdmins AsTeamAdmins { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.AlertRecipientsSettingType.TeamAdmins
+    content.vb: Public ReadOnly Property AsTeamAdmins As AlertRecipientsSettingType.TeamAdmins
+  overload: Dropbox.Api.TeamLog.AlertRecipientsSettingType.AsTeamAdmins*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.AlertRecipientsSettingType.IsOther
+  commentId: P:Dropbox.Api.TeamLog.AlertRecipientsSettingType.IsOther
+  id: IsOther
+  parent: Dropbox.Api.TeamLog.AlertRecipientsSettingType
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: AlertRecipientsSettingType.IsOther
+  fullName: Dropbox.Api.TeamLog.AlertRecipientsSettingType.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AlertRecipientsSettingType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AlertRecipientsSettingType.cs
+    startLine: 128
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.TeamLog.AlertRecipientsSettingType.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.AlertRecipientsSettingType.AsOther
+  commentId: P:Dropbox.Api.TeamLog.AlertRecipientsSettingType.AsOther
+  id: AsOther
+  parent: Dropbox.Api.TeamLog.AlertRecipientsSettingType
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: AlertRecipientsSettingType.AsOther
+  fullName: Dropbox.Api.TeamLog.AlertRecipientsSettingType.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AlertRecipientsSettingType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AlertRecipientsSettingType.cs
+    startLine: 139
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public AlertRecipientsSettingType.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.AlertRecipientsSettingType.Other
+    content.vb: Public ReadOnly Property AsOther As AlertRecipientsSettingType.Other
+  overload: Dropbox.Api.TeamLog.AlertRecipientsSettingType.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.AlertRecipientsSettingType
+  commentId: T:Dropbox.Api.TeamLog.AlertRecipientsSettingType
+  parent: Dropbox.Api.TeamLog
+  name: AlertRecipientsSettingType
+  nameWithType: AlertRecipientsSettingType
+  fullName: Dropbox.Api.TeamLog.AlertRecipientsSettingType
+- uid: Dropbox.Api.TeamLog.AlertRecipientsSettingType.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.AlertRecipientsSettingType.#ctor
+  name: AlertRecipientsSettingType
+  nameWithType: AlertRecipientsSettingType.AlertRecipientsSettingType
+  fullName: Dropbox.Api.TeamLog.AlertRecipientsSettingType.AlertRecipientsSettingType
+- uid: Dropbox.Api.TeamLog.AlertRecipientsSettingType.IsCustomList*
+  commentId: Overload:Dropbox.Api.TeamLog.AlertRecipientsSettingType.IsCustomList
+  name: IsCustomList
+  nameWithType: AlertRecipientsSettingType.IsCustomList
+  fullName: Dropbox.Api.TeamLog.AlertRecipientsSettingType.IsCustomList
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.TeamLog.AlertRecipientsSettingType.AsCustomList*
+  commentId: Overload:Dropbox.Api.TeamLog.AlertRecipientsSettingType.AsCustomList
+  name: AsCustomList
+  nameWithType: AlertRecipientsSettingType.AsCustomList
+  fullName: Dropbox.Api.TeamLog.AlertRecipientsSettingType.AsCustomList
+- uid: Dropbox.Api.TeamLog.AlertRecipientsSettingType.CustomList
+  commentId: T:Dropbox.Api.TeamLog.AlertRecipientsSettingType.CustomList
+  parent: Dropbox.Api.TeamLog
+  name: AlertRecipientsSettingType.CustomList
+  nameWithType: AlertRecipientsSettingType.CustomList
+  fullName: Dropbox.Api.TeamLog.AlertRecipientsSettingType.CustomList
+- uid: Dropbox.Api.TeamLog.AlertRecipientsSettingType.IsInvalid*
+  commentId: Overload:Dropbox.Api.TeamLog.AlertRecipientsSettingType.IsInvalid
+  name: IsInvalid
+  nameWithType: AlertRecipientsSettingType.IsInvalid
+  fullName: Dropbox.Api.TeamLog.AlertRecipientsSettingType.IsInvalid
+- uid: Dropbox.Api.TeamLog.AlertRecipientsSettingType.AsInvalid*
+  commentId: Overload:Dropbox.Api.TeamLog.AlertRecipientsSettingType.AsInvalid
+  name: AsInvalid
+  nameWithType: AlertRecipientsSettingType.AsInvalid
+  fullName: Dropbox.Api.TeamLog.AlertRecipientsSettingType.AsInvalid
+- uid: Dropbox.Api.TeamLog.AlertRecipientsSettingType.Invalid
+  commentId: T:Dropbox.Api.TeamLog.AlertRecipientsSettingType.Invalid
+  parent: Dropbox.Api.TeamLog
+  name: AlertRecipientsSettingType.Invalid
+  nameWithType: AlertRecipientsSettingType.Invalid
+  fullName: Dropbox.Api.TeamLog.AlertRecipientsSettingType.Invalid
+- uid: Dropbox.Api.TeamLog.AlertRecipientsSettingType.IsNone*
+  commentId: Overload:Dropbox.Api.TeamLog.AlertRecipientsSettingType.IsNone
+  name: IsNone
+  nameWithType: AlertRecipientsSettingType.IsNone
+  fullName: Dropbox.Api.TeamLog.AlertRecipientsSettingType.IsNone
+- uid: Dropbox.Api.TeamLog.AlertRecipientsSettingType.AsNone*
+  commentId: Overload:Dropbox.Api.TeamLog.AlertRecipientsSettingType.AsNone
+  name: AsNone
+  nameWithType: AlertRecipientsSettingType.AsNone
+  fullName: Dropbox.Api.TeamLog.AlertRecipientsSettingType.AsNone
+- uid: Dropbox.Api.TeamLog.AlertRecipientsSettingType.None
+  commentId: T:Dropbox.Api.TeamLog.AlertRecipientsSettingType.None
+  parent: Dropbox.Api.TeamLog
+  name: AlertRecipientsSettingType.None
+  nameWithType: AlertRecipientsSettingType.None
+  fullName: Dropbox.Api.TeamLog.AlertRecipientsSettingType.None
+- uid: Dropbox.Api.TeamLog.AlertRecipientsSettingType.IsTeamAdmins*
+  commentId: Overload:Dropbox.Api.TeamLog.AlertRecipientsSettingType.IsTeamAdmins
+  name: IsTeamAdmins
+  nameWithType: AlertRecipientsSettingType.IsTeamAdmins
+  fullName: Dropbox.Api.TeamLog.AlertRecipientsSettingType.IsTeamAdmins
+- uid: Dropbox.Api.TeamLog.AlertRecipientsSettingType.AsTeamAdmins*
+  commentId: Overload:Dropbox.Api.TeamLog.AlertRecipientsSettingType.AsTeamAdmins
+  name: AsTeamAdmins
+  nameWithType: AlertRecipientsSettingType.AsTeamAdmins
+  fullName: Dropbox.Api.TeamLog.AlertRecipientsSettingType.AsTeamAdmins
+- uid: Dropbox.Api.TeamLog.AlertRecipientsSettingType.TeamAdmins
+  commentId: T:Dropbox.Api.TeamLog.AlertRecipientsSettingType.TeamAdmins
+  parent: Dropbox.Api.TeamLog
+  name: AlertRecipientsSettingType.TeamAdmins
+  nameWithType: AlertRecipientsSettingType.TeamAdmins
+  fullName: Dropbox.Api.TeamLog.AlertRecipientsSettingType.TeamAdmins
+- uid: Dropbox.Api.TeamLog.AlertRecipientsSettingType.IsOther*
+  commentId: Overload:Dropbox.Api.TeamLog.AlertRecipientsSettingType.IsOther
+  name: IsOther
+  nameWithType: AlertRecipientsSettingType.IsOther
+  fullName: Dropbox.Api.TeamLog.AlertRecipientsSettingType.IsOther
+- uid: Dropbox.Api.TeamLog.AlertRecipientsSettingType.AsOther*
+  commentId: Overload:Dropbox.Api.TeamLog.AlertRecipientsSettingType.AsOther
+  name: AsOther
+  nameWithType: AlertRecipientsSettingType.AsOther
+  fullName: Dropbox.Api.TeamLog.AlertRecipientsSettingType.AsOther
+- uid: Dropbox.Api.TeamLog.AlertRecipientsSettingType.Other
+  commentId: T:Dropbox.Api.TeamLog.AlertRecipientsSettingType.Other
+  parent: Dropbox.Api.TeamLog
+  name: AlertRecipientsSettingType.Other
+  nameWithType: AlertRecipientsSettingType.Other
+  fullName: Dropbox.Api.TeamLog.AlertRecipientsSettingType.Other
+shouldSkipMarkup: true

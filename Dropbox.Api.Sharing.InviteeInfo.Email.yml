@@ -1,0 +1,186 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.InviteeInfo.Email
+  commentId: T:Dropbox.Api.Sharing.InviteeInfo.Email
+  id: InviteeInfo.Email
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.InviteeInfo.Email.#ctor(System.String)
+  - Dropbox.Api.Sharing.InviteeInfo.Email.Value
+  langs:
+  - csharp
+  - vb
+  name: InviteeInfo.Email
+  nameWithType: InviteeInfo.Email
+  fullName: Dropbox.Api.Sharing.InviteeInfo.Email
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/InviteeInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Email
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/InviteeInfo.cs
+    startLine: 151
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Email address of invited user.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Email : InviteeInfo'
+    content.vb: >-
+      Public NotInheritable Class Email
+          Inherits InviteeInfo
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Sharing.InviteeInfo
+  inheritedMembers:
+  - Dropbox.Api.Sharing.InviteeInfo.IsEmail
+  - Dropbox.Api.Sharing.InviteeInfo.AsEmail
+  - Dropbox.Api.Sharing.InviteeInfo.IsOther
+  - Dropbox.Api.Sharing.InviteeInfo.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Sharing.InviteeInfo.Email.#ctor(System.String)
+  commentId: M:Dropbox.Api.Sharing.InviteeInfo.Email.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.Sharing.InviteeInfo.Email
+  langs:
+  - csharp
+  - vb
+  name: Email(String)
+  nameWithType: InviteeInfo.Email.Email(String)
+  fullName: Dropbox.Api.Sharing.InviteeInfo.Email.Email(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/InviteeInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/InviteeInfo.cs
+    startLine: 169
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.InviteeInfo.Email\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public Email(string value)
+    parameters:
+    - id: value
+      type: System.String
+      description: The value
+    content.vb: Public Sub New(value As String)
+  overload: Dropbox.Api.Sharing.InviteeInfo.Email.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.InviteeInfo.Email.Value
+  commentId: P:Dropbox.Api.Sharing.InviteeInfo.Email.Value
+  id: Value
+  parent: Dropbox.Api.Sharing.InviteeInfo.Email
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: InviteeInfo.Email.Value
+  fullName: Dropbox.Api.Sharing.InviteeInfo.Email.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/InviteeInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/InviteeInfo.cs
+    startLine: 183
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public string Value { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Value As String
+  overload: Dropbox.Api.Sharing.InviteeInfo.Email.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.InviteeInfo
+  commentId: T:Dropbox.Api.Sharing.InviteeInfo
+  parent: Dropbox.Api.Sharing
+  name: InviteeInfo
+  nameWithType: InviteeInfo
+  fullName: Dropbox.Api.Sharing.InviteeInfo
+- uid: Dropbox.Api.Sharing.InviteeInfo.IsEmail
+  commentId: P:Dropbox.Api.Sharing.InviteeInfo.IsEmail
+  parent: Dropbox.Api.Sharing.InviteeInfo
+  name: IsEmail
+  nameWithType: InviteeInfo.IsEmail
+  fullName: Dropbox.Api.Sharing.InviteeInfo.IsEmail
+- uid: Dropbox.Api.Sharing.InviteeInfo.AsEmail
+  commentId: P:Dropbox.Api.Sharing.InviteeInfo.AsEmail
+  parent: Dropbox.Api.Sharing.InviteeInfo
+  name: AsEmail
+  nameWithType: InviteeInfo.AsEmail
+  fullName: Dropbox.Api.Sharing.InviteeInfo.AsEmail
+- uid: Dropbox.Api.Sharing.InviteeInfo.IsOther
+  commentId: P:Dropbox.Api.Sharing.InviteeInfo.IsOther
+  parent: Dropbox.Api.Sharing.InviteeInfo
+  name: IsOther
+  nameWithType: InviteeInfo.IsOther
+  fullName: Dropbox.Api.Sharing.InviteeInfo.IsOther
+- uid: Dropbox.Api.Sharing.InviteeInfo.AsOther
+  commentId: P:Dropbox.Api.Sharing.InviteeInfo.AsOther
+  parent: Dropbox.Api.Sharing.InviteeInfo
+  name: AsOther
+  nameWithType: InviteeInfo.AsOther
+  fullName: Dropbox.Api.Sharing.InviteeInfo.AsOther
+- uid: Dropbox.Api.Sharing.InviteeInfo.Email
+  commentId: T:Dropbox.Api.Sharing.InviteeInfo.Email
+  parent: Dropbox.Api.Sharing
+  name: InviteeInfo.Email
+  nameWithType: InviteeInfo.Email
+  fullName: Dropbox.Api.Sharing.InviteeInfo.Email
+- uid: Dropbox.Api.Sharing.InviteeInfo.Email.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.InviteeInfo.Email.#ctor
+  name: Email
+  nameWithType: InviteeInfo.Email.Email
+  fullName: Dropbox.Api.Sharing.InviteeInfo.Email.Email
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Sharing.InviteeInfo.Email.Value*
+  commentId: Overload:Dropbox.Api.Sharing.InviteeInfo.Email.Value
+  name: Value
+  nameWithType: InviteeInfo.Email.Value
+  fullName: Dropbox.Api.Sharing.InviteeInfo.Email.Value
+shouldSkipMarkup: true

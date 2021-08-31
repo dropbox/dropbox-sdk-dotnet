@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.GroupDeleteType
+  commentId: T:Dropbox.Api.TeamLog.GroupDeleteType
+  id: GroupDeleteType
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.GroupDeleteType.#ctor
+  - Dropbox.Api.TeamLog.GroupDeleteType.#ctor(System.String)
+  - Dropbox.Api.TeamLog.GroupDeleteType.Description
+  langs:
+  - csharp
+  - vb
+  name: GroupDeleteType
+  nameWithType: GroupDeleteType
+  fullName: Dropbox.Api.TeamLog.GroupDeleteType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupDeleteType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GroupDeleteType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupDeleteType.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The group delete type object</p>\n"
+  example: []
+  syntax:
+    content: 'public class GroupDeleteType : object'
+    content.vb: >-
+      Public Class GroupDeleteType
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.GroupDeleteType.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.GroupDeleteType.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.GroupDeleteType
+  langs:
+  - csharp
+  - vb
+  name: GroupDeleteType(String)
+  nameWithType: GroupDeleteType.GroupDeleteType(String)
+  fullName: Dropbox.Api.TeamLog.GroupDeleteType.GroupDeleteType(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupDeleteType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupDeleteType.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.GroupDeleteType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public GroupDeleteType(string description)
+    parameters:
+    - id: description
+      type: System.String
+      description: The description
+    content.vb: Public Sub New(description As String)
+  overload: Dropbox.Api.TeamLog.GroupDeleteType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.GroupDeleteType.#ctor
+  commentId: M:Dropbox.Api.TeamLog.GroupDeleteType.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.GroupDeleteType
+  langs:
+  - csharp
+  - vb
+  name: GroupDeleteType()
+  nameWithType: GroupDeleteType.GroupDeleteType()
+  fullName: Dropbox.Api.TeamLog.GroupDeleteType.GroupDeleteType()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupDeleteType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupDeleteType.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.GroupDeleteType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public GroupDeleteType()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.GroupDeleteType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.GroupDeleteType.Description
+  commentId: P:Dropbox.Api.TeamLog.GroupDeleteType.Description
+  id: Description
+  parent: Dropbox.Api.TeamLog.GroupDeleteType
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: GroupDeleteType.Description
+  fullName: Dropbox.Api.TeamLog.GroupDeleteType.Description
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupDeleteType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Description
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupDeleteType.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets the description of the group delete type</p>\n"
+  example: []
+  syntax:
+    content: public string Description { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Dropbox.Api.TeamLog.GroupDeleteType.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.GroupDeleteType
+  commentId: T:Dropbox.Api.TeamLog.GroupDeleteType
+  parent: Dropbox.Api.TeamLog
+  name: GroupDeleteType
+  nameWithType: GroupDeleteType
+  fullName: Dropbox.Api.TeamLog.GroupDeleteType
+- uid: Dropbox.Api.TeamLog.GroupDeleteType.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.GroupDeleteType.#ctor
+  name: GroupDeleteType
+  nameWithType: GroupDeleteType.GroupDeleteType
+  fullName: Dropbox.Api.TeamLog.GroupDeleteType.GroupDeleteType
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.GroupDeleteType.Description*
+  commentId: Overload:Dropbox.Api.TeamLog.GroupDeleteType.Description
+  name: Description
+  nameWithType: GroupDeleteType.Description
+  fullName: Dropbox.Api.TeamLog.GroupDeleteType.Description
+shouldSkipMarkup: true

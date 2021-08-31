@@ -1,0 +1,288 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Users.GetAccountError
+  commentId: T:Dropbox.Api.Users.GetAccountError
+  id: GetAccountError
+  parent: Dropbox.Api.Users
+  children:
+  - Dropbox.Api.Users.GetAccountError.#ctor
+  - Dropbox.Api.Users.GetAccountError.AsNoAccount
+  - Dropbox.Api.Users.GetAccountError.AsOther
+  - Dropbox.Api.Users.GetAccountError.IsNoAccount
+  - Dropbox.Api.Users.GetAccountError.IsOther
+  langs:
+  - csharp
+  - vb
+  name: GetAccountError
+  nameWithType: GetAccountError
+  fullName: Dropbox.Api.Users.GetAccountError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/GetAccountError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GetAccountError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/GetAccountError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users
+  summary: "\n<p>The get account error object</p>\n"
+  example: []
+  syntax:
+    content: 'public class GetAccountError : object'
+    content.vb: >-
+      Public Class GetAccountError
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Users.GetAccountError.NoAccount
+  - Dropbox.Api.Users.GetAccountError.Other
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Users.GetAccountError.#ctor
+  commentId: M:Dropbox.Api.Users.GetAccountError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Users.GetAccountError
+  langs:
+  - csharp
+  - vb
+  name: GetAccountError()
+  nameWithType: GetAccountError.GetAccountError()
+  fullName: Dropbox.Api.Users.GetAccountError.GetAccountError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/GetAccountError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/GetAccountError.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Users.GetAccountError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public GetAccountError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Users.GetAccountError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Users.GetAccountError.IsNoAccount
+  commentId: P:Dropbox.Api.Users.GetAccountError.IsNoAccount
+  id: IsNoAccount
+  parent: Dropbox.Api.Users.GetAccountError
+  langs:
+  - csharp
+  - vb
+  name: IsNoAccount
+  nameWithType: GetAccountError.IsNoAccount
+  fullName: Dropbox.Api.Users.GetAccountError.IsNoAccount
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/GetAccountError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsNoAccount
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/GetAccountError.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users
+  summary: "\n<p>Gets a value indicating whether this instance is NoAccount</p>\n"
+  example: []
+  syntax:
+    content: public bool IsNoAccount { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsNoAccount As Boolean
+  overload: Dropbox.Api.Users.GetAccountError.IsNoAccount*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Users.GetAccountError.AsNoAccount
+  commentId: P:Dropbox.Api.Users.GetAccountError.AsNoAccount
+  id: AsNoAccount
+  parent: Dropbox.Api.Users.GetAccountError
+  langs:
+  - csharp
+  - vb
+  name: AsNoAccount
+  nameWithType: GetAccountError.AsNoAccount
+  fullName: Dropbox.Api.Users.GetAccountError.AsNoAccount
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/GetAccountError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsNoAccount
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/GetAccountError.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users
+  summary: "\n<p>Gets this instance as a NoAccount, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public GetAccountError.NoAccount AsNoAccount { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Users.GetAccountError.NoAccount
+    content.vb: Public ReadOnly Property AsNoAccount As GetAccountError.NoAccount
+  overload: Dropbox.Api.Users.GetAccountError.AsNoAccount*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Users.GetAccountError.IsOther
+  commentId: P:Dropbox.Api.Users.GetAccountError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Users.GetAccountError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: GetAccountError.IsOther
+  fullName: Dropbox.Api.Users.GetAccountError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/GetAccountError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/GetAccountError.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Users.GetAccountError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Users.GetAccountError.AsOther
+  commentId: P:Dropbox.Api.Users.GetAccountError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Users.GetAccountError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: GetAccountError.AsOther
+  fullName: Dropbox.Api.Users.GetAccountError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/GetAccountError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/GetAccountError.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public GetAccountError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Users.GetAccountError.Other
+    content.vb: Public ReadOnly Property AsOther As GetAccountError.Other
+  overload: Dropbox.Api.Users.GetAccountError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Users
+  commentId: N:Dropbox.Api.Users
+  name: Dropbox.Api.Users
+  nameWithType: Dropbox.Api.Users
+  fullName: Dropbox.Api.Users
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Users.GetAccountError
+  commentId: T:Dropbox.Api.Users.GetAccountError
+  parent: Dropbox.Api.Users
+  name: GetAccountError
+  nameWithType: GetAccountError
+  fullName: Dropbox.Api.Users.GetAccountError
+- uid: Dropbox.Api.Users.GetAccountError.#ctor*
+  commentId: Overload:Dropbox.Api.Users.GetAccountError.#ctor
+  name: GetAccountError
+  nameWithType: GetAccountError.GetAccountError
+  fullName: Dropbox.Api.Users.GetAccountError.GetAccountError
+- uid: Dropbox.Api.Users.GetAccountError.IsNoAccount*
+  commentId: Overload:Dropbox.Api.Users.GetAccountError.IsNoAccount
+  name: IsNoAccount
+  nameWithType: GetAccountError.IsNoAccount
+  fullName: Dropbox.Api.Users.GetAccountError.IsNoAccount
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Users.GetAccountError.AsNoAccount*
+  commentId: Overload:Dropbox.Api.Users.GetAccountError.AsNoAccount
+  name: AsNoAccount
+  nameWithType: GetAccountError.AsNoAccount
+  fullName: Dropbox.Api.Users.GetAccountError.AsNoAccount
+- uid: Dropbox.Api.Users.GetAccountError.NoAccount
+  commentId: T:Dropbox.Api.Users.GetAccountError.NoAccount
+  parent: Dropbox.Api.Users
+  name: GetAccountError.NoAccount
+  nameWithType: GetAccountError.NoAccount
+  fullName: Dropbox.Api.Users.GetAccountError.NoAccount
+- uid: Dropbox.Api.Users.GetAccountError.IsOther*
+  commentId: Overload:Dropbox.Api.Users.GetAccountError.IsOther
+  name: IsOther
+  nameWithType: GetAccountError.IsOther
+  fullName: Dropbox.Api.Users.GetAccountError.IsOther
+- uid: Dropbox.Api.Users.GetAccountError.AsOther*
+  commentId: Overload:Dropbox.Api.Users.GetAccountError.AsOther
+  name: AsOther
+  nameWithType: GetAccountError.AsOther
+  fullName: Dropbox.Api.Users.GetAccountError.AsOther
+- uid: Dropbox.Api.Users.GetAccountError.Other
+  commentId: T:Dropbox.Api.Users.GetAccountError.Other
+  parent: Dropbox.Api.Users
+  name: GetAccountError.Other
+  nameWithType: GetAccountError.Other
+  fullName: Dropbox.Api.Users.GetAccountError.Other
+shouldSkipMarkup: true

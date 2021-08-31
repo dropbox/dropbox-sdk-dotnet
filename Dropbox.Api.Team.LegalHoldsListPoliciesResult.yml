@@ -1,0 +1,343 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.LegalHoldsListPoliciesResult
+  commentId: T:Dropbox.Api.Team.LegalHoldsListPoliciesResult
+  id: LegalHoldsListPoliciesResult
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.LegalHoldsListPoliciesResult.#ctor
+  - Dropbox.Api.Team.LegalHoldsListPoliciesResult.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Team.LegalHoldPolicy})
+  - Dropbox.Api.Team.LegalHoldsListPoliciesResult.Policies
+  langs:
+  - csharp
+  - vb
+  name: LegalHoldsListPoliciesResult
+  nameWithType: LegalHoldsListPoliciesResult
+  fullName: Dropbox.Api.Team.LegalHoldsListPoliciesResult
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListPoliciesResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: LegalHoldsListPoliciesResult
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListPoliciesResult.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The legal holds list policies result object</p>\n"
+  example: []
+  syntax:
+    content: 'public class LegalHoldsListPoliciesResult : object'
+    content.vb: >-
+      Public Class LegalHoldsListPoliciesResult
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.LegalHoldsListPoliciesResult.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Team.LegalHoldPolicy})
+  commentId: M:Dropbox.Api.Team.LegalHoldsListPoliciesResult.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Team.LegalHoldPolicy})
+  id: '#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Team.LegalHoldPolicy})'
+  parent: Dropbox.Api.Team.LegalHoldsListPoliciesResult
+  langs:
+  - csharp
+  - vb
+  name: LegalHoldsListPoliciesResult(System.Collections.Generic.IEnumerable<LegalHoldPolicy>)
+  nameWithType: LegalHoldsListPoliciesResult.LegalHoldsListPoliciesResult(System.Collections.Generic.IEnumerable<LegalHoldPolicy>)
+  fullName: Dropbox.Api.Team.LegalHoldsListPoliciesResult.LegalHoldsListPoliciesResult(System.Collections.Generic.IEnumerable<Dropbox.Api.Team.LegalHoldPolicy>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListPoliciesResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListPoliciesResult.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.LegalHoldsListPoliciesResult\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public LegalHoldsListPoliciesResult(System.Collections.Generic.IEnumerable<LegalHoldPolicy> policies)
+    parameters:
+    - id: policies
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.Team.LegalHoldPolicy}
+      description: The policies
+    content.vb: Public Sub New(policies As System.Collections.Generic.IEnumerable(Of LegalHoldPolicy))
+  overload: Dropbox.Api.Team.LegalHoldsListPoliciesResult.#ctor*
+  nameWithType.vb: LegalHoldsListPoliciesResult.LegalHoldsListPoliciesResult(System.Collections.Generic.IEnumerable(Of LegalHoldPolicy))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Team.LegalHoldsListPoliciesResult.LegalHoldsListPoliciesResult(System.Collections.Generic.IEnumerable(Of Dropbox.Api.Team.LegalHoldPolicy))
+  name.vb: LegalHoldsListPoliciesResult(System.Collections.Generic.IEnumerable(Of LegalHoldPolicy))
+- uid: Dropbox.Api.Team.LegalHoldsListPoliciesResult.#ctor
+  commentId: M:Dropbox.Api.Team.LegalHoldsListPoliciesResult.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.LegalHoldsListPoliciesResult
+  langs:
+  - csharp
+  - vb
+  name: LegalHoldsListPoliciesResult()
+  nameWithType: LegalHoldsListPoliciesResult.LegalHoldsListPoliciesResult()
+  fullName: Dropbox.Api.Team.LegalHoldsListPoliciesResult.LegalHoldsListPoliciesResult()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListPoliciesResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListPoliciesResult.cs
+    startLine: 52
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.LegalHoldsListPoliciesResult\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public LegalHoldsListPoliciesResult()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.LegalHoldsListPoliciesResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.LegalHoldsListPoliciesResult.Policies
+  commentId: P:Dropbox.Api.Team.LegalHoldsListPoliciesResult.Policies
+  id: Policies
+  parent: Dropbox.Api.Team.LegalHoldsListPoliciesResult
+  langs:
+  - csharp
+  - vb
+  name: Policies
+  nameWithType: LegalHoldsListPoliciesResult.Policies
+  fullName: Dropbox.Api.Team.LegalHoldsListPoliciesResult.Policies
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListPoliciesResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Policies
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListPoliciesResult.cs
+    startLine: 60
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets the policies of the legal holds list policies result</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<LegalHoldPolicy> Policies { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{Dropbox.Api.Team.LegalHoldPolicy}
+    content.vb: Public Property Policies As System.Collections.Generic.IList(Of LegalHoldPolicy)
+  overload: Dropbox.Api.Team.LegalHoldsListPoliciesResult.Policies*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.LegalHoldsListPoliciesResult
+  commentId: T:Dropbox.Api.Team.LegalHoldsListPoliciesResult
+  parent: Dropbox.Api.Team
+  name: LegalHoldsListPoliciesResult
+  nameWithType: LegalHoldsListPoliciesResult
+  fullName: Dropbox.Api.Team.LegalHoldsListPoliciesResult
+- uid: Dropbox.Api.Team.LegalHoldsListPoliciesResult.#ctor*
+  commentId: Overload:Dropbox.Api.Team.LegalHoldsListPoliciesResult.#ctor
+  name: LegalHoldsListPoliciesResult
+  nameWithType: LegalHoldsListPoliciesResult.LegalHoldsListPoliciesResult
+  fullName: Dropbox.Api.Team.LegalHoldsListPoliciesResult.LegalHoldsListPoliciesResult
+- uid: System.Collections.Generic.IEnumerable{Dropbox.Api.Team.LegalHoldPolicy}
+  commentId: '!:System.Collections.Generic.IEnumerable{Dropbox.Api.Team.LegalHoldPolicy}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<LegalHoldPolicy>
+  nameWithType: System.Collections.Generic.IEnumerable<LegalHoldPolicy>
+  fullName: System.Collections.Generic.IEnumerable<Dropbox.Api.Team.LegalHoldPolicy>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of LegalHoldPolicy)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Dropbox.Api.Team.LegalHoldPolicy)
+  name.vb: System.Collections.Generic.IEnumerable(Of LegalHoldPolicy)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Team.LegalHoldPolicy
+    name: LegalHoldPolicy
+    nameWithType: LegalHoldPolicy
+    fullName: Dropbox.Api.Team.LegalHoldPolicy
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Team.LegalHoldPolicy
+    name: LegalHoldPolicy
+    nameWithType: LegalHoldPolicy
+    fullName: Dropbox.Api.Team.LegalHoldPolicy
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: System.Collections.Generic.IEnumerable<>
+  nameWithType: System.Collections.Generic.IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: System.Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Team.LegalHoldsListPoliciesResult.Policies*
+  commentId: Overload:Dropbox.Api.Team.LegalHoldsListPoliciesResult.Policies
+  name: Policies
+  nameWithType: LegalHoldsListPoliciesResult.Policies
+  fullName: Dropbox.Api.Team.LegalHoldsListPoliciesResult.Policies
+- uid: System.Collections.Generic.IList{Dropbox.Api.Team.LegalHoldPolicy}
+  commentId: '!:System.Collections.Generic.IList{Dropbox.Api.Team.LegalHoldPolicy}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<LegalHoldPolicy>
+  nameWithType: System.Collections.Generic.IList<LegalHoldPolicy>
+  fullName: System.Collections.Generic.IList<Dropbox.Api.Team.LegalHoldPolicy>
+  nameWithType.vb: System.Collections.Generic.IList(Of LegalHoldPolicy)
+  fullName.vb: System.Collections.Generic.IList(Of Dropbox.Api.Team.LegalHoldPolicy)
+  name.vb: System.Collections.Generic.IList(Of LegalHoldPolicy)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Team.LegalHoldPolicy
+    name: LegalHoldPolicy
+    nameWithType: LegalHoldPolicy
+    fullName: Dropbox.Api.Team.LegalHoldPolicy
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Team.LegalHoldPolicy
+    name: LegalHoldPolicy
+    nameWithType: LegalHoldPolicy
+    fullName: Dropbox.Api.Team.LegalHoldPolicy
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  isExternal: true
+  name: System.Collections.Generic.IList<>
+  nameWithType: System.Collections.Generic.IList<>
+  fullName: System.Collections.Generic.IList<>
+  nameWithType.vb: System.Collections.Generic.IList(Of )
+  fullName.vb: System.Collections.Generic.IList(Of )
+  name.vb: System.Collections.Generic.IList(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+shouldSkipMarkup: true

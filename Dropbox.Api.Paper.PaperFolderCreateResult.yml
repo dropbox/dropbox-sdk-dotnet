@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Paper.PaperFolderCreateResult
+  commentId: T:Dropbox.Api.Paper.PaperFolderCreateResult
+  id: PaperFolderCreateResult
+  parent: Dropbox.Api.Paper
+  children:
+  - Dropbox.Api.Paper.PaperFolderCreateResult.#ctor
+  - Dropbox.Api.Paper.PaperFolderCreateResult.#ctor(System.String)
+  - Dropbox.Api.Paper.PaperFolderCreateResult.FolderId
+  langs:
+  - csharp
+  - vb
+  name: PaperFolderCreateResult
+  nameWithType: PaperFolderCreateResult
+  fullName: Dropbox.Api.Paper.PaperFolderCreateResult
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperFolderCreateResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PaperFolderCreateResult
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperFolderCreateResult.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>The paper folder create result object</p>\n"
+  example: []
+  syntax:
+    content: 'public class PaperFolderCreateResult : object'
+    content.vb: >-
+      Public Class PaperFolderCreateResult
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Paper.PaperFolderCreateResult.#ctor(System.String)
+  commentId: M:Dropbox.Api.Paper.PaperFolderCreateResult.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.Paper.PaperFolderCreateResult
+  langs:
+  - csharp
+  - vb
+  name: PaperFolderCreateResult(String)
+  nameWithType: PaperFolderCreateResult.PaperFolderCreateResult(String)
+  fullName: Dropbox.Api.Paper.PaperFolderCreateResult.PaperFolderCreateResult(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperFolderCreateResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperFolderCreateResult.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Paper.PaperFolderCreateResult\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public PaperFolderCreateResult(string folderId)
+    parameters:
+    - id: folderId
+      type: System.String
+      description: Folder ID of the newly created folder.
+    content.vb: Public Sub New(folderId As String)
+  overload: Dropbox.Api.Paper.PaperFolderCreateResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Paper.PaperFolderCreateResult.#ctor
+  commentId: M:Dropbox.Api.Paper.PaperFolderCreateResult.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Paper.PaperFolderCreateResult
+  langs:
+  - csharp
+  - vb
+  name: PaperFolderCreateResult()
+  nameWithType: PaperFolderCreateResult.PaperFolderCreateResult()
+  fullName: Dropbox.Api.Paper.PaperFolderCreateResult.PaperFolderCreateResult()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperFolderCreateResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperFolderCreateResult.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Paper.PaperFolderCreateResult\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public PaperFolderCreateResult()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Paper.PaperFolderCreateResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Paper.PaperFolderCreateResult.FolderId
+  commentId: P:Dropbox.Api.Paper.PaperFolderCreateResult.FolderId
+  id: FolderId
+  parent: Dropbox.Api.Paper.PaperFolderCreateResult
+  langs:
+  - csharp
+  - vb
+  name: FolderId
+  nameWithType: PaperFolderCreateResult.FolderId
+  fullName: Dropbox.Api.Paper.PaperFolderCreateResult.FolderId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperFolderCreateResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: FolderId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperFolderCreateResult.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Folder ID of the newly created folder.</p>\n"
+  example: []
+  syntax:
+    content: public string FolderId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property FolderId As String
+  overload: Dropbox.Api.Paper.PaperFolderCreateResult.FolderId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Paper
+  commentId: N:Dropbox.Api.Paper
+  name: Dropbox.Api.Paper
+  nameWithType: Dropbox.Api.Paper
+  fullName: Dropbox.Api.Paper
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Paper.PaperFolderCreateResult
+  commentId: T:Dropbox.Api.Paper.PaperFolderCreateResult
+  parent: Dropbox.Api.Paper
+  name: PaperFolderCreateResult
+  nameWithType: PaperFolderCreateResult
+  fullName: Dropbox.Api.Paper.PaperFolderCreateResult
+- uid: Dropbox.Api.Paper.PaperFolderCreateResult.#ctor*
+  commentId: Overload:Dropbox.Api.Paper.PaperFolderCreateResult.#ctor
+  name: PaperFolderCreateResult
+  nameWithType: PaperFolderCreateResult.PaperFolderCreateResult
+  fullName: Dropbox.Api.Paper.PaperFolderCreateResult.PaperFolderCreateResult
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Paper.PaperFolderCreateResult.FolderId*
+  commentId: Overload:Dropbox.Api.Paper.PaperFolderCreateResult.FolderId
+  name: FolderId
+  nameWithType: PaperFolderCreateResult.FolderId
+  fullName: Dropbox.Api.Paper.PaperFolderCreateResult.FolderId
+shouldSkipMarkup: true

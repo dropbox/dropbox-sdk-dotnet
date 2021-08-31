@@ -1,0 +1,148 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.PathOrLink.Other
+  commentId: T:Dropbox.Api.Files.PathOrLink.Other
+  id: PathOrLink.Other
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.PathOrLink.Other.Instance
+  langs:
+  - csharp
+  - vb
+  name: PathOrLink.Other
+  nameWithType: PathOrLink.Other
+  fullName: Dropbox.Api.Files.PathOrLink.Other
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PathOrLink.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Other
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PathOrLink.cs
+    startLine: 364
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The other object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Other : PathOrLink'
+    content.vb: >-
+      Public NotInheritable Class Other
+          Inherits PathOrLink
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Files.PathOrLink
+  inheritedMembers:
+  - Dropbox.Api.Files.PathOrLink.IsPath
+  - Dropbox.Api.Files.PathOrLink.AsPath
+  - Dropbox.Api.Files.PathOrLink.IsLink
+  - Dropbox.Api.Files.PathOrLink.AsLink
+  - Dropbox.Api.Files.PathOrLink.IsOther
+  - Dropbox.Api.Files.PathOrLink.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Files.PathOrLink.Other.Instance
+  commentId: F:Dropbox.Api.Files.PathOrLink.Other.Instance
+  id: Instance
+  parent: Dropbox.Api.Files.PathOrLink.Other
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: PathOrLink.Other.Instance
+  fullName: Dropbox.Api.Files.PathOrLink.Other.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PathOrLink.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PathOrLink.cs
+    startLine: 388
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>A singleton instance of Other</p>\n"
+  example: []
+  syntax:
+    content: public static readonly PathOrLink.Other Instance
+    return:
+      type: Dropbox.Api.Files.PathOrLink.Other
+    content.vb: Public Shared ReadOnly Instance As PathOrLink.Other
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.PathOrLink
+  commentId: T:Dropbox.Api.Files.PathOrLink
+  parent: Dropbox.Api.Files
+  name: PathOrLink
+  nameWithType: PathOrLink
+  fullName: Dropbox.Api.Files.PathOrLink
+- uid: Dropbox.Api.Files.PathOrLink.IsPath
+  commentId: P:Dropbox.Api.Files.PathOrLink.IsPath
+  parent: Dropbox.Api.Files.PathOrLink
+  name: IsPath
+  nameWithType: PathOrLink.IsPath
+  fullName: Dropbox.Api.Files.PathOrLink.IsPath
+- uid: Dropbox.Api.Files.PathOrLink.AsPath
+  commentId: P:Dropbox.Api.Files.PathOrLink.AsPath
+  parent: Dropbox.Api.Files.PathOrLink
+  name: AsPath
+  nameWithType: PathOrLink.AsPath
+  fullName: Dropbox.Api.Files.PathOrLink.AsPath
+- uid: Dropbox.Api.Files.PathOrLink.IsLink
+  commentId: P:Dropbox.Api.Files.PathOrLink.IsLink
+  parent: Dropbox.Api.Files.PathOrLink
+  name: IsLink
+  nameWithType: PathOrLink.IsLink
+  fullName: Dropbox.Api.Files.PathOrLink.IsLink
+- uid: Dropbox.Api.Files.PathOrLink.AsLink
+  commentId: P:Dropbox.Api.Files.PathOrLink.AsLink
+  parent: Dropbox.Api.Files.PathOrLink
+  name: AsLink
+  nameWithType: PathOrLink.AsLink
+  fullName: Dropbox.Api.Files.PathOrLink.AsLink
+- uid: Dropbox.Api.Files.PathOrLink.IsOther
+  commentId: P:Dropbox.Api.Files.PathOrLink.IsOther
+  parent: Dropbox.Api.Files.PathOrLink
+  name: IsOther
+  nameWithType: PathOrLink.IsOther
+  fullName: Dropbox.Api.Files.PathOrLink.IsOther
+- uid: Dropbox.Api.Files.PathOrLink.AsOther
+  commentId: P:Dropbox.Api.Files.PathOrLink.AsOther
+  parent: Dropbox.Api.Files.PathOrLink
+  name: AsOther
+  nameWithType: PathOrLink.AsOther
+  fullName: Dropbox.Api.Files.PathOrLink.AsOther
+- uid: Dropbox.Api.Files.PathOrLink.Other
+  commentId: T:Dropbox.Api.Files.PathOrLink.Other
+  parent: Dropbox.Api.Files
+  name: PathOrLink.Other
+  nameWithType: PathOrLink.Other
+  fullName: Dropbox.Api.Files.PathOrLink.Other
+shouldSkipMarkup: true

@@ -1,0 +1,201 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.UserSelectorError
+  commentId: T:Dropbox.Api.Team.UserSelectorError
+  id: UserSelectorError
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.UserSelectorError.#ctor
+  - Dropbox.Api.Team.UserSelectorError.AsUserNotFound
+  - Dropbox.Api.Team.UserSelectorError.IsUserNotFound
+  langs:
+  - csharp
+  - vb
+  name: UserSelectorError
+  nameWithType: UserSelectorError
+  fullName: Dropbox.Api.Team.UserSelectorError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserSelectorError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: UserSelectorError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserSelectorError.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Error that can be returned whenever a struct derived from <xref href=\"Dropbox.Api.Team.UserSelectorArg\" data-throw-if-not-resolved=\"false\"></xref> is used.</p>\n"
+  example: []
+  syntax:
+    content: 'public class UserSelectorError : object'
+    content.vb: >-
+      Public Class UserSelectorError
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Team.UserSelectorError.UserNotFound
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.UserSelectorError.#ctor
+  commentId: M:Dropbox.Api.Team.UserSelectorError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.UserSelectorError
+  langs:
+  - csharp
+  - vb
+  name: UserSelectorError()
+  nameWithType: UserSelectorError.UserSelectorError()
+  fullName: Dropbox.Api.Team.UserSelectorError.UserSelectorError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserSelectorError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserSelectorError.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.UserSelectorError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public UserSelectorError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.UserSelectorError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.UserSelectorError.IsUserNotFound
+  commentId: P:Dropbox.Api.Team.UserSelectorError.IsUserNotFound
+  id: IsUserNotFound
+  parent: Dropbox.Api.Team.UserSelectorError
+  langs:
+  - csharp
+  - vb
+  name: IsUserNotFound
+  nameWithType: UserSelectorError.IsUserNotFound
+  fullName: Dropbox.Api.Team.UserSelectorError.IsUserNotFound
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserSelectorError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsUserNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserSelectorError.cs
+    startLine: 41
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is UserNotFound</p>\n"
+  example: []
+  syntax:
+    content: public bool IsUserNotFound { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsUserNotFound As Boolean
+  overload: Dropbox.Api.Team.UserSelectorError.IsUserNotFound*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.UserSelectorError.AsUserNotFound
+  commentId: P:Dropbox.Api.Team.UserSelectorError.AsUserNotFound
+  id: AsUserNotFound
+  parent: Dropbox.Api.Team.UserSelectorError
+  langs:
+  - csharp
+  - vb
+  name: AsUserNotFound
+  nameWithType: UserSelectorError.AsUserNotFound
+  fullName: Dropbox.Api.Team.UserSelectorError.AsUserNotFound
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserSelectorError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsUserNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserSelectorError.cs
+    startLine: 52
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a UserNotFound, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public UserSelectorError.UserNotFound AsUserNotFound { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.UserSelectorError.UserNotFound
+    content.vb: Public ReadOnly Property AsUserNotFound As UserSelectorError.UserNotFound
+  overload: Dropbox.Api.Team.UserSelectorError.AsUserNotFound*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team.UserSelectorArg
+  commentId: T:Dropbox.Api.Team.UserSelectorArg
+  parent: Dropbox.Api.Team
+  name: UserSelectorArg
+  nameWithType: UserSelectorArg
+  fullName: Dropbox.Api.Team.UserSelectorArg
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.UserSelectorError
+  commentId: T:Dropbox.Api.Team.UserSelectorError
+  parent: Dropbox.Api.Team
+  name: UserSelectorError
+  nameWithType: UserSelectorError
+  fullName: Dropbox.Api.Team.UserSelectorError
+- uid: Dropbox.Api.Team.UserSelectorError.#ctor*
+  commentId: Overload:Dropbox.Api.Team.UserSelectorError.#ctor
+  name: UserSelectorError
+  nameWithType: UserSelectorError.UserSelectorError
+  fullName: Dropbox.Api.Team.UserSelectorError.UserSelectorError
+- uid: Dropbox.Api.Team.UserSelectorError.IsUserNotFound*
+  commentId: Overload:Dropbox.Api.Team.UserSelectorError.IsUserNotFound
+  name: IsUserNotFound
+  nameWithType: UserSelectorError.IsUserNotFound
+  fullName: Dropbox.Api.Team.UserSelectorError.IsUserNotFound
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Team.UserSelectorError.AsUserNotFound*
+  commentId: Overload:Dropbox.Api.Team.UserSelectorError.AsUserNotFound
+  name: AsUserNotFound
+  nameWithType: UserSelectorError.AsUserNotFound
+  fullName: Dropbox.Api.Team.UserSelectorError.AsUserNotFound
+- uid: Dropbox.Api.Team.UserSelectorError.UserNotFound
+  commentId: T:Dropbox.Api.Team.UserSelectorError.UserNotFound
+  parent: Dropbox.Api.Team
+  name: UserSelectorError.UserNotFound
+  nameWithType: UserSelectorError.UserNotFound
+  fullName: Dropbox.Api.Team.UserSelectorError.UserNotFound
+shouldSkipMarkup: true

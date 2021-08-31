@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.PaperDocSlackShareDetails
+  commentId: T:Dropbox.Api.TeamLog.PaperDocSlackShareDetails
+  id: PaperDocSlackShareDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.PaperDocSlackShareDetails.#ctor
+  - Dropbox.Api.TeamLog.PaperDocSlackShareDetails.#ctor(System.String)
+  - Dropbox.Api.TeamLog.PaperDocSlackShareDetails.EventUuid
+  langs:
+  - csharp
+  - vb
+  name: PaperDocSlackShareDetails
+  nameWithType: PaperDocSlackShareDetails
+  fullName: Dropbox.Api.TeamLog.PaperDocSlackShareDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDocSlackShareDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PaperDocSlackShareDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDocSlackShareDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Shared Paper doc via Slack.</p>\n"
+  example: []
+  syntax:
+    content: 'public class PaperDocSlackShareDetails : object'
+    content.vb: >-
+      Public Class PaperDocSlackShareDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.PaperDocSlackShareDetails.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.PaperDocSlackShareDetails.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.PaperDocSlackShareDetails
+  langs:
+  - csharp
+  - vb
+  name: PaperDocSlackShareDetails(String)
+  nameWithType: PaperDocSlackShareDetails.PaperDocSlackShareDetails(String)
+  fullName: Dropbox.Api.TeamLog.PaperDocSlackShareDetails.PaperDocSlackShareDetails(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDocSlackShareDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDocSlackShareDetails.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.PaperDocSlackShareDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public PaperDocSlackShareDetails(string eventUuid)
+    parameters:
+    - id: eventUuid
+      type: System.String
+      description: Event unique identifier.
+    content.vb: Public Sub New(eventUuid As String)
+  overload: Dropbox.Api.TeamLog.PaperDocSlackShareDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.PaperDocSlackShareDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.PaperDocSlackShareDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.PaperDocSlackShareDetails
+  langs:
+  - csharp
+  - vb
+  name: PaperDocSlackShareDetails()
+  nameWithType: PaperDocSlackShareDetails.PaperDocSlackShareDetails()
+  fullName: Dropbox.Api.TeamLog.PaperDocSlackShareDetails.PaperDocSlackShareDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDocSlackShareDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDocSlackShareDetails.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.PaperDocSlackShareDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public PaperDocSlackShareDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.PaperDocSlackShareDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.PaperDocSlackShareDetails.EventUuid
+  commentId: P:Dropbox.Api.TeamLog.PaperDocSlackShareDetails.EventUuid
+  id: EventUuid
+  parent: Dropbox.Api.TeamLog.PaperDocSlackShareDetails
+  langs:
+  - csharp
+  - vb
+  name: EventUuid
+  nameWithType: PaperDocSlackShareDetails.EventUuid
+  fullName: Dropbox.Api.TeamLog.PaperDocSlackShareDetails.EventUuid
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDocSlackShareDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: EventUuid
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDocSlackShareDetails.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Event unique identifier.</p>\n"
+  example: []
+  syntax:
+    content: public string EventUuid { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property EventUuid As String
+  overload: Dropbox.Api.TeamLog.PaperDocSlackShareDetails.EventUuid*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.PaperDocSlackShareDetails
+  commentId: T:Dropbox.Api.TeamLog.PaperDocSlackShareDetails
+  parent: Dropbox.Api.TeamLog
+  name: PaperDocSlackShareDetails
+  nameWithType: PaperDocSlackShareDetails
+  fullName: Dropbox.Api.TeamLog.PaperDocSlackShareDetails
+- uid: Dropbox.Api.TeamLog.PaperDocSlackShareDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.PaperDocSlackShareDetails.#ctor
+  name: PaperDocSlackShareDetails
+  nameWithType: PaperDocSlackShareDetails.PaperDocSlackShareDetails
+  fullName: Dropbox.Api.TeamLog.PaperDocSlackShareDetails.PaperDocSlackShareDetails
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.PaperDocSlackShareDetails.EventUuid*
+  commentId: Overload:Dropbox.Api.TeamLog.PaperDocSlackShareDetails.EventUuid
+  name: EventUuid
+  nameWithType: PaperDocSlackShareDetails.EventUuid
+  fullName: Dropbox.Api.TeamLog.PaperDocSlackShareDetails.EventUuid
+shouldSkipMarkup: true

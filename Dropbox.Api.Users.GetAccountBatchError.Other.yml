@@ -1,0 +1,134 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Users.GetAccountBatchError.Other
+  commentId: T:Dropbox.Api.Users.GetAccountBatchError.Other
+  id: GetAccountBatchError.Other
+  parent: Dropbox.Api.Users
+  children:
+  - Dropbox.Api.Users.GetAccountBatchError.Other.Instance
+  langs:
+  - csharp
+  - vb
+  name: GetAccountBatchError.Other
+  nameWithType: GetAccountBatchError.Other
+  fullName: Dropbox.Api.Users.GetAccountBatchError.Other
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/GetAccountBatchError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Other
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/GetAccountBatchError.cs
+    startLine: 250
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users
+  summary: "\n<p>The other object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Other : GetAccountBatchError'
+    content.vb: >-
+      Public NotInheritable Class Other
+          Inherits GetAccountBatchError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Users.GetAccountBatchError
+  inheritedMembers:
+  - Dropbox.Api.Users.GetAccountBatchError.IsNoAccount
+  - Dropbox.Api.Users.GetAccountBatchError.AsNoAccount
+  - Dropbox.Api.Users.GetAccountBatchError.IsOther
+  - Dropbox.Api.Users.GetAccountBatchError.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Users.GetAccountBatchError.Other.Instance
+  commentId: F:Dropbox.Api.Users.GetAccountBatchError.Other.Instance
+  id: Instance
+  parent: Dropbox.Api.Users.GetAccountBatchError.Other
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: GetAccountBatchError.Other.Instance
+  fullName: Dropbox.Api.Users.GetAccountBatchError.Other.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/GetAccountBatchError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/GetAccountBatchError.cs
+    startLine: 274
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users
+  summary: "\n<p>A singleton instance of Other</p>\n"
+  example: []
+  syntax:
+    content: public static readonly GetAccountBatchError.Other Instance
+    return:
+      type: Dropbox.Api.Users.GetAccountBatchError.Other
+    content.vb: Public Shared ReadOnly Instance As GetAccountBatchError.Other
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Users
+  commentId: N:Dropbox.Api.Users
+  name: Dropbox.Api.Users
+  nameWithType: Dropbox.Api.Users
+  fullName: Dropbox.Api.Users
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Users.GetAccountBatchError
+  commentId: T:Dropbox.Api.Users.GetAccountBatchError
+  parent: Dropbox.Api.Users
+  name: GetAccountBatchError
+  nameWithType: GetAccountBatchError
+  fullName: Dropbox.Api.Users.GetAccountBatchError
+- uid: Dropbox.Api.Users.GetAccountBatchError.IsNoAccount
+  commentId: P:Dropbox.Api.Users.GetAccountBatchError.IsNoAccount
+  parent: Dropbox.Api.Users.GetAccountBatchError
+  name: IsNoAccount
+  nameWithType: GetAccountBatchError.IsNoAccount
+  fullName: Dropbox.Api.Users.GetAccountBatchError.IsNoAccount
+- uid: Dropbox.Api.Users.GetAccountBatchError.AsNoAccount
+  commentId: P:Dropbox.Api.Users.GetAccountBatchError.AsNoAccount
+  parent: Dropbox.Api.Users.GetAccountBatchError
+  name: AsNoAccount
+  nameWithType: GetAccountBatchError.AsNoAccount
+  fullName: Dropbox.Api.Users.GetAccountBatchError.AsNoAccount
+- uid: Dropbox.Api.Users.GetAccountBatchError.IsOther
+  commentId: P:Dropbox.Api.Users.GetAccountBatchError.IsOther
+  parent: Dropbox.Api.Users.GetAccountBatchError
+  name: IsOther
+  nameWithType: GetAccountBatchError.IsOther
+  fullName: Dropbox.Api.Users.GetAccountBatchError.IsOther
+- uid: Dropbox.Api.Users.GetAccountBatchError.AsOther
+  commentId: P:Dropbox.Api.Users.GetAccountBatchError.AsOther
+  parent: Dropbox.Api.Users.GetAccountBatchError
+  name: AsOther
+  nameWithType: GetAccountBatchError.AsOther
+  fullName: Dropbox.Api.Users.GetAccountBatchError.AsOther
+- uid: Dropbox.Api.Users.GetAccountBatchError.Other
+  commentId: T:Dropbox.Api.Users.GetAccountBatchError.Other
+  parent: Dropbox.Api.Users
+  name: GetAccountBatchError.Other
+  nameWithType: GetAccountBatchError.Other
+  fullName: Dropbox.Api.Users.GetAccountBatchError.Other
+shouldSkipMarkup: true

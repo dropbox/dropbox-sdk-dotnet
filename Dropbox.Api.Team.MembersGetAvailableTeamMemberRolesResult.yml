@@ -1,0 +1,346 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.MembersGetAvailableTeamMemberRolesResult
+  commentId: T:Dropbox.Api.Team.MembersGetAvailableTeamMemberRolesResult
+  id: MembersGetAvailableTeamMemberRolesResult
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.MembersGetAvailableTeamMemberRolesResult.#ctor
+  - Dropbox.Api.Team.MembersGetAvailableTeamMemberRolesResult.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Team.TeamMemberRole})
+  - Dropbox.Api.Team.MembersGetAvailableTeamMemberRolesResult.Roles
+  langs:
+  - csharp
+  - vb
+  name: MembersGetAvailableTeamMemberRolesResult
+  nameWithType: MembersGetAvailableTeamMemberRolesResult
+  fullName: Dropbox.Api.Team.MembersGetAvailableTeamMemberRolesResult
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersGetAvailableTeamMemberRolesResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: MembersGetAvailableTeamMemberRolesResult
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersGetAvailableTeamMemberRolesResult.cs
+    startLine: 17
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Available TeamMemberRole for the connected team. To be used with <xref href=\"Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersSetAdminPermissionsV2Async(Dropbox.Api.Team.MembersSetPermissions2Arg)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+  example: []
+  syntax:
+    content: 'public class MembersGetAvailableTeamMemberRolesResult : object'
+    content.vb: >-
+      Public Class MembersGetAvailableTeamMemberRolesResult
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.MembersGetAvailableTeamMemberRolesResult.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Team.TeamMemberRole})
+  commentId: M:Dropbox.Api.Team.MembersGetAvailableTeamMemberRolesResult.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Team.TeamMemberRole})
+  id: '#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Team.TeamMemberRole})'
+  parent: Dropbox.Api.Team.MembersGetAvailableTeamMemberRolesResult
+  langs:
+  - csharp
+  - vb
+  name: MembersGetAvailableTeamMemberRolesResult(System.Collections.Generic.IEnumerable<TeamMemberRole>)
+  nameWithType: MembersGetAvailableTeamMemberRolesResult.MembersGetAvailableTeamMemberRolesResult(System.Collections.Generic.IEnumerable<TeamMemberRole>)
+  fullName: Dropbox.Api.Team.MembersGetAvailableTeamMemberRolesResult.MembersGetAvailableTeamMemberRolesResult(System.Collections.Generic.IEnumerable<Dropbox.Api.Team.TeamMemberRole>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersGetAvailableTeamMemberRolesResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersGetAvailableTeamMemberRolesResult.cs
+    startLine: 36
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.MembersGetAvailableTeamMemberRolesResult\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public MembersGetAvailableTeamMemberRolesResult(System.Collections.Generic.IEnumerable<TeamMemberRole> roles)
+    parameters:
+    - id: roles
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.Team.TeamMemberRole}
+      description: Available roles.
+    content.vb: Public Sub New(roles As System.Collections.Generic.IEnumerable(Of TeamMemberRole))
+  overload: Dropbox.Api.Team.MembersGetAvailableTeamMemberRolesResult.#ctor*
+  nameWithType.vb: MembersGetAvailableTeamMemberRolesResult.MembersGetAvailableTeamMemberRolesResult(System.Collections.Generic.IEnumerable(Of TeamMemberRole))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Team.MembersGetAvailableTeamMemberRolesResult.MembersGetAvailableTeamMemberRolesResult(System.Collections.Generic.IEnumerable(Of Dropbox.Api.Team.TeamMemberRole))
+  name.vb: MembersGetAvailableTeamMemberRolesResult(System.Collections.Generic.IEnumerable(Of TeamMemberRole))
+- uid: Dropbox.Api.Team.MembersGetAvailableTeamMemberRolesResult.#ctor
+  commentId: M:Dropbox.Api.Team.MembersGetAvailableTeamMemberRolesResult.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.MembersGetAvailableTeamMemberRolesResult
+  langs:
+  - csharp
+  - vb
+  name: MembersGetAvailableTeamMemberRolesResult()
+  nameWithType: MembersGetAvailableTeamMemberRolesResult.MembersGetAvailableTeamMemberRolesResult()
+  fullName: Dropbox.Api.Team.MembersGetAvailableTeamMemberRolesResult.MembersGetAvailableTeamMemberRolesResult()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersGetAvailableTeamMemberRolesResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersGetAvailableTeamMemberRolesResult.cs
+    startLine: 54
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.MembersGetAvailableTeamMemberRolesResult\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public MembersGetAvailableTeamMemberRolesResult()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.MembersGetAvailableTeamMemberRolesResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.MembersGetAvailableTeamMemberRolesResult.Roles
+  commentId: P:Dropbox.Api.Team.MembersGetAvailableTeamMemberRolesResult.Roles
+  id: Roles
+  parent: Dropbox.Api.Team.MembersGetAvailableTeamMemberRolesResult
+  langs:
+  - csharp
+  - vb
+  name: Roles
+  nameWithType: MembersGetAvailableTeamMemberRolesResult.Roles
+  fullName: Dropbox.Api.Team.MembersGetAvailableTeamMemberRolesResult.Roles
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersGetAvailableTeamMemberRolesResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Roles
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersGetAvailableTeamMemberRolesResult.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Available roles.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<TeamMemberRole> Roles { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{Dropbox.Api.Team.TeamMemberRole}
+    content.vb: Public Property Roles As System.Collections.Generic.IList(Of TeamMemberRole)
+  overload: Dropbox.Api.Team.MembersGetAvailableTeamMemberRolesResult.Roles*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersSetAdminPermissionsV2Async(Dropbox.Api.Team.MembersSetPermissions2Arg)
+  commentId: M:Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersSetAdminPermissionsV2Async(Dropbox.Api.Team.MembersSetPermissions2Arg)
+  isExternal: true
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.MembersGetAvailableTeamMemberRolesResult
+  commentId: T:Dropbox.Api.Team.MembersGetAvailableTeamMemberRolesResult
+  parent: Dropbox.Api.Team
+  name: MembersGetAvailableTeamMemberRolesResult
+  nameWithType: MembersGetAvailableTeamMemberRolesResult
+  fullName: Dropbox.Api.Team.MembersGetAvailableTeamMemberRolesResult
+- uid: Dropbox.Api.Team.MembersGetAvailableTeamMemberRolesResult.#ctor*
+  commentId: Overload:Dropbox.Api.Team.MembersGetAvailableTeamMemberRolesResult.#ctor
+  name: MembersGetAvailableTeamMemberRolesResult
+  nameWithType: MembersGetAvailableTeamMemberRolesResult.MembersGetAvailableTeamMemberRolesResult
+  fullName: Dropbox.Api.Team.MembersGetAvailableTeamMemberRolesResult.MembersGetAvailableTeamMemberRolesResult
+- uid: System.Collections.Generic.IEnumerable{Dropbox.Api.Team.TeamMemberRole}
+  commentId: '!:System.Collections.Generic.IEnumerable{Dropbox.Api.Team.TeamMemberRole}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<TeamMemberRole>
+  nameWithType: System.Collections.Generic.IEnumerable<TeamMemberRole>
+  fullName: System.Collections.Generic.IEnumerable<Dropbox.Api.Team.TeamMemberRole>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of TeamMemberRole)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Dropbox.Api.Team.TeamMemberRole)
+  name.vb: System.Collections.Generic.IEnumerable(Of TeamMemberRole)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Team.TeamMemberRole
+    name: TeamMemberRole
+    nameWithType: TeamMemberRole
+    fullName: Dropbox.Api.Team.TeamMemberRole
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Team.TeamMemberRole
+    name: TeamMemberRole
+    nameWithType: TeamMemberRole
+    fullName: Dropbox.Api.Team.TeamMemberRole
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: System.Collections.Generic.IEnumerable<>
+  nameWithType: System.Collections.Generic.IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: System.Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Team.MembersGetAvailableTeamMemberRolesResult.Roles*
+  commentId: Overload:Dropbox.Api.Team.MembersGetAvailableTeamMemberRolesResult.Roles
+  name: Roles
+  nameWithType: MembersGetAvailableTeamMemberRolesResult.Roles
+  fullName: Dropbox.Api.Team.MembersGetAvailableTeamMemberRolesResult.Roles
+- uid: System.Collections.Generic.IList{Dropbox.Api.Team.TeamMemberRole}
+  commentId: '!:System.Collections.Generic.IList{Dropbox.Api.Team.TeamMemberRole}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<TeamMemberRole>
+  nameWithType: System.Collections.Generic.IList<TeamMemberRole>
+  fullName: System.Collections.Generic.IList<Dropbox.Api.Team.TeamMemberRole>
+  nameWithType.vb: System.Collections.Generic.IList(Of TeamMemberRole)
+  fullName.vb: System.Collections.Generic.IList(Of Dropbox.Api.Team.TeamMemberRole)
+  name.vb: System.Collections.Generic.IList(Of TeamMemberRole)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Team.TeamMemberRole
+    name: TeamMemberRole
+    nameWithType: TeamMemberRole
+    fullName: Dropbox.Api.Team.TeamMemberRole
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Team.TeamMemberRole
+    name: TeamMemberRole
+    nameWithType: TeamMemberRole
+    fullName: Dropbox.Api.Team.TeamMemberRole
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  isExternal: true
+  name: System.Collections.Generic.IList<>
+  nameWithType: System.Collections.Generic.IList<>
+  fullName: System.Collections.Generic.IList<>
+  nameWithType.vb: System.Collections.Generic.IList(Of )
+  fullName.vb: System.Collections.Generic.IList(Of )
+  name.vb: System.Collections.Generic.IList(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+shouldSkipMarkup: true

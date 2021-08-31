@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.ShmodelEnableDownloadsType
+  commentId: T:Dropbox.Api.TeamLog.ShmodelEnableDownloadsType
+  id: ShmodelEnableDownloadsType
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.ShmodelEnableDownloadsType.#ctor
+  - Dropbox.Api.TeamLog.ShmodelEnableDownloadsType.#ctor(System.String)
+  - Dropbox.Api.TeamLog.ShmodelEnableDownloadsType.Description
+  langs:
+  - csharp
+  - vb
+  name: ShmodelEnableDownloadsType
+  nameWithType: ShmodelEnableDownloadsType
+  fullName: Dropbox.Api.TeamLog.ShmodelEnableDownloadsType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShmodelEnableDownloadsType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ShmodelEnableDownloadsType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShmodelEnableDownloadsType.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The shmodel enable downloads type object</p>\n"
+  example: []
+  syntax:
+    content: 'public class ShmodelEnableDownloadsType : object'
+    content.vb: >-
+      Public Class ShmodelEnableDownloadsType
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.ShmodelEnableDownloadsType.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.ShmodelEnableDownloadsType.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.ShmodelEnableDownloadsType
+  langs:
+  - csharp
+  - vb
+  name: ShmodelEnableDownloadsType(String)
+  nameWithType: ShmodelEnableDownloadsType.ShmodelEnableDownloadsType(String)
+  fullName: Dropbox.Api.TeamLog.ShmodelEnableDownloadsType.ShmodelEnableDownloadsType(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShmodelEnableDownloadsType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShmodelEnableDownloadsType.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.ShmodelEnableDownloadsType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public ShmodelEnableDownloadsType(string description)
+    parameters:
+    - id: description
+      type: System.String
+      description: The description
+    content.vb: Public Sub New(description As String)
+  overload: Dropbox.Api.TeamLog.ShmodelEnableDownloadsType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.ShmodelEnableDownloadsType.#ctor
+  commentId: M:Dropbox.Api.TeamLog.ShmodelEnableDownloadsType.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.ShmodelEnableDownloadsType
+  langs:
+  - csharp
+  - vb
+  name: ShmodelEnableDownloadsType()
+  nameWithType: ShmodelEnableDownloadsType.ShmodelEnableDownloadsType()
+  fullName: Dropbox.Api.TeamLog.ShmodelEnableDownloadsType.ShmodelEnableDownloadsType()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShmodelEnableDownloadsType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShmodelEnableDownloadsType.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.ShmodelEnableDownloadsType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public ShmodelEnableDownloadsType()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.ShmodelEnableDownloadsType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.ShmodelEnableDownloadsType.Description
+  commentId: P:Dropbox.Api.TeamLog.ShmodelEnableDownloadsType.Description
+  id: Description
+  parent: Dropbox.Api.TeamLog.ShmodelEnableDownloadsType
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: ShmodelEnableDownloadsType.Description
+  fullName: Dropbox.Api.TeamLog.ShmodelEnableDownloadsType.Description
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShmodelEnableDownloadsType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Description
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShmodelEnableDownloadsType.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets the description of the shmodel enable downloads type</p>\n"
+  example: []
+  syntax:
+    content: public string Description { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Dropbox.Api.TeamLog.ShmodelEnableDownloadsType.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.ShmodelEnableDownloadsType
+  commentId: T:Dropbox.Api.TeamLog.ShmodelEnableDownloadsType
+  parent: Dropbox.Api.TeamLog
+  name: ShmodelEnableDownloadsType
+  nameWithType: ShmodelEnableDownloadsType
+  fullName: Dropbox.Api.TeamLog.ShmodelEnableDownloadsType
+- uid: Dropbox.Api.TeamLog.ShmodelEnableDownloadsType.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.ShmodelEnableDownloadsType.#ctor
+  name: ShmodelEnableDownloadsType
+  nameWithType: ShmodelEnableDownloadsType.ShmodelEnableDownloadsType
+  fullName: Dropbox.Api.TeamLog.ShmodelEnableDownloadsType.ShmodelEnableDownloadsType
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.ShmodelEnableDownloadsType.Description*
+  commentId: Overload:Dropbox.Api.TeamLog.ShmodelEnableDownloadsType.Description
+  name: Description
+  nameWithType: ShmodelEnableDownloadsType.Description
+  fullName: Dropbox.Api.TeamLog.ShmodelEnableDownloadsType.Description
+shouldSkipMarkup: true

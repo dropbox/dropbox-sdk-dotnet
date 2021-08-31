@@ -1,0 +1,477 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Paper.ListPaperDocsResponse
+  commentId: T:Dropbox.Api.Paper.ListPaperDocsResponse
+  id: ListPaperDocsResponse
+  parent: Dropbox.Api.Paper
+  children:
+  - Dropbox.Api.Paper.ListPaperDocsResponse.#ctor
+  - Dropbox.Api.Paper.ListPaperDocsResponse.#ctor(System.Collections.Generic.IEnumerable{System.String},Dropbox.Api.Paper.Cursor,System.Boolean)
+  - Dropbox.Api.Paper.ListPaperDocsResponse.Cursor
+  - Dropbox.Api.Paper.ListPaperDocsResponse.DocIds
+  - Dropbox.Api.Paper.ListPaperDocsResponse.HasMore
+  langs:
+  - csharp
+  - vb
+  name: ListPaperDocsResponse
+  nameWithType: ListPaperDocsResponse
+  fullName: Dropbox.Api.Paper.ListPaperDocsResponse
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/ListPaperDocsResponse.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ListPaperDocsResponse
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/ListPaperDocsResponse.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>The list paper docs response object</p>\n"
+  example: []
+  syntax:
+    content: 'public class ListPaperDocsResponse : object'
+    content.vb: >-
+      Public Class ListPaperDocsResponse
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Paper.ListPaperDocsResponse.#ctor(System.Collections.Generic.IEnumerable{System.String},Dropbox.Api.Paper.Cursor,System.Boolean)
+  commentId: M:Dropbox.Api.Paper.ListPaperDocsResponse.#ctor(System.Collections.Generic.IEnumerable{System.String},Dropbox.Api.Paper.Cursor,System.Boolean)
+  id: '#ctor(System.Collections.Generic.IEnumerable{System.String},Dropbox.Api.Paper.Cursor,System.Boolean)'
+  parent: Dropbox.Api.Paper.ListPaperDocsResponse
+  langs:
+  - csharp
+  - vb
+  name: ListPaperDocsResponse(System.Collections.Generic.IEnumerable<String>, Cursor, Boolean)
+  nameWithType: ListPaperDocsResponse.ListPaperDocsResponse(System.Collections.Generic.IEnumerable<String>, Cursor, Boolean)
+  fullName: Dropbox.Api.Paper.ListPaperDocsResponse.ListPaperDocsResponse(System.Collections.Generic.IEnumerable<System.String>, Dropbox.Api.Paper.Cursor, System.Boolean)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/ListPaperDocsResponse.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/ListPaperDocsResponse.cs
+    startLine: 48
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Paper.ListPaperDocsResponse\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public ListPaperDocsResponse(System.Collections.Generic.IEnumerable<string> docIds, Cursor cursor, bool hasMore)
+    parameters:
+    - id: docIds
+      type: System.Collections.Generic.IEnumerable{System.String}
+      description: >-
+        The list of Paper doc IDs that can be used to access the given
+
+        Paper docs or supplied to other API methods. The list is sorted in the order
+
+        specified by the initial call to <xref href="Dropbox.Api.Paper.Routes.PaperUserRoutes.DocsListAsync(Dropbox.Api.Paper.ListPaperDocsArgs)" data-throw-if-not-resolved="false"></xref>.
+    - id: cursor
+      type: Dropbox.Api.Paper.Cursor
+      description: >-
+        Pass the cursor into <xref href="Dropbox.Api.Paper.Routes.PaperUserRoutes.DocsListContinueAsync(Dropbox.Api.Paper.ListPaperDocsContinueArgs)" data-throw-if-not-resolved="false"></xref> to
+
+        paginate through all files. The cursor preserves all properties as specified in the
+
+        original call to <xref href="Dropbox.Api.Paper.Routes.PaperUserRoutes.DocsListAsync(Dropbox.Api.Paper.ListPaperDocsArgs)" data-throw-if-not-resolved="false"></xref>.
+    - id: hasMore
+      type: System.Boolean
+      description: >-
+        Will be set to True if a subsequent call with the provided
+
+        cursor to <xref href="Dropbox.Api.Paper.Routes.PaperUserRoutes.DocsListContinueAsync(Dropbox.Api.Paper.ListPaperDocsContinueArgs)" data-throw-if-not-resolved="false"></xref> returns
+
+        immediately with some results. If set to False please allow some delay before
+
+        making another call to <xref href="Dropbox.Api.Paper.Routes.PaperUserRoutes.DocsListContinueAsync(Dropbox.Api.Paper.ListPaperDocsContinueArgs)" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Sub New(docIds As System.Collections.Generic.IEnumerable(Of String), cursor As Cursor, hasMore As Boolean)
+  overload: Dropbox.Api.Paper.ListPaperDocsResponse.#ctor*
+  nameWithType.vb: ListPaperDocsResponse.ListPaperDocsResponse(System.Collections.Generic.IEnumerable(Of String), Cursor, Boolean)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Paper.ListPaperDocsResponse.ListPaperDocsResponse(System.Collections.Generic.IEnumerable(Of System.String), Dropbox.Api.Paper.Cursor, System.Boolean)
+  name.vb: ListPaperDocsResponse(System.Collections.Generic.IEnumerable(Of String), Cursor, Boolean)
+- uid: Dropbox.Api.Paper.ListPaperDocsResponse.#ctor
+  commentId: M:Dropbox.Api.Paper.ListPaperDocsResponse.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Paper.ListPaperDocsResponse
+  langs:
+  - csharp
+  - vb
+  name: ListPaperDocsResponse()
+  nameWithType: ListPaperDocsResponse.ListPaperDocsResponse()
+  fullName: Dropbox.Api.Paper.ListPaperDocsResponse.ListPaperDocsResponse()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/ListPaperDocsResponse.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/ListPaperDocsResponse.cs
+    startLine: 75
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Paper.ListPaperDocsResponse\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public ListPaperDocsResponse()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Paper.ListPaperDocsResponse.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Paper.ListPaperDocsResponse.DocIds
+  commentId: P:Dropbox.Api.Paper.ListPaperDocsResponse.DocIds
+  id: DocIds
+  parent: Dropbox.Api.Paper.ListPaperDocsResponse
+  langs:
+  - csharp
+  - vb
+  name: DocIds
+  nameWithType: ListPaperDocsResponse.DocIds
+  fullName: Dropbox.Api.Paper.ListPaperDocsResponse.DocIds
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/ListPaperDocsResponse.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: DocIds
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/ListPaperDocsResponse.cs
+    startLine: 86
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>The list of Paper doc IDs that can be used to access the given Paper docs or\nsupplied to other API methods. The list is sorted in the order specified by the\ninitial call to <xref href=\"Dropbox.Api.Paper.Routes.PaperUserRoutes.DocsListAsync(Dropbox.Api.Paper.ListPaperDocsArgs)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<string> DocIds { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{System.String}
+    content.vb: Public Property DocIds As System.Collections.Generic.IList(Of String)
+  overload: Dropbox.Api.Paper.ListPaperDocsResponse.DocIds*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Paper.ListPaperDocsResponse.Cursor
+  commentId: P:Dropbox.Api.Paper.ListPaperDocsResponse.Cursor
+  id: Cursor
+  parent: Dropbox.Api.Paper.ListPaperDocsResponse
+  langs:
+  - csharp
+  - vb
+  name: Cursor
+  nameWithType: ListPaperDocsResponse.Cursor
+  fullName: Dropbox.Api.Paper.ListPaperDocsResponse.Cursor
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/ListPaperDocsResponse.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Cursor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/ListPaperDocsResponse.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Pass the cursor into <xref href=\"Dropbox.Api.Paper.Routes.PaperUserRoutes.DocsListContinueAsync(Dropbox.Api.Paper.ListPaperDocsContinueArgs)\" data-throw-if-not-resolved=\"false\"></xref> to\npaginate through all files. The cursor preserves all properties as specified in the\noriginal call to <xref href=\"Dropbox.Api.Paper.Routes.PaperUserRoutes.DocsListAsync(Dropbox.Api.Paper.ListPaperDocsArgs)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+  example: []
+  syntax:
+    content: public Cursor Cursor { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Paper.Cursor
+    content.vb: Public Property Cursor As Cursor
+  overload: Dropbox.Api.Paper.ListPaperDocsResponse.Cursor*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Paper.ListPaperDocsResponse.HasMore
+  commentId: P:Dropbox.Api.Paper.ListPaperDocsResponse.HasMore
+  id: HasMore
+  parent: Dropbox.Api.Paper.ListPaperDocsResponse
+  langs:
+  - csharp
+  - vb
+  name: HasMore
+  nameWithType: ListPaperDocsResponse.HasMore
+  fullName: Dropbox.Api.Paper.ListPaperDocsResponse.HasMore
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/ListPaperDocsResponse.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: HasMore
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/ListPaperDocsResponse.cs
+    startLine: 104
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Will be set to True if a subsequent call with the provided cursor to <xref href=\"Dropbox.Api.Paper.Routes.PaperUserRoutes.DocsListContinueAsync(Dropbox.Api.Paper.ListPaperDocsContinueArgs)\" data-throw-if-not-resolved=\"false\"></xref> returns\nimmediately with some results. If set to False please allow some delay before\nmaking another call to <xref href=\"Dropbox.Api.Paper.Routes.PaperUserRoutes.DocsListContinueAsync(Dropbox.Api.Paper.ListPaperDocsContinueArgs)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+  example: []
+  syntax:
+    content: public bool HasMore { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property HasMore As Boolean
+  overload: Dropbox.Api.Paper.ListPaperDocsResponse.HasMore*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Paper
+  commentId: N:Dropbox.Api.Paper
+  name: Dropbox.Api.Paper
+  nameWithType: Dropbox.Api.Paper
+  fullName: Dropbox.Api.Paper
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Paper.ListPaperDocsResponse
+  commentId: T:Dropbox.Api.Paper.ListPaperDocsResponse
+  parent: Dropbox.Api.Paper
+  name: ListPaperDocsResponse
+  nameWithType: ListPaperDocsResponse
+  fullName: Dropbox.Api.Paper.ListPaperDocsResponse
+- uid: Dropbox.Api.Paper.Routes.PaperUserRoutes.DocsListAsync(Dropbox.Api.Paper.ListPaperDocsArgs)
+  commentId: M:Dropbox.Api.Paper.Routes.PaperUserRoutes.DocsListAsync(Dropbox.Api.Paper.ListPaperDocsArgs)
+  isExternal: true
+- uid: Dropbox.Api.Paper.Routes.PaperUserRoutes.DocsListContinueAsync(Dropbox.Api.Paper.ListPaperDocsContinueArgs)
+  commentId: M:Dropbox.Api.Paper.Routes.PaperUserRoutes.DocsListContinueAsync(Dropbox.Api.Paper.ListPaperDocsContinueArgs)
+  isExternal: true
+- uid: Dropbox.Api.Paper.ListPaperDocsResponse.#ctor*
+  commentId: Overload:Dropbox.Api.Paper.ListPaperDocsResponse.#ctor
+  name: ListPaperDocsResponse
+  nameWithType: ListPaperDocsResponse.ListPaperDocsResponse
+  fullName: Dropbox.Api.Paper.ListPaperDocsResponse.ListPaperDocsResponse
+- uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: '!:System.Collections.Generic.IEnumerable{System.String}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<String>
+  nameWithType: System.Collections.Generic.IEnumerable<String>
+  fullName: System.Collections.Generic.IEnumerable<System.String>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of String)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.String)
+  name.vb: System.Collections.Generic.IEnumerable(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Paper.Cursor
+  commentId: T:Dropbox.Api.Paper.Cursor
+  parent: Dropbox.Api.Paper
+  name: Cursor
+  nameWithType: Cursor
+  fullName: Dropbox.Api.Paper.Cursor
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: System.Collections.Generic.IEnumerable<>
+  nameWithType: System.Collections.Generic.IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: System.Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Paper.ListPaperDocsResponse.DocIds*
+  commentId: Overload:Dropbox.Api.Paper.ListPaperDocsResponse.DocIds
+  name: DocIds
+  nameWithType: ListPaperDocsResponse.DocIds
+  fullName: Dropbox.Api.Paper.ListPaperDocsResponse.DocIds
+- uid: System.Collections.Generic.IList{System.String}
+  commentId: '!:System.Collections.Generic.IList{System.String}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<String>
+  nameWithType: System.Collections.Generic.IList<String>
+  fullName: System.Collections.Generic.IList<System.String>
+  nameWithType.vb: System.Collections.Generic.IList(Of String)
+  fullName.vb: System.Collections.Generic.IList(Of System.String)
+  name.vb: System.Collections.Generic.IList(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  isExternal: true
+  name: System.Collections.Generic.IList<>
+  nameWithType: System.Collections.Generic.IList<>
+  fullName: System.Collections.Generic.IList<>
+  nameWithType.vb: System.Collections.Generic.IList(Of )
+  fullName.vb: System.Collections.Generic.IList(Of )
+  name.vb: System.Collections.Generic.IList(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Paper.ListPaperDocsResponse.Cursor*
+  commentId: Overload:Dropbox.Api.Paper.ListPaperDocsResponse.Cursor
+  name: Cursor
+  nameWithType: ListPaperDocsResponse.Cursor
+  fullName: Dropbox.Api.Paper.ListPaperDocsResponse.Cursor
+- uid: Dropbox.Api.Paper.ListPaperDocsResponse.HasMore*
+  commentId: Overload:Dropbox.Api.Paper.ListPaperDocsResponse.HasMore
+  name: HasMore
+  nameWithType: ListPaperDocsResponse.HasMore
+  fullName: Dropbox.Api.Paper.ListPaperDocsResponse.HasMore
+shouldSkipMarkup: true

@@ -1,0 +1,148 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.SetAccessInheritanceError.Other
+  commentId: T:Dropbox.Api.Sharing.SetAccessInheritanceError.Other
+  id: SetAccessInheritanceError.Other
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.SetAccessInheritanceError.Other.Instance
+  langs:
+  - csharp
+  - vb
+  name: SetAccessInheritanceError.Other
+  nameWithType: SetAccessInheritanceError.Other
+  fullName: Dropbox.Api.Sharing.SetAccessInheritanceError.Other
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SetAccessInheritanceError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Other
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SetAccessInheritanceError.cs
+    startLine: 351
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The other object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Other : SetAccessInheritanceError'
+    content.vb: >-
+      Public NotInheritable Class Other
+          Inherits SetAccessInheritanceError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Sharing.SetAccessInheritanceError
+  inheritedMembers:
+  - Dropbox.Api.Sharing.SetAccessInheritanceError.IsAccessError
+  - Dropbox.Api.Sharing.SetAccessInheritanceError.AsAccessError
+  - Dropbox.Api.Sharing.SetAccessInheritanceError.IsNoPermission
+  - Dropbox.Api.Sharing.SetAccessInheritanceError.AsNoPermission
+  - Dropbox.Api.Sharing.SetAccessInheritanceError.IsOther
+  - Dropbox.Api.Sharing.SetAccessInheritanceError.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Sharing.SetAccessInheritanceError.Other.Instance
+  commentId: F:Dropbox.Api.Sharing.SetAccessInheritanceError.Other.Instance
+  id: Instance
+  parent: Dropbox.Api.Sharing.SetAccessInheritanceError.Other
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: SetAccessInheritanceError.Other.Instance
+  fullName: Dropbox.Api.Sharing.SetAccessInheritanceError.Other.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SetAccessInheritanceError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SetAccessInheritanceError.cs
+    startLine: 375
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>A singleton instance of Other</p>\n"
+  example: []
+  syntax:
+    content: public static readonly SetAccessInheritanceError.Other Instance
+    return:
+      type: Dropbox.Api.Sharing.SetAccessInheritanceError.Other
+    content.vb: Public Shared ReadOnly Instance As SetAccessInheritanceError.Other
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.SetAccessInheritanceError
+  commentId: T:Dropbox.Api.Sharing.SetAccessInheritanceError
+  parent: Dropbox.Api.Sharing
+  name: SetAccessInheritanceError
+  nameWithType: SetAccessInheritanceError
+  fullName: Dropbox.Api.Sharing.SetAccessInheritanceError
+- uid: Dropbox.Api.Sharing.SetAccessInheritanceError.IsAccessError
+  commentId: P:Dropbox.Api.Sharing.SetAccessInheritanceError.IsAccessError
+  parent: Dropbox.Api.Sharing.SetAccessInheritanceError
+  name: IsAccessError
+  nameWithType: SetAccessInheritanceError.IsAccessError
+  fullName: Dropbox.Api.Sharing.SetAccessInheritanceError.IsAccessError
+- uid: Dropbox.Api.Sharing.SetAccessInheritanceError.AsAccessError
+  commentId: P:Dropbox.Api.Sharing.SetAccessInheritanceError.AsAccessError
+  parent: Dropbox.Api.Sharing.SetAccessInheritanceError
+  name: AsAccessError
+  nameWithType: SetAccessInheritanceError.AsAccessError
+  fullName: Dropbox.Api.Sharing.SetAccessInheritanceError.AsAccessError
+- uid: Dropbox.Api.Sharing.SetAccessInheritanceError.IsNoPermission
+  commentId: P:Dropbox.Api.Sharing.SetAccessInheritanceError.IsNoPermission
+  parent: Dropbox.Api.Sharing.SetAccessInheritanceError
+  name: IsNoPermission
+  nameWithType: SetAccessInheritanceError.IsNoPermission
+  fullName: Dropbox.Api.Sharing.SetAccessInheritanceError.IsNoPermission
+- uid: Dropbox.Api.Sharing.SetAccessInheritanceError.AsNoPermission
+  commentId: P:Dropbox.Api.Sharing.SetAccessInheritanceError.AsNoPermission
+  parent: Dropbox.Api.Sharing.SetAccessInheritanceError
+  name: AsNoPermission
+  nameWithType: SetAccessInheritanceError.AsNoPermission
+  fullName: Dropbox.Api.Sharing.SetAccessInheritanceError.AsNoPermission
+- uid: Dropbox.Api.Sharing.SetAccessInheritanceError.IsOther
+  commentId: P:Dropbox.Api.Sharing.SetAccessInheritanceError.IsOther
+  parent: Dropbox.Api.Sharing.SetAccessInheritanceError
+  name: IsOther
+  nameWithType: SetAccessInheritanceError.IsOther
+  fullName: Dropbox.Api.Sharing.SetAccessInheritanceError.IsOther
+- uid: Dropbox.Api.Sharing.SetAccessInheritanceError.AsOther
+  commentId: P:Dropbox.Api.Sharing.SetAccessInheritanceError.AsOther
+  parent: Dropbox.Api.Sharing.SetAccessInheritanceError
+  name: AsOther
+  nameWithType: SetAccessInheritanceError.AsOther
+  fullName: Dropbox.Api.Sharing.SetAccessInheritanceError.AsOther
+- uid: Dropbox.Api.Sharing.SetAccessInheritanceError.Other
+  commentId: T:Dropbox.Api.Sharing.SetAccessInheritanceError.Other
+  parent: Dropbox.Api.Sharing
+  name: SetAccessInheritanceError.Other
+  nameWithType: SetAccessInheritanceError.Other
+  fullName: Dropbox.Api.Sharing.SetAccessInheritanceError.Other
+shouldSkipMarkup: true

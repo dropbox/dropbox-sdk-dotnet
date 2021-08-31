@@ -1,0 +1,460 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.GroupsListResult
+  commentId: T:Dropbox.Api.Team.GroupsListResult
+  id: GroupsListResult
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.GroupsListResult.#ctor
+  - Dropbox.Api.Team.GroupsListResult.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.TeamCommon.GroupSummary},System.String,System.Boolean)
+  - Dropbox.Api.Team.GroupsListResult.Cursor
+  - Dropbox.Api.Team.GroupsListResult.Groups
+  - Dropbox.Api.Team.GroupsListResult.HasMore
+  langs:
+  - csharp
+  - vb
+  name: GroupsListResult
+  nameWithType: GroupsListResult
+  fullName: Dropbox.Api.Team.GroupsListResult
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsListResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GroupsListResult
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsListResult.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The groups list result object</p>\n"
+  example: []
+  syntax:
+    content: 'public class GroupsListResult : object'
+    content.vb: >-
+      Public Class GroupsListResult
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.GroupsListResult.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.TeamCommon.GroupSummary},System.String,System.Boolean)
+  commentId: M:Dropbox.Api.Team.GroupsListResult.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.TeamCommon.GroupSummary},System.String,System.Boolean)
+  id: '#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.TeamCommon.GroupSummary},System.String,System.Boolean)'
+  parent: Dropbox.Api.Team.GroupsListResult
+  langs:
+  - csharp
+  - vb
+  name: GroupsListResult(System.Collections.Generic.IEnumerable<GroupSummary>, String, Boolean)
+  nameWithType: GroupsListResult.GroupsListResult(System.Collections.Generic.IEnumerable<GroupSummary>, String, Boolean)
+  fullName: Dropbox.Api.Team.GroupsListResult.GroupsListResult(System.Collections.Generic.IEnumerable<Dropbox.Api.TeamCommon.GroupSummary>, System.String, System.Boolean)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsListResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsListResult.cs
+    startLine: 41
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.GroupsListResult\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public GroupsListResult(System.Collections.Generic.IEnumerable<GroupSummary> groups, string cursor, bool hasMore)
+    parameters:
+    - id: groups
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.TeamCommon.GroupSummary}
+      description: The groups
+    - id: cursor
+      type: System.String
+      description: >-
+        Pass the cursor into <xref href="Dropbox.Api.Team.Routes.TeamTeamRoutes.GroupsListContinueAsync(Dropbox.Api.Team.GroupsListContinueArg)" data-throw-if-not-resolved="false"></xref> to obtain
+
+        the additional groups.
+    - id: hasMore
+      type: System.Boolean
+      description: >-
+        Is true if there are additional groups that have not been
+
+        returned yet. An additional call to <xref href="Dropbox.Api.Team.Routes.TeamTeamRoutes.GroupsListContinueAsync(Dropbox.Api.Team.GroupsListContinueArg)" data-throw-if-not-resolved="false"></xref> can
+
+        retrieve them.
+    content.vb: Public Sub New(groups As System.Collections.Generic.IEnumerable(Of GroupSummary), cursor As String, hasMore As Boolean)
+  overload: Dropbox.Api.Team.GroupsListResult.#ctor*
+  nameWithType.vb: GroupsListResult.GroupsListResult(System.Collections.Generic.IEnumerable(Of GroupSummary), String, Boolean)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Team.GroupsListResult.GroupsListResult(System.Collections.Generic.IEnumerable(Of Dropbox.Api.TeamCommon.GroupSummary), System.String, System.Boolean)
+  name.vb: GroupsListResult(System.Collections.Generic.IEnumerable(Of GroupSummary), String, Boolean)
+- uid: Dropbox.Api.Team.GroupsListResult.#ctor
+  commentId: M:Dropbox.Api.Team.GroupsListResult.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.GroupsListResult
+  langs:
+  - csharp
+  - vb
+  name: GroupsListResult()
+  nameWithType: GroupsListResult.GroupsListResult()
+  fullName: Dropbox.Api.Team.GroupsListResult.GroupsListResult()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsListResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsListResult.cs
+    startLine: 68
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.GroupsListResult\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public GroupsListResult()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.GroupsListResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.GroupsListResult.Groups
+  commentId: P:Dropbox.Api.Team.GroupsListResult.Groups
+  id: Groups
+  parent: Dropbox.Api.Team.GroupsListResult
+  langs:
+  - csharp
+  - vb
+  name: Groups
+  nameWithType: GroupsListResult.Groups
+  fullName: Dropbox.Api.Team.GroupsListResult.Groups
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsListResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Groups
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsListResult.cs
+    startLine: 76
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets the groups of the groups list result</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<GroupSummary> Groups { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{Dropbox.Api.TeamCommon.GroupSummary}
+    content.vb: Public Property Groups As System.Collections.Generic.IList(Of GroupSummary)
+  overload: Dropbox.Api.Team.GroupsListResult.Groups*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.GroupsListResult.Cursor
+  commentId: P:Dropbox.Api.Team.GroupsListResult.Cursor
+  id: Cursor
+  parent: Dropbox.Api.Team.GroupsListResult
+  langs:
+  - csharp
+  - vb
+  name: Cursor
+  nameWithType: GroupsListResult.Cursor
+  fullName: Dropbox.Api.Team.GroupsListResult.Cursor
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsListResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Cursor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsListResult.cs
+    startLine: 83
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Pass the cursor into <xref href=\"Dropbox.Api.Team.Routes.TeamTeamRoutes.GroupsListContinueAsync(Dropbox.Api.Team.GroupsListContinueArg)\" data-throw-if-not-resolved=\"false\"></xref> to obtain\nthe additional groups.</p>\n"
+  example: []
+  syntax:
+    content: public string Cursor { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Cursor As String
+  overload: Dropbox.Api.Team.GroupsListResult.Cursor*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.GroupsListResult.HasMore
+  commentId: P:Dropbox.Api.Team.GroupsListResult.HasMore
+  id: HasMore
+  parent: Dropbox.Api.Team.GroupsListResult
+  langs:
+  - csharp
+  - vb
+  name: HasMore
+  nameWithType: GroupsListResult.HasMore
+  fullName: Dropbox.Api.Team.GroupsListResult.HasMore
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsListResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: HasMore
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsListResult.cs
+    startLine: 91
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Is true if there are additional groups that have not been returned yet. An\nadditional call to <xref href=\"Dropbox.Api.Team.Routes.TeamTeamRoutes.GroupsListContinueAsync(Dropbox.Api.Team.GroupsListContinueArg)\" data-throw-if-not-resolved=\"false\"></xref> can\nretrieve them.</p>\n"
+  example: []
+  syntax:
+    content: public bool HasMore { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property HasMore As Boolean
+  overload: Dropbox.Api.Team.GroupsListResult.HasMore*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.GroupsListResult
+  commentId: T:Dropbox.Api.Team.GroupsListResult
+  parent: Dropbox.Api.Team
+  name: GroupsListResult
+  nameWithType: GroupsListResult
+  fullName: Dropbox.Api.Team.GroupsListResult
+- uid: Dropbox.Api.Team.Routes.TeamTeamRoutes.GroupsListContinueAsync(Dropbox.Api.Team.GroupsListContinueArg)
+  commentId: M:Dropbox.Api.Team.Routes.TeamTeamRoutes.GroupsListContinueAsync(Dropbox.Api.Team.GroupsListContinueArg)
+  isExternal: true
+- uid: Dropbox.Api.Team.GroupsListResult.#ctor*
+  commentId: Overload:Dropbox.Api.Team.GroupsListResult.#ctor
+  name: GroupsListResult
+  nameWithType: GroupsListResult.GroupsListResult
+  fullName: Dropbox.Api.Team.GroupsListResult.GroupsListResult
+- uid: System.Collections.Generic.IEnumerable{Dropbox.Api.TeamCommon.GroupSummary}
+  commentId: '!:System.Collections.Generic.IEnumerable{Dropbox.Api.TeamCommon.GroupSummary}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<GroupSummary>
+  nameWithType: System.Collections.Generic.IEnumerable<GroupSummary>
+  fullName: System.Collections.Generic.IEnumerable<Dropbox.Api.TeamCommon.GroupSummary>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of GroupSummary)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Dropbox.Api.TeamCommon.GroupSummary)
+  name.vb: System.Collections.Generic.IEnumerable(Of GroupSummary)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.TeamCommon.GroupSummary
+    name: GroupSummary
+    nameWithType: GroupSummary
+    fullName: Dropbox.Api.TeamCommon.GroupSummary
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.TeamCommon.GroupSummary
+    name: GroupSummary
+    nameWithType: GroupSummary
+    fullName: Dropbox.Api.TeamCommon.GroupSummary
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: System.Collections.Generic.IEnumerable<>
+  nameWithType: System.Collections.Generic.IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: System.Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Team.GroupsListResult.Groups*
+  commentId: Overload:Dropbox.Api.Team.GroupsListResult.Groups
+  name: Groups
+  nameWithType: GroupsListResult.Groups
+  fullName: Dropbox.Api.Team.GroupsListResult.Groups
+- uid: System.Collections.Generic.IList{Dropbox.Api.TeamCommon.GroupSummary}
+  commentId: '!:System.Collections.Generic.IList{Dropbox.Api.TeamCommon.GroupSummary}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<GroupSummary>
+  nameWithType: System.Collections.Generic.IList<GroupSummary>
+  fullName: System.Collections.Generic.IList<Dropbox.Api.TeamCommon.GroupSummary>
+  nameWithType.vb: System.Collections.Generic.IList(Of GroupSummary)
+  fullName.vb: System.Collections.Generic.IList(Of Dropbox.Api.TeamCommon.GroupSummary)
+  name.vb: System.Collections.Generic.IList(Of GroupSummary)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.TeamCommon.GroupSummary
+    name: GroupSummary
+    nameWithType: GroupSummary
+    fullName: Dropbox.Api.TeamCommon.GroupSummary
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.TeamCommon.GroupSummary
+    name: GroupSummary
+    nameWithType: GroupSummary
+    fullName: Dropbox.Api.TeamCommon.GroupSummary
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  isExternal: true
+  name: System.Collections.Generic.IList<>
+  nameWithType: System.Collections.Generic.IList<>
+  fullName: System.Collections.Generic.IList<>
+  nameWithType.vb: System.Collections.Generic.IList(Of )
+  fullName.vb: System.Collections.Generic.IList(Of )
+  name.vb: System.Collections.Generic.IList(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Team.GroupsListResult.Cursor*
+  commentId: Overload:Dropbox.Api.Team.GroupsListResult.Cursor
+  name: Cursor
+  nameWithType: GroupsListResult.Cursor
+  fullName: Dropbox.Api.Team.GroupsListResult.Cursor
+- uid: Dropbox.Api.Team.GroupsListResult.HasMore*
+  commentId: Overload:Dropbox.Api.Team.GroupsListResult.HasMore
+  name: HasMore
+  nameWithType: GroupsListResult.HasMore
+  fullName: Dropbox.Api.Team.GroupsListResult.HasMore
+shouldSkipMarkup: true

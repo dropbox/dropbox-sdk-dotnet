@@ -1,0 +1,191 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.ShmodelDisableDownloadsDetails
+  commentId: T:Dropbox.Api.TeamLog.ShmodelDisableDownloadsDetails
+  id: ShmodelDisableDownloadsDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.ShmodelDisableDownloadsDetails.#ctor
+  - Dropbox.Api.TeamLog.ShmodelDisableDownloadsDetails.#ctor(Dropbox.Api.TeamLog.UserLogInfo)
+  - Dropbox.Api.TeamLog.ShmodelDisableDownloadsDetails.SharedLinkOwner
+  langs:
+  - csharp
+  - vb
+  name: ShmodelDisableDownloadsDetails
+  nameWithType: ShmodelDisableDownloadsDetails
+  fullName: Dropbox.Api.TeamLog.ShmodelDisableDownloadsDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShmodelDisableDownloadsDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ShmodelDisableDownloadsDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShmodelDisableDownloadsDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Disabled downloads for link.</p>\n"
+  example: []
+  syntax:
+    content: 'public class ShmodelDisableDownloadsDetails : object'
+    content.vb: >-
+      Public Class ShmodelDisableDownloadsDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.ShmodelDisableDownloadsDetails.#ctor(Dropbox.Api.TeamLog.UserLogInfo)
+  commentId: M:Dropbox.Api.TeamLog.ShmodelDisableDownloadsDetails.#ctor(Dropbox.Api.TeamLog.UserLogInfo)
+  id: '#ctor(Dropbox.Api.TeamLog.UserLogInfo)'
+  parent: Dropbox.Api.TeamLog.ShmodelDisableDownloadsDetails
+  langs:
+  - csharp
+  - vb
+  name: ShmodelDisableDownloadsDetails(UserLogInfo)
+  nameWithType: ShmodelDisableDownloadsDetails.ShmodelDisableDownloadsDetails(UserLogInfo)
+  fullName: Dropbox.Api.TeamLog.ShmodelDisableDownloadsDetails.ShmodelDisableDownloadsDetails(Dropbox.Api.TeamLog.UserLogInfo)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShmodelDisableDownloadsDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShmodelDisableDownloadsDetails.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.ShmodelDisableDownloadsDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public ShmodelDisableDownloadsDetails(UserLogInfo sharedLinkOwner = null)
+    parameters:
+    - id: sharedLinkOwner
+      type: Dropbox.Api.TeamLog.UserLogInfo
+      description: >-
+        Shared link owner details. Might be missing due to
+
+        historical data gap.
+    content.vb: Public Sub New(sharedLinkOwner As UserLogInfo = Nothing)
+  overload: Dropbox.Api.TeamLog.ShmodelDisableDownloadsDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.ShmodelDisableDownloadsDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.ShmodelDisableDownloadsDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.ShmodelDisableDownloadsDetails
+  langs:
+  - csharp
+  - vb
+  name: ShmodelDisableDownloadsDetails()
+  nameWithType: ShmodelDisableDownloadsDetails.ShmodelDisableDownloadsDetails()
+  fullName: Dropbox.Api.TeamLog.ShmodelDisableDownloadsDetails.ShmodelDisableDownloadsDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShmodelDisableDownloadsDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShmodelDisableDownloadsDetails.cs
+    startLine: 46
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.ShmodelDisableDownloadsDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public ShmodelDisableDownloadsDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.ShmodelDisableDownloadsDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.ShmodelDisableDownloadsDetails.SharedLinkOwner
+  commentId: P:Dropbox.Api.TeamLog.ShmodelDisableDownloadsDetails.SharedLinkOwner
+  id: SharedLinkOwner
+  parent: Dropbox.Api.TeamLog.ShmodelDisableDownloadsDetails
+  langs:
+  - csharp
+  - vb
+  name: SharedLinkOwner
+  nameWithType: ShmodelDisableDownloadsDetails.SharedLinkOwner
+  fullName: Dropbox.Api.TeamLog.ShmodelDisableDownloadsDetails.SharedLinkOwner
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShmodelDisableDownloadsDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SharedLinkOwner
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShmodelDisableDownloadsDetails.cs
+    startLine: 55
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Shared link owner details. Might be missing due to historical data\ngap.</p>\n"
+  example: []
+  syntax:
+    content: public UserLogInfo SharedLinkOwner { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.UserLogInfo
+    content.vb: Public Property SharedLinkOwner As UserLogInfo
+  overload: Dropbox.Api.TeamLog.ShmodelDisableDownloadsDetails.SharedLinkOwner*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.ShmodelDisableDownloadsDetails
+  commentId: T:Dropbox.Api.TeamLog.ShmodelDisableDownloadsDetails
+  parent: Dropbox.Api.TeamLog
+  name: ShmodelDisableDownloadsDetails
+  nameWithType: ShmodelDisableDownloadsDetails
+  fullName: Dropbox.Api.TeamLog.ShmodelDisableDownloadsDetails
+- uid: Dropbox.Api.TeamLog.ShmodelDisableDownloadsDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.ShmodelDisableDownloadsDetails.#ctor
+  name: ShmodelDisableDownloadsDetails
+  nameWithType: ShmodelDisableDownloadsDetails.ShmodelDisableDownloadsDetails
+  fullName: Dropbox.Api.TeamLog.ShmodelDisableDownloadsDetails.ShmodelDisableDownloadsDetails
+- uid: Dropbox.Api.TeamLog.UserLogInfo
+  commentId: T:Dropbox.Api.TeamLog.UserLogInfo
+  parent: Dropbox.Api.TeamLog
+  name: UserLogInfo
+  nameWithType: UserLogInfo
+  fullName: Dropbox.Api.TeamLog.UserLogInfo
+- uid: Dropbox.Api.TeamLog.ShmodelDisableDownloadsDetails.SharedLinkOwner*
+  commentId: Overload:Dropbox.Api.TeamLog.ShmodelDisableDownloadsDetails.SharedLinkOwner
+  name: SharedLinkOwner
+  nameWithType: ShmodelDisableDownloadsDetails.SharedLinkOwner
+  fullName: Dropbox.Api.TeamLog.ShmodelDisableDownloadsDetails.SharedLinkOwner
+shouldSkipMarkup: true

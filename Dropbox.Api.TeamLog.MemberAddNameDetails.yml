@@ -1,0 +1,188 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.MemberAddNameDetails
+  commentId: T:Dropbox.Api.TeamLog.MemberAddNameDetails
+  id: MemberAddNameDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.MemberAddNameDetails.#ctor
+  - Dropbox.Api.TeamLog.MemberAddNameDetails.#ctor(Dropbox.Api.TeamLog.UserNameLogInfo)
+  - Dropbox.Api.TeamLog.MemberAddNameDetails.NewValue
+  langs:
+  - csharp
+  - vb
+  name: MemberAddNameDetails
+  nameWithType: MemberAddNameDetails
+  fullName: Dropbox.Api.TeamLog.MemberAddNameDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberAddNameDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: MemberAddNameDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberAddNameDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Added team member name.</p>\n"
+  example: []
+  syntax:
+    content: 'public class MemberAddNameDetails : object'
+    content.vb: >-
+      Public Class MemberAddNameDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.MemberAddNameDetails.#ctor(Dropbox.Api.TeamLog.UserNameLogInfo)
+  commentId: M:Dropbox.Api.TeamLog.MemberAddNameDetails.#ctor(Dropbox.Api.TeamLog.UserNameLogInfo)
+  id: '#ctor(Dropbox.Api.TeamLog.UserNameLogInfo)'
+  parent: Dropbox.Api.TeamLog.MemberAddNameDetails
+  langs:
+  - csharp
+  - vb
+  name: MemberAddNameDetails(UserNameLogInfo)
+  nameWithType: MemberAddNameDetails.MemberAddNameDetails(UserNameLogInfo)
+  fullName: Dropbox.Api.TeamLog.MemberAddNameDetails.MemberAddNameDetails(Dropbox.Api.TeamLog.UserNameLogInfo)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberAddNameDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberAddNameDetails.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.MemberAddNameDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public MemberAddNameDetails(UserNameLogInfo newValue)
+    parameters:
+    - id: newValue
+      type: Dropbox.Api.TeamLog.UserNameLogInfo
+      description: New user&apos;s name.
+    content.vb: Public Sub New(newValue As UserNameLogInfo)
+  overload: Dropbox.Api.TeamLog.MemberAddNameDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.MemberAddNameDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.MemberAddNameDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.MemberAddNameDetails
+  langs:
+  - csharp
+  - vb
+  name: MemberAddNameDetails()
+  nameWithType: MemberAddNameDetails.MemberAddNameDetails()
+  fullName: Dropbox.Api.TeamLog.MemberAddNameDetails.MemberAddNameDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberAddNameDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberAddNameDetails.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.MemberAddNameDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public MemberAddNameDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.MemberAddNameDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.MemberAddNameDetails.NewValue
+  commentId: P:Dropbox.Api.TeamLog.MemberAddNameDetails.NewValue
+  id: NewValue
+  parent: Dropbox.Api.TeamLog.MemberAddNameDetails
+  langs:
+  - csharp
+  - vb
+  name: NewValue
+  nameWithType: MemberAddNameDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.MemberAddNameDetails.NewValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberAddNameDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NewValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberAddNameDetails.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>New user&apos;s name.</p>\n"
+  example: []
+  syntax:
+    content: public UserNameLogInfo NewValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.UserNameLogInfo
+    content.vb: Public Property NewValue As UserNameLogInfo
+  overload: Dropbox.Api.TeamLog.MemberAddNameDetails.NewValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.MemberAddNameDetails
+  commentId: T:Dropbox.Api.TeamLog.MemberAddNameDetails
+  parent: Dropbox.Api.TeamLog
+  name: MemberAddNameDetails
+  nameWithType: MemberAddNameDetails
+  fullName: Dropbox.Api.TeamLog.MemberAddNameDetails
+- uid: Dropbox.Api.TeamLog.MemberAddNameDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberAddNameDetails.#ctor
+  name: MemberAddNameDetails
+  nameWithType: MemberAddNameDetails.MemberAddNameDetails
+  fullName: Dropbox.Api.TeamLog.MemberAddNameDetails.MemberAddNameDetails
+- uid: Dropbox.Api.TeamLog.UserNameLogInfo
+  commentId: T:Dropbox.Api.TeamLog.UserNameLogInfo
+  parent: Dropbox.Api.TeamLog
+  name: UserNameLogInfo
+  nameWithType: UserNameLogInfo
+  fullName: Dropbox.Api.TeamLog.UserNameLogInfo
+- uid: Dropbox.Api.TeamLog.MemberAddNameDetails.NewValue*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberAddNameDetails.NewValue
+  name: NewValue
+  nameWithType: MemberAddNameDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.MemberAddNameDetails.NewValue
+shouldSkipMarkup: true
