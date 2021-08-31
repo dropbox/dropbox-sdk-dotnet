@@ -5,10 +5,10 @@
           {
             "files": ["**/*.csproj"],
             "exclude": [ "**/bin/**", "**/obj/**" ],
-            "src": "../src"
+            "src": "dropbox-sdk-dotnet/Dropbox.Api"
           }
         ],
-        "dest": "obj/docfx/api/dotnet",
+        "dest": "docs",
         "shouldSkipMarkup": true,
         "properties": {
             "TargetFramework": "netstandard1.3"
