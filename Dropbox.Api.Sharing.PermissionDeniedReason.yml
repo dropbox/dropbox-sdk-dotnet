@@ -1,0 +1,1590 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason
+  commentId: T:Dropbox.Api.Sharing.PermissionDeniedReason
+  id: PermissionDeniedReason
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.PermissionDeniedReason.#ctor
+  - Dropbox.Api.Sharing.PermissionDeniedReason.AsFolderIsInsideSharedFolder
+  - Dropbox.Api.Sharing.PermissionDeniedReason.AsFolderIsLimitedTeamFolder
+  - Dropbox.Api.Sharing.PermissionDeniedReason.AsInsufficientPlan
+  - Dropbox.Api.Sharing.PermissionDeniedReason.AsOther
+  - Dropbox.Api.Sharing.PermissionDeniedReason.AsOwnerNotOnTeam
+  - Dropbox.Api.Sharing.PermissionDeniedReason.AsPermissionDenied
+  - Dropbox.Api.Sharing.PermissionDeniedReason.AsRestrictedByParentFolder
+  - Dropbox.Api.Sharing.PermissionDeniedReason.AsRestrictedByTeam
+  - Dropbox.Api.Sharing.PermissionDeniedReason.AsTargetIsIndirectMember
+  - Dropbox.Api.Sharing.PermissionDeniedReason.AsTargetIsOwner
+  - Dropbox.Api.Sharing.PermissionDeniedReason.AsTargetIsSelf
+  - Dropbox.Api.Sharing.PermissionDeniedReason.AsTargetNotActive
+  - Dropbox.Api.Sharing.PermissionDeniedReason.AsUserAccountType
+  - Dropbox.Api.Sharing.PermissionDeniedReason.AsUserNotAllowedByOwner
+  - Dropbox.Api.Sharing.PermissionDeniedReason.AsUserNotOnTeam
+  - Dropbox.Api.Sharing.PermissionDeniedReason.AsUserNotSameTeamAsOwner
+  - Dropbox.Api.Sharing.PermissionDeniedReason.IsFolderIsInsideSharedFolder
+  - Dropbox.Api.Sharing.PermissionDeniedReason.IsFolderIsLimitedTeamFolder
+  - Dropbox.Api.Sharing.PermissionDeniedReason.IsInsufficientPlan
+  - Dropbox.Api.Sharing.PermissionDeniedReason.IsOther
+  - Dropbox.Api.Sharing.PermissionDeniedReason.IsOwnerNotOnTeam
+  - Dropbox.Api.Sharing.PermissionDeniedReason.IsPermissionDenied
+  - Dropbox.Api.Sharing.PermissionDeniedReason.IsRestrictedByParentFolder
+  - Dropbox.Api.Sharing.PermissionDeniedReason.IsRestrictedByTeam
+  - Dropbox.Api.Sharing.PermissionDeniedReason.IsTargetIsIndirectMember
+  - Dropbox.Api.Sharing.PermissionDeniedReason.IsTargetIsOwner
+  - Dropbox.Api.Sharing.PermissionDeniedReason.IsTargetIsSelf
+  - Dropbox.Api.Sharing.PermissionDeniedReason.IsTargetNotActive
+  - Dropbox.Api.Sharing.PermissionDeniedReason.IsUserAccountType
+  - Dropbox.Api.Sharing.PermissionDeniedReason.IsUserNotAllowedByOwner
+  - Dropbox.Api.Sharing.PermissionDeniedReason.IsUserNotOnTeam
+  - Dropbox.Api.Sharing.PermissionDeniedReason.IsUserNotSameTeamAsOwner
+  langs:
+  - csharp
+  - vb
+  name: PermissionDeniedReason
+  nameWithType: PermissionDeniedReason
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PermissionDeniedReason
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Possible reasons the user is denied a permission.</p>\n"
+  example: []
+  syntax:
+    content: 'public class PermissionDeniedReason : object'
+    content.vb: >-
+      Public Class PermissionDeniedReason
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Sharing.PermissionDeniedReason.FolderIsInsideSharedFolder
+  - Dropbox.Api.Sharing.PermissionDeniedReason.FolderIsLimitedTeamFolder
+  - Dropbox.Api.Sharing.PermissionDeniedReason.InsufficientPlan
+  - Dropbox.Api.Sharing.PermissionDeniedReason.Other
+  - Dropbox.Api.Sharing.PermissionDeniedReason.OwnerNotOnTeam
+  - Dropbox.Api.Sharing.PermissionDeniedReason.PermissionDenied
+  - Dropbox.Api.Sharing.PermissionDeniedReason.RestrictedByParentFolder
+  - Dropbox.Api.Sharing.PermissionDeniedReason.RestrictedByTeam
+  - Dropbox.Api.Sharing.PermissionDeniedReason.TargetIsIndirectMember
+  - Dropbox.Api.Sharing.PermissionDeniedReason.TargetIsOwner
+  - Dropbox.Api.Sharing.PermissionDeniedReason.TargetIsSelf
+  - Dropbox.Api.Sharing.PermissionDeniedReason.TargetNotActive
+  - Dropbox.Api.Sharing.PermissionDeniedReason.UserAccountType
+  - Dropbox.Api.Sharing.PermissionDeniedReason.UserNotAllowedByOwner
+  - Dropbox.Api.Sharing.PermissionDeniedReason.UserNotOnTeam
+  - Dropbox.Api.Sharing.PermissionDeniedReason.UserNotSameTeamAsOwner
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.#ctor
+  commentId: M:Dropbox.Api.Sharing.PermissionDeniedReason.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Sharing.PermissionDeniedReason
+  langs:
+  - csharp
+  - vb
+  name: PermissionDeniedReason()
+  nameWithType: PermissionDeniedReason.PermissionDeniedReason()
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.PermissionDeniedReason()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.PermissionDeniedReason\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public PermissionDeniedReason()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Sharing.PermissionDeniedReason.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.IsUserNotSameTeamAsOwner
+  commentId: P:Dropbox.Api.Sharing.PermissionDeniedReason.IsUserNotSameTeamAsOwner
+  id: IsUserNotSameTeamAsOwner
+  parent: Dropbox.Api.Sharing.PermissionDeniedReason
+  langs:
+  - csharp
+  - vb
+  name: IsUserNotSameTeamAsOwner
+  nameWithType: PermissionDeniedReason.IsUserNotSameTeamAsOwner
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.IsUserNotSameTeamAsOwner
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsUserNotSameTeamAsOwner
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+    startLine: 41
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is\nUserNotSameTeamAsOwner</p>\n"
+  example: []
+  syntax:
+    content: public bool IsUserNotSameTeamAsOwner { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsUserNotSameTeamAsOwner As Boolean
+  overload: Dropbox.Api.Sharing.PermissionDeniedReason.IsUserNotSameTeamAsOwner*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.AsUserNotSameTeamAsOwner
+  commentId: P:Dropbox.Api.Sharing.PermissionDeniedReason.AsUserNotSameTeamAsOwner
+  id: AsUserNotSameTeamAsOwner
+  parent: Dropbox.Api.Sharing.PermissionDeniedReason
+  langs:
+  - csharp
+  - vb
+  name: AsUserNotSameTeamAsOwner
+  nameWithType: PermissionDeniedReason.AsUserNotSameTeamAsOwner
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.AsUserNotSameTeamAsOwner
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsUserNotSameTeamAsOwner
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+    startLine: 52
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a UserNotSameTeamAsOwner, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PermissionDeniedReason.UserNotSameTeamAsOwner AsUserNotSameTeamAsOwner { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.PermissionDeniedReason.UserNotSameTeamAsOwner
+    content.vb: Public ReadOnly Property AsUserNotSameTeamAsOwner As PermissionDeniedReason.UserNotSameTeamAsOwner
+  overload: Dropbox.Api.Sharing.PermissionDeniedReason.AsUserNotSameTeamAsOwner*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.IsUserNotAllowedByOwner
+  commentId: P:Dropbox.Api.Sharing.PermissionDeniedReason.IsUserNotAllowedByOwner
+  id: IsUserNotAllowedByOwner
+  parent: Dropbox.Api.Sharing.PermissionDeniedReason
+  langs:
+  - csharp
+  - vb
+  name: IsUserNotAllowedByOwner
+  nameWithType: PermissionDeniedReason.IsUserNotAllowedByOwner
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.IsUserNotAllowedByOwner
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsUserNotAllowedByOwner
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+    startLine: 63
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is UserNotAllowedByOwner</p>\n"
+  example: []
+  syntax:
+    content: public bool IsUserNotAllowedByOwner { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsUserNotAllowedByOwner As Boolean
+  overload: Dropbox.Api.Sharing.PermissionDeniedReason.IsUserNotAllowedByOwner*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.AsUserNotAllowedByOwner
+  commentId: P:Dropbox.Api.Sharing.PermissionDeniedReason.AsUserNotAllowedByOwner
+  id: AsUserNotAllowedByOwner
+  parent: Dropbox.Api.Sharing.PermissionDeniedReason
+  langs:
+  - csharp
+  - vb
+  name: AsUserNotAllowedByOwner
+  nameWithType: PermissionDeniedReason.AsUserNotAllowedByOwner
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.AsUserNotAllowedByOwner
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsUserNotAllowedByOwner
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+    startLine: 74
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a UserNotAllowedByOwner, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PermissionDeniedReason.UserNotAllowedByOwner AsUserNotAllowedByOwner { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.PermissionDeniedReason.UserNotAllowedByOwner
+    content.vb: Public ReadOnly Property AsUserNotAllowedByOwner As PermissionDeniedReason.UserNotAllowedByOwner
+  overload: Dropbox.Api.Sharing.PermissionDeniedReason.AsUserNotAllowedByOwner*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.IsTargetIsIndirectMember
+  commentId: P:Dropbox.Api.Sharing.PermissionDeniedReason.IsTargetIsIndirectMember
+  id: IsTargetIsIndirectMember
+  parent: Dropbox.Api.Sharing.PermissionDeniedReason
+  langs:
+  - csharp
+  - vb
+  name: IsTargetIsIndirectMember
+  nameWithType: PermissionDeniedReason.IsTargetIsIndirectMember
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.IsTargetIsIndirectMember
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsTargetIsIndirectMember
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+    startLine: 86
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is\nTargetIsIndirectMember</p>\n"
+  example: []
+  syntax:
+    content: public bool IsTargetIsIndirectMember { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsTargetIsIndirectMember As Boolean
+  overload: Dropbox.Api.Sharing.PermissionDeniedReason.IsTargetIsIndirectMember*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.AsTargetIsIndirectMember
+  commentId: P:Dropbox.Api.Sharing.PermissionDeniedReason.AsTargetIsIndirectMember
+  id: AsTargetIsIndirectMember
+  parent: Dropbox.Api.Sharing.PermissionDeniedReason
+  langs:
+  - csharp
+  - vb
+  name: AsTargetIsIndirectMember
+  nameWithType: PermissionDeniedReason.AsTargetIsIndirectMember
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.AsTargetIsIndirectMember
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsTargetIsIndirectMember
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+    startLine: 97
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a TargetIsIndirectMember, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PermissionDeniedReason.TargetIsIndirectMember AsTargetIsIndirectMember { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.PermissionDeniedReason.TargetIsIndirectMember
+    content.vb: Public ReadOnly Property AsTargetIsIndirectMember As PermissionDeniedReason.TargetIsIndirectMember
+  overload: Dropbox.Api.Sharing.PermissionDeniedReason.AsTargetIsIndirectMember*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.IsTargetIsOwner
+  commentId: P:Dropbox.Api.Sharing.PermissionDeniedReason.IsTargetIsOwner
+  id: IsTargetIsOwner
+  parent: Dropbox.Api.Sharing.PermissionDeniedReason
+  langs:
+  - csharp
+  - vb
+  name: IsTargetIsOwner
+  nameWithType: PermissionDeniedReason.IsTargetIsOwner
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.IsTargetIsOwner
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsTargetIsOwner
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+    startLine: 108
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is TargetIsOwner</p>\n"
+  example: []
+  syntax:
+    content: public bool IsTargetIsOwner { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsTargetIsOwner As Boolean
+  overload: Dropbox.Api.Sharing.PermissionDeniedReason.IsTargetIsOwner*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.AsTargetIsOwner
+  commentId: P:Dropbox.Api.Sharing.PermissionDeniedReason.AsTargetIsOwner
+  id: AsTargetIsOwner
+  parent: Dropbox.Api.Sharing.PermissionDeniedReason
+  langs:
+  - csharp
+  - vb
+  name: AsTargetIsOwner
+  nameWithType: PermissionDeniedReason.AsTargetIsOwner
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.AsTargetIsOwner
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsTargetIsOwner
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+    startLine: 119
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a TargetIsOwner, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PermissionDeniedReason.TargetIsOwner AsTargetIsOwner { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.PermissionDeniedReason.TargetIsOwner
+    content.vb: Public ReadOnly Property AsTargetIsOwner As PermissionDeniedReason.TargetIsOwner
+  overload: Dropbox.Api.Sharing.PermissionDeniedReason.AsTargetIsOwner*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.IsTargetIsSelf
+  commentId: P:Dropbox.Api.Sharing.PermissionDeniedReason.IsTargetIsSelf
+  id: IsTargetIsSelf
+  parent: Dropbox.Api.Sharing.PermissionDeniedReason
+  langs:
+  - csharp
+  - vb
+  name: IsTargetIsSelf
+  nameWithType: PermissionDeniedReason.IsTargetIsSelf
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.IsTargetIsSelf
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsTargetIsSelf
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+    startLine: 130
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is TargetIsSelf</p>\n"
+  example: []
+  syntax:
+    content: public bool IsTargetIsSelf { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsTargetIsSelf As Boolean
+  overload: Dropbox.Api.Sharing.PermissionDeniedReason.IsTargetIsSelf*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.AsTargetIsSelf
+  commentId: P:Dropbox.Api.Sharing.PermissionDeniedReason.AsTargetIsSelf
+  id: AsTargetIsSelf
+  parent: Dropbox.Api.Sharing.PermissionDeniedReason
+  langs:
+  - csharp
+  - vb
+  name: AsTargetIsSelf
+  nameWithType: PermissionDeniedReason.AsTargetIsSelf
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.AsTargetIsSelf
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsTargetIsSelf
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+    startLine: 141
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a TargetIsSelf, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PermissionDeniedReason.TargetIsSelf AsTargetIsSelf { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.PermissionDeniedReason.TargetIsSelf
+    content.vb: Public ReadOnly Property AsTargetIsSelf As PermissionDeniedReason.TargetIsSelf
+  overload: Dropbox.Api.Sharing.PermissionDeniedReason.AsTargetIsSelf*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.IsTargetNotActive
+  commentId: P:Dropbox.Api.Sharing.PermissionDeniedReason.IsTargetNotActive
+  id: IsTargetNotActive
+  parent: Dropbox.Api.Sharing.PermissionDeniedReason
+  langs:
+  - csharp
+  - vb
+  name: IsTargetNotActive
+  nameWithType: PermissionDeniedReason.IsTargetNotActive
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.IsTargetNotActive
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsTargetNotActive
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+    startLine: 152
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is TargetNotActive</p>\n"
+  example: []
+  syntax:
+    content: public bool IsTargetNotActive { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsTargetNotActive As Boolean
+  overload: Dropbox.Api.Sharing.PermissionDeniedReason.IsTargetNotActive*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.AsTargetNotActive
+  commentId: P:Dropbox.Api.Sharing.PermissionDeniedReason.AsTargetNotActive
+  id: AsTargetNotActive
+  parent: Dropbox.Api.Sharing.PermissionDeniedReason
+  langs:
+  - csharp
+  - vb
+  name: AsTargetNotActive
+  nameWithType: PermissionDeniedReason.AsTargetNotActive
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.AsTargetNotActive
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsTargetNotActive
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+    startLine: 163
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a TargetNotActive, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PermissionDeniedReason.TargetNotActive AsTargetNotActive { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.PermissionDeniedReason.TargetNotActive
+    content.vb: Public ReadOnly Property AsTargetNotActive As PermissionDeniedReason.TargetNotActive
+  overload: Dropbox.Api.Sharing.PermissionDeniedReason.AsTargetNotActive*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.IsFolderIsLimitedTeamFolder
+  commentId: P:Dropbox.Api.Sharing.PermissionDeniedReason.IsFolderIsLimitedTeamFolder
+  id: IsFolderIsLimitedTeamFolder
+  parent: Dropbox.Api.Sharing.PermissionDeniedReason
+  langs:
+  - csharp
+  - vb
+  name: IsFolderIsLimitedTeamFolder
+  nameWithType: PermissionDeniedReason.IsFolderIsLimitedTeamFolder
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.IsFolderIsLimitedTeamFolder
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsFolderIsLimitedTeamFolder
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+    startLine: 175
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is\nFolderIsLimitedTeamFolder</p>\n"
+  example: []
+  syntax:
+    content: public bool IsFolderIsLimitedTeamFolder { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsFolderIsLimitedTeamFolder As Boolean
+  overload: Dropbox.Api.Sharing.PermissionDeniedReason.IsFolderIsLimitedTeamFolder*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.AsFolderIsLimitedTeamFolder
+  commentId: P:Dropbox.Api.Sharing.PermissionDeniedReason.AsFolderIsLimitedTeamFolder
+  id: AsFolderIsLimitedTeamFolder
+  parent: Dropbox.Api.Sharing.PermissionDeniedReason
+  langs:
+  - csharp
+  - vb
+  name: AsFolderIsLimitedTeamFolder
+  nameWithType: PermissionDeniedReason.AsFolderIsLimitedTeamFolder
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.AsFolderIsLimitedTeamFolder
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsFolderIsLimitedTeamFolder
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+    startLine: 186
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a FolderIsLimitedTeamFolder, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PermissionDeniedReason.FolderIsLimitedTeamFolder AsFolderIsLimitedTeamFolder { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.PermissionDeniedReason.FolderIsLimitedTeamFolder
+    content.vb: Public ReadOnly Property AsFolderIsLimitedTeamFolder As PermissionDeniedReason.FolderIsLimitedTeamFolder
+  overload: Dropbox.Api.Sharing.PermissionDeniedReason.AsFolderIsLimitedTeamFolder*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.IsOwnerNotOnTeam
+  commentId: P:Dropbox.Api.Sharing.PermissionDeniedReason.IsOwnerNotOnTeam
+  id: IsOwnerNotOnTeam
+  parent: Dropbox.Api.Sharing.PermissionDeniedReason
+  langs:
+  - csharp
+  - vb
+  name: IsOwnerNotOnTeam
+  nameWithType: PermissionDeniedReason.IsOwnerNotOnTeam
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.IsOwnerNotOnTeam
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOwnerNotOnTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+    startLine: 197
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is OwnerNotOnTeam</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOwnerNotOnTeam { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOwnerNotOnTeam As Boolean
+  overload: Dropbox.Api.Sharing.PermissionDeniedReason.IsOwnerNotOnTeam*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.AsOwnerNotOnTeam
+  commentId: P:Dropbox.Api.Sharing.PermissionDeniedReason.AsOwnerNotOnTeam
+  id: AsOwnerNotOnTeam
+  parent: Dropbox.Api.Sharing.PermissionDeniedReason
+  langs:
+  - csharp
+  - vb
+  name: AsOwnerNotOnTeam
+  nameWithType: PermissionDeniedReason.AsOwnerNotOnTeam
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.AsOwnerNotOnTeam
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOwnerNotOnTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+    startLine: 208
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a OwnerNotOnTeam, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PermissionDeniedReason.OwnerNotOnTeam AsOwnerNotOnTeam { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.PermissionDeniedReason.OwnerNotOnTeam
+    content.vb: Public ReadOnly Property AsOwnerNotOnTeam As PermissionDeniedReason.OwnerNotOnTeam
+  overload: Dropbox.Api.Sharing.PermissionDeniedReason.AsOwnerNotOnTeam*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.IsPermissionDenied
+  commentId: P:Dropbox.Api.Sharing.PermissionDeniedReason.IsPermissionDenied
+  id: IsPermissionDenied
+  parent: Dropbox.Api.Sharing.PermissionDeniedReason
+  langs:
+  - csharp
+  - vb
+  name: IsPermissionDenied
+  nameWithType: PermissionDeniedReason.IsPermissionDenied
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.IsPermissionDenied
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsPermissionDenied
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+    startLine: 219
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is PermissionDenied</p>\n"
+  example: []
+  syntax:
+    content: public bool IsPermissionDenied { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsPermissionDenied As Boolean
+  overload: Dropbox.Api.Sharing.PermissionDeniedReason.IsPermissionDenied*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.AsPermissionDenied
+  commentId: P:Dropbox.Api.Sharing.PermissionDeniedReason.AsPermissionDenied
+  id: AsPermissionDenied
+  parent: Dropbox.Api.Sharing.PermissionDeniedReason
+  langs:
+  - csharp
+  - vb
+  name: AsPermissionDenied
+  nameWithType: PermissionDeniedReason.AsPermissionDenied
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.AsPermissionDenied
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsPermissionDenied
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+    startLine: 230
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a PermissionDenied, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PermissionDeniedReason.PermissionDenied AsPermissionDenied { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.PermissionDeniedReason.PermissionDenied
+    content.vb: Public ReadOnly Property AsPermissionDenied As PermissionDeniedReason.PermissionDenied
+  overload: Dropbox.Api.Sharing.PermissionDeniedReason.AsPermissionDenied*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.IsRestrictedByTeam
+  commentId: P:Dropbox.Api.Sharing.PermissionDeniedReason.IsRestrictedByTeam
+  id: IsRestrictedByTeam
+  parent: Dropbox.Api.Sharing.PermissionDeniedReason
+  langs:
+  - csharp
+  - vb
+  name: IsRestrictedByTeam
+  nameWithType: PermissionDeniedReason.IsRestrictedByTeam
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.IsRestrictedByTeam
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsRestrictedByTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+    startLine: 241
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is RestrictedByTeam</p>\n"
+  example: []
+  syntax:
+    content: public bool IsRestrictedByTeam { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsRestrictedByTeam As Boolean
+  overload: Dropbox.Api.Sharing.PermissionDeniedReason.IsRestrictedByTeam*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.AsRestrictedByTeam
+  commentId: P:Dropbox.Api.Sharing.PermissionDeniedReason.AsRestrictedByTeam
+  id: AsRestrictedByTeam
+  parent: Dropbox.Api.Sharing.PermissionDeniedReason
+  langs:
+  - csharp
+  - vb
+  name: AsRestrictedByTeam
+  nameWithType: PermissionDeniedReason.AsRestrictedByTeam
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.AsRestrictedByTeam
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsRestrictedByTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+    startLine: 252
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a RestrictedByTeam, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PermissionDeniedReason.RestrictedByTeam AsRestrictedByTeam { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.PermissionDeniedReason.RestrictedByTeam
+    content.vb: Public ReadOnly Property AsRestrictedByTeam As PermissionDeniedReason.RestrictedByTeam
+  overload: Dropbox.Api.Sharing.PermissionDeniedReason.AsRestrictedByTeam*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.IsUserAccountType
+  commentId: P:Dropbox.Api.Sharing.PermissionDeniedReason.IsUserAccountType
+  id: IsUserAccountType
+  parent: Dropbox.Api.Sharing.PermissionDeniedReason
+  langs:
+  - csharp
+  - vb
+  name: IsUserAccountType
+  nameWithType: PermissionDeniedReason.IsUserAccountType
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.IsUserAccountType
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsUserAccountType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+    startLine: 263
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is UserAccountType</p>\n"
+  example: []
+  syntax:
+    content: public bool IsUserAccountType { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsUserAccountType As Boolean
+  overload: Dropbox.Api.Sharing.PermissionDeniedReason.IsUserAccountType*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.AsUserAccountType
+  commentId: P:Dropbox.Api.Sharing.PermissionDeniedReason.AsUserAccountType
+  id: AsUserAccountType
+  parent: Dropbox.Api.Sharing.PermissionDeniedReason
+  langs:
+  - csharp
+  - vb
+  name: AsUserAccountType
+  nameWithType: PermissionDeniedReason.AsUserAccountType
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.AsUserAccountType
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsUserAccountType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+    startLine: 274
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a UserAccountType, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PermissionDeniedReason.UserAccountType AsUserAccountType { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.PermissionDeniedReason.UserAccountType
+    content.vb: Public ReadOnly Property AsUserAccountType As PermissionDeniedReason.UserAccountType
+  overload: Dropbox.Api.Sharing.PermissionDeniedReason.AsUserAccountType*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.IsUserNotOnTeam
+  commentId: P:Dropbox.Api.Sharing.PermissionDeniedReason.IsUserNotOnTeam
+  id: IsUserNotOnTeam
+  parent: Dropbox.Api.Sharing.PermissionDeniedReason
+  langs:
+  - csharp
+  - vb
+  name: IsUserNotOnTeam
+  nameWithType: PermissionDeniedReason.IsUserNotOnTeam
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.IsUserNotOnTeam
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsUserNotOnTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+    startLine: 285
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is UserNotOnTeam</p>\n"
+  example: []
+  syntax:
+    content: public bool IsUserNotOnTeam { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsUserNotOnTeam As Boolean
+  overload: Dropbox.Api.Sharing.PermissionDeniedReason.IsUserNotOnTeam*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.AsUserNotOnTeam
+  commentId: P:Dropbox.Api.Sharing.PermissionDeniedReason.AsUserNotOnTeam
+  id: AsUserNotOnTeam
+  parent: Dropbox.Api.Sharing.PermissionDeniedReason
+  langs:
+  - csharp
+  - vb
+  name: AsUserNotOnTeam
+  nameWithType: PermissionDeniedReason.AsUserNotOnTeam
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.AsUserNotOnTeam
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsUserNotOnTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+    startLine: 296
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a UserNotOnTeam, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PermissionDeniedReason.UserNotOnTeam AsUserNotOnTeam { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.PermissionDeniedReason.UserNotOnTeam
+    content.vb: Public ReadOnly Property AsUserNotOnTeam As PermissionDeniedReason.UserNotOnTeam
+  overload: Dropbox.Api.Sharing.PermissionDeniedReason.AsUserNotOnTeam*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.IsFolderIsInsideSharedFolder
+  commentId: P:Dropbox.Api.Sharing.PermissionDeniedReason.IsFolderIsInsideSharedFolder
+  id: IsFolderIsInsideSharedFolder
+  parent: Dropbox.Api.Sharing.PermissionDeniedReason
+  langs:
+  - csharp
+  - vb
+  name: IsFolderIsInsideSharedFolder
+  nameWithType: PermissionDeniedReason.IsFolderIsInsideSharedFolder
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.IsFolderIsInsideSharedFolder
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsFolderIsInsideSharedFolder
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+    startLine: 308
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is\nFolderIsInsideSharedFolder</p>\n"
+  example: []
+  syntax:
+    content: public bool IsFolderIsInsideSharedFolder { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsFolderIsInsideSharedFolder As Boolean
+  overload: Dropbox.Api.Sharing.PermissionDeniedReason.IsFolderIsInsideSharedFolder*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.AsFolderIsInsideSharedFolder
+  commentId: P:Dropbox.Api.Sharing.PermissionDeniedReason.AsFolderIsInsideSharedFolder
+  id: AsFolderIsInsideSharedFolder
+  parent: Dropbox.Api.Sharing.PermissionDeniedReason
+  langs:
+  - csharp
+  - vb
+  name: AsFolderIsInsideSharedFolder
+  nameWithType: PermissionDeniedReason.AsFolderIsInsideSharedFolder
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.AsFolderIsInsideSharedFolder
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsFolderIsInsideSharedFolder
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+    startLine: 319
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a FolderIsInsideSharedFolder, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PermissionDeniedReason.FolderIsInsideSharedFolder AsFolderIsInsideSharedFolder { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.PermissionDeniedReason.FolderIsInsideSharedFolder
+    content.vb: Public ReadOnly Property AsFolderIsInsideSharedFolder As PermissionDeniedReason.FolderIsInsideSharedFolder
+  overload: Dropbox.Api.Sharing.PermissionDeniedReason.AsFolderIsInsideSharedFolder*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.IsRestrictedByParentFolder
+  commentId: P:Dropbox.Api.Sharing.PermissionDeniedReason.IsRestrictedByParentFolder
+  id: IsRestrictedByParentFolder
+  parent: Dropbox.Api.Sharing.PermissionDeniedReason
+  langs:
+  - csharp
+  - vb
+  name: IsRestrictedByParentFolder
+  nameWithType: PermissionDeniedReason.IsRestrictedByParentFolder
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.IsRestrictedByParentFolder
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsRestrictedByParentFolder
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+    startLine: 331
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is\nRestrictedByParentFolder</p>\n"
+  example: []
+  syntax:
+    content: public bool IsRestrictedByParentFolder { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsRestrictedByParentFolder As Boolean
+  overload: Dropbox.Api.Sharing.PermissionDeniedReason.IsRestrictedByParentFolder*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.AsRestrictedByParentFolder
+  commentId: P:Dropbox.Api.Sharing.PermissionDeniedReason.AsRestrictedByParentFolder
+  id: AsRestrictedByParentFolder
+  parent: Dropbox.Api.Sharing.PermissionDeniedReason
+  langs:
+  - csharp
+  - vb
+  name: AsRestrictedByParentFolder
+  nameWithType: PermissionDeniedReason.AsRestrictedByParentFolder
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.AsRestrictedByParentFolder
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsRestrictedByParentFolder
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+    startLine: 342
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a RestrictedByParentFolder, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PermissionDeniedReason.RestrictedByParentFolder AsRestrictedByParentFolder { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.PermissionDeniedReason.RestrictedByParentFolder
+    content.vb: Public ReadOnly Property AsRestrictedByParentFolder As PermissionDeniedReason.RestrictedByParentFolder
+  overload: Dropbox.Api.Sharing.PermissionDeniedReason.AsRestrictedByParentFolder*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.IsInsufficientPlan
+  commentId: P:Dropbox.Api.Sharing.PermissionDeniedReason.IsInsufficientPlan
+  id: IsInsufficientPlan
+  parent: Dropbox.Api.Sharing.PermissionDeniedReason
+  langs:
+  - csharp
+  - vb
+  name: IsInsufficientPlan
+  nameWithType: PermissionDeniedReason.IsInsufficientPlan
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.IsInsufficientPlan
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsInsufficientPlan
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+    startLine: 353
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is InsufficientPlan</p>\n"
+  example: []
+  syntax:
+    content: public bool IsInsufficientPlan { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsInsufficientPlan As Boolean
+  overload: Dropbox.Api.Sharing.PermissionDeniedReason.IsInsufficientPlan*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.AsInsufficientPlan
+  commentId: P:Dropbox.Api.Sharing.PermissionDeniedReason.AsInsufficientPlan
+  id: AsInsufficientPlan
+  parent: Dropbox.Api.Sharing.PermissionDeniedReason
+  langs:
+  - csharp
+  - vb
+  name: AsInsufficientPlan
+  nameWithType: PermissionDeniedReason.AsInsufficientPlan
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.AsInsufficientPlan
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsInsufficientPlan
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+    startLine: 364
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a InsufficientPlan, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PermissionDeniedReason.InsufficientPlan AsInsufficientPlan { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.PermissionDeniedReason.InsufficientPlan
+    content.vb: Public ReadOnly Property AsInsufficientPlan As PermissionDeniedReason.InsufficientPlan
+  overload: Dropbox.Api.Sharing.PermissionDeniedReason.AsInsufficientPlan*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.IsOther
+  commentId: P:Dropbox.Api.Sharing.PermissionDeniedReason.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Sharing.PermissionDeniedReason
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: PermissionDeniedReason.IsOther
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+    startLine: 375
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Sharing.PermissionDeniedReason.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.AsOther
+  commentId: P:Dropbox.Api.Sharing.PermissionDeniedReason.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Sharing.PermissionDeniedReason
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: PermissionDeniedReason.AsOther
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/PermissionDeniedReason.cs
+    startLine: 386
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PermissionDeniedReason.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.PermissionDeniedReason.Other
+    content.vb: Public ReadOnly Property AsOther As PermissionDeniedReason.Other
+  overload: Dropbox.Api.Sharing.PermissionDeniedReason.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason
+  commentId: T:Dropbox.Api.Sharing.PermissionDeniedReason
+  parent: Dropbox.Api.Sharing
+  name: PermissionDeniedReason
+  nameWithType: PermissionDeniedReason
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.PermissionDeniedReason.#ctor
+  name: PermissionDeniedReason
+  nameWithType: PermissionDeniedReason.PermissionDeniedReason
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.PermissionDeniedReason
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.IsUserNotSameTeamAsOwner*
+  commentId: Overload:Dropbox.Api.Sharing.PermissionDeniedReason.IsUserNotSameTeamAsOwner
+  name: IsUserNotSameTeamAsOwner
+  nameWithType: PermissionDeniedReason.IsUserNotSameTeamAsOwner
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.IsUserNotSameTeamAsOwner
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.AsUserNotSameTeamAsOwner*
+  commentId: Overload:Dropbox.Api.Sharing.PermissionDeniedReason.AsUserNotSameTeamAsOwner
+  name: AsUserNotSameTeamAsOwner
+  nameWithType: PermissionDeniedReason.AsUserNotSameTeamAsOwner
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.AsUserNotSameTeamAsOwner
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.UserNotSameTeamAsOwner
+  commentId: T:Dropbox.Api.Sharing.PermissionDeniedReason.UserNotSameTeamAsOwner
+  parent: Dropbox.Api.Sharing
+  name: PermissionDeniedReason.UserNotSameTeamAsOwner
+  nameWithType: PermissionDeniedReason.UserNotSameTeamAsOwner
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.UserNotSameTeamAsOwner
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.IsUserNotAllowedByOwner*
+  commentId: Overload:Dropbox.Api.Sharing.PermissionDeniedReason.IsUserNotAllowedByOwner
+  name: IsUserNotAllowedByOwner
+  nameWithType: PermissionDeniedReason.IsUserNotAllowedByOwner
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.IsUserNotAllowedByOwner
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.AsUserNotAllowedByOwner*
+  commentId: Overload:Dropbox.Api.Sharing.PermissionDeniedReason.AsUserNotAllowedByOwner
+  name: AsUserNotAllowedByOwner
+  nameWithType: PermissionDeniedReason.AsUserNotAllowedByOwner
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.AsUserNotAllowedByOwner
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.UserNotAllowedByOwner
+  commentId: T:Dropbox.Api.Sharing.PermissionDeniedReason.UserNotAllowedByOwner
+  parent: Dropbox.Api.Sharing
+  name: PermissionDeniedReason.UserNotAllowedByOwner
+  nameWithType: PermissionDeniedReason.UserNotAllowedByOwner
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.UserNotAllowedByOwner
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.IsTargetIsIndirectMember*
+  commentId: Overload:Dropbox.Api.Sharing.PermissionDeniedReason.IsTargetIsIndirectMember
+  name: IsTargetIsIndirectMember
+  nameWithType: PermissionDeniedReason.IsTargetIsIndirectMember
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.IsTargetIsIndirectMember
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.AsTargetIsIndirectMember*
+  commentId: Overload:Dropbox.Api.Sharing.PermissionDeniedReason.AsTargetIsIndirectMember
+  name: AsTargetIsIndirectMember
+  nameWithType: PermissionDeniedReason.AsTargetIsIndirectMember
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.AsTargetIsIndirectMember
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.TargetIsIndirectMember
+  commentId: T:Dropbox.Api.Sharing.PermissionDeniedReason.TargetIsIndirectMember
+  parent: Dropbox.Api.Sharing
+  name: PermissionDeniedReason.TargetIsIndirectMember
+  nameWithType: PermissionDeniedReason.TargetIsIndirectMember
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.TargetIsIndirectMember
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.IsTargetIsOwner*
+  commentId: Overload:Dropbox.Api.Sharing.PermissionDeniedReason.IsTargetIsOwner
+  name: IsTargetIsOwner
+  nameWithType: PermissionDeniedReason.IsTargetIsOwner
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.IsTargetIsOwner
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.AsTargetIsOwner*
+  commentId: Overload:Dropbox.Api.Sharing.PermissionDeniedReason.AsTargetIsOwner
+  name: AsTargetIsOwner
+  nameWithType: PermissionDeniedReason.AsTargetIsOwner
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.AsTargetIsOwner
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.TargetIsOwner
+  commentId: T:Dropbox.Api.Sharing.PermissionDeniedReason.TargetIsOwner
+  parent: Dropbox.Api.Sharing
+  name: PermissionDeniedReason.TargetIsOwner
+  nameWithType: PermissionDeniedReason.TargetIsOwner
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.TargetIsOwner
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.IsTargetIsSelf*
+  commentId: Overload:Dropbox.Api.Sharing.PermissionDeniedReason.IsTargetIsSelf
+  name: IsTargetIsSelf
+  nameWithType: PermissionDeniedReason.IsTargetIsSelf
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.IsTargetIsSelf
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.AsTargetIsSelf*
+  commentId: Overload:Dropbox.Api.Sharing.PermissionDeniedReason.AsTargetIsSelf
+  name: AsTargetIsSelf
+  nameWithType: PermissionDeniedReason.AsTargetIsSelf
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.AsTargetIsSelf
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.TargetIsSelf
+  commentId: T:Dropbox.Api.Sharing.PermissionDeniedReason.TargetIsSelf
+  parent: Dropbox.Api.Sharing
+  name: PermissionDeniedReason.TargetIsSelf
+  nameWithType: PermissionDeniedReason.TargetIsSelf
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.TargetIsSelf
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.IsTargetNotActive*
+  commentId: Overload:Dropbox.Api.Sharing.PermissionDeniedReason.IsTargetNotActive
+  name: IsTargetNotActive
+  nameWithType: PermissionDeniedReason.IsTargetNotActive
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.IsTargetNotActive
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.AsTargetNotActive*
+  commentId: Overload:Dropbox.Api.Sharing.PermissionDeniedReason.AsTargetNotActive
+  name: AsTargetNotActive
+  nameWithType: PermissionDeniedReason.AsTargetNotActive
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.AsTargetNotActive
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.TargetNotActive
+  commentId: T:Dropbox.Api.Sharing.PermissionDeniedReason.TargetNotActive
+  parent: Dropbox.Api.Sharing
+  name: PermissionDeniedReason.TargetNotActive
+  nameWithType: PermissionDeniedReason.TargetNotActive
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.TargetNotActive
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.IsFolderIsLimitedTeamFolder*
+  commentId: Overload:Dropbox.Api.Sharing.PermissionDeniedReason.IsFolderIsLimitedTeamFolder
+  name: IsFolderIsLimitedTeamFolder
+  nameWithType: PermissionDeniedReason.IsFolderIsLimitedTeamFolder
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.IsFolderIsLimitedTeamFolder
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.AsFolderIsLimitedTeamFolder*
+  commentId: Overload:Dropbox.Api.Sharing.PermissionDeniedReason.AsFolderIsLimitedTeamFolder
+  name: AsFolderIsLimitedTeamFolder
+  nameWithType: PermissionDeniedReason.AsFolderIsLimitedTeamFolder
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.AsFolderIsLimitedTeamFolder
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.FolderIsLimitedTeamFolder
+  commentId: T:Dropbox.Api.Sharing.PermissionDeniedReason.FolderIsLimitedTeamFolder
+  parent: Dropbox.Api.Sharing
+  name: PermissionDeniedReason.FolderIsLimitedTeamFolder
+  nameWithType: PermissionDeniedReason.FolderIsLimitedTeamFolder
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.FolderIsLimitedTeamFolder
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.IsOwnerNotOnTeam*
+  commentId: Overload:Dropbox.Api.Sharing.PermissionDeniedReason.IsOwnerNotOnTeam
+  name: IsOwnerNotOnTeam
+  nameWithType: PermissionDeniedReason.IsOwnerNotOnTeam
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.IsOwnerNotOnTeam
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.AsOwnerNotOnTeam*
+  commentId: Overload:Dropbox.Api.Sharing.PermissionDeniedReason.AsOwnerNotOnTeam
+  name: AsOwnerNotOnTeam
+  nameWithType: PermissionDeniedReason.AsOwnerNotOnTeam
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.AsOwnerNotOnTeam
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.OwnerNotOnTeam
+  commentId: T:Dropbox.Api.Sharing.PermissionDeniedReason.OwnerNotOnTeam
+  parent: Dropbox.Api.Sharing
+  name: PermissionDeniedReason.OwnerNotOnTeam
+  nameWithType: PermissionDeniedReason.OwnerNotOnTeam
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.OwnerNotOnTeam
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.IsPermissionDenied*
+  commentId: Overload:Dropbox.Api.Sharing.PermissionDeniedReason.IsPermissionDenied
+  name: IsPermissionDenied
+  nameWithType: PermissionDeniedReason.IsPermissionDenied
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.IsPermissionDenied
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.AsPermissionDenied*
+  commentId: Overload:Dropbox.Api.Sharing.PermissionDeniedReason.AsPermissionDenied
+  name: AsPermissionDenied
+  nameWithType: PermissionDeniedReason.AsPermissionDenied
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.AsPermissionDenied
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.PermissionDenied
+  commentId: T:Dropbox.Api.Sharing.PermissionDeniedReason.PermissionDenied
+  parent: Dropbox.Api.Sharing
+  name: PermissionDeniedReason.PermissionDenied
+  nameWithType: PermissionDeniedReason.PermissionDenied
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.PermissionDenied
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.IsRestrictedByTeam*
+  commentId: Overload:Dropbox.Api.Sharing.PermissionDeniedReason.IsRestrictedByTeam
+  name: IsRestrictedByTeam
+  nameWithType: PermissionDeniedReason.IsRestrictedByTeam
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.IsRestrictedByTeam
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.AsRestrictedByTeam*
+  commentId: Overload:Dropbox.Api.Sharing.PermissionDeniedReason.AsRestrictedByTeam
+  name: AsRestrictedByTeam
+  nameWithType: PermissionDeniedReason.AsRestrictedByTeam
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.AsRestrictedByTeam
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.RestrictedByTeam
+  commentId: T:Dropbox.Api.Sharing.PermissionDeniedReason.RestrictedByTeam
+  parent: Dropbox.Api.Sharing
+  name: PermissionDeniedReason.RestrictedByTeam
+  nameWithType: PermissionDeniedReason.RestrictedByTeam
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.RestrictedByTeam
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.IsUserAccountType*
+  commentId: Overload:Dropbox.Api.Sharing.PermissionDeniedReason.IsUserAccountType
+  name: IsUserAccountType
+  nameWithType: PermissionDeniedReason.IsUserAccountType
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.IsUserAccountType
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.AsUserAccountType*
+  commentId: Overload:Dropbox.Api.Sharing.PermissionDeniedReason.AsUserAccountType
+  name: AsUserAccountType
+  nameWithType: PermissionDeniedReason.AsUserAccountType
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.AsUserAccountType
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.UserAccountType
+  commentId: T:Dropbox.Api.Sharing.PermissionDeniedReason.UserAccountType
+  parent: Dropbox.Api.Sharing
+  name: PermissionDeniedReason.UserAccountType
+  nameWithType: PermissionDeniedReason.UserAccountType
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.UserAccountType
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.IsUserNotOnTeam*
+  commentId: Overload:Dropbox.Api.Sharing.PermissionDeniedReason.IsUserNotOnTeam
+  name: IsUserNotOnTeam
+  nameWithType: PermissionDeniedReason.IsUserNotOnTeam
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.IsUserNotOnTeam
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.AsUserNotOnTeam*
+  commentId: Overload:Dropbox.Api.Sharing.PermissionDeniedReason.AsUserNotOnTeam
+  name: AsUserNotOnTeam
+  nameWithType: PermissionDeniedReason.AsUserNotOnTeam
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.AsUserNotOnTeam
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.UserNotOnTeam
+  commentId: T:Dropbox.Api.Sharing.PermissionDeniedReason.UserNotOnTeam
+  parent: Dropbox.Api.Sharing
+  name: PermissionDeniedReason.UserNotOnTeam
+  nameWithType: PermissionDeniedReason.UserNotOnTeam
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.UserNotOnTeam
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.IsFolderIsInsideSharedFolder*
+  commentId: Overload:Dropbox.Api.Sharing.PermissionDeniedReason.IsFolderIsInsideSharedFolder
+  name: IsFolderIsInsideSharedFolder
+  nameWithType: PermissionDeniedReason.IsFolderIsInsideSharedFolder
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.IsFolderIsInsideSharedFolder
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.AsFolderIsInsideSharedFolder*
+  commentId: Overload:Dropbox.Api.Sharing.PermissionDeniedReason.AsFolderIsInsideSharedFolder
+  name: AsFolderIsInsideSharedFolder
+  nameWithType: PermissionDeniedReason.AsFolderIsInsideSharedFolder
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.AsFolderIsInsideSharedFolder
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.FolderIsInsideSharedFolder
+  commentId: T:Dropbox.Api.Sharing.PermissionDeniedReason.FolderIsInsideSharedFolder
+  parent: Dropbox.Api.Sharing
+  name: PermissionDeniedReason.FolderIsInsideSharedFolder
+  nameWithType: PermissionDeniedReason.FolderIsInsideSharedFolder
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.FolderIsInsideSharedFolder
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.IsRestrictedByParentFolder*
+  commentId: Overload:Dropbox.Api.Sharing.PermissionDeniedReason.IsRestrictedByParentFolder
+  name: IsRestrictedByParentFolder
+  nameWithType: PermissionDeniedReason.IsRestrictedByParentFolder
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.IsRestrictedByParentFolder
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.AsRestrictedByParentFolder*
+  commentId: Overload:Dropbox.Api.Sharing.PermissionDeniedReason.AsRestrictedByParentFolder
+  name: AsRestrictedByParentFolder
+  nameWithType: PermissionDeniedReason.AsRestrictedByParentFolder
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.AsRestrictedByParentFolder
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.RestrictedByParentFolder
+  commentId: T:Dropbox.Api.Sharing.PermissionDeniedReason.RestrictedByParentFolder
+  parent: Dropbox.Api.Sharing
+  name: PermissionDeniedReason.RestrictedByParentFolder
+  nameWithType: PermissionDeniedReason.RestrictedByParentFolder
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.RestrictedByParentFolder
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.IsInsufficientPlan*
+  commentId: Overload:Dropbox.Api.Sharing.PermissionDeniedReason.IsInsufficientPlan
+  name: IsInsufficientPlan
+  nameWithType: PermissionDeniedReason.IsInsufficientPlan
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.IsInsufficientPlan
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.AsInsufficientPlan*
+  commentId: Overload:Dropbox.Api.Sharing.PermissionDeniedReason.AsInsufficientPlan
+  name: AsInsufficientPlan
+  nameWithType: PermissionDeniedReason.AsInsufficientPlan
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.AsInsufficientPlan
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.InsufficientPlan
+  commentId: T:Dropbox.Api.Sharing.PermissionDeniedReason.InsufficientPlan
+  parent: Dropbox.Api.Sharing
+  name: PermissionDeniedReason.InsufficientPlan
+  nameWithType: PermissionDeniedReason.InsufficientPlan
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.InsufficientPlan
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.IsOther*
+  commentId: Overload:Dropbox.Api.Sharing.PermissionDeniedReason.IsOther
+  name: IsOther
+  nameWithType: PermissionDeniedReason.IsOther
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.IsOther
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.AsOther*
+  commentId: Overload:Dropbox.Api.Sharing.PermissionDeniedReason.AsOther
+  name: AsOther
+  nameWithType: PermissionDeniedReason.AsOther
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.AsOther
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason.Other
+  commentId: T:Dropbox.Api.Sharing.PermissionDeniedReason.Other
+  parent: Dropbox.Api.Sharing
+  name: PermissionDeniedReason.Other
+  nameWithType: PermissionDeniedReason.Other
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason.Other
+shouldSkipMarkup: true

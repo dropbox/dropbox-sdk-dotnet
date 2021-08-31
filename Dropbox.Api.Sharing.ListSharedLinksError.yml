@@ -1,0 +1,381 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.ListSharedLinksError
+  commentId: T:Dropbox.Api.Sharing.ListSharedLinksError
+  id: ListSharedLinksError
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.ListSharedLinksError.#ctor
+  - Dropbox.Api.Sharing.ListSharedLinksError.AsOther
+  - Dropbox.Api.Sharing.ListSharedLinksError.AsPath
+  - Dropbox.Api.Sharing.ListSharedLinksError.AsReset
+  - Dropbox.Api.Sharing.ListSharedLinksError.IsOther
+  - Dropbox.Api.Sharing.ListSharedLinksError.IsPath
+  - Dropbox.Api.Sharing.ListSharedLinksError.IsReset
+  langs:
+  - csharp
+  - vb
+  name: ListSharedLinksError
+  nameWithType: ListSharedLinksError
+  fullName: Dropbox.Api.Sharing.ListSharedLinksError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListSharedLinksError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ListSharedLinksError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListSharedLinksError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The list shared links error object</p>\n"
+  example: []
+  syntax:
+    content: 'public class ListSharedLinksError : object'
+    content.vb: >-
+      Public Class ListSharedLinksError
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Sharing.ListSharedLinksError.Other
+  - Dropbox.Api.Sharing.ListSharedLinksError.Path
+  - Dropbox.Api.Sharing.ListSharedLinksError.Reset
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Sharing.ListSharedLinksError.#ctor
+  commentId: M:Dropbox.Api.Sharing.ListSharedLinksError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Sharing.ListSharedLinksError
+  langs:
+  - csharp
+  - vb
+  name: ListSharedLinksError()
+  nameWithType: ListSharedLinksError.ListSharedLinksError()
+  fullName: Dropbox.Api.Sharing.ListSharedLinksError.ListSharedLinksError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListSharedLinksError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListSharedLinksError.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.ListSharedLinksError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public ListSharedLinksError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Sharing.ListSharedLinksError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.ListSharedLinksError.IsPath
+  commentId: P:Dropbox.Api.Sharing.ListSharedLinksError.IsPath
+  id: IsPath
+  parent: Dropbox.Api.Sharing.ListSharedLinksError
+  langs:
+  - csharp
+  - vb
+  name: IsPath
+  nameWithType: ListSharedLinksError.IsPath
+  fullName: Dropbox.Api.Sharing.ListSharedLinksError.IsPath
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListSharedLinksError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsPath
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListSharedLinksError.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is Path</p>\n"
+  example: []
+  syntax:
+    content: public bool IsPath { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsPath As Boolean
+  overload: Dropbox.Api.Sharing.ListSharedLinksError.IsPath*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.ListSharedLinksError.AsPath
+  commentId: P:Dropbox.Api.Sharing.ListSharedLinksError.AsPath
+  id: AsPath
+  parent: Dropbox.Api.Sharing.ListSharedLinksError
+  langs:
+  - csharp
+  - vb
+  name: AsPath
+  nameWithType: ListSharedLinksError.AsPath
+  fullName: Dropbox.Api.Sharing.ListSharedLinksError.AsPath
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListSharedLinksError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsPath
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListSharedLinksError.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a Path, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ListSharedLinksError.Path AsPath { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.ListSharedLinksError.Path
+    content.vb: Public ReadOnly Property AsPath As ListSharedLinksError.Path
+  overload: Dropbox.Api.Sharing.ListSharedLinksError.AsPath*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.ListSharedLinksError.IsReset
+  commentId: P:Dropbox.Api.Sharing.ListSharedLinksError.IsReset
+  id: IsReset
+  parent: Dropbox.Api.Sharing.ListSharedLinksError
+  langs:
+  - csharp
+  - vb
+  name: IsReset
+  nameWithType: ListSharedLinksError.IsReset
+  fullName: Dropbox.Api.Sharing.ListSharedLinksError.IsReset
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListSharedLinksError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsReset
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListSharedLinksError.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is Reset</p>\n"
+  example: []
+  syntax:
+    content: public bool IsReset { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsReset As Boolean
+  overload: Dropbox.Api.Sharing.ListSharedLinksError.IsReset*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.ListSharedLinksError.AsReset
+  commentId: P:Dropbox.Api.Sharing.ListSharedLinksError.AsReset
+  id: AsReset
+  parent: Dropbox.Api.Sharing.ListSharedLinksError
+  langs:
+  - csharp
+  - vb
+  name: AsReset
+  nameWithType: ListSharedLinksError.AsReset
+  fullName: Dropbox.Api.Sharing.ListSharedLinksError.AsReset
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListSharedLinksError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsReset
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListSharedLinksError.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a Reset, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ListSharedLinksError.Reset AsReset { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.ListSharedLinksError.Reset
+    content.vb: Public ReadOnly Property AsReset As ListSharedLinksError.Reset
+  overload: Dropbox.Api.Sharing.ListSharedLinksError.AsReset*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.ListSharedLinksError.IsOther
+  commentId: P:Dropbox.Api.Sharing.ListSharedLinksError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Sharing.ListSharedLinksError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: ListSharedLinksError.IsOther
+  fullName: Dropbox.Api.Sharing.ListSharedLinksError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListSharedLinksError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListSharedLinksError.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Sharing.ListSharedLinksError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.ListSharedLinksError.AsOther
+  commentId: P:Dropbox.Api.Sharing.ListSharedLinksError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Sharing.ListSharedLinksError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: ListSharedLinksError.AsOther
+  fullName: Dropbox.Api.Sharing.ListSharedLinksError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListSharedLinksError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListSharedLinksError.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ListSharedLinksError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.ListSharedLinksError.Other
+    content.vb: Public ReadOnly Property AsOther As ListSharedLinksError.Other
+  overload: Dropbox.Api.Sharing.ListSharedLinksError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.ListSharedLinksError
+  commentId: T:Dropbox.Api.Sharing.ListSharedLinksError
+  parent: Dropbox.Api.Sharing
+  name: ListSharedLinksError
+  nameWithType: ListSharedLinksError
+  fullName: Dropbox.Api.Sharing.ListSharedLinksError
+- uid: Dropbox.Api.Sharing.ListSharedLinksError.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.ListSharedLinksError.#ctor
+  name: ListSharedLinksError
+  nameWithType: ListSharedLinksError.ListSharedLinksError
+  fullName: Dropbox.Api.Sharing.ListSharedLinksError.ListSharedLinksError
+- uid: Dropbox.Api.Sharing.ListSharedLinksError.IsPath*
+  commentId: Overload:Dropbox.Api.Sharing.ListSharedLinksError.IsPath
+  name: IsPath
+  nameWithType: ListSharedLinksError.IsPath
+  fullName: Dropbox.Api.Sharing.ListSharedLinksError.IsPath
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Sharing.ListSharedLinksError.AsPath*
+  commentId: Overload:Dropbox.Api.Sharing.ListSharedLinksError.AsPath
+  name: AsPath
+  nameWithType: ListSharedLinksError.AsPath
+  fullName: Dropbox.Api.Sharing.ListSharedLinksError.AsPath
+- uid: Dropbox.Api.Sharing.ListSharedLinksError.Path
+  commentId: T:Dropbox.Api.Sharing.ListSharedLinksError.Path
+  parent: Dropbox.Api.Sharing
+  name: ListSharedLinksError.Path
+  nameWithType: ListSharedLinksError.Path
+  fullName: Dropbox.Api.Sharing.ListSharedLinksError.Path
+- uid: Dropbox.Api.Sharing.ListSharedLinksError.IsReset*
+  commentId: Overload:Dropbox.Api.Sharing.ListSharedLinksError.IsReset
+  name: IsReset
+  nameWithType: ListSharedLinksError.IsReset
+  fullName: Dropbox.Api.Sharing.ListSharedLinksError.IsReset
+- uid: Dropbox.Api.Sharing.ListSharedLinksError.AsReset*
+  commentId: Overload:Dropbox.Api.Sharing.ListSharedLinksError.AsReset
+  name: AsReset
+  nameWithType: ListSharedLinksError.AsReset
+  fullName: Dropbox.Api.Sharing.ListSharedLinksError.AsReset
+- uid: Dropbox.Api.Sharing.ListSharedLinksError.Reset
+  commentId: T:Dropbox.Api.Sharing.ListSharedLinksError.Reset
+  parent: Dropbox.Api.Sharing
+  name: ListSharedLinksError.Reset
+  nameWithType: ListSharedLinksError.Reset
+  fullName: Dropbox.Api.Sharing.ListSharedLinksError.Reset
+- uid: Dropbox.Api.Sharing.ListSharedLinksError.IsOther*
+  commentId: Overload:Dropbox.Api.Sharing.ListSharedLinksError.IsOther
+  name: IsOther
+  nameWithType: ListSharedLinksError.IsOther
+  fullName: Dropbox.Api.Sharing.ListSharedLinksError.IsOther
+- uid: Dropbox.Api.Sharing.ListSharedLinksError.AsOther*
+  commentId: Overload:Dropbox.Api.Sharing.ListSharedLinksError.AsOther
+  name: AsOther
+  nameWithType: ListSharedLinksError.AsOther
+  fullName: Dropbox.Api.Sharing.ListSharedLinksError.AsOther
+- uid: Dropbox.Api.Sharing.ListSharedLinksError.Other
+  commentId: T:Dropbox.Api.Sharing.ListSharedLinksError.Other
+  parent: Dropbox.Api.Sharing
+  name: ListSharedLinksError.Other
+  nameWithType: ListSharedLinksError.Other
+  fullName: Dropbox.Api.Sharing.ListSharedLinksError.Other
+shouldSkipMarkup: true

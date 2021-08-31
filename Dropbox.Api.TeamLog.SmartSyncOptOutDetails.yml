@@ -1,0 +1,236 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.SmartSyncOptOutDetails
+  commentId: T:Dropbox.Api.TeamLog.SmartSyncOptOutDetails
+  id: SmartSyncOptOutDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.SmartSyncOptOutDetails.#ctor
+  - Dropbox.Api.TeamLog.SmartSyncOptOutDetails.#ctor(Dropbox.Api.TeamLog.SmartSyncOptOutPolicy,Dropbox.Api.TeamLog.SmartSyncOptOutPolicy)
+  - Dropbox.Api.TeamLog.SmartSyncOptOutDetails.NewValue
+  - Dropbox.Api.TeamLog.SmartSyncOptOutDetails.PreviousValue
+  langs:
+  - csharp
+  - vb
+  name: SmartSyncOptOutDetails
+  nameWithType: SmartSyncOptOutDetails
+  fullName: Dropbox.Api.TeamLog.SmartSyncOptOutDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SmartSyncOptOutDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SmartSyncOptOutDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SmartSyncOptOutDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Opted team out of Smart Sync.</p>\n"
+  example: []
+  syntax:
+    content: 'public class SmartSyncOptOutDetails : object'
+    content.vb: >-
+      Public Class SmartSyncOptOutDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.SmartSyncOptOutDetails.#ctor(Dropbox.Api.TeamLog.SmartSyncOptOutPolicy,Dropbox.Api.TeamLog.SmartSyncOptOutPolicy)
+  commentId: M:Dropbox.Api.TeamLog.SmartSyncOptOutDetails.#ctor(Dropbox.Api.TeamLog.SmartSyncOptOutPolicy,Dropbox.Api.TeamLog.SmartSyncOptOutPolicy)
+  id: '#ctor(Dropbox.Api.TeamLog.SmartSyncOptOutPolicy,Dropbox.Api.TeamLog.SmartSyncOptOutPolicy)'
+  parent: Dropbox.Api.TeamLog.SmartSyncOptOutDetails
+  langs:
+  - csharp
+  - vb
+  name: SmartSyncOptOutDetails(SmartSyncOptOutPolicy, SmartSyncOptOutPolicy)
+  nameWithType: SmartSyncOptOutDetails.SmartSyncOptOutDetails(SmartSyncOptOutPolicy, SmartSyncOptOutPolicy)
+  fullName: Dropbox.Api.TeamLog.SmartSyncOptOutDetails.SmartSyncOptOutDetails(Dropbox.Api.TeamLog.SmartSyncOptOutPolicy, Dropbox.Api.TeamLog.SmartSyncOptOutPolicy)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SmartSyncOptOutDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SmartSyncOptOutDetails.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SmartSyncOptOutDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public SmartSyncOptOutDetails(SmartSyncOptOutPolicy previousValue, SmartSyncOptOutPolicy newValue)
+    parameters:
+    - id: previousValue
+      type: Dropbox.Api.TeamLog.SmartSyncOptOutPolicy
+      description: Previous Smart Sync opt out policy.
+    - id: newValue
+      type: Dropbox.Api.TeamLog.SmartSyncOptOutPolicy
+      description: New Smart Sync opt out policy.
+    content.vb: Public Sub New(previousValue As SmartSyncOptOutPolicy, newValue As SmartSyncOptOutPolicy)
+  overload: Dropbox.Api.TeamLog.SmartSyncOptOutDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SmartSyncOptOutDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.SmartSyncOptOutDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.SmartSyncOptOutDetails
+  langs:
+  - csharp
+  - vb
+  name: SmartSyncOptOutDetails()
+  nameWithType: SmartSyncOptOutDetails.SmartSyncOptOutDetails()
+  fullName: Dropbox.Api.TeamLog.SmartSyncOptOutDetails.SmartSyncOptOutDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SmartSyncOptOutDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SmartSyncOptOutDetails.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SmartSyncOptOutDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public SmartSyncOptOutDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.SmartSyncOptOutDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SmartSyncOptOutDetails.PreviousValue
+  commentId: P:Dropbox.Api.TeamLog.SmartSyncOptOutDetails.PreviousValue
+  id: PreviousValue
+  parent: Dropbox.Api.TeamLog.SmartSyncOptOutDetails
+  langs:
+  - csharp
+  - vb
+  name: PreviousValue
+  nameWithType: SmartSyncOptOutDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.SmartSyncOptOutDetails.PreviousValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SmartSyncOptOutDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PreviousValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SmartSyncOptOutDetails.cs
+    startLine: 66
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Previous Smart Sync opt out policy.</p>\n"
+  example: []
+  syntax:
+    content: public SmartSyncOptOutPolicy PreviousValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.SmartSyncOptOutPolicy
+    content.vb: Public Property PreviousValue As SmartSyncOptOutPolicy
+  overload: Dropbox.Api.TeamLog.SmartSyncOptOutDetails.PreviousValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.SmartSyncOptOutDetails.NewValue
+  commentId: P:Dropbox.Api.TeamLog.SmartSyncOptOutDetails.NewValue
+  id: NewValue
+  parent: Dropbox.Api.TeamLog.SmartSyncOptOutDetails
+  langs:
+  - csharp
+  - vb
+  name: NewValue
+  nameWithType: SmartSyncOptOutDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.SmartSyncOptOutDetails.NewValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SmartSyncOptOutDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NewValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SmartSyncOptOutDetails.cs
+    startLine: 71
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>New Smart Sync opt out policy.</p>\n"
+  example: []
+  syntax:
+    content: public SmartSyncOptOutPolicy NewValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.SmartSyncOptOutPolicy
+    content.vb: Public Property NewValue As SmartSyncOptOutPolicy
+  overload: Dropbox.Api.TeamLog.SmartSyncOptOutDetails.NewValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.SmartSyncOptOutDetails
+  commentId: T:Dropbox.Api.TeamLog.SmartSyncOptOutDetails
+  parent: Dropbox.Api.TeamLog
+  name: SmartSyncOptOutDetails
+  nameWithType: SmartSyncOptOutDetails
+  fullName: Dropbox.Api.TeamLog.SmartSyncOptOutDetails
+- uid: Dropbox.Api.TeamLog.SmartSyncOptOutDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.SmartSyncOptOutDetails.#ctor
+  name: SmartSyncOptOutDetails
+  nameWithType: SmartSyncOptOutDetails.SmartSyncOptOutDetails
+  fullName: Dropbox.Api.TeamLog.SmartSyncOptOutDetails.SmartSyncOptOutDetails
+- uid: Dropbox.Api.TeamLog.SmartSyncOptOutPolicy
+  commentId: T:Dropbox.Api.TeamLog.SmartSyncOptOutPolicy
+  parent: Dropbox.Api.TeamLog
+  name: SmartSyncOptOutPolicy
+  nameWithType: SmartSyncOptOutPolicy
+  fullName: Dropbox.Api.TeamLog.SmartSyncOptOutPolicy
+- uid: Dropbox.Api.TeamLog.SmartSyncOptOutDetails.PreviousValue*
+  commentId: Overload:Dropbox.Api.TeamLog.SmartSyncOptOutDetails.PreviousValue
+  name: PreviousValue
+  nameWithType: SmartSyncOptOutDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.SmartSyncOptOutDetails.PreviousValue
+- uid: Dropbox.Api.TeamLog.SmartSyncOptOutDetails.NewValue*
+  commentId: Overload:Dropbox.Api.TeamLog.SmartSyncOptOutDetails.NewValue
+  name: NewValue
+  nameWithType: SmartSyncOptOutDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.SmartSyncOptOutDetails.NewValue
+shouldSkipMarkup: true

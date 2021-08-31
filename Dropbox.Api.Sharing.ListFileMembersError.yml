@@ -1,0 +1,384 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.ListFileMembersError
+  commentId: T:Dropbox.Api.Sharing.ListFileMembersError
+  id: ListFileMembersError
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.ListFileMembersError.#ctor
+  - Dropbox.Api.Sharing.ListFileMembersError.AsAccessError
+  - Dropbox.Api.Sharing.ListFileMembersError.AsOther
+  - Dropbox.Api.Sharing.ListFileMembersError.AsUserError
+  - Dropbox.Api.Sharing.ListFileMembersError.IsAccessError
+  - Dropbox.Api.Sharing.ListFileMembersError.IsOther
+  - Dropbox.Api.Sharing.ListFileMembersError.IsUserError
+  langs:
+  - csharp
+  - vb
+  name: ListFileMembersError
+  nameWithType: ListFileMembersError
+  fullName: Dropbox.Api.Sharing.ListFileMembersError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ListFileMembersError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersError.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Error for <xref href=\"Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListFileMembersAsync(Dropbox.Api.Sharing.ListFileMembersArg)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+  example: []
+  syntax:
+    content: 'public class ListFileMembersError : object'
+    content.vb: >-
+      Public Class ListFileMembersError
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Sharing.ListFileMembersError.AccessError
+  - Dropbox.Api.Sharing.ListFileMembersError.Other
+  - Dropbox.Api.Sharing.ListFileMembersError.UserError
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Sharing.ListFileMembersError.#ctor
+  commentId: M:Dropbox.Api.Sharing.ListFileMembersError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Sharing.ListFileMembersError
+  langs:
+  - csharp
+  - vb
+  name: ListFileMembersError()
+  nameWithType: ListFileMembersError.ListFileMembersError()
+  fullName: Dropbox.Api.Sharing.ListFileMembersError.ListFileMembersError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersError.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.ListFileMembersError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public ListFileMembersError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Sharing.ListFileMembersError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.ListFileMembersError.IsUserError
+  commentId: P:Dropbox.Api.Sharing.ListFileMembersError.IsUserError
+  id: IsUserError
+  parent: Dropbox.Api.Sharing.ListFileMembersError
+  langs:
+  - csharp
+  - vb
+  name: IsUserError
+  nameWithType: ListFileMembersError.IsUserError
+  fullName: Dropbox.Api.Sharing.ListFileMembersError.IsUserError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsUserError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersError.cs
+    startLine: 41
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is UserError</p>\n"
+  example: []
+  syntax:
+    content: public bool IsUserError { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsUserError As Boolean
+  overload: Dropbox.Api.Sharing.ListFileMembersError.IsUserError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.ListFileMembersError.AsUserError
+  commentId: P:Dropbox.Api.Sharing.ListFileMembersError.AsUserError
+  id: AsUserError
+  parent: Dropbox.Api.Sharing.ListFileMembersError
+  langs:
+  - csharp
+  - vb
+  name: AsUserError
+  nameWithType: ListFileMembersError.AsUserError
+  fullName: Dropbox.Api.Sharing.ListFileMembersError.AsUserError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsUserError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersError.cs
+    startLine: 52
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a UserError, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ListFileMembersError.UserError AsUserError { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.ListFileMembersError.UserError
+    content.vb: Public ReadOnly Property AsUserError As ListFileMembersError.UserError
+  overload: Dropbox.Api.Sharing.ListFileMembersError.AsUserError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.ListFileMembersError.IsAccessError
+  commentId: P:Dropbox.Api.Sharing.ListFileMembersError.IsAccessError
+  id: IsAccessError
+  parent: Dropbox.Api.Sharing.ListFileMembersError
+  langs:
+  - csharp
+  - vb
+  name: IsAccessError
+  nameWithType: ListFileMembersError.IsAccessError
+  fullName: Dropbox.Api.Sharing.ListFileMembersError.IsAccessError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsAccessError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersError.cs
+    startLine: 63
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is AccessError</p>\n"
+  example: []
+  syntax:
+    content: public bool IsAccessError { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsAccessError As Boolean
+  overload: Dropbox.Api.Sharing.ListFileMembersError.IsAccessError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.ListFileMembersError.AsAccessError
+  commentId: P:Dropbox.Api.Sharing.ListFileMembersError.AsAccessError
+  id: AsAccessError
+  parent: Dropbox.Api.Sharing.ListFileMembersError
+  langs:
+  - csharp
+  - vb
+  name: AsAccessError
+  nameWithType: ListFileMembersError.AsAccessError
+  fullName: Dropbox.Api.Sharing.ListFileMembersError.AsAccessError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsAccessError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersError.cs
+    startLine: 74
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a AccessError, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ListFileMembersError.AccessError AsAccessError { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.ListFileMembersError.AccessError
+    content.vb: Public ReadOnly Property AsAccessError As ListFileMembersError.AccessError
+  overload: Dropbox.Api.Sharing.ListFileMembersError.AsAccessError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.ListFileMembersError.IsOther
+  commentId: P:Dropbox.Api.Sharing.ListFileMembersError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Sharing.ListFileMembersError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: ListFileMembersError.IsOther
+  fullName: Dropbox.Api.Sharing.ListFileMembersError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersError.cs
+    startLine: 85
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Sharing.ListFileMembersError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.ListFileMembersError.AsOther
+  commentId: P:Dropbox.Api.Sharing.ListFileMembersError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Sharing.ListFileMembersError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: ListFileMembersError.AsOther
+  fullName: Dropbox.Api.Sharing.ListFileMembersError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersError.cs
+    startLine: 96
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ListFileMembersError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.ListFileMembersError.Other
+    content.vb: Public ReadOnly Property AsOther As ListFileMembersError.Other
+  overload: Dropbox.Api.Sharing.ListFileMembersError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListFileMembersAsync(Dropbox.Api.Sharing.ListFileMembersArg)
+  commentId: M:Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListFileMembersAsync(Dropbox.Api.Sharing.ListFileMembersArg)
+  isExternal: true
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.ListFileMembersError
+  commentId: T:Dropbox.Api.Sharing.ListFileMembersError
+  parent: Dropbox.Api.Sharing
+  name: ListFileMembersError
+  nameWithType: ListFileMembersError
+  fullName: Dropbox.Api.Sharing.ListFileMembersError
+- uid: Dropbox.Api.Sharing.ListFileMembersError.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.ListFileMembersError.#ctor
+  name: ListFileMembersError
+  nameWithType: ListFileMembersError.ListFileMembersError
+  fullName: Dropbox.Api.Sharing.ListFileMembersError.ListFileMembersError
+- uid: Dropbox.Api.Sharing.ListFileMembersError.IsUserError*
+  commentId: Overload:Dropbox.Api.Sharing.ListFileMembersError.IsUserError
+  name: IsUserError
+  nameWithType: ListFileMembersError.IsUserError
+  fullName: Dropbox.Api.Sharing.ListFileMembersError.IsUserError
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Sharing.ListFileMembersError.AsUserError*
+  commentId: Overload:Dropbox.Api.Sharing.ListFileMembersError.AsUserError
+  name: AsUserError
+  nameWithType: ListFileMembersError.AsUserError
+  fullName: Dropbox.Api.Sharing.ListFileMembersError.AsUserError
+- uid: Dropbox.Api.Sharing.ListFileMembersError.UserError
+  commentId: T:Dropbox.Api.Sharing.ListFileMembersError.UserError
+  parent: Dropbox.Api.Sharing
+  name: ListFileMembersError.UserError
+  nameWithType: ListFileMembersError.UserError
+  fullName: Dropbox.Api.Sharing.ListFileMembersError.UserError
+- uid: Dropbox.Api.Sharing.ListFileMembersError.IsAccessError*
+  commentId: Overload:Dropbox.Api.Sharing.ListFileMembersError.IsAccessError
+  name: IsAccessError
+  nameWithType: ListFileMembersError.IsAccessError
+  fullName: Dropbox.Api.Sharing.ListFileMembersError.IsAccessError
+- uid: Dropbox.Api.Sharing.ListFileMembersError.AsAccessError*
+  commentId: Overload:Dropbox.Api.Sharing.ListFileMembersError.AsAccessError
+  name: AsAccessError
+  nameWithType: ListFileMembersError.AsAccessError
+  fullName: Dropbox.Api.Sharing.ListFileMembersError.AsAccessError
+- uid: Dropbox.Api.Sharing.ListFileMembersError.AccessError
+  commentId: T:Dropbox.Api.Sharing.ListFileMembersError.AccessError
+  parent: Dropbox.Api.Sharing
+  name: ListFileMembersError.AccessError
+  nameWithType: ListFileMembersError.AccessError
+  fullName: Dropbox.Api.Sharing.ListFileMembersError.AccessError
+- uid: Dropbox.Api.Sharing.ListFileMembersError.IsOther*
+  commentId: Overload:Dropbox.Api.Sharing.ListFileMembersError.IsOther
+  name: IsOther
+  nameWithType: ListFileMembersError.IsOther
+  fullName: Dropbox.Api.Sharing.ListFileMembersError.IsOther
+- uid: Dropbox.Api.Sharing.ListFileMembersError.AsOther*
+  commentId: Overload:Dropbox.Api.Sharing.ListFileMembersError.AsOther
+  name: AsOther
+  nameWithType: ListFileMembersError.AsOther
+  fullName: Dropbox.Api.Sharing.ListFileMembersError.AsOther
+- uid: Dropbox.Api.Sharing.ListFileMembersError.Other
+  commentId: T:Dropbox.Api.Sharing.ListFileMembersError.Other
+  parent: Dropbox.Api.Sharing
+  name: ListFileMembersError.Other
+  nameWithType: ListFileMembersError.Other
+  fullName: Dropbox.Api.Sharing.ListFileMembersError.Other
+shouldSkipMarkup: true

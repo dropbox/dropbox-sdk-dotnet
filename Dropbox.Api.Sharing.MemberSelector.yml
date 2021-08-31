@@ -1,0 +1,381 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.MemberSelector
+  commentId: T:Dropbox.Api.Sharing.MemberSelector
+  id: MemberSelector
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.MemberSelector.#ctor
+  - Dropbox.Api.Sharing.MemberSelector.AsDropboxId
+  - Dropbox.Api.Sharing.MemberSelector.AsEmail
+  - Dropbox.Api.Sharing.MemberSelector.AsOther
+  - Dropbox.Api.Sharing.MemberSelector.IsDropboxId
+  - Dropbox.Api.Sharing.MemberSelector.IsEmail
+  - Dropbox.Api.Sharing.MemberSelector.IsOther
+  langs:
+  - csharp
+  - vb
+  name: MemberSelector
+  nameWithType: MemberSelector
+  fullName: Dropbox.Api.Sharing.MemberSelector
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MemberSelector.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: MemberSelector
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MemberSelector.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Includes different ways to identify a member of a shared folder.</p>\n"
+  example: []
+  syntax:
+    content: 'public class MemberSelector : object'
+    content.vb: >-
+      Public Class MemberSelector
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Sharing.MemberSelector.DropboxId
+  - Dropbox.Api.Sharing.MemberSelector.Email
+  - Dropbox.Api.Sharing.MemberSelector.Other
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Sharing.MemberSelector.#ctor
+  commentId: M:Dropbox.Api.Sharing.MemberSelector.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Sharing.MemberSelector
+  langs:
+  - csharp
+  - vb
+  name: MemberSelector()
+  nameWithType: MemberSelector.MemberSelector()
+  fullName: Dropbox.Api.Sharing.MemberSelector.MemberSelector()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MemberSelector.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MemberSelector.cs
+    startLine: 32
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.MemberSelector\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public MemberSelector()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Sharing.MemberSelector.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.MemberSelector.IsDropboxId
+  commentId: P:Dropbox.Api.Sharing.MemberSelector.IsDropboxId
+  id: IsDropboxId
+  parent: Dropbox.Api.Sharing.MemberSelector
+  langs:
+  - csharp
+  - vb
+  name: IsDropboxId
+  nameWithType: MemberSelector.IsDropboxId
+  fullName: Dropbox.Api.Sharing.MemberSelector.IsDropboxId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MemberSelector.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsDropboxId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MemberSelector.cs
+    startLine: 39
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is DropboxId</p>\n"
+  example: []
+  syntax:
+    content: public bool IsDropboxId { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsDropboxId As Boolean
+  overload: Dropbox.Api.Sharing.MemberSelector.IsDropboxId*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.MemberSelector.AsDropboxId
+  commentId: P:Dropbox.Api.Sharing.MemberSelector.AsDropboxId
+  id: AsDropboxId
+  parent: Dropbox.Api.Sharing.MemberSelector
+  langs:
+  - csharp
+  - vb
+  name: AsDropboxId
+  nameWithType: MemberSelector.AsDropboxId
+  fullName: Dropbox.Api.Sharing.MemberSelector.AsDropboxId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MemberSelector.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsDropboxId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MemberSelector.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a DropboxId, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MemberSelector.DropboxId AsDropboxId { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.MemberSelector.DropboxId
+    content.vb: Public ReadOnly Property AsDropboxId As MemberSelector.DropboxId
+  overload: Dropbox.Api.Sharing.MemberSelector.AsDropboxId*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.MemberSelector.IsEmail
+  commentId: P:Dropbox.Api.Sharing.MemberSelector.IsEmail
+  id: IsEmail
+  parent: Dropbox.Api.Sharing.MemberSelector
+  langs:
+  - csharp
+  - vb
+  name: IsEmail
+  nameWithType: MemberSelector.IsEmail
+  fullName: Dropbox.Api.Sharing.MemberSelector.IsEmail
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MemberSelector.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsEmail
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MemberSelector.cs
+    startLine: 61
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is Email</p>\n"
+  example: []
+  syntax:
+    content: public bool IsEmail { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsEmail As Boolean
+  overload: Dropbox.Api.Sharing.MemberSelector.IsEmail*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.MemberSelector.AsEmail
+  commentId: P:Dropbox.Api.Sharing.MemberSelector.AsEmail
+  id: AsEmail
+  parent: Dropbox.Api.Sharing.MemberSelector
+  langs:
+  - csharp
+  - vb
+  name: AsEmail
+  nameWithType: MemberSelector.AsEmail
+  fullName: Dropbox.Api.Sharing.MemberSelector.AsEmail
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MemberSelector.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsEmail
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MemberSelector.cs
+    startLine: 72
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a Email, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MemberSelector.Email AsEmail { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.MemberSelector.Email
+    content.vb: Public ReadOnly Property AsEmail As MemberSelector.Email
+  overload: Dropbox.Api.Sharing.MemberSelector.AsEmail*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.MemberSelector.IsOther
+  commentId: P:Dropbox.Api.Sharing.MemberSelector.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Sharing.MemberSelector
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: MemberSelector.IsOther
+  fullName: Dropbox.Api.Sharing.MemberSelector.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MemberSelector.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MemberSelector.cs
+    startLine: 83
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Sharing.MemberSelector.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.MemberSelector.AsOther
+  commentId: P:Dropbox.Api.Sharing.MemberSelector.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Sharing.MemberSelector
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: MemberSelector.AsOther
+  fullName: Dropbox.Api.Sharing.MemberSelector.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MemberSelector.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/MemberSelector.cs
+    startLine: 94
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MemberSelector.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.MemberSelector.Other
+    content.vb: Public ReadOnly Property AsOther As MemberSelector.Other
+  overload: Dropbox.Api.Sharing.MemberSelector.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.MemberSelector
+  commentId: T:Dropbox.Api.Sharing.MemberSelector
+  parent: Dropbox.Api.Sharing
+  name: MemberSelector
+  nameWithType: MemberSelector
+  fullName: Dropbox.Api.Sharing.MemberSelector
+- uid: Dropbox.Api.Sharing.MemberSelector.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.MemberSelector.#ctor
+  name: MemberSelector
+  nameWithType: MemberSelector.MemberSelector
+  fullName: Dropbox.Api.Sharing.MemberSelector.MemberSelector
+- uid: Dropbox.Api.Sharing.MemberSelector.IsDropboxId*
+  commentId: Overload:Dropbox.Api.Sharing.MemberSelector.IsDropboxId
+  name: IsDropboxId
+  nameWithType: MemberSelector.IsDropboxId
+  fullName: Dropbox.Api.Sharing.MemberSelector.IsDropboxId
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Sharing.MemberSelector.AsDropboxId*
+  commentId: Overload:Dropbox.Api.Sharing.MemberSelector.AsDropboxId
+  name: AsDropboxId
+  nameWithType: MemberSelector.AsDropboxId
+  fullName: Dropbox.Api.Sharing.MemberSelector.AsDropboxId
+- uid: Dropbox.Api.Sharing.MemberSelector.DropboxId
+  commentId: T:Dropbox.Api.Sharing.MemberSelector.DropboxId
+  parent: Dropbox.Api.Sharing
+  name: MemberSelector.DropboxId
+  nameWithType: MemberSelector.DropboxId
+  fullName: Dropbox.Api.Sharing.MemberSelector.DropboxId
+- uid: Dropbox.Api.Sharing.MemberSelector.IsEmail*
+  commentId: Overload:Dropbox.Api.Sharing.MemberSelector.IsEmail
+  name: IsEmail
+  nameWithType: MemberSelector.IsEmail
+  fullName: Dropbox.Api.Sharing.MemberSelector.IsEmail
+- uid: Dropbox.Api.Sharing.MemberSelector.AsEmail*
+  commentId: Overload:Dropbox.Api.Sharing.MemberSelector.AsEmail
+  name: AsEmail
+  nameWithType: MemberSelector.AsEmail
+  fullName: Dropbox.Api.Sharing.MemberSelector.AsEmail
+- uid: Dropbox.Api.Sharing.MemberSelector.Email
+  commentId: T:Dropbox.Api.Sharing.MemberSelector.Email
+  parent: Dropbox.Api.Sharing
+  name: MemberSelector.Email
+  nameWithType: MemberSelector.Email
+  fullName: Dropbox.Api.Sharing.MemberSelector.Email
+- uid: Dropbox.Api.Sharing.MemberSelector.IsOther*
+  commentId: Overload:Dropbox.Api.Sharing.MemberSelector.IsOther
+  name: IsOther
+  nameWithType: MemberSelector.IsOther
+  fullName: Dropbox.Api.Sharing.MemberSelector.IsOther
+- uid: Dropbox.Api.Sharing.MemberSelector.AsOther*
+  commentId: Overload:Dropbox.Api.Sharing.MemberSelector.AsOther
+  name: AsOther
+  nameWithType: MemberSelector.AsOther
+  fullName: Dropbox.Api.Sharing.MemberSelector.AsOther
+- uid: Dropbox.Api.Sharing.MemberSelector.Other
+  commentId: T:Dropbox.Api.Sharing.MemberSelector.Other
+  parent: Dropbox.Api.Sharing
+  name: MemberSelector.Other
+  nameWithType: MemberSelector.Other
+  fullName: Dropbox.Api.Sharing.MemberSelector.Other
+shouldSkipMarkup: true

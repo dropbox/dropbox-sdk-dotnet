@@ -1,0 +1,134 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.FileRequests.ListFileRequestsError.DisabledForTeam
+  commentId: T:Dropbox.Api.FileRequests.ListFileRequestsError.DisabledForTeam
+  id: ListFileRequestsError.DisabledForTeam
+  parent: Dropbox.Api.FileRequests
+  children:
+  - Dropbox.Api.FileRequests.ListFileRequestsError.DisabledForTeam.Instance
+  langs:
+  - csharp
+  - vb
+  name: ListFileRequestsError.DisabledForTeam
+  nameWithType: ListFileRequestsError.DisabledForTeam
+  fullName: Dropbox.Api.FileRequests.ListFileRequestsError.DisabledForTeam
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/ListFileRequestsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: DisabledForTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/ListFileRequestsError.cs
+    startLine: 155
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>This user&apos;s Dropbox Business team doesn&apos;t allow file requests.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class DisabledForTeam : ListFileRequestsError'
+    content.vb: >-
+      Public NotInheritable Class DisabledForTeam
+          Inherits ListFileRequestsError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.FileRequests.ListFileRequestsError
+  inheritedMembers:
+  - Dropbox.Api.FileRequests.ListFileRequestsError.IsDisabledForTeam
+  - Dropbox.Api.FileRequests.ListFileRequestsError.AsDisabledForTeam
+  - Dropbox.Api.FileRequests.ListFileRequestsError.IsOther
+  - Dropbox.Api.FileRequests.ListFileRequestsError.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.FileRequests.ListFileRequestsError.DisabledForTeam.Instance
+  commentId: F:Dropbox.Api.FileRequests.ListFileRequestsError.DisabledForTeam.Instance
+  id: Instance
+  parent: Dropbox.Api.FileRequests.ListFileRequestsError.DisabledForTeam
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: ListFileRequestsError.DisabledForTeam.Instance
+  fullName: Dropbox.Api.FileRequests.ListFileRequestsError.DisabledForTeam.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/ListFileRequestsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/ListFileRequestsError.cs
+    startLine: 180
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>A singleton instance of DisabledForTeam</p>\n"
+  example: []
+  syntax:
+    content: public static readonly ListFileRequestsError.DisabledForTeam Instance
+    return:
+      type: Dropbox.Api.FileRequests.ListFileRequestsError.DisabledForTeam
+    content.vb: Public Shared ReadOnly Instance As ListFileRequestsError.DisabledForTeam
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.FileRequests
+  commentId: N:Dropbox.Api.FileRequests
+  name: Dropbox.Api.FileRequests
+  nameWithType: Dropbox.Api.FileRequests
+  fullName: Dropbox.Api.FileRequests
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.FileRequests.ListFileRequestsError
+  commentId: T:Dropbox.Api.FileRequests.ListFileRequestsError
+  parent: Dropbox.Api.FileRequests
+  name: ListFileRequestsError
+  nameWithType: ListFileRequestsError
+  fullName: Dropbox.Api.FileRequests.ListFileRequestsError
+- uid: Dropbox.Api.FileRequests.ListFileRequestsError.IsDisabledForTeam
+  commentId: P:Dropbox.Api.FileRequests.ListFileRequestsError.IsDisabledForTeam
+  parent: Dropbox.Api.FileRequests.ListFileRequestsError
+  name: IsDisabledForTeam
+  nameWithType: ListFileRequestsError.IsDisabledForTeam
+  fullName: Dropbox.Api.FileRequests.ListFileRequestsError.IsDisabledForTeam
+- uid: Dropbox.Api.FileRequests.ListFileRequestsError.AsDisabledForTeam
+  commentId: P:Dropbox.Api.FileRequests.ListFileRequestsError.AsDisabledForTeam
+  parent: Dropbox.Api.FileRequests.ListFileRequestsError
+  name: AsDisabledForTeam
+  nameWithType: ListFileRequestsError.AsDisabledForTeam
+  fullName: Dropbox.Api.FileRequests.ListFileRequestsError.AsDisabledForTeam
+- uid: Dropbox.Api.FileRequests.ListFileRequestsError.IsOther
+  commentId: P:Dropbox.Api.FileRequests.ListFileRequestsError.IsOther
+  parent: Dropbox.Api.FileRequests.ListFileRequestsError
+  name: IsOther
+  nameWithType: ListFileRequestsError.IsOther
+  fullName: Dropbox.Api.FileRequests.ListFileRequestsError.IsOther
+- uid: Dropbox.Api.FileRequests.ListFileRequestsError.AsOther
+  commentId: P:Dropbox.Api.FileRequests.ListFileRequestsError.AsOther
+  parent: Dropbox.Api.FileRequests.ListFileRequestsError
+  name: AsOther
+  nameWithType: ListFileRequestsError.AsOther
+  fullName: Dropbox.Api.FileRequests.ListFileRequestsError.AsOther
+- uid: Dropbox.Api.FileRequests.ListFileRequestsError.DisabledForTeam
+  commentId: T:Dropbox.Api.FileRequests.ListFileRequestsError.DisabledForTeam
+  parent: Dropbox.Api.FileRequests
+  name: ListFileRequestsError.DisabledForTeam
+  nameWithType: ListFileRequestsError.DisabledForTeam
+  fullName: Dropbox.Api.FileRequests.ListFileRequestsError.DisabledForTeam
+shouldSkipMarkup: true

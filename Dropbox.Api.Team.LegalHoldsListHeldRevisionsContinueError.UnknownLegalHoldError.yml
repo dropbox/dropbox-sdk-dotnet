@@ -1,0 +1,162 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.UnknownLegalHoldError
+  commentId: T:Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.UnknownLegalHoldError
+  id: LegalHoldsListHeldRevisionsContinueError.UnknownLegalHoldError
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.UnknownLegalHoldError.Instance
+  langs:
+  - csharp
+  - vb
+  name: LegalHoldsListHeldRevisionsContinueError.UnknownLegalHoldError
+  nameWithType: LegalHoldsListHeldRevisionsContinueError.UnknownLegalHoldError
+  fullName: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.UnknownLegalHoldError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListHeldRevisionsContinueError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: UnknownLegalHoldError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListHeldRevisionsContinueError.cs
+    startLine: 213
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>There has been an unknown legal hold error.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class UnknownLegalHoldError : LegalHoldsListHeldRevisionsContinueError'
+    content.vb: >-
+      Public NotInheritable Class UnknownLegalHoldError
+          Inherits LegalHoldsListHeldRevisionsContinueError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError
+  inheritedMembers:
+  - Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.IsUnknownLegalHoldError
+  - Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.AsUnknownLegalHoldError
+  - Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.IsTransientError
+  - Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.AsTransientError
+  - Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.IsReset
+  - Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.AsReset
+  - Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.IsOther
+  - Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.UnknownLegalHoldError.Instance
+  commentId: F:Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.UnknownLegalHoldError.Instance
+  id: Instance
+  parent: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.UnknownLegalHoldError
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: LegalHoldsListHeldRevisionsContinueError.UnknownLegalHoldError.Instance
+  fullName: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.UnknownLegalHoldError.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListHeldRevisionsContinueError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListHeldRevisionsContinueError.cs
+    startLine: 238
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>A singleton instance of UnknownLegalHoldError</p>\n"
+  example: []
+  syntax:
+    content: public static readonly LegalHoldsListHeldRevisionsContinueError.UnknownLegalHoldError Instance
+    return:
+      type: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.UnknownLegalHoldError
+    content.vb: Public Shared ReadOnly Instance As LegalHoldsListHeldRevisionsContinueError.UnknownLegalHoldError
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError
+  commentId: T:Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError
+  parent: Dropbox.Api.Team
+  name: LegalHoldsListHeldRevisionsContinueError
+  nameWithType: LegalHoldsListHeldRevisionsContinueError
+  fullName: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError
+- uid: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.IsUnknownLegalHoldError
+  commentId: P:Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.IsUnknownLegalHoldError
+  parent: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError
+  name: IsUnknownLegalHoldError
+  nameWithType: LegalHoldsListHeldRevisionsContinueError.IsUnknownLegalHoldError
+  fullName: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.IsUnknownLegalHoldError
+- uid: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.AsUnknownLegalHoldError
+  commentId: P:Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.AsUnknownLegalHoldError
+  parent: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError
+  name: AsUnknownLegalHoldError
+  nameWithType: LegalHoldsListHeldRevisionsContinueError.AsUnknownLegalHoldError
+  fullName: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.AsUnknownLegalHoldError
+- uid: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.IsTransientError
+  commentId: P:Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.IsTransientError
+  parent: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError
+  name: IsTransientError
+  nameWithType: LegalHoldsListHeldRevisionsContinueError.IsTransientError
+  fullName: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.IsTransientError
+- uid: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.AsTransientError
+  commentId: P:Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.AsTransientError
+  parent: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError
+  name: AsTransientError
+  nameWithType: LegalHoldsListHeldRevisionsContinueError.AsTransientError
+  fullName: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.AsTransientError
+- uid: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.IsReset
+  commentId: P:Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.IsReset
+  parent: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError
+  name: IsReset
+  nameWithType: LegalHoldsListHeldRevisionsContinueError.IsReset
+  fullName: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.IsReset
+- uid: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.AsReset
+  commentId: P:Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.AsReset
+  parent: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError
+  name: AsReset
+  nameWithType: LegalHoldsListHeldRevisionsContinueError.AsReset
+  fullName: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.AsReset
+- uid: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.IsOther
+  commentId: P:Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.IsOther
+  parent: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError
+  name: IsOther
+  nameWithType: LegalHoldsListHeldRevisionsContinueError.IsOther
+  fullName: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.IsOther
+- uid: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.AsOther
+  commentId: P:Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.AsOther
+  parent: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError
+  name: AsOther
+  nameWithType: LegalHoldsListHeldRevisionsContinueError.AsOther
+  fullName: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.AsOther
+- uid: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.UnknownLegalHoldError
+  commentId: T:Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.UnknownLegalHoldError
+  parent: Dropbox.Api.Team
+  name: LegalHoldsListHeldRevisionsContinueError.UnknownLegalHoldError
+  nameWithType: LegalHoldsListHeldRevisionsContinueError.UnknownLegalHoldError
+  fullName: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueError.UnknownLegalHoldError
+shouldSkipMarkup: true

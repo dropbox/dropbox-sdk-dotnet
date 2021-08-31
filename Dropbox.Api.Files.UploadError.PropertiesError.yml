@@ -1,0 +1,206 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.UploadError.PropertiesError
+  commentId: T:Dropbox.Api.Files.UploadError.PropertiesError
+  id: UploadError.PropertiesError
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.UploadError.PropertiesError.#ctor(Dropbox.Api.FileProperties.InvalidPropertyGroupError)
+  - Dropbox.Api.Files.UploadError.PropertiesError.Value
+  langs:
+  - csharp
+  - vb
+  name: UploadError.PropertiesError
+  nameWithType: UploadError.PropertiesError
+  fullName: Dropbox.Api.Files.UploadError.PropertiesError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PropertiesError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadError.cs
+    startLine: 269
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The supplied property group is invalid. The file has uploaded without\nproperty groups.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class PropertiesError : UploadError'
+    content.vb: >-
+      Public NotInheritable Class PropertiesError
+          Inherits UploadError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Files.UploadError
+  inheritedMembers:
+  - Dropbox.Api.Files.UploadError.IsPath
+  - Dropbox.Api.Files.UploadError.AsPath
+  - Dropbox.Api.Files.UploadError.IsPropertiesError
+  - Dropbox.Api.Files.UploadError.AsPropertiesError
+  - Dropbox.Api.Files.UploadError.IsOther
+  - Dropbox.Api.Files.UploadError.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Files.UploadError.PropertiesError.#ctor(Dropbox.Api.FileProperties.InvalidPropertyGroupError)
+  commentId: M:Dropbox.Api.Files.UploadError.PropertiesError.#ctor(Dropbox.Api.FileProperties.InvalidPropertyGroupError)
+  id: '#ctor(Dropbox.Api.FileProperties.InvalidPropertyGroupError)'
+  parent: Dropbox.Api.Files.UploadError.PropertiesError
+  langs:
+  - csharp
+  - vb
+  name: PropertiesError(InvalidPropertyGroupError)
+  nameWithType: UploadError.PropertiesError.PropertiesError(InvalidPropertyGroupError)
+  fullName: Dropbox.Api.Files.UploadError.PropertiesError.PropertiesError(Dropbox.Api.FileProperties.InvalidPropertyGroupError)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadError.cs
+    startLine: 288
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.UploadError.PropertiesError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public PropertiesError(InvalidPropertyGroupError value)
+    parameters:
+    - id: value
+      type: Dropbox.Api.FileProperties.InvalidPropertyGroupError
+      description: The value
+    content.vb: Public Sub New(value As InvalidPropertyGroupError)
+  overload: Dropbox.Api.Files.UploadError.PropertiesError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.UploadError.PropertiesError.Value
+  commentId: P:Dropbox.Api.Files.UploadError.PropertiesError.Value
+  id: Value
+  parent: Dropbox.Api.Files.UploadError.PropertiesError
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: UploadError.PropertiesError.Value
+  fullName: Dropbox.Api.Files.UploadError.PropertiesError.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadError.cs
+    startLine: 303
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public InvalidPropertyGroupError Value { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.FileProperties.InvalidPropertyGroupError
+    content.vb: Public ReadOnly Property Value As InvalidPropertyGroupError
+  overload: Dropbox.Api.Files.UploadError.PropertiesError.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.UploadError
+  commentId: T:Dropbox.Api.Files.UploadError
+  parent: Dropbox.Api.Files
+  name: UploadError
+  nameWithType: UploadError
+  fullName: Dropbox.Api.Files.UploadError
+- uid: Dropbox.Api.Files.UploadError.IsPath
+  commentId: P:Dropbox.Api.Files.UploadError.IsPath
+  parent: Dropbox.Api.Files.UploadError
+  name: IsPath
+  nameWithType: UploadError.IsPath
+  fullName: Dropbox.Api.Files.UploadError.IsPath
+- uid: Dropbox.Api.Files.UploadError.AsPath
+  commentId: P:Dropbox.Api.Files.UploadError.AsPath
+  parent: Dropbox.Api.Files.UploadError
+  name: AsPath
+  nameWithType: UploadError.AsPath
+  fullName: Dropbox.Api.Files.UploadError.AsPath
+- uid: Dropbox.Api.Files.UploadError.IsPropertiesError
+  commentId: P:Dropbox.Api.Files.UploadError.IsPropertiesError
+  parent: Dropbox.Api.Files.UploadError
+  name: IsPropertiesError
+  nameWithType: UploadError.IsPropertiesError
+  fullName: Dropbox.Api.Files.UploadError.IsPropertiesError
+- uid: Dropbox.Api.Files.UploadError.AsPropertiesError
+  commentId: P:Dropbox.Api.Files.UploadError.AsPropertiesError
+  parent: Dropbox.Api.Files.UploadError
+  name: AsPropertiesError
+  nameWithType: UploadError.AsPropertiesError
+  fullName: Dropbox.Api.Files.UploadError.AsPropertiesError
+- uid: Dropbox.Api.Files.UploadError.IsOther
+  commentId: P:Dropbox.Api.Files.UploadError.IsOther
+  parent: Dropbox.Api.Files.UploadError
+  name: IsOther
+  nameWithType: UploadError.IsOther
+  fullName: Dropbox.Api.Files.UploadError.IsOther
+- uid: Dropbox.Api.Files.UploadError.AsOther
+  commentId: P:Dropbox.Api.Files.UploadError.AsOther
+  parent: Dropbox.Api.Files.UploadError
+  name: AsOther
+  nameWithType: UploadError.AsOther
+  fullName: Dropbox.Api.Files.UploadError.AsOther
+- uid: Dropbox.Api.Files.UploadError.PropertiesError
+  commentId: T:Dropbox.Api.Files.UploadError.PropertiesError
+  parent: Dropbox.Api.Files
+  name: UploadError.PropertiesError
+  nameWithType: UploadError.PropertiesError
+  fullName: Dropbox.Api.Files.UploadError.PropertiesError
+- uid: Dropbox.Api.Files.UploadError.PropertiesError.#ctor*
+  commentId: Overload:Dropbox.Api.Files.UploadError.PropertiesError.#ctor
+  name: PropertiesError
+  nameWithType: UploadError.PropertiesError.PropertiesError
+  fullName: Dropbox.Api.Files.UploadError.PropertiesError.PropertiesError
+- uid: Dropbox.Api.FileProperties.InvalidPropertyGroupError
+  commentId: T:Dropbox.Api.FileProperties.InvalidPropertyGroupError
+  parent: Dropbox.Api.FileProperties
+  name: InvalidPropertyGroupError
+  nameWithType: InvalidPropertyGroupError
+  fullName: Dropbox.Api.FileProperties.InvalidPropertyGroupError
+- uid: Dropbox.Api.FileProperties
+  commentId: N:Dropbox.Api.FileProperties
+  name: Dropbox.Api.FileProperties
+  nameWithType: Dropbox.Api.FileProperties
+  fullName: Dropbox.Api.FileProperties
+- uid: Dropbox.Api.Files.UploadError.PropertiesError.Value*
+  commentId: Overload:Dropbox.Api.Files.UploadError.PropertiesError.Value
+  name: Value
+  nameWithType: UploadError.PropertiesError.Value
+  fullName: Dropbox.Api.Files.UploadError.PropertiesError.Value
+shouldSkipMarkup: true

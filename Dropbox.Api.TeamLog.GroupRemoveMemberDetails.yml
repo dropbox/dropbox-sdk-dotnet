@@ -1,0 +1,96 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.GroupRemoveMemberDetails
+  commentId: T:Dropbox.Api.TeamLog.GroupRemoveMemberDetails
+  id: GroupRemoveMemberDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.GroupRemoveMemberDetails.#ctor
+  langs:
+  - csharp
+  - vb
+  name: GroupRemoveMemberDetails
+  nameWithType: GroupRemoveMemberDetails
+  fullName: Dropbox.Api.TeamLog.GroupRemoveMemberDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupRemoveMemberDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GroupRemoveMemberDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupRemoveMemberDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Removed team members from group.</p>\n"
+  example: []
+  syntax:
+    content: 'public class GroupRemoveMemberDetails : object'
+    content.vb: >-
+      Public Class GroupRemoveMemberDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.GroupRemoveMemberDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.GroupRemoveMemberDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.GroupRemoveMemberDetails
+  langs:
+  - csharp
+  - vb
+  name: GroupRemoveMemberDetails()
+  nameWithType: GroupRemoveMemberDetails.GroupRemoveMemberDetails()
+  fullName: Dropbox.Api.TeamLog.GroupRemoveMemberDetails.GroupRemoveMemberDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupRemoveMemberDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupRemoveMemberDetails.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.GroupRemoveMemberDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public GroupRemoveMemberDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.GroupRemoveMemberDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.GroupRemoveMemberDetails
+  commentId: T:Dropbox.Api.TeamLog.GroupRemoveMemberDetails
+  parent: Dropbox.Api.TeamLog
+  name: GroupRemoveMemberDetails
+  nameWithType: GroupRemoveMemberDetails
+  fullName: Dropbox.Api.TeamLog.GroupRemoveMemberDetails
+- uid: Dropbox.Api.TeamLog.GroupRemoveMemberDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.GroupRemoveMemberDetails.#ctor
+  name: GroupRemoveMemberDetails
+  nameWithType: GroupRemoveMemberDetails.GroupRemoveMemberDetails
+  fullName: Dropbox.Api.TeamLog.GroupRemoveMemberDetails.GroupRemoveMemberDetails
+shouldSkipMarkup: true

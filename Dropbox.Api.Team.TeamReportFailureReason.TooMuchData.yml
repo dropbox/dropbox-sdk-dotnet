@@ -1,0 +1,162 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.TeamReportFailureReason.TooMuchData
+  commentId: T:Dropbox.Api.Team.TeamReportFailureReason.TooMuchData
+  id: TeamReportFailureReason.TooMuchData
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.TeamReportFailureReason.TooMuchData.Instance
+  langs:
+  - csharp
+  - vb
+  name: TeamReportFailureReason.TooMuchData
+  nameWithType: TeamReportFailureReason.TooMuchData
+  fullName: Dropbox.Api.Team.TeamReportFailureReason.TooMuchData
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamReportFailureReason.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TooMuchData
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamReportFailureReason.cs
+    startLine: 357
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>We couldn&apos;t create the report. Try creating the report again with less\ndata.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class TooMuchData : TeamReportFailureReason'
+    content.vb: >-
+      Public NotInheritable Class TooMuchData
+          Inherits TeamReportFailureReason
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.TeamReportFailureReason
+  inheritedMembers:
+  - Dropbox.Api.Team.TeamReportFailureReason.IsTemporaryError
+  - Dropbox.Api.Team.TeamReportFailureReason.AsTemporaryError
+  - Dropbox.Api.Team.TeamReportFailureReason.IsManyReportsAtOnce
+  - Dropbox.Api.Team.TeamReportFailureReason.AsManyReportsAtOnce
+  - Dropbox.Api.Team.TeamReportFailureReason.IsTooMuchData
+  - Dropbox.Api.Team.TeamReportFailureReason.AsTooMuchData
+  - Dropbox.Api.Team.TeamReportFailureReason.IsOther
+  - Dropbox.Api.Team.TeamReportFailureReason.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Team.TeamReportFailureReason.TooMuchData.Instance
+  commentId: F:Dropbox.Api.Team.TeamReportFailureReason.TooMuchData.Instance
+  id: Instance
+  parent: Dropbox.Api.Team.TeamReportFailureReason.TooMuchData
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: TeamReportFailureReason.TooMuchData.Instance
+  fullName: Dropbox.Api.Team.TeamReportFailureReason.TooMuchData.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamReportFailureReason.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamReportFailureReason.cs
+    startLine: 382
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>A singleton instance of TooMuchData</p>\n"
+  example: []
+  syntax:
+    content: public static readonly TeamReportFailureReason.TooMuchData Instance
+    return:
+      type: Dropbox.Api.Team.TeamReportFailureReason.TooMuchData
+    content.vb: Public Shared ReadOnly Instance As TeamReportFailureReason.TooMuchData
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.TeamReportFailureReason
+  commentId: T:Dropbox.Api.Team.TeamReportFailureReason
+  parent: Dropbox.Api.Team
+  name: TeamReportFailureReason
+  nameWithType: TeamReportFailureReason
+  fullName: Dropbox.Api.Team.TeamReportFailureReason
+- uid: Dropbox.Api.Team.TeamReportFailureReason.IsTemporaryError
+  commentId: P:Dropbox.Api.Team.TeamReportFailureReason.IsTemporaryError
+  parent: Dropbox.Api.Team.TeamReportFailureReason
+  name: IsTemporaryError
+  nameWithType: TeamReportFailureReason.IsTemporaryError
+  fullName: Dropbox.Api.Team.TeamReportFailureReason.IsTemporaryError
+- uid: Dropbox.Api.Team.TeamReportFailureReason.AsTemporaryError
+  commentId: P:Dropbox.Api.Team.TeamReportFailureReason.AsTemporaryError
+  parent: Dropbox.Api.Team.TeamReportFailureReason
+  name: AsTemporaryError
+  nameWithType: TeamReportFailureReason.AsTemporaryError
+  fullName: Dropbox.Api.Team.TeamReportFailureReason.AsTemporaryError
+- uid: Dropbox.Api.Team.TeamReportFailureReason.IsManyReportsAtOnce
+  commentId: P:Dropbox.Api.Team.TeamReportFailureReason.IsManyReportsAtOnce
+  parent: Dropbox.Api.Team.TeamReportFailureReason
+  name: IsManyReportsAtOnce
+  nameWithType: TeamReportFailureReason.IsManyReportsAtOnce
+  fullName: Dropbox.Api.Team.TeamReportFailureReason.IsManyReportsAtOnce
+- uid: Dropbox.Api.Team.TeamReportFailureReason.AsManyReportsAtOnce
+  commentId: P:Dropbox.Api.Team.TeamReportFailureReason.AsManyReportsAtOnce
+  parent: Dropbox.Api.Team.TeamReportFailureReason
+  name: AsManyReportsAtOnce
+  nameWithType: TeamReportFailureReason.AsManyReportsAtOnce
+  fullName: Dropbox.Api.Team.TeamReportFailureReason.AsManyReportsAtOnce
+- uid: Dropbox.Api.Team.TeamReportFailureReason.IsTooMuchData
+  commentId: P:Dropbox.Api.Team.TeamReportFailureReason.IsTooMuchData
+  parent: Dropbox.Api.Team.TeamReportFailureReason
+  name: IsTooMuchData
+  nameWithType: TeamReportFailureReason.IsTooMuchData
+  fullName: Dropbox.Api.Team.TeamReportFailureReason.IsTooMuchData
+- uid: Dropbox.Api.Team.TeamReportFailureReason.AsTooMuchData
+  commentId: P:Dropbox.Api.Team.TeamReportFailureReason.AsTooMuchData
+  parent: Dropbox.Api.Team.TeamReportFailureReason
+  name: AsTooMuchData
+  nameWithType: TeamReportFailureReason.AsTooMuchData
+  fullName: Dropbox.Api.Team.TeamReportFailureReason.AsTooMuchData
+- uid: Dropbox.Api.Team.TeamReportFailureReason.IsOther
+  commentId: P:Dropbox.Api.Team.TeamReportFailureReason.IsOther
+  parent: Dropbox.Api.Team.TeamReportFailureReason
+  name: IsOther
+  nameWithType: TeamReportFailureReason.IsOther
+  fullName: Dropbox.Api.Team.TeamReportFailureReason.IsOther
+- uid: Dropbox.Api.Team.TeamReportFailureReason.AsOther
+  commentId: P:Dropbox.Api.Team.TeamReportFailureReason.AsOther
+  parent: Dropbox.Api.Team.TeamReportFailureReason
+  name: AsOther
+  nameWithType: TeamReportFailureReason.AsOther
+  fullName: Dropbox.Api.Team.TeamReportFailureReason.AsOther
+- uid: Dropbox.Api.Team.TeamReportFailureReason.TooMuchData
+  commentId: T:Dropbox.Api.Team.TeamReportFailureReason.TooMuchData
+  parent: Dropbox.Api.Team
+  name: TeamReportFailureReason.TooMuchData
+  nameWithType: TeamReportFailureReason.TooMuchData
+  fullName: Dropbox.Api.Team.TeamReportFailureReason.TooMuchData
+shouldSkipMarkup: true

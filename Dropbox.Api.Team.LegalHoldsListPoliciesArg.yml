@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.LegalHoldsListPoliciesArg
+  commentId: T:Dropbox.Api.Team.LegalHoldsListPoliciesArg
+  id: LegalHoldsListPoliciesArg
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.LegalHoldsListPoliciesArg.#ctor
+  - Dropbox.Api.Team.LegalHoldsListPoliciesArg.#ctor(System.Boolean)
+  - Dropbox.Api.Team.LegalHoldsListPoliciesArg.IncludeReleased
+  langs:
+  - csharp
+  - vb
+  name: LegalHoldsListPoliciesArg
+  nameWithType: LegalHoldsListPoliciesArg
+  fullName: Dropbox.Api.Team.LegalHoldsListPoliciesArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListPoliciesArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: LegalHoldsListPoliciesArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListPoliciesArg.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The legal holds list policies arg object</p>\n"
+  example: []
+  syntax:
+    content: 'public class LegalHoldsListPoliciesArg : object'
+    content.vb: >-
+      Public Class LegalHoldsListPoliciesArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.LegalHoldsListPoliciesArg.#ctor(System.Boolean)
+  commentId: M:Dropbox.Api.Team.LegalHoldsListPoliciesArg.#ctor(System.Boolean)
+  id: '#ctor(System.Boolean)'
+  parent: Dropbox.Api.Team.LegalHoldsListPoliciesArg
+  langs:
+  - csharp
+  - vb
+  name: LegalHoldsListPoliciesArg(Boolean)
+  nameWithType: LegalHoldsListPoliciesArg.LegalHoldsListPoliciesArg(Boolean)
+  fullName: Dropbox.Api.Team.LegalHoldsListPoliciesArg.LegalHoldsListPoliciesArg(System.Boolean)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListPoliciesArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListPoliciesArg.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.LegalHoldsListPoliciesArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public LegalHoldsListPoliciesArg(bool includeReleased = false)
+    parameters:
+    - id: includeReleased
+      type: System.Boolean
+      description: Whether to return holds that were released.
+    content.vb: Public Sub New(includeReleased As Boolean = False)
+  overload: Dropbox.Api.Team.LegalHoldsListPoliciesArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.LegalHoldsListPoliciesArg.#ctor
+  commentId: M:Dropbox.Api.Team.LegalHoldsListPoliciesArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.LegalHoldsListPoliciesArg
+  langs:
+  - csharp
+  - vb
+  name: LegalHoldsListPoliciesArg()
+  nameWithType: LegalHoldsListPoliciesArg.LegalHoldsListPoliciesArg()
+  fullName: Dropbox.Api.Team.LegalHoldsListPoliciesArg.LegalHoldsListPoliciesArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListPoliciesArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListPoliciesArg.cs
+    startLine: 45
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.LegalHoldsListPoliciesArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public LegalHoldsListPoliciesArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.LegalHoldsListPoliciesArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.LegalHoldsListPoliciesArg.IncludeReleased
+  commentId: P:Dropbox.Api.Team.LegalHoldsListPoliciesArg.IncludeReleased
+  id: IncludeReleased
+  parent: Dropbox.Api.Team.LegalHoldsListPoliciesArg
+  langs:
+  - csharp
+  - vb
+  name: IncludeReleased
+  nameWithType: LegalHoldsListPoliciesArg.IncludeReleased
+  fullName: Dropbox.Api.Team.LegalHoldsListPoliciesArg.IncludeReleased
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListPoliciesArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IncludeReleased
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListPoliciesArg.cs
+    startLine: 54
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Whether to return holds that were released.</p>\n"
+  example: []
+  syntax:
+    content: public bool IncludeReleased { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IncludeReleased As Boolean
+  overload: Dropbox.Api.Team.LegalHoldsListPoliciesArg.IncludeReleased*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.LegalHoldsListPoliciesArg
+  commentId: T:Dropbox.Api.Team.LegalHoldsListPoliciesArg
+  parent: Dropbox.Api.Team
+  name: LegalHoldsListPoliciesArg
+  nameWithType: LegalHoldsListPoliciesArg
+  fullName: Dropbox.Api.Team.LegalHoldsListPoliciesArg
+- uid: Dropbox.Api.Team.LegalHoldsListPoliciesArg.#ctor*
+  commentId: Overload:Dropbox.Api.Team.LegalHoldsListPoliciesArg.#ctor
+  name: LegalHoldsListPoliciesArg
+  nameWithType: LegalHoldsListPoliciesArg.LegalHoldsListPoliciesArg
+  fullName: Dropbox.Api.Team.LegalHoldsListPoliciesArg.LegalHoldsListPoliciesArg
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Team.LegalHoldsListPoliciesArg.IncludeReleased*
+  commentId: Overload:Dropbox.Api.Team.LegalHoldsListPoliciesArg.IncludeReleased
+  name: IncludeReleased
+  nameWithType: LegalHoldsListPoliciesArg.IncludeReleased
+  fullName: Dropbox.Api.Team.LegalHoldsListPoliciesArg.IncludeReleased
+shouldSkipMarkup: true

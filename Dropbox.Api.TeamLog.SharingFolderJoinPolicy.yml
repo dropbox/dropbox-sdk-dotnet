@@ -1,0 +1,381 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.SharingFolderJoinPolicy
+  commentId: T:Dropbox.Api.TeamLog.SharingFolderJoinPolicy
+  id: SharingFolderJoinPolicy
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.SharingFolderJoinPolicy.#ctor
+  - Dropbox.Api.TeamLog.SharingFolderJoinPolicy.AsFromAnyone
+  - Dropbox.Api.TeamLog.SharingFolderJoinPolicy.AsFromTeamOnly
+  - Dropbox.Api.TeamLog.SharingFolderJoinPolicy.AsOther
+  - Dropbox.Api.TeamLog.SharingFolderJoinPolicy.IsFromAnyone
+  - Dropbox.Api.TeamLog.SharingFolderJoinPolicy.IsFromTeamOnly
+  - Dropbox.Api.TeamLog.SharingFolderJoinPolicy.IsOther
+  langs:
+  - csharp
+  - vb
+  name: SharingFolderJoinPolicy
+  nameWithType: SharingFolderJoinPolicy
+  fullName: Dropbox.Api.TeamLog.SharingFolderJoinPolicy
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharingFolderJoinPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SharingFolderJoinPolicy
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharingFolderJoinPolicy.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Policy for controlling if team members can join shared folders owned by non team\nmembers.</p>\n"
+  example: []
+  syntax:
+    content: 'public class SharingFolderJoinPolicy : object'
+    content.vb: >-
+      Public Class SharingFolderJoinPolicy
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.TeamLog.SharingFolderJoinPolicy.FromAnyone
+  - Dropbox.Api.TeamLog.SharingFolderJoinPolicy.FromTeamOnly
+  - Dropbox.Api.TeamLog.SharingFolderJoinPolicy.Other
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.SharingFolderJoinPolicy.#ctor
+  commentId: M:Dropbox.Api.TeamLog.SharingFolderJoinPolicy.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.SharingFolderJoinPolicy
+  langs:
+  - csharp
+  - vb
+  name: SharingFolderJoinPolicy()
+  nameWithType: SharingFolderJoinPolicy.SharingFolderJoinPolicy()
+  fullName: Dropbox.Api.TeamLog.SharingFolderJoinPolicy.SharingFolderJoinPolicy()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharingFolderJoinPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharingFolderJoinPolicy.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SharingFolderJoinPolicy\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public SharingFolderJoinPolicy()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.SharingFolderJoinPolicy.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SharingFolderJoinPolicy.IsFromAnyone
+  commentId: P:Dropbox.Api.TeamLog.SharingFolderJoinPolicy.IsFromAnyone
+  id: IsFromAnyone
+  parent: Dropbox.Api.TeamLog.SharingFolderJoinPolicy
+  langs:
+  - csharp
+  - vb
+  name: IsFromAnyone
+  nameWithType: SharingFolderJoinPolicy.IsFromAnyone
+  fullName: Dropbox.Api.TeamLog.SharingFolderJoinPolicy.IsFromAnyone
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharingFolderJoinPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsFromAnyone
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharingFolderJoinPolicy.cs
+    startLine: 41
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is FromAnyone</p>\n"
+  example: []
+  syntax:
+    content: public bool IsFromAnyone { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsFromAnyone As Boolean
+  overload: Dropbox.Api.TeamLog.SharingFolderJoinPolicy.IsFromAnyone*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.SharingFolderJoinPolicy.AsFromAnyone
+  commentId: P:Dropbox.Api.TeamLog.SharingFolderJoinPolicy.AsFromAnyone
+  id: AsFromAnyone
+  parent: Dropbox.Api.TeamLog.SharingFolderJoinPolicy
+  langs:
+  - csharp
+  - vb
+  name: AsFromAnyone
+  nameWithType: SharingFolderJoinPolicy.AsFromAnyone
+  fullName: Dropbox.Api.TeamLog.SharingFolderJoinPolicy.AsFromAnyone
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharingFolderJoinPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsFromAnyone
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharingFolderJoinPolicy.cs
+    startLine: 52
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a FromAnyone, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SharingFolderJoinPolicy.FromAnyone AsFromAnyone { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.SharingFolderJoinPolicy.FromAnyone
+    content.vb: Public ReadOnly Property AsFromAnyone As SharingFolderJoinPolicy.FromAnyone
+  overload: Dropbox.Api.TeamLog.SharingFolderJoinPolicy.AsFromAnyone*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.SharingFolderJoinPolicy.IsFromTeamOnly
+  commentId: P:Dropbox.Api.TeamLog.SharingFolderJoinPolicy.IsFromTeamOnly
+  id: IsFromTeamOnly
+  parent: Dropbox.Api.TeamLog.SharingFolderJoinPolicy
+  langs:
+  - csharp
+  - vb
+  name: IsFromTeamOnly
+  nameWithType: SharingFolderJoinPolicy.IsFromTeamOnly
+  fullName: Dropbox.Api.TeamLog.SharingFolderJoinPolicy.IsFromTeamOnly
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharingFolderJoinPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsFromTeamOnly
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharingFolderJoinPolicy.cs
+    startLine: 63
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is FromTeamOnly</p>\n"
+  example: []
+  syntax:
+    content: public bool IsFromTeamOnly { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsFromTeamOnly As Boolean
+  overload: Dropbox.Api.TeamLog.SharingFolderJoinPolicy.IsFromTeamOnly*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.SharingFolderJoinPolicy.AsFromTeamOnly
+  commentId: P:Dropbox.Api.TeamLog.SharingFolderJoinPolicy.AsFromTeamOnly
+  id: AsFromTeamOnly
+  parent: Dropbox.Api.TeamLog.SharingFolderJoinPolicy
+  langs:
+  - csharp
+  - vb
+  name: AsFromTeamOnly
+  nameWithType: SharingFolderJoinPolicy.AsFromTeamOnly
+  fullName: Dropbox.Api.TeamLog.SharingFolderJoinPolicy.AsFromTeamOnly
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharingFolderJoinPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsFromTeamOnly
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharingFolderJoinPolicy.cs
+    startLine: 74
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a FromTeamOnly, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SharingFolderJoinPolicy.FromTeamOnly AsFromTeamOnly { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.SharingFolderJoinPolicy.FromTeamOnly
+    content.vb: Public ReadOnly Property AsFromTeamOnly As SharingFolderJoinPolicy.FromTeamOnly
+  overload: Dropbox.Api.TeamLog.SharingFolderJoinPolicy.AsFromTeamOnly*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.SharingFolderJoinPolicy.IsOther
+  commentId: P:Dropbox.Api.TeamLog.SharingFolderJoinPolicy.IsOther
+  id: IsOther
+  parent: Dropbox.Api.TeamLog.SharingFolderJoinPolicy
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: SharingFolderJoinPolicy.IsOther
+  fullName: Dropbox.Api.TeamLog.SharingFolderJoinPolicy.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharingFolderJoinPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharingFolderJoinPolicy.cs
+    startLine: 85
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.TeamLog.SharingFolderJoinPolicy.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.SharingFolderJoinPolicy.AsOther
+  commentId: P:Dropbox.Api.TeamLog.SharingFolderJoinPolicy.AsOther
+  id: AsOther
+  parent: Dropbox.Api.TeamLog.SharingFolderJoinPolicy
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: SharingFolderJoinPolicy.AsOther
+  fullName: Dropbox.Api.TeamLog.SharingFolderJoinPolicy.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharingFolderJoinPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharingFolderJoinPolicy.cs
+    startLine: 96
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SharingFolderJoinPolicy.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.SharingFolderJoinPolicy.Other
+    content.vb: Public ReadOnly Property AsOther As SharingFolderJoinPolicy.Other
+  overload: Dropbox.Api.TeamLog.SharingFolderJoinPolicy.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.SharingFolderJoinPolicy
+  commentId: T:Dropbox.Api.TeamLog.SharingFolderJoinPolicy
+  parent: Dropbox.Api.TeamLog
+  name: SharingFolderJoinPolicy
+  nameWithType: SharingFolderJoinPolicy
+  fullName: Dropbox.Api.TeamLog.SharingFolderJoinPolicy
+- uid: Dropbox.Api.TeamLog.SharingFolderJoinPolicy.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.SharingFolderJoinPolicy.#ctor
+  name: SharingFolderJoinPolicy
+  nameWithType: SharingFolderJoinPolicy.SharingFolderJoinPolicy
+  fullName: Dropbox.Api.TeamLog.SharingFolderJoinPolicy.SharingFolderJoinPolicy
+- uid: Dropbox.Api.TeamLog.SharingFolderJoinPolicy.IsFromAnyone*
+  commentId: Overload:Dropbox.Api.TeamLog.SharingFolderJoinPolicy.IsFromAnyone
+  name: IsFromAnyone
+  nameWithType: SharingFolderJoinPolicy.IsFromAnyone
+  fullName: Dropbox.Api.TeamLog.SharingFolderJoinPolicy.IsFromAnyone
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.TeamLog.SharingFolderJoinPolicy.AsFromAnyone*
+  commentId: Overload:Dropbox.Api.TeamLog.SharingFolderJoinPolicy.AsFromAnyone
+  name: AsFromAnyone
+  nameWithType: SharingFolderJoinPolicy.AsFromAnyone
+  fullName: Dropbox.Api.TeamLog.SharingFolderJoinPolicy.AsFromAnyone
+- uid: Dropbox.Api.TeamLog.SharingFolderJoinPolicy.FromAnyone
+  commentId: T:Dropbox.Api.TeamLog.SharingFolderJoinPolicy.FromAnyone
+  parent: Dropbox.Api.TeamLog
+  name: SharingFolderJoinPolicy.FromAnyone
+  nameWithType: SharingFolderJoinPolicy.FromAnyone
+  fullName: Dropbox.Api.TeamLog.SharingFolderJoinPolicy.FromAnyone
+- uid: Dropbox.Api.TeamLog.SharingFolderJoinPolicy.IsFromTeamOnly*
+  commentId: Overload:Dropbox.Api.TeamLog.SharingFolderJoinPolicy.IsFromTeamOnly
+  name: IsFromTeamOnly
+  nameWithType: SharingFolderJoinPolicy.IsFromTeamOnly
+  fullName: Dropbox.Api.TeamLog.SharingFolderJoinPolicy.IsFromTeamOnly
+- uid: Dropbox.Api.TeamLog.SharingFolderJoinPolicy.AsFromTeamOnly*
+  commentId: Overload:Dropbox.Api.TeamLog.SharingFolderJoinPolicy.AsFromTeamOnly
+  name: AsFromTeamOnly
+  nameWithType: SharingFolderJoinPolicy.AsFromTeamOnly
+  fullName: Dropbox.Api.TeamLog.SharingFolderJoinPolicy.AsFromTeamOnly
+- uid: Dropbox.Api.TeamLog.SharingFolderJoinPolicy.FromTeamOnly
+  commentId: T:Dropbox.Api.TeamLog.SharingFolderJoinPolicy.FromTeamOnly
+  parent: Dropbox.Api.TeamLog
+  name: SharingFolderJoinPolicy.FromTeamOnly
+  nameWithType: SharingFolderJoinPolicy.FromTeamOnly
+  fullName: Dropbox.Api.TeamLog.SharingFolderJoinPolicy.FromTeamOnly
+- uid: Dropbox.Api.TeamLog.SharingFolderJoinPolicy.IsOther*
+  commentId: Overload:Dropbox.Api.TeamLog.SharingFolderJoinPolicy.IsOther
+  name: IsOther
+  nameWithType: SharingFolderJoinPolicy.IsOther
+  fullName: Dropbox.Api.TeamLog.SharingFolderJoinPolicy.IsOther
+- uid: Dropbox.Api.TeamLog.SharingFolderJoinPolicy.AsOther*
+  commentId: Overload:Dropbox.Api.TeamLog.SharingFolderJoinPolicy.AsOther
+  name: AsOther
+  nameWithType: SharingFolderJoinPolicy.AsOther
+  fullName: Dropbox.Api.TeamLog.SharingFolderJoinPolicy.AsOther
+- uid: Dropbox.Api.TeamLog.SharingFolderJoinPolicy.Other
+  commentId: T:Dropbox.Api.TeamLog.SharingFolderJoinPolicy.Other
+  parent: Dropbox.Api.TeamLog
+  name: SharingFolderJoinPolicy.Other
+  nameWithType: SharingFolderJoinPolicy.Other
+  fullName: Dropbox.Api.TeamLog.SharingFolderJoinPolicy.Other
+shouldSkipMarkup: true

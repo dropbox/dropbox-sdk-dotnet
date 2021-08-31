@@ -1,0 +1,381 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.UsersSelectorArg
+  commentId: T:Dropbox.Api.Team.UsersSelectorArg
+  id: UsersSelectorArg
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.UsersSelectorArg.#ctor
+  - Dropbox.Api.Team.UsersSelectorArg.AsEmails
+  - Dropbox.Api.Team.UsersSelectorArg.AsExternalIds
+  - Dropbox.Api.Team.UsersSelectorArg.AsTeamMemberIds
+  - Dropbox.Api.Team.UsersSelectorArg.IsEmails
+  - Dropbox.Api.Team.UsersSelectorArg.IsExternalIds
+  - Dropbox.Api.Team.UsersSelectorArg.IsTeamMemberIds
+  langs:
+  - csharp
+  - vb
+  name: UsersSelectorArg
+  nameWithType: UsersSelectorArg
+  fullName: Dropbox.Api.Team.UsersSelectorArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UsersSelectorArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: UsersSelectorArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UsersSelectorArg.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Argument for selecting a list of users, either by team_member_ids, external_ids\nor emails.</p>\n"
+  example: []
+  syntax:
+    content: 'public class UsersSelectorArg : object'
+    content.vb: >-
+      Public Class UsersSelectorArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Team.UsersSelectorArg.Emails
+  - Dropbox.Api.Team.UsersSelectorArg.ExternalIds
+  - Dropbox.Api.Team.UsersSelectorArg.TeamMemberIds
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.UsersSelectorArg.#ctor
+  commentId: M:Dropbox.Api.Team.UsersSelectorArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.UsersSelectorArg
+  langs:
+  - csharp
+  - vb
+  name: UsersSelectorArg()
+  nameWithType: UsersSelectorArg.UsersSelectorArg()
+  fullName: Dropbox.Api.Team.UsersSelectorArg.UsersSelectorArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UsersSelectorArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UsersSelectorArg.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.UsersSelectorArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public UsersSelectorArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.UsersSelectorArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.UsersSelectorArg.IsTeamMemberIds
+  commentId: P:Dropbox.Api.Team.UsersSelectorArg.IsTeamMemberIds
+  id: IsTeamMemberIds
+  parent: Dropbox.Api.Team.UsersSelectorArg
+  langs:
+  - csharp
+  - vb
+  name: IsTeamMemberIds
+  nameWithType: UsersSelectorArg.IsTeamMemberIds
+  fullName: Dropbox.Api.Team.UsersSelectorArg.IsTeamMemberIds
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UsersSelectorArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsTeamMemberIds
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UsersSelectorArg.cs
+    startLine: 41
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is TeamMemberIds</p>\n"
+  example: []
+  syntax:
+    content: public bool IsTeamMemberIds { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsTeamMemberIds As Boolean
+  overload: Dropbox.Api.Team.UsersSelectorArg.IsTeamMemberIds*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.UsersSelectorArg.AsTeamMemberIds
+  commentId: P:Dropbox.Api.Team.UsersSelectorArg.AsTeamMemberIds
+  id: AsTeamMemberIds
+  parent: Dropbox.Api.Team.UsersSelectorArg
+  langs:
+  - csharp
+  - vb
+  name: AsTeamMemberIds
+  nameWithType: UsersSelectorArg.AsTeamMemberIds
+  fullName: Dropbox.Api.Team.UsersSelectorArg.AsTeamMemberIds
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UsersSelectorArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsTeamMemberIds
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UsersSelectorArg.cs
+    startLine: 52
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a TeamMemberIds, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public UsersSelectorArg.TeamMemberIds AsTeamMemberIds { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.UsersSelectorArg.TeamMemberIds
+    content.vb: Public ReadOnly Property AsTeamMemberIds As UsersSelectorArg.TeamMemberIds
+  overload: Dropbox.Api.Team.UsersSelectorArg.AsTeamMemberIds*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.UsersSelectorArg.IsExternalIds
+  commentId: P:Dropbox.Api.Team.UsersSelectorArg.IsExternalIds
+  id: IsExternalIds
+  parent: Dropbox.Api.Team.UsersSelectorArg
+  langs:
+  - csharp
+  - vb
+  name: IsExternalIds
+  nameWithType: UsersSelectorArg.IsExternalIds
+  fullName: Dropbox.Api.Team.UsersSelectorArg.IsExternalIds
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UsersSelectorArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsExternalIds
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UsersSelectorArg.cs
+    startLine: 63
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is ExternalIds</p>\n"
+  example: []
+  syntax:
+    content: public bool IsExternalIds { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsExternalIds As Boolean
+  overload: Dropbox.Api.Team.UsersSelectorArg.IsExternalIds*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.UsersSelectorArg.AsExternalIds
+  commentId: P:Dropbox.Api.Team.UsersSelectorArg.AsExternalIds
+  id: AsExternalIds
+  parent: Dropbox.Api.Team.UsersSelectorArg
+  langs:
+  - csharp
+  - vb
+  name: AsExternalIds
+  nameWithType: UsersSelectorArg.AsExternalIds
+  fullName: Dropbox.Api.Team.UsersSelectorArg.AsExternalIds
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UsersSelectorArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsExternalIds
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UsersSelectorArg.cs
+    startLine: 74
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a ExternalIds, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public UsersSelectorArg.ExternalIds AsExternalIds { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.UsersSelectorArg.ExternalIds
+    content.vb: Public ReadOnly Property AsExternalIds As UsersSelectorArg.ExternalIds
+  overload: Dropbox.Api.Team.UsersSelectorArg.AsExternalIds*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.UsersSelectorArg.IsEmails
+  commentId: P:Dropbox.Api.Team.UsersSelectorArg.IsEmails
+  id: IsEmails
+  parent: Dropbox.Api.Team.UsersSelectorArg
+  langs:
+  - csharp
+  - vb
+  name: IsEmails
+  nameWithType: UsersSelectorArg.IsEmails
+  fullName: Dropbox.Api.Team.UsersSelectorArg.IsEmails
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UsersSelectorArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsEmails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UsersSelectorArg.cs
+    startLine: 85
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is Emails</p>\n"
+  example: []
+  syntax:
+    content: public bool IsEmails { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsEmails As Boolean
+  overload: Dropbox.Api.Team.UsersSelectorArg.IsEmails*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.UsersSelectorArg.AsEmails
+  commentId: P:Dropbox.Api.Team.UsersSelectorArg.AsEmails
+  id: AsEmails
+  parent: Dropbox.Api.Team.UsersSelectorArg
+  langs:
+  - csharp
+  - vb
+  name: AsEmails
+  nameWithType: UsersSelectorArg.AsEmails
+  fullName: Dropbox.Api.Team.UsersSelectorArg.AsEmails
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UsersSelectorArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsEmails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UsersSelectorArg.cs
+    startLine: 96
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a Emails, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public UsersSelectorArg.Emails AsEmails { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.UsersSelectorArg.Emails
+    content.vb: Public ReadOnly Property AsEmails As UsersSelectorArg.Emails
+  overload: Dropbox.Api.Team.UsersSelectorArg.AsEmails*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.UsersSelectorArg
+  commentId: T:Dropbox.Api.Team.UsersSelectorArg
+  parent: Dropbox.Api.Team
+  name: UsersSelectorArg
+  nameWithType: UsersSelectorArg
+  fullName: Dropbox.Api.Team.UsersSelectorArg
+- uid: Dropbox.Api.Team.UsersSelectorArg.#ctor*
+  commentId: Overload:Dropbox.Api.Team.UsersSelectorArg.#ctor
+  name: UsersSelectorArg
+  nameWithType: UsersSelectorArg.UsersSelectorArg
+  fullName: Dropbox.Api.Team.UsersSelectorArg.UsersSelectorArg
+- uid: Dropbox.Api.Team.UsersSelectorArg.IsTeamMemberIds*
+  commentId: Overload:Dropbox.Api.Team.UsersSelectorArg.IsTeamMemberIds
+  name: IsTeamMemberIds
+  nameWithType: UsersSelectorArg.IsTeamMemberIds
+  fullName: Dropbox.Api.Team.UsersSelectorArg.IsTeamMemberIds
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Team.UsersSelectorArg.AsTeamMemberIds*
+  commentId: Overload:Dropbox.Api.Team.UsersSelectorArg.AsTeamMemberIds
+  name: AsTeamMemberIds
+  nameWithType: UsersSelectorArg.AsTeamMemberIds
+  fullName: Dropbox.Api.Team.UsersSelectorArg.AsTeamMemberIds
+- uid: Dropbox.Api.Team.UsersSelectorArg.TeamMemberIds
+  commentId: T:Dropbox.Api.Team.UsersSelectorArg.TeamMemberIds
+  parent: Dropbox.Api.Team
+  name: UsersSelectorArg.TeamMemberIds
+  nameWithType: UsersSelectorArg.TeamMemberIds
+  fullName: Dropbox.Api.Team.UsersSelectorArg.TeamMemberIds
+- uid: Dropbox.Api.Team.UsersSelectorArg.IsExternalIds*
+  commentId: Overload:Dropbox.Api.Team.UsersSelectorArg.IsExternalIds
+  name: IsExternalIds
+  nameWithType: UsersSelectorArg.IsExternalIds
+  fullName: Dropbox.Api.Team.UsersSelectorArg.IsExternalIds
+- uid: Dropbox.Api.Team.UsersSelectorArg.AsExternalIds*
+  commentId: Overload:Dropbox.Api.Team.UsersSelectorArg.AsExternalIds
+  name: AsExternalIds
+  nameWithType: UsersSelectorArg.AsExternalIds
+  fullName: Dropbox.Api.Team.UsersSelectorArg.AsExternalIds
+- uid: Dropbox.Api.Team.UsersSelectorArg.ExternalIds
+  commentId: T:Dropbox.Api.Team.UsersSelectorArg.ExternalIds
+  parent: Dropbox.Api.Team
+  name: UsersSelectorArg.ExternalIds
+  nameWithType: UsersSelectorArg.ExternalIds
+  fullName: Dropbox.Api.Team.UsersSelectorArg.ExternalIds
+- uid: Dropbox.Api.Team.UsersSelectorArg.IsEmails*
+  commentId: Overload:Dropbox.Api.Team.UsersSelectorArg.IsEmails
+  name: IsEmails
+  nameWithType: UsersSelectorArg.IsEmails
+  fullName: Dropbox.Api.Team.UsersSelectorArg.IsEmails
+- uid: Dropbox.Api.Team.UsersSelectorArg.AsEmails*
+  commentId: Overload:Dropbox.Api.Team.UsersSelectorArg.AsEmails
+  name: AsEmails
+  nameWithType: UsersSelectorArg.AsEmails
+  fullName: Dropbox.Api.Team.UsersSelectorArg.AsEmails
+- uid: Dropbox.Api.Team.UsersSelectorArg.Emails
+  commentId: T:Dropbox.Api.Team.UsersSelectorArg.Emails
+  parent: Dropbox.Api.Team
+  name: UsersSelectorArg.Emails
+  nameWithType: UsersSelectorArg.Emails
+  fullName: Dropbox.Api.Team.UsersSelectorArg.Emails
+shouldSkipMarkup: true

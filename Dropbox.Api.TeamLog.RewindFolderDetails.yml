@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.RewindFolderDetails
+  commentId: T:Dropbox.Api.TeamLog.RewindFolderDetails
+  id: RewindFolderDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.RewindFolderDetails.#ctor
+  - Dropbox.Api.TeamLog.RewindFolderDetails.#ctor(System.DateTime)
+  - Dropbox.Api.TeamLog.RewindFolderDetails.RewindFolderTargetTsMs
+  langs:
+  - csharp
+  - vb
+  name: RewindFolderDetails
+  nameWithType: RewindFolderDetails
+  fullName: Dropbox.Api.TeamLog.RewindFolderDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/RewindFolderDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: RewindFolderDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/RewindFolderDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Rewound a folder.</p>\n"
+  example: []
+  syntax:
+    content: 'public class RewindFolderDetails : object'
+    content.vb: >-
+      Public Class RewindFolderDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.RewindFolderDetails.#ctor(System.DateTime)
+  commentId: M:Dropbox.Api.TeamLog.RewindFolderDetails.#ctor(System.DateTime)
+  id: '#ctor(System.DateTime)'
+  parent: Dropbox.Api.TeamLog.RewindFolderDetails
+  langs:
+  - csharp
+  - vb
+  name: RewindFolderDetails(System.DateTime)
+  nameWithType: RewindFolderDetails.RewindFolderDetails(System.DateTime)
+  fullName: Dropbox.Api.TeamLog.RewindFolderDetails.RewindFolderDetails(System.DateTime)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/RewindFolderDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/RewindFolderDetails.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.RewindFolderDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public RewindFolderDetails(System.DateTime rewindFolderTargetTsMs)
+    parameters:
+    - id: rewindFolderTargetTsMs
+      type: System.DateTime
+      description: Folder was Rewound to this date.
+    content.vb: Public Sub New(rewindFolderTargetTsMs As System.DateTime)
+  overload: Dropbox.Api.TeamLog.RewindFolderDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.RewindFolderDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.RewindFolderDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.RewindFolderDetails
+  langs:
+  - csharp
+  - vb
+  name: RewindFolderDetails()
+  nameWithType: RewindFolderDetails.RewindFolderDetails()
+  fullName: Dropbox.Api.TeamLog.RewindFolderDetails.RewindFolderDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/RewindFolderDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/RewindFolderDetails.cs
+    startLine: 45
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.RewindFolderDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public RewindFolderDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.RewindFolderDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.RewindFolderDetails.RewindFolderTargetTsMs
+  commentId: P:Dropbox.Api.TeamLog.RewindFolderDetails.RewindFolderTargetTsMs
+  id: RewindFolderTargetTsMs
+  parent: Dropbox.Api.TeamLog.RewindFolderDetails
+  langs:
+  - csharp
+  - vb
+  name: RewindFolderTargetTsMs
+  nameWithType: RewindFolderDetails.RewindFolderTargetTsMs
+  fullName: Dropbox.Api.TeamLog.RewindFolderDetails.RewindFolderTargetTsMs
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/RewindFolderDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: RewindFolderTargetTsMs
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/RewindFolderDetails.cs
+    startLine: 53
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Folder was Rewound to this date.</p>\n"
+  example: []
+  syntax:
+    content: public System.DateTime RewindFolderTargetTsMs { get; protected set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Property RewindFolderTargetTsMs As System.DateTime
+  overload: Dropbox.Api.TeamLog.RewindFolderDetails.RewindFolderTargetTsMs*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.RewindFolderDetails
+  commentId: T:Dropbox.Api.TeamLog.RewindFolderDetails
+  parent: Dropbox.Api.TeamLog
+  name: RewindFolderDetails
+  nameWithType: RewindFolderDetails
+  fullName: Dropbox.Api.TeamLog.RewindFolderDetails
+- uid: Dropbox.Api.TeamLog.RewindFolderDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.RewindFolderDetails.#ctor
+  name: RewindFolderDetails
+  nameWithType: RewindFolderDetails.RewindFolderDetails
+  fullName: Dropbox.Api.TeamLog.RewindFolderDetails.RewindFolderDetails
+- uid: System.DateTime
+  isExternal: true
+  name: System.DateTime
+  nameWithType: System.DateTime
+  fullName: System.DateTime
+- uid: Dropbox.Api.TeamLog.RewindFolderDetails.RewindFolderTargetTsMs*
+  commentId: Overload:Dropbox.Api.TeamLog.RewindFolderDetails.RewindFolderTargetTsMs
+  name: RewindFolderTargetTsMs
+  nameWithType: RewindFolderDetails.RewindFolderTargetTsMs
+  fullName: Dropbox.Api.TeamLog.RewindFolderDetails.RewindFolderTargetTsMs
+shouldSkipMarkup: true

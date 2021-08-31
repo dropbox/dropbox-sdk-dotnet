@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.MemberSpaceLimitsRemoveCustomQuotaType
+  commentId: T:Dropbox.Api.TeamLog.MemberSpaceLimitsRemoveCustomQuotaType
+  id: MemberSpaceLimitsRemoveCustomQuotaType
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.MemberSpaceLimitsRemoveCustomQuotaType.#ctor
+  - Dropbox.Api.TeamLog.MemberSpaceLimitsRemoveCustomQuotaType.#ctor(System.String)
+  - Dropbox.Api.TeamLog.MemberSpaceLimitsRemoveCustomQuotaType.Description
+  langs:
+  - csharp
+  - vb
+  name: MemberSpaceLimitsRemoveCustomQuotaType
+  nameWithType: MemberSpaceLimitsRemoveCustomQuotaType
+  fullName: Dropbox.Api.TeamLog.MemberSpaceLimitsRemoveCustomQuotaType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSpaceLimitsRemoveCustomQuotaType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: MemberSpaceLimitsRemoveCustomQuotaType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSpaceLimitsRemoveCustomQuotaType.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The member space limits remove custom quota type object</p>\n"
+  example: []
+  syntax:
+    content: 'public class MemberSpaceLimitsRemoveCustomQuotaType : object'
+    content.vb: >-
+      Public Class MemberSpaceLimitsRemoveCustomQuotaType
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.MemberSpaceLimitsRemoveCustomQuotaType.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.MemberSpaceLimitsRemoveCustomQuotaType.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.MemberSpaceLimitsRemoveCustomQuotaType
+  langs:
+  - csharp
+  - vb
+  name: MemberSpaceLimitsRemoveCustomQuotaType(String)
+  nameWithType: MemberSpaceLimitsRemoveCustomQuotaType.MemberSpaceLimitsRemoveCustomQuotaType(String)
+  fullName: Dropbox.Api.TeamLog.MemberSpaceLimitsRemoveCustomQuotaType.MemberSpaceLimitsRemoveCustomQuotaType(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSpaceLimitsRemoveCustomQuotaType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSpaceLimitsRemoveCustomQuotaType.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.MemberSpaceLimitsRemoveCustomQuotaType\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public MemberSpaceLimitsRemoveCustomQuotaType(string description)
+    parameters:
+    - id: description
+      type: System.String
+      description: The description
+    content.vb: Public Sub New(description As String)
+  overload: Dropbox.Api.TeamLog.MemberSpaceLimitsRemoveCustomQuotaType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.MemberSpaceLimitsRemoveCustomQuotaType.#ctor
+  commentId: M:Dropbox.Api.TeamLog.MemberSpaceLimitsRemoveCustomQuotaType.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.MemberSpaceLimitsRemoveCustomQuotaType
+  langs:
+  - csharp
+  - vb
+  name: MemberSpaceLimitsRemoveCustomQuotaType()
+  nameWithType: MemberSpaceLimitsRemoveCustomQuotaType.MemberSpaceLimitsRemoveCustomQuotaType()
+  fullName: Dropbox.Api.TeamLog.MemberSpaceLimitsRemoveCustomQuotaType.MemberSpaceLimitsRemoveCustomQuotaType()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSpaceLimitsRemoveCustomQuotaType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSpaceLimitsRemoveCustomQuotaType.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.MemberSpaceLimitsRemoveCustomQuotaType\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public MemberSpaceLimitsRemoveCustomQuotaType()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.MemberSpaceLimitsRemoveCustomQuotaType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.MemberSpaceLimitsRemoveCustomQuotaType.Description
+  commentId: P:Dropbox.Api.TeamLog.MemberSpaceLimitsRemoveCustomQuotaType.Description
+  id: Description
+  parent: Dropbox.Api.TeamLog.MemberSpaceLimitsRemoveCustomQuotaType
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: MemberSpaceLimitsRemoveCustomQuotaType.Description
+  fullName: Dropbox.Api.TeamLog.MemberSpaceLimitsRemoveCustomQuotaType.Description
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSpaceLimitsRemoveCustomQuotaType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Description
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSpaceLimitsRemoveCustomQuotaType.cs
+    startLine: 59
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets the description of the member space limits remove custom quota\ntype</p>\n"
+  example: []
+  syntax:
+    content: public string Description { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Dropbox.Api.TeamLog.MemberSpaceLimitsRemoveCustomQuotaType.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.MemberSpaceLimitsRemoveCustomQuotaType
+  commentId: T:Dropbox.Api.TeamLog.MemberSpaceLimitsRemoveCustomQuotaType
+  parent: Dropbox.Api.TeamLog
+  name: MemberSpaceLimitsRemoveCustomQuotaType
+  nameWithType: MemberSpaceLimitsRemoveCustomQuotaType
+  fullName: Dropbox.Api.TeamLog.MemberSpaceLimitsRemoveCustomQuotaType
+- uid: Dropbox.Api.TeamLog.MemberSpaceLimitsRemoveCustomQuotaType.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberSpaceLimitsRemoveCustomQuotaType.#ctor
+  name: MemberSpaceLimitsRemoveCustomQuotaType
+  nameWithType: MemberSpaceLimitsRemoveCustomQuotaType.MemberSpaceLimitsRemoveCustomQuotaType
+  fullName: Dropbox.Api.TeamLog.MemberSpaceLimitsRemoveCustomQuotaType.MemberSpaceLimitsRemoveCustomQuotaType
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.MemberSpaceLimitsRemoveCustomQuotaType.Description*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberSpaceLimitsRemoveCustomQuotaType.Description
+  name: Description
+  nameWithType: MemberSpaceLimitsRemoveCustomQuotaType.Description
+  fullName: Dropbox.Api.TeamLog.MemberSpaceLimitsRemoveCustomQuotaType.Description
+shouldSkipMarkup: true

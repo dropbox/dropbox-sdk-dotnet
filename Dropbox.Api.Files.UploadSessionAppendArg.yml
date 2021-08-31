@@ -1,0 +1,249 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.UploadSessionAppendArg
+  commentId: T:Dropbox.Api.Files.UploadSessionAppendArg
+  id: UploadSessionAppendArg
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.UploadSessionAppendArg.#ctor
+  - Dropbox.Api.Files.UploadSessionAppendArg.#ctor(Dropbox.Api.Files.UploadSessionCursor,System.Boolean)
+  - Dropbox.Api.Files.UploadSessionAppendArg.Close
+  - Dropbox.Api.Files.UploadSessionAppendArg.Cursor
+  langs:
+  - csharp
+  - vb
+  name: UploadSessionAppendArg
+  nameWithType: UploadSessionAppendArg
+  fullName: Dropbox.Api.Files.UploadSessionAppendArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionAppendArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: UploadSessionAppendArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionAppendArg.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The upload session append arg object</p>\n"
+  example: []
+  syntax:
+    content: 'public class UploadSessionAppendArg : object'
+    content.vb: >-
+      Public Class UploadSessionAppendArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.UploadSessionAppendArg.#ctor(Dropbox.Api.Files.UploadSessionCursor,System.Boolean)
+  commentId: M:Dropbox.Api.Files.UploadSessionAppendArg.#ctor(Dropbox.Api.Files.UploadSessionCursor,System.Boolean)
+  id: '#ctor(Dropbox.Api.Files.UploadSessionCursor,System.Boolean)'
+  parent: Dropbox.Api.Files.UploadSessionAppendArg
+  langs:
+  - csharp
+  - vb
+  name: UploadSessionAppendArg(UploadSessionCursor, Boolean)
+  nameWithType: UploadSessionAppendArg.UploadSessionAppendArg(UploadSessionCursor, Boolean)
+  fullName: Dropbox.Api.Files.UploadSessionAppendArg.UploadSessionAppendArg(Dropbox.Api.Files.UploadSessionCursor, System.Boolean)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionAppendArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionAppendArg.cs
+    startLine: 38
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.UploadSessionAppendArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public UploadSessionAppendArg(UploadSessionCursor cursor, bool close = false)
+    parameters:
+    - id: cursor
+      type: Dropbox.Api.Files.UploadSessionCursor
+      description: Contains the upload session ID and the offset.
+    - id: close
+      type: System.Boolean
+      description: >-
+        If true, the current session will be closed, at which point you
+
+        won&apos;t be able to call <xref href="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async(Dropbox.Api.Files.UploadSessionAppendArg%2cSystem.IO.Stream)" data-throw-if-not-resolved="false"></xref>
+
+        anymore with the current session.
+    content.vb: Public Sub New(cursor As UploadSessionCursor, close As Boolean = False)
+  overload: Dropbox.Api.Files.UploadSessionAppendArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.UploadSessionAppendArg.#ctor
+  commentId: M:Dropbox.Api.Files.UploadSessionAppendArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.UploadSessionAppendArg
+  langs:
+  - csharp
+  - vb
+  name: UploadSessionAppendArg()
+  nameWithType: UploadSessionAppendArg.UploadSessionAppendArg()
+  fullName: Dropbox.Api.Files.UploadSessionAppendArg.UploadSessionAppendArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionAppendArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionAppendArg.cs
+    startLine: 56
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.UploadSessionAppendArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public UploadSessionAppendArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.UploadSessionAppendArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.UploadSessionAppendArg.Cursor
+  commentId: P:Dropbox.Api.Files.UploadSessionAppendArg.Cursor
+  id: Cursor
+  parent: Dropbox.Api.Files.UploadSessionAppendArg
+  langs:
+  - csharp
+  - vb
+  name: Cursor
+  nameWithType: UploadSessionAppendArg.Cursor
+  fullName: Dropbox.Api.Files.UploadSessionAppendArg.Cursor
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionAppendArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Cursor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionAppendArg.cs
+    startLine: 65
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Contains the upload session ID and the offset.</p>\n"
+  example: []
+  syntax:
+    content: public UploadSessionCursor Cursor { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.UploadSessionCursor
+    content.vb: Public Property Cursor As UploadSessionCursor
+  overload: Dropbox.Api.Files.UploadSessionAppendArg.Cursor*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.UploadSessionAppendArg.Close
+  commentId: P:Dropbox.Api.Files.UploadSessionAppendArg.Close
+  id: Close
+  parent: Dropbox.Api.Files.UploadSessionAppendArg
+  langs:
+  - csharp
+  - vb
+  name: Close
+  nameWithType: UploadSessionAppendArg.Close
+  fullName: Dropbox.Api.Files.UploadSessionAppendArg.Close
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionAppendArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Close
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionAppendArg.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>If true, the current session will be closed, at which point you won&apos;t be able\nto call <xref href=\"Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async(Dropbox.Api.Files.UploadSessionAppendArg%2cSystem.IO.Stream)\" data-throw-if-not-resolved=\"false\"></xref>\nanymore with the current session.</p>\n"
+  example: []
+  syntax:
+    content: public bool Close { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property Close As Boolean
+  overload: Dropbox.Api.Files.UploadSessionAppendArg.Close*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.UploadSessionAppendArg
+  commentId: T:Dropbox.Api.Files.UploadSessionAppendArg
+  parent: Dropbox.Api.Files
+  name: UploadSessionAppendArg
+  nameWithType: UploadSessionAppendArg
+  fullName: Dropbox.Api.Files.UploadSessionAppendArg
+- uid: Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async(Dropbox.Api.Files.UploadSessionAppendArg,System.IO.Stream)
+  commentId: M:Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async(Dropbox.Api.Files.UploadSessionAppendArg,System.IO.Stream)
+  isExternal: true
+- uid: Dropbox.Api.Files.UploadSessionAppendArg.#ctor*
+  commentId: Overload:Dropbox.Api.Files.UploadSessionAppendArg.#ctor
+  name: UploadSessionAppendArg
+  nameWithType: UploadSessionAppendArg.UploadSessionAppendArg
+  fullName: Dropbox.Api.Files.UploadSessionAppendArg.UploadSessionAppendArg
+- uid: Dropbox.Api.Files.UploadSessionCursor
+  commentId: T:Dropbox.Api.Files.UploadSessionCursor
+  parent: Dropbox.Api.Files
+  name: UploadSessionCursor
+  nameWithType: UploadSessionCursor
+  fullName: Dropbox.Api.Files.UploadSessionCursor
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Files.UploadSessionAppendArg.Cursor*
+  commentId: Overload:Dropbox.Api.Files.UploadSessionAppendArg.Cursor
+  name: Cursor
+  nameWithType: UploadSessionAppendArg.Cursor
+  fullName: Dropbox.Api.Files.UploadSessionAppendArg.Cursor
+- uid: Dropbox.Api.Files.UploadSessionAppendArg.Close*
+  commentId: Overload:Dropbox.Api.Files.UploadSessionAppendArg.Close
+  name: Close
+  nameWithType: UploadSessionAppendArg.Close
+  fullName: Dropbox.Api.Files.UploadSessionAppendArg.Close
+shouldSkipMarkup: true

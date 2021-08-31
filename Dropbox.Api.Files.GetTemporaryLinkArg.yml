@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.GetTemporaryLinkArg
+  commentId: T:Dropbox.Api.Files.GetTemporaryLinkArg
+  id: GetTemporaryLinkArg
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.GetTemporaryLinkArg.#ctor
+  - Dropbox.Api.Files.GetTemporaryLinkArg.#ctor(System.String)
+  - Dropbox.Api.Files.GetTemporaryLinkArg.Path
+  langs:
+  - csharp
+  - vb
+  name: GetTemporaryLinkArg
+  nameWithType: GetTemporaryLinkArg
+  fullName: Dropbox.Api.Files.GetTemporaryLinkArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetTemporaryLinkArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GetTemporaryLinkArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetTemporaryLinkArg.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The get temporary link arg object</p>\n"
+  example: []
+  syntax:
+    content: 'public class GetTemporaryLinkArg : object'
+    content.vb: >-
+      Public Class GetTemporaryLinkArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.GetTemporaryLinkArg.#ctor(System.String)
+  commentId: M:Dropbox.Api.Files.GetTemporaryLinkArg.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.Files.GetTemporaryLinkArg
+  langs:
+  - csharp
+  - vb
+  name: GetTemporaryLinkArg(String)
+  nameWithType: GetTemporaryLinkArg.GetTemporaryLinkArg(String)
+  fullName: Dropbox.Api.Files.GetTemporaryLinkArg.GetTemporaryLinkArg(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetTemporaryLinkArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetTemporaryLinkArg.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.GetTemporaryLinkArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public GetTemporaryLinkArg(string path)
+    parameters:
+    - id: path
+      type: System.String
+      description: The path to the file you want a temporary link to.
+    content.vb: Public Sub New(path As String)
+  overload: Dropbox.Api.Files.GetTemporaryLinkArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.GetTemporaryLinkArg.#ctor
+  commentId: M:Dropbox.Api.Files.GetTemporaryLinkArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.GetTemporaryLinkArg
+  langs:
+  - csharp
+  - vb
+  name: GetTemporaryLinkArg()
+  nameWithType: GetTemporaryLinkArg.GetTemporaryLinkArg()
+  fullName: Dropbox.Api.Files.GetTemporaryLinkArg.GetTemporaryLinkArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetTemporaryLinkArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetTemporaryLinkArg.cs
+    startLine: 54
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.GetTemporaryLinkArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public GetTemporaryLinkArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.GetTemporaryLinkArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.GetTemporaryLinkArg.Path
+  commentId: P:Dropbox.Api.Files.GetTemporaryLinkArg.Path
+  id: Path
+  parent: Dropbox.Api.Files.GetTemporaryLinkArg
+  langs:
+  - csharp
+  - vb
+  name: Path
+  nameWithType: GetTemporaryLinkArg.Path
+  fullName: Dropbox.Api.Files.GetTemporaryLinkArg.Path
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetTemporaryLinkArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Path
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetTemporaryLinkArg.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The path to the file you want a temporary link to.</p>\n"
+  example: []
+  syntax:
+    content: public string Path { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Path As String
+  overload: Dropbox.Api.Files.GetTemporaryLinkArg.Path*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.GetTemporaryLinkArg
+  commentId: T:Dropbox.Api.Files.GetTemporaryLinkArg
+  parent: Dropbox.Api.Files
+  name: GetTemporaryLinkArg
+  nameWithType: GetTemporaryLinkArg
+  fullName: Dropbox.Api.Files.GetTemporaryLinkArg
+- uid: Dropbox.Api.Files.GetTemporaryLinkArg.#ctor*
+  commentId: Overload:Dropbox.Api.Files.GetTemporaryLinkArg.#ctor
+  name: GetTemporaryLinkArg
+  nameWithType: GetTemporaryLinkArg.GetTemporaryLinkArg
+  fullName: Dropbox.Api.Files.GetTemporaryLinkArg.GetTemporaryLinkArg
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Files.GetTemporaryLinkArg.Path*
+  commentId: Overload:Dropbox.Api.Files.GetTemporaryLinkArg.Path
+  name: Path
+  nameWithType: GetTemporaryLinkArg.Path
+  fullName: Dropbox.Api.Files.GetTemporaryLinkArg.Path
+shouldSkipMarkup: true

@@ -1,0 +1,320 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.MemberSpaceLimitsChangePolicyDetails
+  commentId: T:Dropbox.Api.TeamLog.MemberSpaceLimitsChangePolicyDetails
+  id: MemberSpaceLimitsChangePolicyDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.MemberSpaceLimitsChangePolicyDetails.#ctor
+  - Dropbox.Api.TeamLog.MemberSpaceLimitsChangePolicyDetails.#ctor(System.Nullable{System.UInt64},System.Nullable{System.UInt64})
+  - Dropbox.Api.TeamLog.MemberSpaceLimitsChangePolicyDetails.NewValue
+  - Dropbox.Api.TeamLog.MemberSpaceLimitsChangePolicyDetails.PreviousValue
+  langs:
+  - csharp
+  - vb
+  name: MemberSpaceLimitsChangePolicyDetails
+  nameWithType: MemberSpaceLimitsChangePolicyDetails
+  fullName: Dropbox.Api.TeamLog.MemberSpaceLimitsChangePolicyDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSpaceLimitsChangePolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: MemberSpaceLimitsChangePolicyDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSpaceLimitsChangePolicyDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Changed team default member space limit.</p>\n"
+  example: []
+  syntax:
+    content: 'public class MemberSpaceLimitsChangePolicyDetails : object'
+    content.vb: >-
+      Public Class MemberSpaceLimitsChangePolicyDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.MemberSpaceLimitsChangePolicyDetails.#ctor(System.Nullable{System.UInt64},System.Nullable{System.UInt64})
+  commentId: M:Dropbox.Api.TeamLog.MemberSpaceLimitsChangePolicyDetails.#ctor(System.Nullable{System.UInt64},System.Nullable{System.UInt64})
+  id: '#ctor(System.Nullable{System.UInt64},System.Nullable{System.UInt64})'
+  parent: Dropbox.Api.TeamLog.MemberSpaceLimitsChangePolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: MemberSpaceLimitsChangePolicyDetails(Nullable<UInt64>, Nullable<UInt64>)
+  nameWithType: MemberSpaceLimitsChangePolicyDetails.MemberSpaceLimitsChangePolicyDetails(Nullable<UInt64>, Nullable<UInt64>)
+  fullName: Dropbox.Api.TeamLog.MemberSpaceLimitsChangePolicyDetails.MemberSpaceLimitsChangePolicyDetails(System.Nullable<System.UInt64>, System.Nullable<System.UInt64>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSpaceLimitsChangePolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSpaceLimitsChangePolicyDetails.cs
+    startLine: 37
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.MemberSpaceLimitsChangePolicyDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public MemberSpaceLimitsChangePolicyDetails(ulong? previousValue = null, ulong? newValue = null)
+    parameters:
+    - id: previousValue
+      type: System.Nullable{System.UInt64}
+      description: >-
+        Previous team default limit value in bytes. Might be
+
+        missing due to historical data gap.
+    - id: newValue
+      type: System.Nullable{System.UInt64}
+      description: >-
+        New team default limit value in bytes. Might be missing due
+
+        to historical data gap.
+    content.vb: Public Sub New(previousValue As ULong? = Nothing, newValue As ULong? = Nothing)
+  overload: Dropbox.Api.TeamLog.MemberSpaceLimitsChangePolicyDetails.#ctor*
+  nameWithType.vb: MemberSpaceLimitsChangePolicyDetails.MemberSpaceLimitsChangePolicyDetails(Nullable(Of UInt64), Nullable(Of UInt64))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.TeamLog.MemberSpaceLimitsChangePolicyDetails.MemberSpaceLimitsChangePolicyDetails(System.Nullable(Of System.UInt64), System.Nullable(Of System.UInt64))
+  name.vb: MemberSpaceLimitsChangePolicyDetails(Nullable(Of UInt64), Nullable(Of UInt64))
+- uid: Dropbox.Api.TeamLog.MemberSpaceLimitsChangePolicyDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.MemberSpaceLimitsChangePolicyDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.MemberSpaceLimitsChangePolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: MemberSpaceLimitsChangePolicyDetails()
+  nameWithType: MemberSpaceLimitsChangePolicyDetails.MemberSpaceLimitsChangePolicyDetails()
+  fullName: Dropbox.Api.TeamLog.MemberSpaceLimitsChangePolicyDetails.MemberSpaceLimitsChangePolicyDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSpaceLimitsChangePolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSpaceLimitsChangePolicyDetails.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.MemberSpaceLimitsChangePolicyDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public MemberSpaceLimitsChangePolicyDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.MemberSpaceLimitsChangePolicyDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.MemberSpaceLimitsChangePolicyDetails.PreviousValue
+  commentId: P:Dropbox.Api.TeamLog.MemberSpaceLimitsChangePolicyDetails.PreviousValue
+  id: PreviousValue
+  parent: Dropbox.Api.TeamLog.MemberSpaceLimitsChangePolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: PreviousValue
+  nameWithType: MemberSpaceLimitsChangePolicyDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.MemberSpaceLimitsChangePolicyDetails.PreviousValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSpaceLimitsChangePolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PreviousValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSpaceLimitsChangePolicyDetails.cs
+    startLine: 59
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Previous team default limit value in bytes. Might be missing due to\nhistorical data gap.</p>\n"
+  example: []
+  syntax:
+    content: public ulong? PreviousValue { get; protected set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.UInt64}
+    content.vb: Public Property PreviousValue As ULong?
+  overload: Dropbox.Api.TeamLog.MemberSpaceLimitsChangePolicyDetails.PreviousValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.MemberSpaceLimitsChangePolicyDetails.NewValue
+  commentId: P:Dropbox.Api.TeamLog.MemberSpaceLimitsChangePolicyDetails.NewValue
+  id: NewValue
+  parent: Dropbox.Api.TeamLog.MemberSpaceLimitsChangePolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: NewValue
+  nameWithType: MemberSpaceLimitsChangePolicyDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.MemberSpaceLimitsChangePolicyDetails.NewValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSpaceLimitsChangePolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NewValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSpaceLimitsChangePolicyDetails.cs
+    startLine: 65
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>New team default limit value in bytes. Might be missing due to historical\ndata gap.</p>\n"
+  example: []
+  syntax:
+    content: public ulong? NewValue { get; protected set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.UInt64}
+    content.vb: Public Property NewValue As ULong?
+  overload: Dropbox.Api.TeamLog.MemberSpaceLimitsChangePolicyDetails.NewValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.MemberSpaceLimitsChangePolicyDetails
+  commentId: T:Dropbox.Api.TeamLog.MemberSpaceLimitsChangePolicyDetails
+  parent: Dropbox.Api.TeamLog
+  name: MemberSpaceLimitsChangePolicyDetails
+  nameWithType: MemberSpaceLimitsChangePolicyDetails
+  fullName: Dropbox.Api.TeamLog.MemberSpaceLimitsChangePolicyDetails
+- uid: Dropbox.Api.TeamLog.MemberSpaceLimitsChangePolicyDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberSpaceLimitsChangePolicyDetails.#ctor
+  name: MemberSpaceLimitsChangePolicyDetails
+  nameWithType: MemberSpaceLimitsChangePolicyDetails.MemberSpaceLimitsChangePolicyDetails
+  fullName: Dropbox.Api.TeamLog.MemberSpaceLimitsChangePolicyDetails.MemberSpaceLimitsChangePolicyDetails
+- uid: System.Nullable{System.UInt64}
+  commentId: '!:System.Nullable{System.UInt64}'
+  definition: System.Nullable`1
+  name: Nullable<UInt64>
+  nameWithType: Nullable<UInt64>
+  fullName: System.Nullable<System.UInt64>
+  nameWithType.vb: Nullable(Of UInt64)
+  fullName.vb: System.Nullable(Of System.UInt64)
+  name.vb: Nullable(Of UInt64)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.UInt64
+    name: UInt64
+    nameWithType: UInt64
+    fullName: System.UInt64
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.UInt64
+    name: UInt64
+    nameWithType: UInt64
+    fullName: System.UInt64
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  isExternal: true
+  name: Nullable<>
+  nameWithType: Nullable<>
+  fullName: System.Nullable<>
+  nameWithType.vb: Nullable(Of )
+  fullName.vb: System.Nullable(Of )
+  name.vb: Nullable(Of )
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.TeamLog.MemberSpaceLimitsChangePolicyDetails.PreviousValue*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberSpaceLimitsChangePolicyDetails.PreviousValue
+  name: PreviousValue
+  nameWithType: MemberSpaceLimitsChangePolicyDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.MemberSpaceLimitsChangePolicyDetails.PreviousValue
+- uid: Dropbox.Api.TeamLog.MemberSpaceLimitsChangePolicyDetails.NewValue*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberSpaceLimitsChangePolicyDetails.NewValue
+  name: NewValue
+  nameWithType: MemberSpaceLimitsChangePolicyDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.MemberSpaceLimitsChangePolicyDetails.NewValue
+shouldSkipMarkup: true

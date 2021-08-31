@@ -1,0 +1,162 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.SyncSetting.NotSyncedInactive
+  commentId: T:Dropbox.Api.Files.SyncSetting.NotSyncedInactive
+  id: SyncSetting.NotSyncedInactive
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.SyncSetting.NotSyncedInactive.Instance
+  langs:
+  - csharp
+  - vb
+  name: SyncSetting.NotSyncedInactive
+  nameWithType: SyncSetting.NotSyncedInactive
+  fullName: Dropbox.Api.Files.SyncSetting.NotSyncedInactive
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SyncSetting.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NotSyncedInactive
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SyncSetting.cs
+    startLine: 352
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The specified folder&apos;s not_synced setting is inactive due to its location or\nother configuration changes. It will follow its parent folder&apos;s setting.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class NotSyncedInactive : SyncSetting'
+    content.vb: >-
+      Public NotInheritable Class NotSyncedInactive
+          Inherits SyncSetting
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Files.SyncSetting
+  inheritedMembers:
+  - Dropbox.Api.Files.SyncSetting.IsDefault
+  - Dropbox.Api.Files.SyncSetting.AsDefault
+  - Dropbox.Api.Files.SyncSetting.IsNotSynced
+  - Dropbox.Api.Files.SyncSetting.AsNotSynced
+  - Dropbox.Api.Files.SyncSetting.IsNotSyncedInactive
+  - Dropbox.Api.Files.SyncSetting.AsNotSyncedInactive
+  - Dropbox.Api.Files.SyncSetting.IsOther
+  - Dropbox.Api.Files.SyncSetting.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Files.SyncSetting.NotSyncedInactive.Instance
+  commentId: F:Dropbox.Api.Files.SyncSetting.NotSyncedInactive.Instance
+  id: Instance
+  parent: Dropbox.Api.Files.SyncSetting.NotSyncedInactive
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: SyncSetting.NotSyncedInactive.Instance
+  fullName: Dropbox.Api.Files.SyncSetting.NotSyncedInactive.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SyncSetting.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SyncSetting.cs
+    startLine: 377
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>A singleton instance of NotSyncedInactive</p>\n"
+  example: []
+  syntax:
+    content: public static readonly SyncSetting.NotSyncedInactive Instance
+    return:
+      type: Dropbox.Api.Files.SyncSetting.NotSyncedInactive
+    content.vb: Public Shared ReadOnly Instance As SyncSetting.NotSyncedInactive
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.SyncSetting
+  commentId: T:Dropbox.Api.Files.SyncSetting
+  parent: Dropbox.Api.Files
+  name: SyncSetting
+  nameWithType: SyncSetting
+  fullName: Dropbox.Api.Files.SyncSetting
+- uid: Dropbox.Api.Files.SyncSetting.IsDefault
+  commentId: P:Dropbox.Api.Files.SyncSetting.IsDefault
+  parent: Dropbox.Api.Files.SyncSetting
+  name: IsDefault
+  nameWithType: SyncSetting.IsDefault
+  fullName: Dropbox.Api.Files.SyncSetting.IsDefault
+- uid: Dropbox.Api.Files.SyncSetting.AsDefault
+  commentId: P:Dropbox.Api.Files.SyncSetting.AsDefault
+  parent: Dropbox.Api.Files.SyncSetting
+  name: AsDefault
+  nameWithType: SyncSetting.AsDefault
+  fullName: Dropbox.Api.Files.SyncSetting.AsDefault
+- uid: Dropbox.Api.Files.SyncSetting.IsNotSynced
+  commentId: P:Dropbox.Api.Files.SyncSetting.IsNotSynced
+  parent: Dropbox.Api.Files.SyncSetting
+  name: IsNotSynced
+  nameWithType: SyncSetting.IsNotSynced
+  fullName: Dropbox.Api.Files.SyncSetting.IsNotSynced
+- uid: Dropbox.Api.Files.SyncSetting.AsNotSynced
+  commentId: P:Dropbox.Api.Files.SyncSetting.AsNotSynced
+  parent: Dropbox.Api.Files.SyncSetting
+  name: AsNotSynced
+  nameWithType: SyncSetting.AsNotSynced
+  fullName: Dropbox.Api.Files.SyncSetting.AsNotSynced
+- uid: Dropbox.Api.Files.SyncSetting.IsNotSyncedInactive
+  commentId: P:Dropbox.Api.Files.SyncSetting.IsNotSyncedInactive
+  parent: Dropbox.Api.Files.SyncSetting
+  name: IsNotSyncedInactive
+  nameWithType: SyncSetting.IsNotSyncedInactive
+  fullName: Dropbox.Api.Files.SyncSetting.IsNotSyncedInactive
+- uid: Dropbox.Api.Files.SyncSetting.AsNotSyncedInactive
+  commentId: P:Dropbox.Api.Files.SyncSetting.AsNotSyncedInactive
+  parent: Dropbox.Api.Files.SyncSetting
+  name: AsNotSyncedInactive
+  nameWithType: SyncSetting.AsNotSyncedInactive
+  fullName: Dropbox.Api.Files.SyncSetting.AsNotSyncedInactive
+- uid: Dropbox.Api.Files.SyncSetting.IsOther
+  commentId: P:Dropbox.Api.Files.SyncSetting.IsOther
+  parent: Dropbox.Api.Files.SyncSetting
+  name: IsOther
+  nameWithType: SyncSetting.IsOther
+  fullName: Dropbox.Api.Files.SyncSetting.IsOther
+- uid: Dropbox.Api.Files.SyncSetting.AsOther
+  commentId: P:Dropbox.Api.Files.SyncSetting.AsOther
+  parent: Dropbox.Api.Files.SyncSetting
+  name: AsOther
+  nameWithType: SyncSetting.AsOther
+  fullName: Dropbox.Api.Files.SyncSetting.AsOther
+- uid: Dropbox.Api.Files.SyncSetting.NotSyncedInactive
+  commentId: T:Dropbox.Api.Files.SyncSetting.NotSyncedInactive
+  parent: Dropbox.Api.Files
+  name: SyncSetting.NotSyncedInactive
+  nameWithType: SyncSetting.NotSyncedInactive
+  fullName: Dropbox.Api.Files.SyncSetting.NotSyncedInactive
+shouldSkipMarkup: true

@@ -1,0 +1,236 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.ResellerSupportChangePolicyDetails
+  commentId: T:Dropbox.Api.TeamLog.ResellerSupportChangePolicyDetails
+  id: ResellerSupportChangePolicyDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.ResellerSupportChangePolicyDetails.#ctor
+  - Dropbox.Api.TeamLog.ResellerSupportChangePolicyDetails.#ctor(Dropbox.Api.TeamLog.ResellerSupportPolicy,Dropbox.Api.TeamLog.ResellerSupportPolicy)
+  - Dropbox.Api.TeamLog.ResellerSupportChangePolicyDetails.NewValue
+  - Dropbox.Api.TeamLog.ResellerSupportChangePolicyDetails.PreviousValue
+  langs:
+  - csharp
+  - vb
+  name: ResellerSupportChangePolicyDetails
+  nameWithType: ResellerSupportChangePolicyDetails
+  fullName: Dropbox.Api.TeamLog.ResellerSupportChangePolicyDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ResellerSupportChangePolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ResellerSupportChangePolicyDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ResellerSupportChangePolicyDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Enabled/disabled reseller support.</p>\n"
+  example: []
+  syntax:
+    content: 'public class ResellerSupportChangePolicyDetails : object'
+    content.vb: >-
+      Public Class ResellerSupportChangePolicyDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.ResellerSupportChangePolicyDetails.#ctor(Dropbox.Api.TeamLog.ResellerSupportPolicy,Dropbox.Api.TeamLog.ResellerSupportPolicy)
+  commentId: M:Dropbox.Api.TeamLog.ResellerSupportChangePolicyDetails.#ctor(Dropbox.Api.TeamLog.ResellerSupportPolicy,Dropbox.Api.TeamLog.ResellerSupportPolicy)
+  id: '#ctor(Dropbox.Api.TeamLog.ResellerSupportPolicy,Dropbox.Api.TeamLog.ResellerSupportPolicy)'
+  parent: Dropbox.Api.TeamLog.ResellerSupportChangePolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: ResellerSupportChangePolicyDetails(ResellerSupportPolicy, ResellerSupportPolicy)
+  nameWithType: ResellerSupportChangePolicyDetails.ResellerSupportChangePolicyDetails(ResellerSupportPolicy, ResellerSupportPolicy)
+  fullName: Dropbox.Api.TeamLog.ResellerSupportChangePolicyDetails.ResellerSupportChangePolicyDetails(Dropbox.Api.TeamLog.ResellerSupportPolicy, Dropbox.Api.TeamLog.ResellerSupportPolicy)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ResellerSupportChangePolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ResellerSupportChangePolicyDetails.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.ResellerSupportChangePolicyDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public ResellerSupportChangePolicyDetails(ResellerSupportPolicy newValue, ResellerSupportPolicy previousValue)
+    parameters:
+    - id: newValue
+      type: Dropbox.Api.TeamLog.ResellerSupportPolicy
+      description: New Reseller support policy.
+    - id: previousValue
+      type: Dropbox.Api.TeamLog.ResellerSupportPolicy
+      description: Previous Reseller support policy.
+    content.vb: Public Sub New(newValue As ResellerSupportPolicy, previousValue As ResellerSupportPolicy)
+  overload: Dropbox.Api.TeamLog.ResellerSupportChangePolicyDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.ResellerSupportChangePolicyDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.ResellerSupportChangePolicyDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.ResellerSupportChangePolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: ResellerSupportChangePolicyDetails()
+  nameWithType: ResellerSupportChangePolicyDetails.ResellerSupportChangePolicyDetails()
+  fullName: Dropbox.Api.TeamLog.ResellerSupportChangePolicyDetails.ResellerSupportChangePolicyDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ResellerSupportChangePolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ResellerSupportChangePolicyDetails.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.ResellerSupportChangePolicyDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public ResellerSupportChangePolicyDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.ResellerSupportChangePolicyDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.ResellerSupportChangePolicyDetails.NewValue
+  commentId: P:Dropbox.Api.TeamLog.ResellerSupportChangePolicyDetails.NewValue
+  id: NewValue
+  parent: Dropbox.Api.TeamLog.ResellerSupportChangePolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: NewValue
+  nameWithType: ResellerSupportChangePolicyDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.ResellerSupportChangePolicyDetails.NewValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ResellerSupportChangePolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NewValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ResellerSupportChangePolicyDetails.cs
+    startLine: 66
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>New Reseller support policy.</p>\n"
+  example: []
+  syntax:
+    content: public ResellerSupportPolicy NewValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.ResellerSupportPolicy
+    content.vb: Public Property NewValue As ResellerSupportPolicy
+  overload: Dropbox.Api.TeamLog.ResellerSupportChangePolicyDetails.NewValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.ResellerSupportChangePolicyDetails.PreviousValue
+  commentId: P:Dropbox.Api.TeamLog.ResellerSupportChangePolicyDetails.PreviousValue
+  id: PreviousValue
+  parent: Dropbox.Api.TeamLog.ResellerSupportChangePolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: PreviousValue
+  nameWithType: ResellerSupportChangePolicyDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.ResellerSupportChangePolicyDetails.PreviousValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ResellerSupportChangePolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PreviousValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ResellerSupportChangePolicyDetails.cs
+    startLine: 71
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Previous Reseller support policy.</p>\n"
+  example: []
+  syntax:
+    content: public ResellerSupportPolicy PreviousValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.ResellerSupportPolicy
+    content.vb: Public Property PreviousValue As ResellerSupportPolicy
+  overload: Dropbox.Api.TeamLog.ResellerSupportChangePolicyDetails.PreviousValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.ResellerSupportChangePolicyDetails
+  commentId: T:Dropbox.Api.TeamLog.ResellerSupportChangePolicyDetails
+  parent: Dropbox.Api.TeamLog
+  name: ResellerSupportChangePolicyDetails
+  nameWithType: ResellerSupportChangePolicyDetails
+  fullName: Dropbox.Api.TeamLog.ResellerSupportChangePolicyDetails
+- uid: Dropbox.Api.TeamLog.ResellerSupportChangePolicyDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.ResellerSupportChangePolicyDetails.#ctor
+  name: ResellerSupportChangePolicyDetails
+  nameWithType: ResellerSupportChangePolicyDetails.ResellerSupportChangePolicyDetails
+  fullName: Dropbox.Api.TeamLog.ResellerSupportChangePolicyDetails.ResellerSupportChangePolicyDetails
+- uid: Dropbox.Api.TeamLog.ResellerSupportPolicy
+  commentId: T:Dropbox.Api.TeamLog.ResellerSupportPolicy
+  parent: Dropbox.Api.TeamLog
+  name: ResellerSupportPolicy
+  nameWithType: ResellerSupportPolicy
+  fullName: Dropbox.Api.TeamLog.ResellerSupportPolicy
+- uid: Dropbox.Api.TeamLog.ResellerSupportChangePolicyDetails.NewValue*
+  commentId: Overload:Dropbox.Api.TeamLog.ResellerSupportChangePolicyDetails.NewValue
+  name: NewValue
+  nameWithType: ResellerSupportChangePolicyDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.ResellerSupportChangePolicyDetails.NewValue
+- uid: Dropbox.Api.TeamLog.ResellerSupportChangePolicyDetails.PreviousValue*
+  commentId: Overload:Dropbox.Api.TeamLog.ResellerSupportChangePolicyDetails.PreviousValue
+  name: PreviousValue
+  nameWithType: ResellerSupportChangePolicyDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.ResellerSupportChangePolicyDetails.PreviousValue
+shouldSkipMarkup: true

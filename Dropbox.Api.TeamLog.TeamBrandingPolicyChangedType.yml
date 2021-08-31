@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.TeamBrandingPolicyChangedType
+  commentId: T:Dropbox.Api.TeamLog.TeamBrandingPolicyChangedType
+  id: TeamBrandingPolicyChangedType
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.TeamBrandingPolicyChangedType.#ctor
+  - Dropbox.Api.TeamLog.TeamBrandingPolicyChangedType.#ctor(System.String)
+  - Dropbox.Api.TeamLog.TeamBrandingPolicyChangedType.Description
+  langs:
+  - csharp
+  - vb
+  name: TeamBrandingPolicyChangedType
+  nameWithType: TeamBrandingPolicyChangedType
+  fullName: Dropbox.Api.TeamLog.TeamBrandingPolicyChangedType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamBrandingPolicyChangedType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TeamBrandingPolicyChangedType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamBrandingPolicyChangedType.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The team branding policy changed type object</p>\n"
+  example: []
+  syntax:
+    content: 'public class TeamBrandingPolicyChangedType : object'
+    content.vb: >-
+      Public Class TeamBrandingPolicyChangedType
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.TeamBrandingPolicyChangedType.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.TeamBrandingPolicyChangedType.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.TeamBrandingPolicyChangedType
+  langs:
+  - csharp
+  - vb
+  name: TeamBrandingPolicyChangedType(String)
+  nameWithType: TeamBrandingPolicyChangedType.TeamBrandingPolicyChangedType(String)
+  fullName: Dropbox.Api.TeamLog.TeamBrandingPolicyChangedType.TeamBrandingPolicyChangedType(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamBrandingPolicyChangedType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamBrandingPolicyChangedType.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.TeamBrandingPolicyChangedType\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public TeamBrandingPolicyChangedType(string description)
+    parameters:
+    - id: description
+      type: System.String
+      description: The description
+    content.vb: Public Sub New(description As String)
+  overload: Dropbox.Api.TeamLog.TeamBrandingPolicyChangedType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.TeamBrandingPolicyChangedType.#ctor
+  commentId: M:Dropbox.Api.TeamLog.TeamBrandingPolicyChangedType.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.TeamBrandingPolicyChangedType
+  langs:
+  - csharp
+  - vb
+  name: TeamBrandingPolicyChangedType()
+  nameWithType: TeamBrandingPolicyChangedType.TeamBrandingPolicyChangedType()
+  fullName: Dropbox.Api.TeamLog.TeamBrandingPolicyChangedType.TeamBrandingPolicyChangedType()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamBrandingPolicyChangedType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamBrandingPolicyChangedType.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.TeamBrandingPolicyChangedType\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public TeamBrandingPolicyChangedType()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.TeamBrandingPolicyChangedType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.TeamBrandingPolicyChangedType.Description
+  commentId: P:Dropbox.Api.TeamLog.TeamBrandingPolicyChangedType.Description
+  id: Description
+  parent: Dropbox.Api.TeamLog.TeamBrandingPolicyChangedType
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: TeamBrandingPolicyChangedType.Description
+  fullName: Dropbox.Api.TeamLog.TeamBrandingPolicyChangedType.Description
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamBrandingPolicyChangedType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Description
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamBrandingPolicyChangedType.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets the description of the team branding policy changed type</p>\n"
+  example: []
+  syntax:
+    content: public string Description { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Dropbox.Api.TeamLog.TeamBrandingPolicyChangedType.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.TeamBrandingPolicyChangedType
+  commentId: T:Dropbox.Api.TeamLog.TeamBrandingPolicyChangedType
+  parent: Dropbox.Api.TeamLog
+  name: TeamBrandingPolicyChangedType
+  nameWithType: TeamBrandingPolicyChangedType
+  fullName: Dropbox.Api.TeamLog.TeamBrandingPolicyChangedType
+- uid: Dropbox.Api.TeamLog.TeamBrandingPolicyChangedType.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.TeamBrandingPolicyChangedType.#ctor
+  name: TeamBrandingPolicyChangedType
+  nameWithType: TeamBrandingPolicyChangedType.TeamBrandingPolicyChangedType
+  fullName: Dropbox.Api.TeamLog.TeamBrandingPolicyChangedType.TeamBrandingPolicyChangedType
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.TeamBrandingPolicyChangedType.Description*
+  commentId: Overload:Dropbox.Api.TeamLog.TeamBrandingPolicyChangedType.Description
+  name: Description
+  nameWithType: TeamBrandingPolicyChangedType.Description
+  fullName: Dropbox.Api.TeamLog.TeamBrandingPolicyChangedType.Description
+shouldSkipMarkup: true

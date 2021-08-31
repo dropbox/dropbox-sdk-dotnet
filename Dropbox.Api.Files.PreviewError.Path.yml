@@ -1,0 +1,215 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.PreviewError.Path
+  commentId: T:Dropbox.Api.Files.PreviewError.Path
+  id: PreviewError.Path
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.PreviewError.Path.#ctor(Dropbox.Api.Files.LookupError)
+  - Dropbox.Api.Files.PreviewError.Path.Value
+  langs:
+  - csharp
+  - vb
+  name: PreviewError.Path
+  nameWithType: PreviewError.Path
+  fullName: Dropbox.Api.Files.PreviewError.Path
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PreviewError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Path
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PreviewError.cs
+    startLine: 213
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>An error occurs when downloading metadata for the file.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Path : PreviewError'
+    content.vb: >-
+      Public NotInheritable Class Path
+          Inherits PreviewError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Files.PreviewError
+  inheritedMembers:
+  - Dropbox.Api.Files.PreviewError.IsPath
+  - Dropbox.Api.Files.PreviewError.AsPath
+  - Dropbox.Api.Files.PreviewError.IsInProgress
+  - Dropbox.Api.Files.PreviewError.AsInProgress
+  - Dropbox.Api.Files.PreviewError.IsUnsupportedExtension
+  - Dropbox.Api.Files.PreviewError.AsUnsupportedExtension
+  - Dropbox.Api.Files.PreviewError.IsUnsupportedContent
+  - Dropbox.Api.Files.PreviewError.AsUnsupportedContent
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Files.PreviewError.Path.#ctor(Dropbox.Api.Files.LookupError)
+  commentId: M:Dropbox.Api.Files.PreviewError.Path.#ctor(Dropbox.Api.Files.LookupError)
+  id: '#ctor(Dropbox.Api.Files.LookupError)'
+  parent: Dropbox.Api.Files.PreviewError.Path
+  langs:
+  - csharp
+  - vb
+  name: Path(LookupError)
+  nameWithType: PreviewError.Path.Path(LookupError)
+  fullName: Dropbox.Api.Files.PreviewError.Path.Path(Dropbox.Api.Files.LookupError)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PreviewError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PreviewError.cs
+    startLine: 231
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.PreviewError.Path\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public Path(LookupError value)
+    parameters:
+    - id: value
+      type: Dropbox.Api.Files.LookupError
+      description: The value
+    content.vb: Public Sub New(value As LookupError)
+  overload: Dropbox.Api.Files.PreviewError.Path.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.PreviewError.Path.Value
+  commentId: P:Dropbox.Api.Files.PreviewError.Path.Value
+  id: Value
+  parent: Dropbox.Api.Files.PreviewError.Path
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: PreviewError.Path.Value
+  fullName: Dropbox.Api.Files.PreviewError.Path.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PreviewError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PreviewError.cs
+    startLine: 245
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public LookupError Value { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.LookupError
+    content.vb: Public ReadOnly Property Value As LookupError
+  overload: Dropbox.Api.Files.PreviewError.Path.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.PreviewError
+  commentId: T:Dropbox.Api.Files.PreviewError
+  parent: Dropbox.Api.Files
+  name: PreviewError
+  nameWithType: PreviewError
+  fullName: Dropbox.Api.Files.PreviewError
+- uid: Dropbox.Api.Files.PreviewError.IsPath
+  commentId: P:Dropbox.Api.Files.PreviewError.IsPath
+  parent: Dropbox.Api.Files.PreviewError
+  name: IsPath
+  nameWithType: PreviewError.IsPath
+  fullName: Dropbox.Api.Files.PreviewError.IsPath
+- uid: Dropbox.Api.Files.PreviewError.AsPath
+  commentId: P:Dropbox.Api.Files.PreviewError.AsPath
+  parent: Dropbox.Api.Files.PreviewError
+  name: AsPath
+  nameWithType: PreviewError.AsPath
+  fullName: Dropbox.Api.Files.PreviewError.AsPath
+- uid: Dropbox.Api.Files.PreviewError.IsInProgress
+  commentId: P:Dropbox.Api.Files.PreviewError.IsInProgress
+  parent: Dropbox.Api.Files.PreviewError
+  name: IsInProgress
+  nameWithType: PreviewError.IsInProgress
+  fullName: Dropbox.Api.Files.PreviewError.IsInProgress
+- uid: Dropbox.Api.Files.PreviewError.AsInProgress
+  commentId: P:Dropbox.Api.Files.PreviewError.AsInProgress
+  parent: Dropbox.Api.Files.PreviewError
+  name: AsInProgress
+  nameWithType: PreviewError.AsInProgress
+  fullName: Dropbox.Api.Files.PreviewError.AsInProgress
+- uid: Dropbox.Api.Files.PreviewError.IsUnsupportedExtension
+  commentId: P:Dropbox.Api.Files.PreviewError.IsUnsupportedExtension
+  parent: Dropbox.Api.Files.PreviewError
+  name: IsUnsupportedExtension
+  nameWithType: PreviewError.IsUnsupportedExtension
+  fullName: Dropbox.Api.Files.PreviewError.IsUnsupportedExtension
+- uid: Dropbox.Api.Files.PreviewError.AsUnsupportedExtension
+  commentId: P:Dropbox.Api.Files.PreviewError.AsUnsupportedExtension
+  parent: Dropbox.Api.Files.PreviewError
+  name: AsUnsupportedExtension
+  nameWithType: PreviewError.AsUnsupportedExtension
+  fullName: Dropbox.Api.Files.PreviewError.AsUnsupportedExtension
+- uid: Dropbox.Api.Files.PreviewError.IsUnsupportedContent
+  commentId: P:Dropbox.Api.Files.PreviewError.IsUnsupportedContent
+  parent: Dropbox.Api.Files.PreviewError
+  name: IsUnsupportedContent
+  nameWithType: PreviewError.IsUnsupportedContent
+  fullName: Dropbox.Api.Files.PreviewError.IsUnsupportedContent
+- uid: Dropbox.Api.Files.PreviewError.AsUnsupportedContent
+  commentId: P:Dropbox.Api.Files.PreviewError.AsUnsupportedContent
+  parent: Dropbox.Api.Files.PreviewError
+  name: AsUnsupportedContent
+  nameWithType: PreviewError.AsUnsupportedContent
+  fullName: Dropbox.Api.Files.PreviewError.AsUnsupportedContent
+- uid: Dropbox.Api.Files.PreviewError.Path
+  commentId: T:Dropbox.Api.Files.PreviewError.Path
+  parent: Dropbox.Api.Files
+  name: PreviewError.Path
+  nameWithType: PreviewError.Path
+  fullName: Dropbox.Api.Files.PreviewError.Path
+- uid: Dropbox.Api.Files.PreviewError.Path.#ctor*
+  commentId: Overload:Dropbox.Api.Files.PreviewError.Path.#ctor
+  name: Path
+  nameWithType: PreviewError.Path.Path
+  fullName: Dropbox.Api.Files.PreviewError.Path.Path
+- uid: Dropbox.Api.Files.LookupError
+  commentId: T:Dropbox.Api.Files.LookupError
+  parent: Dropbox.Api.Files
+  name: LookupError
+  nameWithType: LookupError
+  fullName: Dropbox.Api.Files.LookupError
+- uid: Dropbox.Api.Files.PreviewError.Path.Value*
+  commentId: Overload:Dropbox.Api.Files.PreviewError.Path.Value
+  name: Value
+  nameWithType: PreviewError.Path.Value
+  fullName: Dropbox.Api.Files.PreviewError.Path.Value
+shouldSkipMarkup: true

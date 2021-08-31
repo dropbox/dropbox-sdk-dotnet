@@ -1,0 +1,400 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.UserSecondaryEmailsArg
+  commentId: T:Dropbox.Api.Team.UserSecondaryEmailsArg
+  id: UserSecondaryEmailsArg
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.UserSecondaryEmailsArg.#ctor
+  - Dropbox.Api.Team.UserSecondaryEmailsArg.#ctor(Dropbox.Api.Team.UserSelectorArg,System.Collections.Generic.IEnumerable{System.String})
+  - Dropbox.Api.Team.UserSecondaryEmailsArg.SecondaryEmails
+  - Dropbox.Api.Team.UserSecondaryEmailsArg.User
+  langs:
+  - csharp
+  - vb
+  name: UserSecondaryEmailsArg
+  nameWithType: UserSecondaryEmailsArg
+  fullName: Dropbox.Api.Team.UserSecondaryEmailsArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserSecondaryEmailsArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: UserSecondaryEmailsArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserSecondaryEmailsArg.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>User and a list of secondary emails.</p>\n"
+  example: []
+  syntax:
+    content: 'public class UserSecondaryEmailsArg : object'
+    content.vb: >-
+      Public Class UserSecondaryEmailsArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.UserSecondaryEmailsArg.#ctor(Dropbox.Api.Team.UserSelectorArg,System.Collections.Generic.IEnumerable{System.String})
+  commentId: M:Dropbox.Api.Team.UserSecondaryEmailsArg.#ctor(Dropbox.Api.Team.UserSelectorArg,System.Collections.Generic.IEnumerable{System.String})
+  id: '#ctor(Dropbox.Api.Team.UserSelectorArg,System.Collections.Generic.IEnumerable{System.String})'
+  parent: Dropbox.Api.Team.UserSecondaryEmailsArg
+  langs:
+  - csharp
+  - vb
+  name: UserSecondaryEmailsArg(UserSelectorArg, System.Collections.Generic.IEnumerable<String>)
+  nameWithType: UserSecondaryEmailsArg.UserSecondaryEmailsArg(UserSelectorArg, System.Collections.Generic.IEnumerable<String>)
+  fullName: Dropbox.Api.Team.UserSecondaryEmailsArg.UserSecondaryEmailsArg(Dropbox.Api.Team.UserSelectorArg, System.Collections.Generic.IEnumerable<System.String>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserSecondaryEmailsArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserSecondaryEmailsArg.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.UserSecondaryEmailsArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public UserSecondaryEmailsArg(UserSelectorArg user, System.Collections.Generic.IEnumerable<string> secondaryEmails)
+    parameters:
+    - id: user
+      type: Dropbox.Api.Team.UserSelectorArg
+      description: The user
+    - id: secondaryEmails
+      type: System.Collections.Generic.IEnumerable{System.String}
+      description: The secondary emails
+    content.vb: Public Sub New(user As UserSelectorArg, secondaryEmails As System.Collections.Generic.IEnumerable(Of String))
+  overload: Dropbox.Api.Team.UserSecondaryEmailsArg.#ctor*
+  nameWithType.vb: UserSecondaryEmailsArg.UserSecondaryEmailsArg(UserSelectorArg, System.Collections.Generic.IEnumerable(Of String))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Team.UserSecondaryEmailsArg.UserSecondaryEmailsArg(Dropbox.Api.Team.UserSelectorArg, System.Collections.Generic.IEnumerable(Of System.String))
+  name.vb: UserSecondaryEmailsArg(UserSelectorArg, System.Collections.Generic.IEnumerable(Of String))
+- uid: Dropbox.Api.Team.UserSecondaryEmailsArg.#ctor
+  commentId: M:Dropbox.Api.Team.UserSecondaryEmailsArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.UserSecondaryEmailsArg
+  langs:
+  - csharp
+  - vb
+  name: UserSecondaryEmailsArg()
+  nameWithType: UserSecondaryEmailsArg.UserSecondaryEmailsArg()
+  fullName: Dropbox.Api.Team.UserSecondaryEmailsArg.UserSecondaryEmailsArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserSecondaryEmailsArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserSecondaryEmailsArg.cs
+    startLine: 60
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.UserSecondaryEmailsArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public UserSecondaryEmailsArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.UserSecondaryEmailsArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.UserSecondaryEmailsArg.User
+  commentId: P:Dropbox.Api.Team.UserSecondaryEmailsArg.User
+  id: User
+  parent: Dropbox.Api.Team.UserSecondaryEmailsArg
+  langs:
+  - csharp
+  - vb
+  name: User
+  nameWithType: UserSecondaryEmailsArg.User
+  fullName: Dropbox.Api.Team.UserSecondaryEmailsArg.User
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserSecondaryEmailsArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: User
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserSecondaryEmailsArg.cs
+    startLine: 68
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets the user of the user secondary emails arg</p>\n"
+  example: []
+  syntax:
+    content: public UserSelectorArg User { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.UserSelectorArg
+    content.vb: Public Property User As UserSelectorArg
+  overload: Dropbox.Api.Team.UserSecondaryEmailsArg.User*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.UserSecondaryEmailsArg.SecondaryEmails
+  commentId: P:Dropbox.Api.Team.UserSecondaryEmailsArg.SecondaryEmails
+  id: SecondaryEmails
+  parent: Dropbox.Api.Team.UserSecondaryEmailsArg
+  langs:
+  - csharp
+  - vb
+  name: SecondaryEmails
+  nameWithType: UserSecondaryEmailsArg.SecondaryEmails
+  fullName: Dropbox.Api.Team.UserSecondaryEmailsArg.SecondaryEmails
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserSecondaryEmailsArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SecondaryEmails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/UserSecondaryEmailsArg.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets the secondary emails of the user secondary emails arg</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<string> SecondaryEmails { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{System.String}
+    content.vb: Public Property SecondaryEmails As System.Collections.Generic.IList(Of String)
+  overload: Dropbox.Api.Team.UserSecondaryEmailsArg.SecondaryEmails*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.UserSecondaryEmailsArg
+  commentId: T:Dropbox.Api.Team.UserSecondaryEmailsArg
+  name: UserSecondaryEmailsArg
+  nameWithType: UserSecondaryEmailsArg
+  fullName: Dropbox.Api.Team.UserSecondaryEmailsArg
+- uid: Dropbox.Api.Team.UserSecondaryEmailsArg.#ctor*
+  commentId: Overload:Dropbox.Api.Team.UserSecondaryEmailsArg.#ctor
+  name: UserSecondaryEmailsArg
+  nameWithType: UserSecondaryEmailsArg.UserSecondaryEmailsArg
+  fullName: Dropbox.Api.Team.UserSecondaryEmailsArg.UserSecondaryEmailsArg
+- uid: Dropbox.Api.Team.UserSelectorArg
+  commentId: T:Dropbox.Api.Team.UserSelectorArg
+  parent: Dropbox.Api.Team
+  name: UserSelectorArg
+  nameWithType: UserSelectorArg
+  fullName: Dropbox.Api.Team.UserSelectorArg
+- uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: '!:System.Collections.Generic.IEnumerable{System.String}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<String>
+  nameWithType: System.Collections.Generic.IEnumerable<String>
+  fullName: System.Collections.Generic.IEnumerable<System.String>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of String)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.String)
+  name.vb: System.Collections.Generic.IEnumerable(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: System.Collections.Generic.IEnumerable<>
+  nameWithType: System.Collections.Generic.IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: System.Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Team.UserSecondaryEmailsArg.User*
+  commentId: Overload:Dropbox.Api.Team.UserSecondaryEmailsArg.User
+  name: User
+  nameWithType: UserSecondaryEmailsArg.User
+  fullName: Dropbox.Api.Team.UserSecondaryEmailsArg.User
+- uid: Dropbox.Api.Team.UserSecondaryEmailsArg.SecondaryEmails*
+  commentId: Overload:Dropbox.Api.Team.UserSecondaryEmailsArg.SecondaryEmails
+  name: SecondaryEmails
+  nameWithType: UserSecondaryEmailsArg.SecondaryEmails
+  fullName: Dropbox.Api.Team.UserSecondaryEmailsArg.SecondaryEmails
+- uid: System.Collections.Generic.IList{System.String}
+  commentId: '!:System.Collections.Generic.IList{System.String}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<String>
+  nameWithType: System.Collections.Generic.IList<String>
+  fullName: System.Collections.Generic.IList<System.String>
+  nameWithType.vb: System.Collections.Generic.IList(Of String)
+  fullName.vb: System.Collections.Generic.IList(Of System.String)
+  name.vb: System.Collections.Generic.IList(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  isExternal: true
+  name: System.Collections.Generic.IList<>
+  nameWithType: System.Collections.Generic.IList<>
+  fullName: System.Collections.Generic.IList<>
+  nameWithType.vb: System.Collections.Generic.IList(Of )
+  fullName.vb: System.Collections.Generic.IList(Of )
+  name.vb: System.Collections.Generic.IList(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+shouldSkipMarkup: true

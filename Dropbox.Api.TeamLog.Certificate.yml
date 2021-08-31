@@ -1,0 +1,492 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.Certificate
+  commentId: T:Dropbox.Api.TeamLog.Certificate
+  id: Certificate
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.Certificate.#ctor
+  - Dropbox.Api.TeamLog.Certificate.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.String)
+  - Dropbox.Api.TeamLog.Certificate.CommonName
+  - Dropbox.Api.TeamLog.Certificate.ExpirationDate
+  - Dropbox.Api.TeamLog.Certificate.IssueDate
+  - Dropbox.Api.TeamLog.Certificate.Issuer
+  - Dropbox.Api.TeamLog.Certificate.SerialNumber
+  - Dropbox.Api.TeamLog.Certificate.Sha1Fingerprint
+  - Dropbox.Api.TeamLog.Certificate.Subject
+  langs:
+  - csharp
+  - vb
+  name: Certificate
+  nameWithType: Certificate
+  fullName: Dropbox.Api.TeamLog.Certificate
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/Certificate.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Certificate
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/Certificate.cs
+    startLine: 17
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Certificate details.</p>\n"
+  example: []
+  syntax:
+    content: 'public class Certificate : object'
+    content.vb: >-
+      Public Class Certificate
+          Inherits Object
+  seealso:
+  - linkId: Dropbox.Api.TeamLog.SsoAddCertDetails
+    commentId: T:Dropbox.Api.TeamLog.SsoAddCertDetails
+  - linkId: Dropbox.Api.TeamLog.SsoChangeCertDetails
+    commentId: T:Dropbox.Api.TeamLog.SsoChangeCertDetails
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.Certificate.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.String)
+  commentId: M:Dropbox.Api.TeamLog.Certificate.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.String)
+  id: '#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.String)'
+  parent: Dropbox.Api.TeamLog.Certificate
+  langs:
+  - csharp
+  - vb
+  name: Certificate(String, String, String, String, String, String, String)
+  nameWithType: Certificate.Certificate(String, String, String, String, String, String, String)
+  fullName: Dropbox.Api.TeamLog.Certificate.Certificate(System.String, System.String, System.String, System.String, System.String, System.String, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/Certificate.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/Certificate.cs
+    startLine: 41
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.Certificate\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public Certificate(string subject, string issuer, string issueDate, string expirationDate, string serialNumber, string sha1Fingerprint, string commonName = null)
+    parameters:
+    - id: subject
+      type: System.String
+      description: Certificate subject.
+    - id: issuer
+      type: System.String
+      description: Certificate issuer.
+    - id: issueDate
+      type: System.String
+      description: Certificate issue date.
+    - id: expirationDate
+      type: System.String
+      description: Certificate expiration date.
+    - id: serialNumber
+      type: System.String
+      description: Certificate serial number.
+    - id: sha1Fingerprint
+      type: System.String
+      description: Certificate sha1 fingerprint.
+    - id: commonName
+      type: System.String
+      description: Certificate common name.
+    content.vb: Public Sub New(subject As String, issuer As String, issueDate As String, expirationDate As String, serialNumber As String, sha1Fingerprint As String, commonName As String = Nothing)
+  overload: Dropbox.Api.TeamLog.Certificate.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.Certificate.#ctor
+  commentId: M:Dropbox.Api.TeamLog.Certificate.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.Certificate
+  langs:
+  - csharp
+  - vb
+  name: Certificate()
+  nameWithType: Certificate.Certificate()
+  fullName: Dropbox.Api.TeamLog.Certificate.Certificate()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/Certificate.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/Certificate.cs
+    startLine: 93
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.Certificate\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public Certificate()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.Certificate.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.Certificate.Subject
+  commentId: P:Dropbox.Api.TeamLog.Certificate.Subject
+  id: Subject
+  parent: Dropbox.Api.TeamLog.Certificate
+  langs:
+  - csharp
+  - vb
+  name: Subject
+  nameWithType: Certificate.Subject
+  fullName: Dropbox.Api.TeamLog.Certificate.Subject
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/Certificate.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Subject
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/Certificate.cs
+    startLine: 101
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Certificate subject.</p>\n"
+  example: []
+  syntax:
+    content: public string Subject { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Subject As String
+  overload: Dropbox.Api.TeamLog.Certificate.Subject*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.Certificate.Issuer
+  commentId: P:Dropbox.Api.TeamLog.Certificate.Issuer
+  id: Issuer
+  parent: Dropbox.Api.TeamLog.Certificate
+  langs:
+  - csharp
+  - vb
+  name: Issuer
+  nameWithType: Certificate.Issuer
+  fullName: Dropbox.Api.TeamLog.Certificate.Issuer
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/Certificate.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Issuer
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/Certificate.cs
+    startLine: 106
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Certificate issuer.</p>\n"
+  example: []
+  syntax:
+    content: public string Issuer { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Issuer As String
+  overload: Dropbox.Api.TeamLog.Certificate.Issuer*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.Certificate.IssueDate
+  commentId: P:Dropbox.Api.TeamLog.Certificate.IssueDate
+  id: IssueDate
+  parent: Dropbox.Api.TeamLog.Certificate
+  langs:
+  - csharp
+  - vb
+  name: IssueDate
+  nameWithType: Certificate.IssueDate
+  fullName: Dropbox.Api.TeamLog.Certificate.IssueDate
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/Certificate.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IssueDate
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/Certificate.cs
+    startLine: 111
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Certificate issue date.</p>\n"
+  example: []
+  syntax:
+    content: public string IssueDate { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property IssueDate As String
+  overload: Dropbox.Api.TeamLog.Certificate.IssueDate*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.Certificate.ExpirationDate
+  commentId: P:Dropbox.Api.TeamLog.Certificate.ExpirationDate
+  id: ExpirationDate
+  parent: Dropbox.Api.TeamLog.Certificate
+  langs:
+  - csharp
+  - vb
+  name: ExpirationDate
+  nameWithType: Certificate.ExpirationDate
+  fullName: Dropbox.Api.TeamLog.Certificate.ExpirationDate
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/Certificate.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ExpirationDate
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/Certificate.cs
+    startLine: 116
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Certificate expiration date.</p>\n"
+  example: []
+  syntax:
+    content: public string ExpirationDate { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ExpirationDate As String
+  overload: Dropbox.Api.TeamLog.Certificate.ExpirationDate*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.Certificate.SerialNumber
+  commentId: P:Dropbox.Api.TeamLog.Certificate.SerialNumber
+  id: SerialNumber
+  parent: Dropbox.Api.TeamLog.Certificate
+  langs:
+  - csharp
+  - vb
+  name: SerialNumber
+  nameWithType: Certificate.SerialNumber
+  fullName: Dropbox.Api.TeamLog.Certificate.SerialNumber
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/Certificate.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SerialNumber
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/Certificate.cs
+    startLine: 121
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Certificate serial number.</p>\n"
+  example: []
+  syntax:
+    content: public string SerialNumber { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SerialNumber As String
+  overload: Dropbox.Api.TeamLog.Certificate.SerialNumber*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.Certificate.Sha1Fingerprint
+  commentId: P:Dropbox.Api.TeamLog.Certificate.Sha1Fingerprint
+  id: Sha1Fingerprint
+  parent: Dropbox.Api.TeamLog.Certificate
+  langs:
+  - csharp
+  - vb
+  name: Sha1Fingerprint
+  nameWithType: Certificate.Sha1Fingerprint
+  fullName: Dropbox.Api.TeamLog.Certificate.Sha1Fingerprint
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/Certificate.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Sha1Fingerprint
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/Certificate.cs
+    startLine: 126
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Certificate sha1 fingerprint.</p>\n"
+  example: []
+  syntax:
+    content: public string Sha1Fingerprint { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Sha1Fingerprint As String
+  overload: Dropbox.Api.TeamLog.Certificate.Sha1Fingerprint*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.Certificate.CommonName
+  commentId: P:Dropbox.Api.TeamLog.Certificate.CommonName
+  id: CommonName
+  parent: Dropbox.Api.TeamLog.Certificate
+  langs:
+  - csharp
+  - vb
+  name: CommonName
+  nameWithType: Certificate.CommonName
+  fullName: Dropbox.Api.TeamLog.Certificate.CommonName
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/Certificate.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: CommonName
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/Certificate.cs
+    startLine: 131
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Certificate common name.</p>\n"
+  example: []
+  syntax:
+    content: public string CommonName { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property CommonName As String
+  overload: Dropbox.Api.TeamLog.Certificate.CommonName*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog.SsoAddCertDetails
+  commentId: T:Dropbox.Api.TeamLog.SsoAddCertDetails
+  parent: Dropbox.Api.TeamLog
+  name: SsoAddCertDetails
+  nameWithType: SsoAddCertDetails
+  fullName: Dropbox.Api.TeamLog.SsoAddCertDetails
+- uid: Dropbox.Api.TeamLog.SsoChangeCertDetails
+  commentId: T:Dropbox.Api.TeamLog.SsoChangeCertDetails
+  parent: Dropbox.Api.TeamLog
+  name: SsoChangeCertDetails
+  nameWithType: SsoChangeCertDetails
+  fullName: Dropbox.Api.TeamLog.SsoChangeCertDetails
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.Certificate
+  commentId: T:Dropbox.Api.TeamLog.Certificate
+  parent: Dropbox.Api.TeamLog
+  name: Certificate
+  nameWithType: Certificate
+  fullName: Dropbox.Api.TeamLog.Certificate
+- uid: Dropbox.Api.TeamLog.Certificate.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.Certificate.#ctor
+  name: Certificate
+  nameWithType: Certificate.Certificate
+  fullName: Dropbox.Api.TeamLog.Certificate.Certificate
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.Certificate.Subject*
+  commentId: Overload:Dropbox.Api.TeamLog.Certificate.Subject
+  name: Subject
+  nameWithType: Certificate.Subject
+  fullName: Dropbox.Api.TeamLog.Certificate.Subject
+- uid: Dropbox.Api.TeamLog.Certificate.Issuer*
+  commentId: Overload:Dropbox.Api.TeamLog.Certificate.Issuer
+  name: Issuer
+  nameWithType: Certificate.Issuer
+  fullName: Dropbox.Api.TeamLog.Certificate.Issuer
+- uid: Dropbox.Api.TeamLog.Certificate.IssueDate*
+  commentId: Overload:Dropbox.Api.TeamLog.Certificate.IssueDate
+  name: IssueDate
+  nameWithType: Certificate.IssueDate
+  fullName: Dropbox.Api.TeamLog.Certificate.IssueDate
+- uid: Dropbox.Api.TeamLog.Certificate.ExpirationDate*
+  commentId: Overload:Dropbox.Api.TeamLog.Certificate.ExpirationDate
+  name: ExpirationDate
+  nameWithType: Certificate.ExpirationDate
+  fullName: Dropbox.Api.TeamLog.Certificate.ExpirationDate
+- uid: Dropbox.Api.TeamLog.Certificate.SerialNumber*
+  commentId: Overload:Dropbox.Api.TeamLog.Certificate.SerialNumber
+  name: SerialNumber
+  nameWithType: Certificate.SerialNumber
+  fullName: Dropbox.Api.TeamLog.Certificate.SerialNumber
+- uid: Dropbox.Api.TeamLog.Certificate.Sha1Fingerprint*
+  commentId: Overload:Dropbox.Api.TeamLog.Certificate.Sha1Fingerprint
+  name: Sha1Fingerprint
+  nameWithType: Certificate.Sha1Fingerprint
+  fullName: Dropbox.Api.TeamLog.Certificate.Sha1Fingerprint
+- uid: Dropbox.Api.TeamLog.Certificate.CommonName*
+  commentId: Overload:Dropbox.Api.TeamLog.Certificate.CommonName
+  name: CommonName
+  nameWithType: Certificate.CommonName
+  fullName: Dropbox.Api.TeamLog.Certificate.CommonName
+shouldSkipMarkup: true

@@ -1,0 +1,196 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.ListFolderMembersContinueArg
+  commentId: T:Dropbox.Api.Sharing.ListFolderMembersContinueArg
+  id: ListFolderMembersContinueArg
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.ListFolderMembersContinueArg.#ctor
+  - Dropbox.Api.Sharing.ListFolderMembersContinueArg.#ctor(System.String)
+  - Dropbox.Api.Sharing.ListFolderMembersContinueArg.Cursor
+  langs:
+  - csharp
+  - vb
+  name: ListFolderMembersContinueArg
+  nameWithType: ListFolderMembersContinueArg
+  fullName: Dropbox.Api.Sharing.ListFolderMembersContinueArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFolderMembersContinueArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ListFolderMembersContinueArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFolderMembersContinueArg.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The list folder members continue arg object</p>\n"
+  example: []
+  syntax:
+    content: 'public class ListFolderMembersContinueArg : object'
+    content.vb: >-
+      Public Class ListFolderMembersContinueArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Sharing.ListFolderMembersContinueArg.#ctor(System.String)
+  commentId: M:Dropbox.Api.Sharing.ListFolderMembersContinueArg.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.Sharing.ListFolderMembersContinueArg
+  langs:
+  - csharp
+  - vb
+  name: ListFolderMembersContinueArg(String)
+  nameWithType: ListFolderMembersContinueArg.ListFolderMembersContinueArg(String)
+  fullName: Dropbox.Api.Sharing.ListFolderMembersContinueArg.ListFolderMembersContinueArg(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFolderMembersContinueArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFolderMembersContinueArg.cs
+    startLine: 38
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.ListFolderMembersContinueArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public ListFolderMembersContinueArg(string cursor)
+    parameters:
+    - id: cursor
+      type: System.String
+      description: >-
+        The cursor returned by your last call to <xref href="Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListFolderMembersAsync(Dropbox.Api.Sharing.ListFolderMembersArgs)" data-throw-if-not-resolved="false"></xref> or
+
+        <xref href="Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListFolderMembersContinueAsync(Dropbox.Api.Sharing.ListFolderMembersContinueArg)" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Sub New(cursor As String)
+  overload: Dropbox.Api.Sharing.ListFolderMembersContinueArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.ListFolderMembersContinueArg.#ctor
+  commentId: M:Dropbox.Api.Sharing.ListFolderMembersContinueArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Sharing.ListFolderMembersContinueArg
+  langs:
+  - csharp
+  - vb
+  name: ListFolderMembersContinueArg()
+  nameWithType: ListFolderMembersContinueArg.ListFolderMembersContinueArg()
+  fullName: Dropbox.Api.Sharing.ListFolderMembersContinueArg.ListFolderMembersContinueArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFolderMembersContinueArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFolderMembersContinueArg.cs
+    startLine: 54
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.ListFolderMembersContinueArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public ListFolderMembersContinueArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Sharing.ListFolderMembersContinueArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.ListFolderMembersContinueArg.Cursor
+  commentId: P:Dropbox.Api.Sharing.ListFolderMembersContinueArg.Cursor
+  id: Cursor
+  parent: Dropbox.Api.Sharing.ListFolderMembersContinueArg
+  langs:
+  - csharp
+  - vb
+  name: Cursor
+  nameWithType: ListFolderMembersContinueArg.Cursor
+  fullName: Dropbox.Api.Sharing.ListFolderMembersContinueArg.Cursor
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFolderMembersContinueArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Cursor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFolderMembersContinueArg.cs
+    startLine: 66
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The cursor returned by your last call to <xref href=\"Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListFolderMembersAsync(Dropbox.Api.Sharing.ListFolderMembersArgs)\" data-throw-if-not-resolved=\"false\"></xref> or\n<xref href=\"Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListFolderMembersContinueAsync(Dropbox.Api.Sharing.ListFolderMembersContinueArg)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+  example: []
+  syntax:
+    content: public string Cursor { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Cursor As String
+  overload: Dropbox.Api.Sharing.ListFolderMembersContinueArg.Cursor*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.ListFolderMembersContinueArg
+  commentId: T:Dropbox.Api.Sharing.ListFolderMembersContinueArg
+  parent: Dropbox.Api.Sharing
+  name: ListFolderMembersContinueArg
+  nameWithType: ListFolderMembersContinueArg
+  fullName: Dropbox.Api.Sharing.ListFolderMembersContinueArg
+- uid: Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListFolderMembersAsync(Dropbox.Api.Sharing.ListFolderMembersArgs)
+  commentId: M:Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListFolderMembersAsync(Dropbox.Api.Sharing.ListFolderMembersArgs)
+  isExternal: true
+- uid: Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListFolderMembersContinueAsync(Dropbox.Api.Sharing.ListFolderMembersContinueArg)
+  commentId: M:Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListFolderMembersContinueAsync(Dropbox.Api.Sharing.ListFolderMembersContinueArg)
+  isExternal: true
+- uid: Dropbox.Api.Sharing.ListFolderMembersContinueArg.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.ListFolderMembersContinueArg.#ctor
+  name: ListFolderMembersContinueArg
+  nameWithType: ListFolderMembersContinueArg.ListFolderMembersContinueArg
+  fullName: Dropbox.Api.Sharing.ListFolderMembersContinueArg.ListFolderMembersContinueArg
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Sharing.ListFolderMembersContinueArg.Cursor*
+  commentId: Overload:Dropbox.Api.Sharing.ListFolderMembersContinueArg.Cursor
+  name: Cursor
+  nameWithType: ListFolderMembersContinueArg.Cursor
+  fullName: Dropbox.Api.Sharing.ListFolderMembersContinueArg.Cursor
+shouldSkipMarkup: true

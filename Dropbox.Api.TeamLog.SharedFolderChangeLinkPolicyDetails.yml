@@ -1,0 +1,244 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.SharedFolderChangeLinkPolicyDetails
+  commentId: T:Dropbox.Api.TeamLog.SharedFolderChangeLinkPolicyDetails
+  id: SharedFolderChangeLinkPolicyDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.SharedFolderChangeLinkPolicyDetails.#ctor
+  - Dropbox.Api.TeamLog.SharedFolderChangeLinkPolicyDetails.#ctor(Dropbox.Api.Sharing.SharedLinkPolicy,Dropbox.Api.Sharing.SharedLinkPolicy)
+  - Dropbox.Api.TeamLog.SharedFolderChangeLinkPolicyDetails.NewValue
+  - Dropbox.Api.TeamLog.SharedFolderChangeLinkPolicyDetails.PreviousValue
+  langs:
+  - csharp
+  - vb
+  name: SharedFolderChangeLinkPolicyDetails
+  nameWithType: SharedFolderChangeLinkPolicyDetails
+  fullName: Dropbox.Api.TeamLog.SharedFolderChangeLinkPolicyDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderChangeLinkPolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SharedFolderChangeLinkPolicyDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderChangeLinkPolicyDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Changed who can access shared folder via link.</p>\n"
+  example: []
+  syntax:
+    content: 'public class SharedFolderChangeLinkPolicyDetails : object'
+    content.vb: >-
+      Public Class SharedFolderChangeLinkPolicyDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.SharedFolderChangeLinkPolicyDetails.#ctor(Dropbox.Api.Sharing.SharedLinkPolicy,Dropbox.Api.Sharing.SharedLinkPolicy)
+  commentId: M:Dropbox.Api.TeamLog.SharedFolderChangeLinkPolicyDetails.#ctor(Dropbox.Api.Sharing.SharedLinkPolicy,Dropbox.Api.Sharing.SharedLinkPolicy)
+  id: '#ctor(Dropbox.Api.Sharing.SharedLinkPolicy,Dropbox.Api.Sharing.SharedLinkPolicy)'
+  parent: Dropbox.Api.TeamLog.SharedFolderChangeLinkPolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: SharedFolderChangeLinkPolicyDetails(SharedLinkPolicy, SharedLinkPolicy)
+  nameWithType: SharedFolderChangeLinkPolicyDetails.SharedFolderChangeLinkPolicyDetails(SharedLinkPolicy, SharedLinkPolicy)
+  fullName: Dropbox.Api.TeamLog.SharedFolderChangeLinkPolicyDetails.SharedFolderChangeLinkPolicyDetails(Dropbox.Api.Sharing.SharedLinkPolicy, Dropbox.Api.Sharing.SharedLinkPolicy)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderChangeLinkPolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderChangeLinkPolicyDetails.cs
+    startLine: 36
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SharedFolderChangeLinkPolicyDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public SharedFolderChangeLinkPolicyDetails(SharedLinkPolicy newValue, SharedLinkPolicy previousValue = null)
+    parameters:
+    - id: newValue
+      type: Dropbox.Api.Sharing.SharedLinkPolicy
+      description: New shared folder link policy.
+    - id: previousValue
+      type: Dropbox.Api.Sharing.SharedLinkPolicy
+      description: >-
+        Previous shared folder link policy. Might be missing
+
+        due to historical data gap.
+    content.vb: Public Sub New(newValue As SharedLinkPolicy, previousValue As SharedLinkPolicy = Nothing)
+  overload: Dropbox.Api.TeamLog.SharedFolderChangeLinkPolicyDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SharedFolderChangeLinkPolicyDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.SharedFolderChangeLinkPolicyDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.SharedFolderChangeLinkPolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: SharedFolderChangeLinkPolicyDetails()
+  nameWithType: SharedFolderChangeLinkPolicyDetails.SharedFolderChangeLinkPolicyDetails()
+  fullName: Dropbox.Api.TeamLog.SharedFolderChangeLinkPolicyDetails.SharedFolderChangeLinkPolicyDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderChangeLinkPolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderChangeLinkPolicyDetails.cs
+    startLine: 54
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SharedFolderChangeLinkPolicyDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public SharedFolderChangeLinkPolicyDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.SharedFolderChangeLinkPolicyDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SharedFolderChangeLinkPolicyDetails.NewValue
+  commentId: P:Dropbox.Api.TeamLog.SharedFolderChangeLinkPolicyDetails.NewValue
+  id: NewValue
+  parent: Dropbox.Api.TeamLog.SharedFolderChangeLinkPolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: NewValue
+  nameWithType: SharedFolderChangeLinkPolicyDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.SharedFolderChangeLinkPolicyDetails.NewValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderChangeLinkPolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NewValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderChangeLinkPolicyDetails.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>New shared folder link policy.</p>\n"
+  example: []
+  syntax:
+    content: public SharedLinkPolicy NewValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.SharedLinkPolicy
+    content.vb: Public Property NewValue As SharedLinkPolicy
+  overload: Dropbox.Api.TeamLog.SharedFolderChangeLinkPolicyDetails.NewValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.SharedFolderChangeLinkPolicyDetails.PreviousValue
+  commentId: P:Dropbox.Api.TeamLog.SharedFolderChangeLinkPolicyDetails.PreviousValue
+  id: PreviousValue
+  parent: Dropbox.Api.TeamLog.SharedFolderChangeLinkPolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: PreviousValue
+  nameWithType: SharedFolderChangeLinkPolicyDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.SharedFolderChangeLinkPolicyDetails.PreviousValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderChangeLinkPolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PreviousValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderChangeLinkPolicyDetails.cs
+    startLine: 68
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Previous shared folder link policy. Might be missing due to historical data\ngap.</p>\n"
+  example: []
+  syntax:
+    content: public SharedLinkPolicy PreviousValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.SharedLinkPolicy
+    content.vb: Public Property PreviousValue As SharedLinkPolicy
+  overload: Dropbox.Api.TeamLog.SharedFolderChangeLinkPolicyDetails.PreviousValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.SharedFolderChangeLinkPolicyDetails
+  commentId: T:Dropbox.Api.TeamLog.SharedFolderChangeLinkPolicyDetails
+  parent: Dropbox.Api.TeamLog
+  name: SharedFolderChangeLinkPolicyDetails
+  nameWithType: SharedFolderChangeLinkPolicyDetails
+  fullName: Dropbox.Api.TeamLog.SharedFolderChangeLinkPolicyDetails
+- uid: Dropbox.Api.TeamLog.SharedFolderChangeLinkPolicyDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedFolderChangeLinkPolicyDetails.#ctor
+  name: SharedFolderChangeLinkPolicyDetails
+  nameWithType: SharedFolderChangeLinkPolicyDetails.SharedFolderChangeLinkPolicyDetails
+  fullName: Dropbox.Api.TeamLog.SharedFolderChangeLinkPolicyDetails.SharedFolderChangeLinkPolicyDetails
+- uid: Dropbox.Api.Sharing.SharedLinkPolicy
+  commentId: T:Dropbox.Api.Sharing.SharedLinkPolicy
+  parent: Dropbox.Api.Sharing
+  name: SharedLinkPolicy
+  nameWithType: SharedLinkPolicy
+  fullName: Dropbox.Api.Sharing.SharedLinkPolicy
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: Dropbox.Api.TeamLog.SharedFolderChangeLinkPolicyDetails.NewValue*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedFolderChangeLinkPolicyDetails.NewValue
+  name: NewValue
+  nameWithType: SharedFolderChangeLinkPolicyDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.SharedFolderChangeLinkPolicyDetails.NewValue
+- uid: Dropbox.Api.TeamLog.SharedFolderChangeLinkPolicyDetails.PreviousValue*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedFolderChangeLinkPolicyDetails.PreviousValue
+  name: PreviousValue
+  nameWithType: SharedFolderChangeLinkPolicyDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.SharedFolderChangeLinkPolicyDetails.PreviousValue
+shouldSkipMarkup: true

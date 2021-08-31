@@ -1,0 +1,395 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.RateLimitException
+  commentId: T:Dropbox.Api.RateLimitException
+  id: RateLimitException
+  parent: Dropbox.Api
+  children:
+  - Dropbox.Api.RateLimitException.IsRateLimit
+  - Dropbox.Api.RateLimitException.RequestUri
+  - Dropbox.Api.RateLimitException.RetryAfter
+  - Dropbox.Api.RateLimitException.StatusCode
+  langs:
+  - csharp
+  - vb
+  name: RateLimitException
+  nameWithType: RateLimitException
+  fullName: Dropbox.Api.RateLimitException
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/RateLimitException.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: RateLimitException
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/RateLimitException.cs
+    startLine: 14
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api
+  summary: "\nAn exception that will cause a retry due to rate limiting. The SDK will not do auto-retry for\nthis type of exception. The client should do proper backoff based on the value of\n<xref href=\"Dropbox.Api.RateLimitException.RetryAfter\" data-throw-if-not-resolved=\"false\"></xref> field.\n"
+  example: []
+  syntax:
+    content: 'public sealed class RateLimitException : StructuredException<RateLimitError>'
+    content.vb: >-
+      Public NotInheritable Class RateLimitException
+          Inherits StructuredException(Of RateLimitError)
+  inheritance:
+  - System.Object
+  - Dropbox.Api.DropboxException
+  - Dropbox.Api.StructuredException{Dropbox.Api.Auth.RateLimitError}
+  inheritedMembers:
+  - Dropbox.Api.StructuredException{Dropbox.Api.Auth.RateLimitError}.ErrorResponse
+  - Dropbox.Api.StructuredException{Dropbox.Api.Auth.RateLimitError}.Message
+  - Dropbox.Api.DropboxException.ToString
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.RateLimitException.StatusCode
+  commentId: P:Dropbox.Api.RateLimitException.StatusCode
+  id: StatusCode
+  parent: Dropbox.Api.RateLimitException
+  langs:
+  - csharp
+  - vb
+  name: StatusCode
+  nameWithType: RateLimitException.StatusCode
+  fullName: Dropbox.Api.RateLimitException.StatusCode
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/DropboxException.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: StatusCode
+    path: dropbox-sdk-dotnet/Dropbox.Api/DropboxException.cs
+    startLine: 230
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api
+  summary: "\nGets the HTTP status code that prompted this exception.\n"
+  example: []
+  syntax:
+    content: public int StatusCode { get; }
+    parameters: []
+    return:
+      type: System.Int32
+      description: "\nThe status code.\n"
+    content.vb: Public ReadOnly Property StatusCode As Integer
+  overload: Dropbox.Api.RateLimitException.StatusCode*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.RateLimitException.RequestUri
+  commentId: P:Dropbox.Api.RateLimitException.RequestUri
+  id: RequestUri
+  parent: Dropbox.Api.RateLimitException
+  langs:
+  - csharp
+  - vb
+  name: RequestUri
+  nameWithType: RateLimitException.RequestUri
+  fullName: Dropbox.Api.RateLimitException.RequestUri
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/DropboxException.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: RequestUri
+    path: dropbox-sdk-dotnet/Dropbox.Api/DropboxException.cs
+    startLine: 239
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api
+  summary: "\nGets the URI for the request that prompted this exception.\n"
+  example: []
+  syntax:
+    content: public Uri RequestUri { get; }
+    parameters: []
+    return:
+      type: Uri
+      description: "\nThe request URI.\n"
+    content.vb: Public ReadOnly Property RequestUri As Uri
+  overload: Dropbox.Api.RateLimitException.RequestUri*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.RateLimitException.RetryAfter
+  commentId: P:Dropbox.Api.RateLimitException.RetryAfter
+  id: RetryAfter
+  parent: Dropbox.Api.RateLimitException
+  langs:
+  - csharp
+  - vb
+  name: RetryAfter
+  nameWithType: RateLimitException.RetryAfter
+  fullName: Dropbox.Api.RateLimitException.RetryAfter
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/DropboxException.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: RetryAfter
+    path: dropbox-sdk-dotnet/Dropbox.Api/DropboxException.cs
+    startLine: 245
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api
+  summary: "\nGets the value in second which the client should backoff and retry after.\n"
+  example: []
+  syntax:
+    content: public int RetryAfter { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property RetryAfter As Integer
+  overload: Dropbox.Api.RateLimitException.RetryAfter*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.RateLimitException.IsRateLimit
+  commentId: P:Dropbox.Api.RateLimitException.IsRateLimit
+  id: IsRateLimit
+  parent: Dropbox.Api.RateLimitException
+  langs:
+  - csharp
+  - vb
+  name: IsRateLimit
+  nameWithType: RateLimitException.IsRateLimit
+  fullName: Dropbox.Api.RateLimitException.IsRateLimit
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/DropboxException.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsRateLimit
+    path: dropbox-sdk-dotnet/Dropbox.Api/DropboxException.cs
+    startLine: 256
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api
+  summary: "\nGets a value indicating whether this error represents a rate limiting response from the server.\n"
+  example: []
+  syntax:
+    content: public bool IsRateLimit { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+      description: "\n<code>true</code> if this response is a rate limit; otherwise, <code>false</code>.\n"
+    content.vb: Public ReadOnly Property IsRateLimit As Boolean
+  overload: Dropbox.Api.RateLimitException.IsRateLimit*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.RateLimitException.RetryAfter
+  commentId: P:Dropbox.Api.RateLimitException.RetryAfter
+  isExternal: true
+- uid: Dropbox.Api
+  commentId: N:Dropbox.Api
+  name: Dropbox.Api
+  nameWithType: Dropbox.Api
+  fullName: Dropbox.Api
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.DropboxException
+  commentId: T:Dropbox.Api.DropboxException
+  parent: Dropbox.Api
+  name: DropboxException
+  nameWithType: DropboxException
+  fullName: Dropbox.Api.DropboxException
+- uid: Dropbox.Api.StructuredException{Dropbox.Api.Auth.RateLimitError}
+  commentId: T:Dropbox.Api.StructuredException{Dropbox.Api.Auth.RateLimitError}
+  parent: Dropbox.Api
+  definition: Dropbox.Api.StructuredException`1
+  name: StructuredException<RateLimitError>
+  nameWithType: StructuredException<RateLimitError>
+  fullName: Dropbox.Api.StructuredException<Dropbox.Api.Auth.RateLimitError>
+  nameWithType.vb: StructuredException(Of RateLimitError)
+  fullName.vb: Dropbox.Api.StructuredException(Of Dropbox.Api.Auth.RateLimitError)
+  name.vb: StructuredException(Of RateLimitError)
+  spec.csharp:
+  - uid: Dropbox.Api.StructuredException`1
+    name: StructuredException
+    nameWithType: StructuredException
+    fullName: Dropbox.Api.StructuredException
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Auth.RateLimitError
+    name: RateLimitError
+    nameWithType: RateLimitError
+    fullName: Dropbox.Api.Auth.RateLimitError
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Dropbox.Api.StructuredException`1
+    name: StructuredException
+    nameWithType: StructuredException
+    fullName: Dropbox.Api.StructuredException
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Auth.RateLimitError
+    name: RateLimitError
+    nameWithType: RateLimitError
+    fullName: Dropbox.Api.Auth.RateLimitError
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.StructuredException{Dropbox.Api.Auth.RateLimitError}.ErrorResponse
+  commentId: P:Dropbox.Api.StructuredException{Dropbox.Api.Auth.RateLimitError}.ErrorResponse
+  parent: Dropbox.Api.StructuredException{Dropbox.Api.Auth.RateLimitError}
+  definition: Dropbox.Api.StructuredException`1.ErrorResponse
+  name: ErrorResponse
+  nameWithType: StructuredException<RateLimitError>.ErrorResponse
+  fullName: Dropbox.Api.StructuredException<Dropbox.Api.Auth.RateLimitError>.ErrorResponse
+  nameWithType.vb: StructuredException(Of RateLimitError).ErrorResponse
+  fullName.vb: Dropbox.Api.StructuredException(Of Dropbox.Api.Auth.RateLimitError).ErrorResponse
+- uid: Dropbox.Api.StructuredException{Dropbox.Api.Auth.RateLimitError}.Message
+  commentId: P:Dropbox.Api.StructuredException{Dropbox.Api.Auth.RateLimitError}.Message
+  parent: Dropbox.Api.StructuredException{Dropbox.Api.Auth.RateLimitError}
+  definition: Dropbox.Api.StructuredException`1.Message
+  name: Message
+  nameWithType: StructuredException<RateLimitError>.Message
+  fullName: Dropbox.Api.StructuredException<Dropbox.Api.Auth.RateLimitError>.Message
+  nameWithType.vb: StructuredException(Of RateLimitError).Message
+  fullName.vb: Dropbox.Api.StructuredException(Of Dropbox.Api.Auth.RateLimitError).Message
+- uid: Dropbox.Api.DropboxException.ToString
+  commentId: M:Dropbox.Api.DropboxException.ToString
+  parent: Dropbox.Api.DropboxException
+  name: ToString()
+  nameWithType: DropboxException.ToString()
+  fullName: Dropbox.Api.DropboxException.ToString()
+  spec.csharp:
+  - uid: Dropbox.Api.DropboxException.ToString
+    name: ToString
+    nameWithType: DropboxException.ToString
+    fullName: Dropbox.Api.DropboxException.ToString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Dropbox.Api.DropboxException.ToString
+    name: ToString
+    nameWithType: DropboxException.ToString
+    fullName: Dropbox.Api.DropboxException.ToString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.StructuredException`1
+  commentId: T:Dropbox.Api.StructuredException`1
+  name: StructuredException<TError>
+  nameWithType: StructuredException<TError>
+  fullName: Dropbox.Api.StructuredException<TError>
+  nameWithType.vb: StructuredException(Of TError)
+  fullName.vb: Dropbox.Api.StructuredException(Of TError)
+  name.vb: StructuredException(Of TError)
+  spec.csharp:
+  - uid: Dropbox.Api.StructuredException`1
+    name: StructuredException
+    nameWithType: StructuredException
+    fullName: Dropbox.Api.StructuredException
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TError
+    nameWithType: TError
+    fullName: TError
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Dropbox.Api.StructuredException`1
+    name: StructuredException
+    nameWithType: StructuredException
+    fullName: Dropbox.Api.StructuredException
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TError
+    nameWithType: TError
+    fullName: TError
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.StructuredException`1.ErrorResponse
+  commentId: P:Dropbox.Api.StructuredException`1.ErrorResponse
+  name: ErrorResponse
+  nameWithType: StructuredException<TError>.ErrorResponse
+  fullName: Dropbox.Api.StructuredException<TError>.ErrorResponse
+  nameWithType.vb: StructuredException(Of TError).ErrorResponse
+  fullName.vb: Dropbox.Api.StructuredException(Of TError).ErrorResponse
+- uid: Dropbox.Api.StructuredException`1.Message
+  commentId: P:Dropbox.Api.StructuredException`1.Message
+  name: Message
+  nameWithType: StructuredException<TError>.Message
+  fullName: Dropbox.Api.StructuredException<TError>.Message
+  nameWithType.vb: StructuredException(Of TError).Message
+  fullName.vb: Dropbox.Api.StructuredException(Of TError).Message
+- uid: Dropbox.Api.RateLimitException.StatusCode*
+  commentId: Overload:Dropbox.Api.RateLimitException.StatusCode
+  name: StatusCode
+  nameWithType: RateLimitException.StatusCode
+  fullName: Dropbox.Api.RateLimitException.StatusCode
+- uid: System.Int32
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Dropbox.Api.RateLimitException.RequestUri*
+  commentId: Overload:Dropbox.Api.RateLimitException.RequestUri
+  name: RequestUri
+  nameWithType: RateLimitException.RequestUri
+  fullName: Dropbox.Api.RateLimitException.RequestUri
+- uid: Uri
+  isExternal: true
+  name: Uri
+  nameWithType: Uri
+  fullName: Uri
+- uid: Dropbox.Api.RateLimitException.RetryAfter*
+  commentId: Overload:Dropbox.Api.RateLimitException.RetryAfter
+  name: RetryAfter
+  nameWithType: RateLimitException.RetryAfter
+  fullName: Dropbox.Api.RateLimitException.RetryAfter
+- uid: Dropbox.Api.RateLimitException.IsRateLimit*
+  commentId: Overload:Dropbox.Api.RateLimitException.IsRateLimit
+  name: IsRateLimit
+  nameWithType: RateLimitException.IsRateLimit
+  fullName: Dropbox.Api.RateLimitException.IsRateLimit
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+shouldSkipMarkup: true

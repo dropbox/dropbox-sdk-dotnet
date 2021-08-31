@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.EmmChangePolicyType
+  commentId: T:Dropbox.Api.TeamLog.EmmChangePolicyType
+  id: EmmChangePolicyType
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.EmmChangePolicyType.#ctor
+  - Dropbox.Api.TeamLog.EmmChangePolicyType.#ctor(System.String)
+  - Dropbox.Api.TeamLog.EmmChangePolicyType.Description
+  langs:
+  - csharp
+  - vb
+  name: EmmChangePolicyType
+  nameWithType: EmmChangePolicyType
+  fullName: Dropbox.Api.TeamLog.EmmChangePolicyType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EmmChangePolicyType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: EmmChangePolicyType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EmmChangePolicyType.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The emm change policy type object</p>\n"
+  example: []
+  syntax:
+    content: 'public class EmmChangePolicyType : object'
+    content.vb: >-
+      Public Class EmmChangePolicyType
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.EmmChangePolicyType.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.EmmChangePolicyType.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.EmmChangePolicyType
+  langs:
+  - csharp
+  - vb
+  name: EmmChangePolicyType(String)
+  nameWithType: EmmChangePolicyType.EmmChangePolicyType(String)
+  fullName: Dropbox.Api.TeamLog.EmmChangePolicyType.EmmChangePolicyType(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EmmChangePolicyType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EmmChangePolicyType.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.EmmChangePolicyType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public EmmChangePolicyType(string description)
+    parameters:
+    - id: description
+      type: System.String
+      description: The description
+    content.vb: Public Sub New(description As String)
+  overload: Dropbox.Api.TeamLog.EmmChangePolicyType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.EmmChangePolicyType.#ctor
+  commentId: M:Dropbox.Api.TeamLog.EmmChangePolicyType.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.EmmChangePolicyType
+  langs:
+  - csharp
+  - vb
+  name: EmmChangePolicyType()
+  nameWithType: EmmChangePolicyType.EmmChangePolicyType()
+  fullName: Dropbox.Api.TeamLog.EmmChangePolicyType.EmmChangePolicyType()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EmmChangePolicyType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EmmChangePolicyType.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.EmmChangePolicyType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public EmmChangePolicyType()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.EmmChangePolicyType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.EmmChangePolicyType.Description
+  commentId: P:Dropbox.Api.TeamLog.EmmChangePolicyType.Description
+  id: Description
+  parent: Dropbox.Api.TeamLog.EmmChangePolicyType
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: EmmChangePolicyType.Description
+  fullName: Dropbox.Api.TeamLog.EmmChangePolicyType.Description
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EmmChangePolicyType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Description
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EmmChangePolicyType.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets the description of the emm change policy type</p>\n"
+  example: []
+  syntax:
+    content: public string Description { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Dropbox.Api.TeamLog.EmmChangePolicyType.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.EmmChangePolicyType
+  commentId: T:Dropbox.Api.TeamLog.EmmChangePolicyType
+  parent: Dropbox.Api.TeamLog
+  name: EmmChangePolicyType
+  nameWithType: EmmChangePolicyType
+  fullName: Dropbox.Api.TeamLog.EmmChangePolicyType
+- uid: Dropbox.Api.TeamLog.EmmChangePolicyType.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.EmmChangePolicyType.#ctor
+  name: EmmChangePolicyType
+  nameWithType: EmmChangePolicyType.EmmChangePolicyType
+  fullName: Dropbox.Api.TeamLog.EmmChangePolicyType.EmmChangePolicyType
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.EmmChangePolicyType.Description*
+  commentId: Overload:Dropbox.Api.TeamLog.EmmChangePolicyType.Description
+  name: Description
+  nameWithType: EmmChangePolicyType.Description
+  fullName: Dropbox.Api.TeamLog.EmmChangePolicyType.Description
+shouldSkipMarkup: true

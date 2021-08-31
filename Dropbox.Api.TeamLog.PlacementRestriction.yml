@@ -1,0 +1,660 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.PlacementRestriction
+  commentId: T:Dropbox.Api.TeamLog.PlacementRestriction
+  id: PlacementRestriction
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.PlacementRestriction.#ctor
+  - Dropbox.Api.TeamLog.PlacementRestriction.AsAustraliaOnly
+  - Dropbox.Api.TeamLog.PlacementRestriction.AsEuropeOnly
+  - Dropbox.Api.TeamLog.PlacementRestriction.AsJapanOnly
+  - Dropbox.Api.TeamLog.PlacementRestriction.AsNone
+  - Dropbox.Api.TeamLog.PlacementRestriction.AsOther
+  - Dropbox.Api.TeamLog.PlacementRestriction.AsUkOnly
+  - Dropbox.Api.TeamLog.PlacementRestriction.IsAustraliaOnly
+  - Dropbox.Api.TeamLog.PlacementRestriction.IsEuropeOnly
+  - Dropbox.Api.TeamLog.PlacementRestriction.IsJapanOnly
+  - Dropbox.Api.TeamLog.PlacementRestriction.IsNone
+  - Dropbox.Api.TeamLog.PlacementRestriction.IsOther
+  - Dropbox.Api.TeamLog.PlacementRestriction.IsUkOnly
+  langs:
+  - csharp
+  - vb
+  name: PlacementRestriction
+  nameWithType: PlacementRestriction
+  fullName: Dropbox.Api.TeamLog.PlacementRestriction
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PlacementRestriction.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PlacementRestriction
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PlacementRestriction.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The placement restriction object</p>\n"
+  example: []
+  syntax:
+    content: 'public class PlacementRestriction : object'
+    content.vb: >-
+      Public Class PlacementRestriction
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.TeamLog.PlacementRestriction.AustraliaOnly
+  - Dropbox.Api.TeamLog.PlacementRestriction.EuropeOnly
+  - Dropbox.Api.TeamLog.PlacementRestriction.JapanOnly
+  - Dropbox.Api.TeamLog.PlacementRestriction.None
+  - Dropbox.Api.TeamLog.PlacementRestriction.Other
+  - Dropbox.Api.TeamLog.PlacementRestriction.UkOnly
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.PlacementRestriction.#ctor
+  commentId: M:Dropbox.Api.TeamLog.PlacementRestriction.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.PlacementRestriction
+  langs:
+  - csharp
+  - vb
+  name: PlacementRestriction()
+  nameWithType: PlacementRestriction.PlacementRestriction()
+  fullName: Dropbox.Api.TeamLog.PlacementRestriction.PlacementRestriction()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PlacementRestriction.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PlacementRestriction.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.PlacementRestriction\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public PlacementRestriction()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.PlacementRestriction.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.PlacementRestriction.IsAustraliaOnly
+  commentId: P:Dropbox.Api.TeamLog.PlacementRestriction.IsAustraliaOnly
+  id: IsAustraliaOnly
+  parent: Dropbox.Api.TeamLog.PlacementRestriction
+  langs:
+  - csharp
+  - vb
+  name: IsAustraliaOnly
+  nameWithType: PlacementRestriction.IsAustraliaOnly
+  fullName: Dropbox.Api.TeamLog.PlacementRestriction.IsAustraliaOnly
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PlacementRestriction.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsAustraliaOnly
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PlacementRestriction.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is AustraliaOnly</p>\n"
+  example: []
+  syntax:
+    content: public bool IsAustraliaOnly { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsAustraliaOnly As Boolean
+  overload: Dropbox.Api.TeamLog.PlacementRestriction.IsAustraliaOnly*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.PlacementRestriction.AsAustraliaOnly
+  commentId: P:Dropbox.Api.TeamLog.PlacementRestriction.AsAustraliaOnly
+  id: AsAustraliaOnly
+  parent: Dropbox.Api.TeamLog.PlacementRestriction
+  langs:
+  - csharp
+  - vb
+  name: AsAustraliaOnly
+  nameWithType: PlacementRestriction.AsAustraliaOnly
+  fullName: Dropbox.Api.TeamLog.PlacementRestriction.AsAustraliaOnly
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PlacementRestriction.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsAustraliaOnly
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PlacementRestriction.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a AustraliaOnly, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PlacementRestriction.AustraliaOnly AsAustraliaOnly { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.PlacementRestriction.AustraliaOnly
+    content.vb: Public ReadOnly Property AsAustraliaOnly As PlacementRestriction.AustraliaOnly
+  overload: Dropbox.Api.TeamLog.PlacementRestriction.AsAustraliaOnly*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.PlacementRestriction.IsEuropeOnly
+  commentId: P:Dropbox.Api.TeamLog.PlacementRestriction.IsEuropeOnly
+  id: IsEuropeOnly
+  parent: Dropbox.Api.TeamLog.PlacementRestriction
+  langs:
+  - csharp
+  - vb
+  name: IsEuropeOnly
+  nameWithType: PlacementRestriction.IsEuropeOnly
+  fullName: Dropbox.Api.TeamLog.PlacementRestriction.IsEuropeOnly
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PlacementRestriction.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsEuropeOnly
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PlacementRestriction.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is EuropeOnly</p>\n"
+  example: []
+  syntax:
+    content: public bool IsEuropeOnly { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsEuropeOnly As Boolean
+  overload: Dropbox.Api.TeamLog.PlacementRestriction.IsEuropeOnly*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.PlacementRestriction.AsEuropeOnly
+  commentId: P:Dropbox.Api.TeamLog.PlacementRestriction.AsEuropeOnly
+  id: AsEuropeOnly
+  parent: Dropbox.Api.TeamLog.PlacementRestriction
+  langs:
+  - csharp
+  - vb
+  name: AsEuropeOnly
+  nameWithType: PlacementRestriction.AsEuropeOnly
+  fullName: Dropbox.Api.TeamLog.PlacementRestriction.AsEuropeOnly
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PlacementRestriction.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsEuropeOnly
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PlacementRestriction.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a EuropeOnly, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PlacementRestriction.EuropeOnly AsEuropeOnly { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.PlacementRestriction.EuropeOnly
+    content.vb: Public ReadOnly Property AsEuropeOnly As PlacementRestriction.EuropeOnly
+  overload: Dropbox.Api.TeamLog.PlacementRestriction.AsEuropeOnly*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.PlacementRestriction.IsJapanOnly
+  commentId: P:Dropbox.Api.TeamLog.PlacementRestriction.IsJapanOnly
+  id: IsJapanOnly
+  parent: Dropbox.Api.TeamLog.PlacementRestriction
+  langs:
+  - csharp
+  - vb
+  name: IsJapanOnly
+  nameWithType: PlacementRestriction.IsJapanOnly
+  fullName: Dropbox.Api.TeamLog.PlacementRestriction.IsJapanOnly
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PlacementRestriction.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsJapanOnly
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PlacementRestriction.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is JapanOnly</p>\n"
+  example: []
+  syntax:
+    content: public bool IsJapanOnly { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsJapanOnly As Boolean
+  overload: Dropbox.Api.TeamLog.PlacementRestriction.IsJapanOnly*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.PlacementRestriction.AsJapanOnly
+  commentId: P:Dropbox.Api.TeamLog.PlacementRestriction.AsJapanOnly
+  id: AsJapanOnly
+  parent: Dropbox.Api.TeamLog.PlacementRestriction
+  langs:
+  - csharp
+  - vb
+  name: AsJapanOnly
+  nameWithType: PlacementRestriction.AsJapanOnly
+  fullName: Dropbox.Api.TeamLog.PlacementRestriction.AsJapanOnly
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PlacementRestriction.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsJapanOnly
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PlacementRestriction.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a JapanOnly, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PlacementRestriction.JapanOnly AsJapanOnly { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.PlacementRestriction.JapanOnly
+    content.vb: Public ReadOnly Property AsJapanOnly As PlacementRestriction.JapanOnly
+  overload: Dropbox.Api.TeamLog.PlacementRestriction.AsJapanOnly*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.PlacementRestriction.IsNone
+  commentId: P:Dropbox.Api.TeamLog.PlacementRestriction.IsNone
+  id: IsNone
+  parent: Dropbox.Api.TeamLog.PlacementRestriction
+  langs:
+  - csharp
+  - vb
+  name: IsNone
+  nameWithType: PlacementRestriction.IsNone
+  fullName: Dropbox.Api.TeamLog.PlacementRestriction.IsNone
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PlacementRestriction.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsNone
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PlacementRestriction.cs
+    startLine: 106
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is None</p>\n"
+  example: []
+  syntax:
+    content: public bool IsNone { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsNone As Boolean
+  overload: Dropbox.Api.TeamLog.PlacementRestriction.IsNone*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.PlacementRestriction.AsNone
+  commentId: P:Dropbox.Api.TeamLog.PlacementRestriction.AsNone
+  id: AsNone
+  parent: Dropbox.Api.TeamLog.PlacementRestriction
+  langs:
+  - csharp
+  - vb
+  name: AsNone
+  nameWithType: PlacementRestriction.AsNone
+  fullName: Dropbox.Api.TeamLog.PlacementRestriction.AsNone
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PlacementRestriction.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsNone
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PlacementRestriction.cs
+    startLine: 117
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a None, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PlacementRestriction.None AsNone { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.PlacementRestriction.None
+    content.vb: Public ReadOnly Property AsNone As PlacementRestriction.None
+  overload: Dropbox.Api.TeamLog.PlacementRestriction.AsNone*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.PlacementRestriction.IsUkOnly
+  commentId: P:Dropbox.Api.TeamLog.PlacementRestriction.IsUkOnly
+  id: IsUkOnly
+  parent: Dropbox.Api.TeamLog.PlacementRestriction
+  langs:
+  - csharp
+  - vb
+  name: IsUkOnly
+  nameWithType: PlacementRestriction.IsUkOnly
+  fullName: Dropbox.Api.TeamLog.PlacementRestriction.IsUkOnly
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PlacementRestriction.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsUkOnly
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PlacementRestriction.cs
+    startLine: 128
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is UkOnly</p>\n"
+  example: []
+  syntax:
+    content: public bool IsUkOnly { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsUkOnly As Boolean
+  overload: Dropbox.Api.TeamLog.PlacementRestriction.IsUkOnly*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.PlacementRestriction.AsUkOnly
+  commentId: P:Dropbox.Api.TeamLog.PlacementRestriction.AsUkOnly
+  id: AsUkOnly
+  parent: Dropbox.Api.TeamLog.PlacementRestriction
+  langs:
+  - csharp
+  - vb
+  name: AsUkOnly
+  nameWithType: PlacementRestriction.AsUkOnly
+  fullName: Dropbox.Api.TeamLog.PlacementRestriction.AsUkOnly
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PlacementRestriction.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsUkOnly
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PlacementRestriction.cs
+    startLine: 139
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a UkOnly, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PlacementRestriction.UkOnly AsUkOnly { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.PlacementRestriction.UkOnly
+    content.vb: Public ReadOnly Property AsUkOnly As PlacementRestriction.UkOnly
+  overload: Dropbox.Api.TeamLog.PlacementRestriction.AsUkOnly*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.PlacementRestriction.IsOther
+  commentId: P:Dropbox.Api.TeamLog.PlacementRestriction.IsOther
+  id: IsOther
+  parent: Dropbox.Api.TeamLog.PlacementRestriction
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: PlacementRestriction.IsOther
+  fullName: Dropbox.Api.TeamLog.PlacementRestriction.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PlacementRestriction.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PlacementRestriction.cs
+    startLine: 150
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.TeamLog.PlacementRestriction.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.PlacementRestriction.AsOther
+  commentId: P:Dropbox.Api.TeamLog.PlacementRestriction.AsOther
+  id: AsOther
+  parent: Dropbox.Api.TeamLog.PlacementRestriction
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: PlacementRestriction.AsOther
+  fullName: Dropbox.Api.TeamLog.PlacementRestriction.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PlacementRestriction.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PlacementRestriction.cs
+    startLine: 161
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PlacementRestriction.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.PlacementRestriction.Other
+    content.vb: Public ReadOnly Property AsOther As PlacementRestriction.Other
+  overload: Dropbox.Api.TeamLog.PlacementRestriction.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.PlacementRestriction
+  commentId: T:Dropbox.Api.TeamLog.PlacementRestriction
+  parent: Dropbox.Api.TeamLog
+  name: PlacementRestriction
+  nameWithType: PlacementRestriction
+  fullName: Dropbox.Api.TeamLog.PlacementRestriction
+- uid: Dropbox.Api.TeamLog.PlacementRestriction.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.PlacementRestriction.#ctor
+  name: PlacementRestriction
+  nameWithType: PlacementRestriction.PlacementRestriction
+  fullName: Dropbox.Api.TeamLog.PlacementRestriction.PlacementRestriction
+- uid: Dropbox.Api.TeamLog.PlacementRestriction.IsAustraliaOnly*
+  commentId: Overload:Dropbox.Api.TeamLog.PlacementRestriction.IsAustraliaOnly
+  name: IsAustraliaOnly
+  nameWithType: PlacementRestriction.IsAustraliaOnly
+  fullName: Dropbox.Api.TeamLog.PlacementRestriction.IsAustraliaOnly
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.TeamLog.PlacementRestriction.AsAustraliaOnly*
+  commentId: Overload:Dropbox.Api.TeamLog.PlacementRestriction.AsAustraliaOnly
+  name: AsAustraliaOnly
+  nameWithType: PlacementRestriction.AsAustraliaOnly
+  fullName: Dropbox.Api.TeamLog.PlacementRestriction.AsAustraliaOnly
+- uid: Dropbox.Api.TeamLog.PlacementRestriction.AustraliaOnly
+  commentId: T:Dropbox.Api.TeamLog.PlacementRestriction.AustraliaOnly
+  parent: Dropbox.Api.TeamLog
+  name: PlacementRestriction.AustraliaOnly
+  nameWithType: PlacementRestriction.AustraliaOnly
+  fullName: Dropbox.Api.TeamLog.PlacementRestriction.AustraliaOnly
+- uid: Dropbox.Api.TeamLog.PlacementRestriction.IsEuropeOnly*
+  commentId: Overload:Dropbox.Api.TeamLog.PlacementRestriction.IsEuropeOnly
+  name: IsEuropeOnly
+  nameWithType: PlacementRestriction.IsEuropeOnly
+  fullName: Dropbox.Api.TeamLog.PlacementRestriction.IsEuropeOnly
+- uid: Dropbox.Api.TeamLog.PlacementRestriction.AsEuropeOnly*
+  commentId: Overload:Dropbox.Api.TeamLog.PlacementRestriction.AsEuropeOnly
+  name: AsEuropeOnly
+  nameWithType: PlacementRestriction.AsEuropeOnly
+  fullName: Dropbox.Api.TeamLog.PlacementRestriction.AsEuropeOnly
+- uid: Dropbox.Api.TeamLog.PlacementRestriction.EuropeOnly
+  commentId: T:Dropbox.Api.TeamLog.PlacementRestriction.EuropeOnly
+  parent: Dropbox.Api.TeamLog
+  name: PlacementRestriction.EuropeOnly
+  nameWithType: PlacementRestriction.EuropeOnly
+  fullName: Dropbox.Api.TeamLog.PlacementRestriction.EuropeOnly
+- uid: Dropbox.Api.TeamLog.PlacementRestriction.IsJapanOnly*
+  commentId: Overload:Dropbox.Api.TeamLog.PlacementRestriction.IsJapanOnly
+  name: IsJapanOnly
+  nameWithType: PlacementRestriction.IsJapanOnly
+  fullName: Dropbox.Api.TeamLog.PlacementRestriction.IsJapanOnly
+- uid: Dropbox.Api.TeamLog.PlacementRestriction.AsJapanOnly*
+  commentId: Overload:Dropbox.Api.TeamLog.PlacementRestriction.AsJapanOnly
+  name: AsJapanOnly
+  nameWithType: PlacementRestriction.AsJapanOnly
+  fullName: Dropbox.Api.TeamLog.PlacementRestriction.AsJapanOnly
+- uid: Dropbox.Api.TeamLog.PlacementRestriction.JapanOnly
+  commentId: T:Dropbox.Api.TeamLog.PlacementRestriction.JapanOnly
+  parent: Dropbox.Api.TeamLog
+  name: PlacementRestriction.JapanOnly
+  nameWithType: PlacementRestriction.JapanOnly
+  fullName: Dropbox.Api.TeamLog.PlacementRestriction.JapanOnly
+- uid: Dropbox.Api.TeamLog.PlacementRestriction.IsNone*
+  commentId: Overload:Dropbox.Api.TeamLog.PlacementRestriction.IsNone
+  name: IsNone
+  nameWithType: PlacementRestriction.IsNone
+  fullName: Dropbox.Api.TeamLog.PlacementRestriction.IsNone
+- uid: Dropbox.Api.TeamLog.PlacementRestriction.AsNone*
+  commentId: Overload:Dropbox.Api.TeamLog.PlacementRestriction.AsNone
+  name: AsNone
+  nameWithType: PlacementRestriction.AsNone
+  fullName: Dropbox.Api.TeamLog.PlacementRestriction.AsNone
+- uid: Dropbox.Api.TeamLog.PlacementRestriction.None
+  commentId: T:Dropbox.Api.TeamLog.PlacementRestriction.None
+  parent: Dropbox.Api.TeamLog
+  name: PlacementRestriction.None
+  nameWithType: PlacementRestriction.None
+  fullName: Dropbox.Api.TeamLog.PlacementRestriction.None
+- uid: Dropbox.Api.TeamLog.PlacementRestriction.IsUkOnly*
+  commentId: Overload:Dropbox.Api.TeamLog.PlacementRestriction.IsUkOnly
+  name: IsUkOnly
+  nameWithType: PlacementRestriction.IsUkOnly
+  fullName: Dropbox.Api.TeamLog.PlacementRestriction.IsUkOnly
+- uid: Dropbox.Api.TeamLog.PlacementRestriction.AsUkOnly*
+  commentId: Overload:Dropbox.Api.TeamLog.PlacementRestriction.AsUkOnly
+  name: AsUkOnly
+  nameWithType: PlacementRestriction.AsUkOnly
+  fullName: Dropbox.Api.TeamLog.PlacementRestriction.AsUkOnly
+- uid: Dropbox.Api.TeamLog.PlacementRestriction.UkOnly
+  commentId: T:Dropbox.Api.TeamLog.PlacementRestriction.UkOnly
+  parent: Dropbox.Api.TeamLog
+  name: PlacementRestriction.UkOnly
+  nameWithType: PlacementRestriction.UkOnly
+  fullName: Dropbox.Api.TeamLog.PlacementRestriction.UkOnly
+- uid: Dropbox.Api.TeamLog.PlacementRestriction.IsOther*
+  commentId: Overload:Dropbox.Api.TeamLog.PlacementRestriction.IsOther
+  name: IsOther
+  nameWithType: PlacementRestriction.IsOther
+  fullName: Dropbox.Api.TeamLog.PlacementRestriction.IsOther
+- uid: Dropbox.Api.TeamLog.PlacementRestriction.AsOther*
+  commentId: Overload:Dropbox.Api.TeamLog.PlacementRestriction.AsOther
+  name: AsOther
+  nameWithType: PlacementRestriction.AsOther
+  fullName: Dropbox.Api.TeamLog.PlacementRestriction.AsOther
+- uid: Dropbox.Api.TeamLog.PlacementRestriction.Other
+  commentId: T:Dropbox.Api.TeamLog.PlacementRestriction.Other
+  parent: Dropbox.Api.TeamLog
+  name: PlacementRestriction.Other
+  nameWithType: PlacementRestriction.Other
+  fullName: Dropbox.Api.TeamLog.PlacementRestriction.Other
+shouldSkipMarkup: true

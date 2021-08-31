@@ -1,0 +1,288 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.TeamMembershipType
+  commentId: T:Dropbox.Api.Team.TeamMembershipType
+  id: TeamMembershipType
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.TeamMembershipType.#ctor
+  - Dropbox.Api.Team.TeamMembershipType.AsFull
+  - Dropbox.Api.Team.TeamMembershipType.AsLimited
+  - Dropbox.Api.Team.TeamMembershipType.IsFull
+  - Dropbox.Api.Team.TeamMembershipType.IsLimited
+  langs:
+  - csharp
+  - vb
+  name: TeamMembershipType
+  nameWithType: TeamMembershipType
+  fullName: Dropbox.Api.Team.TeamMembershipType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamMembershipType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TeamMembershipType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamMembershipType.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The team membership type object</p>\n"
+  example: []
+  syntax:
+    content: 'public class TeamMembershipType : object'
+    content.vb: >-
+      Public Class TeamMembershipType
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Team.TeamMembershipType.Full
+  - Dropbox.Api.Team.TeamMembershipType.Limited
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.TeamMembershipType.#ctor
+  commentId: M:Dropbox.Api.Team.TeamMembershipType.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.TeamMembershipType
+  langs:
+  - csharp
+  - vb
+  name: TeamMembershipType()
+  nameWithType: TeamMembershipType.TeamMembershipType()
+  fullName: Dropbox.Api.Team.TeamMembershipType.TeamMembershipType()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamMembershipType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamMembershipType.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.TeamMembershipType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public TeamMembershipType()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.TeamMembershipType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.TeamMembershipType.IsFull
+  commentId: P:Dropbox.Api.Team.TeamMembershipType.IsFull
+  id: IsFull
+  parent: Dropbox.Api.Team.TeamMembershipType
+  langs:
+  - csharp
+  - vb
+  name: IsFull
+  nameWithType: TeamMembershipType.IsFull
+  fullName: Dropbox.Api.Team.TeamMembershipType.IsFull
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamMembershipType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsFull
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamMembershipType.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is Full</p>\n"
+  example: []
+  syntax:
+    content: public bool IsFull { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsFull As Boolean
+  overload: Dropbox.Api.Team.TeamMembershipType.IsFull*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.TeamMembershipType.AsFull
+  commentId: P:Dropbox.Api.Team.TeamMembershipType.AsFull
+  id: AsFull
+  parent: Dropbox.Api.Team.TeamMembershipType
+  langs:
+  - csharp
+  - vb
+  name: AsFull
+  nameWithType: TeamMembershipType.AsFull
+  fullName: Dropbox.Api.Team.TeamMembershipType.AsFull
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamMembershipType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsFull
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamMembershipType.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a Full, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public TeamMembershipType.Full AsFull { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.TeamMembershipType.Full
+    content.vb: Public ReadOnly Property AsFull As TeamMembershipType.Full
+  overload: Dropbox.Api.Team.TeamMembershipType.AsFull*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.TeamMembershipType.IsLimited
+  commentId: P:Dropbox.Api.Team.TeamMembershipType.IsLimited
+  id: IsLimited
+  parent: Dropbox.Api.Team.TeamMembershipType
+  langs:
+  - csharp
+  - vb
+  name: IsLimited
+  nameWithType: TeamMembershipType.IsLimited
+  fullName: Dropbox.Api.Team.TeamMembershipType.IsLimited
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamMembershipType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsLimited
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamMembershipType.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is Limited</p>\n"
+  example: []
+  syntax:
+    content: public bool IsLimited { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsLimited As Boolean
+  overload: Dropbox.Api.Team.TeamMembershipType.IsLimited*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.TeamMembershipType.AsLimited
+  commentId: P:Dropbox.Api.Team.TeamMembershipType.AsLimited
+  id: AsLimited
+  parent: Dropbox.Api.Team.TeamMembershipType
+  langs:
+  - csharp
+  - vb
+  name: AsLimited
+  nameWithType: TeamMembershipType.AsLimited
+  fullName: Dropbox.Api.Team.TeamMembershipType.AsLimited
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamMembershipType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsLimited
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamMembershipType.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a Limited, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public TeamMembershipType.Limited AsLimited { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.TeamMembershipType.Limited
+    content.vb: Public ReadOnly Property AsLimited As TeamMembershipType.Limited
+  overload: Dropbox.Api.Team.TeamMembershipType.AsLimited*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.TeamMembershipType
+  commentId: T:Dropbox.Api.Team.TeamMembershipType
+  parent: Dropbox.Api.Team
+  name: TeamMembershipType
+  nameWithType: TeamMembershipType
+  fullName: Dropbox.Api.Team.TeamMembershipType
+- uid: Dropbox.Api.Team.TeamMembershipType.#ctor*
+  commentId: Overload:Dropbox.Api.Team.TeamMembershipType.#ctor
+  name: TeamMembershipType
+  nameWithType: TeamMembershipType.TeamMembershipType
+  fullName: Dropbox.Api.Team.TeamMembershipType.TeamMembershipType
+- uid: Dropbox.Api.Team.TeamMembershipType.IsFull*
+  commentId: Overload:Dropbox.Api.Team.TeamMembershipType.IsFull
+  name: IsFull
+  nameWithType: TeamMembershipType.IsFull
+  fullName: Dropbox.Api.Team.TeamMembershipType.IsFull
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Team.TeamMembershipType.AsFull*
+  commentId: Overload:Dropbox.Api.Team.TeamMembershipType.AsFull
+  name: AsFull
+  nameWithType: TeamMembershipType.AsFull
+  fullName: Dropbox.Api.Team.TeamMembershipType.AsFull
+- uid: Dropbox.Api.Team.TeamMembershipType.Full
+  commentId: T:Dropbox.Api.Team.TeamMembershipType.Full
+  parent: Dropbox.Api.Team
+  name: TeamMembershipType.Full
+  nameWithType: TeamMembershipType.Full
+  fullName: Dropbox.Api.Team.TeamMembershipType.Full
+- uid: Dropbox.Api.Team.TeamMembershipType.IsLimited*
+  commentId: Overload:Dropbox.Api.Team.TeamMembershipType.IsLimited
+  name: IsLimited
+  nameWithType: TeamMembershipType.IsLimited
+  fullName: Dropbox.Api.Team.TeamMembershipType.IsLimited
+- uid: Dropbox.Api.Team.TeamMembershipType.AsLimited*
+  commentId: Overload:Dropbox.Api.Team.TeamMembershipType.AsLimited
+  name: AsLimited
+  nameWithType: TeamMembershipType.AsLimited
+  fullName: Dropbox.Api.Team.TeamMembershipType.AsLimited
+- uid: Dropbox.Api.Team.TeamMembershipType.Limited
+  commentId: T:Dropbox.Api.Team.TeamMembershipType.Limited
+  parent: Dropbox.Api.Team
+  name: TeamMembershipType.Limited
+  nameWithType: TeamMembershipType.Limited
+  fullName: Dropbox.Api.Team.TeamMembershipType.Limited
+shouldSkipMarkup: true

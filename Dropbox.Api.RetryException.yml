@@ -1,0 +1,167 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.RetryException
+  commentId: T:Dropbox.Api.RetryException
+  id: RetryException
+  parent: Dropbox.Api
+  children:
+  - Dropbox.Api.RetryException.IsRateLimit
+  langs:
+  - csharp
+  - vb
+  name: RetryException
+  nameWithType: RetryException
+  fullName: Dropbox.Api.RetryException
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/DropboxException.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: RetryException
+    path: dropbox-sdk-dotnet/Dropbox.Api/DropboxException.cs
+    startLine: 177
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api
+  summary: "\nAn HTTP Exception that will cause a retry due to transient failure. The SDK will perform\na certain number of retries which is configurable in <xref href=\"Dropbox.Api.DropboxClient\" data-throw-if-not-resolved=\"false\"></xref>. If the client\nstill gets this exception, it&apos;s up to the client to decide whether to continue retrying or not.\n"
+  example: []
+  syntax:
+    content: 'public class RetryException : HttpException'
+    content.vb: >-
+      Public Class RetryException
+          Inherits HttpException
+  inheritance:
+  - System.Object
+  - Dropbox.Api.DropboxException
+  - Dropbox.Api.HttpException
+  inheritedMembers:
+  - Dropbox.Api.HttpException.StatusCode
+  - Dropbox.Api.HttpException.RequestUri
+  - Dropbox.Api.DropboxException.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.RetryException.IsRateLimit
+  commentId: P:Dropbox.Api.RetryException.IsRateLimit
+  id: IsRateLimit
+  parent: Dropbox.Api.RetryException
+  langs:
+  - csharp
+  - vb
+  name: IsRateLimit
+  nameWithType: RetryException.IsRateLimit
+  fullName: Dropbox.Api.RetryException.IsRateLimit
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/DropboxException.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsRateLimit
+    path: dropbox-sdk-dotnet/Dropbox.Api/DropboxException.cs
+    startLine: 198
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api
+  summary: "\nGets a value indicating whether this error represents a rate limiting response from the server.\n"
+  example: []
+  syntax:
+    content: public virtual bool IsRateLimit { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+      description: "\n<code>true</code> if this response is a rate limit; otherwise, <code>false</code>.\n"
+    content.vb: Public Overridable ReadOnly Property IsRateLimit As Boolean
+  overload: Dropbox.Api.RetryException.IsRateLimit*
+  modifiers.csharp:
+  - public
+  - virtual
+  - get
+  modifiers.vb:
+  - Public
+  - Overridable
+  - ReadOnly
+references:
+- uid: Dropbox.Api.DropboxClient
+  commentId: T:Dropbox.Api.DropboxClient
+  parent: Dropbox.Api
+  name: DropboxClient
+  nameWithType: DropboxClient
+  fullName: Dropbox.Api.DropboxClient
+- uid: Dropbox.Api
+  commentId: N:Dropbox.Api
+  name: Dropbox.Api
+  nameWithType: Dropbox.Api
+  fullName: Dropbox.Api
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.DropboxException
+  commentId: T:Dropbox.Api.DropboxException
+  parent: Dropbox.Api
+  name: DropboxException
+  nameWithType: DropboxException
+  fullName: Dropbox.Api.DropboxException
+- uid: Dropbox.Api.HttpException
+  commentId: T:Dropbox.Api.HttpException
+  parent: Dropbox.Api
+  name: HttpException
+  nameWithType: HttpException
+  fullName: Dropbox.Api.HttpException
+- uid: Dropbox.Api.HttpException.StatusCode
+  commentId: P:Dropbox.Api.HttpException.StatusCode
+  parent: Dropbox.Api.HttpException
+  name: StatusCode
+  nameWithType: HttpException.StatusCode
+  fullName: Dropbox.Api.HttpException.StatusCode
+- uid: Dropbox.Api.HttpException.RequestUri
+  commentId: P:Dropbox.Api.HttpException.RequestUri
+  parent: Dropbox.Api.HttpException
+  name: RequestUri
+  nameWithType: HttpException.RequestUri
+  fullName: Dropbox.Api.HttpException.RequestUri
+- uid: Dropbox.Api.DropboxException.ToString
+  commentId: M:Dropbox.Api.DropboxException.ToString
+  parent: Dropbox.Api.DropboxException
+  name: ToString()
+  nameWithType: DropboxException.ToString()
+  fullName: Dropbox.Api.DropboxException.ToString()
+  spec.csharp:
+  - uid: Dropbox.Api.DropboxException.ToString
+    name: ToString
+    nameWithType: DropboxException.ToString
+    fullName: Dropbox.Api.DropboxException.ToString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Dropbox.Api.DropboxException.ToString
+    name: ToString
+    nameWithType: DropboxException.ToString
+    fullName: Dropbox.Api.DropboxException.ToString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.RetryException.IsRateLimit*
+  commentId: Overload:Dropbox.Api.RetryException.IsRateLimit
+  name: IsRateLimit
+  nameWithType: RetryException.IsRateLimit
+  fullName: Dropbox.Api.RetryException.IsRateLimit
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+shouldSkipMarkup: true

@@ -1,0 +1,381 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.FileProperties.TemplateOwnerType
+  commentId: T:Dropbox.Api.FileProperties.TemplateOwnerType
+  id: TemplateOwnerType
+  parent: Dropbox.Api.FileProperties
+  children:
+  - Dropbox.Api.FileProperties.TemplateOwnerType.#ctor
+  - Dropbox.Api.FileProperties.TemplateOwnerType.AsOther
+  - Dropbox.Api.FileProperties.TemplateOwnerType.AsTeam
+  - Dropbox.Api.FileProperties.TemplateOwnerType.AsUser
+  - Dropbox.Api.FileProperties.TemplateOwnerType.IsOther
+  - Dropbox.Api.FileProperties.TemplateOwnerType.IsTeam
+  - Dropbox.Api.FileProperties.TemplateOwnerType.IsUser
+  langs:
+  - csharp
+  - vb
+  name: TemplateOwnerType
+  nameWithType: TemplateOwnerType
+  fullName: Dropbox.Api.FileProperties.TemplateOwnerType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/TemplateOwnerType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TemplateOwnerType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/TemplateOwnerType.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>The template owner type object</p>\n"
+  example: []
+  syntax:
+    content: 'public class TemplateOwnerType : object'
+    content.vb: >-
+      Public Class TemplateOwnerType
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.FileProperties.TemplateOwnerType.Other
+  - Dropbox.Api.FileProperties.TemplateOwnerType.Team
+  - Dropbox.Api.FileProperties.TemplateOwnerType.User
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.FileProperties.TemplateOwnerType.#ctor
+  commentId: M:Dropbox.Api.FileProperties.TemplateOwnerType.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.FileProperties.TemplateOwnerType
+  langs:
+  - csharp
+  - vb
+  name: TemplateOwnerType()
+  nameWithType: TemplateOwnerType.TemplateOwnerType()
+  fullName: Dropbox.Api.FileProperties.TemplateOwnerType.TemplateOwnerType()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/TemplateOwnerType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/TemplateOwnerType.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.FileProperties.TemplateOwnerType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public TemplateOwnerType()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.FileProperties.TemplateOwnerType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileProperties.TemplateOwnerType.IsUser
+  commentId: P:Dropbox.Api.FileProperties.TemplateOwnerType.IsUser
+  id: IsUser
+  parent: Dropbox.Api.FileProperties.TemplateOwnerType
+  langs:
+  - csharp
+  - vb
+  name: IsUser
+  nameWithType: TemplateOwnerType.IsUser
+  fullName: Dropbox.Api.FileProperties.TemplateOwnerType.IsUser
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/TemplateOwnerType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsUser
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/TemplateOwnerType.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Gets a value indicating whether this instance is User</p>\n"
+  example: []
+  syntax:
+    content: public bool IsUser { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsUser As Boolean
+  overload: Dropbox.Api.FileProperties.TemplateOwnerType.IsUser*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileProperties.TemplateOwnerType.AsUser
+  commentId: P:Dropbox.Api.FileProperties.TemplateOwnerType.AsUser
+  id: AsUser
+  parent: Dropbox.Api.FileProperties.TemplateOwnerType
+  langs:
+  - csharp
+  - vb
+  name: AsUser
+  nameWithType: TemplateOwnerType.AsUser
+  fullName: Dropbox.Api.FileProperties.TemplateOwnerType.AsUser
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/TemplateOwnerType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsUser
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/TemplateOwnerType.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Gets this instance as a User, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public TemplateOwnerType.User AsUser { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.FileProperties.TemplateOwnerType.User
+    content.vb: Public ReadOnly Property AsUser As TemplateOwnerType.User
+  overload: Dropbox.Api.FileProperties.TemplateOwnerType.AsUser*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileProperties.TemplateOwnerType.IsTeam
+  commentId: P:Dropbox.Api.FileProperties.TemplateOwnerType.IsTeam
+  id: IsTeam
+  parent: Dropbox.Api.FileProperties.TemplateOwnerType
+  langs:
+  - csharp
+  - vb
+  name: IsTeam
+  nameWithType: TemplateOwnerType.IsTeam
+  fullName: Dropbox.Api.FileProperties.TemplateOwnerType.IsTeam
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/TemplateOwnerType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/TemplateOwnerType.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Gets a value indicating whether this instance is Team</p>\n"
+  example: []
+  syntax:
+    content: public bool IsTeam { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsTeam As Boolean
+  overload: Dropbox.Api.FileProperties.TemplateOwnerType.IsTeam*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileProperties.TemplateOwnerType.AsTeam
+  commentId: P:Dropbox.Api.FileProperties.TemplateOwnerType.AsTeam
+  id: AsTeam
+  parent: Dropbox.Api.FileProperties.TemplateOwnerType
+  langs:
+  - csharp
+  - vb
+  name: AsTeam
+  nameWithType: TemplateOwnerType.AsTeam
+  fullName: Dropbox.Api.FileProperties.TemplateOwnerType.AsTeam
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/TemplateOwnerType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/TemplateOwnerType.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Gets this instance as a Team, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public TemplateOwnerType.Team AsTeam { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.FileProperties.TemplateOwnerType.Team
+    content.vb: Public ReadOnly Property AsTeam As TemplateOwnerType.Team
+  overload: Dropbox.Api.FileProperties.TemplateOwnerType.AsTeam*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileProperties.TemplateOwnerType.IsOther
+  commentId: P:Dropbox.Api.FileProperties.TemplateOwnerType.IsOther
+  id: IsOther
+  parent: Dropbox.Api.FileProperties.TemplateOwnerType
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: TemplateOwnerType.IsOther
+  fullName: Dropbox.Api.FileProperties.TemplateOwnerType.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/TemplateOwnerType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/TemplateOwnerType.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.FileProperties.TemplateOwnerType.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.FileProperties.TemplateOwnerType.AsOther
+  commentId: P:Dropbox.Api.FileProperties.TemplateOwnerType.AsOther
+  id: AsOther
+  parent: Dropbox.Api.FileProperties.TemplateOwnerType
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: TemplateOwnerType.AsOther
+  fullName: Dropbox.Api.FileProperties.TemplateOwnerType.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/TemplateOwnerType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/TemplateOwnerType.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public TemplateOwnerType.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.FileProperties.TemplateOwnerType.Other
+    content.vb: Public ReadOnly Property AsOther As TemplateOwnerType.Other
+  overload: Dropbox.Api.FileProperties.TemplateOwnerType.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.FileProperties
+  commentId: N:Dropbox.Api.FileProperties
+  name: Dropbox.Api.FileProperties
+  nameWithType: Dropbox.Api.FileProperties
+  fullName: Dropbox.Api.FileProperties
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.FileProperties.TemplateOwnerType
+  commentId: T:Dropbox.Api.FileProperties.TemplateOwnerType
+  parent: Dropbox.Api.FileProperties
+  name: TemplateOwnerType
+  nameWithType: TemplateOwnerType
+  fullName: Dropbox.Api.FileProperties.TemplateOwnerType
+- uid: Dropbox.Api.FileProperties.TemplateOwnerType.#ctor*
+  commentId: Overload:Dropbox.Api.FileProperties.TemplateOwnerType.#ctor
+  name: TemplateOwnerType
+  nameWithType: TemplateOwnerType.TemplateOwnerType
+  fullName: Dropbox.Api.FileProperties.TemplateOwnerType.TemplateOwnerType
+- uid: Dropbox.Api.FileProperties.TemplateOwnerType.IsUser*
+  commentId: Overload:Dropbox.Api.FileProperties.TemplateOwnerType.IsUser
+  name: IsUser
+  nameWithType: TemplateOwnerType.IsUser
+  fullName: Dropbox.Api.FileProperties.TemplateOwnerType.IsUser
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.FileProperties.TemplateOwnerType.AsUser*
+  commentId: Overload:Dropbox.Api.FileProperties.TemplateOwnerType.AsUser
+  name: AsUser
+  nameWithType: TemplateOwnerType.AsUser
+  fullName: Dropbox.Api.FileProperties.TemplateOwnerType.AsUser
+- uid: Dropbox.Api.FileProperties.TemplateOwnerType.User
+  commentId: T:Dropbox.Api.FileProperties.TemplateOwnerType.User
+  parent: Dropbox.Api.FileProperties
+  name: TemplateOwnerType.User
+  nameWithType: TemplateOwnerType.User
+  fullName: Dropbox.Api.FileProperties.TemplateOwnerType.User
+- uid: Dropbox.Api.FileProperties.TemplateOwnerType.IsTeam*
+  commentId: Overload:Dropbox.Api.FileProperties.TemplateOwnerType.IsTeam
+  name: IsTeam
+  nameWithType: TemplateOwnerType.IsTeam
+  fullName: Dropbox.Api.FileProperties.TemplateOwnerType.IsTeam
+- uid: Dropbox.Api.FileProperties.TemplateOwnerType.AsTeam*
+  commentId: Overload:Dropbox.Api.FileProperties.TemplateOwnerType.AsTeam
+  name: AsTeam
+  nameWithType: TemplateOwnerType.AsTeam
+  fullName: Dropbox.Api.FileProperties.TemplateOwnerType.AsTeam
+- uid: Dropbox.Api.FileProperties.TemplateOwnerType.Team
+  commentId: T:Dropbox.Api.FileProperties.TemplateOwnerType.Team
+  parent: Dropbox.Api.FileProperties
+  name: TemplateOwnerType.Team
+  nameWithType: TemplateOwnerType.Team
+  fullName: Dropbox.Api.FileProperties.TemplateOwnerType.Team
+- uid: Dropbox.Api.FileProperties.TemplateOwnerType.IsOther*
+  commentId: Overload:Dropbox.Api.FileProperties.TemplateOwnerType.IsOther
+  name: IsOther
+  nameWithType: TemplateOwnerType.IsOther
+  fullName: Dropbox.Api.FileProperties.TemplateOwnerType.IsOther
+- uid: Dropbox.Api.FileProperties.TemplateOwnerType.AsOther*
+  commentId: Overload:Dropbox.Api.FileProperties.TemplateOwnerType.AsOther
+  name: AsOther
+  nameWithType: TemplateOwnerType.AsOther
+  fullName: Dropbox.Api.FileProperties.TemplateOwnerType.AsOther
+- uid: Dropbox.Api.FileProperties.TemplateOwnerType.Other
+  commentId: T:Dropbox.Api.FileProperties.TemplateOwnerType.Other
+  parent: Dropbox.Api.FileProperties
+  name: TemplateOwnerType.Other
+  nameWithType: TemplateOwnerType.Other
+  fullName: Dropbox.Api.FileProperties.TemplateOwnerType.Other
+shouldSkipMarkup: true

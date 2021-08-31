@@ -1,0 +1,134 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.FileProperties.PropertiesSearchContinueError.Other
+  commentId: T:Dropbox.Api.FileProperties.PropertiesSearchContinueError.Other
+  id: PropertiesSearchContinueError.Other
+  parent: Dropbox.Api.FileProperties
+  children:
+  - Dropbox.Api.FileProperties.PropertiesSearchContinueError.Other.Instance
+  langs:
+  - csharp
+  - vb
+  name: PropertiesSearchContinueError.Other
+  nameWithType: PropertiesSearchContinueError.Other
+  fullName: Dropbox.Api.FileProperties.PropertiesSearchContinueError.Other
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertiesSearchContinueError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Other
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertiesSearchContinueError.cs
+    startLine: 224
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>The other object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Other : PropertiesSearchContinueError'
+    content.vb: >-
+      Public NotInheritable Class Other
+          Inherits PropertiesSearchContinueError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.FileProperties.PropertiesSearchContinueError
+  inheritedMembers:
+  - Dropbox.Api.FileProperties.PropertiesSearchContinueError.IsReset
+  - Dropbox.Api.FileProperties.PropertiesSearchContinueError.AsReset
+  - Dropbox.Api.FileProperties.PropertiesSearchContinueError.IsOther
+  - Dropbox.Api.FileProperties.PropertiesSearchContinueError.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.FileProperties.PropertiesSearchContinueError.Other.Instance
+  commentId: F:Dropbox.Api.FileProperties.PropertiesSearchContinueError.Other.Instance
+  id: Instance
+  parent: Dropbox.Api.FileProperties.PropertiesSearchContinueError.Other
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: PropertiesSearchContinueError.Other.Instance
+  fullName: Dropbox.Api.FileProperties.PropertiesSearchContinueError.Other.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertiesSearchContinueError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertiesSearchContinueError.cs
+    startLine: 248
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>A singleton instance of Other</p>\n"
+  example: []
+  syntax:
+    content: public static readonly PropertiesSearchContinueError.Other Instance
+    return:
+      type: Dropbox.Api.FileProperties.PropertiesSearchContinueError.Other
+    content.vb: Public Shared ReadOnly Instance As PropertiesSearchContinueError.Other
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.FileProperties
+  commentId: N:Dropbox.Api.FileProperties
+  name: Dropbox.Api.FileProperties
+  nameWithType: Dropbox.Api.FileProperties
+  fullName: Dropbox.Api.FileProperties
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.FileProperties.PropertiesSearchContinueError
+  commentId: T:Dropbox.Api.FileProperties.PropertiesSearchContinueError
+  parent: Dropbox.Api.FileProperties
+  name: PropertiesSearchContinueError
+  nameWithType: PropertiesSearchContinueError
+  fullName: Dropbox.Api.FileProperties.PropertiesSearchContinueError
+- uid: Dropbox.Api.FileProperties.PropertiesSearchContinueError.IsReset
+  commentId: P:Dropbox.Api.FileProperties.PropertiesSearchContinueError.IsReset
+  parent: Dropbox.Api.FileProperties.PropertiesSearchContinueError
+  name: IsReset
+  nameWithType: PropertiesSearchContinueError.IsReset
+  fullName: Dropbox.Api.FileProperties.PropertiesSearchContinueError.IsReset
+- uid: Dropbox.Api.FileProperties.PropertiesSearchContinueError.AsReset
+  commentId: P:Dropbox.Api.FileProperties.PropertiesSearchContinueError.AsReset
+  parent: Dropbox.Api.FileProperties.PropertiesSearchContinueError
+  name: AsReset
+  nameWithType: PropertiesSearchContinueError.AsReset
+  fullName: Dropbox.Api.FileProperties.PropertiesSearchContinueError.AsReset
+- uid: Dropbox.Api.FileProperties.PropertiesSearchContinueError.IsOther
+  commentId: P:Dropbox.Api.FileProperties.PropertiesSearchContinueError.IsOther
+  parent: Dropbox.Api.FileProperties.PropertiesSearchContinueError
+  name: IsOther
+  nameWithType: PropertiesSearchContinueError.IsOther
+  fullName: Dropbox.Api.FileProperties.PropertiesSearchContinueError.IsOther
+- uid: Dropbox.Api.FileProperties.PropertiesSearchContinueError.AsOther
+  commentId: P:Dropbox.Api.FileProperties.PropertiesSearchContinueError.AsOther
+  parent: Dropbox.Api.FileProperties.PropertiesSearchContinueError
+  name: AsOther
+  nameWithType: PropertiesSearchContinueError.AsOther
+  fullName: Dropbox.Api.FileProperties.PropertiesSearchContinueError.AsOther
+- uid: Dropbox.Api.FileProperties.PropertiesSearchContinueError.Other
+  commentId: T:Dropbox.Api.FileProperties.PropertiesSearchContinueError.Other
+  parent: Dropbox.Api.FileProperties
+  name: PropertiesSearchContinueError.Other
+  nameWithType: PropertiesSearchContinueError.Other
+  fullName: Dropbox.Api.FileProperties.PropertiesSearchContinueError.Other
+shouldSkipMarkup: true

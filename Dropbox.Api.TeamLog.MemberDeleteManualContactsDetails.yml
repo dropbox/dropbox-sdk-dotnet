@@ -1,0 +1,96 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.MemberDeleteManualContactsDetails
+  commentId: T:Dropbox.Api.TeamLog.MemberDeleteManualContactsDetails
+  id: MemberDeleteManualContactsDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.MemberDeleteManualContactsDetails.#ctor
+  langs:
+  - csharp
+  - vb
+  name: MemberDeleteManualContactsDetails
+  nameWithType: MemberDeleteManualContactsDetails
+  fullName: Dropbox.Api.TeamLog.MemberDeleteManualContactsDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberDeleteManualContactsDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: MemberDeleteManualContactsDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberDeleteManualContactsDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Cleared manually added contacts.</p>\n"
+  example: []
+  syntax:
+    content: 'public class MemberDeleteManualContactsDetails : object'
+    content.vb: >-
+      Public Class MemberDeleteManualContactsDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.MemberDeleteManualContactsDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.MemberDeleteManualContactsDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.MemberDeleteManualContactsDetails
+  langs:
+  - csharp
+  - vb
+  name: MemberDeleteManualContactsDetails()
+  nameWithType: MemberDeleteManualContactsDetails.MemberDeleteManualContactsDetails()
+  fullName: Dropbox.Api.TeamLog.MemberDeleteManualContactsDetails.MemberDeleteManualContactsDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberDeleteManualContactsDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberDeleteManualContactsDetails.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.MemberDeleteManualContactsDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public MemberDeleteManualContactsDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.MemberDeleteManualContactsDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.MemberDeleteManualContactsDetails
+  commentId: T:Dropbox.Api.TeamLog.MemberDeleteManualContactsDetails
+  parent: Dropbox.Api.TeamLog
+  name: MemberDeleteManualContactsDetails
+  nameWithType: MemberDeleteManualContactsDetails
+  fullName: Dropbox.Api.TeamLog.MemberDeleteManualContactsDetails
+- uid: Dropbox.Api.TeamLog.MemberDeleteManualContactsDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberDeleteManualContactsDetails.#ctor
+  name: MemberDeleteManualContactsDetails
+  nameWithType: MemberDeleteManualContactsDetails.MemberDeleteManualContactsDetails
+  fullName: Dropbox.Api.TeamLog.MemberDeleteManualContactsDetails.MemberDeleteManualContactsDetails
+shouldSkipMarkup: true

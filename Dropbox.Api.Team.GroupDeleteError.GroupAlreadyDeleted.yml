@@ -1,0 +1,162 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.GroupDeleteError.GroupAlreadyDeleted
+  commentId: T:Dropbox.Api.Team.GroupDeleteError.GroupAlreadyDeleted
+  id: GroupDeleteError.GroupAlreadyDeleted
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.GroupDeleteError.GroupAlreadyDeleted.Instance
+  langs:
+  - csharp
+  - vb
+  name: GroupDeleteError.GroupAlreadyDeleted
+  nameWithType: GroupDeleteError.GroupAlreadyDeleted
+  fullName: Dropbox.Api.Team.GroupDeleteError.GroupAlreadyDeleted
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupDeleteError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GroupAlreadyDeleted
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupDeleteError.cs
+    startLine: 215
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>This group has already been deleted.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class GroupAlreadyDeleted : GroupDeleteError'
+    content.vb: >-
+      Public NotInheritable Class GroupAlreadyDeleted
+          Inherits GroupDeleteError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.GroupDeleteError
+  inheritedMembers:
+  - Dropbox.Api.Team.GroupDeleteError.IsGroupAlreadyDeleted
+  - Dropbox.Api.Team.GroupDeleteError.AsGroupAlreadyDeleted
+  - Dropbox.Api.Team.GroupDeleteError.IsSystemManagedGroupDisallowed
+  - Dropbox.Api.Team.GroupDeleteError.AsSystemManagedGroupDisallowed
+  - Dropbox.Api.Team.GroupDeleteError.IsGroupNotFound
+  - Dropbox.Api.Team.GroupDeleteError.AsGroupNotFound
+  - Dropbox.Api.Team.GroupDeleteError.IsOther
+  - Dropbox.Api.Team.GroupDeleteError.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Team.GroupDeleteError.GroupAlreadyDeleted.Instance
+  commentId: F:Dropbox.Api.Team.GroupDeleteError.GroupAlreadyDeleted.Instance
+  id: Instance
+  parent: Dropbox.Api.Team.GroupDeleteError.GroupAlreadyDeleted
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: GroupDeleteError.GroupAlreadyDeleted.Instance
+  fullName: Dropbox.Api.Team.GroupDeleteError.GroupAlreadyDeleted.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupDeleteError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupDeleteError.cs
+    startLine: 240
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>A singleton instance of GroupAlreadyDeleted</p>\n"
+  example: []
+  syntax:
+    content: public static readonly GroupDeleteError.GroupAlreadyDeleted Instance
+    return:
+      type: Dropbox.Api.Team.GroupDeleteError.GroupAlreadyDeleted
+    content.vb: Public Shared ReadOnly Instance As GroupDeleteError.GroupAlreadyDeleted
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.GroupDeleteError
+  commentId: T:Dropbox.Api.Team.GroupDeleteError
+  parent: Dropbox.Api.Team
+  name: GroupDeleteError
+  nameWithType: GroupDeleteError
+  fullName: Dropbox.Api.Team.GroupDeleteError
+- uid: Dropbox.Api.Team.GroupDeleteError.IsGroupAlreadyDeleted
+  commentId: P:Dropbox.Api.Team.GroupDeleteError.IsGroupAlreadyDeleted
+  parent: Dropbox.Api.Team.GroupDeleteError
+  name: IsGroupAlreadyDeleted
+  nameWithType: GroupDeleteError.IsGroupAlreadyDeleted
+  fullName: Dropbox.Api.Team.GroupDeleteError.IsGroupAlreadyDeleted
+- uid: Dropbox.Api.Team.GroupDeleteError.AsGroupAlreadyDeleted
+  commentId: P:Dropbox.Api.Team.GroupDeleteError.AsGroupAlreadyDeleted
+  parent: Dropbox.Api.Team.GroupDeleteError
+  name: AsGroupAlreadyDeleted
+  nameWithType: GroupDeleteError.AsGroupAlreadyDeleted
+  fullName: Dropbox.Api.Team.GroupDeleteError.AsGroupAlreadyDeleted
+- uid: Dropbox.Api.Team.GroupDeleteError.IsSystemManagedGroupDisallowed
+  commentId: P:Dropbox.Api.Team.GroupDeleteError.IsSystemManagedGroupDisallowed
+  parent: Dropbox.Api.Team.GroupDeleteError
+  name: IsSystemManagedGroupDisallowed
+  nameWithType: GroupDeleteError.IsSystemManagedGroupDisallowed
+  fullName: Dropbox.Api.Team.GroupDeleteError.IsSystemManagedGroupDisallowed
+- uid: Dropbox.Api.Team.GroupDeleteError.AsSystemManagedGroupDisallowed
+  commentId: P:Dropbox.Api.Team.GroupDeleteError.AsSystemManagedGroupDisallowed
+  parent: Dropbox.Api.Team.GroupDeleteError
+  name: AsSystemManagedGroupDisallowed
+  nameWithType: GroupDeleteError.AsSystemManagedGroupDisallowed
+  fullName: Dropbox.Api.Team.GroupDeleteError.AsSystemManagedGroupDisallowed
+- uid: Dropbox.Api.Team.GroupDeleteError.IsGroupNotFound
+  commentId: P:Dropbox.Api.Team.GroupDeleteError.IsGroupNotFound
+  parent: Dropbox.Api.Team.GroupDeleteError
+  name: IsGroupNotFound
+  nameWithType: GroupDeleteError.IsGroupNotFound
+  fullName: Dropbox.Api.Team.GroupDeleteError.IsGroupNotFound
+- uid: Dropbox.Api.Team.GroupDeleteError.AsGroupNotFound
+  commentId: P:Dropbox.Api.Team.GroupDeleteError.AsGroupNotFound
+  parent: Dropbox.Api.Team.GroupDeleteError
+  name: AsGroupNotFound
+  nameWithType: GroupDeleteError.AsGroupNotFound
+  fullName: Dropbox.Api.Team.GroupDeleteError.AsGroupNotFound
+- uid: Dropbox.Api.Team.GroupDeleteError.IsOther
+  commentId: P:Dropbox.Api.Team.GroupDeleteError.IsOther
+  parent: Dropbox.Api.Team.GroupDeleteError
+  name: IsOther
+  nameWithType: GroupDeleteError.IsOther
+  fullName: Dropbox.Api.Team.GroupDeleteError.IsOther
+- uid: Dropbox.Api.Team.GroupDeleteError.AsOther
+  commentId: P:Dropbox.Api.Team.GroupDeleteError.AsOther
+  parent: Dropbox.Api.Team.GroupDeleteError
+  name: AsOther
+  nameWithType: GroupDeleteError.AsOther
+  fullName: Dropbox.Api.Team.GroupDeleteError.AsOther
+- uid: Dropbox.Api.Team.GroupDeleteError.GroupAlreadyDeleted
+  commentId: T:Dropbox.Api.Team.GroupDeleteError.GroupAlreadyDeleted
+  parent: Dropbox.Api.Team
+  name: GroupDeleteError.GroupAlreadyDeleted
+  nameWithType: GroupDeleteError.GroupAlreadyDeleted
+  fullName: Dropbox.Api.Team.GroupDeleteError.GroupAlreadyDeleted
+shouldSkipMarkup: true

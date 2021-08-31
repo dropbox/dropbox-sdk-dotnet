@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.ApiSessionLogInfo
+  commentId: T:Dropbox.Api.TeamLog.ApiSessionLogInfo
+  id: ApiSessionLogInfo
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.ApiSessionLogInfo.#ctor
+  - Dropbox.Api.TeamLog.ApiSessionLogInfo.#ctor(System.String)
+  - Dropbox.Api.TeamLog.ApiSessionLogInfo.RequestId
+  langs:
+  - csharp
+  - vb
+  name: ApiSessionLogInfo
+  nameWithType: ApiSessionLogInfo
+  fullName: Dropbox.Api.TeamLog.ApiSessionLogInfo
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ApiSessionLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ApiSessionLogInfo
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ApiSessionLogInfo.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Api session.</p>\n"
+  example: []
+  syntax:
+    content: 'public class ApiSessionLogInfo : object'
+    content.vb: >-
+      Public Class ApiSessionLogInfo
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.ApiSessionLogInfo.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.ApiSessionLogInfo.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.ApiSessionLogInfo
+  langs:
+  - csharp
+  - vb
+  name: ApiSessionLogInfo(String)
+  nameWithType: ApiSessionLogInfo.ApiSessionLogInfo(String)
+  fullName: Dropbox.Api.TeamLog.ApiSessionLogInfo.ApiSessionLogInfo(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ApiSessionLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ApiSessionLogInfo.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.ApiSessionLogInfo\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public ApiSessionLogInfo(string requestId)
+    parameters:
+    - id: requestId
+      type: System.String
+      description: Api request ID.
+    content.vb: Public Sub New(requestId As String)
+  overload: Dropbox.Api.TeamLog.ApiSessionLogInfo.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.ApiSessionLogInfo.#ctor
+  commentId: M:Dropbox.Api.TeamLog.ApiSessionLogInfo.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.ApiSessionLogInfo
+  langs:
+  - csharp
+  - vb
+  name: ApiSessionLogInfo()
+  nameWithType: ApiSessionLogInfo.ApiSessionLogInfo()
+  fullName: Dropbox.Api.TeamLog.ApiSessionLogInfo.ApiSessionLogInfo()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ApiSessionLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ApiSessionLogInfo.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.ApiSessionLogInfo\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public ApiSessionLogInfo()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.ApiSessionLogInfo.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.ApiSessionLogInfo.RequestId
+  commentId: P:Dropbox.Api.TeamLog.ApiSessionLogInfo.RequestId
+  id: RequestId
+  parent: Dropbox.Api.TeamLog.ApiSessionLogInfo
+  langs:
+  - csharp
+  - vb
+  name: RequestId
+  nameWithType: ApiSessionLogInfo.RequestId
+  fullName: Dropbox.Api.TeamLog.ApiSessionLogInfo.RequestId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ApiSessionLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: RequestId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ApiSessionLogInfo.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Api request ID.</p>\n"
+  example: []
+  syntax:
+    content: public string RequestId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property RequestId As String
+  overload: Dropbox.Api.TeamLog.ApiSessionLogInfo.RequestId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.ApiSessionLogInfo
+  commentId: T:Dropbox.Api.TeamLog.ApiSessionLogInfo
+  parent: Dropbox.Api.TeamLog
+  name: ApiSessionLogInfo
+  nameWithType: ApiSessionLogInfo
+  fullName: Dropbox.Api.TeamLog.ApiSessionLogInfo
+- uid: Dropbox.Api.TeamLog.ApiSessionLogInfo.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.ApiSessionLogInfo.#ctor
+  name: ApiSessionLogInfo
+  nameWithType: ApiSessionLogInfo.ApiSessionLogInfo
+  fullName: Dropbox.Api.TeamLog.ApiSessionLogInfo.ApiSessionLogInfo
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.ApiSessionLogInfo.RequestId*
+  commentId: Overload:Dropbox.Api.TeamLog.ApiSessionLogInfo.RequestId
+  name: RequestId
+  nameWithType: ApiSessionLogInfo.RequestId
+  fullName: Dropbox.Api.TeamLog.ApiSessionLogInfo.RequestId
+shouldSkipMarkup: true

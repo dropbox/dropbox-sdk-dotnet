@@ -1,0 +1,148 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.UploadErrorWithProperties.Other
+  commentId: T:Dropbox.Api.Files.UploadErrorWithProperties.Other
+  id: UploadErrorWithProperties.Other
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.UploadErrorWithProperties.Other.Instance
+  langs:
+  - csharp
+  - vb
+  name: UploadErrorWithProperties.Other
+  nameWithType: UploadErrorWithProperties.Other
+  fullName: Dropbox.Api.Files.UploadErrorWithProperties.Other
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadErrorWithProperties.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Other
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadErrorWithProperties.cs
+    startLine: 371
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The other object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Other : UploadErrorWithProperties'
+    content.vb: >-
+      Public NotInheritable Class Other
+          Inherits UploadErrorWithProperties
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Files.UploadErrorWithProperties
+  inheritedMembers:
+  - Dropbox.Api.Files.UploadErrorWithProperties.IsPath
+  - Dropbox.Api.Files.UploadErrorWithProperties.AsPath
+  - Dropbox.Api.Files.UploadErrorWithProperties.IsPropertiesError
+  - Dropbox.Api.Files.UploadErrorWithProperties.AsPropertiesError
+  - Dropbox.Api.Files.UploadErrorWithProperties.IsOther
+  - Dropbox.Api.Files.UploadErrorWithProperties.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Files.UploadErrorWithProperties.Other.Instance
+  commentId: F:Dropbox.Api.Files.UploadErrorWithProperties.Other.Instance
+  id: Instance
+  parent: Dropbox.Api.Files.UploadErrorWithProperties.Other
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: UploadErrorWithProperties.Other.Instance
+  fullName: Dropbox.Api.Files.UploadErrorWithProperties.Other.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadErrorWithProperties.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadErrorWithProperties.cs
+    startLine: 395
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>A singleton instance of Other</p>\n"
+  example: []
+  syntax:
+    content: public static readonly UploadErrorWithProperties.Other Instance
+    return:
+      type: Dropbox.Api.Files.UploadErrorWithProperties.Other
+    content.vb: Public Shared ReadOnly Instance As UploadErrorWithProperties.Other
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.UploadErrorWithProperties
+  commentId: T:Dropbox.Api.Files.UploadErrorWithProperties
+  parent: Dropbox.Api.Files
+  name: UploadErrorWithProperties
+  nameWithType: UploadErrorWithProperties
+  fullName: Dropbox.Api.Files.UploadErrorWithProperties
+- uid: Dropbox.Api.Files.UploadErrorWithProperties.IsPath
+  commentId: P:Dropbox.Api.Files.UploadErrorWithProperties.IsPath
+  parent: Dropbox.Api.Files.UploadErrorWithProperties
+  name: IsPath
+  nameWithType: UploadErrorWithProperties.IsPath
+  fullName: Dropbox.Api.Files.UploadErrorWithProperties.IsPath
+- uid: Dropbox.Api.Files.UploadErrorWithProperties.AsPath
+  commentId: P:Dropbox.Api.Files.UploadErrorWithProperties.AsPath
+  parent: Dropbox.Api.Files.UploadErrorWithProperties
+  name: AsPath
+  nameWithType: UploadErrorWithProperties.AsPath
+  fullName: Dropbox.Api.Files.UploadErrorWithProperties.AsPath
+- uid: Dropbox.Api.Files.UploadErrorWithProperties.IsPropertiesError
+  commentId: P:Dropbox.Api.Files.UploadErrorWithProperties.IsPropertiesError
+  parent: Dropbox.Api.Files.UploadErrorWithProperties
+  name: IsPropertiesError
+  nameWithType: UploadErrorWithProperties.IsPropertiesError
+  fullName: Dropbox.Api.Files.UploadErrorWithProperties.IsPropertiesError
+- uid: Dropbox.Api.Files.UploadErrorWithProperties.AsPropertiesError
+  commentId: P:Dropbox.Api.Files.UploadErrorWithProperties.AsPropertiesError
+  parent: Dropbox.Api.Files.UploadErrorWithProperties
+  name: AsPropertiesError
+  nameWithType: UploadErrorWithProperties.AsPropertiesError
+  fullName: Dropbox.Api.Files.UploadErrorWithProperties.AsPropertiesError
+- uid: Dropbox.Api.Files.UploadErrorWithProperties.IsOther
+  commentId: P:Dropbox.Api.Files.UploadErrorWithProperties.IsOther
+  parent: Dropbox.Api.Files.UploadErrorWithProperties
+  name: IsOther
+  nameWithType: UploadErrorWithProperties.IsOther
+  fullName: Dropbox.Api.Files.UploadErrorWithProperties.IsOther
+- uid: Dropbox.Api.Files.UploadErrorWithProperties.AsOther
+  commentId: P:Dropbox.Api.Files.UploadErrorWithProperties.AsOther
+  parent: Dropbox.Api.Files.UploadErrorWithProperties
+  name: AsOther
+  nameWithType: UploadErrorWithProperties.AsOther
+  fullName: Dropbox.Api.Files.UploadErrorWithProperties.AsOther
+- uid: Dropbox.Api.Files.UploadErrorWithProperties.Other
+  commentId: T:Dropbox.Api.Files.UploadErrorWithProperties.Other
+  parent: Dropbox.Api.Files
+  name: UploadErrorWithProperties.Other
+  nameWithType: UploadErrorWithProperties.Other
+  fullName: Dropbox.Api.Files.UploadErrorWithProperties.Other
+shouldSkipMarkup: true

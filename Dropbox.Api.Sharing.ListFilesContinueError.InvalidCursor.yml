@@ -1,0 +1,151 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.ListFilesContinueError.InvalidCursor
+  commentId: T:Dropbox.Api.Sharing.ListFilesContinueError.InvalidCursor
+  id: ListFilesContinueError.InvalidCursor
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.ListFilesContinueError.InvalidCursor.Instance
+  langs:
+  - csharp
+  - vb
+  name: ListFilesContinueError.InvalidCursor
+  nameWithType: ListFilesContinueError.InvalidCursor
+  fullName: Dropbox.Api.Sharing.ListFilesContinueError.InvalidCursor
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFilesContinueError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: InvalidCursor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFilesContinueError.cs
+    startLine: 282
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p><xref href=\"Dropbox.Api.Sharing.ListFilesContinueArg.Cursor\" data-throw-if-not-resolved=\"false\"></xref> is\ninvalid.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class InvalidCursor : ListFilesContinueError'
+    content.vb: >-
+      Public NotInheritable Class InvalidCursor
+          Inherits ListFilesContinueError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Sharing.ListFilesContinueError
+  inheritedMembers:
+  - Dropbox.Api.Sharing.ListFilesContinueError.IsUserError
+  - Dropbox.Api.Sharing.ListFilesContinueError.AsUserError
+  - Dropbox.Api.Sharing.ListFilesContinueError.IsInvalidCursor
+  - Dropbox.Api.Sharing.ListFilesContinueError.AsInvalidCursor
+  - Dropbox.Api.Sharing.ListFilesContinueError.IsOther
+  - Dropbox.Api.Sharing.ListFilesContinueError.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Sharing.ListFilesContinueError.InvalidCursor.Instance
+  commentId: F:Dropbox.Api.Sharing.ListFilesContinueError.InvalidCursor.Instance
+  id: Instance
+  parent: Dropbox.Api.Sharing.ListFilesContinueError.InvalidCursor
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: ListFilesContinueError.InvalidCursor.Instance
+  fullName: Dropbox.Api.Sharing.ListFilesContinueError.InvalidCursor.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFilesContinueError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFilesContinueError.cs
+    startLine: 307
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>A singleton instance of InvalidCursor</p>\n"
+  example: []
+  syntax:
+    content: public static readonly ListFilesContinueError.InvalidCursor Instance
+    return:
+      type: Dropbox.Api.Sharing.ListFilesContinueError.InvalidCursor
+    content.vb: Public Shared ReadOnly Instance As ListFilesContinueError.InvalidCursor
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Sharing.ListFilesContinueArg.Cursor
+  commentId: P:Dropbox.Api.Sharing.ListFilesContinueArg.Cursor
+  isExternal: true
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.ListFilesContinueError
+  commentId: T:Dropbox.Api.Sharing.ListFilesContinueError
+  parent: Dropbox.Api.Sharing
+  name: ListFilesContinueError
+  nameWithType: ListFilesContinueError
+  fullName: Dropbox.Api.Sharing.ListFilesContinueError
+- uid: Dropbox.Api.Sharing.ListFilesContinueError.IsUserError
+  commentId: P:Dropbox.Api.Sharing.ListFilesContinueError.IsUserError
+  parent: Dropbox.Api.Sharing.ListFilesContinueError
+  name: IsUserError
+  nameWithType: ListFilesContinueError.IsUserError
+  fullName: Dropbox.Api.Sharing.ListFilesContinueError.IsUserError
+- uid: Dropbox.Api.Sharing.ListFilesContinueError.AsUserError
+  commentId: P:Dropbox.Api.Sharing.ListFilesContinueError.AsUserError
+  parent: Dropbox.Api.Sharing.ListFilesContinueError
+  name: AsUserError
+  nameWithType: ListFilesContinueError.AsUserError
+  fullName: Dropbox.Api.Sharing.ListFilesContinueError.AsUserError
+- uid: Dropbox.Api.Sharing.ListFilesContinueError.IsInvalidCursor
+  commentId: P:Dropbox.Api.Sharing.ListFilesContinueError.IsInvalidCursor
+  parent: Dropbox.Api.Sharing.ListFilesContinueError
+  name: IsInvalidCursor
+  nameWithType: ListFilesContinueError.IsInvalidCursor
+  fullName: Dropbox.Api.Sharing.ListFilesContinueError.IsInvalidCursor
+- uid: Dropbox.Api.Sharing.ListFilesContinueError.AsInvalidCursor
+  commentId: P:Dropbox.Api.Sharing.ListFilesContinueError.AsInvalidCursor
+  parent: Dropbox.Api.Sharing.ListFilesContinueError
+  name: AsInvalidCursor
+  nameWithType: ListFilesContinueError.AsInvalidCursor
+  fullName: Dropbox.Api.Sharing.ListFilesContinueError.AsInvalidCursor
+- uid: Dropbox.Api.Sharing.ListFilesContinueError.IsOther
+  commentId: P:Dropbox.Api.Sharing.ListFilesContinueError.IsOther
+  parent: Dropbox.Api.Sharing.ListFilesContinueError
+  name: IsOther
+  nameWithType: ListFilesContinueError.IsOther
+  fullName: Dropbox.Api.Sharing.ListFilesContinueError.IsOther
+- uid: Dropbox.Api.Sharing.ListFilesContinueError.AsOther
+  commentId: P:Dropbox.Api.Sharing.ListFilesContinueError.AsOther
+  parent: Dropbox.Api.Sharing.ListFilesContinueError
+  name: AsOther
+  nameWithType: ListFilesContinueError.AsOther
+  fullName: Dropbox.Api.Sharing.ListFilesContinueError.AsOther
+- uid: Dropbox.Api.Sharing.ListFilesContinueError.InvalidCursor
+  commentId: T:Dropbox.Api.Sharing.ListFilesContinueError.InvalidCursor
+  parent: Dropbox.Api.Sharing
+  name: ListFilesContinueError.InvalidCursor
+  nameWithType: ListFilesContinueError.InvalidCursor
+  fullName: Dropbox.Api.Sharing.ListFilesContinueError.InvalidCursor
+shouldSkipMarkup: true

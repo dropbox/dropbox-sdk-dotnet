@@ -1,0 +1,96 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.EmmCreateUsageReportDetails
+  commentId: T:Dropbox.Api.TeamLog.EmmCreateUsageReportDetails
+  id: EmmCreateUsageReportDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.EmmCreateUsageReportDetails.#ctor
+  langs:
+  - csharp
+  - vb
+  name: EmmCreateUsageReportDetails
+  nameWithType: EmmCreateUsageReportDetails
+  fullName: Dropbox.Api.TeamLog.EmmCreateUsageReportDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EmmCreateUsageReportDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: EmmCreateUsageReportDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EmmCreateUsageReportDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Created EMM mobile app usage report.</p>\n"
+  example: []
+  syntax:
+    content: 'public class EmmCreateUsageReportDetails : object'
+    content.vb: >-
+      Public Class EmmCreateUsageReportDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.EmmCreateUsageReportDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.EmmCreateUsageReportDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.EmmCreateUsageReportDetails
+  langs:
+  - csharp
+  - vb
+  name: EmmCreateUsageReportDetails()
+  nameWithType: EmmCreateUsageReportDetails.EmmCreateUsageReportDetails()
+  fullName: Dropbox.Api.TeamLog.EmmCreateUsageReportDetails.EmmCreateUsageReportDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EmmCreateUsageReportDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EmmCreateUsageReportDetails.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.EmmCreateUsageReportDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public EmmCreateUsageReportDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.EmmCreateUsageReportDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.EmmCreateUsageReportDetails
+  commentId: T:Dropbox.Api.TeamLog.EmmCreateUsageReportDetails
+  parent: Dropbox.Api.TeamLog
+  name: EmmCreateUsageReportDetails
+  nameWithType: EmmCreateUsageReportDetails
+  fullName: Dropbox.Api.TeamLog.EmmCreateUsageReportDetails
+- uid: Dropbox.Api.TeamLog.EmmCreateUsageReportDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.EmmCreateUsageReportDetails.#ctor
+  name: EmmCreateUsageReportDetails
+  nameWithType: EmmCreateUsageReportDetails.EmmCreateUsageReportDetails
+  fullName: Dropbox.Api.TeamLog.EmmCreateUsageReportDetails.EmmCreateUsageReportDetails
+shouldSkipMarkup: true

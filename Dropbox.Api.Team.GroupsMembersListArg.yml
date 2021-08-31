@@ -1,0 +1,241 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.GroupsMembersListArg
+  commentId: T:Dropbox.Api.Team.GroupsMembersListArg
+  id: GroupsMembersListArg
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.GroupsMembersListArg.#ctor
+  - Dropbox.Api.Team.GroupsMembersListArg.#ctor(Dropbox.Api.Team.GroupSelector,System.UInt32)
+  - Dropbox.Api.Team.GroupsMembersListArg.Group
+  - Dropbox.Api.Team.GroupsMembersListArg.Limit
+  langs:
+  - csharp
+  - vb
+  name: GroupsMembersListArg
+  nameWithType: GroupsMembersListArg
+  fullName: Dropbox.Api.Team.GroupsMembersListArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsMembersListArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GroupsMembersListArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsMembersListArg.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The groups members list arg object</p>\n"
+  example: []
+  syntax:
+    content: 'public class GroupsMembersListArg : object'
+    content.vb: >-
+      Public Class GroupsMembersListArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.GroupsMembersListArg.#ctor(Dropbox.Api.Team.GroupSelector,System.UInt32)
+  commentId: M:Dropbox.Api.Team.GroupsMembersListArg.#ctor(Dropbox.Api.Team.GroupSelector,System.UInt32)
+  id: '#ctor(Dropbox.Api.Team.GroupSelector,System.UInt32)'
+  parent: Dropbox.Api.Team.GroupsMembersListArg
+  langs:
+  - csharp
+  - vb
+  name: GroupsMembersListArg(GroupSelector, UInt32)
+  nameWithType: GroupsMembersListArg.GroupsMembersListArg(GroupSelector, UInt32)
+  fullName: Dropbox.Api.Team.GroupsMembersListArg.GroupsMembersListArg(Dropbox.Api.Team.GroupSelector, System.UInt32)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsMembersListArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsMembersListArg.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.GroupsMembersListArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public GroupsMembersListArg(GroupSelector group, uint limit = null)
+    parameters:
+    - id: group
+      type: Dropbox.Api.Team.GroupSelector
+      description: The group whose members are to be listed.
+    - id: limit
+      type: System.UInt32
+      description: Number of results to return per call.
+    content.vb: Public Sub New(group As GroupSelector, limit As UInteger = Nothing)
+  overload: Dropbox.Api.Team.GroupsMembersListArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.GroupsMembersListArg.#ctor
+  commentId: M:Dropbox.Api.Team.GroupsMembersListArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.GroupsMembersListArg
+  langs:
+  - csharp
+  - vb
+  name: GroupsMembersListArg()
+  nameWithType: GroupsMembersListArg.GroupsMembersListArg()
+  fullName: Dropbox.Api.Team.GroupsMembersListArg.GroupsMembersListArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsMembersListArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsMembersListArg.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.GroupsMembersListArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public GroupsMembersListArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.GroupsMembersListArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.GroupsMembersListArg.Group
+  commentId: P:Dropbox.Api.Team.GroupsMembersListArg.Group
+  id: Group
+  parent: Dropbox.Api.Team.GroupsMembersListArg
+  langs:
+  - csharp
+  - vb
+  name: Group
+  nameWithType: GroupsMembersListArg.Group
+  fullName: Dropbox.Api.Team.GroupsMembersListArg.Group
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsMembersListArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Group
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsMembersListArg.cs
+    startLine: 71
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The group whose members are to be listed.</p>\n"
+  example: []
+  syntax:
+    content: public GroupSelector Group { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.GroupSelector
+    content.vb: Public Property Group As GroupSelector
+  overload: Dropbox.Api.Team.GroupsMembersListArg.Group*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.GroupsMembersListArg.Limit
+  commentId: P:Dropbox.Api.Team.GroupsMembersListArg.Limit
+  id: Limit
+  parent: Dropbox.Api.Team.GroupsMembersListArg
+  langs:
+  - csharp
+  - vb
+  name: Limit
+  nameWithType: GroupsMembersListArg.Limit
+  fullName: Dropbox.Api.Team.GroupsMembersListArg.Limit
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsMembersListArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Limit
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsMembersListArg.cs
+    startLine: 76
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Number of results to return per call.</p>\n"
+  example: []
+  syntax:
+    content: public uint Limit { get; protected set; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public Property Limit As UInteger
+  overload: Dropbox.Api.Team.GroupsMembersListArg.Limit*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.GroupsMembersListArg
+  commentId: T:Dropbox.Api.Team.GroupsMembersListArg
+  parent: Dropbox.Api.Team
+  name: GroupsMembersListArg
+  nameWithType: GroupsMembersListArg
+  fullName: Dropbox.Api.Team.GroupsMembersListArg
+- uid: Dropbox.Api.Team.GroupsMembersListArg.#ctor*
+  commentId: Overload:Dropbox.Api.Team.GroupsMembersListArg.#ctor
+  name: GroupsMembersListArg
+  nameWithType: GroupsMembersListArg.GroupsMembersListArg
+  fullName: Dropbox.Api.Team.GroupsMembersListArg.GroupsMembersListArg
+- uid: Dropbox.Api.Team.GroupSelector
+  commentId: T:Dropbox.Api.Team.GroupSelector
+  parent: Dropbox.Api.Team
+  name: GroupSelector
+  nameWithType: GroupSelector
+  fullName: Dropbox.Api.Team.GroupSelector
+- uid: System.UInt32
+  isExternal: true
+  name: UInt32
+  nameWithType: UInt32
+  fullName: System.UInt32
+- uid: Dropbox.Api.Team.GroupsMembersListArg.Group*
+  commentId: Overload:Dropbox.Api.Team.GroupsMembersListArg.Group
+  name: Group
+  nameWithType: GroupsMembersListArg.Group
+  fullName: Dropbox.Api.Team.GroupsMembersListArg.Group
+- uid: Dropbox.Api.Team.GroupsMembersListArg.Limit*
+  commentId: Overload:Dropbox.Api.Team.GroupsMembersListArg.Limit
+  name: Limit
+  nameWithType: GroupsMembersListArg.Limit
+  fullName: Dropbox.Api.Team.GroupsMembersListArg.Limit
+shouldSkipMarkup: true

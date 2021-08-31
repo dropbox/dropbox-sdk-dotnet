@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.PaperContentRemoveMemberDetails
+  commentId: T:Dropbox.Api.TeamLog.PaperContentRemoveMemberDetails
+  id: PaperContentRemoveMemberDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.PaperContentRemoveMemberDetails.#ctor
+  - Dropbox.Api.TeamLog.PaperContentRemoveMemberDetails.#ctor(System.String)
+  - Dropbox.Api.TeamLog.PaperContentRemoveMemberDetails.EventUuid
+  langs:
+  - csharp
+  - vb
+  name: PaperContentRemoveMemberDetails
+  nameWithType: PaperContentRemoveMemberDetails
+  fullName: Dropbox.Api.TeamLog.PaperContentRemoveMemberDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperContentRemoveMemberDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PaperContentRemoveMemberDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperContentRemoveMemberDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Removed users and/or groups from Paper doc/folder.</p>\n"
+  example: []
+  syntax:
+    content: 'public class PaperContentRemoveMemberDetails : object'
+    content.vb: >-
+      Public Class PaperContentRemoveMemberDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.PaperContentRemoveMemberDetails.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.PaperContentRemoveMemberDetails.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.PaperContentRemoveMemberDetails
+  langs:
+  - csharp
+  - vb
+  name: PaperContentRemoveMemberDetails(String)
+  nameWithType: PaperContentRemoveMemberDetails.PaperContentRemoveMemberDetails(String)
+  fullName: Dropbox.Api.TeamLog.PaperContentRemoveMemberDetails.PaperContentRemoveMemberDetails(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperContentRemoveMemberDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperContentRemoveMemberDetails.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.PaperContentRemoveMemberDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public PaperContentRemoveMemberDetails(string eventUuid)
+    parameters:
+    - id: eventUuid
+      type: System.String
+      description: Event unique identifier.
+    content.vb: Public Sub New(eventUuid As String)
+  overload: Dropbox.Api.TeamLog.PaperContentRemoveMemberDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.PaperContentRemoveMemberDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.PaperContentRemoveMemberDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.PaperContentRemoveMemberDetails
+  langs:
+  - csharp
+  - vb
+  name: PaperContentRemoveMemberDetails()
+  nameWithType: PaperContentRemoveMemberDetails.PaperContentRemoveMemberDetails()
+  fullName: Dropbox.Api.TeamLog.PaperContentRemoveMemberDetails.PaperContentRemoveMemberDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperContentRemoveMemberDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperContentRemoveMemberDetails.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.PaperContentRemoveMemberDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public PaperContentRemoveMemberDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.PaperContentRemoveMemberDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.PaperContentRemoveMemberDetails.EventUuid
+  commentId: P:Dropbox.Api.TeamLog.PaperContentRemoveMemberDetails.EventUuid
+  id: EventUuid
+  parent: Dropbox.Api.TeamLog.PaperContentRemoveMemberDetails
+  langs:
+  - csharp
+  - vb
+  name: EventUuid
+  nameWithType: PaperContentRemoveMemberDetails.EventUuid
+  fullName: Dropbox.Api.TeamLog.PaperContentRemoveMemberDetails.EventUuid
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperContentRemoveMemberDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: EventUuid
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperContentRemoveMemberDetails.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Event unique identifier.</p>\n"
+  example: []
+  syntax:
+    content: public string EventUuid { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property EventUuid As String
+  overload: Dropbox.Api.TeamLog.PaperContentRemoveMemberDetails.EventUuid*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.PaperContentRemoveMemberDetails
+  commentId: T:Dropbox.Api.TeamLog.PaperContentRemoveMemberDetails
+  parent: Dropbox.Api.TeamLog
+  name: PaperContentRemoveMemberDetails
+  nameWithType: PaperContentRemoveMemberDetails
+  fullName: Dropbox.Api.TeamLog.PaperContentRemoveMemberDetails
+- uid: Dropbox.Api.TeamLog.PaperContentRemoveMemberDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.PaperContentRemoveMemberDetails.#ctor
+  name: PaperContentRemoveMemberDetails
+  nameWithType: PaperContentRemoveMemberDetails.PaperContentRemoveMemberDetails
+  fullName: Dropbox.Api.TeamLog.PaperContentRemoveMemberDetails.PaperContentRemoveMemberDetails
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.PaperContentRemoveMemberDetails.EventUuid*
+  commentId: Overload:Dropbox.Api.TeamLog.PaperContentRemoveMemberDetails.EventUuid
+  name: EventUuid
+  nameWithType: PaperContentRemoveMemberDetails.EventUuid
+  fullName: Dropbox.Api.TeamLog.PaperContentRemoveMemberDetails.EventUuid
+shouldSkipMarkup: true

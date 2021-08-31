@@ -1,0 +1,339 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.NamespaceMetadata
+  commentId: T:Dropbox.Api.Team.NamespaceMetadata
+  id: NamespaceMetadata
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.NamespaceMetadata.#ctor
+  - Dropbox.Api.Team.NamespaceMetadata.#ctor(System.String,System.String,Dropbox.Api.Team.NamespaceType,System.String)
+  - Dropbox.Api.Team.NamespaceMetadata.Name
+  - Dropbox.Api.Team.NamespaceMetadata.NamespaceId
+  - Dropbox.Api.Team.NamespaceMetadata.NamespaceType
+  - Dropbox.Api.Team.NamespaceMetadata.TeamMemberId
+  langs:
+  - csharp
+  - vb
+  name: NamespaceMetadata
+  nameWithType: NamespaceMetadata
+  fullName: Dropbox.Api.Team.NamespaceMetadata
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/NamespaceMetadata.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NamespaceMetadata
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/NamespaceMetadata.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Properties of a namespace.</p>\n"
+  example: []
+  syntax:
+    content: 'public class NamespaceMetadata : object'
+    content.vb: >-
+      Public Class NamespaceMetadata
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.NamespaceMetadata.#ctor(System.String,System.String,Dropbox.Api.Team.NamespaceType,System.String)
+  commentId: M:Dropbox.Api.Team.NamespaceMetadata.#ctor(System.String,System.String,Dropbox.Api.Team.NamespaceType,System.String)
+  id: '#ctor(System.String,System.String,Dropbox.Api.Team.NamespaceType,System.String)'
+  parent: Dropbox.Api.Team.NamespaceMetadata
+  langs:
+  - csharp
+  - vb
+  name: NamespaceMetadata(String, String, NamespaceType, String)
+  nameWithType: NamespaceMetadata.NamespaceMetadata(String, String, NamespaceType, String)
+  fullName: Dropbox.Api.Team.NamespaceMetadata.NamespaceMetadata(System.String, System.String, Dropbox.Api.Team.NamespaceType, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/NamespaceMetadata.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/NamespaceMetadata.cs
+    startLine: 38
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.NamespaceMetadata\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public NamespaceMetadata(string name, string namespaceId, NamespaceType namespaceType, string teamMemberId = null)
+    parameters:
+    - id: name
+      type: System.String
+      description: The name of this namespace.
+    - id: namespaceId
+      type: System.String
+      description: The ID of this namespace.
+    - id: namespaceType
+      type: Dropbox.Api.Team.NamespaceType
+      description: The type of this namespace.
+    - id: teamMemberId
+      type: System.String
+      description: >-
+        If this is a team member or app folder, the ID of the
+
+        owning team member. Otherwise, this field is not present.
+    content.vb: Public Sub New(name As String, namespaceId As String, namespaceType As NamespaceType, teamMemberId As String = Nothing)
+  overload: Dropbox.Api.Team.NamespaceMetadata.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.NamespaceMetadata.#ctor
+  commentId: M:Dropbox.Api.Team.NamespaceMetadata.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.NamespaceMetadata
+  langs:
+  - csharp
+  - vb
+  name: NamespaceMetadata()
+  nameWithType: NamespaceMetadata.NamespaceMetadata()
+  fullName: Dropbox.Api.Team.NamespaceMetadata.NamespaceMetadata()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/NamespaceMetadata.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/NamespaceMetadata.cs
+    startLine: 74
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.NamespaceMetadata\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public NamespaceMetadata()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.NamespaceMetadata.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.NamespaceMetadata.Name
+  commentId: P:Dropbox.Api.Team.NamespaceMetadata.Name
+  id: Name
+  parent: Dropbox.Api.Team.NamespaceMetadata
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: NamespaceMetadata.Name
+  fullName: Dropbox.Api.Team.NamespaceMetadata.Name
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/NamespaceMetadata.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Name
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/NamespaceMetadata.cs
+    startLine: 82
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The name of this namespace.</p>\n"
+  example: []
+  syntax:
+    content: public string Name { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: Dropbox.Api.Team.NamespaceMetadata.Name*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.NamespaceMetadata.NamespaceId
+  commentId: P:Dropbox.Api.Team.NamespaceMetadata.NamespaceId
+  id: NamespaceId
+  parent: Dropbox.Api.Team.NamespaceMetadata
+  langs:
+  - csharp
+  - vb
+  name: NamespaceId
+  nameWithType: NamespaceMetadata.NamespaceId
+  fullName: Dropbox.Api.Team.NamespaceMetadata.NamespaceId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/NamespaceMetadata.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NamespaceId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/NamespaceMetadata.cs
+    startLine: 87
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The ID of this namespace.</p>\n"
+  example: []
+  syntax:
+    content: public string NamespaceId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property NamespaceId As String
+  overload: Dropbox.Api.Team.NamespaceMetadata.NamespaceId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.NamespaceMetadata.NamespaceType
+  commentId: P:Dropbox.Api.Team.NamespaceMetadata.NamespaceType
+  id: NamespaceType
+  parent: Dropbox.Api.Team.NamespaceMetadata
+  langs:
+  - csharp
+  - vb
+  name: NamespaceType
+  nameWithType: NamespaceMetadata.NamespaceType
+  fullName: Dropbox.Api.Team.NamespaceMetadata.NamespaceType
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/NamespaceMetadata.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NamespaceType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/NamespaceMetadata.cs
+    startLine: 92
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The type of this namespace.</p>\n"
+  example: []
+  syntax:
+    content: public NamespaceType NamespaceType { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.NamespaceType
+    content.vb: Public Property NamespaceType As NamespaceType
+  overload: Dropbox.Api.Team.NamespaceMetadata.NamespaceType*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.NamespaceMetadata.TeamMemberId
+  commentId: P:Dropbox.Api.Team.NamespaceMetadata.TeamMemberId
+  id: TeamMemberId
+  parent: Dropbox.Api.Team.NamespaceMetadata
+  langs:
+  - csharp
+  - vb
+  name: TeamMemberId
+  nameWithType: NamespaceMetadata.TeamMemberId
+  fullName: Dropbox.Api.Team.NamespaceMetadata.TeamMemberId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/NamespaceMetadata.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TeamMemberId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/NamespaceMetadata.cs
+    startLine: 98
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>If this is a team member or app folder, the ID of the owning team member.\nOtherwise, this field is not present.</p>\n"
+  example: []
+  syntax:
+    content: public string TeamMemberId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property TeamMemberId As String
+  overload: Dropbox.Api.Team.NamespaceMetadata.TeamMemberId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.NamespaceMetadata
+  commentId: T:Dropbox.Api.Team.NamespaceMetadata
+  name: NamespaceMetadata
+  nameWithType: NamespaceMetadata
+  fullName: Dropbox.Api.Team.NamespaceMetadata
+- uid: Dropbox.Api.Team.NamespaceMetadata.#ctor*
+  commentId: Overload:Dropbox.Api.Team.NamespaceMetadata.#ctor
+  name: NamespaceMetadata
+  nameWithType: NamespaceMetadata.NamespaceMetadata
+  fullName: Dropbox.Api.Team.NamespaceMetadata.NamespaceMetadata
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Team.NamespaceType
+  commentId: T:Dropbox.Api.Team.NamespaceType
+  parent: Dropbox.Api.Team
+  name: NamespaceType
+  nameWithType: NamespaceType
+  fullName: Dropbox.Api.Team.NamespaceType
+- uid: Dropbox.Api.Team.NamespaceMetadata.Name*
+  commentId: Overload:Dropbox.Api.Team.NamespaceMetadata.Name
+  name: Name
+  nameWithType: NamespaceMetadata.Name
+  fullName: Dropbox.Api.Team.NamespaceMetadata.Name
+- uid: Dropbox.Api.Team.NamespaceMetadata.NamespaceId*
+  commentId: Overload:Dropbox.Api.Team.NamespaceMetadata.NamespaceId
+  name: NamespaceId
+  nameWithType: NamespaceMetadata.NamespaceId
+  fullName: Dropbox.Api.Team.NamespaceMetadata.NamespaceId
+- uid: Dropbox.Api.Team.NamespaceMetadata.NamespaceType*
+  commentId: Overload:Dropbox.Api.Team.NamespaceMetadata.NamespaceType
+  name: NamespaceType
+  nameWithType: NamespaceMetadata.NamespaceType
+  fullName: Dropbox.Api.Team.NamespaceMetadata.NamespaceType
+- uid: Dropbox.Api.Team.NamespaceMetadata.TeamMemberId*
+  commentId: Overload:Dropbox.Api.Team.NamespaceMetadata.TeamMemberId
+  name: TeamMemberId
+  nameWithType: NamespaceMetadata.TeamMemberId
+  fullName: Dropbox.Api.Team.NamespaceMetadata.TeamMemberId
+shouldSkipMarkup: true

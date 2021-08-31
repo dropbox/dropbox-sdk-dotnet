@@ -1,0 +1,200 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.LinkExpiry.SetExpiry
+  commentId: T:Dropbox.Api.Sharing.LinkExpiry.SetExpiry
+  id: LinkExpiry.SetExpiry
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.LinkExpiry.SetExpiry.#ctor(System.DateTime)
+  - Dropbox.Api.Sharing.LinkExpiry.SetExpiry.Value
+  langs:
+  - csharp
+  - vb
+  name: LinkExpiry.SetExpiry
+  nameWithType: LinkExpiry.SetExpiry
+  fullName: Dropbox.Api.Sharing.LinkExpiry.SetExpiry
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkExpiry.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SetExpiry
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkExpiry.cs
+    startLine: 251
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Set a new expiry or change an existing expiry.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class SetExpiry : LinkExpiry'
+    content.vb: >-
+      Public NotInheritable Class SetExpiry
+          Inherits LinkExpiry
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Sharing.LinkExpiry
+  inheritedMembers:
+  - Dropbox.Api.Sharing.LinkExpiry.IsRemoveExpiry
+  - Dropbox.Api.Sharing.LinkExpiry.AsRemoveExpiry
+  - Dropbox.Api.Sharing.LinkExpiry.IsSetExpiry
+  - Dropbox.Api.Sharing.LinkExpiry.AsSetExpiry
+  - Dropbox.Api.Sharing.LinkExpiry.IsOther
+  - Dropbox.Api.Sharing.LinkExpiry.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Sharing.LinkExpiry.SetExpiry.#ctor(System.DateTime)
+  commentId: M:Dropbox.Api.Sharing.LinkExpiry.SetExpiry.#ctor(System.DateTime)
+  id: '#ctor(System.DateTime)'
+  parent: Dropbox.Api.Sharing.LinkExpiry.SetExpiry
+  langs:
+  - csharp
+  - vb
+  name: SetExpiry(System.DateTime)
+  nameWithType: LinkExpiry.SetExpiry.SetExpiry(System.DateTime)
+  fullName: Dropbox.Api.Sharing.LinkExpiry.SetExpiry.SetExpiry(System.DateTime)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkExpiry.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkExpiry.cs
+    startLine: 269
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.LinkExpiry.SetExpiry\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public SetExpiry(System.DateTime value)
+    parameters:
+    - id: value
+      type: System.DateTime
+      description: The value
+    content.vb: Public Sub New(value As System.DateTime)
+  overload: Dropbox.Api.Sharing.LinkExpiry.SetExpiry.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.LinkExpiry.SetExpiry.Value
+  commentId: P:Dropbox.Api.Sharing.LinkExpiry.SetExpiry.Value
+  id: Value
+  parent: Dropbox.Api.Sharing.LinkExpiry.SetExpiry
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: LinkExpiry.SetExpiry.Value
+  fullName: Dropbox.Api.Sharing.LinkExpiry.SetExpiry.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkExpiry.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/LinkExpiry.cs
+    startLine: 283
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public System.DateTime Value { get; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public ReadOnly Property Value As System.DateTime
+  overload: Dropbox.Api.Sharing.LinkExpiry.SetExpiry.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.LinkExpiry
+  commentId: T:Dropbox.Api.Sharing.LinkExpiry
+  parent: Dropbox.Api.Sharing
+  name: LinkExpiry
+  nameWithType: LinkExpiry
+  fullName: Dropbox.Api.Sharing.LinkExpiry
+- uid: Dropbox.Api.Sharing.LinkExpiry.IsRemoveExpiry
+  commentId: P:Dropbox.Api.Sharing.LinkExpiry.IsRemoveExpiry
+  parent: Dropbox.Api.Sharing.LinkExpiry
+  name: IsRemoveExpiry
+  nameWithType: LinkExpiry.IsRemoveExpiry
+  fullName: Dropbox.Api.Sharing.LinkExpiry.IsRemoveExpiry
+- uid: Dropbox.Api.Sharing.LinkExpiry.AsRemoveExpiry
+  commentId: P:Dropbox.Api.Sharing.LinkExpiry.AsRemoveExpiry
+  parent: Dropbox.Api.Sharing.LinkExpiry
+  name: AsRemoveExpiry
+  nameWithType: LinkExpiry.AsRemoveExpiry
+  fullName: Dropbox.Api.Sharing.LinkExpiry.AsRemoveExpiry
+- uid: Dropbox.Api.Sharing.LinkExpiry.IsSetExpiry
+  commentId: P:Dropbox.Api.Sharing.LinkExpiry.IsSetExpiry
+  parent: Dropbox.Api.Sharing.LinkExpiry
+  name: IsSetExpiry
+  nameWithType: LinkExpiry.IsSetExpiry
+  fullName: Dropbox.Api.Sharing.LinkExpiry.IsSetExpiry
+- uid: Dropbox.Api.Sharing.LinkExpiry.AsSetExpiry
+  commentId: P:Dropbox.Api.Sharing.LinkExpiry.AsSetExpiry
+  parent: Dropbox.Api.Sharing.LinkExpiry
+  name: AsSetExpiry
+  nameWithType: LinkExpiry.AsSetExpiry
+  fullName: Dropbox.Api.Sharing.LinkExpiry.AsSetExpiry
+- uid: Dropbox.Api.Sharing.LinkExpiry.IsOther
+  commentId: P:Dropbox.Api.Sharing.LinkExpiry.IsOther
+  parent: Dropbox.Api.Sharing.LinkExpiry
+  name: IsOther
+  nameWithType: LinkExpiry.IsOther
+  fullName: Dropbox.Api.Sharing.LinkExpiry.IsOther
+- uid: Dropbox.Api.Sharing.LinkExpiry.AsOther
+  commentId: P:Dropbox.Api.Sharing.LinkExpiry.AsOther
+  parent: Dropbox.Api.Sharing.LinkExpiry
+  name: AsOther
+  nameWithType: LinkExpiry.AsOther
+  fullName: Dropbox.Api.Sharing.LinkExpiry.AsOther
+- uid: Dropbox.Api.Sharing.LinkExpiry.SetExpiry
+  commentId: T:Dropbox.Api.Sharing.LinkExpiry.SetExpiry
+  parent: Dropbox.Api.Sharing
+  name: LinkExpiry.SetExpiry
+  nameWithType: LinkExpiry.SetExpiry
+  fullName: Dropbox.Api.Sharing.LinkExpiry.SetExpiry
+- uid: Dropbox.Api.Sharing.LinkExpiry.SetExpiry.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.LinkExpiry.SetExpiry.#ctor
+  name: SetExpiry
+  nameWithType: LinkExpiry.SetExpiry.SetExpiry
+  fullName: Dropbox.Api.Sharing.LinkExpiry.SetExpiry.SetExpiry
+- uid: System.DateTime
+  isExternal: true
+  name: System.DateTime
+  nameWithType: System.DateTime
+  fullName: System.DateTime
+- uid: Dropbox.Api.Sharing.LinkExpiry.SetExpiry.Value*
+  commentId: Overload:Dropbox.Api.Sharing.LinkExpiry.SetExpiry.Value
+  name: Value
+  nameWithType: LinkExpiry.SetExpiry.Value
+  fullName: Dropbox.Api.Sharing.LinkExpiry.SetExpiry.Value
+shouldSkipMarkup: true

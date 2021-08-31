@@ -1,0 +1,96 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.SmartSyncCreateAdminPrivilegeReportDetails
+  commentId: T:Dropbox.Api.TeamLog.SmartSyncCreateAdminPrivilegeReportDetails
+  id: SmartSyncCreateAdminPrivilegeReportDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.SmartSyncCreateAdminPrivilegeReportDetails.#ctor
+  langs:
+  - csharp
+  - vb
+  name: SmartSyncCreateAdminPrivilegeReportDetails
+  nameWithType: SmartSyncCreateAdminPrivilegeReportDetails
+  fullName: Dropbox.Api.TeamLog.SmartSyncCreateAdminPrivilegeReportDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SmartSyncCreateAdminPrivilegeReportDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SmartSyncCreateAdminPrivilegeReportDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SmartSyncCreateAdminPrivilegeReportDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Created Smart Sync non-admin devices report.</p>\n"
+  example: []
+  syntax:
+    content: 'public class SmartSyncCreateAdminPrivilegeReportDetails : object'
+    content.vb: >-
+      Public Class SmartSyncCreateAdminPrivilegeReportDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.SmartSyncCreateAdminPrivilegeReportDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.SmartSyncCreateAdminPrivilegeReportDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.SmartSyncCreateAdminPrivilegeReportDetails
+  langs:
+  - csharp
+  - vb
+  name: SmartSyncCreateAdminPrivilegeReportDetails()
+  nameWithType: SmartSyncCreateAdminPrivilegeReportDetails.SmartSyncCreateAdminPrivilegeReportDetails()
+  fullName: Dropbox.Api.TeamLog.SmartSyncCreateAdminPrivilegeReportDetails.SmartSyncCreateAdminPrivilegeReportDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SmartSyncCreateAdminPrivilegeReportDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SmartSyncCreateAdminPrivilegeReportDetails.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SmartSyncCreateAdminPrivilegeReportDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public SmartSyncCreateAdminPrivilegeReportDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.SmartSyncCreateAdminPrivilegeReportDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.SmartSyncCreateAdminPrivilegeReportDetails
+  commentId: T:Dropbox.Api.TeamLog.SmartSyncCreateAdminPrivilegeReportDetails
+  parent: Dropbox.Api.TeamLog
+  name: SmartSyncCreateAdminPrivilegeReportDetails
+  nameWithType: SmartSyncCreateAdminPrivilegeReportDetails
+  fullName: Dropbox.Api.TeamLog.SmartSyncCreateAdminPrivilegeReportDetails
+- uid: Dropbox.Api.TeamLog.SmartSyncCreateAdminPrivilegeReportDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.SmartSyncCreateAdminPrivilegeReportDetails.#ctor
+  name: SmartSyncCreateAdminPrivilegeReportDetails
+  nameWithType: SmartSyncCreateAdminPrivilegeReportDetails.SmartSyncCreateAdminPrivilegeReportDetails
+  fullName: Dropbox.Api.TeamLog.SmartSyncCreateAdminPrivilegeReportDetails.SmartSyncCreateAdminPrivilegeReportDetails
+shouldSkipMarkup: true

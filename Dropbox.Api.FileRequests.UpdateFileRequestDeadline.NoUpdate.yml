@@ -1,0 +1,148 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.FileRequests.UpdateFileRequestDeadline.NoUpdate
+  commentId: T:Dropbox.Api.FileRequests.UpdateFileRequestDeadline.NoUpdate
+  id: UpdateFileRequestDeadline.NoUpdate
+  parent: Dropbox.Api.FileRequests
+  children:
+  - Dropbox.Api.FileRequests.UpdateFileRequestDeadline.NoUpdate.Instance
+  langs:
+  - csharp
+  - vb
+  name: UpdateFileRequestDeadline.NoUpdate
+  nameWithType: UpdateFileRequestDeadline.NoUpdate
+  fullName: Dropbox.Api.FileRequests.UpdateFileRequestDeadline.NoUpdate
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/UpdateFileRequestDeadline.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NoUpdate
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/UpdateFileRequestDeadline.cs
+    startLine: 183
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Do not change the file request&apos;s deadline.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class NoUpdate : UpdateFileRequestDeadline'
+    content.vb: >-
+      Public NotInheritable Class NoUpdate
+          Inherits UpdateFileRequestDeadline
+  inheritance:
+  - System.Object
+  - Dropbox.Api.FileRequests.UpdateFileRequestDeadline
+  inheritedMembers:
+  - Dropbox.Api.FileRequests.UpdateFileRequestDeadline.IsNoUpdate
+  - Dropbox.Api.FileRequests.UpdateFileRequestDeadline.AsNoUpdate
+  - Dropbox.Api.FileRequests.UpdateFileRequestDeadline.IsUpdate
+  - Dropbox.Api.FileRequests.UpdateFileRequestDeadline.AsUpdate
+  - Dropbox.Api.FileRequests.UpdateFileRequestDeadline.IsOther
+  - Dropbox.Api.FileRequests.UpdateFileRequestDeadline.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.FileRequests.UpdateFileRequestDeadline.NoUpdate.Instance
+  commentId: F:Dropbox.Api.FileRequests.UpdateFileRequestDeadline.NoUpdate.Instance
+  id: Instance
+  parent: Dropbox.Api.FileRequests.UpdateFileRequestDeadline.NoUpdate
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: UpdateFileRequestDeadline.NoUpdate.Instance
+  fullName: Dropbox.Api.FileRequests.UpdateFileRequestDeadline.NoUpdate.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/UpdateFileRequestDeadline.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/UpdateFileRequestDeadline.cs
+    startLine: 207
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>A singleton instance of NoUpdate</p>\n"
+  example: []
+  syntax:
+    content: public static readonly UpdateFileRequestDeadline.NoUpdate Instance
+    return:
+      type: Dropbox.Api.FileRequests.UpdateFileRequestDeadline.NoUpdate
+    content.vb: Public Shared ReadOnly Instance As UpdateFileRequestDeadline.NoUpdate
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.FileRequests
+  commentId: N:Dropbox.Api.FileRequests
+  name: Dropbox.Api.FileRequests
+  nameWithType: Dropbox.Api.FileRequests
+  fullName: Dropbox.Api.FileRequests
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.FileRequests.UpdateFileRequestDeadline
+  commentId: T:Dropbox.Api.FileRequests.UpdateFileRequestDeadline
+  parent: Dropbox.Api.FileRequests
+  name: UpdateFileRequestDeadline
+  nameWithType: UpdateFileRequestDeadline
+  fullName: Dropbox.Api.FileRequests.UpdateFileRequestDeadline
+- uid: Dropbox.Api.FileRequests.UpdateFileRequestDeadline.IsNoUpdate
+  commentId: P:Dropbox.Api.FileRequests.UpdateFileRequestDeadline.IsNoUpdate
+  parent: Dropbox.Api.FileRequests.UpdateFileRequestDeadline
+  name: IsNoUpdate
+  nameWithType: UpdateFileRequestDeadline.IsNoUpdate
+  fullName: Dropbox.Api.FileRequests.UpdateFileRequestDeadline.IsNoUpdate
+- uid: Dropbox.Api.FileRequests.UpdateFileRequestDeadline.AsNoUpdate
+  commentId: P:Dropbox.Api.FileRequests.UpdateFileRequestDeadline.AsNoUpdate
+  parent: Dropbox.Api.FileRequests.UpdateFileRequestDeadline
+  name: AsNoUpdate
+  nameWithType: UpdateFileRequestDeadline.AsNoUpdate
+  fullName: Dropbox.Api.FileRequests.UpdateFileRequestDeadline.AsNoUpdate
+- uid: Dropbox.Api.FileRequests.UpdateFileRequestDeadline.IsUpdate
+  commentId: P:Dropbox.Api.FileRequests.UpdateFileRequestDeadline.IsUpdate
+  parent: Dropbox.Api.FileRequests.UpdateFileRequestDeadline
+  name: IsUpdate
+  nameWithType: UpdateFileRequestDeadline.IsUpdate
+  fullName: Dropbox.Api.FileRequests.UpdateFileRequestDeadline.IsUpdate
+- uid: Dropbox.Api.FileRequests.UpdateFileRequestDeadline.AsUpdate
+  commentId: P:Dropbox.Api.FileRequests.UpdateFileRequestDeadline.AsUpdate
+  parent: Dropbox.Api.FileRequests.UpdateFileRequestDeadline
+  name: AsUpdate
+  nameWithType: UpdateFileRequestDeadline.AsUpdate
+  fullName: Dropbox.Api.FileRequests.UpdateFileRequestDeadline.AsUpdate
+- uid: Dropbox.Api.FileRequests.UpdateFileRequestDeadline.IsOther
+  commentId: P:Dropbox.Api.FileRequests.UpdateFileRequestDeadline.IsOther
+  parent: Dropbox.Api.FileRequests.UpdateFileRequestDeadline
+  name: IsOther
+  nameWithType: UpdateFileRequestDeadline.IsOther
+  fullName: Dropbox.Api.FileRequests.UpdateFileRequestDeadline.IsOther
+- uid: Dropbox.Api.FileRequests.UpdateFileRequestDeadline.AsOther
+  commentId: P:Dropbox.Api.FileRequests.UpdateFileRequestDeadline.AsOther
+  parent: Dropbox.Api.FileRequests.UpdateFileRequestDeadline
+  name: AsOther
+  nameWithType: UpdateFileRequestDeadline.AsOther
+  fullName: Dropbox.Api.FileRequests.UpdateFileRequestDeadline.AsOther
+- uid: Dropbox.Api.FileRequests.UpdateFileRequestDeadline.NoUpdate
+  commentId: T:Dropbox.Api.FileRequests.UpdateFileRequestDeadline.NoUpdate
+  parent: Dropbox.Api.FileRequests
+  name: UpdateFileRequestDeadline.NoUpdate
+  nameWithType: UpdateFileRequestDeadline.NoUpdate
+  fullName: Dropbox.Api.FileRequests.UpdateFileRequestDeadline.NoUpdate
+shouldSkipMarkup: true

@@ -1,0 +1,218 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Paper.AddPaperDocUserResult.FailedUserDataRetrieval
+  commentId: T:Dropbox.Api.Paper.AddPaperDocUserResult.FailedUserDataRetrieval
+  id: AddPaperDocUserResult.FailedUserDataRetrieval
+  parent: Dropbox.Api.Paper
+  children:
+  - Dropbox.Api.Paper.AddPaperDocUserResult.FailedUserDataRetrieval.Instance
+  langs:
+  - csharp
+  - vb
+  name: AddPaperDocUserResult.FailedUserDataRetrieval
+  nameWithType: AddPaperDocUserResult.FailedUserDataRetrieval
+  fullName: Dropbox.Api.Paper.AddPaperDocUserResult.FailedUserDataRetrieval
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/AddPaperDocUserResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: FailedUserDataRetrieval
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/AddPaperDocUserResult.cs
+    startLine: 689
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>User data could not be retrieved. Clients should retry.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class FailedUserDataRetrieval : AddPaperDocUserResult'
+    content.vb: >-
+      Public NotInheritable Class FailedUserDataRetrieval
+          Inherits AddPaperDocUserResult
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Paper.AddPaperDocUserResult
+  inheritedMembers:
+  - Dropbox.Api.Paper.AddPaperDocUserResult.IsSuccess
+  - Dropbox.Api.Paper.AddPaperDocUserResult.AsSuccess
+  - Dropbox.Api.Paper.AddPaperDocUserResult.IsUnknownError
+  - Dropbox.Api.Paper.AddPaperDocUserResult.AsUnknownError
+  - Dropbox.Api.Paper.AddPaperDocUserResult.IsSharingOutsideTeamDisabled
+  - Dropbox.Api.Paper.AddPaperDocUserResult.AsSharingOutsideTeamDisabled
+  - Dropbox.Api.Paper.AddPaperDocUserResult.IsDailyLimitReached
+  - Dropbox.Api.Paper.AddPaperDocUserResult.AsDailyLimitReached
+  - Dropbox.Api.Paper.AddPaperDocUserResult.IsUserIsOwner
+  - Dropbox.Api.Paper.AddPaperDocUserResult.AsUserIsOwner
+  - Dropbox.Api.Paper.AddPaperDocUserResult.IsFailedUserDataRetrieval
+  - Dropbox.Api.Paper.AddPaperDocUserResult.AsFailedUserDataRetrieval
+  - Dropbox.Api.Paper.AddPaperDocUserResult.IsPermissionAlreadyGranted
+  - Dropbox.Api.Paper.AddPaperDocUserResult.AsPermissionAlreadyGranted
+  - Dropbox.Api.Paper.AddPaperDocUserResult.IsOther
+  - Dropbox.Api.Paper.AddPaperDocUserResult.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Paper.AddPaperDocUserResult.FailedUserDataRetrieval.Instance
+  commentId: F:Dropbox.Api.Paper.AddPaperDocUserResult.FailedUserDataRetrieval.Instance
+  id: Instance
+  parent: Dropbox.Api.Paper.AddPaperDocUserResult.FailedUserDataRetrieval
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: AddPaperDocUserResult.FailedUserDataRetrieval.Instance
+  fullName: Dropbox.Api.Paper.AddPaperDocUserResult.FailedUserDataRetrieval.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/AddPaperDocUserResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/AddPaperDocUserResult.cs
+    startLine: 714
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>A singleton instance of FailedUserDataRetrieval</p>\n"
+  example: []
+  syntax:
+    content: public static readonly AddPaperDocUserResult.FailedUserDataRetrieval Instance
+    return:
+      type: Dropbox.Api.Paper.AddPaperDocUserResult.FailedUserDataRetrieval
+    content.vb: Public Shared ReadOnly Instance As AddPaperDocUserResult.FailedUserDataRetrieval
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Paper
+  commentId: N:Dropbox.Api.Paper
+  name: Dropbox.Api.Paper
+  nameWithType: Dropbox.Api.Paper
+  fullName: Dropbox.Api.Paper
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Paper.AddPaperDocUserResult
+  commentId: T:Dropbox.Api.Paper.AddPaperDocUserResult
+  parent: Dropbox.Api.Paper
+  name: AddPaperDocUserResult
+  nameWithType: AddPaperDocUserResult
+  fullName: Dropbox.Api.Paper.AddPaperDocUserResult
+- uid: Dropbox.Api.Paper.AddPaperDocUserResult.IsSuccess
+  commentId: P:Dropbox.Api.Paper.AddPaperDocUserResult.IsSuccess
+  parent: Dropbox.Api.Paper.AddPaperDocUserResult
+  name: IsSuccess
+  nameWithType: AddPaperDocUserResult.IsSuccess
+  fullName: Dropbox.Api.Paper.AddPaperDocUserResult.IsSuccess
+- uid: Dropbox.Api.Paper.AddPaperDocUserResult.AsSuccess
+  commentId: P:Dropbox.Api.Paper.AddPaperDocUserResult.AsSuccess
+  parent: Dropbox.Api.Paper.AddPaperDocUserResult
+  name: AsSuccess
+  nameWithType: AddPaperDocUserResult.AsSuccess
+  fullName: Dropbox.Api.Paper.AddPaperDocUserResult.AsSuccess
+- uid: Dropbox.Api.Paper.AddPaperDocUserResult.IsUnknownError
+  commentId: P:Dropbox.Api.Paper.AddPaperDocUserResult.IsUnknownError
+  parent: Dropbox.Api.Paper.AddPaperDocUserResult
+  name: IsUnknownError
+  nameWithType: AddPaperDocUserResult.IsUnknownError
+  fullName: Dropbox.Api.Paper.AddPaperDocUserResult.IsUnknownError
+- uid: Dropbox.Api.Paper.AddPaperDocUserResult.AsUnknownError
+  commentId: P:Dropbox.Api.Paper.AddPaperDocUserResult.AsUnknownError
+  parent: Dropbox.Api.Paper.AddPaperDocUserResult
+  name: AsUnknownError
+  nameWithType: AddPaperDocUserResult.AsUnknownError
+  fullName: Dropbox.Api.Paper.AddPaperDocUserResult.AsUnknownError
+- uid: Dropbox.Api.Paper.AddPaperDocUserResult.IsSharingOutsideTeamDisabled
+  commentId: P:Dropbox.Api.Paper.AddPaperDocUserResult.IsSharingOutsideTeamDisabled
+  parent: Dropbox.Api.Paper.AddPaperDocUserResult
+  name: IsSharingOutsideTeamDisabled
+  nameWithType: AddPaperDocUserResult.IsSharingOutsideTeamDisabled
+  fullName: Dropbox.Api.Paper.AddPaperDocUserResult.IsSharingOutsideTeamDisabled
+- uid: Dropbox.Api.Paper.AddPaperDocUserResult.AsSharingOutsideTeamDisabled
+  commentId: P:Dropbox.Api.Paper.AddPaperDocUserResult.AsSharingOutsideTeamDisabled
+  parent: Dropbox.Api.Paper.AddPaperDocUserResult
+  name: AsSharingOutsideTeamDisabled
+  nameWithType: AddPaperDocUserResult.AsSharingOutsideTeamDisabled
+  fullName: Dropbox.Api.Paper.AddPaperDocUserResult.AsSharingOutsideTeamDisabled
+- uid: Dropbox.Api.Paper.AddPaperDocUserResult.IsDailyLimitReached
+  commentId: P:Dropbox.Api.Paper.AddPaperDocUserResult.IsDailyLimitReached
+  parent: Dropbox.Api.Paper.AddPaperDocUserResult
+  name: IsDailyLimitReached
+  nameWithType: AddPaperDocUserResult.IsDailyLimitReached
+  fullName: Dropbox.Api.Paper.AddPaperDocUserResult.IsDailyLimitReached
+- uid: Dropbox.Api.Paper.AddPaperDocUserResult.AsDailyLimitReached
+  commentId: P:Dropbox.Api.Paper.AddPaperDocUserResult.AsDailyLimitReached
+  parent: Dropbox.Api.Paper.AddPaperDocUserResult
+  name: AsDailyLimitReached
+  nameWithType: AddPaperDocUserResult.AsDailyLimitReached
+  fullName: Dropbox.Api.Paper.AddPaperDocUserResult.AsDailyLimitReached
+- uid: Dropbox.Api.Paper.AddPaperDocUserResult.IsUserIsOwner
+  commentId: P:Dropbox.Api.Paper.AddPaperDocUserResult.IsUserIsOwner
+  parent: Dropbox.Api.Paper.AddPaperDocUserResult
+  name: IsUserIsOwner
+  nameWithType: AddPaperDocUserResult.IsUserIsOwner
+  fullName: Dropbox.Api.Paper.AddPaperDocUserResult.IsUserIsOwner
+- uid: Dropbox.Api.Paper.AddPaperDocUserResult.AsUserIsOwner
+  commentId: P:Dropbox.Api.Paper.AddPaperDocUserResult.AsUserIsOwner
+  parent: Dropbox.Api.Paper.AddPaperDocUserResult
+  name: AsUserIsOwner
+  nameWithType: AddPaperDocUserResult.AsUserIsOwner
+  fullName: Dropbox.Api.Paper.AddPaperDocUserResult.AsUserIsOwner
+- uid: Dropbox.Api.Paper.AddPaperDocUserResult.IsFailedUserDataRetrieval
+  commentId: P:Dropbox.Api.Paper.AddPaperDocUserResult.IsFailedUserDataRetrieval
+  parent: Dropbox.Api.Paper.AddPaperDocUserResult
+  name: IsFailedUserDataRetrieval
+  nameWithType: AddPaperDocUserResult.IsFailedUserDataRetrieval
+  fullName: Dropbox.Api.Paper.AddPaperDocUserResult.IsFailedUserDataRetrieval
+- uid: Dropbox.Api.Paper.AddPaperDocUserResult.AsFailedUserDataRetrieval
+  commentId: P:Dropbox.Api.Paper.AddPaperDocUserResult.AsFailedUserDataRetrieval
+  parent: Dropbox.Api.Paper.AddPaperDocUserResult
+  name: AsFailedUserDataRetrieval
+  nameWithType: AddPaperDocUserResult.AsFailedUserDataRetrieval
+  fullName: Dropbox.Api.Paper.AddPaperDocUserResult.AsFailedUserDataRetrieval
+- uid: Dropbox.Api.Paper.AddPaperDocUserResult.IsPermissionAlreadyGranted
+  commentId: P:Dropbox.Api.Paper.AddPaperDocUserResult.IsPermissionAlreadyGranted
+  parent: Dropbox.Api.Paper.AddPaperDocUserResult
+  name: IsPermissionAlreadyGranted
+  nameWithType: AddPaperDocUserResult.IsPermissionAlreadyGranted
+  fullName: Dropbox.Api.Paper.AddPaperDocUserResult.IsPermissionAlreadyGranted
+- uid: Dropbox.Api.Paper.AddPaperDocUserResult.AsPermissionAlreadyGranted
+  commentId: P:Dropbox.Api.Paper.AddPaperDocUserResult.AsPermissionAlreadyGranted
+  parent: Dropbox.Api.Paper.AddPaperDocUserResult
+  name: AsPermissionAlreadyGranted
+  nameWithType: AddPaperDocUserResult.AsPermissionAlreadyGranted
+  fullName: Dropbox.Api.Paper.AddPaperDocUserResult.AsPermissionAlreadyGranted
+- uid: Dropbox.Api.Paper.AddPaperDocUserResult.IsOther
+  commentId: P:Dropbox.Api.Paper.AddPaperDocUserResult.IsOther
+  parent: Dropbox.Api.Paper.AddPaperDocUserResult
+  name: IsOther
+  nameWithType: AddPaperDocUserResult.IsOther
+  fullName: Dropbox.Api.Paper.AddPaperDocUserResult.IsOther
+- uid: Dropbox.Api.Paper.AddPaperDocUserResult.AsOther
+  commentId: P:Dropbox.Api.Paper.AddPaperDocUserResult.AsOther
+  parent: Dropbox.Api.Paper.AddPaperDocUserResult
+  name: AsOther
+  nameWithType: AddPaperDocUserResult.AsOther
+  fullName: Dropbox.Api.Paper.AddPaperDocUserResult.AsOther
+- uid: Dropbox.Api.Paper.AddPaperDocUserResult.FailedUserDataRetrieval
+  commentId: T:Dropbox.Api.Paper.AddPaperDocUserResult.FailedUserDataRetrieval
+  parent: Dropbox.Api.Paper
+  name: AddPaperDocUserResult.FailedUserDataRetrieval
+  nameWithType: AddPaperDocUserResult.FailedUserDataRetrieval
+  fullName: Dropbox.Api.Paper.AddPaperDocUserResult.FailedUserDataRetrieval
+shouldSkipMarkup: true

@@ -1,0 +1,244 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.DeviceDeleteOnUnlinkSuccessDetails
+  commentId: T:Dropbox.Api.TeamLog.DeviceDeleteOnUnlinkSuccessDetails
+  id: DeviceDeleteOnUnlinkSuccessDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.DeviceDeleteOnUnlinkSuccessDetails.#ctor
+  - Dropbox.Api.TeamLog.DeviceDeleteOnUnlinkSuccessDetails.#ctor(Dropbox.Api.TeamLog.SessionLogInfo,System.String)
+  - Dropbox.Api.TeamLog.DeviceDeleteOnUnlinkSuccessDetails.DisplayName
+  - Dropbox.Api.TeamLog.DeviceDeleteOnUnlinkSuccessDetails.SessionInfo
+  langs:
+  - csharp
+  - vb
+  name: DeviceDeleteOnUnlinkSuccessDetails
+  nameWithType: DeviceDeleteOnUnlinkSuccessDetails
+  fullName: Dropbox.Api.TeamLog.DeviceDeleteOnUnlinkSuccessDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceDeleteOnUnlinkSuccessDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: DeviceDeleteOnUnlinkSuccessDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceDeleteOnUnlinkSuccessDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Deleted all files from unlinked device.</p>\n"
+  example: []
+  syntax:
+    content: 'public class DeviceDeleteOnUnlinkSuccessDetails : object'
+    content.vb: >-
+      Public Class DeviceDeleteOnUnlinkSuccessDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.DeviceDeleteOnUnlinkSuccessDetails.#ctor(Dropbox.Api.TeamLog.SessionLogInfo,System.String)
+  commentId: M:Dropbox.Api.TeamLog.DeviceDeleteOnUnlinkSuccessDetails.#ctor(Dropbox.Api.TeamLog.SessionLogInfo,System.String)
+  id: '#ctor(Dropbox.Api.TeamLog.SessionLogInfo,System.String)'
+  parent: Dropbox.Api.TeamLog.DeviceDeleteOnUnlinkSuccessDetails
+  langs:
+  - csharp
+  - vb
+  name: DeviceDeleteOnUnlinkSuccessDetails(SessionLogInfo, String)
+  nameWithType: DeviceDeleteOnUnlinkSuccessDetails.DeviceDeleteOnUnlinkSuccessDetails(SessionLogInfo, String)
+  fullName: Dropbox.Api.TeamLog.DeviceDeleteOnUnlinkSuccessDetails.DeviceDeleteOnUnlinkSuccessDetails(Dropbox.Api.TeamLog.SessionLogInfo, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceDeleteOnUnlinkSuccessDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceDeleteOnUnlinkSuccessDetails.cs
+    startLine: 36
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.DeviceDeleteOnUnlinkSuccessDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public DeviceDeleteOnUnlinkSuccessDetails(SessionLogInfo sessionInfo = null, string displayName = null)
+    parameters:
+    - id: sessionInfo
+      type: Dropbox.Api.TeamLog.SessionLogInfo
+      description: Session unique id.
+    - id: displayName
+      type: System.String
+      description: >-
+        The device name. Might be missing due to historical data
+
+        gap.
+    content.vb: Public Sub New(sessionInfo As SessionLogInfo = Nothing, displayName As String = Nothing)
+  overload: Dropbox.Api.TeamLog.DeviceDeleteOnUnlinkSuccessDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.DeviceDeleteOnUnlinkSuccessDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.DeviceDeleteOnUnlinkSuccessDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.DeviceDeleteOnUnlinkSuccessDetails
+  langs:
+  - csharp
+  - vb
+  name: DeviceDeleteOnUnlinkSuccessDetails()
+  nameWithType: DeviceDeleteOnUnlinkSuccessDetails.DeviceDeleteOnUnlinkSuccessDetails()
+  fullName: Dropbox.Api.TeamLog.DeviceDeleteOnUnlinkSuccessDetails.DeviceDeleteOnUnlinkSuccessDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceDeleteOnUnlinkSuccessDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceDeleteOnUnlinkSuccessDetails.cs
+    startLine: 49
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.DeviceDeleteOnUnlinkSuccessDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public DeviceDeleteOnUnlinkSuccessDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.DeviceDeleteOnUnlinkSuccessDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.DeviceDeleteOnUnlinkSuccessDetails.SessionInfo
+  commentId: P:Dropbox.Api.TeamLog.DeviceDeleteOnUnlinkSuccessDetails.SessionInfo
+  id: SessionInfo
+  parent: Dropbox.Api.TeamLog.DeviceDeleteOnUnlinkSuccessDetails
+  langs:
+  - csharp
+  - vb
+  name: SessionInfo
+  nameWithType: DeviceDeleteOnUnlinkSuccessDetails.SessionInfo
+  fullName: Dropbox.Api.TeamLog.DeviceDeleteOnUnlinkSuccessDetails.SessionInfo
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceDeleteOnUnlinkSuccessDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SessionInfo
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceDeleteOnUnlinkSuccessDetails.cs
+    startLine: 57
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Session unique id.</p>\n"
+  example: []
+  syntax:
+    content: public SessionLogInfo SessionInfo { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.SessionLogInfo
+    content.vb: Public Property SessionInfo As SessionLogInfo
+  overload: Dropbox.Api.TeamLog.DeviceDeleteOnUnlinkSuccessDetails.SessionInfo*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.DeviceDeleteOnUnlinkSuccessDetails.DisplayName
+  commentId: P:Dropbox.Api.TeamLog.DeviceDeleteOnUnlinkSuccessDetails.DisplayName
+  id: DisplayName
+  parent: Dropbox.Api.TeamLog.DeviceDeleteOnUnlinkSuccessDetails
+  langs:
+  - csharp
+  - vb
+  name: DisplayName
+  nameWithType: DeviceDeleteOnUnlinkSuccessDetails.DisplayName
+  fullName: Dropbox.Api.TeamLog.DeviceDeleteOnUnlinkSuccessDetails.DisplayName
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceDeleteOnUnlinkSuccessDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: DisplayName
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceDeleteOnUnlinkSuccessDetails.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The device name. Might be missing due to historical data gap.</p>\n"
+  example: []
+  syntax:
+    content: public string DisplayName { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property DisplayName As String
+  overload: Dropbox.Api.TeamLog.DeviceDeleteOnUnlinkSuccessDetails.DisplayName*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.DeviceDeleteOnUnlinkSuccessDetails
+  commentId: T:Dropbox.Api.TeamLog.DeviceDeleteOnUnlinkSuccessDetails
+  parent: Dropbox.Api.TeamLog
+  name: DeviceDeleteOnUnlinkSuccessDetails
+  nameWithType: DeviceDeleteOnUnlinkSuccessDetails
+  fullName: Dropbox.Api.TeamLog.DeviceDeleteOnUnlinkSuccessDetails
+- uid: Dropbox.Api.TeamLog.DeviceDeleteOnUnlinkSuccessDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.DeviceDeleteOnUnlinkSuccessDetails.#ctor
+  name: DeviceDeleteOnUnlinkSuccessDetails
+  nameWithType: DeviceDeleteOnUnlinkSuccessDetails.DeviceDeleteOnUnlinkSuccessDetails
+  fullName: Dropbox.Api.TeamLog.DeviceDeleteOnUnlinkSuccessDetails.DeviceDeleteOnUnlinkSuccessDetails
+- uid: Dropbox.Api.TeamLog.SessionLogInfo
+  commentId: T:Dropbox.Api.TeamLog.SessionLogInfo
+  parent: Dropbox.Api.TeamLog
+  name: SessionLogInfo
+  nameWithType: SessionLogInfo
+  fullName: Dropbox.Api.TeamLog.SessionLogInfo
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.DeviceDeleteOnUnlinkSuccessDetails.SessionInfo*
+  commentId: Overload:Dropbox.Api.TeamLog.DeviceDeleteOnUnlinkSuccessDetails.SessionInfo
+  name: SessionInfo
+  nameWithType: DeviceDeleteOnUnlinkSuccessDetails.SessionInfo
+  fullName: Dropbox.Api.TeamLog.DeviceDeleteOnUnlinkSuccessDetails.SessionInfo
+- uid: Dropbox.Api.TeamLog.DeviceDeleteOnUnlinkSuccessDetails.DisplayName*
+  commentId: Overload:Dropbox.Api.TeamLog.DeviceDeleteOnUnlinkSuccessDetails.DisplayName
+  name: DisplayName
+  nameWithType: DeviceDeleteOnUnlinkSuccessDetails.DisplayName
+  fullName: Dropbox.Api.TeamLog.DeviceDeleteOnUnlinkSuccessDetails.DisplayName
+shouldSkipMarkup: true

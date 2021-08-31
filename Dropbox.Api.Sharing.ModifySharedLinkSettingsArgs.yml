@@ -1,0 +1,297 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.ModifySharedLinkSettingsArgs
+  commentId: T:Dropbox.Api.Sharing.ModifySharedLinkSettingsArgs
+  id: ModifySharedLinkSettingsArgs
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.ModifySharedLinkSettingsArgs.#ctor
+  - Dropbox.Api.Sharing.ModifySharedLinkSettingsArgs.#ctor(System.String,Dropbox.Api.Sharing.SharedLinkSettings,System.Boolean)
+  - Dropbox.Api.Sharing.ModifySharedLinkSettingsArgs.RemoveExpiration
+  - Dropbox.Api.Sharing.ModifySharedLinkSettingsArgs.Settings
+  - Dropbox.Api.Sharing.ModifySharedLinkSettingsArgs.Url
+  langs:
+  - csharp
+  - vb
+  name: ModifySharedLinkSettingsArgs
+  nameWithType: ModifySharedLinkSettingsArgs
+  fullName: Dropbox.Api.Sharing.ModifySharedLinkSettingsArgs
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ModifySharedLinkSettingsArgs.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ModifySharedLinkSettingsArgs
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ModifySharedLinkSettingsArgs.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The modify shared link settings args object</p>\n"
+  example: []
+  syntax:
+    content: 'public class ModifySharedLinkSettingsArgs : object'
+    content.vb: >-
+      Public Class ModifySharedLinkSettingsArgs
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Sharing.ModifySharedLinkSettingsArgs.#ctor(System.String,Dropbox.Api.Sharing.SharedLinkSettings,System.Boolean)
+  commentId: M:Dropbox.Api.Sharing.ModifySharedLinkSettingsArgs.#ctor(System.String,Dropbox.Api.Sharing.SharedLinkSettings,System.Boolean)
+  id: '#ctor(System.String,Dropbox.Api.Sharing.SharedLinkSettings,System.Boolean)'
+  parent: Dropbox.Api.Sharing.ModifySharedLinkSettingsArgs
+  langs:
+  - csharp
+  - vb
+  name: ModifySharedLinkSettingsArgs(String, SharedLinkSettings, Boolean)
+  nameWithType: ModifySharedLinkSettingsArgs.ModifySharedLinkSettingsArgs(String, SharedLinkSettings, Boolean)
+  fullName: Dropbox.Api.Sharing.ModifySharedLinkSettingsArgs.ModifySharedLinkSettingsArgs(System.String, Dropbox.Api.Sharing.SharedLinkSettings, System.Boolean)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ModifySharedLinkSettingsArgs.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ModifySharedLinkSettingsArgs.cs
+    startLine: 37
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.ModifySharedLinkSettingsArgs\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public ModifySharedLinkSettingsArgs(string url, SharedLinkSettings settings, bool removeExpiration = false)
+    parameters:
+    - id: url
+      type: System.String
+      description: URL of the shared link to change its settings.
+    - id: settings
+      type: Dropbox.Api.Sharing.SharedLinkSettings
+      description: Set of settings for the shared link.
+    - id: removeExpiration
+      type: System.Boolean
+      description: >-
+        If set to true, removes the expiration of the shared
+
+        link.
+    content.vb: Public Sub New(url As String, settings As SharedLinkSettings, removeExpiration As Boolean = False)
+  overload: Dropbox.Api.Sharing.ModifySharedLinkSettingsArgs.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.ModifySharedLinkSettingsArgs.#ctor
+  commentId: M:Dropbox.Api.Sharing.ModifySharedLinkSettingsArgs.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Sharing.ModifySharedLinkSettingsArgs
+  langs:
+  - csharp
+  - vb
+  name: ModifySharedLinkSettingsArgs()
+  nameWithType: ModifySharedLinkSettingsArgs.ModifySharedLinkSettingsArgs()
+  fullName: Dropbox.Api.Sharing.ModifySharedLinkSettingsArgs.ModifySharedLinkSettingsArgs()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ModifySharedLinkSettingsArgs.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ModifySharedLinkSettingsArgs.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.ModifySharedLinkSettingsArgs\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public ModifySharedLinkSettingsArgs()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Sharing.ModifySharedLinkSettingsArgs.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.ModifySharedLinkSettingsArgs.Url
+  commentId: P:Dropbox.Api.Sharing.ModifySharedLinkSettingsArgs.Url
+  id: Url
+  parent: Dropbox.Api.Sharing.ModifySharedLinkSettingsArgs
+  langs:
+  - csharp
+  - vb
+  name: Url
+  nameWithType: ModifySharedLinkSettingsArgs.Url
+  fullName: Dropbox.Api.Sharing.ModifySharedLinkSettingsArgs.Url
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ModifySharedLinkSettingsArgs.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Url
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ModifySharedLinkSettingsArgs.cs
+    startLine: 71
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>URL of the shared link to change its settings.</p>\n"
+  example: []
+  syntax:
+    content: public string Url { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Url As String
+  overload: Dropbox.Api.Sharing.ModifySharedLinkSettingsArgs.Url*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.ModifySharedLinkSettingsArgs.Settings
+  commentId: P:Dropbox.Api.Sharing.ModifySharedLinkSettingsArgs.Settings
+  id: Settings
+  parent: Dropbox.Api.Sharing.ModifySharedLinkSettingsArgs
+  langs:
+  - csharp
+  - vb
+  name: Settings
+  nameWithType: ModifySharedLinkSettingsArgs.Settings
+  fullName: Dropbox.Api.Sharing.ModifySharedLinkSettingsArgs.Settings
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ModifySharedLinkSettingsArgs.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Settings
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ModifySharedLinkSettingsArgs.cs
+    startLine: 76
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Set of settings for the shared link.</p>\n"
+  example: []
+  syntax:
+    content: public SharedLinkSettings Settings { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.SharedLinkSettings
+    content.vb: Public Property Settings As SharedLinkSettings
+  overload: Dropbox.Api.Sharing.ModifySharedLinkSettingsArgs.Settings*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.ModifySharedLinkSettingsArgs.RemoveExpiration
+  commentId: P:Dropbox.Api.Sharing.ModifySharedLinkSettingsArgs.RemoveExpiration
+  id: RemoveExpiration
+  parent: Dropbox.Api.Sharing.ModifySharedLinkSettingsArgs
+  langs:
+  - csharp
+  - vb
+  name: RemoveExpiration
+  nameWithType: ModifySharedLinkSettingsArgs.RemoveExpiration
+  fullName: Dropbox.Api.Sharing.ModifySharedLinkSettingsArgs.RemoveExpiration
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ModifySharedLinkSettingsArgs.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: RemoveExpiration
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ModifySharedLinkSettingsArgs.cs
+    startLine: 81
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>If set to true, removes the expiration of the shared link.</p>\n"
+  example: []
+  syntax:
+    content: public bool RemoveExpiration { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property RemoveExpiration As Boolean
+  overload: Dropbox.Api.Sharing.ModifySharedLinkSettingsArgs.RemoveExpiration*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.ModifySharedLinkSettingsArgs
+  commentId: T:Dropbox.Api.Sharing.ModifySharedLinkSettingsArgs
+  parent: Dropbox.Api.Sharing
+  name: ModifySharedLinkSettingsArgs
+  nameWithType: ModifySharedLinkSettingsArgs
+  fullName: Dropbox.Api.Sharing.ModifySharedLinkSettingsArgs
+- uid: Dropbox.Api.Sharing.ModifySharedLinkSettingsArgs.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.ModifySharedLinkSettingsArgs.#ctor
+  name: ModifySharedLinkSettingsArgs
+  nameWithType: ModifySharedLinkSettingsArgs.ModifySharedLinkSettingsArgs
+  fullName: Dropbox.Api.Sharing.ModifySharedLinkSettingsArgs.ModifySharedLinkSettingsArgs
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Sharing.SharedLinkSettings
+  commentId: T:Dropbox.Api.Sharing.SharedLinkSettings
+  parent: Dropbox.Api.Sharing
+  name: SharedLinkSettings
+  nameWithType: SharedLinkSettings
+  fullName: Dropbox.Api.Sharing.SharedLinkSettings
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Sharing.ModifySharedLinkSettingsArgs.Url*
+  commentId: Overload:Dropbox.Api.Sharing.ModifySharedLinkSettingsArgs.Url
+  name: Url
+  nameWithType: ModifySharedLinkSettingsArgs.Url
+  fullName: Dropbox.Api.Sharing.ModifySharedLinkSettingsArgs.Url
+- uid: Dropbox.Api.Sharing.ModifySharedLinkSettingsArgs.Settings*
+  commentId: Overload:Dropbox.Api.Sharing.ModifySharedLinkSettingsArgs.Settings
+  name: Settings
+  nameWithType: ModifySharedLinkSettingsArgs.Settings
+  fullName: Dropbox.Api.Sharing.ModifySharedLinkSettingsArgs.Settings
+- uid: Dropbox.Api.Sharing.ModifySharedLinkSettingsArgs.RemoveExpiration*
+  commentId: Overload:Dropbox.Api.Sharing.ModifySharedLinkSettingsArgs.RemoveExpiration
+  name: RemoveExpiration
+  nameWithType: ModifySharedLinkSettingsArgs.RemoveExpiration
+  fullName: Dropbox.Api.Sharing.ModifySharedLinkSettingsArgs.RemoveExpiration
+shouldSkipMarkup: true

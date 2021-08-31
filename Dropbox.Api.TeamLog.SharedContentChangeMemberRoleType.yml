@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.SharedContentChangeMemberRoleType
+  commentId: T:Dropbox.Api.TeamLog.SharedContentChangeMemberRoleType
+  id: SharedContentChangeMemberRoleType
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.SharedContentChangeMemberRoleType.#ctor
+  - Dropbox.Api.TeamLog.SharedContentChangeMemberRoleType.#ctor(System.String)
+  - Dropbox.Api.TeamLog.SharedContentChangeMemberRoleType.Description
+  langs:
+  - csharp
+  - vb
+  name: SharedContentChangeMemberRoleType
+  nameWithType: SharedContentChangeMemberRoleType
+  fullName: Dropbox.Api.TeamLog.SharedContentChangeMemberRoleType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentChangeMemberRoleType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SharedContentChangeMemberRoleType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentChangeMemberRoleType.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The shared content change member role type object</p>\n"
+  example: []
+  syntax:
+    content: 'public class SharedContentChangeMemberRoleType : object'
+    content.vb: >-
+      Public Class SharedContentChangeMemberRoleType
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.SharedContentChangeMemberRoleType.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.SharedContentChangeMemberRoleType.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.SharedContentChangeMemberRoleType
+  langs:
+  - csharp
+  - vb
+  name: SharedContentChangeMemberRoleType(String)
+  nameWithType: SharedContentChangeMemberRoleType.SharedContentChangeMemberRoleType(String)
+  fullName: Dropbox.Api.TeamLog.SharedContentChangeMemberRoleType.SharedContentChangeMemberRoleType(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentChangeMemberRoleType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentChangeMemberRoleType.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SharedContentChangeMemberRoleType\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public SharedContentChangeMemberRoleType(string description)
+    parameters:
+    - id: description
+      type: System.String
+      description: The description
+    content.vb: Public Sub New(description As String)
+  overload: Dropbox.Api.TeamLog.SharedContentChangeMemberRoleType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SharedContentChangeMemberRoleType.#ctor
+  commentId: M:Dropbox.Api.TeamLog.SharedContentChangeMemberRoleType.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.SharedContentChangeMemberRoleType
+  langs:
+  - csharp
+  - vb
+  name: SharedContentChangeMemberRoleType()
+  nameWithType: SharedContentChangeMemberRoleType.SharedContentChangeMemberRoleType()
+  fullName: Dropbox.Api.TeamLog.SharedContentChangeMemberRoleType.SharedContentChangeMemberRoleType()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentChangeMemberRoleType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentChangeMemberRoleType.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SharedContentChangeMemberRoleType\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public SharedContentChangeMemberRoleType()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.SharedContentChangeMemberRoleType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SharedContentChangeMemberRoleType.Description
+  commentId: P:Dropbox.Api.TeamLog.SharedContentChangeMemberRoleType.Description
+  id: Description
+  parent: Dropbox.Api.TeamLog.SharedContentChangeMemberRoleType
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: SharedContentChangeMemberRoleType.Description
+  fullName: Dropbox.Api.TeamLog.SharedContentChangeMemberRoleType.Description
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentChangeMemberRoleType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Description
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentChangeMemberRoleType.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets the description of the shared content change member role type</p>\n"
+  example: []
+  syntax:
+    content: public string Description { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Dropbox.Api.TeamLog.SharedContentChangeMemberRoleType.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.SharedContentChangeMemberRoleType
+  commentId: T:Dropbox.Api.TeamLog.SharedContentChangeMemberRoleType
+  parent: Dropbox.Api.TeamLog
+  name: SharedContentChangeMemberRoleType
+  nameWithType: SharedContentChangeMemberRoleType
+  fullName: Dropbox.Api.TeamLog.SharedContentChangeMemberRoleType
+- uid: Dropbox.Api.TeamLog.SharedContentChangeMemberRoleType.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedContentChangeMemberRoleType.#ctor
+  name: SharedContentChangeMemberRoleType
+  nameWithType: SharedContentChangeMemberRoleType.SharedContentChangeMemberRoleType
+  fullName: Dropbox.Api.TeamLog.SharedContentChangeMemberRoleType.SharedContentChangeMemberRoleType
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.SharedContentChangeMemberRoleType.Description*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedContentChangeMemberRoleType.Description
+  name: Description
+  nameWithType: SharedContentChangeMemberRoleType.Description
+  fullName: Dropbox.Api.TeamLog.SharedContentChangeMemberRoleType.Description
+shouldSkipMarkup: true

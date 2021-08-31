@@ -1,0 +1,148 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.DownloadPolicyType.Allow
+  commentId: T:Dropbox.Api.TeamLog.DownloadPolicyType.Allow
+  id: DownloadPolicyType.Allow
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.DownloadPolicyType.Allow.Instance
+  langs:
+  - csharp
+  - vb
+  name: DownloadPolicyType.Allow
+  nameWithType: DownloadPolicyType.Allow
+  fullName: Dropbox.Api.TeamLog.DownloadPolicyType.Allow
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DownloadPolicyType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Allow
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DownloadPolicyType.cs
+    startLine: 182
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The allow object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Allow : DownloadPolicyType'
+    content.vb: >-
+      Public NotInheritable Class Allow
+          Inherits DownloadPolicyType
+  inheritance:
+  - System.Object
+  - Dropbox.Api.TeamLog.DownloadPolicyType
+  inheritedMembers:
+  - Dropbox.Api.TeamLog.DownloadPolicyType.IsAllow
+  - Dropbox.Api.TeamLog.DownloadPolicyType.AsAllow
+  - Dropbox.Api.TeamLog.DownloadPolicyType.IsDisallow
+  - Dropbox.Api.TeamLog.DownloadPolicyType.AsDisallow
+  - Dropbox.Api.TeamLog.DownloadPolicyType.IsOther
+  - Dropbox.Api.TeamLog.DownloadPolicyType.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.TeamLog.DownloadPolicyType.Allow.Instance
+  commentId: F:Dropbox.Api.TeamLog.DownloadPolicyType.Allow.Instance
+  id: Instance
+  parent: Dropbox.Api.TeamLog.DownloadPolicyType.Allow
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: DownloadPolicyType.Allow.Instance
+  fullName: Dropbox.Api.TeamLog.DownloadPolicyType.Allow.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DownloadPolicyType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DownloadPolicyType.cs
+    startLine: 206
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>A singleton instance of Allow</p>\n"
+  example: []
+  syntax:
+    content: public static readonly DownloadPolicyType.Allow Instance
+    return:
+      type: Dropbox.Api.TeamLog.DownloadPolicyType.Allow
+    content.vb: Public Shared ReadOnly Instance As DownloadPolicyType.Allow
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.DownloadPolicyType
+  commentId: T:Dropbox.Api.TeamLog.DownloadPolicyType
+  parent: Dropbox.Api.TeamLog
+  name: DownloadPolicyType
+  nameWithType: DownloadPolicyType
+  fullName: Dropbox.Api.TeamLog.DownloadPolicyType
+- uid: Dropbox.Api.TeamLog.DownloadPolicyType.IsAllow
+  commentId: P:Dropbox.Api.TeamLog.DownloadPolicyType.IsAllow
+  parent: Dropbox.Api.TeamLog.DownloadPolicyType
+  name: IsAllow
+  nameWithType: DownloadPolicyType.IsAllow
+  fullName: Dropbox.Api.TeamLog.DownloadPolicyType.IsAllow
+- uid: Dropbox.Api.TeamLog.DownloadPolicyType.AsAllow
+  commentId: P:Dropbox.Api.TeamLog.DownloadPolicyType.AsAllow
+  parent: Dropbox.Api.TeamLog.DownloadPolicyType
+  name: AsAllow
+  nameWithType: DownloadPolicyType.AsAllow
+  fullName: Dropbox.Api.TeamLog.DownloadPolicyType.AsAllow
+- uid: Dropbox.Api.TeamLog.DownloadPolicyType.IsDisallow
+  commentId: P:Dropbox.Api.TeamLog.DownloadPolicyType.IsDisallow
+  parent: Dropbox.Api.TeamLog.DownloadPolicyType
+  name: IsDisallow
+  nameWithType: DownloadPolicyType.IsDisallow
+  fullName: Dropbox.Api.TeamLog.DownloadPolicyType.IsDisallow
+- uid: Dropbox.Api.TeamLog.DownloadPolicyType.AsDisallow
+  commentId: P:Dropbox.Api.TeamLog.DownloadPolicyType.AsDisallow
+  parent: Dropbox.Api.TeamLog.DownloadPolicyType
+  name: AsDisallow
+  nameWithType: DownloadPolicyType.AsDisallow
+  fullName: Dropbox.Api.TeamLog.DownloadPolicyType.AsDisallow
+- uid: Dropbox.Api.TeamLog.DownloadPolicyType.IsOther
+  commentId: P:Dropbox.Api.TeamLog.DownloadPolicyType.IsOther
+  parent: Dropbox.Api.TeamLog.DownloadPolicyType
+  name: IsOther
+  nameWithType: DownloadPolicyType.IsOther
+  fullName: Dropbox.Api.TeamLog.DownloadPolicyType.IsOther
+- uid: Dropbox.Api.TeamLog.DownloadPolicyType.AsOther
+  commentId: P:Dropbox.Api.TeamLog.DownloadPolicyType.AsOther
+  parent: Dropbox.Api.TeamLog.DownloadPolicyType
+  name: AsOther
+  nameWithType: DownloadPolicyType.AsOther
+  fullName: Dropbox.Api.TeamLog.DownloadPolicyType.AsOther
+- uid: Dropbox.Api.TeamLog.DownloadPolicyType.Allow
+  commentId: T:Dropbox.Api.TeamLog.DownloadPolicyType.Allow
+  parent: Dropbox.Api.TeamLog
+  name: DownloadPolicyType.Allow
+  nameWithType: DownloadPolicyType.Allow
+  fullName: Dropbox.Api.TeamLog.DownloadPolicyType.Allow
+shouldSkipMarkup: true

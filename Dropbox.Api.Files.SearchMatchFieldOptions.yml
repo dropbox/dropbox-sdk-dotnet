@@ -1,0 +1,190 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.SearchMatchFieldOptions
+  commentId: T:Dropbox.Api.Files.SearchMatchFieldOptions
+  id: SearchMatchFieldOptions
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.SearchMatchFieldOptions.#ctor
+  - Dropbox.Api.Files.SearchMatchFieldOptions.#ctor(System.Boolean)
+  - Dropbox.Api.Files.SearchMatchFieldOptions.IncludeHighlights
+  langs:
+  - csharp
+  - vb
+  name: SearchMatchFieldOptions
+  nameWithType: SearchMatchFieldOptions
+  fullName: Dropbox.Api.Files.SearchMatchFieldOptions
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchMatchFieldOptions.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SearchMatchFieldOptions
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchMatchFieldOptions.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The search match field options object</p>\n"
+  example: []
+  syntax:
+    content: 'public class SearchMatchFieldOptions : object'
+    content.vb: >-
+      Public Class SearchMatchFieldOptions
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.SearchMatchFieldOptions.#ctor(System.Boolean)
+  commentId: M:Dropbox.Api.Files.SearchMatchFieldOptions.#ctor(System.Boolean)
+  id: '#ctor(System.Boolean)'
+  parent: Dropbox.Api.Files.SearchMatchFieldOptions
+  langs:
+  - csharp
+  - vb
+  name: SearchMatchFieldOptions(Boolean)
+  nameWithType: SearchMatchFieldOptions.SearchMatchFieldOptions(Boolean)
+  fullName: Dropbox.Api.Files.SearchMatchFieldOptions.SearchMatchFieldOptions(System.Boolean)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchMatchFieldOptions.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchMatchFieldOptions.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.SearchMatchFieldOptions\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public SearchMatchFieldOptions(bool includeHighlights = false)
+    parameters:
+    - id: includeHighlights
+      type: System.Boolean
+      description: >-
+        Whether to include highlight span from file
+
+        title.
+    content.vb: Public Sub New(includeHighlights As Boolean = False)
+  overload: Dropbox.Api.Files.SearchMatchFieldOptions.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.SearchMatchFieldOptions.#ctor
+  commentId: M:Dropbox.Api.Files.SearchMatchFieldOptions.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.SearchMatchFieldOptions
+  langs:
+  - csharp
+  - vb
+  name: SearchMatchFieldOptions()
+  nameWithType: SearchMatchFieldOptions.SearchMatchFieldOptions()
+  fullName: Dropbox.Api.Files.SearchMatchFieldOptions.SearchMatchFieldOptions()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchMatchFieldOptions.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchMatchFieldOptions.cs
+    startLine: 46
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.SearchMatchFieldOptions\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public SearchMatchFieldOptions()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.SearchMatchFieldOptions.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.SearchMatchFieldOptions.IncludeHighlights
+  commentId: P:Dropbox.Api.Files.SearchMatchFieldOptions.IncludeHighlights
+  id: IncludeHighlights
+  parent: Dropbox.Api.Files.SearchMatchFieldOptions
+  langs:
+  - csharp
+  - vb
+  name: IncludeHighlights
+  nameWithType: SearchMatchFieldOptions.IncludeHighlights
+  fullName: Dropbox.Api.Files.SearchMatchFieldOptions.IncludeHighlights
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchMatchFieldOptions.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IncludeHighlights
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchMatchFieldOptions.cs
+    startLine: 55
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Whether to include highlight span from file title.</p>\n"
+  example: []
+  syntax:
+    content: public bool IncludeHighlights { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IncludeHighlights As Boolean
+  overload: Dropbox.Api.Files.SearchMatchFieldOptions.IncludeHighlights*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.SearchMatchFieldOptions
+  commentId: T:Dropbox.Api.Files.SearchMatchFieldOptions
+  parent: Dropbox.Api.Files
+  name: SearchMatchFieldOptions
+  nameWithType: SearchMatchFieldOptions
+  fullName: Dropbox.Api.Files.SearchMatchFieldOptions
+- uid: Dropbox.Api.Files.SearchMatchFieldOptions.#ctor*
+  commentId: Overload:Dropbox.Api.Files.SearchMatchFieldOptions.#ctor
+  name: SearchMatchFieldOptions
+  nameWithType: SearchMatchFieldOptions.SearchMatchFieldOptions
+  fullName: Dropbox.Api.Files.SearchMatchFieldOptions.SearchMatchFieldOptions
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Files.SearchMatchFieldOptions.IncludeHighlights*
+  commentId: Overload:Dropbox.Api.Files.SearchMatchFieldOptions.IncludeHighlights
+  name: IncludeHighlights
+  nameWithType: SearchMatchFieldOptions.IncludeHighlights
+  fullName: Dropbox.Api.Files.SearchMatchFieldOptions.IncludeHighlights
+shouldSkipMarkup: true

@@ -1,0 +1,201 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.RemoveMemberJobStatus.Failed
+  commentId: T:Dropbox.Api.Sharing.RemoveMemberJobStatus.Failed
+  id: RemoveMemberJobStatus.Failed
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.RemoveMemberJobStatus.Failed.#ctor(Dropbox.Api.Sharing.RemoveFolderMemberError)
+  - Dropbox.Api.Sharing.RemoveMemberJobStatus.Failed.Value
+  langs:
+  - csharp
+  - vb
+  name: RemoveMemberJobStatus.Failed
+  nameWithType: RemoveMemberJobStatus.Failed
+  fullName: Dropbox.Api.Sharing.RemoveMemberJobStatus.Failed
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RemoveMemberJobStatus.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Failed
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RemoveMemberJobStatus.cs
+    startLine: 273
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The failed object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Failed : RemoveMemberJobStatus'
+    content.vb: >-
+      Public NotInheritable Class Failed
+          Inherits RemoveMemberJobStatus
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Sharing.RemoveMemberJobStatus
+  inheritedMembers:
+  - Dropbox.Api.Sharing.RemoveMemberJobStatus.IsComplete
+  - Dropbox.Api.Sharing.RemoveMemberJobStatus.AsComplete
+  - Dropbox.Api.Sharing.RemoveMemberJobStatus.IsFailed
+  - Dropbox.Api.Sharing.RemoveMemberJobStatus.AsFailed
+  - Dropbox.Api.Sharing.RemoveMemberJobStatus.IsInProgress
+  - Dropbox.Api.Sharing.RemoveMemberJobStatus.AsInProgress
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Sharing.RemoveMemberJobStatus.Failed.#ctor(Dropbox.Api.Sharing.RemoveFolderMemberError)
+  commentId: M:Dropbox.Api.Sharing.RemoveMemberJobStatus.Failed.#ctor(Dropbox.Api.Sharing.RemoveFolderMemberError)
+  id: '#ctor(Dropbox.Api.Sharing.RemoveFolderMemberError)'
+  parent: Dropbox.Api.Sharing.RemoveMemberJobStatus.Failed
+  langs:
+  - csharp
+  - vb
+  name: Failed(RemoveFolderMemberError)
+  nameWithType: RemoveMemberJobStatus.Failed.Failed(RemoveFolderMemberError)
+  fullName: Dropbox.Api.Sharing.RemoveMemberJobStatus.Failed.Failed(Dropbox.Api.Sharing.RemoveFolderMemberError)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RemoveMemberJobStatus.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RemoveMemberJobStatus.cs
+    startLine: 291
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.RemoveMemberJobStatus.Failed\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public Failed(RemoveFolderMemberError value)
+    parameters:
+    - id: value
+      type: Dropbox.Api.Sharing.RemoveFolderMemberError
+      description: The value
+    content.vb: Public Sub New(value As RemoveFolderMemberError)
+  overload: Dropbox.Api.Sharing.RemoveMemberJobStatus.Failed.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.RemoveMemberJobStatus.Failed.Value
+  commentId: P:Dropbox.Api.Sharing.RemoveMemberJobStatus.Failed.Value
+  id: Value
+  parent: Dropbox.Api.Sharing.RemoveMemberJobStatus.Failed
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: RemoveMemberJobStatus.Failed.Value
+  fullName: Dropbox.Api.Sharing.RemoveMemberJobStatus.Failed.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RemoveMemberJobStatus.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RemoveMemberJobStatus.cs
+    startLine: 305
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public RemoveFolderMemberError Value { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.RemoveFolderMemberError
+    content.vb: Public ReadOnly Property Value As RemoveFolderMemberError
+  overload: Dropbox.Api.Sharing.RemoveMemberJobStatus.Failed.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.RemoveMemberJobStatus
+  commentId: T:Dropbox.Api.Sharing.RemoveMemberJobStatus
+  parent: Dropbox.Api.Sharing
+  name: RemoveMemberJobStatus
+  nameWithType: RemoveMemberJobStatus
+  fullName: Dropbox.Api.Sharing.RemoveMemberJobStatus
+- uid: Dropbox.Api.Sharing.RemoveMemberJobStatus.IsComplete
+  commentId: P:Dropbox.Api.Sharing.RemoveMemberJobStatus.IsComplete
+  parent: Dropbox.Api.Sharing.RemoveMemberJobStatus
+  name: IsComplete
+  nameWithType: RemoveMemberJobStatus.IsComplete
+  fullName: Dropbox.Api.Sharing.RemoveMemberJobStatus.IsComplete
+- uid: Dropbox.Api.Sharing.RemoveMemberJobStatus.AsComplete
+  commentId: P:Dropbox.Api.Sharing.RemoveMemberJobStatus.AsComplete
+  parent: Dropbox.Api.Sharing.RemoveMemberJobStatus
+  name: AsComplete
+  nameWithType: RemoveMemberJobStatus.AsComplete
+  fullName: Dropbox.Api.Sharing.RemoveMemberJobStatus.AsComplete
+- uid: Dropbox.Api.Sharing.RemoveMemberJobStatus.IsFailed
+  commentId: P:Dropbox.Api.Sharing.RemoveMemberJobStatus.IsFailed
+  parent: Dropbox.Api.Sharing.RemoveMemberJobStatus
+  name: IsFailed
+  nameWithType: RemoveMemberJobStatus.IsFailed
+  fullName: Dropbox.Api.Sharing.RemoveMemberJobStatus.IsFailed
+- uid: Dropbox.Api.Sharing.RemoveMemberJobStatus.AsFailed
+  commentId: P:Dropbox.Api.Sharing.RemoveMemberJobStatus.AsFailed
+  parent: Dropbox.Api.Sharing.RemoveMemberJobStatus
+  name: AsFailed
+  nameWithType: RemoveMemberJobStatus.AsFailed
+  fullName: Dropbox.Api.Sharing.RemoveMemberJobStatus.AsFailed
+- uid: Dropbox.Api.Sharing.RemoveMemberJobStatus.IsInProgress
+  commentId: P:Dropbox.Api.Sharing.RemoveMemberJobStatus.IsInProgress
+  parent: Dropbox.Api.Sharing.RemoveMemberJobStatus
+  name: IsInProgress
+  nameWithType: RemoveMemberJobStatus.IsInProgress
+  fullName: Dropbox.Api.Sharing.RemoveMemberJobStatus.IsInProgress
+- uid: Dropbox.Api.Sharing.RemoveMemberJobStatus.AsInProgress
+  commentId: P:Dropbox.Api.Sharing.RemoveMemberJobStatus.AsInProgress
+  parent: Dropbox.Api.Sharing.RemoveMemberJobStatus
+  name: AsInProgress
+  nameWithType: RemoveMemberJobStatus.AsInProgress
+  fullName: Dropbox.Api.Sharing.RemoveMemberJobStatus.AsInProgress
+- uid: Dropbox.Api.Sharing.RemoveMemberJobStatus.Failed
+  commentId: T:Dropbox.Api.Sharing.RemoveMemberJobStatus.Failed
+  parent: Dropbox.Api.Sharing
+  name: RemoveMemberJobStatus.Failed
+  nameWithType: RemoveMemberJobStatus.Failed
+  fullName: Dropbox.Api.Sharing.RemoveMemberJobStatus.Failed
+- uid: Dropbox.Api.Sharing.RemoveMemberJobStatus.Failed.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.RemoveMemberJobStatus.Failed.#ctor
+  name: Failed
+  nameWithType: RemoveMemberJobStatus.Failed.Failed
+  fullName: Dropbox.Api.Sharing.RemoveMemberJobStatus.Failed.Failed
+- uid: Dropbox.Api.Sharing.RemoveFolderMemberError
+  commentId: T:Dropbox.Api.Sharing.RemoveFolderMemberError
+  parent: Dropbox.Api.Sharing
+  name: RemoveFolderMemberError
+  nameWithType: RemoveFolderMemberError
+  fullName: Dropbox.Api.Sharing.RemoveFolderMemberError
+- uid: Dropbox.Api.Sharing.RemoveMemberJobStatus.Failed.Value*
+  commentId: Overload:Dropbox.Api.Sharing.RemoveMemberJobStatus.Failed.Value
+  name: Value
+  nameWithType: RemoveMemberJobStatus.Failed.Value
+  fullName: Dropbox.Api.Sharing.RemoveMemberJobStatus.Failed.Value
+shouldSkipMarkup: true

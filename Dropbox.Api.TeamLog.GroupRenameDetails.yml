@@ -1,0 +1,235 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.GroupRenameDetails
+  commentId: T:Dropbox.Api.TeamLog.GroupRenameDetails
+  id: GroupRenameDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.GroupRenameDetails.#ctor
+  - Dropbox.Api.TeamLog.GroupRenameDetails.#ctor(System.String,System.String)
+  - Dropbox.Api.TeamLog.GroupRenameDetails.NewValue
+  - Dropbox.Api.TeamLog.GroupRenameDetails.PreviousValue
+  langs:
+  - csharp
+  - vb
+  name: GroupRenameDetails
+  nameWithType: GroupRenameDetails
+  fullName: Dropbox.Api.TeamLog.GroupRenameDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupRenameDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GroupRenameDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupRenameDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Renamed group.</p>\n"
+  example: []
+  syntax:
+    content: 'public class GroupRenameDetails : object'
+    content.vb: >-
+      Public Class GroupRenameDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.GroupRenameDetails.#ctor(System.String,System.String)
+  commentId: M:Dropbox.Api.TeamLog.GroupRenameDetails.#ctor(System.String,System.String)
+  id: '#ctor(System.String,System.String)'
+  parent: Dropbox.Api.TeamLog.GroupRenameDetails
+  langs:
+  - csharp
+  - vb
+  name: GroupRenameDetails(String, String)
+  nameWithType: GroupRenameDetails.GroupRenameDetails(String, String)
+  fullName: Dropbox.Api.TeamLog.GroupRenameDetails.GroupRenameDetails(System.String, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupRenameDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupRenameDetails.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.GroupRenameDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public GroupRenameDetails(string previousValue, string newValue)
+    parameters:
+    - id: previousValue
+      type: System.String
+      description: Previous display name.
+    - id: newValue
+      type: System.String
+      description: New display name.
+    content.vb: Public Sub New(previousValue As String, newValue As String)
+  overload: Dropbox.Api.TeamLog.GroupRenameDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.GroupRenameDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.GroupRenameDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.GroupRenameDetails
+  langs:
+  - csharp
+  - vb
+  name: GroupRenameDetails()
+  nameWithType: GroupRenameDetails.GroupRenameDetails()
+  fullName: Dropbox.Api.TeamLog.GroupRenameDetails.GroupRenameDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupRenameDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupRenameDetails.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.GroupRenameDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public GroupRenameDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.GroupRenameDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.GroupRenameDetails.PreviousValue
+  commentId: P:Dropbox.Api.TeamLog.GroupRenameDetails.PreviousValue
+  id: PreviousValue
+  parent: Dropbox.Api.TeamLog.GroupRenameDetails
+  langs:
+  - csharp
+  - vb
+  name: PreviousValue
+  nameWithType: GroupRenameDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.GroupRenameDetails.PreviousValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupRenameDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PreviousValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupRenameDetails.cs
+    startLine: 66
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Previous display name.</p>\n"
+  example: []
+  syntax:
+    content: public string PreviousValue { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property PreviousValue As String
+  overload: Dropbox.Api.TeamLog.GroupRenameDetails.PreviousValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.GroupRenameDetails.NewValue
+  commentId: P:Dropbox.Api.TeamLog.GroupRenameDetails.NewValue
+  id: NewValue
+  parent: Dropbox.Api.TeamLog.GroupRenameDetails
+  langs:
+  - csharp
+  - vb
+  name: NewValue
+  nameWithType: GroupRenameDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.GroupRenameDetails.NewValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupRenameDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NewValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupRenameDetails.cs
+    startLine: 71
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>New display name.</p>\n"
+  example: []
+  syntax:
+    content: public string NewValue { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property NewValue As String
+  overload: Dropbox.Api.TeamLog.GroupRenameDetails.NewValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.GroupRenameDetails
+  commentId: T:Dropbox.Api.TeamLog.GroupRenameDetails
+  parent: Dropbox.Api.TeamLog
+  name: GroupRenameDetails
+  nameWithType: GroupRenameDetails
+  fullName: Dropbox.Api.TeamLog.GroupRenameDetails
+- uid: Dropbox.Api.TeamLog.GroupRenameDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.GroupRenameDetails.#ctor
+  name: GroupRenameDetails
+  nameWithType: GroupRenameDetails.GroupRenameDetails
+  fullName: Dropbox.Api.TeamLog.GroupRenameDetails.GroupRenameDetails
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.GroupRenameDetails.PreviousValue*
+  commentId: Overload:Dropbox.Api.TeamLog.GroupRenameDetails.PreviousValue
+  name: PreviousValue
+  nameWithType: GroupRenameDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.GroupRenameDetails.PreviousValue
+- uid: Dropbox.Api.TeamLog.GroupRenameDetails.NewValue*
+  commentId: Overload:Dropbox.Api.TeamLog.GroupRenameDetails.NewValue
+  name: NewValue
+  nameWithType: GroupRenameDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.GroupRenameDetails.NewValue
+shouldSkipMarkup: true

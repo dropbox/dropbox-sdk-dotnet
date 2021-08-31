@@ -1,0 +1,235 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.RestoreArg
+  commentId: T:Dropbox.Api.Files.RestoreArg
+  id: RestoreArg
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.RestoreArg.#ctor
+  - Dropbox.Api.Files.RestoreArg.#ctor(System.String,System.String)
+  - Dropbox.Api.Files.RestoreArg.Path
+  - Dropbox.Api.Files.RestoreArg.Rev
+  langs:
+  - csharp
+  - vb
+  name: RestoreArg
+  nameWithType: RestoreArg
+  fullName: Dropbox.Api.Files.RestoreArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RestoreArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: RestoreArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RestoreArg.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The restore arg object</p>\n"
+  example: []
+  syntax:
+    content: 'public class RestoreArg : object'
+    content.vb: >-
+      Public Class RestoreArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.RestoreArg.#ctor(System.String,System.String)
+  commentId: M:Dropbox.Api.Files.RestoreArg.#ctor(System.String,System.String)
+  id: '#ctor(System.String,System.String)'
+  parent: Dropbox.Api.Files.RestoreArg
+  langs:
+  - csharp
+  - vb
+  name: RestoreArg(String, String)
+  nameWithType: RestoreArg.RestoreArg(String, String)
+  fullName: Dropbox.Api.Files.RestoreArg.RestoreArg(System.String, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RestoreArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RestoreArg.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.RestoreArg\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public RestoreArg(string path, string rev)
+    parameters:
+    - id: path
+      type: System.String
+      description: The path to save the restored file.
+    - id: rev
+      type: System.String
+      description: The revision to restore.
+    content.vb: Public Sub New(path As String, rev As String)
+  overload: Dropbox.Api.Files.RestoreArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.RestoreArg.#ctor
+  commentId: M:Dropbox.Api.Files.RestoreArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.RestoreArg
+  langs:
+  - csharp
+  - vb
+  name: RestoreArg()
+  nameWithType: RestoreArg.RestoreArg()
+  fullName: Dropbox.Api.Files.RestoreArg.RestoreArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RestoreArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RestoreArg.cs
+    startLine: 68
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.RestoreArg\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public RestoreArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.RestoreArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.RestoreArg.Path
+  commentId: P:Dropbox.Api.Files.RestoreArg.Path
+  id: Path
+  parent: Dropbox.Api.Files.RestoreArg
+  langs:
+  - csharp
+  - vb
+  name: Path
+  nameWithType: RestoreArg.Path
+  fullName: Dropbox.Api.Files.RestoreArg.Path
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RestoreArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Path
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RestoreArg.cs
+    startLine: 76
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The path to save the restored file.</p>\n"
+  example: []
+  syntax:
+    content: public string Path { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Path As String
+  overload: Dropbox.Api.Files.RestoreArg.Path*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.RestoreArg.Rev
+  commentId: P:Dropbox.Api.Files.RestoreArg.Rev
+  id: Rev
+  parent: Dropbox.Api.Files.RestoreArg
+  langs:
+  - csharp
+  - vb
+  name: Rev
+  nameWithType: RestoreArg.Rev
+  fullName: Dropbox.Api.Files.RestoreArg.Rev
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RestoreArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Rev
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RestoreArg.cs
+    startLine: 81
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The revision to restore.</p>\n"
+  example: []
+  syntax:
+    content: public string Rev { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Rev As String
+  overload: Dropbox.Api.Files.RestoreArg.Rev*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.RestoreArg
+  commentId: T:Dropbox.Api.Files.RestoreArg
+  parent: Dropbox.Api.Files
+  name: RestoreArg
+  nameWithType: RestoreArg
+  fullName: Dropbox.Api.Files.RestoreArg
+- uid: Dropbox.Api.Files.RestoreArg.#ctor*
+  commentId: Overload:Dropbox.Api.Files.RestoreArg.#ctor
+  name: RestoreArg
+  nameWithType: RestoreArg.RestoreArg
+  fullName: Dropbox.Api.Files.RestoreArg.RestoreArg
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Files.RestoreArg.Path*
+  commentId: Overload:Dropbox.Api.Files.RestoreArg.Path
+  name: Path
+  nameWithType: RestoreArg.Path
+  fullName: Dropbox.Api.Files.RestoreArg.Path
+- uid: Dropbox.Api.Files.RestoreArg.Rev*
+  commentId: Overload:Dropbox.Api.Files.RestoreArg.Rev
+  name: Rev
+  nameWithType: RestoreArg.Rev
+  fullName: Dropbox.Api.Files.RestoreArg.Rev
+shouldSkipMarkup: true

@@ -1,0 +1,190 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Async.PollArg
+  commentId: T:Dropbox.Api.Async.PollArg
+  id: PollArg
+  parent: Dropbox.Api.Async
+  children:
+  - Dropbox.Api.Async.PollArg.#ctor
+  - Dropbox.Api.Async.PollArg.#ctor(System.String)
+  - Dropbox.Api.Async.PollArg.AsyncJobId
+  langs:
+  - csharp
+  - vb
+  name: PollArg
+  nameWithType: PollArg
+  fullName: Dropbox.Api.Async.PollArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Async/PollArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PollArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Async/PollArg.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Async
+  summary: "\n<p>Arguments for methods that poll the status of an asynchronous job.</p>\n"
+  example: []
+  syntax:
+    content: 'public class PollArg : object'
+    content.vb: >-
+      Public Class PollArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Async.PollArg.#ctor(System.String)
+  commentId: M:Dropbox.Api.Async.PollArg.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.Async.PollArg
+  langs:
+  - csharp
+  - vb
+  name: PollArg(String)
+  nameWithType: PollArg.PollArg(String)
+  fullName: Dropbox.Api.Async.PollArg.PollArg(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Async/PollArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Async/PollArg.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Async
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Async.PollArg\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public PollArg(string asyncJobId)
+    parameters:
+    - id: asyncJobId
+      type: System.String
+      description: >-
+        Id of the asynchronous job. This is the value of a
+
+        response returned from the method that launched the job.
+    content.vb: Public Sub New(asyncJobId As String)
+  overload: Dropbox.Api.Async.PollArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Async.PollArg.#ctor
+  commentId: M:Dropbox.Api.Async.PollArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Async.PollArg
+  langs:
+  - csharp
+  - vb
+  name: PollArg()
+  nameWithType: PollArg.PollArg()
+  fullName: Dropbox.Api.Async.PollArg.PollArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Async/PollArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Async/PollArg.cs
+    startLine: 53
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Async
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Async.PollArg\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public PollArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Async.PollArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Async.PollArg.AsyncJobId
+  commentId: P:Dropbox.Api.Async.PollArg.AsyncJobId
+  id: AsyncJobId
+  parent: Dropbox.Api.Async.PollArg
+  langs:
+  - csharp
+  - vb
+  name: AsyncJobId
+  nameWithType: PollArg.AsyncJobId
+  fullName: Dropbox.Api.Async.PollArg.AsyncJobId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Async/PollArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsyncJobId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Async/PollArg.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Async
+  summary: "\n<p>Id of the asynchronous job. This is the value of a response returned from the\nmethod that launched the job.</p>\n"
+  example: []
+  syntax:
+    content: public string AsyncJobId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property AsyncJobId As String
+  overload: Dropbox.Api.Async.PollArg.AsyncJobId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Async
+  commentId: N:Dropbox.Api.Async
+  name: Dropbox.Api.Async
+  nameWithType: Dropbox.Api.Async
+  fullName: Dropbox.Api.Async
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Async.PollArg
+  commentId: T:Dropbox.Api.Async.PollArg
+  parent: Dropbox.Api.Async
+  name: PollArg
+  nameWithType: PollArg
+  fullName: Dropbox.Api.Async.PollArg
+- uid: Dropbox.Api.Async.PollArg.#ctor*
+  commentId: Overload:Dropbox.Api.Async.PollArg.#ctor
+  name: PollArg
+  nameWithType: PollArg.PollArg
+  fullName: Dropbox.Api.Async.PollArg.PollArg
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Async.PollArg.AsyncJobId*
+  commentId: Overload:Dropbox.Api.Async.PollArg.AsyncJobId
+  name: AsyncJobId
+  nameWithType: PollArg.AsyncJobId
+  fullName: Dropbox.Api.Async.PollArg.AsyncJobId
+shouldSkipMarkup: true

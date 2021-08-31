@@ -1,0 +1,289 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.AdminAlertingChangedAlertConfigDetails
+  commentId: T:Dropbox.Api.TeamLog.AdminAlertingChangedAlertConfigDetails
+  id: AdminAlertingChangedAlertConfigDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.AdminAlertingChangedAlertConfigDetails.#ctor
+  - Dropbox.Api.TeamLog.AdminAlertingChangedAlertConfigDetails.#ctor(System.String,Dropbox.Api.TeamLog.AdminAlertingAlertConfiguration,Dropbox.Api.TeamLog.AdminAlertingAlertConfiguration)
+  - Dropbox.Api.TeamLog.AdminAlertingChangedAlertConfigDetails.AlertName
+  - Dropbox.Api.TeamLog.AdminAlertingChangedAlertConfigDetails.NewAlertConfig
+  - Dropbox.Api.TeamLog.AdminAlertingChangedAlertConfigDetails.PreviousAlertConfig
+  langs:
+  - csharp
+  - vb
+  name: AdminAlertingChangedAlertConfigDetails
+  nameWithType: AdminAlertingChangedAlertConfigDetails
+  fullName: Dropbox.Api.TeamLog.AdminAlertingChangedAlertConfigDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertingChangedAlertConfigDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AdminAlertingChangedAlertConfigDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertingChangedAlertConfigDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Changed an alert setting.</p>\n"
+  example: []
+  syntax:
+    content: 'public class AdminAlertingChangedAlertConfigDetails : object'
+    content.vb: >-
+      Public Class AdminAlertingChangedAlertConfigDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.AdminAlertingChangedAlertConfigDetails.#ctor(System.String,Dropbox.Api.TeamLog.AdminAlertingAlertConfiguration,Dropbox.Api.TeamLog.AdminAlertingAlertConfiguration)
+  commentId: M:Dropbox.Api.TeamLog.AdminAlertingChangedAlertConfigDetails.#ctor(System.String,Dropbox.Api.TeamLog.AdminAlertingAlertConfiguration,Dropbox.Api.TeamLog.AdminAlertingAlertConfiguration)
+  id: '#ctor(System.String,Dropbox.Api.TeamLog.AdminAlertingAlertConfiguration,Dropbox.Api.TeamLog.AdminAlertingAlertConfiguration)'
+  parent: Dropbox.Api.TeamLog.AdminAlertingChangedAlertConfigDetails
+  langs:
+  - csharp
+  - vb
+  name: AdminAlertingChangedAlertConfigDetails(String, AdminAlertingAlertConfiguration, AdminAlertingAlertConfiguration)
+  nameWithType: AdminAlertingChangedAlertConfigDetails.AdminAlertingChangedAlertConfigDetails(String, AdminAlertingAlertConfiguration, AdminAlertingAlertConfiguration)
+  fullName: Dropbox.Api.TeamLog.AdminAlertingChangedAlertConfigDetails.AdminAlertingChangedAlertConfigDetails(System.String, Dropbox.Api.TeamLog.AdminAlertingAlertConfiguration, Dropbox.Api.TeamLog.AdminAlertingAlertConfiguration)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertingChangedAlertConfigDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertingChangedAlertConfigDetails.cs
+    startLine: 36
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.AdminAlertingChangedAlertConfigDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public AdminAlertingChangedAlertConfigDetails(string alertName, AdminAlertingAlertConfiguration previousAlertConfig, AdminAlertingAlertConfiguration newAlertConfig)
+    parameters:
+    - id: alertName
+      type: System.String
+      description: Alert Name.
+    - id: previousAlertConfig
+      type: Dropbox.Api.TeamLog.AdminAlertingAlertConfiguration
+      description: Previous alert configuration.
+    - id: newAlertConfig
+      type: Dropbox.Api.TeamLog.AdminAlertingAlertConfiguration
+      description: New alert configuration.
+    content.vb: Public Sub New(alertName As String, previousAlertConfig As AdminAlertingAlertConfiguration, newAlertConfig As AdminAlertingAlertConfiguration)
+  overload: Dropbox.Api.TeamLog.AdminAlertingChangedAlertConfigDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.AdminAlertingChangedAlertConfigDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.AdminAlertingChangedAlertConfigDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.AdminAlertingChangedAlertConfigDetails
+  langs:
+  - csharp
+  - vb
+  name: AdminAlertingChangedAlertConfigDetails()
+  nameWithType: AdminAlertingChangedAlertConfigDetails.AdminAlertingChangedAlertConfigDetails()
+  fullName: Dropbox.Api.TeamLog.AdminAlertingChangedAlertConfigDetails.AdminAlertingChangedAlertConfigDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertingChangedAlertConfigDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertingChangedAlertConfigDetails.cs
+    startLine: 66
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.AdminAlertingChangedAlertConfigDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public AdminAlertingChangedAlertConfigDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.AdminAlertingChangedAlertConfigDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.AdminAlertingChangedAlertConfigDetails.AlertName
+  commentId: P:Dropbox.Api.TeamLog.AdminAlertingChangedAlertConfigDetails.AlertName
+  id: AlertName
+  parent: Dropbox.Api.TeamLog.AdminAlertingChangedAlertConfigDetails
+  langs:
+  - csharp
+  - vb
+  name: AlertName
+  nameWithType: AdminAlertingChangedAlertConfigDetails.AlertName
+  fullName: Dropbox.Api.TeamLog.AdminAlertingChangedAlertConfigDetails.AlertName
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertingChangedAlertConfigDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AlertName
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertingChangedAlertConfigDetails.cs
+    startLine: 74
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Alert Name.</p>\n"
+  example: []
+  syntax:
+    content: public string AlertName { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property AlertName As String
+  overload: Dropbox.Api.TeamLog.AdminAlertingChangedAlertConfigDetails.AlertName*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.AdminAlertingChangedAlertConfigDetails.PreviousAlertConfig
+  commentId: P:Dropbox.Api.TeamLog.AdminAlertingChangedAlertConfigDetails.PreviousAlertConfig
+  id: PreviousAlertConfig
+  parent: Dropbox.Api.TeamLog.AdminAlertingChangedAlertConfigDetails
+  langs:
+  - csharp
+  - vb
+  name: PreviousAlertConfig
+  nameWithType: AdminAlertingChangedAlertConfigDetails.PreviousAlertConfig
+  fullName: Dropbox.Api.TeamLog.AdminAlertingChangedAlertConfigDetails.PreviousAlertConfig
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertingChangedAlertConfigDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PreviousAlertConfig
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertingChangedAlertConfigDetails.cs
+    startLine: 79
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Previous alert configuration.</p>\n"
+  example: []
+  syntax:
+    content: public AdminAlertingAlertConfiguration PreviousAlertConfig { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.AdminAlertingAlertConfiguration
+    content.vb: Public Property PreviousAlertConfig As AdminAlertingAlertConfiguration
+  overload: Dropbox.Api.TeamLog.AdminAlertingChangedAlertConfigDetails.PreviousAlertConfig*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.AdminAlertingChangedAlertConfigDetails.NewAlertConfig
+  commentId: P:Dropbox.Api.TeamLog.AdminAlertingChangedAlertConfigDetails.NewAlertConfig
+  id: NewAlertConfig
+  parent: Dropbox.Api.TeamLog.AdminAlertingChangedAlertConfigDetails
+  langs:
+  - csharp
+  - vb
+  name: NewAlertConfig
+  nameWithType: AdminAlertingChangedAlertConfigDetails.NewAlertConfig
+  fullName: Dropbox.Api.TeamLog.AdminAlertingChangedAlertConfigDetails.NewAlertConfig
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertingChangedAlertConfigDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NewAlertConfig
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertingChangedAlertConfigDetails.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>New alert configuration.</p>\n"
+  example: []
+  syntax:
+    content: public AdminAlertingAlertConfiguration NewAlertConfig { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.AdminAlertingAlertConfiguration
+    content.vb: Public Property NewAlertConfig As AdminAlertingAlertConfiguration
+  overload: Dropbox.Api.TeamLog.AdminAlertingChangedAlertConfigDetails.NewAlertConfig*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.AdminAlertingChangedAlertConfigDetails
+  commentId: T:Dropbox.Api.TeamLog.AdminAlertingChangedAlertConfigDetails
+  parent: Dropbox.Api.TeamLog
+  name: AdminAlertingChangedAlertConfigDetails
+  nameWithType: AdminAlertingChangedAlertConfigDetails
+  fullName: Dropbox.Api.TeamLog.AdminAlertingChangedAlertConfigDetails
+- uid: Dropbox.Api.TeamLog.AdminAlertingChangedAlertConfigDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.AdminAlertingChangedAlertConfigDetails.#ctor
+  name: AdminAlertingChangedAlertConfigDetails
+  nameWithType: AdminAlertingChangedAlertConfigDetails.AdminAlertingChangedAlertConfigDetails
+  fullName: Dropbox.Api.TeamLog.AdminAlertingChangedAlertConfigDetails.AdminAlertingChangedAlertConfigDetails
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.AdminAlertingAlertConfiguration
+  commentId: T:Dropbox.Api.TeamLog.AdminAlertingAlertConfiguration
+  parent: Dropbox.Api.TeamLog
+  name: AdminAlertingAlertConfiguration
+  nameWithType: AdminAlertingAlertConfiguration
+  fullName: Dropbox.Api.TeamLog.AdminAlertingAlertConfiguration
+- uid: Dropbox.Api.TeamLog.AdminAlertingChangedAlertConfigDetails.AlertName*
+  commentId: Overload:Dropbox.Api.TeamLog.AdminAlertingChangedAlertConfigDetails.AlertName
+  name: AlertName
+  nameWithType: AdminAlertingChangedAlertConfigDetails.AlertName
+  fullName: Dropbox.Api.TeamLog.AdminAlertingChangedAlertConfigDetails.AlertName
+- uid: Dropbox.Api.TeamLog.AdminAlertingChangedAlertConfigDetails.PreviousAlertConfig*
+  commentId: Overload:Dropbox.Api.TeamLog.AdminAlertingChangedAlertConfigDetails.PreviousAlertConfig
+  name: PreviousAlertConfig
+  nameWithType: AdminAlertingChangedAlertConfigDetails.PreviousAlertConfig
+  fullName: Dropbox.Api.TeamLog.AdminAlertingChangedAlertConfigDetails.PreviousAlertConfig
+- uid: Dropbox.Api.TeamLog.AdminAlertingChangedAlertConfigDetails.NewAlertConfig*
+  commentId: Overload:Dropbox.Api.TeamLog.AdminAlertingChangedAlertConfigDetails.NewAlertConfig
+  name: NewAlertConfig
+  nameWithType: AdminAlertingChangedAlertConfigDetails.NewAlertConfig
+  fullName: Dropbox.Api.TeamLog.AdminAlertingChangedAlertConfigDetails.NewAlertConfig
+shouldSkipMarkup: true

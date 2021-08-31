@@ -1,0 +1,449 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.RecipientsConfiguration
+  commentId: T:Dropbox.Api.TeamLog.RecipientsConfiguration
+  id: RecipientsConfiguration
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.RecipientsConfiguration.#ctor
+  - Dropbox.Api.TeamLog.RecipientsConfiguration.#ctor(Dropbox.Api.TeamLog.AlertRecipientsSettingType,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String})
+  - Dropbox.Api.TeamLog.RecipientsConfiguration.Emails
+  - Dropbox.Api.TeamLog.RecipientsConfiguration.Groups
+  - Dropbox.Api.TeamLog.RecipientsConfiguration.RecipientSettingType
+  langs:
+  - csharp
+  - vb
+  name: RecipientsConfiguration
+  nameWithType: RecipientsConfiguration
+  fullName: Dropbox.Api.TeamLog.RecipientsConfiguration
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/RecipientsConfiguration.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: RecipientsConfiguration
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/RecipientsConfiguration.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Recipients Configuration</p>\n"
+  example: []
+  syntax:
+    content: 'public class RecipientsConfiguration : object'
+    content.vb: >-
+      Public Class RecipientsConfiguration
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.RecipientsConfiguration.#ctor(Dropbox.Api.TeamLog.AlertRecipientsSettingType,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String})
+  commentId: M:Dropbox.Api.TeamLog.RecipientsConfiguration.#ctor(Dropbox.Api.TeamLog.AlertRecipientsSettingType,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String})
+  id: '#ctor(Dropbox.Api.TeamLog.AlertRecipientsSettingType,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{System.String})'
+  parent: Dropbox.Api.TeamLog.RecipientsConfiguration
+  langs:
+  - csharp
+  - vb
+  name: RecipientsConfiguration(AlertRecipientsSettingType, System.Collections.Generic.IEnumerable<String>, System.Collections.Generic.IEnumerable<String>)
+  nameWithType: RecipientsConfiguration.RecipientsConfiguration(AlertRecipientsSettingType, System.Collections.Generic.IEnumerable<String>, System.Collections.Generic.IEnumerable<String>)
+  fullName: Dropbox.Api.TeamLog.RecipientsConfiguration.RecipientsConfiguration(Dropbox.Api.TeamLog.AlertRecipientsSettingType, System.Collections.Generic.IEnumerable<System.String>, System.Collections.Generic.IEnumerable<System.String>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/RecipientsConfiguration.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/RecipientsConfiguration.cs
+    startLine: 36
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.RecipientsConfiguration\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public RecipientsConfiguration(AlertRecipientsSettingType recipientSettingType = null, System.Collections.Generic.IEnumerable<string> emails = null, System.Collections.Generic.IEnumerable<string> groups = null)
+    parameters:
+    - id: recipientSettingType
+      type: Dropbox.Api.TeamLog.AlertRecipientsSettingType
+      description: Recipients setting type.
+    - id: emails
+      type: System.Collections.Generic.IEnumerable{System.String}
+      description: A list of user emails to notify.
+    - id: groups
+      type: System.Collections.Generic.IEnumerable{System.String}
+      description: A list of groups to notify.
+    content.vb: Public Sub New(recipientSettingType As AlertRecipientsSettingType = Nothing, emails As System.Collections.Generic.IEnumerable(Of String) = Nothing, groups As System.Collections.Generic.IEnumerable(Of String) = Nothing)
+  overload: Dropbox.Api.TeamLog.RecipientsConfiguration.#ctor*
+  nameWithType.vb: RecipientsConfiguration.RecipientsConfiguration(AlertRecipientsSettingType, System.Collections.Generic.IEnumerable(Of String), System.Collections.Generic.IEnumerable(Of String))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.TeamLog.RecipientsConfiguration.RecipientsConfiguration(Dropbox.Api.TeamLog.AlertRecipientsSettingType, System.Collections.Generic.IEnumerable(Of System.String), System.Collections.Generic.IEnumerable(Of System.String))
+  name.vb: RecipientsConfiguration(AlertRecipientsSettingType, System.Collections.Generic.IEnumerable(Of String), System.Collections.Generic.IEnumerable(Of String))
+- uid: Dropbox.Api.TeamLog.RecipientsConfiguration.#ctor
+  commentId: M:Dropbox.Api.TeamLog.RecipientsConfiguration.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.RecipientsConfiguration
+  langs:
+  - csharp
+  - vb
+  name: RecipientsConfiguration()
+  nameWithType: RecipientsConfiguration.RecipientsConfiguration()
+  fullName: Dropbox.Api.TeamLog.RecipientsConfiguration.RecipientsConfiguration()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/RecipientsConfiguration.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/RecipientsConfiguration.cs
+    startLine: 55
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.RecipientsConfiguration\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public RecipientsConfiguration()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.RecipientsConfiguration.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.RecipientsConfiguration.RecipientSettingType
+  commentId: P:Dropbox.Api.TeamLog.RecipientsConfiguration.RecipientSettingType
+  id: RecipientSettingType
+  parent: Dropbox.Api.TeamLog.RecipientsConfiguration
+  langs:
+  - csharp
+  - vb
+  name: RecipientSettingType
+  nameWithType: RecipientsConfiguration.RecipientSettingType
+  fullName: Dropbox.Api.TeamLog.RecipientsConfiguration.RecipientSettingType
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/RecipientsConfiguration.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: RecipientSettingType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/RecipientsConfiguration.cs
+    startLine: 63
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Recipients setting type.</p>\n"
+  example: []
+  syntax:
+    content: public AlertRecipientsSettingType RecipientSettingType { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.AlertRecipientsSettingType
+    content.vb: Public Property RecipientSettingType As AlertRecipientsSettingType
+  overload: Dropbox.Api.TeamLog.RecipientsConfiguration.RecipientSettingType*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.RecipientsConfiguration.Emails
+  commentId: P:Dropbox.Api.TeamLog.RecipientsConfiguration.Emails
+  id: Emails
+  parent: Dropbox.Api.TeamLog.RecipientsConfiguration
+  langs:
+  - csharp
+  - vb
+  name: Emails
+  nameWithType: RecipientsConfiguration.Emails
+  fullName: Dropbox.Api.TeamLog.RecipientsConfiguration.Emails
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/RecipientsConfiguration.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Emails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/RecipientsConfiguration.cs
+    startLine: 68
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>A list of user emails to notify.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<string> Emails { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{System.String}
+    content.vb: Public Property Emails As System.Collections.Generic.IList(Of String)
+  overload: Dropbox.Api.TeamLog.RecipientsConfiguration.Emails*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.RecipientsConfiguration.Groups
+  commentId: P:Dropbox.Api.TeamLog.RecipientsConfiguration.Groups
+  id: Groups
+  parent: Dropbox.Api.TeamLog.RecipientsConfiguration
+  langs:
+  - csharp
+  - vb
+  name: Groups
+  nameWithType: RecipientsConfiguration.Groups
+  fullName: Dropbox.Api.TeamLog.RecipientsConfiguration.Groups
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/RecipientsConfiguration.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Groups
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/RecipientsConfiguration.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>A list of groups to notify.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<string> Groups { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{System.String}
+    content.vb: Public Property Groups As System.Collections.Generic.IList(Of String)
+  overload: Dropbox.Api.TeamLog.RecipientsConfiguration.Groups*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.RecipientsConfiguration
+  commentId: T:Dropbox.Api.TeamLog.RecipientsConfiguration
+  parent: Dropbox.Api.TeamLog
+  name: RecipientsConfiguration
+  nameWithType: RecipientsConfiguration
+  fullName: Dropbox.Api.TeamLog.RecipientsConfiguration
+- uid: Dropbox.Api.TeamLog.RecipientsConfiguration.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.RecipientsConfiguration.#ctor
+  name: RecipientsConfiguration
+  nameWithType: RecipientsConfiguration.RecipientsConfiguration
+  fullName: Dropbox.Api.TeamLog.RecipientsConfiguration.RecipientsConfiguration
+- uid: Dropbox.Api.TeamLog.AlertRecipientsSettingType
+  commentId: T:Dropbox.Api.TeamLog.AlertRecipientsSettingType
+  parent: Dropbox.Api.TeamLog
+  name: AlertRecipientsSettingType
+  nameWithType: AlertRecipientsSettingType
+  fullName: Dropbox.Api.TeamLog.AlertRecipientsSettingType
+- uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: '!:System.Collections.Generic.IEnumerable{System.String}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<String>
+  nameWithType: System.Collections.Generic.IEnumerable<String>
+  fullName: System.Collections.Generic.IEnumerable<System.String>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of String)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.String)
+  name.vb: System.Collections.Generic.IEnumerable(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: System.Collections.Generic.IEnumerable<>
+  nameWithType: System.Collections.Generic.IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: System.Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.TeamLog.RecipientsConfiguration.RecipientSettingType*
+  commentId: Overload:Dropbox.Api.TeamLog.RecipientsConfiguration.RecipientSettingType
+  name: RecipientSettingType
+  nameWithType: RecipientsConfiguration.RecipientSettingType
+  fullName: Dropbox.Api.TeamLog.RecipientsConfiguration.RecipientSettingType
+- uid: Dropbox.Api.TeamLog.RecipientsConfiguration.Emails*
+  commentId: Overload:Dropbox.Api.TeamLog.RecipientsConfiguration.Emails
+  name: Emails
+  nameWithType: RecipientsConfiguration.Emails
+  fullName: Dropbox.Api.TeamLog.RecipientsConfiguration.Emails
+- uid: System.Collections.Generic.IList{System.String}
+  commentId: '!:System.Collections.Generic.IList{System.String}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<String>
+  nameWithType: System.Collections.Generic.IList<String>
+  fullName: System.Collections.Generic.IList<System.String>
+  nameWithType.vb: System.Collections.Generic.IList(Of String)
+  fullName.vb: System.Collections.Generic.IList(Of System.String)
+  name.vb: System.Collections.Generic.IList(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  isExternal: true
+  name: System.Collections.Generic.IList<>
+  nameWithType: System.Collections.Generic.IList<>
+  fullName: System.Collections.Generic.IList<>
+  nameWithType.vb: System.Collections.Generic.IList(Of )
+  fullName.vb: System.Collections.Generic.IList(Of )
+  name.vb: System.Collections.Generic.IList(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.TeamLog.RecipientsConfiguration.Groups*
+  commentId: Overload:Dropbox.Api.TeamLog.RecipientsConfiguration.Groups
+  name: Groups
+  nameWithType: RecipientsConfiguration.Groups
+  fullName: Dropbox.Api.TeamLog.RecipientsConfiguration.Groups
+shouldSkipMarkup: true

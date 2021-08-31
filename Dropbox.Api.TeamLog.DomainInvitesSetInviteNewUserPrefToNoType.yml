@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.DomainInvitesSetInviteNewUserPrefToNoType
+  commentId: T:Dropbox.Api.TeamLog.DomainInvitesSetInviteNewUserPrefToNoType
+  id: DomainInvitesSetInviteNewUserPrefToNoType
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.DomainInvitesSetInviteNewUserPrefToNoType.#ctor
+  - Dropbox.Api.TeamLog.DomainInvitesSetInviteNewUserPrefToNoType.#ctor(System.String)
+  - Dropbox.Api.TeamLog.DomainInvitesSetInviteNewUserPrefToNoType.Description
+  langs:
+  - csharp
+  - vb
+  name: DomainInvitesSetInviteNewUserPrefToNoType
+  nameWithType: DomainInvitesSetInviteNewUserPrefToNoType
+  fullName: Dropbox.Api.TeamLog.DomainInvitesSetInviteNewUserPrefToNoType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DomainInvitesSetInviteNewUserPrefToNoType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: DomainInvitesSetInviteNewUserPrefToNoType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DomainInvitesSetInviteNewUserPrefToNoType.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The domain invites set invite new user pref to no type object</p>\n"
+  example: []
+  syntax:
+    content: 'public class DomainInvitesSetInviteNewUserPrefToNoType : object'
+    content.vb: >-
+      Public Class DomainInvitesSetInviteNewUserPrefToNoType
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.DomainInvitesSetInviteNewUserPrefToNoType.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.DomainInvitesSetInviteNewUserPrefToNoType.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.DomainInvitesSetInviteNewUserPrefToNoType
+  langs:
+  - csharp
+  - vb
+  name: DomainInvitesSetInviteNewUserPrefToNoType(String)
+  nameWithType: DomainInvitesSetInviteNewUserPrefToNoType.DomainInvitesSetInviteNewUserPrefToNoType(String)
+  fullName: Dropbox.Api.TeamLog.DomainInvitesSetInviteNewUserPrefToNoType.DomainInvitesSetInviteNewUserPrefToNoType(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DomainInvitesSetInviteNewUserPrefToNoType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DomainInvitesSetInviteNewUserPrefToNoType.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.DomainInvitesSetInviteNewUserPrefToNoType\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public DomainInvitesSetInviteNewUserPrefToNoType(string description)
+    parameters:
+    - id: description
+      type: System.String
+      description: The description
+    content.vb: Public Sub New(description As String)
+  overload: Dropbox.Api.TeamLog.DomainInvitesSetInviteNewUserPrefToNoType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.DomainInvitesSetInviteNewUserPrefToNoType.#ctor
+  commentId: M:Dropbox.Api.TeamLog.DomainInvitesSetInviteNewUserPrefToNoType.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.DomainInvitesSetInviteNewUserPrefToNoType
+  langs:
+  - csharp
+  - vb
+  name: DomainInvitesSetInviteNewUserPrefToNoType()
+  nameWithType: DomainInvitesSetInviteNewUserPrefToNoType.DomainInvitesSetInviteNewUserPrefToNoType()
+  fullName: Dropbox.Api.TeamLog.DomainInvitesSetInviteNewUserPrefToNoType.DomainInvitesSetInviteNewUserPrefToNoType()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DomainInvitesSetInviteNewUserPrefToNoType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DomainInvitesSetInviteNewUserPrefToNoType.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.DomainInvitesSetInviteNewUserPrefToNoType\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public DomainInvitesSetInviteNewUserPrefToNoType()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.DomainInvitesSetInviteNewUserPrefToNoType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.DomainInvitesSetInviteNewUserPrefToNoType.Description
+  commentId: P:Dropbox.Api.TeamLog.DomainInvitesSetInviteNewUserPrefToNoType.Description
+  id: Description
+  parent: Dropbox.Api.TeamLog.DomainInvitesSetInviteNewUserPrefToNoType
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: DomainInvitesSetInviteNewUserPrefToNoType.Description
+  fullName: Dropbox.Api.TeamLog.DomainInvitesSetInviteNewUserPrefToNoType.Description
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DomainInvitesSetInviteNewUserPrefToNoType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Description
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DomainInvitesSetInviteNewUserPrefToNoType.cs
+    startLine: 59
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets the description of the domain invites set invite new user pref to no\ntype</p>\n"
+  example: []
+  syntax:
+    content: public string Description { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Dropbox.Api.TeamLog.DomainInvitesSetInviteNewUserPrefToNoType.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.DomainInvitesSetInviteNewUserPrefToNoType
+  commentId: T:Dropbox.Api.TeamLog.DomainInvitesSetInviteNewUserPrefToNoType
+  parent: Dropbox.Api.TeamLog
+  name: DomainInvitesSetInviteNewUserPrefToNoType
+  nameWithType: DomainInvitesSetInviteNewUserPrefToNoType
+  fullName: Dropbox.Api.TeamLog.DomainInvitesSetInviteNewUserPrefToNoType
+- uid: Dropbox.Api.TeamLog.DomainInvitesSetInviteNewUserPrefToNoType.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.DomainInvitesSetInviteNewUserPrefToNoType.#ctor
+  name: DomainInvitesSetInviteNewUserPrefToNoType
+  nameWithType: DomainInvitesSetInviteNewUserPrefToNoType.DomainInvitesSetInviteNewUserPrefToNoType
+  fullName: Dropbox.Api.TeamLog.DomainInvitesSetInviteNewUserPrefToNoType.DomainInvitesSetInviteNewUserPrefToNoType
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.DomainInvitesSetInviteNewUserPrefToNoType.Description*
+  commentId: Overload:Dropbox.Api.TeamLog.DomainInvitesSetInviteNewUserPrefToNoType.Description
+  name: Description
+  nameWithType: DomainInvitesSetInviteNewUserPrefToNoType.Description
+  fullName: Dropbox.Api.TeamLog.DomainInvitesSetInviteNewUserPrefToNoType.Description
+shouldSkipMarkup: true

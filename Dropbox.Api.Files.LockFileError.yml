@@ -1,0 +1,939 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.LockFileError
+  commentId: T:Dropbox.Api.Files.LockFileError
+  id: LockFileError
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.LockFileError.#ctor
+  - Dropbox.Api.Files.LockFileError.AsCannotBeLocked
+  - Dropbox.Api.Files.LockFileError.AsFileNotShared
+  - Dropbox.Api.Files.LockFileError.AsInternalError
+  - Dropbox.Api.Files.LockFileError.AsLockConflict
+  - Dropbox.Api.Files.LockFileError.AsNoWritePermission
+  - Dropbox.Api.Files.LockFileError.AsOther
+  - Dropbox.Api.Files.LockFileError.AsPathLookup
+  - Dropbox.Api.Files.LockFileError.AsTooManyFiles
+  - Dropbox.Api.Files.LockFileError.AsTooManyWriteOperations
+  - Dropbox.Api.Files.LockFileError.IsCannotBeLocked
+  - Dropbox.Api.Files.LockFileError.IsFileNotShared
+  - Dropbox.Api.Files.LockFileError.IsInternalError
+  - Dropbox.Api.Files.LockFileError.IsLockConflict
+  - Dropbox.Api.Files.LockFileError.IsNoWritePermission
+  - Dropbox.Api.Files.LockFileError.IsOther
+  - Dropbox.Api.Files.LockFileError.IsPathLookup
+  - Dropbox.Api.Files.LockFileError.IsTooManyFiles
+  - Dropbox.Api.Files.LockFileError.IsTooManyWriteOperations
+  langs:
+  - csharp
+  - vb
+  name: LockFileError
+  nameWithType: LockFileError
+  fullName: Dropbox.Api.Files.LockFileError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: LockFileError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The lock file error object</p>\n"
+  example: []
+  syntax:
+    content: 'public class LockFileError : object'
+    content.vb: >-
+      Public Class LockFileError
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Files.LockFileError.CannotBeLocked
+  - Dropbox.Api.Files.LockFileError.FileNotShared
+  - Dropbox.Api.Files.LockFileError.InternalError
+  - Dropbox.Api.Files.LockFileError.LockConflict
+  - Dropbox.Api.Files.LockFileError.NoWritePermission
+  - Dropbox.Api.Files.LockFileError.Other
+  - Dropbox.Api.Files.LockFileError.PathLookup
+  - Dropbox.Api.Files.LockFileError.TooManyFiles
+  - Dropbox.Api.Files.LockFileError.TooManyWriteOperations
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.LockFileError.#ctor
+  commentId: M:Dropbox.Api.Files.LockFileError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.LockFileError
+  langs:
+  - csharp
+  - vb
+  name: LockFileError()
+  nameWithType: LockFileError.LockFileError()
+  fullName: Dropbox.Api.Files.LockFileError.LockFileError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileError.cs
+    startLine: 32
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.LockFileError\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public LockFileError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.LockFileError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.LockFileError.IsPathLookup
+  commentId: P:Dropbox.Api.Files.LockFileError.IsPathLookup
+  id: IsPathLookup
+  parent: Dropbox.Api.Files.LockFileError
+  langs:
+  - csharp
+  - vb
+  name: IsPathLookup
+  nameWithType: LockFileError.IsPathLookup
+  fullName: Dropbox.Api.Files.LockFileError.IsPathLookup
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsPathLookup
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileError.cs
+    startLine: 39
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is PathLookup</p>\n"
+  example: []
+  syntax:
+    content: public bool IsPathLookup { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsPathLookup As Boolean
+  overload: Dropbox.Api.Files.LockFileError.IsPathLookup*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.LockFileError.AsPathLookup
+  commentId: P:Dropbox.Api.Files.LockFileError.AsPathLookup
+  id: AsPathLookup
+  parent: Dropbox.Api.Files.LockFileError
+  langs:
+  - csharp
+  - vb
+  name: AsPathLookup
+  nameWithType: LockFileError.AsPathLookup
+  fullName: Dropbox.Api.Files.LockFileError.AsPathLookup
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsPathLookup
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileError.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a PathLookup, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public LockFileError.PathLookup AsPathLookup { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.LockFileError.PathLookup
+    content.vb: Public ReadOnly Property AsPathLookup As LockFileError.PathLookup
+  overload: Dropbox.Api.Files.LockFileError.AsPathLookup*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.LockFileError.IsTooManyWriteOperations
+  commentId: P:Dropbox.Api.Files.LockFileError.IsTooManyWriteOperations
+  id: IsTooManyWriteOperations
+  parent: Dropbox.Api.Files.LockFileError
+  langs:
+  - csharp
+  - vb
+  name: IsTooManyWriteOperations
+  nameWithType: LockFileError.IsTooManyWriteOperations
+  fullName: Dropbox.Api.Files.LockFileError.IsTooManyWriteOperations
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsTooManyWriteOperations
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileError.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is\nTooManyWriteOperations</p>\n"
+  example: []
+  syntax:
+    content: public bool IsTooManyWriteOperations { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsTooManyWriteOperations As Boolean
+  overload: Dropbox.Api.Files.LockFileError.IsTooManyWriteOperations*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.LockFileError.AsTooManyWriteOperations
+  commentId: P:Dropbox.Api.Files.LockFileError.AsTooManyWriteOperations
+  id: AsTooManyWriteOperations
+  parent: Dropbox.Api.Files.LockFileError
+  langs:
+  - csharp
+  - vb
+  name: AsTooManyWriteOperations
+  nameWithType: LockFileError.AsTooManyWriteOperations
+  fullName: Dropbox.Api.Files.LockFileError.AsTooManyWriteOperations
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsTooManyWriteOperations
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileError.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a TooManyWriteOperations, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public LockFileError.TooManyWriteOperations AsTooManyWriteOperations { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.LockFileError.TooManyWriteOperations
+    content.vb: Public ReadOnly Property AsTooManyWriteOperations As LockFileError.TooManyWriteOperations
+  overload: Dropbox.Api.Files.LockFileError.AsTooManyWriteOperations*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.LockFileError.IsTooManyFiles
+  commentId: P:Dropbox.Api.Files.LockFileError.IsTooManyFiles
+  id: IsTooManyFiles
+  parent: Dropbox.Api.Files.LockFileError
+  langs:
+  - csharp
+  - vb
+  name: IsTooManyFiles
+  nameWithType: LockFileError.IsTooManyFiles
+  fullName: Dropbox.Api.Files.LockFileError.IsTooManyFiles
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsTooManyFiles
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileError.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is TooManyFiles</p>\n"
+  example: []
+  syntax:
+    content: public bool IsTooManyFiles { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsTooManyFiles As Boolean
+  overload: Dropbox.Api.Files.LockFileError.IsTooManyFiles*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.LockFileError.AsTooManyFiles
+  commentId: P:Dropbox.Api.Files.LockFileError.AsTooManyFiles
+  id: AsTooManyFiles
+  parent: Dropbox.Api.Files.LockFileError
+  langs:
+  - csharp
+  - vb
+  name: AsTooManyFiles
+  nameWithType: LockFileError.AsTooManyFiles
+  fullName: Dropbox.Api.Files.LockFileError.AsTooManyFiles
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsTooManyFiles
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileError.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a TooManyFiles, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public LockFileError.TooManyFiles AsTooManyFiles { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.LockFileError.TooManyFiles
+    content.vb: Public ReadOnly Property AsTooManyFiles As LockFileError.TooManyFiles
+  overload: Dropbox.Api.Files.LockFileError.AsTooManyFiles*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.LockFileError.IsNoWritePermission
+  commentId: P:Dropbox.Api.Files.LockFileError.IsNoWritePermission
+  id: IsNoWritePermission
+  parent: Dropbox.Api.Files.LockFileError
+  langs:
+  - csharp
+  - vb
+  name: IsNoWritePermission
+  nameWithType: LockFileError.IsNoWritePermission
+  fullName: Dropbox.Api.Files.LockFileError.IsNoWritePermission
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsNoWritePermission
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileError.cs
+    startLine: 106
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is NoWritePermission</p>\n"
+  example: []
+  syntax:
+    content: public bool IsNoWritePermission { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsNoWritePermission As Boolean
+  overload: Dropbox.Api.Files.LockFileError.IsNoWritePermission*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.LockFileError.AsNoWritePermission
+  commentId: P:Dropbox.Api.Files.LockFileError.AsNoWritePermission
+  id: AsNoWritePermission
+  parent: Dropbox.Api.Files.LockFileError
+  langs:
+  - csharp
+  - vb
+  name: AsNoWritePermission
+  nameWithType: LockFileError.AsNoWritePermission
+  fullName: Dropbox.Api.Files.LockFileError.AsNoWritePermission
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsNoWritePermission
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileError.cs
+    startLine: 117
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a NoWritePermission, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public LockFileError.NoWritePermission AsNoWritePermission { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.LockFileError.NoWritePermission
+    content.vb: Public ReadOnly Property AsNoWritePermission As LockFileError.NoWritePermission
+  overload: Dropbox.Api.Files.LockFileError.AsNoWritePermission*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.LockFileError.IsCannotBeLocked
+  commentId: P:Dropbox.Api.Files.LockFileError.IsCannotBeLocked
+  id: IsCannotBeLocked
+  parent: Dropbox.Api.Files.LockFileError
+  langs:
+  - csharp
+  - vb
+  name: IsCannotBeLocked
+  nameWithType: LockFileError.IsCannotBeLocked
+  fullName: Dropbox.Api.Files.LockFileError.IsCannotBeLocked
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsCannotBeLocked
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileError.cs
+    startLine: 128
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is CannotBeLocked</p>\n"
+  example: []
+  syntax:
+    content: public bool IsCannotBeLocked { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsCannotBeLocked As Boolean
+  overload: Dropbox.Api.Files.LockFileError.IsCannotBeLocked*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.LockFileError.AsCannotBeLocked
+  commentId: P:Dropbox.Api.Files.LockFileError.AsCannotBeLocked
+  id: AsCannotBeLocked
+  parent: Dropbox.Api.Files.LockFileError
+  langs:
+  - csharp
+  - vb
+  name: AsCannotBeLocked
+  nameWithType: LockFileError.AsCannotBeLocked
+  fullName: Dropbox.Api.Files.LockFileError.AsCannotBeLocked
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsCannotBeLocked
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileError.cs
+    startLine: 139
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a CannotBeLocked, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public LockFileError.CannotBeLocked AsCannotBeLocked { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.LockFileError.CannotBeLocked
+    content.vb: Public ReadOnly Property AsCannotBeLocked As LockFileError.CannotBeLocked
+  overload: Dropbox.Api.Files.LockFileError.AsCannotBeLocked*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.LockFileError.IsFileNotShared
+  commentId: P:Dropbox.Api.Files.LockFileError.IsFileNotShared
+  id: IsFileNotShared
+  parent: Dropbox.Api.Files.LockFileError
+  langs:
+  - csharp
+  - vb
+  name: IsFileNotShared
+  nameWithType: LockFileError.IsFileNotShared
+  fullName: Dropbox.Api.Files.LockFileError.IsFileNotShared
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsFileNotShared
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileError.cs
+    startLine: 150
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is FileNotShared</p>\n"
+  example: []
+  syntax:
+    content: public bool IsFileNotShared { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsFileNotShared As Boolean
+  overload: Dropbox.Api.Files.LockFileError.IsFileNotShared*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.LockFileError.AsFileNotShared
+  commentId: P:Dropbox.Api.Files.LockFileError.AsFileNotShared
+  id: AsFileNotShared
+  parent: Dropbox.Api.Files.LockFileError
+  langs:
+  - csharp
+  - vb
+  name: AsFileNotShared
+  nameWithType: LockFileError.AsFileNotShared
+  fullName: Dropbox.Api.Files.LockFileError.AsFileNotShared
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsFileNotShared
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileError.cs
+    startLine: 161
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a FileNotShared, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public LockFileError.FileNotShared AsFileNotShared { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.LockFileError.FileNotShared
+    content.vb: Public ReadOnly Property AsFileNotShared As LockFileError.FileNotShared
+  overload: Dropbox.Api.Files.LockFileError.AsFileNotShared*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.LockFileError.IsLockConflict
+  commentId: P:Dropbox.Api.Files.LockFileError.IsLockConflict
+  id: IsLockConflict
+  parent: Dropbox.Api.Files.LockFileError
+  langs:
+  - csharp
+  - vb
+  name: IsLockConflict
+  nameWithType: LockFileError.IsLockConflict
+  fullName: Dropbox.Api.Files.LockFileError.IsLockConflict
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsLockConflict
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileError.cs
+    startLine: 172
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is LockConflict</p>\n"
+  example: []
+  syntax:
+    content: public bool IsLockConflict { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsLockConflict As Boolean
+  overload: Dropbox.Api.Files.LockFileError.IsLockConflict*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.LockFileError.AsLockConflict
+  commentId: P:Dropbox.Api.Files.LockFileError.AsLockConflict
+  id: AsLockConflict
+  parent: Dropbox.Api.Files.LockFileError
+  langs:
+  - csharp
+  - vb
+  name: AsLockConflict
+  nameWithType: LockFileError.AsLockConflict
+  fullName: Dropbox.Api.Files.LockFileError.AsLockConflict
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsLockConflict
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileError.cs
+    startLine: 183
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a LockConflict, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public LockFileError.LockConflict AsLockConflict { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.LockFileError.LockConflict
+    content.vb: Public ReadOnly Property AsLockConflict As LockFileError.LockConflict
+  overload: Dropbox.Api.Files.LockFileError.AsLockConflict*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.LockFileError.IsInternalError
+  commentId: P:Dropbox.Api.Files.LockFileError.IsInternalError
+  id: IsInternalError
+  parent: Dropbox.Api.Files.LockFileError
+  langs:
+  - csharp
+  - vb
+  name: IsInternalError
+  nameWithType: LockFileError.IsInternalError
+  fullName: Dropbox.Api.Files.LockFileError.IsInternalError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsInternalError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileError.cs
+    startLine: 194
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is InternalError</p>\n"
+  example: []
+  syntax:
+    content: public bool IsInternalError { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsInternalError As Boolean
+  overload: Dropbox.Api.Files.LockFileError.IsInternalError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.LockFileError.AsInternalError
+  commentId: P:Dropbox.Api.Files.LockFileError.AsInternalError
+  id: AsInternalError
+  parent: Dropbox.Api.Files.LockFileError
+  langs:
+  - csharp
+  - vb
+  name: AsInternalError
+  nameWithType: LockFileError.AsInternalError
+  fullName: Dropbox.Api.Files.LockFileError.AsInternalError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsInternalError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileError.cs
+    startLine: 205
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a InternalError, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public LockFileError.InternalError AsInternalError { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.LockFileError.InternalError
+    content.vb: Public ReadOnly Property AsInternalError As LockFileError.InternalError
+  overload: Dropbox.Api.Files.LockFileError.AsInternalError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.LockFileError.IsOther
+  commentId: P:Dropbox.Api.Files.LockFileError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Files.LockFileError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: LockFileError.IsOther
+  fullName: Dropbox.Api.Files.LockFileError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileError.cs
+    startLine: 216
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Files.LockFileError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.LockFileError.AsOther
+  commentId: P:Dropbox.Api.Files.LockFileError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Files.LockFileError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: LockFileError.AsOther
+  fullName: Dropbox.Api.Files.LockFileError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/LockFileError.cs
+    startLine: 227
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public LockFileError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.LockFileError.Other
+    content.vb: Public ReadOnly Property AsOther As LockFileError.Other
+  overload: Dropbox.Api.Files.LockFileError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.LockFileError
+  commentId: T:Dropbox.Api.Files.LockFileError
+  parent: Dropbox.Api.Files
+  name: LockFileError
+  nameWithType: LockFileError
+  fullName: Dropbox.Api.Files.LockFileError
+- uid: Dropbox.Api.Files.LockFileError.#ctor*
+  commentId: Overload:Dropbox.Api.Files.LockFileError.#ctor
+  name: LockFileError
+  nameWithType: LockFileError.LockFileError
+  fullName: Dropbox.Api.Files.LockFileError.LockFileError
+- uid: Dropbox.Api.Files.LockFileError.IsPathLookup*
+  commentId: Overload:Dropbox.Api.Files.LockFileError.IsPathLookup
+  name: IsPathLookup
+  nameWithType: LockFileError.IsPathLookup
+  fullName: Dropbox.Api.Files.LockFileError.IsPathLookup
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Files.LockFileError.AsPathLookup*
+  commentId: Overload:Dropbox.Api.Files.LockFileError.AsPathLookup
+  name: AsPathLookup
+  nameWithType: LockFileError.AsPathLookup
+  fullName: Dropbox.Api.Files.LockFileError.AsPathLookup
+- uid: Dropbox.Api.Files.LockFileError.PathLookup
+  commentId: T:Dropbox.Api.Files.LockFileError.PathLookup
+  parent: Dropbox.Api.Files
+  name: LockFileError.PathLookup
+  nameWithType: LockFileError.PathLookup
+  fullName: Dropbox.Api.Files.LockFileError.PathLookup
+- uid: Dropbox.Api.Files.LockFileError.IsTooManyWriteOperations*
+  commentId: Overload:Dropbox.Api.Files.LockFileError.IsTooManyWriteOperations
+  name: IsTooManyWriteOperations
+  nameWithType: LockFileError.IsTooManyWriteOperations
+  fullName: Dropbox.Api.Files.LockFileError.IsTooManyWriteOperations
+- uid: Dropbox.Api.Files.LockFileError.AsTooManyWriteOperations*
+  commentId: Overload:Dropbox.Api.Files.LockFileError.AsTooManyWriteOperations
+  name: AsTooManyWriteOperations
+  nameWithType: LockFileError.AsTooManyWriteOperations
+  fullName: Dropbox.Api.Files.LockFileError.AsTooManyWriteOperations
+- uid: Dropbox.Api.Files.LockFileError.TooManyWriteOperations
+  commentId: T:Dropbox.Api.Files.LockFileError.TooManyWriteOperations
+  parent: Dropbox.Api.Files
+  name: LockFileError.TooManyWriteOperations
+  nameWithType: LockFileError.TooManyWriteOperations
+  fullName: Dropbox.Api.Files.LockFileError.TooManyWriteOperations
+- uid: Dropbox.Api.Files.LockFileError.IsTooManyFiles*
+  commentId: Overload:Dropbox.Api.Files.LockFileError.IsTooManyFiles
+  name: IsTooManyFiles
+  nameWithType: LockFileError.IsTooManyFiles
+  fullName: Dropbox.Api.Files.LockFileError.IsTooManyFiles
+- uid: Dropbox.Api.Files.LockFileError.AsTooManyFiles*
+  commentId: Overload:Dropbox.Api.Files.LockFileError.AsTooManyFiles
+  name: AsTooManyFiles
+  nameWithType: LockFileError.AsTooManyFiles
+  fullName: Dropbox.Api.Files.LockFileError.AsTooManyFiles
+- uid: Dropbox.Api.Files.LockFileError.TooManyFiles
+  commentId: T:Dropbox.Api.Files.LockFileError.TooManyFiles
+  parent: Dropbox.Api.Files
+  name: LockFileError.TooManyFiles
+  nameWithType: LockFileError.TooManyFiles
+  fullName: Dropbox.Api.Files.LockFileError.TooManyFiles
+- uid: Dropbox.Api.Files.LockFileError.IsNoWritePermission*
+  commentId: Overload:Dropbox.Api.Files.LockFileError.IsNoWritePermission
+  name: IsNoWritePermission
+  nameWithType: LockFileError.IsNoWritePermission
+  fullName: Dropbox.Api.Files.LockFileError.IsNoWritePermission
+- uid: Dropbox.Api.Files.LockFileError.AsNoWritePermission*
+  commentId: Overload:Dropbox.Api.Files.LockFileError.AsNoWritePermission
+  name: AsNoWritePermission
+  nameWithType: LockFileError.AsNoWritePermission
+  fullName: Dropbox.Api.Files.LockFileError.AsNoWritePermission
+- uid: Dropbox.Api.Files.LockFileError.NoWritePermission
+  commentId: T:Dropbox.Api.Files.LockFileError.NoWritePermission
+  parent: Dropbox.Api.Files
+  name: LockFileError.NoWritePermission
+  nameWithType: LockFileError.NoWritePermission
+  fullName: Dropbox.Api.Files.LockFileError.NoWritePermission
+- uid: Dropbox.Api.Files.LockFileError.IsCannotBeLocked*
+  commentId: Overload:Dropbox.Api.Files.LockFileError.IsCannotBeLocked
+  name: IsCannotBeLocked
+  nameWithType: LockFileError.IsCannotBeLocked
+  fullName: Dropbox.Api.Files.LockFileError.IsCannotBeLocked
+- uid: Dropbox.Api.Files.LockFileError.AsCannotBeLocked*
+  commentId: Overload:Dropbox.Api.Files.LockFileError.AsCannotBeLocked
+  name: AsCannotBeLocked
+  nameWithType: LockFileError.AsCannotBeLocked
+  fullName: Dropbox.Api.Files.LockFileError.AsCannotBeLocked
+- uid: Dropbox.Api.Files.LockFileError.CannotBeLocked
+  commentId: T:Dropbox.Api.Files.LockFileError.CannotBeLocked
+  parent: Dropbox.Api.Files
+  name: LockFileError.CannotBeLocked
+  nameWithType: LockFileError.CannotBeLocked
+  fullName: Dropbox.Api.Files.LockFileError.CannotBeLocked
+- uid: Dropbox.Api.Files.LockFileError.IsFileNotShared*
+  commentId: Overload:Dropbox.Api.Files.LockFileError.IsFileNotShared
+  name: IsFileNotShared
+  nameWithType: LockFileError.IsFileNotShared
+  fullName: Dropbox.Api.Files.LockFileError.IsFileNotShared
+- uid: Dropbox.Api.Files.LockFileError.AsFileNotShared*
+  commentId: Overload:Dropbox.Api.Files.LockFileError.AsFileNotShared
+  name: AsFileNotShared
+  nameWithType: LockFileError.AsFileNotShared
+  fullName: Dropbox.Api.Files.LockFileError.AsFileNotShared
+- uid: Dropbox.Api.Files.LockFileError.FileNotShared
+  commentId: T:Dropbox.Api.Files.LockFileError.FileNotShared
+  parent: Dropbox.Api.Files
+  name: LockFileError.FileNotShared
+  nameWithType: LockFileError.FileNotShared
+  fullName: Dropbox.Api.Files.LockFileError.FileNotShared
+- uid: Dropbox.Api.Files.LockFileError.IsLockConflict*
+  commentId: Overload:Dropbox.Api.Files.LockFileError.IsLockConflict
+  name: IsLockConflict
+  nameWithType: LockFileError.IsLockConflict
+  fullName: Dropbox.Api.Files.LockFileError.IsLockConflict
+- uid: Dropbox.Api.Files.LockFileError.AsLockConflict*
+  commentId: Overload:Dropbox.Api.Files.LockFileError.AsLockConflict
+  name: AsLockConflict
+  nameWithType: LockFileError.AsLockConflict
+  fullName: Dropbox.Api.Files.LockFileError.AsLockConflict
+- uid: Dropbox.Api.Files.LockFileError.LockConflict
+  commentId: T:Dropbox.Api.Files.LockFileError.LockConflict
+  parent: Dropbox.Api.Files
+  name: LockFileError.LockConflict
+  nameWithType: LockFileError.LockConflict
+  fullName: Dropbox.Api.Files.LockFileError.LockConflict
+- uid: Dropbox.Api.Files.LockFileError.IsInternalError*
+  commentId: Overload:Dropbox.Api.Files.LockFileError.IsInternalError
+  name: IsInternalError
+  nameWithType: LockFileError.IsInternalError
+  fullName: Dropbox.Api.Files.LockFileError.IsInternalError
+- uid: Dropbox.Api.Files.LockFileError.AsInternalError*
+  commentId: Overload:Dropbox.Api.Files.LockFileError.AsInternalError
+  name: AsInternalError
+  nameWithType: LockFileError.AsInternalError
+  fullName: Dropbox.Api.Files.LockFileError.AsInternalError
+- uid: Dropbox.Api.Files.LockFileError.InternalError
+  commentId: T:Dropbox.Api.Files.LockFileError.InternalError
+  parent: Dropbox.Api.Files
+  name: LockFileError.InternalError
+  nameWithType: LockFileError.InternalError
+  fullName: Dropbox.Api.Files.LockFileError.InternalError
+- uid: Dropbox.Api.Files.LockFileError.IsOther*
+  commentId: Overload:Dropbox.Api.Files.LockFileError.IsOther
+  name: IsOther
+  nameWithType: LockFileError.IsOther
+  fullName: Dropbox.Api.Files.LockFileError.IsOther
+- uid: Dropbox.Api.Files.LockFileError.AsOther*
+  commentId: Overload:Dropbox.Api.Files.LockFileError.AsOther
+  name: AsOther
+  nameWithType: LockFileError.AsOther
+  fullName: Dropbox.Api.Files.LockFileError.AsOther
+- uid: Dropbox.Api.Files.LockFileError.Other
+  commentId: T:Dropbox.Api.Files.LockFileError.Other
+  parent: Dropbox.Api.Files
+  name: LockFileError.Other
+  nameWithType: LockFileError.Other
+  fullName: Dropbox.Api.Files.LockFileError.Other
+shouldSkipMarkup: true

@@ -1,0 +1,239 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.SharingChangeFolderJoinPolicyDetails
+  commentId: T:Dropbox.Api.TeamLog.SharingChangeFolderJoinPolicyDetails
+  id: SharingChangeFolderJoinPolicyDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.SharingChangeFolderJoinPolicyDetails.#ctor
+  - Dropbox.Api.TeamLog.SharingChangeFolderJoinPolicyDetails.#ctor(Dropbox.Api.TeamLog.SharingFolderJoinPolicy,Dropbox.Api.TeamLog.SharingFolderJoinPolicy)
+  - Dropbox.Api.TeamLog.SharingChangeFolderJoinPolicyDetails.NewValue
+  - Dropbox.Api.TeamLog.SharingChangeFolderJoinPolicyDetails.PreviousValue
+  langs:
+  - csharp
+  - vb
+  name: SharingChangeFolderJoinPolicyDetails
+  nameWithType: SharingChangeFolderJoinPolicyDetails
+  fullName: Dropbox.Api.TeamLog.SharingChangeFolderJoinPolicyDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharingChangeFolderJoinPolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SharingChangeFolderJoinPolicyDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharingChangeFolderJoinPolicyDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Changed whether team members can join shared folders owned outside team.</p>\n"
+  example: []
+  syntax:
+    content: 'public class SharingChangeFolderJoinPolicyDetails : object'
+    content.vb: >-
+      Public Class SharingChangeFolderJoinPolicyDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.SharingChangeFolderJoinPolicyDetails.#ctor(Dropbox.Api.TeamLog.SharingFolderJoinPolicy,Dropbox.Api.TeamLog.SharingFolderJoinPolicy)
+  commentId: M:Dropbox.Api.TeamLog.SharingChangeFolderJoinPolicyDetails.#ctor(Dropbox.Api.TeamLog.SharingFolderJoinPolicy,Dropbox.Api.TeamLog.SharingFolderJoinPolicy)
+  id: '#ctor(Dropbox.Api.TeamLog.SharingFolderJoinPolicy,Dropbox.Api.TeamLog.SharingFolderJoinPolicy)'
+  parent: Dropbox.Api.TeamLog.SharingChangeFolderJoinPolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: SharingChangeFolderJoinPolicyDetails(SharingFolderJoinPolicy, SharingFolderJoinPolicy)
+  nameWithType: SharingChangeFolderJoinPolicyDetails.SharingChangeFolderJoinPolicyDetails(SharingFolderJoinPolicy, SharingFolderJoinPolicy)
+  fullName: Dropbox.Api.TeamLog.SharingChangeFolderJoinPolicyDetails.SharingChangeFolderJoinPolicyDetails(Dropbox.Api.TeamLog.SharingFolderJoinPolicy, Dropbox.Api.TeamLog.SharingFolderJoinPolicy)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharingChangeFolderJoinPolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharingChangeFolderJoinPolicyDetails.cs
+    startLine: 36
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SharingChangeFolderJoinPolicyDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public SharingChangeFolderJoinPolicyDetails(SharingFolderJoinPolicy newValue, SharingFolderJoinPolicy previousValue = null)
+    parameters:
+    - id: newValue
+      type: Dropbox.Api.TeamLog.SharingFolderJoinPolicy
+      description: New external join policy.
+    - id: previousValue
+      type: Dropbox.Api.TeamLog.SharingFolderJoinPolicy
+      description: >-
+        Previous external join policy. Might be missing due to
+
+        historical data gap.
+    content.vb: Public Sub New(newValue As SharingFolderJoinPolicy, previousValue As SharingFolderJoinPolicy = Nothing)
+  overload: Dropbox.Api.TeamLog.SharingChangeFolderJoinPolicyDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SharingChangeFolderJoinPolicyDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.SharingChangeFolderJoinPolicyDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.SharingChangeFolderJoinPolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: SharingChangeFolderJoinPolicyDetails()
+  nameWithType: SharingChangeFolderJoinPolicyDetails.SharingChangeFolderJoinPolicyDetails()
+  fullName: Dropbox.Api.TeamLog.SharingChangeFolderJoinPolicyDetails.SharingChangeFolderJoinPolicyDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharingChangeFolderJoinPolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharingChangeFolderJoinPolicyDetails.cs
+    startLine: 54
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SharingChangeFolderJoinPolicyDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public SharingChangeFolderJoinPolicyDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.SharingChangeFolderJoinPolicyDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SharingChangeFolderJoinPolicyDetails.NewValue
+  commentId: P:Dropbox.Api.TeamLog.SharingChangeFolderJoinPolicyDetails.NewValue
+  id: NewValue
+  parent: Dropbox.Api.TeamLog.SharingChangeFolderJoinPolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: NewValue
+  nameWithType: SharingChangeFolderJoinPolicyDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.SharingChangeFolderJoinPolicyDetails.NewValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharingChangeFolderJoinPolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NewValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharingChangeFolderJoinPolicyDetails.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>New external join policy.</p>\n"
+  example: []
+  syntax:
+    content: public SharingFolderJoinPolicy NewValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.SharingFolderJoinPolicy
+    content.vb: Public Property NewValue As SharingFolderJoinPolicy
+  overload: Dropbox.Api.TeamLog.SharingChangeFolderJoinPolicyDetails.NewValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.SharingChangeFolderJoinPolicyDetails.PreviousValue
+  commentId: P:Dropbox.Api.TeamLog.SharingChangeFolderJoinPolicyDetails.PreviousValue
+  id: PreviousValue
+  parent: Dropbox.Api.TeamLog.SharingChangeFolderJoinPolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: PreviousValue
+  nameWithType: SharingChangeFolderJoinPolicyDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.SharingChangeFolderJoinPolicyDetails.PreviousValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharingChangeFolderJoinPolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PreviousValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharingChangeFolderJoinPolicyDetails.cs
+    startLine: 68
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Previous external join policy. Might be missing due to historical data\ngap.</p>\n"
+  example: []
+  syntax:
+    content: public SharingFolderJoinPolicy PreviousValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.SharingFolderJoinPolicy
+    content.vb: Public Property PreviousValue As SharingFolderJoinPolicy
+  overload: Dropbox.Api.TeamLog.SharingChangeFolderJoinPolicyDetails.PreviousValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.SharingChangeFolderJoinPolicyDetails
+  commentId: T:Dropbox.Api.TeamLog.SharingChangeFolderJoinPolicyDetails
+  parent: Dropbox.Api.TeamLog
+  name: SharingChangeFolderJoinPolicyDetails
+  nameWithType: SharingChangeFolderJoinPolicyDetails
+  fullName: Dropbox.Api.TeamLog.SharingChangeFolderJoinPolicyDetails
+- uid: Dropbox.Api.TeamLog.SharingChangeFolderJoinPolicyDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.SharingChangeFolderJoinPolicyDetails.#ctor
+  name: SharingChangeFolderJoinPolicyDetails
+  nameWithType: SharingChangeFolderJoinPolicyDetails.SharingChangeFolderJoinPolicyDetails
+  fullName: Dropbox.Api.TeamLog.SharingChangeFolderJoinPolicyDetails.SharingChangeFolderJoinPolicyDetails
+- uid: Dropbox.Api.TeamLog.SharingFolderJoinPolicy
+  commentId: T:Dropbox.Api.TeamLog.SharingFolderJoinPolicy
+  parent: Dropbox.Api.TeamLog
+  name: SharingFolderJoinPolicy
+  nameWithType: SharingFolderJoinPolicy
+  fullName: Dropbox.Api.TeamLog.SharingFolderJoinPolicy
+- uid: Dropbox.Api.TeamLog.SharingChangeFolderJoinPolicyDetails.NewValue*
+  commentId: Overload:Dropbox.Api.TeamLog.SharingChangeFolderJoinPolicyDetails.NewValue
+  name: NewValue
+  nameWithType: SharingChangeFolderJoinPolicyDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.SharingChangeFolderJoinPolicyDetails.NewValue
+- uid: Dropbox.Api.TeamLog.SharingChangeFolderJoinPolicyDetails.PreviousValue*
+  commentId: Overload:Dropbox.Api.TeamLog.SharingChangeFolderJoinPolicyDetails.PreviousValue
+  name: PreviousValue
+  nameWithType: SharingChangeFolderJoinPolicyDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.SharingChangeFolderJoinPolicyDetails.PreviousValue
+shouldSkipMarkup: true

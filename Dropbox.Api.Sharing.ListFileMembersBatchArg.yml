@@ -1,0 +1,406 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.ListFileMembersBatchArg
+  commentId: T:Dropbox.Api.Sharing.ListFileMembersBatchArg
+  id: ListFileMembersBatchArg
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.ListFileMembersBatchArg.#ctor
+  - Dropbox.Api.Sharing.ListFileMembersBatchArg.#ctor(System.Collections.Generic.IEnumerable{System.String},System.UInt32)
+  - Dropbox.Api.Sharing.ListFileMembersBatchArg.Files
+  - Dropbox.Api.Sharing.ListFileMembersBatchArg.Limit
+  langs:
+  - csharp
+  - vb
+  name: ListFileMembersBatchArg
+  nameWithType: ListFileMembersBatchArg
+  fullName: Dropbox.Api.Sharing.ListFileMembersBatchArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersBatchArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ListFileMembersBatchArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersBatchArg.cs
+    startLine: 17
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Arguments for <xref href=\"Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListFileMembersBatchAsync(Dropbox.Api.Sharing.ListFileMembersBatchArg)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+  example: []
+  syntax:
+    content: 'public class ListFileMembersBatchArg : object'
+    content.vb: >-
+      Public Class ListFileMembersBatchArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Sharing.ListFileMembersBatchArg.#ctor(System.Collections.Generic.IEnumerable{System.String},System.UInt32)
+  commentId: M:Dropbox.Api.Sharing.ListFileMembersBatchArg.#ctor(System.Collections.Generic.IEnumerable{System.String},System.UInt32)
+  id: '#ctor(System.Collections.Generic.IEnumerable{System.String},System.UInt32)'
+  parent: Dropbox.Api.Sharing.ListFileMembersBatchArg
+  langs:
+  - csharp
+  - vb
+  name: ListFileMembersBatchArg(System.Collections.Generic.IEnumerable<String>, UInt32)
+  nameWithType: ListFileMembersBatchArg.ListFileMembersBatchArg(System.Collections.Generic.IEnumerable<String>, UInt32)
+  fullName: Dropbox.Api.Sharing.ListFileMembersBatchArg.ListFileMembersBatchArg(System.Collections.Generic.IEnumerable<System.String>, System.UInt32)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersBatchArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersBatchArg.cs
+    startLine: 38
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.ListFileMembersBatchArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public ListFileMembersBatchArg(System.Collections.Generic.IEnumerable<string> files, uint limit = null)
+    parameters:
+    - id: files
+      type: System.Collections.Generic.IEnumerable{System.String}
+      description: Files for which to return members.
+    - id: limit
+      type: System.UInt32
+      description: >-
+        Number of members to return max per query. Defaults to 10 if no
+
+        limit is specified.
+    content.vb: Public Sub New(files As System.Collections.Generic.IEnumerable(Of String), limit As UInteger = Nothing)
+  overload: Dropbox.Api.Sharing.ListFileMembersBatchArg.#ctor*
+  nameWithType.vb: ListFileMembersBatchArg.ListFileMembersBatchArg(System.Collections.Generic.IEnumerable(Of String), UInt32)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Sharing.ListFileMembersBatchArg.ListFileMembersBatchArg(System.Collections.Generic.IEnumerable(Of System.String), System.UInt32)
+  name.vb: ListFileMembersBatchArg(System.Collections.Generic.IEnumerable(Of String), UInt32)
+- uid: Dropbox.Api.Sharing.ListFileMembersBatchArg.#ctor
+  commentId: M:Dropbox.Api.Sharing.ListFileMembersBatchArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Sharing.ListFileMembersBatchArg
+  langs:
+  - csharp
+  - vb
+  name: ListFileMembersBatchArg()
+  nameWithType: ListFileMembersBatchArg.ListFileMembersBatchArg()
+  fullName: Dropbox.Api.Sharing.ListFileMembersBatchArg.ListFileMembersBatchArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersBatchArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersBatchArg.cs
+    startLine: 67
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.ListFileMembersBatchArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public ListFileMembersBatchArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Sharing.ListFileMembersBatchArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.ListFileMembersBatchArg.Files
+  commentId: P:Dropbox.Api.Sharing.ListFileMembersBatchArg.Files
+  id: Files
+  parent: Dropbox.Api.Sharing.ListFileMembersBatchArg
+  langs:
+  - csharp
+  - vb
+  name: Files
+  nameWithType: ListFileMembersBatchArg.Files
+  fullName: Dropbox.Api.Sharing.ListFileMembersBatchArg.Files
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersBatchArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Files
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersBatchArg.cs
+    startLine: 76
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Files for which to return members.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<string> Files { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{System.String}
+    content.vb: Public Property Files As System.Collections.Generic.IList(Of String)
+  overload: Dropbox.Api.Sharing.ListFileMembersBatchArg.Files*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.ListFileMembersBatchArg.Limit
+  commentId: P:Dropbox.Api.Sharing.ListFileMembersBatchArg.Limit
+  id: Limit
+  parent: Dropbox.Api.Sharing.ListFileMembersBatchArg
+  langs:
+  - csharp
+  - vb
+  name: Limit
+  nameWithType: ListFileMembersBatchArg.Limit
+  fullName: Dropbox.Api.Sharing.ListFileMembersBatchArg.Limit
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersBatchArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Limit
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersBatchArg.cs
+    startLine: 82
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Number of members to return max per query. Defaults to 10 if no limit is\nspecified.</p>\n"
+  example: []
+  syntax:
+    content: public uint Limit { get; protected set; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public Property Limit As UInteger
+  overload: Dropbox.Api.Sharing.ListFileMembersBatchArg.Limit*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListFileMembersBatchAsync(Dropbox.Api.Sharing.ListFileMembersBatchArg)
+  commentId: M:Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListFileMembersBatchAsync(Dropbox.Api.Sharing.ListFileMembersBatchArg)
+  isExternal: true
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.ListFileMembersBatchArg
+  commentId: T:Dropbox.Api.Sharing.ListFileMembersBatchArg
+  parent: Dropbox.Api.Sharing
+  name: ListFileMembersBatchArg
+  nameWithType: ListFileMembersBatchArg
+  fullName: Dropbox.Api.Sharing.ListFileMembersBatchArg
+- uid: Dropbox.Api.Sharing.ListFileMembersBatchArg.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.ListFileMembersBatchArg.#ctor
+  name: ListFileMembersBatchArg
+  nameWithType: ListFileMembersBatchArg.ListFileMembersBatchArg
+  fullName: Dropbox.Api.Sharing.ListFileMembersBatchArg.ListFileMembersBatchArg
+- uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: '!:System.Collections.Generic.IEnumerable{System.String}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<String>
+  nameWithType: System.Collections.Generic.IEnumerable<String>
+  fullName: System.Collections.Generic.IEnumerable<System.String>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of String)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.String)
+  name.vb: System.Collections.Generic.IEnumerable(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.UInt32
+  isExternal: true
+  name: UInt32
+  nameWithType: UInt32
+  fullName: System.UInt32
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: System.Collections.Generic.IEnumerable<>
+  nameWithType: System.Collections.Generic.IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: System.Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Sharing.ListFileMembersBatchArg.Files*
+  commentId: Overload:Dropbox.Api.Sharing.ListFileMembersBatchArg.Files
+  name: Files
+  nameWithType: ListFileMembersBatchArg.Files
+  fullName: Dropbox.Api.Sharing.ListFileMembersBatchArg.Files
+- uid: System.Collections.Generic.IList{System.String}
+  commentId: '!:System.Collections.Generic.IList{System.String}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<String>
+  nameWithType: System.Collections.Generic.IList<String>
+  fullName: System.Collections.Generic.IList<System.String>
+  nameWithType.vb: System.Collections.Generic.IList(Of String)
+  fullName.vb: System.Collections.Generic.IList(Of System.String)
+  name.vb: System.Collections.Generic.IList(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  isExternal: true
+  name: System.Collections.Generic.IList<>
+  nameWithType: System.Collections.Generic.IList<>
+  fullName: System.Collections.Generic.IList<>
+  nameWithType.vb: System.Collections.Generic.IList(Of )
+  fullName.vb: System.Collections.Generic.IList(Of )
+  name.vb: System.Collections.Generic.IList(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Sharing.ListFileMembersBatchArg.Limit*
+  commentId: Overload:Dropbox.Api.Sharing.ListFileMembersBatchArg.Limit
+  name: Limit
+  nameWithType: ListFileMembersBatchArg.Limit
+  fullName: Dropbox.Api.Sharing.ListFileMembersBatchArg.Limit
+shouldSkipMarkup: true

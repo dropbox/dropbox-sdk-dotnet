@@ -1,0 +1,234 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.MembersSetProfilePhotoError.PhotoError
+  commentId: T:Dropbox.Api.Team.MembersSetProfilePhotoError.PhotoError
+  id: MembersSetProfilePhotoError.PhotoError
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.MembersSetProfilePhotoError.PhotoError.#ctor(Dropbox.Api.Account.SetProfilePhotoError)
+  - Dropbox.Api.Team.MembersSetProfilePhotoError.PhotoError.Value
+  langs:
+  - csharp
+  - vb
+  name: MembersSetProfilePhotoError.PhotoError
+  nameWithType: MembersSetProfilePhotoError.PhotoError
+  fullName: Dropbox.Api.Team.MembersSetProfilePhotoError.PhotoError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfilePhotoError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PhotoError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfilePhotoError.cs
+    startLine: 314
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The photo error object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class PhotoError : MembersSetProfilePhotoError'
+    content.vb: >-
+      Public NotInheritable Class PhotoError
+          Inherits MembersSetProfilePhotoError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.MembersSetProfilePhotoError
+  inheritedMembers:
+  - Dropbox.Api.Team.MembersSetProfilePhotoError.IsSetProfileDisallowed
+  - Dropbox.Api.Team.MembersSetProfilePhotoError.AsSetProfileDisallowed
+  - Dropbox.Api.Team.MembersSetProfilePhotoError.IsPhotoError
+  - Dropbox.Api.Team.MembersSetProfilePhotoError.AsPhotoError
+  - Dropbox.Api.Team.MembersSetProfilePhotoError.IsOther
+  - Dropbox.Api.Team.MembersSetProfilePhotoError.AsOther
+  - Dropbox.Api.Team.MembersSetProfilePhotoError.IsUserNotInTeam
+  - Dropbox.Api.Team.MembersSetProfilePhotoError.AsUserNotInTeam
+  - Dropbox.Api.Team.MembersSetProfilePhotoError.IsUserNotFound
+  - Dropbox.Api.Team.MembersSetProfilePhotoError.AsUserNotFound
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Team.MembersSetProfilePhotoError.PhotoError.#ctor(Dropbox.Api.Account.SetProfilePhotoError)
+  commentId: M:Dropbox.Api.Team.MembersSetProfilePhotoError.PhotoError.#ctor(Dropbox.Api.Account.SetProfilePhotoError)
+  id: '#ctor(Dropbox.Api.Account.SetProfilePhotoError)'
+  parent: Dropbox.Api.Team.MembersSetProfilePhotoError.PhotoError
+  langs:
+  - csharp
+  - vb
+  name: PhotoError(SetProfilePhotoError)
+  nameWithType: MembersSetProfilePhotoError.PhotoError.PhotoError(SetProfilePhotoError)
+  fullName: Dropbox.Api.Team.MembersSetProfilePhotoError.PhotoError.PhotoError(Dropbox.Api.Account.SetProfilePhotoError)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfilePhotoError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfilePhotoError.cs
+    startLine: 332
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.MembersSetProfilePhotoError.PhotoError\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public PhotoError(SetProfilePhotoError value)
+    parameters:
+    - id: value
+      type: Dropbox.Api.Account.SetProfilePhotoError
+      description: The value
+    content.vb: Public Sub New(value As SetProfilePhotoError)
+  overload: Dropbox.Api.Team.MembersSetProfilePhotoError.PhotoError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.MembersSetProfilePhotoError.PhotoError.Value
+  commentId: P:Dropbox.Api.Team.MembersSetProfilePhotoError.PhotoError.Value
+  id: Value
+  parent: Dropbox.Api.Team.MembersSetProfilePhotoError.PhotoError
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: MembersSetProfilePhotoError.PhotoError.Value
+  fullName: Dropbox.Api.Team.MembersSetProfilePhotoError.PhotoError.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfilePhotoError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetProfilePhotoError.cs
+    startLine: 346
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public SetProfilePhotoError Value { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Account.SetProfilePhotoError
+    content.vb: Public ReadOnly Property Value As SetProfilePhotoError
+  overload: Dropbox.Api.Team.MembersSetProfilePhotoError.PhotoError.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.MembersSetProfilePhotoError
+  commentId: T:Dropbox.Api.Team.MembersSetProfilePhotoError
+  parent: Dropbox.Api.Team
+  name: MembersSetProfilePhotoError
+  nameWithType: MembersSetProfilePhotoError
+  fullName: Dropbox.Api.Team.MembersSetProfilePhotoError
+- uid: Dropbox.Api.Team.MembersSetProfilePhotoError.IsSetProfileDisallowed
+  commentId: P:Dropbox.Api.Team.MembersSetProfilePhotoError.IsSetProfileDisallowed
+  parent: Dropbox.Api.Team.MembersSetProfilePhotoError
+  name: IsSetProfileDisallowed
+  nameWithType: MembersSetProfilePhotoError.IsSetProfileDisallowed
+  fullName: Dropbox.Api.Team.MembersSetProfilePhotoError.IsSetProfileDisallowed
+- uid: Dropbox.Api.Team.MembersSetProfilePhotoError.AsSetProfileDisallowed
+  commentId: P:Dropbox.Api.Team.MembersSetProfilePhotoError.AsSetProfileDisallowed
+  parent: Dropbox.Api.Team.MembersSetProfilePhotoError
+  name: AsSetProfileDisallowed
+  nameWithType: MembersSetProfilePhotoError.AsSetProfileDisallowed
+  fullName: Dropbox.Api.Team.MembersSetProfilePhotoError.AsSetProfileDisallowed
+- uid: Dropbox.Api.Team.MembersSetProfilePhotoError.IsPhotoError
+  commentId: P:Dropbox.Api.Team.MembersSetProfilePhotoError.IsPhotoError
+  parent: Dropbox.Api.Team.MembersSetProfilePhotoError
+  name: IsPhotoError
+  nameWithType: MembersSetProfilePhotoError.IsPhotoError
+  fullName: Dropbox.Api.Team.MembersSetProfilePhotoError.IsPhotoError
+- uid: Dropbox.Api.Team.MembersSetProfilePhotoError.AsPhotoError
+  commentId: P:Dropbox.Api.Team.MembersSetProfilePhotoError.AsPhotoError
+  parent: Dropbox.Api.Team.MembersSetProfilePhotoError
+  name: AsPhotoError
+  nameWithType: MembersSetProfilePhotoError.AsPhotoError
+  fullName: Dropbox.Api.Team.MembersSetProfilePhotoError.AsPhotoError
+- uid: Dropbox.Api.Team.MembersSetProfilePhotoError.IsOther
+  commentId: P:Dropbox.Api.Team.MembersSetProfilePhotoError.IsOther
+  parent: Dropbox.Api.Team.MembersSetProfilePhotoError
+  name: IsOther
+  nameWithType: MembersSetProfilePhotoError.IsOther
+  fullName: Dropbox.Api.Team.MembersSetProfilePhotoError.IsOther
+- uid: Dropbox.Api.Team.MembersSetProfilePhotoError.AsOther
+  commentId: P:Dropbox.Api.Team.MembersSetProfilePhotoError.AsOther
+  parent: Dropbox.Api.Team.MembersSetProfilePhotoError
+  name: AsOther
+  nameWithType: MembersSetProfilePhotoError.AsOther
+  fullName: Dropbox.Api.Team.MembersSetProfilePhotoError.AsOther
+- uid: Dropbox.Api.Team.MembersSetProfilePhotoError.IsUserNotInTeam
+  commentId: P:Dropbox.Api.Team.MembersSetProfilePhotoError.IsUserNotInTeam
+  parent: Dropbox.Api.Team.MembersSetProfilePhotoError
+  name: IsUserNotInTeam
+  nameWithType: MembersSetProfilePhotoError.IsUserNotInTeam
+  fullName: Dropbox.Api.Team.MembersSetProfilePhotoError.IsUserNotInTeam
+- uid: Dropbox.Api.Team.MembersSetProfilePhotoError.AsUserNotInTeam
+  commentId: P:Dropbox.Api.Team.MembersSetProfilePhotoError.AsUserNotInTeam
+  parent: Dropbox.Api.Team.MembersSetProfilePhotoError
+  name: AsUserNotInTeam
+  nameWithType: MembersSetProfilePhotoError.AsUserNotInTeam
+  fullName: Dropbox.Api.Team.MembersSetProfilePhotoError.AsUserNotInTeam
+- uid: Dropbox.Api.Team.MembersSetProfilePhotoError.IsUserNotFound
+  commentId: P:Dropbox.Api.Team.MembersSetProfilePhotoError.IsUserNotFound
+  parent: Dropbox.Api.Team.MembersSetProfilePhotoError
+  name: IsUserNotFound
+  nameWithType: MembersSetProfilePhotoError.IsUserNotFound
+  fullName: Dropbox.Api.Team.MembersSetProfilePhotoError.IsUserNotFound
+- uid: Dropbox.Api.Team.MembersSetProfilePhotoError.AsUserNotFound
+  commentId: P:Dropbox.Api.Team.MembersSetProfilePhotoError.AsUserNotFound
+  parent: Dropbox.Api.Team.MembersSetProfilePhotoError
+  name: AsUserNotFound
+  nameWithType: MembersSetProfilePhotoError.AsUserNotFound
+  fullName: Dropbox.Api.Team.MembersSetProfilePhotoError.AsUserNotFound
+- uid: Dropbox.Api.Team.MembersSetProfilePhotoError.PhotoError
+  commentId: T:Dropbox.Api.Team.MembersSetProfilePhotoError.PhotoError
+  parent: Dropbox.Api.Team
+  name: MembersSetProfilePhotoError.PhotoError
+  nameWithType: MembersSetProfilePhotoError.PhotoError
+  fullName: Dropbox.Api.Team.MembersSetProfilePhotoError.PhotoError
+- uid: Dropbox.Api.Team.MembersSetProfilePhotoError.PhotoError.#ctor*
+  commentId: Overload:Dropbox.Api.Team.MembersSetProfilePhotoError.PhotoError.#ctor
+  name: PhotoError
+  nameWithType: MembersSetProfilePhotoError.PhotoError.PhotoError
+  fullName: Dropbox.Api.Team.MembersSetProfilePhotoError.PhotoError.PhotoError
+- uid: Dropbox.Api.Account.SetProfilePhotoError
+  commentId: T:Dropbox.Api.Account.SetProfilePhotoError
+  parent: Dropbox.Api.Account
+  name: SetProfilePhotoError
+  nameWithType: SetProfilePhotoError
+  fullName: Dropbox.Api.Account.SetProfilePhotoError
+- uid: Dropbox.Api.Account
+  commentId: N:Dropbox.Api.Account
+  name: Dropbox.Api.Account
+  nameWithType: Dropbox.Api.Account
+  fullName: Dropbox.Api.Account
+- uid: Dropbox.Api.Team.MembersSetProfilePhotoError.PhotoError.Value*
+  commentId: Overload:Dropbox.Api.Team.MembersSetProfilePhotoError.PhotoError.Value
+  name: Value
+  nameWithType: MembersSetProfilePhotoError.PhotoError.Value
+  fullName: Dropbox.Api.Team.MembersSetProfilePhotoError.PhotoError.Value
+shouldSkipMarkup: true

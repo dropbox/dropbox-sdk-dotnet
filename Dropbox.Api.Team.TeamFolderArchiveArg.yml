@@ -1,0 +1,213 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.TeamFolderArchiveArg
+  commentId: T:Dropbox.Api.Team.TeamFolderArchiveArg
+  id: TeamFolderArchiveArg
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.TeamFolderArchiveArg.#ctor
+  - Dropbox.Api.Team.TeamFolderArchiveArg.#ctor(System.String,System.Boolean)
+  - Dropbox.Api.Team.TeamFolderArchiveArg.ForceAsyncOff
+  langs:
+  - csharp
+  - vb
+  name: TeamFolderArchiveArg
+  nameWithType: TeamFolderArchiveArg
+  fullName: Dropbox.Api.Team.TeamFolderArchiveArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderArchiveArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TeamFolderArchiveArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderArchiveArg.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The team folder archive arg object</p>\n"
+  example: []
+  syntax:
+    content: 'public class TeamFolderArchiveArg : TeamFolderIdArg'
+    content.vb: >-
+      Public Class TeamFolderArchiveArg
+          Inherits TeamFolderIdArg
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.TeamFolderIdArg
+  inheritedMembers:
+  - Dropbox.Api.Team.TeamFolderIdArg.TeamFolderId
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.TeamFolderArchiveArg.#ctor(System.String,System.Boolean)
+  commentId: M:Dropbox.Api.Team.TeamFolderArchiveArg.#ctor(System.String,System.Boolean)
+  id: '#ctor(System.String,System.Boolean)'
+  parent: Dropbox.Api.Team.TeamFolderArchiveArg
+  langs:
+  - csharp
+  - vb
+  name: TeamFolderArchiveArg(String, Boolean)
+  nameWithType: TeamFolderArchiveArg.TeamFolderArchiveArg(String, Boolean)
+  fullName: Dropbox.Api.Team.TeamFolderArchiveArg.TeamFolderArchiveArg(System.String, System.Boolean)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderArchiveArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderArchiveArg.cs
+    startLine: 37
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.TeamFolderArchiveArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public TeamFolderArchiveArg(string teamFolderId, bool forceAsyncOff = false)
+    parameters:
+    - id: teamFolderId
+      type: System.String
+      description: The ID of the team folder.
+    - id: forceAsyncOff
+      type: System.Boolean
+      description: >-
+        Whether to force the archive to happen
+
+        synchronously.
+    content.vb: Public Sub New(teamFolderId As String, forceAsyncOff As Boolean = False)
+  overload: Dropbox.Api.Team.TeamFolderArchiveArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.TeamFolderArchiveArg.#ctor
+  commentId: M:Dropbox.Api.Team.TeamFolderArchiveArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.TeamFolderArchiveArg
+  langs:
+  - csharp
+  - vb
+  name: TeamFolderArchiveArg()
+  nameWithType: TeamFolderArchiveArg.TeamFolderArchiveArg()
+  fullName: Dropbox.Api.Team.TeamFolderArchiveArg.TeamFolderArchiveArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderArchiveArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderArchiveArg.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.TeamFolderArchiveArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public TeamFolderArchiveArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.TeamFolderArchiveArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.TeamFolderArchiveArg.ForceAsyncOff
+  commentId: P:Dropbox.Api.Team.TeamFolderArchiveArg.ForceAsyncOff
+  id: ForceAsyncOff
+  parent: Dropbox.Api.Team.TeamFolderArchiveArg
+  langs:
+  - csharp
+  - vb
+  name: ForceAsyncOff
+  nameWithType: TeamFolderArchiveArg.ForceAsyncOff
+  fullName: Dropbox.Api.Team.TeamFolderArchiveArg.ForceAsyncOff
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderArchiveArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ForceAsyncOff
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderArchiveArg.cs
+    startLine: 59
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Whether to force the archive to happen synchronously.</p>\n"
+  example: []
+  syntax:
+    content: public bool ForceAsyncOff { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property ForceAsyncOff As Boolean
+  overload: Dropbox.Api.Team.TeamFolderArchiveArg.ForceAsyncOff*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.TeamFolderIdArg
+  commentId: T:Dropbox.Api.Team.TeamFolderIdArg
+  parent: Dropbox.Api.Team
+  name: TeamFolderIdArg
+  nameWithType: TeamFolderIdArg
+  fullName: Dropbox.Api.Team.TeamFolderIdArg
+- uid: Dropbox.Api.Team.TeamFolderIdArg.TeamFolderId
+  commentId: P:Dropbox.Api.Team.TeamFolderIdArg.TeamFolderId
+  parent: Dropbox.Api.Team.TeamFolderIdArg
+  name: TeamFolderId
+  nameWithType: TeamFolderIdArg.TeamFolderId
+  fullName: Dropbox.Api.Team.TeamFolderIdArg.TeamFolderId
+- uid: Dropbox.Api.Team.TeamFolderArchiveArg
+  commentId: T:Dropbox.Api.Team.TeamFolderArchiveArg
+  parent: Dropbox.Api.Team
+  name: TeamFolderArchiveArg
+  nameWithType: TeamFolderArchiveArg
+  fullName: Dropbox.Api.Team.TeamFolderArchiveArg
+- uid: Dropbox.Api.Team.TeamFolderArchiveArg.#ctor*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderArchiveArg.#ctor
+  name: TeamFolderArchiveArg
+  nameWithType: TeamFolderArchiveArg.TeamFolderArchiveArg
+  fullName: Dropbox.Api.Team.TeamFolderArchiveArg.TeamFolderArchiveArg
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Team.TeamFolderArchiveArg.ForceAsyncOff*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderArchiveArg.ForceAsyncOff
+  name: ForceAsyncOff
+  nameWithType: TeamFolderArchiveArg.ForceAsyncOff
+  fullName: Dropbox.Api.Team.TeamFolderArchiveArg.ForceAsyncOff
+shouldSkipMarkup: true

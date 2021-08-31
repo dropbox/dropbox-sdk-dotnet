@@ -1,0 +1,189 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.GroupsGetInfoItem.IdNotFound
+  commentId: T:Dropbox.Api.Team.GroupsGetInfoItem.IdNotFound
+  id: GroupsGetInfoItem.IdNotFound
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.GroupsGetInfoItem.IdNotFound.#ctor(System.String)
+  - Dropbox.Api.Team.GroupsGetInfoItem.IdNotFound.Value
+  langs:
+  - csharp
+  - vb
+  name: GroupsGetInfoItem.IdNotFound
+  nameWithType: GroupsGetInfoItem.IdNotFound
+  fullName: Dropbox.Api.Team.GroupsGetInfoItem.IdNotFound
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsGetInfoItem.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IdNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsGetInfoItem.cs
+    startLine: 157
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>An ID that was provided as a parameter to <xref href=\"Dropbox.Api.Team.Routes.TeamTeamRoutes.GroupsGetInfoAsync(Dropbox.Api.Team.GroupsSelector)\" data-throw-if-not-resolved=\"false\"></xref>, and did not\nmatch a corresponding group. The ID can be a group ID, or an external ID, depending\non how the method was called.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class IdNotFound : GroupsGetInfoItem'
+    content.vb: >-
+      Public NotInheritable Class IdNotFound
+          Inherits GroupsGetInfoItem
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.GroupsGetInfoItem
+  inheritedMembers:
+  - Dropbox.Api.Team.GroupsGetInfoItem.IsIdNotFound
+  - Dropbox.Api.Team.GroupsGetInfoItem.AsIdNotFound
+  - Dropbox.Api.Team.GroupsGetInfoItem.IsGroupInfo
+  - Dropbox.Api.Team.GroupsGetInfoItem.AsGroupInfo
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Team.GroupsGetInfoItem.IdNotFound.#ctor(System.String)
+  commentId: M:Dropbox.Api.Team.GroupsGetInfoItem.IdNotFound.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.Team.GroupsGetInfoItem.IdNotFound
+  langs:
+  - csharp
+  - vb
+  name: IdNotFound(String)
+  nameWithType: GroupsGetInfoItem.IdNotFound.IdNotFound(String)
+  fullName: Dropbox.Api.Team.GroupsGetInfoItem.IdNotFound.IdNotFound(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsGetInfoItem.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsGetInfoItem.cs
+    startLine: 175
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.GroupsGetInfoItem.IdNotFound\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public IdNotFound(string value)
+    parameters:
+    - id: value
+      type: System.String
+      description: The value
+    content.vb: Public Sub New(value As String)
+  overload: Dropbox.Api.Team.GroupsGetInfoItem.IdNotFound.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.GroupsGetInfoItem.IdNotFound.Value
+  commentId: P:Dropbox.Api.Team.GroupsGetInfoItem.IdNotFound.Value
+  id: Value
+  parent: Dropbox.Api.Team.GroupsGetInfoItem.IdNotFound
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: GroupsGetInfoItem.IdNotFound.Value
+  fullName: Dropbox.Api.Team.GroupsGetInfoItem.IdNotFound.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsGetInfoItem.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsGetInfoItem.cs
+    startLine: 189
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public string Value { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Value As String
+  overload: Dropbox.Api.Team.GroupsGetInfoItem.IdNotFound.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team.Routes.TeamTeamRoutes.GroupsGetInfoAsync(Dropbox.Api.Team.GroupsSelector)
+  commentId: M:Dropbox.Api.Team.Routes.TeamTeamRoutes.GroupsGetInfoAsync(Dropbox.Api.Team.GroupsSelector)
+  isExternal: true
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.GroupsGetInfoItem
+  commentId: T:Dropbox.Api.Team.GroupsGetInfoItem
+  parent: Dropbox.Api.Team
+  name: GroupsGetInfoItem
+  nameWithType: GroupsGetInfoItem
+  fullName: Dropbox.Api.Team.GroupsGetInfoItem
+- uid: Dropbox.Api.Team.GroupsGetInfoItem.IsIdNotFound
+  commentId: P:Dropbox.Api.Team.GroupsGetInfoItem.IsIdNotFound
+  parent: Dropbox.Api.Team.GroupsGetInfoItem
+  name: IsIdNotFound
+  nameWithType: GroupsGetInfoItem.IsIdNotFound
+  fullName: Dropbox.Api.Team.GroupsGetInfoItem.IsIdNotFound
+- uid: Dropbox.Api.Team.GroupsGetInfoItem.AsIdNotFound
+  commentId: P:Dropbox.Api.Team.GroupsGetInfoItem.AsIdNotFound
+  parent: Dropbox.Api.Team.GroupsGetInfoItem
+  name: AsIdNotFound
+  nameWithType: GroupsGetInfoItem.AsIdNotFound
+  fullName: Dropbox.Api.Team.GroupsGetInfoItem.AsIdNotFound
+- uid: Dropbox.Api.Team.GroupsGetInfoItem.IsGroupInfo
+  commentId: P:Dropbox.Api.Team.GroupsGetInfoItem.IsGroupInfo
+  parent: Dropbox.Api.Team.GroupsGetInfoItem
+  name: IsGroupInfo
+  nameWithType: GroupsGetInfoItem.IsGroupInfo
+  fullName: Dropbox.Api.Team.GroupsGetInfoItem.IsGroupInfo
+- uid: Dropbox.Api.Team.GroupsGetInfoItem.AsGroupInfo
+  commentId: P:Dropbox.Api.Team.GroupsGetInfoItem.AsGroupInfo
+  parent: Dropbox.Api.Team.GroupsGetInfoItem
+  name: AsGroupInfo
+  nameWithType: GroupsGetInfoItem.AsGroupInfo
+  fullName: Dropbox.Api.Team.GroupsGetInfoItem.AsGroupInfo
+- uid: Dropbox.Api.Team.GroupsGetInfoItem.IdNotFound
+  commentId: T:Dropbox.Api.Team.GroupsGetInfoItem.IdNotFound
+  parent: Dropbox.Api.Team
+  name: GroupsGetInfoItem.IdNotFound
+  nameWithType: GroupsGetInfoItem.IdNotFound
+  fullName: Dropbox.Api.Team.GroupsGetInfoItem.IdNotFound
+- uid: Dropbox.Api.Team.GroupsGetInfoItem.IdNotFound.#ctor*
+  commentId: Overload:Dropbox.Api.Team.GroupsGetInfoItem.IdNotFound.#ctor
+  name: IdNotFound
+  nameWithType: GroupsGetInfoItem.IdNotFound.IdNotFound
+  fullName: Dropbox.Api.Team.GroupsGetInfoItem.IdNotFound.IdNotFound
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Team.GroupsGetInfoItem.IdNotFound.Value*
+  commentId: Overload:Dropbox.Api.Team.GroupsGetInfoItem.IdNotFound.Value
+  name: Value
+  nameWithType: GroupsGetInfoItem.IdNotFound.Value
+  fullName: Dropbox.Api.Team.GroupsGetInfoItem.IdNotFound.Value
+shouldSkipMarkup: true

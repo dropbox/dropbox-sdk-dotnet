@@ -1,0 +1,246 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.DeviceSessionArg
+  commentId: T:Dropbox.Api.Team.DeviceSessionArg
+  id: DeviceSessionArg
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.DeviceSessionArg.#ctor
+  - Dropbox.Api.Team.DeviceSessionArg.#ctor(System.String,System.String)
+  - Dropbox.Api.Team.DeviceSessionArg.SessionId
+  - Dropbox.Api.Team.DeviceSessionArg.TeamMemberId
+  langs:
+  - csharp
+  - vb
+  name: DeviceSessionArg
+  nameWithType: DeviceSessionArg
+  fullName: Dropbox.Api.Team.DeviceSessionArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DeviceSessionArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: DeviceSessionArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DeviceSessionArg.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The device session arg object</p>\n"
+  example: []
+  syntax:
+    content: 'public class DeviceSessionArg : object'
+    content.vb: >-
+      Public Class DeviceSessionArg
+          Inherits Object
+  seealso:
+  - linkId: Dropbox.Api.Team.RevokeDesktopClientArg
+    commentId: T:Dropbox.Api.Team.RevokeDesktopClientArg
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Team.RevokeDesktopClientArg
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.DeviceSessionArg.#ctor(System.String,System.String)
+  commentId: M:Dropbox.Api.Team.DeviceSessionArg.#ctor(System.String,System.String)
+  id: '#ctor(System.String,System.String)'
+  parent: Dropbox.Api.Team.DeviceSessionArg
+  langs:
+  - csharp
+  - vb
+  name: DeviceSessionArg(String, String)
+  nameWithType: DeviceSessionArg.DeviceSessionArg(String, String)
+  fullName: Dropbox.Api.Team.DeviceSessionArg.DeviceSessionArg(System.String, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DeviceSessionArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DeviceSessionArg.cs
+    startLine: 36
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.DeviceSessionArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public DeviceSessionArg(string sessionId, string teamMemberId)
+    parameters:
+    - id: sessionId
+      type: System.String
+      description: The session id.
+    - id: teamMemberId
+      type: System.String
+      description: The unique id of the member owning the device.
+    content.vb: Public Sub New(sessionId As String, teamMemberId As String)
+  overload: Dropbox.Api.Team.DeviceSessionArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.DeviceSessionArg.#ctor
+  commentId: M:Dropbox.Api.Team.DeviceSessionArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.DeviceSessionArg
+  langs:
+  - csharp
+  - vb
+  name: DeviceSessionArg()
+  nameWithType: DeviceSessionArg.DeviceSessionArg()
+  fullName: Dropbox.Api.Team.DeviceSessionArg.DeviceSessionArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DeviceSessionArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DeviceSessionArg.cs
+    startLine: 59
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.DeviceSessionArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public DeviceSessionArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.DeviceSessionArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.DeviceSessionArg.SessionId
+  commentId: P:Dropbox.Api.Team.DeviceSessionArg.SessionId
+  id: SessionId
+  parent: Dropbox.Api.Team.DeviceSessionArg
+  langs:
+  - csharp
+  - vb
+  name: SessionId
+  nameWithType: DeviceSessionArg.SessionId
+  fullName: Dropbox.Api.Team.DeviceSessionArg.SessionId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DeviceSessionArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SessionId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DeviceSessionArg.cs
+    startLine: 67
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The session id.</p>\n"
+  example: []
+  syntax:
+    content: public string SessionId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SessionId As String
+  overload: Dropbox.Api.Team.DeviceSessionArg.SessionId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.DeviceSessionArg.TeamMemberId
+  commentId: P:Dropbox.Api.Team.DeviceSessionArg.TeamMemberId
+  id: TeamMemberId
+  parent: Dropbox.Api.Team.DeviceSessionArg
+  langs:
+  - csharp
+  - vb
+  name: TeamMemberId
+  nameWithType: DeviceSessionArg.TeamMemberId
+  fullName: Dropbox.Api.Team.DeviceSessionArg.TeamMemberId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DeviceSessionArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TeamMemberId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DeviceSessionArg.cs
+    startLine: 72
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The unique id of the member owning the device.</p>\n"
+  example: []
+  syntax:
+    content: public string TeamMemberId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property TeamMemberId As String
+  overload: Dropbox.Api.Team.DeviceSessionArg.TeamMemberId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Team.RevokeDesktopClientArg
+  commentId: T:Dropbox.Api.Team.RevokeDesktopClientArg
+  parent: Dropbox.Api.Team
+  name: RevokeDesktopClientArg
+  nameWithType: RevokeDesktopClientArg
+  fullName: Dropbox.Api.Team.RevokeDesktopClientArg
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.DeviceSessionArg
+  commentId: T:Dropbox.Api.Team.DeviceSessionArg
+  parent: Dropbox.Api.Team
+  name: DeviceSessionArg
+  nameWithType: DeviceSessionArg
+  fullName: Dropbox.Api.Team.DeviceSessionArg
+- uid: Dropbox.Api.Team.DeviceSessionArg.#ctor*
+  commentId: Overload:Dropbox.Api.Team.DeviceSessionArg.#ctor
+  name: DeviceSessionArg
+  nameWithType: DeviceSessionArg.DeviceSessionArg
+  fullName: Dropbox.Api.Team.DeviceSessionArg.DeviceSessionArg
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Team.DeviceSessionArg.SessionId*
+  commentId: Overload:Dropbox.Api.Team.DeviceSessionArg.SessionId
+  name: SessionId
+  nameWithType: DeviceSessionArg.SessionId
+  fullName: Dropbox.Api.Team.DeviceSessionArg.SessionId
+- uid: Dropbox.Api.Team.DeviceSessionArg.TeamMemberId*
+  commentId: Overload:Dropbox.Api.Team.DeviceSessionArg.TeamMemberId
+  name: TeamMemberId
+  nameWithType: DeviceSessionArg.TeamMemberId
+  fullName: Dropbox.Api.Team.DeviceSessionArg.TeamMemberId
+shouldSkipMarkup: true

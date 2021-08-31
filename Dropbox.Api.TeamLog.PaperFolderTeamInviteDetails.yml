@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.PaperFolderTeamInviteDetails
+  commentId: T:Dropbox.Api.TeamLog.PaperFolderTeamInviteDetails
+  id: PaperFolderTeamInviteDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.PaperFolderTeamInviteDetails.#ctor
+  - Dropbox.Api.TeamLog.PaperFolderTeamInviteDetails.#ctor(System.String)
+  - Dropbox.Api.TeamLog.PaperFolderTeamInviteDetails.EventUuid
+  langs:
+  - csharp
+  - vb
+  name: PaperFolderTeamInviteDetails
+  nameWithType: PaperFolderTeamInviteDetails
+  fullName: Dropbox.Api.TeamLog.PaperFolderTeamInviteDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperFolderTeamInviteDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PaperFolderTeamInviteDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperFolderTeamInviteDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Shared Paper folder with users and/or groups.</p>\n"
+  example: []
+  syntax:
+    content: 'public class PaperFolderTeamInviteDetails : object'
+    content.vb: >-
+      Public Class PaperFolderTeamInviteDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.PaperFolderTeamInviteDetails.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.PaperFolderTeamInviteDetails.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.PaperFolderTeamInviteDetails
+  langs:
+  - csharp
+  - vb
+  name: PaperFolderTeamInviteDetails(String)
+  nameWithType: PaperFolderTeamInviteDetails.PaperFolderTeamInviteDetails(String)
+  fullName: Dropbox.Api.TeamLog.PaperFolderTeamInviteDetails.PaperFolderTeamInviteDetails(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperFolderTeamInviteDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperFolderTeamInviteDetails.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.PaperFolderTeamInviteDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public PaperFolderTeamInviteDetails(string eventUuid)
+    parameters:
+    - id: eventUuid
+      type: System.String
+      description: Event unique identifier.
+    content.vb: Public Sub New(eventUuid As String)
+  overload: Dropbox.Api.TeamLog.PaperFolderTeamInviteDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.PaperFolderTeamInviteDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.PaperFolderTeamInviteDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.PaperFolderTeamInviteDetails
+  langs:
+  - csharp
+  - vb
+  name: PaperFolderTeamInviteDetails()
+  nameWithType: PaperFolderTeamInviteDetails.PaperFolderTeamInviteDetails()
+  fullName: Dropbox.Api.TeamLog.PaperFolderTeamInviteDetails.PaperFolderTeamInviteDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperFolderTeamInviteDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperFolderTeamInviteDetails.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.PaperFolderTeamInviteDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public PaperFolderTeamInviteDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.PaperFolderTeamInviteDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.PaperFolderTeamInviteDetails.EventUuid
+  commentId: P:Dropbox.Api.TeamLog.PaperFolderTeamInviteDetails.EventUuid
+  id: EventUuid
+  parent: Dropbox.Api.TeamLog.PaperFolderTeamInviteDetails
+  langs:
+  - csharp
+  - vb
+  name: EventUuid
+  nameWithType: PaperFolderTeamInviteDetails.EventUuid
+  fullName: Dropbox.Api.TeamLog.PaperFolderTeamInviteDetails.EventUuid
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperFolderTeamInviteDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: EventUuid
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperFolderTeamInviteDetails.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Event unique identifier.</p>\n"
+  example: []
+  syntax:
+    content: public string EventUuid { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property EventUuid As String
+  overload: Dropbox.Api.TeamLog.PaperFolderTeamInviteDetails.EventUuid*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.PaperFolderTeamInviteDetails
+  commentId: T:Dropbox.Api.TeamLog.PaperFolderTeamInviteDetails
+  parent: Dropbox.Api.TeamLog
+  name: PaperFolderTeamInviteDetails
+  nameWithType: PaperFolderTeamInviteDetails
+  fullName: Dropbox.Api.TeamLog.PaperFolderTeamInviteDetails
+- uid: Dropbox.Api.TeamLog.PaperFolderTeamInviteDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.PaperFolderTeamInviteDetails.#ctor
+  name: PaperFolderTeamInviteDetails
+  nameWithType: PaperFolderTeamInviteDetails.PaperFolderTeamInviteDetails
+  fullName: Dropbox.Api.TeamLog.PaperFolderTeamInviteDetails.PaperFolderTeamInviteDetails
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.PaperFolderTeamInviteDetails.EventUuid*
+  commentId: Overload:Dropbox.Api.TeamLog.PaperFolderTeamInviteDetails.EventUuid
+  name: EventUuid
+  nameWithType: PaperFolderTeamInviteDetails.EventUuid
+  fullName: Dropbox.Api.TeamLog.PaperFolderTeamInviteDetails.EventUuid
+shouldSkipMarkup: true

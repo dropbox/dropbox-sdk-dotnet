@@ -1,0 +1,190 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.FileRequests.ListFileRequestsContinueArg
+  commentId: T:Dropbox.Api.FileRequests.ListFileRequestsContinueArg
+  id: ListFileRequestsContinueArg
+  parent: Dropbox.Api.FileRequests
+  children:
+  - Dropbox.Api.FileRequests.ListFileRequestsContinueArg.#ctor
+  - Dropbox.Api.FileRequests.ListFileRequestsContinueArg.#ctor(System.String)
+  - Dropbox.Api.FileRequests.ListFileRequestsContinueArg.Cursor
+  langs:
+  - csharp
+  - vb
+  name: ListFileRequestsContinueArg
+  nameWithType: ListFileRequestsContinueArg
+  fullName: Dropbox.Api.FileRequests.ListFileRequestsContinueArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/ListFileRequestsContinueArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ListFileRequestsContinueArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/ListFileRequestsContinueArg.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>The list file requests continue arg object</p>\n"
+  example: []
+  syntax:
+    content: 'public class ListFileRequestsContinueArg : object'
+    content.vb: >-
+      Public Class ListFileRequestsContinueArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.FileRequests.ListFileRequestsContinueArg.#ctor(System.String)
+  commentId: M:Dropbox.Api.FileRequests.ListFileRequestsContinueArg.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.FileRequests.ListFileRequestsContinueArg
+  langs:
+  - csharp
+  - vb
+  name: ListFileRequestsContinueArg(String)
+  nameWithType: ListFileRequestsContinueArg.ListFileRequestsContinueArg(String)
+  fullName: Dropbox.Api.FileRequests.ListFileRequestsContinueArg.ListFileRequestsContinueArg(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/ListFileRequestsContinueArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/ListFileRequestsContinueArg.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.FileRequests.ListFileRequestsContinueArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public ListFileRequestsContinueArg(string cursor)
+    parameters:
+    - id: cursor
+      type: System.String
+      description: >-
+        The cursor returned by the previous API call specified in the
+
+        endpoint description.
+    content.vb: Public Sub New(cursor As String)
+  overload: Dropbox.Api.FileRequests.ListFileRequestsContinueArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileRequests.ListFileRequestsContinueArg.#ctor
+  commentId: M:Dropbox.Api.FileRequests.ListFileRequestsContinueArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.FileRequests.ListFileRequestsContinueArg
+  langs:
+  - csharp
+  - vb
+  name: ListFileRequestsContinueArg()
+  nameWithType: ListFileRequestsContinueArg.ListFileRequestsContinueArg()
+  fullName: Dropbox.Api.FileRequests.ListFileRequestsContinueArg.ListFileRequestsContinueArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/ListFileRequestsContinueArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/ListFileRequestsContinueArg.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.FileRequests.ListFileRequestsContinueArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public ListFileRequestsContinueArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.FileRequests.ListFileRequestsContinueArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileRequests.ListFileRequestsContinueArg.Cursor
+  commentId: P:Dropbox.Api.FileRequests.ListFileRequestsContinueArg.Cursor
+  id: Cursor
+  parent: Dropbox.Api.FileRequests.ListFileRequestsContinueArg
+  langs:
+  - csharp
+  - vb
+  name: Cursor
+  nameWithType: ListFileRequestsContinueArg.Cursor
+  fullName: Dropbox.Api.FileRequests.ListFileRequestsContinueArg.Cursor
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/ListFileRequestsContinueArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Cursor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/ListFileRequestsContinueArg.cs
+    startLine: 60
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>The cursor returned by the previous API call specified in the endpoint\ndescription.</p>\n"
+  example: []
+  syntax:
+    content: public string Cursor { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Cursor As String
+  overload: Dropbox.Api.FileRequests.ListFileRequestsContinueArg.Cursor*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.FileRequests
+  commentId: N:Dropbox.Api.FileRequests
+  name: Dropbox.Api.FileRequests
+  nameWithType: Dropbox.Api.FileRequests
+  fullName: Dropbox.Api.FileRequests
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.FileRequests.ListFileRequestsContinueArg
+  commentId: T:Dropbox.Api.FileRequests.ListFileRequestsContinueArg
+  parent: Dropbox.Api.FileRequests
+  name: ListFileRequestsContinueArg
+  nameWithType: ListFileRequestsContinueArg
+  fullName: Dropbox.Api.FileRequests.ListFileRequestsContinueArg
+- uid: Dropbox.Api.FileRequests.ListFileRequestsContinueArg.#ctor*
+  commentId: Overload:Dropbox.Api.FileRequests.ListFileRequestsContinueArg.#ctor
+  name: ListFileRequestsContinueArg
+  nameWithType: ListFileRequestsContinueArg.ListFileRequestsContinueArg
+  fullName: Dropbox.Api.FileRequests.ListFileRequestsContinueArg.ListFileRequestsContinueArg
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.FileRequests.ListFileRequestsContinueArg.Cursor*
+  commentId: Overload:Dropbox.Api.FileRequests.ListFileRequestsContinueArg.Cursor
+  name: Cursor
+  nameWithType: ListFileRequestsContinueArg.Cursor
+  fullName: Dropbox.Api.FileRequests.ListFileRequestsContinueArg.Cursor
+shouldSkipMarkup: true

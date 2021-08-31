@@ -1,0 +1,193 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.FileRequests.ListFileRequestsArg
+  commentId: T:Dropbox.Api.FileRequests.ListFileRequestsArg
+  id: ListFileRequestsArg
+  parent: Dropbox.Api.FileRequests
+  children:
+  - Dropbox.Api.FileRequests.ListFileRequestsArg.#ctor
+  - Dropbox.Api.FileRequests.ListFileRequestsArg.#ctor(System.UInt64)
+  - Dropbox.Api.FileRequests.ListFileRequestsArg.Limit
+  langs:
+  - csharp
+  - vb
+  name: ListFileRequestsArg
+  nameWithType: ListFileRequestsArg
+  fullName: Dropbox.Api.FileRequests.ListFileRequestsArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/ListFileRequestsArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ListFileRequestsArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/ListFileRequestsArg.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Arguments for <xref href=\"Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListV2Async(Dropbox.Api.FileRequests.ListFileRequestsArg)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+  example: []
+  syntax:
+    content: 'public class ListFileRequestsArg : object'
+    content.vb: >-
+      Public Class ListFileRequestsArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.FileRequests.ListFileRequestsArg.#ctor(System.UInt64)
+  commentId: M:Dropbox.Api.FileRequests.ListFileRequestsArg.#ctor(System.UInt64)
+  id: '#ctor(System.UInt64)'
+  parent: Dropbox.Api.FileRequests.ListFileRequestsArg
+  langs:
+  - csharp
+  - vb
+  name: ListFileRequestsArg(UInt64)
+  nameWithType: ListFileRequestsArg.ListFileRequestsArg(UInt64)
+  fullName: Dropbox.Api.FileRequests.ListFileRequestsArg.ListFileRequestsArg(System.UInt64)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/ListFileRequestsArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/ListFileRequestsArg.cs
+    startLine: 36
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.FileRequests.ListFileRequestsArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public ListFileRequestsArg(ulong limit = null)
+    parameters:
+    - id: limit
+      type: System.UInt64
+      description: >-
+        The maximum number of file requests that should be returned per
+
+        request.
+    content.vb: Public Sub New(limit As ULong = Nothing)
+  overload: Dropbox.Api.FileRequests.ListFileRequestsArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileRequests.ListFileRequestsArg.#ctor
+  commentId: M:Dropbox.Api.FileRequests.ListFileRequestsArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.FileRequests.ListFileRequestsArg
+  langs:
+  - csharp
+  - vb
+  name: ListFileRequestsArg()
+  nameWithType: ListFileRequestsArg.ListFileRequestsArg()
+  fullName: Dropbox.Api.FileRequests.ListFileRequestsArg.ListFileRequestsArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/ListFileRequestsArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/ListFileRequestsArg.cs
+    startLine: 47
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.FileRequests.ListFileRequestsArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public ListFileRequestsArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.FileRequests.ListFileRequestsArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileRequests.ListFileRequestsArg.Limit
+  commentId: P:Dropbox.Api.FileRequests.ListFileRequestsArg.Limit
+  id: Limit
+  parent: Dropbox.Api.FileRequests.ListFileRequestsArg
+  langs:
+  - csharp
+  - vb
+  name: Limit
+  nameWithType: ListFileRequestsArg.Limit
+  fullName: Dropbox.Api.FileRequests.ListFileRequestsArg.Limit
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/ListFileRequestsArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Limit
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/ListFileRequestsArg.cs
+    startLine: 57
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>The maximum number of file requests that should be returned per\nrequest.</p>\n"
+  example: []
+  syntax:
+    content: public ulong Limit { get; protected set; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: Public Property Limit As ULong
+  overload: Dropbox.Api.FileRequests.ListFileRequestsArg.Limit*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListV2Async(Dropbox.Api.FileRequests.ListFileRequestsArg)
+  commentId: M:Dropbox.Api.FileRequests.Routes.FileRequestsUserRoutes.ListV2Async(Dropbox.Api.FileRequests.ListFileRequestsArg)
+  isExternal: true
+- uid: Dropbox.Api.FileRequests
+  commentId: N:Dropbox.Api.FileRequests
+  name: Dropbox.Api.FileRequests
+  nameWithType: Dropbox.Api.FileRequests
+  fullName: Dropbox.Api.FileRequests
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.FileRequests.ListFileRequestsArg
+  commentId: T:Dropbox.Api.FileRequests.ListFileRequestsArg
+  parent: Dropbox.Api.FileRequests
+  name: ListFileRequestsArg
+  nameWithType: ListFileRequestsArg
+  fullName: Dropbox.Api.FileRequests.ListFileRequestsArg
+- uid: Dropbox.Api.FileRequests.ListFileRequestsArg.#ctor*
+  commentId: Overload:Dropbox.Api.FileRequests.ListFileRequestsArg.#ctor
+  name: ListFileRequestsArg
+  nameWithType: ListFileRequestsArg.ListFileRequestsArg
+  fullName: Dropbox.Api.FileRequests.ListFileRequestsArg.ListFileRequestsArg
+- uid: System.UInt64
+  isExternal: true
+  name: UInt64
+  nameWithType: UInt64
+  fullName: System.UInt64
+- uid: Dropbox.Api.FileRequests.ListFileRequestsArg.Limit*
+  commentId: Overload:Dropbox.Api.FileRequests.ListFileRequestsArg.Limit
+  name: Limit
+  nameWithType: ListFileRequestsArg.Limit
+  fullName: Dropbox.Api.FileRequests.ListFileRequestsArg.Limit
+shouldSkipMarkup: true

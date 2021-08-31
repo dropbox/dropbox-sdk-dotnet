@@ -1,0 +1,186 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.RelocationBatchV2Launch.AsyncJobId
+  commentId: T:Dropbox.Api.Files.RelocationBatchV2Launch.AsyncJobId
+  id: RelocationBatchV2Launch.AsyncJobId
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.RelocationBatchV2Launch.AsyncJobId.#ctor(System.String)
+  - Dropbox.Api.Files.RelocationBatchV2Launch.AsyncJobId.Value
+  langs:
+  - csharp
+  - vb
+  name: RelocationBatchV2Launch.AsyncJobId
+  nameWithType: RelocationBatchV2Launch.AsyncJobId
+  fullName: Dropbox.Api.Files.RelocationBatchV2Launch.AsyncJobId
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchV2Launch.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsyncJobId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchV2Launch.cs
+    startLine: 246
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>This response indicates that the processing is asynchronous. The string is an\nid that can be used to obtain the status of the asynchronous job.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class AsyncJobId : RelocationBatchV2Launch'
+    content.vb: >-
+      Public NotInheritable Class AsyncJobId
+          Inherits RelocationBatchV2Launch
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Files.RelocationBatchV2Launch
+  inheritedMembers:
+  - Dropbox.Api.Files.RelocationBatchV2Launch.IsComplete
+  - Dropbox.Api.Files.RelocationBatchV2Launch.AsComplete
+  - Dropbox.Api.Files.RelocationBatchV2Launch.IsAsyncJobId
+  - Dropbox.Api.Files.RelocationBatchV2Launch.AsAsyncJobId
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Files.RelocationBatchV2Launch.AsyncJobId.#ctor(System.String)
+  commentId: M:Dropbox.Api.Files.RelocationBatchV2Launch.AsyncJobId.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.Files.RelocationBatchV2Launch.AsyncJobId
+  langs:
+  - csharp
+  - vb
+  name: AsyncJobId(String)
+  nameWithType: RelocationBatchV2Launch.AsyncJobId.AsyncJobId(String)
+  fullName: Dropbox.Api.Files.RelocationBatchV2Launch.AsyncJobId.AsyncJobId(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchV2Launch.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchV2Launch.cs
+    startLine: 264
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.RelocationBatchV2Launch.AsyncJobId\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public AsyncJobId(string value)
+    parameters:
+    - id: value
+      type: System.String
+      description: The value
+    content.vb: Public Sub New(value As String)
+  overload: Dropbox.Api.Files.RelocationBatchV2Launch.AsyncJobId.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.RelocationBatchV2Launch.AsyncJobId.Value
+  commentId: P:Dropbox.Api.Files.RelocationBatchV2Launch.AsyncJobId.Value
+  id: Value
+  parent: Dropbox.Api.Files.RelocationBatchV2Launch.AsyncJobId
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: RelocationBatchV2Launch.AsyncJobId.Value
+  fullName: Dropbox.Api.Files.RelocationBatchV2Launch.AsyncJobId.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchV2Launch.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchV2Launch.cs
+    startLine: 278
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public string Value { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Value As String
+  overload: Dropbox.Api.Files.RelocationBatchV2Launch.AsyncJobId.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.RelocationBatchV2Launch
+  commentId: T:Dropbox.Api.Files.RelocationBatchV2Launch
+  parent: Dropbox.Api.Files
+  name: RelocationBatchV2Launch
+  nameWithType: RelocationBatchV2Launch
+  fullName: Dropbox.Api.Files.RelocationBatchV2Launch
+- uid: Dropbox.Api.Files.RelocationBatchV2Launch.IsComplete
+  commentId: P:Dropbox.Api.Files.RelocationBatchV2Launch.IsComplete
+  parent: Dropbox.Api.Files.RelocationBatchV2Launch
+  name: IsComplete
+  nameWithType: RelocationBatchV2Launch.IsComplete
+  fullName: Dropbox.Api.Files.RelocationBatchV2Launch.IsComplete
+- uid: Dropbox.Api.Files.RelocationBatchV2Launch.AsComplete
+  commentId: P:Dropbox.Api.Files.RelocationBatchV2Launch.AsComplete
+  parent: Dropbox.Api.Files.RelocationBatchV2Launch
+  name: AsComplete
+  nameWithType: RelocationBatchV2Launch.AsComplete
+  fullName: Dropbox.Api.Files.RelocationBatchV2Launch.AsComplete
+- uid: Dropbox.Api.Files.RelocationBatchV2Launch.IsAsyncJobId
+  commentId: P:Dropbox.Api.Files.RelocationBatchV2Launch.IsAsyncJobId
+  parent: Dropbox.Api.Files.RelocationBatchV2Launch
+  name: IsAsyncJobId
+  nameWithType: RelocationBatchV2Launch.IsAsyncJobId
+  fullName: Dropbox.Api.Files.RelocationBatchV2Launch.IsAsyncJobId
+- uid: Dropbox.Api.Files.RelocationBatchV2Launch.AsAsyncJobId
+  commentId: P:Dropbox.Api.Files.RelocationBatchV2Launch.AsAsyncJobId
+  parent: Dropbox.Api.Files.RelocationBatchV2Launch
+  name: AsAsyncJobId
+  nameWithType: RelocationBatchV2Launch.AsAsyncJobId
+  fullName: Dropbox.Api.Files.RelocationBatchV2Launch.AsAsyncJobId
+- uid: Dropbox.Api.Files.RelocationBatchV2Launch.AsyncJobId
+  commentId: T:Dropbox.Api.Files.RelocationBatchV2Launch.AsyncJobId
+  parent: Dropbox.Api.Files
+  name: RelocationBatchV2Launch.AsyncJobId
+  nameWithType: RelocationBatchV2Launch.AsyncJobId
+  fullName: Dropbox.Api.Files.RelocationBatchV2Launch.AsyncJobId
+- uid: Dropbox.Api.Files.RelocationBatchV2Launch.AsyncJobId.#ctor*
+  commentId: Overload:Dropbox.Api.Files.RelocationBatchV2Launch.AsyncJobId.#ctor
+  name: AsyncJobId
+  nameWithType: RelocationBatchV2Launch.AsyncJobId.AsyncJobId
+  fullName: Dropbox.Api.Files.RelocationBatchV2Launch.AsyncJobId.AsyncJobId
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Files.RelocationBatchV2Launch.AsyncJobId.Value*
+  commentId: Overload:Dropbox.Api.Files.RelocationBatchV2Launch.AsyncJobId.Value
+  name: Value
+  nameWithType: RelocationBatchV2Launch.AsyncJobId.Value
+  fullName: Dropbox.Api.Files.RelocationBatchV2Launch.AsyncJobId.Value
+shouldSkipMarkup: true

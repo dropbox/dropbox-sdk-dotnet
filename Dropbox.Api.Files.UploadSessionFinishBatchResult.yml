@@ -1,0 +1,352 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.UploadSessionFinishBatchResult
+  commentId: T:Dropbox.Api.Files.UploadSessionFinishBatchResult
+  id: UploadSessionFinishBatchResult
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.UploadSessionFinishBatchResult.#ctor
+  - Dropbox.Api.Files.UploadSessionFinishBatchResult.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Files.UploadSessionFinishBatchResultEntry})
+  - Dropbox.Api.Files.UploadSessionFinishBatchResult.Entries
+  langs:
+  - csharp
+  - vb
+  name: UploadSessionFinishBatchResult
+  nameWithType: UploadSessionFinishBatchResult
+  fullName: Dropbox.Api.Files.UploadSessionFinishBatchResult
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionFinishBatchResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: UploadSessionFinishBatchResult
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionFinishBatchResult.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The upload session finish batch result object</p>\n"
+  example: []
+  syntax:
+    content: 'public class UploadSessionFinishBatchResult : object'
+    content.vb: >-
+      Public Class UploadSessionFinishBatchResult
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.UploadSessionFinishBatchResult.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Files.UploadSessionFinishBatchResultEntry})
+  commentId: M:Dropbox.Api.Files.UploadSessionFinishBatchResult.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Files.UploadSessionFinishBatchResultEntry})
+  id: '#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Files.UploadSessionFinishBatchResultEntry})'
+  parent: Dropbox.Api.Files.UploadSessionFinishBatchResult
+  langs:
+  - csharp
+  - vb
+  name: UploadSessionFinishBatchResult(System.Collections.Generic.IEnumerable<UploadSessionFinishBatchResultEntry>)
+  nameWithType: UploadSessionFinishBatchResult.UploadSessionFinishBatchResult(System.Collections.Generic.IEnumerable<UploadSessionFinishBatchResultEntry>)
+  fullName: Dropbox.Api.Files.UploadSessionFinishBatchResult.UploadSessionFinishBatchResult(System.Collections.Generic.IEnumerable<Dropbox.Api.Files.UploadSessionFinishBatchResultEntry>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionFinishBatchResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionFinishBatchResult.cs
+    startLine: 37
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.UploadSessionFinishBatchResult\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public UploadSessionFinishBatchResult(System.Collections.Generic.IEnumerable<UploadSessionFinishBatchResultEntry> entries)
+    parameters:
+    - id: entries
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.Files.UploadSessionFinishBatchResultEntry}
+      description: >-
+        Each entry in <xref href="Dropbox.Api.Files.UploadSessionFinishBatchArg.Entries" data-throw-if-not-resolved="false"></xref> will appear at the
+
+        same position inside <xref href="Dropbox.Api.Files.UploadSessionFinishBatchResult.Entries" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Sub New(entries As System.Collections.Generic.IEnumerable(Of UploadSessionFinishBatchResultEntry))
+  overload: Dropbox.Api.Files.UploadSessionFinishBatchResult.#ctor*
+  nameWithType.vb: UploadSessionFinishBatchResult.UploadSessionFinishBatchResult(System.Collections.Generic.IEnumerable(Of UploadSessionFinishBatchResultEntry))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Files.UploadSessionFinishBatchResult.UploadSessionFinishBatchResult(System.Collections.Generic.IEnumerable(Of Dropbox.Api.Files.UploadSessionFinishBatchResultEntry))
+  name.vb: UploadSessionFinishBatchResult(System.Collections.Generic.IEnumerable(Of UploadSessionFinishBatchResultEntry))
+- uid: Dropbox.Api.Files.UploadSessionFinishBatchResult.#ctor
+  commentId: M:Dropbox.Api.Files.UploadSessionFinishBatchResult.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.UploadSessionFinishBatchResult
+  langs:
+  - csharp
+  - vb
+  name: UploadSessionFinishBatchResult()
+  nameWithType: UploadSessionFinishBatchResult.UploadSessionFinishBatchResult()
+  fullName: Dropbox.Api.Files.UploadSessionFinishBatchResult.UploadSessionFinishBatchResult()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionFinishBatchResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionFinishBatchResult.cs
+    startLine: 55
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.UploadSessionFinishBatchResult\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public UploadSessionFinishBatchResult()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.UploadSessionFinishBatchResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.UploadSessionFinishBatchResult.Entries
+  commentId: P:Dropbox.Api.Files.UploadSessionFinishBatchResult.Entries
+  id: Entries
+  parent: Dropbox.Api.Files.UploadSessionFinishBatchResult
+  langs:
+  - csharp
+  - vb
+  name: Entries
+  nameWithType: UploadSessionFinishBatchResult.Entries
+  fullName: Dropbox.Api.Files.UploadSessionFinishBatchResult.Entries
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionFinishBatchResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Entries
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionFinishBatchResult.cs
+    startLine: 66
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Each entry in <xref href=\"Dropbox.Api.Files.UploadSessionFinishBatchArg.Entries\" data-throw-if-not-resolved=\"false\"></xref> will appear at the\nsame position inside <xref href=\"Dropbox.Api.Files.UploadSessionFinishBatchResult.Entries\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<UploadSessionFinishBatchResultEntry> Entries { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{Dropbox.Api.Files.UploadSessionFinishBatchResultEntry}
+    content.vb: Public Property Entries As System.Collections.Generic.IList(Of UploadSessionFinishBatchResultEntry)
+  overload: Dropbox.Api.Files.UploadSessionFinishBatchResult.Entries*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.UploadSessionFinishBatchResult
+  commentId: T:Dropbox.Api.Files.UploadSessionFinishBatchResult
+  parent: Dropbox.Api.Files
+  name: UploadSessionFinishBatchResult
+  nameWithType: UploadSessionFinishBatchResult
+  fullName: Dropbox.Api.Files.UploadSessionFinishBatchResult
+- uid: Dropbox.Api.Files.UploadSessionFinishBatchArg.Entries
+  commentId: P:Dropbox.Api.Files.UploadSessionFinishBatchArg.Entries
+  isExternal: true
+- uid: Dropbox.Api.Files.UploadSessionFinishBatchResult.Entries
+  commentId: P:Dropbox.Api.Files.UploadSessionFinishBatchResult.Entries
+  isExternal: true
+- uid: Dropbox.Api.Files.UploadSessionFinishBatchResult.#ctor*
+  commentId: Overload:Dropbox.Api.Files.UploadSessionFinishBatchResult.#ctor
+  name: UploadSessionFinishBatchResult
+  nameWithType: UploadSessionFinishBatchResult.UploadSessionFinishBatchResult
+  fullName: Dropbox.Api.Files.UploadSessionFinishBatchResult.UploadSessionFinishBatchResult
+- uid: System.Collections.Generic.IEnumerable{Dropbox.Api.Files.UploadSessionFinishBatchResultEntry}
+  commentId: '!:System.Collections.Generic.IEnumerable{Dropbox.Api.Files.UploadSessionFinishBatchResultEntry}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<UploadSessionFinishBatchResultEntry>
+  nameWithType: System.Collections.Generic.IEnumerable<UploadSessionFinishBatchResultEntry>
+  fullName: System.Collections.Generic.IEnumerable<Dropbox.Api.Files.UploadSessionFinishBatchResultEntry>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of UploadSessionFinishBatchResultEntry)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Dropbox.Api.Files.UploadSessionFinishBatchResultEntry)
+  name.vb: System.Collections.Generic.IEnumerable(Of UploadSessionFinishBatchResultEntry)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Files.UploadSessionFinishBatchResultEntry
+    name: UploadSessionFinishBatchResultEntry
+    nameWithType: UploadSessionFinishBatchResultEntry
+    fullName: Dropbox.Api.Files.UploadSessionFinishBatchResultEntry
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Files.UploadSessionFinishBatchResultEntry
+    name: UploadSessionFinishBatchResultEntry
+    nameWithType: UploadSessionFinishBatchResultEntry
+    fullName: Dropbox.Api.Files.UploadSessionFinishBatchResultEntry
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: System.Collections.Generic.IEnumerable<>
+  nameWithType: System.Collections.Generic.IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: System.Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Files.UploadSessionFinishBatchResult.Entries*
+  commentId: Overload:Dropbox.Api.Files.UploadSessionFinishBatchResult.Entries
+  name: Entries
+  nameWithType: UploadSessionFinishBatchResult.Entries
+  fullName: Dropbox.Api.Files.UploadSessionFinishBatchResult.Entries
+- uid: System.Collections.Generic.IList{Dropbox.Api.Files.UploadSessionFinishBatchResultEntry}
+  commentId: '!:System.Collections.Generic.IList{Dropbox.Api.Files.UploadSessionFinishBatchResultEntry}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<UploadSessionFinishBatchResultEntry>
+  nameWithType: System.Collections.Generic.IList<UploadSessionFinishBatchResultEntry>
+  fullName: System.Collections.Generic.IList<Dropbox.Api.Files.UploadSessionFinishBatchResultEntry>
+  nameWithType.vb: System.Collections.Generic.IList(Of UploadSessionFinishBatchResultEntry)
+  fullName.vb: System.Collections.Generic.IList(Of Dropbox.Api.Files.UploadSessionFinishBatchResultEntry)
+  name.vb: System.Collections.Generic.IList(Of UploadSessionFinishBatchResultEntry)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Files.UploadSessionFinishBatchResultEntry
+    name: UploadSessionFinishBatchResultEntry
+    nameWithType: UploadSessionFinishBatchResultEntry
+    fullName: Dropbox.Api.Files.UploadSessionFinishBatchResultEntry
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Files.UploadSessionFinishBatchResultEntry
+    name: UploadSessionFinishBatchResultEntry
+    nameWithType: UploadSessionFinishBatchResultEntry
+    fullName: Dropbox.Api.Files.UploadSessionFinishBatchResultEntry
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  isExternal: true
+  name: System.Collections.Generic.IList<>
+  nameWithType: System.Collections.Generic.IList<>
+  fullName: System.Collections.Generic.IList<>
+  nameWithType.vb: System.Collections.Generic.IList(Of )
+  fullName.vb: System.Collections.Generic.IList(Of )
+  name.vb: System.Collections.Generic.IList(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+shouldSkipMarkup: true

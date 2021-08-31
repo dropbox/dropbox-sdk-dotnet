@@ -1,0 +1,96 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.SharedFolderDeclineInvitationDetails
+  commentId: T:Dropbox.Api.TeamLog.SharedFolderDeclineInvitationDetails
+  id: SharedFolderDeclineInvitationDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.SharedFolderDeclineInvitationDetails.#ctor
+  langs:
+  - csharp
+  - vb
+  name: SharedFolderDeclineInvitationDetails
+  nameWithType: SharedFolderDeclineInvitationDetails
+  fullName: Dropbox.Api.TeamLog.SharedFolderDeclineInvitationDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderDeclineInvitationDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SharedFolderDeclineInvitationDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderDeclineInvitationDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Declined team member&apos;s invite to shared folder.</p>\n"
+  example: []
+  syntax:
+    content: 'public class SharedFolderDeclineInvitationDetails : object'
+    content.vb: >-
+      Public Class SharedFolderDeclineInvitationDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.SharedFolderDeclineInvitationDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.SharedFolderDeclineInvitationDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.SharedFolderDeclineInvitationDetails
+  langs:
+  - csharp
+  - vb
+  name: SharedFolderDeclineInvitationDetails()
+  nameWithType: SharedFolderDeclineInvitationDetails.SharedFolderDeclineInvitationDetails()
+  fullName: Dropbox.Api.TeamLog.SharedFolderDeclineInvitationDetails.SharedFolderDeclineInvitationDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderDeclineInvitationDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderDeclineInvitationDetails.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SharedFolderDeclineInvitationDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public SharedFolderDeclineInvitationDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.SharedFolderDeclineInvitationDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.SharedFolderDeclineInvitationDetails
+  commentId: T:Dropbox.Api.TeamLog.SharedFolderDeclineInvitationDetails
+  parent: Dropbox.Api.TeamLog
+  name: SharedFolderDeclineInvitationDetails
+  nameWithType: SharedFolderDeclineInvitationDetails
+  fullName: Dropbox.Api.TeamLog.SharedFolderDeclineInvitationDetails
+- uid: Dropbox.Api.TeamLog.SharedFolderDeclineInvitationDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedFolderDeclineInvitationDetails.#ctor
+  name: SharedFolderDeclineInvitationDetails
+  nameWithType: SharedFolderDeclineInvitationDetails.SharedFolderDeclineInvitationDetails
+  fullName: Dropbox.Api.TeamLog.SharedFolderDeclineInvitationDetails.SharedFolderDeclineInvitationDetails
+shouldSkipMarkup: true

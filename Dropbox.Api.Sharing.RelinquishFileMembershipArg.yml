@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.RelinquishFileMembershipArg
+  commentId: T:Dropbox.Api.Sharing.RelinquishFileMembershipArg
+  id: RelinquishFileMembershipArg
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.RelinquishFileMembershipArg.#ctor
+  - Dropbox.Api.Sharing.RelinquishFileMembershipArg.#ctor(System.String)
+  - Dropbox.Api.Sharing.RelinquishFileMembershipArg.File
+  langs:
+  - csharp
+  - vb
+  name: RelinquishFileMembershipArg
+  nameWithType: RelinquishFileMembershipArg
+  fullName: Dropbox.Api.Sharing.RelinquishFileMembershipArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RelinquishFileMembershipArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: RelinquishFileMembershipArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RelinquishFileMembershipArg.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The relinquish file membership arg object</p>\n"
+  example: []
+  syntax:
+    content: 'public class RelinquishFileMembershipArg : object'
+    content.vb: >-
+      Public Class RelinquishFileMembershipArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Sharing.RelinquishFileMembershipArg.#ctor(System.String)
+  commentId: M:Dropbox.Api.Sharing.RelinquishFileMembershipArg.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.Sharing.RelinquishFileMembershipArg
+  langs:
+  - csharp
+  - vb
+  name: RelinquishFileMembershipArg(String)
+  nameWithType: RelinquishFileMembershipArg.RelinquishFileMembershipArg(String)
+  fullName: Dropbox.Api.Sharing.RelinquishFileMembershipArg.RelinquishFileMembershipArg(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RelinquishFileMembershipArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RelinquishFileMembershipArg.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.RelinquishFileMembershipArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public RelinquishFileMembershipArg(string file)
+    parameters:
+    - id: file
+      type: System.String
+      description: The path or id for the file.
+    content.vb: Public Sub New(file As String)
+  overload: Dropbox.Api.Sharing.RelinquishFileMembershipArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.RelinquishFileMembershipArg.#ctor
+  commentId: M:Dropbox.Api.Sharing.RelinquishFileMembershipArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Sharing.RelinquishFileMembershipArg
+  langs:
+  - csharp
+  - vb
+  name: RelinquishFileMembershipArg()
+  nameWithType: RelinquishFileMembershipArg.RelinquishFileMembershipArg()
+  fullName: Dropbox.Api.Sharing.RelinquishFileMembershipArg.RelinquishFileMembershipArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RelinquishFileMembershipArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RelinquishFileMembershipArg.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.RelinquishFileMembershipArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public RelinquishFileMembershipArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Sharing.RelinquishFileMembershipArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.RelinquishFileMembershipArg.File
+  commentId: P:Dropbox.Api.Sharing.RelinquishFileMembershipArg.File
+  id: File
+  parent: Dropbox.Api.Sharing.RelinquishFileMembershipArg
+  langs:
+  - csharp
+  - vb
+  name: File
+  nameWithType: RelinquishFileMembershipArg.File
+  fullName: Dropbox.Api.Sharing.RelinquishFileMembershipArg.File
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RelinquishFileMembershipArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: File
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RelinquishFileMembershipArg.cs
+    startLine: 66
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The path or id for the file.</p>\n"
+  example: []
+  syntax:
+    content: public string File { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property File As String
+  overload: Dropbox.Api.Sharing.RelinquishFileMembershipArg.File*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.RelinquishFileMembershipArg
+  commentId: T:Dropbox.Api.Sharing.RelinquishFileMembershipArg
+  parent: Dropbox.Api.Sharing
+  name: RelinquishFileMembershipArg
+  nameWithType: RelinquishFileMembershipArg
+  fullName: Dropbox.Api.Sharing.RelinquishFileMembershipArg
+- uid: Dropbox.Api.Sharing.RelinquishFileMembershipArg.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.RelinquishFileMembershipArg.#ctor
+  name: RelinquishFileMembershipArg
+  nameWithType: RelinquishFileMembershipArg.RelinquishFileMembershipArg
+  fullName: Dropbox.Api.Sharing.RelinquishFileMembershipArg.RelinquishFileMembershipArg
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Sharing.RelinquishFileMembershipArg.File*
+  commentId: Overload:Dropbox.Api.Sharing.RelinquishFileMembershipArg.File
+  name: File
+  nameWithType: RelinquishFileMembershipArg.File
+  fullName: Dropbox.Api.Sharing.RelinquishFileMembershipArg.File
+shouldSkipMarkup: true

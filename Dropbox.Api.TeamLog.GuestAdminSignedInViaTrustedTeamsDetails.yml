@@ -1,0 +1,235 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.GuestAdminSignedInViaTrustedTeamsDetails
+  commentId: T:Dropbox.Api.TeamLog.GuestAdminSignedInViaTrustedTeamsDetails
+  id: GuestAdminSignedInViaTrustedTeamsDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.GuestAdminSignedInViaTrustedTeamsDetails.#ctor
+  - Dropbox.Api.TeamLog.GuestAdminSignedInViaTrustedTeamsDetails.#ctor(System.String,System.String)
+  - Dropbox.Api.TeamLog.GuestAdminSignedInViaTrustedTeamsDetails.TeamName
+  - Dropbox.Api.TeamLog.GuestAdminSignedInViaTrustedTeamsDetails.TrustedTeamName
+  langs:
+  - csharp
+  - vb
+  name: GuestAdminSignedInViaTrustedTeamsDetails
+  nameWithType: GuestAdminSignedInViaTrustedTeamsDetails
+  fullName: Dropbox.Api.TeamLog.GuestAdminSignedInViaTrustedTeamsDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GuestAdminSignedInViaTrustedTeamsDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GuestAdminSignedInViaTrustedTeamsDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GuestAdminSignedInViaTrustedTeamsDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Started trusted team admin session.</p>\n"
+  example: []
+  syntax:
+    content: 'public class GuestAdminSignedInViaTrustedTeamsDetails : object'
+    content.vb: >-
+      Public Class GuestAdminSignedInViaTrustedTeamsDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.GuestAdminSignedInViaTrustedTeamsDetails.#ctor(System.String,System.String)
+  commentId: M:Dropbox.Api.TeamLog.GuestAdminSignedInViaTrustedTeamsDetails.#ctor(System.String,System.String)
+  id: '#ctor(System.String,System.String)'
+  parent: Dropbox.Api.TeamLog.GuestAdminSignedInViaTrustedTeamsDetails
+  langs:
+  - csharp
+  - vb
+  name: GuestAdminSignedInViaTrustedTeamsDetails(String, String)
+  nameWithType: GuestAdminSignedInViaTrustedTeamsDetails.GuestAdminSignedInViaTrustedTeamsDetails(String, String)
+  fullName: Dropbox.Api.TeamLog.GuestAdminSignedInViaTrustedTeamsDetails.GuestAdminSignedInViaTrustedTeamsDetails(System.String, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GuestAdminSignedInViaTrustedTeamsDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GuestAdminSignedInViaTrustedTeamsDetails.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.GuestAdminSignedInViaTrustedTeamsDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public GuestAdminSignedInViaTrustedTeamsDetails(string teamName = null, string trustedTeamName = null)
+    parameters:
+    - id: teamName
+      type: System.String
+      description: Host team name.
+    - id: trustedTeamName
+      type: System.String
+      description: Trusted team name.
+    content.vb: Public Sub New(teamName As String = Nothing, trustedTeamName As String = Nothing)
+  overload: Dropbox.Api.TeamLog.GuestAdminSignedInViaTrustedTeamsDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.GuestAdminSignedInViaTrustedTeamsDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.GuestAdminSignedInViaTrustedTeamsDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.GuestAdminSignedInViaTrustedTeamsDetails
+  langs:
+  - csharp
+  - vb
+  name: GuestAdminSignedInViaTrustedTeamsDetails()
+  nameWithType: GuestAdminSignedInViaTrustedTeamsDetails.GuestAdminSignedInViaTrustedTeamsDetails()
+  fullName: Dropbox.Api.TeamLog.GuestAdminSignedInViaTrustedTeamsDetails.GuestAdminSignedInViaTrustedTeamsDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GuestAdminSignedInViaTrustedTeamsDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GuestAdminSignedInViaTrustedTeamsDetails.cs
+    startLine: 48
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.GuestAdminSignedInViaTrustedTeamsDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public GuestAdminSignedInViaTrustedTeamsDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.GuestAdminSignedInViaTrustedTeamsDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.GuestAdminSignedInViaTrustedTeamsDetails.TeamName
+  commentId: P:Dropbox.Api.TeamLog.GuestAdminSignedInViaTrustedTeamsDetails.TeamName
+  id: TeamName
+  parent: Dropbox.Api.TeamLog.GuestAdminSignedInViaTrustedTeamsDetails
+  langs:
+  - csharp
+  - vb
+  name: TeamName
+  nameWithType: GuestAdminSignedInViaTrustedTeamsDetails.TeamName
+  fullName: Dropbox.Api.TeamLog.GuestAdminSignedInViaTrustedTeamsDetails.TeamName
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GuestAdminSignedInViaTrustedTeamsDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TeamName
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GuestAdminSignedInViaTrustedTeamsDetails.cs
+    startLine: 56
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Host team name.</p>\n"
+  example: []
+  syntax:
+    content: public string TeamName { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property TeamName As String
+  overload: Dropbox.Api.TeamLog.GuestAdminSignedInViaTrustedTeamsDetails.TeamName*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.GuestAdminSignedInViaTrustedTeamsDetails.TrustedTeamName
+  commentId: P:Dropbox.Api.TeamLog.GuestAdminSignedInViaTrustedTeamsDetails.TrustedTeamName
+  id: TrustedTeamName
+  parent: Dropbox.Api.TeamLog.GuestAdminSignedInViaTrustedTeamsDetails
+  langs:
+  - csharp
+  - vb
+  name: TrustedTeamName
+  nameWithType: GuestAdminSignedInViaTrustedTeamsDetails.TrustedTeamName
+  fullName: Dropbox.Api.TeamLog.GuestAdminSignedInViaTrustedTeamsDetails.TrustedTeamName
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GuestAdminSignedInViaTrustedTeamsDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TrustedTeamName
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GuestAdminSignedInViaTrustedTeamsDetails.cs
+    startLine: 61
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Trusted team name.</p>\n"
+  example: []
+  syntax:
+    content: public string TrustedTeamName { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property TrustedTeamName As String
+  overload: Dropbox.Api.TeamLog.GuestAdminSignedInViaTrustedTeamsDetails.TrustedTeamName*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.GuestAdminSignedInViaTrustedTeamsDetails
+  commentId: T:Dropbox.Api.TeamLog.GuestAdminSignedInViaTrustedTeamsDetails
+  parent: Dropbox.Api.TeamLog
+  name: GuestAdminSignedInViaTrustedTeamsDetails
+  nameWithType: GuestAdminSignedInViaTrustedTeamsDetails
+  fullName: Dropbox.Api.TeamLog.GuestAdminSignedInViaTrustedTeamsDetails
+- uid: Dropbox.Api.TeamLog.GuestAdminSignedInViaTrustedTeamsDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.GuestAdminSignedInViaTrustedTeamsDetails.#ctor
+  name: GuestAdminSignedInViaTrustedTeamsDetails
+  nameWithType: GuestAdminSignedInViaTrustedTeamsDetails.GuestAdminSignedInViaTrustedTeamsDetails
+  fullName: Dropbox.Api.TeamLog.GuestAdminSignedInViaTrustedTeamsDetails.GuestAdminSignedInViaTrustedTeamsDetails
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.GuestAdminSignedInViaTrustedTeamsDetails.TeamName*
+  commentId: Overload:Dropbox.Api.TeamLog.GuestAdminSignedInViaTrustedTeamsDetails.TeamName
+  name: TeamName
+  nameWithType: GuestAdminSignedInViaTrustedTeamsDetails.TeamName
+  fullName: Dropbox.Api.TeamLog.GuestAdminSignedInViaTrustedTeamsDetails.TeamName
+- uid: Dropbox.Api.TeamLog.GuestAdminSignedInViaTrustedTeamsDetails.TrustedTeamName*
+  commentId: Overload:Dropbox.Api.TeamLog.GuestAdminSignedInViaTrustedTeamsDetails.TrustedTeamName
+  name: TrustedTeamName
+  nameWithType: GuestAdminSignedInViaTrustedTeamsDetails.TrustedTeamName
+  fullName: Dropbox.Api.TeamLog.GuestAdminSignedInViaTrustedTeamsDetails.TrustedTeamName
+shouldSkipMarkup: true

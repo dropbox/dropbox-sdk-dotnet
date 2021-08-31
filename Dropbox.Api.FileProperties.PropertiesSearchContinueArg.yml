@@ -1,0 +1,193 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.FileProperties.PropertiesSearchContinueArg
+  commentId: T:Dropbox.Api.FileProperties.PropertiesSearchContinueArg
+  id: PropertiesSearchContinueArg
+  parent: Dropbox.Api.FileProperties
+  children:
+  - Dropbox.Api.FileProperties.PropertiesSearchContinueArg.#ctor
+  - Dropbox.Api.FileProperties.PropertiesSearchContinueArg.#ctor(System.String)
+  - Dropbox.Api.FileProperties.PropertiesSearchContinueArg.Cursor
+  langs:
+  - csharp
+  - vb
+  name: PropertiesSearchContinueArg
+  nameWithType: PropertiesSearchContinueArg
+  fullName: Dropbox.Api.FileProperties.PropertiesSearchContinueArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertiesSearchContinueArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PropertiesSearchContinueArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertiesSearchContinueArg.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>The properties search continue arg object</p>\n"
+  example: []
+  syntax:
+    content: 'public class PropertiesSearchContinueArg : object'
+    content.vb: >-
+      Public Class PropertiesSearchContinueArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.FileProperties.PropertiesSearchContinueArg.#ctor(System.String)
+  commentId: M:Dropbox.Api.FileProperties.PropertiesSearchContinueArg.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.FileProperties.PropertiesSearchContinueArg
+  langs:
+  - csharp
+  - vb
+  name: PropertiesSearchContinueArg(String)
+  nameWithType: PropertiesSearchContinueArg.PropertiesSearchContinueArg(String)
+  fullName: Dropbox.Api.FileProperties.PropertiesSearchContinueArg.PropertiesSearchContinueArg(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertiesSearchContinueArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertiesSearchContinueArg.cs
+    startLine: 38
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.FileProperties.PropertiesSearchContinueArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public PropertiesSearchContinueArg(string cursor)
+    parameters:
+    - id: cursor
+      type: System.String
+      description: The cursor returned by your last call to <xref href="Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.PropertiesSearchAsync(Dropbox.Api.FileProperties.PropertiesSearchArg)" data-throw-if-not-resolved="false"></xref> or <xref href="Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.PropertiesSearchContinueAsync(Dropbox.Api.FileProperties.PropertiesSearchContinueArg)" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Sub New(cursor As String)
+  overload: Dropbox.Api.FileProperties.PropertiesSearchContinueArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileProperties.PropertiesSearchContinueArg.#ctor
+  commentId: M:Dropbox.Api.FileProperties.PropertiesSearchContinueArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.FileProperties.PropertiesSearchContinueArg
+  langs:
+  - csharp
+  - vb
+  name: PropertiesSearchContinueArg()
+  nameWithType: PropertiesSearchContinueArg.PropertiesSearchContinueArg()
+  fullName: Dropbox.Api.FileProperties.PropertiesSearchContinueArg.PropertiesSearchContinueArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertiesSearchContinueArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertiesSearchContinueArg.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.FileProperties.PropertiesSearchContinueArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public PropertiesSearchContinueArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.FileProperties.PropertiesSearchContinueArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileProperties.PropertiesSearchContinueArg.Cursor
+  commentId: P:Dropbox.Api.FileProperties.PropertiesSearchContinueArg.Cursor
+  id: Cursor
+  parent: Dropbox.Api.FileProperties.PropertiesSearchContinueArg
+  langs:
+  - csharp
+  - vb
+  name: Cursor
+  nameWithType: PropertiesSearchContinueArg.Cursor
+  fullName: Dropbox.Api.FileProperties.PropertiesSearchContinueArg.Cursor
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertiesSearchContinueArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Cursor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertiesSearchContinueArg.cs
+    startLine: 70
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>The cursor returned by your last call to <xref href=\"Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.PropertiesSearchAsync(Dropbox.Api.FileProperties.PropertiesSearchArg)\" data-throw-if-not-resolved=\"false\"></xref> or <xref href=\"Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.PropertiesSearchContinueAsync(Dropbox.Api.FileProperties.PropertiesSearchContinueArg)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+  example: []
+  syntax:
+    content: public string Cursor { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Cursor As String
+  overload: Dropbox.Api.FileProperties.PropertiesSearchContinueArg.Cursor*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.FileProperties
+  commentId: N:Dropbox.Api.FileProperties
+  name: Dropbox.Api.FileProperties
+  nameWithType: Dropbox.Api.FileProperties
+  fullName: Dropbox.Api.FileProperties
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.FileProperties.PropertiesSearchContinueArg
+  commentId: T:Dropbox.Api.FileProperties.PropertiesSearchContinueArg
+  parent: Dropbox.Api.FileProperties
+  name: PropertiesSearchContinueArg
+  nameWithType: PropertiesSearchContinueArg
+  fullName: Dropbox.Api.FileProperties.PropertiesSearchContinueArg
+- uid: Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.PropertiesSearchAsync(Dropbox.Api.FileProperties.PropertiesSearchArg)
+  commentId: M:Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.PropertiesSearchAsync(Dropbox.Api.FileProperties.PropertiesSearchArg)
+  isExternal: true
+- uid: Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.PropertiesSearchContinueAsync(Dropbox.Api.FileProperties.PropertiesSearchContinueArg)
+  commentId: M:Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.PropertiesSearchContinueAsync(Dropbox.Api.FileProperties.PropertiesSearchContinueArg)
+  isExternal: true
+- uid: Dropbox.Api.FileProperties.PropertiesSearchContinueArg.#ctor*
+  commentId: Overload:Dropbox.Api.FileProperties.PropertiesSearchContinueArg.#ctor
+  name: PropertiesSearchContinueArg
+  nameWithType: PropertiesSearchContinueArg.PropertiesSearchContinueArg
+  fullName: Dropbox.Api.FileProperties.PropertiesSearchContinueArg.PropertiesSearchContinueArg
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.FileProperties.PropertiesSearchContinueArg.Cursor*
+  commentId: Overload:Dropbox.Api.FileProperties.PropertiesSearchContinueArg.Cursor
+  name: Cursor
+  nameWithType: PropertiesSearchContinueArg.Cursor
+  fullName: Dropbox.Api.FileProperties.PropertiesSearchContinueArg.Cursor
+shouldSkipMarkup: true

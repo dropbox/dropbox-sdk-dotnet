@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.PaperDocRequestAccessDetails
+  commentId: T:Dropbox.Api.TeamLog.PaperDocRequestAccessDetails
+  id: PaperDocRequestAccessDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.PaperDocRequestAccessDetails.#ctor
+  - Dropbox.Api.TeamLog.PaperDocRequestAccessDetails.#ctor(System.String)
+  - Dropbox.Api.TeamLog.PaperDocRequestAccessDetails.EventUuid
+  langs:
+  - csharp
+  - vb
+  name: PaperDocRequestAccessDetails
+  nameWithType: PaperDocRequestAccessDetails
+  fullName: Dropbox.Api.TeamLog.PaperDocRequestAccessDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDocRequestAccessDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PaperDocRequestAccessDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDocRequestAccessDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Requested access to Paper doc.</p>\n"
+  example: []
+  syntax:
+    content: 'public class PaperDocRequestAccessDetails : object'
+    content.vb: >-
+      Public Class PaperDocRequestAccessDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.PaperDocRequestAccessDetails.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.PaperDocRequestAccessDetails.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.PaperDocRequestAccessDetails
+  langs:
+  - csharp
+  - vb
+  name: PaperDocRequestAccessDetails(String)
+  nameWithType: PaperDocRequestAccessDetails.PaperDocRequestAccessDetails(String)
+  fullName: Dropbox.Api.TeamLog.PaperDocRequestAccessDetails.PaperDocRequestAccessDetails(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDocRequestAccessDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDocRequestAccessDetails.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.PaperDocRequestAccessDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public PaperDocRequestAccessDetails(string eventUuid)
+    parameters:
+    - id: eventUuid
+      type: System.String
+      description: Event unique identifier.
+    content.vb: Public Sub New(eventUuid As String)
+  overload: Dropbox.Api.TeamLog.PaperDocRequestAccessDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.PaperDocRequestAccessDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.PaperDocRequestAccessDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.PaperDocRequestAccessDetails
+  langs:
+  - csharp
+  - vb
+  name: PaperDocRequestAccessDetails()
+  nameWithType: PaperDocRequestAccessDetails.PaperDocRequestAccessDetails()
+  fullName: Dropbox.Api.TeamLog.PaperDocRequestAccessDetails.PaperDocRequestAccessDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDocRequestAccessDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDocRequestAccessDetails.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.PaperDocRequestAccessDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public PaperDocRequestAccessDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.PaperDocRequestAccessDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.PaperDocRequestAccessDetails.EventUuid
+  commentId: P:Dropbox.Api.TeamLog.PaperDocRequestAccessDetails.EventUuid
+  id: EventUuid
+  parent: Dropbox.Api.TeamLog.PaperDocRequestAccessDetails
+  langs:
+  - csharp
+  - vb
+  name: EventUuid
+  nameWithType: PaperDocRequestAccessDetails.EventUuid
+  fullName: Dropbox.Api.TeamLog.PaperDocRequestAccessDetails.EventUuid
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDocRequestAccessDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: EventUuid
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDocRequestAccessDetails.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Event unique identifier.</p>\n"
+  example: []
+  syntax:
+    content: public string EventUuid { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property EventUuid As String
+  overload: Dropbox.Api.TeamLog.PaperDocRequestAccessDetails.EventUuid*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.PaperDocRequestAccessDetails
+  commentId: T:Dropbox.Api.TeamLog.PaperDocRequestAccessDetails
+  parent: Dropbox.Api.TeamLog
+  name: PaperDocRequestAccessDetails
+  nameWithType: PaperDocRequestAccessDetails
+  fullName: Dropbox.Api.TeamLog.PaperDocRequestAccessDetails
+- uid: Dropbox.Api.TeamLog.PaperDocRequestAccessDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.PaperDocRequestAccessDetails.#ctor
+  name: PaperDocRequestAccessDetails
+  nameWithType: PaperDocRequestAccessDetails.PaperDocRequestAccessDetails
+  fullName: Dropbox.Api.TeamLog.PaperDocRequestAccessDetails.PaperDocRequestAccessDetails
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.PaperDocRequestAccessDetails.EventUuid*
+  commentId: Overload:Dropbox.Api.TeamLog.PaperDocRequestAccessDetails.EventUuid
+  name: EventUuid
+  nameWithType: PaperDocRequestAccessDetails.EventUuid
+  fullName: Dropbox.Api.TeamLog.PaperDocRequestAccessDetails.EventUuid
+shouldSkipMarkup: true

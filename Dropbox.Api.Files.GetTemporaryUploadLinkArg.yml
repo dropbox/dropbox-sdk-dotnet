@@ -1,0 +1,252 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.GetTemporaryUploadLinkArg
+  commentId: T:Dropbox.Api.Files.GetTemporaryUploadLinkArg
+  id: GetTemporaryUploadLinkArg
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.GetTemporaryUploadLinkArg.#ctor
+  - Dropbox.Api.Files.GetTemporaryUploadLinkArg.#ctor(Dropbox.Api.Files.CommitInfo,System.Double)
+  - Dropbox.Api.Files.GetTemporaryUploadLinkArg.CommitInfo
+  - Dropbox.Api.Files.GetTemporaryUploadLinkArg.Duration
+  langs:
+  - csharp
+  - vb
+  name: GetTemporaryUploadLinkArg
+  nameWithType: GetTemporaryUploadLinkArg
+  fullName: Dropbox.Api.Files.GetTemporaryUploadLinkArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetTemporaryUploadLinkArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GetTemporaryUploadLinkArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetTemporaryUploadLinkArg.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The get temporary upload link arg object</p>\n"
+  example: []
+  syntax:
+    content: 'public class GetTemporaryUploadLinkArg : object'
+    content.vb: >-
+      Public Class GetTemporaryUploadLinkArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.GetTemporaryUploadLinkArg.#ctor(Dropbox.Api.Files.CommitInfo,System.Double)
+  commentId: M:Dropbox.Api.Files.GetTemporaryUploadLinkArg.#ctor(Dropbox.Api.Files.CommitInfo,System.Double)
+  id: '#ctor(Dropbox.Api.Files.CommitInfo,System.Double)'
+  parent: Dropbox.Api.Files.GetTemporaryUploadLinkArg
+  langs:
+  - csharp
+  - vb
+  name: GetTemporaryUploadLinkArg(CommitInfo, Double)
+  nameWithType: GetTemporaryUploadLinkArg.GetTemporaryUploadLinkArg(CommitInfo, Double)
+  fullName: Dropbox.Api.Files.GetTemporaryUploadLinkArg.GetTemporaryUploadLinkArg(Dropbox.Api.Files.CommitInfo, System.Double)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetTemporaryUploadLinkArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetTemporaryUploadLinkArg.cs
+    startLine: 39
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.GetTemporaryUploadLinkArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public GetTemporaryUploadLinkArg(CommitInfo commitInfo, double duration = 14400)
+    parameters:
+    - id: commitInfo
+      type: Dropbox.Api.Files.CommitInfo
+      description: >-
+        Contains the path and other optional modifiers for the
+
+        future upload commit. Equivalent to the parameters provided to <xref href="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadAsync(Dropbox.Api.Files.CommitInfo%2cSystem.IO.Stream)" data-throw-if-not-resolved="false"></xref>.
+    - id: duration
+      type: System.Double
+      description: >-
+        How long before this link expires, in seconds.  Attempting
+
+        to start an upload with this link longer than this period  of time after link
+
+        creation will result in an error.
+    content.vb: Public Sub New(commitInfo As CommitInfo, duration As Double = 14400)
+  overload: Dropbox.Api.Files.GetTemporaryUploadLinkArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.GetTemporaryUploadLinkArg.#ctor
+  commentId: M:Dropbox.Api.Files.GetTemporaryUploadLinkArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.GetTemporaryUploadLinkArg
+  langs:
+  - csharp
+  - vb
+  name: GetTemporaryUploadLinkArg()
+  nameWithType: GetTemporaryUploadLinkArg.GetTemporaryUploadLinkArg()
+  fullName: Dropbox.Api.Files.GetTemporaryUploadLinkArg.GetTemporaryUploadLinkArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetTemporaryUploadLinkArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetTemporaryUploadLinkArg.cs
+    startLine: 66
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.GetTemporaryUploadLinkArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public GetTemporaryUploadLinkArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.GetTemporaryUploadLinkArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.GetTemporaryUploadLinkArg.CommitInfo
+  commentId: P:Dropbox.Api.Files.GetTemporaryUploadLinkArg.CommitInfo
+  id: CommitInfo
+  parent: Dropbox.Api.Files.GetTemporaryUploadLinkArg
+  langs:
+  - csharp
+  - vb
+  name: CommitInfo
+  nameWithType: GetTemporaryUploadLinkArg.CommitInfo
+  fullName: Dropbox.Api.Files.GetTemporaryUploadLinkArg.CommitInfo
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetTemporaryUploadLinkArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: CommitInfo
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetTemporaryUploadLinkArg.cs
+    startLine: 77
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Contains the path and other optional modifiers for the future upload commit.\nEquivalent to the parameters provided to <xref href=\"Dropbox.Api.Files.Routes.FilesUserRoutes.UploadAsync(Dropbox.Api.Files.CommitInfo%2cSystem.IO.Stream)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+  example: []
+  syntax:
+    content: public CommitInfo CommitInfo { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.CommitInfo
+    content.vb: Public Property CommitInfo As CommitInfo
+  overload: Dropbox.Api.Files.GetTemporaryUploadLinkArg.CommitInfo*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.GetTemporaryUploadLinkArg.Duration
+  commentId: P:Dropbox.Api.Files.GetTemporaryUploadLinkArg.Duration
+  id: Duration
+  parent: Dropbox.Api.Files.GetTemporaryUploadLinkArg
+  langs:
+  - csharp
+  - vb
+  name: Duration
+  nameWithType: GetTemporaryUploadLinkArg.Duration
+  fullName: Dropbox.Api.Files.GetTemporaryUploadLinkArg.Duration
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetTemporaryUploadLinkArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Duration
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetTemporaryUploadLinkArg.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>How long before this link expires, in seconds.  Attempting to start an upload\nwith this link longer than this period  of time after link creation will result in\nan error.</p>\n"
+  example: []
+  syntax:
+    content: public double Duration { get; protected set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Duration As Double
+  overload: Dropbox.Api.Files.GetTemporaryUploadLinkArg.Duration*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.GetTemporaryUploadLinkArg
+  commentId: T:Dropbox.Api.Files.GetTemporaryUploadLinkArg
+  parent: Dropbox.Api.Files
+  name: GetTemporaryUploadLinkArg
+  nameWithType: GetTemporaryUploadLinkArg
+  fullName: Dropbox.Api.Files.GetTemporaryUploadLinkArg
+- uid: Dropbox.Api.Files.Routes.FilesUserRoutes.UploadAsync(Dropbox.Api.Files.CommitInfo,System.IO.Stream)
+  commentId: M:Dropbox.Api.Files.Routes.FilesUserRoutes.UploadAsync(Dropbox.Api.Files.CommitInfo,System.IO.Stream)
+  isExternal: true
+- uid: Dropbox.Api.Files.GetTemporaryUploadLinkArg.#ctor*
+  commentId: Overload:Dropbox.Api.Files.GetTemporaryUploadLinkArg.#ctor
+  name: GetTemporaryUploadLinkArg
+  nameWithType: GetTemporaryUploadLinkArg.GetTemporaryUploadLinkArg
+  fullName: Dropbox.Api.Files.GetTemporaryUploadLinkArg.GetTemporaryUploadLinkArg
+- uid: Dropbox.Api.Files.CommitInfo
+  commentId: T:Dropbox.Api.Files.CommitInfo
+  parent: Dropbox.Api.Files
+  name: CommitInfo
+  nameWithType: CommitInfo
+  fullName: Dropbox.Api.Files.CommitInfo
+- uid: System.Double
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: Dropbox.Api.Files.GetTemporaryUploadLinkArg.CommitInfo*
+  commentId: Overload:Dropbox.Api.Files.GetTemporaryUploadLinkArg.CommitInfo
+  name: CommitInfo
+  nameWithType: GetTemporaryUploadLinkArg.CommitInfo
+  fullName: Dropbox.Api.Files.GetTemporaryUploadLinkArg.CommitInfo
+- uid: Dropbox.Api.Files.GetTemporaryUploadLinkArg.Duration*
+  commentId: Overload:Dropbox.Api.Files.GetTemporaryUploadLinkArg.Duration
+  name: Duration
+  nameWithType: GetTemporaryUploadLinkArg.Duration
+  fullName: Dropbox.Api.Files.GetTemporaryUploadLinkArg.Duration
+shouldSkipMarkup: true

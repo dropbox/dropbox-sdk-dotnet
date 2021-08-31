@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.SfInviteGroupDetails
+  commentId: T:Dropbox.Api.TeamLog.SfInviteGroupDetails
+  id: SfInviteGroupDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.SfInviteGroupDetails.#ctor
+  - Dropbox.Api.TeamLog.SfInviteGroupDetails.#ctor(System.UInt64)
+  - Dropbox.Api.TeamLog.SfInviteGroupDetails.TargetAssetIndex
+  langs:
+  - csharp
+  - vb
+  name: SfInviteGroupDetails
+  nameWithType: SfInviteGroupDetails
+  fullName: Dropbox.Api.TeamLog.SfInviteGroupDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SfInviteGroupDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SfInviteGroupDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SfInviteGroupDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Invited group to shared folder.</p>\n"
+  example: []
+  syntax:
+    content: 'public class SfInviteGroupDetails : object'
+    content.vb: >-
+      Public Class SfInviteGroupDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.SfInviteGroupDetails.#ctor(System.UInt64)
+  commentId: M:Dropbox.Api.TeamLog.SfInviteGroupDetails.#ctor(System.UInt64)
+  id: '#ctor(System.UInt64)'
+  parent: Dropbox.Api.TeamLog.SfInviteGroupDetails
+  langs:
+  - csharp
+  - vb
+  name: SfInviteGroupDetails(UInt64)
+  nameWithType: SfInviteGroupDetails.SfInviteGroupDetails(UInt64)
+  fullName: Dropbox.Api.TeamLog.SfInviteGroupDetails.SfInviteGroupDetails(System.UInt64)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SfInviteGroupDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SfInviteGroupDetails.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SfInviteGroupDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public SfInviteGroupDetails(ulong targetAssetIndex)
+    parameters:
+    - id: targetAssetIndex
+      type: System.UInt64
+      description: Target asset position in the Assets list.
+    content.vb: Public Sub New(targetAssetIndex As ULong)
+  overload: Dropbox.Api.TeamLog.SfInviteGroupDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SfInviteGroupDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.SfInviteGroupDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.SfInviteGroupDetails
+  langs:
+  - csharp
+  - vb
+  name: SfInviteGroupDetails()
+  nameWithType: SfInviteGroupDetails.SfInviteGroupDetails()
+  fullName: Dropbox.Api.TeamLog.SfInviteGroupDetails.SfInviteGroupDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SfInviteGroupDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SfInviteGroupDetails.cs
+    startLine: 45
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SfInviteGroupDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public SfInviteGroupDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.SfInviteGroupDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SfInviteGroupDetails.TargetAssetIndex
+  commentId: P:Dropbox.Api.TeamLog.SfInviteGroupDetails.TargetAssetIndex
+  id: TargetAssetIndex
+  parent: Dropbox.Api.TeamLog.SfInviteGroupDetails
+  langs:
+  - csharp
+  - vb
+  name: TargetAssetIndex
+  nameWithType: SfInviteGroupDetails.TargetAssetIndex
+  fullName: Dropbox.Api.TeamLog.SfInviteGroupDetails.TargetAssetIndex
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SfInviteGroupDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TargetAssetIndex
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SfInviteGroupDetails.cs
+    startLine: 53
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Target asset position in the Assets list.</p>\n"
+  example: []
+  syntax:
+    content: public ulong TargetAssetIndex { get; protected set; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: Public Property TargetAssetIndex As ULong
+  overload: Dropbox.Api.TeamLog.SfInviteGroupDetails.TargetAssetIndex*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.SfInviteGroupDetails
+  commentId: T:Dropbox.Api.TeamLog.SfInviteGroupDetails
+  parent: Dropbox.Api.TeamLog
+  name: SfInviteGroupDetails
+  nameWithType: SfInviteGroupDetails
+  fullName: Dropbox.Api.TeamLog.SfInviteGroupDetails
+- uid: Dropbox.Api.TeamLog.SfInviteGroupDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.SfInviteGroupDetails.#ctor
+  name: SfInviteGroupDetails
+  nameWithType: SfInviteGroupDetails.SfInviteGroupDetails
+  fullName: Dropbox.Api.TeamLog.SfInviteGroupDetails.SfInviteGroupDetails
+- uid: System.UInt64
+  isExternal: true
+  name: UInt64
+  nameWithType: UInt64
+  fullName: System.UInt64
+- uid: Dropbox.Api.TeamLog.SfInviteGroupDetails.TargetAssetIndex*
+  commentId: Overload:Dropbox.Api.TeamLog.SfInviteGroupDetails.TargetAssetIndex
+  name: TargetAssetIndex
+  nameWithType: SfInviteGroupDetails.TargetAssetIndex
+  fullName: Dropbox.Api.TeamLog.SfInviteGroupDetails.TargetAssetIndex
+shouldSkipMarkup: true

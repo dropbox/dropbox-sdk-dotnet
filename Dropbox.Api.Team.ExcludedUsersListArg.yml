@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.ExcludedUsersListArg
+  commentId: T:Dropbox.Api.Team.ExcludedUsersListArg
+  id: ExcludedUsersListArg
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.ExcludedUsersListArg.#ctor
+  - Dropbox.Api.Team.ExcludedUsersListArg.#ctor(System.UInt32)
+  - Dropbox.Api.Team.ExcludedUsersListArg.Limit
+  langs:
+  - csharp
+  - vb
+  name: ExcludedUsersListArg
+  nameWithType: ExcludedUsersListArg
+  fullName: Dropbox.Api.Team.ExcludedUsersListArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ExcludedUsersListArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ExcludedUsersListArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ExcludedUsersListArg.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Excluded users list argument.</p>\n"
+  example: []
+  syntax:
+    content: 'public class ExcludedUsersListArg : object'
+    content.vb: >-
+      Public Class ExcludedUsersListArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.ExcludedUsersListArg.#ctor(System.UInt32)
+  commentId: M:Dropbox.Api.Team.ExcludedUsersListArg.#ctor(System.UInt32)
+  id: '#ctor(System.UInt32)'
+  parent: Dropbox.Api.Team.ExcludedUsersListArg
+  langs:
+  - csharp
+  - vb
+  name: ExcludedUsersListArg(UInt32)
+  nameWithType: ExcludedUsersListArg.ExcludedUsersListArg(UInt32)
+  fullName: Dropbox.Api.Team.ExcludedUsersListArg.ExcludedUsersListArg(System.UInt32)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ExcludedUsersListArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ExcludedUsersListArg.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.ExcludedUsersListArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public ExcludedUsersListArg(uint limit = null)
+    parameters:
+    - id: limit
+      type: System.UInt32
+      description: Number of results to return per call.
+    content.vb: Public Sub New(limit As UInteger = Nothing)
+  overload: Dropbox.Api.Team.ExcludedUsersListArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.ExcludedUsersListArg.#ctor
+  commentId: M:Dropbox.Api.Team.ExcludedUsersListArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.ExcludedUsersListArg
+  langs:
+  - csharp
+  - vb
+  name: ExcludedUsersListArg()
+  nameWithType: ExcludedUsersListArg.ExcludedUsersListArg()
+  fullName: Dropbox.Api.Team.ExcludedUsersListArg.ExcludedUsersListArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ExcludedUsersListArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ExcludedUsersListArg.cs
+    startLine: 54
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.ExcludedUsersListArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public ExcludedUsersListArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.ExcludedUsersListArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.ExcludedUsersListArg.Limit
+  commentId: P:Dropbox.Api.Team.ExcludedUsersListArg.Limit
+  id: Limit
+  parent: Dropbox.Api.Team.ExcludedUsersListArg
+  langs:
+  - csharp
+  - vb
+  name: Limit
+  nameWithType: ExcludedUsersListArg.Limit
+  fullName: Dropbox.Api.Team.ExcludedUsersListArg.Limit
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ExcludedUsersListArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Limit
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ExcludedUsersListArg.cs
+    startLine: 63
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Number of results to return per call.</p>\n"
+  example: []
+  syntax:
+    content: public uint Limit { get; protected set; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public Property Limit As UInteger
+  overload: Dropbox.Api.Team.ExcludedUsersListArg.Limit*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.ExcludedUsersListArg
+  commentId: T:Dropbox.Api.Team.ExcludedUsersListArg
+  parent: Dropbox.Api.Team
+  name: ExcludedUsersListArg
+  nameWithType: ExcludedUsersListArg
+  fullName: Dropbox.Api.Team.ExcludedUsersListArg
+- uid: Dropbox.Api.Team.ExcludedUsersListArg.#ctor*
+  commentId: Overload:Dropbox.Api.Team.ExcludedUsersListArg.#ctor
+  name: ExcludedUsersListArg
+  nameWithType: ExcludedUsersListArg.ExcludedUsersListArg
+  fullName: Dropbox.Api.Team.ExcludedUsersListArg.ExcludedUsersListArg
+- uid: System.UInt32
+  isExternal: true
+  name: UInt32
+  nameWithType: UInt32
+  fullName: System.UInt32
+- uid: Dropbox.Api.Team.ExcludedUsersListArg.Limit*
+  commentId: Overload:Dropbox.Api.Team.ExcludedUsersListArg.Limit
+  name: Limit
+  nameWithType: ExcludedUsersListArg.Limit
+  fullName: Dropbox.Api.Team.ExcludedUsersListArg.Limit
+shouldSkipMarkup: true

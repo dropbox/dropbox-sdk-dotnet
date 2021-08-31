@@ -1,0 +1,240 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.DomainInvitesEmailExistingUsersDetails
+  commentId: T:Dropbox.Api.TeamLog.DomainInvitesEmailExistingUsersDetails
+  id: DomainInvitesEmailExistingUsersDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.DomainInvitesEmailExistingUsersDetails.#ctor
+  - Dropbox.Api.TeamLog.DomainInvitesEmailExistingUsersDetails.#ctor(System.String,System.UInt64)
+  - Dropbox.Api.TeamLog.DomainInvitesEmailExistingUsersDetails.DomainName
+  - Dropbox.Api.TeamLog.DomainInvitesEmailExistingUsersDetails.NumRecipients
+  langs:
+  - csharp
+  - vb
+  name: DomainInvitesEmailExistingUsersDetails
+  nameWithType: DomainInvitesEmailExistingUsersDetails
+  fullName: Dropbox.Api.TeamLog.DomainInvitesEmailExistingUsersDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DomainInvitesEmailExistingUsersDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: DomainInvitesEmailExistingUsersDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DomainInvitesEmailExistingUsersDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Sent domain invites to existing domain accounts.</p>\n"
+  example: []
+  syntax:
+    content: 'public class DomainInvitesEmailExistingUsersDetails : object'
+    content.vb: >-
+      Public Class DomainInvitesEmailExistingUsersDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.DomainInvitesEmailExistingUsersDetails.#ctor(System.String,System.UInt64)
+  commentId: M:Dropbox.Api.TeamLog.DomainInvitesEmailExistingUsersDetails.#ctor(System.String,System.UInt64)
+  id: '#ctor(System.String,System.UInt64)'
+  parent: Dropbox.Api.TeamLog.DomainInvitesEmailExistingUsersDetails
+  langs:
+  - csharp
+  - vb
+  name: DomainInvitesEmailExistingUsersDetails(String, UInt64)
+  nameWithType: DomainInvitesEmailExistingUsersDetails.DomainInvitesEmailExistingUsersDetails(String, UInt64)
+  fullName: Dropbox.Api.TeamLog.DomainInvitesEmailExistingUsersDetails.DomainInvitesEmailExistingUsersDetails(System.String, System.UInt64)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DomainInvitesEmailExistingUsersDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DomainInvitesEmailExistingUsersDetails.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.DomainInvitesEmailExistingUsersDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public DomainInvitesEmailExistingUsersDetails(string domainName, ulong numRecipients)
+    parameters:
+    - id: domainName
+      type: System.String
+      description: Domain names.
+    - id: numRecipients
+      type: System.UInt64
+      description: Number of recipients.
+    content.vb: Public Sub New(domainName As String, numRecipients As ULong)
+  overload: Dropbox.Api.TeamLog.DomainInvitesEmailExistingUsersDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.DomainInvitesEmailExistingUsersDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.DomainInvitesEmailExistingUsersDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.DomainInvitesEmailExistingUsersDetails
+  langs:
+  - csharp
+  - vb
+  name: DomainInvitesEmailExistingUsersDetails()
+  nameWithType: DomainInvitesEmailExistingUsersDetails.DomainInvitesEmailExistingUsersDetails()
+  fullName: Dropbox.Api.TeamLog.DomainInvitesEmailExistingUsersDetails.DomainInvitesEmailExistingUsersDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DomainInvitesEmailExistingUsersDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DomainInvitesEmailExistingUsersDetails.cs
+    startLine: 53
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.DomainInvitesEmailExistingUsersDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public DomainInvitesEmailExistingUsersDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.DomainInvitesEmailExistingUsersDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.DomainInvitesEmailExistingUsersDetails.DomainName
+  commentId: P:Dropbox.Api.TeamLog.DomainInvitesEmailExistingUsersDetails.DomainName
+  id: DomainName
+  parent: Dropbox.Api.TeamLog.DomainInvitesEmailExistingUsersDetails
+  langs:
+  - csharp
+  - vb
+  name: DomainName
+  nameWithType: DomainInvitesEmailExistingUsersDetails.DomainName
+  fullName: Dropbox.Api.TeamLog.DomainInvitesEmailExistingUsersDetails.DomainName
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DomainInvitesEmailExistingUsersDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: DomainName
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DomainInvitesEmailExistingUsersDetails.cs
+    startLine: 61
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Domain names.</p>\n"
+  example: []
+  syntax:
+    content: public string DomainName { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property DomainName As String
+  overload: Dropbox.Api.TeamLog.DomainInvitesEmailExistingUsersDetails.DomainName*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.DomainInvitesEmailExistingUsersDetails.NumRecipients
+  commentId: P:Dropbox.Api.TeamLog.DomainInvitesEmailExistingUsersDetails.NumRecipients
+  id: NumRecipients
+  parent: Dropbox.Api.TeamLog.DomainInvitesEmailExistingUsersDetails
+  langs:
+  - csharp
+  - vb
+  name: NumRecipients
+  nameWithType: DomainInvitesEmailExistingUsersDetails.NumRecipients
+  fullName: Dropbox.Api.TeamLog.DomainInvitesEmailExistingUsersDetails.NumRecipients
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DomainInvitesEmailExistingUsersDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NumRecipients
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DomainInvitesEmailExistingUsersDetails.cs
+    startLine: 66
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Number of recipients.</p>\n"
+  example: []
+  syntax:
+    content: public ulong NumRecipients { get; protected set; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: Public Property NumRecipients As ULong
+  overload: Dropbox.Api.TeamLog.DomainInvitesEmailExistingUsersDetails.NumRecipients*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.DomainInvitesEmailExistingUsersDetails
+  commentId: T:Dropbox.Api.TeamLog.DomainInvitesEmailExistingUsersDetails
+  parent: Dropbox.Api.TeamLog
+  name: DomainInvitesEmailExistingUsersDetails
+  nameWithType: DomainInvitesEmailExistingUsersDetails
+  fullName: Dropbox.Api.TeamLog.DomainInvitesEmailExistingUsersDetails
+- uid: Dropbox.Api.TeamLog.DomainInvitesEmailExistingUsersDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.DomainInvitesEmailExistingUsersDetails.#ctor
+  name: DomainInvitesEmailExistingUsersDetails
+  nameWithType: DomainInvitesEmailExistingUsersDetails.DomainInvitesEmailExistingUsersDetails
+  fullName: Dropbox.Api.TeamLog.DomainInvitesEmailExistingUsersDetails.DomainInvitesEmailExistingUsersDetails
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.UInt64
+  isExternal: true
+  name: UInt64
+  nameWithType: UInt64
+  fullName: System.UInt64
+- uid: Dropbox.Api.TeamLog.DomainInvitesEmailExistingUsersDetails.DomainName*
+  commentId: Overload:Dropbox.Api.TeamLog.DomainInvitesEmailExistingUsersDetails.DomainName
+  name: DomainName
+  nameWithType: DomainInvitesEmailExistingUsersDetails.DomainName
+  fullName: Dropbox.Api.TeamLog.DomainInvitesEmailExistingUsersDetails.DomainName
+- uid: Dropbox.Api.TeamLog.DomainInvitesEmailExistingUsersDetails.NumRecipients*
+  commentId: Overload:Dropbox.Api.TeamLog.DomainInvitesEmailExistingUsersDetails.NumRecipients
+  name: NumRecipients
+  nameWithType: DomainInvitesEmailExistingUsersDetails.NumRecipients
+  fullName: Dropbox.Api.TeamLog.DomainInvitesEmailExistingUsersDetails.NumRecipients
+shouldSkipMarkup: true

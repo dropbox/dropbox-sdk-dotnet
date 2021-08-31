@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.SharedContentRequestAccessDetails
+  commentId: T:Dropbox.Api.TeamLog.SharedContentRequestAccessDetails
+  id: SharedContentRequestAccessDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.SharedContentRequestAccessDetails.#ctor
+  - Dropbox.Api.TeamLog.SharedContentRequestAccessDetails.#ctor(System.String)
+  - Dropbox.Api.TeamLog.SharedContentRequestAccessDetails.SharedContentLink
+  langs:
+  - csharp
+  - vb
+  name: SharedContentRequestAccessDetails
+  nameWithType: SharedContentRequestAccessDetails
+  fullName: Dropbox.Api.TeamLog.SharedContentRequestAccessDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentRequestAccessDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SharedContentRequestAccessDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentRequestAccessDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Requested access to shared file/folder.</p>\n"
+  example: []
+  syntax:
+    content: 'public class SharedContentRequestAccessDetails : object'
+    content.vb: >-
+      Public Class SharedContentRequestAccessDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.SharedContentRequestAccessDetails.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.SharedContentRequestAccessDetails.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.SharedContentRequestAccessDetails
+  langs:
+  - csharp
+  - vb
+  name: SharedContentRequestAccessDetails(String)
+  nameWithType: SharedContentRequestAccessDetails.SharedContentRequestAccessDetails(String)
+  fullName: Dropbox.Api.TeamLog.SharedContentRequestAccessDetails.SharedContentRequestAccessDetails(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentRequestAccessDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentRequestAccessDetails.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SharedContentRequestAccessDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public SharedContentRequestAccessDetails(string sharedContentLink = null)
+    parameters:
+    - id: sharedContentLink
+      type: System.String
+      description: Shared content link.
+    content.vb: Public Sub New(sharedContentLink As String = Nothing)
+  overload: Dropbox.Api.TeamLog.SharedContentRequestAccessDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SharedContentRequestAccessDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.SharedContentRequestAccessDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.SharedContentRequestAccessDetails
+  langs:
+  - csharp
+  - vb
+  name: SharedContentRequestAccessDetails()
+  nameWithType: SharedContentRequestAccessDetails.SharedContentRequestAccessDetails()
+  fullName: Dropbox.Api.TeamLog.SharedContentRequestAccessDetails.SharedContentRequestAccessDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentRequestAccessDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentRequestAccessDetails.cs
+    startLine: 45
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SharedContentRequestAccessDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public SharedContentRequestAccessDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.SharedContentRequestAccessDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SharedContentRequestAccessDetails.SharedContentLink
+  commentId: P:Dropbox.Api.TeamLog.SharedContentRequestAccessDetails.SharedContentLink
+  id: SharedContentLink
+  parent: Dropbox.Api.TeamLog.SharedContentRequestAccessDetails
+  langs:
+  - csharp
+  - vb
+  name: SharedContentLink
+  nameWithType: SharedContentRequestAccessDetails.SharedContentLink
+  fullName: Dropbox.Api.TeamLog.SharedContentRequestAccessDetails.SharedContentLink
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentRequestAccessDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SharedContentLink
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentRequestAccessDetails.cs
+    startLine: 53
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Shared content link.</p>\n"
+  example: []
+  syntax:
+    content: public string SharedContentLink { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SharedContentLink As String
+  overload: Dropbox.Api.TeamLog.SharedContentRequestAccessDetails.SharedContentLink*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.SharedContentRequestAccessDetails
+  commentId: T:Dropbox.Api.TeamLog.SharedContentRequestAccessDetails
+  parent: Dropbox.Api.TeamLog
+  name: SharedContentRequestAccessDetails
+  nameWithType: SharedContentRequestAccessDetails
+  fullName: Dropbox.Api.TeamLog.SharedContentRequestAccessDetails
+- uid: Dropbox.Api.TeamLog.SharedContentRequestAccessDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedContentRequestAccessDetails.#ctor
+  name: SharedContentRequestAccessDetails
+  nameWithType: SharedContentRequestAccessDetails.SharedContentRequestAccessDetails
+  fullName: Dropbox.Api.TeamLog.SharedContentRequestAccessDetails.SharedContentRequestAccessDetails
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.SharedContentRequestAccessDetails.SharedContentLink*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedContentRequestAccessDetails.SharedContentLink
+  name: SharedContentLink
+  nameWithType: SharedContentRequestAccessDetails.SharedContentLink
+  fullName: Dropbox.Api.TeamLog.SharedContentRequestAccessDetails.SharedContentLink
+shouldSkipMarkup: true

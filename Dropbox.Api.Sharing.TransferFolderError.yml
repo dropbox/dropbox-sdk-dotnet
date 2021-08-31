@@ -1,0 +1,846 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.TransferFolderError
+  commentId: T:Dropbox.Api.Sharing.TransferFolderError
+  id: TransferFolderError
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.TransferFolderError.#ctor
+  - Dropbox.Api.Sharing.TransferFolderError.AsAccessError
+  - Dropbox.Api.Sharing.TransferFolderError.AsInvalidDropboxId
+  - Dropbox.Api.Sharing.TransferFolderError.AsNewOwnerEmailUnverified
+  - Dropbox.Api.Sharing.TransferFolderError.AsNewOwnerNotAMember
+  - Dropbox.Api.Sharing.TransferFolderError.AsNewOwnerUnmounted
+  - Dropbox.Api.Sharing.TransferFolderError.AsNoPermission
+  - Dropbox.Api.Sharing.TransferFolderError.AsOther
+  - Dropbox.Api.Sharing.TransferFolderError.AsTeamFolder
+  - Dropbox.Api.Sharing.TransferFolderError.IsAccessError
+  - Dropbox.Api.Sharing.TransferFolderError.IsInvalidDropboxId
+  - Dropbox.Api.Sharing.TransferFolderError.IsNewOwnerEmailUnverified
+  - Dropbox.Api.Sharing.TransferFolderError.IsNewOwnerNotAMember
+  - Dropbox.Api.Sharing.TransferFolderError.IsNewOwnerUnmounted
+  - Dropbox.Api.Sharing.TransferFolderError.IsNoPermission
+  - Dropbox.Api.Sharing.TransferFolderError.IsOther
+  - Dropbox.Api.Sharing.TransferFolderError.IsTeamFolder
+  langs:
+  - csharp
+  - vb
+  name: TransferFolderError
+  nameWithType: TransferFolderError
+  fullName: Dropbox.Api.Sharing.TransferFolderError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/TransferFolderError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TransferFolderError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/TransferFolderError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The transfer folder error object</p>\n"
+  example: []
+  syntax:
+    content: 'public class TransferFolderError : object'
+    content.vb: >-
+      Public Class TransferFolderError
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Sharing.TransferFolderError.AccessError
+  - Dropbox.Api.Sharing.TransferFolderError.InvalidDropboxId
+  - Dropbox.Api.Sharing.TransferFolderError.NewOwnerEmailUnverified
+  - Dropbox.Api.Sharing.TransferFolderError.NewOwnerNotAMember
+  - Dropbox.Api.Sharing.TransferFolderError.NewOwnerUnmounted
+  - Dropbox.Api.Sharing.TransferFolderError.NoPermission
+  - Dropbox.Api.Sharing.TransferFolderError.Other
+  - Dropbox.Api.Sharing.TransferFolderError.TeamFolder
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Sharing.TransferFolderError.#ctor
+  commentId: M:Dropbox.Api.Sharing.TransferFolderError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Sharing.TransferFolderError
+  langs:
+  - csharp
+  - vb
+  name: TransferFolderError()
+  nameWithType: TransferFolderError.TransferFolderError()
+  fullName: Dropbox.Api.Sharing.TransferFolderError.TransferFolderError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/TransferFolderError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/TransferFolderError.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.TransferFolderError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public TransferFolderError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Sharing.TransferFolderError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.TransferFolderError.IsAccessError
+  commentId: P:Dropbox.Api.Sharing.TransferFolderError.IsAccessError
+  id: IsAccessError
+  parent: Dropbox.Api.Sharing.TransferFolderError
+  langs:
+  - csharp
+  - vb
+  name: IsAccessError
+  nameWithType: TransferFolderError.IsAccessError
+  fullName: Dropbox.Api.Sharing.TransferFolderError.IsAccessError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/TransferFolderError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsAccessError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/TransferFolderError.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is AccessError</p>\n"
+  example: []
+  syntax:
+    content: public bool IsAccessError { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsAccessError As Boolean
+  overload: Dropbox.Api.Sharing.TransferFolderError.IsAccessError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.TransferFolderError.AsAccessError
+  commentId: P:Dropbox.Api.Sharing.TransferFolderError.AsAccessError
+  id: AsAccessError
+  parent: Dropbox.Api.Sharing.TransferFolderError
+  langs:
+  - csharp
+  - vb
+  name: AsAccessError
+  nameWithType: TransferFolderError.AsAccessError
+  fullName: Dropbox.Api.Sharing.TransferFolderError.AsAccessError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/TransferFolderError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsAccessError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/TransferFolderError.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a AccessError, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public TransferFolderError.AccessError AsAccessError { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.TransferFolderError.AccessError
+    content.vb: Public ReadOnly Property AsAccessError As TransferFolderError.AccessError
+  overload: Dropbox.Api.Sharing.TransferFolderError.AsAccessError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.TransferFolderError.IsInvalidDropboxId
+  commentId: P:Dropbox.Api.Sharing.TransferFolderError.IsInvalidDropboxId
+  id: IsInvalidDropboxId
+  parent: Dropbox.Api.Sharing.TransferFolderError
+  langs:
+  - csharp
+  - vb
+  name: IsInvalidDropboxId
+  nameWithType: TransferFolderError.IsInvalidDropboxId
+  fullName: Dropbox.Api.Sharing.TransferFolderError.IsInvalidDropboxId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/TransferFolderError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsInvalidDropboxId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/TransferFolderError.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is InvalidDropboxId</p>\n"
+  example: []
+  syntax:
+    content: public bool IsInvalidDropboxId { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsInvalidDropboxId As Boolean
+  overload: Dropbox.Api.Sharing.TransferFolderError.IsInvalidDropboxId*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.TransferFolderError.AsInvalidDropboxId
+  commentId: P:Dropbox.Api.Sharing.TransferFolderError.AsInvalidDropboxId
+  id: AsInvalidDropboxId
+  parent: Dropbox.Api.Sharing.TransferFolderError
+  langs:
+  - csharp
+  - vb
+  name: AsInvalidDropboxId
+  nameWithType: TransferFolderError.AsInvalidDropboxId
+  fullName: Dropbox.Api.Sharing.TransferFolderError.AsInvalidDropboxId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/TransferFolderError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsInvalidDropboxId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/TransferFolderError.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a InvalidDropboxId, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public TransferFolderError.InvalidDropboxId AsInvalidDropboxId { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.TransferFolderError.InvalidDropboxId
+    content.vb: Public ReadOnly Property AsInvalidDropboxId As TransferFolderError.InvalidDropboxId
+  overload: Dropbox.Api.Sharing.TransferFolderError.AsInvalidDropboxId*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.TransferFolderError.IsNewOwnerNotAMember
+  commentId: P:Dropbox.Api.Sharing.TransferFolderError.IsNewOwnerNotAMember
+  id: IsNewOwnerNotAMember
+  parent: Dropbox.Api.Sharing.TransferFolderError
+  langs:
+  - csharp
+  - vb
+  name: IsNewOwnerNotAMember
+  nameWithType: TransferFolderError.IsNewOwnerNotAMember
+  fullName: Dropbox.Api.Sharing.TransferFolderError.IsNewOwnerNotAMember
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/TransferFolderError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsNewOwnerNotAMember
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/TransferFolderError.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is NewOwnerNotAMember</p>\n"
+  example: []
+  syntax:
+    content: public bool IsNewOwnerNotAMember { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsNewOwnerNotAMember As Boolean
+  overload: Dropbox.Api.Sharing.TransferFolderError.IsNewOwnerNotAMember*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.TransferFolderError.AsNewOwnerNotAMember
+  commentId: P:Dropbox.Api.Sharing.TransferFolderError.AsNewOwnerNotAMember
+  id: AsNewOwnerNotAMember
+  parent: Dropbox.Api.Sharing.TransferFolderError
+  langs:
+  - csharp
+  - vb
+  name: AsNewOwnerNotAMember
+  nameWithType: TransferFolderError.AsNewOwnerNotAMember
+  fullName: Dropbox.Api.Sharing.TransferFolderError.AsNewOwnerNotAMember
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/TransferFolderError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsNewOwnerNotAMember
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/TransferFolderError.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a NewOwnerNotAMember, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public TransferFolderError.NewOwnerNotAMember AsNewOwnerNotAMember { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.TransferFolderError.NewOwnerNotAMember
+    content.vb: Public ReadOnly Property AsNewOwnerNotAMember As TransferFolderError.NewOwnerNotAMember
+  overload: Dropbox.Api.Sharing.TransferFolderError.AsNewOwnerNotAMember*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.TransferFolderError.IsNewOwnerUnmounted
+  commentId: P:Dropbox.Api.Sharing.TransferFolderError.IsNewOwnerUnmounted
+  id: IsNewOwnerUnmounted
+  parent: Dropbox.Api.Sharing.TransferFolderError
+  langs:
+  - csharp
+  - vb
+  name: IsNewOwnerUnmounted
+  nameWithType: TransferFolderError.IsNewOwnerUnmounted
+  fullName: Dropbox.Api.Sharing.TransferFolderError.IsNewOwnerUnmounted
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/TransferFolderError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsNewOwnerUnmounted
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/TransferFolderError.cs
+    startLine: 106
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is NewOwnerUnmounted</p>\n"
+  example: []
+  syntax:
+    content: public bool IsNewOwnerUnmounted { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsNewOwnerUnmounted As Boolean
+  overload: Dropbox.Api.Sharing.TransferFolderError.IsNewOwnerUnmounted*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.TransferFolderError.AsNewOwnerUnmounted
+  commentId: P:Dropbox.Api.Sharing.TransferFolderError.AsNewOwnerUnmounted
+  id: AsNewOwnerUnmounted
+  parent: Dropbox.Api.Sharing.TransferFolderError
+  langs:
+  - csharp
+  - vb
+  name: AsNewOwnerUnmounted
+  nameWithType: TransferFolderError.AsNewOwnerUnmounted
+  fullName: Dropbox.Api.Sharing.TransferFolderError.AsNewOwnerUnmounted
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/TransferFolderError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsNewOwnerUnmounted
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/TransferFolderError.cs
+    startLine: 117
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a NewOwnerUnmounted, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public TransferFolderError.NewOwnerUnmounted AsNewOwnerUnmounted { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.TransferFolderError.NewOwnerUnmounted
+    content.vb: Public ReadOnly Property AsNewOwnerUnmounted As TransferFolderError.NewOwnerUnmounted
+  overload: Dropbox.Api.Sharing.TransferFolderError.AsNewOwnerUnmounted*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.TransferFolderError.IsNewOwnerEmailUnverified
+  commentId: P:Dropbox.Api.Sharing.TransferFolderError.IsNewOwnerEmailUnverified
+  id: IsNewOwnerEmailUnverified
+  parent: Dropbox.Api.Sharing.TransferFolderError
+  langs:
+  - csharp
+  - vb
+  name: IsNewOwnerEmailUnverified
+  nameWithType: TransferFolderError.IsNewOwnerEmailUnverified
+  fullName: Dropbox.Api.Sharing.TransferFolderError.IsNewOwnerEmailUnverified
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/TransferFolderError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsNewOwnerEmailUnverified
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/TransferFolderError.cs
+    startLine: 129
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is\nNewOwnerEmailUnverified</p>\n"
+  example: []
+  syntax:
+    content: public bool IsNewOwnerEmailUnverified { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsNewOwnerEmailUnverified As Boolean
+  overload: Dropbox.Api.Sharing.TransferFolderError.IsNewOwnerEmailUnverified*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.TransferFolderError.AsNewOwnerEmailUnverified
+  commentId: P:Dropbox.Api.Sharing.TransferFolderError.AsNewOwnerEmailUnverified
+  id: AsNewOwnerEmailUnverified
+  parent: Dropbox.Api.Sharing.TransferFolderError
+  langs:
+  - csharp
+  - vb
+  name: AsNewOwnerEmailUnverified
+  nameWithType: TransferFolderError.AsNewOwnerEmailUnverified
+  fullName: Dropbox.Api.Sharing.TransferFolderError.AsNewOwnerEmailUnverified
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/TransferFolderError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsNewOwnerEmailUnverified
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/TransferFolderError.cs
+    startLine: 140
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a NewOwnerEmailUnverified, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public TransferFolderError.NewOwnerEmailUnverified AsNewOwnerEmailUnverified { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.TransferFolderError.NewOwnerEmailUnverified
+    content.vb: Public ReadOnly Property AsNewOwnerEmailUnverified As TransferFolderError.NewOwnerEmailUnverified
+  overload: Dropbox.Api.Sharing.TransferFolderError.AsNewOwnerEmailUnverified*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.TransferFolderError.IsTeamFolder
+  commentId: P:Dropbox.Api.Sharing.TransferFolderError.IsTeamFolder
+  id: IsTeamFolder
+  parent: Dropbox.Api.Sharing.TransferFolderError
+  langs:
+  - csharp
+  - vb
+  name: IsTeamFolder
+  nameWithType: TransferFolderError.IsTeamFolder
+  fullName: Dropbox.Api.Sharing.TransferFolderError.IsTeamFolder
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/TransferFolderError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsTeamFolder
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/TransferFolderError.cs
+    startLine: 151
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is TeamFolder</p>\n"
+  example: []
+  syntax:
+    content: public bool IsTeamFolder { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsTeamFolder As Boolean
+  overload: Dropbox.Api.Sharing.TransferFolderError.IsTeamFolder*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.TransferFolderError.AsTeamFolder
+  commentId: P:Dropbox.Api.Sharing.TransferFolderError.AsTeamFolder
+  id: AsTeamFolder
+  parent: Dropbox.Api.Sharing.TransferFolderError
+  langs:
+  - csharp
+  - vb
+  name: AsTeamFolder
+  nameWithType: TransferFolderError.AsTeamFolder
+  fullName: Dropbox.Api.Sharing.TransferFolderError.AsTeamFolder
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/TransferFolderError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsTeamFolder
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/TransferFolderError.cs
+    startLine: 162
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a TeamFolder, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public TransferFolderError.TeamFolder AsTeamFolder { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.TransferFolderError.TeamFolder
+    content.vb: Public ReadOnly Property AsTeamFolder As TransferFolderError.TeamFolder
+  overload: Dropbox.Api.Sharing.TransferFolderError.AsTeamFolder*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.TransferFolderError.IsNoPermission
+  commentId: P:Dropbox.Api.Sharing.TransferFolderError.IsNoPermission
+  id: IsNoPermission
+  parent: Dropbox.Api.Sharing.TransferFolderError
+  langs:
+  - csharp
+  - vb
+  name: IsNoPermission
+  nameWithType: TransferFolderError.IsNoPermission
+  fullName: Dropbox.Api.Sharing.TransferFolderError.IsNoPermission
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/TransferFolderError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsNoPermission
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/TransferFolderError.cs
+    startLine: 173
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is NoPermission</p>\n"
+  example: []
+  syntax:
+    content: public bool IsNoPermission { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsNoPermission As Boolean
+  overload: Dropbox.Api.Sharing.TransferFolderError.IsNoPermission*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.TransferFolderError.AsNoPermission
+  commentId: P:Dropbox.Api.Sharing.TransferFolderError.AsNoPermission
+  id: AsNoPermission
+  parent: Dropbox.Api.Sharing.TransferFolderError
+  langs:
+  - csharp
+  - vb
+  name: AsNoPermission
+  nameWithType: TransferFolderError.AsNoPermission
+  fullName: Dropbox.Api.Sharing.TransferFolderError.AsNoPermission
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/TransferFolderError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsNoPermission
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/TransferFolderError.cs
+    startLine: 184
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a NoPermission, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public TransferFolderError.NoPermission AsNoPermission { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.TransferFolderError.NoPermission
+    content.vb: Public ReadOnly Property AsNoPermission As TransferFolderError.NoPermission
+  overload: Dropbox.Api.Sharing.TransferFolderError.AsNoPermission*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.TransferFolderError.IsOther
+  commentId: P:Dropbox.Api.Sharing.TransferFolderError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Sharing.TransferFolderError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: TransferFolderError.IsOther
+  fullName: Dropbox.Api.Sharing.TransferFolderError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/TransferFolderError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/TransferFolderError.cs
+    startLine: 195
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Sharing.TransferFolderError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.TransferFolderError.AsOther
+  commentId: P:Dropbox.Api.Sharing.TransferFolderError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Sharing.TransferFolderError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: TransferFolderError.AsOther
+  fullName: Dropbox.Api.Sharing.TransferFolderError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/TransferFolderError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/TransferFolderError.cs
+    startLine: 206
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public TransferFolderError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.TransferFolderError.Other
+    content.vb: Public ReadOnly Property AsOther As TransferFolderError.Other
+  overload: Dropbox.Api.Sharing.TransferFolderError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.TransferFolderError
+  commentId: T:Dropbox.Api.Sharing.TransferFolderError
+  parent: Dropbox.Api.Sharing
+  name: TransferFolderError
+  nameWithType: TransferFolderError
+  fullName: Dropbox.Api.Sharing.TransferFolderError
+- uid: Dropbox.Api.Sharing.TransferFolderError.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.TransferFolderError.#ctor
+  name: TransferFolderError
+  nameWithType: TransferFolderError.TransferFolderError
+  fullName: Dropbox.Api.Sharing.TransferFolderError.TransferFolderError
+- uid: Dropbox.Api.Sharing.TransferFolderError.IsAccessError*
+  commentId: Overload:Dropbox.Api.Sharing.TransferFolderError.IsAccessError
+  name: IsAccessError
+  nameWithType: TransferFolderError.IsAccessError
+  fullName: Dropbox.Api.Sharing.TransferFolderError.IsAccessError
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Sharing.TransferFolderError.AsAccessError*
+  commentId: Overload:Dropbox.Api.Sharing.TransferFolderError.AsAccessError
+  name: AsAccessError
+  nameWithType: TransferFolderError.AsAccessError
+  fullName: Dropbox.Api.Sharing.TransferFolderError.AsAccessError
+- uid: Dropbox.Api.Sharing.TransferFolderError.AccessError
+  commentId: T:Dropbox.Api.Sharing.TransferFolderError.AccessError
+  parent: Dropbox.Api.Sharing
+  name: TransferFolderError.AccessError
+  nameWithType: TransferFolderError.AccessError
+  fullName: Dropbox.Api.Sharing.TransferFolderError.AccessError
+- uid: Dropbox.Api.Sharing.TransferFolderError.IsInvalidDropboxId*
+  commentId: Overload:Dropbox.Api.Sharing.TransferFolderError.IsInvalidDropboxId
+  name: IsInvalidDropboxId
+  nameWithType: TransferFolderError.IsInvalidDropboxId
+  fullName: Dropbox.Api.Sharing.TransferFolderError.IsInvalidDropboxId
+- uid: Dropbox.Api.Sharing.TransferFolderError.AsInvalidDropboxId*
+  commentId: Overload:Dropbox.Api.Sharing.TransferFolderError.AsInvalidDropboxId
+  name: AsInvalidDropboxId
+  nameWithType: TransferFolderError.AsInvalidDropboxId
+  fullName: Dropbox.Api.Sharing.TransferFolderError.AsInvalidDropboxId
+- uid: Dropbox.Api.Sharing.TransferFolderError.InvalidDropboxId
+  commentId: T:Dropbox.Api.Sharing.TransferFolderError.InvalidDropboxId
+  parent: Dropbox.Api.Sharing
+  name: TransferFolderError.InvalidDropboxId
+  nameWithType: TransferFolderError.InvalidDropboxId
+  fullName: Dropbox.Api.Sharing.TransferFolderError.InvalidDropboxId
+- uid: Dropbox.Api.Sharing.TransferFolderError.IsNewOwnerNotAMember*
+  commentId: Overload:Dropbox.Api.Sharing.TransferFolderError.IsNewOwnerNotAMember
+  name: IsNewOwnerNotAMember
+  nameWithType: TransferFolderError.IsNewOwnerNotAMember
+  fullName: Dropbox.Api.Sharing.TransferFolderError.IsNewOwnerNotAMember
+- uid: Dropbox.Api.Sharing.TransferFolderError.AsNewOwnerNotAMember*
+  commentId: Overload:Dropbox.Api.Sharing.TransferFolderError.AsNewOwnerNotAMember
+  name: AsNewOwnerNotAMember
+  nameWithType: TransferFolderError.AsNewOwnerNotAMember
+  fullName: Dropbox.Api.Sharing.TransferFolderError.AsNewOwnerNotAMember
+- uid: Dropbox.Api.Sharing.TransferFolderError.NewOwnerNotAMember
+  commentId: T:Dropbox.Api.Sharing.TransferFolderError.NewOwnerNotAMember
+  parent: Dropbox.Api.Sharing
+  name: TransferFolderError.NewOwnerNotAMember
+  nameWithType: TransferFolderError.NewOwnerNotAMember
+  fullName: Dropbox.Api.Sharing.TransferFolderError.NewOwnerNotAMember
+- uid: Dropbox.Api.Sharing.TransferFolderError.IsNewOwnerUnmounted*
+  commentId: Overload:Dropbox.Api.Sharing.TransferFolderError.IsNewOwnerUnmounted
+  name: IsNewOwnerUnmounted
+  nameWithType: TransferFolderError.IsNewOwnerUnmounted
+  fullName: Dropbox.Api.Sharing.TransferFolderError.IsNewOwnerUnmounted
+- uid: Dropbox.Api.Sharing.TransferFolderError.AsNewOwnerUnmounted*
+  commentId: Overload:Dropbox.Api.Sharing.TransferFolderError.AsNewOwnerUnmounted
+  name: AsNewOwnerUnmounted
+  nameWithType: TransferFolderError.AsNewOwnerUnmounted
+  fullName: Dropbox.Api.Sharing.TransferFolderError.AsNewOwnerUnmounted
+- uid: Dropbox.Api.Sharing.TransferFolderError.NewOwnerUnmounted
+  commentId: T:Dropbox.Api.Sharing.TransferFolderError.NewOwnerUnmounted
+  parent: Dropbox.Api.Sharing
+  name: TransferFolderError.NewOwnerUnmounted
+  nameWithType: TransferFolderError.NewOwnerUnmounted
+  fullName: Dropbox.Api.Sharing.TransferFolderError.NewOwnerUnmounted
+- uid: Dropbox.Api.Sharing.TransferFolderError.IsNewOwnerEmailUnverified*
+  commentId: Overload:Dropbox.Api.Sharing.TransferFolderError.IsNewOwnerEmailUnverified
+  name: IsNewOwnerEmailUnverified
+  nameWithType: TransferFolderError.IsNewOwnerEmailUnverified
+  fullName: Dropbox.Api.Sharing.TransferFolderError.IsNewOwnerEmailUnverified
+- uid: Dropbox.Api.Sharing.TransferFolderError.AsNewOwnerEmailUnverified*
+  commentId: Overload:Dropbox.Api.Sharing.TransferFolderError.AsNewOwnerEmailUnverified
+  name: AsNewOwnerEmailUnverified
+  nameWithType: TransferFolderError.AsNewOwnerEmailUnverified
+  fullName: Dropbox.Api.Sharing.TransferFolderError.AsNewOwnerEmailUnverified
+- uid: Dropbox.Api.Sharing.TransferFolderError.NewOwnerEmailUnverified
+  commentId: T:Dropbox.Api.Sharing.TransferFolderError.NewOwnerEmailUnverified
+  parent: Dropbox.Api.Sharing
+  name: TransferFolderError.NewOwnerEmailUnverified
+  nameWithType: TransferFolderError.NewOwnerEmailUnverified
+  fullName: Dropbox.Api.Sharing.TransferFolderError.NewOwnerEmailUnverified
+- uid: Dropbox.Api.Sharing.TransferFolderError.IsTeamFolder*
+  commentId: Overload:Dropbox.Api.Sharing.TransferFolderError.IsTeamFolder
+  name: IsTeamFolder
+  nameWithType: TransferFolderError.IsTeamFolder
+  fullName: Dropbox.Api.Sharing.TransferFolderError.IsTeamFolder
+- uid: Dropbox.Api.Sharing.TransferFolderError.AsTeamFolder*
+  commentId: Overload:Dropbox.Api.Sharing.TransferFolderError.AsTeamFolder
+  name: AsTeamFolder
+  nameWithType: TransferFolderError.AsTeamFolder
+  fullName: Dropbox.Api.Sharing.TransferFolderError.AsTeamFolder
+- uid: Dropbox.Api.Sharing.TransferFolderError.TeamFolder
+  commentId: T:Dropbox.Api.Sharing.TransferFolderError.TeamFolder
+  parent: Dropbox.Api.Sharing
+  name: TransferFolderError.TeamFolder
+  nameWithType: TransferFolderError.TeamFolder
+  fullName: Dropbox.Api.Sharing.TransferFolderError.TeamFolder
+- uid: Dropbox.Api.Sharing.TransferFolderError.IsNoPermission*
+  commentId: Overload:Dropbox.Api.Sharing.TransferFolderError.IsNoPermission
+  name: IsNoPermission
+  nameWithType: TransferFolderError.IsNoPermission
+  fullName: Dropbox.Api.Sharing.TransferFolderError.IsNoPermission
+- uid: Dropbox.Api.Sharing.TransferFolderError.AsNoPermission*
+  commentId: Overload:Dropbox.Api.Sharing.TransferFolderError.AsNoPermission
+  name: AsNoPermission
+  nameWithType: TransferFolderError.AsNoPermission
+  fullName: Dropbox.Api.Sharing.TransferFolderError.AsNoPermission
+- uid: Dropbox.Api.Sharing.TransferFolderError.NoPermission
+  commentId: T:Dropbox.Api.Sharing.TransferFolderError.NoPermission
+  parent: Dropbox.Api.Sharing
+  name: TransferFolderError.NoPermission
+  nameWithType: TransferFolderError.NoPermission
+  fullName: Dropbox.Api.Sharing.TransferFolderError.NoPermission
+- uid: Dropbox.Api.Sharing.TransferFolderError.IsOther*
+  commentId: Overload:Dropbox.Api.Sharing.TransferFolderError.IsOther
+  name: IsOther
+  nameWithType: TransferFolderError.IsOther
+  fullName: Dropbox.Api.Sharing.TransferFolderError.IsOther
+- uid: Dropbox.Api.Sharing.TransferFolderError.AsOther*
+  commentId: Overload:Dropbox.Api.Sharing.TransferFolderError.AsOther
+  name: AsOther
+  nameWithType: TransferFolderError.AsOther
+  fullName: Dropbox.Api.Sharing.TransferFolderError.AsOther
+- uid: Dropbox.Api.Sharing.TransferFolderError.Other
+  commentId: T:Dropbox.Api.Sharing.TransferFolderError.Other
+  parent: Dropbox.Api.Sharing
+  name: TransferFolderError.Other
+  nameWithType: TransferFolderError.Other
+  fullName: Dropbox.Api.Sharing.TransferFolderError.Other
+shouldSkipMarkup: true

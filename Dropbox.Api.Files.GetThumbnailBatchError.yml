@@ -1,0 +1,288 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.GetThumbnailBatchError
+  commentId: T:Dropbox.Api.Files.GetThumbnailBatchError
+  id: GetThumbnailBatchError
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.GetThumbnailBatchError.#ctor
+  - Dropbox.Api.Files.GetThumbnailBatchError.AsOther
+  - Dropbox.Api.Files.GetThumbnailBatchError.AsTooManyFiles
+  - Dropbox.Api.Files.GetThumbnailBatchError.IsOther
+  - Dropbox.Api.Files.GetThumbnailBatchError.IsTooManyFiles
+  langs:
+  - csharp
+  - vb
+  name: GetThumbnailBatchError
+  nameWithType: GetThumbnailBatchError
+  fullName: Dropbox.Api.Files.GetThumbnailBatchError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetThumbnailBatchError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GetThumbnailBatchError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetThumbnailBatchError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The get thumbnail batch error object</p>\n"
+  example: []
+  syntax:
+    content: 'public class GetThumbnailBatchError : object'
+    content.vb: >-
+      Public Class GetThumbnailBatchError
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Files.GetThumbnailBatchError.Other
+  - Dropbox.Api.Files.GetThumbnailBatchError.TooManyFiles
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.GetThumbnailBatchError.#ctor
+  commentId: M:Dropbox.Api.Files.GetThumbnailBatchError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.GetThumbnailBatchError
+  langs:
+  - csharp
+  - vb
+  name: GetThumbnailBatchError()
+  nameWithType: GetThumbnailBatchError.GetThumbnailBatchError()
+  fullName: Dropbox.Api.Files.GetThumbnailBatchError.GetThumbnailBatchError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetThumbnailBatchError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetThumbnailBatchError.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.GetThumbnailBatchError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public GetThumbnailBatchError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.GetThumbnailBatchError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.GetThumbnailBatchError.IsTooManyFiles
+  commentId: P:Dropbox.Api.Files.GetThumbnailBatchError.IsTooManyFiles
+  id: IsTooManyFiles
+  parent: Dropbox.Api.Files.GetThumbnailBatchError
+  langs:
+  - csharp
+  - vb
+  name: IsTooManyFiles
+  nameWithType: GetThumbnailBatchError.IsTooManyFiles
+  fullName: Dropbox.Api.Files.GetThumbnailBatchError.IsTooManyFiles
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetThumbnailBatchError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsTooManyFiles
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetThumbnailBatchError.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is TooManyFiles</p>\n"
+  example: []
+  syntax:
+    content: public bool IsTooManyFiles { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsTooManyFiles As Boolean
+  overload: Dropbox.Api.Files.GetThumbnailBatchError.IsTooManyFiles*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.GetThumbnailBatchError.AsTooManyFiles
+  commentId: P:Dropbox.Api.Files.GetThumbnailBatchError.AsTooManyFiles
+  id: AsTooManyFiles
+  parent: Dropbox.Api.Files.GetThumbnailBatchError
+  langs:
+  - csharp
+  - vb
+  name: AsTooManyFiles
+  nameWithType: GetThumbnailBatchError.AsTooManyFiles
+  fullName: Dropbox.Api.Files.GetThumbnailBatchError.AsTooManyFiles
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetThumbnailBatchError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsTooManyFiles
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetThumbnailBatchError.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a TooManyFiles, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public GetThumbnailBatchError.TooManyFiles AsTooManyFiles { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.GetThumbnailBatchError.TooManyFiles
+    content.vb: Public ReadOnly Property AsTooManyFiles As GetThumbnailBatchError.TooManyFiles
+  overload: Dropbox.Api.Files.GetThumbnailBatchError.AsTooManyFiles*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.GetThumbnailBatchError.IsOther
+  commentId: P:Dropbox.Api.Files.GetThumbnailBatchError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Files.GetThumbnailBatchError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: GetThumbnailBatchError.IsOther
+  fullName: Dropbox.Api.Files.GetThumbnailBatchError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetThumbnailBatchError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetThumbnailBatchError.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Files.GetThumbnailBatchError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.GetThumbnailBatchError.AsOther
+  commentId: P:Dropbox.Api.Files.GetThumbnailBatchError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Files.GetThumbnailBatchError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: GetThumbnailBatchError.AsOther
+  fullName: Dropbox.Api.Files.GetThumbnailBatchError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetThumbnailBatchError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetThumbnailBatchError.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public GetThumbnailBatchError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.GetThumbnailBatchError.Other
+    content.vb: Public ReadOnly Property AsOther As GetThumbnailBatchError.Other
+  overload: Dropbox.Api.Files.GetThumbnailBatchError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.GetThumbnailBatchError
+  commentId: T:Dropbox.Api.Files.GetThumbnailBatchError
+  parent: Dropbox.Api.Files
+  name: GetThumbnailBatchError
+  nameWithType: GetThumbnailBatchError
+  fullName: Dropbox.Api.Files.GetThumbnailBatchError
+- uid: Dropbox.Api.Files.GetThumbnailBatchError.#ctor*
+  commentId: Overload:Dropbox.Api.Files.GetThumbnailBatchError.#ctor
+  name: GetThumbnailBatchError
+  nameWithType: GetThumbnailBatchError.GetThumbnailBatchError
+  fullName: Dropbox.Api.Files.GetThumbnailBatchError.GetThumbnailBatchError
+- uid: Dropbox.Api.Files.GetThumbnailBatchError.IsTooManyFiles*
+  commentId: Overload:Dropbox.Api.Files.GetThumbnailBatchError.IsTooManyFiles
+  name: IsTooManyFiles
+  nameWithType: GetThumbnailBatchError.IsTooManyFiles
+  fullName: Dropbox.Api.Files.GetThumbnailBatchError.IsTooManyFiles
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Files.GetThumbnailBatchError.AsTooManyFiles*
+  commentId: Overload:Dropbox.Api.Files.GetThumbnailBatchError.AsTooManyFiles
+  name: AsTooManyFiles
+  nameWithType: GetThumbnailBatchError.AsTooManyFiles
+  fullName: Dropbox.Api.Files.GetThumbnailBatchError.AsTooManyFiles
+- uid: Dropbox.Api.Files.GetThumbnailBatchError.TooManyFiles
+  commentId: T:Dropbox.Api.Files.GetThumbnailBatchError.TooManyFiles
+  parent: Dropbox.Api.Files
+  name: GetThumbnailBatchError.TooManyFiles
+  nameWithType: GetThumbnailBatchError.TooManyFiles
+  fullName: Dropbox.Api.Files.GetThumbnailBatchError.TooManyFiles
+- uid: Dropbox.Api.Files.GetThumbnailBatchError.IsOther*
+  commentId: Overload:Dropbox.Api.Files.GetThumbnailBatchError.IsOther
+  name: IsOther
+  nameWithType: GetThumbnailBatchError.IsOther
+  fullName: Dropbox.Api.Files.GetThumbnailBatchError.IsOther
+- uid: Dropbox.Api.Files.GetThumbnailBatchError.AsOther*
+  commentId: Overload:Dropbox.Api.Files.GetThumbnailBatchError.AsOther
+  name: AsOther
+  nameWithType: GetThumbnailBatchError.AsOther
+  fullName: Dropbox.Api.Files.GetThumbnailBatchError.AsOther
+- uid: Dropbox.Api.Files.GetThumbnailBatchError.Other
+  commentId: T:Dropbox.Api.Files.GetThumbnailBatchError.Other
+  parent: Dropbox.Api.Files
+  name: GetThumbnailBatchError.Other
+  nameWithType: GetThumbnailBatchError.Other
+  fullName: Dropbox.Api.Files.GetThumbnailBatchError.Other
+shouldSkipMarkup: true

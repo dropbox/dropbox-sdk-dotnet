@@ -1,0 +1,567 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Paper.PaperApiCursorError
+  commentId: T:Dropbox.Api.Paper.PaperApiCursorError
+  id: PaperApiCursorError
+  parent: Dropbox.Api.Paper
+  children:
+  - Dropbox.Api.Paper.PaperApiCursorError.#ctor
+  - Dropbox.Api.Paper.PaperApiCursorError.AsExpiredCursor
+  - Dropbox.Api.Paper.PaperApiCursorError.AsInvalidCursor
+  - Dropbox.Api.Paper.PaperApiCursorError.AsOther
+  - Dropbox.Api.Paper.PaperApiCursorError.AsReset
+  - Dropbox.Api.Paper.PaperApiCursorError.AsWrongUserInCursor
+  - Dropbox.Api.Paper.PaperApiCursorError.IsExpiredCursor
+  - Dropbox.Api.Paper.PaperApiCursorError.IsInvalidCursor
+  - Dropbox.Api.Paper.PaperApiCursorError.IsOther
+  - Dropbox.Api.Paper.PaperApiCursorError.IsReset
+  - Dropbox.Api.Paper.PaperApiCursorError.IsWrongUserInCursor
+  langs:
+  - csharp
+  - vb
+  name: PaperApiCursorError
+  nameWithType: PaperApiCursorError
+  fullName: Dropbox.Api.Paper.PaperApiCursorError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperApiCursorError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PaperApiCursorError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperApiCursorError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>The paper api cursor error object</p>\n"
+  example: []
+  syntax:
+    content: 'public class PaperApiCursorError : object'
+    content.vb: >-
+      Public Class PaperApiCursorError
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Paper.PaperApiCursorError.ExpiredCursor
+  - Dropbox.Api.Paper.PaperApiCursorError.InvalidCursor
+  - Dropbox.Api.Paper.PaperApiCursorError.Other
+  - Dropbox.Api.Paper.PaperApiCursorError.Reset
+  - Dropbox.Api.Paper.PaperApiCursorError.WrongUserInCursor
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Paper.PaperApiCursorError.#ctor
+  commentId: M:Dropbox.Api.Paper.PaperApiCursorError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Paper.PaperApiCursorError
+  langs:
+  - csharp
+  - vb
+  name: PaperApiCursorError()
+  nameWithType: PaperApiCursorError.PaperApiCursorError()
+  fullName: Dropbox.Api.Paper.PaperApiCursorError.PaperApiCursorError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperApiCursorError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperApiCursorError.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Paper.PaperApiCursorError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public PaperApiCursorError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Paper.PaperApiCursorError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Paper.PaperApiCursorError.IsExpiredCursor
+  commentId: P:Dropbox.Api.Paper.PaperApiCursorError.IsExpiredCursor
+  id: IsExpiredCursor
+  parent: Dropbox.Api.Paper.PaperApiCursorError
+  langs:
+  - csharp
+  - vb
+  name: IsExpiredCursor
+  nameWithType: PaperApiCursorError.IsExpiredCursor
+  fullName: Dropbox.Api.Paper.PaperApiCursorError.IsExpiredCursor
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperApiCursorError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsExpiredCursor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperApiCursorError.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets a value indicating whether this instance is ExpiredCursor</p>\n"
+  example: []
+  syntax:
+    content: public bool IsExpiredCursor { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsExpiredCursor As Boolean
+  overload: Dropbox.Api.Paper.PaperApiCursorError.IsExpiredCursor*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Paper.PaperApiCursorError.AsExpiredCursor
+  commentId: P:Dropbox.Api.Paper.PaperApiCursorError.AsExpiredCursor
+  id: AsExpiredCursor
+  parent: Dropbox.Api.Paper.PaperApiCursorError
+  langs:
+  - csharp
+  - vb
+  name: AsExpiredCursor
+  nameWithType: PaperApiCursorError.AsExpiredCursor
+  fullName: Dropbox.Api.Paper.PaperApiCursorError.AsExpiredCursor
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperApiCursorError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsExpiredCursor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperApiCursorError.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets this instance as a ExpiredCursor, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PaperApiCursorError.ExpiredCursor AsExpiredCursor { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Paper.PaperApiCursorError.ExpiredCursor
+    content.vb: Public ReadOnly Property AsExpiredCursor As PaperApiCursorError.ExpiredCursor
+  overload: Dropbox.Api.Paper.PaperApiCursorError.AsExpiredCursor*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Paper.PaperApiCursorError.IsInvalidCursor
+  commentId: P:Dropbox.Api.Paper.PaperApiCursorError.IsInvalidCursor
+  id: IsInvalidCursor
+  parent: Dropbox.Api.Paper.PaperApiCursorError
+  langs:
+  - csharp
+  - vb
+  name: IsInvalidCursor
+  nameWithType: PaperApiCursorError.IsInvalidCursor
+  fullName: Dropbox.Api.Paper.PaperApiCursorError.IsInvalidCursor
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperApiCursorError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsInvalidCursor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperApiCursorError.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets a value indicating whether this instance is InvalidCursor</p>\n"
+  example: []
+  syntax:
+    content: public bool IsInvalidCursor { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsInvalidCursor As Boolean
+  overload: Dropbox.Api.Paper.PaperApiCursorError.IsInvalidCursor*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Paper.PaperApiCursorError.AsInvalidCursor
+  commentId: P:Dropbox.Api.Paper.PaperApiCursorError.AsInvalidCursor
+  id: AsInvalidCursor
+  parent: Dropbox.Api.Paper.PaperApiCursorError
+  langs:
+  - csharp
+  - vb
+  name: AsInvalidCursor
+  nameWithType: PaperApiCursorError.AsInvalidCursor
+  fullName: Dropbox.Api.Paper.PaperApiCursorError.AsInvalidCursor
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperApiCursorError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsInvalidCursor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperApiCursorError.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets this instance as a InvalidCursor, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PaperApiCursorError.InvalidCursor AsInvalidCursor { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Paper.PaperApiCursorError.InvalidCursor
+    content.vb: Public ReadOnly Property AsInvalidCursor As PaperApiCursorError.InvalidCursor
+  overload: Dropbox.Api.Paper.PaperApiCursorError.AsInvalidCursor*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Paper.PaperApiCursorError.IsWrongUserInCursor
+  commentId: P:Dropbox.Api.Paper.PaperApiCursorError.IsWrongUserInCursor
+  id: IsWrongUserInCursor
+  parent: Dropbox.Api.Paper.PaperApiCursorError
+  langs:
+  - csharp
+  - vb
+  name: IsWrongUserInCursor
+  nameWithType: PaperApiCursorError.IsWrongUserInCursor
+  fullName: Dropbox.Api.Paper.PaperApiCursorError.IsWrongUserInCursor
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperApiCursorError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsWrongUserInCursor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperApiCursorError.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets a value indicating whether this instance is WrongUserInCursor</p>\n"
+  example: []
+  syntax:
+    content: public bool IsWrongUserInCursor { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsWrongUserInCursor As Boolean
+  overload: Dropbox.Api.Paper.PaperApiCursorError.IsWrongUserInCursor*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Paper.PaperApiCursorError.AsWrongUserInCursor
+  commentId: P:Dropbox.Api.Paper.PaperApiCursorError.AsWrongUserInCursor
+  id: AsWrongUserInCursor
+  parent: Dropbox.Api.Paper.PaperApiCursorError
+  langs:
+  - csharp
+  - vb
+  name: AsWrongUserInCursor
+  nameWithType: PaperApiCursorError.AsWrongUserInCursor
+  fullName: Dropbox.Api.Paper.PaperApiCursorError.AsWrongUserInCursor
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperApiCursorError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsWrongUserInCursor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperApiCursorError.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets this instance as a WrongUserInCursor, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PaperApiCursorError.WrongUserInCursor AsWrongUserInCursor { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Paper.PaperApiCursorError.WrongUserInCursor
+    content.vb: Public ReadOnly Property AsWrongUserInCursor As PaperApiCursorError.WrongUserInCursor
+  overload: Dropbox.Api.Paper.PaperApiCursorError.AsWrongUserInCursor*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Paper.PaperApiCursorError.IsReset
+  commentId: P:Dropbox.Api.Paper.PaperApiCursorError.IsReset
+  id: IsReset
+  parent: Dropbox.Api.Paper.PaperApiCursorError
+  langs:
+  - csharp
+  - vb
+  name: IsReset
+  nameWithType: PaperApiCursorError.IsReset
+  fullName: Dropbox.Api.Paper.PaperApiCursorError.IsReset
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperApiCursorError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsReset
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperApiCursorError.cs
+    startLine: 106
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets a value indicating whether this instance is Reset</p>\n"
+  example: []
+  syntax:
+    content: public bool IsReset { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsReset As Boolean
+  overload: Dropbox.Api.Paper.PaperApiCursorError.IsReset*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Paper.PaperApiCursorError.AsReset
+  commentId: P:Dropbox.Api.Paper.PaperApiCursorError.AsReset
+  id: AsReset
+  parent: Dropbox.Api.Paper.PaperApiCursorError
+  langs:
+  - csharp
+  - vb
+  name: AsReset
+  nameWithType: PaperApiCursorError.AsReset
+  fullName: Dropbox.Api.Paper.PaperApiCursorError.AsReset
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperApiCursorError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsReset
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperApiCursorError.cs
+    startLine: 117
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets this instance as a Reset, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PaperApiCursorError.Reset AsReset { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Paper.PaperApiCursorError.Reset
+    content.vb: Public ReadOnly Property AsReset As PaperApiCursorError.Reset
+  overload: Dropbox.Api.Paper.PaperApiCursorError.AsReset*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Paper.PaperApiCursorError.IsOther
+  commentId: P:Dropbox.Api.Paper.PaperApiCursorError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Paper.PaperApiCursorError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: PaperApiCursorError.IsOther
+  fullName: Dropbox.Api.Paper.PaperApiCursorError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperApiCursorError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperApiCursorError.cs
+    startLine: 128
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Paper.PaperApiCursorError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Paper.PaperApiCursorError.AsOther
+  commentId: P:Dropbox.Api.Paper.PaperApiCursorError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Paper.PaperApiCursorError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: PaperApiCursorError.AsOther
+  fullName: Dropbox.Api.Paper.PaperApiCursorError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperApiCursorError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperApiCursorError.cs
+    startLine: 139
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PaperApiCursorError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Paper.PaperApiCursorError.Other
+    content.vb: Public ReadOnly Property AsOther As PaperApiCursorError.Other
+  overload: Dropbox.Api.Paper.PaperApiCursorError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Paper
+  commentId: N:Dropbox.Api.Paper
+  name: Dropbox.Api.Paper
+  nameWithType: Dropbox.Api.Paper
+  fullName: Dropbox.Api.Paper
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Paper.PaperApiCursorError
+  commentId: T:Dropbox.Api.Paper.PaperApiCursorError
+  parent: Dropbox.Api.Paper
+  name: PaperApiCursorError
+  nameWithType: PaperApiCursorError
+  fullName: Dropbox.Api.Paper.PaperApiCursorError
+- uid: Dropbox.Api.Paper.PaperApiCursorError.#ctor*
+  commentId: Overload:Dropbox.Api.Paper.PaperApiCursorError.#ctor
+  name: PaperApiCursorError
+  nameWithType: PaperApiCursorError.PaperApiCursorError
+  fullName: Dropbox.Api.Paper.PaperApiCursorError.PaperApiCursorError
+- uid: Dropbox.Api.Paper.PaperApiCursorError.IsExpiredCursor*
+  commentId: Overload:Dropbox.Api.Paper.PaperApiCursorError.IsExpiredCursor
+  name: IsExpiredCursor
+  nameWithType: PaperApiCursorError.IsExpiredCursor
+  fullName: Dropbox.Api.Paper.PaperApiCursorError.IsExpiredCursor
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Paper.PaperApiCursorError.AsExpiredCursor*
+  commentId: Overload:Dropbox.Api.Paper.PaperApiCursorError.AsExpiredCursor
+  name: AsExpiredCursor
+  nameWithType: PaperApiCursorError.AsExpiredCursor
+  fullName: Dropbox.Api.Paper.PaperApiCursorError.AsExpiredCursor
+- uid: Dropbox.Api.Paper.PaperApiCursorError.ExpiredCursor
+  commentId: T:Dropbox.Api.Paper.PaperApiCursorError.ExpiredCursor
+  parent: Dropbox.Api.Paper
+  name: PaperApiCursorError.ExpiredCursor
+  nameWithType: PaperApiCursorError.ExpiredCursor
+  fullName: Dropbox.Api.Paper.PaperApiCursorError.ExpiredCursor
+- uid: Dropbox.Api.Paper.PaperApiCursorError.IsInvalidCursor*
+  commentId: Overload:Dropbox.Api.Paper.PaperApiCursorError.IsInvalidCursor
+  name: IsInvalidCursor
+  nameWithType: PaperApiCursorError.IsInvalidCursor
+  fullName: Dropbox.Api.Paper.PaperApiCursorError.IsInvalidCursor
+- uid: Dropbox.Api.Paper.PaperApiCursorError.AsInvalidCursor*
+  commentId: Overload:Dropbox.Api.Paper.PaperApiCursorError.AsInvalidCursor
+  name: AsInvalidCursor
+  nameWithType: PaperApiCursorError.AsInvalidCursor
+  fullName: Dropbox.Api.Paper.PaperApiCursorError.AsInvalidCursor
+- uid: Dropbox.Api.Paper.PaperApiCursorError.InvalidCursor
+  commentId: T:Dropbox.Api.Paper.PaperApiCursorError.InvalidCursor
+  parent: Dropbox.Api.Paper
+  name: PaperApiCursorError.InvalidCursor
+  nameWithType: PaperApiCursorError.InvalidCursor
+  fullName: Dropbox.Api.Paper.PaperApiCursorError.InvalidCursor
+- uid: Dropbox.Api.Paper.PaperApiCursorError.IsWrongUserInCursor*
+  commentId: Overload:Dropbox.Api.Paper.PaperApiCursorError.IsWrongUserInCursor
+  name: IsWrongUserInCursor
+  nameWithType: PaperApiCursorError.IsWrongUserInCursor
+  fullName: Dropbox.Api.Paper.PaperApiCursorError.IsWrongUserInCursor
+- uid: Dropbox.Api.Paper.PaperApiCursorError.AsWrongUserInCursor*
+  commentId: Overload:Dropbox.Api.Paper.PaperApiCursorError.AsWrongUserInCursor
+  name: AsWrongUserInCursor
+  nameWithType: PaperApiCursorError.AsWrongUserInCursor
+  fullName: Dropbox.Api.Paper.PaperApiCursorError.AsWrongUserInCursor
+- uid: Dropbox.Api.Paper.PaperApiCursorError.WrongUserInCursor
+  commentId: T:Dropbox.Api.Paper.PaperApiCursorError.WrongUserInCursor
+  parent: Dropbox.Api.Paper
+  name: PaperApiCursorError.WrongUserInCursor
+  nameWithType: PaperApiCursorError.WrongUserInCursor
+  fullName: Dropbox.Api.Paper.PaperApiCursorError.WrongUserInCursor
+- uid: Dropbox.Api.Paper.PaperApiCursorError.IsReset*
+  commentId: Overload:Dropbox.Api.Paper.PaperApiCursorError.IsReset
+  name: IsReset
+  nameWithType: PaperApiCursorError.IsReset
+  fullName: Dropbox.Api.Paper.PaperApiCursorError.IsReset
+- uid: Dropbox.Api.Paper.PaperApiCursorError.AsReset*
+  commentId: Overload:Dropbox.Api.Paper.PaperApiCursorError.AsReset
+  name: AsReset
+  nameWithType: PaperApiCursorError.AsReset
+  fullName: Dropbox.Api.Paper.PaperApiCursorError.AsReset
+- uid: Dropbox.Api.Paper.PaperApiCursorError.Reset
+  commentId: T:Dropbox.Api.Paper.PaperApiCursorError.Reset
+  parent: Dropbox.Api.Paper
+  name: PaperApiCursorError.Reset
+  nameWithType: PaperApiCursorError.Reset
+  fullName: Dropbox.Api.Paper.PaperApiCursorError.Reset
+- uid: Dropbox.Api.Paper.PaperApiCursorError.IsOther*
+  commentId: Overload:Dropbox.Api.Paper.PaperApiCursorError.IsOther
+  name: IsOther
+  nameWithType: PaperApiCursorError.IsOther
+  fullName: Dropbox.Api.Paper.PaperApiCursorError.IsOther
+- uid: Dropbox.Api.Paper.PaperApiCursorError.AsOther*
+  commentId: Overload:Dropbox.Api.Paper.PaperApiCursorError.AsOther
+  name: AsOther
+  nameWithType: PaperApiCursorError.AsOther
+  fullName: Dropbox.Api.Paper.PaperApiCursorError.AsOther
+- uid: Dropbox.Api.Paper.PaperApiCursorError.Other
+  commentId: T:Dropbox.Api.Paper.PaperApiCursorError.Other
+  parent: Dropbox.Api.Paper
+  name: PaperApiCursorError.Other
+  nameWithType: PaperApiCursorError.Other
+  fullName: Dropbox.Api.Paper.PaperApiCursorError.Other
+shouldSkipMarkup: true

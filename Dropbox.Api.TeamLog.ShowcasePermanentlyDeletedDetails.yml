@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.ShowcasePermanentlyDeletedDetails
+  commentId: T:Dropbox.Api.TeamLog.ShowcasePermanentlyDeletedDetails
+  id: ShowcasePermanentlyDeletedDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.ShowcasePermanentlyDeletedDetails.#ctor
+  - Dropbox.Api.TeamLog.ShowcasePermanentlyDeletedDetails.#ctor(System.String)
+  - Dropbox.Api.TeamLog.ShowcasePermanentlyDeletedDetails.EventUuid
+  langs:
+  - csharp
+  - vb
+  name: ShowcasePermanentlyDeletedDetails
+  nameWithType: ShowcasePermanentlyDeletedDetails
+  fullName: Dropbox.Api.TeamLog.ShowcasePermanentlyDeletedDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcasePermanentlyDeletedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ShowcasePermanentlyDeletedDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcasePermanentlyDeletedDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Permanently deleted showcase.</p>\n"
+  example: []
+  syntax:
+    content: 'public class ShowcasePermanentlyDeletedDetails : object'
+    content.vb: >-
+      Public Class ShowcasePermanentlyDeletedDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.ShowcasePermanentlyDeletedDetails.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.ShowcasePermanentlyDeletedDetails.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.ShowcasePermanentlyDeletedDetails
+  langs:
+  - csharp
+  - vb
+  name: ShowcasePermanentlyDeletedDetails(String)
+  nameWithType: ShowcasePermanentlyDeletedDetails.ShowcasePermanentlyDeletedDetails(String)
+  fullName: Dropbox.Api.TeamLog.ShowcasePermanentlyDeletedDetails.ShowcasePermanentlyDeletedDetails(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcasePermanentlyDeletedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcasePermanentlyDeletedDetails.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.ShowcasePermanentlyDeletedDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public ShowcasePermanentlyDeletedDetails(string eventUuid)
+    parameters:
+    - id: eventUuid
+      type: System.String
+      description: Event unique identifier.
+    content.vb: Public Sub New(eventUuid As String)
+  overload: Dropbox.Api.TeamLog.ShowcasePermanentlyDeletedDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.ShowcasePermanentlyDeletedDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.ShowcasePermanentlyDeletedDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.ShowcasePermanentlyDeletedDetails
+  langs:
+  - csharp
+  - vb
+  name: ShowcasePermanentlyDeletedDetails()
+  nameWithType: ShowcasePermanentlyDeletedDetails.ShowcasePermanentlyDeletedDetails()
+  fullName: Dropbox.Api.TeamLog.ShowcasePermanentlyDeletedDetails.ShowcasePermanentlyDeletedDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcasePermanentlyDeletedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcasePermanentlyDeletedDetails.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.ShowcasePermanentlyDeletedDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public ShowcasePermanentlyDeletedDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.ShowcasePermanentlyDeletedDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.ShowcasePermanentlyDeletedDetails.EventUuid
+  commentId: P:Dropbox.Api.TeamLog.ShowcasePermanentlyDeletedDetails.EventUuid
+  id: EventUuid
+  parent: Dropbox.Api.TeamLog.ShowcasePermanentlyDeletedDetails
+  langs:
+  - csharp
+  - vb
+  name: EventUuid
+  nameWithType: ShowcasePermanentlyDeletedDetails.EventUuid
+  fullName: Dropbox.Api.TeamLog.ShowcasePermanentlyDeletedDetails.EventUuid
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcasePermanentlyDeletedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: EventUuid
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcasePermanentlyDeletedDetails.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Event unique identifier.</p>\n"
+  example: []
+  syntax:
+    content: public string EventUuid { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property EventUuid As String
+  overload: Dropbox.Api.TeamLog.ShowcasePermanentlyDeletedDetails.EventUuid*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.ShowcasePermanentlyDeletedDetails
+  commentId: T:Dropbox.Api.TeamLog.ShowcasePermanentlyDeletedDetails
+  parent: Dropbox.Api.TeamLog
+  name: ShowcasePermanentlyDeletedDetails
+  nameWithType: ShowcasePermanentlyDeletedDetails
+  fullName: Dropbox.Api.TeamLog.ShowcasePermanentlyDeletedDetails
+- uid: Dropbox.Api.TeamLog.ShowcasePermanentlyDeletedDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.ShowcasePermanentlyDeletedDetails.#ctor
+  name: ShowcasePermanentlyDeletedDetails
+  nameWithType: ShowcasePermanentlyDeletedDetails.ShowcasePermanentlyDeletedDetails
+  fullName: Dropbox.Api.TeamLog.ShowcasePermanentlyDeletedDetails.ShowcasePermanentlyDeletedDetails
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.ShowcasePermanentlyDeletedDetails.EventUuid*
+  commentId: Overload:Dropbox.Api.TeamLog.ShowcasePermanentlyDeletedDetails.EventUuid
+  name: EventUuid
+  nameWithType: ShowcasePermanentlyDeletedDetails.EventUuid
+  fullName: Dropbox.Api.TeamLog.ShowcasePermanentlyDeletedDetails.EventUuid
+shouldSkipMarkup: true

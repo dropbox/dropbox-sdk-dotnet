@@ -1,0 +1,244 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.PaperChangeDeploymentPolicyDetails
+  commentId: T:Dropbox.Api.TeamLog.PaperChangeDeploymentPolicyDetails
+  id: PaperChangeDeploymentPolicyDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.PaperChangeDeploymentPolicyDetails.#ctor
+  - Dropbox.Api.TeamLog.PaperChangeDeploymentPolicyDetails.#ctor(Dropbox.Api.TeamPolicies.PaperDeploymentPolicy,Dropbox.Api.TeamPolicies.PaperDeploymentPolicy)
+  - Dropbox.Api.TeamLog.PaperChangeDeploymentPolicyDetails.NewValue
+  - Dropbox.Api.TeamLog.PaperChangeDeploymentPolicyDetails.PreviousValue
+  langs:
+  - csharp
+  - vb
+  name: PaperChangeDeploymentPolicyDetails
+  nameWithType: PaperChangeDeploymentPolicyDetails
+  fullName: Dropbox.Api.TeamLog.PaperChangeDeploymentPolicyDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperChangeDeploymentPolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PaperChangeDeploymentPolicyDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperChangeDeploymentPolicyDetails.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Changed whether Dropbox Paper, when enabled, is deployed to all members or to\nspecific members.</p>\n"
+  example: []
+  syntax:
+    content: 'public class PaperChangeDeploymentPolicyDetails : object'
+    content.vb: >-
+      Public Class PaperChangeDeploymentPolicyDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.PaperChangeDeploymentPolicyDetails.#ctor(Dropbox.Api.TeamPolicies.PaperDeploymentPolicy,Dropbox.Api.TeamPolicies.PaperDeploymentPolicy)
+  commentId: M:Dropbox.Api.TeamLog.PaperChangeDeploymentPolicyDetails.#ctor(Dropbox.Api.TeamPolicies.PaperDeploymentPolicy,Dropbox.Api.TeamPolicies.PaperDeploymentPolicy)
+  id: '#ctor(Dropbox.Api.TeamPolicies.PaperDeploymentPolicy,Dropbox.Api.TeamPolicies.PaperDeploymentPolicy)'
+  parent: Dropbox.Api.TeamLog.PaperChangeDeploymentPolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: PaperChangeDeploymentPolicyDetails(PaperDeploymentPolicy, PaperDeploymentPolicy)
+  nameWithType: PaperChangeDeploymentPolicyDetails.PaperChangeDeploymentPolicyDetails(PaperDeploymentPolicy, PaperDeploymentPolicy)
+  fullName: Dropbox.Api.TeamLog.PaperChangeDeploymentPolicyDetails.PaperChangeDeploymentPolicyDetails(Dropbox.Api.TeamPolicies.PaperDeploymentPolicy, Dropbox.Api.TeamPolicies.PaperDeploymentPolicy)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperChangeDeploymentPolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperChangeDeploymentPolicyDetails.cs
+    startLine: 37
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.PaperChangeDeploymentPolicyDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public PaperChangeDeploymentPolicyDetails(PaperDeploymentPolicy newValue, PaperDeploymentPolicy previousValue = null)
+    parameters:
+    - id: newValue
+      type: Dropbox.Api.TeamPolicies.PaperDeploymentPolicy
+      description: New Dropbox Paper deployment policy.
+    - id: previousValue
+      type: Dropbox.Api.TeamPolicies.PaperDeploymentPolicy
+      description: >-
+        Previous Dropbox Paper deployment policy. Might be
+
+        missing due to historical data gap.
+    content.vb: Public Sub New(newValue As PaperDeploymentPolicy, previousValue As PaperDeploymentPolicy = Nothing)
+  overload: Dropbox.Api.TeamLog.PaperChangeDeploymentPolicyDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.PaperChangeDeploymentPolicyDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.PaperChangeDeploymentPolicyDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.PaperChangeDeploymentPolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: PaperChangeDeploymentPolicyDetails()
+  nameWithType: PaperChangeDeploymentPolicyDetails.PaperChangeDeploymentPolicyDetails()
+  fullName: Dropbox.Api.TeamLog.PaperChangeDeploymentPolicyDetails.PaperChangeDeploymentPolicyDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperChangeDeploymentPolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperChangeDeploymentPolicyDetails.cs
+    startLine: 55
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.PaperChangeDeploymentPolicyDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public PaperChangeDeploymentPolicyDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.PaperChangeDeploymentPolicyDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.PaperChangeDeploymentPolicyDetails.NewValue
+  commentId: P:Dropbox.Api.TeamLog.PaperChangeDeploymentPolicyDetails.NewValue
+  id: NewValue
+  parent: Dropbox.Api.TeamLog.PaperChangeDeploymentPolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: NewValue
+  nameWithType: PaperChangeDeploymentPolicyDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.PaperChangeDeploymentPolicyDetails.NewValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperChangeDeploymentPolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NewValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperChangeDeploymentPolicyDetails.cs
+    startLine: 63
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>New Dropbox Paper deployment policy.</p>\n"
+  example: []
+  syntax:
+    content: public PaperDeploymentPolicy NewValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamPolicies.PaperDeploymentPolicy
+    content.vb: Public Property NewValue As PaperDeploymentPolicy
+  overload: Dropbox.Api.TeamLog.PaperChangeDeploymentPolicyDetails.NewValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.PaperChangeDeploymentPolicyDetails.PreviousValue
+  commentId: P:Dropbox.Api.TeamLog.PaperChangeDeploymentPolicyDetails.PreviousValue
+  id: PreviousValue
+  parent: Dropbox.Api.TeamLog.PaperChangeDeploymentPolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: PreviousValue
+  nameWithType: PaperChangeDeploymentPolicyDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.PaperChangeDeploymentPolicyDetails.PreviousValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperChangeDeploymentPolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PreviousValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperChangeDeploymentPolicyDetails.cs
+    startLine: 69
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Previous Dropbox Paper deployment policy. Might be missing due to historical\ndata gap.</p>\n"
+  example: []
+  syntax:
+    content: public PaperDeploymentPolicy PreviousValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamPolicies.PaperDeploymentPolicy
+    content.vb: Public Property PreviousValue As PaperDeploymentPolicy
+  overload: Dropbox.Api.TeamLog.PaperChangeDeploymentPolicyDetails.PreviousValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.PaperChangeDeploymentPolicyDetails
+  commentId: T:Dropbox.Api.TeamLog.PaperChangeDeploymentPolicyDetails
+  parent: Dropbox.Api.TeamLog
+  name: PaperChangeDeploymentPolicyDetails
+  nameWithType: PaperChangeDeploymentPolicyDetails
+  fullName: Dropbox.Api.TeamLog.PaperChangeDeploymentPolicyDetails
+- uid: Dropbox.Api.TeamLog.PaperChangeDeploymentPolicyDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.PaperChangeDeploymentPolicyDetails.#ctor
+  name: PaperChangeDeploymentPolicyDetails
+  nameWithType: PaperChangeDeploymentPolicyDetails.PaperChangeDeploymentPolicyDetails
+  fullName: Dropbox.Api.TeamLog.PaperChangeDeploymentPolicyDetails.PaperChangeDeploymentPolicyDetails
+- uid: Dropbox.Api.TeamPolicies.PaperDeploymentPolicy
+  commentId: T:Dropbox.Api.TeamPolicies.PaperDeploymentPolicy
+  parent: Dropbox.Api.TeamPolicies
+  name: PaperDeploymentPolicy
+  nameWithType: PaperDeploymentPolicy
+  fullName: Dropbox.Api.TeamPolicies.PaperDeploymentPolicy
+- uid: Dropbox.Api.TeamPolicies
+  commentId: N:Dropbox.Api.TeamPolicies
+  name: Dropbox.Api.TeamPolicies
+  nameWithType: Dropbox.Api.TeamPolicies
+  fullName: Dropbox.Api.TeamPolicies
+- uid: Dropbox.Api.TeamLog.PaperChangeDeploymentPolicyDetails.NewValue*
+  commentId: Overload:Dropbox.Api.TeamLog.PaperChangeDeploymentPolicyDetails.NewValue
+  name: NewValue
+  nameWithType: PaperChangeDeploymentPolicyDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.PaperChangeDeploymentPolicyDetails.NewValue
+- uid: Dropbox.Api.TeamLog.PaperChangeDeploymentPolicyDetails.PreviousValue*
+  commentId: Overload:Dropbox.Api.TeamLog.PaperChangeDeploymentPolicyDetails.PreviousValue
+  name: PreviousValue
+  nameWithType: PaperChangeDeploymentPolicyDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.PaperChangeDeploymentPolicyDetails.PreviousValue
+shouldSkipMarkup: true

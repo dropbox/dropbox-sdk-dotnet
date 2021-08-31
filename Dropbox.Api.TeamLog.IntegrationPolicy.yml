@@ -1,0 +1,381 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.IntegrationPolicy
+  commentId: T:Dropbox.Api.TeamLog.IntegrationPolicy
+  id: IntegrationPolicy
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.IntegrationPolicy.#ctor
+  - Dropbox.Api.TeamLog.IntegrationPolicy.AsDisabled
+  - Dropbox.Api.TeamLog.IntegrationPolicy.AsEnabled
+  - Dropbox.Api.TeamLog.IntegrationPolicy.AsOther
+  - Dropbox.Api.TeamLog.IntegrationPolicy.IsDisabled
+  - Dropbox.Api.TeamLog.IntegrationPolicy.IsEnabled
+  - Dropbox.Api.TeamLog.IntegrationPolicy.IsOther
+  langs:
+  - csharp
+  - vb
+  name: IntegrationPolicy
+  nameWithType: IntegrationPolicy
+  fullName: Dropbox.Api.TeamLog.IntegrationPolicy
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/IntegrationPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IntegrationPolicy
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/IntegrationPolicy.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Policy for controlling whether a service integration is enabled for the\nteam.</p>\n"
+  example: []
+  syntax:
+    content: 'public class IntegrationPolicy : object'
+    content.vb: >-
+      Public Class IntegrationPolicy
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.TeamLog.IntegrationPolicy.Disabled
+  - Dropbox.Api.TeamLog.IntegrationPolicy.Enabled
+  - Dropbox.Api.TeamLog.IntegrationPolicy.Other
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.IntegrationPolicy.#ctor
+  commentId: M:Dropbox.Api.TeamLog.IntegrationPolicy.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.IntegrationPolicy
+  langs:
+  - csharp
+  - vb
+  name: IntegrationPolicy()
+  nameWithType: IntegrationPolicy.IntegrationPolicy()
+  fullName: Dropbox.Api.TeamLog.IntegrationPolicy.IntegrationPolicy()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/IntegrationPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/IntegrationPolicy.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.IntegrationPolicy\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public IntegrationPolicy()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.IntegrationPolicy.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.IntegrationPolicy.IsDisabled
+  commentId: P:Dropbox.Api.TeamLog.IntegrationPolicy.IsDisabled
+  id: IsDisabled
+  parent: Dropbox.Api.TeamLog.IntegrationPolicy
+  langs:
+  - csharp
+  - vb
+  name: IsDisabled
+  nameWithType: IntegrationPolicy.IsDisabled
+  fullName: Dropbox.Api.TeamLog.IntegrationPolicy.IsDisabled
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/IntegrationPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsDisabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/IntegrationPolicy.cs
+    startLine: 41
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Disabled</p>\n"
+  example: []
+  syntax:
+    content: public bool IsDisabled { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsDisabled As Boolean
+  overload: Dropbox.Api.TeamLog.IntegrationPolicy.IsDisabled*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.IntegrationPolicy.AsDisabled
+  commentId: P:Dropbox.Api.TeamLog.IntegrationPolicy.AsDisabled
+  id: AsDisabled
+  parent: Dropbox.Api.TeamLog.IntegrationPolicy
+  langs:
+  - csharp
+  - vb
+  name: AsDisabled
+  nameWithType: IntegrationPolicy.AsDisabled
+  fullName: Dropbox.Api.TeamLog.IntegrationPolicy.AsDisabled
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/IntegrationPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsDisabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/IntegrationPolicy.cs
+    startLine: 52
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Disabled, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public IntegrationPolicy.Disabled AsDisabled { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.IntegrationPolicy.Disabled
+    content.vb: Public ReadOnly Property AsDisabled As IntegrationPolicy.Disabled
+  overload: Dropbox.Api.TeamLog.IntegrationPolicy.AsDisabled*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.IntegrationPolicy.IsEnabled
+  commentId: P:Dropbox.Api.TeamLog.IntegrationPolicy.IsEnabled
+  id: IsEnabled
+  parent: Dropbox.Api.TeamLog.IntegrationPolicy
+  langs:
+  - csharp
+  - vb
+  name: IsEnabled
+  nameWithType: IntegrationPolicy.IsEnabled
+  fullName: Dropbox.Api.TeamLog.IntegrationPolicy.IsEnabled
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/IntegrationPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsEnabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/IntegrationPolicy.cs
+    startLine: 63
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Enabled</p>\n"
+  example: []
+  syntax:
+    content: public bool IsEnabled { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsEnabled As Boolean
+  overload: Dropbox.Api.TeamLog.IntegrationPolicy.IsEnabled*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.IntegrationPolicy.AsEnabled
+  commentId: P:Dropbox.Api.TeamLog.IntegrationPolicy.AsEnabled
+  id: AsEnabled
+  parent: Dropbox.Api.TeamLog.IntegrationPolicy
+  langs:
+  - csharp
+  - vb
+  name: AsEnabled
+  nameWithType: IntegrationPolicy.AsEnabled
+  fullName: Dropbox.Api.TeamLog.IntegrationPolicy.AsEnabled
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/IntegrationPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsEnabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/IntegrationPolicy.cs
+    startLine: 74
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Enabled, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public IntegrationPolicy.Enabled AsEnabled { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.IntegrationPolicy.Enabled
+    content.vb: Public ReadOnly Property AsEnabled As IntegrationPolicy.Enabled
+  overload: Dropbox.Api.TeamLog.IntegrationPolicy.AsEnabled*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.IntegrationPolicy.IsOther
+  commentId: P:Dropbox.Api.TeamLog.IntegrationPolicy.IsOther
+  id: IsOther
+  parent: Dropbox.Api.TeamLog.IntegrationPolicy
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: IntegrationPolicy.IsOther
+  fullName: Dropbox.Api.TeamLog.IntegrationPolicy.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/IntegrationPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/IntegrationPolicy.cs
+    startLine: 85
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.TeamLog.IntegrationPolicy.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.IntegrationPolicy.AsOther
+  commentId: P:Dropbox.Api.TeamLog.IntegrationPolicy.AsOther
+  id: AsOther
+  parent: Dropbox.Api.TeamLog.IntegrationPolicy
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: IntegrationPolicy.AsOther
+  fullName: Dropbox.Api.TeamLog.IntegrationPolicy.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/IntegrationPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/IntegrationPolicy.cs
+    startLine: 96
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public IntegrationPolicy.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.IntegrationPolicy.Other
+    content.vb: Public ReadOnly Property AsOther As IntegrationPolicy.Other
+  overload: Dropbox.Api.TeamLog.IntegrationPolicy.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.IntegrationPolicy
+  commentId: T:Dropbox.Api.TeamLog.IntegrationPolicy
+  parent: Dropbox.Api.TeamLog
+  name: IntegrationPolicy
+  nameWithType: IntegrationPolicy
+  fullName: Dropbox.Api.TeamLog.IntegrationPolicy
+- uid: Dropbox.Api.TeamLog.IntegrationPolicy.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.IntegrationPolicy.#ctor
+  name: IntegrationPolicy
+  nameWithType: IntegrationPolicy.IntegrationPolicy
+  fullName: Dropbox.Api.TeamLog.IntegrationPolicy.IntegrationPolicy
+- uid: Dropbox.Api.TeamLog.IntegrationPolicy.IsDisabled*
+  commentId: Overload:Dropbox.Api.TeamLog.IntegrationPolicy.IsDisabled
+  name: IsDisabled
+  nameWithType: IntegrationPolicy.IsDisabled
+  fullName: Dropbox.Api.TeamLog.IntegrationPolicy.IsDisabled
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.TeamLog.IntegrationPolicy.AsDisabled*
+  commentId: Overload:Dropbox.Api.TeamLog.IntegrationPolicy.AsDisabled
+  name: AsDisabled
+  nameWithType: IntegrationPolicy.AsDisabled
+  fullName: Dropbox.Api.TeamLog.IntegrationPolicy.AsDisabled
+- uid: Dropbox.Api.TeamLog.IntegrationPolicy.Disabled
+  commentId: T:Dropbox.Api.TeamLog.IntegrationPolicy.Disabled
+  parent: Dropbox.Api.TeamLog
+  name: IntegrationPolicy.Disabled
+  nameWithType: IntegrationPolicy.Disabled
+  fullName: Dropbox.Api.TeamLog.IntegrationPolicy.Disabled
+- uid: Dropbox.Api.TeamLog.IntegrationPolicy.IsEnabled*
+  commentId: Overload:Dropbox.Api.TeamLog.IntegrationPolicy.IsEnabled
+  name: IsEnabled
+  nameWithType: IntegrationPolicy.IsEnabled
+  fullName: Dropbox.Api.TeamLog.IntegrationPolicy.IsEnabled
+- uid: Dropbox.Api.TeamLog.IntegrationPolicy.AsEnabled*
+  commentId: Overload:Dropbox.Api.TeamLog.IntegrationPolicy.AsEnabled
+  name: AsEnabled
+  nameWithType: IntegrationPolicy.AsEnabled
+  fullName: Dropbox.Api.TeamLog.IntegrationPolicy.AsEnabled
+- uid: Dropbox.Api.TeamLog.IntegrationPolicy.Enabled
+  commentId: T:Dropbox.Api.TeamLog.IntegrationPolicy.Enabled
+  parent: Dropbox.Api.TeamLog
+  name: IntegrationPolicy.Enabled
+  nameWithType: IntegrationPolicy.Enabled
+  fullName: Dropbox.Api.TeamLog.IntegrationPolicy.Enabled
+- uid: Dropbox.Api.TeamLog.IntegrationPolicy.IsOther*
+  commentId: Overload:Dropbox.Api.TeamLog.IntegrationPolicy.IsOther
+  name: IsOther
+  nameWithType: IntegrationPolicy.IsOther
+  fullName: Dropbox.Api.TeamLog.IntegrationPolicy.IsOther
+- uid: Dropbox.Api.TeamLog.IntegrationPolicy.AsOther*
+  commentId: Overload:Dropbox.Api.TeamLog.IntegrationPolicy.AsOther
+  name: AsOther
+  nameWithType: IntegrationPolicy.AsOther
+  fullName: Dropbox.Api.TeamLog.IntegrationPolicy.AsOther
+- uid: Dropbox.Api.TeamLog.IntegrationPolicy.Other
+  commentId: T:Dropbox.Api.TeamLog.IntegrationPolicy.Other
+  parent: Dropbox.Api.TeamLog
+  name: IntegrationPolicy.Other
+  nameWithType: IntegrationPolicy.Other
+  fullName: Dropbox.Api.TeamLog.IntegrationPolicy.Other
+shouldSkipMarkup: true

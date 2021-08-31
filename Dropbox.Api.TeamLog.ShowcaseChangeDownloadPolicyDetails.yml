@@ -1,0 +1,236 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.ShowcaseChangeDownloadPolicyDetails
+  commentId: T:Dropbox.Api.TeamLog.ShowcaseChangeDownloadPolicyDetails
+  id: ShowcaseChangeDownloadPolicyDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.ShowcaseChangeDownloadPolicyDetails.#ctor
+  - Dropbox.Api.TeamLog.ShowcaseChangeDownloadPolicyDetails.#ctor(Dropbox.Api.TeamLog.ShowcaseDownloadPolicy,Dropbox.Api.TeamLog.ShowcaseDownloadPolicy)
+  - Dropbox.Api.TeamLog.ShowcaseChangeDownloadPolicyDetails.NewValue
+  - Dropbox.Api.TeamLog.ShowcaseChangeDownloadPolicyDetails.PreviousValue
+  langs:
+  - csharp
+  - vb
+  name: ShowcaseChangeDownloadPolicyDetails
+  nameWithType: ShowcaseChangeDownloadPolicyDetails
+  fullName: Dropbox.Api.TeamLog.ShowcaseChangeDownloadPolicyDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseChangeDownloadPolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ShowcaseChangeDownloadPolicyDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseChangeDownloadPolicyDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Enabled/disabled downloading files from Dropbox Showcase for team.</p>\n"
+  example: []
+  syntax:
+    content: 'public class ShowcaseChangeDownloadPolicyDetails : object'
+    content.vb: >-
+      Public Class ShowcaseChangeDownloadPolicyDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.ShowcaseChangeDownloadPolicyDetails.#ctor(Dropbox.Api.TeamLog.ShowcaseDownloadPolicy,Dropbox.Api.TeamLog.ShowcaseDownloadPolicy)
+  commentId: M:Dropbox.Api.TeamLog.ShowcaseChangeDownloadPolicyDetails.#ctor(Dropbox.Api.TeamLog.ShowcaseDownloadPolicy,Dropbox.Api.TeamLog.ShowcaseDownloadPolicy)
+  id: '#ctor(Dropbox.Api.TeamLog.ShowcaseDownloadPolicy,Dropbox.Api.TeamLog.ShowcaseDownloadPolicy)'
+  parent: Dropbox.Api.TeamLog.ShowcaseChangeDownloadPolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: ShowcaseChangeDownloadPolicyDetails(ShowcaseDownloadPolicy, ShowcaseDownloadPolicy)
+  nameWithType: ShowcaseChangeDownloadPolicyDetails.ShowcaseChangeDownloadPolicyDetails(ShowcaseDownloadPolicy, ShowcaseDownloadPolicy)
+  fullName: Dropbox.Api.TeamLog.ShowcaseChangeDownloadPolicyDetails.ShowcaseChangeDownloadPolicyDetails(Dropbox.Api.TeamLog.ShowcaseDownloadPolicy, Dropbox.Api.TeamLog.ShowcaseDownloadPolicy)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseChangeDownloadPolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseChangeDownloadPolicyDetails.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.ShowcaseChangeDownloadPolicyDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public ShowcaseChangeDownloadPolicyDetails(ShowcaseDownloadPolicy newValue, ShowcaseDownloadPolicy previousValue)
+    parameters:
+    - id: newValue
+      type: Dropbox.Api.TeamLog.ShowcaseDownloadPolicy
+      description: New Dropbox Showcase download policy.
+    - id: previousValue
+      type: Dropbox.Api.TeamLog.ShowcaseDownloadPolicy
+      description: Previous Dropbox Showcase download policy.
+    content.vb: Public Sub New(newValue As ShowcaseDownloadPolicy, previousValue As ShowcaseDownloadPolicy)
+  overload: Dropbox.Api.TeamLog.ShowcaseChangeDownloadPolicyDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.ShowcaseChangeDownloadPolicyDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.ShowcaseChangeDownloadPolicyDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.ShowcaseChangeDownloadPolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: ShowcaseChangeDownloadPolicyDetails()
+  nameWithType: ShowcaseChangeDownloadPolicyDetails.ShowcaseChangeDownloadPolicyDetails()
+  fullName: Dropbox.Api.TeamLog.ShowcaseChangeDownloadPolicyDetails.ShowcaseChangeDownloadPolicyDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseChangeDownloadPolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseChangeDownloadPolicyDetails.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.ShowcaseChangeDownloadPolicyDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public ShowcaseChangeDownloadPolicyDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.ShowcaseChangeDownloadPolicyDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.ShowcaseChangeDownloadPolicyDetails.NewValue
+  commentId: P:Dropbox.Api.TeamLog.ShowcaseChangeDownloadPolicyDetails.NewValue
+  id: NewValue
+  parent: Dropbox.Api.TeamLog.ShowcaseChangeDownloadPolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: NewValue
+  nameWithType: ShowcaseChangeDownloadPolicyDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.ShowcaseChangeDownloadPolicyDetails.NewValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseChangeDownloadPolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NewValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseChangeDownloadPolicyDetails.cs
+    startLine: 66
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>New Dropbox Showcase download policy.</p>\n"
+  example: []
+  syntax:
+    content: public ShowcaseDownloadPolicy NewValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.ShowcaseDownloadPolicy
+    content.vb: Public Property NewValue As ShowcaseDownloadPolicy
+  overload: Dropbox.Api.TeamLog.ShowcaseChangeDownloadPolicyDetails.NewValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.ShowcaseChangeDownloadPolicyDetails.PreviousValue
+  commentId: P:Dropbox.Api.TeamLog.ShowcaseChangeDownloadPolicyDetails.PreviousValue
+  id: PreviousValue
+  parent: Dropbox.Api.TeamLog.ShowcaseChangeDownloadPolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: PreviousValue
+  nameWithType: ShowcaseChangeDownloadPolicyDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.ShowcaseChangeDownloadPolicyDetails.PreviousValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseChangeDownloadPolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PreviousValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseChangeDownloadPolicyDetails.cs
+    startLine: 71
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Previous Dropbox Showcase download policy.</p>\n"
+  example: []
+  syntax:
+    content: public ShowcaseDownloadPolicy PreviousValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.ShowcaseDownloadPolicy
+    content.vb: Public Property PreviousValue As ShowcaseDownloadPolicy
+  overload: Dropbox.Api.TeamLog.ShowcaseChangeDownloadPolicyDetails.PreviousValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.ShowcaseChangeDownloadPolicyDetails
+  commentId: T:Dropbox.Api.TeamLog.ShowcaseChangeDownloadPolicyDetails
+  parent: Dropbox.Api.TeamLog
+  name: ShowcaseChangeDownloadPolicyDetails
+  nameWithType: ShowcaseChangeDownloadPolicyDetails
+  fullName: Dropbox.Api.TeamLog.ShowcaseChangeDownloadPolicyDetails
+- uid: Dropbox.Api.TeamLog.ShowcaseChangeDownloadPolicyDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.ShowcaseChangeDownloadPolicyDetails.#ctor
+  name: ShowcaseChangeDownloadPolicyDetails
+  nameWithType: ShowcaseChangeDownloadPolicyDetails.ShowcaseChangeDownloadPolicyDetails
+  fullName: Dropbox.Api.TeamLog.ShowcaseChangeDownloadPolicyDetails.ShowcaseChangeDownloadPolicyDetails
+- uid: Dropbox.Api.TeamLog.ShowcaseDownloadPolicy
+  commentId: T:Dropbox.Api.TeamLog.ShowcaseDownloadPolicy
+  parent: Dropbox.Api.TeamLog
+  name: ShowcaseDownloadPolicy
+  nameWithType: ShowcaseDownloadPolicy
+  fullName: Dropbox.Api.TeamLog.ShowcaseDownloadPolicy
+- uid: Dropbox.Api.TeamLog.ShowcaseChangeDownloadPolicyDetails.NewValue*
+  commentId: Overload:Dropbox.Api.TeamLog.ShowcaseChangeDownloadPolicyDetails.NewValue
+  name: NewValue
+  nameWithType: ShowcaseChangeDownloadPolicyDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.ShowcaseChangeDownloadPolicyDetails.NewValue
+- uid: Dropbox.Api.TeamLog.ShowcaseChangeDownloadPolicyDetails.PreviousValue*
+  commentId: Overload:Dropbox.Api.TeamLog.ShowcaseChangeDownloadPolicyDetails.PreviousValue
+  name: PreviousValue
+  nameWithType: ShowcaseChangeDownloadPolicyDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.ShowcaseChangeDownloadPolicyDetails.PreviousValue
+shouldSkipMarkup: true

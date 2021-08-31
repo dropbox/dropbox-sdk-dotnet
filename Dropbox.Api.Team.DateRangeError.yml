@@ -1,0 +1,195 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.DateRangeError
+  commentId: T:Dropbox.Api.Team.DateRangeError
+  id: DateRangeError
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.DateRangeError.#ctor
+  - Dropbox.Api.Team.DateRangeError.AsOther
+  - Dropbox.Api.Team.DateRangeError.IsOther
+  langs:
+  - csharp
+  - vb
+  name: DateRangeError
+  nameWithType: DateRangeError
+  fullName: Dropbox.Api.Team.DateRangeError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DateRangeError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: DateRangeError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DateRangeError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Errors that can originate from problems in input arguments to reports.</p>\n"
+  example: []
+  syntax:
+    content: 'public class DateRangeError : object'
+    content.vb: >-
+      Public Class DateRangeError
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Team.DateRangeError.Other
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.DateRangeError.#ctor
+  commentId: M:Dropbox.Api.Team.DateRangeError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.DateRangeError
+  langs:
+  - csharp
+  - vb
+  name: DateRangeError()
+  nameWithType: DateRangeError.DateRangeError()
+  fullName: Dropbox.Api.Team.DateRangeError.DateRangeError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DateRangeError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DateRangeError.cs
+    startLine: 32
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.DateRangeError\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public DateRangeError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.DateRangeError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.DateRangeError.IsOther
+  commentId: P:Dropbox.Api.Team.DateRangeError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Team.DateRangeError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: DateRangeError.IsOther
+  fullName: Dropbox.Api.Team.DateRangeError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DateRangeError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DateRangeError.cs
+    startLine: 39
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Team.DateRangeError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.DateRangeError.AsOther
+  commentId: P:Dropbox.Api.Team.DateRangeError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Team.DateRangeError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: DateRangeError.AsOther
+  fullName: Dropbox.Api.Team.DateRangeError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DateRangeError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DateRangeError.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public DateRangeError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.DateRangeError.Other
+    content.vb: Public ReadOnly Property AsOther As DateRangeError.Other
+  overload: Dropbox.Api.Team.DateRangeError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.DateRangeError
+  commentId: T:Dropbox.Api.Team.DateRangeError
+  parent: Dropbox.Api.Team
+  name: DateRangeError
+  nameWithType: DateRangeError
+  fullName: Dropbox.Api.Team.DateRangeError
+- uid: Dropbox.Api.Team.DateRangeError.#ctor*
+  commentId: Overload:Dropbox.Api.Team.DateRangeError.#ctor
+  name: DateRangeError
+  nameWithType: DateRangeError.DateRangeError
+  fullName: Dropbox.Api.Team.DateRangeError.DateRangeError
+- uid: Dropbox.Api.Team.DateRangeError.IsOther*
+  commentId: Overload:Dropbox.Api.Team.DateRangeError.IsOther
+  name: IsOther
+  nameWithType: DateRangeError.IsOther
+  fullName: Dropbox.Api.Team.DateRangeError.IsOther
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Team.DateRangeError.AsOther*
+  commentId: Overload:Dropbox.Api.Team.DateRangeError.AsOther
+  name: AsOther
+  nameWithType: DateRangeError.AsOther
+  fullName: Dropbox.Api.Team.DateRangeError.AsOther
+- uid: Dropbox.Api.Team.DateRangeError.Other
+  commentId: T:Dropbox.Api.Team.DateRangeError.Other
+  parent: Dropbox.Api.Team
+  name: DateRangeError.Other
+  nameWithType: DateRangeError.Other
+  fullName: Dropbox.Api.Team.DateRangeError.Other
+shouldSkipMarkup: true

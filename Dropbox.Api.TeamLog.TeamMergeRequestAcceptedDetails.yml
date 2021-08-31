@@ -1,0 +1,188 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestAcceptedDetails
+  commentId: T:Dropbox.Api.TeamLog.TeamMergeRequestAcceptedDetails
+  id: TeamMergeRequestAcceptedDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.TeamMergeRequestAcceptedDetails.#ctor
+  - Dropbox.Api.TeamLog.TeamMergeRequestAcceptedDetails.#ctor(Dropbox.Api.TeamLog.TeamMergeRequestAcceptedExtraDetails)
+  - Dropbox.Api.TeamLog.TeamMergeRequestAcceptedDetails.RequestAcceptedDetails
+  langs:
+  - csharp
+  - vb
+  name: TeamMergeRequestAcceptedDetails
+  nameWithType: TeamMergeRequestAcceptedDetails
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestAcceptedDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestAcceptedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TeamMergeRequestAcceptedDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestAcceptedDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Accepted a team merge request.</p>\n"
+  example: []
+  syntax:
+    content: 'public class TeamMergeRequestAcceptedDetails : object'
+    content.vb: >-
+      Public Class TeamMergeRequestAcceptedDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestAcceptedDetails.#ctor(Dropbox.Api.TeamLog.TeamMergeRequestAcceptedExtraDetails)
+  commentId: M:Dropbox.Api.TeamLog.TeamMergeRequestAcceptedDetails.#ctor(Dropbox.Api.TeamLog.TeamMergeRequestAcceptedExtraDetails)
+  id: '#ctor(Dropbox.Api.TeamLog.TeamMergeRequestAcceptedExtraDetails)'
+  parent: Dropbox.Api.TeamLog.TeamMergeRequestAcceptedDetails
+  langs:
+  - csharp
+  - vb
+  name: TeamMergeRequestAcceptedDetails(TeamMergeRequestAcceptedExtraDetails)
+  nameWithType: TeamMergeRequestAcceptedDetails.TeamMergeRequestAcceptedDetails(TeamMergeRequestAcceptedExtraDetails)
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestAcceptedDetails.TeamMergeRequestAcceptedDetails(Dropbox.Api.TeamLog.TeamMergeRequestAcceptedExtraDetails)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestAcceptedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestAcceptedDetails.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.TeamMergeRequestAcceptedDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public TeamMergeRequestAcceptedDetails(TeamMergeRequestAcceptedExtraDetails requestAcceptedDetails)
+    parameters:
+    - id: requestAcceptedDetails
+      type: Dropbox.Api.TeamLog.TeamMergeRequestAcceptedExtraDetails
+      description: Team merge request acceptance details.
+    content.vb: Public Sub New(requestAcceptedDetails As TeamMergeRequestAcceptedExtraDetails)
+  overload: Dropbox.Api.TeamLog.TeamMergeRequestAcceptedDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestAcceptedDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.TeamMergeRequestAcceptedDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.TeamMergeRequestAcceptedDetails
+  langs:
+  - csharp
+  - vb
+  name: TeamMergeRequestAcceptedDetails()
+  nameWithType: TeamMergeRequestAcceptedDetails.TeamMergeRequestAcceptedDetails()
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestAcceptedDetails.TeamMergeRequestAcceptedDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestAcceptedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestAcceptedDetails.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.TeamMergeRequestAcceptedDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public TeamMergeRequestAcceptedDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.TeamMergeRequestAcceptedDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestAcceptedDetails.RequestAcceptedDetails
+  commentId: P:Dropbox.Api.TeamLog.TeamMergeRequestAcceptedDetails.RequestAcceptedDetails
+  id: RequestAcceptedDetails
+  parent: Dropbox.Api.TeamLog.TeamMergeRequestAcceptedDetails
+  langs:
+  - csharp
+  - vb
+  name: RequestAcceptedDetails
+  nameWithType: TeamMergeRequestAcceptedDetails.RequestAcceptedDetails
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestAcceptedDetails.RequestAcceptedDetails
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestAcceptedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: RequestAcceptedDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestAcceptedDetails.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Team merge request acceptance details.</p>\n"
+  example: []
+  syntax:
+    content: public TeamMergeRequestAcceptedExtraDetails RequestAcceptedDetails { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.TeamMergeRequestAcceptedExtraDetails
+    content.vb: Public Property RequestAcceptedDetails As TeamMergeRequestAcceptedExtraDetails
+  overload: Dropbox.Api.TeamLog.TeamMergeRequestAcceptedDetails.RequestAcceptedDetails*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestAcceptedDetails
+  commentId: T:Dropbox.Api.TeamLog.TeamMergeRequestAcceptedDetails
+  parent: Dropbox.Api.TeamLog
+  name: TeamMergeRequestAcceptedDetails
+  nameWithType: TeamMergeRequestAcceptedDetails
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestAcceptedDetails
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestAcceptedDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.TeamMergeRequestAcceptedDetails.#ctor
+  name: TeamMergeRequestAcceptedDetails
+  nameWithType: TeamMergeRequestAcceptedDetails.TeamMergeRequestAcceptedDetails
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestAcceptedDetails.TeamMergeRequestAcceptedDetails
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestAcceptedExtraDetails
+  commentId: T:Dropbox.Api.TeamLog.TeamMergeRequestAcceptedExtraDetails
+  parent: Dropbox.Api.TeamLog
+  name: TeamMergeRequestAcceptedExtraDetails
+  nameWithType: TeamMergeRequestAcceptedExtraDetails
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestAcceptedExtraDetails
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestAcceptedDetails.RequestAcceptedDetails*
+  commentId: Overload:Dropbox.Api.TeamLog.TeamMergeRequestAcceptedDetails.RequestAcceptedDetails
+  name: RequestAcceptedDetails
+  nameWithType: TeamMergeRequestAcceptedDetails.RequestAcceptedDetails
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestAcceptedDetails.RequestAcceptedDetails
+shouldSkipMarkup: true

@@ -1,0 +1,236 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.ExternalDriveBackupPolicyChangedDetails
+  commentId: T:Dropbox.Api.TeamLog.ExternalDriveBackupPolicyChangedDetails
+  id: ExternalDriveBackupPolicyChangedDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.ExternalDriveBackupPolicyChangedDetails.#ctor
+  - Dropbox.Api.TeamLog.ExternalDriveBackupPolicyChangedDetails.#ctor(Dropbox.Api.TeamLog.ExternalDriveBackupPolicy,Dropbox.Api.TeamLog.ExternalDriveBackupPolicy)
+  - Dropbox.Api.TeamLog.ExternalDriveBackupPolicyChangedDetails.NewValue
+  - Dropbox.Api.TeamLog.ExternalDriveBackupPolicyChangedDetails.PreviousValue
+  langs:
+  - csharp
+  - vb
+  name: ExternalDriveBackupPolicyChangedDetails
+  nameWithType: ExternalDriveBackupPolicyChangedDetails
+  fullName: Dropbox.Api.TeamLog.ExternalDriveBackupPolicyChangedDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ExternalDriveBackupPolicyChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ExternalDriveBackupPolicyChangedDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ExternalDriveBackupPolicyChangedDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Changed external drive backup policy for team.</p>\n"
+  example: []
+  syntax:
+    content: 'public class ExternalDriveBackupPolicyChangedDetails : object'
+    content.vb: >-
+      Public Class ExternalDriveBackupPolicyChangedDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.ExternalDriveBackupPolicyChangedDetails.#ctor(Dropbox.Api.TeamLog.ExternalDriveBackupPolicy,Dropbox.Api.TeamLog.ExternalDriveBackupPolicy)
+  commentId: M:Dropbox.Api.TeamLog.ExternalDriveBackupPolicyChangedDetails.#ctor(Dropbox.Api.TeamLog.ExternalDriveBackupPolicy,Dropbox.Api.TeamLog.ExternalDriveBackupPolicy)
+  id: '#ctor(Dropbox.Api.TeamLog.ExternalDriveBackupPolicy,Dropbox.Api.TeamLog.ExternalDriveBackupPolicy)'
+  parent: Dropbox.Api.TeamLog.ExternalDriveBackupPolicyChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: ExternalDriveBackupPolicyChangedDetails(ExternalDriveBackupPolicy, ExternalDriveBackupPolicy)
+  nameWithType: ExternalDriveBackupPolicyChangedDetails.ExternalDriveBackupPolicyChangedDetails(ExternalDriveBackupPolicy, ExternalDriveBackupPolicy)
+  fullName: Dropbox.Api.TeamLog.ExternalDriveBackupPolicyChangedDetails.ExternalDriveBackupPolicyChangedDetails(Dropbox.Api.TeamLog.ExternalDriveBackupPolicy, Dropbox.Api.TeamLog.ExternalDriveBackupPolicy)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ExternalDriveBackupPolicyChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ExternalDriveBackupPolicyChangedDetails.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.ExternalDriveBackupPolicyChangedDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public ExternalDriveBackupPolicyChangedDetails(ExternalDriveBackupPolicy newValue, ExternalDriveBackupPolicy previousValue)
+    parameters:
+    - id: newValue
+      type: Dropbox.Api.TeamLog.ExternalDriveBackupPolicy
+      description: New external drive backup policy.
+    - id: previousValue
+      type: Dropbox.Api.TeamLog.ExternalDriveBackupPolicy
+      description: Previous external drive backup policy.
+    content.vb: Public Sub New(newValue As ExternalDriveBackupPolicy, previousValue As ExternalDriveBackupPolicy)
+  overload: Dropbox.Api.TeamLog.ExternalDriveBackupPolicyChangedDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.ExternalDriveBackupPolicyChangedDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.ExternalDriveBackupPolicyChangedDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.ExternalDriveBackupPolicyChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: ExternalDriveBackupPolicyChangedDetails()
+  nameWithType: ExternalDriveBackupPolicyChangedDetails.ExternalDriveBackupPolicyChangedDetails()
+  fullName: Dropbox.Api.TeamLog.ExternalDriveBackupPolicyChangedDetails.ExternalDriveBackupPolicyChangedDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ExternalDriveBackupPolicyChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ExternalDriveBackupPolicyChangedDetails.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.ExternalDriveBackupPolicyChangedDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public ExternalDriveBackupPolicyChangedDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.ExternalDriveBackupPolicyChangedDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.ExternalDriveBackupPolicyChangedDetails.NewValue
+  commentId: P:Dropbox.Api.TeamLog.ExternalDriveBackupPolicyChangedDetails.NewValue
+  id: NewValue
+  parent: Dropbox.Api.TeamLog.ExternalDriveBackupPolicyChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: NewValue
+  nameWithType: ExternalDriveBackupPolicyChangedDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.ExternalDriveBackupPolicyChangedDetails.NewValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ExternalDriveBackupPolicyChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NewValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ExternalDriveBackupPolicyChangedDetails.cs
+    startLine: 66
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>New external drive backup policy.</p>\n"
+  example: []
+  syntax:
+    content: public ExternalDriveBackupPolicy NewValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.ExternalDriveBackupPolicy
+    content.vb: Public Property NewValue As ExternalDriveBackupPolicy
+  overload: Dropbox.Api.TeamLog.ExternalDriveBackupPolicyChangedDetails.NewValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.ExternalDriveBackupPolicyChangedDetails.PreviousValue
+  commentId: P:Dropbox.Api.TeamLog.ExternalDriveBackupPolicyChangedDetails.PreviousValue
+  id: PreviousValue
+  parent: Dropbox.Api.TeamLog.ExternalDriveBackupPolicyChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: PreviousValue
+  nameWithType: ExternalDriveBackupPolicyChangedDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.ExternalDriveBackupPolicyChangedDetails.PreviousValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ExternalDriveBackupPolicyChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PreviousValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ExternalDriveBackupPolicyChangedDetails.cs
+    startLine: 71
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Previous external drive backup policy.</p>\n"
+  example: []
+  syntax:
+    content: public ExternalDriveBackupPolicy PreviousValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.ExternalDriveBackupPolicy
+    content.vb: Public Property PreviousValue As ExternalDriveBackupPolicy
+  overload: Dropbox.Api.TeamLog.ExternalDriveBackupPolicyChangedDetails.PreviousValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.ExternalDriveBackupPolicyChangedDetails
+  commentId: T:Dropbox.Api.TeamLog.ExternalDriveBackupPolicyChangedDetails
+  parent: Dropbox.Api.TeamLog
+  name: ExternalDriveBackupPolicyChangedDetails
+  nameWithType: ExternalDriveBackupPolicyChangedDetails
+  fullName: Dropbox.Api.TeamLog.ExternalDriveBackupPolicyChangedDetails
+- uid: Dropbox.Api.TeamLog.ExternalDriveBackupPolicyChangedDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.ExternalDriveBackupPolicyChangedDetails.#ctor
+  name: ExternalDriveBackupPolicyChangedDetails
+  nameWithType: ExternalDriveBackupPolicyChangedDetails.ExternalDriveBackupPolicyChangedDetails
+  fullName: Dropbox.Api.TeamLog.ExternalDriveBackupPolicyChangedDetails.ExternalDriveBackupPolicyChangedDetails
+- uid: Dropbox.Api.TeamLog.ExternalDriveBackupPolicy
+  commentId: T:Dropbox.Api.TeamLog.ExternalDriveBackupPolicy
+  parent: Dropbox.Api.TeamLog
+  name: ExternalDriveBackupPolicy
+  nameWithType: ExternalDriveBackupPolicy
+  fullName: Dropbox.Api.TeamLog.ExternalDriveBackupPolicy
+- uid: Dropbox.Api.TeamLog.ExternalDriveBackupPolicyChangedDetails.NewValue*
+  commentId: Overload:Dropbox.Api.TeamLog.ExternalDriveBackupPolicyChangedDetails.NewValue
+  name: NewValue
+  nameWithType: ExternalDriveBackupPolicyChangedDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.ExternalDriveBackupPolicyChangedDetails.NewValue
+- uid: Dropbox.Api.TeamLog.ExternalDriveBackupPolicyChangedDetails.PreviousValue*
+  commentId: Overload:Dropbox.Api.TeamLog.ExternalDriveBackupPolicyChangedDetails.PreviousValue
+  name: PreviousValue
+  nameWithType: ExternalDriveBackupPolicyChangedDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.ExternalDriveBackupPolicyChangedDetails.PreviousValue
+shouldSkipMarkup: true

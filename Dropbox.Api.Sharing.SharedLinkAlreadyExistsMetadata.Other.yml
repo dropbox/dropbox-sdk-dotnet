@@ -1,0 +1,134 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.SharedLinkAlreadyExistsMetadata.Other
+  commentId: T:Dropbox.Api.Sharing.SharedLinkAlreadyExistsMetadata.Other
+  id: SharedLinkAlreadyExistsMetadata.Other
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.SharedLinkAlreadyExistsMetadata.Other.Instance
+  langs:
+  - csharp
+  - vb
+  name: SharedLinkAlreadyExistsMetadata.Other
+  nameWithType: SharedLinkAlreadyExistsMetadata.Other
+  fullName: Dropbox.Api.Sharing.SharedLinkAlreadyExistsMetadata.Other
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedLinkAlreadyExistsMetadata.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Other
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedLinkAlreadyExistsMetadata.cs
+    startLine: 249
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The other object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Other : SharedLinkAlreadyExistsMetadata'
+    content.vb: >-
+      Public NotInheritable Class Other
+          Inherits SharedLinkAlreadyExistsMetadata
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Sharing.SharedLinkAlreadyExistsMetadata
+  inheritedMembers:
+  - Dropbox.Api.Sharing.SharedLinkAlreadyExistsMetadata.IsMetadata
+  - Dropbox.Api.Sharing.SharedLinkAlreadyExistsMetadata.AsMetadata
+  - Dropbox.Api.Sharing.SharedLinkAlreadyExistsMetadata.IsOther
+  - Dropbox.Api.Sharing.SharedLinkAlreadyExistsMetadata.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Sharing.SharedLinkAlreadyExistsMetadata.Other.Instance
+  commentId: F:Dropbox.Api.Sharing.SharedLinkAlreadyExistsMetadata.Other.Instance
+  id: Instance
+  parent: Dropbox.Api.Sharing.SharedLinkAlreadyExistsMetadata.Other
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: SharedLinkAlreadyExistsMetadata.Other.Instance
+  fullName: Dropbox.Api.Sharing.SharedLinkAlreadyExistsMetadata.Other.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedLinkAlreadyExistsMetadata.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedLinkAlreadyExistsMetadata.cs
+    startLine: 273
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>A singleton instance of Other</p>\n"
+  example: []
+  syntax:
+    content: public static readonly SharedLinkAlreadyExistsMetadata.Other Instance
+    return:
+      type: Dropbox.Api.Sharing.SharedLinkAlreadyExistsMetadata.Other
+    content.vb: Public Shared ReadOnly Instance As SharedLinkAlreadyExistsMetadata.Other
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.SharedLinkAlreadyExistsMetadata
+  commentId: T:Dropbox.Api.Sharing.SharedLinkAlreadyExistsMetadata
+  parent: Dropbox.Api.Sharing
+  name: SharedLinkAlreadyExistsMetadata
+  nameWithType: SharedLinkAlreadyExistsMetadata
+  fullName: Dropbox.Api.Sharing.SharedLinkAlreadyExistsMetadata
+- uid: Dropbox.Api.Sharing.SharedLinkAlreadyExistsMetadata.IsMetadata
+  commentId: P:Dropbox.Api.Sharing.SharedLinkAlreadyExistsMetadata.IsMetadata
+  parent: Dropbox.Api.Sharing.SharedLinkAlreadyExistsMetadata
+  name: IsMetadata
+  nameWithType: SharedLinkAlreadyExistsMetadata.IsMetadata
+  fullName: Dropbox.Api.Sharing.SharedLinkAlreadyExistsMetadata.IsMetadata
+- uid: Dropbox.Api.Sharing.SharedLinkAlreadyExistsMetadata.AsMetadata
+  commentId: P:Dropbox.Api.Sharing.SharedLinkAlreadyExistsMetadata.AsMetadata
+  parent: Dropbox.Api.Sharing.SharedLinkAlreadyExistsMetadata
+  name: AsMetadata
+  nameWithType: SharedLinkAlreadyExistsMetadata.AsMetadata
+  fullName: Dropbox.Api.Sharing.SharedLinkAlreadyExistsMetadata.AsMetadata
+- uid: Dropbox.Api.Sharing.SharedLinkAlreadyExistsMetadata.IsOther
+  commentId: P:Dropbox.Api.Sharing.SharedLinkAlreadyExistsMetadata.IsOther
+  parent: Dropbox.Api.Sharing.SharedLinkAlreadyExistsMetadata
+  name: IsOther
+  nameWithType: SharedLinkAlreadyExistsMetadata.IsOther
+  fullName: Dropbox.Api.Sharing.SharedLinkAlreadyExistsMetadata.IsOther
+- uid: Dropbox.Api.Sharing.SharedLinkAlreadyExistsMetadata.AsOther
+  commentId: P:Dropbox.Api.Sharing.SharedLinkAlreadyExistsMetadata.AsOther
+  parent: Dropbox.Api.Sharing.SharedLinkAlreadyExistsMetadata
+  name: AsOther
+  nameWithType: SharedLinkAlreadyExistsMetadata.AsOther
+  fullName: Dropbox.Api.Sharing.SharedLinkAlreadyExistsMetadata.AsOther
+- uid: Dropbox.Api.Sharing.SharedLinkAlreadyExistsMetadata.Other
+  commentId: T:Dropbox.Api.Sharing.SharedLinkAlreadyExistsMetadata.Other
+  parent: Dropbox.Api.Sharing
+  name: SharedLinkAlreadyExistsMetadata.Other
+  nameWithType: SharedLinkAlreadyExistsMetadata.Other
+  fullName: Dropbox.Api.Sharing.SharedLinkAlreadyExistsMetadata.Other
+shouldSkipMarkup: true

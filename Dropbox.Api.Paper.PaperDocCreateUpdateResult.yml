@@ -1,0 +1,291 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Paper.PaperDocCreateUpdateResult
+  commentId: T:Dropbox.Api.Paper.PaperDocCreateUpdateResult
+  id: PaperDocCreateUpdateResult
+  parent: Dropbox.Api.Paper
+  children:
+  - Dropbox.Api.Paper.PaperDocCreateUpdateResult.#ctor
+  - Dropbox.Api.Paper.PaperDocCreateUpdateResult.#ctor(System.String,System.Int64,System.String)
+  - Dropbox.Api.Paper.PaperDocCreateUpdateResult.DocId
+  - Dropbox.Api.Paper.PaperDocCreateUpdateResult.Revision
+  - Dropbox.Api.Paper.PaperDocCreateUpdateResult.Title
+  langs:
+  - csharp
+  - vb
+  name: PaperDocCreateUpdateResult
+  nameWithType: PaperDocCreateUpdateResult
+  fullName: Dropbox.Api.Paper.PaperDocCreateUpdateResult
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperDocCreateUpdateResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PaperDocCreateUpdateResult
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperDocCreateUpdateResult.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>The paper doc create update result object</p>\n"
+  example: []
+  syntax:
+    content: 'public class PaperDocCreateUpdateResult : object'
+    content.vb: >-
+      Public Class PaperDocCreateUpdateResult
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Paper.PaperDocCreateUpdateResult.#ctor(System.String,System.Int64,System.String)
+  commentId: M:Dropbox.Api.Paper.PaperDocCreateUpdateResult.#ctor(System.String,System.Int64,System.String)
+  id: '#ctor(System.String,System.Int64,System.String)'
+  parent: Dropbox.Api.Paper.PaperDocCreateUpdateResult
+  langs:
+  - csharp
+  - vb
+  name: PaperDocCreateUpdateResult(String, Int64, String)
+  nameWithType: PaperDocCreateUpdateResult.PaperDocCreateUpdateResult(String, Int64, String)
+  fullName: Dropbox.Api.Paper.PaperDocCreateUpdateResult.PaperDocCreateUpdateResult(System.String, System.Int64, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperDocCreateUpdateResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperDocCreateUpdateResult.cs
+    startLine: 37
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Paper.PaperDocCreateUpdateResult\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public PaperDocCreateUpdateResult(string docId, long revision, string title)
+    parameters:
+    - id: docId
+      type: System.String
+      description: Doc ID of the newly created doc.
+    - id: revision
+      type: System.Int64
+      description: >-
+        The Paper doc revision. Simply an ever increasing
+
+        number.
+    - id: title
+      type: System.String
+      description: The Paper doc title.
+    content.vb: Public Sub New(docId As String, revision As Long, title As String)
+  overload: Dropbox.Api.Paper.PaperDocCreateUpdateResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Paper.PaperDocCreateUpdateResult.#ctor
+  commentId: M:Dropbox.Api.Paper.PaperDocCreateUpdateResult.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Paper.PaperDocCreateUpdateResult
+  langs:
+  - csharp
+  - vb
+  name: PaperDocCreateUpdateResult()
+  nameWithType: PaperDocCreateUpdateResult.PaperDocCreateUpdateResult()
+  fullName: Dropbox.Api.Paper.PaperDocCreateUpdateResult.PaperDocCreateUpdateResult()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperDocCreateUpdateResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperDocCreateUpdateResult.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Paper.PaperDocCreateUpdateResult\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public PaperDocCreateUpdateResult()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Paper.PaperDocCreateUpdateResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Paper.PaperDocCreateUpdateResult.DocId
+  commentId: P:Dropbox.Api.Paper.PaperDocCreateUpdateResult.DocId
+  id: DocId
+  parent: Dropbox.Api.Paper.PaperDocCreateUpdateResult
+  langs:
+  - csharp
+  - vb
+  name: DocId
+  nameWithType: PaperDocCreateUpdateResult.DocId
+  fullName: Dropbox.Api.Paper.PaperDocCreateUpdateResult.DocId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperDocCreateUpdateResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: DocId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperDocCreateUpdateResult.cs
+    startLine: 70
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Doc ID of the newly created doc.</p>\n"
+  example: []
+  syntax:
+    content: public string DocId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property DocId As String
+  overload: Dropbox.Api.Paper.PaperDocCreateUpdateResult.DocId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Paper.PaperDocCreateUpdateResult.Revision
+  commentId: P:Dropbox.Api.Paper.PaperDocCreateUpdateResult.Revision
+  id: Revision
+  parent: Dropbox.Api.Paper.PaperDocCreateUpdateResult
+  langs:
+  - csharp
+  - vb
+  name: Revision
+  nameWithType: PaperDocCreateUpdateResult.Revision
+  fullName: Dropbox.Api.Paper.PaperDocCreateUpdateResult.Revision
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperDocCreateUpdateResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Revision
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperDocCreateUpdateResult.cs
+    startLine: 75
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>The Paper doc revision. Simply an ever increasing number.</p>\n"
+  example: []
+  syntax:
+    content: public long Revision { get; protected set; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: Public Property Revision As Long
+  overload: Dropbox.Api.Paper.PaperDocCreateUpdateResult.Revision*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Paper.PaperDocCreateUpdateResult.Title
+  commentId: P:Dropbox.Api.Paper.PaperDocCreateUpdateResult.Title
+  id: Title
+  parent: Dropbox.Api.Paper.PaperDocCreateUpdateResult
+  langs:
+  - csharp
+  - vb
+  name: Title
+  nameWithType: PaperDocCreateUpdateResult.Title
+  fullName: Dropbox.Api.Paper.PaperDocCreateUpdateResult.Title
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperDocCreateUpdateResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Title
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperDocCreateUpdateResult.cs
+    startLine: 80
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>The Paper doc title.</p>\n"
+  example: []
+  syntax:
+    content: public string Title { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Title As String
+  overload: Dropbox.Api.Paper.PaperDocCreateUpdateResult.Title*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Paper
+  commentId: N:Dropbox.Api.Paper
+  name: Dropbox.Api.Paper
+  nameWithType: Dropbox.Api.Paper
+  fullName: Dropbox.Api.Paper
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Paper.PaperDocCreateUpdateResult
+  commentId: T:Dropbox.Api.Paper.PaperDocCreateUpdateResult
+  parent: Dropbox.Api.Paper
+  name: PaperDocCreateUpdateResult
+  nameWithType: PaperDocCreateUpdateResult
+  fullName: Dropbox.Api.Paper.PaperDocCreateUpdateResult
+- uid: Dropbox.Api.Paper.PaperDocCreateUpdateResult.#ctor*
+  commentId: Overload:Dropbox.Api.Paper.PaperDocCreateUpdateResult.#ctor
+  name: PaperDocCreateUpdateResult
+  nameWithType: PaperDocCreateUpdateResult.PaperDocCreateUpdateResult
+  fullName: Dropbox.Api.Paper.PaperDocCreateUpdateResult.PaperDocCreateUpdateResult
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Int64
+  isExternal: true
+  name: Int64
+  nameWithType: Int64
+  fullName: System.Int64
+- uid: Dropbox.Api.Paper.PaperDocCreateUpdateResult.DocId*
+  commentId: Overload:Dropbox.Api.Paper.PaperDocCreateUpdateResult.DocId
+  name: DocId
+  nameWithType: PaperDocCreateUpdateResult.DocId
+  fullName: Dropbox.Api.Paper.PaperDocCreateUpdateResult.DocId
+- uid: Dropbox.Api.Paper.PaperDocCreateUpdateResult.Revision*
+  commentId: Overload:Dropbox.Api.Paper.PaperDocCreateUpdateResult.Revision
+  name: Revision
+  nameWithType: PaperDocCreateUpdateResult.Revision
+  fullName: Dropbox.Api.Paper.PaperDocCreateUpdateResult.Revision
+- uid: Dropbox.Api.Paper.PaperDocCreateUpdateResult.Title*
+  commentId: Overload:Dropbox.Api.Paper.PaperDocCreateUpdateResult.Title
+  name: Title
+  nameWithType: PaperDocCreateUpdateResult.Title
+  fullName: Dropbox.Api.Paper.PaperDocCreateUpdateResult.Title
+shouldSkipMarkup: true

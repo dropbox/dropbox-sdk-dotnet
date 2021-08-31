@@ -1,0 +1,235 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.LegalHoldsAddMembersDetails
+  commentId: T:Dropbox.Api.TeamLog.LegalHoldsAddMembersDetails
+  id: LegalHoldsAddMembersDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.LegalHoldsAddMembersDetails.#ctor
+  - Dropbox.Api.TeamLog.LegalHoldsAddMembersDetails.#ctor(System.String,System.String)
+  - Dropbox.Api.TeamLog.LegalHoldsAddMembersDetails.LegalHoldId
+  - Dropbox.Api.TeamLog.LegalHoldsAddMembersDetails.Name
+  langs:
+  - csharp
+  - vb
+  name: LegalHoldsAddMembersDetails
+  nameWithType: LegalHoldsAddMembersDetails
+  fullName: Dropbox.Api.TeamLog.LegalHoldsAddMembersDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LegalHoldsAddMembersDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: LegalHoldsAddMembersDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LegalHoldsAddMembersDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Added members to a hold.</p>\n"
+  example: []
+  syntax:
+    content: 'public class LegalHoldsAddMembersDetails : object'
+    content.vb: >-
+      Public Class LegalHoldsAddMembersDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.LegalHoldsAddMembersDetails.#ctor(System.String,System.String)
+  commentId: M:Dropbox.Api.TeamLog.LegalHoldsAddMembersDetails.#ctor(System.String,System.String)
+  id: '#ctor(System.String,System.String)'
+  parent: Dropbox.Api.TeamLog.LegalHoldsAddMembersDetails
+  langs:
+  - csharp
+  - vb
+  name: LegalHoldsAddMembersDetails(String, String)
+  nameWithType: LegalHoldsAddMembersDetails.LegalHoldsAddMembersDetails(String, String)
+  fullName: Dropbox.Api.TeamLog.LegalHoldsAddMembersDetails.LegalHoldsAddMembersDetails(System.String, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LegalHoldsAddMembersDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LegalHoldsAddMembersDetails.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.LegalHoldsAddMembersDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public LegalHoldsAddMembersDetails(string legalHoldId, string name)
+    parameters:
+    - id: legalHoldId
+      type: System.String
+      description: Hold ID.
+    - id: name
+      type: System.String
+      description: Hold name.
+    content.vb: Public Sub New(legalHoldId As String, name As String)
+  overload: Dropbox.Api.TeamLog.LegalHoldsAddMembersDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.LegalHoldsAddMembersDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.LegalHoldsAddMembersDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.LegalHoldsAddMembersDetails
+  langs:
+  - csharp
+  - vb
+  name: LegalHoldsAddMembersDetails()
+  nameWithType: LegalHoldsAddMembersDetails.LegalHoldsAddMembersDetails()
+  fullName: Dropbox.Api.TeamLog.LegalHoldsAddMembersDetails.LegalHoldsAddMembersDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LegalHoldsAddMembersDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LegalHoldsAddMembersDetails.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.LegalHoldsAddMembersDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public LegalHoldsAddMembersDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.LegalHoldsAddMembersDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.LegalHoldsAddMembersDetails.LegalHoldId
+  commentId: P:Dropbox.Api.TeamLog.LegalHoldsAddMembersDetails.LegalHoldId
+  id: LegalHoldId
+  parent: Dropbox.Api.TeamLog.LegalHoldsAddMembersDetails
+  langs:
+  - csharp
+  - vb
+  name: LegalHoldId
+  nameWithType: LegalHoldsAddMembersDetails.LegalHoldId
+  fullName: Dropbox.Api.TeamLog.LegalHoldsAddMembersDetails.LegalHoldId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LegalHoldsAddMembersDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: LegalHoldId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LegalHoldsAddMembersDetails.cs
+    startLine: 66
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Hold ID.</p>\n"
+  example: []
+  syntax:
+    content: public string LegalHoldId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property LegalHoldId As String
+  overload: Dropbox.Api.TeamLog.LegalHoldsAddMembersDetails.LegalHoldId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.LegalHoldsAddMembersDetails.Name
+  commentId: P:Dropbox.Api.TeamLog.LegalHoldsAddMembersDetails.Name
+  id: Name
+  parent: Dropbox.Api.TeamLog.LegalHoldsAddMembersDetails
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: LegalHoldsAddMembersDetails.Name
+  fullName: Dropbox.Api.TeamLog.LegalHoldsAddMembersDetails.Name
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LegalHoldsAddMembersDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Name
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LegalHoldsAddMembersDetails.cs
+    startLine: 71
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Hold name.</p>\n"
+  example: []
+  syntax:
+    content: public string Name { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: Dropbox.Api.TeamLog.LegalHoldsAddMembersDetails.Name*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.LegalHoldsAddMembersDetails
+  commentId: T:Dropbox.Api.TeamLog.LegalHoldsAddMembersDetails
+  parent: Dropbox.Api.TeamLog
+  name: LegalHoldsAddMembersDetails
+  nameWithType: LegalHoldsAddMembersDetails
+  fullName: Dropbox.Api.TeamLog.LegalHoldsAddMembersDetails
+- uid: Dropbox.Api.TeamLog.LegalHoldsAddMembersDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.LegalHoldsAddMembersDetails.#ctor
+  name: LegalHoldsAddMembersDetails
+  nameWithType: LegalHoldsAddMembersDetails.LegalHoldsAddMembersDetails
+  fullName: Dropbox.Api.TeamLog.LegalHoldsAddMembersDetails.LegalHoldsAddMembersDetails
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.LegalHoldsAddMembersDetails.LegalHoldId*
+  commentId: Overload:Dropbox.Api.TeamLog.LegalHoldsAddMembersDetails.LegalHoldId
+  name: LegalHoldId
+  nameWithType: LegalHoldsAddMembersDetails.LegalHoldId
+  fullName: Dropbox.Api.TeamLog.LegalHoldsAddMembersDetails.LegalHoldId
+- uid: Dropbox.Api.TeamLog.LegalHoldsAddMembersDetails.Name*
+  commentId: Overload:Dropbox.Api.TeamLog.LegalHoldsAddMembersDetails.Name
+  name: Name
+  nameWithType: LegalHoldsAddMembersDetails.Name
+  fullName: Dropbox.Api.TeamLog.LegalHoldsAddMembersDetails.Name
+shouldSkipMarkup: true

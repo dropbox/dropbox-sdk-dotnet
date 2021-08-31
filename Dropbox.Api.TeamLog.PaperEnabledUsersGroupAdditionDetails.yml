@@ -1,0 +1,96 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.PaperEnabledUsersGroupAdditionDetails
+  commentId: T:Dropbox.Api.TeamLog.PaperEnabledUsersGroupAdditionDetails
+  id: PaperEnabledUsersGroupAdditionDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.PaperEnabledUsersGroupAdditionDetails.#ctor
+  langs:
+  - csharp
+  - vb
+  name: PaperEnabledUsersGroupAdditionDetails
+  nameWithType: PaperEnabledUsersGroupAdditionDetails
+  fullName: Dropbox.Api.TeamLog.PaperEnabledUsersGroupAdditionDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperEnabledUsersGroupAdditionDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PaperEnabledUsersGroupAdditionDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperEnabledUsersGroupAdditionDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Added users to Paper-enabled users list.</p>\n"
+  example: []
+  syntax:
+    content: 'public class PaperEnabledUsersGroupAdditionDetails : object'
+    content.vb: >-
+      Public Class PaperEnabledUsersGroupAdditionDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.PaperEnabledUsersGroupAdditionDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.PaperEnabledUsersGroupAdditionDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.PaperEnabledUsersGroupAdditionDetails
+  langs:
+  - csharp
+  - vb
+  name: PaperEnabledUsersGroupAdditionDetails()
+  nameWithType: PaperEnabledUsersGroupAdditionDetails.PaperEnabledUsersGroupAdditionDetails()
+  fullName: Dropbox.Api.TeamLog.PaperEnabledUsersGroupAdditionDetails.PaperEnabledUsersGroupAdditionDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperEnabledUsersGroupAdditionDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperEnabledUsersGroupAdditionDetails.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.PaperEnabledUsersGroupAdditionDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public PaperEnabledUsersGroupAdditionDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.PaperEnabledUsersGroupAdditionDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.PaperEnabledUsersGroupAdditionDetails
+  commentId: T:Dropbox.Api.TeamLog.PaperEnabledUsersGroupAdditionDetails
+  parent: Dropbox.Api.TeamLog
+  name: PaperEnabledUsersGroupAdditionDetails
+  nameWithType: PaperEnabledUsersGroupAdditionDetails
+  fullName: Dropbox.Api.TeamLog.PaperEnabledUsersGroupAdditionDetails
+- uid: Dropbox.Api.TeamLog.PaperEnabledUsersGroupAdditionDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.PaperEnabledUsersGroupAdditionDetails.#ctor
+  name: PaperEnabledUsersGroupAdditionDetails
+  nameWithType: PaperEnabledUsersGroupAdditionDetails.PaperEnabledUsersGroupAdditionDetails
+  fullName: Dropbox.Api.TeamLog.PaperEnabledUsersGroupAdditionDetails.PaperEnabledUsersGroupAdditionDetails
+shouldSkipMarkup: true

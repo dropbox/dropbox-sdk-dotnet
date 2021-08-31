@@ -1,0 +1,193 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.GetSharedLinksArg
+  commentId: T:Dropbox.Api.Sharing.GetSharedLinksArg
+  id: GetSharedLinksArg
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.GetSharedLinksArg.#ctor
+  - Dropbox.Api.Sharing.GetSharedLinksArg.#ctor(System.String)
+  - Dropbox.Api.Sharing.GetSharedLinksArg.Path
+  langs:
+  - csharp
+  - vb
+  name: GetSharedLinksArg
+  nameWithType: GetSharedLinksArg
+  fullName: Dropbox.Api.Sharing.GetSharedLinksArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetSharedLinksArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GetSharedLinksArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetSharedLinksArg.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The get shared links arg object</p>\n"
+  example: []
+  syntax:
+    content: 'public class GetSharedLinksArg : object'
+    content.vb: >-
+      Public Class GetSharedLinksArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Sharing.GetSharedLinksArg.#ctor(System.String)
+  commentId: M:Dropbox.Api.Sharing.GetSharedLinksArg.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.Sharing.GetSharedLinksArg
+  langs:
+  - csharp
+  - vb
+  name: GetSharedLinksArg(String)
+  nameWithType: GetSharedLinksArg.GetSharedLinksArg(String)
+  fullName: Dropbox.Api.Sharing.GetSharedLinksArg.GetSharedLinksArg(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetSharedLinksArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetSharedLinksArg.cs
+    startLine: 36
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.GetSharedLinksArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public GetSharedLinksArg(string path = null)
+    parameters:
+    - id: path
+      type: System.String
+      description: >-
+        See <xref href="Dropbox.Api.Sharing.Routes.SharingUserRoutes.GetSharedLinksAsync(Dropbox.Api.Sharing.GetSharedLinksArg)" data-throw-if-not-resolved="false"></xref>
+
+        description.
+    content.vb: Public Sub New(path As String = Nothing)
+  overload: Dropbox.Api.Sharing.GetSharedLinksArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.GetSharedLinksArg.#ctor
+  commentId: M:Dropbox.Api.Sharing.GetSharedLinksArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Sharing.GetSharedLinksArg
+  langs:
+  - csharp
+  - vb
+  name: GetSharedLinksArg()
+  nameWithType: GetSharedLinksArg.GetSharedLinksArg()
+  fullName: Dropbox.Api.Sharing.GetSharedLinksArg.GetSharedLinksArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetSharedLinksArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetSharedLinksArg.cs
+    startLine: 47
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.GetSharedLinksArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public GetSharedLinksArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Sharing.GetSharedLinksArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.GetSharedLinksArg.Path
+  commentId: P:Dropbox.Api.Sharing.GetSharedLinksArg.Path
+  id: Path
+  parent: Dropbox.Api.Sharing.GetSharedLinksArg
+  langs:
+  - csharp
+  - vb
+  name: Path
+  nameWithType: GetSharedLinksArg.Path
+  fullName: Dropbox.Api.Sharing.GetSharedLinksArg.Path
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetSharedLinksArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Path
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/GetSharedLinksArg.cs
+    startLine: 57
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>See <xref href=\"Dropbox.Api.Sharing.Routes.SharingUserRoutes.GetSharedLinksAsync(Dropbox.Api.Sharing.GetSharedLinksArg)\" data-throw-if-not-resolved=\"false\"></xref>\ndescription.</p>\n"
+  example: []
+  syntax:
+    content: public string Path { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Path As String
+  overload: Dropbox.Api.Sharing.GetSharedLinksArg.Path*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.GetSharedLinksArg
+  commentId: T:Dropbox.Api.Sharing.GetSharedLinksArg
+  parent: Dropbox.Api.Sharing
+  name: GetSharedLinksArg
+  nameWithType: GetSharedLinksArg
+  fullName: Dropbox.Api.Sharing.GetSharedLinksArg
+- uid: Dropbox.Api.Sharing.Routes.SharingUserRoutes.GetSharedLinksAsync(Dropbox.Api.Sharing.GetSharedLinksArg)
+  commentId: M:Dropbox.Api.Sharing.Routes.SharingUserRoutes.GetSharedLinksAsync(Dropbox.Api.Sharing.GetSharedLinksArg)
+  isExternal: true
+- uid: Dropbox.Api.Sharing.GetSharedLinksArg.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.GetSharedLinksArg.#ctor
+  name: GetSharedLinksArg
+  nameWithType: GetSharedLinksArg.GetSharedLinksArg
+  fullName: Dropbox.Api.Sharing.GetSharedLinksArg.GetSharedLinksArg
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Sharing.GetSharedLinksArg.Path*
+  commentId: Overload:Dropbox.Api.Sharing.GetSharedLinksArg.Path
+  name: Path
+  nameWithType: GetSharedLinksArg.Path
+  fullName: Dropbox.Api.Sharing.GetSharedLinksArg.Path
+shouldSkipMarkup: true

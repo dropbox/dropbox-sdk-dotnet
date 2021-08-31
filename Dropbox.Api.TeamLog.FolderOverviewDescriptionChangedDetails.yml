@@ -1,0 +1,190 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.FolderOverviewDescriptionChangedDetails
+  commentId: T:Dropbox.Api.TeamLog.FolderOverviewDescriptionChangedDetails
+  id: FolderOverviewDescriptionChangedDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.FolderOverviewDescriptionChangedDetails.#ctor
+  - Dropbox.Api.TeamLog.FolderOverviewDescriptionChangedDetails.#ctor(System.UInt64)
+  - Dropbox.Api.TeamLog.FolderOverviewDescriptionChangedDetails.FolderOverviewLocationAsset
+  langs:
+  - csharp
+  - vb
+  name: FolderOverviewDescriptionChangedDetails
+  nameWithType: FolderOverviewDescriptionChangedDetails
+  fullName: Dropbox.Api.TeamLog.FolderOverviewDescriptionChangedDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FolderOverviewDescriptionChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: FolderOverviewDescriptionChangedDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FolderOverviewDescriptionChangedDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Updated folder overview.</p>\n"
+  example: []
+  syntax:
+    content: 'public class FolderOverviewDescriptionChangedDetails : object'
+    content.vb: >-
+      Public Class FolderOverviewDescriptionChangedDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.FolderOverviewDescriptionChangedDetails.#ctor(System.UInt64)
+  commentId: M:Dropbox.Api.TeamLog.FolderOverviewDescriptionChangedDetails.#ctor(System.UInt64)
+  id: '#ctor(System.UInt64)'
+  parent: Dropbox.Api.TeamLog.FolderOverviewDescriptionChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: FolderOverviewDescriptionChangedDetails(UInt64)
+  nameWithType: FolderOverviewDescriptionChangedDetails.FolderOverviewDescriptionChangedDetails(UInt64)
+  fullName: Dropbox.Api.TeamLog.FolderOverviewDescriptionChangedDetails.FolderOverviewDescriptionChangedDetails(System.UInt64)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FolderOverviewDescriptionChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FolderOverviewDescriptionChangedDetails.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.FolderOverviewDescriptionChangedDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public FolderOverviewDescriptionChangedDetails(ulong folderOverviewLocationAsset)
+    parameters:
+    - id: folderOverviewLocationAsset
+      type: System.UInt64
+      description: >-
+        Folder Overview location position in the
+
+        Assets list.
+    content.vb: Public Sub New(folderOverviewLocationAsset As ULong)
+  overload: Dropbox.Api.TeamLog.FolderOverviewDescriptionChangedDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.FolderOverviewDescriptionChangedDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.FolderOverviewDescriptionChangedDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.FolderOverviewDescriptionChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: FolderOverviewDescriptionChangedDetails()
+  nameWithType: FolderOverviewDescriptionChangedDetails.FolderOverviewDescriptionChangedDetails()
+  fullName: Dropbox.Api.TeamLog.FolderOverviewDescriptionChangedDetails.FolderOverviewDescriptionChangedDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FolderOverviewDescriptionChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FolderOverviewDescriptionChangedDetails.cs
+    startLine: 46
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.FolderOverviewDescriptionChangedDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public FolderOverviewDescriptionChangedDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.FolderOverviewDescriptionChangedDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.FolderOverviewDescriptionChangedDetails.FolderOverviewLocationAsset
+  commentId: P:Dropbox.Api.TeamLog.FolderOverviewDescriptionChangedDetails.FolderOverviewLocationAsset
+  id: FolderOverviewLocationAsset
+  parent: Dropbox.Api.TeamLog.FolderOverviewDescriptionChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: FolderOverviewLocationAsset
+  nameWithType: FolderOverviewDescriptionChangedDetails.FolderOverviewLocationAsset
+  fullName: Dropbox.Api.TeamLog.FolderOverviewDescriptionChangedDetails.FolderOverviewLocationAsset
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FolderOverviewDescriptionChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: FolderOverviewLocationAsset
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FolderOverviewDescriptionChangedDetails.cs
+    startLine: 54
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Folder Overview location position in the Assets list.</p>\n"
+  example: []
+  syntax:
+    content: public ulong FolderOverviewLocationAsset { get; protected set; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: Public Property FolderOverviewLocationAsset As ULong
+  overload: Dropbox.Api.TeamLog.FolderOverviewDescriptionChangedDetails.FolderOverviewLocationAsset*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.FolderOverviewDescriptionChangedDetails
+  commentId: T:Dropbox.Api.TeamLog.FolderOverviewDescriptionChangedDetails
+  parent: Dropbox.Api.TeamLog
+  name: FolderOverviewDescriptionChangedDetails
+  nameWithType: FolderOverviewDescriptionChangedDetails
+  fullName: Dropbox.Api.TeamLog.FolderOverviewDescriptionChangedDetails
+- uid: Dropbox.Api.TeamLog.FolderOverviewDescriptionChangedDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.FolderOverviewDescriptionChangedDetails.#ctor
+  name: FolderOverviewDescriptionChangedDetails
+  nameWithType: FolderOverviewDescriptionChangedDetails.FolderOverviewDescriptionChangedDetails
+  fullName: Dropbox.Api.TeamLog.FolderOverviewDescriptionChangedDetails.FolderOverviewDescriptionChangedDetails
+- uid: System.UInt64
+  isExternal: true
+  name: UInt64
+  nameWithType: UInt64
+  fullName: System.UInt64
+- uid: Dropbox.Api.TeamLog.FolderOverviewDescriptionChangedDetails.FolderOverviewLocationAsset*
+  commentId: Overload:Dropbox.Api.TeamLog.FolderOverviewDescriptionChangedDetails.FolderOverviewLocationAsset
+  name: FolderOverviewLocationAsset
+  nameWithType: FolderOverviewDescriptionChangedDetails.FolderOverviewLocationAsset
+  fullName: Dropbox.Api.TeamLog.FolderOverviewDescriptionChangedDetails.FolderOverviewLocationAsset
+shouldSkipMarkup: true

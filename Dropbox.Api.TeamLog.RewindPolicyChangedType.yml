@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.RewindPolicyChangedType
+  commentId: T:Dropbox.Api.TeamLog.RewindPolicyChangedType
+  id: RewindPolicyChangedType
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.RewindPolicyChangedType.#ctor
+  - Dropbox.Api.TeamLog.RewindPolicyChangedType.#ctor(System.String)
+  - Dropbox.Api.TeamLog.RewindPolicyChangedType.Description
+  langs:
+  - csharp
+  - vb
+  name: RewindPolicyChangedType
+  nameWithType: RewindPolicyChangedType
+  fullName: Dropbox.Api.TeamLog.RewindPolicyChangedType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/RewindPolicyChangedType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: RewindPolicyChangedType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/RewindPolicyChangedType.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The rewind policy changed type object</p>\n"
+  example: []
+  syntax:
+    content: 'public class RewindPolicyChangedType : object'
+    content.vb: >-
+      Public Class RewindPolicyChangedType
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.RewindPolicyChangedType.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.RewindPolicyChangedType.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.RewindPolicyChangedType
+  langs:
+  - csharp
+  - vb
+  name: RewindPolicyChangedType(String)
+  nameWithType: RewindPolicyChangedType.RewindPolicyChangedType(String)
+  fullName: Dropbox.Api.TeamLog.RewindPolicyChangedType.RewindPolicyChangedType(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/RewindPolicyChangedType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/RewindPolicyChangedType.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.RewindPolicyChangedType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public RewindPolicyChangedType(string description)
+    parameters:
+    - id: description
+      type: System.String
+      description: The description
+    content.vb: Public Sub New(description As String)
+  overload: Dropbox.Api.TeamLog.RewindPolicyChangedType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.RewindPolicyChangedType.#ctor
+  commentId: M:Dropbox.Api.TeamLog.RewindPolicyChangedType.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.RewindPolicyChangedType
+  langs:
+  - csharp
+  - vb
+  name: RewindPolicyChangedType()
+  nameWithType: RewindPolicyChangedType.RewindPolicyChangedType()
+  fullName: Dropbox.Api.TeamLog.RewindPolicyChangedType.RewindPolicyChangedType()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/RewindPolicyChangedType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/RewindPolicyChangedType.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.RewindPolicyChangedType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public RewindPolicyChangedType()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.RewindPolicyChangedType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.RewindPolicyChangedType.Description
+  commentId: P:Dropbox.Api.TeamLog.RewindPolicyChangedType.Description
+  id: Description
+  parent: Dropbox.Api.TeamLog.RewindPolicyChangedType
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: RewindPolicyChangedType.Description
+  fullName: Dropbox.Api.TeamLog.RewindPolicyChangedType.Description
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/RewindPolicyChangedType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Description
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/RewindPolicyChangedType.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets the description of the rewind policy changed type</p>\n"
+  example: []
+  syntax:
+    content: public string Description { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Dropbox.Api.TeamLog.RewindPolicyChangedType.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.RewindPolicyChangedType
+  commentId: T:Dropbox.Api.TeamLog.RewindPolicyChangedType
+  parent: Dropbox.Api.TeamLog
+  name: RewindPolicyChangedType
+  nameWithType: RewindPolicyChangedType
+  fullName: Dropbox.Api.TeamLog.RewindPolicyChangedType
+- uid: Dropbox.Api.TeamLog.RewindPolicyChangedType.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.RewindPolicyChangedType.#ctor
+  name: RewindPolicyChangedType
+  nameWithType: RewindPolicyChangedType.RewindPolicyChangedType
+  fullName: Dropbox.Api.TeamLog.RewindPolicyChangedType.RewindPolicyChangedType
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.RewindPolicyChangedType.Description*
+  commentId: Overload:Dropbox.Api.TeamLog.RewindPolicyChangedType.Description
+  name: Description
+  nameWithType: RewindPolicyChangedType.Description
+  fullName: Dropbox.Api.TeamLog.RewindPolicyChangedType.Description
+shouldSkipMarkup: true

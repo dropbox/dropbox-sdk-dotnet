@@ -1,0 +1,235 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.NoExpirationLinkGenCreateReportDetails
+  commentId: T:Dropbox.Api.TeamLog.NoExpirationLinkGenCreateReportDetails
+  id: NoExpirationLinkGenCreateReportDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.NoExpirationLinkGenCreateReportDetails.#ctor
+  - Dropbox.Api.TeamLog.NoExpirationLinkGenCreateReportDetails.#ctor(System.DateTime,System.DateTime)
+  - Dropbox.Api.TeamLog.NoExpirationLinkGenCreateReportDetails.EndDate
+  - Dropbox.Api.TeamLog.NoExpirationLinkGenCreateReportDetails.StartDate
+  langs:
+  - csharp
+  - vb
+  name: NoExpirationLinkGenCreateReportDetails
+  nameWithType: NoExpirationLinkGenCreateReportDetails
+  fullName: Dropbox.Api.TeamLog.NoExpirationLinkGenCreateReportDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/NoExpirationLinkGenCreateReportDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NoExpirationLinkGenCreateReportDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/NoExpirationLinkGenCreateReportDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Report created: Links created with no expiration.</p>\n"
+  example: []
+  syntax:
+    content: 'public class NoExpirationLinkGenCreateReportDetails : object'
+    content.vb: >-
+      Public Class NoExpirationLinkGenCreateReportDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.NoExpirationLinkGenCreateReportDetails.#ctor(System.DateTime,System.DateTime)
+  commentId: M:Dropbox.Api.TeamLog.NoExpirationLinkGenCreateReportDetails.#ctor(System.DateTime,System.DateTime)
+  id: '#ctor(System.DateTime,System.DateTime)'
+  parent: Dropbox.Api.TeamLog.NoExpirationLinkGenCreateReportDetails
+  langs:
+  - csharp
+  - vb
+  name: NoExpirationLinkGenCreateReportDetails(System.DateTime, System.DateTime)
+  nameWithType: NoExpirationLinkGenCreateReportDetails.NoExpirationLinkGenCreateReportDetails(System.DateTime, System.DateTime)
+  fullName: Dropbox.Api.TeamLog.NoExpirationLinkGenCreateReportDetails.NoExpirationLinkGenCreateReportDetails(System.DateTime, System.DateTime)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/NoExpirationLinkGenCreateReportDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/NoExpirationLinkGenCreateReportDetails.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.NoExpirationLinkGenCreateReportDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public NoExpirationLinkGenCreateReportDetails(System.DateTime startDate, System.DateTime endDate)
+    parameters:
+    - id: startDate
+      type: System.DateTime
+      description: Report start date.
+    - id: endDate
+      type: System.DateTime
+      description: Report end date.
+    content.vb: Public Sub New(startDate As System.DateTime, endDate As System.DateTime)
+  overload: Dropbox.Api.TeamLog.NoExpirationLinkGenCreateReportDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.NoExpirationLinkGenCreateReportDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.NoExpirationLinkGenCreateReportDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.NoExpirationLinkGenCreateReportDetails
+  langs:
+  - csharp
+  - vb
+  name: NoExpirationLinkGenCreateReportDetails()
+  nameWithType: NoExpirationLinkGenCreateReportDetails.NoExpirationLinkGenCreateReportDetails()
+  fullName: Dropbox.Api.TeamLog.NoExpirationLinkGenCreateReportDetails.NoExpirationLinkGenCreateReportDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/NoExpirationLinkGenCreateReportDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/NoExpirationLinkGenCreateReportDetails.cs
+    startLine: 48
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.NoExpirationLinkGenCreateReportDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public NoExpirationLinkGenCreateReportDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.NoExpirationLinkGenCreateReportDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.NoExpirationLinkGenCreateReportDetails.StartDate
+  commentId: P:Dropbox.Api.TeamLog.NoExpirationLinkGenCreateReportDetails.StartDate
+  id: StartDate
+  parent: Dropbox.Api.TeamLog.NoExpirationLinkGenCreateReportDetails
+  langs:
+  - csharp
+  - vb
+  name: StartDate
+  nameWithType: NoExpirationLinkGenCreateReportDetails.StartDate
+  fullName: Dropbox.Api.TeamLog.NoExpirationLinkGenCreateReportDetails.StartDate
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/NoExpirationLinkGenCreateReportDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: StartDate
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/NoExpirationLinkGenCreateReportDetails.cs
+    startLine: 56
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Report start date.</p>\n"
+  example: []
+  syntax:
+    content: public System.DateTime StartDate { get; protected set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Property StartDate As System.DateTime
+  overload: Dropbox.Api.TeamLog.NoExpirationLinkGenCreateReportDetails.StartDate*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.NoExpirationLinkGenCreateReportDetails.EndDate
+  commentId: P:Dropbox.Api.TeamLog.NoExpirationLinkGenCreateReportDetails.EndDate
+  id: EndDate
+  parent: Dropbox.Api.TeamLog.NoExpirationLinkGenCreateReportDetails
+  langs:
+  - csharp
+  - vb
+  name: EndDate
+  nameWithType: NoExpirationLinkGenCreateReportDetails.EndDate
+  fullName: Dropbox.Api.TeamLog.NoExpirationLinkGenCreateReportDetails.EndDate
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/NoExpirationLinkGenCreateReportDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: EndDate
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/NoExpirationLinkGenCreateReportDetails.cs
+    startLine: 61
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Report end date.</p>\n"
+  example: []
+  syntax:
+    content: public System.DateTime EndDate { get; protected set; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Property EndDate As System.DateTime
+  overload: Dropbox.Api.TeamLog.NoExpirationLinkGenCreateReportDetails.EndDate*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.NoExpirationLinkGenCreateReportDetails
+  commentId: T:Dropbox.Api.TeamLog.NoExpirationLinkGenCreateReportDetails
+  parent: Dropbox.Api.TeamLog
+  name: NoExpirationLinkGenCreateReportDetails
+  nameWithType: NoExpirationLinkGenCreateReportDetails
+  fullName: Dropbox.Api.TeamLog.NoExpirationLinkGenCreateReportDetails
+- uid: Dropbox.Api.TeamLog.NoExpirationLinkGenCreateReportDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.NoExpirationLinkGenCreateReportDetails.#ctor
+  name: NoExpirationLinkGenCreateReportDetails
+  nameWithType: NoExpirationLinkGenCreateReportDetails.NoExpirationLinkGenCreateReportDetails
+  fullName: Dropbox.Api.TeamLog.NoExpirationLinkGenCreateReportDetails.NoExpirationLinkGenCreateReportDetails
+- uid: System.DateTime
+  isExternal: true
+  name: System.DateTime
+  nameWithType: System.DateTime
+  fullName: System.DateTime
+- uid: Dropbox.Api.TeamLog.NoExpirationLinkGenCreateReportDetails.StartDate*
+  commentId: Overload:Dropbox.Api.TeamLog.NoExpirationLinkGenCreateReportDetails.StartDate
+  name: StartDate
+  nameWithType: NoExpirationLinkGenCreateReportDetails.StartDate
+  fullName: Dropbox.Api.TeamLog.NoExpirationLinkGenCreateReportDetails.StartDate
+- uid: Dropbox.Api.TeamLog.NoExpirationLinkGenCreateReportDetails.EndDate*
+  commentId: Overload:Dropbox.Api.TeamLog.NoExpirationLinkGenCreateReportDetails.EndDate
+  name: EndDate
+  nameWithType: NoExpirationLinkGenCreateReportDetails.EndDate
+  fullName: Dropbox.Api.TeamLog.NoExpirationLinkGenCreateReportDetails.EndDate
+shouldSkipMarkup: true

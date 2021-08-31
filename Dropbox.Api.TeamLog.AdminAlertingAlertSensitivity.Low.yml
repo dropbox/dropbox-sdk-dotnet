@@ -1,0 +1,204 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.Low
+  commentId: T:Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.Low
+  id: AdminAlertingAlertSensitivity.Low
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.Low.Instance
+  langs:
+  - csharp
+  - vb
+  name: AdminAlertingAlertSensitivity.Low
+  nameWithType: AdminAlertingAlertSensitivity.Low
+  fullName: Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.Low
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertingAlertSensitivity.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Low
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertingAlertSensitivity.cs
+    startLine: 510
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The low object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Low : AdminAlertingAlertSensitivity'
+    content.vb: >-
+      Public NotInheritable Class Low
+          Inherits AdminAlertingAlertSensitivity
+  inheritance:
+  - System.Object
+  - Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity
+  inheritedMembers:
+  - Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.IsHigh
+  - Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.AsHigh
+  - Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.IsHighest
+  - Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.AsHighest
+  - Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.IsInvalid
+  - Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.AsInvalid
+  - Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.IsLow
+  - Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.AsLow
+  - Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.IsLowest
+  - Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.AsLowest
+  - Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.IsMedium
+  - Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.AsMedium
+  - Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.IsOther
+  - Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.Low.Instance
+  commentId: F:Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.Low.Instance
+  id: Instance
+  parent: Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.Low
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: AdminAlertingAlertSensitivity.Low.Instance
+  fullName: Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.Low.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertingAlertSensitivity.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AdminAlertingAlertSensitivity.cs
+    startLine: 534
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>A singleton instance of Low</p>\n"
+  example: []
+  syntax:
+    content: public static readonly AdminAlertingAlertSensitivity.Low Instance
+    return:
+      type: Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.Low
+    content.vb: Public Shared ReadOnly Instance As AdminAlertingAlertSensitivity.Low
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity
+  commentId: T:Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity
+  parent: Dropbox.Api.TeamLog
+  name: AdminAlertingAlertSensitivity
+  nameWithType: AdminAlertingAlertSensitivity
+  fullName: Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity
+- uid: Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.IsHigh
+  commentId: P:Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.IsHigh
+  parent: Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity
+  name: IsHigh
+  nameWithType: AdminAlertingAlertSensitivity.IsHigh
+  fullName: Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.IsHigh
+- uid: Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.AsHigh
+  commentId: P:Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.AsHigh
+  parent: Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity
+  name: AsHigh
+  nameWithType: AdminAlertingAlertSensitivity.AsHigh
+  fullName: Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.AsHigh
+- uid: Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.IsHighest
+  commentId: P:Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.IsHighest
+  parent: Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity
+  name: IsHighest
+  nameWithType: AdminAlertingAlertSensitivity.IsHighest
+  fullName: Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.IsHighest
+- uid: Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.AsHighest
+  commentId: P:Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.AsHighest
+  parent: Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity
+  name: AsHighest
+  nameWithType: AdminAlertingAlertSensitivity.AsHighest
+  fullName: Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.AsHighest
+- uid: Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.IsInvalid
+  commentId: P:Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.IsInvalid
+  parent: Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity
+  name: IsInvalid
+  nameWithType: AdminAlertingAlertSensitivity.IsInvalid
+  fullName: Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.IsInvalid
+- uid: Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.AsInvalid
+  commentId: P:Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.AsInvalid
+  parent: Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity
+  name: AsInvalid
+  nameWithType: AdminAlertingAlertSensitivity.AsInvalid
+  fullName: Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.AsInvalid
+- uid: Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.IsLow
+  commentId: P:Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.IsLow
+  parent: Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity
+  name: IsLow
+  nameWithType: AdminAlertingAlertSensitivity.IsLow
+  fullName: Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.IsLow
+- uid: Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.AsLow
+  commentId: P:Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.AsLow
+  parent: Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity
+  name: AsLow
+  nameWithType: AdminAlertingAlertSensitivity.AsLow
+  fullName: Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.AsLow
+- uid: Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.IsLowest
+  commentId: P:Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.IsLowest
+  parent: Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity
+  name: IsLowest
+  nameWithType: AdminAlertingAlertSensitivity.IsLowest
+  fullName: Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.IsLowest
+- uid: Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.AsLowest
+  commentId: P:Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.AsLowest
+  parent: Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity
+  name: AsLowest
+  nameWithType: AdminAlertingAlertSensitivity.AsLowest
+  fullName: Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.AsLowest
+- uid: Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.IsMedium
+  commentId: P:Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.IsMedium
+  parent: Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity
+  name: IsMedium
+  nameWithType: AdminAlertingAlertSensitivity.IsMedium
+  fullName: Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.IsMedium
+- uid: Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.AsMedium
+  commentId: P:Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.AsMedium
+  parent: Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity
+  name: AsMedium
+  nameWithType: AdminAlertingAlertSensitivity.AsMedium
+  fullName: Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.AsMedium
+- uid: Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.IsOther
+  commentId: P:Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.IsOther
+  parent: Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity
+  name: IsOther
+  nameWithType: AdminAlertingAlertSensitivity.IsOther
+  fullName: Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.IsOther
+- uid: Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.AsOther
+  commentId: P:Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.AsOther
+  parent: Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity
+  name: AsOther
+  nameWithType: AdminAlertingAlertSensitivity.AsOther
+  fullName: Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.AsOther
+- uid: Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.Low
+  commentId: T:Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.Low
+  parent: Dropbox.Api.TeamLog
+  name: AdminAlertingAlertSensitivity.Low
+  nameWithType: AdminAlertingAlertSensitivity.Low
+  fullName: Dropbox.Api.TeamLog.AdminAlertingAlertSensitivity.Low
+shouldSkipMarkup: true

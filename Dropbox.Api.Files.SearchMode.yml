@@ -1,0 +1,381 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.SearchMode
+  commentId: T:Dropbox.Api.Files.SearchMode
+  id: SearchMode
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.SearchMode.#ctor
+  - Dropbox.Api.Files.SearchMode.AsDeletedFilename
+  - Dropbox.Api.Files.SearchMode.AsFilename
+  - Dropbox.Api.Files.SearchMode.AsFilenameAndContent
+  - Dropbox.Api.Files.SearchMode.IsDeletedFilename
+  - Dropbox.Api.Files.SearchMode.IsFilename
+  - Dropbox.Api.Files.SearchMode.IsFilenameAndContent
+  langs:
+  - csharp
+  - vb
+  name: SearchMode
+  nameWithType: SearchMode
+  fullName: Dropbox.Api.Files.SearchMode
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchMode.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SearchMode
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchMode.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The search mode object</p>\n"
+  example: []
+  syntax:
+    content: 'public class SearchMode : object'
+    content.vb: >-
+      Public Class SearchMode
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Files.SearchMode.DeletedFilename
+  - Dropbox.Api.Files.SearchMode.Filename
+  - Dropbox.Api.Files.SearchMode.FilenameAndContent
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.SearchMode.#ctor
+  commentId: M:Dropbox.Api.Files.SearchMode.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.SearchMode
+  langs:
+  - csharp
+  - vb
+  name: SearchMode()
+  nameWithType: SearchMode.SearchMode()
+  fullName: Dropbox.Api.Files.SearchMode.SearchMode()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchMode.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchMode.cs
+    startLine: 32
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.SearchMode\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public SearchMode()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.SearchMode.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.SearchMode.IsFilename
+  commentId: P:Dropbox.Api.Files.SearchMode.IsFilename
+  id: IsFilename
+  parent: Dropbox.Api.Files.SearchMode
+  langs:
+  - csharp
+  - vb
+  name: IsFilename
+  nameWithType: SearchMode.IsFilename
+  fullName: Dropbox.Api.Files.SearchMode.IsFilename
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchMode.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsFilename
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchMode.cs
+    startLine: 39
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is Filename</p>\n"
+  example: []
+  syntax:
+    content: public bool IsFilename { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsFilename As Boolean
+  overload: Dropbox.Api.Files.SearchMode.IsFilename*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.SearchMode.AsFilename
+  commentId: P:Dropbox.Api.Files.SearchMode.AsFilename
+  id: AsFilename
+  parent: Dropbox.Api.Files.SearchMode
+  langs:
+  - csharp
+  - vb
+  name: AsFilename
+  nameWithType: SearchMode.AsFilename
+  fullName: Dropbox.Api.Files.SearchMode.AsFilename
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchMode.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsFilename
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchMode.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a Filename, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SearchMode.Filename AsFilename { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.SearchMode.Filename
+    content.vb: Public ReadOnly Property AsFilename As SearchMode.Filename
+  overload: Dropbox.Api.Files.SearchMode.AsFilename*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.SearchMode.IsFilenameAndContent
+  commentId: P:Dropbox.Api.Files.SearchMode.IsFilenameAndContent
+  id: IsFilenameAndContent
+  parent: Dropbox.Api.Files.SearchMode
+  langs:
+  - csharp
+  - vb
+  name: IsFilenameAndContent
+  nameWithType: SearchMode.IsFilenameAndContent
+  fullName: Dropbox.Api.Files.SearchMode.IsFilenameAndContent
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchMode.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsFilenameAndContent
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchMode.cs
+    startLine: 61
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is FilenameAndContent</p>\n"
+  example: []
+  syntax:
+    content: public bool IsFilenameAndContent { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsFilenameAndContent As Boolean
+  overload: Dropbox.Api.Files.SearchMode.IsFilenameAndContent*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.SearchMode.AsFilenameAndContent
+  commentId: P:Dropbox.Api.Files.SearchMode.AsFilenameAndContent
+  id: AsFilenameAndContent
+  parent: Dropbox.Api.Files.SearchMode
+  langs:
+  - csharp
+  - vb
+  name: AsFilenameAndContent
+  nameWithType: SearchMode.AsFilenameAndContent
+  fullName: Dropbox.Api.Files.SearchMode.AsFilenameAndContent
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchMode.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsFilenameAndContent
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchMode.cs
+    startLine: 72
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a FilenameAndContent, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SearchMode.FilenameAndContent AsFilenameAndContent { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.SearchMode.FilenameAndContent
+    content.vb: Public ReadOnly Property AsFilenameAndContent As SearchMode.FilenameAndContent
+  overload: Dropbox.Api.Files.SearchMode.AsFilenameAndContent*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.SearchMode.IsDeletedFilename
+  commentId: P:Dropbox.Api.Files.SearchMode.IsDeletedFilename
+  id: IsDeletedFilename
+  parent: Dropbox.Api.Files.SearchMode
+  langs:
+  - csharp
+  - vb
+  name: IsDeletedFilename
+  nameWithType: SearchMode.IsDeletedFilename
+  fullName: Dropbox.Api.Files.SearchMode.IsDeletedFilename
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchMode.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsDeletedFilename
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchMode.cs
+    startLine: 83
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is DeletedFilename</p>\n"
+  example: []
+  syntax:
+    content: public bool IsDeletedFilename { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsDeletedFilename As Boolean
+  overload: Dropbox.Api.Files.SearchMode.IsDeletedFilename*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.SearchMode.AsDeletedFilename
+  commentId: P:Dropbox.Api.Files.SearchMode.AsDeletedFilename
+  id: AsDeletedFilename
+  parent: Dropbox.Api.Files.SearchMode
+  langs:
+  - csharp
+  - vb
+  name: AsDeletedFilename
+  nameWithType: SearchMode.AsDeletedFilename
+  fullName: Dropbox.Api.Files.SearchMode.AsDeletedFilename
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchMode.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsDeletedFilename
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchMode.cs
+    startLine: 94
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a DeletedFilename, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SearchMode.DeletedFilename AsDeletedFilename { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.SearchMode.DeletedFilename
+    content.vb: Public ReadOnly Property AsDeletedFilename As SearchMode.DeletedFilename
+  overload: Dropbox.Api.Files.SearchMode.AsDeletedFilename*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.SearchMode
+  commentId: T:Dropbox.Api.Files.SearchMode
+  parent: Dropbox.Api.Files
+  name: SearchMode
+  nameWithType: SearchMode
+  fullName: Dropbox.Api.Files.SearchMode
+- uid: Dropbox.Api.Files.SearchMode.#ctor*
+  commentId: Overload:Dropbox.Api.Files.SearchMode.#ctor
+  name: SearchMode
+  nameWithType: SearchMode.SearchMode
+  fullName: Dropbox.Api.Files.SearchMode.SearchMode
+- uid: Dropbox.Api.Files.SearchMode.IsFilename*
+  commentId: Overload:Dropbox.Api.Files.SearchMode.IsFilename
+  name: IsFilename
+  nameWithType: SearchMode.IsFilename
+  fullName: Dropbox.Api.Files.SearchMode.IsFilename
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Files.SearchMode.AsFilename*
+  commentId: Overload:Dropbox.Api.Files.SearchMode.AsFilename
+  name: AsFilename
+  nameWithType: SearchMode.AsFilename
+  fullName: Dropbox.Api.Files.SearchMode.AsFilename
+- uid: Dropbox.Api.Files.SearchMode.Filename
+  commentId: T:Dropbox.Api.Files.SearchMode.Filename
+  parent: Dropbox.Api.Files
+  name: SearchMode.Filename
+  nameWithType: SearchMode.Filename
+  fullName: Dropbox.Api.Files.SearchMode.Filename
+- uid: Dropbox.Api.Files.SearchMode.IsFilenameAndContent*
+  commentId: Overload:Dropbox.Api.Files.SearchMode.IsFilenameAndContent
+  name: IsFilenameAndContent
+  nameWithType: SearchMode.IsFilenameAndContent
+  fullName: Dropbox.Api.Files.SearchMode.IsFilenameAndContent
+- uid: Dropbox.Api.Files.SearchMode.AsFilenameAndContent*
+  commentId: Overload:Dropbox.Api.Files.SearchMode.AsFilenameAndContent
+  name: AsFilenameAndContent
+  nameWithType: SearchMode.AsFilenameAndContent
+  fullName: Dropbox.Api.Files.SearchMode.AsFilenameAndContent
+- uid: Dropbox.Api.Files.SearchMode.FilenameAndContent
+  commentId: T:Dropbox.Api.Files.SearchMode.FilenameAndContent
+  parent: Dropbox.Api.Files
+  name: SearchMode.FilenameAndContent
+  nameWithType: SearchMode.FilenameAndContent
+  fullName: Dropbox.Api.Files.SearchMode.FilenameAndContent
+- uid: Dropbox.Api.Files.SearchMode.IsDeletedFilename*
+  commentId: Overload:Dropbox.Api.Files.SearchMode.IsDeletedFilename
+  name: IsDeletedFilename
+  nameWithType: SearchMode.IsDeletedFilename
+  fullName: Dropbox.Api.Files.SearchMode.IsDeletedFilename
+- uid: Dropbox.Api.Files.SearchMode.AsDeletedFilename*
+  commentId: Overload:Dropbox.Api.Files.SearchMode.AsDeletedFilename
+  name: AsDeletedFilename
+  nameWithType: SearchMode.AsDeletedFilename
+  fullName: Dropbox.Api.Files.SearchMode.AsDeletedFilename
+- uid: Dropbox.Api.Files.SearchMode.DeletedFilename
+  commentId: T:Dropbox.Api.Files.SearchMode.DeletedFilename
+  parent: Dropbox.Api.Files
+  name: SearchMode.DeletedFilename
+  nameWithType: SearchMode.DeletedFilename
+  fullName: Dropbox.Api.Files.SearchMode.DeletedFilename
+shouldSkipMarkup: true

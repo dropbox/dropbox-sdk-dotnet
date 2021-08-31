@@ -1,0 +1,188 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.DeleteBatchResultData
+  commentId: T:Dropbox.Api.Files.DeleteBatchResultData
+  id: DeleteBatchResultData
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.DeleteBatchResultData.#ctor
+  - Dropbox.Api.Files.DeleteBatchResultData.#ctor(Dropbox.Api.Files.Metadata)
+  - Dropbox.Api.Files.DeleteBatchResultData.Metadata
+  langs:
+  - csharp
+  - vb
+  name: DeleteBatchResultData
+  nameWithType: DeleteBatchResultData
+  fullName: Dropbox.Api.Files.DeleteBatchResultData
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/DeleteBatchResultData.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: DeleteBatchResultData
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/DeleteBatchResultData.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The delete batch result data object</p>\n"
+  example: []
+  syntax:
+    content: 'public class DeleteBatchResultData : object'
+    content.vb: >-
+      Public Class DeleteBatchResultData
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.DeleteBatchResultData.#ctor(Dropbox.Api.Files.Metadata)
+  commentId: M:Dropbox.Api.Files.DeleteBatchResultData.#ctor(Dropbox.Api.Files.Metadata)
+  id: '#ctor(Dropbox.Api.Files.Metadata)'
+  parent: Dropbox.Api.Files.DeleteBatchResultData
+  langs:
+  - csharp
+  - vb
+  name: DeleteBatchResultData(Metadata)
+  nameWithType: DeleteBatchResultData.DeleteBatchResultData(Metadata)
+  fullName: Dropbox.Api.Files.DeleteBatchResultData.DeleteBatchResultData(Dropbox.Api.Files.Metadata)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/DeleteBatchResultData.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/DeleteBatchResultData.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.DeleteBatchResultData\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public DeleteBatchResultData(Metadata metadata)
+    parameters:
+    - id: metadata
+      type: Dropbox.Api.Files.Metadata
+      description: Metadata of the deleted object.
+    content.vb: Public Sub New(metadata As Metadata)
+  overload: Dropbox.Api.Files.DeleteBatchResultData.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.DeleteBatchResultData.#ctor
+  commentId: M:Dropbox.Api.Files.DeleteBatchResultData.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.DeleteBatchResultData
+  langs:
+  - csharp
+  - vb
+  name: DeleteBatchResultData()
+  nameWithType: DeleteBatchResultData.DeleteBatchResultData()
+  fullName: Dropbox.Api.Files.DeleteBatchResultData.DeleteBatchResultData()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/DeleteBatchResultData.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/DeleteBatchResultData.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.DeleteBatchResultData\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public DeleteBatchResultData()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.DeleteBatchResultData.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.DeleteBatchResultData.Metadata
+  commentId: P:Dropbox.Api.Files.DeleteBatchResultData.Metadata
+  id: Metadata
+  parent: Dropbox.Api.Files.DeleteBatchResultData
+  langs:
+  - csharp
+  - vb
+  name: Metadata
+  nameWithType: DeleteBatchResultData.Metadata
+  fullName: Dropbox.Api.Files.DeleteBatchResultData.Metadata
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/DeleteBatchResultData.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Metadata
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/DeleteBatchResultData.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Metadata of the deleted object.</p>\n"
+  example: []
+  syntax:
+    content: public Metadata Metadata { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.Metadata
+    content.vb: Public Property Metadata As Metadata
+  overload: Dropbox.Api.Files.DeleteBatchResultData.Metadata*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.DeleteBatchResultData
+  commentId: T:Dropbox.Api.Files.DeleteBatchResultData
+  parent: Dropbox.Api.Files
+  name: DeleteBatchResultData
+  nameWithType: DeleteBatchResultData
+  fullName: Dropbox.Api.Files.DeleteBatchResultData
+- uid: Dropbox.Api.Files.DeleteBatchResultData.#ctor*
+  commentId: Overload:Dropbox.Api.Files.DeleteBatchResultData.#ctor
+  name: DeleteBatchResultData
+  nameWithType: DeleteBatchResultData.DeleteBatchResultData
+  fullName: Dropbox.Api.Files.DeleteBatchResultData.DeleteBatchResultData
+- uid: Dropbox.Api.Files.Metadata
+  commentId: T:Dropbox.Api.Files.Metadata
+  parent: Dropbox.Api.Files
+  name: Metadata
+  nameWithType: Metadata
+  fullName: Dropbox.Api.Files.Metadata
+- uid: Dropbox.Api.Files.DeleteBatchResultData.Metadata*
+  commentId: Overload:Dropbox.Api.Files.DeleteBatchResultData.Metadata
+  name: Metadata
+  nameWithType: DeleteBatchResultData.Metadata
+  fullName: Dropbox.Api.Files.DeleteBatchResultData.Metadata
+shouldSkipMarkup: true

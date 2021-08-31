@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.ShowcaseFileAddedDetails
+  commentId: T:Dropbox.Api.TeamLog.ShowcaseFileAddedDetails
+  id: ShowcaseFileAddedDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.ShowcaseFileAddedDetails.#ctor
+  - Dropbox.Api.TeamLog.ShowcaseFileAddedDetails.#ctor(System.String)
+  - Dropbox.Api.TeamLog.ShowcaseFileAddedDetails.EventUuid
+  langs:
+  - csharp
+  - vb
+  name: ShowcaseFileAddedDetails
+  nameWithType: ShowcaseFileAddedDetails
+  fullName: Dropbox.Api.TeamLog.ShowcaseFileAddedDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseFileAddedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ShowcaseFileAddedDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseFileAddedDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Added file to showcase.</p>\n"
+  example: []
+  syntax:
+    content: 'public class ShowcaseFileAddedDetails : object'
+    content.vb: >-
+      Public Class ShowcaseFileAddedDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.ShowcaseFileAddedDetails.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.ShowcaseFileAddedDetails.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.ShowcaseFileAddedDetails
+  langs:
+  - csharp
+  - vb
+  name: ShowcaseFileAddedDetails(String)
+  nameWithType: ShowcaseFileAddedDetails.ShowcaseFileAddedDetails(String)
+  fullName: Dropbox.Api.TeamLog.ShowcaseFileAddedDetails.ShowcaseFileAddedDetails(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseFileAddedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseFileAddedDetails.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.ShowcaseFileAddedDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public ShowcaseFileAddedDetails(string eventUuid)
+    parameters:
+    - id: eventUuid
+      type: System.String
+      description: Event unique identifier.
+    content.vb: Public Sub New(eventUuid As String)
+  overload: Dropbox.Api.TeamLog.ShowcaseFileAddedDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.ShowcaseFileAddedDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.ShowcaseFileAddedDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.ShowcaseFileAddedDetails
+  langs:
+  - csharp
+  - vb
+  name: ShowcaseFileAddedDetails()
+  nameWithType: ShowcaseFileAddedDetails.ShowcaseFileAddedDetails()
+  fullName: Dropbox.Api.TeamLog.ShowcaseFileAddedDetails.ShowcaseFileAddedDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseFileAddedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseFileAddedDetails.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.ShowcaseFileAddedDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public ShowcaseFileAddedDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.ShowcaseFileAddedDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.ShowcaseFileAddedDetails.EventUuid
+  commentId: P:Dropbox.Api.TeamLog.ShowcaseFileAddedDetails.EventUuid
+  id: EventUuid
+  parent: Dropbox.Api.TeamLog.ShowcaseFileAddedDetails
+  langs:
+  - csharp
+  - vb
+  name: EventUuid
+  nameWithType: ShowcaseFileAddedDetails.EventUuid
+  fullName: Dropbox.Api.TeamLog.ShowcaseFileAddedDetails.EventUuid
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseFileAddedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: EventUuid
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseFileAddedDetails.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Event unique identifier.</p>\n"
+  example: []
+  syntax:
+    content: public string EventUuid { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property EventUuid As String
+  overload: Dropbox.Api.TeamLog.ShowcaseFileAddedDetails.EventUuid*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.ShowcaseFileAddedDetails
+  commentId: T:Dropbox.Api.TeamLog.ShowcaseFileAddedDetails
+  parent: Dropbox.Api.TeamLog
+  name: ShowcaseFileAddedDetails
+  nameWithType: ShowcaseFileAddedDetails
+  fullName: Dropbox.Api.TeamLog.ShowcaseFileAddedDetails
+- uid: Dropbox.Api.TeamLog.ShowcaseFileAddedDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.ShowcaseFileAddedDetails.#ctor
+  name: ShowcaseFileAddedDetails
+  nameWithType: ShowcaseFileAddedDetails.ShowcaseFileAddedDetails
+  fullName: Dropbox.Api.TeamLog.ShowcaseFileAddedDetails.ShowcaseFileAddedDetails
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.ShowcaseFileAddedDetails.EventUuid*
+  commentId: Overload:Dropbox.Api.TeamLog.ShowcaseFileAddedDetails.EventUuid
+  name: EventUuid
+  nameWithType: ShowcaseFileAddedDetails.EventUuid
+  fullName: Dropbox.Api.TeamLog.ShowcaseFileAddedDetails.EventUuid
+shouldSkipMarkup: true

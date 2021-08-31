@@ -1,0 +1,96 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.TeamProfileRemoveLogoDetails
+  commentId: T:Dropbox.Api.TeamLog.TeamProfileRemoveLogoDetails
+  id: TeamProfileRemoveLogoDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.TeamProfileRemoveLogoDetails.#ctor
+  langs:
+  - csharp
+  - vb
+  name: TeamProfileRemoveLogoDetails
+  nameWithType: TeamProfileRemoveLogoDetails
+  fullName: Dropbox.Api.TeamLog.TeamProfileRemoveLogoDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamProfileRemoveLogoDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TeamProfileRemoveLogoDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamProfileRemoveLogoDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Removed team logo displayed on shared link headers.</p>\n"
+  example: []
+  syntax:
+    content: 'public class TeamProfileRemoveLogoDetails : object'
+    content.vb: >-
+      Public Class TeamProfileRemoveLogoDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.TeamProfileRemoveLogoDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.TeamProfileRemoveLogoDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.TeamProfileRemoveLogoDetails
+  langs:
+  - csharp
+  - vb
+  name: TeamProfileRemoveLogoDetails()
+  nameWithType: TeamProfileRemoveLogoDetails.TeamProfileRemoveLogoDetails()
+  fullName: Dropbox.Api.TeamLog.TeamProfileRemoveLogoDetails.TeamProfileRemoveLogoDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamProfileRemoveLogoDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamProfileRemoveLogoDetails.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.TeamProfileRemoveLogoDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public TeamProfileRemoveLogoDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.TeamProfileRemoveLogoDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.TeamProfileRemoveLogoDetails
+  commentId: T:Dropbox.Api.TeamLog.TeamProfileRemoveLogoDetails
+  parent: Dropbox.Api.TeamLog
+  name: TeamProfileRemoveLogoDetails
+  nameWithType: TeamProfileRemoveLogoDetails
+  fullName: Dropbox.Api.TeamLog.TeamProfileRemoveLogoDetails
+- uid: Dropbox.Api.TeamLog.TeamProfileRemoveLogoDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.TeamProfileRemoveLogoDetails.#ctor
+  name: TeamProfileRemoveLogoDetails
+  nameWithType: TeamProfileRemoveLogoDetails.TeamProfileRemoveLogoDetails
+  fullName: Dropbox.Api.TeamLog.TeamProfileRemoveLogoDetails.TeamProfileRemoveLogoDetails
+shouldSkipMarkup: true

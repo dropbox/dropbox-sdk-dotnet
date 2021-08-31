@@ -1,0 +1,152 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.OAuth2Exception
+  commentId: T:Dropbox.Api.OAuth2Exception
+  id: OAuth2Exception
+  parent: Dropbox.Api
+  children:
+  - Dropbox.Api.OAuth2Exception.#ctor(System.String,System.String)
+  - Dropbox.Api.OAuth2Exception.ErrorDescription
+  langs:
+  - csharp
+  - vb
+  name: OAuth2Exception
+  nameWithType: OAuth2Exception
+  fullName: Dropbox.Api.OAuth2Exception
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/DropboxOauth2Helper.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: OAuth2Exception
+    path: dropbox-sdk-dotnet/Dropbox.Api/DropboxOauth2Helper.cs
+    startLine: 872
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api
+  summary: "\nException when error occurs during oauth2 flow.\n"
+  example: []
+  syntax:
+    content: 'public sealed class OAuth2Exception : Exception'
+    content.vb: >-
+      Public NotInheritable Class OAuth2Exception
+          Inherits Exception
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.OAuth2Exception.#ctor(System.String,System.String)
+  commentId: M:Dropbox.Api.OAuth2Exception.#ctor(System.String,System.String)
+  id: '#ctor(System.String,System.String)'
+  parent: Dropbox.Api.OAuth2Exception
+  langs:
+  - csharp
+  - vb
+  name: OAuth2Exception(String, String)
+  nameWithType: OAuth2Exception.OAuth2Exception(String, String)
+  fullName: Dropbox.Api.OAuth2Exception.OAuth2Exception(System.String, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/DropboxOauth2Helper.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/DropboxOauth2Helper.cs
+    startLine: 879
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api
+  summary: "\nInitializes a new instance of the <xref href=\"Dropbox.Api.OAuth2Exception\" data-throw-if-not-resolved=\"false\"></xref> class.\n"
+  example: []
+  syntax:
+    content: public OAuth2Exception(string message, string errorDescription = null)
+    parameters:
+    - id: message
+      type: System.String
+      description: The message.
+    - id: errorDescription
+      type: System.String
+      description: The error description.
+    content.vb: Public Sub New(message As String, errorDescription As String = Nothing)
+  overload: Dropbox.Api.OAuth2Exception.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.OAuth2Exception.ErrorDescription
+  commentId: P:Dropbox.Api.OAuth2Exception.ErrorDescription
+  id: ErrorDescription
+  parent: Dropbox.Api.OAuth2Exception
+  langs:
+  - csharp
+  - vb
+  name: ErrorDescription
+  nameWithType: OAuth2Exception.ErrorDescription
+  fullName: Dropbox.Api.OAuth2Exception.ErrorDescription
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/DropboxOauth2Helper.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ErrorDescription
+    path: dropbox-sdk-dotnet/Dropbox.Api/DropboxOauth2Helper.cs
+    startLine: 888
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api
+  summary: "\nGets the error description.\n"
+  example: []
+  syntax:
+    content: public string ErrorDescription { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property ErrorDescription As String
+  overload: Dropbox.Api.OAuth2Exception.ErrorDescription*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api
+  commentId: N:Dropbox.Api
+  name: Dropbox.Api
+  nameWithType: Dropbox.Api
+  fullName: Dropbox.Api
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.OAuth2Exception
+  commentId: T:Dropbox.Api.OAuth2Exception
+  name: OAuth2Exception
+  nameWithType: OAuth2Exception
+  fullName: Dropbox.Api.OAuth2Exception
+- uid: Dropbox.Api.OAuth2Exception.#ctor*
+  commentId: Overload:Dropbox.Api.OAuth2Exception.#ctor
+  name: OAuth2Exception
+  nameWithType: OAuth2Exception.OAuth2Exception
+  fullName: Dropbox.Api.OAuth2Exception.OAuth2Exception
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.OAuth2Exception.ErrorDescription*
+  commentId: Overload:Dropbox.Api.OAuth2Exception.ErrorDescription
+  name: ErrorDescription
+  nameWithType: OAuth2Exception.ErrorDescription
+  fullName: Dropbox.Api.OAuth2Exception.ErrorDescription
+shouldSkipMarkup: true

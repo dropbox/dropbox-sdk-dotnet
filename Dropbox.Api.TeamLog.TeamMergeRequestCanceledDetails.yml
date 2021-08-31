@@ -1,0 +1,191 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestCanceledDetails
+  commentId: T:Dropbox.Api.TeamLog.TeamMergeRequestCanceledDetails
+  id: TeamMergeRequestCanceledDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.TeamMergeRequestCanceledDetails.#ctor
+  - Dropbox.Api.TeamLog.TeamMergeRequestCanceledDetails.#ctor(Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails)
+  - Dropbox.Api.TeamLog.TeamMergeRequestCanceledDetails.RequestCanceledDetails
+  langs:
+  - csharp
+  - vb
+  name: TeamMergeRequestCanceledDetails
+  nameWithType: TeamMergeRequestCanceledDetails
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestCanceledDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestCanceledDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TeamMergeRequestCanceledDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestCanceledDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Canceled a team merge request.</p>\n"
+  example: []
+  syntax:
+    content: 'public class TeamMergeRequestCanceledDetails : object'
+    content.vb: >-
+      Public Class TeamMergeRequestCanceledDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestCanceledDetails.#ctor(Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails)
+  commentId: M:Dropbox.Api.TeamLog.TeamMergeRequestCanceledDetails.#ctor(Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails)
+  id: '#ctor(Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails)'
+  parent: Dropbox.Api.TeamLog.TeamMergeRequestCanceledDetails
+  langs:
+  - csharp
+  - vb
+  name: TeamMergeRequestCanceledDetails(TeamMergeRequestCanceledExtraDetails)
+  nameWithType: TeamMergeRequestCanceledDetails.TeamMergeRequestCanceledDetails(TeamMergeRequestCanceledExtraDetails)
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestCanceledDetails.TeamMergeRequestCanceledDetails(Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestCanceledDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestCanceledDetails.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.TeamMergeRequestCanceledDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public TeamMergeRequestCanceledDetails(TeamMergeRequestCanceledExtraDetails requestCanceledDetails)
+    parameters:
+    - id: requestCanceledDetails
+      type: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails
+      description: >-
+        Team merge request cancellation
+
+        details.
+    content.vb: Public Sub New(requestCanceledDetails As TeamMergeRequestCanceledExtraDetails)
+  overload: Dropbox.Api.TeamLog.TeamMergeRequestCanceledDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestCanceledDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.TeamMergeRequestCanceledDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.TeamMergeRequestCanceledDetails
+  langs:
+  - csharp
+  - vb
+  name: TeamMergeRequestCanceledDetails()
+  nameWithType: TeamMergeRequestCanceledDetails.TeamMergeRequestCanceledDetails()
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestCanceledDetails.TeamMergeRequestCanceledDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestCanceledDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestCanceledDetails.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.TeamMergeRequestCanceledDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public TeamMergeRequestCanceledDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.TeamMergeRequestCanceledDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestCanceledDetails.RequestCanceledDetails
+  commentId: P:Dropbox.Api.TeamLog.TeamMergeRequestCanceledDetails.RequestCanceledDetails
+  id: RequestCanceledDetails
+  parent: Dropbox.Api.TeamLog.TeamMergeRequestCanceledDetails
+  langs:
+  - csharp
+  - vb
+  name: RequestCanceledDetails
+  nameWithType: TeamMergeRequestCanceledDetails.RequestCanceledDetails
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestCanceledDetails.RequestCanceledDetails
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestCanceledDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: RequestCanceledDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestCanceledDetails.cs
+    startLine: 59
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Team merge request cancellation details.</p>\n"
+  example: []
+  syntax:
+    content: public TeamMergeRequestCanceledExtraDetails RequestCanceledDetails { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails
+    content.vb: Public Property RequestCanceledDetails As TeamMergeRequestCanceledExtraDetails
+  overload: Dropbox.Api.TeamLog.TeamMergeRequestCanceledDetails.RequestCanceledDetails*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestCanceledDetails
+  commentId: T:Dropbox.Api.TeamLog.TeamMergeRequestCanceledDetails
+  parent: Dropbox.Api.TeamLog
+  name: TeamMergeRequestCanceledDetails
+  nameWithType: TeamMergeRequestCanceledDetails
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestCanceledDetails
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestCanceledDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.TeamMergeRequestCanceledDetails.#ctor
+  name: TeamMergeRequestCanceledDetails
+  nameWithType: TeamMergeRequestCanceledDetails.TeamMergeRequestCanceledDetails
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestCanceledDetails.TeamMergeRequestCanceledDetails
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails
+  commentId: T:Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails
+  parent: Dropbox.Api.TeamLog
+  name: TeamMergeRequestCanceledExtraDetails
+  nameWithType: TeamMergeRequestCanceledExtraDetails
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestCanceledExtraDetails
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestCanceledDetails.RequestCanceledDetails*
+  commentId: Overload:Dropbox.Api.TeamLog.TeamMergeRequestCanceledDetails.RequestCanceledDetails
+  name: RequestCanceledDetails
+  nameWithType: TeamMergeRequestCanceledDetails.RequestCanceledDetails
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestCanceledDetails.RequestCanceledDetails
+shouldSkipMarkup: true

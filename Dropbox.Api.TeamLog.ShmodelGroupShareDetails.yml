@@ -1,0 +1,96 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.ShmodelGroupShareDetails
+  commentId: T:Dropbox.Api.TeamLog.ShmodelGroupShareDetails
+  id: ShmodelGroupShareDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.ShmodelGroupShareDetails.#ctor
+  langs:
+  - csharp
+  - vb
+  name: ShmodelGroupShareDetails
+  nameWithType: ShmodelGroupShareDetails
+  fullName: Dropbox.Api.TeamLog.ShmodelGroupShareDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShmodelGroupShareDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ShmodelGroupShareDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShmodelGroupShareDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Shared link with group.</p>\n"
+  example: []
+  syntax:
+    content: 'public class ShmodelGroupShareDetails : object'
+    content.vb: >-
+      Public Class ShmodelGroupShareDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.ShmodelGroupShareDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.ShmodelGroupShareDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.ShmodelGroupShareDetails
+  langs:
+  - csharp
+  - vb
+  name: ShmodelGroupShareDetails()
+  nameWithType: ShmodelGroupShareDetails.ShmodelGroupShareDetails()
+  fullName: Dropbox.Api.TeamLog.ShmodelGroupShareDetails.ShmodelGroupShareDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShmodelGroupShareDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShmodelGroupShareDetails.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.ShmodelGroupShareDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public ShmodelGroupShareDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.ShmodelGroupShareDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.ShmodelGroupShareDetails
+  commentId: T:Dropbox.Api.TeamLog.ShmodelGroupShareDetails
+  parent: Dropbox.Api.TeamLog
+  name: ShmodelGroupShareDetails
+  nameWithType: ShmodelGroupShareDetails
+  fullName: Dropbox.Api.TeamLog.ShmodelGroupShareDetails
+- uid: Dropbox.Api.TeamLog.ShmodelGroupShareDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.ShmodelGroupShareDetails.#ctor
+  name: ShmodelGroupShareDetails
+  nameWithType: ShmodelGroupShareDetails.ShmodelGroupShareDetails
+  fullName: Dropbox.Api.TeamLog.ShmodelGroupShareDetails.ShmodelGroupShareDetails
+shouldSkipMarkup: true

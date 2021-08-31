@@ -1,0 +1,96 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.GroupDescriptionUpdatedDetails
+  commentId: T:Dropbox.Api.TeamLog.GroupDescriptionUpdatedDetails
+  id: GroupDescriptionUpdatedDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.GroupDescriptionUpdatedDetails.#ctor
+  langs:
+  - csharp
+  - vb
+  name: GroupDescriptionUpdatedDetails
+  nameWithType: GroupDescriptionUpdatedDetails
+  fullName: Dropbox.Api.TeamLog.GroupDescriptionUpdatedDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupDescriptionUpdatedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GroupDescriptionUpdatedDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupDescriptionUpdatedDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Updated group.</p>\n"
+  example: []
+  syntax:
+    content: 'public class GroupDescriptionUpdatedDetails : object'
+    content.vb: >-
+      Public Class GroupDescriptionUpdatedDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.GroupDescriptionUpdatedDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.GroupDescriptionUpdatedDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.GroupDescriptionUpdatedDetails
+  langs:
+  - csharp
+  - vb
+  name: GroupDescriptionUpdatedDetails()
+  nameWithType: GroupDescriptionUpdatedDetails.GroupDescriptionUpdatedDetails()
+  fullName: Dropbox.Api.TeamLog.GroupDescriptionUpdatedDetails.GroupDescriptionUpdatedDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupDescriptionUpdatedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupDescriptionUpdatedDetails.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.GroupDescriptionUpdatedDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public GroupDescriptionUpdatedDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.GroupDescriptionUpdatedDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.GroupDescriptionUpdatedDetails
+  commentId: T:Dropbox.Api.TeamLog.GroupDescriptionUpdatedDetails
+  parent: Dropbox.Api.TeamLog
+  name: GroupDescriptionUpdatedDetails
+  nameWithType: GroupDescriptionUpdatedDetails
+  fullName: Dropbox.Api.TeamLog.GroupDescriptionUpdatedDetails
+- uid: Dropbox.Api.TeamLog.GroupDescriptionUpdatedDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.GroupDescriptionUpdatedDetails.#ctor
+  name: GroupDescriptionUpdatedDetails
+  nameWithType: GroupDescriptionUpdatedDetails.GroupDescriptionUpdatedDetails
+  fullName: Dropbox.Api.TeamLog.GroupDescriptionUpdatedDetails.GroupDescriptionUpdatedDetails
+shouldSkipMarkup: true

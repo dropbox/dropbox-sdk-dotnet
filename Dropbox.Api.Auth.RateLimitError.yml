@@ -1,0 +1,243 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Auth.RateLimitError
+  commentId: T:Dropbox.Api.Auth.RateLimitError
+  id: RateLimitError
+  parent: Dropbox.Api.Auth
+  children:
+  - Dropbox.Api.Auth.RateLimitError.#ctor
+  - Dropbox.Api.Auth.RateLimitError.#ctor(Dropbox.Api.Auth.RateLimitReason,System.UInt64)
+  - Dropbox.Api.Auth.RateLimitError.Reason
+  - Dropbox.Api.Auth.RateLimitError.RetryAfter
+  langs:
+  - csharp
+  - vb
+  name: RateLimitError
+  nameWithType: RateLimitError
+  fullName: Dropbox.Api.Auth.RateLimitError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/RateLimitError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: RateLimitError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/RateLimitError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth
+  summary: "\n<p>Error occurred because the app is being rate limited.</p>\n"
+  example: []
+  syntax:
+    content: 'public class RateLimitError : object'
+    content.vb: >-
+      Public Class RateLimitError
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Auth.RateLimitError.#ctor(Dropbox.Api.Auth.RateLimitReason,System.UInt64)
+  commentId: M:Dropbox.Api.Auth.RateLimitError.#ctor(Dropbox.Api.Auth.RateLimitReason,System.UInt64)
+  id: '#ctor(Dropbox.Api.Auth.RateLimitReason,System.UInt64)'
+  parent: Dropbox.Api.Auth.RateLimitError
+  langs:
+  - csharp
+  - vb
+  name: RateLimitError(RateLimitReason, UInt64)
+  nameWithType: RateLimitError.RateLimitError(RateLimitReason, UInt64)
+  fullName: Dropbox.Api.Auth.RateLimitError.RateLimitError(Dropbox.Api.Auth.RateLimitReason, System.UInt64)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/RateLimitError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/RateLimitError.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Auth.RateLimitError\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public RateLimitError(RateLimitReason reason, ulong retryAfter = null)
+    parameters:
+    - id: reason
+      type: Dropbox.Api.Auth.RateLimitReason
+      description: The reason why the app is being rate limited.
+    - id: retryAfter
+      type: System.UInt64
+      description: >-
+        The number of seconds that the app should wait before
+
+        making another request.
+    content.vb: Public Sub New(reason As RateLimitReason, retryAfter As ULong = Nothing)
+  overload: Dropbox.Api.Auth.RateLimitError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Auth.RateLimitError.#ctor
+  commentId: M:Dropbox.Api.Auth.RateLimitError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Auth.RateLimitError
+  langs:
+  - csharp
+  - vb
+  name: RateLimitError()
+  nameWithType: RateLimitError.RateLimitError()
+  fullName: Dropbox.Api.Auth.RateLimitError.RateLimitError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/RateLimitError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/RateLimitError.cs
+    startLine: 52
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Auth.RateLimitError\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public RateLimitError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Auth.RateLimitError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Auth.RateLimitError.Reason
+  commentId: P:Dropbox.Api.Auth.RateLimitError.Reason
+  id: Reason
+  parent: Dropbox.Api.Auth.RateLimitError
+  langs:
+  - csharp
+  - vb
+  name: Reason
+  nameWithType: RateLimitError.Reason
+  fullName: Dropbox.Api.Auth.RateLimitError.Reason
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/RateLimitError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Reason
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/RateLimitError.cs
+    startLine: 61
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth
+  summary: "\n<p>The reason why the app is being rate limited.</p>\n"
+  example: []
+  syntax:
+    content: public RateLimitReason Reason { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Auth.RateLimitReason
+    content.vb: Public Property Reason As RateLimitReason
+  overload: Dropbox.Api.Auth.RateLimitError.Reason*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Auth.RateLimitError.RetryAfter
+  commentId: P:Dropbox.Api.Auth.RateLimitError.RetryAfter
+  id: RetryAfter
+  parent: Dropbox.Api.Auth.RateLimitError
+  langs:
+  - csharp
+  - vb
+  name: RetryAfter
+  nameWithType: RateLimitError.RetryAfter
+  fullName: Dropbox.Api.Auth.RateLimitError.RetryAfter
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/RateLimitError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: RetryAfter
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/RateLimitError.cs
+    startLine: 67
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth
+  summary: "\n<p>The number of seconds that the app should wait before making another\nrequest.</p>\n"
+  example: []
+  syntax:
+    content: public ulong RetryAfter { get; protected set; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: Public Property RetryAfter As ULong
+  overload: Dropbox.Api.Auth.RateLimitError.RetryAfter*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Auth
+  commentId: N:Dropbox.Api.Auth
+  name: Dropbox.Api.Auth
+  nameWithType: Dropbox.Api.Auth
+  fullName: Dropbox.Api.Auth
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Auth.RateLimitError
+  commentId: T:Dropbox.Api.Auth.RateLimitError
+  name: RateLimitError
+  nameWithType: RateLimitError
+  fullName: Dropbox.Api.Auth.RateLimitError
+- uid: Dropbox.Api.Auth.RateLimitError.#ctor*
+  commentId: Overload:Dropbox.Api.Auth.RateLimitError.#ctor
+  name: RateLimitError
+  nameWithType: RateLimitError.RateLimitError
+  fullName: Dropbox.Api.Auth.RateLimitError.RateLimitError
+- uid: Dropbox.Api.Auth.RateLimitReason
+  commentId: T:Dropbox.Api.Auth.RateLimitReason
+  parent: Dropbox.Api.Auth
+  name: RateLimitReason
+  nameWithType: RateLimitReason
+  fullName: Dropbox.Api.Auth.RateLimitReason
+- uid: System.UInt64
+  isExternal: true
+  name: UInt64
+  nameWithType: UInt64
+  fullName: System.UInt64
+- uid: Dropbox.Api.Auth.RateLimitError.Reason*
+  commentId: Overload:Dropbox.Api.Auth.RateLimitError.Reason
+  name: Reason
+  nameWithType: RateLimitError.Reason
+  fullName: Dropbox.Api.Auth.RateLimitError.Reason
+- uid: Dropbox.Api.Auth.RateLimitError.RetryAfter*
+  commentId: Overload:Dropbox.Api.Auth.RateLimitError.RetryAfter
+  name: RetryAfter
+  nameWithType: RateLimitError.RetryAfter
+  fullName: Dropbox.Api.Auth.RateLimitError.RetryAfter
+shouldSkipMarkup: true

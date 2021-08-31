@@ -1,0 +1,373 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.FolderSharingInfo
+  commentId: T:Dropbox.Api.Files.FolderSharingInfo
+  id: FolderSharingInfo
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.FolderSharingInfo.#ctor
+  - Dropbox.Api.Files.FolderSharingInfo.#ctor(System.Boolean,System.String,System.String,System.Boolean,System.Boolean)
+  - Dropbox.Api.Files.FolderSharingInfo.NoAccess
+  - Dropbox.Api.Files.FolderSharingInfo.ParentSharedFolderId
+  - Dropbox.Api.Files.FolderSharingInfo.SharedFolderId
+  - Dropbox.Api.Files.FolderSharingInfo.TraverseOnly
+  langs:
+  - csharp
+  - vb
+  name: FolderSharingInfo
+  nameWithType: FolderSharingInfo
+  fullName: Dropbox.Api.Files.FolderSharingInfo
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FolderSharingInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: FolderSharingInfo
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FolderSharingInfo.cs
+    startLine: 17
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Sharing info for a folder which is contained in a shared folder or is a shared\nfolder mount point.</p>\n"
+  example: []
+  syntax:
+    content: 'public class FolderSharingInfo : SharingInfo'
+    content.vb: >-
+      Public Class FolderSharingInfo
+          Inherits SharingInfo
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Files.SharingInfo
+  inheritedMembers:
+  - Dropbox.Api.Files.SharingInfo.ReadOnly
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.FolderSharingInfo.#ctor(System.Boolean,System.String,System.String,System.Boolean,System.Boolean)
+  commentId: M:Dropbox.Api.Files.FolderSharingInfo.#ctor(System.Boolean,System.String,System.String,System.Boolean,System.Boolean)
+  id: '#ctor(System.Boolean,System.String,System.String,System.Boolean,System.Boolean)'
+  parent: Dropbox.Api.Files.FolderSharingInfo
+  langs:
+  - csharp
+  - vb
+  name: FolderSharingInfo(Boolean, String, String, Boolean, Boolean)
+  nameWithType: FolderSharingInfo.FolderSharingInfo(Boolean, String, String, Boolean, Boolean)
+  fullName: Dropbox.Api.Files.FolderSharingInfo.FolderSharingInfo(System.Boolean, System.String, System.String, System.Boolean, System.Boolean)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FolderSharingInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FolderSharingInfo.cs
+    startLine: 47
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.FolderSharingInfo\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public FolderSharingInfo(bool readOnly, string parentSharedFolderId = null, string sharedFolderId = null, bool traverseOnly = false, bool noAccess = false)
+    parameters:
+    - id: readOnly
+      type: System.Boolean
+      description: >-
+        True if the file or folder is inside a read-only shared
+
+        folder.
+    - id: parentSharedFolderId
+      type: System.String
+      description: >-
+        Set if the folder is contained by a shared
+
+        folder.
+    - id: sharedFolderId
+      type: System.String
+      description: >-
+        If this folder is a shared folder mount point, the ID
+
+        of the shared folder mounted at this location.
+    - id: traverseOnly
+      type: System.Boolean
+      description: >-
+        Specifies that the folder can only be traversed and the
+
+        user can only see a limited subset of the contents of this folder because they
+
+        don&apos;t have read access to this folder. They do, however, have access to some sub
+
+        folder.
+    - id: noAccess
+      type: System.Boolean
+      description: >-
+        Specifies that the folder cannot be accessed by the
+
+        user.
+    content.vb: Public Sub New(readOnly As Boolean, parentSharedFolderId As String = Nothing, sharedFolderId As String = Nothing, traverseOnly As Boolean = False, noAccess As Boolean = False)
+  overload: Dropbox.Api.Files.FolderSharingInfo.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.FolderSharingInfo.#ctor
+  commentId: M:Dropbox.Api.Files.FolderSharingInfo.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.FolderSharingInfo
+  langs:
+  - csharp
+  - vb
+  name: FolderSharingInfo()
+  nameWithType: FolderSharingInfo.FolderSharingInfo()
+  fullName: Dropbox.Api.Files.FolderSharingInfo.FolderSharingInfo()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FolderSharingInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FolderSharingInfo.cs
+    startLine: 82
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.FolderSharingInfo\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public FolderSharingInfo()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.FolderSharingInfo.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.FolderSharingInfo.ParentSharedFolderId
+  commentId: P:Dropbox.Api.Files.FolderSharingInfo.ParentSharedFolderId
+  id: ParentSharedFolderId
+  parent: Dropbox.Api.Files.FolderSharingInfo
+  langs:
+  - csharp
+  - vb
+  name: ParentSharedFolderId
+  nameWithType: FolderSharingInfo.ParentSharedFolderId
+  fullName: Dropbox.Api.Files.FolderSharingInfo.ParentSharedFolderId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FolderSharingInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ParentSharedFolderId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FolderSharingInfo.cs
+    startLine: 92
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Set if the folder is contained by a shared folder.</p>\n"
+  example: []
+  syntax:
+    content: public string ParentSharedFolderId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ParentSharedFolderId As String
+  overload: Dropbox.Api.Files.FolderSharingInfo.ParentSharedFolderId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.FolderSharingInfo.SharedFolderId
+  commentId: P:Dropbox.Api.Files.FolderSharingInfo.SharedFolderId
+  id: SharedFolderId
+  parent: Dropbox.Api.Files.FolderSharingInfo
+  langs:
+  - csharp
+  - vb
+  name: SharedFolderId
+  nameWithType: FolderSharingInfo.SharedFolderId
+  fullName: Dropbox.Api.Files.FolderSharingInfo.SharedFolderId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FolderSharingInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SharedFolderId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FolderSharingInfo.cs
+    startLine: 98
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>If this folder is a shared folder mount point, the ID of the shared folder\nmounted at this location.</p>\n"
+  example: []
+  syntax:
+    content: public string SharedFolderId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SharedFolderId As String
+  overload: Dropbox.Api.Files.FolderSharingInfo.SharedFolderId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.FolderSharingInfo.TraverseOnly
+  commentId: P:Dropbox.Api.Files.FolderSharingInfo.TraverseOnly
+  id: TraverseOnly
+  parent: Dropbox.Api.Files.FolderSharingInfo
+  langs:
+  - csharp
+  - vb
+  name: TraverseOnly
+  nameWithType: FolderSharingInfo.TraverseOnly
+  fullName: Dropbox.Api.Files.FolderSharingInfo.TraverseOnly
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FolderSharingInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TraverseOnly
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FolderSharingInfo.cs
+    startLine: 105
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Specifies that the folder can only be traversed and the user can only see a\nlimited subset of the contents of this folder because they don&apos;t have read access\nto this folder. They do, however, have access to some sub folder.</p>\n"
+  example: []
+  syntax:
+    content: public bool TraverseOnly { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property TraverseOnly As Boolean
+  overload: Dropbox.Api.Files.FolderSharingInfo.TraverseOnly*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.FolderSharingInfo.NoAccess
+  commentId: P:Dropbox.Api.Files.FolderSharingInfo.NoAccess
+  id: NoAccess
+  parent: Dropbox.Api.Files.FolderSharingInfo
+  langs:
+  - csharp
+  - vb
+  name: NoAccess
+  nameWithType: FolderSharingInfo.NoAccess
+  fullName: Dropbox.Api.Files.FolderSharingInfo.NoAccess
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FolderSharingInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NoAccess
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FolderSharingInfo.cs
+    startLine: 110
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Specifies that the folder cannot be accessed by the user.</p>\n"
+  example: []
+  syntax:
+    content: public bool NoAccess { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property NoAccess As Boolean
+  overload: Dropbox.Api.Files.FolderSharingInfo.NoAccess*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.SharingInfo
+  commentId: T:Dropbox.Api.Files.SharingInfo
+  parent: Dropbox.Api.Files
+  name: SharingInfo
+  nameWithType: SharingInfo
+  fullName: Dropbox.Api.Files.SharingInfo
+- uid: Dropbox.Api.Files.SharingInfo.ReadOnly
+  commentId: P:Dropbox.Api.Files.SharingInfo.ReadOnly
+  parent: Dropbox.Api.Files.SharingInfo
+  name: ReadOnly
+  nameWithType: SharingInfo.ReadOnly
+  fullName: Dropbox.Api.Files.SharingInfo.ReadOnly
+- uid: Dropbox.Api.Files.FolderSharingInfo
+  commentId: T:Dropbox.Api.Files.FolderSharingInfo
+  parent: Dropbox.Api.Files
+  name: FolderSharingInfo
+  nameWithType: FolderSharingInfo
+  fullName: Dropbox.Api.Files.FolderSharingInfo
+- uid: Dropbox.Api.Files.FolderSharingInfo.#ctor*
+  commentId: Overload:Dropbox.Api.Files.FolderSharingInfo.#ctor
+  name: FolderSharingInfo
+  nameWithType: FolderSharingInfo.FolderSharingInfo
+  fullName: Dropbox.Api.Files.FolderSharingInfo.FolderSharingInfo
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Files.FolderSharingInfo.ParentSharedFolderId*
+  commentId: Overload:Dropbox.Api.Files.FolderSharingInfo.ParentSharedFolderId
+  name: ParentSharedFolderId
+  nameWithType: FolderSharingInfo.ParentSharedFolderId
+  fullName: Dropbox.Api.Files.FolderSharingInfo.ParentSharedFolderId
+- uid: Dropbox.Api.Files.FolderSharingInfo.SharedFolderId*
+  commentId: Overload:Dropbox.Api.Files.FolderSharingInfo.SharedFolderId
+  name: SharedFolderId
+  nameWithType: FolderSharingInfo.SharedFolderId
+  fullName: Dropbox.Api.Files.FolderSharingInfo.SharedFolderId
+- uid: Dropbox.Api.Files.FolderSharingInfo.TraverseOnly*
+  commentId: Overload:Dropbox.Api.Files.FolderSharingInfo.TraverseOnly
+  name: TraverseOnly
+  nameWithType: FolderSharingInfo.TraverseOnly
+  fullName: Dropbox.Api.Files.FolderSharingInfo.TraverseOnly
+- uid: Dropbox.Api.Files.FolderSharingInfo.NoAccess*
+  commentId: Overload:Dropbox.Api.Files.FolderSharingInfo.NoAccess
+  name: NoAccess
+  nameWithType: FolderSharingInfo.NoAccess
+  fullName: Dropbox.Api.Files.FolderSharingInfo.NoAccess
+shouldSkipMarkup: true

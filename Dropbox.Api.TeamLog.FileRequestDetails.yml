@@ -1,0 +1,250 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.FileRequestDetails
+  commentId: T:Dropbox.Api.TeamLog.FileRequestDetails
+  id: FileRequestDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.FileRequestDetails.#ctor
+  - Dropbox.Api.TeamLog.FileRequestDetails.#ctor(System.UInt64,Dropbox.Api.TeamLog.FileRequestDeadline)
+  - Dropbox.Api.TeamLog.FileRequestDetails.AssetIndex
+  - Dropbox.Api.TeamLog.FileRequestDetails.Deadline
+  langs:
+  - csharp
+  - vb
+  name: FileRequestDetails
+  nameWithType: FileRequestDetails
+  fullName: Dropbox.Api.TeamLog.FileRequestDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: FileRequestDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestDetails.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>File request details</p>\n"
+  example: []
+  syntax:
+    content: 'public class FileRequestDetails : object'
+    content.vb: >-
+      Public Class FileRequestDetails
+          Inherits Object
+  seealso:
+  - linkId: Dropbox.Api.TeamLog.FileRequestChangeDetails
+    commentId: T:Dropbox.Api.TeamLog.FileRequestChangeDetails
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.FileRequestDetails.#ctor(System.UInt64,Dropbox.Api.TeamLog.FileRequestDeadline)
+  commentId: M:Dropbox.Api.TeamLog.FileRequestDetails.#ctor(System.UInt64,Dropbox.Api.TeamLog.FileRequestDeadline)
+  id: '#ctor(System.UInt64,Dropbox.Api.TeamLog.FileRequestDeadline)'
+  parent: Dropbox.Api.TeamLog.FileRequestDetails
+  langs:
+  - csharp
+  - vb
+  name: FileRequestDetails(UInt64, FileRequestDeadline)
+  nameWithType: FileRequestDetails.FileRequestDetails(UInt64, FileRequestDeadline)
+  fullName: Dropbox.Api.TeamLog.FileRequestDetails.FileRequestDetails(System.UInt64, Dropbox.Api.TeamLog.FileRequestDeadline)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestDetails.cs
+    startLine: 36
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.FileRequestDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public FileRequestDetails(ulong assetIndex, FileRequestDeadline deadline = null)
+    parameters:
+    - id: assetIndex
+      type: System.UInt64
+      description: Asset position in the Assets list.
+    - id: deadline
+      type: Dropbox.Api.TeamLog.FileRequestDeadline
+      description: File request deadline.
+    content.vb: Public Sub New(assetIndex As ULong, deadline As FileRequestDeadline = Nothing)
+  overload: Dropbox.Api.TeamLog.FileRequestDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.FileRequestDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.FileRequestDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.FileRequestDetails
+  langs:
+  - csharp
+  - vb
+  name: FileRequestDetails()
+  nameWithType: FileRequestDetails.FileRequestDetails()
+  fullName: Dropbox.Api.TeamLog.FileRequestDetails.FileRequestDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestDetails.cs
+    startLine: 49
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.FileRequestDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public FileRequestDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.FileRequestDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.FileRequestDetails.AssetIndex
+  commentId: P:Dropbox.Api.TeamLog.FileRequestDetails.AssetIndex
+  id: AssetIndex
+  parent: Dropbox.Api.TeamLog.FileRequestDetails
+  langs:
+  - csharp
+  - vb
+  name: AssetIndex
+  nameWithType: FileRequestDetails.AssetIndex
+  fullName: Dropbox.Api.TeamLog.FileRequestDetails.AssetIndex
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AssetIndex
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestDetails.cs
+    startLine: 57
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Asset position in the Assets list.</p>\n"
+  example: []
+  syntax:
+    content: public ulong AssetIndex { get; protected set; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: Public Property AssetIndex As ULong
+  overload: Dropbox.Api.TeamLog.FileRequestDetails.AssetIndex*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.FileRequestDetails.Deadline
+  commentId: P:Dropbox.Api.TeamLog.FileRequestDetails.Deadline
+  id: Deadline
+  parent: Dropbox.Api.TeamLog.FileRequestDetails
+  langs:
+  - csharp
+  - vb
+  name: Deadline
+  nameWithType: FileRequestDetails.Deadline
+  fullName: Dropbox.Api.TeamLog.FileRequestDetails.Deadline
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Deadline
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestDetails.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>File request deadline.</p>\n"
+  example: []
+  syntax:
+    content: public FileRequestDeadline Deadline { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.FileRequestDeadline
+    content.vb: Public Property Deadline As FileRequestDeadline
+  overload: Dropbox.Api.TeamLog.FileRequestDetails.Deadline*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog.FileRequestChangeDetails
+  commentId: T:Dropbox.Api.TeamLog.FileRequestChangeDetails
+  parent: Dropbox.Api.TeamLog
+  name: FileRequestChangeDetails
+  nameWithType: FileRequestChangeDetails
+  fullName: Dropbox.Api.TeamLog.FileRequestChangeDetails
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.FileRequestDetails
+  commentId: T:Dropbox.Api.TeamLog.FileRequestDetails
+  parent: Dropbox.Api.TeamLog
+  name: FileRequestDetails
+  nameWithType: FileRequestDetails
+  fullName: Dropbox.Api.TeamLog.FileRequestDetails
+- uid: Dropbox.Api.TeamLog.FileRequestDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.FileRequestDetails.#ctor
+  name: FileRequestDetails
+  nameWithType: FileRequestDetails.FileRequestDetails
+  fullName: Dropbox.Api.TeamLog.FileRequestDetails.FileRequestDetails
+- uid: System.UInt64
+  isExternal: true
+  name: UInt64
+  nameWithType: UInt64
+  fullName: System.UInt64
+- uid: Dropbox.Api.TeamLog.FileRequestDeadline
+  commentId: T:Dropbox.Api.TeamLog.FileRequestDeadline
+  parent: Dropbox.Api.TeamLog
+  name: FileRequestDeadline
+  nameWithType: FileRequestDeadline
+  fullName: Dropbox.Api.TeamLog.FileRequestDeadline
+- uid: Dropbox.Api.TeamLog.FileRequestDetails.AssetIndex*
+  commentId: Overload:Dropbox.Api.TeamLog.FileRequestDetails.AssetIndex
+  name: AssetIndex
+  nameWithType: FileRequestDetails.AssetIndex
+  fullName: Dropbox.Api.TeamLog.FileRequestDetails.AssetIndex
+- uid: Dropbox.Api.TeamLog.FileRequestDetails.Deadline*
+  commentId: Overload:Dropbox.Api.TeamLog.FileRequestDetails.Deadline
+  name: Deadline
+  nameWithType: FileRequestDetails.Deadline
+  fullName: Dropbox.Api.TeamLog.FileRequestDetails.Deadline
+shouldSkipMarkup: true

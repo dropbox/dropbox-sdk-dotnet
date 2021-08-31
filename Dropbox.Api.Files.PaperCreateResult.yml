@@ -1,0 +1,342 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.PaperCreateResult
+  commentId: T:Dropbox.Api.Files.PaperCreateResult
+  id: PaperCreateResult
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.PaperCreateResult.#ctor
+  - Dropbox.Api.Files.PaperCreateResult.#ctor(System.String,System.String,System.String,System.Int64)
+  - Dropbox.Api.Files.PaperCreateResult.FileId
+  - Dropbox.Api.Files.PaperCreateResult.PaperRevision
+  - Dropbox.Api.Files.PaperCreateResult.ResultPath
+  - Dropbox.Api.Files.PaperCreateResult.Url
+  langs:
+  - csharp
+  - vb
+  name: PaperCreateResult
+  nameWithType: PaperCreateResult
+  fullName: Dropbox.Api.Files.PaperCreateResult
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperCreateResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PaperCreateResult
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperCreateResult.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The paper create result object</p>\n"
+  example: []
+  syntax:
+    content: 'public class PaperCreateResult : object'
+    content.vb: >-
+      Public Class PaperCreateResult
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.PaperCreateResult.#ctor(System.String,System.String,System.String,System.Int64)
+  commentId: M:Dropbox.Api.Files.PaperCreateResult.#ctor(System.String,System.String,System.String,System.Int64)
+  id: '#ctor(System.String,System.String,System.String,System.Int64)'
+  parent: Dropbox.Api.Files.PaperCreateResult
+  langs:
+  - csharp
+  - vb
+  name: PaperCreateResult(String, String, String, Int64)
+  nameWithType: PaperCreateResult.PaperCreateResult(String, String, String, Int64)
+  fullName: Dropbox.Api.Files.PaperCreateResult.PaperCreateResult(System.String, System.String, System.String, System.Int64)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperCreateResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperCreateResult.cs
+    startLine: 39
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.PaperCreateResult\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public PaperCreateResult(string url, string resultPath, string fileId, long paperRevision)
+    parameters:
+    - id: url
+      type: System.String
+      description: URL to open the Paper Doc.
+    - id: resultPath
+      type: System.String
+      description: >-
+        The fully qualified path the Paper Doc was actually
+
+        created at.
+    - id: fileId
+      type: System.String
+      description: >-
+        The id to use in Dropbox APIs when referencing the Paper
+
+        Doc.
+    - id: paperRevision
+      type: System.Int64
+      description: The current doc revision.
+    content.vb: Public Sub New(url As String, resultPath As String, fileId As String, paperRevision As Long)
+  overload: Dropbox.Api.Files.PaperCreateResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.PaperCreateResult.#ctor
+  commentId: M:Dropbox.Api.Files.PaperCreateResult.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.PaperCreateResult
+  langs:
+  - csharp
+  - vb
+  name: PaperCreateResult()
+  nameWithType: PaperCreateResult.PaperCreateResult()
+  fullName: Dropbox.Api.Files.PaperCreateResult.PaperCreateResult()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperCreateResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperCreateResult.cs
+    startLine: 79
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.PaperCreateResult\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public PaperCreateResult()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.PaperCreateResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.PaperCreateResult.Url
+  commentId: P:Dropbox.Api.Files.PaperCreateResult.Url
+  id: Url
+  parent: Dropbox.Api.Files.PaperCreateResult
+  langs:
+  - csharp
+  - vb
+  name: Url
+  nameWithType: PaperCreateResult.Url
+  fullName: Dropbox.Api.Files.PaperCreateResult.Url
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperCreateResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Url
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperCreateResult.cs
+    startLine: 87
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>URL to open the Paper Doc.</p>\n"
+  example: []
+  syntax:
+    content: public string Url { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Url As String
+  overload: Dropbox.Api.Files.PaperCreateResult.Url*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.PaperCreateResult.ResultPath
+  commentId: P:Dropbox.Api.Files.PaperCreateResult.ResultPath
+  id: ResultPath
+  parent: Dropbox.Api.Files.PaperCreateResult
+  langs:
+  - csharp
+  - vb
+  name: ResultPath
+  nameWithType: PaperCreateResult.ResultPath
+  fullName: Dropbox.Api.Files.PaperCreateResult.ResultPath
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperCreateResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ResultPath
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperCreateResult.cs
+    startLine: 92
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The fully qualified path the Paper Doc was actually created at.</p>\n"
+  example: []
+  syntax:
+    content: public string ResultPath { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ResultPath As String
+  overload: Dropbox.Api.Files.PaperCreateResult.ResultPath*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.PaperCreateResult.FileId
+  commentId: P:Dropbox.Api.Files.PaperCreateResult.FileId
+  id: FileId
+  parent: Dropbox.Api.Files.PaperCreateResult
+  langs:
+  - csharp
+  - vb
+  name: FileId
+  nameWithType: PaperCreateResult.FileId
+  fullName: Dropbox.Api.Files.PaperCreateResult.FileId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperCreateResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: FileId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperCreateResult.cs
+    startLine: 97
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The id to use in Dropbox APIs when referencing the Paper Doc.</p>\n"
+  example: []
+  syntax:
+    content: public string FileId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property FileId As String
+  overload: Dropbox.Api.Files.PaperCreateResult.FileId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.PaperCreateResult.PaperRevision
+  commentId: P:Dropbox.Api.Files.PaperCreateResult.PaperRevision
+  id: PaperRevision
+  parent: Dropbox.Api.Files.PaperCreateResult
+  langs:
+  - csharp
+  - vb
+  name: PaperRevision
+  nameWithType: PaperCreateResult.PaperRevision
+  fullName: Dropbox.Api.Files.PaperCreateResult.PaperRevision
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperCreateResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PaperRevision
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperCreateResult.cs
+    startLine: 102
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The current doc revision.</p>\n"
+  example: []
+  syntax:
+    content: public long PaperRevision { get; protected set; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: Public Property PaperRevision As Long
+  overload: Dropbox.Api.Files.PaperCreateResult.PaperRevision*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.PaperCreateResult
+  commentId: T:Dropbox.Api.Files.PaperCreateResult
+  parent: Dropbox.Api.Files
+  name: PaperCreateResult
+  nameWithType: PaperCreateResult
+  fullName: Dropbox.Api.Files.PaperCreateResult
+- uid: Dropbox.Api.Files.PaperCreateResult.#ctor*
+  commentId: Overload:Dropbox.Api.Files.PaperCreateResult.#ctor
+  name: PaperCreateResult
+  nameWithType: PaperCreateResult.PaperCreateResult
+  fullName: Dropbox.Api.Files.PaperCreateResult.PaperCreateResult
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Int64
+  isExternal: true
+  name: Int64
+  nameWithType: Int64
+  fullName: System.Int64
+- uid: Dropbox.Api.Files.PaperCreateResult.Url*
+  commentId: Overload:Dropbox.Api.Files.PaperCreateResult.Url
+  name: Url
+  nameWithType: PaperCreateResult.Url
+  fullName: Dropbox.Api.Files.PaperCreateResult.Url
+- uid: Dropbox.Api.Files.PaperCreateResult.ResultPath*
+  commentId: Overload:Dropbox.Api.Files.PaperCreateResult.ResultPath
+  name: ResultPath
+  nameWithType: PaperCreateResult.ResultPath
+  fullName: Dropbox.Api.Files.PaperCreateResult.ResultPath
+- uid: Dropbox.Api.Files.PaperCreateResult.FileId*
+  commentId: Overload:Dropbox.Api.Files.PaperCreateResult.FileId
+  name: FileId
+  nameWithType: PaperCreateResult.FileId
+  fullName: Dropbox.Api.Files.PaperCreateResult.FileId
+- uid: Dropbox.Api.Files.PaperCreateResult.PaperRevision*
+  commentId: Overload:Dropbox.Api.Files.PaperCreateResult.PaperRevision
+  name: PaperRevision
+  nameWithType: PaperCreateResult.PaperRevision
+  fullName: Dropbox.Api.Files.PaperCreateResult.PaperRevision
+shouldSkipMarkup: true

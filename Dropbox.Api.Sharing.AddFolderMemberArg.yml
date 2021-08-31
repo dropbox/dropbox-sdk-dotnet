@@ -1,0 +1,506 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.AddFolderMemberArg
+  commentId: T:Dropbox.Api.Sharing.AddFolderMemberArg
+  id: AddFolderMemberArg
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.AddFolderMemberArg.#ctor
+  - Dropbox.Api.Sharing.AddFolderMemberArg.#ctor(System.String,System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.AddMember},System.Boolean,System.String)
+  - Dropbox.Api.Sharing.AddFolderMemberArg.CustomMessage
+  - Dropbox.Api.Sharing.AddFolderMemberArg.Members
+  - Dropbox.Api.Sharing.AddFolderMemberArg.Quiet
+  - Dropbox.Api.Sharing.AddFolderMemberArg.SharedFolderId
+  langs:
+  - csharp
+  - vb
+  name: AddFolderMemberArg
+  nameWithType: AddFolderMemberArg
+  fullName: Dropbox.Api.Sharing.AddFolderMemberArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AddFolderMemberArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AddFolderMemberArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AddFolderMemberArg.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The add folder member arg object</p>\n"
+  example: []
+  syntax:
+    content: 'public class AddFolderMemberArg : object'
+    content.vb: >-
+      Public Class AddFolderMemberArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Sharing.AddFolderMemberArg.#ctor(System.String,System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.AddMember},System.Boolean,System.String)
+  commentId: M:Dropbox.Api.Sharing.AddFolderMemberArg.#ctor(System.String,System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.AddMember},System.Boolean,System.String)
+  id: '#ctor(System.String,System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.AddMember},System.Boolean,System.String)'
+  parent: Dropbox.Api.Sharing.AddFolderMemberArg
+  langs:
+  - csharp
+  - vb
+  name: AddFolderMemberArg(String, System.Collections.Generic.IEnumerable<AddMember>, Boolean, String)
+  nameWithType: AddFolderMemberArg.AddFolderMemberArg(String, System.Collections.Generic.IEnumerable<AddMember>, Boolean, String)
+  fullName: Dropbox.Api.Sharing.AddFolderMemberArg.AddFolderMemberArg(System.String, System.Collections.Generic.IEnumerable<Dropbox.Api.Sharing.AddMember>, System.Boolean, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AddFolderMemberArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AddFolderMemberArg.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.AddFolderMemberArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public AddFolderMemberArg(string sharedFolderId, System.Collections.Generic.IEnumerable<AddMember> members, bool quiet = false, string customMessage = null)
+    parameters:
+    - id: sharedFolderId
+      type: System.String
+      description: The ID for the shared folder.
+    - id: members
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.AddMember}
+      description: >-
+        The intended list of members to add.  Added members will
+
+        receive invites to join the shared folder.
+    - id: quiet
+      type: System.Boolean
+      description: >-
+        Whether added members should be notified via email and device
+
+        notifications of their invite.
+    - id: customMessage
+      type: System.String
+      description: >-
+        Optional message to display to added members in their
+
+        invitation.
+    content.vb: Public Sub New(sharedFolderId As String, members As System.Collections.Generic.IEnumerable(Of AddMember), quiet As Boolean = False, customMessage As String = Nothing)
+  overload: Dropbox.Api.Sharing.AddFolderMemberArg.#ctor*
+  nameWithType.vb: AddFolderMemberArg.AddFolderMemberArg(String, System.Collections.Generic.IEnumerable(Of AddMember), Boolean, String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Sharing.AddFolderMemberArg.AddFolderMemberArg(System.String, System.Collections.Generic.IEnumerable(Of Dropbox.Api.Sharing.AddMember), System.Boolean, System.String)
+  name.vb: AddFolderMemberArg(String, System.Collections.Generic.IEnumerable(Of AddMember), Boolean, String)
+- uid: Dropbox.Api.Sharing.AddFolderMemberArg.#ctor
+  commentId: M:Dropbox.Api.Sharing.AddFolderMemberArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Sharing.AddFolderMemberArg
+  langs:
+  - csharp
+  - vb
+  name: AddFolderMemberArg()
+  nameWithType: AddFolderMemberArg.AddFolderMemberArg()
+  fullName: Dropbox.Api.Sharing.AddFolderMemberArg.AddFolderMemberArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AddFolderMemberArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AddFolderMemberArg.cs
+    startLine: 81
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.AddFolderMemberArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public AddFolderMemberArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Sharing.AddFolderMemberArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.AddFolderMemberArg.SharedFolderId
+  commentId: P:Dropbox.Api.Sharing.AddFolderMemberArg.SharedFolderId
+  id: SharedFolderId
+  parent: Dropbox.Api.Sharing.AddFolderMemberArg
+  langs:
+  - csharp
+  - vb
+  name: SharedFolderId
+  nameWithType: AddFolderMemberArg.SharedFolderId
+  fullName: Dropbox.Api.Sharing.AddFolderMemberArg.SharedFolderId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AddFolderMemberArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SharedFolderId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AddFolderMemberArg.cs
+    startLine: 90
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The ID for the shared folder.</p>\n"
+  example: []
+  syntax:
+    content: public string SharedFolderId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SharedFolderId As String
+  overload: Dropbox.Api.Sharing.AddFolderMemberArg.SharedFolderId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.AddFolderMemberArg.Members
+  commentId: P:Dropbox.Api.Sharing.AddFolderMemberArg.Members
+  id: Members
+  parent: Dropbox.Api.Sharing.AddFolderMemberArg
+  langs:
+  - csharp
+  - vb
+  name: Members
+  nameWithType: AddFolderMemberArg.Members
+  fullName: Dropbox.Api.Sharing.AddFolderMemberArg.Members
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AddFolderMemberArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Members
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AddFolderMemberArg.cs
+    startLine: 96
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The intended list of members to add.  Added members will receive invites to\njoin the shared folder.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<AddMember> Members { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{Dropbox.Api.Sharing.AddMember}
+    content.vb: Public Property Members As System.Collections.Generic.IList(Of AddMember)
+  overload: Dropbox.Api.Sharing.AddFolderMemberArg.Members*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.AddFolderMemberArg.Quiet
+  commentId: P:Dropbox.Api.Sharing.AddFolderMemberArg.Quiet
+  id: Quiet
+  parent: Dropbox.Api.Sharing.AddFolderMemberArg
+  langs:
+  - csharp
+  - vb
+  name: Quiet
+  nameWithType: AddFolderMemberArg.Quiet
+  fullName: Dropbox.Api.Sharing.AddFolderMemberArg.Quiet
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AddFolderMemberArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Quiet
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AddFolderMemberArg.cs
+    startLine: 102
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Whether added members should be notified via email and device notifications\nof their invite.</p>\n"
+  example: []
+  syntax:
+    content: public bool Quiet { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property Quiet As Boolean
+  overload: Dropbox.Api.Sharing.AddFolderMemberArg.Quiet*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.AddFolderMemberArg.CustomMessage
+  commentId: P:Dropbox.Api.Sharing.AddFolderMemberArg.CustomMessage
+  id: CustomMessage
+  parent: Dropbox.Api.Sharing.AddFolderMemberArg
+  langs:
+  - csharp
+  - vb
+  name: CustomMessage
+  nameWithType: AddFolderMemberArg.CustomMessage
+  fullName: Dropbox.Api.Sharing.AddFolderMemberArg.CustomMessage
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AddFolderMemberArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: CustomMessage
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AddFolderMemberArg.cs
+    startLine: 107
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Optional message to display to added members in their invitation.</p>\n"
+  example: []
+  syntax:
+    content: public string CustomMessage { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property CustomMessage As String
+  overload: Dropbox.Api.Sharing.AddFolderMemberArg.CustomMessage*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.AddFolderMemberArg
+  commentId: T:Dropbox.Api.Sharing.AddFolderMemberArg
+  parent: Dropbox.Api.Sharing
+  name: AddFolderMemberArg
+  nameWithType: AddFolderMemberArg
+  fullName: Dropbox.Api.Sharing.AddFolderMemberArg
+- uid: Dropbox.Api.Sharing.AddFolderMemberArg.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.AddFolderMemberArg.#ctor
+  name: AddFolderMemberArg
+  nameWithType: AddFolderMemberArg.AddFolderMemberArg
+  fullName: Dropbox.Api.Sharing.AddFolderMemberArg.AddFolderMemberArg
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.AddMember}
+  commentId: '!:System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.AddMember}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<AddMember>
+  nameWithType: System.Collections.Generic.IEnumerable<AddMember>
+  fullName: System.Collections.Generic.IEnumerable<Dropbox.Api.Sharing.AddMember>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of AddMember)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Dropbox.Api.Sharing.AddMember)
+  name.vb: System.Collections.Generic.IEnumerable(Of AddMember)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Sharing.AddMember
+    name: AddMember
+    nameWithType: AddMember
+    fullName: Dropbox.Api.Sharing.AddMember
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Sharing.AddMember
+    name: AddMember
+    nameWithType: AddMember
+    fullName: Dropbox.Api.Sharing.AddMember
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: System.Collections.Generic.IEnumerable<>
+  nameWithType: System.Collections.Generic.IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: System.Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Sharing.AddFolderMemberArg.SharedFolderId*
+  commentId: Overload:Dropbox.Api.Sharing.AddFolderMemberArg.SharedFolderId
+  name: SharedFolderId
+  nameWithType: AddFolderMemberArg.SharedFolderId
+  fullName: Dropbox.Api.Sharing.AddFolderMemberArg.SharedFolderId
+- uid: Dropbox.Api.Sharing.AddFolderMemberArg.Members*
+  commentId: Overload:Dropbox.Api.Sharing.AddFolderMemberArg.Members
+  name: Members
+  nameWithType: AddFolderMemberArg.Members
+  fullName: Dropbox.Api.Sharing.AddFolderMemberArg.Members
+- uid: System.Collections.Generic.IList{Dropbox.Api.Sharing.AddMember}
+  commentId: '!:System.Collections.Generic.IList{Dropbox.Api.Sharing.AddMember}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<AddMember>
+  nameWithType: System.Collections.Generic.IList<AddMember>
+  fullName: System.Collections.Generic.IList<Dropbox.Api.Sharing.AddMember>
+  nameWithType.vb: System.Collections.Generic.IList(Of AddMember)
+  fullName.vb: System.Collections.Generic.IList(Of Dropbox.Api.Sharing.AddMember)
+  name.vb: System.Collections.Generic.IList(Of AddMember)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Sharing.AddMember
+    name: AddMember
+    nameWithType: AddMember
+    fullName: Dropbox.Api.Sharing.AddMember
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Sharing.AddMember
+    name: AddMember
+    nameWithType: AddMember
+    fullName: Dropbox.Api.Sharing.AddMember
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  isExternal: true
+  name: System.Collections.Generic.IList<>
+  nameWithType: System.Collections.Generic.IList<>
+  fullName: System.Collections.Generic.IList<>
+  nameWithType.vb: System.Collections.Generic.IList(Of )
+  fullName.vb: System.Collections.Generic.IList(Of )
+  name.vb: System.Collections.Generic.IList(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Sharing.AddFolderMemberArg.Quiet*
+  commentId: Overload:Dropbox.Api.Sharing.AddFolderMemberArg.Quiet
+  name: Quiet
+  nameWithType: AddFolderMemberArg.Quiet
+  fullName: Dropbox.Api.Sharing.AddFolderMemberArg.Quiet
+- uid: Dropbox.Api.Sharing.AddFolderMemberArg.CustomMessage*
+  commentId: Overload:Dropbox.Api.Sharing.AddFolderMemberArg.CustomMessage
+  name: CustomMessage
+  nameWithType: AddFolderMemberArg.CustomMessage
+  fullName: Dropbox.Api.Sharing.AddFolderMemberArg.CustomMessage
+shouldSkipMarkup: true

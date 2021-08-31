@@ -1,0 +1,288 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.FileMemberActionIndividualResult
+  commentId: T:Dropbox.Api.Sharing.FileMemberActionIndividualResult
+  id: FileMemberActionIndividualResult
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.FileMemberActionIndividualResult.#ctor
+  - Dropbox.Api.Sharing.FileMemberActionIndividualResult.AsMemberError
+  - Dropbox.Api.Sharing.FileMemberActionIndividualResult.AsSuccess
+  - Dropbox.Api.Sharing.FileMemberActionIndividualResult.IsMemberError
+  - Dropbox.Api.Sharing.FileMemberActionIndividualResult.IsSuccess
+  langs:
+  - csharp
+  - vb
+  name: FileMemberActionIndividualResult
+  nameWithType: FileMemberActionIndividualResult
+  fullName: Dropbox.Api.Sharing.FileMemberActionIndividualResult
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FileMemberActionIndividualResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: FileMemberActionIndividualResult
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FileMemberActionIndividualResult.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The file member action individual result object</p>\n"
+  example: []
+  syntax:
+    content: 'public class FileMemberActionIndividualResult : object'
+    content.vb: >-
+      Public Class FileMemberActionIndividualResult
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Sharing.FileMemberActionIndividualResult.MemberError
+  - Dropbox.Api.Sharing.FileMemberActionIndividualResult.Success
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Sharing.FileMemberActionIndividualResult.#ctor
+  commentId: M:Dropbox.Api.Sharing.FileMemberActionIndividualResult.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Sharing.FileMemberActionIndividualResult
+  langs:
+  - csharp
+  - vb
+  name: FileMemberActionIndividualResult()
+  nameWithType: FileMemberActionIndividualResult.FileMemberActionIndividualResult()
+  fullName: Dropbox.Api.Sharing.FileMemberActionIndividualResult.FileMemberActionIndividualResult()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FileMemberActionIndividualResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FileMemberActionIndividualResult.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.FileMemberActionIndividualResult\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public FileMemberActionIndividualResult()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Sharing.FileMemberActionIndividualResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.FileMemberActionIndividualResult.IsSuccess
+  commentId: P:Dropbox.Api.Sharing.FileMemberActionIndividualResult.IsSuccess
+  id: IsSuccess
+  parent: Dropbox.Api.Sharing.FileMemberActionIndividualResult
+  langs:
+  - csharp
+  - vb
+  name: IsSuccess
+  nameWithType: FileMemberActionIndividualResult.IsSuccess
+  fullName: Dropbox.Api.Sharing.FileMemberActionIndividualResult.IsSuccess
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FileMemberActionIndividualResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsSuccess
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FileMemberActionIndividualResult.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is Success</p>\n"
+  example: []
+  syntax:
+    content: public bool IsSuccess { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsSuccess As Boolean
+  overload: Dropbox.Api.Sharing.FileMemberActionIndividualResult.IsSuccess*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.FileMemberActionIndividualResult.AsSuccess
+  commentId: P:Dropbox.Api.Sharing.FileMemberActionIndividualResult.AsSuccess
+  id: AsSuccess
+  parent: Dropbox.Api.Sharing.FileMemberActionIndividualResult
+  langs:
+  - csharp
+  - vb
+  name: AsSuccess
+  nameWithType: FileMemberActionIndividualResult.AsSuccess
+  fullName: Dropbox.Api.Sharing.FileMemberActionIndividualResult.AsSuccess
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FileMemberActionIndividualResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsSuccess
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FileMemberActionIndividualResult.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a Success, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public FileMemberActionIndividualResult.Success AsSuccess { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.FileMemberActionIndividualResult.Success
+    content.vb: Public ReadOnly Property AsSuccess As FileMemberActionIndividualResult.Success
+  overload: Dropbox.Api.Sharing.FileMemberActionIndividualResult.AsSuccess*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.FileMemberActionIndividualResult.IsMemberError
+  commentId: P:Dropbox.Api.Sharing.FileMemberActionIndividualResult.IsMemberError
+  id: IsMemberError
+  parent: Dropbox.Api.Sharing.FileMemberActionIndividualResult
+  langs:
+  - csharp
+  - vb
+  name: IsMemberError
+  nameWithType: FileMemberActionIndividualResult.IsMemberError
+  fullName: Dropbox.Api.Sharing.FileMemberActionIndividualResult.IsMemberError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FileMemberActionIndividualResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsMemberError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FileMemberActionIndividualResult.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is MemberError</p>\n"
+  example: []
+  syntax:
+    content: public bool IsMemberError { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsMemberError As Boolean
+  overload: Dropbox.Api.Sharing.FileMemberActionIndividualResult.IsMemberError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.FileMemberActionIndividualResult.AsMemberError
+  commentId: P:Dropbox.Api.Sharing.FileMemberActionIndividualResult.AsMemberError
+  id: AsMemberError
+  parent: Dropbox.Api.Sharing.FileMemberActionIndividualResult
+  langs:
+  - csharp
+  - vb
+  name: AsMemberError
+  nameWithType: FileMemberActionIndividualResult.AsMemberError
+  fullName: Dropbox.Api.Sharing.FileMemberActionIndividualResult.AsMemberError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FileMemberActionIndividualResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsMemberError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FileMemberActionIndividualResult.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a MemberError, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public FileMemberActionIndividualResult.MemberError AsMemberError { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.FileMemberActionIndividualResult.MemberError
+    content.vb: Public ReadOnly Property AsMemberError As FileMemberActionIndividualResult.MemberError
+  overload: Dropbox.Api.Sharing.FileMemberActionIndividualResult.AsMemberError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.FileMemberActionIndividualResult
+  commentId: T:Dropbox.Api.Sharing.FileMemberActionIndividualResult
+  parent: Dropbox.Api.Sharing
+  name: FileMemberActionIndividualResult
+  nameWithType: FileMemberActionIndividualResult
+  fullName: Dropbox.Api.Sharing.FileMemberActionIndividualResult
+- uid: Dropbox.Api.Sharing.FileMemberActionIndividualResult.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.FileMemberActionIndividualResult.#ctor
+  name: FileMemberActionIndividualResult
+  nameWithType: FileMemberActionIndividualResult.FileMemberActionIndividualResult
+  fullName: Dropbox.Api.Sharing.FileMemberActionIndividualResult.FileMemberActionIndividualResult
+- uid: Dropbox.Api.Sharing.FileMemberActionIndividualResult.IsSuccess*
+  commentId: Overload:Dropbox.Api.Sharing.FileMemberActionIndividualResult.IsSuccess
+  name: IsSuccess
+  nameWithType: FileMemberActionIndividualResult.IsSuccess
+  fullName: Dropbox.Api.Sharing.FileMemberActionIndividualResult.IsSuccess
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Sharing.FileMemberActionIndividualResult.AsSuccess*
+  commentId: Overload:Dropbox.Api.Sharing.FileMemberActionIndividualResult.AsSuccess
+  name: AsSuccess
+  nameWithType: FileMemberActionIndividualResult.AsSuccess
+  fullName: Dropbox.Api.Sharing.FileMemberActionIndividualResult.AsSuccess
+- uid: Dropbox.Api.Sharing.FileMemberActionIndividualResult.Success
+  commentId: T:Dropbox.Api.Sharing.FileMemberActionIndividualResult.Success
+  parent: Dropbox.Api.Sharing
+  name: FileMemberActionIndividualResult.Success
+  nameWithType: FileMemberActionIndividualResult.Success
+  fullName: Dropbox.Api.Sharing.FileMemberActionIndividualResult.Success
+- uid: Dropbox.Api.Sharing.FileMemberActionIndividualResult.IsMemberError*
+  commentId: Overload:Dropbox.Api.Sharing.FileMemberActionIndividualResult.IsMemberError
+  name: IsMemberError
+  nameWithType: FileMemberActionIndividualResult.IsMemberError
+  fullName: Dropbox.Api.Sharing.FileMemberActionIndividualResult.IsMemberError
+- uid: Dropbox.Api.Sharing.FileMemberActionIndividualResult.AsMemberError*
+  commentId: Overload:Dropbox.Api.Sharing.FileMemberActionIndividualResult.AsMemberError
+  name: AsMemberError
+  nameWithType: FileMemberActionIndividualResult.AsMemberError
+  fullName: Dropbox.Api.Sharing.FileMemberActionIndividualResult.AsMemberError
+- uid: Dropbox.Api.Sharing.FileMemberActionIndividualResult.MemberError
+  commentId: T:Dropbox.Api.Sharing.FileMemberActionIndividualResult.MemberError
+  parent: Dropbox.Api.Sharing
+  name: FileMemberActionIndividualResult.MemberError
+  nameWithType: FileMemberActionIndividualResult.MemberError
+  fullName: Dropbox.Api.Sharing.FileMemberActionIndividualResult.MemberError
+shouldSkipMarkup: true

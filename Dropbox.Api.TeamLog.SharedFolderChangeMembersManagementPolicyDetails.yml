@@ -1,0 +1,244 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.SharedFolderChangeMembersManagementPolicyDetails
+  commentId: T:Dropbox.Api.TeamLog.SharedFolderChangeMembersManagementPolicyDetails
+  id: SharedFolderChangeMembersManagementPolicyDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.SharedFolderChangeMembersManagementPolicyDetails.#ctor
+  - Dropbox.Api.TeamLog.SharedFolderChangeMembersManagementPolicyDetails.#ctor(Dropbox.Api.Sharing.AclUpdatePolicy,Dropbox.Api.Sharing.AclUpdatePolicy)
+  - Dropbox.Api.TeamLog.SharedFolderChangeMembersManagementPolicyDetails.NewValue
+  - Dropbox.Api.TeamLog.SharedFolderChangeMembersManagementPolicyDetails.PreviousValue
+  langs:
+  - csharp
+  - vb
+  name: SharedFolderChangeMembersManagementPolicyDetails
+  nameWithType: SharedFolderChangeMembersManagementPolicyDetails
+  fullName: Dropbox.Api.TeamLog.SharedFolderChangeMembersManagementPolicyDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderChangeMembersManagementPolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SharedFolderChangeMembersManagementPolicyDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderChangeMembersManagementPolicyDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Changed who can add/remove members of shared folder.</p>\n"
+  example: []
+  syntax:
+    content: 'public class SharedFolderChangeMembersManagementPolicyDetails : object'
+    content.vb: >-
+      Public Class SharedFolderChangeMembersManagementPolicyDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.SharedFolderChangeMembersManagementPolicyDetails.#ctor(Dropbox.Api.Sharing.AclUpdatePolicy,Dropbox.Api.Sharing.AclUpdatePolicy)
+  commentId: M:Dropbox.Api.TeamLog.SharedFolderChangeMembersManagementPolicyDetails.#ctor(Dropbox.Api.Sharing.AclUpdatePolicy,Dropbox.Api.Sharing.AclUpdatePolicy)
+  id: '#ctor(Dropbox.Api.Sharing.AclUpdatePolicy,Dropbox.Api.Sharing.AclUpdatePolicy)'
+  parent: Dropbox.Api.TeamLog.SharedFolderChangeMembersManagementPolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: SharedFolderChangeMembersManagementPolicyDetails(AclUpdatePolicy, AclUpdatePolicy)
+  nameWithType: SharedFolderChangeMembersManagementPolicyDetails.SharedFolderChangeMembersManagementPolicyDetails(AclUpdatePolicy, AclUpdatePolicy)
+  fullName: Dropbox.Api.TeamLog.SharedFolderChangeMembersManagementPolicyDetails.SharedFolderChangeMembersManagementPolicyDetails(Dropbox.Api.Sharing.AclUpdatePolicy, Dropbox.Api.Sharing.AclUpdatePolicy)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderChangeMembersManagementPolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderChangeMembersManagementPolicyDetails.cs
+    startLine: 36
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SharedFolderChangeMembersManagementPolicyDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public SharedFolderChangeMembersManagementPolicyDetails(AclUpdatePolicy newValue, AclUpdatePolicy previousValue = null)
+    parameters:
+    - id: newValue
+      type: Dropbox.Api.Sharing.AclUpdatePolicy
+      description: New members management policy.
+    - id: previousValue
+      type: Dropbox.Api.Sharing.AclUpdatePolicy
+      description: >-
+        Previous members management policy. Might be missing
+
+        due to historical data gap.
+    content.vb: Public Sub New(newValue As AclUpdatePolicy, previousValue As AclUpdatePolicy = Nothing)
+  overload: Dropbox.Api.TeamLog.SharedFolderChangeMembersManagementPolicyDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SharedFolderChangeMembersManagementPolicyDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.SharedFolderChangeMembersManagementPolicyDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.SharedFolderChangeMembersManagementPolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: SharedFolderChangeMembersManagementPolicyDetails()
+  nameWithType: SharedFolderChangeMembersManagementPolicyDetails.SharedFolderChangeMembersManagementPolicyDetails()
+  fullName: Dropbox.Api.TeamLog.SharedFolderChangeMembersManagementPolicyDetails.SharedFolderChangeMembersManagementPolicyDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderChangeMembersManagementPolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderChangeMembersManagementPolicyDetails.cs
+    startLine: 54
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SharedFolderChangeMembersManagementPolicyDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public SharedFolderChangeMembersManagementPolicyDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.SharedFolderChangeMembersManagementPolicyDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SharedFolderChangeMembersManagementPolicyDetails.NewValue
+  commentId: P:Dropbox.Api.TeamLog.SharedFolderChangeMembersManagementPolicyDetails.NewValue
+  id: NewValue
+  parent: Dropbox.Api.TeamLog.SharedFolderChangeMembersManagementPolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: NewValue
+  nameWithType: SharedFolderChangeMembersManagementPolicyDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.SharedFolderChangeMembersManagementPolicyDetails.NewValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderChangeMembersManagementPolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NewValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderChangeMembersManagementPolicyDetails.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>New members management policy.</p>\n"
+  example: []
+  syntax:
+    content: public AclUpdatePolicy NewValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.AclUpdatePolicy
+    content.vb: Public Property NewValue As AclUpdatePolicy
+  overload: Dropbox.Api.TeamLog.SharedFolderChangeMembersManagementPolicyDetails.NewValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.SharedFolderChangeMembersManagementPolicyDetails.PreviousValue
+  commentId: P:Dropbox.Api.TeamLog.SharedFolderChangeMembersManagementPolicyDetails.PreviousValue
+  id: PreviousValue
+  parent: Dropbox.Api.TeamLog.SharedFolderChangeMembersManagementPolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: PreviousValue
+  nameWithType: SharedFolderChangeMembersManagementPolicyDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.SharedFolderChangeMembersManagementPolicyDetails.PreviousValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderChangeMembersManagementPolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PreviousValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedFolderChangeMembersManagementPolicyDetails.cs
+    startLine: 68
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Previous members management policy. Might be missing due to historical data\ngap.</p>\n"
+  example: []
+  syntax:
+    content: public AclUpdatePolicy PreviousValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.AclUpdatePolicy
+    content.vb: Public Property PreviousValue As AclUpdatePolicy
+  overload: Dropbox.Api.TeamLog.SharedFolderChangeMembersManagementPolicyDetails.PreviousValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.SharedFolderChangeMembersManagementPolicyDetails
+  commentId: T:Dropbox.Api.TeamLog.SharedFolderChangeMembersManagementPolicyDetails
+  parent: Dropbox.Api.TeamLog
+  name: SharedFolderChangeMembersManagementPolicyDetails
+  nameWithType: SharedFolderChangeMembersManagementPolicyDetails
+  fullName: Dropbox.Api.TeamLog.SharedFolderChangeMembersManagementPolicyDetails
+- uid: Dropbox.Api.TeamLog.SharedFolderChangeMembersManagementPolicyDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedFolderChangeMembersManagementPolicyDetails.#ctor
+  name: SharedFolderChangeMembersManagementPolicyDetails
+  nameWithType: SharedFolderChangeMembersManagementPolicyDetails.SharedFolderChangeMembersManagementPolicyDetails
+  fullName: Dropbox.Api.TeamLog.SharedFolderChangeMembersManagementPolicyDetails.SharedFolderChangeMembersManagementPolicyDetails
+- uid: Dropbox.Api.Sharing.AclUpdatePolicy
+  commentId: T:Dropbox.Api.Sharing.AclUpdatePolicy
+  parent: Dropbox.Api.Sharing
+  name: AclUpdatePolicy
+  nameWithType: AclUpdatePolicy
+  fullName: Dropbox.Api.Sharing.AclUpdatePolicy
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: Dropbox.Api.TeamLog.SharedFolderChangeMembersManagementPolicyDetails.NewValue*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedFolderChangeMembersManagementPolicyDetails.NewValue
+  name: NewValue
+  nameWithType: SharedFolderChangeMembersManagementPolicyDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.SharedFolderChangeMembersManagementPolicyDetails.NewValue
+- uid: Dropbox.Api.TeamLog.SharedFolderChangeMembersManagementPolicyDetails.PreviousValue*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedFolderChangeMembersManagementPolicyDetails.PreviousValue
+  name: PreviousValue
+  nameWithType: SharedFolderChangeMembersManagementPolicyDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.SharedFolderChangeMembersManagementPolicyDetails.PreviousValue
+shouldSkipMarkup: true

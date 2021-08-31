@@ -1,0 +1,939 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.PaperUpdateError
+  commentId: T:Dropbox.Api.Files.PaperUpdateError
+  id: PaperUpdateError
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.PaperUpdateError.#ctor
+  - Dropbox.Api.Files.PaperUpdateError.AsContentMalformed
+  - Dropbox.Api.Files.PaperUpdateError.AsDocArchived
+  - Dropbox.Api.Files.PaperUpdateError.AsDocDeleted
+  - Dropbox.Api.Files.PaperUpdateError.AsDocLengthExceeded
+  - Dropbox.Api.Files.PaperUpdateError.AsImageSizeExceeded
+  - Dropbox.Api.Files.PaperUpdateError.AsInsufficientPermissions
+  - Dropbox.Api.Files.PaperUpdateError.AsOther
+  - Dropbox.Api.Files.PaperUpdateError.AsPath
+  - Dropbox.Api.Files.PaperUpdateError.AsRevisionMismatch
+  - Dropbox.Api.Files.PaperUpdateError.IsContentMalformed
+  - Dropbox.Api.Files.PaperUpdateError.IsDocArchived
+  - Dropbox.Api.Files.PaperUpdateError.IsDocDeleted
+  - Dropbox.Api.Files.PaperUpdateError.IsDocLengthExceeded
+  - Dropbox.Api.Files.PaperUpdateError.IsImageSizeExceeded
+  - Dropbox.Api.Files.PaperUpdateError.IsInsufficientPermissions
+  - Dropbox.Api.Files.PaperUpdateError.IsOther
+  - Dropbox.Api.Files.PaperUpdateError.IsPath
+  - Dropbox.Api.Files.PaperUpdateError.IsRevisionMismatch
+  langs:
+  - csharp
+  - vb
+  name: PaperUpdateError
+  nameWithType: PaperUpdateError
+  fullName: Dropbox.Api.Files.PaperUpdateError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperUpdateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PaperUpdateError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperUpdateError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The paper update error object</p>\n"
+  example: []
+  syntax:
+    content: 'public class PaperUpdateError : object'
+    content.vb: >-
+      Public Class PaperUpdateError
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Files.PaperUpdateError.ContentMalformed
+  - Dropbox.Api.Files.PaperUpdateError.DocArchived
+  - Dropbox.Api.Files.PaperUpdateError.DocDeleted
+  - Dropbox.Api.Files.PaperUpdateError.DocLengthExceeded
+  - Dropbox.Api.Files.PaperUpdateError.ImageSizeExceeded
+  - Dropbox.Api.Files.PaperUpdateError.InsufficientPermissions
+  - Dropbox.Api.Files.PaperUpdateError.Other
+  - Dropbox.Api.Files.PaperUpdateError.Path
+  - Dropbox.Api.Files.PaperUpdateError.RevisionMismatch
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.PaperUpdateError.#ctor
+  commentId: M:Dropbox.Api.Files.PaperUpdateError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.PaperUpdateError
+  langs:
+  - csharp
+  - vb
+  name: PaperUpdateError()
+  nameWithType: PaperUpdateError.PaperUpdateError()
+  fullName: Dropbox.Api.Files.PaperUpdateError.PaperUpdateError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperUpdateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperUpdateError.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.PaperUpdateError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public PaperUpdateError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.PaperUpdateError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.PaperUpdateError.IsPath
+  commentId: P:Dropbox.Api.Files.PaperUpdateError.IsPath
+  id: IsPath
+  parent: Dropbox.Api.Files.PaperUpdateError
+  langs:
+  - csharp
+  - vb
+  name: IsPath
+  nameWithType: PaperUpdateError.IsPath
+  fullName: Dropbox.Api.Files.PaperUpdateError.IsPath
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperUpdateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsPath
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperUpdateError.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is Path</p>\n"
+  example: []
+  syntax:
+    content: public bool IsPath { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsPath As Boolean
+  overload: Dropbox.Api.Files.PaperUpdateError.IsPath*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.PaperUpdateError.AsPath
+  commentId: P:Dropbox.Api.Files.PaperUpdateError.AsPath
+  id: AsPath
+  parent: Dropbox.Api.Files.PaperUpdateError
+  langs:
+  - csharp
+  - vb
+  name: AsPath
+  nameWithType: PaperUpdateError.AsPath
+  fullName: Dropbox.Api.Files.PaperUpdateError.AsPath
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperUpdateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsPath
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperUpdateError.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a Path, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PaperUpdateError.Path AsPath { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.PaperUpdateError.Path
+    content.vb: Public ReadOnly Property AsPath As PaperUpdateError.Path
+  overload: Dropbox.Api.Files.PaperUpdateError.AsPath*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.PaperUpdateError.IsRevisionMismatch
+  commentId: P:Dropbox.Api.Files.PaperUpdateError.IsRevisionMismatch
+  id: IsRevisionMismatch
+  parent: Dropbox.Api.Files.PaperUpdateError
+  langs:
+  - csharp
+  - vb
+  name: IsRevisionMismatch
+  nameWithType: PaperUpdateError.IsRevisionMismatch
+  fullName: Dropbox.Api.Files.PaperUpdateError.IsRevisionMismatch
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperUpdateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsRevisionMismatch
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperUpdateError.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is RevisionMismatch</p>\n"
+  example: []
+  syntax:
+    content: public bool IsRevisionMismatch { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsRevisionMismatch As Boolean
+  overload: Dropbox.Api.Files.PaperUpdateError.IsRevisionMismatch*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.PaperUpdateError.AsRevisionMismatch
+  commentId: P:Dropbox.Api.Files.PaperUpdateError.AsRevisionMismatch
+  id: AsRevisionMismatch
+  parent: Dropbox.Api.Files.PaperUpdateError
+  langs:
+  - csharp
+  - vb
+  name: AsRevisionMismatch
+  nameWithType: PaperUpdateError.AsRevisionMismatch
+  fullName: Dropbox.Api.Files.PaperUpdateError.AsRevisionMismatch
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperUpdateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsRevisionMismatch
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperUpdateError.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a RevisionMismatch, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PaperUpdateError.RevisionMismatch AsRevisionMismatch { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.PaperUpdateError.RevisionMismatch
+    content.vb: Public ReadOnly Property AsRevisionMismatch As PaperUpdateError.RevisionMismatch
+  overload: Dropbox.Api.Files.PaperUpdateError.AsRevisionMismatch*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.PaperUpdateError.IsDocArchived
+  commentId: P:Dropbox.Api.Files.PaperUpdateError.IsDocArchived
+  id: IsDocArchived
+  parent: Dropbox.Api.Files.PaperUpdateError
+  langs:
+  - csharp
+  - vb
+  name: IsDocArchived
+  nameWithType: PaperUpdateError.IsDocArchived
+  fullName: Dropbox.Api.Files.PaperUpdateError.IsDocArchived
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperUpdateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsDocArchived
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperUpdateError.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is DocArchived</p>\n"
+  example: []
+  syntax:
+    content: public bool IsDocArchived { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsDocArchived As Boolean
+  overload: Dropbox.Api.Files.PaperUpdateError.IsDocArchived*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.PaperUpdateError.AsDocArchived
+  commentId: P:Dropbox.Api.Files.PaperUpdateError.AsDocArchived
+  id: AsDocArchived
+  parent: Dropbox.Api.Files.PaperUpdateError
+  langs:
+  - csharp
+  - vb
+  name: AsDocArchived
+  nameWithType: PaperUpdateError.AsDocArchived
+  fullName: Dropbox.Api.Files.PaperUpdateError.AsDocArchived
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperUpdateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsDocArchived
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperUpdateError.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a DocArchived, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PaperUpdateError.DocArchived AsDocArchived { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.PaperUpdateError.DocArchived
+    content.vb: Public ReadOnly Property AsDocArchived As PaperUpdateError.DocArchived
+  overload: Dropbox.Api.Files.PaperUpdateError.AsDocArchived*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.PaperUpdateError.IsDocDeleted
+  commentId: P:Dropbox.Api.Files.PaperUpdateError.IsDocDeleted
+  id: IsDocDeleted
+  parent: Dropbox.Api.Files.PaperUpdateError
+  langs:
+  - csharp
+  - vb
+  name: IsDocDeleted
+  nameWithType: PaperUpdateError.IsDocDeleted
+  fullName: Dropbox.Api.Files.PaperUpdateError.IsDocDeleted
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperUpdateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsDocDeleted
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperUpdateError.cs
+    startLine: 106
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is DocDeleted</p>\n"
+  example: []
+  syntax:
+    content: public bool IsDocDeleted { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsDocDeleted As Boolean
+  overload: Dropbox.Api.Files.PaperUpdateError.IsDocDeleted*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.PaperUpdateError.AsDocDeleted
+  commentId: P:Dropbox.Api.Files.PaperUpdateError.AsDocDeleted
+  id: AsDocDeleted
+  parent: Dropbox.Api.Files.PaperUpdateError
+  langs:
+  - csharp
+  - vb
+  name: AsDocDeleted
+  nameWithType: PaperUpdateError.AsDocDeleted
+  fullName: Dropbox.Api.Files.PaperUpdateError.AsDocDeleted
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperUpdateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsDocDeleted
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperUpdateError.cs
+    startLine: 117
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a DocDeleted, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PaperUpdateError.DocDeleted AsDocDeleted { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.PaperUpdateError.DocDeleted
+    content.vb: Public ReadOnly Property AsDocDeleted As PaperUpdateError.DocDeleted
+  overload: Dropbox.Api.Files.PaperUpdateError.AsDocDeleted*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.PaperUpdateError.IsInsufficientPermissions
+  commentId: P:Dropbox.Api.Files.PaperUpdateError.IsInsufficientPermissions
+  id: IsInsufficientPermissions
+  parent: Dropbox.Api.Files.PaperUpdateError
+  langs:
+  - csharp
+  - vb
+  name: IsInsufficientPermissions
+  nameWithType: PaperUpdateError.IsInsufficientPermissions
+  fullName: Dropbox.Api.Files.PaperUpdateError.IsInsufficientPermissions
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperUpdateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsInsufficientPermissions
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperUpdateError.cs
+    startLine: 129
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is\nInsufficientPermissions</p>\n"
+  example: []
+  syntax:
+    content: public bool IsInsufficientPermissions { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsInsufficientPermissions As Boolean
+  overload: Dropbox.Api.Files.PaperUpdateError.IsInsufficientPermissions*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.PaperUpdateError.AsInsufficientPermissions
+  commentId: P:Dropbox.Api.Files.PaperUpdateError.AsInsufficientPermissions
+  id: AsInsufficientPermissions
+  parent: Dropbox.Api.Files.PaperUpdateError
+  langs:
+  - csharp
+  - vb
+  name: AsInsufficientPermissions
+  nameWithType: PaperUpdateError.AsInsufficientPermissions
+  fullName: Dropbox.Api.Files.PaperUpdateError.AsInsufficientPermissions
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperUpdateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsInsufficientPermissions
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperUpdateError.cs
+    startLine: 140
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a InsufficientPermissions, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PaperUpdateError.InsufficientPermissions AsInsufficientPermissions { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.PaperUpdateError.InsufficientPermissions
+    content.vb: Public ReadOnly Property AsInsufficientPermissions As PaperUpdateError.InsufficientPermissions
+  overload: Dropbox.Api.Files.PaperUpdateError.AsInsufficientPermissions*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.PaperUpdateError.IsContentMalformed
+  commentId: P:Dropbox.Api.Files.PaperUpdateError.IsContentMalformed
+  id: IsContentMalformed
+  parent: Dropbox.Api.Files.PaperUpdateError
+  langs:
+  - csharp
+  - vb
+  name: IsContentMalformed
+  nameWithType: PaperUpdateError.IsContentMalformed
+  fullName: Dropbox.Api.Files.PaperUpdateError.IsContentMalformed
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperUpdateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsContentMalformed
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperUpdateError.cs
+    startLine: 151
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is ContentMalformed</p>\n"
+  example: []
+  syntax:
+    content: public bool IsContentMalformed { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsContentMalformed As Boolean
+  overload: Dropbox.Api.Files.PaperUpdateError.IsContentMalformed*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.PaperUpdateError.AsContentMalformed
+  commentId: P:Dropbox.Api.Files.PaperUpdateError.AsContentMalformed
+  id: AsContentMalformed
+  parent: Dropbox.Api.Files.PaperUpdateError
+  langs:
+  - csharp
+  - vb
+  name: AsContentMalformed
+  nameWithType: PaperUpdateError.AsContentMalformed
+  fullName: Dropbox.Api.Files.PaperUpdateError.AsContentMalformed
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperUpdateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsContentMalformed
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperUpdateError.cs
+    startLine: 162
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a ContentMalformed, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PaperUpdateError.ContentMalformed AsContentMalformed { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.PaperUpdateError.ContentMalformed
+    content.vb: Public ReadOnly Property AsContentMalformed As PaperUpdateError.ContentMalformed
+  overload: Dropbox.Api.Files.PaperUpdateError.AsContentMalformed*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.PaperUpdateError.IsDocLengthExceeded
+  commentId: P:Dropbox.Api.Files.PaperUpdateError.IsDocLengthExceeded
+  id: IsDocLengthExceeded
+  parent: Dropbox.Api.Files.PaperUpdateError
+  langs:
+  - csharp
+  - vb
+  name: IsDocLengthExceeded
+  nameWithType: PaperUpdateError.IsDocLengthExceeded
+  fullName: Dropbox.Api.Files.PaperUpdateError.IsDocLengthExceeded
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperUpdateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsDocLengthExceeded
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperUpdateError.cs
+    startLine: 173
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is DocLengthExceeded</p>\n"
+  example: []
+  syntax:
+    content: public bool IsDocLengthExceeded { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsDocLengthExceeded As Boolean
+  overload: Dropbox.Api.Files.PaperUpdateError.IsDocLengthExceeded*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.PaperUpdateError.AsDocLengthExceeded
+  commentId: P:Dropbox.Api.Files.PaperUpdateError.AsDocLengthExceeded
+  id: AsDocLengthExceeded
+  parent: Dropbox.Api.Files.PaperUpdateError
+  langs:
+  - csharp
+  - vb
+  name: AsDocLengthExceeded
+  nameWithType: PaperUpdateError.AsDocLengthExceeded
+  fullName: Dropbox.Api.Files.PaperUpdateError.AsDocLengthExceeded
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperUpdateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsDocLengthExceeded
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperUpdateError.cs
+    startLine: 184
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a DocLengthExceeded, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PaperUpdateError.DocLengthExceeded AsDocLengthExceeded { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.PaperUpdateError.DocLengthExceeded
+    content.vb: Public ReadOnly Property AsDocLengthExceeded As PaperUpdateError.DocLengthExceeded
+  overload: Dropbox.Api.Files.PaperUpdateError.AsDocLengthExceeded*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.PaperUpdateError.IsImageSizeExceeded
+  commentId: P:Dropbox.Api.Files.PaperUpdateError.IsImageSizeExceeded
+  id: IsImageSizeExceeded
+  parent: Dropbox.Api.Files.PaperUpdateError
+  langs:
+  - csharp
+  - vb
+  name: IsImageSizeExceeded
+  nameWithType: PaperUpdateError.IsImageSizeExceeded
+  fullName: Dropbox.Api.Files.PaperUpdateError.IsImageSizeExceeded
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperUpdateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsImageSizeExceeded
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperUpdateError.cs
+    startLine: 195
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is ImageSizeExceeded</p>\n"
+  example: []
+  syntax:
+    content: public bool IsImageSizeExceeded { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsImageSizeExceeded As Boolean
+  overload: Dropbox.Api.Files.PaperUpdateError.IsImageSizeExceeded*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.PaperUpdateError.AsImageSizeExceeded
+  commentId: P:Dropbox.Api.Files.PaperUpdateError.AsImageSizeExceeded
+  id: AsImageSizeExceeded
+  parent: Dropbox.Api.Files.PaperUpdateError
+  langs:
+  - csharp
+  - vb
+  name: AsImageSizeExceeded
+  nameWithType: PaperUpdateError.AsImageSizeExceeded
+  fullName: Dropbox.Api.Files.PaperUpdateError.AsImageSizeExceeded
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperUpdateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsImageSizeExceeded
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperUpdateError.cs
+    startLine: 206
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a ImageSizeExceeded, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PaperUpdateError.ImageSizeExceeded AsImageSizeExceeded { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.PaperUpdateError.ImageSizeExceeded
+    content.vb: Public ReadOnly Property AsImageSizeExceeded As PaperUpdateError.ImageSizeExceeded
+  overload: Dropbox.Api.Files.PaperUpdateError.AsImageSizeExceeded*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.PaperUpdateError.IsOther
+  commentId: P:Dropbox.Api.Files.PaperUpdateError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Files.PaperUpdateError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: PaperUpdateError.IsOther
+  fullName: Dropbox.Api.Files.PaperUpdateError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperUpdateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperUpdateError.cs
+    startLine: 217
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Files.PaperUpdateError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.PaperUpdateError.AsOther
+  commentId: P:Dropbox.Api.Files.PaperUpdateError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Files.PaperUpdateError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: PaperUpdateError.AsOther
+  fullName: Dropbox.Api.Files.PaperUpdateError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperUpdateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/PaperUpdateError.cs
+    startLine: 228
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PaperUpdateError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.PaperUpdateError.Other
+    content.vb: Public ReadOnly Property AsOther As PaperUpdateError.Other
+  overload: Dropbox.Api.Files.PaperUpdateError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.PaperUpdateError
+  commentId: T:Dropbox.Api.Files.PaperUpdateError
+  parent: Dropbox.Api.Files
+  name: PaperUpdateError
+  nameWithType: PaperUpdateError
+  fullName: Dropbox.Api.Files.PaperUpdateError
+- uid: Dropbox.Api.Files.PaperUpdateError.#ctor*
+  commentId: Overload:Dropbox.Api.Files.PaperUpdateError.#ctor
+  name: PaperUpdateError
+  nameWithType: PaperUpdateError.PaperUpdateError
+  fullName: Dropbox.Api.Files.PaperUpdateError.PaperUpdateError
+- uid: Dropbox.Api.Files.PaperUpdateError.IsPath*
+  commentId: Overload:Dropbox.Api.Files.PaperUpdateError.IsPath
+  name: IsPath
+  nameWithType: PaperUpdateError.IsPath
+  fullName: Dropbox.Api.Files.PaperUpdateError.IsPath
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Files.PaperUpdateError.AsPath*
+  commentId: Overload:Dropbox.Api.Files.PaperUpdateError.AsPath
+  name: AsPath
+  nameWithType: PaperUpdateError.AsPath
+  fullName: Dropbox.Api.Files.PaperUpdateError.AsPath
+- uid: Dropbox.Api.Files.PaperUpdateError.Path
+  commentId: T:Dropbox.Api.Files.PaperUpdateError.Path
+  parent: Dropbox.Api.Files
+  name: PaperUpdateError.Path
+  nameWithType: PaperUpdateError.Path
+  fullName: Dropbox.Api.Files.PaperUpdateError.Path
+- uid: Dropbox.Api.Files.PaperUpdateError.IsRevisionMismatch*
+  commentId: Overload:Dropbox.Api.Files.PaperUpdateError.IsRevisionMismatch
+  name: IsRevisionMismatch
+  nameWithType: PaperUpdateError.IsRevisionMismatch
+  fullName: Dropbox.Api.Files.PaperUpdateError.IsRevisionMismatch
+- uid: Dropbox.Api.Files.PaperUpdateError.AsRevisionMismatch*
+  commentId: Overload:Dropbox.Api.Files.PaperUpdateError.AsRevisionMismatch
+  name: AsRevisionMismatch
+  nameWithType: PaperUpdateError.AsRevisionMismatch
+  fullName: Dropbox.Api.Files.PaperUpdateError.AsRevisionMismatch
+- uid: Dropbox.Api.Files.PaperUpdateError.RevisionMismatch
+  commentId: T:Dropbox.Api.Files.PaperUpdateError.RevisionMismatch
+  parent: Dropbox.Api.Files
+  name: PaperUpdateError.RevisionMismatch
+  nameWithType: PaperUpdateError.RevisionMismatch
+  fullName: Dropbox.Api.Files.PaperUpdateError.RevisionMismatch
+- uid: Dropbox.Api.Files.PaperUpdateError.IsDocArchived*
+  commentId: Overload:Dropbox.Api.Files.PaperUpdateError.IsDocArchived
+  name: IsDocArchived
+  nameWithType: PaperUpdateError.IsDocArchived
+  fullName: Dropbox.Api.Files.PaperUpdateError.IsDocArchived
+- uid: Dropbox.Api.Files.PaperUpdateError.AsDocArchived*
+  commentId: Overload:Dropbox.Api.Files.PaperUpdateError.AsDocArchived
+  name: AsDocArchived
+  nameWithType: PaperUpdateError.AsDocArchived
+  fullName: Dropbox.Api.Files.PaperUpdateError.AsDocArchived
+- uid: Dropbox.Api.Files.PaperUpdateError.DocArchived
+  commentId: T:Dropbox.Api.Files.PaperUpdateError.DocArchived
+  parent: Dropbox.Api.Files
+  name: PaperUpdateError.DocArchived
+  nameWithType: PaperUpdateError.DocArchived
+  fullName: Dropbox.Api.Files.PaperUpdateError.DocArchived
+- uid: Dropbox.Api.Files.PaperUpdateError.IsDocDeleted*
+  commentId: Overload:Dropbox.Api.Files.PaperUpdateError.IsDocDeleted
+  name: IsDocDeleted
+  nameWithType: PaperUpdateError.IsDocDeleted
+  fullName: Dropbox.Api.Files.PaperUpdateError.IsDocDeleted
+- uid: Dropbox.Api.Files.PaperUpdateError.AsDocDeleted*
+  commentId: Overload:Dropbox.Api.Files.PaperUpdateError.AsDocDeleted
+  name: AsDocDeleted
+  nameWithType: PaperUpdateError.AsDocDeleted
+  fullName: Dropbox.Api.Files.PaperUpdateError.AsDocDeleted
+- uid: Dropbox.Api.Files.PaperUpdateError.DocDeleted
+  commentId: T:Dropbox.Api.Files.PaperUpdateError.DocDeleted
+  parent: Dropbox.Api.Files
+  name: PaperUpdateError.DocDeleted
+  nameWithType: PaperUpdateError.DocDeleted
+  fullName: Dropbox.Api.Files.PaperUpdateError.DocDeleted
+- uid: Dropbox.Api.Files.PaperUpdateError.IsInsufficientPermissions*
+  commentId: Overload:Dropbox.Api.Files.PaperUpdateError.IsInsufficientPermissions
+  name: IsInsufficientPermissions
+  nameWithType: PaperUpdateError.IsInsufficientPermissions
+  fullName: Dropbox.Api.Files.PaperUpdateError.IsInsufficientPermissions
+- uid: Dropbox.Api.Files.PaperUpdateError.AsInsufficientPermissions*
+  commentId: Overload:Dropbox.Api.Files.PaperUpdateError.AsInsufficientPermissions
+  name: AsInsufficientPermissions
+  nameWithType: PaperUpdateError.AsInsufficientPermissions
+  fullName: Dropbox.Api.Files.PaperUpdateError.AsInsufficientPermissions
+- uid: Dropbox.Api.Files.PaperUpdateError.InsufficientPermissions
+  commentId: T:Dropbox.Api.Files.PaperUpdateError.InsufficientPermissions
+  parent: Dropbox.Api.Files
+  name: PaperUpdateError.InsufficientPermissions
+  nameWithType: PaperUpdateError.InsufficientPermissions
+  fullName: Dropbox.Api.Files.PaperUpdateError.InsufficientPermissions
+- uid: Dropbox.Api.Files.PaperUpdateError.IsContentMalformed*
+  commentId: Overload:Dropbox.Api.Files.PaperUpdateError.IsContentMalformed
+  name: IsContentMalformed
+  nameWithType: PaperUpdateError.IsContentMalformed
+  fullName: Dropbox.Api.Files.PaperUpdateError.IsContentMalformed
+- uid: Dropbox.Api.Files.PaperUpdateError.AsContentMalformed*
+  commentId: Overload:Dropbox.Api.Files.PaperUpdateError.AsContentMalformed
+  name: AsContentMalformed
+  nameWithType: PaperUpdateError.AsContentMalformed
+  fullName: Dropbox.Api.Files.PaperUpdateError.AsContentMalformed
+- uid: Dropbox.Api.Files.PaperUpdateError.ContentMalformed
+  commentId: T:Dropbox.Api.Files.PaperUpdateError.ContentMalformed
+  parent: Dropbox.Api.Files
+  name: PaperUpdateError.ContentMalformed
+  nameWithType: PaperUpdateError.ContentMalformed
+  fullName: Dropbox.Api.Files.PaperUpdateError.ContentMalformed
+- uid: Dropbox.Api.Files.PaperUpdateError.IsDocLengthExceeded*
+  commentId: Overload:Dropbox.Api.Files.PaperUpdateError.IsDocLengthExceeded
+  name: IsDocLengthExceeded
+  nameWithType: PaperUpdateError.IsDocLengthExceeded
+  fullName: Dropbox.Api.Files.PaperUpdateError.IsDocLengthExceeded
+- uid: Dropbox.Api.Files.PaperUpdateError.AsDocLengthExceeded*
+  commentId: Overload:Dropbox.Api.Files.PaperUpdateError.AsDocLengthExceeded
+  name: AsDocLengthExceeded
+  nameWithType: PaperUpdateError.AsDocLengthExceeded
+  fullName: Dropbox.Api.Files.PaperUpdateError.AsDocLengthExceeded
+- uid: Dropbox.Api.Files.PaperUpdateError.DocLengthExceeded
+  commentId: T:Dropbox.Api.Files.PaperUpdateError.DocLengthExceeded
+  parent: Dropbox.Api.Files
+  name: PaperUpdateError.DocLengthExceeded
+  nameWithType: PaperUpdateError.DocLengthExceeded
+  fullName: Dropbox.Api.Files.PaperUpdateError.DocLengthExceeded
+- uid: Dropbox.Api.Files.PaperUpdateError.IsImageSizeExceeded*
+  commentId: Overload:Dropbox.Api.Files.PaperUpdateError.IsImageSizeExceeded
+  name: IsImageSizeExceeded
+  nameWithType: PaperUpdateError.IsImageSizeExceeded
+  fullName: Dropbox.Api.Files.PaperUpdateError.IsImageSizeExceeded
+- uid: Dropbox.Api.Files.PaperUpdateError.AsImageSizeExceeded*
+  commentId: Overload:Dropbox.Api.Files.PaperUpdateError.AsImageSizeExceeded
+  name: AsImageSizeExceeded
+  nameWithType: PaperUpdateError.AsImageSizeExceeded
+  fullName: Dropbox.Api.Files.PaperUpdateError.AsImageSizeExceeded
+- uid: Dropbox.Api.Files.PaperUpdateError.ImageSizeExceeded
+  commentId: T:Dropbox.Api.Files.PaperUpdateError.ImageSizeExceeded
+  parent: Dropbox.Api.Files
+  name: PaperUpdateError.ImageSizeExceeded
+  nameWithType: PaperUpdateError.ImageSizeExceeded
+  fullName: Dropbox.Api.Files.PaperUpdateError.ImageSizeExceeded
+- uid: Dropbox.Api.Files.PaperUpdateError.IsOther*
+  commentId: Overload:Dropbox.Api.Files.PaperUpdateError.IsOther
+  name: IsOther
+  nameWithType: PaperUpdateError.IsOther
+  fullName: Dropbox.Api.Files.PaperUpdateError.IsOther
+- uid: Dropbox.Api.Files.PaperUpdateError.AsOther*
+  commentId: Overload:Dropbox.Api.Files.PaperUpdateError.AsOther
+  name: AsOther
+  nameWithType: PaperUpdateError.AsOther
+  fullName: Dropbox.Api.Files.PaperUpdateError.AsOther
+- uid: Dropbox.Api.Files.PaperUpdateError.Other
+  commentId: T:Dropbox.Api.Files.PaperUpdateError.Other
+  parent: Dropbox.Api.Files
+  name: PaperUpdateError.Other
+  nameWithType: PaperUpdateError.Other
+  fullName: Dropbox.Api.Files.PaperUpdateError.Other
+shouldSkipMarkup: true

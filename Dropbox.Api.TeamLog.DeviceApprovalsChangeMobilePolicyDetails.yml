@@ -1,0 +1,242 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.DeviceApprovalsChangeMobilePolicyDetails
+  commentId: T:Dropbox.Api.TeamLog.DeviceApprovalsChangeMobilePolicyDetails
+  id: DeviceApprovalsChangeMobilePolicyDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.DeviceApprovalsChangeMobilePolicyDetails.#ctor
+  - Dropbox.Api.TeamLog.DeviceApprovalsChangeMobilePolicyDetails.#ctor(Dropbox.Api.TeamLog.DeviceApprovalsPolicy,Dropbox.Api.TeamLog.DeviceApprovalsPolicy)
+  - Dropbox.Api.TeamLog.DeviceApprovalsChangeMobilePolicyDetails.NewValue
+  - Dropbox.Api.TeamLog.DeviceApprovalsChangeMobilePolicyDetails.PreviousValue
+  langs:
+  - csharp
+  - vb
+  name: DeviceApprovalsChangeMobilePolicyDetails
+  nameWithType: DeviceApprovalsChangeMobilePolicyDetails
+  fullName: Dropbox.Api.TeamLog.DeviceApprovalsChangeMobilePolicyDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceApprovalsChangeMobilePolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: DeviceApprovalsChangeMobilePolicyDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceApprovalsChangeMobilePolicyDetails.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Set/removed limit on number of mobile devices member can link to team Dropbox\naccount.</p>\n"
+  example: []
+  syntax:
+    content: 'public class DeviceApprovalsChangeMobilePolicyDetails : object'
+    content.vb: >-
+      Public Class DeviceApprovalsChangeMobilePolicyDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.DeviceApprovalsChangeMobilePolicyDetails.#ctor(Dropbox.Api.TeamLog.DeviceApprovalsPolicy,Dropbox.Api.TeamLog.DeviceApprovalsPolicy)
+  commentId: M:Dropbox.Api.TeamLog.DeviceApprovalsChangeMobilePolicyDetails.#ctor(Dropbox.Api.TeamLog.DeviceApprovalsPolicy,Dropbox.Api.TeamLog.DeviceApprovalsPolicy)
+  id: '#ctor(Dropbox.Api.TeamLog.DeviceApprovalsPolicy,Dropbox.Api.TeamLog.DeviceApprovalsPolicy)'
+  parent: Dropbox.Api.TeamLog.DeviceApprovalsChangeMobilePolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: DeviceApprovalsChangeMobilePolicyDetails(DeviceApprovalsPolicy, DeviceApprovalsPolicy)
+  nameWithType: DeviceApprovalsChangeMobilePolicyDetails.DeviceApprovalsChangeMobilePolicyDetails(DeviceApprovalsPolicy, DeviceApprovalsPolicy)
+  fullName: Dropbox.Api.TeamLog.DeviceApprovalsChangeMobilePolicyDetails.DeviceApprovalsChangeMobilePolicyDetails(Dropbox.Api.TeamLog.DeviceApprovalsPolicy, Dropbox.Api.TeamLog.DeviceApprovalsPolicy)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceApprovalsChangeMobilePolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceApprovalsChangeMobilePolicyDetails.cs
+    startLine: 38
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.DeviceApprovalsChangeMobilePolicyDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public DeviceApprovalsChangeMobilePolicyDetails(DeviceApprovalsPolicy newValue = null, DeviceApprovalsPolicy previousValue = null)
+    parameters:
+    - id: newValue
+      type: Dropbox.Api.TeamLog.DeviceApprovalsPolicy
+      description: >-
+        New mobile device approvals policy. Might be missing due to
+
+        historical data gap.
+    - id: previousValue
+      type: Dropbox.Api.TeamLog.DeviceApprovalsPolicy
+      description: >-
+        Previous mobile device approvals policy. Might be
+
+        missing due to historical data gap.
+    content.vb: Public Sub New(newValue As DeviceApprovalsPolicy = Nothing, previousValue As DeviceApprovalsPolicy = Nothing)
+  overload: Dropbox.Api.TeamLog.DeviceApprovalsChangeMobilePolicyDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.DeviceApprovalsChangeMobilePolicyDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.DeviceApprovalsChangeMobilePolicyDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.DeviceApprovalsChangeMobilePolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: DeviceApprovalsChangeMobilePolicyDetails()
+  nameWithType: DeviceApprovalsChangeMobilePolicyDetails.DeviceApprovalsChangeMobilePolicyDetails()
+  fullName: Dropbox.Api.TeamLog.DeviceApprovalsChangeMobilePolicyDetails.DeviceApprovalsChangeMobilePolicyDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceApprovalsChangeMobilePolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceApprovalsChangeMobilePolicyDetails.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.DeviceApprovalsChangeMobilePolicyDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public DeviceApprovalsChangeMobilePolicyDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.DeviceApprovalsChangeMobilePolicyDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.DeviceApprovalsChangeMobilePolicyDetails.NewValue
+  commentId: P:Dropbox.Api.TeamLog.DeviceApprovalsChangeMobilePolicyDetails.NewValue
+  id: NewValue
+  parent: Dropbox.Api.TeamLog.DeviceApprovalsChangeMobilePolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: NewValue
+  nameWithType: DeviceApprovalsChangeMobilePolicyDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.DeviceApprovalsChangeMobilePolicyDetails.NewValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceApprovalsChangeMobilePolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NewValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceApprovalsChangeMobilePolicyDetails.cs
+    startLine: 60
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>New mobile device approvals policy. Might be missing due to historical data\ngap.</p>\n"
+  example: []
+  syntax:
+    content: public DeviceApprovalsPolicy NewValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.DeviceApprovalsPolicy
+    content.vb: Public Property NewValue As DeviceApprovalsPolicy
+  overload: Dropbox.Api.TeamLog.DeviceApprovalsChangeMobilePolicyDetails.NewValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.DeviceApprovalsChangeMobilePolicyDetails.PreviousValue
+  commentId: P:Dropbox.Api.TeamLog.DeviceApprovalsChangeMobilePolicyDetails.PreviousValue
+  id: PreviousValue
+  parent: Dropbox.Api.TeamLog.DeviceApprovalsChangeMobilePolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: PreviousValue
+  nameWithType: DeviceApprovalsChangeMobilePolicyDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.DeviceApprovalsChangeMobilePolicyDetails.PreviousValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceApprovalsChangeMobilePolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PreviousValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceApprovalsChangeMobilePolicyDetails.cs
+    startLine: 66
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Previous mobile device approvals policy. Might be missing due to historical\ndata gap.</p>\n"
+  example: []
+  syntax:
+    content: public DeviceApprovalsPolicy PreviousValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.DeviceApprovalsPolicy
+    content.vb: Public Property PreviousValue As DeviceApprovalsPolicy
+  overload: Dropbox.Api.TeamLog.DeviceApprovalsChangeMobilePolicyDetails.PreviousValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.DeviceApprovalsChangeMobilePolicyDetails
+  commentId: T:Dropbox.Api.TeamLog.DeviceApprovalsChangeMobilePolicyDetails
+  parent: Dropbox.Api.TeamLog
+  name: DeviceApprovalsChangeMobilePolicyDetails
+  nameWithType: DeviceApprovalsChangeMobilePolicyDetails
+  fullName: Dropbox.Api.TeamLog.DeviceApprovalsChangeMobilePolicyDetails
+- uid: Dropbox.Api.TeamLog.DeviceApprovalsChangeMobilePolicyDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.DeviceApprovalsChangeMobilePolicyDetails.#ctor
+  name: DeviceApprovalsChangeMobilePolicyDetails
+  nameWithType: DeviceApprovalsChangeMobilePolicyDetails.DeviceApprovalsChangeMobilePolicyDetails
+  fullName: Dropbox.Api.TeamLog.DeviceApprovalsChangeMobilePolicyDetails.DeviceApprovalsChangeMobilePolicyDetails
+- uid: Dropbox.Api.TeamLog.DeviceApprovalsPolicy
+  commentId: T:Dropbox.Api.TeamLog.DeviceApprovalsPolicy
+  parent: Dropbox.Api.TeamLog
+  name: DeviceApprovalsPolicy
+  nameWithType: DeviceApprovalsPolicy
+  fullName: Dropbox.Api.TeamLog.DeviceApprovalsPolicy
+- uid: Dropbox.Api.TeamLog.DeviceApprovalsChangeMobilePolicyDetails.NewValue*
+  commentId: Overload:Dropbox.Api.TeamLog.DeviceApprovalsChangeMobilePolicyDetails.NewValue
+  name: NewValue
+  nameWithType: DeviceApprovalsChangeMobilePolicyDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.DeviceApprovalsChangeMobilePolicyDetails.NewValue
+- uid: Dropbox.Api.TeamLog.DeviceApprovalsChangeMobilePolicyDetails.PreviousValue*
+  commentId: Overload:Dropbox.Api.TeamLog.DeviceApprovalsChangeMobilePolicyDetails.PreviousValue
+  name: PreviousValue
+  nameWithType: DeviceApprovalsChangeMobilePolicyDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.DeviceApprovalsChangeMobilePolicyDetails.PreviousValue
+shouldSkipMarkup: true

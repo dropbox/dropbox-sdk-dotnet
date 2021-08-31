@@ -1,0 +1,148 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.UploadSessionType.Other
+  commentId: T:Dropbox.Api.Files.UploadSessionType.Other
+  id: UploadSessionType.Other
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.UploadSessionType.Other.Instance
+  langs:
+  - csharp
+  - vb
+  name: UploadSessionType.Other
+  nameWithType: UploadSessionType.Other
+  fullName: Dropbox.Api.Files.UploadSessionType.Other
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Other
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionType.cs
+    startLine: 321
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The other object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Other : UploadSessionType'
+    content.vb: >-
+      Public NotInheritable Class Other
+          Inherits UploadSessionType
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Files.UploadSessionType
+  inheritedMembers:
+  - Dropbox.Api.Files.UploadSessionType.IsSequential
+  - Dropbox.Api.Files.UploadSessionType.AsSequential
+  - Dropbox.Api.Files.UploadSessionType.IsConcurrent
+  - Dropbox.Api.Files.UploadSessionType.AsConcurrent
+  - Dropbox.Api.Files.UploadSessionType.IsOther
+  - Dropbox.Api.Files.UploadSessionType.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Files.UploadSessionType.Other.Instance
+  commentId: F:Dropbox.Api.Files.UploadSessionType.Other.Instance
+  id: Instance
+  parent: Dropbox.Api.Files.UploadSessionType.Other
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: UploadSessionType.Other.Instance
+  fullName: Dropbox.Api.Files.UploadSessionType.Other.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionType.cs
+    startLine: 345
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>A singleton instance of Other</p>\n"
+  example: []
+  syntax:
+    content: public static readonly UploadSessionType.Other Instance
+    return:
+      type: Dropbox.Api.Files.UploadSessionType.Other
+    content.vb: Public Shared ReadOnly Instance As UploadSessionType.Other
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.UploadSessionType
+  commentId: T:Dropbox.Api.Files.UploadSessionType
+  parent: Dropbox.Api.Files
+  name: UploadSessionType
+  nameWithType: UploadSessionType
+  fullName: Dropbox.Api.Files.UploadSessionType
+- uid: Dropbox.Api.Files.UploadSessionType.IsSequential
+  commentId: P:Dropbox.Api.Files.UploadSessionType.IsSequential
+  parent: Dropbox.Api.Files.UploadSessionType
+  name: IsSequential
+  nameWithType: UploadSessionType.IsSequential
+  fullName: Dropbox.Api.Files.UploadSessionType.IsSequential
+- uid: Dropbox.Api.Files.UploadSessionType.AsSequential
+  commentId: P:Dropbox.Api.Files.UploadSessionType.AsSequential
+  parent: Dropbox.Api.Files.UploadSessionType
+  name: AsSequential
+  nameWithType: UploadSessionType.AsSequential
+  fullName: Dropbox.Api.Files.UploadSessionType.AsSequential
+- uid: Dropbox.Api.Files.UploadSessionType.IsConcurrent
+  commentId: P:Dropbox.Api.Files.UploadSessionType.IsConcurrent
+  parent: Dropbox.Api.Files.UploadSessionType
+  name: IsConcurrent
+  nameWithType: UploadSessionType.IsConcurrent
+  fullName: Dropbox.Api.Files.UploadSessionType.IsConcurrent
+- uid: Dropbox.Api.Files.UploadSessionType.AsConcurrent
+  commentId: P:Dropbox.Api.Files.UploadSessionType.AsConcurrent
+  parent: Dropbox.Api.Files.UploadSessionType
+  name: AsConcurrent
+  nameWithType: UploadSessionType.AsConcurrent
+  fullName: Dropbox.Api.Files.UploadSessionType.AsConcurrent
+- uid: Dropbox.Api.Files.UploadSessionType.IsOther
+  commentId: P:Dropbox.Api.Files.UploadSessionType.IsOther
+  parent: Dropbox.Api.Files.UploadSessionType
+  name: IsOther
+  nameWithType: UploadSessionType.IsOther
+  fullName: Dropbox.Api.Files.UploadSessionType.IsOther
+- uid: Dropbox.Api.Files.UploadSessionType.AsOther
+  commentId: P:Dropbox.Api.Files.UploadSessionType.AsOther
+  parent: Dropbox.Api.Files.UploadSessionType
+  name: AsOther
+  nameWithType: UploadSessionType.AsOther
+  fullName: Dropbox.Api.Files.UploadSessionType.AsOther
+- uid: Dropbox.Api.Files.UploadSessionType.Other
+  commentId: T:Dropbox.Api.Files.UploadSessionType.Other
+  parent: Dropbox.Api.Files
+  name: UploadSessionType.Other
+  nameWithType: UploadSessionType.Other
+  fullName: Dropbox.Api.Files.UploadSessionType.Other
+shouldSkipMarkup: true

@@ -1,0 +1,241 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.AccountCaptureNotificationEmailsSentDetails
+  commentId: T:Dropbox.Api.TeamLog.AccountCaptureNotificationEmailsSentDetails
+  id: AccountCaptureNotificationEmailsSentDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.AccountCaptureNotificationEmailsSentDetails.#ctor
+  - Dropbox.Api.TeamLog.AccountCaptureNotificationEmailsSentDetails.#ctor(System.String,Dropbox.Api.TeamLog.AccountCaptureNotificationType)
+  - Dropbox.Api.TeamLog.AccountCaptureNotificationEmailsSentDetails.DomainName
+  - Dropbox.Api.TeamLog.AccountCaptureNotificationEmailsSentDetails.NotificationType
+  langs:
+  - csharp
+  - vb
+  name: AccountCaptureNotificationEmailsSentDetails
+  nameWithType: AccountCaptureNotificationEmailsSentDetails
+  fullName: Dropbox.Api.TeamLog.AccountCaptureNotificationEmailsSentDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AccountCaptureNotificationEmailsSentDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AccountCaptureNotificationEmailsSentDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AccountCaptureNotificationEmailsSentDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Sent account capture email to all unmanaged members.</p>\n"
+  example: []
+  syntax:
+    content: 'public class AccountCaptureNotificationEmailsSentDetails : object'
+    content.vb: >-
+      Public Class AccountCaptureNotificationEmailsSentDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.AccountCaptureNotificationEmailsSentDetails.#ctor(System.String,Dropbox.Api.TeamLog.AccountCaptureNotificationType)
+  commentId: M:Dropbox.Api.TeamLog.AccountCaptureNotificationEmailsSentDetails.#ctor(System.String,Dropbox.Api.TeamLog.AccountCaptureNotificationType)
+  id: '#ctor(System.String,Dropbox.Api.TeamLog.AccountCaptureNotificationType)'
+  parent: Dropbox.Api.TeamLog.AccountCaptureNotificationEmailsSentDetails
+  langs:
+  - csharp
+  - vb
+  name: AccountCaptureNotificationEmailsSentDetails(String, AccountCaptureNotificationType)
+  nameWithType: AccountCaptureNotificationEmailsSentDetails.AccountCaptureNotificationEmailsSentDetails(String, AccountCaptureNotificationType)
+  fullName: Dropbox.Api.TeamLog.AccountCaptureNotificationEmailsSentDetails.AccountCaptureNotificationEmailsSentDetails(System.String, Dropbox.Api.TeamLog.AccountCaptureNotificationType)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AccountCaptureNotificationEmailsSentDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AccountCaptureNotificationEmailsSentDetails.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.AccountCaptureNotificationEmailsSentDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public AccountCaptureNotificationEmailsSentDetails(string domainName, AccountCaptureNotificationType notificationType = null)
+    parameters:
+    - id: domainName
+      type: System.String
+      description: Domain name.
+    - id: notificationType
+      type: Dropbox.Api.TeamLog.AccountCaptureNotificationType
+      description: Account-capture email notification type.
+    content.vb: Public Sub New(domainName As String, notificationType As AccountCaptureNotificationType = Nothing)
+  overload: Dropbox.Api.TeamLog.AccountCaptureNotificationEmailsSentDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.AccountCaptureNotificationEmailsSentDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.AccountCaptureNotificationEmailsSentDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.AccountCaptureNotificationEmailsSentDetails
+  langs:
+  - csharp
+  - vb
+  name: AccountCaptureNotificationEmailsSentDetails()
+  nameWithType: AccountCaptureNotificationEmailsSentDetails.AccountCaptureNotificationEmailsSentDetails()
+  fullName: Dropbox.Api.TeamLog.AccountCaptureNotificationEmailsSentDetails.AccountCaptureNotificationEmailsSentDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AccountCaptureNotificationEmailsSentDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AccountCaptureNotificationEmailsSentDetails.cs
+    startLine: 53
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.AccountCaptureNotificationEmailsSentDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public AccountCaptureNotificationEmailsSentDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.AccountCaptureNotificationEmailsSentDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.AccountCaptureNotificationEmailsSentDetails.DomainName
+  commentId: P:Dropbox.Api.TeamLog.AccountCaptureNotificationEmailsSentDetails.DomainName
+  id: DomainName
+  parent: Dropbox.Api.TeamLog.AccountCaptureNotificationEmailsSentDetails
+  langs:
+  - csharp
+  - vb
+  name: DomainName
+  nameWithType: AccountCaptureNotificationEmailsSentDetails.DomainName
+  fullName: Dropbox.Api.TeamLog.AccountCaptureNotificationEmailsSentDetails.DomainName
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AccountCaptureNotificationEmailsSentDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: DomainName
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AccountCaptureNotificationEmailsSentDetails.cs
+    startLine: 61
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Domain name.</p>\n"
+  example: []
+  syntax:
+    content: public string DomainName { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property DomainName As String
+  overload: Dropbox.Api.TeamLog.AccountCaptureNotificationEmailsSentDetails.DomainName*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.AccountCaptureNotificationEmailsSentDetails.NotificationType
+  commentId: P:Dropbox.Api.TeamLog.AccountCaptureNotificationEmailsSentDetails.NotificationType
+  id: NotificationType
+  parent: Dropbox.Api.TeamLog.AccountCaptureNotificationEmailsSentDetails
+  langs:
+  - csharp
+  - vb
+  name: NotificationType
+  nameWithType: AccountCaptureNotificationEmailsSentDetails.NotificationType
+  fullName: Dropbox.Api.TeamLog.AccountCaptureNotificationEmailsSentDetails.NotificationType
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AccountCaptureNotificationEmailsSentDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NotificationType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AccountCaptureNotificationEmailsSentDetails.cs
+    startLine: 66
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Account-capture email notification type.</p>\n"
+  example: []
+  syntax:
+    content: public AccountCaptureNotificationType NotificationType { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.AccountCaptureNotificationType
+    content.vb: Public Property NotificationType As AccountCaptureNotificationType
+  overload: Dropbox.Api.TeamLog.AccountCaptureNotificationEmailsSentDetails.NotificationType*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.AccountCaptureNotificationEmailsSentDetails
+  commentId: T:Dropbox.Api.TeamLog.AccountCaptureNotificationEmailsSentDetails
+  parent: Dropbox.Api.TeamLog
+  name: AccountCaptureNotificationEmailsSentDetails
+  nameWithType: AccountCaptureNotificationEmailsSentDetails
+  fullName: Dropbox.Api.TeamLog.AccountCaptureNotificationEmailsSentDetails
+- uid: Dropbox.Api.TeamLog.AccountCaptureNotificationEmailsSentDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.AccountCaptureNotificationEmailsSentDetails.#ctor
+  name: AccountCaptureNotificationEmailsSentDetails
+  nameWithType: AccountCaptureNotificationEmailsSentDetails.AccountCaptureNotificationEmailsSentDetails
+  fullName: Dropbox.Api.TeamLog.AccountCaptureNotificationEmailsSentDetails.AccountCaptureNotificationEmailsSentDetails
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.AccountCaptureNotificationType
+  commentId: T:Dropbox.Api.TeamLog.AccountCaptureNotificationType
+  parent: Dropbox.Api.TeamLog
+  name: AccountCaptureNotificationType
+  nameWithType: AccountCaptureNotificationType
+  fullName: Dropbox.Api.TeamLog.AccountCaptureNotificationType
+- uid: Dropbox.Api.TeamLog.AccountCaptureNotificationEmailsSentDetails.DomainName*
+  commentId: Overload:Dropbox.Api.TeamLog.AccountCaptureNotificationEmailsSentDetails.DomainName
+  name: DomainName
+  nameWithType: AccountCaptureNotificationEmailsSentDetails.DomainName
+  fullName: Dropbox.Api.TeamLog.AccountCaptureNotificationEmailsSentDetails.DomainName
+- uid: Dropbox.Api.TeamLog.AccountCaptureNotificationEmailsSentDetails.NotificationType*
+  commentId: Overload:Dropbox.Api.TeamLog.AccountCaptureNotificationEmailsSentDetails.NotificationType
+  name: NotificationType
+  nameWithType: AccountCaptureNotificationEmailsSentDetails.NotificationType
+  fullName: Dropbox.Api.TeamLog.AccountCaptureNotificationEmailsSentDetails.NotificationType
+shouldSkipMarkup: true

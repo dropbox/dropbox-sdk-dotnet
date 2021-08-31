@@ -1,0 +1,335 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.ListFolderLongpollResult
+  commentId: T:Dropbox.Api.Files.ListFolderLongpollResult
+  id: ListFolderLongpollResult
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.ListFolderLongpollResult.#ctor
+  - Dropbox.Api.Files.ListFolderLongpollResult.#ctor(System.Boolean,System.Nullable{System.UInt64})
+  - Dropbox.Api.Files.ListFolderLongpollResult.Backoff
+  - Dropbox.Api.Files.ListFolderLongpollResult.Changes
+  langs:
+  - csharp
+  - vb
+  name: ListFolderLongpollResult
+  nameWithType: ListFolderLongpollResult
+  fullName: Dropbox.Api.Files.ListFolderLongpollResult
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderLongpollResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ListFolderLongpollResult
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderLongpollResult.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The list folder longpoll result object</p>\n"
+  example: []
+  syntax:
+    content: 'public class ListFolderLongpollResult : object'
+    content.vb: >-
+      Public Class ListFolderLongpollResult
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.ListFolderLongpollResult.#ctor(System.Boolean,System.Nullable{System.UInt64})
+  commentId: M:Dropbox.Api.Files.ListFolderLongpollResult.#ctor(System.Boolean,System.Nullable{System.UInt64})
+  id: '#ctor(System.Boolean,System.Nullable{System.UInt64})'
+  parent: Dropbox.Api.Files.ListFolderLongpollResult
+  langs:
+  - csharp
+  - vb
+  name: ListFolderLongpollResult(Boolean, Nullable<UInt64>)
+  nameWithType: ListFolderLongpollResult.ListFolderLongpollResult(Boolean, Nullable<UInt64>)
+  fullName: Dropbox.Api.Files.ListFolderLongpollResult.ListFolderLongpollResult(System.Boolean, System.Nullable<System.UInt64>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderLongpollResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderLongpollResult.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.ListFolderLongpollResult\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public ListFolderLongpollResult(bool changes, ulong? backoff = null)
+    parameters:
+    - id: changes
+      type: System.Boolean
+      description: >-
+        Indicates whether new changes are available. If true, call
+
+        <xref href="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync(Dropbox.Api.Files.ListFolderContinueArg)" data-throw-if-not-resolved="false"></xref> to
+
+        retrieve the changes.
+    - id: backoff
+      type: System.Nullable{System.UInt64}
+      description: >-
+        If present, backoff for at least this many seconds before
+
+        calling <xref href="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderLongpollAsync(Dropbox.Api.Files.ListFolderLongpollArg)" data-throw-if-not-resolved="false"></xref>
+
+        again.
+    content.vb: Public Sub New(changes As Boolean, backoff As ULong? = Nothing)
+  overload: Dropbox.Api.Files.ListFolderLongpollResult.#ctor*
+  nameWithType.vb: ListFolderLongpollResult.ListFolderLongpollResult(Boolean, Nullable(Of UInt64))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Files.ListFolderLongpollResult.ListFolderLongpollResult(System.Boolean, System.Nullable(Of System.UInt64))
+  name.vb: ListFolderLongpollResult(Boolean, Nullable(Of UInt64))
+- uid: Dropbox.Api.Files.ListFolderLongpollResult.#ctor
+  commentId: M:Dropbox.Api.Files.ListFolderLongpollResult.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.ListFolderLongpollResult
+  langs:
+  - csharp
+  - vb
+  name: ListFolderLongpollResult()
+  nameWithType: ListFolderLongpollResult.ListFolderLongpollResult()
+  fullName: Dropbox.Api.Files.ListFolderLongpollResult.ListFolderLongpollResult()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderLongpollResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderLongpollResult.cs
+    startLine: 53
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.ListFolderLongpollResult\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public ListFolderLongpollResult()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.ListFolderLongpollResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.ListFolderLongpollResult.Changes
+  commentId: P:Dropbox.Api.Files.ListFolderLongpollResult.Changes
+  id: Changes
+  parent: Dropbox.Api.Files.ListFolderLongpollResult
+  langs:
+  - csharp
+  - vb
+  name: Changes
+  nameWithType: ListFolderLongpollResult.Changes
+  fullName: Dropbox.Api.Files.ListFolderLongpollResult.Changes
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderLongpollResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Changes
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderLongpollResult.cs
+    startLine: 63
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Indicates whether new changes are available. If true, call <xref href=\"Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync(Dropbox.Api.Files.ListFolderContinueArg)\" data-throw-if-not-resolved=\"false\"></xref> to\nretrieve the changes.</p>\n"
+  example: []
+  syntax:
+    content: public bool Changes { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property Changes As Boolean
+  overload: Dropbox.Api.Files.ListFolderLongpollResult.Changes*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.ListFolderLongpollResult.Backoff
+  commentId: P:Dropbox.Api.Files.ListFolderLongpollResult.Backoff
+  id: Backoff
+  parent: Dropbox.Api.Files.ListFolderLongpollResult
+  langs:
+  - csharp
+  - vb
+  name: Backoff
+  nameWithType: ListFolderLongpollResult.Backoff
+  fullName: Dropbox.Api.Files.ListFolderLongpollResult.Backoff
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderLongpollResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Backoff
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListFolderLongpollResult.cs
+    startLine: 70
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>If present, backoff for at least this many seconds before calling <xref href=\"Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderLongpollAsync(Dropbox.Api.Files.ListFolderLongpollArg)\" data-throw-if-not-resolved=\"false\"></xref>\nagain.</p>\n"
+  example: []
+  syntax:
+    content: public ulong? Backoff { get; protected set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.UInt64}
+    content.vb: Public Property Backoff As ULong?
+  overload: Dropbox.Api.Files.ListFolderLongpollResult.Backoff*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.ListFolderLongpollResult
+  commentId: T:Dropbox.Api.Files.ListFolderLongpollResult
+  parent: Dropbox.Api.Files
+  name: ListFolderLongpollResult
+  nameWithType: ListFolderLongpollResult
+  fullName: Dropbox.Api.Files.ListFolderLongpollResult
+- uid: Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync(Dropbox.Api.Files.ListFolderContinueArg)
+  commentId: M:Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync(Dropbox.Api.Files.ListFolderContinueArg)
+  isExternal: true
+- uid: Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderLongpollAsync(Dropbox.Api.Files.ListFolderLongpollArg)
+  commentId: M:Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderLongpollAsync(Dropbox.Api.Files.ListFolderLongpollArg)
+  isExternal: true
+- uid: Dropbox.Api.Files.ListFolderLongpollResult.#ctor*
+  commentId: Overload:Dropbox.Api.Files.ListFolderLongpollResult.#ctor
+  name: ListFolderLongpollResult
+  nameWithType: ListFolderLongpollResult.ListFolderLongpollResult
+  fullName: Dropbox.Api.Files.ListFolderLongpollResult.ListFolderLongpollResult
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.Nullable{System.UInt64}
+  commentId: '!:System.Nullable{System.UInt64}'
+  definition: System.Nullable`1
+  name: Nullable<UInt64>
+  nameWithType: Nullable<UInt64>
+  fullName: System.Nullable<System.UInt64>
+  nameWithType.vb: Nullable(Of UInt64)
+  fullName.vb: System.Nullable(Of System.UInt64)
+  name.vb: Nullable(Of UInt64)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.UInt64
+    name: UInt64
+    nameWithType: UInt64
+    fullName: System.UInt64
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.UInt64
+    name: UInt64
+    nameWithType: UInt64
+    fullName: System.UInt64
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  isExternal: true
+  name: Nullable<>
+  nameWithType: Nullable<>
+  fullName: System.Nullable<>
+  nameWithType.vb: Nullable(Of )
+  fullName.vb: System.Nullable(Of )
+  name.vb: Nullable(Of )
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Files.ListFolderLongpollResult.Changes*
+  commentId: Overload:Dropbox.Api.Files.ListFolderLongpollResult.Changes
+  name: Changes
+  nameWithType: ListFolderLongpollResult.Changes
+  fullName: Dropbox.Api.Files.ListFolderLongpollResult.Changes
+- uid: Dropbox.Api.Files.ListFolderLongpollResult.Backoff*
+  commentId: Overload:Dropbox.Api.Files.ListFolderLongpollResult.Backoff
+  name: Backoff
+  nameWithType: ListFolderLongpollResult.Backoff
+  fullName: Dropbox.Api.Files.ListFolderLongpollResult.Backoff
+shouldSkipMarkup: true

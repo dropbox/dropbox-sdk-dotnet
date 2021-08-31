@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.SharedContentCopyType
+  commentId: T:Dropbox.Api.TeamLog.SharedContentCopyType
+  id: SharedContentCopyType
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.SharedContentCopyType.#ctor
+  - Dropbox.Api.TeamLog.SharedContentCopyType.#ctor(System.String)
+  - Dropbox.Api.TeamLog.SharedContentCopyType.Description
+  langs:
+  - csharp
+  - vb
+  name: SharedContentCopyType
+  nameWithType: SharedContentCopyType
+  fullName: Dropbox.Api.TeamLog.SharedContentCopyType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentCopyType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SharedContentCopyType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentCopyType.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The shared content copy type object</p>\n"
+  example: []
+  syntax:
+    content: 'public class SharedContentCopyType : object'
+    content.vb: >-
+      Public Class SharedContentCopyType
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.SharedContentCopyType.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.SharedContentCopyType.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.SharedContentCopyType
+  langs:
+  - csharp
+  - vb
+  name: SharedContentCopyType(String)
+  nameWithType: SharedContentCopyType.SharedContentCopyType(String)
+  fullName: Dropbox.Api.TeamLog.SharedContentCopyType.SharedContentCopyType(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentCopyType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentCopyType.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SharedContentCopyType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public SharedContentCopyType(string description)
+    parameters:
+    - id: description
+      type: System.String
+      description: The description
+    content.vb: Public Sub New(description As String)
+  overload: Dropbox.Api.TeamLog.SharedContentCopyType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SharedContentCopyType.#ctor
+  commentId: M:Dropbox.Api.TeamLog.SharedContentCopyType.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.SharedContentCopyType
+  langs:
+  - csharp
+  - vb
+  name: SharedContentCopyType()
+  nameWithType: SharedContentCopyType.SharedContentCopyType()
+  fullName: Dropbox.Api.TeamLog.SharedContentCopyType.SharedContentCopyType()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentCopyType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentCopyType.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SharedContentCopyType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public SharedContentCopyType()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.SharedContentCopyType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SharedContentCopyType.Description
+  commentId: P:Dropbox.Api.TeamLog.SharedContentCopyType.Description
+  id: Description
+  parent: Dropbox.Api.TeamLog.SharedContentCopyType
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: SharedContentCopyType.Description
+  fullName: Dropbox.Api.TeamLog.SharedContentCopyType.Description
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentCopyType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Description
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentCopyType.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets the description of the shared content copy type</p>\n"
+  example: []
+  syntax:
+    content: public string Description { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Dropbox.Api.TeamLog.SharedContentCopyType.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.SharedContentCopyType
+  commentId: T:Dropbox.Api.TeamLog.SharedContentCopyType
+  parent: Dropbox.Api.TeamLog
+  name: SharedContentCopyType
+  nameWithType: SharedContentCopyType
+  fullName: Dropbox.Api.TeamLog.SharedContentCopyType
+- uid: Dropbox.Api.TeamLog.SharedContentCopyType.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedContentCopyType.#ctor
+  name: SharedContentCopyType
+  nameWithType: SharedContentCopyType.SharedContentCopyType
+  fullName: Dropbox.Api.TeamLog.SharedContentCopyType.SharedContentCopyType
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.SharedContentCopyType.Description*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedContentCopyType.Description
+  name: Description
+  nameWithType: SharedContentCopyType.Description
+  fullName: Dropbox.Api.TeamLog.SharedContentCopyType.Description
+shouldSkipMarkup: true

@@ -1,0 +1,134 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Account.PhotoSourceArg.Other
+  commentId: T:Dropbox.Api.Account.PhotoSourceArg.Other
+  id: PhotoSourceArg.Other
+  parent: Dropbox.Api.Account
+  children:
+  - Dropbox.Api.Account.PhotoSourceArg.Other.Instance
+  langs:
+  - csharp
+  - vb
+  name: PhotoSourceArg.Other
+  nameWithType: PhotoSourceArg.Other
+  fullName: Dropbox.Api.Account.PhotoSourceArg.Other
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Account/PhotoSourceArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Other
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Account/PhotoSourceArg.cs
+    startLine: 247
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Account
+  summary: "\n<p>The other object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Other : PhotoSourceArg'
+    content.vb: >-
+      Public NotInheritable Class Other
+          Inherits PhotoSourceArg
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Account.PhotoSourceArg
+  inheritedMembers:
+  - Dropbox.Api.Account.PhotoSourceArg.IsBase64Data
+  - Dropbox.Api.Account.PhotoSourceArg.AsBase64Data
+  - Dropbox.Api.Account.PhotoSourceArg.IsOther
+  - Dropbox.Api.Account.PhotoSourceArg.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Account.PhotoSourceArg.Other.Instance
+  commentId: F:Dropbox.Api.Account.PhotoSourceArg.Other.Instance
+  id: Instance
+  parent: Dropbox.Api.Account.PhotoSourceArg.Other
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: PhotoSourceArg.Other.Instance
+  fullName: Dropbox.Api.Account.PhotoSourceArg.Other.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Account/PhotoSourceArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Account/PhotoSourceArg.cs
+    startLine: 271
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Account
+  summary: "\n<p>A singleton instance of Other</p>\n"
+  example: []
+  syntax:
+    content: public static readonly PhotoSourceArg.Other Instance
+    return:
+      type: Dropbox.Api.Account.PhotoSourceArg.Other
+    content.vb: Public Shared ReadOnly Instance As PhotoSourceArg.Other
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Account
+  commentId: N:Dropbox.Api.Account
+  name: Dropbox.Api.Account
+  nameWithType: Dropbox.Api.Account
+  fullName: Dropbox.Api.Account
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Account.PhotoSourceArg
+  commentId: T:Dropbox.Api.Account.PhotoSourceArg
+  parent: Dropbox.Api.Account
+  name: PhotoSourceArg
+  nameWithType: PhotoSourceArg
+  fullName: Dropbox.Api.Account.PhotoSourceArg
+- uid: Dropbox.Api.Account.PhotoSourceArg.IsBase64Data
+  commentId: P:Dropbox.Api.Account.PhotoSourceArg.IsBase64Data
+  parent: Dropbox.Api.Account.PhotoSourceArg
+  name: IsBase64Data
+  nameWithType: PhotoSourceArg.IsBase64Data
+  fullName: Dropbox.Api.Account.PhotoSourceArg.IsBase64Data
+- uid: Dropbox.Api.Account.PhotoSourceArg.AsBase64Data
+  commentId: P:Dropbox.Api.Account.PhotoSourceArg.AsBase64Data
+  parent: Dropbox.Api.Account.PhotoSourceArg
+  name: AsBase64Data
+  nameWithType: PhotoSourceArg.AsBase64Data
+  fullName: Dropbox.Api.Account.PhotoSourceArg.AsBase64Data
+- uid: Dropbox.Api.Account.PhotoSourceArg.IsOther
+  commentId: P:Dropbox.Api.Account.PhotoSourceArg.IsOther
+  parent: Dropbox.Api.Account.PhotoSourceArg
+  name: IsOther
+  nameWithType: PhotoSourceArg.IsOther
+  fullName: Dropbox.Api.Account.PhotoSourceArg.IsOther
+- uid: Dropbox.Api.Account.PhotoSourceArg.AsOther
+  commentId: P:Dropbox.Api.Account.PhotoSourceArg.AsOther
+  parent: Dropbox.Api.Account.PhotoSourceArg
+  name: AsOther
+  nameWithType: PhotoSourceArg.AsOther
+  fullName: Dropbox.Api.Account.PhotoSourceArg.AsOther
+- uid: Dropbox.Api.Account.PhotoSourceArg.Other
+  commentId: T:Dropbox.Api.Account.PhotoSourceArg.Other
+  parent: Dropbox.Api.Account
+  name: PhotoSourceArg.Other
+  nameWithType: PhotoSourceArg.Other
+  fullName: Dropbox.Api.Account.PhotoSourceArg.Other
+shouldSkipMarkup: true

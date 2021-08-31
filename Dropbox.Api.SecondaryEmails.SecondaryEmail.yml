@@ -1,0 +1,243 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.SecondaryEmails.SecondaryEmail
+  commentId: T:Dropbox.Api.SecondaryEmails.SecondaryEmail
+  id: SecondaryEmail
+  parent: Dropbox.Api.SecondaryEmails
+  children:
+  - Dropbox.Api.SecondaryEmails.SecondaryEmail.#ctor
+  - Dropbox.Api.SecondaryEmails.SecondaryEmail.#ctor(System.String,System.Boolean)
+  - Dropbox.Api.SecondaryEmails.SecondaryEmail.Email
+  - Dropbox.Api.SecondaryEmails.SecondaryEmail.IsVerified
+  langs:
+  - csharp
+  - vb
+  name: SecondaryEmail
+  nameWithType: SecondaryEmail
+  fullName: Dropbox.Api.SecondaryEmails.SecondaryEmail
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/SecondaryEmails/SecondaryEmail.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SecondaryEmail
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/SecondaryEmails/SecondaryEmail.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.SecondaryEmails
+  summary: "\n<p>The secondary email object</p>\n"
+  example: []
+  syntax:
+    content: 'public class SecondaryEmail : object'
+    content.vb: >-
+      Public Class SecondaryEmail
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.SecondaryEmails.SecondaryEmail.#ctor(System.String,System.Boolean)
+  commentId: M:Dropbox.Api.SecondaryEmails.SecondaryEmail.#ctor(System.String,System.Boolean)
+  id: '#ctor(System.String,System.Boolean)'
+  parent: Dropbox.Api.SecondaryEmails.SecondaryEmail
+  langs:
+  - csharp
+  - vb
+  name: SecondaryEmail(String, Boolean)
+  nameWithType: SecondaryEmail.SecondaryEmail(String, Boolean)
+  fullName: Dropbox.Api.SecondaryEmails.SecondaryEmail.SecondaryEmail(System.String, System.Boolean)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/SecondaryEmails/SecondaryEmail.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/SecondaryEmails/SecondaryEmail.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.SecondaryEmails
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.SecondaryEmails.SecondaryEmail\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public SecondaryEmail(string email, bool isVerified)
+    parameters:
+    - id: email
+      type: System.String
+      description: Secondary email address.
+    - id: isVerified
+      type: System.Boolean
+      description: >-
+        Whether or not the secondary email address is verified to
+
+        be owned by a user.
+    content.vb: Public Sub New(email As String, isVerified As Boolean)
+  overload: Dropbox.Api.SecondaryEmails.SecondaryEmail.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.SecondaryEmails.SecondaryEmail.#ctor
+  commentId: M:Dropbox.Api.SecondaryEmails.SecondaryEmail.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.SecondaryEmails.SecondaryEmail
+  langs:
+  - csharp
+  - vb
+  name: SecondaryEmail()
+  nameWithType: SecondaryEmail.SecondaryEmail()
+  fullName: Dropbox.Api.SecondaryEmails.SecondaryEmail.SecondaryEmail()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/SecondaryEmails/SecondaryEmail.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/SecondaryEmails/SecondaryEmail.cs
+    startLine: 60
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.SecondaryEmails
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.SecondaryEmails.SecondaryEmail\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public SecondaryEmail()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.SecondaryEmails.SecondaryEmail.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.SecondaryEmails.SecondaryEmail.Email
+  commentId: P:Dropbox.Api.SecondaryEmails.SecondaryEmail.Email
+  id: Email
+  parent: Dropbox.Api.SecondaryEmails.SecondaryEmail
+  langs:
+  - csharp
+  - vb
+  name: Email
+  nameWithType: SecondaryEmail.Email
+  fullName: Dropbox.Api.SecondaryEmails.SecondaryEmail.Email
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/SecondaryEmails/SecondaryEmail.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Email
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/SecondaryEmails/SecondaryEmail.cs
+    startLine: 68
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.SecondaryEmails
+  summary: "\n<p>Secondary email address.</p>\n"
+  example: []
+  syntax:
+    content: public string Email { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Email As String
+  overload: Dropbox.Api.SecondaryEmails.SecondaryEmail.Email*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.SecondaryEmails.SecondaryEmail.IsVerified
+  commentId: P:Dropbox.Api.SecondaryEmails.SecondaryEmail.IsVerified
+  id: IsVerified
+  parent: Dropbox.Api.SecondaryEmails.SecondaryEmail
+  langs:
+  - csharp
+  - vb
+  name: IsVerified
+  nameWithType: SecondaryEmail.IsVerified
+  fullName: Dropbox.Api.SecondaryEmails.SecondaryEmail.IsVerified
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/SecondaryEmails/SecondaryEmail.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsVerified
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/SecondaryEmails/SecondaryEmail.cs
+    startLine: 74
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.SecondaryEmails
+  summary: "\n<p>Whether or not the secondary email address is verified to be owned by a\nuser.</p>\n"
+  example: []
+  syntax:
+    content: public bool IsVerified { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsVerified As Boolean
+  overload: Dropbox.Api.SecondaryEmails.SecondaryEmail.IsVerified*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.SecondaryEmails
+  commentId: N:Dropbox.Api.SecondaryEmails
+  name: Dropbox.Api.SecondaryEmails
+  nameWithType: Dropbox.Api.SecondaryEmails
+  fullName: Dropbox.Api.SecondaryEmails
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.SecondaryEmails.SecondaryEmail
+  commentId: T:Dropbox.Api.SecondaryEmails.SecondaryEmail
+  parent: Dropbox.Api.SecondaryEmails
+  name: SecondaryEmail
+  nameWithType: SecondaryEmail
+  fullName: Dropbox.Api.SecondaryEmails.SecondaryEmail
+- uid: Dropbox.Api.SecondaryEmails.SecondaryEmail.#ctor*
+  commentId: Overload:Dropbox.Api.SecondaryEmails.SecondaryEmail.#ctor
+  name: SecondaryEmail
+  nameWithType: SecondaryEmail.SecondaryEmail
+  fullName: Dropbox.Api.SecondaryEmails.SecondaryEmail.SecondaryEmail
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.SecondaryEmails.SecondaryEmail.Email*
+  commentId: Overload:Dropbox.Api.SecondaryEmails.SecondaryEmail.Email
+  name: Email
+  nameWithType: SecondaryEmail.Email
+  fullName: Dropbox.Api.SecondaryEmails.SecondaryEmail.Email
+- uid: Dropbox.Api.SecondaryEmails.SecondaryEmail.IsVerified*
+  commentId: Overload:Dropbox.Api.SecondaryEmails.SecondaryEmail.IsVerified
+  name: IsVerified
+  nameWithType: SecondaryEmail.IsVerified
+  fullName: Dropbox.Api.SecondaryEmails.SecondaryEmail.IsVerified
+shouldSkipMarkup: true

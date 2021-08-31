@@ -1,0 +1,96 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.TfaChangeBackupPhoneDetails
+  commentId: T:Dropbox.Api.TeamLog.TfaChangeBackupPhoneDetails
+  id: TfaChangeBackupPhoneDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.TfaChangeBackupPhoneDetails.#ctor
+  langs:
+  - csharp
+  - vb
+  name: TfaChangeBackupPhoneDetails
+  nameWithType: TfaChangeBackupPhoneDetails
+  fullName: Dropbox.Api.TeamLog.TfaChangeBackupPhoneDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaChangeBackupPhoneDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TfaChangeBackupPhoneDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaChangeBackupPhoneDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Changed backup phone for two-step verification.</p>\n"
+  example: []
+  syntax:
+    content: 'public class TfaChangeBackupPhoneDetails : object'
+    content.vb: >-
+      Public Class TfaChangeBackupPhoneDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.TfaChangeBackupPhoneDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.TfaChangeBackupPhoneDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.TfaChangeBackupPhoneDetails
+  langs:
+  - csharp
+  - vb
+  name: TfaChangeBackupPhoneDetails()
+  nameWithType: TfaChangeBackupPhoneDetails.TfaChangeBackupPhoneDetails()
+  fullName: Dropbox.Api.TeamLog.TfaChangeBackupPhoneDetails.TfaChangeBackupPhoneDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaChangeBackupPhoneDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaChangeBackupPhoneDetails.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.TfaChangeBackupPhoneDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public TfaChangeBackupPhoneDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.TfaChangeBackupPhoneDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.TfaChangeBackupPhoneDetails
+  commentId: T:Dropbox.Api.TeamLog.TfaChangeBackupPhoneDetails
+  parent: Dropbox.Api.TeamLog
+  name: TfaChangeBackupPhoneDetails
+  nameWithType: TfaChangeBackupPhoneDetails
+  fullName: Dropbox.Api.TeamLog.TfaChangeBackupPhoneDetails
+- uid: Dropbox.Api.TeamLog.TfaChangeBackupPhoneDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.TfaChangeBackupPhoneDetails.#ctor
+  name: TfaChangeBackupPhoneDetails
+  nameWithType: TfaChangeBackupPhoneDetails.TfaChangeBackupPhoneDetails
+  fullName: Dropbox.Api.TeamLog.TfaChangeBackupPhoneDetails.TfaChangeBackupPhoneDetails
+shouldSkipMarkup: true

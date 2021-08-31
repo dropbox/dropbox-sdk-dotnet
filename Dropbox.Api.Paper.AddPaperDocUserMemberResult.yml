@@ -1,0 +1,249 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Paper.AddPaperDocUserMemberResult
+  commentId: T:Dropbox.Api.Paper.AddPaperDocUserMemberResult
+  id: AddPaperDocUserMemberResult
+  parent: Dropbox.Api.Paper
+  children:
+  - Dropbox.Api.Paper.AddPaperDocUserMemberResult.#ctor
+  - Dropbox.Api.Paper.AddPaperDocUserMemberResult.#ctor(Dropbox.Api.Sharing.MemberSelector,Dropbox.Api.Paper.AddPaperDocUserResult)
+  - Dropbox.Api.Paper.AddPaperDocUserMemberResult.Member
+  - Dropbox.Api.Paper.AddPaperDocUserMemberResult.Result
+  langs:
+  - csharp
+  - vb
+  name: AddPaperDocUserMemberResult
+  nameWithType: AddPaperDocUserMemberResult
+  fullName: Dropbox.Api.Paper.AddPaperDocUserMemberResult
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/AddPaperDocUserMemberResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AddPaperDocUserMemberResult
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/AddPaperDocUserMemberResult.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Per-member result for <xref href=\"Dropbox.Api.Paper.Routes.PaperUserRoutes.DocsUsersAddAsync(Dropbox.Api.Paper.AddPaperDocUser)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+  example: []
+  syntax:
+    content: 'public class AddPaperDocUserMemberResult : object'
+    content.vb: >-
+      Public Class AddPaperDocUserMemberResult
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Paper.AddPaperDocUserMemberResult.#ctor(Dropbox.Api.Sharing.MemberSelector,Dropbox.Api.Paper.AddPaperDocUserResult)
+  commentId: M:Dropbox.Api.Paper.AddPaperDocUserMemberResult.#ctor(Dropbox.Api.Sharing.MemberSelector,Dropbox.Api.Paper.AddPaperDocUserResult)
+  id: '#ctor(Dropbox.Api.Sharing.MemberSelector,Dropbox.Api.Paper.AddPaperDocUserResult)'
+  parent: Dropbox.Api.Paper.AddPaperDocUserMemberResult
+  langs:
+  - csharp
+  - vb
+  name: AddPaperDocUserMemberResult(MemberSelector, AddPaperDocUserResult)
+  nameWithType: AddPaperDocUserMemberResult.AddPaperDocUserMemberResult(MemberSelector, AddPaperDocUserResult)
+  fullName: Dropbox.Api.Paper.AddPaperDocUserMemberResult.AddPaperDocUserMemberResult(Dropbox.Api.Sharing.MemberSelector, Dropbox.Api.Paper.AddPaperDocUserResult)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/AddPaperDocUserMemberResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/AddPaperDocUserMemberResult.cs
+    startLine: 36
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Paper.AddPaperDocUserMemberResult\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public AddPaperDocUserMemberResult(MemberSelector member, AddPaperDocUserResult result)
+    parameters:
+    - id: member
+      type: Dropbox.Api.Sharing.MemberSelector
+      description: One of specified input members.
+    - id: result
+      type: Dropbox.Api.Paper.AddPaperDocUserResult
+      description: The outcome of the action on this member.
+    content.vb: Public Sub New(member As MemberSelector, result As AddPaperDocUserResult)
+  overload: Dropbox.Api.Paper.AddPaperDocUserMemberResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Paper.AddPaperDocUserMemberResult.#ctor
+  commentId: M:Dropbox.Api.Paper.AddPaperDocUserMemberResult.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Paper.AddPaperDocUserMemberResult
+  langs:
+  - csharp
+  - vb
+  name: AddPaperDocUserMemberResult()
+  nameWithType: AddPaperDocUserMemberResult.AddPaperDocUserMemberResult()
+  fullName: Dropbox.Api.Paper.AddPaperDocUserMemberResult.AddPaperDocUserMemberResult()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/AddPaperDocUserMemberResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/AddPaperDocUserMemberResult.cs
+    startLine: 59
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Paper.AddPaperDocUserMemberResult\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public AddPaperDocUserMemberResult()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Paper.AddPaperDocUserMemberResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Paper.AddPaperDocUserMemberResult.Member
+  commentId: P:Dropbox.Api.Paper.AddPaperDocUserMemberResult.Member
+  id: Member
+  parent: Dropbox.Api.Paper.AddPaperDocUserMemberResult
+  langs:
+  - csharp
+  - vb
+  name: Member
+  nameWithType: AddPaperDocUserMemberResult.Member
+  fullName: Dropbox.Api.Paper.AddPaperDocUserMemberResult.Member
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/AddPaperDocUserMemberResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Member
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/AddPaperDocUserMemberResult.cs
+    startLine: 67
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>One of specified input members.</p>\n"
+  example: []
+  syntax:
+    content: public MemberSelector Member { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.MemberSelector
+    content.vb: Public Property Member As MemberSelector
+  overload: Dropbox.Api.Paper.AddPaperDocUserMemberResult.Member*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Paper.AddPaperDocUserMemberResult.Result
+  commentId: P:Dropbox.Api.Paper.AddPaperDocUserMemberResult.Result
+  id: Result
+  parent: Dropbox.Api.Paper.AddPaperDocUserMemberResult
+  langs:
+  - csharp
+  - vb
+  name: Result
+  nameWithType: AddPaperDocUserMemberResult.Result
+  fullName: Dropbox.Api.Paper.AddPaperDocUserMemberResult.Result
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/AddPaperDocUserMemberResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Result
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/AddPaperDocUserMemberResult.cs
+    startLine: 72
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>The outcome of the action on this member.</p>\n"
+  example: []
+  syntax:
+    content: public AddPaperDocUserResult Result { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Paper.AddPaperDocUserResult
+    content.vb: Public Property Result As AddPaperDocUserResult
+  overload: Dropbox.Api.Paper.AddPaperDocUserMemberResult.Result*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Paper.Routes.PaperUserRoutes.DocsUsersAddAsync(Dropbox.Api.Paper.AddPaperDocUser)
+  commentId: M:Dropbox.Api.Paper.Routes.PaperUserRoutes.DocsUsersAddAsync(Dropbox.Api.Paper.AddPaperDocUser)
+  isExternal: true
+- uid: Dropbox.Api.Paper
+  commentId: N:Dropbox.Api.Paper
+  name: Dropbox.Api.Paper
+  nameWithType: Dropbox.Api.Paper
+  fullName: Dropbox.Api.Paper
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Paper.AddPaperDocUserMemberResult
+  commentId: T:Dropbox.Api.Paper.AddPaperDocUserMemberResult
+  name: AddPaperDocUserMemberResult
+  nameWithType: AddPaperDocUserMemberResult
+  fullName: Dropbox.Api.Paper.AddPaperDocUserMemberResult
+- uid: Dropbox.Api.Paper.AddPaperDocUserMemberResult.#ctor*
+  commentId: Overload:Dropbox.Api.Paper.AddPaperDocUserMemberResult.#ctor
+  name: AddPaperDocUserMemberResult
+  nameWithType: AddPaperDocUserMemberResult.AddPaperDocUserMemberResult
+  fullName: Dropbox.Api.Paper.AddPaperDocUserMemberResult.AddPaperDocUserMemberResult
+- uid: Dropbox.Api.Sharing.MemberSelector
+  commentId: T:Dropbox.Api.Sharing.MemberSelector
+  parent: Dropbox.Api.Sharing
+  name: MemberSelector
+  nameWithType: MemberSelector
+  fullName: Dropbox.Api.Sharing.MemberSelector
+- uid: Dropbox.Api.Paper.AddPaperDocUserResult
+  commentId: T:Dropbox.Api.Paper.AddPaperDocUserResult
+  parent: Dropbox.Api.Paper
+  name: AddPaperDocUserResult
+  nameWithType: AddPaperDocUserResult
+  fullName: Dropbox.Api.Paper.AddPaperDocUserResult
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: Dropbox.Api.Paper.AddPaperDocUserMemberResult.Member*
+  commentId: Overload:Dropbox.Api.Paper.AddPaperDocUserMemberResult.Member
+  name: Member
+  nameWithType: AddPaperDocUserMemberResult.Member
+  fullName: Dropbox.Api.Paper.AddPaperDocUserMemberResult.Member
+- uid: Dropbox.Api.Paper.AddPaperDocUserMemberResult.Result*
+  commentId: Overload:Dropbox.Api.Paper.AddPaperDocUserMemberResult.Result
+  name: Result
+  nameWithType: AddPaperDocUserMemberResult.Result
+  fullName: Dropbox.Api.Paper.AddPaperDocUserMemberResult.Result
+shouldSkipMarkup: true

@@ -1,0 +1,228 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.BaseDfbReport
+  commentId: T:Dropbox.Api.Team.BaseDfbReport
+  id: BaseDfbReport
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.BaseDfbReport.#ctor
+  - Dropbox.Api.Team.BaseDfbReport.#ctor(System.String)
+  - Dropbox.Api.Team.BaseDfbReport.StartDate
+  langs:
+  - csharp
+  - vb
+  name: BaseDfbReport
+  nameWithType: BaseDfbReport
+  fullName: Dropbox.Api.Team.BaseDfbReport
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/BaseDfbReport.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: BaseDfbReport
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/BaseDfbReport.cs
+    startLine: 19
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Base report structure.</p>\n"
+  example: []
+  syntax:
+    content: 'public class BaseDfbReport : object'
+    content.vb: >-
+      Public Class BaseDfbReport
+          Inherits Object
+  seealso:
+  - linkId: Dropbox.Api.Team.GetActivityReport
+    commentId: T:Dropbox.Api.Team.GetActivityReport
+  - linkId: Dropbox.Api.Team.GetDevicesReport
+    commentId: T:Dropbox.Api.Team.GetDevicesReport
+  - linkId: Dropbox.Api.Team.GetMembershipReport
+    commentId: T:Dropbox.Api.Team.GetMembershipReport
+  - linkId: Dropbox.Api.Team.GetStorageReport
+    commentId: T:Dropbox.Api.Team.GetStorageReport
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Team.GetActivityReport
+  - Dropbox.Api.Team.GetDevicesReport
+  - Dropbox.Api.Team.GetMembershipReport
+  - Dropbox.Api.Team.GetStorageReport
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.BaseDfbReport.#ctor(System.String)
+  commentId: M:Dropbox.Api.Team.BaseDfbReport.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.Team.BaseDfbReport
+  langs:
+  - csharp
+  - vb
+  name: BaseDfbReport(String)
+  nameWithType: BaseDfbReport.BaseDfbReport(String)
+  fullName: Dropbox.Api.Team.BaseDfbReport.BaseDfbReport(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/BaseDfbReport.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/BaseDfbReport.cs
+    startLine: 38
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.BaseDfbReport\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public BaseDfbReport(string startDate)
+    parameters:
+    - id: startDate
+      type: System.String
+      description: >-
+        First date present in the results as &apos;YYYY-MM-DD&apos; or
+
+        None.
+    content.vb: Public Sub New(startDate As String)
+  overload: Dropbox.Api.Team.BaseDfbReport.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.BaseDfbReport.#ctor
+  commentId: M:Dropbox.Api.Team.BaseDfbReport.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.BaseDfbReport
+  langs:
+  - csharp
+  - vb
+  name: BaseDfbReport()
+  nameWithType: BaseDfbReport.BaseDfbReport()
+  fullName: Dropbox.Api.Team.BaseDfbReport.BaseDfbReport()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/BaseDfbReport.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/BaseDfbReport.cs
+    startLine: 53
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.BaseDfbReport\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public BaseDfbReport()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.BaseDfbReport.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.BaseDfbReport.StartDate
+  commentId: P:Dropbox.Api.Team.BaseDfbReport.StartDate
+  id: StartDate
+  parent: Dropbox.Api.Team.BaseDfbReport
+  langs:
+  - csharp
+  - vb
+  name: StartDate
+  nameWithType: BaseDfbReport.StartDate
+  fullName: Dropbox.Api.Team.BaseDfbReport.StartDate
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/BaseDfbReport.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: StartDate
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/BaseDfbReport.cs
+    startLine: 61
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>First date present in the results as &apos;YYYY-MM-DD&apos; or None.</p>\n"
+  example: []
+  syntax:
+    content: public string StartDate { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property StartDate As String
+  overload: Dropbox.Api.Team.BaseDfbReport.StartDate*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Team.GetActivityReport
+  commentId: T:Dropbox.Api.Team.GetActivityReport
+  parent: Dropbox.Api.Team
+  name: GetActivityReport
+  nameWithType: GetActivityReport
+  fullName: Dropbox.Api.Team.GetActivityReport
+- uid: Dropbox.Api.Team.GetDevicesReport
+  commentId: T:Dropbox.Api.Team.GetDevicesReport
+  parent: Dropbox.Api.Team
+  name: GetDevicesReport
+  nameWithType: GetDevicesReport
+  fullName: Dropbox.Api.Team.GetDevicesReport
+- uid: Dropbox.Api.Team.GetMembershipReport
+  commentId: T:Dropbox.Api.Team.GetMembershipReport
+  parent: Dropbox.Api.Team
+  name: GetMembershipReport
+  nameWithType: GetMembershipReport
+  fullName: Dropbox.Api.Team.GetMembershipReport
+- uid: Dropbox.Api.Team.GetStorageReport
+  commentId: T:Dropbox.Api.Team.GetStorageReport
+  parent: Dropbox.Api.Team
+  name: GetStorageReport
+  nameWithType: GetStorageReport
+  fullName: Dropbox.Api.Team.GetStorageReport
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.BaseDfbReport
+  commentId: T:Dropbox.Api.Team.BaseDfbReport
+  parent: Dropbox.Api.Team
+  name: BaseDfbReport
+  nameWithType: BaseDfbReport
+  fullName: Dropbox.Api.Team.BaseDfbReport
+- uid: Dropbox.Api.Team.BaseDfbReport.#ctor*
+  commentId: Overload:Dropbox.Api.Team.BaseDfbReport.#ctor
+  name: BaseDfbReport
+  nameWithType: BaseDfbReport.BaseDfbReport
+  fullName: Dropbox.Api.Team.BaseDfbReport.BaseDfbReport
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Team.BaseDfbReport.StartDate*
+  commentId: Overload:Dropbox.Api.Team.BaseDfbReport.StartDate
+  name: StartDate
+  nameWithType: BaseDfbReport.StartDate
+  fullName: Dropbox.Api.Team.BaseDfbReport.StartDate
+shouldSkipMarkup: true

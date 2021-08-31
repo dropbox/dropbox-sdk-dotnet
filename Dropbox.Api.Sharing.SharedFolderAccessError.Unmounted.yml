@@ -1,0 +1,176 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.SharedFolderAccessError.Unmounted
+  commentId: T:Dropbox.Api.Sharing.SharedFolderAccessError.Unmounted
+  id: SharedFolderAccessError.Unmounted
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.SharedFolderAccessError.Unmounted.Instance
+  langs:
+  - csharp
+  - vb
+  name: SharedFolderAccessError.Unmounted
+  nameWithType: SharedFolderAccessError.Unmounted
+  fullName: Dropbox.Api.Sharing.SharedFolderAccessError.Unmounted
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedFolderAccessError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Unmounted
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedFolderAccessError.cs
+    startLine: 451
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The shared folder is unmounted.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Unmounted : SharedFolderAccessError'
+    content.vb: >-
+      Public NotInheritable Class Unmounted
+          Inherits SharedFolderAccessError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Sharing.SharedFolderAccessError
+  inheritedMembers:
+  - Dropbox.Api.Sharing.SharedFolderAccessError.IsInvalidId
+  - Dropbox.Api.Sharing.SharedFolderAccessError.AsInvalidId
+  - Dropbox.Api.Sharing.SharedFolderAccessError.IsNotAMember
+  - Dropbox.Api.Sharing.SharedFolderAccessError.AsNotAMember
+  - Dropbox.Api.Sharing.SharedFolderAccessError.IsEmailUnverified
+  - Dropbox.Api.Sharing.SharedFolderAccessError.AsEmailUnverified
+  - Dropbox.Api.Sharing.SharedFolderAccessError.IsUnmounted
+  - Dropbox.Api.Sharing.SharedFolderAccessError.AsUnmounted
+  - Dropbox.Api.Sharing.SharedFolderAccessError.IsOther
+  - Dropbox.Api.Sharing.SharedFolderAccessError.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Sharing.SharedFolderAccessError.Unmounted.Instance
+  commentId: F:Dropbox.Api.Sharing.SharedFolderAccessError.Unmounted.Instance
+  id: Instance
+  parent: Dropbox.Api.Sharing.SharedFolderAccessError.Unmounted
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: SharedFolderAccessError.Unmounted.Instance
+  fullName: Dropbox.Api.Sharing.SharedFolderAccessError.Unmounted.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedFolderAccessError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedFolderAccessError.cs
+    startLine: 475
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>A singleton instance of Unmounted</p>\n"
+  example: []
+  syntax:
+    content: public static readonly SharedFolderAccessError.Unmounted Instance
+    return:
+      type: Dropbox.Api.Sharing.SharedFolderAccessError.Unmounted
+    content.vb: Public Shared ReadOnly Instance As SharedFolderAccessError.Unmounted
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.SharedFolderAccessError
+  commentId: T:Dropbox.Api.Sharing.SharedFolderAccessError
+  parent: Dropbox.Api.Sharing
+  name: SharedFolderAccessError
+  nameWithType: SharedFolderAccessError
+  fullName: Dropbox.Api.Sharing.SharedFolderAccessError
+- uid: Dropbox.Api.Sharing.SharedFolderAccessError.IsInvalidId
+  commentId: P:Dropbox.Api.Sharing.SharedFolderAccessError.IsInvalidId
+  parent: Dropbox.Api.Sharing.SharedFolderAccessError
+  name: IsInvalidId
+  nameWithType: SharedFolderAccessError.IsInvalidId
+  fullName: Dropbox.Api.Sharing.SharedFolderAccessError.IsInvalidId
+- uid: Dropbox.Api.Sharing.SharedFolderAccessError.AsInvalidId
+  commentId: P:Dropbox.Api.Sharing.SharedFolderAccessError.AsInvalidId
+  parent: Dropbox.Api.Sharing.SharedFolderAccessError
+  name: AsInvalidId
+  nameWithType: SharedFolderAccessError.AsInvalidId
+  fullName: Dropbox.Api.Sharing.SharedFolderAccessError.AsInvalidId
+- uid: Dropbox.Api.Sharing.SharedFolderAccessError.IsNotAMember
+  commentId: P:Dropbox.Api.Sharing.SharedFolderAccessError.IsNotAMember
+  parent: Dropbox.Api.Sharing.SharedFolderAccessError
+  name: IsNotAMember
+  nameWithType: SharedFolderAccessError.IsNotAMember
+  fullName: Dropbox.Api.Sharing.SharedFolderAccessError.IsNotAMember
+- uid: Dropbox.Api.Sharing.SharedFolderAccessError.AsNotAMember
+  commentId: P:Dropbox.Api.Sharing.SharedFolderAccessError.AsNotAMember
+  parent: Dropbox.Api.Sharing.SharedFolderAccessError
+  name: AsNotAMember
+  nameWithType: SharedFolderAccessError.AsNotAMember
+  fullName: Dropbox.Api.Sharing.SharedFolderAccessError.AsNotAMember
+- uid: Dropbox.Api.Sharing.SharedFolderAccessError.IsEmailUnverified
+  commentId: P:Dropbox.Api.Sharing.SharedFolderAccessError.IsEmailUnverified
+  parent: Dropbox.Api.Sharing.SharedFolderAccessError
+  name: IsEmailUnverified
+  nameWithType: SharedFolderAccessError.IsEmailUnverified
+  fullName: Dropbox.Api.Sharing.SharedFolderAccessError.IsEmailUnverified
+- uid: Dropbox.Api.Sharing.SharedFolderAccessError.AsEmailUnverified
+  commentId: P:Dropbox.Api.Sharing.SharedFolderAccessError.AsEmailUnverified
+  parent: Dropbox.Api.Sharing.SharedFolderAccessError
+  name: AsEmailUnverified
+  nameWithType: SharedFolderAccessError.AsEmailUnverified
+  fullName: Dropbox.Api.Sharing.SharedFolderAccessError.AsEmailUnverified
+- uid: Dropbox.Api.Sharing.SharedFolderAccessError.IsUnmounted
+  commentId: P:Dropbox.Api.Sharing.SharedFolderAccessError.IsUnmounted
+  parent: Dropbox.Api.Sharing.SharedFolderAccessError
+  name: IsUnmounted
+  nameWithType: SharedFolderAccessError.IsUnmounted
+  fullName: Dropbox.Api.Sharing.SharedFolderAccessError.IsUnmounted
+- uid: Dropbox.Api.Sharing.SharedFolderAccessError.AsUnmounted
+  commentId: P:Dropbox.Api.Sharing.SharedFolderAccessError.AsUnmounted
+  parent: Dropbox.Api.Sharing.SharedFolderAccessError
+  name: AsUnmounted
+  nameWithType: SharedFolderAccessError.AsUnmounted
+  fullName: Dropbox.Api.Sharing.SharedFolderAccessError.AsUnmounted
+- uid: Dropbox.Api.Sharing.SharedFolderAccessError.IsOther
+  commentId: P:Dropbox.Api.Sharing.SharedFolderAccessError.IsOther
+  parent: Dropbox.Api.Sharing.SharedFolderAccessError
+  name: IsOther
+  nameWithType: SharedFolderAccessError.IsOther
+  fullName: Dropbox.Api.Sharing.SharedFolderAccessError.IsOther
+- uid: Dropbox.Api.Sharing.SharedFolderAccessError.AsOther
+  commentId: P:Dropbox.Api.Sharing.SharedFolderAccessError.AsOther
+  parent: Dropbox.Api.Sharing.SharedFolderAccessError
+  name: AsOther
+  nameWithType: SharedFolderAccessError.AsOther
+  fullName: Dropbox.Api.Sharing.SharedFolderAccessError.AsOther
+- uid: Dropbox.Api.Sharing.SharedFolderAccessError.Unmounted
+  commentId: T:Dropbox.Api.Sharing.SharedFolderAccessError.Unmounted
+  parent: Dropbox.Api.Sharing
+  name: SharedFolderAccessError.Unmounted
+  nameWithType: SharedFolderAccessError.Unmounted
+  fullName: Dropbox.Api.Sharing.SharedFolderAccessError.Unmounted
+shouldSkipMarkup: true

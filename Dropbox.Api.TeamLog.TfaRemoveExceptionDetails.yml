@@ -1,0 +1,96 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.TfaRemoveExceptionDetails
+  commentId: T:Dropbox.Api.TeamLog.TfaRemoveExceptionDetails
+  id: TfaRemoveExceptionDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.TfaRemoveExceptionDetails.#ctor
+  langs:
+  - csharp
+  - vb
+  name: TfaRemoveExceptionDetails
+  nameWithType: TfaRemoveExceptionDetails
+  fullName: Dropbox.Api.TeamLog.TfaRemoveExceptionDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaRemoveExceptionDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TfaRemoveExceptionDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaRemoveExceptionDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Removed members from two factor authentication exception list.</p>\n"
+  example: []
+  syntax:
+    content: 'public class TfaRemoveExceptionDetails : object'
+    content.vb: >-
+      Public Class TfaRemoveExceptionDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.TfaRemoveExceptionDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.TfaRemoveExceptionDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.TfaRemoveExceptionDetails
+  langs:
+  - csharp
+  - vb
+  name: TfaRemoveExceptionDetails()
+  nameWithType: TfaRemoveExceptionDetails.TfaRemoveExceptionDetails()
+  fullName: Dropbox.Api.TeamLog.TfaRemoveExceptionDetails.TfaRemoveExceptionDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaRemoveExceptionDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaRemoveExceptionDetails.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.TfaRemoveExceptionDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public TfaRemoveExceptionDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.TfaRemoveExceptionDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.TfaRemoveExceptionDetails
+  commentId: T:Dropbox.Api.TeamLog.TfaRemoveExceptionDetails
+  parent: Dropbox.Api.TeamLog
+  name: TfaRemoveExceptionDetails
+  nameWithType: TfaRemoveExceptionDetails
+  fullName: Dropbox.Api.TeamLog.TfaRemoveExceptionDetails
+- uid: Dropbox.Api.TeamLog.TfaRemoveExceptionDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.TfaRemoveExceptionDetails.#ctor
+  name: TfaRemoveExceptionDetails
+  nameWithType: TfaRemoveExceptionDetails.TfaRemoveExceptionDetails
+  fullName: Dropbox.Api.TeamLog.TfaRemoveExceptionDetails.TfaRemoveExceptionDetails
+shouldSkipMarkup: true

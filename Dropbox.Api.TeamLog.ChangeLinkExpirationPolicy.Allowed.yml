@@ -1,0 +1,148 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.ChangeLinkExpirationPolicy.Allowed
+  commentId: T:Dropbox.Api.TeamLog.ChangeLinkExpirationPolicy.Allowed
+  id: ChangeLinkExpirationPolicy.Allowed
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.ChangeLinkExpirationPolicy.Allowed.Instance
+  langs:
+  - csharp
+  - vb
+  name: ChangeLinkExpirationPolicy.Allowed
+  nameWithType: ChangeLinkExpirationPolicy.Allowed
+  fullName: Dropbox.Api.TeamLog.ChangeLinkExpirationPolicy.Allowed
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ChangeLinkExpirationPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Allowed
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ChangeLinkExpirationPolicy.cs
+    startLine: 184
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The allowed object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Allowed : ChangeLinkExpirationPolicy'
+    content.vb: >-
+      Public NotInheritable Class Allowed
+          Inherits ChangeLinkExpirationPolicy
+  inheritance:
+  - System.Object
+  - Dropbox.Api.TeamLog.ChangeLinkExpirationPolicy
+  inheritedMembers:
+  - Dropbox.Api.TeamLog.ChangeLinkExpirationPolicy.IsAllowed
+  - Dropbox.Api.TeamLog.ChangeLinkExpirationPolicy.AsAllowed
+  - Dropbox.Api.TeamLog.ChangeLinkExpirationPolicy.IsNotAllowed
+  - Dropbox.Api.TeamLog.ChangeLinkExpirationPolicy.AsNotAllowed
+  - Dropbox.Api.TeamLog.ChangeLinkExpirationPolicy.IsOther
+  - Dropbox.Api.TeamLog.ChangeLinkExpirationPolicy.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.TeamLog.ChangeLinkExpirationPolicy.Allowed.Instance
+  commentId: F:Dropbox.Api.TeamLog.ChangeLinkExpirationPolicy.Allowed.Instance
+  id: Instance
+  parent: Dropbox.Api.TeamLog.ChangeLinkExpirationPolicy.Allowed
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: ChangeLinkExpirationPolicy.Allowed.Instance
+  fullName: Dropbox.Api.TeamLog.ChangeLinkExpirationPolicy.Allowed.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ChangeLinkExpirationPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ChangeLinkExpirationPolicy.cs
+    startLine: 208
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>A singleton instance of Allowed</p>\n"
+  example: []
+  syntax:
+    content: public static readonly ChangeLinkExpirationPolicy.Allowed Instance
+    return:
+      type: Dropbox.Api.TeamLog.ChangeLinkExpirationPolicy.Allowed
+    content.vb: Public Shared ReadOnly Instance As ChangeLinkExpirationPolicy.Allowed
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.ChangeLinkExpirationPolicy
+  commentId: T:Dropbox.Api.TeamLog.ChangeLinkExpirationPolicy
+  parent: Dropbox.Api.TeamLog
+  name: ChangeLinkExpirationPolicy
+  nameWithType: ChangeLinkExpirationPolicy
+  fullName: Dropbox.Api.TeamLog.ChangeLinkExpirationPolicy
+- uid: Dropbox.Api.TeamLog.ChangeLinkExpirationPolicy.IsAllowed
+  commentId: P:Dropbox.Api.TeamLog.ChangeLinkExpirationPolicy.IsAllowed
+  parent: Dropbox.Api.TeamLog.ChangeLinkExpirationPolicy
+  name: IsAllowed
+  nameWithType: ChangeLinkExpirationPolicy.IsAllowed
+  fullName: Dropbox.Api.TeamLog.ChangeLinkExpirationPolicy.IsAllowed
+- uid: Dropbox.Api.TeamLog.ChangeLinkExpirationPolicy.AsAllowed
+  commentId: P:Dropbox.Api.TeamLog.ChangeLinkExpirationPolicy.AsAllowed
+  parent: Dropbox.Api.TeamLog.ChangeLinkExpirationPolicy
+  name: AsAllowed
+  nameWithType: ChangeLinkExpirationPolicy.AsAllowed
+  fullName: Dropbox.Api.TeamLog.ChangeLinkExpirationPolicy.AsAllowed
+- uid: Dropbox.Api.TeamLog.ChangeLinkExpirationPolicy.IsNotAllowed
+  commentId: P:Dropbox.Api.TeamLog.ChangeLinkExpirationPolicy.IsNotAllowed
+  parent: Dropbox.Api.TeamLog.ChangeLinkExpirationPolicy
+  name: IsNotAllowed
+  nameWithType: ChangeLinkExpirationPolicy.IsNotAllowed
+  fullName: Dropbox.Api.TeamLog.ChangeLinkExpirationPolicy.IsNotAllowed
+- uid: Dropbox.Api.TeamLog.ChangeLinkExpirationPolicy.AsNotAllowed
+  commentId: P:Dropbox.Api.TeamLog.ChangeLinkExpirationPolicy.AsNotAllowed
+  parent: Dropbox.Api.TeamLog.ChangeLinkExpirationPolicy
+  name: AsNotAllowed
+  nameWithType: ChangeLinkExpirationPolicy.AsNotAllowed
+  fullName: Dropbox.Api.TeamLog.ChangeLinkExpirationPolicy.AsNotAllowed
+- uid: Dropbox.Api.TeamLog.ChangeLinkExpirationPolicy.IsOther
+  commentId: P:Dropbox.Api.TeamLog.ChangeLinkExpirationPolicy.IsOther
+  parent: Dropbox.Api.TeamLog.ChangeLinkExpirationPolicy
+  name: IsOther
+  nameWithType: ChangeLinkExpirationPolicy.IsOther
+  fullName: Dropbox.Api.TeamLog.ChangeLinkExpirationPolicy.IsOther
+- uid: Dropbox.Api.TeamLog.ChangeLinkExpirationPolicy.AsOther
+  commentId: P:Dropbox.Api.TeamLog.ChangeLinkExpirationPolicy.AsOther
+  parent: Dropbox.Api.TeamLog.ChangeLinkExpirationPolicy
+  name: AsOther
+  nameWithType: ChangeLinkExpirationPolicy.AsOther
+  fullName: Dropbox.Api.TeamLog.ChangeLinkExpirationPolicy.AsOther
+- uid: Dropbox.Api.TeamLog.ChangeLinkExpirationPolicy.Allowed
+  commentId: T:Dropbox.Api.TeamLog.ChangeLinkExpirationPolicy.Allowed
+  parent: Dropbox.Api.TeamLog
+  name: ChangeLinkExpirationPolicy.Allowed
+  nameWithType: ChangeLinkExpirationPolicy.Allowed
+  fullName: Dropbox.Api.TeamLog.ChangeLinkExpirationPolicy.Allowed
+shouldSkipMarkup: true

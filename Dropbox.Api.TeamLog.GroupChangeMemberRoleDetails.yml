@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.GroupChangeMemberRoleDetails
+  commentId: T:Dropbox.Api.TeamLog.GroupChangeMemberRoleDetails
+  id: GroupChangeMemberRoleDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.GroupChangeMemberRoleDetails.#ctor
+  - Dropbox.Api.TeamLog.GroupChangeMemberRoleDetails.#ctor(System.Boolean)
+  - Dropbox.Api.TeamLog.GroupChangeMemberRoleDetails.IsGroupOwner
+  langs:
+  - csharp
+  - vb
+  name: GroupChangeMemberRoleDetails
+  nameWithType: GroupChangeMemberRoleDetails
+  fullName: Dropbox.Api.TeamLog.GroupChangeMemberRoleDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupChangeMemberRoleDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GroupChangeMemberRoleDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupChangeMemberRoleDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Changed manager permissions of group member.</p>\n"
+  example: []
+  syntax:
+    content: 'public class GroupChangeMemberRoleDetails : object'
+    content.vb: >-
+      Public Class GroupChangeMemberRoleDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.GroupChangeMemberRoleDetails.#ctor(System.Boolean)
+  commentId: M:Dropbox.Api.TeamLog.GroupChangeMemberRoleDetails.#ctor(System.Boolean)
+  id: '#ctor(System.Boolean)'
+  parent: Dropbox.Api.TeamLog.GroupChangeMemberRoleDetails
+  langs:
+  - csharp
+  - vb
+  name: GroupChangeMemberRoleDetails(Boolean)
+  nameWithType: GroupChangeMemberRoleDetails.GroupChangeMemberRoleDetails(Boolean)
+  fullName: Dropbox.Api.TeamLog.GroupChangeMemberRoleDetails.GroupChangeMemberRoleDetails(System.Boolean)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupChangeMemberRoleDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupChangeMemberRoleDetails.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.GroupChangeMemberRoleDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public GroupChangeMemberRoleDetails(bool isGroupOwner)
+    parameters:
+    - id: isGroupOwner
+      type: System.Boolean
+      description: Is group owner.
+    content.vb: Public Sub New(isGroupOwner As Boolean)
+  overload: Dropbox.Api.TeamLog.GroupChangeMemberRoleDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.GroupChangeMemberRoleDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.GroupChangeMemberRoleDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.GroupChangeMemberRoleDetails
+  langs:
+  - csharp
+  - vb
+  name: GroupChangeMemberRoleDetails()
+  nameWithType: GroupChangeMemberRoleDetails.GroupChangeMemberRoleDetails()
+  fullName: Dropbox.Api.TeamLog.GroupChangeMemberRoleDetails.GroupChangeMemberRoleDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupChangeMemberRoleDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupChangeMemberRoleDetails.cs
+    startLine: 45
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.GroupChangeMemberRoleDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public GroupChangeMemberRoleDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.GroupChangeMemberRoleDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.GroupChangeMemberRoleDetails.IsGroupOwner
+  commentId: P:Dropbox.Api.TeamLog.GroupChangeMemberRoleDetails.IsGroupOwner
+  id: IsGroupOwner
+  parent: Dropbox.Api.TeamLog.GroupChangeMemberRoleDetails
+  langs:
+  - csharp
+  - vb
+  name: IsGroupOwner
+  nameWithType: GroupChangeMemberRoleDetails.IsGroupOwner
+  fullName: Dropbox.Api.TeamLog.GroupChangeMemberRoleDetails.IsGroupOwner
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupChangeMemberRoleDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsGroupOwner
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupChangeMemberRoleDetails.cs
+    startLine: 53
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Is group owner.</p>\n"
+  example: []
+  syntax:
+    content: public bool IsGroupOwner { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsGroupOwner As Boolean
+  overload: Dropbox.Api.TeamLog.GroupChangeMemberRoleDetails.IsGroupOwner*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.GroupChangeMemberRoleDetails
+  commentId: T:Dropbox.Api.TeamLog.GroupChangeMemberRoleDetails
+  parent: Dropbox.Api.TeamLog
+  name: GroupChangeMemberRoleDetails
+  nameWithType: GroupChangeMemberRoleDetails
+  fullName: Dropbox.Api.TeamLog.GroupChangeMemberRoleDetails
+- uid: Dropbox.Api.TeamLog.GroupChangeMemberRoleDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.GroupChangeMemberRoleDetails.#ctor
+  name: GroupChangeMemberRoleDetails
+  nameWithType: GroupChangeMemberRoleDetails.GroupChangeMemberRoleDetails
+  fullName: Dropbox.Api.TeamLog.GroupChangeMemberRoleDetails.GroupChangeMemberRoleDetails
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.TeamLog.GroupChangeMemberRoleDetails.IsGroupOwner*
+  commentId: Overload:Dropbox.Api.TeamLog.GroupChangeMemberRoleDetails.IsGroupOwner
+  name: IsGroupOwner
+  nameWithType: GroupChangeMemberRoleDetails.IsGroupOwner
+  fullName: Dropbox.Api.TeamLog.GroupChangeMemberRoleDetails.IsGroupOwner
+shouldSkipMarkup: true

@@ -1,0 +1,474 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Paper.PaperFolderCreateError
+  commentId: T:Dropbox.Api.Paper.PaperFolderCreateError
+  id: PaperFolderCreateError
+  parent: Dropbox.Api.Paper
+  children:
+  - Dropbox.Api.Paper.PaperFolderCreateError.#ctor
+  - Dropbox.Api.Paper.PaperFolderCreateError.AsFolderNotFound
+  - Dropbox.Api.Paper.PaperFolderCreateError.AsInsufficientPermissions
+  - Dropbox.Api.Paper.PaperFolderCreateError.AsInvalidFolderId
+  - Dropbox.Api.Paper.PaperFolderCreateError.AsOther
+  - Dropbox.Api.Paper.PaperFolderCreateError.IsFolderNotFound
+  - Dropbox.Api.Paper.PaperFolderCreateError.IsInsufficientPermissions
+  - Dropbox.Api.Paper.PaperFolderCreateError.IsInvalidFolderId
+  - Dropbox.Api.Paper.PaperFolderCreateError.IsOther
+  langs:
+  - csharp
+  - vb
+  name: PaperFolderCreateError
+  nameWithType: PaperFolderCreateError
+  fullName: Dropbox.Api.Paper.PaperFolderCreateError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperFolderCreateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PaperFolderCreateError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperFolderCreateError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>The paper folder create error object</p>\n"
+  example: []
+  syntax:
+    content: 'public class PaperFolderCreateError : object'
+    content.vb: >-
+      Public Class PaperFolderCreateError
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Paper.PaperFolderCreateError.FolderNotFound
+  - Dropbox.Api.Paper.PaperFolderCreateError.InsufficientPermissions
+  - Dropbox.Api.Paper.PaperFolderCreateError.InvalidFolderId
+  - Dropbox.Api.Paper.PaperFolderCreateError.Other
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Paper.PaperFolderCreateError.#ctor
+  commentId: M:Dropbox.Api.Paper.PaperFolderCreateError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Paper.PaperFolderCreateError
+  langs:
+  - csharp
+  - vb
+  name: PaperFolderCreateError()
+  nameWithType: PaperFolderCreateError.PaperFolderCreateError()
+  fullName: Dropbox.Api.Paper.PaperFolderCreateError.PaperFolderCreateError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperFolderCreateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperFolderCreateError.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Paper.PaperFolderCreateError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public PaperFolderCreateError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Paper.PaperFolderCreateError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Paper.PaperFolderCreateError.IsFolderNotFound
+  commentId: P:Dropbox.Api.Paper.PaperFolderCreateError.IsFolderNotFound
+  id: IsFolderNotFound
+  parent: Dropbox.Api.Paper.PaperFolderCreateError
+  langs:
+  - csharp
+  - vb
+  name: IsFolderNotFound
+  nameWithType: PaperFolderCreateError.IsFolderNotFound
+  fullName: Dropbox.Api.Paper.PaperFolderCreateError.IsFolderNotFound
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperFolderCreateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsFolderNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperFolderCreateError.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets a value indicating whether this instance is FolderNotFound</p>\n"
+  example: []
+  syntax:
+    content: public bool IsFolderNotFound { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsFolderNotFound As Boolean
+  overload: Dropbox.Api.Paper.PaperFolderCreateError.IsFolderNotFound*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Paper.PaperFolderCreateError.AsFolderNotFound
+  commentId: P:Dropbox.Api.Paper.PaperFolderCreateError.AsFolderNotFound
+  id: AsFolderNotFound
+  parent: Dropbox.Api.Paper.PaperFolderCreateError
+  langs:
+  - csharp
+  - vb
+  name: AsFolderNotFound
+  nameWithType: PaperFolderCreateError.AsFolderNotFound
+  fullName: Dropbox.Api.Paper.PaperFolderCreateError.AsFolderNotFound
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperFolderCreateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsFolderNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperFolderCreateError.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets this instance as a FolderNotFound, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PaperFolderCreateError.FolderNotFound AsFolderNotFound { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Paper.PaperFolderCreateError.FolderNotFound
+    content.vb: Public ReadOnly Property AsFolderNotFound As PaperFolderCreateError.FolderNotFound
+  overload: Dropbox.Api.Paper.PaperFolderCreateError.AsFolderNotFound*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Paper.PaperFolderCreateError.IsInvalidFolderId
+  commentId: P:Dropbox.Api.Paper.PaperFolderCreateError.IsInvalidFolderId
+  id: IsInvalidFolderId
+  parent: Dropbox.Api.Paper.PaperFolderCreateError
+  langs:
+  - csharp
+  - vb
+  name: IsInvalidFolderId
+  nameWithType: PaperFolderCreateError.IsInvalidFolderId
+  fullName: Dropbox.Api.Paper.PaperFolderCreateError.IsInvalidFolderId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperFolderCreateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsInvalidFolderId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperFolderCreateError.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets a value indicating whether this instance is InvalidFolderId</p>\n"
+  example: []
+  syntax:
+    content: public bool IsInvalidFolderId { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsInvalidFolderId As Boolean
+  overload: Dropbox.Api.Paper.PaperFolderCreateError.IsInvalidFolderId*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Paper.PaperFolderCreateError.AsInvalidFolderId
+  commentId: P:Dropbox.Api.Paper.PaperFolderCreateError.AsInvalidFolderId
+  id: AsInvalidFolderId
+  parent: Dropbox.Api.Paper.PaperFolderCreateError
+  langs:
+  - csharp
+  - vb
+  name: AsInvalidFolderId
+  nameWithType: PaperFolderCreateError.AsInvalidFolderId
+  fullName: Dropbox.Api.Paper.PaperFolderCreateError.AsInvalidFolderId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperFolderCreateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsInvalidFolderId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperFolderCreateError.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets this instance as a InvalidFolderId, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PaperFolderCreateError.InvalidFolderId AsInvalidFolderId { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Paper.PaperFolderCreateError.InvalidFolderId
+    content.vb: Public ReadOnly Property AsInvalidFolderId As PaperFolderCreateError.InvalidFolderId
+  overload: Dropbox.Api.Paper.PaperFolderCreateError.AsInvalidFolderId*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Paper.PaperFolderCreateError.IsInsufficientPermissions
+  commentId: P:Dropbox.Api.Paper.PaperFolderCreateError.IsInsufficientPermissions
+  id: IsInsufficientPermissions
+  parent: Dropbox.Api.Paper.PaperFolderCreateError
+  langs:
+  - csharp
+  - vb
+  name: IsInsufficientPermissions
+  nameWithType: PaperFolderCreateError.IsInsufficientPermissions
+  fullName: Dropbox.Api.Paper.PaperFolderCreateError.IsInsufficientPermissions
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperFolderCreateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsInsufficientPermissions
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperFolderCreateError.cs
+    startLine: 85
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets a value indicating whether this instance is\nInsufficientPermissions</p>\n"
+  example: []
+  syntax:
+    content: public bool IsInsufficientPermissions { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsInsufficientPermissions As Boolean
+  overload: Dropbox.Api.Paper.PaperFolderCreateError.IsInsufficientPermissions*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Paper.PaperFolderCreateError.AsInsufficientPermissions
+  commentId: P:Dropbox.Api.Paper.PaperFolderCreateError.AsInsufficientPermissions
+  id: AsInsufficientPermissions
+  parent: Dropbox.Api.Paper.PaperFolderCreateError
+  langs:
+  - csharp
+  - vb
+  name: AsInsufficientPermissions
+  nameWithType: PaperFolderCreateError.AsInsufficientPermissions
+  fullName: Dropbox.Api.Paper.PaperFolderCreateError.AsInsufficientPermissions
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperFolderCreateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsInsufficientPermissions
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperFolderCreateError.cs
+    startLine: 96
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets this instance as a InsufficientPermissions, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PaperFolderCreateError.InsufficientPermissions AsInsufficientPermissions { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Paper.PaperFolderCreateError.InsufficientPermissions
+    content.vb: Public ReadOnly Property AsInsufficientPermissions As PaperFolderCreateError.InsufficientPermissions
+  overload: Dropbox.Api.Paper.PaperFolderCreateError.AsInsufficientPermissions*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Paper.PaperFolderCreateError.IsOther
+  commentId: P:Dropbox.Api.Paper.PaperFolderCreateError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Paper.PaperFolderCreateError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: PaperFolderCreateError.IsOther
+  fullName: Dropbox.Api.Paper.PaperFolderCreateError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperFolderCreateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperFolderCreateError.cs
+    startLine: 107
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Paper.PaperFolderCreateError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Paper.PaperFolderCreateError.AsOther
+  commentId: P:Dropbox.Api.Paper.PaperFolderCreateError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Paper.PaperFolderCreateError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: PaperFolderCreateError.AsOther
+  fullName: Dropbox.Api.Paper.PaperFolderCreateError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperFolderCreateError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperFolderCreateError.cs
+    startLine: 118
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PaperFolderCreateError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Paper.PaperFolderCreateError.Other
+    content.vb: Public ReadOnly Property AsOther As PaperFolderCreateError.Other
+  overload: Dropbox.Api.Paper.PaperFolderCreateError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Paper
+  commentId: N:Dropbox.Api.Paper
+  name: Dropbox.Api.Paper
+  nameWithType: Dropbox.Api.Paper
+  fullName: Dropbox.Api.Paper
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Paper.PaperFolderCreateError
+  commentId: T:Dropbox.Api.Paper.PaperFolderCreateError
+  parent: Dropbox.Api.Paper
+  name: PaperFolderCreateError
+  nameWithType: PaperFolderCreateError
+  fullName: Dropbox.Api.Paper.PaperFolderCreateError
+- uid: Dropbox.Api.Paper.PaperFolderCreateError.#ctor*
+  commentId: Overload:Dropbox.Api.Paper.PaperFolderCreateError.#ctor
+  name: PaperFolderCreateError
+  nameWithType: PaperFolderCreateError.PaperFolderCreateError
+  fullName: Dropbox.Api.Paper.PaperFolderCreateError.PaperFolderCreateError
+- uid: Dropbox.Api.Paper.PaperFolderCreateError.IsFolderNotFound*
+  commentId: Overload:Dropbox.Api.Paper.PaperFolderCreateError.IsFolderNotFound
+  name: IsFolderNotFound
+  nameWithType: PaperFolderCreateError.IsFolderNotFound
+  fullName: Dropbox.Api.Paper.PaperFolderCreateError.IsFolderNotFound
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Paper.PaperFolderCreateError.AsFolderNotFound*
+  commentId: Overload:Dropbox.Api.Paper.PaperFolderCreateError.AsFolderNotFound
+  name: AsFolderNotFound
+  nameWithType: PaperFolderCreateError.AsFolderNotFound
+  fullName: Dropbox.Api.Paper.PaperFolderCreateError.AsFolderNotFound
+- uid: Dropbox.Api.Paper.PaperFolderCreateError.FolderNotFound
+  commentId: T:Dropbox.Api.Paper.PaperFolderCreateError.FolderNotFound
+  parent: Dropbox.Api.Paper
+  name: PaperFolderCreateError.FolderNotFound
+  nameWithType: PaperFolderCreateError.FolderNotFound
+  fullName: Dropbox.Api.Paper.PaperFolderCreateError.FolderNotFound
+- uid: Dropbox.Api.Paper.PaperFolderCreateError.IsInvalidFolderId*
+  commentId: Overload:Dropbox.Api.Paper.PaperFolderCreateError.IsInvalidFolderId
+  name: IsInvalidFolderId
+  nameWithType: PaperFolderCreateError.IsInvalidFolderId
+  fullName: Dropbox.Api.Paper.PaperFolderCreateError.IsInvalidFolderId
+- uid: Dropbox.Api.Paper.PaperFolderCreateError.AsInvalidFolderId*
+  commentId: Overload:Dropbox.Api.Paper.PaperFolderCreateError.AsInvalidFolderId
+  name: AsInvalidFolderId
+  nameWithType: PaperFolderCreateError.AsInvalidFolderId
+  fullName: Dropbox.Api.Paper.PaperFolderCreateError.AsInvalidFolderId
+- uid: Dropbox.Api.Paper.PaperFolderCreateError.InvalidFolderId
+  commentId: T:Dropbox.Api.Paper.PaperFolderCreateError.InvalidFolderId
+  parent: Dropbox.Api.Paper
+  name: PaperFolderCreateError.InvalidFolderId
+  nameWithType: PaperFolderCreateError.InvalidFolderId
+  fullName: Dropbox.Api.Paper.PaperFolderCreateError.InvalidFolderId
+- uid: Dropbox.Api.Paper.PaperFolderCreateError.IsInsufficientPermissions*
+  commentId: Overload:Dropbox.Api.Paper.PaperFolderCreateError.IsInsufficientPermissions
+  name: IsInsufficientPermissions
+  nameWithType: PaperFolderCreateError.IsInsufficientPermissions
+  fullName: Dropbox.Api.Paper.PaperFolderCreateError.IsInsufficientPermissions
+- uid: Dropbox.Api.Paper.PaperFolderCreateError.AsInsufficientPermissions*
+  commentId: Overload:Dropbox.Api.Paper.PaperFolderCreateError.AsInsufficientPermissions
+  name: AsInsufficientPermissions
+  nameWithType: PaperFolderCreateError.AsInsufficientPermissions
+  fullName: Dropbox.Api.Paper.PaperFolderCreateError.AsInsufficientPermissions
+- uid: Dropbox.Api.Paper.PaperFolderCreateError.InsufficientPermissions
+  commentId: T:Dropbox.Api.Paper.PaperFolderCreateError.InsufficientPermissions
+  parent: Dropbox.Api.Paper
+  name: PaperFolderCreateError.InsufficientPermissions
+  nameWithType: PaperFolderCreateError.InsufficientPermissions
+  fullName: Dropbox.Api.Paper.PaperFolderCreateError.InsufficientPermissions
+- uid: Dropbox.Api.Paper.PaperFolderCreateError.IsOther*
+  commentId: Overload:Dropbox.Api.Paper.PaperFolderCreateError.IsOther
+  name: IsOther
+  nameWithType: PaperFolderCreateError.IsOther
+  fullName: Dropbox.Api.Paper.PaperFolderCreateError.IsOther
+- uid: Dropbox.Api.Paper.PaperFolderCreateError.AsOther*
+  commentId: Overload:Dropbox.Api.Paper.PaperFolderCreateError.AsOther
+  name: AsOther
+  nameWithType: PaperFolderCreateError.AsOther
+  fullName: Dropbox.Api.Paper.PaperFolderCreateError.AsOther
+- uid: Dropbox.Api.Paper.PaperFolderCreateError.Other
+  commentId: T:Dropbox.Api.Paper.PaperFolderCreateError.Other
+  parent: Dropbox.Api.Paper
+  name: PaperFolderCreateError.Other
+  nameWithType: PaperFolderCreateError.Other
+  fullName: Dropbox.Api.Paper.PaperFolderCreateError.Other
+shouldSkipMarkup: true

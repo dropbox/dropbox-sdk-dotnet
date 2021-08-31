@@ -1,0 +1,148 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Common.PathRootError.Other
+  commentId: T:Dropbox.Api.Common.PathRootError.Other
+  id: PathRootError.Other
+  parent: Dropbox.Api.Common
+  children:
+  - Dropbox.Api.Common.PathRootError.Other.Instance
+  langs:
+  - csharp
+  - vb
+  name: PathRootError.Other
+  nameWithType: PathRootError.Other
+  fullName: Dropbox.Api.Common.PathRootError.Other
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Common/PathRootError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Other
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Common/PathRootError.cs
+    startLine: 351
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Common
+  summary: "\n<p>The other object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Other : PathRootError'
+    content.vb: >-
+      Public NotInheritable Class Other
+          Inherits PathRootError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Common.PathRootError
+  inheritedMembers:
+  - Dropbox.Api.Common.PathRootError.IsInvalidRoot
+  - Dropbox.Api.Common.PathRootError.AsInvalidRoot
+  - Dropbox.Api.Common.PathRootError.IsNoPermission
+  - Dropbox.Api.Common.PathRootError.AsNoPermission
+  - Dropbox.Api.Common.PathRootError.IsOther
+  - Dropbox.Api.Common.PathRootError.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Common.PathRootError.Other.Instance
+  commentId: F:Dropbox.Api.Common.PathRootError.Other.Instance
+  id: Instance
+  parent: Dropbox.Api.Common.PathRootError.Other
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: PathRootError.Other.Instance
+  fullName: Dropbox.Api.Common.PathRootError.Other.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Common/PathRootError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Common/PathRootError.cs
+    startLine: 375
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Common
+  summary: "\n<p>A singleton instance of Other</p>\n"
+  example: []
+  syntax:
+    content: public static readonly PathRootError.Other Instance
+    return:
+      type: Dropbox.Api.Common.PathRootError.Other
+    content.vb: Public Shared ReadOnly Instance As PathRootError.Other
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Common
+  commentId: N:Dropbox.Api.Common
+  name: Dropbox.Api.Common
+  nameWithType: Dropbox.Api.Common
+  fullName: Dropbox.Api.Common
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Common.PathRootError
+  commentId: T:Dropbox.Api.Common.PathRootError
+  parent: Dropbox.Api.Common
+  name: PathRootError
+  nameWithType: PathRootError
+  fullName: Dropbox.Api.Common.PathRootError
+- uid: Dropbox.Api.Common.PathRootError.IsInvalidRoot
+  commentId: P:Dropbox.Api.Common.PathRootError.IsInvalidRoot
+  parent: Dropbox.Api.Common.PathRootError
+  name: IsInvalidRoot
+  nameWithType: PathRootError.IsInvalidRoot
+  fullName: Dropbox.Api.Common.PathRootError.IsInvalidRoot
+- uid: Dropbox.Api.Common.PathRootError.AsInvalidRoot
+  commentId: P:Dropbox.Api.Common.PathRootError.AsInvalidRoot
+  parent: Dropbox.Api.Common.PathRootError
+  name: AsInvalidRoot
+  nameWithType: PathRootError.AsInvalidRoot
+  fullName: Dropbox.Api.Common.PathRootError.AsInvalidRoot
+- uid: Dropbox.Api.Common.PathRootError.IsNoPermission
+  commentId: P:Dropbox.Api.Common.PathRootError.IsNoPermission
+  parent: Dropbox.Api.Common.PathRootError
+  name: IsNoPermission
+  nameWithType: PathRootError.IsNoPermission
+  fullName: Dropbox.Api.Common.PathRootError.IsNoPermission
+- uid: Dropbox.Api.Common.PathRootError.AsNoPermission
+  commentId: P:Dropbox.Api.Common.PathRootError.AsNoPermission
+  parent: Dropbox.Api.Common.PathRootError
+  name: AsNoPermission
+  nameWithType: PathRootError.AsNoPermission
+  fullName: Dropbox.Api.Common.PathRootError.AsNoPermission
+- uid: Dropbox.Api.Common.PathRootError.IsOther
+  commentId: P:Dropbox.Api.Common.PathRootError.IsOther
+  parent: Dropbox.Api.Common.PathRootError
+  name: IsOther
+  nameWithType: PathRootError.IsOther
+  fullName: Dropbox.Api.Common.PathRootError.IsOther
+- uid: Dropbox.Api.Common.PathRootError.AsOther
+  commentId: P:Dropbox.Api.Common.PathRootError.AsOther
+  parent: Dropbox.Api.Common.PathRootError
+  name: AsOther
+  nameWithType: PathRootError.AsOther
+  fullName: Dropbox.Api.Common.PathRootError.AsOther
+- uid: Dropbox.Api.Common.PathRootError.Other
+  commentId: T:Dropbox.Api.Common.PathRootError.Other
+  parent: Dropbox.Api.Common
+  name: PathRootError.Other
+  nameWithType: PathRootError.Other
+  fullName: Dropbox.Api.Common.PathRootError.Other
+shouldSkipMarkup: true

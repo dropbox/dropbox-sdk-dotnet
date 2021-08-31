@@ -1,0 +1,288 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.GroupsSelector
+  commentId: T:Dropbox.Api.Team.GroupsSelector
+  id: GroupsSelector
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.GroupsSelector.#ctor
+  - Dropbox.Api.Team.GroupsSelector.AsGroupExternalIds
+  - Dropbox.Api.Team.GroupsSelector.AsGroupIds
+  - Dropbox.Api.Team.GroupsSelector.IsGroupExternalIds
+  - Dropbox.Api.Team.GroupsSelector.IsGroupIds
+  langs:
+  - csharp
+  - vb
+  name: GroupsSelector
+  nameWithType: GroupsSelector
+  fullName: Dropbox.Api.Team.GroupsSelector
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsSelector.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GroupsSelector
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsSelector.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Argument for selecting a list of groups, either by group_ids, or external group\nIDs.</p>\n"
+  example: []
+  syntax:
+    content: 'public class GroupsSelector : object'
+    content.vb: >-
+      Public Class GroupsSelector
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Team.GroupsSelector.GroupExternalIds
+  - Dropbox.Api.Team.GroupsSelector.GroupIds
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.GroupsSelector.#ctor
+  commentId: M:Dropbox.Api.Team.GroupsSelector.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.GroupsSelector
+  langs:
+  - csharp
+  - vb
+  name: GroupsSelector()
+  nameWithType: GroupsSelector.GroupsSelector()
+  fullName: Dropbox.Api.Team.GroupsSelector.GroupsSelector()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsSelector.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsSelector.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.GroupsSelector\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public GroupsSelector()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.GroupsSelector.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.GroupsSelector.IsGroupIds
+  commentId: P:Dropbox.Api.Team.GroupsSelector.IsGroupIds
+  id: IsGroupIds
+  parent: Dropbox.Api.Team.GroupsSelector
+  langs:
+  - csharp
+  - vb
+  name: IsGroupIds
+  nameWithType: GroupsSelector.IsGroupIds
+  fullName: Dropbox.Api.Team.GroupsSelector.IsGroupIds
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsSelector.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsGroupIds
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsSelector.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is GroupIds</p>\n"
+  example: []
+  syntax:
+    content: public bool IsGroupIds { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsGroupIds As Boolean
+  overload: Dropbox.Api.Team.GroupsSelector.IsGroupIds*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.GroupsSelector.AsGroupIds
+  commentId: P:Dropbox.Api.Team.GroupsSelector.AsGroupIds
+  id: AsGroupIds
+  parent: Dropbox.Api.Team.GroupsSelector
+  langs:
+  - csharp
+  - vb
+  name: AsGroupIds
+  nameWithType: GroupsSelector.AsGroupIds
+  fullName: Dropbox.Api.Team.GroupsSelector.AsGroupIds
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsSelector.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsGroupIds
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsSelector.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a GroupIds, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public GroupsSelector.GroupIds AsGroupIds { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.GroupsSelector.GroupIds
+    content.vb: Public ReadOnly Property AsGroupIds As GroupsSelector.GroupIds
+  overload: Dropbox.Api.Team.GroupsSelector.AsGroupIds*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.GroupsSelector.IsGroupExternalIds
+  commentId: P:Dropbox.Api.Team.GroupsSelector.IsGroupExternalIds
+  id: IsGroupExternalIds
+  parent: Dropbox.Api.Team.GroupsSelector
+  langs:
+  - csharp
+  - vb
+  name: IsGroupExternalIds
+  nameWithType: GroupsSelector.IsGroupExternalIds
+  fullName: Dropbox.Api.Team.GroupsSelector.IsGroupExternalIds
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsSelector.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsGroupExternalIds
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsSelector.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is GroupExternalIds</p>\n"
+  example: []
+  syntax:
+    content: public bool IsGroupExternalIds { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsGroupExternalIds As Boolean
+  overload: Dropbox.Api.Team.GroupsSelector.IsGroupExternalIds*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.GroupsSelector.AsGroupExternalIds
+  commentId: P:Dropbox.Api.Team.GroupsSelector.AsGroupExternalIds
+  id: AsGroupExternalIds
+  parent: Dropbox.Api.Team.GroupsSelector
+  langs:
+  - csharp
+  - vb
+  name: AsGroupExternalIds
+  nameWithType: GroupsSelector.AsGroupExternalIds
+  fullName: Dropbox.Api.Team.GroupsSelector.AsGroupExternalIds
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsSelector.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsGroupExternalIds
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupsSelector.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a GroupExternalIds, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public GroupsSelector.GroupExternalIds AsGroupExternalIds { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.GroupsSelector.GroupExternalIds
+    content.vb: Public ReadOnly Property AsGroupExternalIds As GroupsSelector.GroupExternalIds
+  overload: Dropbox.Api.Team.GroupsSelector.AsGroupExternalIds*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.GroupsSelector
+  commentId: T:Dropbox.Api.Team.GroupsSelector
+  parent: Dropbox.Api.Team
+  name: GroupsSelector
+  nameWithType: GroupsSelector
+  fullName: Dropbox.Api.Team.GroupsSelector
+- uid: Dropbox.Api.Team.GroupsSelector.#ctor*
+  commentId: Overload:Dropbox.Api.Team.GroupsSelector.#ctor
+  name: GroupsSelector
+  nameWithType: GroupsSelector.GroupsSelector
+  fullName: Dropbox.Api.Team.GroupsSelector.GroupsSelector
+- uid: Dropbox.Api.Team.GroupsSelector.IsGroupIds*
+  commentId: Overload:Dropbox.Api.Team.GroupsSelector.IsGroupIds
+  name: IsGroupIds
+  nameWithType: GroupsSelector.IsGroupIds
+  fullName: Dropbox.Api.Team.GroupsSelector.IsGroupIds
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Team.GroupsSelector.AsGroupIds*
+  commentId: Overload:Dropbox.Api.Team.GroupsSelector.AsGroupIds
+  name: AsGroupIds
+  nameWithType: GroupsSelector.AsGroupIds
+  fullName: Dropbox.Api.Team.GroupsSelector.AsGroupIds
+- uid: Dropbox.Api.Team.GroupsSelector.GroupIds
+  commentId: T:Dropbox.Api.Team.GroupsSelector.GroupIds
+  parent: Dropbox.Api.Team
+  name: GroupsSelector.GroupIds
+  nameWithType: GroupsSelector.GroupIds
+  fullName: Dropbox.Api.Team.GroupsSelector.GroupIds
+- uid: Dropbox.Api.Team.GroupsSelector.IsGroupExternalIds*
+  commentId: Overload:Dropbox.Api.Team.GroupsSelector.IsGroupExternalIds
+  name: IsGroupExternalIds
+  nameWithType: GroupsSelector.IsGroupExternalIds
+  fullName: Dropbox.Api.Team.GroupsSelector.IsGroupExternalIds
+- uid: Dropbox.Api.Team.GroupsSelector.AsGroupExternalIds*
+  commentId: Overload:Dropbox.Api.Team.GroupsSelector.AsGroupExternalIds
+  name: AsGroupExternalIds
+  nameWithType: GroupsSelector.AsGroupExternalIds
+  fullName: Dropbox.Api.Team.GroupsSelector.AsGroupExternalIds
+- uid: Dropbox.Api.Team.GroupsSelector.GroupExternalIds
+  commentId: T:Dropbox.Api.Team.GroupsSelector.GroupExternalIds
+  parent: Dropbox.Api.Team
+  name: GroupsSelector.GroupExternalIds
+  nameWithType: GroupsSelector.GroupExternalIds
+  fullName: Dropbox.Api.Team.GroupsSelector.GroupExternalIds
+shouldSkipMarkup: true

@@ -1,0 +1,215 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.ActionDetails.RemoveAction
+  commentId: T:Dropbox.Api.TeamLog.ActionDetails.RemoveAction
+  id: ActionDetails.RemoveAction
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.ActionDetails.RemoveAction.#ctor(Dropbox.Api.TeamLog.MemberRemoveActionType)
+  - Dropbox.Api.TeamLog.ActionDetails.RemoveAction.Value
+  langs:
+  - csharp
+  - vb
+  name: ActionDetails.RemoveAction
+  nameWithType: ActionDetails.RemoveAction
+  fullName: Dropbox.Api.TeamLog.ActionDetails.RemoveAction
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ActionDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: RemoveAction
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ActionDetails.cs
+    startLine: 212
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Define how the user was removed from the team.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class RemoveAction : ActionDetails'
+    content.vb: >-
+      Public NotInheritable Class RemoveAction
+          Inherits ActionDetails
+  inheritance:
+  - System.Object
+  - Dropbox.Api.TeamLog.ActionDetails
+  inheritedMembers:
+  - Dropbox.Api.TeamLog.ActionDetails.IsRemoveAction
+  - Dropbox.Api.TeamLog.ActionDetails.AsRemoveAction
+  - Dropbox.Api.TeamLog.ActionDetails.IsTeamInviteDetails
+  - Dropbox.Api.TeamLog.ActionDetails.AsTeamInviteDetails
+  - Dropbox.Api.TeamLog.ActionDetails.IsTeamJoinDetails
+  - Dropbox.Api.TeamLog.ActionDetails.AsTeamJoinDetails
+  - Dropbox.Api.TeamLog.ActionDetails.IsOther
+  - Dropbox.Api.TeamLog.ActionDetails.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.TeamLog.ActionDetails.RemoveAction.#ctor(Dropbox.Api.TeamLog.MemberRemoveActionType)
+  commentId: M:Dropbox.Api.TeamLog.ActionDetails.RemoveAction.#ctor(Dropbox.Api.TeamLog.MemberRemoveActionType)
+  id: '#ctor(Dropbox.Api.TeamLog.MemberRemoveActionType)'
+  parent: Dropbox.Api.TeamLog.ActionDetails.RemoveAction
+  langs:
+  - csharp
+  - vb
+  name: RemoveAction(MemberRemoveActionType)
+  nameWithType: ActionDetails.RemoveAction.RemoveAction(MemberRemoveActionType)
+  fullName: Dropbox.Api.TeamLog.ActionDetails.RemoveAction.RemoveAction(Dropbox.Api.TeamLog.MemberRemoveActionType)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ActionDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ActionDetails.cs
+    startLine: 231
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.ActionDetails.RemoveAction\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public RemoveAction(MemberRemoveActionType value)
+    parameters:
+    - id: value
+      type: Dropbox.Api.TeamLog.MemberRemoveActionType
+      description: The value
+    content.vb: Public Sub New(value As MemberRemoveActionType)
+  overload: Dropbox.Api.TeamLog.ActionDetails.RemoveAction.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.ActionDetails.RemoveAction.Value
+  commentId: P:Dropbox.Api.TeamLog.ActionDetails.RemoveAction.Value
+  id: Value
+  parent: Dropbox.Api.TeamLog.ActionDetails.RemoveAction
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: ActionDetails.RemoveAction.Value
+  fullName: Dropbox.Api.TeamLog.ActionDetails.RemoveAction.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ActionDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ActionDetails.cs
+    startLine: 246
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public MemberRemoveActionType Value { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.MemberRemoveActionType
+    content.vb: Public ReadOnly Property Value As MemberRemoveActionType
+  overload: Dropbox.Api.TeamLog.ActionDetails.RemoveAction.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.ActionDetails
+  commentId: T:Dropbox.Api.TeamLog.ActionDetails
+  parent: Dropbox.Api.TeamLog
+  name: ActionDetails
+  nameWithType: ActionDetails
+  fullName: Dropbox.Api.TeamLog.ActionDetails
+- uid: Dropbox.Api.TeamLog.ActionDetails.IsRemoveAction
+  commentId: P:Dropbox.Api.TeamLog.ActionDetails.IsRemoveAction
+  parent: Dropbox.Api.TeamLog.ActionDetails
+  name: IsRemoveAction
+  nameWithType: ActionDetails.IsRemoveAction
+  fullName: Dropbox.Api.TeamLog.ActionDetails.IsRemoveAction
+- uid: Dropbox.Api.TeamLog.ActionDetails.AsRemoveAction
+  commentId: P:Dropbox.Api.TeamLog.ActionDetails.AsRemoveAction
+  parent: Dropbox.Api.TeamLog.ActionDetails
+  name: AsRemoveAction
+  nameWithType: ActionDetails.AsRemoveAction
+  fullName: Dropbox.Api.TeamLog.ActionDetails.AsRemoveAction
+- uid: Dropbox.Api.TeamLog.ActionDetails.IsTeamInviteDetails
+  commentId: P:Dropbox.Api.TeamLog.ActionDetails.IsTeamInviteDetails
+  parent: Dropbox.Api.TeamLog.ActionDetails
+  name: IsTeamInviteDetails
+  nameWithType: ActionDetails.IsTeamInviteDetails
+  fullName: Dropbox.Api.TeamLog.ActionDetails.IsTeamInviteDetails
+- uid: Dropbox.Api.TeamLog.ActionDetails.AsTeamInviteDetails
+  commentId: P:Dropbox.Api.TeamLog.ActionDetails.AsTeamInviteDetails
+  parent: Dropbox.Api.TeamLog.ActionDetails
+  name: AsTeamInviteDetails
+  nameWithType: ActionDetails.AsTeamInviteDetails
+  fullName: Dropbox.Api.TeamLog.ActionDetails.AsTeamInviteDetails
+- uid: Dropbox.Api.TeamLog.ActionDetails.IsTeamJoinDetails
+  commentId: P:Dropbox.Api.TeamLog.ActionDetails.IsTeamJoinDetails
+  parent: Dropbox.Api.TeamLog.ActionDetails
+  name: IsTeamJoinDetails
+  nameWithType: ActionDetails.IsTeamJoinDetails
+  fullName: Dropbox.Api.TeamLog.ActionDetails.IsTeamJoinDetails
+- uid: Dropbox.Api.TeamLog.ActionDetails.AsTeamJoinDetails
+  commentId: P:Dropbox.Api.TeamLog.ActionDetails.AsTeamJoinDetails
+  parent: Dropbox.Api.TeamLog.ActionDetails
+  name: AsTeamJoinDetails
+  nameWithType: ActionDetails.AsTeamJoinDetails
+  fullName: Dropbox.Api.TeamLog.ActionDetails.AsTeamJoinDetails
+- uid: Dropbox.Api.TeamLog.ActionDetails.IsOther
+  commentId: P:Dropbox.Api.TeamLog.ActionDetails.IsOther
+  parent: Dropbox.Api.TeamLog.ActionDetails
+  name: IsOther
+  nameWithType: ActionDetails.IsOther
+  fullName: Dropbox.Api.TeamLog.ActionDetails.IsOther
+- uid: Dropbox.Api.TeamLog.ActionDetails.AsOther
+  commentId: P:Dropbox.Api.TeamLog.ActionDetails.AsOther
+  parent: Dropbox.Api.TeamLog.ActionDetails
+  name: AsOther
+  nameWithType: ActionDetails.AsOther
+  fullName: Dropbox.Api.TeamLog.ActionDetails.AsOther
+- uid: Dropbox.Api.TeamLog.ActionDetails.RemoveAction
+  commentId: T:Dropbox.Api.TeamLog.ActionDetails.RemoveAction
+  parent: Dropbox.Api.TeamLog
+  name: ActionDetails.RemoveAction
+  nameWithType: ActionDetails.RemoveAction
+  fullName: Dropbox.Api.TeamLog.ActionDetails.RemoveAction
+- uid: Dropbox.Api.TeamLog.ActionDetails.RemoveAction.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.ActionDetails.RemoveAction.#ctor
+  name: RemoveAction
+  nameWithType: ActionDetails.RemoveAction.RemoveAction
+  fullName: Dropbox.Api.TeamLog.ActionDetails.RemoveAction.RemoveAction
+- uid: Dropbox.Api.TeamLog.MemberRemoveActionType
+  commentId: T:Dropbox.Api.TeamLog.MemberRemoveActionType
+  parent: Dropbox.Api.TeamLog
+  name: MemberRemoveActionType
+  nameWithType: MemberRemoveActionType
+  fullName: Dropbox.Api.TeamLog.MemberRemoveActionType
+- uid: Dropbox.Api.TeamLog.ActionDetails.RemoveAction.Value*
+  commentId: Overload:Dropbox.Api.TeamLog.ActionDetails.RemoveAction.Value
+  name: Value
+  nameWithType: ActionDetails.RemoveAction.Value
+  fullName: Dropbox.Api.TeamLog.ActionDetails.RemoveAction.Value
+shouldSkipMarkup: true

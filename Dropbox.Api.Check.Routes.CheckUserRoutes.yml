@@ -1,0 +1,411 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Check.Routes.CheckUserRoutes
+  commentId: T:Dropbox.Api.Check.Routes.CheckUserRoutes
+  id: CheckUserRoutes
+  parent: Dropbox.Api.Check.Routes
+  children:
+  - Dropbox.Api.Check.Routes.CheckUserRoutes.BeginUser(Dropbox.Api.Check.EchoArg,System.AsyncCallback,System.Object)
+  - Dropbox.Api.Check.Routes.CheckUserRoutes.BeginUser(System.String,System.AsyncCallback,System.Object)
+  - Dropbox.Api.Check.Routes.CheckUserRoutes.EndUser(System.IAsyncResult)
+  - Dropbox.Api.Check.Routes.CheckUserRoutes.UserAsync(Dropbox.Api.Check.EchoArg)
+  - Dropbox.Api.Check.Routes.CheckUserRoutes.UserAsync(System.String)
+  langs:
+  - csharp
+  - vb
+  name: CheckUserRoutes
+  nameWithType: CheckUserRoutes
+  fullName: Dropbox.Api.Check.Routes.CheckUserRoutes
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Check/CheckUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: CheckUserRoutes
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Check/CheckUserRoutes.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Check.Routes
+  summary: "\n<p>The routes for the <xref href=\"Dropbox.Api.Check\" data-throw-if-not-resolved=\"false\"></xref> namespace</p>\n"
+  example: []
+  syntax:
+    content: 'public class CheckUserRoutes : object'
+    content.vb: >-
+      Public Class CheckUserRoutes
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Check.Routes.CheckUserRoutes.UserAsync(Dropbox.Api.Check.EchoArg)
+  commentId: M:Dropbox.Api.Check.Routes.CheckUserRoutes.UserAsync(Dropbox.Api.Check.EchoArg)
+  id: UserAsync(Dropbox.Api.Check.EchoArg)
+  parent: Dropbox.Api.Check.Routes.CheckUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: UserAsync(EchoArg)
+  nameWithType: CheckUserRoutes.UserAsync(EchoArg)
+  fullName: Dropbox.Api.Check.Routes.CheckUserRoutes.UserAsync(Dropbox.Api.Check.EchoArg)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Check/CheckUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: UserAsync
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Check/CheckUserRoutes.cs
+    startLine: 42
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Check.Routes
+  summary: "\n<p>This endpoint performs User Authentication, validating the supplied access\ntoken, and returns the supplied string, to allow you to test your code and\nconnection to the Dropbox API. It has no other effect. If you receive an HTTP 200\nresponse with the supplied query, it indicates at least part of the Dropbox API\ninfrastructure is working and that the access token is valid.</p>\n"
+  example: []
+  syntax:
+    content: public System.Threading.Tasks.Task<EchoResult> UserAsync(EchoArg echoArg)
+    parameters:
+    - id: echoArg
+      type: Dropbox.Api.Check.EchoArg
+      description: The request parameters
+    return:
+      type: System.Threading.Tasks.Task{Dropbox.Api.Check.EchoResult}
+      description: >-
+        The task that represents the asynchronous send operation. The TResult
+
+        parameter contains the response from the server.
+    content.vb: Public Function UserAsync(echoArg As EchoArg) As System.Threading.Tasks.Task(Of EchoResult)
+  overload: Dropbox.Api.Check.Routes.CheckUserRoutes.UserAsync*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Check.Routes.CheckUserRoutes.BeginUser(Dropbox.Api.Check.EchoArg,System.AsyncCallback,System.Object)
+  commentId: M:Dropbox.Api.Check.Routes.CheckUserRoutes.BeginUser(Dropbox.Api.Check.EchoArg,System.AsyncCallback,System.Object)
+  id: BeginUser(Dropbox.Api.Check.EchoArg,System.AsyncCallback,System.Object)
+  parent: Dropbox.Api.Check.Routes.CheckUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: BeginUser(EchoArg, System.AsyncCallback, Object)
+  nameWithType: CheckUserRoutes.BeginUser(EchoArg, System.AsyncCallback, Object)
+  fullName: Dropbox.Api.Check.Routes.CheckUserRoutes.BeginUser(Dropbox.Api.Check.EchoArg, System.AsyncCallback, System.Object)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Check/CheckUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: BeginUser
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Check/CheckUserRoutes.cs
+    startLine: 56
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Check.Routes
+  summary: "\n<p>Begins an asynchronous send to the user route.</p>\n"
+  example: []
+  syntax:
+    content: public System.IAsyncResult BeginUser(EchoArg echoArg, System.AsyncCallback callback, object state = null)
+    parameters:
+    - id: echoArg
+      type: Dropbox.Api.Check.EchoArg
+      description: The request parameters.
+    - id: callback
+      type: System.AsyncCallback
+      description: >-
+        The method to be called when the asynchronous send is
+
+        completed.
+    - id: state
+      type: System.Object
+      description: >-
+        A user provided object that distinguished this send from other
+
+        send requests.
+    return:
+      type: System.IAsyncResult
+      description: An object that represents the asynchronous send request.
+    content.vb: Public Function BeginUser(echoArg As EchoArg, callback As System.AsyncCallback, state As Object = Nothing) As System.IAsyncResult
+  overload: Dropbox.Api.Check.Routes.CheckUserRoutes.BeginUser*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Check.Routes.CheckUserRoutes.UserAsync(System.String)
+  commentId: M:Dropbox.Api.Check.Routes.CheckUserRoutes.UserAsync(System.String)
+  id: UserAsync(System.String)
+  parent: Dropbox.Api.Check.Routes.CheckUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: UserAsync(String)
+  nameWithType: CheckUserRoutes.UserAsync(String)
+  fullName: Dropbox.Api.Check.Routes.CheckUserRoutes.UserAsync(System.String)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Check/CheckUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: UserAsync
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Check/CheckUserRoutes.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Check.Routes
+  summary: "\n<p>This endpoint performs User Authentication, validating the supplied access\ntoken, and returns the supplied string, to allow you to test your code and\nconnection to the Dropbox API. It has no other effect. If you receive an HTTP 200\nresponse with the supplied query, it indicates at least part of the Dropbox API\ninfrastructure is working and that the access token is valid.</p>\n"
+  example: []
+  syntax:
+    content: public System.Threading.Tasks.Task<EchoResult> UserAsync(string query = "")
+    parameters:
+    - id: query
+      type: System.String
+      description: The string that you&apos;d like to be echoed back to you.
+    return:
+      type: System.Threading.Tasks.Task{Dropbox.Api.Check.EchoResult}
+      description: >-
+        The task that represents the asynchronous send operation. The TResult
+
+        parameter contains the response from the server.
+    content.vb: Public Function UserAsync(query As String = "") As System.Threading.Tasks.Task(Of EchoResult)
+  overload: Dropbox.Api.Check.Routes.CheckUserRoutes.UserAsync*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Check.Routes.CheckUserRoutes.BeginUser(System.String,System.AsyncCallback,System.Object)
+  commentId: M:Dropbox.Api.Check.Routes.CheckUserRoutes.BeginUser(System.String,System.AsyncCallback,System.Object)
+  id: BeginUser(System.String,System.AsyncCallback,System.Object)
+  parent: Dropbox.Api.Check.Routes.CheckUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: BeginUser(String, System.AsyncCallback, Object)
+  nameWithType: CheckUserRoutes.BeginUser(String, System.AsyncCallback, Object)
+  fullName: Dropbox.Api.Check.Routes.CheckUserRoutes.BeginUser(System.String, System.AsyncCallback, System.Object)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Check/CheckUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: BeginUser
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Check/CheckUserRoutes.cs
+    startLine: 89
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Check.Routes
+  summary: "\n<p>Begins an asynchronous send to the user route.</p>\n"
+  example: []
+  syntax:
+    content: public System.IAsyncResult BeginUser(string query = "", System.AsyncCallback callback = null, object callbackState = null)
+    parameters:
+    - id: query
+      type: System.String
+      description: The string that you&apos;d like to be echoed back to you.
+    - id: callback
+      type: System.AsyncCallback
+      description: >-
+        The method to be called when the asynchronous send is
+
+        completed.
+    - id: callbackState
+      type: System.Object
+      description: >-
+        A user provided object that distinguished this send
+
+        from other send requests.
+    return:
+      type: System.IAsyncResult
+      description: An object that represents the asynchronous send request.
+    content.vb: Public Function BeginUser(query As String = "", callback As System.AsyncCallback = Nothing, callbackState As Object = Nothing) As System.IAsyncResult
+  overload: Dropbox.Api.Check.Routes.CheckUserRoutes.BeginUser*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Check.Routes.CheckUserRoutes.EndUser(System.IAsyncResult)
+  commentId: M:Dropbox.Api.Check.Routes.CheckUserRoutes.EndUser(System.IAsyncResult)
+  id: EndUser(System.IAsyncResult)
+  parent: Dropbox.Api.Check.Routes.CheckUserRoutes
+  langs:
+  - csharp
+  - vb
+  name: EndUser(System.IAsyncResult)
+  nameWithType: CheckUserRoutes.EndUser(System.IAsyncResult)
+  fullName: Dropbox.Api.Check.Routes.CheckUserRoutes.EndUser(System.IAsyncResult)
+  type: Method
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Check/CheckUserRoutes.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: EndUser
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Check/CheckUserRoutes.cs
+    startLine: 104
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Check.Routes
+  summary: "\n<p>Waits for the pending asynchronous send to the user route to complete</p>\n"
+  example: []
+  syntax:
+    content: public EchoResult EndUser(System.IAsyncResult asyncResult)
+    parameters:
+    - id: asyncResult
+      type: System.IAsyncResult
+      description: >-
+        The reference to the pending asynchronous send
+
+        request
+    return:
+      type: Dropbox.Api.Check.EchoResult
+      description: The response to the send request
+    content.vb: Public Function EndUser(asyncResult As System.IAsyncResult) As EchoResult
+  overload: Dropbox.Api.Check.Routes.CheckUserRoutes.EndUser*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Dropbox.Api.Check
+  commentId: N:Dropbox.Api.Check
+  name: Dropbox.Api.Check
+  nameWithType: Dropbox.Api.Check
+  fullName: Dropbox.Api.Check
+- uid: Dropbox.Api.Check.Routes
+  commentId: N:Dropbox.Api.Check.Routes
+  name: Dropbox.Api.Check.Routes
+  nameWithType: Dropbox.Api.Check.Routes
+  fullName: Dropbox.Api.Check.Routes
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Check.Routes.CheckUserRoutes.UserAsync*
+  commentId: Overload:Dropbox.Api.Check.Routes.CheckUserRoutes.UserAsync
+  name: UserAsync
+  nameWithType: CheckUserRoutes.UserAsync
+  fullName: Dropbox.Api.Check.Routes.CheckUserRoutes.UserAsync
+- uid: Dropbox.Api.Check.EchoArg
+  commentId: T:Dropbox.Api.Check.EchoArg
+  parent: Dropbox.Api.Check
+  name: EchoArg
+  nameWithType: EchoArg
+  fullName: Dropbox.Api.Check.EchoArg
+- uid: System.Threading.Tasks.Task{Dropbox.Api.Check.EchoResult}
+  commentId: '!:System.Threading.Tasks.Task{Dropbox.Api.Check.EchoResult}'
+  definition: System.Threading.Tasks.Task`1
+  name: System.Threading.Tasks.Task<EchoResult>
+  nameWithType: System.Threading.Tasks.Task<EchoResult>
+  fullName: System.Threading.Tasks.Task<Dropbox.Api.Check.EchoResult>
+  nameWithType.vb: System.Threading.Tasks.Task(Of EchoResult)
+  fullName.vb: System.Threading.Tasks.Task(Of Dropbox.Api.Check.EchoResult)
+  name.vb: System.Threading.Tasks.Task(Of EchoResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: System.Threading.Tasks.Task
+    nameWithType: System.Threading.Tasks.Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Check.EchoResult
+    name: EchoResult
+    nameWithType: EchoResult
+    fullName: Dropbox.Api.Check.EchoResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: System.Threading.Tasks.Task
+    nameWithType: System.Threading.Tasks.Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Check.EchoResult
+    name: EchoResult
+    nameWithType: EchoResult
+    fullName: Dropbox.Api.Check.EchoResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks.Task`1
+  isExternal: true
+  name: System.Threading.Tasks.Task<>
+  nameWithType: System.Threading.Tasks.Task<>
+  fullName: System.Threading.Tasks.Task<>
+  nameWithType.vb: System.Threading.Tasks.Task(Of )
+  fullName.vb: System.Threading.Tasks.Task(Of )
+  name.vb: System.Threading.Tasks.Task(Of )
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: System.Threading.Tasks.Task
+    nameWithType: System.Threading.Tasks.Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: System.Threading.Tasks.Task
+    nameWithType: System.Threading.Tasks.Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Check.Routes.CheckUserRoutes.BeginUser*
+  commentId: Overload:Dropbox.Api.Check.Routes.CheckUserRoutes.BeginUser
+  name: BeginUser
+  nameWithType: CheckUserRoutes.BeginUser
+  fullName: Dropbox.Api.Check.Routes.CheckUserRoutes.BeginUser
+- uid: System.AsyncCallback
+  isExternal: true
+  name: System.AsyncCallback
+  nameWithType: System.AsyncCallback
+  fullName: System.AsyncCallback
+- uid: System.IAsyncResult
+  isExternal: true
+  name: System.IAsyncResult
+  nameWithType: System.IAsyncResult
+  fullName: System.IAsyncResult
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Check.Routes.CheckUserRoutes.EndUser*
+  commentId: Overload:Dropbox.Api.Check.Routes.CheckUserRoutes.EndUser
+  name: EndUser
+  nameWithType: CheckUserRoutes.EndUser
+  fullName: Dropbox.Api.Check.Routes.CheckUserRoutes.EndUser
+- uid: Dropbox.Api.Check.EchoResult
+  commentId: T:Dropbox.Api.Check.EchoResult
+  parent: Dropbox.Api.Check
+  name: EchoResult
+  nameWithType: EchoResult
+  fullName: Dropbox.Api.Check.EchoResult
+shouldSkipMarkup: true

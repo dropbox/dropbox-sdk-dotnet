@@ -1,0 +1,148 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Auth.RateLimitReason.TooManyRequests
+  commentId: T:Dropbox.Api.Auth.RateLimitReason.TooManyRequests
+  id: RateLimitReason.TooManyRequests
+  parent: Dropbox.Api.Auth
+  children:
+  - Dropbox.Api.Auth.RateLimitReason.TooManyRequests.Instance
+  langs:
+  - csharp
+  - vb
+  name: RateLimitReason.TooManyRequests
+  nameWithType: RateLimitReason.TooManyRequests
+  fullName: Dropbox.Api.Auth.RateLimitReason.TooManyRequests
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/RateLimitReason.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TooManyRequests
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/RateLimitReason.cs
+    startLine: 183
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth
+  summary: "\n<p>You are making too many requests in the past few minutes.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class TooManyRequests : RateLimitReason'
+    content.vb: >-
+      Public NotInheritable Class TooManyRequests
+          Inherits RateLimitReason
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Auth.RateLimitReason
+  inheritedMembers:
+  - Dropbox.Api.Auth.RateLimitReason.IsTooManyRequests
+  - Dropbox.Api.Auth.RateLimitReason.AsTooManyRequests
+  - Dropbox.Api.Auth.RateLimitReason.IsTooManyWriteOperations
+  - Dropbox.Api.Auth.RateLimitReason.AsTooManyWriteOperations
+  - Dropbox.Api.Auth.RateLimitReason.IsOther
+  - Dropbox.Api.Auth.RateLimitReason.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Auth.RateLimitReason.TooManyRequests.Instance
+  commentId: F:Dropbox.Api.Auth.RateLimitReason.TooManyRequests.Instance
+  id: Instance
+  parent: Dropbox.Api.Auth.RateLimitReason.TooManyRequests
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: RateLimitReason.TooManyRequests.Instance
+  fullName: Dropbox.Api.Auth.RateLimitReason.TooManyRequests.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/RateLimitReason.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/RateLimitReason.cs
+    startLine: 208
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth
+  summary: "\n<p>A singleton instance of TooManyRequests</p>\n"
+  example: []
+  syntax:
+    content: public static readonly RateLimitReason.TooManyRequests Instance
+    return:
+      type: Dropbox.Api.Auth.RateLimitReason.TooManyRequests
+    content.vb: Public Shared ReadOnly Instance As RateLimitReason.TooManyRequests
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Auth
+  commentId: N:Dropbox.Api.Auth
+  name: Dropbox.Api.Auth
+  nameWithType: Dropbox.Api.Auth
+  fullName: Dropbox.Api.Auth
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Auth.RateLimitReason
+  commentId: T:Dropbox.Api.Auth.RateLimitReason
+  parent: Dropbox.Api.Auth
+  name: RateLimitReason
+  nameWithType: RateLimitReason
+  fullName: Dropbox.Api.Auth.RateLimitReason
+- uid: Dropbox.Api.Auth.RateLimitReason.IsTooManyRequests
+  commentId: P:Dropbox.Api.Auth.RateLimitReason.IsTooManyRequests
+  parent: Dropbox.Api.Auth.RateLimitReason
+  name: IsTooManyRequests
+  nameWithType: RateLimitReason.IsTooManyRequests
+  fullName: Dropbox.Api.Auth.RateLimitReason.IsTooManyRequests
+- uid: Dropbox.Api.Auth.RateLimitReason.AsTooManyRequests
+  commentId: P:Dropbox.Api.Auth.RateLimitReason.AsTooManyRequests
+  parent: Dropbox.Api.Auth.RateLimitReason
+  name: AsTooManyRequests
+  nameWithType: RateLimitReason.AsTooManyRequests
+  fullName: Dropbox.Api.Auth.RateLimitReason.AsTooManyRequests
+- uid: Dropbox.Api.Auth.RateLimitReason.IsTooManyWriteOperations
+  commentId: P:Dropbox.Api.Auth.RateLimitReason.IsTooManyWriteOperations
+  parent: Dropbox.Api.Auth.RateLimitReason
+  name: IsTooManyWriteOperations
+  nameWithType: RateLimitReason.IsTooManyWriteOperations
+  fullName: Dropbox.Api.Auth.RateLimitReason.IsTooManyWriteOperations
+- uid: Dropbox.Api.Auth.RateLimitReason.AsTooManyWriteOperations
+  commentId: P:Dropbox.Api.Auth.RateLimitReason.AsTooManyWriteOperations
+  parent: Dropbox.Api.Auth.RateLimitReason
+  name: AsTooManyWriteOperations
+  nameWithType: RateLimitReason.AsTooManyWriteOperations
+  fullName: Dropbox.Api.Auth.RateLimitReason.AsTooManyWriteOperations
+- uid: Dropbox.Api.Auth.RateLimitReason.IsOther
+  commentId: P:Dropbox.Api.Auth.RateLimitReason.IsOther
+  parent: Dropbox.Api.Auth.RateLimitReason
+  name: IsOther
+  nameWithType: RateLimitReason.IsOther
+  fullName: Dropbox.Api.Auth.RateLimitReason.IsOther
+- uid: Dropbox.Api.Auth.RateLimitReason.AsOther
+  commentId: P:Dropbox.Api.Auth.RateLimitReason.AsOther
+  parent: Dropbox.Api.Auth.RateLimitReason
+  name: AsOther
+  nameWithType: RateLimitReason.AsOther
+  fullName: Dropbox.Api.Auth.RateLimitReason.AsOther
+- uid: Dropbox.Api.Auth.RateLimitReason.TooManyRequests
+  commentId: T:Dropbox.Api.Auth.RateLimitReason.TooManyRequests
+  parent: Dropbox.Api.Auth
+  name: RateLimitReason.TooManyRequests
+  nameWithType: RateLimitReason.TooManyRequests
+  fullName: Dropbox.Api.Auth.RateLimitReason.TooManyRequests
+shouldSkipMarkup: true

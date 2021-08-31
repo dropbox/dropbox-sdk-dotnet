@@ -1,0 +1,311 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.MoveBatchArg
+  commentId: T:Dropbox.Api.Files.MoveBatchArg
+  id: MoveBatchArg
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.MoveBatchArg.#ctor
+  - Dropbox.Api.Files.MoveBatchArg.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Files.RelocationPath},System.Boolean,System.Boolean)
+  - Dropbox.Api.Files.MoveBatchArg.AllowOwnershipTransfer
+  langs:
+  - csharp
+  - vb
+  name: MoveBatchArg
+  nameWithType: MoveBatchArg
+  fullName: Dropbox.Api.Files.MoveBatchArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MoveBatchArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: MoveBatchArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MoveBatchArg.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The move batch arg object</p>\n"
+  example: []
+  syntax:
+    content: 'public class MoveBatchArg : RelocationBatchArgBase'
+    content.vb: >-
+      Public Class MoveBatchArg
+          Inherits RelocationBatchArgBase
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Files.RelocationBatchArgBase
+  inheritedMembers:
+  - Dropbox.Api.Files.RelocationBatchArgBase.Entries
+  - Dropbox.Api.Files.RelocationBatchArgBase.Autorename
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.MoveBatchArg.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Files.RelocationPath},System.Boolean,System.Boolean)
+  commentId: M:Dropbox.Api.Files.MoveBatchArg.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Files.RelocationPath},System.Boolean,System.Boolean)
+  id: '#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Files.RelocationPath},System.Boolean,System.Boolean)'
+  parent: Dropbox.Api.Files.MoveBatchArg
+  langs:
+  - csharp
+  - vb
+  name: MoveBatchArg(System.Collections.Generic.IEnumerable<RelocationPath>, Boolean, Boolean)
+  nameWithType: MoveBatchArg.MoveBatchArg(System.Collections.Generic.IEnumerable<RelocationPath>, Boolean, Boolean)
+  fullName: Dropbox.Api.Files.MoveBatchArg.MoveBatchArg(System.Collections.Generic.IEnumerable<Dropbox.Api.Files.RelocationPath>, System.Boolean, System.Boolean)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MoveBatchArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MoveBatchArg.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.MoveBatchArg\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public MoveBatchArg(System.Collections.Generic.IEnumerable<RelocationPath> entries, bool autorename = false, bool allowOwnershipTransfer = false)
+    parameters:
+    - id: entries
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.Files.RelocationPath}
+      description: List of entries to be moved or copied. Each entry is <xref href="Dropbox.Api.Files.RelocationPath" data-throw-if-not-resolved="false"></xref>.
+    - id: autorename
+      type: System.Boolean
+      description: >-
+        If there&apos;s a conflict with any file, have the Dropbox
+
+        server try to autorename that file to avoid the conflict.
+    - id: allowOwnershipTransfer
+      type: System.Boolean
+      description: >-
+        Allow moves by owner even if it would result
+
+        in an ownership transfer for the content being moved. This does not apply to
+
+        copies.
+    content.vb: Public Sub New(entries As System.Collections.Generic.IEnumerable(Of RelocationPath), autorename As Boolean = False, allowOwnershipTransfer As Boolean = False)
+  overload: Dropbox.Api.Files.MoveBatchArg.#ctor*
+  nameWithType.vb: MoveBatchArg.MoveBatchArg(System.Collections.Generic.IEnumerable(Of RelocationPath), Boolean, Boolean)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Files.MoveBatchArg.MoveBatchArg(System.Collections.Generic.IEnumerable(Of Dropbox.Api.Files.RelocationPath), System.Boolean, System.Boolean)
+  name.vb: MoveBatchArg(System.Collections.Generic.IEnumerable(Of RelocationPath), Boolean, Boolean)
+- uid: Dropbox.Api.Files.MoveBatchArg.#ctor
+  commentId: M:Dropbox.Api.Files.MoveBatchArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.MoveBatchArg
+  langs:
+  - csharp
+  - vb
+  name: MoveBatchArg()
+  nameWithType: MoveBatchArg.MoveBatchArg()
+  fullName: Dropbox.Api.Files.MoveBatchArg.MoveBatchArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MoveBatchArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MoveBatchArg.cs
+    startLine: 53
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.MoveBatchArg\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public MoveBatchArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.MoveBatchArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.MoveBatchArg.AllowOwnershipTransfer
+  commentId: P:Dropbox.Api.Files.MoveBatchArg.AllowOwnershipTransfer
+  id: AllowOwnershipTransfer
+  parent: Dropbox.Api.Files.MoveBatchArg
+  langs:
+  - csharp
+  - vb
+  name: AllowOwnershipTransfer
+  nameWithType: MoveBatchArg.AllowOwnershipTransfer
+  fullName: Dropbox.Api.Files.MoveBatchArg.AllowOwnershipTransfer
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MoveBatchArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AllowOwnershipTransfer
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MoveBatchArg.cs
+    startLine: 63
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Allow moves by owner even if it would result in an ownership transfer for the\ncontent being moved. This does not apply to copies.</p>\n"
+  example: []
+  syntax:
+    content: public bool AllowOwnershipTransfer { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property AllowOwnershipTransfer As Boolean
+  overload: Dropbox.Api.Files.MoveBatchArg.AllowOwnershipTransfer*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.RelocationBatchArgBase
+  commentId: T:Dropbox.Api.Files.RelocationBatchArgBase
+  parent: Dropbox.Api.Files
+  name: RelocationBatchArgBase
+  nameWithType: RelocationBatchArgBase
+  fullName: Dropbox.Api.Files.RelocationBatchArgBase
+- uid: Dropbox.Api.Files.RelocationBatchArgBase.Entries
+  commentId: P:Dropbox.Api.Files.RelocationBatchArgBase.Entries
+  parent: Dropbox.Api.Files.RelocationBatchArgBase
+  name: Entries
+  nameWithType: RelocationBatchArgBase.Entries
+  fullName: Dropbox.Api.Files.RelocationBatchArgBase.Entries
+- uid: Dropbox.Api.Files.RelocationBatchArgBase.Autorename
+  commentId: P:Dropbox.Api.Files.RelocationBatchArgBase.Autorename
+  parent: Dropbox.Api.Files.RelocationBatchArgBase
+  name: Autorename
+  nameWithType: RelocationBatchArgBase.Autorename
+  fullName: Dropbox.Api.Files.RelocationBatchArgBase.Autorename
+- uid: Dropbox.Api.Files.MoveBatchArg
+  commentId: T:Dropbox.Api.Files.MoveBatchArg
+  parent: Dropbox.Api.Files
+  name: MoveBatchArg
+  nameWithType: MoveBatchArg
+  fullName: Dropbox.Api.Files.MoveBatchArg
+- uid: Dropbox.Api.Files.RelocationPath
+  commentId: T:Dropbox.Api.Files.RelocationPath
+  parent: Dropbox.Api.Files
+  name: RelocationPath
+  nameWithType: RelocationPath
+  fullName: Dropbox.Api.Files.RelocationPath
+- uid: Dropbox.Api.Files.MoveBatchArg.#ctor*
+  commentId: Overload:Dropbox.Api.Files.MoveBatchArg.#ctor
+  name: MoveBatchArg
+  nameWithType: MoveBatchArg.MoveBatchArg
+  fullName: Dropbox.Api.Files.MoveBatchArg.MoveBatchArg
+- uid: System.Collections.Generic.IEnumerable{Dropbox.Api.Files.RelocationPath}
+  commentId: '!:System.Collections.Generic.IEnumerable{Dropbox.Api.Files.RelocationPath}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<RelocationPath>
+  nameWithType: System.Collections.Generic.IEnumerable<RelocationPath>
+  fullName: System.Collections.Generic.IEnumerable<Dropbox.Api.Files.RelocationPath>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of RelocationPath)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Dropbox.Api.Files.RelocationPath)
+  name.vb: System.Collections.Generic.IEnumerable(Of RelocationPath)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Files.RelocationPath
+    name: RelocationPath
+    nameWithType: RelocationPath
+    fullName: Dropbox.Api.Files.RelocationPath
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Files.RelocationPath
+    name: RelocationPath
+    nameWithType: RelocationPath
+    fullName: Dropbox.Api.Files.RelocationPath
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: System.Collections.Generic.IEnumerable<>
+  nameWithType: System.Collections.Generic.IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: System.Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Files.MoveBatchArg.AllowOwnershipTransfer*
+  commentId: Overload:Dropbox.Api.Files.MoveBatchArg.AllowOwnershipTransfer
+  name: AllowOwnershipTransfer
+  nameWithType: MoveBatchArg.AllowOwnershipTransfer
+  fullName: Dropbox.Api.Files.MoveBatchArg.AllowOwnershipTransfer
+shouldSkipMarkup: true

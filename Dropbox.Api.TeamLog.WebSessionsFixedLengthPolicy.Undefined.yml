@@ -1,0 +1,148 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.WebSessionsFixedLengthPolicy.Undefined
+  commentId: T:Dropbox.Api.TeamLog.WebSessionsFixedLengthPolicy.Undefined
+  id: WebSessionsFixedLengthPolicy.Undefined
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.WebSessionsFixedLengthPolicy.Undefined.Instance
+  langs:
+  - csharp
+  - vb
+  name: WebSessionsFixedLengthPolicy.Undefined
+  nameWithType: WebSessionsFixedLengthPolicy.Undefined
+  fullName: Dropbox.Api.TeamLog.WebSessionsFixedLengthPolicy.Undefined
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/WebSessionsFixedLengthPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Undefined
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/WebSessionsFixedLengthPolicy.cs
+    startLine: 270
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Undefined fixed session length.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Undefined : WebSessionsFixedLengthPolicy'
+    content.vb: >-
+      Public NotInheritable Class Undefined
+          Inherits WebSessionsFixedLengthPolicy
+  inheritance:
+  - System.Object
+  - Dropbox.Api.TeamLog.WebSessionsFixedLengthPolicy
+  inheritedMembers:
+  - Dropbox.Api.TeamLog.WebSessionsFixedLengthPolicy.IsDefined
+  - Dropbox.Api.TeamLog.WebSessionsFixedLengthPolicy.AsDefined
+  - Dropbox.Api.TeamLog.WebSessionsFixedLengthPolicy.IsUndefined
+  - Dropbox.Api.TeamLog.WebSessionsFixedLengthPolicy.AsUndefined
+  - Dropbox.Api.TeamLog.WebSessionsFixedLengthPolicy.IsOther
+  - Dropbox.Api.TeamLog.WebSessionsFixedLengthPolicy.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.TeamLog.WebSessionsFixedLengthPolicy.Undefined.Instance
+  commentId: F:Dropbox.Api.TeamLog.WebSessionsFixedLengthPolicy.Undefined.Instance
+  id: Instance
+  parent: Dropbox.Api.TeamLog.WebSessionsFixedLengthPolicy.Undefined
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: WebSessionsFixedLengthPolicy.Undefined.Instance
+  fullName: Dropbox.Api.TeamLog.WebSessionsFixedLengthPolicy.Undefined.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/WebSessionsFixedLengthPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/WebSessionsFixedLengthPolicy.cs
+    startLine: 294
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>A singleton instance of Undefined</p>\n"
+  example: []
+  syntax:
+    content: public static readonly WebSessionsFixedLengthPolicy.Undefined Instance
+    return:
+      type: Dropbox.Api.TeamLog.WebSessionsFixedLengthPolicy.Undefined
+    content.vb: Public Shared ReadOnly Instance As WebSessionsFixedLengthPolicy.Undefined
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.WebSessionsFixedLengthPolicy
+  commentId: T:Dropbox.Api.TeamLog.WebSessionsFixedLengthPolicy
+  parent: Dropbox.Api.TeamLog
+  name: WebSessionsFixedLengthPolicy
+  nameWithType: WebSessionsFixedLengthPolicy
+  fullName: Dropbox.Api.TeamLog.WebSessionsFixedLengthPolicy
+- uid: Dropbox.Api.TeamLog.WebSessionsFixedLengthPolicy.IsDefined
+  commentId: P:Dropbox.Api.TeamLog.WebSessionsFixedLengthPolicy.IsDefined
+  parent: Dropbox.Api.TeamLog.WebSessionsFixedLengthPolicy
+  name: IsDefined
+  nameWithType: WebSessionsFixedLengthPolicy.IsDefined
+  fullName: Dropbox.Api.TeamLog.WebSessionsFixedLengthPolicy.IsDefined
+- uid: Dropbox.Api.TeamLog.WebSessionsFixedLengthPolicy.AsDefined
+  commentId: P:Dropbox.Api.TeamLog.WebSessionsFixedLengthPolicy.AsDefined
+  parent: Dropbox.Api.TeamLog.WebSessionsFixedLengthPolicy
+  name: AsDefined
+  nameWithType: WebSessionsFixedLengthPolicy.AsDefined
+  fullName: Dropbox.Api.TeamLog.WebSessionsFixedLengthPolicy.AsDefined
+- uid: Dropbox.Api.TeamLog.WebSessionsFixedLengthPolicy.IsUndefined
+  commentId: P:Dropbox.Api.TeamLog.WebSessionsFixedLengthPolicy.IsUndefined
+  parent: Dropbox.Api.TeamLog.WebSessionsFixedLengthPolicy
+  name: IsUndefined
+  nameWithType: WebSessionsFixedLengthPolicy.IsUndefined
+  fullName: Dropbox.Api.TeamLog.WebSessionsFixedLengthPolicy.IsUndefined
+- uid: Dropbox.Api.TeamLog.WebSessionsFixedLengthPolicy.AsUndefined
+  commentId: P:Dropbox.Api.TeamLog.WebSessionsFixedLengthPolicy.AsUndefined
+  parent: Dropbox.Api.TeamLog.WebSessionsFixedLengthPolicy
+  name: AsUndefined
+  nameWithType: WebSessionsFixedLengthPolicy.AsUndefined
+  fullName: Dropbox.Api.TeamLog.WebSessionsFixedLengthPolicy.AsUndefined
+- uid: Dropbox.Api.TeamLog.WebSessionsFixedLengthPolicy.IsOther
+  commentId: P:Dropbox.Api.TeamLog.WebSessionsFixedLengthPolicy.IsOther
+  parent: Dropbox.Api.TeamLog.WebSessionsFixedLengthPolicy
+  name: IsOther
+  nameWithType: WebSessionsFixedLengthPolicy.IsOther
+  fullName: Dropbox.Api.TeamLog.WebSessionsFixedLengthPolicy.IsOther
+- uid: Dropbox.Api.TeamLog.WebSessionsFixedLengthPolicy.AsOther
+  commentId: P:Dropbox.Api.TeamLog.WebSessionsFixedLengthPolicy.AsOther
+  parent: Dropbox.Api.TeamLog.WebSessionsFixedLengthPolicy
+  name: AsOther
+  nameWithType: WebSessionsFixedLengthPolicy.AsOther
+  fullName: Dropbox.Api.TeamLog.WebSessionsFixedLengthPolicy.AsOther
+- uid: Dropbox.Api.TeamLog.WebSessionsFixedLengthPolicy.Undefined
+  commentId: T:Dropbox.Api.TeamLog.WebSessionsFixedLengthPolicy.Undefined
+  parent: Dropbox.Api.TeamLog
+  name: WebSessionsFixedLengthPolicy.Undefined
+  nameWithType: WebSessionsFixedLengthPolicy.Undefined
+  fullName: Dropbox.Api.TeamLog.WebSessionsFixedLengthPolicy.Undefined
+shouldSkipMarkup: true

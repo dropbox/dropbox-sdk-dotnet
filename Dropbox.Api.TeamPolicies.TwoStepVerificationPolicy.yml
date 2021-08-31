@@ -1,0 +1,381 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy
+  commentId: T:Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy
+  id: TwoStepVerificationPolicy
+  parent: Dropbox.Api.TeamPolicies
+  children:
+  - Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.#ctor
+  - Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.AsOther
+  - Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.AsRequireTfaDisable
+  - Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.AsRequireTfaEnable
+  - Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.IsOther
+  - Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.IsRequireTfaDisable
+  - Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.IsRequireTfaEnable
+  langs:
+  - csharp
+  - vb
+  name: TwoStepVerificationPolicy
+  nameWithType: TwoStepVerificationPolicy
+  fullName: Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/TwoStepVerificationPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TwoStepVerificationPolicy
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/TwoStepVerificationPolicy.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>The two step verification policy object</p>\n"
+  example: []
+  syntax:
+    content: 'public class TwoStepVerificationPolicy : object'
+    content.vb: >-
+      Public Class TwoStepVerificationPolicy
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.Other
+  - Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.RequireTfaDisable
+  - Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.RequireTfaEnable
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.#ctor
+  commentId: M:Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy
+  langs:
+  - csharp
+  - vb
+  name: TwoStepVerificationPolicy()
+  nameWithType: TwoStepVerificationPolicy.TwoStepVerificationPolicy()
+  fullName: Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.TwoStepVerificationPolicy()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/TwoStepVerificationPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/TwoStepVerificationPolicy.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public TwoStepVerificationPolicy()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.IsRequireTfaEnable
+  commentId: P:Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.IsRequireTfaEnable
+  id: IsRequireTfaEnable
+  parent: Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy
+  langs:
+  - csharp
+  - vb
+  name: IsRequireTfaEnable
+  nameWithType: TwoStepVerificationPolicy.IsRequireTfaEnable
+  fullName: Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.IsRequireTfaEnable
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/TwoStepVerificationPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsRequireTfaEnable
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/TwoStepVerificationPolicy.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Gets a value indicating whether this instance is RequireTfaEnable</p>\n"
+  example: []
+  syntax:
+    content: public bool IsRequireTfaEnable { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsRequireTfaEnable As Boolean
+  overload: Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.IsRequireTfaEnable*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.AsRequireTfaEnable
+  commentId: P:Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.AsRequireTfaEnable
+  id: AsRequireTfaEnable
+  parent: Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy
+  langs:
+  - csharp
+  - vb
+  name: AsRequireTfaEnable
+  nameWithType: TwoStepVerificationPolicy.AsRequireTfaEnable
+  fullName: Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.AsRequireTfaEnable
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/TwoStepVerificationPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsRequireTfaEnable
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/TwoStepVerificationPolicy.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Gets this instance as a RequireTfaEnable, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public TwoStepVerificationPolicy.RequireTfaEnable AsRequireTfaEnable { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.RequireTfaEnable
+    content.vb: Public ReadOnly Property AsRequireTfaEnable As TwoStepVerificationPolicy.RequireTfaEnable
+  overload: Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.AsRequireTfaEnable*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.IsRequireTfaDisable
+  commentId: P:Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.IsRequireTfaDisable
+  id: IsRequireTfaDisable
+  parent: Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy
+  langs:
+  - csharp
+  - vb
+  name: IsRequireTfaDisable
+  nameWithType: TwoStepVerificationPolicy.IsRequireTfaDisable
+  fullName: Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.IsRequireTfaDisable
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/TwoStepVerificationPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsRequireTfaDisable
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/TwoStepVerificationPolicy.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Gets a value indicating whether this instance is RequireTfaDisable</p>\n"
+  example: []
+  syntax:
+    content: public bool IsRequireTfaDisable { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsRequireTfaDisable As Boolean
+  overload: Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.IsRequireTfaDisable*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.AsRequireTfaDisable
+  commentId: P:Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.AsRequireTfaDisable
+  id: AsRequireTfaDisable
+  parent: Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy
+  langs:
+  - csharp
+  - vb
+  name: AsRequireTfaDisable
+  nameWithType: TwoStepVerificationPolicy.AsRequireTfaDisable
+  fullName: Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.AsRequireTfaDisable
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/TwoStepVerificationPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsRequireTfaDisable
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/TwoStepVerificationPolicy.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Gets this instance as a RequireTfaDisable, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public TwoStepVerificationPolicy.RequireTfaDisable AsRequireTfaDisable { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.RequireTfaDisable
+    content.vb: Public ReadOnly Property AsRequireTfaDisable As TwoStepVerificationPolicy.RequireTfaDisable
+  overload: Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.AsRequireTfaDisable*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.IsOther
+  commentId: P:Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.IsOther
+  id: IsOther
+  parent: Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: TwoStepVerificationPolicy.IsOther
+  fullName: Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/TwoStepVerificationPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/TwoStepVerificationPolicy.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.AsOther
+  commentId: P:Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.AsOther
+  id: AsOther
+  parent: Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: TwoStepVerificationPolicy.AsOther
+  fullName: Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/TwoStepVerificationPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/TwoStepVerificationPolicy.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public TwoStepVerificationPolicy.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.Other
+    content.vb: Public ReadOnly Property AsOther As TwoStepVerificationPolicy.Other
+  overload: Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamPolicies
+  commentId: N:Dropbox.Api.TeamPolicies
+  name: Dropbox.Api.TeamPolicies
+  nameWithType: Dropbox.Api.TeamPolicies
+  fullName: Dropbox.Api.TeamPolicies
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy
+  commentId: T:Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy
+  parent: Dropbox.Api.TeamPolicies
+  name: TwoStepVerificationPolicy
+  nameWithType: TwoStepVerificationPolicy
+  fullName: Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy
+- uid: Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.#ctor*
+  commentId: Overload:Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.#ctor
+  name: TwoStepVerificationPolicy
+  nameWithType: TwoStepVerificationPolicy.TwoStepVerificationPolicy
+  fullName: Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.TwoStepVerificationPolicy
+- uid: Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.IsRequireTfaEnable*
+  commentId: Overload:Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.IsRequireTfaEnable
+  name: IsRequireTfaEnable
+  nameWithType: TwoStepVerificationPolicy.IsRequireTfaEnable
+  fullName: Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.IsRequireTfaEnable
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.AsRequireTfaEnable*
+  commentId: Overload:Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.AsRequireTfaEnable
+  name: AsRequireTfaEnable
+  nameWithType: TwoStepVerificationPolicy.AsRequireTfaEnable
+  fullName: Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.AsRequireTfaEnable
+- uid: Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.RequireTfaEnable
+  commentId: T:Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.RequireTfaEnable
+  parent: Dropbox.Api.TeamPolicies
+  name: TwoStepVerificationPolicy.RequireTfaEnable
+  nameWithType: TwoStepVerificationPolicy.RequireTfaEnable
+  fullName: Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.RequireTfaEnable
+- uid: Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.IsRequireTfaDisable*
+  commentId: Overload:Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.IsRequireTfaDisable
+  name: IsRequireTfaDisable
+  nameWithType: TwoStepVerificationPolicy.IsRequireTfaDisable
+  fullName: Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.IsRequireTfaDisable
+- uid: Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.AsRequireTfaDisable*
+  commentId: Overload:Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.AsRequireTfaDisable
+  name: AsRequireTfaDisable
+  nameWithType: TwoStepVerificationPolicy.AsRequireTfaDisable
+  fullName: Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.AsRequireTfaDisable
+- uid: Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.RequireTfaDisable
+  commentId: T:Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.RequireTfaDisable
+  parent: Dropbox.Api.TeamPolicies
+  name: TwoStepVerificationPolicy.RequireTfaDisable
+  nameWithType: TwoStepVerificationPolicy.RequireTfaDisable
+  fullName: Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.RequireTfaDisable
+- uid: Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.IsOther*
+  commentId: Overload:Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.IsOther
+  name: IsOther
+  nameWithType: TwoStepVerificationPolicy.IsOther
+  fullName: Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.IsOther
+- uid: Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.AsOther*
+  commentId: Overload:Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.AsOther
+  name: AsOther
+  nameWithType: TwoStepVerificationPolicy.AsOther
+  fullName: Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.AsOther
+- uid: Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.Other
+  commentId: T:Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.Other
+  parent: Dropbox.Api.TeamPolicies
+  name: TwoStepVerificationPolicy.Other
+  nameWithType: TwoStepVerificationPolicy.Other
+  fullName: Dropbox.Api.TeamPolicies.TwoStepVerificationPolicy.Other
+shouldSkipMarkup: true

@@ -1,0 +1,334 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.BinderRenameSectionDetails
+  commentId: T:Dropbox.Api.TeamLog.BinderRenameSectionDetails
+  id: BinderRenameSectionDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.BinderRenameSectionDetails.#ctor
+  - Dropbox.Api.TeamLog.BinderRenameSectionDetails.#ctor(System.String,System.String,System.String,System.String)
+  - Dropbox.Api.TeamLog.BinderRenameSectionDetails.BinderItemName
+  - Dropbox.Api.TeamLog.BinderRenameSectionDetails.DocTitle
+  - Dropbox.Api.TeamLog.BinderRenameSectionDetails.EventUuid
+  - Dropbox.Api.TeamLog.BinderRenameSectionDetails.PreviousBinderItemName
+  langs:
+  - csharp
+  - vb
+  name: BinderRenameSectionDetails
+  nameWithType: BinderRenameSectionDetails
+  fullName: Dropbox.Api.TeamLog.BinderRenameSectionDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/BinderRenameSectionDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: BinderRenameSectionDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/BinderRenameSectionDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Renamed Binder section.</p>\n"
+  example: []
+  syntax:
+    content: 'public class BinderRenameSectionDetails : object'
+    content.vb: >-
+      Public Class BinderRenameSectionDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.BinderRenameSectionDetails.#ctor(System.String,System.String,System.String,System.String)
+  commentId: M:Dropbox.Api.TeamLog.BinderRenameSectionDetails.#ctor(System.String,System.String,System.String,System.String)
+  id: '#ctor(System.String,System.String,System.String,System.String)'
+  parent: Dropbox.Api.TeamLog.BinderRenameSectionDetails
+  langs:
+  - csharp
+  - vb
+  name: BinderRenameSectionDetails(String, String, String, String)
+  nameWithType: BinderRenameSectionDetails.BinderRenameSectionDetails(String, String, String, String)
+  fullName: Dropbox.Api.TeamLog.BinderRenameSectionDetails.BinderRenameSectionDetails(System.String, System.String, System.String, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/BinderRenameSectionDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/BinderRenameSectionDetails.cs
+    startLine: 38
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.BinderRenameSectionDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public BinderRenameSectionDetails(string eventUuid, string docTitle, string binderItemName, string previousBinderItemName = null)
+    parameters:
+    - id: eventUuid
+      type: System.String
+      description: Event unique identifier.
+    - id: docTitle
+      type: System.String
+      description: Title of the Binder doc.
+    - id: binderItemName
+      type: System.String
+      description: Name of the Binder page/section.
+    - id: previousBinderItemName
+      type: System.String
+      description: >-
+        Previous name of the Binder
+
+        page/section.
+    content.vb: Public Sub New(eventUuid As String, docTitle As String, binderItemName As String, previousBinderItemName As String = Nothing)
+  overload: Dropbox.Api.TeamLog.BinderRenameSectionDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.BinderRenameSectionDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.BinderRenameSectionDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.BinderRenameSectionDetails
+  langs:
+  - csharp
+  - vb
+  name: BinderRenameSectionDetails()
+  nameWithType: BinderRenameSectionDetails.BinderRenameSectionDetails()
+  fullName: Dropbox.Api.TeamLog.BinderRenameSectionDetails.BinderRenameSectionDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/BinderRenameSectionDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/BinderRenameSectionDetails.cs
+    startLine: 70
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.BinderRenameSectionDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public BinderRenameSectionDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.BinderRenameSectionDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.BinderRenameSectionDetails.EventUuid
+  commentId: P:Dropbox.Api.TeamLog.BinderRenameSectionDetails.EventUuid
+  id: EventUuid
+  parent: Dropbox.Api.TeamLog.BinderRenameSectionDetails
+  langs:
+  - csharp
+  - vb
+  name: EventUuid
+  nameWithType: BinderRenameSectionDetails.EventUuid
+  fullName: Dropbox.Api.TeamLog.BinderRenameSectionDetails.EventUuid
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/BinderRenameSectionDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: EventUuid
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/BinderRenameSectionDetails.cs
+    startLine: 78
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Event unique identifier.</p>\n"
+  example: []
+  syntax:
+    content: public string EventUuid { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property EventUuid As String
+  overload: Dropbox.Api.TeamLog.BinderRenameSectionDetails.EventUuid*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.BinderRenameSectionDetails.DocTitle
+  commentId: P:Dropbox.Api.TeamLog.BinderRenameSectionDetails.DocTitle
+  id: DocTitle
+  parent: Dropbox.Api.TeamLog.BinderRenameSectionDetails
+  langs:
+  - csharp
+  - vb
+  name: DocTitle
+  nameWithType: BinderRenameSectionDetails.DocTitle
+  fullName: Dropbox.Api.TeamLog.BinderRenameSectionDetails.DocTitle
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/BinderRenameSectionDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: DocTitle
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/BinderRenameSectionDetails.cs
+    startLine: 83
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Title of the Binder doc.</p>\n"
+  example: []
+  syntax:
+    content: public string DocTitle { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property DocTitle As String
+  overload: Dropbox.Api.TeamLog.BinderRenameSectionDetails.DocTitle*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.BinderRenameSectionDetails.BinderItemName
+  commentId: P:Dropbox.Api.TeamLog.BinderRenameSectionDetails.BinderItemName
+  id: BinderItemName
+  parent: Dropbox.Api.TeamLog.BinderRenameSectionDetails
+  langs:
+  - csharp
+  - vb
+  name: BinderItemName
+  nameWithType: BinderRenameSectionDetails.BinderItemName
+  fullName: Dropbox.Api.TeamLog.BinderRenameSectionDetails.BinderItemName
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/BinderRenameSectionDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: BinderItemName
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/BinderRenameSectionDetails.cs
+    startLine: 88
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Name of the Binder page/section.</p>\n"
+  example: []
+  syntax:
+    content: public string BinderItemName { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property BinderItemName As String
+  overload: Dropbox.Api.TeamLog.BinderRenameSectionDetails.BinderItemName*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.BinderRenameSectionDetails.PreviousBinderItemName
+  commentId: P:Dropbox.Api.TeamLog.BinderRenameSectionDetails.PreviousBinderItemName
+  id: PreviousBinderItemName
+  parent: Dropbox.Api.TeamLog.BinderRenameSectionDetails
+  langs:
+  - csharp
+  - vb
+  name: PreviousBinderItemName
+  nameWithType: BinderRenameSectionDetails.PreviousBinderItemName
+  fullName: Dropbox.Api.TeamLog.BinderRenameSectionDetails.PreviousBinderItemName
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/BinderRenameSectionDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PreviousBinderItemName
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/BinderRenameSectionDetails.cs
+    startLine: 93
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Previous name of the Binder page/section.</p>\n"
+  example: []
+  syntax:
+    content: public string PreviousBinderItemName { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property PreviousBinderItemName As String
+  overload: Dropbox.Api.TeamLog.BinderRenameSectionDetails.PreviousBinderItemName*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.BinderRenameSectionDetails
+  commentId: T:Dropbox.Api.TeamLog.BinderRenameSectionDetails
+  parent: Dropbox.Api.TeamLog
+  name: BinderRenameSectionDetails
+  nameWithType: BinderRenameSectionDetails
+  fullName: Dropbox.Api.TeamLog.BinderRenameSectionDetails
+- uid: Dropbox.Api.TeamLog.BinderRenameSectionDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.BinderRenameSectionDetails.#ctor
+  name: BinderRenameSectionDetails
+  nameWithType: BinderRenameSectionDetails.BinderRenameSectionDetails
+  fullName: Dropbox.Api.TeamLog.BinderRenameSectionDetails.BinderRenameSectionDetails
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.BinderRenameSectionDetails.EventUuid*
+  commentId: Overload:Dropbox.Api.TeamLog.BinderRenameSectionDetails.EventUuid
+  name: EventUuid
+  nameWithType: BinderRenameSectionDetails.EventUuid
+  fullName: Dropbox.Api.TeamLog.BinderRenameSectionDetails.EventUuid
+- uid: Dropbox.Api.TeamLog.BinderRenameSectionDetails.DocTitle*
+  commentId: Overload:Dropbox.Api.TeamLog.BinderRenameSectionDetails.DocTitle
+  name: DocTitle
+  nameWithType: BinderRenameSectionDetails.DocTitle
+  fullName: Dropbox.Api.TeamLog.BinderRenameSectionDetails.DocTitle
+- uid: Dropbox.Api.TeamLog.BinderRenameSectionDetails.BinderItemName*
+  commentId: Overload:Dropbox.Api.TeamLog.BinderRenameSectionDetails.BinderItemName
+  name: BinderItemName
+  nameWithType: BinderRenameSectionDetails.BinderItemName
+  fullName: Dropbox.Api.TeamLog.BinderRenameSectionDetails.BinderItemName
+- uid: Dropbox.Api.TeamLog.BinderRenameSectionDetails.PreviousBinderItemName*
+  commentId: Overload:Dropbox.Api.TeamLog.BinderRenameSectionDetails.PreviousBinderItemName
+  name: PreviousBinderItemName
+  nameWithType: BinderRenameSectionDetails.PreviousBinderItemName
+  fullName: Dropbox.Api.TeamLog.BinderRenameSectionDetails.PreviousBinderItemName
+shouldSkipMarkup: true

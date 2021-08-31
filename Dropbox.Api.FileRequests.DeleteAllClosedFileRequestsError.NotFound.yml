@@ -1,0 +1,218 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.NotFound
+  commentId: T:Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.NotFound
+  id: DeleteAllClosedFileRequestsError.NotFound
+  parent: Dropbox.Api.FileRequests
+  children:
+  - Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.NotFound.Instance
+  langs:
+  - csharp
+  - vb
+  name: DeleteAllClosedFileRequestsError.NotFound
+  nameWithType: DeleteAllClosedFileRequestsError.NotFound
+  fullName: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.NotFound
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteAllClosedFileRequestsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteAllClosedFileRequestsError.cs
+    startLine: 335
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>This file request ID was not found.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class NotFound : DeleteAllClosedFileRequestsError'
+    content.vb: >-
+      Public NotInheritable Class NotFound
+          Inherits DeleteAllClosedFileRequestsError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError
+  inheritedMembers:
+  - Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsNotFound
+  - Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsNotFound
+  - Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsNotAFolder
+  - Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsNotAFolder
+  - Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsAppLacksAccess
+  - Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsAppLacksAccess
+  - Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsNoPermission
+  - Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsNoPermission
+  - Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsEmailUnverified
+  - Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsEmailUnverified
+  - Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsValidationError
+  - Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsValidationError
+  - Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsDisabledForTeam
+  - Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsDisabledForTeam
+  - Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsOther
+  - Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.NotFound.Instance
+  commentId: F:Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.NotFound.Instance
+  id: Instance
+  parent: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.NotFound
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: DeleteAllClosedFileRequestsError.NotFound.Instance
+  fullName: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.NotFound.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteAllClosedFileRequestsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileRequests/DeleteAllClosedFileRequestsError.cs
+    startLine: 359
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileRequests
+  summary: "\n<p>A singleton instance of NotFound</p>\n"
+  example: []
+  syntax:
+    content: public static readonly DeleteAllClosedFileRequestsError.NotFound Instance
+    return:
+      type: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.NotFound
+    content.vb: Public Shared ReadOnly Instance As DeleteAllClosedFileRequestsError.NotFound
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.FileRequests
+  commentId: N:Dropbox.Api.FileRequests
+  name: Dropbox.Api.FileRequests
+  nameWithType: Dropbox.Api.FileRequests
+  fullName: Dropbox.Api.FileRequests
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError
+  commentId: T:Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError
+  parent: Dropbox.Api.FileRequests
+  name: DeleteAllClosedFileRequestsError
+  nameWithType: DeleteAllClosedFileRequestsError
+  fullName: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError
+- uid: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsNotFound
+  commentId: P:Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsNotFound
+  parent: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError
+  name: IsNotFound
+  nameWithType: DeleteAllClosedFileRequestsError.IsNotFound
+  fullName: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsNotFound
+- uid: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsNotFound
+  commentId: P:Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsNotFound
+  parent: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError
+  name: AsNotFound
+  nameWithType: DeleteAllClosedFileRequestsError.AsNotFound
+  fullName: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsNotFound
+- uid: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsNotAFolder
+  commentId: P:Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsNotAFolder
+  parent: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError
+  name: IsNotAFolder
+  nameWithType: DeleteAllClosedFileRequestsError.IsNotAFolder
+  fullName: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsNotAFolder
+- uid: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsNotAFolder
+  commentId: P:Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsNotAFolder
+  parent: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError
+  name: AsNotAFolder
+  nameWithType: DeleteAllClosedFileRequestsError.AsNotAFolder
+  fullName: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsNotAFolder
+- uid: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsAppLacksAccess
+  commentId: P:Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsAppLacksAccess
+  parent: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError
+  name: IsAppLacksAccess
+  nameWithType: DeleteAllClosedFileRequestsError.IsAppLacksAccess
+  fullName: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsAppLacksAccess
+- uid: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsAppLacksAccess
+  commentId: P:Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsAppLacksAccess
+  parent: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError
+  name: AsAppLacksAccess
+  nameWithType: DeleteAllClosedFileRequestsError.AsAppLacksAccess
+  fullName: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsAppLacksAccess
+- uid: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsNoPermission
+  commentId: P:Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsNoPermission
+  parent: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError
+  name: IsNoPermission
+  nameWithType: DeleteAllClosedFileRequestsError.IsNoPermission
+  fullName: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsNoPermission
+- uid: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsNoPermission
+  commentId: P:Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsNoPermission
+  parent: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError
+  name: AsNoPermission
+  nameWithType: DeleteAllClosedFileRequestsError.AsNoPermission
+  fullName: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsNoPermission
+- uid: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsEmailUnverified
+  commentId: P:Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsEmailUnverified
+  parent: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError
+  name: IsEmailUnverified
+  nameWithType: DeleteAllClosedFileRequestsError.IsEmailUnverified
+  fullName: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsEmailUnverified
+- uid: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsEmailUnverified
+  commentId: P:Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsEmailUnverified
+  parent: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError
+  name: AsEmailUnverified
+  nameWithType: DeleteAllClosedFileRequestsError.AsEmailUnverified
+  fullName: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsEmailUnverified
+- uid: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsValidationError
+  commentId: P:Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsValidationError
+  parent: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError
+  name: IsValidationError
+  nameWithType: DeleteAllClosedFileRequestsError.IsValidationError
+  fullName: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsValidationError
+- uid: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsValidationError
+  commentId: P:Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsValidationError
+  parent: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError
+  name: AsValidationError
+  nameWithType: DeleteAllClosedFileRequestsError.AsValidationError
+  fullName: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsValidationError
+- uid: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsDisabledForTeam
+  commentId: P:Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsDisabledForTeam
+  parent: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError
+  name: IsDisabledForTeam
+  nameWithType: DeleteAllClosedFileRequestsError.IsDisabledForTeam
+  fullName: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsDisabledForTeam
+- uid: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsDisabledForTeam
+  commentId: P:Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsDisabledForTeam
+  parent: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError
+  name: AsDisabledForTeam
+  nameWithType: DeleteAllClosedFileRequestsError.AsDisabledForTeam
+  fullName: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsDisabledForTeam
+- uid: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsOther
+  commentId: P:Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsOther
+  parent: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError
+  name: IsOther
+  nameWithType: DeleteAllClosedFileRequestsError.IsOther
+  fullName: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.IsOther
+- uid: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsOther
+  commentId: P:Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsOther
+  parent: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError
+  name: AsOther
+  nameWithType: DeleteAllClosedFileRequestsError.AsOther
+  fullName: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.AsOther
+- uid: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.NotFound
+  commentId: T:Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.NotFound
+  parent: Dropbox.Api.FileRequests
+  name: DeleteAllClosedFileRequestsError.NotFound
+  nameWithType: DeleteAllClosedFileRequestsError.NotFound
+  fullName: Dropbox.Api.FileRequests.DeleteAllClosedFileRequestsError.NotFound
+shouldSkipMarkup: true

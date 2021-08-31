@@ -1,0 +1,474 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.RelocationBatchErrorEntry
+  commentId: T:Dropbox.Api.Files.RelocationBatchErrorEntry
+  id: RelocationBatchErrorEntry
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.RelocationBatchErrorEntry.#ctor
+  - Dropbox.Api.Files.RelocationBatchErrorEntry.AsInternalError
+  - Dropbox.Api.Files.RelocationBatchErrorEntry.AsOther
+  - Dropbox.Api.Files.RelocationBatchErrorEntry.AsRelocationError
+  - Dropbox.Api.Files.RelocationBatchErrorEntry.AsTooManyWriteOperations
+  - Dropbox.Api.Files.RelocationBatchErrorEntry.IsInternalError
+  - Dropbox.Api.Files.RelocationBatchErrorEntry.IsOther
+  - Dropbox.Api.Files.RelocationBatchErrorEntry.IsRelocationError
+  - Dropbox.Api.Files.RelocationBatchErrorEntry.IsTooManyWriteOperations
+  langs:
+  - csharp
+  - vb
+  name: RelocationBatchErrorEntry
+  nameWithType: RelocationBatchErrorEntry
+  fullName: Dropbox.Api.Files.RelocationBatchErrorEntry
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchErrorEntry.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: RelocationBatchErrorEntry
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchErrorEntry.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The relocation batch error entry object</p>\n"
+  example: []
+  syntax:
+    content: 'public class RelocationBatchErrorEntry : object'
+    content.vb: >-
+      Public Class RelocationBatchErrorEntry
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Files.RelocationBatchErrorEntry.InternalError
+  - Dropbox.Api.Files.RelocationBatchErrorEntry.Other
+  - Dropbox.Api.Files.RelocationBatchErrorEntry.RelocationError
+  - Dropbox.Api.Files.RelocationBatchErrorEntry.TooManyWriteOperations
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.RelocationBatchErrorEntry.#ctor
+  commentId: M:Dropbox.Api.Files.RelocationBatchErrorEntry.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.RelocationBatchErrorEntry
+  langs:
+  - csharp
+  - vb
+  name: RelocationBatchErrorEntry()
+  nameWithType: RelocationBatchErrorEntry.RelocationBatchErrorEntry()
+  fullName: Dropbox.Api.Files.RelocationBatchErrorEntry.RelocationBatchErrorEntry()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchErrorEntry.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchErrorEntry.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.RelocationBatchErrorEntry\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public RelocationBatchErrorEntry()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.RelocationBatchErrorEntry.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.RelocationBatchErrorEntry.IsRelocationError
+  commentId: P:Dropbox.Api.Files.RelocationBatchErrorEntry.IsRelocationError
+  id: IsRelocationError
+  parent: Dropbox.Api.Files.RelocationBatchErrorEntry
+  langs:
+  - csharp
+  - vb
+  name: IsRelocationError
+  nameWithType: RelocationBatchErrorEntry.IsRelocationError
+  fullName: Dropbox.Api.Files.RelocationBatchErrorEntry.IsRelocationError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchErrorEntry.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsRelocationError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchErrorEntry.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is RelocationError</p>\n"
+  example: []
+  syntax:
+    content: public bool IsRelocationError { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsRelocationError As Boolean
+  overload: Dropbox.Api.Files.RelocationBatchErrorEntry.IsRelocationError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.RelocationBatchErrorEntry.AsRelocationError
+  commentId: P:Dropbox.Api.Files.RelocationBatchErrorEntry.AsRelocationError
+  id: AsRelocationError
+  parent: Dropbox.Api.Files.RelocationBatchErrorEntry
+  langs:
+  - csharp
+  - vb
+  name: AsRelocationError
+  nameWithType: RelocationBatchErrorEntry.AsRelocationError
+  fullName: Dropbox.Api.Files.RelocationBatchErrorEntry.AsRelocationError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchErrorEntry.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsRelocationError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchErrorEntry.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a RelocationError, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public RelocationBatchErrorEntry.RelocationError AsRelocationError { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.RelocationBatchErrorEntry.RelocationError
+    content.vb: Public ReadOnly Property AsRelocationError As RelocationBatchErrorEntry.RelocationError
+  overload: Dropbox.Api.Files.RelocationBatchErrorEntry.AsRelocationError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.RelocationBatchErrorEntry.IsInternalError
+  commentId: P:Dropbox.Api.Files.RelocationBatchErrorEntry.IsInternalError
+  id: IsInternalError
+  parent: Dropbox.Api.Files.RelocationBatchErrorEntry
+  langs:
+  - csharp
+  - vb
+  name: IsInternalError
+  nameWithType: RelocationBatchErrorEntry.IsInternalError
+  fullName: Dropbox.Api.Files.RelocationBatchErrorEntry.IsInternalError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchErrorEntry.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsInternalError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchErrorEntry.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is InternalError</p>\n"
+  example: []
+  syntax:
+    content: public bool IsInternalError { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsInternalError As Boolean
+  overload: Dropbox.Api.Files.RelocationBatchErrorEntry.IsInternalError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.RelocationBatchErrorEntry.AsInternalError
+  commentId: P:Dropbox.Api.Files.RelocationBatchErrorEntry.AsInternalError
+  id: AsInternalError
+  parent: Dropbox.Api.Files.RelocationBatchErrorEntry
+  langs:
+  - csharp
+  - vb
+  name: AsInternalError
+  nameWithType: RelocationBatchErrorEntry.AsInternalError
+  fullName: Dropbox.Api.Files.RelocationBatchErrorEntry.AsInternalError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchErrorEntry.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsInternalError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchErrorEntry.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a InternalError, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public RelocationBatchErrorEntry.InternalError AsInternalError { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.RelocationBatchErrorEntry.InternalError
+    content.vb: Public ReadOnly Property AsInternalError As RelocationBatchErrorEntry.InternalError
+  overload: Dropbox.Api.Files.RelocationBatchErrorEntry.AsInternalError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.RelocationBatchErrorEntry.IsTooManyWriteOperations
+  commentId: P:Dropbox.Api.Files.RelocationBatchErrorEntry.IsTooManyWriteOperations
+  id: IsTooManyWriteOperations
+  parent: Dropbox.Api.Files.RelocationBatchErrorEntry
+  langs:
+  - csharp
+  - vb
+  name: IsTooManyWriteOperations
+  nameWithType: RelocationBatchErrorEntry.IsTooManyWriteOperations
+  fullName: Dropbox.Api.Files.RelocationBatchErrorEntry.IsTooManyWriteOperations
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchErrorEntry.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsTooManyWriteOperations
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchErrorEntry.cs
+    startLine: 85
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is\nTooManyWriteOperations</p>\n"
+  example: []
+  syntax:
+    content: public bool IsTooManyWriteOperations { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsTooManyWriteOperations As Boolean
+  overload: Dropbox.Api.Files.RelocationBatchErrorEntry.IsTooManyWriteOperations*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.RelocationBatchErrorEntry.AsTooManyWriteOperations
+  commentId: P:Dropbox.Api.Files.RelocationBatchErrorEntry.AsTooManyWriteOperations
+  id: AsTooManyWriteOperations
+  parent: Dropbox.Api.Files.RelocationBatchErrorEntry
+  langs:
+  - csharp
+  - vb
+  name: AsTooManyWriteOperations
+  nameWithType: RelocationBatchErrorEntry.AsTooManyWriteOperations
+  fullName: Dropbox.Api.Files.RelocationBatchErrorEntry.AsTooManyWriteOperations
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchErrorEntry.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsTooManyWriteOperations
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchErrorEntry.cs
+    startLine: 96
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a TooManyWriteOperations, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public RelocationBatchErrorEntry.TooManyWriteOperations AsTooManyWriteOperations { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.RelocationBatchErrorEntry.TooManyWriteOperations
+    content.vb: Public ReadOnly Property AsTooManyWriteOperations As RelocationBatchErrorEntry.TooManyWriteOperations
+  overload: Dropbox.Api.Files.RelocationBatchErrorEntry.AsTooManyWriteOperations*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.RelocationBatchErrorEntry.IsOther
+  commentId: P:Dropbox.Api.Files.RelocationBatchErrorEntry.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Files.RelocationBatchErrorEntry
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: RelocationBatchErrorEntry.IsOther
+  fullName: Dropbox.Api.Files.RelocationBatchErrorEntry.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchErrorEntry.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchErrorEntry.cs
+    startLine: 107
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Files.RelocationBatchErrorEntry.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.RelocationBatchErrorEntry.AsOther
+  commentId: P:Dropbox.Api.Files.RelocationBatchErrorEntry.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Files.RelocationBatchErrorEntry
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: RelocationBatchErrorEntry.AsOther
+  fullName: Dropbox.Api.Files.RelocationBatchErrorEntry.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchErrorEntry.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchErrorEntry.cs
+    startLine: 118
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public RelocationBatchErrorEntry.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.RelocationBatchErrorEntry.Other
+    content.vb: Public ReadOnly Property AsOther As RelocationBatchErrorEntry.Other
+  overload: Dropbox.Api.Files.RelocationBatchErrorEntry.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.RelocationBatchErrorEntry
+  commentId: T:Dropbox.Api.Files.RelocationBatchErrorEntry
+  parent: Dropbox.Api.Files
+  name: RelocationBatchErrorEntry
+  nameWithType: RelocationBatchErrorEntry
+  fullName: Dropbox.Api.Files.RelocationBatchErrorEntry
+- uid: Dropbox.Api.Files.RelocationBatchErrorEntry.#ctor*
+  commentId: Overload:Dropbox.Api.Files.RelocationBatchErrorEntry.#ctor
+  name: RelocationBatchErrorEntry
+  nameWithType: RelocationBatchErrorEntry.RelocationBatchErrorEntry
+  fullName: Dropbox.Api.Files.RelocationBatchErrorEntry.RelocationBatchErrorEntry
+- uid: Dropbox.Api.Files.RelocationBatchErrorEntry.IsRelocationError*
+  commentId: Overload:Dropbox.Api.Files.RelocationBatchErrorEntry.IsRelocationError
+  name: IsRelocationError
+  nameWithType: RelocationBatchErrorEntry.IsRelocationError
+  fullName: Dropbox.Api.Files.RelocationBatchErrorEntry.IsRelocationError
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Files.RelocationBatchErrorEntry.AsRelocationError*
+  commentId: Overload:Dropbox.Api.Files.RelocationBatchErrorEntry.AsRelocationError
+  name: AsRelocationError
+  nameWithType: RelocationBatchErrorEntry.AsRelocationError
+  fullName: Dropbox.Api.Files.RelocationBatchErrorEntry.AsRelocationError
+- uid: Dropbox.Api.Files.RelocationBatchErrorEntry.RelocationError
+  commentId: T:Dropbox.Api.Files.RelocationBatchErrorEntry.RelocationError
+  parent: Dropbox.Api.Files
+  name: RelocationBatchErrorEntry.RelocationError
+  nameWithType: RelocationBatchErrorEntry.RelocationError
+  fullName: Dropbox.Api.Files.RelocationBatchErrorEntry.RelocationError
+- uid: Dropbox.Api.Files.RelocationBatchErrorEntry.IsInternalError*
+  commentId: Overload:Dropbox.Api.Files.RelocationBatchErrorEntry.IsInternalError
+  name: IsInternalError
+  nameWithType: RelocationBatchErrorEntry.IsInternalError
+  fullName: Dropbox.Api.Files.RelocationBatchErrorEntry.IsInternalError
+- uid: Dropbox.Api.Files.RelocationBatchErrorEntry.AsInternalError*
+  commentId: Overload:Dropbox.Api.Files.RelocationBatchErrorEntry.AsInternalError
+  name: AsInternalError
+  nameWithType: RelocationBatchErrorEntry.AsInternalError
+  fullName: Dropbox.Api.Files.RelocationBatchErrorEntry.AsInternalError
+- uid: Dropbox.Api.Files.RelocationBatchErrorEntry.InternalError
+  commentId: T:Dropbox.Api.Files.RelocationBatchErrorEntry.InternalError
+  parent: Dropbox.Api.Files
+  name: RelocationBatchErrorEntry.InternalError
+  nameWithType: RelocationBatchErrorEntry.InternalError
+  fullName: Dropbox.Api.Files.RelocationBatchErrorEntry.InternalError
+- uid: Dropbox.Api.Files.RelocationBatchErrorEntry.IsTooManyWriteOperations*
+  commentId: Overload:Dropbox.Api.Files.RelocationBatchErrorEntry.IsTooManyWriteOperations
+  name: IsTooManyWriteOperations
+  nameWithType: RelocationBatchErrorEntry.IsTooManyWriteOperations
+  fullName: Dropbox.Api.Files.RelocationBatchErrorEntry.IsTooManyWriteOperations
+- uid: Dropbox.Api.Files.RelocationBatchErrorEntry.AsTooManyWriteOperations*
+  commentId: Overload:Dropbox.Api.Files.RelocationBatchErrorEntry.AsTooManyWriteOperations
+  name: AsTooManyWriteOperations
+  nameWithType: RelocationBatchErrorEntry.AsTooManyWriteOperations
+  fullName: Dropbox.Api.Files.RelocationBatchErrorEntry.AsTooManyWriteOperations
+- uid: Dropbox.Api.Files.RelocationBatchErrorEntry.TooManyWriteOperations
+  commentId: T:Dropbox.Api.Files.RelocationBatchErrorEntry.TooManyWriteOperations
+  parent: Dropbox.Api.Files
+  name: RelocationBatchErrorEntry.TooManyWriteOperations
+  nameWithType: RelocationBatchErrorEntry.TooManyWriteOperations
+  fullName: Dropbox.Api.Files.RelocationBatchErrorEntry.TooManyWriteOperations
+- uid: Dropbox.Api.Files.RelocationBatchErrorEntry.IsOther*
+  commentId: Overload:Dropbox.Api.Files.RelocationBatchErrorEntry.IsOther
+  name: IsOther
+  nameWithType: RelocationBatchErrorEntry.IsOther
+  fullName: Dropbox.Api.Files.RelocationBatchErrorEntry.IsOther
+- uid: Dropbox.Api.Files.RelocationBatchErrorEntry.AsOther*
+  commentId: Overload:Dropbox.Api.Files.RelocationBatchErrorEntry.AsOther
+  name: AsOther
+  nameWithType: RelocationBatchErrorEntry.AsOther
+  fullName: Dropbox.Api.Files.RelocationBatchErrorEntry.AsOther
+- uid: Dropbox.Api.Files.RelocationBatchErrorEntry.Other
+  commentId: T:Dropbox.Api.Files.RelocationBatchErrorEntry.Other
+  parent: Dropbox.Api.Files
+  name: RelocationBatchErrorEntry.Other
+  nameWithType: RelocationBatchErrorEntry.Other
+  fullName: Dropbox.Api.Files.RelocationBatchErrorEntry.Other
+shouldSkipMarkup: true

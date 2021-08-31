@@ -1,0 +1,756 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.GetStorageReport
+  commentId: T:Dropbox.Api.Team.GetStorageReport
+  id: GetStorageReport
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.GetStorageReport.#ctor
+  - Dropbox.Api.Team.GetStorageReport.#ctor(System.String,System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}},System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}},System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}},System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}},System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{Dropbox.Api.Team.StorageBucket}})
+  - Dropbox.Api.Team.GetStorageReport.MemberStorageMap
+  - Dropbox.Api.Team.GetStorageReport.SharedFolders
+  - Dropbox.Api.Team.GetStorageReport.SharedUsage
+  - Dropbox.Api.Team.GetStorageReport.TotalUsage
+  - Dropbox.Api.Team.GetStorageReport.UnsharedUsage
+  langs:
+  - csharp
+  - vb
+  name: GetStorageReport
+  nameWithType: GetStorageReport
+  fullName: Dropbox.Api.Team.GetStorageReport
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GetStorageReport.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GetStorageReport
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GetStorageReport.cs
+    startLine: 18
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Storage Report Result. Each of the items in the storage report is an array of\nvalues, one value per day. If there is no data for a day, then the value will be\nNone.</p>\n"
+  example: []
+  syntax:
+    content: 'public class GetStorageReport : BaseDfbReport'
+    content.vb: >-
+      Public Class GetStorageReport
+          Inherits BaseDfbReport
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.BaseDfbReport
+  inheritedMembers:
+  - Dropbox.Api.Team.BaseDfbReport.StartDate
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.GetStorageReport.#ctor(System.String,System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}},System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}},System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}},System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}},System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{Dropbox.Api.Team.StorageBucket}})
+  commentId: M:Dropbox.Api.Team.GetStorageReport.#ctor(System.String,System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}},System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}},System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}},System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}},System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{Dropbox.Api.Team.StorageBucket}})
+  id: '#ctor(System.String,System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}},System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}},System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}},System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}},System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{Dropbox.Api.Team.StorageBucket}})'
+  parent: Dropbox.Api.Team.GetStorageReport
+  langs:
+  - csharp
+  - vb
+  name: GetStorageReport(String, System.Collections.Generic.IEnumerable<Nullable<UInt64>>, System.Collections.Generic.IEnumerable<Nullable<UInt64>>, System.Collections.Generic.IEnumerable<Nullable<UInt64>>, System.Collections.Generic.IEnumerable<Nullable<UInt64>>, System.Collections.Generic.IEnumerable<System.Collections.Generic.IEnumerable<StorageBucket>>)
+  nameWithType: GetStorageReport.GetStorageReport(String, System.Collections.Generic.IEnumerable<Nullable<UInt64>>, System.Collections.Generic.IEnumerable<Nullable<UInt64>>, System.Collections.Generic.IEnumerable<Nullable<UInt64>>, System.Collections.Generic.IEnumerable<Nullable<UInt64>>, System.Collections.Generic.IEnumerable<System.Collections.Generic.IEnumerable<StorageBucket>>)
+  fullName: Dropbox.Api.Team.GetStorageReport.GetStorageReport(System.String, System.Collections.Generic.IEnumerable<System.Nullable<System.UInt64>>, System.Collections.Generic.IEnumerable<System.Nullable<System.UInt64>>, System.Collections.Generic.IEnumerable<System.Nullable<System.UInt64>>, System.Collections.Generic.IEnumerable<System.Nullable<System.UInt64>>, System.Collections.Generic.IEnumerable<System.Collections.Generic.IEnumerable<Dropbox.Api.Team.StorageBucket>>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GetStorageReport.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GetStorageReport.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.GetStorageReport\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public GetStorageReport(string startDate, System.Collections.Generic.IEnumerable<ulong?> totalUsage, System.Collections.Generic.IEnumerable<ulong?> sharedUsage, System.Collections.Generic.IEnumerable<ulong?> unsharedUsage, System.Collections.Generic.IEnumerable<ulong?> sharedFolders, System.Collections.Generic.IEnumerable<System.Collections.Generic.IEnumerable<StorageBucket>> memberStorageMap)
+    parameters:
+    - id: startDate
+      type: System.String
+      description: >-
+        First date present in the results as &apos;YYYY-MM-DD&apos; or
+
+        None.
+    - id: totalUsage
+      type: System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}}
+      description: >-
+        Sum of the shared, unshared, and datastore usages, for
+
+        each day.
+    - id: sharedUsage
+      type: System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}}
+      description: >-
+        Array of the combined size (bytes) of team members&apos;
+
+        shared folders, for each day.
+    - id: unsharedUsage
+      type: System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}}
+      description: >-
+        Array of the combined size (bytes) of team members&apos;
+
+        root namespaces, for each day.
+    - id: sharedFolders
+      type: System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}}
+      description: >-
+        Array of the number of shared folders owned by team
+
+        members, for each day.
+    - id: memberStorageMap
+      type: System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{Dropbox.Api.Team.StorageBucket}}
+      description: >-
+        Array of storage summaries of team members&apos; account
+
+        sizes. Each storage summary is an array of key, value pairs, where each pair
+
+        describes a storage bucket. The key indicates the upper bound of the bucket and the
+
+        value is the number of users in that bucket. There is one such summary per day. If
+
+        there is no data for a day, the storage summary will be empty.
+    content.vb: Public Sub New(startDate As String, totalUsage As System.Collections.Generic.IEnumerable(Of ULong?), sharedUsage As System.Collections.Generic.IEnumerable(Of ULong?), unsharedUsage As System.Collections.Generic.IEnumerable(Of ULong?), sharedFolders As System.Collections.Generic.IEnumerable(Of ULong?), memberStorageMap As System.Collections.Generic.IEnumerable(Of System.Collections.Generic.IEnumerable(Of StorageBucket)))
+  overload: Dropbox.Api.Team.GetStorageReport.#ctor*
+  nameWithType.vb: GetStorageReport.GetStorageReport(String, System.Collections.Generic.IEnumerable(Of Nullable(Of UInt64)), System.Collections.Generic.IEnumerable(Of Nullable(Of UInt64)), System.Collections.Generic.IEnumerable(Of Nullable(Of UInt64)), System.Collections.Generic.IEnumerable(Of Nullable(Of UInt64)), System.Collections.Generic.IEnumerable(Of System.Collections.Generic.IEnumerable(Of StorageBucket)))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Team.GetStorageReport.GetStorageReport(System.String, System.Collections.Generic.IEnumerable(Of System.Nullable(Of System.UInt64)), System.Collections.Generic.IEnumerable(Of System.Nullable(Of System.UInt64)), System.Collections.Generic.IEnumerable(Of System.Nullable(Of System.UInt64)), System.Collections.Generic.IEnumerable(Of System.Nullable(Of System.UInt64)), System.Collections.Generic.IEnumerable(Of System.Collections.Generic.IEnumerable(Of Dropbox.Api.Team.StorageBucket)))
+  name.vb: GetStorageReport(String, System.Collections.Generic.IEnumerable(Of Nullable(Of UInt64)), System.Collections.Generic.IEnumerable(Of Nullable(Of UInt64)), System.Collections.Generic.IEnumerable(Of Nullable(Of UInt64)), System.Collections.Generic.IEnumerable(Of Nullable(Of UInt64)), System.Collections.Generic.IEnumerable(Of System.Collections.Generic.IEnumerable(Of StorageBucket)))
+- uid: Dropbox.Api.Team.GetStorageReport.#ctor
+  commentId: M:Dropbox.Api.Team.GetStorageReport.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.GetStorageReport
+  langs:
+  - csharp
+  - vb
+  name: GetStorageReport()
+  nameWithType: GetStorageReport.GetStorageReport()
+  fullName: Dropbox.Api.Team.GetStorageReport.GetStorageReport()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GetStorageReport.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GetStorageReport.cs
+    startLine: 107
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.GetStorageReport\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public GetStorageReport()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.GetStorageReport.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.GetStorageReport.TotalUsage
+  commentId: P:Dropbox.Api.Team.GetStorageReport.TotalUsage
+  id: TotalUsage
+  parent: Dropbox.Api.Team.GetStorageReport
+  langs:
+  - csharp
+  - vb
+  name: TotalUsage
+  nameWithType: GetStorageReport.TotalUsage
+  fullName: Dropbox.Api.Team.GetStorageReport.TotalUsage
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GetStorageReport.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TotalUsage
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GetStorageReport.cs
+    startLine: 115
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Sum of the shared, unshared, and datastore usages, for each day.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<ulong?> TotalUsage { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{System.Nullable{System.UInt64}}
+    content.vb: Public Property TotalUsage As System.Collections.Generic.IList(Of ULong?)
+  overload: Dropbox.Api.Team.GetStorageReport.TotalUsage*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.GetStorageReport.SharedUsage
+  commentId: P:Dropbox.Api.Team.GetStorageReport.SharedUsage
+  id: SharedUsage
+  parent: Dropbox.Api.Team.GetStorageReport
+  langs:
+  - csharp
+  - vb
+  name: SharedUsage
+  nameWithType: GetStorageReport.SharedUsage
+  fullName: Dropbox.Api.Team.GetStorageReport.SharedUsage
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GetStorageReport.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SharedUsage
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GetStorageReport.cs
+    startLine: 121
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Array of the combined size (bytes) of team members&apos; shared folders, for each\nday.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<ulong?> SharedUsage { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{System.Nullable{System.UInt64}}
+    content.vb: Public Property SharedUsage As System.Collections.Generic.IList(Of ULong?)
+  overload: Dropbox.Api.Team.GetStorageReport.SharedUsage*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.GetStorageReport.UnsharedUsage
+  commentId: P:Dropbox.Api.Team.GetStorageReport.UnsharedUsage
+  id: UnsharedUsage
+  parent: Dropbox.Api.Team.GetStorageReport
+  langs:
+  - csharp
+  - vb
+  name: UnsharedUsage
+  nameWithType: GetStorageReport.UnsharedUsage
+  fullName: Dropbox.Api.Team.GetStorageReport.UnsharedUsage
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GetStorageReport.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: UnsharedUsage
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GetStorageReport.cs
+    startLine: 127
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Array of the combined size (bytes) of team members&apos; root namespaces, for each\nday.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<ulong?> UnsharedUsage { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{System.Nullable{System.UInt64}}
+    content.vb: Public Property UnsharedUsage As System.Collections.Generic.IList(Of ULong?)
+  overload: Dropbox.Api.Team.GetStorageReport.UnsharedUsage*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.GetStorageReport.SharedFolders
+  commentId: P:Dropbox.Api.Team.GetStorageReport.SharedFolders
+  id: SharedFolders
+  parent: Dropbox.Api.Team.GetStorageReport
+  langs:
+  - csharp
+  - vb
+  name: SharedFolders
+  nameWithType: GetStorageReport.SharedFolders
+  fullName: Dropbox.Api.Team.GetStorageReport.SharedFolders
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GetStorageReport.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SharedFolders
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GetStorageReport.cs
+    startLine: 133
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Array of the number of shared folders owned by team members, for each\nday.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<ulong?> SharedFolders { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{System.Nullable{System.UInt64}}
+    content.vb: Public Property SharedFolders As System.Collections.Generic.IList(Of ULong?)
+  overload: Dropbox.Api.Team.GetStorageReport.SharedFolders*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.GetStorageReport.MemberStorageMap
+  commentId: P:Dropbox.Api.Team.GetStorageReport.MemberStorageMap
+  id: MemberStorageMap
+  parent: Dropbox.Api.Team.GetStorageReport
+  langs:
+  - csharp
+  - vb
+  name: MemberStorageMap
+  nameWithType: GetStorageReport.MemberStorageMap
+  fullName: Dropbox.Api.Team.GetStorageReport.MemberStorageMap
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GetStorageReport.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: MemberStorageMap
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GetStorageReport.cs
+    startLine: 142
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Array of storage summaries of team members&apos; account sizes. Each storage\nsummary is an array of key, value pairs, where each pair describes a storage\nbucket. The key indicates the upper bound of the bucket and the value is the number\nof users in that bucket. There is one such summary per day. If there is no data for\na day, the storage summary will be empty.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<System.Collections.Generic.IList<StorageBucket>> MemberStorageMap { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{System.Collections.Generic.IList{Dropbox.Api.Team.StorageBucket}}
+    content.vb: Public Property MemberStorageMap As System.Collections.Generic.IList(Of System.Collections.Generic.IList(Of StorageBucket))
+  overload: Dropbox.Api.Team.GetStorageReport.MemberStorageMap*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.BaseDfbReport
+  commentId: T:Dropbox.Api.Team.BaseDfbReport
+  parent: Dropbox.Api.Team
+  name: BaseDfbReport
+  nameWithType: BaseDfbReport
+  fullName: Dropbox.Api.Team.BaseDfbReport
+- uid: Dropbox.Api.Team.BaseDfbReport.StartDate
+  commentId: P:Dropbox.Api.Team.BaseDfbReport.StartDate
+  parent: Dropbox.Api.Team.BaseDfbReport
+  name: StartDate
+  nameWithType: BaseDfbReport.StartDate
+  fullName: Dropbox.Api.Team.BaseDfbReport.StartDate
+- uid: Dropbox.Api.Team.GetStorageReport
+  commentId: T:Dropbox.Api.Team.GetStorageReport
+  parent: Dropbox.Api.Team
+  name: GetStorageReport
+  nameWithType: GetStorageReport
+  fullName: Dropbox.Api.Team.GetStorageReport
+- uid: Dropbox.Api.Team.GetStorageReport.#ctor*
+  commentId: Overload:Dropbox.Api.Team.GetStorageReport.#ctor
+  name: GetStorageReport
+  nameWithType: GetStorageReport.GetStorageReport
+  fullName: Dropbox.Api.Team.GetStorageReport.GetStorageReport
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}}
+  commentId: '!:System.Collections.Generic.IEnumerable{System.Nullable{System.UInt64}}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<Nullable<UInt64>>
+  nameWithType: System.Collections.Generic.IEnumerable<Nullable<UInt64>>
+  fullName: System.Collections.Generic.IEnumerable<System.Nullable<System.UInt64>>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of Nullable(Of UInt64))
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.Nullable(Of System.UInt64))
+  name.vb: System.Collections.Generic.IEnumerable(Of Nullable(Of UInt64))
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.UInt64
+    name: UInt64
+    nameWithType: UInt64
+    fullName: System.UInt64
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.UInt64
+    name: UInt64
+    nameWithType: UInt64
+    fullName: System.UInt64
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{Dropbox.Api.Team.StorageBucket}}
+  commentId: '!:System.Collections.Generic.IEnumerable{System.Collections.Generic.IEnumerable{Dropbox.Api.Team.StorageBucket}}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<System.Collections.Generic.IEnumerable<StorageBucket>>
+  nameWithType: System.Collections.Generic.IEnumerable<System.Collections.Generic.IEnumerable<StorageBucket>>
+  fullName: System.Collections.Generic.IEnumerable<System.Collections.Generic.IEnumerable<Dropbox.Api.Team.StorageBucket>>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of System.Collections.Generic.IEnumerable(Of StorageBucket))
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.Collections.Generic.IEnumerable(Of Dropbox.Api.Team.StorageBucket))
+  name.vb: System.Collections.Generic.IEnumerable(Of System.Collections.Generic.IEnumerable(Of StorageBucket))
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Team.StorageBucket
+    name: StorageBucket
+    nameWithType: StorageBucket
+    fullName: Dropbox.Api.Team.StorageBucket
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Team.StorageBucket
+    name: StorageBucket
+    nameWithType: StorageBucket
+    fullName: Dropbox.Api.Team.StorageBucket
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: System.Collections.Generic.IEnumerable<>
+  nameWithType: System.Collections.Generic.IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: System.Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Team.GetStorageReport.TotalUsage*
+  commentId: Overload:Dropbox.Api.Team.GetStorageReport.TotalUsage
+  name: TotalUsage
+  nameWithType: GetStorageReport.TotalUsage
+  fullName: Dropbox.Api.Team.GetStorageReport.TotalUsage
+- uid: System.Collections.Generic.IList{System.Nullable{System.UInt64}}
+  commentId: '!:System.Collections.Generic.IList{System.Nullable{System.UInt64}}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<Nullable<UInt64>>
+  nameWithType: System.Collections.Generic.IList<Nullable<UInt64>>
+  fullName: System.Collections.Generic.IList<System.Nullable<System.UInt64>>
+  nameWithType.vb: System.Collections.Generic.IList(Of Nullable(Of UInt64))
+  fullName.vb: System.Collections.Generic.IList(Of System.Nullable(Of System.UInt64))
+  name.vb: System.Collections.Generic.IList(Of Nullable(Of UInt64))
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.UInt64
+    name: UInt64
+    nameWithType: UInt64
+    fullName: System.UInt64
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.UInt64
+    name: UInt64
+    nameWithType: UInt64
+    fullName: System.UInt64
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  isExternal: true
+  name: System.Collections.Generic.IList<>
+  nameWithType: System.Collections.Generic.IList<>
+  fullName: System.Collections.Generic.IList<>
+  nameWithType.vb: System.Collections.Generic.IList(Of )
+  fullName.vb: System.Collections.Generic.IList(Of )
+  name.vb: System.Collections.Generic.IList(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Team.GetStorageReport.SharedUsage*
+  commentId: Overload:Dropbox.Api.Team.GetStorageReport.SharedUsage
+  name: SharedUsage
+  nameWithType: GetStorageReport.SharedUsage
+  fullName: Dropbox.Api.Team.GetStorageReport.SharedUsage
+- uid: Dropbox.Api.Team.GetStorageReport.UnsharedUsage*
+  commentId: Overload:Dropbox.Api.Team.GetStorageReport.UnsharedUsage
+  name: UnsharedUsage
+  nameWithType: GetStorageReport.UnsharedUsage
+  fullName: Dropbox.Api.Team.GetStorageReport.UnsharedUsage
+- uid: Dropbox.Api.Team.GetStorageReport.SharedFolders*
+  commentId: Overload:Dropbox.Api.Team.GetStorageReport.SharedFolders
+  name: SharedFolders
+  nameWithType: GetStorageReport.SharedFolders
+  fullName: Dropbox.Api.Team.GetStorageReport.SharedFolders
+- uid: Dropbox.Api.Team.GetStorageReport.MemberStorageMap*
+  commentId: Overload:Dropbox.Api.Team.GetStorageReport.MemberStorageMap
+  name: MemberStorageMap
+  nameWithType: GetStorageReport.MemberStorageMap
+  fullName: Dropbox.Api.Team.GetStorageReport.MemberStorageMap
+- uid: System.Collections.Generic.IList{System.Collections.Generic.IList{Dropbox.Api.Team.StorageBucket}}
+  commentId: '!:System.Collections.Generic.IList{System.Collections.Generic.IList{Dropbox.Api.Team.StorageBucket}}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<System.Collections.Generic.IList<StorageBucket>>
+  nameWithType: System.Collections.Generic.IList<System.Collections.Generic.IList<StorageBucket>>
+  fullName: System.Collections.Generic.IList<System.Collections.Generic.IList<Dropbox.Api.Team.StorageBucket>>
+  nameWithType.vb: System.Collections.Generic.IList(Of System.Collections.Generic.IList(Of StorageBucket))
+  fullName.vb: System.Collections.Generic.IList(Of System.Collections.Generic.IList(Of Dropbox.Api.Team.StorageBucket))
+  name.vb: System.Collections.Generic.IList(Of System.Collections.Generic.IList(Of StorageBucket))
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Team.StorageBucket
+    name: StorageBucket
+    nameWithType: StorageBucket
+    fullName: Dropbox.Api.Team.StorageBucket
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Team.StorageBucket
+    name: StorageBucket
+    nameWithType: StorageBucket
+    fullName: Dropbox.Api.Team.StorageBucket
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+shouldSkipMarkup: true

@@ -1,0 +1,655 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.MemberDevices
+  commentId: T:Dropbox.Api.Team.MemberDevices
+  id: MemberDevices
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.MemberDevices.#ctor
+  - Dropbox.Api.Team.MemberDevices.#ctor(System.String,System.Collections.Generic.IEnumerable{Dropbox.Api.Team.ActiveWebSession},System.Collections.Generic.IEnumerable{Dropbox.Api.Team.DesktopClientSession},System.Collections.Generic.IEnumerable{Dropbox.Api.Team.MobileClientSession})
+  - Dropbox.Api.Team.MemberDevices.DesktopClients
+  - Dropbox.Api.Team.MemberDevices.MobileClients
+  - Dropbox.Api.Team.MemberDevices.TeamMemberId
+  - Dropbox.Api.Team.MemberDevices.WebSessions
+  langs:
+  - csharp
+  - vb
+  name: MemberDevices
+  nameWithType: MemberDevices
+  fullName: Dropbox.Api.Team.MemberDevices
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MemberDevices.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: MemberDevices
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MemberDevices.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Information on devices of a team&apos;s member.</p>\n"
+  example: []
+  syntax:
+    content: 'public class MemberDevices : object'
+    content.vb: >-
+      Public Class MemberDevices
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.MemberDevices.#ctor(System.String,System.Collections.Generic.IEnumerable{Dropbox.Api.Team.ActiveWebSession},System.Collections.Generic.IEnumerable{Dropbox.Api.Team.DesktopClientSession},System.Collections.Generic.IEnumerable{Dropbox.Api.Team.MobileClientSession})
+  commentId: M:Dropbox.Api.Team.MemberDevices.#ctor(System.String,System.Collections.Generic.IEnumerable{Dropbox.Api.Team.ActiveWebSession},System.Collections.Generic.IEnumerable{Dropbox.Api.Team.DesktopClientSession},System.Collections.Generic.IEnumerable{Dropbox.Api.Team.MobileClientSession})
+  id: '#ctor(System.String,System.Collections.Generic.IEnumerable{Dropbox.Api.Team.ActiveWebSession},System.Collections.Generic.IEnumerable{Dropbox.Api.Team.DesktopClientSession},System.Collections.Generic.IEnumerable{Dropbox.Api.Team.MobileClientSession})'
+  parent: Dropbox.Api.Team.MemberDevices
+  langs:
+  - csharp
+  - vb
+  name: MemberDevices(String, System.Collections.Generic.IEnumerable<ActiveWebSession>, System.Collections.Generic.IEnumerable<DesktopClientSession>, System.Collections.Generic.IEnumerable<MobileClientSession>)
+  nameWithType: MemberDevices.MemberDevices(String, System.Collections.Generic.IEnumerable<ActiveWebSession>, System.Collections.Generic.IEnumerable<DesktopClientSession>, System.Collections.Generic.IEnumerable<MobileClientSession>)
+  fullName: Dropbox.Api.Team.MemberDevices.MemberDevices(System.String, System.Collections.Generic.IEnumerable<Dropbox.Api.Team.ActiveWebSession>, System.Collections.Generic.IEnumerable<Dropbox.Api.Team.DesktopClientSession>, System.Collections.Generic.IEnumerable<Dropbox.Api.Team.MobileClientSession>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MemberDevices.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MemberDevices.cs
+    startLine: 36
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.MemberDevices\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public MemberDevices(string teamMemberId, System.Collections.Generic.IEnumerable<ActiveWebSession> webSessions = null, System.Collections.Generic.IEnumerable<DesktopClientSession> desktopClients = null, System.Collections.Generic.IEnumerable<MobileClientSession> mobileClients = null)
+    parameters:
+    - id: teamMemberId
+      type: System.String
+      description: The member unique Id.
+    - id: webSessions
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.Team.ActiveWebSession}
+      description: List of web sessions made by this team member.
+    - id: desktopClients
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.Team.DesktopClientSession}
+      description: List of desktop clients by this team member.
+    - id: mobileClients
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.Team.MobileClientSession}
+      description: List of mobile clients by this team member.
+    content.vb: Public Sub New(teamMemberId As String, webSessions As System.Collections.Generic.IEnumerable(Of ActiveWebSession) = Nothing, desktopClients As System.Collections.Generic.IEnumerable(Of DesktopClientSession) = Nothing, mobileClients As System.Collections.Generic.IEnumerable(Of MobileClientSession) = Nothing)
+  overload: Dropbox.Api.Team.MemberDevices.#ctor*
+  nameWithType.vb: MemberDevices.MemberDevices(String, System.Collections.Generic.IEnumerable(Of ActiveWebSession), System.Collections.Generic.IEnumerable(Of DesktopClientSession), System.Collections.Generic.IEnumerable(Of MobileClientSession))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Team.MemberDevices.MemberDevices(System.String, System.Collections.Generic.IEnumerable(Of Dropbox.Api.Team.ActiveWebSession), System.Collections.Generic.IEnumerable(Of Dropbox.Api.Team.DesktopClientSession), System.Collections.Generic.IEnumerable(Of Dropbox.Api.Team.MobileClientSession))
+  name.vb: MemberDevices(String, System.Collections.Generic.IEnumerable(Of ActiveWebSession), System.Collections.Generic.IEnumerable(Of DesktopClientSession), System.Collections.Generic.IEnumerable(Of MobileClientSession))
+- uid: Dropbox.Api.Team.MemberDevices.#ctor
+  commentId: M:Dropbox.Api.Team.MemberDevices.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.MemberDevices
+  langs:
+  - csharp
+  - vb
+  name: MemberDevices()
+  nameWithType: MemberDevices.MemberDevices()
+  fullName: Dropbox.Api.Team.MemberDevices.MemberDevices()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MemberDevices.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MemberDevices.cs
+    startLine: 63
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.MemberDevices\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public MemberDevices()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.MemberDevices.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.MemberDevices.TeamMemberId
+  commentId: P:Dropbox.Api.Team.MemberDevices.TeamMemberId
+  id: TeamMemberId
+  parent: Dropbox.Api.Team.MemberDevices
+  langs:
+  - csharp
+  - vb
+  name: TeamMemberId
+  nameWithType: MemberDevices.TeamMemberId
+  fullName: Dropbox.Api.Team.MemberDevices.TeamMemberId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MemberDevices.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TeamMemberId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MemberDevices.cs
+    startLine: 71
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The member unique Id.</p>\n"
+  example: []
+  syntax:
+    content: public string TeamMemberId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property TeamMemberId As String
+  overload: Dropbox.Api.Team.MemberDevices.TeamMemberId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.MemberDevices.WebSessions
+  commentId: P:Dropbox.Api.Team.MemberDevices.WebSessions
+  id: WebSessions
+  parent: Dropbox.Api.Team.MemberDevices
+  langs:
+  - csharp
+  - vb
+  name: WebSessions
+  nameWithType: MemberDevices.WebSessions
+  fullName: Dropbox.Api.Team.MemberDevices.WebSessions
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MemberDevices.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: WebSessions
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MemberDevices.cs
+    startLine: 76
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>List of web sessions made by this team member.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<ActiveWebSession> WebSessions { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{Dropbox.Api.Team.ActiveWebSession}
+    content.vb: Public Property WebSessions As System.Collections.Generic.IList(Of ActiveWebSession)
+  overload: Dropbox.Api.Team.MemberDevices.WebSessions*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.MemberDevices.DesktopClients
+  commentId: P:Dropbox.Api.Team.MemberDevices.DesktopClients
+  id: DesktopClients
+  parent: Dropbox.Api.Team.MemberDevices
+  langs:
+  - csharp
+  - vb
+  name: DesktopClients
+  nameWithType: MemberDevices.DesktopClients
+  fullName: Dropbox.Api.Team.MemberDevices.DesktopClients
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MemberDevices.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: DesktopClients
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MemberDevices.cs
+    startLine: 81
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>List of desktop clients by this team member.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<DesktopClientSession> DesktopClients { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{Dropbox.Api.Team.DesktopClientSession}
+    content.vb: Public Property DesktopClients As System.Collections.Generic.IList(Of DesktopClientSession)
+  overload: Dropbox.Api.Team.MemberDevices.DesktopClients*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.MemberDevices.MobileClients
+  commentId: P:Dropbox.Api.Team.MemberDevices.MobileClients
+  id: MobileClients
+  parent: Dropbox.Api.Team.MemberDevices
+  langs:
+  - csharp
+  - vb
+  name: MobileClients
+  nameWithType: MemberDevices.MobileClients
+  fullName: Dropbox.Api.Team.MemberDevices.MobileClients
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MemberDevices.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: MobileClients
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MemberDevices.cs
+    startLine: 86
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>List of mobile clients by this team member.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<MobileClientSession> MobileClients { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{Dropbox.Api.Team.MobileClientSession}
+    content.vb: Public Property MobileClients As System.Collections.Generic.IList(Of MobileClientSession)
+  overload: Dropbox.Api.Team.MemberDevices.MobileClients*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.MemberDevices
+  commentId: T:Dropbox.Api.Team.MemberDevices
+  name: MemberDevices
+  nameWithType: MemberDevices
+  fullName: Dropbox.Api.Team.MemberDevices
+- uid: Dropbox.Api.Team.MemberDevices.#ctor*
+  commentId: Overload:Dropbox.Api.Team.MemberDevices.#ctor
+  name: MemberDevices
+  nameWithType: MemberDevices.MemberDevices
+  fullName: Dropbox.Api.Team.MemberDevices.MemberDevices
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Collections.Generic.IEnumerable{Dropbox.Api.Team.ActiveWebSession}
+  commentId: '!:System.Collections.Generic.IEnumerable{Dropbox.Api.Team.ActiveWebSession}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<ActiveWebSession>
+  nameWithType: System.Collections.Generic.IEnumerable<ActiveWebSession>
+  fullName: System.Collections.Generic.IEnumerable<Dropbox.Api.Team.ActiveWebSession>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of ActiveWebSession)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Dropbox.Api.Team.ActiveWebSession)
+  name.vb: System.Collections.Generic.IEnumerable(Of ActiveWebSession)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Team.ActiveWebSession
+    name: ActiveWebSession
+    nameWithType: ActiveWebSession
+    fullName: Dropbox.Api.Team.ActiveWebSession
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Team.ActiveWebSession
+    name: ActiveWebSession
+    nameWithType: ActiveWebSession
+    fullName: Dropbox.Api.Team.ActiveWebSession
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable{Dropbox.Api.Team.DesktopClientSession}
+  commentId: '!:System.Collections.Generic.IEnumerable{Dropbox.Api.Team.DesktopClientSession}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<DesktopClientSession>
+  nameWithType: System.Collections.Generic.IEnumerable<DesktopClientSession>
+  fullName: System.Collections.Generic.IEnumerable<Dropbox.Api.Team.DesktopClientSession>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of DesktopClientSession)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Dropbox.Api.Team.DesktopClientSession)
+  name.vb: System.Collections.Generic.IEnumerable(Of DesktopClientSession)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Team.DesktopClientSession
+    name: DesktopClientSession
+    nameWithType: DesktopClientSession
+    fullName: Dropbox.Api.Team.DesktopClientSession
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Team.DesktopClientSession
+    name: DesktopClientSession
+    nameWithType: DesktopClientSession
+    fullName: Dropbox.Api.Team.DesktopClientSession
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable{Dropbox.Api.Team.MobileClientSession}
+  commentId: '!:System.Collections.Generic.IEnumerable{Dropbox.Api.Team.MobileClientSession}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<MobileClientSession>
+  nameWithType: System.Collections.Generic.IEnumerable<MobileClientSession>
+  fullName: System.Collections.Generic.IEnumerable<Dropbox.Api.Team.MobileClientSession>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of MobileClientSession)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Dropbox.Api.Team.MobileClientSession)
+  name.vb: System.Collections.Generic.IEnumerable(Of MobileClientSession)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Team.MobileClientSession
+    name: MobileClientSession
+    nameWithType: MobileClientSession
+    fullName: Dropbox.Api.Team.MobileClientSession
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Team.MobileClientSession
+    name: MobileClientSession
+    nameWithType: MobileClientSession
+    fullName: Dropbox.Api.Team.MobileClientSession
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: System.Collections.Generic.IEnumerable<>
+  nameWithType: System.Collections.Generic.IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: System.Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Team.MemberDevices.TeamMemberId*
+  commentId: Overload:Dropbox.Api.Team.MemberDevices.TeamMemberId
+  name: TeamMemberId
+  nameWithType: MemberDevices.TeamMemberId
+  fullName: Dropbox.Api.Team.MemberDevices.TeamMemberId
+- uid: Dropbox.Api.Team.MemberDevices.WebSessions*
+  commentId: Overload:Dropbox.Api.Team.MemberDevices.WebSessions
+  name: WebSessions
+  nameWithType: MemberDevices.WebSessions
+  fullName: Dropbox.Api.Team.MemberDevices.WebSessions
+- uid: System.Collections.Generic.IList{Dropbox.Api.Team.ActiveWebSession}
+  commentId: '!:System.Collections.Generic.IList{Dropbox.Api.Team.ActiveWebSession}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<ActiveWebSession>
+  nameWithType: System.Collections.Generic.IList<ActiveWebSession>
+  fullName: System.Collections.Generic.IList<Dropbox.Api.Team.ActiveWebSession>
+  nameWithType.vb: System.Collections.Generic.IList(Of ActiveWebSession)
+  fullName.vb: System.Collections.Generic.IList(Of Dropbox.Api.Team.ActiveWebSession)
+  name.vb: System.Collections.Generic.IList(Of ActiveWebSession)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Team.ActiveWebSession
+    name: ActiveWebSession
+    nameWithType: ActiveWebSession
+    fullName: Dropbox.Api.Team.ActiveWebSession
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Team.ActiveWebSession
+    name: ActiveWebSession
+    nameWithType: ActiveWebSession
+    fullName: Dropbox.Api.Team.ActiveWebSession
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  isExternal: true
+  name: System.Collections.Generic.IList<>
+  nameWithType: System.Collections.Generic.IList<>
+  fullName: System.Collections.Generic.IList<>
+  nameWithType.vb: System.Collections.Generic.IList(Of )
+  fullName.vb: System.Collections.Generic.IList(Of )
+  name.vb: System.Collections.Generic.IList(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Team.MemberDevices.DesktopClients*
+  commentId: Overload:Dropbox.Api.Team.MemberDevices.DesktopClients
+  name: DesktopClients
+  nameWithType: MemberDevices.DesktopClients
+  fullName: Dropbox.Api.Team.MemberDevices.DesktopClients
+- uid: System.Collections.Generic.IList{Dropbox.Api.Team.DesktopClientSession}
+  commentId: '!:System.Collections.Generic.IList{Dropbox.Api.Team.DesktopClientSession}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<DesktopClientSession>
+  nameWithType: System.Collections.Generic.IList<DesktopClientSession>
+  fullName: System.Collections.Generic.IList<Dropbox.Api.Team.DesktopClientSession>
+  nameWithType.vb: System.Collections.Generic.IList(Of DesktopClientSession)
+  fullName.vb: System.Collections.Generic.IList(Of Dropbox.Api.Team.DesktopClientSession)
+  name.vb: System.Collections.Generic.IList(Of DesktopClientSession)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Team.DesktopClientSession
+    name: DesktopClientSession
+    nameWithType: DesktopClientSession
+    fullName: Dropbox.Api.Team.DesktopClientSession
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Team.DesktopClientSession
+    name: DesktopClientSession
+    nameWithType: DesktopClientSession
+    fullName: Dropbox.Api.Team.DesktopClientSession
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Team.MemberDevices.MobileClients*
+  commentId: Overload:Dropbox.Api.Team.MemberDevices.MobileClients
+  name: MobileClients
+  nameWithType: MemberDevices.MobileClients
+  fullName: Dropbox.Api.Team.MemberDevices.MobileClients
+- uid: System.Collections.Generic.IList{Dropbox.Api.Team.MobileClientSession}
+  commentId: '!:System.Collections.Generic.IList{Dropbox.Api.Team.MobileClientSession}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<MobileClientSession>
+  nameWithType: System.Collections.Generic.IList<MobileClientSession>
+  fullName: System.Collections.Generic.IList<Dropbox.Api.Team.MobileClientSession>
+  nameWithType.vb: System.Collections.Generic.IList(Of MobileClientSession)
+  fullName.vb: System.Collections.Generic.IList(Of Dropbox.Api.Team.MobileClientSession)
+  name.vb: System.Collections.Generic.IList(Of MobileClientSession)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Team.MobileClientSession
+    name: MobileClientSession
+    nameWithType: MobileClientSession
+    fullName: Dropbox.Api.Team.MobileClientSession
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Team.MobileClientSession
+    name: MobileClientSession
+    nameWithType: MobileClientSession
+    fullName: Dropbox.Api.Team.MobileClientSession
+  - name: )
+    nameWithType: )
+    fullName: )
+shouldSkipMarkup: true

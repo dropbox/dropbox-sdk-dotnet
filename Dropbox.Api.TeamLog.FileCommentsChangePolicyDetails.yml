@@ -1,0 +1,239 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.FileCommentsChangePolicyDetails
+  commentId: T:Dropbox.Api.TeamLog.FileCommentsChangePolicyDetails
+  id: FileCommentsChangePolicyDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.FileCommentsChangePolicyDetails.#ctor
+  - Dropbox.Api.TeamLog.FileCommentsChangePolicyDetails.#ctor(Dropbox.Api.TeamLog.FileCommentsPolicy,Dropbox.Api.TeamLog.FileCommentsPolicy)
+  - Dropbox.Api.TeamLog.FileCommentsChangePolicyDetails.NewValue
+  - Dropbox.Api.TeamLog.FileCommentsChangePolicyDetails.PreviousValue
+  langs:
+  - csharp
+  - vb
+  name: FileCommentsChangePolicyDetails
+  nameWithType: FileCommentsChangePolicyDetails
+  fullName: Dropbox.Api.TeamLog.FileCommentsChangePolicyDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileCommentsChangePolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: FileCommentsChangePolicyDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileCommentsChangePolicyDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Enabled/disabled commenting on team files.</p>\n"
+  example: []
+  syntax:
+    content: 'public class FileCommentsChangePolicyDetails : object'
+    content.vb: >-
+      Public Class FileCommentsChangePolicyDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.FileCommentsChangePolicyDetails.#ctor(Dropbox.Api.TeamLog.FileCommentsPolicy,Dropbox.Api.TeamLog.FileCommentsPolicy)
+  commentId: M:Dropbox.Api.TeamLog.FileCommentsChangePolicyDetails.#ctor(Dropbox.Api.TeamLog.FileCommentsPolicy,Dropbox.Api.TeamLog.FileCommentsPolicy)
+  id: '#ctor(Dropbox.Api.TeamLog.FileCommentsPolicy,Dropbox.Api.TeamLog.FileCommentsPolicy)'
+  parent: Dropbox.Api.TeamLog.FileCommentsChangePolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: FileCommentsChangePolicyDetails(FileCommentsPolicy, FileCommentsPolicy)
+  nameWithType: FileCommentsChangePolicyDetails.FileCommentsChangePolicyDetails(FileCommentsPolicy, FileCommentsPolicy)
+  fullName: Dropbox.Api.TeamLog.FileCommentsChangePolicyDetails.FileCommentsChangePolicyDetails(Dropbox.Api.TeamLog.FileCommentsPolicy, Dropbox.Api.TeamLog.FileCommentsPolicy)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileCommentsChangePolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileCommentsChangePolicyDetails.cs
+    startLine: 36
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.FileCommentsChangePolicyDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public FileCommentsChangePolicyDetails(FileCommentsPolicy newValue, FileCommentsPolicy previousValue = null)
+    parameters:
+    - id: newValue
+      type: Dropbox.Api.TeamLog.FileCommentsPolicy
+      description: New commenting on team files policy.
+    - id: previousValue
+      type: Dropbox.Api.TeamLog.FileCommentsPolicy
+      description: >-
+        Previous commenting on team files policy. Might be
+
+        missing due to historical data gap.
+    content.vb: Public Sub New(newValue As FileCommentsPolicy, previousValue As FileCommentsPolicy = Nothing)
+  overload: Dropbox.Api.TeamLog.FileCommentsChangePolicyDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.FileCommentsChangePolicyDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.FileCommentsChangePolicyDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.FileCommentsChangePolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: FileCommentsChangePolicyDetails()
+  nameWithType: FileCommentsChangePolicyDetails.FileCommentsChangePolicyDetails()
+  fullName: Dropbox.Api.TeamLog.FileCommentsChangePolicyDetails.FileCommentsChangePolicyDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileCommentsChangePolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileCommentsChangePolicyDetails.cs
+    startLine: 54
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.FileCommentsChangePolicyDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public FileCommentsChangePolicyDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.FileCommentsChangePolicyDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.FileCommentsChangePolicyDetails.NewValue
+  commentId: P:Dropbox.Api.TeamLog.FileCommentsChangePolicyDetails.NewValue
+  id: NewValue
+  parent: Dropbox.Api.TeamLog.FileCommentsChangePolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: NewValue
+  nameWithType: FileCommentsChangePolicyDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.FileCommentsChangePolicyDetails.NewValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileCommentsChangePolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NewValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileCommentsChangePolicyDetails.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>New commenting on team files policy.</p>\n"
+  example: []
+  syntax:
+    content: public FileCommentsPolicy NewValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.FileCommentsPolicy
+    content.vb: Public Property NewValue As FileCommentsPolicy
+  overload: Dropbox.Api.TeamLog.FileCommentsChangePolicyDetails.NewValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.FileCommentsChangePolicyDetails.PreviousValue
+  commentId: P:Dropbox.Api.TeamLog.FileCommentsChangePolicyDetails.PreviousValue
+  id: PreviousValue
+  parent: Dropbox.Api.TeamLog.FileCommentsChangePolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: PreviousValue
+  nameWithType: FileCommentsChangePolicyDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.FileCommentsChangePolicyDetails.PreviousValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileCommentsChangePolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PreviousValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileCommentsChangePolicyDetails.cs
+    startLine: 68
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Previous commenting on team files policy. Might be missing due to historical\ndata gap.</p>\n"
+  example: []
+  syntax:
+    content: public FileCommentsPolicy PreviousValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.FileCommentsPolicy
+    content.vb: Public Property PreviousValue As FileCommentsPolicy
+  overload: Dropbox.Api.TeamLog.FileCommentsChangePolicyDetails.PreviousValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.FileCommentsChangePolicyDetails
+  commentId: T:Dropbox.Api.TeamLog.FileCommentsChangePolicyDetails
+  parent: Dropbox.Api.TeamLog
+  name: FileCommentsChangePolicyDetails
+  nameWithType: FileCommentsChangePolicyDetails
+  fullName: Dropbox.Api.TeamLog.FileCommentsChangePolicyDetails
+- uid: Dropbox.Api.TeamLog.FileCommentsChangePolicyDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.FileCommentsChangePolicyDetails.#ctor
+  name: FileCommentsChangePolicyDetails
+  nameWithType: FileCommentsChangePolicyDetails.FileCommentsChangePolicyDetails
+  fullName: Dropbox.Api.TeamLog.FileCommentsChangePolicyDetails.FileCommentsChangePolicyDetails
+- uid: Dropbox.Api.TeamLog.FileCommentsPolicy
+  commentId: T:Dropbox.Api.TeamLog.FileCommentsPolicy
+  parent: Dropbox.Api.TeamLog
+  name: FileCommentsPolicy
+  nameWithType: FileCommentsPolicy
+  fullName: Dropbox.Api.TeamLog.FileCommentsPolicy
+- uid: Dropbox.Api.TeamLog.FileCommentsChangePolicyDetails.NewValue*
+  commentId: Overload:Dropbox.Api.TeamLog.FileCommentsChangePolicyDetails.NewValue
+  name: NewValue
+  nameWithType: FileCommentsChangePolicyDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.FileCommentsChangePolicyDetails.NewValue
+- uid: Dropbox.Api.TeamLog.FileCommentsChangePolicyDetails.PreviousValue*
+  commentId: Overload:Dropbox.Api.TeamLog.FileCommentsChangePolicyDetails.PreviousValue
+  name: PreviousValue
+  nameWithType: FileCommentsChangePolicyDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.FileCommentsChangePolicyDetails.PreviousValue
+shouldSkipMarkup: true

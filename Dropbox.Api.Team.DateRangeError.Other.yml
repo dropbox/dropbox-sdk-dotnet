@@ -1,0 +1,120 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.DateRangeError.Other
+  commentId: T:Dropbox.Api.Team.DateRangeError.Other
+  id: DateRangeError.Other
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.DateRangeError.Other.Instance
+  langs:
+  - csharp
+  - vb
+  name: DateRangeError.Other
+  nameWithType: DateRangeError.Other
+  fullName: Dropbox.Api.Team.DateRangeError.Other
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DateRangeError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Other
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DateRangeError.cs
+    startLine: 121
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The other object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Other : DateRangeError'
+    content.vb: >-
+      Public NotInheritable Class Other
+          Inherits DateRangeError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.DateRangeError
+  inheritedMembers:
+  - Dropbox.Api.Team.DateRangeError.IsOther
+  - Dropbox.Api.Team.DateRangeError.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Team.DateRangeError.Other.Instance
+  commentId: F:Dropbox.Api.Team.DateRangeError.Other.Instance
+  id: Instance
+  parent: Dropbox.Api.Team.DateRangeError.Other
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: DateRangeError.Other.Instance
+  fullName: Dropbox.Api.Team.DateRangeError.Other.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DateRangeError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/DateRangeError.cs
+    startLine: 145
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>A singleton instance of Other</p>\n"
+  example: []
+  syntax:
+    content: public static readonly DateRangeError.Other Instance
+    return:
+      type: Dropbox.Api.Team.DateRangeError.Other
+    content.vb: Public Shared ReadOnly Instance As DateRangeError.Other
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.DateRangeError
+  commentId: T:Dropbox.Api.Team.DateRangeError
+  parent: Dropbox.Api.Team
+  name: DateRangeError
+  nameWithType: DateRangeError
+  fullName: Dropbox.Api.Team.DateRangeError
+- uid: Dropbox.Api.Team.DateRangeError.IsOther
+  commentId: P:Dropbox.Api.Team.DateRangeError.IsOther
+  parent: Dropbox.Api.Team.DateRangeError
+  name: IsOther
+  nameWithType: DateRangeError.IsOther
+  fullName: Dropbox.Api.Team.DateRangeError.IsOther
+- uid: Dropbox.Api.Team.DateRangeError.AsOther
+  commentId: P:Dropbox.Api.Team.DateRangeError.AsOther
+  parent: Dropbox.Api.Team.DateRangeError
+  name: AsOther
+  nameWithType: DateRangeError.AsOther
+  fullName: Dropbox.Api.Team.DateRangeError.AsOther
+- uid: Dropbox.Api.Team.DateRangeError.Other
+  commentId: T:Dropbox.Api.Team.DateRangeError.Other
+  parent: Dropbox.Api.Team
+  name: DateRangeError.Other
+  nameWithType: DateRangeError.Other
+  fullName: Dropbox.Api.Team.DateRangeError.Other
+shouldSkipMarkup: true

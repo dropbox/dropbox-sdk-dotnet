@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.TfaResetType
+  commentId: T:Dropbox.Api.TeamLog.TfaResetType
+  id: TfaResetType
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.TfaResetType.#ctor
+  - Dropbox.Api.TeamLog.TfaResetType.#ctor(System.String)
+  - Dropbox.Api.TeamLog.TfaResetType.Description
+  langs:
+  - csharp
+  - vb
+  name: TfaResetType
+  nameWithType: TfaResetType
+  fullName: Dropbox.Api.TeamLog.TfaResetType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaResetType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TfaResetType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaResetType.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The tfa reset type object</p>\n"
+  example: []
+  syntax:
+    content: 'public class TfaResetType : object'
+    content.vb: >-
+      Public Class TfaResetType
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.TfaResetType.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.TfaResetType.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.TfaResetType
+  langs:
+  - csharp
+  - vb
+  name: TfaResetType(String)
+  nameWithType: TfaResetType.TfaResetType(String)
+  fullName: Dropbox.Api.TeamLog.TfaResetType.TfaResetType(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaResetType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaResetType.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.TfaResetType\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public TfaResetType(string description)
+    parameters:
+    - id: description
+      type: System.String
+      description: The description
+    content.vb: Public Sub New(description As String)
+  overload: Dropbox.Api.TeamLog.TfaResetType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.TfaResetType.#ctor
+  commentId: M:Dropbox.Api.TeamLog.TfaResetType.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.TfaResetType
+  langs:
+  - csharp
+  - vb
+  name: TfaResetType()
+  nameWithType: TfaResetType.TfaResetType()
+  fullName: Dropbox.Api.TeamLog.TfaResetType.TfaResetType()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaResetType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaResetType.cs
+    startLine: 48
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.TfaResetType\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public TfaResetType()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.TfaResetType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.TfaResetType.Description
+  commentId: P:Dropbox.Api.TeamLog.TfaResetType.Description
+  id: Description
+  parent: Dropbox.Api.TeamLog.TfaResetType
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: TfaResetType.Description
+  fullName: Dropbox.Api.TeamLog.TfaResetType.Description
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaResetType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Description
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaResetType.cs
+    startLine: 56
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets the description of the tfa reset type</p>\n"
+  example: []
+  syntax:
+    content: public string Description { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Dropbox.Api.TeamLog.TfaResetType.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.TfaResetType
+  commentId: T:Dropbox.Api.TeamLog.TfaResetType
+  parent: Dropbox.Api.TeamLog
+  name: TfaResetType
+  nameWithType: TfaResetType
+  fullName: Dropbox.Api.TeamLog.TfaResetType
+- uid: Dropbox.Api.TeamLog.TfaResetType.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.TfaResetType.#ctor
+  name: TfaResetType
+  nameWithType: TfaResetType.TfaResetType
+  fullName: Dropbox.Api.TeamLog.TfaResetType.TfaResetType
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.TfaResetType.Description*
+  commentId: Overload:Dropbox.Api.TeamLog.TfaResetType.Description
+  name: Description
+  nameWithType: TfaResetType.Description
+  fullName: Dropbox.Api.TeamLog.TfaResetType.Description
+shouldSkipMarkup: true

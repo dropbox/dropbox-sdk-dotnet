@@ -1,0 +1,240 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.RevokeDeviceSessionStatus
+  commentId: T:Dropbox.Api.Team.RevokeDeviceSessionStatus
+  id: RevokeDeviceSessionStatus
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.RevokeDeviceSessionStatus.#ctor
+  - Dropbox.Api.Team.RevokeDeviceSessionStatus.#ctor(System.Boolean,Dropbox.Api.Team.RevokeDeviceSessionError)
+  - Dropbox.Api.Team.RevokeDeviceSessionStatus.ErrorType
+  - Dropbox.Api.Team.RevokeDeviceSessionStatus.Success
+  langs:
+  - csharp
+  - vb
+  name: RevokeDeviceSessionStatus
+  nameWithType: RevokeDeviceSessionStatus
+  fullName: Dropbox.Api.Team.RevokeDeviceSessionStatus
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeDeviceSessionStatus.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: RevokeDeviceSessionStatus
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeDeviceSessionStatus.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The revoke device session status object</p>\n"
+  example: []
+  syntax:
+    content: 'public class RevokeDeviceSessionStatus : object'
+    content.vb: >-
+      Public Class RevokeDeviceSessionStatus
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.RevokeDeviceSessionStatus.#ctor(System.Boolean,Dropbox.Api.Team.RevokeDeviceSessionError)
+  commentId: M:Dropbox.Api.Team.RevokeDeviceSessionStatus.#ctor(System.Boolean,Dropbox.Api.Team.RevokeDeviceSessionError)
+  id: '#ctor(System.Boolean,Dropbox.Api.Team.RevokeDeviceSessionError)'
+  parent: Dropbox.Api.Team.RevokeDeviceSessionStatus
+  langs:
+  - csharp
+  - vb
+  name: RevokeDeviceSessionStatus(Boolean, RevokeDeviceSessionError)
+  nameWithType: RevokeDeviceSessionStatus.RevokeDeviceSessionStatus(Boolean, RevokeDeviceSessionError)
+  fullName: Dropbox.Api.Team.RevokeDeviceSessionStatus.RevokeDeviceSessionStatus(System.Boolean, Dropbox.Api.Team.RevokeDeviceSessionError)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeDeviceSessionStatus.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeDeviceSessionStatus.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.RevokeDeviceSessionStatus\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public RevokeDeviceSessionStatus(bool success, RevokeDeviceSessionError errorType = null)
+    parameters:
+    - id: success
+      type: System.Boolean
+      description: Result of the revoking request.
+    - id: errorType
+      type: Dropbox.Api.Team.RevokeDeviceSessionError
+      description: The error cause in case of a failure.
+    content.vb: Public Sub New(success As Boolean, errorType As RevokeDeviceSessionError = Nothing)
+  overload: Dropbox.Api.Team.RevokeDeviceSessionStatus.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.RevokeDeviceSessionStatus.#ctor
+  commentId: M:Dropbox.Api.Team.RevokeDeviceSessionStatus.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.RevokeDeviceSessionStatus
+  langs:
+  - csharp
+  - vb
+  name: RevokeDeviceSessionStatus()
+  nameWithType: RevokeDeviceSessionStatus.RevokeDeviceSessionStatus()
+  fullName: Dropbox.Api.Team.RevokeDeviceSessionStatus.RevokeDeviceSessionStatus()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeDeviceSessionStatus.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeDeviceSessionStatus.cs
+    startLine: 48
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.RevokeDeviceSessionStatus\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public RevokeDeviceSessionStatus()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.RevokeDeviceSessionStatus.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.RevokeDeviceSessionStatus.Success
+  commentId: P:Dropbox.Api.Team.RevokeDeviceSessionStatus.Success
+  id: Success
+  parent: Dropbox.Api.Team.RevokeDeviceSessionStatus
+  langs:
+  - csharp
+  - vb
+  name: Success
+  nameWithType: RevokeDeviceSessionStatus.Success
+  fullName: Dropbox.Api.Team.RevokeDeviceSessionStatus.Success
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeDeviceSessionStatus.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Success
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeDeviceSessionStatus.cs
+    startLine: 56
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Result of the revoking request.</p>\n"
+  example: []
+  syntax:
+    content: public bool Success { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property Success As Boolean
+  overload: Dropbox.Api.Team.RevokeDeviceSessionStatus.Success*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.RevokeDeviceSessionStatus.ErrorType
+  commentId: P:Dropbox.Api.Team.RevokeDeviceSessionStatus.ErrorType
+  id: ErrorType
+  parent: Dropbox.Api.Team.RevokeDeviceSessionStatus
+  langs:
+  - csharp
+  - vb
+  name: ErrorType
+  nameWithType: RevokeDeviceSessionStatus.ErrorType
+  fullName: Dropbox.Api.Team.RevokeDeviceSessionStatus.ErrorType
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeDeviceSessionStatus.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ErrorType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeDeviceSessionStatus.cs
+    startLine: 61
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The error cause in case of a failure.</p>\n"
+  example: []
+  syntax:
+    content: public RevokeDeviceSessionError ErrorType { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.RevokeDeviceSessionError
+    content.vb: Public Property ErrorType As RevokeDeviceSessionError
+  overload: Dropbox.Api.Team.RevokeDeviceSessionStatus.ErrorType*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.RevokeDeviceSessionStatus
+  commentId: T:Dropbox.Api.Team.RevokeDeviceSessionStatus
+  name: RevokeDeviceSessionStatus
+  nameWithType: RevokeDeviceSessionStatus
+  fullName: Dropbox.Api.Team.RevokeDeviceSessionStatus
+- uid: Dropbox.Api.Team.RevokeDeviceSessionStatus.#ctor*
+  commentId: Overload:Dropbox.Api.Team.RevokeDeviceSessionStatus.#ctor
+  name: RevokeDeviceSessionStatus
+  nameWithType: RevokeDeviceSessionStatus.RevokeDeviceSessionStatus
+  fullName: Dropbox.Api.Team.RevokeDeviceSessionStatus.RevokeDeviceSessionStatus
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Team.RevokeDeviceSessionError
+  commentId: T:Dropbox.Api.Team.RevokeDeviceSessionError
+  parent: Dropbox.Api.Team
+  name: RevokeDeviceSessionError
+  nameWithType: RevokeDeviceSessionError
+  fullName: Dropbox.Api.Team.RevokeDeviceSessionError
+- uid: Dropbox.Api.Team.RevokeDeviceSessionStatus.Success*
+  commentId: Overload:Dropbox.Api.Team.RevokeDeviceSessionStatus.Success
+  name: Success
+  nameWithType: RevokeDeviceSessionStatus.Success
+  fullName: Dropbox.Api.Team.RevokeDeviceSessionStatus.Success
+- uid: Dropbox.Api.Team.RevokeDeviceSessionStatus.ErrorType*
+  commentId: Overload:Dropbox.Api.Team.RevokeDeviceSessionStatus.ErrorType
+  name: ErrorType
+  nameWithType: RevokeDeviceSessionStatus.ErrorType
+  fullName: Dropbox.Api.Team.RevokeDeviceSessionStatus.ErrorType
+shouldSkipMarkup: true

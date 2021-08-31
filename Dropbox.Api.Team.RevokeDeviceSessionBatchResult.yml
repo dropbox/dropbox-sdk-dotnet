@@ -1,0 +1,343 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.RevokeDeviceSessionBatchResult
+  commentId: T:Dropbox.Api.Team.RevokeDeviceSessionBatchResult
+  id: RevokeDeviceSessionBatchResult
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.RevokeDeviceSessionBatchResult.#ctor
+  - Dropbox.Api.Team.RevokeDeviceSessionBatchResult.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Team.RevokeDeviceSessionStatus})
+  - Dropbox.Api.Team.RevokeDeviceSessionBatchResult.RevokeDevicesStatus
+  langs:
+  - csharp
+  - vb
+  name: RevokeDeviceSessionBatchResult
+  nameWithType: RevokeDeviceSessionBatchResult
+  fullName: Dropbox.Api.Team.RevokeDeviceSessionBatchResult
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeDeviceSessionBatchResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: RevokeDeviceSessionBatchResult
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeDeviceSessionBatchResult.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The revoke device session batch result object</p>\n"
+  example: []
+  syntax:
+    content: 'public class RevokeDeviceSessionBatchResult : object'
+    content.vb: >-
+      Public Class RevokeDeviceSessionBatchResult
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.RevokeDeviceSessionBatchResult.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Team.RevokeDeviceSessionStatus})
+  commentId: M:Dropbox.Api.Team.RevokeDeviceSessionBatchResult.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Team.RevokeDeviceSessionStatus})
+  id: '#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Team.RevokeDeviceSessionStatus})'
+  parent: Dropbox.Api.Team.RevokeDeviceSessionBatchResult
+  langs:
+  - csharp
+  - vb
+  name: RevokeDeviceSessionBatchResult(System.Collections.Generic.IEnumerable<RevokeDeviceSessionStatus>)
+  nameWithType: RevokeDeviceSessionBatchResult.RevokeDeviceSessionBatchResult(System.Collections.Generic.IEnumerable<RevokeDeviceSessionStatus>)
+  fullName: Dropbox.Api.Team.RevokeDeviceSessionBatchResult.RevokeDeviceSessionBatchResult(System.Collections.Generic.IEnumerable<Dropbox.Api.Team.RevokeDeviceSessionStatus>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeDeviceSessionBatchResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeDeviceSessionBatchResult.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.RevokeDeviceSessionBatchResult\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public RevokeDeviceSessionBatchResult(System.Collections.Generic.IEnumerable<RevokeDeviceSessionStatus> revokeDevicesStatus)
+    parameters:
+    - id: revokeDevicesStatus
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.Team.RevokeDeviceSessionStatus}
+      description: The revoke devices status
+    content.vb: Public Sub New(revokeDevicesStatus As System.Collections.Generic.IEnumerable(Of RevokeDeviceSessionStatus))
+  overload: Dropbox.Api.Team.RevokeDeviceSessionBatchResult.#ctor*
+  nameWithType.vb: RevokeDeviceSessionBatchResult.RevokeDeviceSessionBatchResult(System.Collections.Generic.IEnumerable(Of RevokeDeviceSessionStatus))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Team.RevokeDeviceSessionBatchResult.RevokeDeviceSessionBatchResult(System.Collections.Generic.IEnumerable(Of Dropbox.Api.Team.RevokeDeviceSessionStatus))
+  name.vb: RevokeDeviceSessionBatchResult(System.Collections.Generic.IEnumerable(Of RevokeDeviceSessionStatus))
+- uid: Dropbox.Api.Team.RevokeDeviceSessionBatchResult.#ctor
+  commentId: M:Dropbox.Api.Team.RevokeDeviceSessionBatchResult.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.RevokeDeviceSessionBatchResult
+  langs:
+  - csharp
+  - vb
+  name: RevokeDeviceSessionBatchResult()
+  nameWithType: RevokeDeviceSessionBatchResult.RevokeDeviceSessionBatchResult()
+  fullName: Dropbox.Api.Team.RevokeDeviceSessionBatchResult.RevokeDeviceSessionBatchResult()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeDeviceSessionBatchResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeDeviceSessionBatchResult.cs
+    startLine: 52
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.RevokeDeviceSessionBatchResult\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public RevokeDeviceSessionBatchResult()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.RevokeDeviceSessionBatchResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.RevokeDeviceSessionBatchResult.RevokeDevicesStatus
+  commentId: P:Dropbox.Api.Team.RevokeDeviceSessionBatchResult.RevokeDevicesStatus
+  id: RevokeDevicesStatus
+  parent: Dropbox.Api.Team.RevokeDeviceSessionBatchResult
+  langs:
+  - csharp
+  - vb
+  name: RevokeDevicesStatus
+  nameWithType: RevokeDeviceSessionBatchResult.RevokeDevicesStatus
+  fullName: Dropbox.Api.Team.RevokeDeviceSessionBatchResult.RevokeDevicesStatus
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeDeviceSessionBatchResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: RevokeDevicesStatus
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/RevokeDeviceSessionBatchResult.cs
+    startLine: 61
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets the revoke devices status of the revoke device session batch\nresult</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<RevokeDeviceSessionStatus> RevokeDevicesStatus { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{Dropbox.Api.Team.RevokeDeviceSessionStatus}
+    content.vb: Public Property RevokeDevicesStatus As System.Collections.Generic.IList(Of RevokeDeviceSessionStatus)
+  overload: Dropbox.Api.Team.RevokeDeviceSessionBatchResult.RevokeDevicesStatus*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.RevokeDeviceSessionBatchResult
+  commentId: T:Dropbox.Api.Team.RevokeDeviceSessionBatchResult
+  parent: Dropbox.Api.Team
+  name: RevokeDeviceSessionBatchResult
+  nameWithType: RevokeDeviceSessionBatchResult
+  fullName: Dropbox.Api.Team.RevokeDeviceSessionBatchResult
+- uid: Dropbox.Api.Team.RevokeDeviceSessionBatchResult.#ctor*
+  commentId: Overload:Dropbox.Api.Team.RevokeDeviceSessionBatchResult.#ctor
+  name: RevokeDeviceSessionBatchResult
+  nameWithType: RevokeDeviceSessionBatchResult.RevokeDeviceSessionBatchResult
+  fullName: Dropbox.Api.Team.RevokeDeviceSessionBatchResult.RevokeDeviceSessionBatchResult
+- uid: System.Collections.Generic.IEnumerable{Dropbox.Api.Team.RevokeDeviceSessionStatus}
+  commentId: '!:System.Collections.Generic.IEnumerable{Dropbox.Api.Team.RevokeDeviceSessionStatus}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<RevokeDeviceSessionStatus>
+  nameWithType: System.Collections.Generic.IEnumerable<RevokeDeviceSessionStatus>
+  fullName: System.Collections.Generic.IEnumerable<Dropbox.Api.Team.RevokeDeviceSessionStatus>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of RevokeDeviceSessionStatus)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Dropbox.Api.Team.RevokeDeviceSessionStatus)
+  name.vb: System.Collections.Generic.IEnumerable(Of RevokeDeviceSessionStatus)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Team.RevokeDeviceSessionStatus
+    name: RevokeDeviceSessionStatus
+    nameWithType: RevokeDeviceSessionStatus
+    fullName: Dropbox.Api.Team.RevokeDeviceSessionStatus
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Team.RevokeDeviceSessionStatus
+    name: RevokeDeviceSessionStatus
+    nameWithType: RevokeDeviceSessionStatus
+    fullName: Dropbox.Api.Team.RevokeDeviceSessionStatus
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: System.Collections.Generic.IEnumerable<>
+  nameWithType: System.Collections.Generic.IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: System.Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Team.RevokeDeviceSessionBatchResult.RevokeDevicesStatus*
+  commentId: Overload:Dropbox.Api.Team.RevokeDeviceSessionBatchResult.RevokeDevicesStatus
+  name: RevokeDevicesStatus
+  nameWithType: RevokeDeviceSessionBatchResult.RevokeDevicesStatus
+  fullName: Dropbox.Api.Team.RevokeDeviceSessionBatchResult.RevokeDevicesStatus
+- uid: System.Collections.Generic.IList{Dropbox.Api.Team.RevokeDeviceSessionStatus}
+  commentId: '!:System.Collections.Generic.IList{Dropbox.Api.Team.RevokeDeviceSessionStatus}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<RevokeDeviceSessionStatus>
+  nameWithType: System.Collections.Generic.IList<RevokeDeviceSessionStatus>
+  fullName: System.Collections.Generic.IList<Dropbox.Api.Team.RevokeDeviceSessionStatus>
+  nameWithType.vb: System.Collections.Generic.IList(Of RevokeDeviceSessionStatus)
+  fullName.vb: System.Collections.Generic.IList(Of Dropbox.Api.Team.RevokeDeviceSessionStatus)
+  name.vb: System.Collections.Generic.IList(Of RevokeDeviceSessionStatus)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Team.RevokeDeviceSessionStatus
+    name: RevokeDeviceSessionStatus
+    nameWithType: RevokeDeviceSessionStatus
+    fullName: Dropbox.Api.Team.RevokeDeviceSessionStatus
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Team.RevokeDeviceSessionStatus
+    name: RevokeDeviceSessionStatus
+    nameWithType: RevokeDeviceSessionStatus
+    fullName: Dropbox.Api.Team.RevokeDeviceSessionStatus
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  isExternal: true
+  name: System.Collections.Generic.IList<>
+  nameWithType: System.Collections.Generic.IList<>
+  fullName: System.Collections.Generic.IList<>
+  nameWithType.vb: System.Collections.Generic.IList(Of )
+  fullName.vb: System.Collections.Generic.IList(Of )
+  name.vb: System.Collections.Generic.IList(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+shouldSkipMarkup: true

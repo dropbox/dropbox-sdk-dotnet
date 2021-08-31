@@ -1,0 +1,381 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy
+  commentId: T:Dropbox.Api.TeamLog.PaperDefaultFolderPolicy
+  id: PaperDefaultFolderPolicy
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.#ctor
+  - Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.AsEveryoneInTeam
+  - Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.AsInviteOnly
+  - Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.AsOther
+  - Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.IsEveryoneInTeam
+  - Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.IsInviteOnly
+  - Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.IsOther
+  langs:
+  - csharp
+  - vb
+  name: PaperDefaultFolderPolicy
+  nameWithType: PaperDefaultFolderPolicy
+  fullName: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDefaultFolderPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PaperDefaultFolderPolicy
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDefaultFolderPolicy.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Policy to set default access for newly created Paper folders.</p>\n"
+  example: []
+  syntax:
+    content: 'public class PaperDefaultFolderPolicy : object'
+    content.vb: >-
+      Public Class PaperDefaultFolderPolicy
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.EveryoneInTeam
+  - Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.InviteOnly
+  - Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.Other
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.#ctor
+  commentId: M:Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy
+  langs:
+  - csharp
+  - vb
+  name: PaperDefaultFolderPolicy()
+  nameWithType: PaperDefaultFolderPolicy.PaperDefaultFolderPolicy()
+  fullName: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.PaperDefaultFolderPolicy()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDefaultFolderPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDefaultFolderPolicy.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.PaperDefaultFolderPolicy\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public PaperDefaultFolderPolicy()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.IsEveryoneInTeam
+  commentId: P:Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.IsEveryoneInTeam
+  id: IsEveryoneInTeam
+  parent: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy
+  langs:
+  - csharp
+  - vb
+  name: IsEveryoneInTeam
+  nameWithType: PaperDefaultFolderPolicy.IsEveryoneInTeam
+  fullName: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.IsEveryoneInTeam
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDefaultFolderPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsEveryoneInTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDefaultFolderPolicy.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is EveryoneInTeam</p>\n"
+  example: []
+  syntax:
+    content: public bool IsEveryoneInTeam { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsEveryoneInTeam As Boolean
+  overload: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.IsEveryoneInTeam*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.AsEveryoneInTeam
+  commentId: P:Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.AsEveryoneInTeam
+  id: AsEveryoneInTeam
+  parent: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy
+  langs:
+  - csharp
+  - vb
+  name: AsEveryoneInTeam
+  nameWithType: PaperDefaultFolderPolicy.AsEveryoneInTeam
+  fullName: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.AsEveryoneInTeam
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDefaultFolderPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsEveryoneInTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDefaultFolderPolicy.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a EveryoneInTeam, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PaperDefaultFolderPolicy.EveryoneInTeam AsEveryoneInTeam { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.EveryoneInTeam
+    content.vb: Public ReadOnly Property AsEveryoneInTeam As PaperDefaultFolderPolicy.EveryoneInTeam
+  overload: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.AsEveryoneInTeam*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.IsInviteOnly
+  commentId: P:Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.IsInviteOnly
+  id: IsInviteOnly
+  parent: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy
+  langs:
+  - csharp
+  - vb
+  name: IsInviteOnly
+  nameWithType: PaperDefaultFolderPolicy.IsInviteOnly
+  fullName: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.IsInviteOnly
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDefaultFolderPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsInviteOnly
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDefaultFolderPolicy.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is InviteOnly</p>\n"
+  example: []
+  syntax:
+    content: public bool IsInviteOnly { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsInviteOnly As Boolean
+  overload: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.IsInviteOnly*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.AsInviteOnly
+  commentId: P:Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.AsInviteOnly
+  id: AsInviteOnly
+  parent: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy
+  langs:
+  - csharp
+  - vb
+  name: AsInviteOnly
+  nameWithType: PaperDefaultFolderPolicy.AsInviteOnly
+  fullName: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.AsInviteOnly
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDefaultFolderPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsInviteOnly
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDefaultFolderPolicy.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a InviteOnly, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PaperDefaultFolderPolicy.InviteOnly AsInviteOnly { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.InviteOnly
+    content.vb: Public ReadOnly Property AsInviteOnly As PaperDefaultFolderPolicy.InviteOnly
+  overload: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.AsInviteOnly*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.IsOther
+  commentId: P:Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.IsOther
+  id: IsOther
+  parent: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: PaperDefaultFolderPolicy.IsOther
+  fullName: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDefaultFolderPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDefaultFolderPolicy.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.AsOther
+  commentId: P:Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.AsOther
+  id: AsOther
+  parent: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: PaperDefaultFolderPolicy.AsOther
+  fullName: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDefaultFolderPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDefaultFolderPolicy.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PaperDefaultFolderPolicy.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.Other
+    content.vb: Public ReadOnly Property AsOther As PaperDefaultFolderPolicy.Other
+  overload: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy
+  commentId: T:Dropbox.Api.TeamLog.PaperDefaultFolderPolicy
+  parent: Dropbox.Api.TeamLog
+  name: PaperDefaultFolderPolicy
+  nameWithType: PaperDefaultFolderPolicy
+  fullName: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy
+- uid: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.#ctor
+  name: PaperDefaultFolderPolicy
+  nameWithType: PaperDefaultFolderPolicy.PaperDefaultFolderPolicy
+  fullName: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.PaperDefaultFolderPolicy
+- uid: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.IsEveryoneInTeam*
+  commentId: Overload:Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.IsEveryoneInTeam
+  name: IsEveryoneInTeam
+  nameWithType: PaperDefaultFolderPolicy.IsEveryoneInTeam
+  fullName: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.IsEveryoneInTeam
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.AsEveryoneInTeam*
+  commentId: Overload:Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.AsEveryoneInTeam
+  name: AsEveryoneInTeam
+  nameWithType: PaperDefaultFolderPolicy.AsEveryoneInTeam
+  fullName: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.AsEveryoneInTeam
+- uid: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.EveryoneInTeam
+  commentId: T:Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.EveryoneInTeam
+  parent: Dropbox.Api.TeamLog
+  name: PaperDefaultFolderPolicy.EveryoneInTeam
+  nameWithType: PaperDefaultFolderPolicy.EveryoneInTeam
+  fullName: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.EveryoneInTeam
+- uid: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.IsInviteOnly*
+  commentId: Overload:Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.IsInviteOnly
+  name: IsInviteOnly
+  nameWithType: PaperDefaultFolderPolicy.IsInviteOnly
+  fullName: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.IsInviteOnly
+- uid: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.AsInviteOnly*
+  commentId: Overload:Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.AsInviteOnly
+  name: AsInviteOnly
+  nameWithType: PaperDefaultFolderPolicy.AsInviteOnly
+  fullName: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.AsInviteOnly
+- uid: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.InviteOnly
+  commentId: T:Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.InviteOnly
+  parent: Dropbox.Api.TeamLog
+  name: PaperDefaultFolderPolicy.InviteOnly
+  nameWithType: PaperDefaultFolderPolicy.InviteOnly
+  fullName: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.InviteOnly
+- uid: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.IsOther*
+  commentId: Overload:Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.IsOther
+  name: IsOther
+  nameWithType: PaperDefaultFolderPolicy.IsOther
+  fullName: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.IsOther
+- uid: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.AsOther*
+  commentId: Overload:Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.AsOther
+  name: AsOther
+  nameWithType: PaperDefaultFolderPolicy.AsOther
+  fullName: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.AsOther
+- uid: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.Other
+  commentId: T:Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.Other
+  parent: Dropbox.Api.TeamLog
+  name: PaperDefaultFolderPolicy.Other
+  nameWithType: PaperDefaultFolderPolicy.Other
+  fullName: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy.Other
+shouldSkipMarkup: true

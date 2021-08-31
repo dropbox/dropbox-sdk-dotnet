@@ -1,0 +1,134 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Async.PollEmptyResult.Complete
+  commentId: T:Dropbox.Api.Async.PollEmptyResult.Complete
+  id: PollEmptyResult.Complete
+  parent: Dropbox.Api.Async
+  children:
+  - Dropbox.Api.Async.PollEmptyResult.Complete.Instance
+  langs:
+  - csharp
+  - vb
+  name: PollEmptyResult.Complete
+  nameWithType: PollEmptyResult.Complete
+  fullName: Dropbox.Api.Async.PollEmptyResult.Complete
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Async/PollEmptyResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Complete
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Async/PollEmptyResult.cs
+    startLine: 155
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Async
+  summary: "\n<p>The asynchronous job has completed successfully.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Complete : PollEmptyResult'
+    content.vb: >-
+      Public NotInheritable Class Complete
+          Inherits PollEmptyResult
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Async.PollEmptyResult
+  inheritedMembers:
+  - Dropbox.Api.Async.PollEmptyResult.IsComplete
+  - Dropbox.Api.Async.PollEmptyResult.AsComplete
+  - Dropbox.Api.Async.PollEmptyResult.IsInProgress
+  - Dropbox.Api.Async.PollEmptyResult.AsInProgress
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Async.PollEmptyResult.Complete.Instance
+  commentId: F:Dropbox.Api.Async.PollEmptyResult.Complete.Instance
+  id: Instance
+  parent: Dropbox.Api.Async.PollEmptyResult.Complete
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: PollEmptyResult.Complete.Instance
+  fullName: Dropbox.Api.Async.PollEmptyResult.Complete.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Async/PollEmptyResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Async/PollEmptyResult.cs
+    startLine: 179
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Async
+  summary: "\n<p>A singleton instance of Complete</p>\n"
+  example: []
+  syntax:
+    content: public static readonly PollEmptyResult.Complete Instance
+    return:
+      type: Dropbox.Api.Async.PollEmptyResult.Complete
+    content.vb: Public Shared ReadOnly Instance As PollEmptyResult.Complete
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Async
+  commentId: N:Dropbox.Api.Async
+  name: Dropbox.Api.Async
+  nameWithType: Dropbox.Api.Async
+  fullName: Dropbox.Api.Async
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Async.PollEmptyResult
+  commentId: T:Dropbox.Api.Async.PollEmptyResult
+  parent: Dropbox.Api.Async
+  name: PollEmptyResult
+  nameWithType: PollEmptyResult
+  fullName: Dropbox.Api.Async.PollEmptyResult
+- uid: Dropbox.Api.Async.PollEmptyResult.IsComplete
+  commentId: P:Dropbox.Api.Async.PollEmptyResult.IsComplete
+  parent: Dropbox.Api.Async.PollEmptyResult
+  name: IsComplete
+  nameWithType: PollEmptyResult.IsComplete
+  fullName: Dropbox.Api.Async.PollEmptyResult.IsComplete
+- uid: Dropbox.Api.Async.PollEmptyResult.AsComplete
+  commentId: P:Dropbox.Api.Async.PollEmptyResult.AsComplete
+  parent: Dropbox.Api.Async.PollEmptyResult
+  name: AsComplete
+  nameWithType: PollEmptyResult.AsComplete
+  fullName: Dropbox.Api.Async.PollEmptyResult.AsComplete
+- uid: Dropbox.Api.Async.PollEmptyResult.IsInProgress
+  commentId: P:Dropbox.Api.Async.PollEmptyResult.IsInProgress
+  parent: Dropbox.Api.Async.PollEmptyResult
+  name: IsInProgress
+  nameWithType: PollEmptyResult.IsInProgress
+  fullName: Dropbox.Api.Async.PollEmptyResult.IsInProgress
+- uid: Dropbox.Api.Async.PollEmptyResult.AsInProgress
+  commentId: P:Dropbox.Api.Async.PollEmptyResult.AsInProgress
+  parent: Dropbox.Api.Async.PollEmptyResult
+  name: AsInProgress
+  nameWithType: PollEmptyResult.AsInProgress
+  fullName: Dropbox.Api.Async.PollEmptyResult.AsInProgress
+- uid: Dropbox.Api.Async.PollEmptyResult.Complete
+  commentId: T:Dropbox.Api.Async.PollEmptyResult.Complete
+  parent: Dropbox.Api.Async
+  name: PollEmptyResult.Complete
+  nameWithType: PollEmptyResult.Complete
+  fullName: Dropbox.Api.Async.PollEmptyResult.Complete
+shouldSkipMarkup: true

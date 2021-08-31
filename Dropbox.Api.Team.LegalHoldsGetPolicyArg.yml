@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.LegalHoldsGetPolicyArg
+  commentId: T:Dropbox.Api.Team.LegalHoldsGetPolicyArg
+  id: LegalHoldsGetPolicyArg
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.LegalHoldsGetPolicyArg.#ctor
+  - Dropbox.Api.Team.LegalHoldsGetPolicyArg.#ctor(System.String)
+  - Dropbox.Api.Team.LegalHoldsGetPolicyArg.Id
+  langs:
+  - csharp
+  - vb
+  name: LegalHoldsGetPolicyArg
+  nameWithType: LegalHoldsGetPolicyArg
+  fullName: Dropbox.Api.Team.LegalHoldsGetPolicyArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsGetPolicyArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: LegalHoldsGetPolicyArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsGetPolicyArg.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The legal holds get policy arg object</p>\n"
+  example: []
+  syntax:
+    content: 'public class LegalHoldsGetPolicyArg : object'
+    content.vb: >-
+      Public Class LegalHoldsGetPolicyArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.LegalHoldsGetPolicyArg.#ctor(System.String)
+  commentId: M:Dropbox.Api.Team.LegalHoldsGetPolicyArg.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.Team.LegalHoldsGetPolicyArg
+  langs:
+  - csharp
+  - vb
+  name: LegalHoldsGetPolicyArg(String)
+  nameWithType: LegalHoldsGetPolicyArg.LegalHoldsGetPolicyArg(String)
+  fullName: Dropbox.Api.Team.LegalHoldsGetPolicyArg.LegalHoldsGetPolicyArg(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsGetPolicyArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsGetPolicyArg.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.LegalHoldsGetPolicyArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public LegalHoldsGetPolicyArg(string id)
+    parameters:
+    - id: id
+      type: System.String
+      description: The legal hold Id.
+    content.vb: Public Sub New(id As String)
+  overload: Dropbox.Api.Team.LegalHoldsGetPolicyArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.LegalHoldsGetPolicyArg.#ctor
+  commentId: M:Dropbox.Api.Team.LegalHoldsGetPolicyArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.LegalHoldsGetPolicyArg
+  langs:
+  - csharp
+  - vb
+  name: LegalHoldsGetPolicyArg()
+  nameWithType: LegalHoldsGetPolicyArg.LegalHoldsGetPolicyArg()
+  fullName: Dropbox.Api.Team.LegalHoldsGetPolicyArg.LegalHoldsGetPolicyArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsGetPolicyArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsGetPolicyArg.cs
+    startLine: 54
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.LegalHoldsGetPolicyArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public LegalHoldsGetPolicyArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.LegalHoldsGetPolicyArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.LegalHoldsGetPolicyArg.Id
+  commentId: P:Dropbox.Api.Team.LegalHoldsGetPolicyArg.Id
+  id: Id
+  parent: Dropbox.Api.Team.LegalHoldsGetPolicyArg
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: LegalHoldsGetPolicyArg.Id
+  fullName: Dropbox.Api.Team.LegalHoldsGetPolicyArg.Id
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsGetPolicyArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Id
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsGetPolicyArg.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The legal hold Id.</p>\n"
+  example: []
+  syntax:
+    content: public string Id { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Id As String
+  overload: Dropbox.Api.Team.LegalHoldsGetPolicyArg.Id*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.LegalHoldsGetPolicyArg
+  commentId: T:Dropbox.Api.Team.LegalHoldsGetPolicyArg
+  parent: Dropbox.Api.Team
+  name: LegalHoldsGetPolicyArg
+  nameWithType: LegalHoldsGetPolicyArg
+  fullName: Dropbox.Api.Team.LegalHoldsGetPolicyArg
+- uid: Dropbox.Api.Team.LegalHoldsGetPolicyArg.#ctor*
+  commentId: Overload:Dropbox.Api.Team.LegalHoldsGetPolicyArg.#ctor
+  name: LegalHoldsGetPolicyArg
+  nameWithType: LegalHoldsGetPolicyArg.LegalHoldsGetPolicyArg
+  fullName: Dropbox.Api.Team.LegalHoldsGetPolicyArg.LegalHoldsGetPolicyArg
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Team.LegalHoldsGetPolicyArg.Id*
+  commentId: Overload:Dropbox.Api.Team.LegalHoldsGetPolicyArg.Id
+  name: Id
+  nameWithType: LegalHoldsGetPolicyArg.Id
+  fullName: Dropbox.Api.Team.LegalHoldsGetPolicyArg.Id
+shouldSkipMarkup: true

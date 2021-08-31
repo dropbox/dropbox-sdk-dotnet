@@ -1,0 +1,229 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.WebDeviceSession
+  commentId: T:Dropbox.Api.TeamLog.LinkedDeviceLogInfo.WebDeviceSession
+  id: LinkedDeviceLogInfo.WebDeviceSession
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.LinkedDeviceLogInfo.WebDeviceSession.#ctor(Dropbox.Api.TeamLog.WebDeviceSessionLogInfo)
+  - Dropbox.Api.TeamLog.LinkedDeviceLogInfo.WebDeviceSession.Value
+  langs:
+  - csharp
+  - vb
+  name: LinkedDeviceLogInfo.WebDeviceSession
+  nameWithType: LinkedDeviceLogInfo.WebDeviceSession
+  fullName: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.WebDeviceSession
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LinkedDeviceLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: WebDeviceSession
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LinkedDeviceLogInfo.cs
+    startLine: 512
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>web device session&apos;s details.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class WebDeviceSession : LinkedDeviceLogInfo'
+    content.vb: >-
+      Public NotInheritable Class WebDeviceSession
+          Inherits LinkedDeviceLogInfo
+  inheritance:
+  - System.Object
+  - Dropbox.Api.TeamLog.LinkedDeviceLogInfo
+  inheritedMembers:
+  - Dropbox.Api.TeamLog.LinkedDeviceLogInfo.IsDesktopDeviceSession
+  - Dropbox.Api.TeamLog.LinkedDeviceLogInfo.AsDesktopDeviceSession
+  - Dropbox.Api.TeamLog.LinkedDeviceLogInfo.IsLegacyDeviceSession
+  - Dropbox.Api.TeamLog.LinkedDeviceLogInfo.AsLegacyDeviceSession
+  - Dropbox.Api.TeamLog.LinkedDeviceLogInfo.IsMobileDeviceSession
+  - Dropbox.Api.TeamLog.LinkedDeviceLogInfo.AsMobileDeviceSession
+  - Dropbox.Api.TeamLog.LinkedDeviceLogInfo.IsWebDeviceSession
+  - Dropbox.Api.TeamLog.LinkedDeviceLogInfo.AsWebDeviceSession
+  - Dropbox.Api.TeamLog.LinkedDeviceLogInfo.IsOther
+  - Dropbox.Api.TeamLog.LinkedDeviceLogInfo.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.WebDeviceSession.#ctor(Dropbox.Api.TeamLog.WebDeviceSessionLogInfo)
+  commentId: M:Dropbox.Api.TeamLog.LinkedDeviceLogInfo.WebDeviceSession.#ctor(Dropbox.Api.TeamLog.WebDeviceSessionLogInfo)
+  id: '#ctor(Dropbox.Api.TeamLog.WebDeviceSessionLogInfo)'
+  parent: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.WebDeviceSession
+  langs:
+  - csharp
+  - vb
+  name: WebDeviceSession(WebDeviceSessionLogInfo)
+  nameWithType: LinkedDeviceLogInfo.WebDeviceSession.WebDeviceSession(WebDeviceSessionLogInfo)
+  fullName: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.WebDeviceSession.WebDeviceSession(Dropbox.Api.TeamLog.WebDeviceSessionLogInfo)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LinkedDeviceLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LinkedDeviceLogInfo.cs
+    startLine: 531
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.LinkedDeviceLogInfo.WebDeviceSession\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public WebDeviceSession(WebDeviceSessionLogInfo value)
+    parameters:
+    - id: value
+      type: Dropbox.Api.TeamLog.WebDeviceSessionLogInfo
+      description: The value
+    content.vb: Public Sub New(value As WebDeviceSessionLogInfo)
+  overload: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.WebDeviceSession.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.WebDeviceSession.Value
+  commentId: P:Dropbox.Api.TeamLog.LinkedDeviceLogInfo.WebDeviceSession.Value
+  id: Value
+  parent: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.WebDeviceSession
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: LinkedDeviceLogInfo.WebDeviceSession.Value
+  fullName: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.WebDeviceSession.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LinkedDeviceLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/LinkedDeviceLogInfo.cs
+    startLine: 546
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public WebDeviceSessionLogInfo Value { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.WebDeviceSessionLogInfo
+    content.vb: Public ReadOnly Property Value As WebDeviceSessionLogInfo
+  overload: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.WebDeviceSession.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.LinkedDeviceLogInfo
+  commentId: T:Dropbox.Api.TeamLog.LinkedDeviceLogInfo
+  parent: Dropbox.Api.TeamLog
+  name: LinkedDeviceLogInfo
+  nameWithType: LinkedDeviceLogInfo
+  fullName: Dropbox.Api.TeamLog.LinkedDeviceLogInfo
+- uid: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.IsDesktopDeviceSession
+  commentId: P:Dropbox.Api.TeamLog.LinkedDeviceLogInfo.IsDesktopDeviceSession
+  parent: Dropbox.Api.TeamLog.LinkedDeviceLogInfo
+  name: IsDesktopDeviceSession
+  nameWithType: LinkedDeviceLogInfo.IsDesktopDeviceSession
+  fullName: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.IsDesktopDeviceSession
+- uid: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.AsDesktopDeviceSession
+  commentId: P:Dropbox.Api.TeamLog.LinkedDeviceLogInfo.AsDesktopDeviceSession
+  parent: Dropbox.Api.TeamLog.LinkedDeviceLogInfo
+  name: AsDesktopDeviceSession
+  nameWithType: LinkedDeviceLogInfo.AsDesktopDeviceSession
+  fullName: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.AsDesktopDeviceSession
+- uid: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.IsLegacyDeviceSession
+  commentId: P:Dropbox.Api.TeamLog.LinkedDeviceLogInfo.IsLegacyDeviceSession
+  parent: Dropbox.Api.TeamLog.LinkedDeviceLogInfo
+  name: IsLegacyDeviceSession
+  nameWithType: LinkedDeviceLogInfo.IsLegacyDeviceSession
+  fullName: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.IsLegacyDeviceSession
+- uid: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.AsLegacyDeviceSession
+  commentId: P:Dropbox.Api.TeamLog.LinkedDeviceLogInfo.AsLegacyDeviceSession
+  parent: Dropbox.Api.TeamLog.LinkedDeviceLogInfo
+  name: AsLegacyDeviceSession
+  nameWithType: LinkedDeviceLogInfo.AsLegacyDeviceSession
+  fullName: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.AsLegacyDeviceSession
+- uid: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.IsMobileDeviceSession
+  commentId: P:Dropbox.Api.TeamLog.LinkedDeviceLogInfo.IsMobileDeviceSession
+  parent: Dropbox.Api.TeamLog.LinkedDeviceLogInfo
+  name: IsMobileDeviceSession
+  nameWithType: LinkedDeviceLogInfo.IsMobileDeviceSession
+  fullName: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.IsMobileDeviceSession
+- uid: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.AsMobileDeviceSession
+  commentId: P:Dropbox.Api.TeamLog.LinkedDeviceLogInfo.AsMobileDeviceSession
+  parent: Dropbox.Api.TeamLog.LinkedDeviceLogInfo
+  name: AsMobileDeviceSession
+  nameWithType: LinkedDeviceLogInfo.AsMobileDeviceSession
+  fullName: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.AsMobileDeviceSession
+- uid: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.IsWebDeviceSession
+  commentId: P:Dropbox.Api.TeamLog.LinkedDeviceLogInfo.IsWebDeviceSession
+  parent: Dropbox.Api.TeamLog.LinkedDeviceLogInfo
+  name: IsWebDeviceSession
+  nameWithType: LinkedDeviceLogInfo.IsWebDeviceSession
+  fullName: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.IsWebDeviceSession
+- uid: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.AsWebDeviceSession
+  commentId: P:Dropbox.Api.TeamLog.LinkedDeviceLogInfo.AsWebDeviceSession
+  parent: Dropbox.Api.TeamLog.LinkedDeviceLogInfo
+  name: AsWebDeviceSession
+  nameWithType: LinkedDeviceLogInfo.AsWebDeviceSession
+  fullName: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.AsWebDeviceSession
+- uid: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.IsOther
+  commentId: P:Dropbox.Api.TeamLog.LinkedDeviceLogInfo.IsOther
+  parent: Dropbox.Api.TeamLog.LinkedDeviceLogInfo
+  name: IsOther
+  nameWithType: LinkedDeviceLogInfo.IsOther
+  fullName: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.IsOther
+- uid: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.AsOther
+  commentId: P:Dropbox.Api.TeamLog.LinkedDeviceLogInfo.AsOther
+  parent: Dropbox.Api.TeamLog.LinkedDeviceLogInfo
+  name: AsOther
+  nameWithType: LinkedDeviceLogInfo.AsOther
+  fullName: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.AsOther
+- uid: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.WebDeviceSession
+  commentId: T:Dropbox.Api.TeamLog.LinkedDeviceLogInfo.WebDeviceSession
+  parent: Dropbox.Api.TeamLog
+  name: LinkedDeviceLogInfo.WebDeviceSession
+  nameWithType: LinkedDeviceLogInfo.WebDeviceSession
+  fullName: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.WebDeviceSession
+- uid: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.WebDeviceSession.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.LinkedDeviceLogInfo.WebDeviceSession.#ctor
+  name: WebDeviceSession
+  nameWithType: LinkedDeviceLogInfo.WebDeviceSession.WebDeviceSession
+  fullName: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.WebDeviceSession.WebDeviceSession
+- uid: Dropbox.Api.TeamLog.WebDeviceSessionLogInfo
+  commentId: T:Dropbox.Api.TeamLog.WebDeviceSessionLogInfo
+  parent: Dropbox.Api.TeamLog
+  name: WebDeviceSessionLogInfo
+  nameWithType: WebDeviceSessionLogInfo
+  fullName: Dropbox.Api.TeamLog.WebDeviceSessionLogInfo
+- uid: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.WebDeviceSession.Value*
+  commentId: Overload:Dropbox.Api.TeamLog.LinkedDeviceLogInfo.WebDeviceSession.Value
+  name: Value
+  nameWithType: LinkedDeviceLogInfo.WebDeviceSession.Value
+  fullName: Dropbox.Api.TeamLog.LinkedDeviceLogInfo.WebDeviceSession.Value
+shouldSkipMarkup: true

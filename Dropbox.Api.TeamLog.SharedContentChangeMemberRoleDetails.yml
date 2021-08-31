@@ -1,0 +1,244 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.SharedContentChangeMemberRoleDetails
+  commentId: T:Dropbox.Api.TeamLog.SharedContentChangeMemberRoleDetails
+  id: SharedContentChangeMemberRoleDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.SharedContentChangeMemberRoleDetails.#ctor
+  - Dropbox.Api.TeamLog.SharedContentChangeMemberRoleDetails.#ctor(Dropbox.Api.Sharing.AccessLevel,Dropbox.Api.Sharing.AccessLevel)
+  - Dropbox.Api.TeamLog.SharedContentChangeMemberRoleDetails.NewAccessLevel
+  - Dropbox.Api.TeamLog.SharedContentChangeMemberRoleDetails.PreviousAccessLevel
+  langs:
+  - csharp
+  - vb
+  name: SharedContentChangeMemberRoleDetails
+  nameWithType: SharedContentChangeMemberRoleDetails
+  fullName: Dropbox.Api.TeamLog.SharedContentChangeMemberRoleDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentChangeMemberRoleDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SharedContentChangeMemberRoleDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentChangeMemberRoleDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Changed access type of shared file/folder member.</p>\n"
+  example: []
+  syntax:
+    content: 'public class SharedContentChangeMemberRoleDetails : object'
+    content.vb: >-
+      Public Class SharedContentChangeMemberRoleDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.SharedContentChangeMemberRoleDetails.#ctor(Dropbox.Api.Sharing.AccessLevel,Dropbox.Api.Sharing.AccessLevel)
+  commentId: M:Dropbox.Api.TeamLog.SharedContentChangeMemberRoleDetails.#ctor(Dropbox.Api.Sharing.AccessLevel,Dropbox.Api.Sharing.AccessLevel)
+  id: '#ctor(Dropbox.Api.Sharing.AccessLevel,Dropbox.Api.Sharing.AccessLevel)'
+  parent: Dropbox.Api.TeamLog.SharedContentChangeMemberRoleDetails
+  langs:
+  - csharp
+  - vb
+  name: SharedContentChangeMemberRoleDetails(AccessLevel, AccessLevel)
+  nameWithType: SharedContentChangeMemberRoleDetails.SharedContentChangeMemberRoleDetails(AccessLevel, AccessLevel)
+  fullName: Dropbox.Api.TeamLog.SharedContentChangeMemberRoleDetails.SharedContentChangeMemberRoleDetails(Dropbox.Api.Sharing.AccessLevel, Dropbox.Api.Sharing.AccessLevel)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentChangeMemberRoleDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentChangeMemberRoleDetails.cs
+    startLine: 36
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SharedContentChangeMemberRoleDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public SharedContentChangeMemberRoleDetails(AccessLevel newAccessLevel, AccessLevel previousAccessLevel = null)
+    parameters:
+    - id: newAccessLevel
+      type: Dropbox.Api.Sharing.AccessLevel
+      description: New access level.
+    - id: previousAccessLevel
+      type: Dropbox.Api.Sharing.AccessLevel
+      description: >-
+        Previous access level. Might be missing due to
+
+        historical data gap.
+    content.vb: Public Sub New(newAccessLevel As AccessLevel, previousAccessLevel As AccessLevel = Nothing)
+  overload: Dropbox.Api.TeamLog.SharedContentChangeMemberRoleDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SharedContentChangeMemberRoleDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.SharedContentChangeMemberRoleDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.SharedContentChangeMemberRoleDetails
+  langs:
+  - csharp
+  - vb
+  name: SharedContentChangeMemberRoleDetails()
+  nameWithType: SharedContentChangeMemberRoleDetails.SharedContentChangeMemberRoleDetails()
+  fullName: Dropbox.Api.TeamLog.SharedContentChangeMemberRoleDetails.SharedContentChangeMemberRoleDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentChangeMemberRoleDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentChangeMemberRoleDetails.cs
+    startLine: 54
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SharedContentChangeMemberRoleDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public SharedContentChangeMemberRoleDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.SharedContentChangeMemberRoleDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SharedContentChangeMemberRoleDetails.NewAccessLevel
+  commentId: P:Dropbox.Api.TeamLog.SharedContentChangeMemberRoleDetails.NewAccessLevel
+  id: NewAccessLevel
+  parent: Dropbox.Api.TeamLog.SharedContentChangeMemberRoleDetails
+  langs:
+  - csharp
+  - vb
+  name: NewAccessLevel
+  nameWithType: SharedContentChangeMemberRoleDetails.NewAccessLevel
+  fullName: Dropbox.Api.TeamLog.SharedContentChangeMemberRoleDetails.NewAccessLevel
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentChangeMemberRoleDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NewAccessLevel
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentChangeMemberRoleDetails.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>New access level.</p>\n"
+  example: []
+  syntax:
+    content: public AccessLevel NewAccessLevel { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.AccessLevel
+    content.vb: Public Property NewAccessLevel As AccessLevel
+  overload: Dropbox.Api.TeamLog.SharedContentChangeMemberRoleDetails.NewAccessLevel*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.SharedContentChangeMemberRoleDetails.PreviousAccessLevel
+  commentId: P:Dropbox.Api.TeamLog.SharedContentChangeMemberRoleDetails.PreviousAccessLevel
+  id: PreviousAccessLevel
+  parent: Dropbox.Api.TeamLog.SharedContentChangeMemberRoleDetails
+  langs:
+  - csharp
+  - vb
+  name: PreviousAccessLevel
+  nameWithType: SharedContentChangeMemberRoleDetails.PreviousAccessLevel
+  fullName: Dropbox.Api.TeamLog.SharedContentChangeMemberRoleDetails.PreviousAccessLevel
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentChangeMemberRoleDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PreviousAccessLevel
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentChangeMemberRoleDetails.cs
+    startLine: 67
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Previous access level. Might be missing due to historical data gap.</p>\n"
+  example: []
+  syntax:
+    content: public AccessLevel PreviousAccessLevel { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.AccessLevel
+    content.vb: Public Property PreviousAccessLevel As AccessLevel
+  overload: Dropbox.Api.TeamLog.SharedContentChangeMemberRoleDetails.PreviousAccessLevel*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.SharedContentChangeMemberRoleDetails
+  commentId: T:Dropbox.Api.TeamLog.SharedContentChangeMemberRoleDetails
+  parent: Dropbox.Api.TeamLog
+  name: SharedContentChangeMemberRoleDetails
+  nameWithType: SharedContentChangeMemberRoleDetails
+  fullName: Dropbox.Api.TeamLog.SharedContentChangeMemberRoleDetails
+- uid: Dropbox.Api.TeamLog.SharedContentChangeMemberRoleDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedContentChangeMemberRoleDetails.#ctor
+  name: SharedContentChangeMemberRoleDetails
+  nameWithType: SharedContentChangeMemberRoleDetails.SharedContentChangeMemberRoleDetails
+  fullName: Dropbox.Api.TeamLog.SharedContentChangeMemberRoleDetails.SharedContentChangeMemberRoleDetails
+- uid: Dropbox.Api.Sharing.AccessLevel
+  commentId: T:Dropbox.Api.Sharing.AccessLevel
+  parent: Dropbox.Api.Sharing
+  name: AccessLevel
+  nameWithType: AccessLevel
+  fullName: Dropbox.Api.Sharing.AccessLevel
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: Dropbox.Api.TeamLog.SharedContentChangeMemberRoleDetails.NewAccessLevel*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedContentChangeMemberRoleDetails.NewAccessLevel
+  name: NewAccessLevel
+  nameWithType: SharedContentChangeMemberRoleDetails.NewAccessLevel
+  fullName: Dropbox.Api.TeamLog.SharedContentChangeMemberRoleDetails.NewAccessLevel
+- uid: Dropbox.Api.TeamLog.SharedContentChangeMemberRoleDetails.PreviousAccessLevel*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedContentChangeMemberRoleDetails.PreviousAccessLevel
+  name: PreviousAccessLevel
+  nameWithType: SharedContentChangeMemberRoleDetails.PreviousAccessLevel
+  fullName: Dropbox.Api.TeamLog.SharedContentChangeMemberRoleDetails.PreviousAccessLevel
+shouldSkipMarkup: true

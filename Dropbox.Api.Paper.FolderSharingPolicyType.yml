@@ -1,0 +1,288 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Paper.FolderSharingPolicyType
+  commentId: T:Dropbox.Api.Paper.FolderSharingPolicyType
+  id: FolderSharingPolicyType
+  parent: Dropbox.Api.Paper
+  children:
+  - Dropbox.Api.Paper.FolderSharingPolicyType.#ctor
+  - Dropbox.Api.Paper.FolderSharingPolicyType.AsInviteOnly
+  - Dropbox.Api.Paper.FolderSharingPolicyType.AsTeam
+  - Dropbox.Api.Paper.FolderSharingPolicyType.IsInviteOnly
+  - Dropbox.Api.Paper.FolderSharingPolicyType.IsTeam
+  langs:
+  - csharp
+  - vb
+  name: FolderSharingPolicyType
+  nameWithType: FolderSharingPolicyType
+  fullName: Dropbox.Api.Paper.FolderSharingPolicyType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/FolderSharingPolicyType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: FolderSharingPolicyType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/FolderSharingPolicyType.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>The sharing policy of a Paper folder.</p>\n<p>The sharing policy of subfolders is inherited from the root folder.</p>\n"
+  example: []
+  syntax:
+    content: 'public class FolderSharingPolicyType : object'
+    content.vb: >-
+      Public Class FolderSharingPolicyType
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Paper.FolderSharingPolicyType.InviteOnly
+  - Dropbox.Api.Paper.FolderSharingPolicyType.Team
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Paper.FolderSharingPolicyType.#ctor
+  commentId: M:Dropbox.Api.Paper.FolderSharingPolicyType.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Paper.FolderSharingPolicyType
+  langs:
+  - csharp
+  - vb
+  name: FolderSharingPolicyType()
+  nameWithType: FolderSharingPolicyType.FolderSharingPolicyType()
+  fullName: Dropbox.Api.Paper.FolderSharingPolicyType.FolderSharingPolicyType()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/FolderSharingPolicyType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/FolderSharingPolicyType.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Paper.FolderSharingPolicyType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public FolderSharingPolicyType()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Paper.FolderSharingPolicyType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Paper.FolderSharingPolicyType.IsTeam
+  commentId: P:Dropbox.Api.Paper.FolderSharingPolicyType.IsTeam
+  id: IsTeam
+  parent: Dropbox.Api.Paper.FolderSharingPolicyType
+  langs:
+  - csharp
+  - vb
+  name: IsTeam
+  nameWithType: FolderSharingPolicyType.IsTeam
+  fullName: Dropbox.Api.Paper.FolderSharingPolicyType.IsTeam
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/FolderSharingPolicyType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/FolderSharingPolicyType.cs
+    startLine: 41
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets a value indicating whether this instance is Team</p>\n"
+  example: []
+  syntax:
+    content: public bool IsTeam { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsTeam As Boolean
+  overload: Dropbox.Api.Paper.FolderSharingPolicyType.IsTeam*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Paper.FolderSharingPolicyType.AsTeam
+  commentId: P:Dropbox.Api.Paper.FolderSharingPolicyType.AsTeam
+  id: AsTeam
+  parent: Dropbox.Api.Paper.FolderSharingPolicyType
+  langs:
+  - csharp
+  - vb
+  name: AsTeam
+  nameWithType: FolderSharingPolicyType.AsTeam
+  fullName: Dropbox.Api.Paper.FolderSharingPolicyType.AsTeam
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/FolderSharingPolicyType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/FolderSharingPolicyType.cs
+    startLine: 52
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets this instance as a Team, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public FolderSharingPolicyType.Team AsTeam { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Paper.FolderSharingPolicyType.Team
+    content.vb: Public ReadOnly Property AsTeam As FolderSharingPolicyType.Team
+  overload: Dropbox.Api.Paper.FolderSharingPolicyType.AsTeam*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Paper.FolderSharingPolicyType.IsInviteOnly
+  commentId: P:Dropbox.Api.Paper.FolderSharingPolicyType.IsInviteOnly
+  id: IsInviteOnly
+  parent: Dropbox.Api.Paper.FolderSharingPolicyType
+  langs:
+  - csharp
+  - vb
+  name: IsInviteOnly
+  nameWithType: FolderSharingPolicyType.IsInviteOnly
+  fullName: Dropbox.Api.Paper.FolderSharingPolicyType.IsInviteOnly
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/FolderSharingPolicyType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsInviteOnly
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/FolderSharingPolicyType.cs
+    startLine: 63
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets a value indicating whether this instance is InviteOnly</p>\n"
+  example: []
+  syntax:
+    content: public bool IsInviteOnly { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsInviteOnly As Boolean
+  overload: Dropbox.Api.Paper.FolderSharingPolicyType.IsInviteOnly*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Paper.FolderSharingPolicyType.AsInviteOnly
+  commentId: P:Dropbox.Api.Paper.FolderSharingPolicyType.AsInviteOnly
+  id: AsInviteOnly
+  parent: Dropbox.Api.Paper.FolderSharingPolicyType
+  langs:
+  - csharp
+  - vb
+  name: AsInviteOnly
+  nameWithType: FolderSharingPolicyType.AsInviteOnly
+  fullName: Dropbox.Api.Paper.FolderSharingPolicyType.AsInviteOnly
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/FolderSharingPolicyType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsInviteOnly
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/FolderSharingPolicyType.cs
+    startLine: 74
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets this instance as a InviteOnly, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public FolderSharingPolicyType.InviteOnly AsInviteOnly { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Paper.FolderSharingPolicyType.InviteOnly
+    content.vb: Public ReadOnly Property AsInviteOnly As FolderSharingPolicyType.InviteOnly
+  overload: Dropbox.Api.Paper.FolderSharingPolicyType.AsInviteOnly*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Paper
+  commentId: N:Dropbox.Api.Paper
+  name: Dropbox.Api.Paper
+  nameWithType: Dropbox.Api.Paper
+  fullName: Dropbox.Api.Paper
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Paper.FolderSharingPolicyType
+  commentId: T:Dropbox.Api.Paper.FolderSharingPolicyType
+  parent: Dropbox.Api.Paper
+  name: FolderSharingPolicyType
+  nameWithType: FolderSharingPolicyType
+  fullName: Dropbox.Api.Paper.FolderSharingPolicyType
+- uid: Dropbox.Api.Paper.FolderSharingPolicyType.#ctor*
+  commentId: Overload:Dropbox.Api.Paper.FolderSharingPolicyType.#ctor
+  name: FolderSharingPolicyType
+  nameWithType: FolderSharingPolicyType.FolderSharingPolicyType
+  fullName: Dropbox.Api.Paper.FolderSharingPolicyType.FolderSharingPolicyType
+- uid: Dropbox.Api.Paper.FolderSharingPolicyType.IsTeam*
+  commentId: Overload:Dropbox.Api.Paper.FolderSharingPolicyType.IsTeam
+  name: IsTeam
+  nameWithType: FolderSharingPolicyType.IsTeam
+  fullName: Dropbox.Api.Paper.FolderSharingPolicyType.IsTeam
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Paper.FolderSharingPolicyType.AsTeam*
+  commentId: Overload:Dropbox.Api.Paper.FolderSharingPolicyType.AsTeam
+  name: AsTeam
+  nameWithType: FolderSharingPolicyType.AsTeam
+  fullName: Dropbox.Api.Paper.FolderSharingPolicyType.AsTeam
+- uid: Dropbox.Api.Paper.FolderSharingPolicyType.Team
+  commentId: T:Dropbox.Api.Paper.FolderSharingPolicyType.Team
+  parent: Dropbox.Api.Paper
+  name: FolderSharingPolicyType.Team
+  nameWithType: FolderSharingPolicyType.Team
+  fullName: Dropbox.Api.Paper.FolderSharingPolicyType.Team
+- uid: Dropbox.Api.Paper.FolderSharingPolicyType.IsInviteOnly*
+  commentId: Overload:Dropbox.Api.Paper.FolderSharingPolicyType.IsInviteOnly
+  name: IsInviteOnly
+  nameWithType: FolderSharingPolicyType.IsInviteOnly
+  fullName: Dropbox.Api.Paper.FolderSharingPolicyType.IsInviteOnly
+- uid: Dropbox.Api.Paper.FolderSharingPolicyType.AsInviteOnly*
+  commentId: Overload:Dropbox.Api.Paper.FolderSharingPolicyType.AsInviteOnly
+  name: AsInviteOnly
+  nameWithType: FolderSharingPolicyType.AsInviteOnly
+  fullName: Dropbox.Api.Paper.FolderSharingPolicyType.AsInviteOnly
+- uid: Dropbox.Api.Paper.FolderSharingPolicyType.InviteOnly
+  commentId: T:Dropbox.Api.Paper.FolderSharingPolicyType.InviteOnly
+  parent: Dropbox.Api.Paper
+  name: FolderSharingPolicyType.InviteOnly
+  nameWithType: FolderSharingPolicyType.InviteOnly
+  fullName: Dropbox.Api.Paper.FolderSharingPolicyType.InviteOnly
+shouldSkipMarkup: true

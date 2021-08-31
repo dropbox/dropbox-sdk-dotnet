@@ -1,0 +1,241 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.TeamSelectiveSyncSettingsChangedDetails
+  commentId: T:Dropbox.Api.TeamLog.TeamSelectiveSyncSettingsChangedDetails
+  id: TeamSelectiveSyncSettingsChangedDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.TeamSelectiveSyncSettingsChangedDetails.#ctor
+  - Dropbox.Api.TeamLog.TeamSelectiveSyncSettingsChangedDetails.#ctor(Dropbox.Api.Files.SyncSetting,Dropbox.Api.Files.SyncSetting)
+  - Dropbox.Api.TeamLog.TeamSelectiveSyncSettingsChangedDetails.NewValue
+  - Dropbox.Api.TeamLog.TeamSelectiveSyncSettingsChangedDetails.PreviousValue
+  langs:
+  - csharp
+  - vb
+  name: TeamSelectiveSyncSettingsChangedDetails
+  nameWithType: TeamSelectiveSyncSettingsChangedDetails
+  fullName: Dropbox.Api.TeamLog.TeamSelectiveSyncSettingsChangedDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamSelectiveSyncSettingsChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TeamSelectiveSyncSettingsChangedDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamSelectiveSyncSettingsChangedDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Changed sync default.</p>\n"
+  example: []
+  syntax:
+    content: 'public class TeamSelectiveSyncSettingsChangedDetails : object'
+    content.vb: >-
+      Public Class TeamSelectiveSyncSettingsChangedDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.TeamSelectiveSyncSettingsChangedDetails.#ctor(Dropbox.Api.Files.SyncSetting,Dropbox.Api.Files.SyncSetting)
+  commentId: M:Dropbox.Api.TeamLog.TeamSelectiveSyncSettingsChangedDetails.#ctor(Dropbox.Api.Files.SyncSetting,Dropbox.Api.Files.SyncSetting)
+  id: '#ctor(Dropbox.Api.Files.SyncSetting,Dropbox.Api.Files.SyncSetting)'
+  parent: Dropbox.Api.TeamLog.TeamSelectiveSyncSettingsChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: TeamSelectiveSyncSettingsChangedDetails(SyncSetting, SyncSetting)
+  nameWithType: TeamSelectiveSyncSettingsChangedDetails.TeamSelectiveSyncSettingsChangedDetails(SyncSetting, SyncSetting)
+  fullName: Dropbox.Api.TeamLog.TeamSelectiveSyncSettingsChangedDetails.TeamSelectiveSyncSettingsChangedDetails(Dropbox.Api.Files.SyncSetting, Dropbox.Api.Files.SyncSetting)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamSelectiveSyncSettingsChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamSelectiveSyncSettingsChangedDetails.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.TeamSelectiveSyncSettingsChangedDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public TeamSelectiveSyncSettingsChangedDetails(SyncSetting previousValue, SyncSetting newValue)
+    parameters:
+    - id: previousValue
+      type: Dropbox.Api.Files.SyncSetting
+      description: Previous value.
+    - id: newValue
+      type: Dropbox.Api.Files.SyncSetting
+      description: New value.
+    content.vb: Public Sub New(previousValue As SyncSetting, newValue As SyncSetting)
+  overload: Dropbox.Api.TeamLog.TeamSelectiveSyncSettingsChangedDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.TeamSelectiveSyncSettingsChangedDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.TeamSelectiveSyncSettingsChangedDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.TeamSelectiveSyncSettingsChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: TeamSelectiveSyncSettingsChangedDetails()
+  nameWithType: TeamSelectiveSyncSettingsChangedDetails.TeamSelectiveSyncSettingsChangedDetails()
+  fullName: Dropbox.Api.TeamLog.TeamSelectiveSyncSettingsChangedDetails.TeamSelectiveSyncSettingsChangedDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamSelectiveSyncSettingsChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamSelectiveSyncSettingsChangedDetails.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.TeamSelectiveSyncSettingsChangedDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public TeamSelectiveSyncSettingsChangedDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.TeamSelectiveSyncSettingsChangedDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.TeamSelectiveSyncSettingsChangedDetails.PreviousValue
+  commentId: P:Dropbox.Api.TeamLog.TeamSelectiveSyncSettingsChangedDetails.PreviousValue
+  id: PreviousValue
+  parent: Dropbox.Api.TeamLog.TeamSelectiveSyncSettingsChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: PreviousValue
+  nameWithType: TeamSelectiveSyncSettingsChangedDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.TeamSelectiveSyncSettingsChangedDetails.PreviousValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamSelectiveSyncSettingsChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PreviousValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamSelectiveSyncSettingsChangedDetails.cs
+    startLine: 66
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Previous value.</p>\n"
+  example: []
+  syntax:
+    content: public SyncSetting PreviousValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.SyncSetting
+    content.vb: Public Property PreviousValue As SyncSetting
+  overload: Dropbox.Api.TeamLog.TeamSelectiveSyncSettingsChangedDetails.PreviousValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.TeamSelectiveSyncSettingsChangedDetails.NewValue
+  commentId: P:Dropbox.Api.TeamLog.TeamSelectiveSyncSettingsChangedDetails.NewValue
+  id: NewValue
+  parent: Dropbox.Api.TeamLog.TeamSelectiveSyncSettingsChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: NewValue
+  nameWithType: TeamSelectiveSyncSettingsChangedDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.TeamSelectiveSyncSettingsChangedDetails.NewValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamSelectiveSyncSettingsChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NewValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamSelectiveSyncSettingsChangedDetails.cs
+    startLine: 71
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>New value.</p>\n"
+  example: []
+  syntax:
+    content: public SyncSetting NewValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.SyncSetting
+    content.vb: Public Property NewValue As SyncSetting
+  overload: Dropbox.Api.TeamLog.TeamSelectiveSyncSettingsChangedDetails.NewValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.TeamSelectiveSyncSettingsChangedDetails
+  commentId: T:Dropbox.Api.TeamLog.TeamSelectiveSyncSettingsChangedDetails
+  parent: Dropbox.Api.TeamLog
+  name: TeamSelectiveSyncSettingsChangedDetails
+  nameWithType: TeamSelectiveSyncSettingsChangedDetails
+  fullName: Dropbox.Api.TeamLog.TeamSelectiveSyncSettingsChangedDetails
+- uid: Dropbox.Api.TeamLog.TeamSelectiveSyncSettingsChangedDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.TeamSelectiveSyncSettingsChangedDetails.#ctor
+  name: TeamSelectiveSyncSettingsChangedDetails
+  nameWithType: TeamSelectiveSyncSettingsChangedDetails.TeamSelectiveSyncSettingsChangedDetails
+  fullName: Dropbox.Api.TeamLog.TeamSelectiveSyncSettingsChangedDetails.TeamSelectiveSyncSettingsChangedDetails
+- uid: Dropbox.Api.Files.SyncSetting
+  commentId: T:Dropbox.Api.Files.SyncSetting
+  parent: Dropbox.Api.Files
+  name: SyncSetting
+  nameWithType: SyncSetting
+  fullName: Dropbox.Api.Files.SyncSetting
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: Dropbox.Api.TeamLog.TeamSelectiveSyncSettingsChangedDetails.PreviousValue*
+  commentId: Overload:Dropbox.Api.TeamLog.TeamSelectiveSyncSettingsChangedDetails.PreviousValue
+  name: PreviousValue
+  nameWithType: TeamSelectiveSyncSettingsChangedDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.TeamSelectiveSyncSettingsChangedDetails.PreviousValue
+- uid: Dropbox.Api.TeamLog.TeamSelectiveSyncSettingsChangedDetails.NewValue*
+  commentId: Overload:Dropbox.Api.TeamLog.TeamSelectiveSyncSettingsChangedDetails.NewValue
+  name: NewValue
+  nameWithType: TeamSelectiveSyncSettingsChangedDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.TeamSelectiveSyncSettingsChangedDetails.NewValue
+shouldSkipMarkup: true

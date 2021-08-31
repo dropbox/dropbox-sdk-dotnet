@@ -1,0 +1,148 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamPolicies.ShowcaseExternalSharingPolicy.Enabled
+  commentId: T:Dropbox.Api.TeamPolicies.ShowcaseExternalSharingPolicy.Enabled
+  id: ShowcaseExternalSharingPolicy.Enabled
+  parent: Dropbox.Api.TeamPolicies
+  children:
+  - Dropbox.Api.TeamPolicies.ShowcaseExternalSharingPolicy.Enabled.Instance
+  langs:
+  - csharp
+  - vb
+  name: ShowcaseExternalSharingPolicy.Enabled
+  nameWithType: ShowcaseExternalSharingPolicy.Enabled
+  fullName: Dropbox.Api.TeamPolicies.ShowcaseExternalSharingPolicy.Enabled
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/ShowcaseExternalSharingPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Enabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/ShowcaseExternalSharingPolicy.cs
+    startLine: 252
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Allow showcases to be shared with people not on the team.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Enabled : ShowcaseExternalSharingPolicy'
+    content.vb: >-
+      Public NotInheritable Class Enabled
+          Inherits ShowcaseExternalSharingPolicy
+  inheritance:
+  - System.Object
+  - Dropbox.Api.TeamPolicies.ShowcaseExternalSharingPolicy
+  inheritedMembers:
+  - Dropbox.Api.TeamPolicies.ShowcaseExternalSharingPolicy.IsDisabled
+  - Dropbox.Api.TeamPolicies.ShowcaseExternalSharingPolicy.AsDisabled
+  - Dropbox.Api.TeamPolicies.ShowcaseExternalSharingPolicy.IsEnabled
+  - Dropbox.Api.TeamPolicies.ShowcaseExternalSharingPolicy.AsEnabled
+  - Dropbox.Api.TeamPolicies.ShowcaseExternalSharingPolicy.IsOther
+  - Dropbox.Api.TeamPolicies.ShowcaseExternalSharingPolicy.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.TeamPolicies.ShowcaseExternalSharingPolicy.Enabled.Instance
+  commentId: F:Dropbox.Api.TeamPolicies.ShowcaseExternalSharingPolicy.Enabled.Instance
+  id: Instance
+  parent: Dropbox.Api.TeamPolicies.ShowcaseExternalSharingPolicy.Enabled
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: ShowcaseExternalSharingPolicy.Enabled.Instance
+  fullName: Dropbox.Api.TeamPolicies.ShowcaseExternalSharingPolicy.Enabled.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/ShowcaseExternalSharingPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/ShowcaseExternalSharingPolicy.cs
+    startLine: 276
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>A singleton instance of Enabled</p>\n"
+  example: []
+  syntax:
+    content: public static readonly ShowcaseExternalSharingPolicy.Enabled Instance
+    return:
+      type: Dropbox.Api.TeamPolicies.ShowcaseExternalSharingPolicy.Enabled
+    content.vb: Public Shared ReadOnly Instance As ShowcaseExternalSharingPolicy.Enabled
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamPolicies
+  commentId: N:Dropbox.Api.TeamPolicies
+  name: Dropbox.Api.TeamPolicies
+  nameWithType: Dropbox.Api.TeamPolicies
+  fullName: Dropbox.Api.TeamPolicies
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamPolicies.ShowcaseExternalSharingPolicy
+  commentId: T:Dropbox.Api.TeamPolicies.ShowcaseExternalSharingPolicy
+  parent: Dropbox.Api.TeamPolicies
+  name: ShowcaseExternalSharingPolicy
+  nameWithType: ShowcaseExternalSharingPolicy
+  fullName: Dropbox.Api.TeamPolicies.ShowcaseExternalSharingPolicy
+- uid: Dropbox.Api.TeamPolicies.ShowcaseExternalSharingPolicy.IsDisabled
+  commentId: P:Dropbox.Api.TeamPolicies.ShowcaseExternalSharingPolicy.IsDisabled
+  parent: Dropbox.Api.TeamPolicies.ShowcaseExternalSharingPolicy
+  name: IsDisabled
+  nameWithType: ShowcaseExternalSharingPolicy.IsDisabled
+  fullName: Dropbox.Api.TeamPolicies.ShowcaseExternalSharingPolicy.IsDisabled
+- uid: Dropbox.Api.TeamPolicies.ShowcaseExternalSharingPolicy.AsDisabled
+  commentId: P:Dropbox.Api.TeamPolicies.ShowcaseExternalSharingPolicy.AsDisabled
+  parent: Dropbox.Api.TeamPolicies.ShowcaseExternalSharingPolicy
+  name: AsDisabled
+  nameWithType: ShowcaseExternalSharingPolicy.AsDisabled
+  fullName: Dropbox.Api.TeamPolicies.ShowcaseExternalSharingPolicy.AsDisabled
+- uid: Dropbox.Api.TeamPolicies.ShowcaseExternalSharingPolicy.IsEnabled
+  commentId: P:Dropbox.Api.TeamPolicies.ShowcaseExternalSharingPolicy.IsEnabled
+  parent: Dropbox.Api.TeamPolicies.ShowcaseExternalSharingPolicy
+  name: IsEnabled
+  nameWithType: ShowcaseExternalSharingPolicy.IsEnabled
+  fullName: Dropbox.Api.TeamPolicies.ShowcaseExternalSharingPolicy.IsEnabled
+- uid: Dropbox.Api.TeamPolicies.ShowcaseExternalSharingPolicy.AsEnabled
+  commentId: P:Dropbox.Api.TeamPolicies.ShowcaseExternalSharingPolicy.AsEnabled
+  parent: Dropbox.Api.TeamPolicies.ShowcaseExternalSharingPolicy
+  name: AsEnabled
+  nameWithType: ShowcaseExternalSharingPolicy.AsEnabled
+  fullName: Dropbox.Api.TeamPolicies.ShowcaseExternalSharingPolicy.AsEnabled
+- uid: Dropbox.Api.TeamPolicies.ShowcaseExternalSharingPolicy.IsOther
+  commentId: P:Dropbox.Api.TeamPolicies.ShowcaseExternalSharingPolicy.IsOther
+  parent: Dropbox.Api.TeamPolicies.ShowcaseExternalSharingPolicy
+  name: IsOther
+  nameWithType: ShowcaseExternalSharingPolicy.IsOther
+  fullName: Dropbox.Api.TeamPolicies.ShowcaseExternalSharingPolicy.IsOther
+- uid: Dropbox.Api.TeamPolicies.ShowcaseExternalSharingPolicy.AsOther
+  commentId: P:Dropbox.Api.TeamPolicies.ShowcaseExternalSharingPolicy.AsOther
+  parent: Dropbox.Api.TeamPolicies.ShowcaseExternalSharingPolicy
+  name: AsOther
+  nameWithType: ShowcaseExternalSharingPolicy.AsOther
+  fullName: Dropbox.Api.TeamPolicies.ShowcaseExternalSharingPolicy.AsOther
+- uid: Dropbox.Api.TeamPolicies.ShowcaseExternalSharingPolicy.Enabled
+  commentId: T:Dropbox.Api.TeamPolicies.ShowcaseExternalSharingPolicy.Enabled
+  parent: Dropbox.Api.TeamPolicies
+  name: ShowcaseExternalSharingPolicy.Enabled
+  nameWithType: ShowcaseExternalSharingPolicy.Enabled
+  fullName: Dropbox.Api.TeamPolicies.ShowcaseExternalSharingPolicy.Enabled
+shouldSkipMarkup: true

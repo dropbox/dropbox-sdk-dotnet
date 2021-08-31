@@ -1,0 +1,379 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.MembersAddJobStatusV2Result.Complete
+  commentId: T:Dropbox.Api.Team.MembersAddJobStatusV2Result.Complete
+  id: MembersAddJobStatusV2Result.Complete
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.MembersAddJobStatusV2Result.Complete.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Team.MemberAddV2Result})
+  - Dropbox.Api.Team.MembersAddJobStatusV2Result.Complete.Value
+  langs:
+  - csharp
+  - vb
+  name: MembersAddJobStatusV2Result.Complete
+  nameWithType: MembersAddJobStatusV2Result.Complete
+  fullName: Dropbox.Api.Team.MembersAddJobStatusV2Result.Complete
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersAddJobStatusV2Result.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Complete
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersAddJobStatusV2Result.cs
+    startLine: 216
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The asynchronous job has finished. For each member that was specified in the\nparameter <xref href=\"Dropbox.Api.Team.MembersAddArg\" data-throw-if-not-resolved=\"false\"></xref> that was provided to <xref href=\"Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersAddV2Async(Dropbox.Api.Team.MembersAddV2Arg)\" data-throw-if-not-resolved=\"false\"></xref>, a corresponding\nitem is returned in this list.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Complete : MembersAddJobStatusV2Result'
+    content.vb: >-
+      Public NotInheritable Class Complete
+          Inherits MembersAddJobStatusV2Result
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.MembersAddJobStatusV2Result
+  inheritedMembers:
+  - Dropbox.Api.Team.MembersAddJobStatusV2Result.IsComplete
+  - Dropbox.Api.Team.MembersAddJobStatusV2Result.AsComplete
+  - Dropbox.Api.Team.MembersAddJobStatusV2Result.IsFailed
+  - Dropbox.Api.Team.MembersAddJobStatusV2Result.AsFailed
+  - Dropbox.Api.Team.MembersAddJobStatusV2Result.IsOther
+  - Dropbox.Api.Team.MembersAddJobStatusV2Result.AsOther
+  - Dropbox.Api.Team.MembersAddJobStatusV2Result.IsInProgress
+  - Dropbox.Api.Team.MembersAddJobStatusV2Result.AsInProgress
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Team.MembersAddJobStatusV2Result.Complete.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Team.MemberAddV2Result})
+  commentId: M:Dropbox.Api.Team.MembersAddJobStatusV2Result.Complete.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Team.MemberAddV2Result})
+  id: '#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Team.MemberAddV2Result})'
+  parent: Dropbox.Api.Team.MembersAddJobStatusV2Result.Complete
+  langs:
+  - csharp
+  - vb
+  name: Complete(System.Collections.Generic.IEnumerable<MemberAddV2Result>)
+  nameWithType: MembersAddJobStatusV2Result.Complete.Complete(System.Collections.Generic.IEnumerable<MemberAddV2Result>)
+  fullName: Dropbox.Api.Team.MembersAddJobStatusV2Result.Complete.Complete(System.Collections.Generic.IEnumerable<Dropbox.Api.Team.MemberAddV2Result>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersAddJobStatusV2Result.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersAddJobStatusV2Result.cs
+    startLine: 234
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.MembersAddJobStatusV2Result.Complete\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public Complete(System.Collections.Generic.IEnumerable<MemberAddV2Result> value)
+    parameters:
+    - id: value
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.Team.MemberAddV2Result}
+      description: The value
+    content.vb: Public Sub New(value As System.Collections.Generic.IEnumerable(Of MemberAddV2Result))
+  overload: Dropbox.Api.Team.MembersAddJobStatusV2Result.Complete.#ctor*
+  nameWithType.vb: MembersAddJobStatusV2Result.Complete.Complete(System.Collections.Generic.IEnumerable(Of MemberAddV2Result))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Team.MembersAddJobStatusV2Result.Complete.Complete(System.Collections.Generic.IEnumerable(Of Dropbox.Api.Team.MemberAddV2Result))
+  name.vb: Complete(System.Collections.Generic.IEnumerable(Of MemberAddV2Result))
+- uid: Dropbox.Api.Team.MembersAddJobStatusV2Result.Complete.Value
+  commentId: P:Dropbox.Api.Team.MembersAddJobStatusV2Result.Complete.Value
+  id: Value
+  parent: Dropbox.Api.Team.MembersAddJobStatusV2Result.Complete
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: MembersAddJobStatusV2Result.Complete.Value
+  fullName: Dropbox.Api.Team.MembersAddJobStatusV2Result.Complete.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersAddJobStatusV2Result.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersAddJobStatusV2Result.cs
+    startLine: 248
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<MemberAddV2Result> Value { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{Dropbox.Api.Team.MemberAddV2Result}
+    content.vb: Public ReadOnly Property Value As System.Collections.Generic.IList(Of MemberAddV2Result)
+  overload: Dropbox.Api.Team.MembersAddJobStatusV2Result.Complete.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team.MembersAddArg
+  commentId: T:Dropbox.Api.Team.MembersAddArg
+  parent: Dropbox.Api.Team
+  name: MembersAddArg
+  nameWithType: MembersAddArg
+  fullName: Dropbox.Api.Team.MembersAddArg
+- uid: Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersAddV2Async(Dropbox.Api.Team.MembersAddV2Arg)
+  commentId: M:Dropbox.Api.Team.Routes.TeamTeamRoutes.MembersAddV2Async(Dropbox.Api.Team.MembersAddV2Arg)
+  isExternal: true
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.MembersAddJobStatusV2Result
+  commentId: T:Dropbox.Api.Team.MembersAddJobStatusV2Result
+  parent: Dropbox.Api.Team
+  name: MembersAddJobStatusV2Result
+  nameWithType: MembersAddJobStatusV2Result
+  fullName: Dropbox.Api.Team.MembersAddJobStatusV2Result
+- uid: Dropbox.Api.Team.MembersAddJobStatusV2Result.IsComplete
+  commentId: P:Dropbox.Api.Team.MembersAddJobStatusV2Result.IsComplete
+  parent: Dropbox.Api.Team.MembersAddJobStatusV2Result
+  name: IsComplete
+  nameWithType: MembersAddJobStatusV2Result.IsComplete
+  fullName: Dropbox.Api.Team.MembersAddJobStatusV2Result.IsComplete
+- uid: Dropbox.Api.Team.MembersAddJobStatusV2Result.AsComplete
+  commentId: P:Dropbox.Api.Team.MembersAddJobStatusV2Result.AsComplete
+  parent: Dropbox.Api.Team.MembersAddJobStatusV2Result
+  name: AsComplete
+  nameWithType: MembersAddJobStatusV2Result.AsComplete
+  fullName: Dropbox.Api.Team.MembersAddJobStatusV2Result.AsComplete
+- uid: Dropbox.Api.Team.MembersAddJobStatusV2Result.IsFailed
+  commentId: P:Dropbox.Api.Team.MembersAddJobStatusV2Result.IsFailed
+  parent: Dropbox.Api.Team.MembersAddJobStatusV2Result
+  name: IsFailed
+  nameWithType: MembersAddJobStatusV2Result.IsFailed
+  fullName: Dropbox.Api.Team.MembersAddJobStatusV2Result.IsFailed
+- uid: Dropbox.Api.Team.MembersAddJobStatusV2Result.AsFailed
+  commentId: P:Dropbox.Api.Team.MembersAddJobStatusV2Result.AsFailed
+  parent: Dropbox.Api.Team.MembersAddJobStatusV2Result
+  name: AsFailed
+  nameWithType: MembersAddJobStatusV2Result.AsFailed
+  fullName: Dropbox.Api.Team.MembersAddJobStatusV2Result.AsFailed
+- uid: Dropbox.Api.Team.MembersAddJobStatusV2Result.IsOther
+  commentId: P:Dropbox.Api.Team.MembersAddJobStatusV2Result.IsOther
+  parent: Dropbox.Api.Team.MembersAddJobStatusV2Result
+  name: IsOther
+  nameWithType: MembersAddJobStatusV2Result.IsOther
+  fullName: Dropbox.Api.Team.MembersAddJobStatusV2Result.IsOther
+- uid: Dropbox.Api.Team.MembersAddJobStatusV2Result.AsOther
+  commentId: P:Dropbox.Api.Team.MembersAddJobStatusV2Result.AsOther
+  parent: Dropbox.Api.Team.MembersAddJobStatusV2Result
+  name: AsOther
+  nameWithType: MembersAddJobStatusV2Result.AsOther
+  fullName: Dropbox.Api.Team.MembersAddJobStatusV2Result.AsOther
+- uid: Dropbox.Api.Team.MembersAddJobStatusV2Result.IsInProgress
+  commentId: P:Dropbox.Api.Team.MembersAddJobStatusV2Result.IsInProgress
+  parent: Dropbox.Api.Team.MembersAddJobStatusV2Result
+  name: IsInProgress
+  nameWithType: MembersAddJobStatusV2Result.IsInProgress
+  fullName: Dropbox.Api.Team.MembersAddJobStatusV2Result.IsInProgress
+- uid: Dropbox.Api.Team.MembersAddJobStatusV2Result.AsInProgress
+  commentId: P:Dropbox.Api.Team.MembersAddJobStatusV2Result.AsInProgress
+  parent: Dropbox.Api.Team.MembersAddJobStatusV2Result
+  name: AsInProgress
+  nameWithType: MembersAddJobStatusV2Result.AsInProgress
+  fullName: Dropbox.Api.Team.MembersAddJobStatusV2Result.AsInProgress
+- uid: Dropbox.Api.Team.MembersAddJobStatusV2Result.Complete
+  commentId: T:Dropbox.Api.Team.MembersAddJobStatusV2Result.Complete
+  parent: Dropbox.Api.Team
+  name: MembersAddJobStatusV2Result.Complete
+  nameWithType: MembersAddJobStatusV2Result.Complete
+  fullName: Dropbox.Api.Team.MembersAddJobStatusV2Result.Complete
+- uid: Dropbox.Api.Team.MembersAddJobStatusV2Result.Complete.#ctor*
+  commentId: Overload:Dropbox.Api.Team.MembersAddJobStatusV2Result.Complete.#ctor
+  name: Complete
+  nameWithType: MembersAddJobStatusV2Result.Complete.Complete
+  fullName: Dropbox.Api.Team.MembersAddJobStatusV2Result.Complete.Complete
+- uid: System.Collections.Generic.IEnumerable{Dropbox.Api.Team.MemberAddV2Result}
+  commentId: '!:System.Collections.Generic.IEnumerable{Dropbox.Api.Team.MemberAddV2Result}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<MemberAddV2Result>
+  nameWithType: System.Collections.Generic.IEnumerable<MemberAddV2Result>
+  fullName: System.Collections.Generic.IEnumerable<Dropbox.Api.Team.MemberAddV2Result>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of MemberAddV2Result)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Dropbox.Api.Team.MemberAddV2Result)
+  name.vb: System.Collections.Generic.IEnumerable(Of MemberAddV2Result)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Team.MemberAddV2Result
+    name: MemberAddV2Result
+    nameWithType: MemberAddV2Result
+    fullName: Dropbox.Api.Team.MemberAddV2Result
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Team.MemberAddV2Result
+    name: MemberAddV2Result
+    nameWithType: MemberAddV2Result
+    fullName: Dropbox.Api.Team.MemberAddV2Result
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: System.Collections.Generic.IEnumerable<>
+  nameWithType: System.Collections.Generic.IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: System.Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Team.MembersAddJobStatusV2Result.Complete.Value*
+  commentId: Overload:Dropbox.Api.Team.MembersAddJobStatusV2Result.Complete.Value
+  name: Value
+  nameWithType: MembersAddJobStatusV2Result.Complete.Value
+  fullName: Dropbox.Api.Team.MembersAddJobStatusV2Result.Complete.Value
+- uid: System.Collections.Generic.IList{Dropbox.Api.Team.MemberAddV2Result}
+  commentId: '!:System.Collections.Generic.IList{Dropbox.Api.Team.MemberAddV2Result}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<MemberAddV2Result>
+  nameWithType: System.Collections.Generic.IList<MemberAddV2Result>
+  fullName: System.Collections.Generic.IList<Dropbox.Api.Team.MemberAddV2Result>
+  nameWithType.vb: System.Collections.Generic.IList(Of MemberAddV2Result)
+  fullName.vb: System.Collections.Generic.IList(Of Dropbox.Api.Team.MemberAddV2Result)
+  name.vb: System.Collections.Generic.IList(Of MemberAddV2Result)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Team.MemberAddV2Result
+    name: MemberAddV2Result
+    nameWithType: MemberAddV2Result
+    fullName: Dropbox.Api.Team.MemberAddV2Result
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Team.MemberAddV2Result
+    name: MemberAddV2Result
+    nameWithType: MemberAddV2Result
+    fullName: Dropbox.Api.Team.MemberAddV2Result
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  isExternal: true
+  name: System.Collections.Generic.IList<>
+  nameWithType: System.Collections.Generic.IList<>
+  fullName: System.Collections.Generic.IList<>
+  nameWithType.vb: System.Collections.Generic.IList(Of )
+  fullName.vb: System.Collections.Generic.IList(Of )
+  name.vb: System.Collections.Generic.IList(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+shouldSkipMarkup: true

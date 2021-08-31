@@ -1,0 +1,283 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.PaperDocOwnershipChangedDetails
+  commentId: T:Dropbox.Api.TeamLog.PaperDocOwnershipChangedDetails
+  id: PaperDocOwnershipChangedDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.PaperDocOwnershipChangedDetails.#ctor
+  - Dropbox.Api.TeamLog.PaperDocOwnershipChangedDetails.#ctor(System.String,System.String,System.String)
+  - Dropbox.Api.TeamLog.PaperDocOwnershipChangedDetails.EventUuid
+  - Dropbox.Api.TeamLog.PaperDocOwnershipChangedDetails.NewOwnerUserId
+  - Dropbox.Api.TeamLog.PaperDocOwnershipChangedDetails.OldOwnerUserId
+  langs:
+  - csharp
+  - vb
+  name: PaperDocOwnershipChangedDetails
+  nameWithType: PaperDocOwnershipChangedDetails
+  fullName: Dropbox.Api.TeamLog.PaperDocOwnershipChangedDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDocOwnershipChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PaperDocOwnershipChangedDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDocOwnershipChangedDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Transferred ownership of Paper doc.</p>\n"
+  example: []
+  syntax:
+    content: 'public class PaperDocOwnershipChangedDetails : object'
+    content.vb: >-
+      Public Class PaperDocOwnershipChangedDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.PaperDocOwnershipChangedDetails.#ctor(System.String,System.String,System.String)
+  commentId: M:Dropbox.Api.TeamLog.PaperDocOwnershipChangedDetails.#ctor(System.String,System.String,System.String)
+  id: '#ctor(System.String,System.String,System.String)'
+  parent: Dropbox.Api.TeamLog.PaperDocOwnershipChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: PaperDocOwnershipChangedDetails(String, String, String)
+  nameWithType: PaperDocOwnershipChangedDetails.PaperDocOwnershipChangedDetails(String, String, String)
+  fullName: Dropbox.Api.TeamLog.PaperDocOwnershipChangedDetails.PaperDocOwnershipChangedDetails(System.String, System.String, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDocOwnershipChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDocOwnershipChangedDetails.cs
+    startLine: 36
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.PaperDocOwnershipChangedDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public PaperDocOwnershipChangedDetails(string eventUuid, string newOwnerUserId, string oldOwnerUserId = null)
+    parameters:
+    - id: eventUuid
+      type: System.String
+      description: Event unique identifier.
+    - id: newOwnerUserId
+      type: System.String
+      description: New owner.
+    - id: oldOwnerUserId
+      type: System.String
+      description: Previous owner.
+    content.vb: Public Sub New(eventUuid As String, newOwnerUserId As String, oldOwnerUserId As String = Nothing)
+  overload: Dropbox.Api.TeamLog.PaperDocOwnershipChangedDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.PaperDocOwnershipChangedDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.PaperDocOwnershipChangedDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.PaperDocOwnershipChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: PaperDocOwnershipChangedDetails()
+  nameWithType: PaperDocOwnershipChangedDetails.PaperDocOwnershipChangedDetails()
+  fullName: Dropbox.Api.TeamLog.PaperDocOwnershipChangedDetails.PaperDocOwnershipChangedDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDocOwnershipChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDocOwnershipChangedDetails.cs
+    startLine: 81
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.PaperDocOwnershipChangedDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public PaperDocOwnershipChangedDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.PaperDocOwnershipChangedDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.PaperDocOwnershipChangedDetails.EventUuid
+  commentId: P:Dropbox.Api.TeamLog.PaperDocOwnershipChangedDetails.EventUuid
+  id: EventUuid
+  parent: Dropbox.Api.TeamLog.PaperDocOwnershipChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: EventUuid
+  nameWithType: PaperDocOwnershipChangedDetails.EventUuid
+  fullName: Dropbox.Api.TeamLog.PaperDocOwnershipChangedDetails.EventUuid
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDocOwnershipChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: EventUuid
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDocOwnershipChangedDetails.cs
+    startLine: 89
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Event unique identifier.</p>\n"
+  example: []
+  syntax:
+    content: public string EventUuid { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property EventUuid As String
+  overload: Dropbox.Api.TeamLog.PaperDocOwnershipChangedDetails.EventUuid*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.PaperDocOwnershipChangedDetails.NewOwnerUserId
+  commentId: P:Dropbox.Api.TeamLog.PaperDocOwnershipChangedDetails.NewOwnerUserId
+  id: NewOwnerUserId
+  parent: Dropbox.Api.TeamLog.PaperDocOwnershipChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: NewOwnerUserId
+  nameWithType: PaperDocOwnershipChangedDetails.NewOwnerUserId
+  fullName: Dropbox.Api.TeamLog.PaperDocOwnershipChangedDetails.NewOwnerUserId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDocOwnershipChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NewOwnerUserId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDocOwnershipChangedDetails.cs
+    startLine: 94
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>New owner.</p>\n"
+  example: []
+  syntax:
+    content: public string NewOwnerUserId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property NewOwnerUserId As String
+  overload: Dropbox.Api.TeamLog.PaperDocOwnershipChangedDetails.NewOwnerUserId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.PaperDocOwnershipChangedDetails.OldOwnerUserId
+  commentId: P:Dropbox.Api.TeamLog.PaperDocOwnershipChangedDetails.OldOwnerUserId
+  id: OldOwnerUserId
+  parent: Dropbox.Api.TeamLog.PaperDocOwnershipChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: OldOwnerUserId
+  nameWithType: PaperDocOwnershipChangedDetails.OldOwnerUserId
+  fullName: Dropbox.Api.TeamLog.PaperDocOwnershipChangedDetails.OldOwnerUserId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDocOwnershipChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: OldOwnerUserId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDocOwnershipChangedDetails.cs
+    startLine: 99
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Previous owner.</p>\n"
+  example: []
+  syntax:
+    content: public string OldOwnerUserId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property OldOwnerUserId As String
+  overload: Dropbox.Api.TeamLog.PaperDocOwnershipChangedDetails.OldOwnerUserId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.PaperDocOwnershipChangedDetails
+  commentId: T:Dropbox.Api.TeamLog.PaperDocOwnershipChangedDetails
+  parent: Dropbox.Api.TeamLog
+  name: PaperDocOwnershipChangedDetails
+  nameWithType: PaperDocOwnershipChangedDetails
+  fullName: Dropbox.Api.TeamLog.PaperDocOwnershipChangedDetails
+- uid: Dropbox.Api.TeamLog.PaperDocOwnershipChangedDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.PaperDocOwnershipChangedDetails.#ctor
+  name: PaperDocOwnershipChangedDetails
+  nameWithType: PaperDocOwnershipChangedDetails.PaperDocOwnershipChangedDetails
+  fullName: Dropbox.Api.TeamLog.PaperDocOwnershipChangedDetails.PaperDocOwnershipChangedDetails
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.PaperDocOwnershipChangedDetails.EventUuid*
+  commentId: Overload:Dropbox.Api.TeamLog.PaperDocOwnershipChangedDetails.EventUuid
+  name: EventUuid
+  nameWithType: PaperDocOwnershipChangedDetails.EventUuid
+  fullName: Dropbox.Api.TeamLog.PaperDocOwnershipChangedDetails.EventUuid
+- uid: Dropbox.Api.TeamLog.PaperDocOwnershipChangedDetails.NewOwnerUserId*
+  commentId: Overload:Dropbox.Api.TeamLog.PaperDocOwnershipChangedDetails.NewOwnerUserId
+  name: NewOwnerUserId
+  nameWithType: PaperDocOwnershipChangedDetails.NewOwnerUserId
+  fullName: Dropbox.Api.TeamLog.PaperDocOwnershipChangedDetails.NewOwnerUserId
+- uid: Dropbox.Api.TeamLog.PaperDocOwnershipChangedDetails.OldOwnerUserId*
+  commentId: Overload:Dropbox.Api.TeamLog.PaperDocOwnershipChangedDetails.OldOwnerUserId
+  name: OldOwnerUserId
+  nameWithType: PaperDocOwnershipChangedDetails.OldOwnerUserId
+  fullName: Dropbox.Api.TeamLog.PaperDocOwnershipChangedDetails.OldOwnerUserId
+shouldSkipMarkup: true

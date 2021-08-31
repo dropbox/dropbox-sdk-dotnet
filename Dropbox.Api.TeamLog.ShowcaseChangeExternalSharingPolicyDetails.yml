@@ -1,0 +1,239 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.ShowcaseChangeExternalSharingPolicyDetails
+  commentId: T:Dropbox.Api.TeamLog.ShowcaseChangeExternalSharingPolicyDetails
+  id: ShowcaseChangeExternalSharingPolicyDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.ShowcaseChangeExternalSharingPolicyDetails.#ctor
+  - Dropbox.Api.TeamLog.ShowcaseChangeExternalSharingPolicyDetails.#ctor(Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy,Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy)
+  - Dropbox.Api.TeamLog.ShowcaseChangeExternalSharingPolicyDetails.NewValue
+  - Dropbox.Api.TeamLog.ShowcaseChangeExternalSharingPolicyDetails.PreviousValue
+  langs:
+  - csharp
+  - vb
+  name: ShowcaseChangeExternalSharingPolicyDetails
+  nameWithType: ShowcaseChangeExternalSharingPolicyDetails
+  fullName: Dropbox.Api.TeamLog.ShowcaseChangeExternalSharingPolicyDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseChangeExternalSharingPolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ShowcaseChangeExternalSharingPolicyDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseChangeExternalSharingPolicyDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Enabled/disabled sharing Dropbox Showcase externally for team.</p>\n"
+  example: []
+  syntax:
+    content: 'public class ShowcaseChangeExternalSharingPolicyDetails : object'
+    content.vb: >-
+      Public Class ShowcaseChangeExternalSharingPolicyDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.ShowcaseChangeExternalSharingPolicyDetails.#ctor(Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy,Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy)
+  commentId: M:Dropbox.Api.TeamLog.ShowcaseChangeExternalSharingPolicyDetails.#ctor(Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy,Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy)
+  id: '#ctor(Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy,Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy)'
+  parent: Dropbox.Api.TeamLog.ShowcaseChangeExternalSharingPolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: ShowcaseChangeExternalSharingPolicyDetails(ShowcaseExternalSharingPolicy, ShowcaseExternalSharingPolicy)
+  nameWithType: ShowcaseChangeExternalSharingPolicyDetails.ShowcaseChangeExternalSharingPolicyDetails(ShowcaseExternalSharingPolicy, ShowcaseExternalSharingPolicy)
+  fullName: Dropbox.Api.TeamLog.ShowcaseChangeExternalSharingPolicyDetails.ShowcaseChangeExternalSharingPolicyDetails(Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy, Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseChangeExternalSharingPolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseChangeExternalSharingPolicyDetails.cs
+    startLine: 36
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.ShowcaseChangeExternalSharingPolicyDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public ShowcaseChangeExternalSharingPolicyDetails(ShowcaseExternalSharingPolicy newValue, ShowcaseExternalSharingPolicy previousValue)
+    parameters:
+    - id: newValue
+      type: Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy
+      description: New Dropbox Showcase external sharing policy.
+    - id: previousValue
+      type: Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy
+      description: >-
+        Previous Dropbox Showcase external sharing
+
+        policy.
+    content.vb: Public Sub New(newValue As ShowcaseExternalSharingPolicy, previousValue As ShowcaseExternalSharingPolicy)
+  overload: Dropbox.Api.TeamLog.ShowcaseChangeExternalSharingPolicyDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.ShowcaseChangeExternalSharingPolicyDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.ShowcaseChangeExternalSharingPolicyDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.ShowcaseChangeExternalSharingPolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: ShowcaseChangeExternalSharingPolicyDetails()
+  nameWithType: ShowcaseChangeExternalSharingPolicyDetails.ShowcaseChangeExternalSharingPolicyDetails()
+  fullName: Dropbox.Api.TeamLog.ShowcaseChangeExternalSharingPolicyDetails.ShowcaseChangeExternalSharingPolicyDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseChangeExternalSharingPolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseChangeExternalSharingPolicyDetails.cs
+    startLine: 59
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.ShowcaseChangeExternalSharingPolicyDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public ShowcaseChangeExternalSharingPolicyDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.ShowcaseChangeExternalSharingPolicyDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.ShowcaseChangeExternalSharingPolicyDetails.NewValue
+  commentId: P:Dropbox.Api.TeamLog.ShowcaseChangeExternalSharingPolicyDetails.NewValue
+  id: NewValue
+  parent: Dropbox.Api.TeamLog.ShowcaseChangeExternalSharingPolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: NewValue
+  nameWithType: ShowcaseChangeExternalSharingPolicyDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.ShowcaseChangeExternalSharingPolicyDetails.NewValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseChangeExternalSharingPolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NewValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseChangeExternalSharingPolicyDetails.cs
+    startLine: 67
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>New Dropbox Showcase external sharing policy.</p>\n"
+  example: []
+  syntax:
+    content: public ShowcaseExternalSharingPolicy NewValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy
+    content.vb: Public Property NewValue As ShowcaseExternalSharingPolicy
+  overload: Dropbox.Api.TeamLog.ShowcaseChangeExternalSharingPolicyDetails.NewValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.ShowcaseChangeExternalSharingPolicyDetails.PreviousValue
+  commentId: P:Dropbox.Api.TeamLog.ShowcaseChangeExternalSharingPolicyDetails.PreviousValue
+  id: PreviousValue
+  parent: Dropbox.Api.TeamLog.ShowcaseChangeExternalSharingPolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: PreviousValue
+  nameWithType: ShowcaseChangeExternalSharingPolicyDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.ShowcaseChangeExternalSharingPolicyDetails.PreviousValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseChangeExternalSharingPolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PreviousValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseChangeExternalSharingPolicyDetails.cs
+    startLine: 72
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Previous Dropbox Showcase external sharing policy.</p>\n"
+  example: []
+  syntax:
+    content: public ShowcaseExternalSharingPolicy PreviousValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy
+    content.vb: Public Property PreviousValue As ShowcaseExternalSharingPolicy
+  overload: Dropbox.Api.TeamLog.ShowcaseChangeExternalSharingPolicyDetails.PreviousValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.ShowcaseChangeExternalSharingPolicyDetails
+  commentId: T:Dropbox.Api.TeamLog.ShowcaseChangeExternalSharingPolicyDetails
+  parent: Dropbox.Api.TeamLog
+  name: ShowcaseChangeExternalSharingPolicyDetails
+  nameWithType: ShowcaseChangeExternalSharingPolicyDetails
+  fullName: Dropbox.Api.TeamLog.ShowcaseChangeExternalSharingPolicyDetails
+- uid: Dropbox.Api.TeamLog.ShowcaseChangeExternalSharingPolicyDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.ShowcaseChangeExternalSharingPolicyDetails.#ctor
+  name: ShowcaseChangeExternalSharingPolicyDetails
+  nameWithType: ShowcaseChangeExternalSharingPolicyDetails.ShowcaseChangeExternalSharingPolicyDetails
+  fullName: Dropbox.Api.TeamLog.ShowcaseChangeExternalSharingPolicyDetails.ShowcaseChangeExternalSharingPolicyDetails
+- uid: Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy
+  commentId: T:Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy
+  parent: Dropbox.Api.TeamLog
+  name: ShowcaseExternalSharingPolicy
+  nameWithType: ShowcaseExternalSharingPolicy
+  fullName: Dropbox.Api.TeamLog.ShowcaseExternalSharingPolicy
+- uid: Dropbox.Api.TeamLog.ShowcaseChangeExternalSharingPolicyDetails.NewValue*
+  commentId: Overload:Dropbox.Api.TeamLog.ShowcaseChangeExternalSharingPolicyDetails.NewValue
+  name: NewValue
+  nameWithType: ShowcaseChangeExternalSharingPolicyDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.ShowcaseChangeExternalSharingPolicyDetails.NewValue
+- uid: Dropbox.Api.TeamLog.ShowcaseChangeExternalSharingPolicyDetails.PreviousValue*
+  commentId: Overload:Dropbox.Api.TeamLog.ShowcaseChangeExternalSharingPolicyDetails.PreviousValue
+  name: PreviousValue
+  nameWithType: ShowcaseChangeExternalSharingPolicyDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.ShowcaseChangeExternalSharingPolicyDetails.PreviousValue
+shouldSkipMarkup: true

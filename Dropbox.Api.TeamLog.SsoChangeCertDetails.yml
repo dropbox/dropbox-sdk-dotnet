@@ -1,0 +1,239 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.SsoChangeCertDetails
+  commentId: T:Dropbox.Api.TeamLog.SsoChangeCertDetails
+  id: SsoChangeCertDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.SsoChangeCertDetails.#ctor
+  - Dropbox.Api.TeamLog.SsoChangeCertDetails.#ctor(Dropbox.Api.TeamLog.Certificate,Dropbox.Api.TeamLog.Certificate)
+  - Dropbox.Api.TeamLog.SsoChangeCertDetails.NewCertificateDetails
+  - Dropbox.Api.TeamLog.SsoChangeCertDetails.PreviousCertificateDetails
+  langs:
+  - csharp
+  - vb
+  name: SsoChangeCertDetails
+  nameWithType: SsoChangeCertDetails
+  fullName: Dropbox.Api.TeamLog.SsoChangeCertDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SsoChangeCertDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SsoChangeCertDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SsoChangeCertDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Changed X.509 certificate for SSO.</p>\n"
+  example: []
+  syntax:
+    content: 'public class SsoChangeCertDetails : object'
+    content.vb: >-
+      Public Class SsoChangeCertDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.SsoChangeCertDetails.#ctor(Dropbox.Api.TeamLog.Certificate,Dropbox.Api.TeamLog.Certificate)
+  commentId: M:Dropbox.Api.TeamLog.SsoChangeCertDetails.#ctor(Dropbox.Api.TeamLog.Certificate,Dropbox.Api.TeamLog.Certificate)
+  id: '#ctor(Dropbox.Api.TeamLog.Certificate,Dropbox.Api.TeamLog.Certificate)'
+  parent: Dropbox.Api.TeamLog.SsoChangeCertDetails
+  langs:
+  - csharp
+  - vb
+  name: SsoChangeCertDetails(Certificate, Certificate)
+  nameWithType: SsoChangeCertDetails.SsoChangeCertDetails(Certificate, Certificate)
+  fullName: Dropbox.Api.TeamLog.SsoChangeCertDetails.SsoChangeCertDetails(Dropbox.Api.TeamLog.Certificate, Dropbox.Api.TeamLog.Certificate)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SsoChangeCertDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SsoChangeCertDetails.cs
+    startLine: 36
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SsoChangeCertDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public SsoChangeCertDetails(Certificate newCertificateDetails, Certificate previousCertificateDetails = null)
+    parameters:
+    - id: newCertificateDetails
+      type: Dropbox.Api.TeamLog.Certificate
+      description: New SSO certificate details.
+    - id: previousCertificateDetails
+      type: Dropbox.Api.TeamLog.Certificate
+      description: >-
+        Previous SSO certificate details. Might be
+
+        missing due to historical data gap.
+    content.vb: Public Sub New(newCertificateDetails As Certificate, previousCertificateDetails As Certificate = Nothing)
+  overload: Dropbox.Api.TeamLog.SsoChangeCertDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SsoChangeCertDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.SsoChangeCertDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.SsoChangeCertDetails
+  langs:
+  - csharp
+  - vb
+  name: SsoChangeCertDetails()
+  nameWithType: SsoChangeCertDetails.SsoChangeCertDetails()
+  fullName: Dropbox.Api.TeamLog.SsoChangeCertDetails.SsoChangeCertDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SsoChangeCertDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SsoChangeCertDetails.cs
+    startLine: 54
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SsoChangeCertDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public SsoChangeCertDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.SsoChangeCertDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SsoChangeCertDetails.NewCertificateDetails
+  commentId: P:Dropbox.Api.TeamLog.SsoChangeCertDetails.NewCertificateDetails
+  id: NewCertificateDetails
+  parent: Dropbox.Api.TeamLog.SsoChangeCertDetails
+  langs:
+  - csharp
+  - vb
+  name: NewCertificateDetails
+  nameWithType: SsoChangeCertDetails.NewCertificateDetails
+  fullName: Dropbox.Api.TeamLog.SsoChangeCertDetails.NewCertificateDetails
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SsoChangeCertDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NewCertificateDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SsoChangeCertDetails.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>New SSO certificate details.</p>\n"
+  example: []
+  syntax:
+    content: public Certificate NewCertificateDetails { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.Certificate
+    content.vb: Public Property NewCertificateDetails As Certificate
+  overload: Dropbox.Api.TeamLog.SsoChangeCertDetails.NewCertificateDetails*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.SsoChangeCertDetails.PreviousCertificateDetails
+  commentId: P:Dropbox.Api.TeamLog.SsoChangeCertDetails.PreviousCertificateDetails
+  id: PreviousCertificateDetails
+  parent: Dropbox.Api.TeamLog.SsoChangeCertDetails
+  langs:
+  - csharp
+  - vb
+  name: PreviousCertificateDetails
+  nameWithType: SsoChangeCertDetails.PreviousCertificateDetails
+  fullName: Dropbox.Api.TeamLog.SsoChangeCertDetails.PreviousCertificateDetails
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SsoChangeCertDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PreviousCertificateDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SsoChangeCertDetails.cs
+    startLine: 68
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Previous SSO certificate details. Might be missing due to historical data\ngap.</p>\n"
+  example: []
+  syntax:
+    content: public Certificate PreviousCertificateDetails { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.Certificate
+    content.vb: Public Property PreviousCertificateDetails As Certificate
+  overload: Dropbox.Api.TeamLog.SsoChangeCertDetails.PreviousCertificateDetails*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.SsoChangeCertDetails
+  commentId: T:Dropbox.Api.TeamLog.SsoChangeCertDetails
+  parent: Dropbox.Api.TeamLog
+  name: SsoChangeCertDetails
+  nameWithType: SsoChangeCertDetails
+  fullName: Dropbox.Api.TeamLog.SsoChangeCertDetails
+- uid: Dropbox.Api.TeamLog.SsoChangeCertDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.SsoChangeCertDetails.#ctor
+  name: SsoChangeCertDetails
+  nameWithType: SsoChangeCertDetails.SsoChangeCertDetails
+  fullName: Dropbox.Api.TeamLog.SsoChangeCertDetails.SsoChangeCertDetails
+- uid: Dropbox.Api.TeamLog.Certificate
+  commentId: T:Dropbox.Api.TeamLog.Certificate
+  parent: Dropbox.Api.TeamLog
+  name: Certificate
+  nameWithType: Certificate
+  fullName: Dropbox.Api.TeamLog.Certificate
+- uid: Dropbox.Api.TeamLog.SsoChangeCertDetails.NewCertificateDetails*
+  commentId: Overload:Dropbox.Api.TeamLog.SsoChangeCertDetails.NewCertificateDetails
+  name: NewCertificateDetails
+  nameWithType: SsoChangeCertDetails.NewCertificateDetails
+  fullName: Dropbox.Api.TeamLog.SsoChangeCertDetails.NewCertificateDetails
+- uid: Dropbox.Api.TeamLog.SsoChangeCertDetails.PreviousCertificateDetails*
+  commentId: Overload:Dropbox.Api.TeamLog.SsoChangeCertDetails.PreviousCertificateDetails
+  name: PreviousCertificateDetails
+  nameWithType: SsoChangeCertDetails.PreviousCertificateDetails
+  fullName: Dropbox.Api.TeamLog.SsoChangeCertDetails.PreviousCertificateDetails
+shouldSkipMarkup: true

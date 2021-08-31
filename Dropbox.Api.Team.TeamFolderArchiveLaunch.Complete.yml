@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.TeamFolderArchiveLaunch.Complete
+  commentId: T:Dropbox.Api.Team.TeamFolderArchiveLaunch.Complete
+  id: TeamFolderArchiveLaunch.Complete
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.TeamFolderArchiveLaunch.Complete.#ctor(Dropbox.Api.Team.TeamFolderMetadata)
+  - Dropbox.Api.Team.TeamFolderArchiveLaunch.Complete.Value
+  langs:
+  - csharp
+  - vb
+  name: TeamFolderArchiveLaunch.Complete
+  nameWithType: TeamFolderArchiveLaunch.Complete
+  fullName: Dropbox.Api.Team.TeamFolderArchiveLaunch.Complete
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderArchiveLaunch.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Complete
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderArchiveLaunch.cs
+    startLine: 155
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The complete object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Complete : TeamFolderArchiveLaunch'
+    content.vb: >-
+      Public NotInheritable Class Complete
+          Inherits TeamFolderArchiveLaunch
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.TeamFolderArchiveLaunch
+  inheritedMembers:
+  - Dropbox.Api.Team.TeamFolderArchiveLaunch.IsComplete
+  - Dropbox.Api.Team.TeamFolderArchiveLaunch.AsComplete
+  - Dropbox.Api.Team.TeamFolderArchiveLaunch.IsAsyncJobId
+  - Dropbox.Api.Team.TeamFolderArchiveLaunch.AsAsyncJobId
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Team.TeamFolderArchiveLaunch.Complete.#ctor(Dropbox.Api.Team.TeamFolderMetadata)
+  commentId: M:Dropbox.Api.Team.TeamFolderArchiveLaunch.Complete.#ctor(Dropbox.Api.Team.TeamFolderMetadata)
+  id: '#ctor(Dropbox.Api.Team.TeamFolderMetadata)'
+  parent: Dropbox.Api.Team.TeamFolderArchiveLaunch.Complete
+  langs:
+  - csharp
+  - vb
+  name: Complete(TeamFolderMetadata)
+  nameWithType: TeamFolderArchiveLaunch.Complete.Complete(TeamFolderMetadata)
+  fullName: Dropbox.Api.Team.TeamFolderArchiveLaunch.Complete.Complete(Dropbox.Api.Team.TeamFolderMetadata)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderArchiveLaunch.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderArchiveLaunch.cs
+    startLine: 173
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.TeamFolderArchiveLaunch.Complete\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public Complete(TeamFolderMetadata value)
+    parameters:
+    - id: value
+      type: Dropbox.Api.Team.TeamFolderMetadata
+      description: The value
+    content.vb: Public Sub New(value As TeamFolderMetadata)
+  overload: Dropbox.Api.Team.TeamFolderArchiveLaunch.Complete.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.TeamFolderArchiveLaunch.Complete.Value
+  commentId: P:Dropbox.Api.Team.TeamFolderArchiveLaunch.Complete.Value
+  id: Value
+  parent: Dropbox.Api.Team.TeamFolderArchiveLaunch.Complete
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: TeamFolderArchiveLaunch.Complete.Value
+  fullName: Dropbox.Api.Team.TeamFolderArchiveLaunch.Complete.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderArchiveLaunch.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderArchiveLaunch.cs
+    startLine: 187
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public TeamFolderMetadata Value { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.TeamFolderMetadata
+    content.vb: Public ReadOnly Property Value As TeamFolderMetadata
+  overload: Dropbox.Api.Team.TeamFolderArchiveLaunch.Complete.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.TeamFolderArchiveLaunch
+  commentId: T:Dropbox.Api.Team.TeamFolderArchiveLaunch
+  parent: Dropbox.Api.Team
+  name: TeamFolderArchiveLaunch
+  nameWithType: TeamFolderArchiveLaunch
+  fullName: Dropbox.Api.Team.TeamFolderArchiveLaunch
+- uid: Dropbox.Api.Team.TeamFolderArchiveLaunch.IsComplete
+  commentId: P:Dropbox.Api.Team.TeamFolderArchiveLaunch.IsComplete
+  parent: Dropbox.Api.Team.TeamFolderArchiveLaunch
+  name: IsComplete
+  nameWithType: TeamFolderArchiveLaunch.IsComplete
+  fullName: Dropbox.Api.Team.TeamFolderArchiveLaunch.IsComplete
+- uid: Dropbox.Api.Team.TeamFolderArchiveLaunch.AsComplete
+  commentId: P:Dropbox.Api.Team.TeamFolderArchiveLaunch.AsComplete
+  parent: Dropbox.Api.Team.TeamFolderArchiveLaunch
+  name: AsComplete
+  nameWithType: TeamFolderArchiveLaunch.AsComplete
+  fullName: Dropbox.Api.Team.TeamFolderArchiveLaunch.AsComplete
+- uid: Dropbox.Api.Team.TeamFolderArchiveLaunch.IsAsyncJobId
+  commentId: P:Dropbox.Api.Team.TeamFolderArchiveLaunch.IsAsyncJobId
+  parent: Dropbox.Api.Team.TeamFolderArchiveLaunch
+  name: IsAsyncJobId
+  nameWithType: TeamFolderArchiveLaunch.IsAsyncJobId
+  fullName: Dropbox.Api.Team.TeamFolderArchiveLaunch.IsAsyncJobId
+- uid: Dropbox.Api.Team.TeamFolderArchiveLaunch.AsAsyncJobId
+  commentId: P:Dropbox.Api.Team.TeamFolderArchiveLaunch.AsAsyncJobId
+  parent: Dropbox.Api.Team.TeamFolderArchiveLaunch
+  name: AsAsyncJobId
+  nameWithType: TeamFolderArchiveLaunch.AsAsyncJobId
+  fullName: Dropbox.Api.Team.TeamFolderArchiveLaunch.AsAsyncJobId
+- uid: Dropbox.Api.Team.TeamFolderArchiveLaunch.Complete
+  commentId: T:Dropbox.Api.Team.TeamFolderArchiveLaunch.Complete
+  parent: Dropbox.Api.Team
+  name: TeamFolderArchiveLaunch.Complete
+  nameWithType: TeamFolderArchiveLaunch.Complete
+  fullName: Dropbox.Api.Team.TeamFolderArchiveLaunch.Complete
+- uid: Dropbox.Api.Team.TeamFolderArchiveLaunch.Complete.#ctor*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderArchiveLaunch.Complete.#ctor
+  name: Complete
+  nameWithType: TeamFolderArchiveLaunch.Complete.Complete
+  fullName: Dropbox.Api.Team.TeamFolderArchiveLaunch.Complete.Complete
+- uid: Dropbox.Api.Team.TeamFolderMetadata
+  commentId: T:Dropbox.Api.Team.TeamFolderMetadata
+  parent: Dropbox.Api.Team
+  name: TeamFolderMetadata
+  nameWithType: TeamFolderMetadata
+  fullName: Dropbox.Api.Team.TeamFolderMetadata
+- uid: Dropbox.Api.Team.TeamFolderArchiveLaunch.Complete.Value*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderArchiveLaunch.Complete.Value
+  name: Value
+  nameWithType: TeamFolderArchiveLaunch.Complete.Value
+  fullName: Dropbox.Api.Team.TeamFolderArchiveLaunch.Complete.Value
+shouldSkipMarkup: true

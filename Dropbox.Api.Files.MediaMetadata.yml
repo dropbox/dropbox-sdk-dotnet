@@ -1,0 +1,571 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.MediaMetadata
+  commentId: T:Dropbox.Api.Files.MediaMetadata
+  id: MediaMetadata
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.MediaMetadata.#ctor
+  - Dropbox.Api.Files.MediaMetadata.#ctor(Dropbox.Api.Files.Dimensions,Dropbox.Api.Files.GpsCoordinates,System.Nullable{System.DateTime})
+  - Dropbox.Api.Files.MediaMetadata.AsPhoto
+  - Dropbox.Api.Files.MediaMetadata.AsVideo
+  - Dropbox.Api.Files.MediaMetadata.Dimensions
+  - Dropbox.Api.Files.MediaMetadata.IsPhoto
+  - Dropbox.Api.Files.MediaMetadata.IsVideo
+  - Dropbox.Api.Files.MediaMetadata.Location
+  - Dropbox.Api.Files.MediaMetadata.TimeTaken
+  langs:
+  - csharp
+  - vb
+  name: MediaMetadata
+  nameWithType: MediaMetadata
+  fullName: Dropbox.Api.Files.MediaMetadata
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MediaMetadata.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: MediaMetadata
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MediaMetadata.cs
+    startLine: 17
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Metadata for a photo or video.</p>\n"
+  example: []
+  syntax:
+    content: 'public class MediaMetadata : object'
+    content.vb: >-
+      Public Class MediaMetadata
+          Inherits Object
+  seealso:
+  - linkId: Dropbox.Api.Files.PhotoMetadata
+    commentId: T:Dropbox.Api.Files.PhotoMetadata
+  - linkId: Dropbox.Api.Files.VideoMetadata
+    commentId: T:Dropbox.Api.Files.VideoMetadata
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Files.PhotoMetadata
+  - Dropbox.Api.Files.VideoMetadata
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.MediaMetadata.#ctor(Dropbox.Api.Files.Dimensions,Dropbox.Api.Files.GpsCoordinates,System.Nullable{System.DateTime})
+  commentId: M:Dropbox.Api.Files.MediaMetadata.#ctor(Dropbox.Api.Files.Dimensions,Dropbox.Api.Files.GpsCoordinates,System.Nullable{System.DateTime})
+  id: '#ctor(Dropbox.Api.Files.Dimensions,Dropbox.Api.Files.GpsCoordinates,System.Nullable{System.DateTime})'
+  parent: Dropbox.Api.Files.MediaMetadata
+  langs:
+  - csharp
+  - vb
+  name: MediaMetadata(Dimensions, GpsCoordinates, Nullable<System.DateTime>)
+  nameWithType: MediaMetadata.MediaMetadata(Dimensions, GpsCoordinates, Nullable<System.DateTime>)
+  fullName: Dropbox.Api.Files.MediaMetadata.MediaMetadata(Dropbox.Api.Files.Dimensions, Dropbox.Api.Files.GpsCoordinates, System.Nullable<System.DateTime>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MediaMetadata.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MediaMetadata.cs
+    startLine: 37
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.MediaMetadata\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: protected MediaMetadata(Dimensions dimensions = null, GpsCoordinates location = null, System.DateTime? timeTaken = null)
+    parameters:
+    - id: dimensions
+      type: Dropbox.Api.Files.Dimensions
+      description: Dimension of the photo/video.
+    - id: location
+      type: Dropbox.Api.Files.GpsCoordinates
+      description: The GPS coordinate of the photo/video.
+    - id: timeTaken
+      type: System.Nullable{System.DateTime}
+      description: The timestamp when the photo/video is taken.
+    content.vb: Protected Sub New(dimensions As Dimensions = Nothing, location As GpsCoordinates = Nothing, timeTaken As System.DateTime? = Nothing)
+  overload: Dropbox.Api.Files.MediaMetadata.#ctor*
+  nameWithType.vb: MediaMetadata.MediaMetadata(Dimensions, GpsCoordinates, Nullable(Of System.DateTime))
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+  fullName.vb: Dropbox.Api.Files.MediaMetadata.MediaMetadata(Dropbox.Api.Files.Dimensions, Dropbox.Api.Files.GpsCoordinates, System.Nullable(Of System.DateTime))
+  name.vb: MediaMetadata(Dimensions, GpsCoordinates, Nullable(Of System.DateTime))
+- uid: Dropbox.Api.Files.MediaMetadata.#ctor
+  commentId: M:Dropbox.Api.Files.MediaMetadata.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.MediaMetadata
+  langs:
+  - csharp
+  - vb
+  name: MediaMetadata()
+  nameWithType: MediaMetadata.MediaMetadata()
+  fullName: Dropbox.Api.Files.MediaMetadata.MediaMetadata()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MediaMetadata.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MediaMetadata.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.MediaMetadata\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public MediaMetadata()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.MediaMetadata.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.MediaMetadata.IsPhoto
+  commentId: P:Dropbox.Api.Files.MediaMetadata.IsPhoto
+  id: IsPhoto
+  parent: Dropbox.Api.Files.MediaMetadata
+  langs:
+  - csharp
+  - vb
+  name: IsPhoto
+  nameWithType: MediaMetadata.IsPhoto
+  fullName: Dropbox.Api.Files.MediaMetadata.IsPhoto
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MediaMetadata.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsPhoto
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MediaMetadata.cs
+    startLine: 59
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is Photo</p>\n"
+  example: []
+  syntax:
+    content: public bool IsPhoto { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsPhoto As Boolean
+  overload: Dropbox.Api.Files.MediaMetadata.IsPhoto*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.MediaMetadata.AsPhoto
+  commentId: P:Dropbox.Api.Files.MediaMetadata.AsPhoto
+  id: AsPhoto
+  parent: Dropbox.Api.Files.MediaMetadata
+  langs:
+  - csharp
+  - vb
+  name: AsPhoto
+  nameWithType: MediaMetadata.AsPhoto
+  fullName: Dropbox.Api.Files.MediaMetadata.AsPhoto
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MediaMetadata.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsPhoto
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MediaMetadata.cs
+    startLine: 70
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a <xref href=\"Dropbox.Api.Files.PhotoMetadata\" data-throw-if-not-resolved=\"false\"></xref>, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PhotoMetadata AsPhoto { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.PhotoMetadata
+    content.vb: Public ReadOnly Property AsPhoto As PhotoMetadata
+  overload: Dropbox.Api.Files.MediaMetadata.AsPhoto*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.MediaMetadata.IsVideo
+  commentId: P:Dropbox.Api.Files.MediaMetadata.IsVideo
+  id: IsVideo
+  parent: Dropbox.Api.Files.MediaMetadata
+  langs:
+  - csharp
+  - vb
+  name: IsVideo
+  nameWithType: MediaMetadata.IsVideo
+  fullName: Dropbox.Api.Files.MediaMetadata.IsVideo
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MediaMetadata.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsVideo
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MediaMetadata.cs
+    startLine: 81
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is Video</p>\n"
+  example: []
+  syntax:
+    content: public bool IsVideo { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsVideo As Boolean
+  overload: Dropbox.Api.Files.MediaMetadata.IsVideo*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.MediaMetadata.AsVideo
+  commentId: P:Dropbox.Api.Files.MediaMetadata.AsVideo
+  id: AsVideo
+  parent: Dropbox.Api.Files.MediaMetadata
+  langs:
+  - csharp
+  - vb
+  name: AsVideo
+  nameWithType: MediaMetadata.AsVideo
+  fullName: Dropbox.Api.Files.MediaMetadata.AsVideo
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MediaMetadata.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsVideo
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MediaMetadata.cs
+    startLine: 92
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a <xref href=\"Dropbox.Api.Files.VideoMetadata\" data-throw-if-not-resolved=\"false\"></xref>, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public VideoMetadata AsVideo { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.VideoMetadata
+    content.vb: Public ReadOnly Property AsVideo As VideoMetadata
+  overload: Dropbox.Api.Files.MediaMetadata.AsVideo*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.MediaMetadata.Dimensions
+  commentId: P:Dropbox.Api.Files.MediaMetadata.Dimensions
+  id: Dimensions
+  parent: Dropbox.Api.Files.MediaMetadata
+  langs:
+  - csharp
+  - vb
+  name: Dimensions
+  nameWithType: MediaMetadata.Dimensions
+  fullName: Dropbox.Api.Files.MediaMetadata.Dimensions
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MediaMetadata.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Dimensions
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MediaMetadata.cs
+    startLine: 103
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Dimension of the photo/video.</p>\n"
+  example: []
+  syntax:
+    content: public Dimensions Dimensions { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.Dimensions
+    content.vb: Public Property Dimensions As Dimensions
+  overload: Dropbox.Api.Files.MediaMetadata.Dimensions*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.MediaMetadata.Location
+  commentId: P:Dropbox.Api.Files.MediaMetadata.Location
+  id: Location
+  parent: Dropbox.Api.Files.MediaMetadata
+  langs:
+  - csharp
+  - vb
+  name: Location
+  nameWithType: MediaMetadata.Location
+  fullName: Dropbox.Api.Files.MediaMetadata.Location
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MediaMetadata.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Location
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MediaMetadata.cs
+    startLine: 108
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The GPS coordinate of the photo/video.</p>\n"
+  example: []
+  syntax:
+    content: public GpsCoordinates Location { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.GpsCoordinates
+    content.vb: Public Property Location As GpsCoordinates
+  overload: Dropbox.Api.Files.MediaMetadata.Location*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.MediaMetadata.TimeTaken
+  commentId: P:Dropbox.Api.Files.MediaMetadata.TimeTaken
+  id: TimeTaken
+  parent: Dropbox.Api.Files.MediaMetadata
+  langs:
+  - csharp
+  - vb
+  name: TimeTaken
+  nameWithType: MediaMetadata.TimeTaken
+  fullName: Dropbox.Api.Files.MediaMetadata.TimeTaken
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MediaMetadata.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TimeTaken
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MediaMetadata.cs
+    startLine: 113
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The timestamp when the photo/video is taken.</p>\n"
+  example: []
+  syntax:
+    content: public System.DateTime? TimeTaken { get; protected set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property TimeTaken As System.DateTime?
+  overload: Dropbox.Api.Files.MediaMetadata.TimeTaken*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Files.PhotoMetadata
+  commentId: T:Dropbox.Api.Files.PhotoMetadata
+  parent: Dropbox.Api.Files
+  name: PhotoMetadata
+  nameWithType: PhotoMetadata
+  fullName: Dropbox.Api.Files.PhotoMetadata
+- uid: Dropbox.Api.Files.VideoMetadata
+  commentId: T:Dropbox.Api.Files.VideoMetadata
+  parent: Dropbox.Api.Files
+  name: VideoMetadata
+  nameWithType: VideoMetadata
+  fullName: Dropbox.Api.Files.VideoMetadata
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.MediaMetadata
+  commentId: T:Dropbox.Api.Files.MediaMetadata
+  parent: Dropbox.Api.Files
+  name: MediaMetadata
+  nameWithType: MediaMetadata
+  fullName: Dropbox.Api.Files.MediaMetadata
+- uid: Dropbox.Api.Files.MediaMetadata.#ctor*
+  commentId: Overload:Dropbox.Api.Files.MediaMetadata.#ctor
+  name: MediaMetadata
+  nameWithType: MediaMetadata.MediaMetadata
+  fullName: Dropbox.Api.Files.MediaMetadata.MediaMetadata
+- uid: Dropbox.Api.Files.Dimensions
+  commentId: T:Dropbox.Api.Files.Dimensions
+  parent: Dropbox.Api.Files
+  name: Dimensions
+  nameWithType: Dimensions
+  fullName: Dropbox.Api.Files.Dimensions
+- uid: Dropbox.Api.Files.GpsCoordinates
+  commentId: T:Dropbox.Api.Files.GpsCoordinates
+  parent: Dropbox.Api.Files
+  name: GpsCoordinates
+  nameWithType: GpsCoordinates
+  fullName: Dropbox.Api.Files.GpsCoordinates
+- uid: System.Nullable{System.DateTime}
+  commentId: '!:System.Nullable{System.DateTime}'
+  definition: System.Nullable`1
+  name: Nullable<System.DateTime>
+  nameWithType: Nullable<System.DateTime>
+  fullName: System.Nullable<System.DateTime>
+  nameWithType.vb: Nullable(Of System.DateTime)
+  fullName.vb: System.Nullable(Of System.DateTime)
+  name.vb: Nullable(Of System.DateTime)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.DateTime
+    name: System.DateTime
+    nameWithType: System.DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.DateTime
+    name: System.DateTime
+    nameWithType: System.DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  isExternal: true
+  name: Nullable<>
+  nameWithType: Nullable<>
+  fullName: System.Nullable<>
+  nameWithType.vb: Nullable(Of )
+  fullName.vb: System.Nullable(Of )
+  name.vb: Nullable(Of )
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Files.MediaMetadata.IsPhoto*
+  commentId: Overload:Dropbox.Api.Files.MediaMetadata.IsPhoto
+  name: IsPhoto
+  nameWithType: MediaMetadata.IsPhoto
+  fullName: Dropbox.Api.Files.MediaMetadata.IsPhoto
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Files.MediaMetadata.AsPhoto*
+  commentId: Overload:Dropbox.Api.Files.MediaMetadata.AsPhoto
+  name: AsPhoto
+  nameWithType: MediaMetadata.AsPhoto
+  fullName: Dropbox.Api.Files.MediaMetadata.AsPhoto
+- uid: Dropbox.Api.Files.MediaMetadata.IsVideo*
+  commentId: Overload:Dropbox.Api.Files.MediaMetadata.IsVideo
+  name: IsVideo
+  nameWithType: MediaMetadata.IsVideo
+  fullName: Dropbox.Api.Files.MediaMetadata.IsVideo
+- uid: Dropbox.Api.Files.MediaMetadata.AsVideo*
+  commentId: Overload:Dropbox.Api.Files.MediaMetadata.AsVideo
+  name: AsVideo
+  nameWithType: MediaMetadata.AsVideo
+  fullName: Dropbox.Api.Files.MediaMetadata.AsVideo
+- uid: Dropbox.Api.Files.MediaMetadata.Dimensions*
+  commentId: Overload:Dropbox.Api.Files.MediaMetadata.Dimensions
+  name: Dimensions
+  nameWithType: MediaMetadata.Dimensions
+  fullName: Dropbox.Api.Files.MediaMetadata.Dimensions
+- uid: Dropbox.Api.Files.MediaMetadata.Location*
+  commentId: Overload:Dropbox.Api.Files.MediaMetadata.Location
+  name: Location
+  nameWithType: MediaMetadata.Location
+  fullName: Dropbox.Api.Files.MediaMetadata.Location
+- uid: Dropbox.Api.Files.MediaMetadata.TimeTaken*
+  commentId: Overload:Dropbox.Api.Files.MediaMetadata.TimeTaken
+  name: TimeTaken
+  nameWithType: MediaMetadata.TimeTaken
+  fullName: Dropbox.Api.Files.MediaMetadata.TimeTaken
+shouldSkipMarkup: true

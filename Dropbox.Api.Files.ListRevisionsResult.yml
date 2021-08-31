@@ -1,0 +1,531 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.ListRevisionsResult
+  commentId: T:Dropbox.Api.Files.ListRevisionsResult
+  id: ListRevisionsResult
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.ListRevisionsResult.#ctor
+  - Dropbox.Api.Files.ListRevisionsResult.#ctor(System.Boolean,System.Collections.Generic.IEnumerable{Dropbox.Api.Files.FileMetadata},System.Nullable{System.DateTime})
+  - Dropbox.Api.Files.ListRevisionsResult.Entries
+  - Dropbox.Api.Files.ListRevisionsResult.IsDeleted
+  - Dropbox.Api.Files.ListRevisionsResult.ServerDeleted
+  langs:
+  - csharp
+  - vb
+  name: ListRevisionsResult
+  nameWithType: ListRevisionsResult
+  fullName: Dropbox.Api.Files.ListRevisionsResult
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListRevisionsResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ListRevisionsResult
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListRevisionsResult.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The list revisions result object</p>\n"
+  example: []
+  syntax:
+    content: 'public class ListRevisionsResult : object'
+    content.vb: >-
+      Public Class ListRevisionsResult
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.ListRevisionsResult.#ctor(System.Boolean,System.Collections.Generic.IEnumerable{Dropbox.Api.Files.FileMetadata},System.Nullable{System.DateTime})
+  commentId: M:Dropbox.Api.Files.ListRevisionsResult.#ctor(System.Boolean,System.Collections.Generic.IEnumerable{Dropbox.Api.Files.FileMetadata},System.Nullable{System.DateTime})
+  id: '#ctor(System.Boolean,System.Collections.Generic.IEnumerable{Dropbox.Api.Files.FileMetadata},System.Nullable{System.DateTime})'
+  parent: Dropbox.Api.Files.ListRevisionsResult
+  langs:
+  - csharp
+  - vb
+  name: ListRevisionsResult(Boolean, System.Collections.Generic.IEnumerable<FileMetadata>, Nullable<System.DateTime>)
+  nameWithType: ListRevisionsResult.ListRevisionsResult(Boolean, System.Collections.Generic.IEnumerable<FileMetadata>, Nullable<System.DateTime>)
+  fullName: Dropbox.Api.Files.ListRevisionsResult.ListRevisionsResult(System.Boolean, System.Collections.Generic.IEnumerable<Dropbox.Api.Files.FileMetadata>, System.Nullable<System.DateTime>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListRevisionsResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListRevisionsResult.cs
+    startLine: 38
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.ListRevisionsResult\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public ListRevisionsResult(bool isDeleted, System.Collections.Generic.IEnumerable<FileMetadata> entries, System.DateTime? serverDeleted = null)
+    parameters:
+    - id: isDeleted
+      type: System.Boolean
+      description: >-
+        If the file identified by the latest revision in the
+
+        response is either deleted or moved.
+    - id: entries
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.Files.FileMetadata}
+      description: >-
+        The revisions for the file. Only revisions that are not
+
+        deleted will show up here.
+    - id: serverDeleted
+      type: System.Nullable{System.DateTime}
+      description: The time of deletion if the file was deleted.
+    content.vb: Public Sub New(isDeleted As Boolean, entries As System.Collections.Generic.IEnumerable(Of FileMetadata), serverDeleted As System.DateTime? = Nothing)
+  overload: Dropbox.Api.Files.ListRevisionsResult.#ctor*
+  nameWithType.vb: ListRevisionsResult.ListRevisionsResult(Boolean, System.Collections.Generic.IEnumerable(Of FileMetadata), Nullable(Of System.DateTime))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Files.ListRevisionsResult.ListRevisionsResult(System.Boolean, System.Collections.Generic.IEnumerable(Of Dropbox.Api.Files.FileMetadata), System.Nullable(Of System.DateTime))
+  name.vb: ListRevisionsResult(Boolean, System.Collections.Generic.IEnumerable(Of FileMetadata), Nullable(Of System.DateTime))
+- uid: Dropbox.Api.Files.ListRevisionsResult.#ctor
+  commentId: M:Dropbox.Api.Files.ListRevisionsResult.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.ListRevisionsResult
+  langs:
+  - csharp
+  - vb
+  name: ListRevisionsResult()
+  nameWithType: ListRevisionsResult.ListRevisionsResult()
+  fullName: Dropbox.Api.Files.ListRevisionsResult.ListRevisionsResult()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListRevisionsResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListRevisionsResult.cs
+    startLine: 60
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.ListRevisionsResult\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public ListRevisionsResult()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.ListRevisionsResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.ListRevisionsResult.IsDeleted
+  commentId: P:Dropbox.Api.Files.ListRevisionsResult.IsDeleted
+  id: IsDeleted
+  parent: Dropbox.Api.Files.ListRevisionsResult
+  langs:
+  - csharp
+  - vb
+  name: IsDeleted
+  nameWithType: ListRevisionsResult.IsDeleted
+  fullName: Dropbox.Api.Files.ListRevisionsResult.IsDeleted
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListRevisionsResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsDeleted
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListRevisionsResult.cs
+    startLine: 69
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>If the file identified by the latest revision in the response is either\ndeleted or moved.</p>\n"
+  example: []
+  syntax:
+    content: public bool IsDeleted { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsDeleted As Boolean
+  overload: Dropbox.Api.Files.ListRevisionsResult.IsDeleted*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.ListRevisionsResult.Entries
+  commentId: P:Dropbox.Api.Files.ListRevisionsResult.Entries
+  id: Entries
+  parent: Dropbox.Api.Files.ListRevisionsResult
+  langs:
+  - csharp
+  - vb
+  name: Entries
+  nameWithType: ListRevisionsResult.Entries
+  fullName: Dropbox.Api.Files.ListRevisionsResult.Entries
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListRevisionsResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Entries
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListRevisionsResult.cs
+    startLine: 75
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The revisions for the file. Only revisions that are not deleted will show up\nhere.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<FileMetadata> Entries { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{Dropbox.Api.Files.FileMetadata}
+    content.vb: Public Property Entries As System.Collections.Generic.IList(Of FileMetadata)
+  overload: Dropbox.Api.Files.ListRevisionsResult.Entries*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.ListRevisionsResult.ServerDeleted
+  commentId: P:Dropbox.Api.Files.ListRevisionsResult.ServerDeleted
+  id: ServerDeleted
+  parent: Dropbox.Api.Files.ListRevisionsResult
+  langs:
+  - csharp
+  - vb
+  name: ServerDeleted
+  nameWithType: ListRevisionsResult.ServerDeleted
+  fullName: Dropbox.Api.Files.ListRevisionsResult.ServerDeleted
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListRevisionsResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ServerDeleted
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ListRevisionsResult.cs
+    startLine: 80
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The time of deletion if the file was deleted.</p>\n"
+  example: []
+  syntax:
+    content: public System.DateTime? ServerDeleted { get; protected set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property ServerDeleted As System.DateTime?
+  overload: Dropbox.Api.Files.ListRevisionsResult.ServerDeleted*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.ListRevisionsResult
+  commentId: T:Dropbox.Api.Files.ListRevisionsResult
+  parent: Dropbox.Api.Files
+  name: ListRevisionsResult
+  nameWithType: ListRevisionsResult
+  fullName: Dropbox.Api.Files.ListRevisionsResult
+- uid: Dropbox.Api.Files.ListRevisionsResult.#ctor*
+  commentId: Overload:Dropbox.Api.Files.ListRevisionsResult.#ctor
+  name: ListRevisionsResult
+  nameWithType: ListRevisionsResult.ListRevisionsResult
+  fullName: Dropbox.Api.Files.ListRevisionsResult.ListRevisionsResult
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.Collections.Generic.IEnumerable{Dropbox.Api.Files.FileMetadata}
+  commentId: '!:System.Collections.Generic.IEnumerable{Dropbox.Api.Files.FileMetadata}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<FileMetadata>
+  nameWithType: System.Collections.Generic.IEnumerable<FileMetadata>
+  fullName: System.Collections.Generic.IEnumerable<Dropbox.Api.Files.FileMetadata>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of FileMetadata)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Dropbox.Api.Files.FileMetadata)
+  name.vb: System.Collections.Generic.IEnumerable(Of FileMetadata)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Files.FileMetadata
+    name: FileMetadata
+    nameWithType: FileMetadata
+    fullName: Dropbox.Api.Files.FileMetadata
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Files.FileMetadata
+    name: FileMetadata
+    nameWithType: FileMetadata
+    fullName: Dropbox.Api.Files.FileMetadata
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable{System.DateTime}
+  commentId: '!:System.Nullable{System.DateTime}'
+  definition: System.Nullable`1
+  name: Nullable<System.DateTime>
+  nameWithType: Nullable<System.DateTime>
+  fullName: System.Nullable<System.DateTime>
+  nameWithType.vb: Nullable(Of System.DateTime)
+  fullName.vb: System.Nullable(Of System.DateTime)
+  name.vb: Nullable(Of System.DateTime)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.DateTime
+    name: System.DateTime
+    nameWithType: System.DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.DateTime
+    name: System.DateTime
+    nameWithType: System.DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: System.Collections.Generic.IEnumerable<>
+  nameWithType: System.Collections.Generic.IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: System.Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  isExternal: true
+  name: Nullable<>
+  nameWithType: Nullable<>
+  fullName: System.Nullable<>
+  nameWithType.vb: Nullable(Of )
+  fullName.vb: System.Nullable(Of )
+  name.vb: Nullable(Of )
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Files.ListRevisionsResult.IsDeleted*
+  commentId: Overload:Dropbox.Api.Files.ListRevisionsResult.IsDeleted
+  name: IsDeleted
+  nameWithType: ListRevisionsResult.IsDeleted
+  fullName: Dropbox.Api.Files.ListRevisionsResult.IsDeleted
+- uid: Dropbox.Api.Files.ListRevisionsResult.Entries*
+  commentId: Overload:Dropbox.Api.Files.ListRevisionsResult.Entries
+  name: Entries
+  nameWithType: ListRevisionsResult.Entries
+  fullName: Dropbox.Api.Files.ListRevisionsResult.Entries
+- uid: System.Collections.Generic.IList{Dropbox.Api.Files.FileMetadata}
+  commentId: '!:System.Collections.Generic.IList{Dropbox.Api.Files.FileMetadata}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<FileMetadata>
+  nameWithType: System.Collections.Generic.IList<FileMetadata>
+  fullName: System.Collections.Generic.IList<Dropbox.Api.Files.FileMetadata>
+  nameWithType.vb: System.Collections.Generic.IList(Of FileMetadata)
+  fullName.vb: System.Collections.Generic.IList(Of Dropbox.Api.Files.FileMetadata)
+  name.vb: System.Collections.Generic.IList(Of FileMetadata)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Files.FileMetadata
+    name: FileMetadata
+    nameWithType: FileMetadata
+    fullName: Dropbox.Api.Files.FileMetadata
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Files.FileMetadata
+    name: FileMetadata
+    nameWithType: FileMetadata
+    fullName: Dropbox.Api.Files.FileMetadata
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  isExternal: true
+  name: System.Collections.Generic.IList<>
+  nameWithType: System.Collections.Generic.IList<>
+  fullName: System.Collections.Generic.IList<>
+  nameWithType.vb: System.Collections.Generic.IList(Of )
+  fullName.vb: System.Collections.Generic.IList(Of )
+  name.vb: System.Collections.Generic.IList(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Files.ListRevisionsResult.ServerDeleted*
+  commentId: Overload:Dropbox.Api.Files.ListRevisionsResult.ServerDeleted
+  name: ServerDeleted
+  nameWithType: ListRevisionsResult.ServerDeleted
+  fullName: Dropbox.Api.Files.ListRevisionsResult.ServerDeleted
+shouldSkipMarkup: true

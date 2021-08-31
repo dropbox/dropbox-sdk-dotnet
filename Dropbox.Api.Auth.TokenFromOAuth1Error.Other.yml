@@ -1,0 +1,148 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Auth.TokenFromOAuth1Error.Other
+  commentId: T:Dropbox.Api.Auth.TokenFromOAuth1Error.Other
+  id: TokenFromOAuth1Error.Other
+  parent: Dropbox.Api.Auth
+  children:
+  - Dropbox.Api.Auth.TokenFromOAuth1Error.Other.Instance
+  langs:
+  - csharp
+  - vb
+  name: TokenFromOAuth1Error.Other
+  nameWithType: TokenFromOAuth1Error.Other
+  fullName: Dropbox.Api.Auth.TokenFromOAuth1Error.Other
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/TokenFromOAuth1Error.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Other
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/TokenFromOAuth1Error.cs
+    startLine: 325
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth
+  summary: "\n<p>The other object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Other : TokenFromOAuth1Error'
+    content.vb: >-
+      Public NotInheritable Class Other
+          Inherits TokenFromOAuth1Error
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Auth.TokenFromOAuth1Error
+  inheritedMembers:
+  - Dropbox.Api.Auth.TokenFromOAuth1Error.IsInvalidOauth1TokenInfo
+  - Dropbox.Api.Auth.TokenFromOAuth1Error.AsInvalidOauth1TokenInfo
+  - Dropbox.Api.Auth.TokenFromOAuth1Error.IsAppIdMismatch
+  - Dropbox.Api.Auth.TokenFromOAuth1Error.AsAppIdMismatch
+  - Dropbox.Api.Auth.TokenFromOAuth1Error.IsOther
+  - Dropbox.Api.Auth.TokenFromOAuth1Error.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Auth.TokenFromOAuth1Error.Other.Instance
+  commentId: F:Dropbox.Api.Auth.TokenFromOAuth1Error.Other.Instance
+  id: Instance
+  parent: Dropbox.Api.Auth.TokenFromOAuth1Error.Other
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: TokenFromOAuth1Error.Other.Instance
+  fullName: Dropbox.Api.Auth.TokenFromOAuth1Error.Other.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/TokenFromOAuth1Error.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/TokenFromOAuth1Error.cs
+    startLine: 349
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth
+  summary: "\n<p>A singleton instance of Other</p>\n"
+  example: []
+  syntax:
+    content: public static readonly TokenFromOAuth1Error.Other Instance
+    return:
+      type: Dropbox.Api.Auth.TokenFromOAuth1Error.Other
+    content.vb: Public Shared ReadOnly Instance As TokenFromOAuth1Error.Other
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Auth
+  commentId: N:Dropbox.Api.Auth
+  name: Dropbox.Api.Auth
+  nameWithType: Dropbox.Api.Auth
+  fullName: Dropbox.Api.Auth
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Auth.TokenFromOAuth1Error
+  commentId: T:Dropbox.Api.Auth.TokenFromOAuth1Error
+  parent: Dropbox.Api.Auth
+  name: TokenFromOAuth1Error
+  nameWithType: TokenFromOAuth1Error
+  fullName: Dropbox.Api.Auth.TokenFromOAuth1Error
+- uid: Dropbox.Api.Auth.TokenFromOAuth1Error.IsInvalidOauth1TokenInfo
+  commentId: P:Dropbox.Api.Auth.TokenFromOAuth1Error.IsInvalidOauth1TokenInfo
+  parent: Dropbox.Api.Auth.TokenFromOAuth1Error
+  name: IsInvalidOauth1TokenInfo
+  nameWithType: TokenFromOAuth1Error.IsInvalidOauth1TokenInfo
+  fullName: Dropbox.Api.Auth.TokenFromOAuth1Error.IsInvalidOauth1TokenInfo
+- uid: Dropbox.Api.Auth.TokenFromOAuth1Error.AsInvalidOauth1TokenInfo
+  commentId: P:Dropbox.Api.Auth.TokenFromOAuth1Error.AsInvalidOauth1TokenInfo
+  parent: Dropbox.Api.Auth.TokenFromOAuth1Error
+  name: AsInvalidOauth1TokenInfo
+  nameWithType: TokenFromOAuth1Error.AsInvalidOauth1TokenInfo
+  fullName: Dropbox.Api.Auth.TokenFromOAuth1Error.AsInvalidOauth1TokenInfo
+- uid: Dropbox.Api.Auth.TokenFromOAuth1Error.IsAppIdMismatch
+  commentId: P:Dropbox.Api.Auth.TokenFromOAuth1Error.IsAppIdMismatch
+  parent: Dropbox.Api.Auth.TokenFromOAuth1Error
+  name: IsAppIdMismatch
+  nameWithType: TokenFromOAuth1Error.IsAppIdMismatch
+  fullName: Dropbox.Api.Auth.TokenFromOAuth1Error.IsAppIdMismatch
+- uid: Dropbox.Api.Auth.TokenFromOAuth1Error.AsAppIdMismatch
+  commentId: P:Dropbox.Api.Auth.TokenFromOAuth1Error.AsAppIdMismatch
+  parent: Dropbox.Api.Auth.TokenFromOAuth1Error
+  name: AsAppIdMismatch
+  nameWithType: TokenFromOAuth1Error.AsAppIdMismatch
+  fullName: Dropbox.Api.Auth.TokenFromOAuth1Error.AsAppIdMismatch
+- uid: Dropbox.Api.Auth.TokenFromOAuth1Error.IsOther
+  commentId: P:Dropbox.Api.Auth.TokenFromOAuth1Error.IsOther
+  parent: Dropbox.Api.Auth.TokenFromOAuth1Error
+  name: IsOther
+  nameWithType: TokenFromOAuth1Error.IsOther
+  fullName: Dropbox.Api.Auth.TokenFromOAuth1Error.IsOther
+- uid: Dropbox.Api.Auth.TokenFromOAuth1Error.AsOther
+  commentId: P:Dropbox.Api.Auth.TokenFromOAuth1Error.AsOther
+  parent: Dropbox.Api.Auth.TokenFromOAuth1Error
+  name: AsOther
+  nameWithType: TokenFromOAuth1Error.AsOther
+  fullName: Dropbox.Api.Auth.TokenFromOAuth1Error.AsOther
+- uid: Dropbox.Api.Auth.TokenFromOAuth1Error.Other
+  commentId: T:Dropbox.Api.Auth.TokenFromOAuth1Error.Other
+  parent: Dropbox.Api.Auth
+  name: TokenFromOAuth1Error.Other
+  nameWithType: TokenFromOAuth1Error.Other
+  fullName: Dropbox.Api.Auth.TokenFromOAuth1Error.Other
+shouldSkipMarkup: true

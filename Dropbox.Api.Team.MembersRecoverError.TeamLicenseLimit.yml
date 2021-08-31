@@ -1,0 +1,176 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.MembersRecoverError.TeamLicenseLimit
+  commentId: T:Dropbox.Api.Team.MembersRecoverError.TeamLicenseLimit
+  id: MembersRecoverError.TeamLicenseLimit
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.MembersRecoverError.TeamLicenseLimit.Instance
+  langs:
+  - csharp
+  - vb
+  name: MembersRecoverError.TeamLicenseLimit
+  nameWithType: MembersRecoverError.TeamLicenseLimit
+  fullName: Dropbox.Api.Team.MembersRecoverError.TeamLicenseLimit
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersRecoverError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TeamLicenseLimit
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersRecoverError.cs
+    startLine: 383
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Team is full. The organization has no available licenses.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class TeamLicenseLimit : MembersRecoverError'
+    content.vb: >-
+      Public NotInheritable Class TeamLicenseLimit
+          Inherits MembersRecoverError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.MembersRecoverError
+  inheritedMembers:
+  - Dropbox.Api.Team.MembersRecoverError.IsUserUnrecoverable
+  - Dropbox.Api.Team.MembersRecoverError.AsUserUnrecoverable
+  - Dropbox.Api.Team.MembersRecoverError.IsUserNotInTeam
+  - Dropbox.Api.Team.MembersRecoverError.AsUserNotInTeam
+  - Dropbox.Api.Team.MembersRecoverError.IsTeamLicenseLimit
+  - Dropbox.Api.Team.MembersRecoverError.AsTeamLicenseLimit
+  - Dropbox.Api.Team.MembersRecoverError.IsOther
+  - Dropbox.Api.Team.MembersRecoverError.AsOther
+  - Dropbox.Api.Team.MembersRecoverError.IsUserNotFound
+  - Dropbox.Api.Team.MembersRecoverError.AsUserNotFound
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Team.MembersRecoverError.TeamLicenseLimit.Instance
+  commentId: F:Dropbox.Api.Team.MembersRecoverError.TeamLicenseLimit.Instance
+  id: Instance
+  parent: Dropbox.Api.Team.MembersRecoverError.TeamLicenseLimit
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: MembersRecoverError.TeamLicenseLimit.Instance
+  fullName: Dropbox.Api.Team.MembersRecoverError.TeamLicenseLimit.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersRecoverError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersRecoverError.cs
+    startLine: 408
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>A singleton instance of TeamLicenseLimit</p>\n"
+  example: []
+  syntax:
+    content: public static readonly MembersRecoverError.TeamLicenseLimit Instance
+    return:
+      type: Dropbox.Api.Team.MembersRecoverError.TeamLicenseLimit
+    content.vb: Public Shared ReadOnly Instance As MembersRecoverError.TeamLicenseLimit
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.MembersRecoverError
+  commentId: T:Dropbox.Api.Team.MembersRecoverError
+  parent: Dropbox.Api.Team
+  name: MembersRecoverError
+  nameWithType: MembersRecoverError
+  fullName: Dropbox.Api.Team.MembersRecoverError
+- uid: Dropbox.Api.Team.MembersRecoverError.IsUserUnrecoverable
+  commentId: P:Dropbox.Api.Team.MembersRecoverError.IsUserUnrecoverable
+  parent: Dropbox.Api.Team.MembersRecoverError
+  name: IsUserUnrecoverable
+  nameWithType: MembersRecoverError.IsUserUnrecoverable
+  fullName: Dropbox.Api.Team.MembersRecoverError.IsUserUnrecoverable
+- uid: Dropbox.Api.Team.MembersRecoverError.AsUserUnrecoverable
+  commentId: P:Dropbox.Api.Team.MembersRecoverError.AsUserUnrecoverable
+  parent: Dropbox.Api.Team.MembersRecoverError
+  name: AsUserUnrecoverable
+  nameWithType: MembersRecoverError.AsUserUnrecoverable
+  fullName: Dropbox.Api.Team.MembersRecoverError.AsUserUnrecoverable
+- uid: Dropbox.Api.Team.MembersRecoverError.IsUserNotInTeam
+  commentId: P:Dropbox.Api.Team.MembersRecoverError.IsUserNotInTeam
+  parent: Dropbox.Api.Team.MembersRecoverError
+  name: IsUserNotInTeam
+  nameWithType: MembersRecoverError.IsUserNotInTeam
+  fullName: Dropbox.Api.Team.MembersRecoverError.IsUserNotInTeam
+- uid: Dropbox.Api.Team.MembersRecoverError.AsUserNotInTeam
+  commentId: P:Dropbox.Api.Team.MembersRecoverError.AsUserNotInTeam
+  parent: Dropbox.Api.Team.MembersRecoverError
+  name: AsUserNotInTeam
+  nameWithType: MembersRecoverError.AsUserNotInTeam
+  fullName: Dropbox.Api.Team.MembersRecoverError.AsUserNotInTeam
+- uid: Dropbox.Api.Team.MembersRecoverError.IsTeamLicenseLimit
+  commentId: P:Dropbox.Api.Team.MembersRecoverError.IsTeamLicenseLimit
+  parent: Dropbox.Api.Team.MembersRecoverError
+  name: IsTeamLicenseLimit
+  nameWithType: MembersRecoverError.IsTeamLicenseLimit
+  fullName: Dropbox.Api.Team.MembersRecoverError.IsTeamLicenseLimit
+- uid: Dropbox.Api.Team.MembersRecoverError.AsTeamLicenseLimit
+  commentId: P:Dropbox.Api.Team.MembersRecoverError.AsTeamLicenseLimit
+  parent: Dropbox.Api.Team.MembersRecoverError
+  name: AsTeamLicenseLimit
+  nameWithType: MembersRecoverError.AsTeamLicenseLimit
+  fullName: Dropbox.Api.Team.MembersRecoverError.AsTeamLicenseLimit
+- uid: Dropbox.Api.Team.MembersRecoverError.IsOther
+  commentId: P:Dropbox.Api.Team.MembersRecoverError.IsOther
+  parent: Dropbox.Api.Team.MembersRecoverError
+  name: IsOther
+  nameWithType: MembersRecoverError.IsOther
+  fullName: Dropbox.Api.Team.MembersRecoverError.IsOther
+- uid: Dropbox.Api.Team.MembersRecoverError.AsOther
+  commentId: P:Dropbox.Api.Team.MembersRecoverError.AsOther
+  parent: Dropbox.Api.Team.MembersRecoverError
+  name: AsOther
+  nameWithType: MembersRecoverError.AsOther
+  fullName: Dropbox.Api.Team.MembersRecoverError.AsOther
+- uid: Dropbox.Api.Team.MembersRecoverError.IsUserNotFound
+  commentId: P:Dropbox.Api.Team.MembersRecoverError.IsUserNotFound
+  parent: Dropbox.Api.Team.MembersRecoverError
+  name: IsUserNotFound
+  nameWithType: MembersRecoverError.IsUserNotFound
+  fullName: Dropbox.Api.Team.MembersRecoverError.IsUserNotFound
+- uid: Dropbox.Api.Team.MembersRecoverError.AsUserNotFound
+  commentId: P:Dropbox.Api.Team.MembersRecoverError.AsUserNotFound
+  parent: Dropbox.Api.Team.MembersRecoverError
+  name: AsUserNotFound
+  nameWithType: MembersRecoverError.AsUserNotFound
+  fullName: Dropbox.Api.Team.MembersRecoverError.AsUserNotFound
+- uid: Dropbox.Api.Team.MembersRecoverError.TeamLicenseLimit
+  commentId: T:Dropbox.Api.Team.MembersRecoverError.TeamLicenseLimit
+  parent: Dropbox.Api.Team
+  name: MembersRecoverError.TeamLicenseLimit
+  nameWithType: MembersRecoverError.TeamLicenseLimit
+  fullName: Dropbox.Api.Team.MembersRecoverError.TeamLicenseLimit
+shouldSkipMarkup: true

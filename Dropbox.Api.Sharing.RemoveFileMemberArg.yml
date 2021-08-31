@@ -1,0 +1,249 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.RemoveFileMemberArg
+  commentId: T:Dropbox.Api.Sharing.RemoveFileMemberArg
+  id: RemoveFileMemberArg
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.RemoveFileMemberArg.#ctor
+  - Dropbox.Api.Sharing.RemoveFileMemberArg.#ctor(System.String,Dropbox.Api.Sharing.MemberSelector)
+  - Dropbox.Api.Sharing.RemoveFileMemberArg.File
+  - Dropbox.Api.Sharing.RemoveFileMemberArg.Member
+  langs:
+  - csharp
+  - vb
+  name: RemoveFileMemberArg
+  nameWithType: RemoveFileMemberArg
+  fullName: Dropbox.Api.Sharing.RemoveFileMemberArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RemoveFileMemberArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: RemoveFileMemberArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RemoveFileMemberArg.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Arguments for <xref href=\"Dropbox.Api.Sharing.Routes.SharingUserRoutes.RemoveFileMember2Async(Dropbox.Api.Sharing.RemoveFileMemberArg)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+  example: []
+  syntax:
+    content: 'public class RemoveFileMemberArg : object'
+    content.vb: >-
+      Public Class RemoveFileMemberArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Sharing.RemoveFileMemberArg.#ctor(System.String,Dropbox.Api.Sharing.MemberSelector)
+  commentId: M:Dropbox.Api.Sharing.RemoveFileMemberArg.#ctor(System.String,Dropbox.Api.Sharing.MemberSelector)
+  id: '#ctor(System.String,Dropbox.Api.Sharing.MemberSelector)'
+  parent: Dropbox.Api.Sharing.RemoveFileMemberArg
+  langs:
+  - csharp
+  - vb
+  name: RemoveFileMemberArg(String, MemberSelector)
+  nameWithType: RemoveFileMemberArg.RemoveFileMemberArg(String, MemberSelector)
+  fullName: Dropbox.Api.Sharing.RemoveFileMemberArg.RemoveFileMemberArg(System.String, Dropbox.Api.Sharing.MemberSelector)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RemoveFileMemberArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RemoveFileMemberArg.cs
+    startLine: 38
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.RemoveFileMemberArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public RemoveFileMemberArg(string file, MemberSelector member)
+    parameters:
+    - id: file
+      type: System.String
+      description: File from which to remove members.
+    - id: member
+      type: Dropbox.Api.Sharing.MemberSelector
+      description: >-
+        Member to remove from this file. Note that even if an email is
+
+        specified, it may result in the removal of a user (not an invitee) if the user&apos;s
+
+        main account corresponds to that email address.
+    content.vb: Public Sub New(file As String, member As MemberSelector)
+  overload: Dropbox.Api.Sharing.RemoveFileMemberArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.RemoveFileMemberArg.#ctor
+  commentId: M:Dropbox.Api.Sharing.RemoveFileMemberArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Sharing.RemoveFileMemberArg
+  langs:
+  - csharp
+  - vb
+  name: RemoveFileMemberArg()
+  nameWithType: RemoveFileMemberArg.RemoveFileMemberArg()
+  fullName: Dropbox.Api.Sharing.RemoveFileMemberArg.RemoveFileMemberArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RemoveFileMemberArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RemoveFileMemberArg.cs
+    startLine: 69
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.RemoveFileMemberArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public RemoveFileMemberArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Sharing.RemoveFileMemberArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.RemoveFileMemberArg.File
+  commentId: P:Dropbox.Api.Sharing.RemoveFileMemberArg.File
+  id: File
+  parent: Dropbox.Api.Sharing.RemoveFileMemberArg
+  langs:
+  - csharp
+  - vb
+  name: File
+  nameWithType: RemoveFileMemberArg.File
+  fullName: Dropbox.Api.Sharing.RemoveFileMemberArg.File
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RemoveFileMemberArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: File
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RemoveFileMemberArg.cs
+    startLine: 77
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>File from which to remove members.</p>\n"
+  example: []
+  syntax:
+    content: public string File { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property File As String
+  overload: Dropbox.Api.Sharing.RemoveFileMemberArg.File*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.RemoveFileMemberArg.Member
+  commentId: P:Dropbox.Api.Sharing.RemoveFileMemberArg.Member
+  id: Member
+  parent: Dropbox.Api.Sharing.RemoveFileMemberArg
+  langs:
+  - csharp
+  - vb
+  name: Member
+  nameWithType: RemoveFileMemberArg.Member
+  fullName: Dropbox.Api.Sharing.RemoveFileMemberArg.Member
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RemoveFileMemberArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Member
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/RemoveFileMemberArg.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Member to remove from this file. Note that even if an email is specified, it\nmay result in the removal of a user (not an invitee) if the user&apos;s main account\ncorresponds to that email address.</p>\n"
+  example: []
+  syntax:
+    content: public MemberSelector Member { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.MemberSelector
+    content.vb: Public Property Member As MemberSelector
+  overload: Dropbox.Api.Sharing.RemoveFileMemberArg.Member*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Sharing.Routes.SharingUserRoutes.RemoveFileMember2Async(Dropbox.Api.Sharing.RemoveFileMemberArg)
+  commentId: M:Dropbox.Api.Sharing.Routes.SharingUserRoutes.RemoveFileMember2Async(Dropbox.Api.Sharing.RemoveFileMemberArg)
+  isExternal: true
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.RemoveFileMemberArg
+  commentId: T:Dropbox.Api.Sharing.RemoveFileMemberArg
+  parent: Dropbox.Api.Sharing
+  name: RemoveFileMemberArg
+  nameWithType: RemoveFileMemberArg
+  fullName: Dropbox.Api.Sharing.RemoveFileMemberArg
+- uid: Dropbox.Api.Sharing.RemoveFileMemberArg.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.RemoveFileMemberArg.#ctor
+  name: RemoveFileMemberArg
+  nameWithType: RemoveFileMemberArg.RemoveFileMemberArg
+  fullName: Dropbox.Api.Sharing.RemoveFileMemberArg.RemoveFileMemberArg
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Sharing.MemberSelector
+  commentId: T:Dropbox.Api.Sharing.MemberSelector
+  parent: Dropbox.Api.Sharing
+  name: MemberSelector
+  nameWithType: MemberSelector
+  fullName: Dropbox.Api.Sharing.MemberSelector
+- uid: Dropbox.Api.Sharing.RemoveFileMemberArg.File*
+  commentId: Overload:Dropbox.Api.Sharing.RemoveFileMemberArg.File
+  name: File
+  nameWithType: RemoveFileMemberArg.File
+  fullName: Dropbox.Api.Sharing.RemoveFileMemberArg.File
+- uid: Dropbox.Api.Sharing.RemoveFileMemberArg.Member*
+  commentId: Overload:Dropbox.Api.Sharing.RemoveFileMemberArg.Member
+  name: Member
+  nameWithType: RemoveFileMemberArg.Member
+  fullName: Dropbox.Api.Sharing.RemoveFileMemberArg.Member
+shouldSkipMarkup: true

@@ -1,0 +1,288 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.ExcludedUsersUpdateStatus
+  commentId: T:Dropbox.Api.Team.ExcludedUsersUpdateStatus
+  id: ExcludedUsersUpdateStatus
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.ExcludedUsersUpdateStatus.#ctor
+  - Dropbox.Api.Team.ExcludedUsersUpdateStatus.AsOther
+  - Dropbox.Api.Team.ExcludedUsersUpdateStatus.AsSuccess
+  - Dropbox.Api.Team.ExcludedUsersUpdateStatus.IsOther
+  - Dropbox.Api.Team.ExcludedUsersUpdateStatus.IsSuccess
+  langs:
+  - csharp
+  - vb
+  name: ExcludedUsersUpdateStatus
+  nameWithType: ExcludedUsersUpdateStatus
+  fullName: Dropbox.Api.Team.ExcludedUsersUpdateStatus
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ExcludedUsersUpdateStatus.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ExcludedUsersUpdateStatus
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ExcludedUsersUpdateStatus.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Excluded users update operation status.</p>\n"
+  example: []
+  syntax:
+    content: 'public class ExcludedUsersUpdateStatus : object'
+    content.vb: >-
+      Public Class ExcludedUsersUpdateStatus
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Team.ExcludedUsersUpdateStatus.Other
+  - Dropbox.Api.Team.ExcludedUsersUpdateStatus.Success
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.ExcludedUsersUpdateStatus.#ctor
+  commentId: M:Dropbox.Api.Team.ExcludedUsersUpdateStatus.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.ExcludedUsersUpdateStatus
+  langs:
+  - csharp
+  - vb
+  name: ExcludedUsersUpdateStatus()
+  nameWithType: ExcludedUsersUpdateStatus.ExcludedUsersUpdateStatus()
+  fullName: Dropbox.Api.Team.ExcludedUsersUpdateStatus.ExcludedUsersUpdateStatus()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ExcludedUsersUpdateStatus.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ExcludedUsersUpdateStatus.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.ExcludedUsersUpdateStatus\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public ExcludedUsersUpdateStatus()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.ExcludedUsersUpdateStatus.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.ExcludedUsersUpdateStatus.IsSuccess
+  commentId: P:Dropbox.Api.Team.ExcludedUsersUpdateStatus.IsSuccess
+  id: IsSuccess
+  parent: Dropbox.Api.Team.ExcludedUsersUpdateStatus
+  langs:
+  - csharp
+  - vb
+  name: IsSuccess
+  nameWithType: ExcludedUsersUpdateStatus.IsSuccess
+  fullName: Dropbox.Api.Team.ExcludedUsersUpdateStatus.IsSuccess
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ExcludedUsersUpdateStatus.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsSuccess
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ExcludedUsersUpdateStatus.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is Success</p>\n"
+  example: []
+  syntax:
+    content: public bool IsSuccess { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsSuccess As Boolean
+  overload: Dropbox.Api.Team.ExcludedUsersUpdateStatus.IsSuccess*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.ExcludedUsersUpdateStatus.AsSuccess
+  commentId: P:Dropbox.Api.Team.ExcludedUsersUpdateStatus.AsSuccess
+  id: AsSuccess
+  parent: Dropbox.Api.Team.ExcludedUsersUpdateStatus
+  langs:
+  - csharp
+  - vb
+  name: AsSuccess
+  nameWithType: ExcludedUsersUpdateStatus.AsSuccess
+  fullName: Dropbox.Api.Team.ExcludedUsersUpdateStatus.AsSuccess
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ExcludedUsersUpdateStatus.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsSuccess
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ExcludedUsersUpdateStatus.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a Success, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ExcludedUsersUpdateStatus.Success AsSuccess { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.ExcludedUsersUpdateStatus.Success
+    content.vb: Public ReadOnly Property AsSuccess As ExcludedUsersUpdateStatus.Success
+  overload: Dropbox.Api.Team.ExcludedUsersUpdateStatus.AsSuccess*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.ExcludedUsersUpdateStatus.IsOther
+  commentId: P:Dropbox.Api.Team.ExcludedUsersUpdateStatus.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Team.ExcludedUsersUpdateStatus
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: ExcludedUsersUpdateStatus.IsOther
+  fullName: Dropbox.Api.Team.ExcludedUsersUpdateStatus.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ExcludedUsersUpdateStatus.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ExcludedUsersUpdateStatus.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Team.ExcludedUsersUpdateStatus.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.ExcludedUsersUpdateStatus.AsOther
+  commentId: P:Dropbox.Api.Team.ExcludedUsersUpdateStatus.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Team.ExcludedUsersUpdateStatus
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: ExcludedUsersUpdateStatus.AsOther
+  fullName: Dropbox.Api.Team.ExcludedUsersUpdateStatus.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ExcludedUsersUpdateStatus.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ExcludedUsersUpdateStatus.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ExcludedUsersUpdateStatus.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.ExcludedUsersUpdateStatus.Other
+    content.vb: Public ReadOnly Property AsOther As ExcludedUsersUpdateStatus.Other
+  overload: Dropbox.Api.Team.ExcludedUsersUpdateStatus.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.ExcludedUsersUpdateStatus
+  commentId: T:Dropbox.Api.Team.ExcludedUsersUpdateStatus
+  parent: Dropbox.Api.Team
+  name: ExcludedUsersUpdateStatus
+  nameWithType: ExcludedUsersUpdateStatus
+  fullName: Dropbox.Api.Team.ExcludedUsersUpdateStatus
+- uid: Dropbox.Api.Team.ExcludedUsersUpdateStatus.#ctor*
+  commentId: Overload:Dropbox.Api.Team.ExcludedUsersUpdateStatus.#ctor
+  name: ExcludedUsersUpdateStatus
+  nameWithType: ExcludedUsersUpdateStatus.ExcludedUsersUpdateStatus
+  fullName: Dropbox.Api.Team.ExcludedUsersUpdateStatus.ExcludedUsersUpdateStatus
+- uid: Dropbox.Api.Team.ExcludedUsersUpdateStatus.IsSuccess*
+  commentId: Overload:Dropbox.Api.Team.ExcludedUsersUpdateStatus.IsSuccess
+  name: IsSuccess
+  nameWithType: ExcludedUsersUpdateStatus.IsSuccess
+  fullName: Dropbox.Api.Team.ExcludedUsersUpdateStatus.IsSuccess
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Team.ExcludedUsersUpdateStatus.AsSuccess*
+  commentId: Overload:Dropbox.Api.Team.ExcludedUsersUpdateStatus.AsSuccess
+  name: AsSuccess
+  nameWithType: ExcludedUsersUpdateStatus.AsSuccess
+  fullName: Dropbox.Api.Team.ExcludedUsersUpdateStatus.AsSuccess
+- uid: Dropbox.Api.Team.ExcludedUsersUpdateStatus.Success
+  commentId: T:Dropbox.Api.Team.ExcludedUsersUpdateStatus.Success
+  parent: Dropbox.Api.Team
+  name: ExcludedUsersUpdateStatus.Success
+  nameWithType: ExcludedUsersUpdateStatus.Success
+  fullName: Dropbox.Api.Team.ExcludedUsersUpdateStatus.Success
+- uid: Dropbox.Api.Team.ExcludedUsersUpdateStatus.IsOther*
+  commentId: Overload:Dropbox.Api.Team.ExcludedUsersUpdateStatus.IsOther
+  name: IsOther
+  nameWithType: ExcludedUsersUpdateStatus.IsOther
+  fullName: Dropbox.Api.Team.ExcludedUsersUpdateStatus.IsOther
+- uid: Dropbox.Api.Team.ExcludedUsersUpdateStatus.AsOther*
+  commentId: Overload:Dropbox.Api.Team.ExcludedUsersUpdateStatus.AsOther
+  name: AsOther
+  nameWithType: ExcludedUsersUpdateStatus.AsOther
+  fullName: Dropbox.Api.Team.ExcludedUsersUpdateStatus.AsOther
+- uid: Dropbox.Api.Team.ExcludedUsersUpdateStatus.Other
+  commentId: T:Dropbox.Api.Team.ExcludedUsersUpdateStatus.Other
+  parent: Dropbox.Api.Team
+  name: ExcludedUsersUpdateStatus.Other
+  nameWithType: ExcludedUsersUpdateStatus.Other
+  fullName: Dropbox.Api.Team.ExcludedUsersUpdateStatus.Other
+shouldSkipMarkup: true

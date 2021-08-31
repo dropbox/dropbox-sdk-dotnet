@@ -1,0 +1,211 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.MembersDeactivateBaseArg
+  commentId: T:Dropbox.Api.Team.MembersDeactivateBaseArg
+  id: MembersDeactivateBaseArg
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.MembersDeactivateBaseArg.#ctor
+  - Dropbox.Api.Team.MembersDeactivateBaseArg.#ctor(Dropbox.Api.Team.UserSelectorArg)
+  - Dropbox.Api.Team.MembersDeactivateBaseArg.User
+  langs:
+  - csharp
+  - vb
+  name: MembersDeactivateBaseArg
+  nameWithType: MembersDeactivateBaseArg
+  fullName: Dropbox.Api.Team.MembersDeactivateBaseArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersDeactivateBaseArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: MembersDeactivateBaseArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersDeactivateBaseArg.cs
+    startLine: 18
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Exactly one of team_member_id, email, or external_id must be provided to identify\nthe user account.</p>\n"
+  example: []
+  syntax:
+    content: 'public class MembersDeactivateBaseArg : object'
+    content.vb: >-
+      Public Class MembersDeactivateBaseArg
+          Inherits Object
+  seealso:
+  - linkId: Dropbox.Api.Team.MembersDataTransferArg
+    commentId: T:Dropbox.Api.Team.MembersDataTransferArg
+  - linkId: Dropbox.Api.Team.MembersDeactivateArg
+    commentId: T:Dropbox.Api.Team.MembersDeactivateArg
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Team.MembersDataTransferArg
+  - Dropbox.Api.Team.MembersDeactivateArg
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.MembersDeactivateBaseArg.#ctor(Dropbox.Api.Team.UserSelectorArg)
+  commentId: M:Dropbox.Api.Team.MembersDeactivateBaseArg.#ctor(Dropbox.Api.Team.UserSelectorArg)
+  id: '#ctor(Dropbox.Api.Team.UserSelectorArg)'
+  parent: Dropbox.Api.Team.MembersDeactivateBaseArg
+  langs:
+  - csharp
+  - vb
+  name: MembersDeactivateBaseArg(UserSelectorArg)
+  nameWithType: MembersDeactivateBaseArg.MembersDeactivateBaseArg(UserSelectorArg)
+  fullName: Dropbox.Api.Team.MembersDeactivateBaseArg.MembersDeactivateBaseArg(Dropbox.Api.Team.UserSelectorArg)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersDeactivateBaseArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersDeactivateBaseArg.cs
+    startLine: 38
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.MembersDeactivateBaseArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public MembersDeactivateBaseArg(UserSelectorArg user)
+    parameters:
+    - id: user
+      type: Dropbox.Api.Team.UserSelectorArg
+      description: >-
+        Identity of user to remove/suspend/have their files
+
+        moved.
+    content.vb: Public Sub New(user As UserSelectorArg)
+  overload: Dropbox.Api.Team.MembersDeactivateBaseArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.MembersDeactivateBaseArg.#ctor
+  commentId: M:Dropbox.Api.Team.MembersDeactivateBaseArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.MembersDeactivateBaseArg
+  langs:
+  - csharp
+  - vb
+  name: MembersDeactivateBaseArg()
+  nameWithType: MembersDeactivateBaseArg.MembersDeactivateBaseArg()
+  fullName: Dropbox.Api.Team.MembersDeactivateBaseArg.MembersDeactivateBaseArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersDeactivateBaseArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersDeactivateBaseArg.cs
+    startLine: 54
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.MembersDeactivateBaseArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public MembersDeactivateBaseArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.MembersDeactivateBaseArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.MembersDeactivateBaseArg.User
+  commentId: P:Dropbox.Api.Team.MembersDeactivateBaseArg.User
+  id: User
+  parent: Dropbox.Api.Team.MembersDeactivateBaseArg
+  langs:
+  - csharp
+  - vb
+  name: User
+  nameWithType: MembersDeactivateBaseArg.User
+  fullName: Dropbox.Api.Team.MembersDeactivateBaseArg.User
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersDeactivateBaseArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: User
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersDeactivateBaseArg.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Identity of user to remove/suspend/have their files moved.</p>\n"
+  example: []
+  syntax:
+    content: public UserSelectorArg User { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.UserSelectorArg
+    content.vb: Public Property User As UserSelectorArg
+  overload: Dropbox.Api.Team.MembersDeactivateBaseArg.User*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Team.MembersDataTransferArg
+  commentId: T:Dropbox.Api.Team.MembersDataTransferArg
+  parent: Dropbox.Api.Team
+  name: MembersDataTransferArg
+  nameWithType: MembersDataTransferArg
+  fullName: Dropbox.Api.Team.MembersDataTransferArg
+- uid: Dropbox.Api.Team.MembersDeactivateArg
+  commentId: T:Dropbox.Api.Team.MembersDeactivateArg
+  parent: Dropbox.Api.Team
+  name: MembersDeactivateArg
+  nameWithType: MembersDeactivateArg
+  fullName: Dropbox.Api.Team.MembersDeactivateArg
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.MembersDeactivateBaseArg
+  commentId: T:Dropbox.Api.Team.MembersDeactivateBaseArg
+  parent: Dropbox.Api.Team
+  name: MembersDeactivateBaseArg
+  nameWithType: MembersDeactivateBaseArg
+  fullName: Dropbox.Api.Team.MembersDeactivateBaseArg
+- uid: Dropbox.Api.Team.MembersDeactivateBaseArg.#ctor*
+  commentId: Overload:Dropbox.Api.Team.MembersDeactivateBaseArg.#ctor
+  name: MembersDeactivateBaseArg
+  nameWithType: MembersDeactivateBaseArg.MembersDeactivateBaseArg
+  fullName: Dropbox.Api.Team.MembersDeactivateBaseArg.MembersDeactivateBaseArg
+- uid: Dropbox.Api.Team.UserSelectorArg
+  commentId: T:Dropbox.Api.Team.UserSelectorArg
+  parent: Dropbox.Api.Team
+  name: UserSelectorArg
+  nameWithType: UserSelectorArg
+  fullName: Dropbox.Api.Team.UserSelectorArg
+- uid: Dropbox.Api.Team.MembersDeactivateBaseArg.User*
+  commentId: Overload:Dropbox.Api.Team.MembersDeactivateBaseArg.User
+  name: User
+  nameWithType: MembersDeactivateBaseArg.User
+  fullName: Dropbox.Api.Team.MembersDeactivateBaseArg.User
+shouldSkipMarkup: true

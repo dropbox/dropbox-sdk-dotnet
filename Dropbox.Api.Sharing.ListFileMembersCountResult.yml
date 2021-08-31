@@ -1,0 +1,244 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.ListFileMembersCountResult
+  commentId: T:Dropbox.Api.Sharing.ListFileMembersCountResult
+  id: ListFileMembersCountResult
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.ListFileMembersCountResult.#ctor
+  - Dropbox.Api.Sharing.ListFileMembersCountResult.#ctor(Dropbox.Api.Sharing.SharedFileMembers,System.UInt32)
+  - Dropbox.Api.Sharing.ListFileMembersCountResult.MemberCount
+  - Dropbox.Api.Sharing.ListFileMembersCountResult.Members
+  langs:
+  - csharp
+  - vb
+  name: ListFileMembersCountResult
+  nameWithType: ListFileMembersCountResult
+  fullName: Dropbox.Api.Sharing.ListFileMembersCountResult
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersCountResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ListFileMembersCountResult
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersCountResult.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The list file members count result object</p>\n"
+  example: []
+  syntax:
+    content: 'public class ListFileMembersCountResult : object'
+    content.vb: >-
+      Public Class ListFileMembersCountResult
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Sharing.ListFileMembersCountResult.#ctor(Dropbox.Api.Sharing.SharedFileMembers,System.UInt32)
+  commentId: M:Dropbox.Api.Sharing.ListFileMembersCountResult.#ctor(Dropbox.Api.Sharing.SharedFileMembers,System.UInt32)
+  id: '#ctor(Dropbox.Api.Sharing.SharedFileMembers,System.UInt32)'
+  parent: Dropbox.Api.Sharing.ListFileMembersCountResult
+  langs:
+  - csharp
+  - vb
+  name: ListFileMembersCountResult(SharedFileMembers, UInt32)
+  nameWithType: ListFileMembersCountResult.ListFileMembersCountResult(SharedFileMembers, UInt32)
+  fullName: Dropbox.Api.Sharing.ListFileMembersCountResult.ListFileMembersCountResult(Dropbox.Api.Sharing.SharedFileMembers, System.UInt32)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersCountResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersCountResult.cs
+    startLine: 36
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.ListFileMembersCountResult\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public ListFileMembersCountResult(SharedFileMembers members, uint memberCount)
+    parameters:
+    - id: members
+      type: Dropbox.Api.Sharing.SharedFileMembers
+      description: A list of members on this file.
+    - id: memberCount
+      type: System.UInt32
+      description: >-
+        The number of members on this file. This does not include
+
+        inherited members.
+    content.vb: Public Sub New(members As SharedFileMembers, memberCount As UInteger)
+  overload: Dropbox.Api.Sharing.ListFileMembersCountResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.ListFileMembersCountResult.#ctor
+  commentId: M:Dropbox.Api.Sharing.ListFileMembersCountResult.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Sharing.ListFileMembersCountResult
+  langs:
+  - csharp
+  - vb
+  name: ListFileMembersCountResult()
+  nameWithType: ListFileMembersCountResult.ListFileMembersCountResult()
+  fullName: Dropbox.Api.Sharing.ListFileMembersCountResult.ListFileMembersCountResult()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersCountResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersCountResult.cs
+    startLine: 54
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.ListFileMembersCountResult\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public ListFileMembersCountResult()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Sharing.ListFileMembersCountResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.ListFileMembersCountResult.Members
+  commentId: P:Dropbox.Api.Sharing.ListFileMembersCountResult.Members
+  id: Members
+  parent: Dropbox.Api.Sharing.ListFileMembersCountResult
+  langs:
+  - csharp
+  - vb
+  name: Members
+  nameWithType: ListFileMembersCountResult.Members
+  fullName: Dropbox.Api.Sharing.ListFileMembersCountResult.Members
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersCountResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Members
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersCountResult.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>A list of members on this file.</p>\n"
+  example: []
+  syntax:
+    content: public SharedFileMembers Members { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.SharedFileMembers
+    content.vb: Public Property Members As SharedFileMembers
+  overload: Dropbox.Api.Sharing.ListFileMembersCountResult.Members*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.ListFileMembersCountResult.MemberCount
+  commentId: P:Dropbox.Api.Sharing.ListFileMembersCountResult.MemberCount
+  id: MemberCount
+  parent: Dropbox.Api.Sharing.ListFileMembersCountResult
+  langs:
+  - csharp
+  - vb
+  name: MemberCount
+  nameWithType: ListFileMembersCountResult.MemberCount
+  fullName: Dropbox.Api.Sharing.ListFileMembersCountResult.MemberCount
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersCountResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: MemberCount
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/ListFileMembersCountResult.cs
+    startLine: 68
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The number of members on this file. This does not include inherited\nmembers.</p>\n"
+  example: []
+  syntax:
+    content: public uint MemberCount { get; protected set; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public Property MemberCount As UInteger
+  overload: Dropbox.Api.Sharing.ListFileMembersCountResult.MemberCount*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.ListFileMembersCountResult
+  commentId: T:Dropbox.Api.Sharing.ListFileMembersCountResult
+  parent: Dropbox.Api.Sharing
+  name: ListFileMembersCountResult
+  nameWithType: ListFileMembersCountResult
+  fullName: Dropbox.Api.Sharing.ListFileMembersCountResult
+- uid: Dropbox.Api.Sharing.ListFileMembersCountResult.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.ListFileMembersCountResult.#ctor
+  name: ListFileMembersCountResult
+  nameWithType: ListFileMembersCountResult.ListFileMembersCountResult
+  fullName: Dropbox.Api.Sharing.ListFileMembersCountResult.ListFileMembersCountResult
+- uid: Dropbox.Api.Sharing.SharedFileMembers
+  commentId: T:Dropbox.Api.Sharing.SharedFileMembers
+  parent: Dropbox.Api.Sharing
+  name: SharedFileMembers
+  nameWithType: SharedFileMembers
+  fullName: Dropbox.Api.Sharing.SharedFileMembers
+- uid: System.UInt32
+  isExternal: true
+  name: UInt32
+  nameWithType: UInt32
+  fullName: System.UInt32
+- uid: Dropbox.Api.Sharing.ListFileMembersCountResult.Members*
+  commentId: Overload:Dropbox.Api.Sharing.ListFileMembersCountResult.Members
+  name: Members
+  nameWithType: ListFileMembersCountResult.Members
+  fullName: Dropbox.Api.Sharing.ListFileMembersCountResult.Members
+- uid: Dropbox.Api.Sharing.ListFileMembersCountResult.MemberCount*
+  commentId: Overload:Dropbox.Api.Sharing.ListFileMembersCountResult.MemberCount
+  name: MemberCount
+  nameWithType: ListFileMembersCountResult.MemberCount
+  fullName: Dropbox.Api.Sharing.ListFileMembersCountResult.MemberCount
+shouldSkipMarkup: true

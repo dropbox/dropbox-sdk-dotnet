@@ -1,0 +1,189 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.AudienceExceptionContentInfo
+  commentId: T:Dropbox.Api.Sharing.AudienceExceptionContentInfo
+  id: AudienceExceptionContentInfo
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.AudienceExceptionContentInfo.#ctor
+  - Dropbox.Api.Sharing.AudienceExceptionContentInfo.#ctor(System.String)
+  - Dropbox.Api.Sharing.AudienceExceptionContentInfo.Name
+  langs:
+  - csharp
+  - vb
+  name: AudienceExceptionContentInfo
+  nameWithType: AudienceExceptionContentInfo
+  fullName: Dropbox.Api.Sharing.AudienceExceptionContentInfo
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AudienceExceptionContentInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AudienceExceptionContentInfo
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AudienceExceptionContentInfo.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Information about the content that has a link audience different than that of\nthis folder.</p>\n"
+  example: []
+  syntax:
+    content: 'public class AudienceExceptionContentInfo : object'
+    content.vb: >-
+      Public Class AudienceExceptionContentInfo
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Sharing.AudienceExceptionContentInfo.#ctor(System.String)
+  commentId: M:Dropbox.Api.Sharing.AudienceExceptionContentInfo.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.Sharing.AudienceExceptionContentInfo
+  langs:
+  - csharp
+  - vb
+  name: AudienceExceptionContentInfo(String)
+  nameWithType: AudienceExceptionContentInfo.AudienceExceptionContentInfo(String)
+  fullName: Dropbox.Api.Sharing.AudienceExceptionContentInfo.AudienceExceptionContentInfo(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AudienceExceptionContentInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AudienceExceptionContentInfo.cs
+    startLine: 36
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.AudienceExceptionContentInfo\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public AudienceExceptionContentInfo(string name)
+    parameters:
+    - id: name
+      type: System.String
+      description: >-
+        The name of the content, which is either a file or a
+
+        folder.
+    content.vb: Public Sub New(name As String)
+  overload: Dropbox.Api.Sharing.AudienceExceptionContentInfo.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.AudienceExceptionContentInfo.#ctor
+  commentId: M:Dropbox.Api.Sharing.AudienceExceptionContentInfo.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Sharing.AudienceExceptionContentInfo
+  langs:
+  - csharp
+  - vb
+  name: AudienceExceptionContentInfo()
+  nameWithType: AudienceExceptionContentInfo.AudienceExceptionContentInfo()
+  fullName: Dropbox.Api.Sharing.AudienceExceptionContentInfo.AudienceExceptionContentInfo()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AudienceExceptionContentInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AudienceExceptionContentInfo.cs
+    startLine: 52
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.AudienceExceptionContentInfo\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public AudienceExceptionContentInfo()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Sharing.AudienceExceptionContentInfo.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.AudienceExceptionContentInfo.Name
+  commentId: P:Dropbox.Api.Sharing.AudienceExceptionContentInfo.Name
+  id: Name
+  parent: Dropbox.Api.Sharing.AudienceExceptionContentInfo
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: AudienceExceptionContentInfo.Name
+  fullName: Dropbox.Api.Sharing.AudienceExceptionContentInfo.Name
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AudienceExceptionContentInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Name
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AudienceExceptionContentInfo.cs
+    startLine: 60
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The name of the content, which is either a file or a folder.</p>\n"
+  example: []
+  syntax:
+    content: public string Name { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: Dropbox.Api.Sharing.AudienceExceptionContentInfo.Name*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.AudienceExceptionContentInfo
+  commentId: T:Dropbox.Api.Sharing.AudienceExceptionContentInfo
+  name: AudienceExceptionContentInfo
+  nameWithType: AudienceExceptionContentInfo
+  fullName: Dropbox.Api.Sharing.AudienceExceptionContentInfo
+- uid: Dropbox.Api.Sharing.AudienceExceptionContentInfo.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.AudienceExceptionContentInfo.#ctor
+  name: AudienceExceptionContentInfo
+  nameWithType: AudienceExceptionContentInfo.AudienceExceptionContentInfo
+  fullName: Dropbox.Api.Sharing.AudienceExceptionContentInfo.AudienceExceptionContentInfo
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Sharing.AudienceExceptionContentInfo.Name*
+  commentId: Overload:Dropbox.Api.Sharing.AudienceExceptionContentInfo.Name
+  name: Name
+  nameWithType: AudienceExceptionContentInfo.Name
+  fullName: Dropbox.Api.Sharing.AudienceExceptionContentInfo.Name
+shouldSkipMarkup: true

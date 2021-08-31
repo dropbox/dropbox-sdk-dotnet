@@ -1,0 +1,474 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.MemberRequestsPolicy
+  commentId: T:Dropbox.Api.TeamLog.MemberRequestsPolicy
+  id: MemberRequestsPolicy
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.MemberRequestsPolicy.#ctor
+  - Dropbox.Api.TeamLog.MemberRequestsPolicy.AsAutoAccept
+  - Dropbox.Api.TeamLog.MemberRequestsPolicy.AsDisabled
+  - Dropbox.Api.TeamLog.MemberRequestsPolicy.AsOther
+  - Dropbox.Api.TeamLog.MemberRequestsPolicy.AsRequireApproval
+  - Dropbox.Api.TeamLog.MemberRequestsPolicy.IsAutoAccept
+  - Dropbox.Api.TeamLog.MemberRequestsPolicy.IsDisabled
+  - Dropbox.Api.TeamLog.MemberRequestsPolicy.IsOther
+  - Dropbox.Api.TeamLog.MemberRequestsPolicy.IsRequireApproval
+  langs:
+  - csharp
+  - vb
+  name: MemberRequestsPolicy
+  nameWithType: MemberRequestsPolicy
+  fullName: Dropbox.Api.TeamLog.MemberRequestsPolicy
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberRequestsPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: MemberRequestsPolicy
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberRequestsPolicy.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The member requests policy object</p>\n"
+  example: []
+  syntax:
+    content: 'public class MemberRequestsPolicy : object'
+    content.vb: >-
+      Public Class MemberRequestsPolicy
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.TeamLog.MemberRequestsPolicy.AutoAccept
+  - Dropbox.Api.TeamLog.MemberRequestsPolicy.Disabled
+  - Dropbox.Api.TeamLog.MemberRequestsPolicy.Other
+  - Dropbox.Api.TeamLog.MemberRequestsPolicy.RequireApproval
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.MemberRequestsPolicy.#ctor
+  commentId: M:Dropbox.Api.TeamLog.MemberRequestsPolicy.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.MemberRequestsPolicy
+  langs:
+  - csharp
+  - vb
+  name: MemberRequestsPolicy()
+  nameWithType: MemberRequestsPolicy.MemberRequestsPolicy()
+  fullName: Dropbox.Api.TeamLog.MemberRequestsPolicy.MemberRequestsPolicy()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberRequestsPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberRequestsPolicy.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.MemberRequestsPolicy\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public MemberRequestsPolicy()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.MemberRequestsPolicy.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.MemberRequestsPolicy.IsAutoAccept
+  commentId: P:Dropbox.Api.TeamLog.MemberRequestsPolicy.IsAutoAccept
+  id: IsAutoAccept
+  parent: Dropbox.Api.TeamLog.MemberRequestsPolicy
+  langs:
+  - csharp
+  - vb
+  name: IsAutoAccept
+  nameWithType: MemberRequestsPolicy.IsAutoAccept
+  fullName: Dropbox.Api.TeamLog.MemberRequestsPolicy.IsAutoAccept
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberRequestsPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsAutoAccept
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberRequestsPolicy.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is AutoAccept</p>\n"
+  example: []
+  syntax:
+    content: public bool IsAutoAccept { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsAutoAccept As Boolean
+  overload: Dropbox.Api.TeamLog.MemberRequestsPolicy.IsAutoAccept*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.MemberRequestsPolicy.AsAutoAccept
+  commentId: P:Dropbox.Api.TeamLog.MemberRequestsPolicy.AsAutoAccept
+  id: AsAutoAccept
+  parent: Dropbox.Api.TeamLog.MemberRequestsPolicy
+  langs:
+  - csharp
+  - vb
+  name: AsAutoAccept
+  nameWithType: MemberRequestsPolicy.AsAutoAccept
+  fullName: Dropbox.Api.TeamLog.MemberRequestsPolicy.AsAutoAccept
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberRequestsPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsAutoAccept
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberRequestsPolicy.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a AutoAccept, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MemberRequestsPolicy.AutoAccept AsAutoAccept { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.MemberRequestsPolicy.AutoAccept
+    content.vb: Public ReadOnly Property AsAutoAccept As MemberRequestsPolicy.AutoAccept
+  overload: Dropbox.Api.TeamLog.MemberRequestsPolicy.AsAutoAccept*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.MemberRequestsPolicy.IsDisabled
+  commentId: P:Dropbox.Api.TeamLog.MemberRequestsPolicy.IsDisabled
+  id: IsDisabled
+  parent: Dropbox.Api.TeamLog.MemberRequestsPolicy
+  langs:
+  - csharp
+  - vb
+  name: IsDisabled
+  nameWithType: MemberRequestsPolicy.IsDisabled
+  fullName: Dropbox.Api.TeamLog.MemberRequestsPolicy.IsDisabled
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberRequestsPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsDisabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberRequestsPolicy.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Disabled</p>\n"
+  example: []
+  syntax:
+    content: public bool IsDisabled { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsDisabled As Boolean
+  overload: Dropbox.Api.TeamLog.MemberRequestsPolicy.IsDisabled*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.MemberRequestsPolicy.AsDisabled
+  commentId: P:Dropbox.Api.TeamLog.MemberRequestsPolicy.AsDisabled
+  id: AsDisabled
+  parent: Dropbox.Api.TeamLog.MemberRequestsPolicy
+  langs:
+  - csharp
+  - vb
+  name: AsDisabled
+  nameWithType: MemberRequestsPolicy.AsDisabled
+  fullName: Dropbox.Api.TeamLog.MemberRequestsPolicy.AsDisabled
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberRequestsPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsDisabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberRequestsPolicy.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Disabled, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MemberRequestsPolicy.Disabled AsDisabled { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.MemberRequestsPolicy.Disabled
+    content.vb: Public ReadOnly Property AsDisabled As MemberRequestsPolicy.Disabled
+  overload: Dropbox.Api.TeamLog.MemberRequestsPolicy.AsDisabled*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.MemberRequestsPolicy.IsRequireApproval
+  commentId: P:Dropbox.Api.TeamLog.MemberRequestsPolicy.IsRequireApproval
+  id: IsRequireApproval
+  parent: Dropbox.Api.TeamLog.MemberRequestsPolicy
+  langs:
+  - csharp
+  - vb
+  name: IsRequireApproval
+  nameWithType: MemberRequestsPolicy.IsRequireApproval
+  fullName: Dropbox.Api.TeamLog.MemberRequestsPolicy.IsRequireApproval
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberRequestsPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsRequireApproval
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberRequestsPolicy.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is RequireApproval</p>\n"
+  example: []
+  syntax:
+    content: public bool IsRequireApproval { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsRequireApproval As Boolean
+  overload: Dropbox.Api.TeamLog.MemberRequestsPolicy.IsRequireApproval*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.MemberRequestsPolicy.AsRequireApproval
+  commentId: P:Dropbox.Api.TeamLog.MemberRequestsPolicy.AsRequireApproval
+  id: AsRequireApproval
+  parent: Dropbox.Api.TeamLog.MemberRequestsPolicy
+  langs:
+  - csharp
+  - vb
+  name: AsRequireApproval
+  nameWithType: MemberRequestsPolicy.AsRequireApproval
+  fullName: Dropbox.Api.TeamLog.MemberRequestsPolicy.AsRequireApproval
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberRequestsPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsRequireApproval
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberRequestsPolicy.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a RequireApproval, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MemberRequestsPolicy.RequireApproval AsRequireApproval { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.MemberRequestsPolicy.RequireApproval
+    content.vb: Public ReadOnly Property AsRequireApproval As MemberRequestsPolicy.RequireApproval
+  overload: Dropbox.Api.TeamLog.MemberRequestsPolicy.AsRequireApproval*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.MemberRequestsPolicy.IsOther
+  commentId: P:Dropbox.Api.TeamLog.MemberRequestsPolicy.IsOther
+  id: IsOther
+  parent: Dropbox.Api.TeamLog.MemberRequestsPolicy
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: MemberRequestsPolicy.IsOther
+  fullName: Dropbox.Api.TeamLog.MemberRequestsPolicy.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberRequestsPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberRequestsPolicy.cs
+    startLine: 106
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.TeamLog.MemberRequestsPolicy.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.MemberRequestsPolicy.AsOther
+  commentId: P:Dropbox.Api.TeamLog.MemberRequestsPolicy.AsOther
+  id: AsOther
+  parent: Dropbox.Api.TeamLog.MemberRequestsPolicy
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: MemberRequestsPolicy.AsOther
+  fullName: Dropbox.Api.TeamLog.MemberRequestsPolicy.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberRequestsPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberRequestsPolicy.cs
+    startLine: 117
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MemberRequestsPolicy.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.MemberRequestsPolicy.Other
+    content.vb: Public ReadOnly Property AsOther As MemberRequestsPolicy.Other
+  overload: Dropbox.Api.TeamLog.MemberRequestsPolicy.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.MemberRequestsPolicy
+  commentId: T:Dropbox.Api.TeamLog.MemberRequestsPolicy
+  parent: Dropbox.Api.TeamLog
+  name: MemberRequestsPolicy
+  nameWithType: MemberRequestsPolicy
+  fullName: Dropbox.Api.TeamLog.MemberRequestsPolicy
+- uid: Dropbox.Api.TeamLog.MemberRequestsPolicy.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberRequestsPolicy.#ctor
+  name: MemberRequestsPolicy
+  nameWithType: MemberRequestsPolicy.MemberRequestsPolicy
+  fullName: Dropbox.Api.TeamLog.MemberRequestsPolicy.MemberRequestsPolicy
+- uid: Dropbox.Api.TeamLog.MemberRequestsPolicy.IsAutoAccept*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberRequestsPolicy.IsAutoAccept
+  name: IsAutoAccept
+  nameWithType: MemberRequestsPolicy.IsAutoAccept
+  fullName: Dropbox.Api.TeamLog.MemberRequestsPolicy.IsAutoAccept
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.TeamLog.MemberRequestsPolicy.AsAutoAccept*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberRequestsPolicy.AsAutoAccept
+  name: AsAutoAccept
+  nameWithType: MemberRequestsPolicy.AsAutoAccept
+  fullName: Dropbox.Api.TeamLog.MemberRequestsPolicy.AsAutoAccept
+- uid: Dropbox.Api.TeamLog.MemberRequestsPolicy.AutoAccept
+  commentId: T:Dropbox.Api.TeamLog.MemberRequestsPolicy.AutoAccept
+  parent: Dropbox.Api.TeamLog
+  name: MemberRequestsPolicy.AutoAccept
+  nameWithType: MemberRequestsPolicy.AutoAccept
+  fullName: Dropbox.Api.TeamLog.MemberRequestsPolicy.AutoAccept
+- uid: Dropbox.Api.TeamLog.MemberRequestsPolicy.IsDisabled*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberRequestsPolicy.IsDisabled
+  name: IsDisabled
+  nameWithType: MemberRequestsPolicy.IsDisabled
+  fullName: Dropbox.Api.TeamLog.MemberRequestsPolicy.IsDisabled
+- uid: Dropbox.Api.TeamLog.MemberRequestsPolicy.AsDisabled*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberRequestsPolicy.AsDisabled
+  name: AsDisabled
+  nameWithType: MemberRequestsPolicy.AsDisabled
+  fullName: Dropbox.Api.TeamLog.MemberRequestsPolicy.AsDisabled
+- uid: Dropbox.Api.TeamLog.MemberRequestsPolicy.Disabled
+  commentId: T:Dropbox.Api.TeamLog.MemberRequestsPolicy.Disabled
+  parent: Dropbox.Api.TeamLog
+  name: MemberRequestsPolicy.Disabled
+  nameWithType: MemberRequestsPolicy.Disabled
+  fullName: Dropbox.Api.TeamLog.MemberRequestsPolicy.Disabled
+- uid: Dropbox.Api.TeamLog.MemberRequestsPolicy.IsRequireApproval*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberRequestsPolicy.IsRequireApproval
+  name: IsRequireApproval
+  nameWithType: MemberRequestsPolicy.IsRequireApproval
+  fullName: Dropbox.Api.TeamLog.MemberRequestsPolicy.IsRequireApproval
+- uid: Dropbox.Api.TeamLog.MemberRequestsPolicy.AsRequireApproval*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberRequestsPolicy.AsRequireApproval
+  name: AsRequireApproval
+  nameWithType: MemberRequestsPolicy.AsRequireApproval
+  fullName: Dropbox.Api.TeamLog.MemberRequestsPolicy.AsRequireApproval
+- uid: Dropbox.Api.TeamLog.MemberRequestsPolicy.RequireApproval
+  commentId: T:Dropbox.Api.TeamLog.MemberRequestsPolicy.RequireApproval
+  parent: Dropbox.Api.TeamLog
+  name: MemberRequestsPolicy.RequireApproval
+  nameWithType: MemberRequestsPolicy.RequireApproval
+  fullName: Dropbox.Api.TeamLog.MemberRequestsPolicy.RequireApproval
+- uid: Dropbox.Api.TeamLog.MemberRequestsPolicy.IsOther*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberRequestsPolicy.IsOther
+  name: IsOther
+  nameWithType: MemberRequestsPolicy.IsOther
+  fullName: Dropbox.Api.TeamLog.MemberRequestsPolicy.IsOther
+- uid: Dropbox.Api.TeamLog.MemberRequestsPolicy.AsOther*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberRequestsPolicy.AsOther
+  name: AsOther
+  nameWithType: MemberRequestsPolicy.AsOther
+  fullName: Dropbox.Api.TeamLog.MemberRequestsPolicy.AsOther
+- uid: Dropbox.Api.TeamLog.MemberRequestsPolicy.Other
+  commentId: T:Dropbox.Api.TeamLog.MemberRequestsPolicy.Other
+  parent: Dropbox.Api.TeamLog
+  name: MemberRequestsPolicy.Other
+  nameWithType: MemberRequestsPolicy.Other
+  fullName: Dropbox.Api.TeamLog.MemberRequestsPolicy.Other
+shouldSkipMarkup: true

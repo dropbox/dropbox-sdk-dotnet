@@ -1,0 +1,241 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Users.SpaceUsage
+  commentId: T:Dropbox.Api.Users.SpaceUsage
+  id: SpaceUsage
+  parent: Dropbox.Api.Users
+  children:
+  - Dropbox.Api.Users.SpaceUsage.#ctor
+  - Dropbox.Api.Users.SpaceUsage.#ctor(System.UInt64,Dropbox.Api.Users.SpaceAllocation)
+  - Dropbox.Api.Users.SpaceUsage.Allocation
+  - Dropbox.Api.Users.SpaceUsage.Used
+  langs:
+  - csharp
+  - vb
+  name: SpaceUsage
+  nameWithType: SpaceUsage
+  fullName: Dropbox.Api.Users.SpaceUsage
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/SpaceUsage.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SpaceUsage
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/SpaceUsage.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users
+  summary: "\n<p>Information about a user&apos;s space usage and quota.</p>\n"
+  example: []
+  syntax:
+    content: 'public class SpaceUsage : object'
+    content.vb: >-
+      Public Class SpaceUsage
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Users.SpaceUsage.#ctor(System.UInt64,Dropbox.Api.Users.SpaceAllocation)
+  commentId: M:Dropbox.Api.Users.SpaceUsage.#ctor(System.UInt64,Dropbox.Api.Users.SpaceAllocation)
+  id: '#ctor(System.UInt64,Dropbox.Api.Users.SpaceAllocation)'
+  parent: Dropbox.Api.Users.SpaceUsage
+  langs:
+  - csharp
+  - vb
+  name: SpaceUsage(UInt64, SpaceAllocation)
+  nameWithType: SpaceUsage.SpaceUsage(UInt64, SpaceAllocation)
+  fullName: Dropbox.Api.Users.SpaceUsage.SpaceUsage(System.UInt64, Dropbox.Api.Users.SpaceAllocation)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/SpaceUsage.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/SpaceUsage.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Users.SpaceUsage\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public SpaceUsage(ulong used, SpaceAllocation allocation)
+    parameters:
+    - id: used
+      type: System.UInt64
+      description: The user&apos;s total space usage (bytes).
+    - id: allocation
+      type: Dropbox.Api.Users.SpaceAllocation
+      description: The user&apos;s space allocation.
+    content.vb: Public Sub New(used As ULong, allocation As SpaceAllocation)
+  overload: Dropbox.Api.Users.SpaceUsage.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Users.SpaceUsage.#ctor
+  commentId: M:Dropbox.Api.Users.SpaceUsage.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Users.SpaceUsage
+  langs:
+  - csharp
+  - vb
+  name: SpaceUsage()
+  nameWithType: SpaceUsage.SpaceUsage()
+  fullName: Dropbox.Api.Users.SpaceUsage.SpaceUsage()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/SpaceUsage.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/SpaceUsage.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Users.SpaceUsage\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public SpaceUsage()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Users.SpaceUsage.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Users.SpaceUsage.Used
+  commentId: P:Dropbox.Api.Users.SpaceUsage.Used
+  id: Used
+  parent: Dropbox.Api.Users.SpaceUsage
+  langs:
+  - csharp
+  - vb
+  name: Used
+  nameWithType: SpaceUsage.Used
+  fullName: Dropbox.Api.Users.SpaceUsage.Used
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/SpaceUsage.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Used
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/SpaceUsage.cs
+    startLine: 59
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users
+  summary: "\n<p>The user&apos;s total space usage (bytes).</p>\n"
+  example: []
+  syntax:
+    content: public ulong Used { get; protected set; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: Public Property Used As ULong
+  overload: Dropbox.Api.Users.SpaceUsage.Used*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Users.SpaceUsage.Allocation
+  commentId: P:Dropbox.Api.Users.SpaceUsage.Allocation
+  id: Allocation
+  parent: Dropbox.Api.Users.SpaceUsage
+  langs:
+  - csharp
+  - vb
+  name: Allocation
+  nameWithType: SpaceUsage.Allocation
+  fullName: Dropbox.Api.Users.SpaceUsage.Allocation
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/SpaceUsage.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Allocation
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Users/SpaceUsage.cs
+    startLine: 64
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Users
+  summary: "\n<p>The user&apos;s space allocation.</p>\n"
+  example: []
+  syntax:
+    content: public SpaceAllocation Allocation { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Users.SpaceAllocation
+    content.vb: Public Property Allocation As SpaceAllocation
+  overload: Dropbox.Api.Users.SpaceUsage.Allocation*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Users
+  commentId: N:Dropbox.Api.Users
+  name: Dropbox.Api.Users
+  nameWithType: Dropbox.Api.Users
+  fullName: Dropbox.Api.Users
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Users.SpaceUsage
+  commentId: T:Dropbox.Api.Users.SpaceUsage
+  parent: Dropbox.Api.Users
+  name: SpaceUsage
+  nameWithType: SpaceUsage
+  fullName: Dropbox.Api.Users.SpaceUsage
+- uid: Dropbox.Api.Users.SpaceUsage.#ctor*
+  commentId: Overload:Dropbox.Api.Users.SpaceUsage.#ctor
+  name: SpaceUsage
+  nameWithType: SpaceUsage.SpaceUsage
+  fullName: Dropbox.Api.Users.SpaceUsage.SpaceUsage
+- uid: System.UInt64
+  isExternal: true
+  name: UInt64
+  nameWithType: UInt64
+  fullName: System.UInt64
+- uid: Dropbox.Api.Users.SpaceAllocation
+  commentId: T:Dropbox.Api.Users.SpaceAllocation
+  parent: Dropbox.Api.Users
+  name: SpaceAllocation
+  nameWithType: SpaceAllocation
+  fullName: Dropbox.Api.Users.SpaceAllocation
+- uid: Dropbox.Api.Users.SpaceUsage.Used*
+  commentId: Overload:Dropbox.Api.Users.SpaceUsage.Used
+  name: Used
+  nameWithType: SpaceUsage.Used
+  fullName: Dropbox.Api.Users.SpaceUsage.Used
+- uid: Dropbox.Api.Users.SpaceUsage.Allocation*
+  commentId: Overload:Dropbox.Api.Users.SpaceUsage.Allocation
+  name: Allocation
+  nameWithType: SpaceUsage.Allocation
+  fullName: Dropbox.Api.Users.SpaceUsage.Allocation
+shouldSkipMarkup: true

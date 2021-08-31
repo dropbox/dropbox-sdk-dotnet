@@ -1,0 +1,272 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Paper.ListUsersOnPaperDocArgs
+  commentId: T:Dropbox.Api.Paper.ListUsersOnPaperDocArgs
+  id: ListUsersOnPaperDocArgs
+  parent: Dropbox.Api.Paper
+  children:
+  - Dropbox.Api.Paper.ListUsersOnPaperDocArgs.#ctor
+  - Dropbox.Api.Paper.ListUsersOnPaperDocArgs.#ctor(System.String,System.Int32,Dropbox.Api.Paper.UserOnPaperDocFilter)
+  - Dropbox.Api.Paper.ListUsersOnPaperDocArgs.FilterBy
+  - Dropbox.Api.Paper.ListUsersOnPaperDocArgs.Limit
+  langs:
+  - csharp
+  - vb
+  name: ListUsersOnPaperDocArgs
+  nameWithType: ListUsersOnPaperDocArgs
+  fullName: Dropbox.Api.Paper.ListUsersOnPaperDocArgs
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/ListUsersOnPaperDocArgs.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ListUsersOnPaperDocArgs
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/ListUsersOnPaperDocArgs.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>The list users on paper doc args object</p>\n"
+  example: []
+  syntax:
+    content: 'public class ListUsersOnPaperDocArgs : RefPaperDoc'
+    content.vb: >-
+      Public Class ListUsersOnPaperDocArgs
+          Inherits RefPaperDoc
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Paper.RefPaperDoc
+  inheritedMembers:
+  - Dropbox.Api.Paper.RefPaperDoc.DocId
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Paper.ListUsersOnPaperDocArgs.#ctor(System.String,System.Int32,Dropbox.Api.Paper.UserOnPaperDocFilter)
+  commentId: M:Dropbox.Api.Paper.ListUsersOnPaperDocArgs.#ctor(System.String,System.Int32,Dropbox.Api.Paper.UserOnPaperDocFilter)
+  id: '#ctor(System.String,System.Int32,Dropbox.Api.Paper.UserOnPaperDocFilter)'
+  parent: Dropbox.Api.Paper.ListUsersOnPaperDocArgs
+  langs:
+  - csharp
+  - vb
+  name: ListUsersOnPaperDocArgs(String, Int32, UserOnPaperDocFilter)
+  nameWithType: ListUsersOnPaperDocArgs.ListUsersOnPaperDocArgs(String, Int32, UserOnPaperDocFilter)
+  fullName: Dropbox.Api.Paper.ListUsersOnPaperDocArgs.ListUsersOnPaperDocArgs(System.String, System.Int32, Dropbox.Api.Paper.UserOnPaperDocFilter)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/ListUsersOnPaperDocArgs.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/ListUsersOnPaperDocArgs.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Paper.ListUsersOnPaperDocArgs\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public ListUsersOnPaperDocArgs(string docId, int limit = 1000, UserOnPaperDocFilter filterBy = null)
+    parameters:
+    - id: docId
+      type: System.String
+      description: The Paper doc ID.
+    - id: limit
+      type: System.Int32
+      description: >-
+        Size limit per batch. The maximum number of users that can be
+
+        retrieved per batch is 1000. Higher value results in invalid arguments
+
+        error.
+    - id: filterBy
+      type: Dropbox.Api.Paper.UserOnPaperDocFilter
+      description: >-
+        Specify this attribute if you want to obtain users that have
+
+        already accessed the Paper doc.
+    content.vb: Public Sub New(docId As String, limit As Integer = 1000, filterBy As UserOnPaperDocFilter = Nothing)
+  overload: Dropbox.Api.Paper.ListUsersOnPaperDocArgs.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Paper.ListUsersOnPaperDocArgs.#ctor
+  commentId: M:Dropbox.Api.Paper.ListUsersOnPaperDocArgs.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Paper.ListUsersOnPaperDocArgs
+  langs:
+  - csharp
+  - vb
+  name: ListUsersOnPaperDocArgs()
+  nameWithType: ListUsersOnPaperDocArgs.ListUsersOnPaperDocArgs()
+  fullName: Dropbox.Api.Paper.ListUsersOnPaperDocArgs.ListUsersOnPaperDocArgs()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/ListUsersOnPaperDocArgs.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/ListUsersOnPaperDocArgs.cs
+    startLine: 68
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Paper.ListUsersOnPaperDocArgs\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public ListUsersOnPaperDocArgs()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Paper.ListUsersOnPaperDocArgs.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Paper.ListUsersOnPaperDocArgs.Limit
+  commentId: P:Dropbox.Api.Paper.ListUsersOnPaperDocArgs.Limit
+  id: Limit
+  parent: Dropbox.Api.Paper.ListUsersOnPaperDocArgs
+  langs:
+  - csharp
+  - vb
+  name: Limit
+  nameWithType: ListUsersOnPaperDocArgs.Limit
+  fullName: Dropbox.Api.Paper.ListUsersOnPaperDocArgs.Limit
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/ListUsersOnPaperDocArgs.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Limit
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/ListUsersOnPaperDocArgs.cs
+    startLine: 79
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Size limit per batch. The maximum number of users that can be retrieved per\nbatch is 1000. Higher value results in invalid arguments error.</p>\n"
+  example: []
+  syntax:
+    content: public int Limit { get; protected set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Limit As Integer
+  overload: Dropbox.Api.Paper.ListUsersOnPaperDocArgs.Limit*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Paper.ListUsersOnPaperDocArgs.FilterBy
+  commentId: P:Dropbox.Api.Paper.ListUsersOnPaperDocArgs.FilterBy
+  id: FilterBy
+  parent: Dropbox.Api.Paper.ListUsersOnPaperDocArgs
+  langs:
+  - csharp
+  - vb
+  name: FilterBy
+  nameWithType: ListUsersOnPaperDocArgs.FilterBy
+  fullName: Dropbox.Api.Paper.ListUsersOnPaperDocArgs.FilterBy
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/ListUsersOnPaperDocArgs.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: FilterBy
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/ListUsersOnPaperDocArgs.cs
+    startLine: 85
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Specify this attribute if you want to obtain users that have already accessed\nthe Paper doc.</p>\n"
+  example: []
+  syntax:
+    content: public UserOnPaperDocFilter FilterBy { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Paper.UserOnPaperDocFilter
+    content.vb: Public Property FilterBy As UserOnPaperDocFilter
+  overload: Dropbox.Api.Paper.ListUsersOnPaperDocArgs.FilterBy*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Paper
+  commentId: N:Dropbox.Api.Paper
+  name: Dropbox.Api.Paper
+  nameWithType: Dropbox.Api.Paper
+  fullName: Dropbox.Api.Paper
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Paper.RefPaperDoc
+  commentId: T:Dropbox.Api.Paper.RefPaperDoc
+  parent: Dropbox.Api.Paper
+  name: RefPaperDoc
+  nameWithType: RefPaperDoc
+  fullName: Dropbox.Api.Paper.RefPaperDoc
+- uid: Dropbox.Api.Paper.RefPaperDoc.DocId
+  commentId: P:Dropbox.Api.Paper.RefPaperDoc.DocId
+  parent: Dropbox.Api.Paper.RefPaperDoc
+  name: DocId
+  nameWithType: RefPaperDoc.DocId
+  fullName: Dropbox.Api.Paper.RefPaperDoc.DocId
+- uid: Dropbox.Api.Paper.ListUsersOnPaperDocArgs
+  commentId: T:Dropbox.Api.Paper.ListUsersOnPaperDocArgs
+  parent: Dropbox.Api.Paper
+  name: ListUsersOnPaperDocArgs
+  nameWithType: ListUsersOnPaperDocArgs
+  fullName: Dropbox.Api.Paper.ListUsersOnPaperDocArgs
+- uid: Dropbox.Api.Paper.ListUsersOnPaperDocArgs.#ctor*
+  commentId: Overload:Dropbox.Api.Paper.ListUsersOnPaperDocArgs.#ctor
+  name: ListUsersOnPaperDocArgs
+  nameWithType: ListUsersOnPaperDocArgs.ListUsersOnPaperDocArgs
+  fullName: Dropbox.Api.Paper.ListUsersOnPaperDocArgs.ListUsersOnPaperDocArgs
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Int32
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Dropbox.Api.Paper.UserOnPaperDocFilter
+  commentId: T:Dropbox.Api.Paper.UserOnPaperDocFilter
+  parent: Dropbox.Api.Paper
+  name: UserOnPaperDocFilter
+  nameWithType: UserOnPaperDocFilter
+  fullName: Dropbox.Api.Paper.UserOnPaperDocFilter
+- uid: Dropbox.Api.Paper.ListUsersOnPaperDocArgs.Limit*
+  commentId: Overload:Dropbox.Api.Paper.ListUsersOnPaperDocArgs.Limit
+  name: Limit
+  nameWithType: ListUsersOnPaperDocArgs.Limit
+  fullName: Dropbox.Api.Paper.ListUsersOnPaperDocArgs.Limit
+- uid: Dropbox.Api.Paper.ListUsersOnPaperDocArgs.FilterBy*
+  commentId: Overload:Dropbox.Api.Paper.ListUsersOnPaperDocArgs.FilterBy
+  name: FilterBy
+  nameWithType: ListUsersOnPaperDocArgs.FilterBy
+  fullName: Dropbox.Api.Paper.ListUsersOnPaperDocArgs.FilterBy
+shouldSkipMarkup: true

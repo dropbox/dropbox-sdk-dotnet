@@ -1,0 +1,474 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.SharingMemberPolicy
+  commentId: T:Dropbox.Api.TeamLog.SharingMemberPolicy
+  id: SharingMemberPolicy
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.SharingMemberPolicy.#ctor
+  - Dropbox.Api.TeamLog.SharingMemberPolicy.AsAllow
+  - Dropbox.Api.TeamLog.SharingMemberPolicy.AsForbid
+  - Dropbox.Api.TeamLog.SharingMemberPolicy.AsForbidWithExclusions
+  - Dropbox.Api.TeamLog.SharingMemberPolicy.AsOther
+  - Dropbox.Api.TeamLog.SharingMemberPolicy.IsAllow
+  - Dropbox.Api.TeamLog.SharingMemberPolicy.IsForbid
+  - Dropbox.Api.TeamLog.SharingMemberPolicy.IsForbidWithExclusions
+  - Dropbox.Api.TeamLog.SharingMemberPolicy.IsOther
+  langs:
+  - csharp
+  - vb
+  name: SharingMemberPolicy
+  nameWithType: SharingMemberPolicy
+  fullName: Dropbox.Api.TeamLog.SharingMemberPolicy
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharingMemberPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SharingMemberPolicy
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharingMemberPolicy.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>External sharing policy</p>\n"
+  example: []
+  syntax:
+    content: 'public class SharingMemberPolicy : object'
+    content.vb: >-
+      Public Class SharingMemberPolicy
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.TeamLog.SharingMemberPolicy.Allow
+  - Dropbox.Api.TeamLog.SharingMemberPolicy.Forbid
+  - Dropbox.Api.TeamLog.SharingMemberPolicy.ForbidWithExclusions
+  - Dropbox.Api.TeamLog.SharingMemberPolicy.Other
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.SharingMemberPolicy.#ctor
+  commentId: M:Dropbox.Api.TeamLog.SharingMemberPolicy.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.SharingMemberPolicy
+  langs:
+  - csharp
+  - vb
+  name: SharingMemberPolicy()
+  nameWithType: SharingMemberPolicy.SharingMemberPolicy()
+  fullName: Dropbox.Api.TeamLog.SharingMemberPolicy.SharingMemberPolicy()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharingMemberPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharingMemberPolicy.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SharingMemberPolicy\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public SharingMemberPolicy()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.SharingMemberPolicy.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SharingMemberPolicy.IsAllow
+  commentId: P:Dropbox.Api.TeamLog.SharingMemberPolicy.IsAllow
+  id: IsAllow
+  parent: Dropbox.Api.TeamLog.SharingMemberPolicy
+  langs:
+  - csharp
+  - vb
+  name: IsAllow
+  nameWithType: SharingMemberPolicy.IsAllow
+  fullName: Dropbox.Api.TeamLog.SharingMemberPolicy.IsAllow
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharingMemberPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsAllow
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharingMemberPolicy.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Allow</p>\n"
+  example: []
+  syntax:
+    content: public bool IsAllow { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsAllow As Boolean
+  overload: Dropbox.Api.TeamLog.SharingMemberPolicy.IsAllow*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.SharingMemberPolicy.AsAllow
+  commentId: P:Dropbox.Api.TeamLog.SharingMemberPolicy.AsAllow
+  id: AsAllow
+  parent: Dropbox.Api.TeamLog.SharingMemberPolicy
+  langs:
+  - csharp
+  - vb
+  name: AsAllow
+  nameWithType: SharingMemberPolicy.AsAllow
+  fullName: Dropbox.Api.TeamLog.SharingMemberPolicy.AsAllow
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharingMemberPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsAllow
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharingMemberPolicy.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Allow, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SharingMemberPolicy.Allow AsAllow { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.SharingMemberPolicy.Allow
+    content.vb: Public ReadOnly Property AsAllow As SharingMemberPolicy.Allow
+  overload: Dropbox.Api.TeamLog.SharingMemberPolicy.AsAllow*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.SharingMemberPolicy.IsForbid
+  commentId: P:Dropbox.Api.TeamLog.SharingMemberPolicy.IsForbid
+  id: IsForbid
+  parent: Dropbox.Api.TeamLog.SharingMemberPolicy
+  langs:
+  - csharp
+  - vb
+  name: IsForbid
+  nameWithType: SharingMemberPolicy.IsForbid
+  fullName: Dropbox.Api.TeamLog.SharingMemberPolicy.IsForbid
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharingMemberPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsForbid
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharingMemberPolicy.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Forbid</p>\n"
+  example: []
+  syntax:
+    content: public bool IsForbid { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsForbid As Boolean
+  overload: Dropbox.Api.TeamLog.SharingMemberPolicy.IsForbid*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.SharingMemberPolicy.AsForbid
+  commentId: P:Dropbox.Api.TeamLog.SharingMemberPolicy.AsForbid
+  id: AsForbid
+  parent: Dropbox.Api.TeamLog.SharingMemberPolicy
+  langs:
+  - csharp
+  - vb
+  name: AsForbid
+  nameWithType: SharingMemberPolicy.AsForbid
+  fullName: Dropbox.Api.TeamLog.SharingMemberPolicy.AsForbid
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharingMemberPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsForbid
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharingMemberPolicy.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Forbid, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SharingMemberPolicy.Forbid AsForbid { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.SharingMemberPolicy.Forbid
+    content.vb: Public ReadOnly Property AsForbid As SharingMemberPolicy.Forbid
+  overload: Dropbox.Api.TeamLog.SharingMemberPolicy.AsForbid*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.SharingMemberPolicy.IsForbidWithExclusions
+  commentId: P:Dropbox.Api.TeamLog.SharingMemberPolicy.IsForbidWithExclusions
+  id: IsForbidWithExclusions
+  parent: Dropbox.Api.TeamLog.SharingMemberPolicy
+  langs:
+  - csharp
+  - vb
+  name: IsForbidWithExclusions
+  nameWithType: SharingMemberPolicy.IsForbidWithExclusions
+  fullName: Dropbox.Api.TeamLog.SharingMemberPolicy.IsForbidWithExclusions
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharingMemberPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsForbidWithExclusions
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharingMemberPolicy.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is ForbidWithExclusions</p>\n"
+  example: []
+  syntax:
+    content: public bool IsForbidWithExclusions { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsForbidWithExclusions As Boolean
+  overload: Dropbox.Api.TeamLog.SharingMemberPolicy.IsForbidWithExclusions*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.SharingMemberPolicy.AsForbidWithExclusions
+  commentId: P:Dropbox.Api.TeamLog.SharingMemberPolicy.AsForbidWithExclusions
+  id: AsForbidWithExclusions
+  parent: Dropbox.Api.TeamLog.SharingMemberPolicy
+  langs:
+  - csharp
+  - vb
+  name: AsForbidWithExclusions
+  nameWithType: SharingMemberPolicy.AsForbidWithExclusions
+  fullName: Dropbox.Api.TeamLog.SharingMemberPolicy.AsForbidWithExclusions
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharingMemberPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsForbidWithExclusions
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharingMemberPolicy.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a ForbidWithExclusions, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SharingMemberPolicy.ForbidWithExclusions AsForbidWithExclusions { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.SharingMemberPolicy.ForbidWithExclusions
+    content.vb: Public ReadOnly Property AsForbidWithExclusions As SharingMemberPolicy.ForbidWithExclusions
+  overload: Dropbox.Api.TeamLog.SharingMemberPolicy.AsForbidWithExclusions*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.SharingMemberPolicy.IsOther
+  commentId: P:Dropbox.Api.TeamLog.SharingMemberPolicy.IsOther
+  id: IsOther
+  parent: Dropbox.Api.TeamLog.SharingMemberPolicy
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: SharingMemberPolicy.IsOther
+  fullName: Dropbox.Api.TeamLog.SharingMemberPolicy.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharingMemberPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharingMemberPolicy.cs
+    startLine: 106
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.TeamLog.SharingMemberPolicy.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.SharingMemberPolicy.AsOther
+  commentId: P:Dropbox.Api.TeamLog.SharingMemberPolicy.AsOther
+  id: AsOther
+  parent: Dropbox.Api.TeamLog.SharingMemberPolicy
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: SharingMemberPolicy.AsOther
+  fullName: Dropbox.Api.TeamLog.SharingMemberPolicy.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharingMemberPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharingMemberPolicy.cs
+    startLine: 117
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SharingMemberPolicy.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.SharingMemberPolicy.Other
+    content.vb: Public ReadOnly Property AsOther As SharingMemberPolicy.Other
+  overload: Dropbox.Api.TeamLog.SharingMemberPolicy.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.SharingMemberPolicy
+  commentId: T:Dropbox.Api.TeamLog.SharingMemberPolicy
+  parent: Dropbox.Api.TeamLog
+  name: SharingMemberPolicy
+  nameWithType: SharingMemberPolicy
+  fullName: Dropbox.Api.TeamLog.SharingMemberPolicy
+- uid: Dropbox.Api.TeamLog.SharingMemberPolicy.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.SharingMemberPolicy.#ctor
+  name: SharingMemberPolicy
+  nameWithType: SharingMemberPolicy.SharingMemberPolicy
+  fullName: Dropbox.Api.TeamLog.SharingMemberPolicy.SharingMemberPolicy
+- uid: Dropbox.Api.TeamLog.SharingMemberPolicy.IsAllow*
+  commentId: Overload:Dropbox.Api.TeamLog.SharingMemberPolicy.IsAllow
+  name: IsAllow
+  nameWithType: SharingMemberPolicy.IsAllow
+  fullName: Dropbox.Api.TeamLog.SharingMemberPolicy.IsAllow
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.TeamLog.SharingMemberPolicy.AsAllow*
+  commentId: Overload:Dropbox.Api.TeamLog.SharingMemberPolicy.AsAllow
+  name: AsAllow
+  nameWithType: SharingMemberPolicy.AsAllow
+  fullName: Dropbox.Api.TeamLog.SharingMemberPolicy.AsAllow
+- uid: Dropbox.Api.TeamLog.SharingMemberPolicy.Allow
+  commentId: T:Dropbox.Api.TeamLog.SharingMemberPolicy.Allow
+  parent: Dropbox.Api.TeamLog
+  name: SharingMemberPolicy.Allow
+  nameWithType: SharingMemberPolicy.Allow
+  fullName: Dropbox.Api.TeamLog.SharingMemberPolicy.Allow
+- uid: Dropbox.Api.TeamLog.SharingMemberPolicy.IsForbid*
+  commentId: Overload:Dropbox.Api.TeamLog.SharingMemberPolicy.IsForbid
+  name: IsForbid
+  nameWithType: SharingMemberPolicy.IsForbid
+  fullName: Dropbox.Api.TeamLog.SharingMemberPolicy.IsForbid
+- uid: Dropbox.Api.TeamLog.SharingMemberPolicy.AsForbid*
+  commentId: Overload:Dropbox.Api.TeamLog.SharingMemberPolicy.AsForbid
+  name: AsForbid
+  nameWithType: SharingMemberPolicy.AsForbid
+  fullName: Dropbox.Api.TeamLog.SharingMemberPolicy.AsForbid
+- uid: Dropbox.Api.TeamLog.SharingMemberPolicy.Forbid
+  commentId: T:Dropbox.Api.TeamLog.SharingMemberPolicy.Forbid
+  parent: Dropbox.Api.TeamLog
+  name: SharingMemberPolicy.Forbid
+  nameWithType: SharingMemberPolicy.Forbid
+  fullName: Dropbox.Api.TeamLog.SharingMemberPolicy.Forbid
+- uid: Dropbox.Api.TeamLog.SharingMemberPolicy.IsForbidWithExclusions*
+  commentId: Overload:Dropbox.Api.TeamLog.SharingMemberPolicy.IsForbidWithExclusions
+  name: IsForbidWithExclusions
+  nameWithType: SharingMemberPolicy.IsForbidWithExclusions
+  fullName: Dropbox.Api.TeamLog.SharingMemberPolicy.IsForbidWithExclusions
+- uid: Dropbox.Api.TeamLog.SharingMemberPolicy.AsForbidWithExclusions*
+  commentId: Overload:Dropbox.Api.TeamLog.SharingMemberPolicy.AsForbidWithExclusions
+  name: AsForbidWithExclusions
+  nameWithType: SharingMemberPolicy.AsForbidWithExclusions
+  fullName: Dropbox.Api.TeamLog.SharingMemberPolicy.AsForbidWithExclusions
+- uid: Dropbox.Api.TeamLog.SharingMemberPolicy.ForbidWithExclusions
+  commentId: T:Dropbox.Api.TeamLog.SharingMemberPolicy.ForbidWithExclusions
+  parent: Dropbox.Api.TeamLog
+  name: SharingMemberPolicy.ForbidWithExclusions
+  nameWithType: SharingMemberPolicy.ForbidWithExclusions
+  fullName: Dropbox.Api.TeamLog.SharingMemberPolicy.ForbidWithExclusions
+- uid: Dropbox.Api.TeamLog.SharingMemberPolicy.IsOther*
+  commentId: Overload:Dropbox.Api.TeamLog.SharingMemberPolicy.IsOther
+  name: IsOther
+  nameWithType: SharingMemberPolicy.IsOther
+  fullName: Dropbox.Api.TeamLog.SharingMemberPolicy.IsOther
+- uid: Dropbox.Api.TeamLog.SharingMemberPolicy.AsOther*
+  commentId: Overload:Dropbox.Api.TeamLog.SharingMemberPolicy.AsOther
+  name: AsOther
+  nameWithType: SharingMemberPolicy.AsOther
+  fullName: Dropbox.Api.TeamLog.SharingMemberPolicy.AsOther
+- uid: Dropbox.Api.TeamLog.SharingMemberPolicy.Other
+  commentId: T:Dropbox.Api.TeamLog.SharingMemberPolicy.Other
+  parent: Dropbox.Api.TeamLog
+  name: SharingMemberPolicy.Other
+  nameWithType: SharingMemberPolicy.Other
+  fullName: Dropbox.Api.TeamLog.SharingMemberPolicy.Other
+shouldSkipMarkup: true

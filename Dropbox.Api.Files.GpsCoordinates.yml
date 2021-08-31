@@ -1,0 +1,235 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.GpsCoordinates
+  commentId: T:Dropbox.Api.Files.GpsCoordinates
+  id: GpsCoordinates
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.GpsCoordinates.#ctor
+  - Dropbox.Api.Files.GpsCoordinates.#ctor(System.Double,System.Double)
+  - Dropbox.Api.Files.GpsCoordinates.Latitude
+  - Dropbox.Api.Files.GpsCoordinates.Longitude
+  langs:
+  - csharp
+  - vb
+  name: GpsCoordinates
+  nameWithType: GpsCoordinates
+  fullName: Dropbox.Api.Files.GpsCoordinates
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GpsCoordinates.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GpsCoordinates
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GpsCoordinates.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>GPS coordinates for a photo or video.</p>\n"
+  example: []
+  syntax:
+    content: 'public class GpsCoordinates : object'
+    content.vb: >-
+      Public Class GpsCoordinates
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.GpsCoordinates.#ctor(System.Double,System.Double)
+  commentId: M:Dropbox.Api.Files.GpsCoordinates.#ctor(System.Double,System.Double)
+  id: '#ctor(System.Double,System.Double)'
+  parent: Dropbox.Api.Files.GpsCoordinates
+  langs:
+  - csharp
+  - vb
+  name: GpsCoordinates(Double, Double)
+  nameWithType: GpsCoordinates.GpsCoordinates(Double, Double)
+  fullName: Dropbox.Api.Files.GpsCoordinates.GpsCoordinates(System.Double, System.Double)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GpsCoordinates.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GpsCoordinates.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.GpsCoordinates\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public GpsCoordinates(double latitude, double longitude)
+    parameters:
+    - id: latitude
+      type: System.Double
+      description: Latitude of the GPS coordinates.
+    - id: longitude
+      type: System.Double
+      description: Longitude of the GPS coordinates.
+    content.vb: Public Sub New(latitude As Double, longitude As Double)
+  overload: Dropbox.Api.Files.GpsCoordinates.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.GpsCoordinates.#ctor
+  commentId: M:Dropbox.Api.Files.GpsCoordinates.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.GpsCoordinates
+  langs:
+  - csharp
+  - vb
+  name: GpsCoordinates()
+  nameWithType: GpsCoordinates.GpsCoordinates()
+  fullName: Dropbox.Api.Files.GpsCoordinates.GpsCoordinates()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GpsCoordinates.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GpsCoordinates.cs
+    startLine: 46
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.GpsCoordinates\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public GpsCoordinates()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.GpsCoordinates.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.GpsCoordinates.Latitude
+  commentId: P:Dropbox.Api.Files.GpsCoordinates.Latitude
+  id: Latitude
+  parent: Dropbox.Api.Files.GpsCoordinates
+  langs:
+  - csharp
+  - vb
+  name: Latitude
+  nameWithType: GpsCoordinates.Latitude
+  fullName: Dropbox.Api.Files.GpsCoordinates.Latitude
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GpsCoordinates.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Latitude
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GpsCoordinates.cs
+    startLine: 54
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Latitude of the GPS coordinates.</p>\n"
+  example: []
+  syntax:
+    content: public double Latitude { get; protected set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Latitude As Double
+  overload: Dropbox.Api.Files.GpsCoordinates.Latitude*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.GpsCoordinates.Longitude
+  commentId: P:Dropbox.Api.Files.GpsCoordinates.Longitude
+  id: Longitude
+  parent: Dropbox.Api.Files.GpsCoordinates
+  langs:
+  - csharp
+  - vb
+  name: Longitude
+  nameWithType: GpsCoordinates.Longitude
+  fullName: Dropbox.Api.Files.GpsCoordinates.Longitude
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GpsCoordinates.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Longitude
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GpsCoordinates.cs
+    startLine: 59
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Longitude of the GPS coordinates.</p>\n"
+  example: []
+  syntax:
+    content: public double Longitude { get; protected set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Longitude As Double
+  overload: Dropbox.Api.Files.GpsCoordinates.Longitude*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.GpsCoordinates
+  commentId: T:Dropbox.Api.Files.GpsCoordinates
+  parent: Dropbox.Api.Files
+  name: GpsCoordinates
+  nameWithType: GpsCoordinates
+  fullName: Dropbox.Api.Files.GpsCoordinates
+- uid: Dropbox.Api.Files.GpsCoordinates.#ctor*
+  commentId: Overload:Dropbox.Api.Files.GpsCoordinates.#ctor
+  name: GpsCoordinates
+  nameWithType: GpsCoordinates.GpsCoordinates
+  fullName: Dropbox.Api.Files.GpsCoordinates.GpsCoordinates
+- uid: System.Double
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: Dropbox.Api.Files.GpsCoordinates.Latitude*
+  commentId: Overload:Dropbox.Api.Files.GpsCoordinates.Latitude
+  name: Latitude
+  nameWithType: GpsCoordinates.Latitude
+  fullName: Dropbox.Api.Files.GpsCoordinates.Latitude
+- uid: Dropbox.Api.Files.GpsCoordinates.Longitude*
+  commentId: Overload:Dropbox.Api.Files.GpsCoordinates.Longitude
+  name: Longitude
+  nameWithType: GpsCoordinates.Longitude
+  fullName: Dropbox.Api.Files.GpsCoordinates.Longitude
+shouldSkipMarkup: true

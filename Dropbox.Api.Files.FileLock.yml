@@ -1,0 +1,205 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.FileLock
+  commentId: T:Dropbox.Api.Files.FileLock
+  id: FileLock
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.FileLock.#ctor
+  - Dropbox.Api.Files.FileLock.#ctor(Dropbox.Api.Files.FileLockContent)
+  - Dropbox.Api.Files.FileLock.Content
+  langs:
+  - csharp
+  - vb
+  name: FileLock
+  nameWithType: FileLock
+  fullName: Dropbox.Api.Files.FileLock
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileLock.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: FileLock
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileLock.cs
+    startLine: 17
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The file lock object</p>\n"
+  example: []
+  syntax:
+    content: 'public class FileLock : object'
+    content.vb: >-
+      Public Class FileLock
+          Inherits Object
+  seealso:
+  - linkId: Dropbox.Api.Files.LockConflictError
+    commentId: T:Dropbox.Api.Files.LockConflictError
+  - linkId: Dropbox.Api.Files.LockFileResult
+    commentId: T:Dropbox.Api.Files.LockFileResult
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.FileLock.#ctor(Dropbox.Api.Files.FileLockContent)
+  commentId: M:Dropbox.Api.Files.FileLock.#ctor(Dropbox.Api.Files.FileLockContent)
+  id: '#ctor(Dropbox.Api.Files.FileLockContent)'
+  parent: Dropbox.Api.Files.FileLock
+  langs:
+  - csharp
+  - vb
+  name: FileLock(FileLockContent)
+  nameWithType: FileLock.FileLock(FileLockContent)
+  fullName: Dropbox.Api.Files.FileLock.FileLock(Dropbox.Api.Files.FileLockContent)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileLock.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileLock.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.FileLock\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public FileLock(FileLockContent content)
+    parameters:
+    - id: content
+      type: Dropbox.Api.Files.FileLockContent
+      description: The lock description.
+    content.vb: Public Sub New(content As FileLockContent)
+  overload: Dropbox.Api.Files.FileLock.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.FileLock.#ctor
+  commentId: M:Dropbox.Api.Files.FileLock.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.FileLock
+  langs:
+  - csharp
+  - vb
+  name: FileLock()
+  nameWithType: FileLock.FileLock()
+  fullName: Dropbox.Api.Files.FileLock.FileLock()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileLock.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileLock.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.FileLock\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public FileLock()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.FileLock.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.FileLock.Content
+  commentId: P:Dropbox.Api.Files.FileLock.Content
+  id: Content
+  parent: Dropbox.Api.Files.FileLock
+  langs:
+  - csharp
+  - vb
+  name: Content
+  nameWithType: FileLock.Content
+  fullName: Dropbox.Api.Files.FileLock.Content
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileLock.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Content
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/FileLock.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The lock description.</p>\n"
+  example: []
+  syntax:
+    content: public FileLockContent Content { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.FileLockContent
+    content.vb: Public Property Content As FileLockContent
+  overload: Dropbox.Api.Files.FileLock.Content*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Files.LockConflictError
+  commentId: T:Dropbox.Api.Files.LockConflictError
+  parent: Dropbox.Api.Files
+  name: LockConflictError
+  nameWithType: LockConflictError
+  fullName: Dropbox.Api.Files.LockConflictError
+- uid: Dropbox.Api.Files.LockFileResult
+  commentId: T:Dropbox.Api.Files.LockFileResult
+  parent: Dropbox.Api.Files
+  name: LockFileResult
+  nameWithType: LockFileResult
+  fullName: Dropbox.Api.Files.LockFileResult
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.FileLock
+  commentId: T:Dropbox.Api.Files.FileLock
+  parent: Dropbox.Api.Files
+  name: FileLock
+  nameWithType: FileLock
+  fullName: Dropbox.Api.Files.FileLock
+- uid: Dropbox.Api.Files.FileLock.#ctor*
+  commentId: Overload:Dropbox.Api.Files.FileLock.#ctor
+  name: FileLock
+  nameWithType: FileLock.FileLock
+  fullName: Dropbox.Api.Files.FileLock.FileLock
+- uid: Dropbox.Api.Files.FileLockContent
+  commentId: T:Dropbox.Api.Files.FileLockContent
+  parent: Dropbox.Api.Files
+  name: FileLockContent
+  nameWithType: FileLockContent
+  fullName: Dropbox.Api.Files.FileLockContent
+- uid: Dropbox.Api.Files.FileLock.Content*
+  commentId: Overload:Dropbox.Api.Files.FileLock.Content
+  name: Content
+  nameWithType: FileLock.Content
+  fullName: Dropbox.Api.Files.FileLock.Content
+shouldSkipMarkup: true

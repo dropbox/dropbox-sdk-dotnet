@@ -1,0 +1,381 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.GroupJoinPolicy
+  commentId: T:Dropbox.Api.TeamLog.GroupJoinPolicy
+  id: GroupJoinPolicy
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.GroupJoinPolicy.#ctor
+  - Dropbox.Api.TeamLog.GroupJoinPolicy.AsOpen
+  - Dropbox.Api.TeamLog.GroupJoinPolicy.AsOther
+  - Dropbox.Api.TeamLog.GroupJoinPolicy.AsRequestToJoin
+  - Dropbox.Api.TeamLog.GroupJoinPolicy.IsOpen
+  - Dropbox.Api.TeamLog.GroupJoinPolicy.IsOther
+  - Dropbox.Api.TeamLog.GroupJoinPolicy.IsRequestToJoin
+  langs:
+  - csharp
+  - vb
+  name: GroupJoinPolicy
+  nameWithType: GroupJoinPolicy
+  fullName: Dropbox.Api.TeamLog.GroupJoinPolicy
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupJoinPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GroupJoinPolicy
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupJoinPolicy.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The group join policy object</p>\n"
+  example: []
+  syntax:
+    content: 'public class GroupJoinPolicy : object'
+    content.vb: >-
+      Public Class GroupJoinPolicy
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.TeamLog.GroupJoinPolicy.Open
+  - Dropbox.Api.TeamLog.GroupJoinPolicy.Other
+  - Dropbox.Api.TeamLog.GroupJoinPolicy.RequestToJoin
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.GroupJoinPolicy.#ctor
+  commentId: M:Dropbox.Api.TeamLog.GroupJoinPolicy.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.GroupJoinPolicy
+  langs:
+  - csharp
+  - vb
+  name: GroupJoinPolicy()
+  nameWithType: GroupJoinPolicy.GroupJoinPolicy()
+  fullName: Dropbox.Api.TeamLog.GroupJoinPolicy.GroupJoinPolicy()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupJoinPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupJoinPolicy.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.GroupJoinPolicy\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public GroupJoinPolicy()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.GroupJoinPolicy.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.GroupJoinPolicy.IsOpen
+  commentId: P:Dropbox.Api.TeamLog.GroupJoinPolicy.IsOpen
+  id: IsOpen
+  parent: Dropbox.Api.TeamLog.GroupJoinPolicy
+  langs:
+  - csharp
+  - vb
+  name: IsOpen
+  nameWithType: GroupJoinPolicy.IsOpen
+  fullName: Dropbox.Api.TeamLog.GroupJoinPolicy.IsOpen
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupJoinPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOpen
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupJoinPolicy.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Open</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOpen { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOpen As Boolean
+  overload: Dropbox.Api.TeamLog.GroupJoinPolicy.IsOpen*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.GroupJoinPolicy.AsOpen
+  commentId: P:Dropbox.Api.TeamLog.GroupJoinPolicy.AsOpen
+  id: AsOpen
+  parent: Dropbox.Api.TeamLog.GroupJoinPolicy
+  langs:
+  - csharp
+  - vb
+  name: AsOpen
+  nameWithType: GroupJoinPolicy.AsOpen
+  fullName: Dropbox.Api.TeamLog.GroupJoinPolicy.AsOpen
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupJoinPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOpen
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupJoinPolicy.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Open, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public GroupJoinPolicy.Open AsOpen { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.GroupJoinPolicy.Open
+    content.vb: Public ReadOnly Property AsOpen As GroupJoinPolicy.Open
+  overload: Dropbox.Api.TeamLog.GroupJoinPolicy.AsOpen*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.GroupJoinPolicy.IsRequestToJoin
+  commentId: P:Dropbox.Api.TeamLog.GroupJoinPolicy.IsRequestToJoin
+  id: IsRequestToJoin
+  parent: Dropbox.Api.TeamLog.GroupJoinPolicy
+  langs:
+  - csharp
+  - vb
+  name: IsRequestToJoin
+  nameWithType: GroupJoinPolicy.IsRequestToJoin
+  fullName: Dropbox.Api.TeamLog.GroupJoinPolicy.IsRequestToJoin
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupJoinPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsRequestToJoin
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupJoinPolicy.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is RequestToJoin</p>\n"
+  example: []
+  syntax:
+    content: public bool IsRequestToJoin { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsRequestToJoin As Boolean
+  overload: Dropbox.Api.TeamLog.GroupJoinPolicy.IsRequestToJoin*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.GroupJoinPolicy.AsRequestToJoin
+  commentId: P:Dropbox.Api.TeamLog.GroupJoinPolicy.AsRequestToJoin
+  id: AsRequestToJoin
+  parent: Dropbox.Api.TeamLog.GroupJoinPolicy
+  langs:
+  - csharp
+  - vb
+  name: AsRequestToJoin
+  nameWithType: GroupJoinPolicy.AsRequestToJoin
+  fullName: Dropbox.Api.TeamLog.GroupJoinPolicy.AsRequestToJoin
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupJoinPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsRequestToJoin
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupJoinPolicy.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a RequestToJoin, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public GroupJoinPolicy.RequestToJoin AsRequestToJoin { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.GroupJoinPolicy.RequestToJoin
+    content.vb: Public ReadOnly Property AsRequestToJoin As GroupJoinPolicy.RequestToJoin
+  overload: Dropbox.Api.TeamLog.GroupJoinPolicy.AsRequestToJoin*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.GroupJoinPolicy.IsOther
+  commentId: P:Dropbox.Api.TeamLog.GroupJoinPolicy.IsOther
+  id: IsOther
+  parent: Dropbox.Api.TeamLog.GroupJoinPolicy
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: GroupJoinPolicy.IsOther
+  fullName: Dropbox.Api.TeamLog.GroupJoinPolicy.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupJoinPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupJoinPolicy.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.TeamLog.GroupJoinPolicy.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.GroupJoinPolicy.AsOther
+  commentId: P:Dropbox.Api.TeamLog.GroupJoinPolicy.AsOther
+  id: AsOther
+  parent: Dropbox.Api.TeamLog.GroupJoinPolicy
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: GroupJoinPolicy.AsOther
+  fullName: Dropbox.Api.TeamLog.GroupJoinPolicy.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupJoinPolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupJoinPolicy.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public GroupJoinPolicy.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.GroupJoinPolicy.Other
+    content.vb: Public ReadOnly Property AsOther As GroupJoinPolicy.Other
+  overload: Dropbox.Api.TeamLog.GroupJoinPolicy.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.GroupJoinPolicy
+  commentId: T:Dropbox.Api.TeamLog.GroupJoinPolicy
+  parent: Dropbox.Api.TeamLog
+  name: GroupJoinPolicy
+  nameWithType: GroupJoinPolicy
+  fullName: Dropbox.Api.TeamLog.GroupJoinPolicy
+- uid: Dropbox.Api.TeamLog.GroupJoinPolicy.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.GroupJoinPolicy.#ctor
+  name: GroupJoinPolicy
+  nameWithType: GroupJoinPolicy.GroupJoinPolicy
+  fullName: Dropbox.Api.TeamLog.GroupJoinPolicy.GroupJoinPolicy
+- uid: Dropbox.Api.TeamLog.GroupJoinPolicy.IsOpen*
+  commentId: Overload:Dropbox.Api.TeamLog.GroupJoinPolicy.IsOpen
+  name: IsOpen
+  nameWithType: GroupJoinPolicy.IsOpen
+  fullName: Dropbox.Api.TeamLog.GroupJoinPolicy.IsOpen
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.TeamLog.GroupJoinPolicy.AsOpen*
+  commentId: Overload:Dropbox.Api.TeamLog.GroupJoinPolicy.AsOpen
+  name: AsOpen
+  nameWithType: GroupJoinPolicy.AsOpen
+  fullName: Dropbox.Api.TeamLog.GroupJoinPolicy.AsOpen
+- uid: Dropbox.Api.TeamLog.GroupJoinPolicy.Open
+  commentId: T:Dropbox.Api.TeamLog.GroupJoinPolicy.Open
+  parent: Dropbox.Api.TeamLog
+  name: GroupJoinPolicy.Open
+  nameWithType: GroupJoinPolicy.Open
+  fullName: Dropbox.Api.TeamLog.GroupJoinPolicy.Open
+- uid: Dropbox.Api.TeamLog.GroupJoinPolicy.IsRequestToJoin*
+  commentId: Overload:Dropbox.Api.TeamLog.GroupJoinPolicy.IsRequestToJoin
+  name: IsRequestToJoin
+  nameWithType: GroupJoinPolicy.IsRequestToJoin
+  fullName: Dropbox.Api.TeamLog.GroupJoinPolicy.IsRequestToJoin
+- uid: Dropbox.Api.TeamLog.GroupJoinPolicy.AsRequestToJoin*
+  commentId: Overload:Dropbox.Api.TeamLog.GroupJoinPolicy.AsRequestToJoin
+  name: AsRequestToJoin
+  nameWithType: GroupJoinPolicy.AsRequestToJoin
+  fullName: Dropbox.Api.TeamLog.GroupJoinPolicy.AsRequestToJoin
+- uid: Dropbox.Api.TeamLog.GroupJoinPolicy.RequestToJoin
+  commentId: T:Dropbox.Api.TeamLog.GroupJoinPolicy.RequestToJoin
+  parent: Dropbox.Api.TeamLog
+  name: GroupJoinPolicy.RequestToJoin
+  nameWithType: GroupJoinPolicy.RequestToJoin
+  fullName: Dropbox.Api.TeamLog.GroupJoinPolicy.RequestToJoin
+- uid: Dropbox.Api.TeamLog.GroupJoinPolicy.IsOther*
+  commentId: Overload:Dropbox.Api.TeamLog.GroupJoinPolicy.IsOther
+  name: IsOther
+  nameWithType: GroupJoinPolicy.IsOther
+  fullName: Dropbox.Api.TeamLog.GroupJoinPolicy.IsOther
+- uid: Dropbox.Api.TeamLog.GroupJoinPolicy.AsOther*
+  commentId: Overload:Dropbox.Api.TeamLog.GroupJoinPolicy.AsOther
+  name: AsOther
+  nameWithType: GroupJoinPolicy.AsOther
+  fullName: Dropbox.Api.TeamLog.GroupJoinPolicy.AsOther
+- uid: Dropbox.Api.TeamLog.GroupJoinPolicy.Other
+  commentId: T:Dropbox.Api.TeamLog.GroupJoinPolicy.Other
+  parent: Dropbox.Api.TeamLog
+  name: GroupJoinPolicy.Other
+  nameWithType: GroupJoinPolicy.Other
+  fullName: Dropbox.Api.TeamLog.GroupJoinPolicy.Other
+shouldSkipMarkup: true

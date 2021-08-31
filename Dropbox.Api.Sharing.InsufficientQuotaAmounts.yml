@@ -1,0 +1,292 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.InsufficientQuotaAmounts
+  commentId: T:Dropbox.Api.Sharing.InsufficientQuotaAmounts
+  id: InsufficientQuotaAmounts
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.InsufficientQuotaAmounts.#ctor
+  - Dropbox.Api.Sharing.InsufficientQuotaAmounts.#ctor(System.UInt64,System.UInt64,System.UInt64)
+  - Dropbox.Api.Sharing.InsufficientQuotaAmounts.SpaceLeft
+  - Dropbox.Api.Sharing.InsufficientQuotaAmounts.SpaceNeeded
+  - Dropbox.Api.Sharing.InsufficientQuotaAmounts.SpaceShortage
+  langs:
+  - csharp
+  - vb
+  name: InsufficientQuotaAmounts
+  nameWithType: InsufficientQuotaAmounts
+  fullName: Dropbox.Api.Sharing.InsufficientQuotaAmounts
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/InsufficientQuotaAmounts.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: InsufficientQuotaAmounts
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/InsufficientQuotaAmounts.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The insufficient quota amounts object</p>\n"
+  example: []
+  syntax:
+    content: 'public class InsufficientQuotaAmounts : object'
+    content.vb: >-
+      Public Class InsufficientQuotaAmounts
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Sharing.InsufficientQuotaAmounts.#ctor(System.UInt64,System.UInt64,System.UInt64)
+  commentId: M:Dropbox.Api.Sharing.InsufficientQuotaAmounts.#ctor(System.UInt64,System.UInt64,System.UInt64)
+  id: '#ctor(System.UInt64,System.UInt64,System.UInt64)'
+  parent: Dropbox.Api.Sharing.InsufficientQuotaAmounts
+  langs:
+  - csharp
+  - vb
+  name: InsufficientQuotaAmounts(UInt64, UInt64, UInt64)
+  nameWithType: InsufficientQuotaAmounts.InsufficientQuotaAmounts(UInt64, UInt64, UInt64)
+  fullName: Dropbox.Api.Sharing.InsufficientQuotaAmounts.InsufficientQuotaAmounts(System.UInt64, System.UInt64, System.UInt64)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/InsufficientQuotaAmounts.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/InsufficientQuotaAmounts.cs
+    startLine: 39
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.InsufficientQuotaAmounts\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public InsufficientQuotaAmounts(ulong spaceNeeded, ulong spaceShortage, ulong spaceLeft)
+    parameters:
+    - id: spaceNeeded
+      type: System.UInt64
+      description: >-
+        The amount of space needed to add the item (the size of
+
+        the item).
+    - id: spaceShortage
+      type: System.UInt64
+      description: >-
+        The amount of extra space needed to add the
+
+        item.
+    - id: spaceLeft
+      type: System.UInt64
+      description: >-
+        The amount of space left in the user&apos;s Dropbox, less than
+
+        space_needed.
+    content.vb: Public Sub New(spaceNeeded As ULong, spaceShortage As ULong, spaceLeft As ULong)
+  overload: Dropbox.Api.Sharing.InsufficientQuotaAmounts.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.InsufficientQuotaAmounts.#ctor
+  commentId: M:Dropbox.Api.Sharing.InsufficientQuotaAmounts.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Sharing.InsufficientQuotaAmounts
+  langs:
+  - csharp
+  - vb
+  name: InsufficientQuotaAmounts()
+  nameWithType: InsufficientQuotaAmounts.InsufficientQuotaAmounts()
+  fullName: Dropbox.Api.Sharing.InsufficientQuotaAmounts.InsufficientQuotaAmounts()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/InsufficientQuotaAmounts.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/InsufficientQuotaAmounts.cs
+    startLine: 54
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.InsufficientQuotaAmounts\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public InsufficientQuotaAmounts()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Sharing.InsufficientQuotaAmounts.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.InsufficientQuotaAmounts.SpaceNeeded
+  commentId: P:Dropbox.Api.Sharing.InsufficientQuotaAmounts.SpaceNeeded
+  id: SpaceNeeded
+  parent: Dropbox.Api.Sharing.InsufficientQuotaAmounts
+  langs:
+  - csharp
+  - vb
+  name: SpaceNeeded
+  nameWithType: InsufficientQuotaAmounts.SpaceNeeded
+  fullName: Dropbox.Api.Sharing.InsufficientQuotaAmounts.SpaceNeeded
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/InsufficientQuotaAmounts.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SpaceNeeded
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/InsufficientQuotaAmounts.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The amount of space needed to add the item (the size of the item).</p>\n"
+  example: []
+  syntax:
+    content: public ulong SpaceNeeded { get; protected set; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: Public Property SpaceNeeded As ULong
+  overload: Dropbox.Api.Sharing.InsufficientQuotaAmounts.SpaceNeeded*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.InsufficientQuotaAmounts.SpaceShortage
+  commentId: P:Dropbox.Api.Sharing.InsufficientQuotaAmounts.SpaceShortage
+  id: SpaceShortage
+  parent: Dropbox.Api.Sharing.InsufficientQuotaAmounts
+  langs:
+  - csharp
+  - vb
+  name: SpaceShortage
+  nameWithType: InsufficientQuotaAmounts.SpaceShortage
+  fullName: Dropbox.Api.Sharing.InsufficientQuotaAmounts.SpaceShortage
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/InsufficientQuotaAmounts.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SpaceShortage
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/InsufficientQuotaAmounts.cs
+    startLine: 67
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The amount of extra space needed to add the item.</p>\n"
+  example: []
+  syntax:
+    content: public ulong SpaceShortage { get; protected set; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: Public Property SpaceShortage As ULong
+  overload: Dropbox.Api.Sharing.InsufficientQuotaAmounts.SpaceShortage*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.InsufficientQuotaAmounts.SpaceLeft
+  commentId: P:Dropbox.Api.Sharing.InsufficientQuotaAmounts.SpaceLeft
+  id: SpaceLeft
+  parent: Dropbox.Api.Sharing.InsufficientQuotaAmounts
+  langs:
+  - csharp
+  - vb
+  name: SpaceLeft
+  nameWithType: InsufficientQuotaAmounts.SpaceLeft
+  fullName: Dropbox.Api.Sharing.InsufficientQuotaAmounts.SpaceLeft
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/InsufficientQuotaAmounts.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SpaceLeft
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/InsufficientQuotaAmounts.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The amount of space left in the user&apos;s Dropbox, less than\nspace_needed.</p>\n"
+  example: []
+  syntax:
+    content: public ulong SpaceLeft { get; protected set; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: Public Property SpaceLeft As ULong
+  overload: Dropbox.Api.Sharing.InsufficientQuotaAmounts.SpaceLeft*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.InsufficientQuotaAmounts
+  commentId: T:Dropbox.Api.Sharing.InsufficientQuotaAmounts
+  parent: Dropbox.Api.Sharing
+  name: InsufficientQuotaAmounts
+  nameWithType: InsufficientQuotaAmounts
+  fullName: Dropbox.Api.Sharing.InsufficientQuotaAmounts
+- uid: Dropbox.Api.Sharing.InsufficientQuotaAmounts.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.InsufficientQuotaAmounts.#ctor
+  name: InsufficientQuotaAmounts
+  nameWithType: InsufficientQuotaAmounts.InsufficientQuotaAmounts
+  fullName: Dropbox.Api.Sharing.InsufficientQuotaAmounts.InsufficientQuotaAmounts
+- uid: System.UInt64
+  isExternal: true
+  name: UInt64
+  nameWithType: UInt64
+  fullName: System.UInt64
+- uid: Dropbox.Api.Sharing.InsufficientQuotaAmounts.SpaceNeeded*
+  commentId: Overload:Dropbox.Api.Sharing.InsufficientQuotaAmounts.SpaceNeeded
+  name: SpaceNeeded
+  nameWithType: InsufficientQuotaAmounts.SpaceNeeded
+  fullName: Dropbox.Api.Sharing.InsufficientQuotaAmounts.SpaceNeeded
+- uid: Dropbox.Api.Sharing.InsufficientQuotaAmounts.SpaceShortage*
+  commentId: Overload:Dropbox.Api.Sharing.InsufficientQuotaAmounts.SpaceShortage
+  name: SpaceShortage
+  nameWithType: InsufficientQuotaAmounts.SpaceShortage
+  fullName: Dropbox.Api.Sharing.InsufficientQuotaAmounts.SpaceShortage
+- uid: Dropbox.Api.Sharing.InsufficientQuotaAmounts.SpaceLeft*
+  commentId: Overload:Dropbox.Api.Sharing.InsufficientQuotaAmounts.SpaceLeft
+  name: SpaceLeft
+  nameWithType: InsufficientQuotaAmounts.SpaceLeft
+  fullName: Dropbox.Api.Sharing.InsufficientQuotaAmounts.SpaceLeft
+shouldSkipMarkup: true

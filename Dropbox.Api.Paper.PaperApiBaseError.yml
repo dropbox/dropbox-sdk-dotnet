@@ -1,0 +1,288 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Paper.PaperApiBaseError
+  commentId: T:Dropbox.Api.Paper.PaperApiBaseError
+  id: PaperApiBaseError
+  parent: Dropbox.Api.Paper
+  children:
+  - Dropbox.Api.Paper.PaperApiBaseError.#ctor
+  - Dropbox.Api.Paper.PaperApiBaseError.AsInsufficientPermissions
+  - Dropbox.Api.Paper.PaperApiBaseError.AsOther
+  - Dropbox.Api.Paper.PaperApiBaseError.IsInsufficientPermissions
+  - Dropbox.Api.Paper.PaperApiBaseError.IsOther
+  langs:
+  - csharp
+  - vb
+  name: PaperApiBaseError
+  nameWithType: PaperApiBaseError
+  fullName: Dropbox.Api.Paper.PaperApiBaseError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperApiBaseError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PaperApiBaseError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperApiBaseError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>The paper api base error object</p>\n"
+  example: []
+  syntax:
+    content: 'public class PaperApiBaseError : object'
+    content.vb: >-
+      Public Class PaperApiBaseError
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Paper.PaperApiBaseError.InsufficientPermissions
+  - Dropbox.Api.Paper.PaperApiBaseError.Other
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Paper.PaperApiBaseError.#ctor
+  commentId: M:Dropbox.Api.Paper.PaperApiBaseError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Paper.PaperApiBaseError
+  langs:
+  - csharp
+  - vb
+  name: PaperApiBaseError()
+  nameWithType: PaperApiBaseError.PaperApiBaseError()
+  fullName: Dropbox.Api.Paper.PaperApiBaseError.PaperApiBaseError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperApiBaseError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperApiBaseError.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Paper.PaperApiBaseError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public PaperApiBaseError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Paper.PaperApiBaseError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Paper.PaperApiBaseError.IsInsufficientPermissions
+  commentId: P:Dropbox.Api.Paper.PaperApiBaseError.IsInsufficientPermissions
+  id: IsInsufficientPermissions
+  parent: Dropbox.Api.Paper.PaperApiBaseError
+  langs:
+  - csharp
+  - vb
+  name: IsInsufficientPermissions
+  nameWithType: PaperApiBaseError.IsInsufficientPermissions
+  fullName: Dropbox.Api.Paper.PaperApiBaseError.IsInsufficientPermissions
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperApiBaseError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsInsufficientPermissions
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperApiBaseError.cs
+    startLine: 41
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets a value indicating whether this instance is\nInsufficientPermissions</p>\n"
+  example: []
+  syntax:
+    content: public bool IsInsufficientPermissions { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsInsufficientPermissions As Boolean
+  overload: Dropbox.Api.Paper.PaperApiBaseError.IsInsufficientPermissions*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Paper.PaperApiBaseError.AsInsufficientPermissions
+  commentId: P:Dropbox.Api.Paper.PaperApiBaseError.AsInsufficientPermissions
+  id: AsInsufficientPermissions
+  parent: Dropbox.Api.Paper.PaperApiBaseError
+  langs:
+  - csharp
+  - vb
+  name: AsInsufficientPermissions
+  nameWithType: PaperApiBaseError.AsInsufficientPermissions
+  fullName: Dropbox.Api.Paper.PaperApiBaseError.AsInsufficientPermissions
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperApiBaseError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsInsufficientPermissions
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperApiBaseError.cs
+    startLine: 52
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets this instance as a InsufficientPermissions, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PaperApiBaseError.InsufficientPermissions AsInsufficientPermissions { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Paper.PaperApiBaseError.InsufficientPermissions
+    content.vb: Public ReadOnly Property AsInsufficientPermissions As PaperApiBaseError.InsufficientPermissions
+  overload: Dropbox.Api.Paper.PaperApiBaseError.AsInsufficientPermissions*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Paper.PaperApiBaseError.IsOther
+  commentId: P:Dropbox.Api.Paper.PaperApiBaseError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Paper.PaperApiBaseError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: PaperApiBaseError.IsOther
+  fullName: Dropbox.Api.Paper.PaperApiBaseError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperApiBaseError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperApiBaseError.cs
+    startLine: 63
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Paper.PaperApiBaseError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Paper.PaperApiBaseError.AsOther
+  commentId: P:Dropbox.Api.Paper.PaperApiBaseError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Paper.PaperApiBaseError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: PaperApiBaseError.AsOther
+  fullName: Dropbox.Api.Paper.PaperApiBaseError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperApiBaseError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperApiBaseError.cs
+    startLine: 74
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public PaperApiBaseError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Paper.PaperApiBaseError.Other
+    content.vb: Public ReadOnly Property AsOther As PaperApiBaseError.Other
+  overload: Dropbox.Api.Paper.PaperApiBaseError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Paper
+  commentId: N:Dropbox.Api.Paper
+  name: Dropbox.Api.Paper
+  nameWithType: Dropbox.Api.Paper
+  fullName: Dropbox.Api.Paper
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Paper.PaperApiBaseError
+  commentId: T:Dropbox.Api.Paper.PaperApiBaseError
+  parent: Dropbox.Api.Paper
+  name: PaperApiBaseError
+  nameWithType: PaperApiBaseError
+  fullName: Dropbox.Api.Paper.PaperApiBaseError
+- uid: Dropbox.Api.Paper.PaperApiBaseError.#ctor*
+  commentId: Overload:Dropbox.Api.Paper.PaperApiBaseError.#ctor
+  name: PaperApiBaseError
+  nameWithType: PaperApiBaseError.PaperApiBaseError
+  fullName: Dropbox.Api.Paper.PaperApiBaseError.PaperApiBaseError
+- uid: Dropbox.Api.Paper.PaperApiBaseError.IsInsufficientPermissions*
+  commentId: Overload:Dropbox.Api.Paper.PaperApiBaseError.IsInsufficientPermissions
+  name: IsInsufficientPermissions
+  nameWithType: PaperApiBaseError.IsInsufficientPermissions
+  fullName: Dropbox.Api.Paper.PaperApiBaseError.IsInsufficientPermissions
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Paper.PaperApiBaseError.AsInsufficientPermissions*
+  commentId: Overload:Dropbox.Api.Paper.PaperApiBaseError.AsInsufficientPermissions
+  name: AsInsufficientPermissions
+  nameWithType: PaperApiBaseError.AsInsufficientPermissions
+  fullName: Dropbox.Api.Paper.PaperApiBaseError.AsInsufficientPermissions
+- uid: Dropbox.Api.Paper.PaperApiBaseError.InsufficientPermissions
+  commentId: T:Dropbox.Api.Paper.PaperApiBaseError.InsufficientPermissions
+  parent: Dropbox.Api.Paper
+  name: PaperApiBaseError.InsufficientPermissions
+  nameWithType: PaperApiBaseError.InsufficientPermissions
+  fullName: Dropbox.Api.Paper.PaperApiBaseError.InsufficientPermissions
+- uid: Dropbox.Api.Paper.PaperApiBaseError.IsOther*
+  commentId: Overload:Dropbox.Api.Paper.PaperApiBaseError.IsOther
+  name: IsOther
+  nameWithType: PaperApiBaseError.IsOther
+  fullName: Dropbox.Api.Paper.PaperApiBaseError.IsOther
+- uid: Dropbox.Api.Paper.PaperApiBaseError.AsOther*
+  commentId: Overload:Dropbox.Api.Paper.PaperApiBaseError.AsOther
+  name: AsOther
+  nameWithType: PaperApiBaseError.AsOther
+  fullName: Dropbox.Api.Paper.PaperApiBaseError.AsOther
+- uid: Dropbox.Api.Paper.PaperApiBaseError.Other
+  commentId: T:Dropbox.Api.Paper.PaperApiBaseError.Other
+  parent: Dropbox.Api.Paper
+  name: PaperApiBaseError.Other
+  nameWithType: PaperApiBaseError.Other
+  fullName: Dropbox.Api.Paper.PaperApiBaseError.Other
+shouldSkipMarkup: true

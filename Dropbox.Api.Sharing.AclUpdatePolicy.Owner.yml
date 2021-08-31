@@ -1,0 +1,148 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.AclUpdatePolicy.Owner
+  commentId: T:Dropbox.Api.Sharing.AclUpdatePolicy.Owner
+  id: AclUpdatePolicy.Owner
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.AclUpdatePolicy.Owner.Instance
+  langs:
+  - csharp
+  - vb
+  name: AclUpdatePolicy.Owner
+  nameWithType: AclUpdatePolicy.Owner
+  fullName: Dropbox.Api.Sharing.AclUpdatePolicy.Owner
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AclUpdatePolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Owner
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AclUpdatePolicy.cs
+    startLine: 183
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Only the owner can update the ACL.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Owner : AclUpdatePolicy'
+    content.vb: >-
+      Public NotInheritable Class Owner
+          Inherits AclUpdatePolicy
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Sharing.AclUpdatePolicy
+  inheritedMembers:
+  - Dropbox.Api.Sharing.AclUpdatePolicy.IsOwner
+  - Dropbox.Api.Sharing.AclUpdatePolicy.AsOwner
+  - Dropbox.Api.Sharing.AclUpdatePolicy.IsEditors
+  - Dropbox.Api.Sharing.AclUpdatePolicy.AsEditors
+  - Dropbox.Api.Sharing.AclUpdatePolicy.IsOther
+  - Dropbox.Api.Sharing.AclUpdatePolicy.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Sharing.AclUpdatePolicy.Owner.Instance
+  commentId: F:Dropbox.Api.Sharing.AclUpdatePolicy.Owner.Instance
+  id: Instance
+  parent: Dropbox.Api.Sharing.AclUpdatePolicy.Owner
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: AclUpdatePolicy.Owner.Instance
+  fullName: Dropbox.Api.Sharing.AclUpdatePolicy.Owner.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AclUpdatePolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/AclUpdatePolicy.cs
+    startLine: 207
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>A singleton instance of Owner</p>\n"
+  example: []
+  syntax:
+    content: public static readonly AclUpdatePolicy.Owner Instance
+    return:
+      type: Dropbox.Api.Sharing.AclUpdatePolicy.Owner
+    content.vb: Public Shared ReadOnly Instance As AclUpdatePolicy.Owner
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.AclUpdatePolicy
+  commentId: T:Dropbox.Api.Sharing.AclUpdatePolicy
+  parent: Dropbox.Api.Sharing
+  name: AclUpdatePolicy
+  nameWithType: AclUpdatePolicy
+  fullName: Dropbox.Api.Sharing.AclUpdatePolicy
+- uid: Dropbox.Api.Sharing.AclUpdatePolicy.IsOwner
+  commentId: P:Dropbox.Api.Sharing.AclUpdatePolicy.IsOwner
+  parent: Dropbox.Api.Sharing.AclUpdatePolicy
+  name: IsOwner
+  nameWithType: AclUpdatePolicy.IsOwner
+  fullName: Dropbox.Api.Sharing.AclUpdatePolicy.IsOwner
+- uid: Dropbox.Api.Sharing.AclUpdatePolicy.AsOwner
+  commentId: P:Dropbox.Api.Sharing.AclUpdatePolicy.AsOwner
+  parent: Dropbox.Api.Sharing.AclUpdatePolicy
+  name: AsOwner
+  nameWithType: AclUpdatePolicy.AsOwner
+  fullName: Dropbox.Api.Sharing.AclUpdatePolicy.AsOwner
+- uid: Dropbox.Api.Sharing.AclUpdatePolicy.IsEditors
+  commentId: P:Dropbox.Api.Sharing.AclUpdatePolicy.IsEditors
+  parent: Dropbox.Api.Sharing.AclUpdatePolicy
+  name: IsEditors
+  nameWithType: AclUpdatePolicy.IsEditors
+  fullName: Dropbox.Api.Sharing.AclUpdatePolicy.IsEditors
+- uid: Dropbox.Api.Sharing.AclUpdatePolicy.AsEditors
+  commentId: P:Dropbox.Api.Sharing.AclUpdatePolicy.AsEditors
+  parent: Dropbox.Api.Sharing.AclUpdatePolicy
+  name: AsEditors
+  nameWithType: AclUpdatePolicy.AsEditors
+  fullName: Dropbox.Api.Sharing.AclUpdatePolicy.AsEditors
+- uid: Dropbox.Api.Sharing.AclUpdatePolicy.IsOther
+  commentId: P:Dropbox.Api.Sharing.AclUpdatePolicy.IsOther
+  parent: Dropbox.Api.Sharing.AclUpdatePolicy
+  name: IsOther
+  nameWithType: AclUpdatePolicy.IsOther
+  fullName: Dropbox.Api.Sharing.AclUpdatePolicy.IsOther
+- uid: Dropbox.Api.Sharing.AclUpdatePolicy.AsOther
+  commentId: P:Dropbox.Api.Sharing.AclUpdatePolicy.AsOther
+  parent: Dropbox.Api.Sharing.AclUpdatePolicy
+  name: AsOther
+  nameWithType: AclUpdatePolicy.AsOther
+  fullName: Dropbox.Api.Sharing.AclUpdatePolicy.AsOther
+- uid: Dropbox.Api.Sharing.AclUpdatePolicy.Owner
+  commentId: T:Dropbox.Api.Sharing.AclUpdatePolicy.Owner
+  parent: Dropbox.Api.Sharing
+  name: AclUpdatePolicy.Owner
+  nameWithType: AclUpdatePolicy.Owner
+  fullName: Dropbox.Api.Sharing.AclUpdatePolicy.Owner
+shouldSkipMarkup: true

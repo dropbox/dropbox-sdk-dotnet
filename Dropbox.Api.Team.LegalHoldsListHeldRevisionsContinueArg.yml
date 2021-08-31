@@ -1,0 +1,240 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueArg
+  commentId: T:Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueArg
+  id: LegalHoldsListHeldRevisionsContinueArg
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueArg.#ctor
+  - Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueArg.#ctor(System.String,System.String)
+  - Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueArg.Cursor
+  - Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueArg.Id
+  langs:
+  - csharp
+  - vb
+  name: LegalHoldsListHeldRevisionsContinueArg
+  nameWithType: LegalHoldsListHeldRevisionsContinueArg
+  fullName: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListHeldRevisionsContinueArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: LegalHoldsListHeldRevisionsContinueArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListHeldRevisionsContinueArg.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The legal holds list held revisions continue arg object</p>\n"
+  example: []
+  syntax:
+    content: 'public class LegalHoldsListHeldRevisionsContinueArg : object'
+    content.vb: >-
+      Public Class LegalHoldsListHeldRevisionsContinueArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueArg.#ctor(System.String,System.String)
+  commentId: M:Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueArg.#ctor(System.String,System.String)
+  id: '#ctor(System.String,System.String)'
+  parent: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueArg
+  langs:
+  - csharp
+  - vb
+  name: LegalHoldsListHeldRevisionsContinueArg(String, String)
+  nameWithType: LegalHoldsListHeldRevisionsContinueArg.LegalHoldsListHeldRevisionsContinueArg(String, String)
+  fullName: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueArg.LegalHoldsListHeldRevisionsContinueArg(System.String, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListHeldRevisionsContinueArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListHeldRevisionsContinueArg.cs
+    startLine: 37
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueArg\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public LegalHoldsListHeldRevisionsContinueArg(string id, string cursor = null)
+    parameters:
+    - id: id
+      type: System.String
+      description: The legal hold Id.
+    - id: cursor
+      type: System.String
+      description: >-
+        The cursor idicates where to continue reading file metadata
+
+        entries for the next API call. When there are no more entries, the cursor will
+
+        return none.
+    content.vb: Public Sub New(id As String, cursor As String = Nothing)
+  overload: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueArg.#ctor
+  commentId: M:Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueArg
+  langs:
+  - csharp
+  - vb
+  name: LegalHoldsListHeldRevisionsContinueArg()
+  nameWithType: LegalHoldsListHeldRevisionsContinueArg.LegalHoldsListHeldRevisionsContinueArg()
+  fullName: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueArg.LegalHoldsListHeldRevisionsContinueArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListHeldRevisionsContinueArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListHeldRevisionsContinueArg.cs
+    startLine: 67
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueArg\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public LegalHoldsListHeldRevisionsContinueArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueArg.Id
+  commentId: P:Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueArg.Id
+  id: Id
+  parent: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueArg
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: LegalHoldsListHeldRevisionsContinueArg.Id
+  fullName: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueArg.Id
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListHeldRevisionsContinueArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Id
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListHeldRevisionsContinueArg.cs
+    startLine: 75
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The legal hold Id.</p>\n"
+  example: []
+  syntax:
+    content: public string Id { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Id As String
+  overload: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueArg.Id*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueArg.Cursor
+  commentId: P:Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueArg.Cursor
+  id: Cursor
+  parent: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueArg
+  langs:
+  - csharp
+  - vb
+  name: Cursor
+  nameWithType: LegalHoldsListHeldRevisionsContinueArg.Cursor
+  fullName: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueArg.Cursor
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListHeldRevisionsContinueArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Cursor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/LegalHoldsListHeldRevisionsContinueArg.cs
+    startLine: 81
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The cursor idicates where to continue reading file metadata entries for the\nnext API call. When there are no more entries, the cursor will return none.</p>\n"
+  example: []
+  syntax:
+    content: public string Cursor { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Cursor As String
+  overload: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueArg.Cursor*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueArg
+  commentId: T:Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueArg
+  parent: Dropbox.Api.Team
+  name: LegalHoldsListHeldRevisionsContinueArg
+  nameWithType: LegalHoldsListHeldRevisionsContinueArg
+  fullName: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueArg
+- uid: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueArg.#ctor*
+  commentId: Overload:Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueArg.#ctor
+  name: LegalHoldsListHeldRevisionsContinueArg
+  nameWithType: LegalHoldsListHeldRevisionsContinueArg.LegalHoldsListHeldRevisionsContinueArg
+  fullName: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueArg.LegalHoldsListHeldRevisionsContinueArg
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueArg.Id*
+  commentId: Overload:Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueArg.Id
+  name: Id
+  nameWithType: LegalHoldsListHeldRevisionsContinueArg.Id
+  fullName: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueArg.Id
+- uid: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueArg.Cursor*
+  commentId: Overload:Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueArg.Cursor
+  name: Cursor
+  nameWithType: LegalHoldsListHeldRevisionsContinueArg.Cursor
+  fullName: Dropbox.Api.Team.LegalHoldsListHeldRevisionsContinueArg.Cursor
+shouldSkipMarkup: true

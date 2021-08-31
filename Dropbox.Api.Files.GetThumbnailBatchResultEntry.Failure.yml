@@ -1,0 +1,201 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.GetThumbnailBatchResultEntry.Failure
+  commentId: T:Dropbox.Api.Files.GetThumbnailBatchResultEntry.Failure
+  id: GetThumbnailBatchResultEntry.Failure
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.GetThumbnailBatchResultEntry.Failure.#ctor(Dropbox.Api.Files.ThumbnailError)
+  - Dropbox.Api.Files.GetThumbnailBatchResultEntry.Failure.Value
+  langs:
+  - csharp
+  - vb
+  name: GetThumbnailBatchResultEntry.Failure
+  nameWithType: GetThumbnailBatchResultEntry.Failure
+  fullName: Dropbox.Api.Files.GetThumbnailBatchResultEntry.Failure
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetThumbnailBatchResultEntry.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Failure
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetThumbnailBatchResultEntry.cs
+    startLine: 270
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The result for this file if it was an error.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Failure : GetThumbnailBatchResultEntry'
+    content.vb: >-
+      Public NotInheritable Class Failure
+          Inherits GetThumbnailBatchResultEntry
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Files.GetThumbnailBatchResultEntry
+  inheritedMembers:
+  - Dropbox.Api.Files.GetThumbnailBatchResultEntry.IsSuccess
+  - Dropbox.Api.Files.GetThumbnailBatchResultEntry.AsSuccess
+  - Dropbox.Api.Files.GetThumbnailBatchResultEntry.IsFailure
+  - Dropbox.Api.Files.GetThumbnailBatchResultEntry.AsFailure
+  - Dropbox.Api.Files.GetThumbnailBatchResultEntry.IsOther
+  - Dropbox.Api.Files.GetThumbnailBatchResultEntry.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Files.GetThumbnailBatchResultEntry.Failure.#ctor(Dropbox.Api.Files.ThumbnailError)
+  commentId: M:Dropbox.Api.Files.GetThumbnailBatchResultEntry.Failure.#ctor(Dropbox.Api.Files.ThumbnailError)
+  id: '#ctor(Dropbox.Api.Files.ThumbnailError)'
+  parent: Dropbox.Api.Files.GetThumbnailBatchResultEntry.Failure
+  langs:
+  - csharp
+  - vb
+  name: Failure(ThumbnailError)
+  nameWithType: GetThumbnailBatchResultEntry.Failure.Failure(ThumbnailError)
+  fullName: Dropbox.Api.Files.GetThumbnailBatchResultEntry.Failure.Failure(Dropbox.Api.Files.ThumbnailError)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetThumbnailBatchResultEntry.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetThumbnailBatchResultEntry.cs
+    startLine: 288
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.GetThumbnailBatchResultEntry.Failure\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public Failure(ThumbnailError value)
+    parameters:
+    - id: value
+      type: Dropbox.Api.Files.ThumbnailError
+      description: The value
+    content.vb: Public Sub New(value As ThumbnailError)
+  overload: Dropbox.Api.Files.GetThumbnailBatchResultEntry.Failure.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.GetThumbnailBatchResultEntry.Failure.Value
+  commentId: P:Dropbox.Api.Files.GetThumbnailBatchResultEntry.Failure.Value
+  id: Value
+  parent: Dropbox.Api.Files.GetThumbnailBatchResultEntry.Failure
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: GetThumbnailBatchResultEntry.Failure.Value
+  fullName: Dropbox.Api.Files.GetThumbnailBatchResultEntry.Failure.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetThumbnailBatchResultEntry.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetThumbnailBatchResultEntry.cs
+    startLine: 302
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public ThumbnailError Value { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.ThumbnailError
+    content.vb: Public ReadOnly Property Value As ThumbnailError
+  overload: Dropbox.Api.Files.GetThumbnailBatchResultEntry.Failure.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.GetThumbnailBatchResultEntry
+  commentId: T:Dropbox.Api.Files.GetThumbnailBatchResultEntry
+  parent: Dropbox.Api.Files
+  name: GetThumbnailBatchResultEntry
+  nameWithType: GetThumbnailBatchResultEntry
+  fullName: Dropbox.Api.Files.GetThumbnailBatchResultEntry
+- uid: Dropbox.Api.Files.GetThumbnailBatchResultEntry.IsSuccess
+  commentId: P:Dropbox.Api.Files.GetThumbnailBatchResultEntry.IsSuccess
+  parent: Dropbox.Api.Files.GetThumbnailBatchResultEntry
+  name: IsSuccess
+  nameWithType: GetThumbnailBatchResultEntry.IsSuccess
+  fullName: Dropbox.Api.Files.GetThumbnailBatchResultEntry.IsSuccess
+- uid: Dropbox.Api.Files.GetThumbnailBatchResultEntry.AsSuccess
+  commentId: P:Dropbox.Api.Files.GetThumbnailBatchResultEntry.AsSuccess
+  parent: Dropbox.Api.Files.GetThumbnailBatchResultEntry
+  name: AsSuccess
+  nameWithType: GetThumbnailBatchResultEntry.AsSuccess
+  fullName: Dropbox.Api.Files.GetThumbnailBatchResultEntry.AsSuccess
+- uid: Dropbox.Api.Files.GetThumbnailBatchResultEntry.IsFailure
+  commentId: P:Dropbox.Api.Files.GetThumbnailBatchResultEntry.IsFailure
+  parent: Dropbox.Api.Files.GetThumbnailBatchResultEntry
+  name: IsFailure
+  nameWithType: GetThumbnailBatchResultEntry.IsFailure
+  fullName: Dropbox.Api.Files.GetThumbnailBatchResultEntry.IsFailure
+- uid: Dropbox.Api.Files.GetThumbnailBatchResultEntry.AsFailure
+  commentId: P:Dropbox.Api.Files.GetThumbnailBatchResultEntry.AsFailure
+  parent: Dropbox.Api.Files.GetThumbnailBatchResultEntry
+  name: AsFailure
+  nameWithType: GetThumbnailBatchResultEntry.AsFailure
+  fullName: Dropbox.Api.Files.GetThumbnailBatchResultEntry.AsFailure
+- uid: Dropbox.Api.Files.GetThumbnailBatchResultEntry.IsOther
+  commentId: P:Dropbox.Api.Files.GetThumbnailBatchResultEntry.IsOther
+  parent: Dropbox.Api.Files.GetThumbnailBatchResultEntry
+  name: IsOther
+  nameWithType: GetThumbnailBatchResultEntry.IsOther
+  fullName: Dropbox.Api.Files.GetThumbnailBatchResultEntry.IsOther
+- uid: Dropbox.Api.Files.GetThumbnailBatchResultEntry.AsOther
+  commentId: P:Dropbox.Api.Files.GetThumbnailBatchResultEntry.AsOther
+  parent: Dropbox.Api.Files.GetThumbnailBatchResultEntry
+  name: AsOther
+  nameWithType: GetThumbnailBatchResultEntry.AsOther
+  fullName: Dropbox.Api.Files.GetThumbnailBatchResultEntry.AsOther
+- uid: Dropbox.Api.Files.GetThumbnailBatchResultEntry.Failure
+  commentId: T:Dropbox.Api.Files.GetThumbnailBatchResultEntry.Failure
+  parent: Dropbox.Api.Files
+  name: GetThumbnailBatchResultEntry.Failure
+  nameWithType: GetThumbnailBatchResultEntry.Failure
+  fullName: Dropbox.Api.Files.GetThumbnailBatchResultEntry.Failure
+- uid: Dropbox.Api.Files.GetThumbnailBatchResultEntry.Failure.#ctor*
+  commentId: Overload:Dropbox.Api.Files.GetThumbnailBatchResultEntry.Failure.#ctor
+  name: Failure
+  nameWithType: GetThumbnailBatchResultEntry.Failure.Failure
+  fullName: Dropbox.Api.Files.GetThumbnailBatchResultEntry.Failure.Failure
+- uid: Dropbox.Api.Files.ThumbnailError
+  commentId: T:Dropbox.Api.Files.ThumbnailError
+  parent: Dropbox.Api.Files
+  name: ThumbnailError
+  nameWithType: ThumbnailError
+  fullName: Dropbox.Api.Files.ThumbnailError
+- uid: Dropbox.Api.Files.GetThumbnailBatchResultEntry.Failure.Value*
+  commentId: Overload:Dropbox.Api.Files.GetThumbnailBatchResultEntry.Failure.Value
+  name: Value
+  nameWithType: GetThumbnailBatchResultEntry.Failure.Value
+  fullName: Dropbox.Api.Files.GetThumbnailBatchResultEntry.Failure.Value
+shouldSkipMarkup: true

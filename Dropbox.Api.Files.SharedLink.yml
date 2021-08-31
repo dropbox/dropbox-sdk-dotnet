@@ -1,0 +1,235 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.SharedLink
+  commentId: T:Dropbox.Api.Files.SharedLink
+  id: SharedLink
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.SharedLink.#ctor
+  - Dropbox.Api.Files.SharedLink.#ctor(System.String,System.String)
+  - Dropbox.Api.Files.SharedLink.Password
+  - Dropbox.Api.Files.SharedLink.Url
+  langs:
+  - csharp
+  - vb
+  name: SharedLink
+  nameWithType: SharedLink
+  fullName: Dropbox.Api.Files.SharedLink
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SharedLink.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SharedLink
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SharedLink.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The shared link object</p>\n"
+  example: []
+  syntax:
+    content: 'public class SharedLink : object'
+    content.vb: >-
+      Public Class SharedLink
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.SharedLink.#ctor(System.String,System.String)
+  commentId: M:Dropbox.Api.Files.SharedLink.#ctor(System.String,System.String)
+  id: '#ctor(System.String,System.String)'
+  parent: Dropbox.Api.Files.SharedLink
+  langs:
+  - csharp
+  - vb
+  name: SharedLink(String, String)
+  nameWithType: SharedLink.SharedLink(String, String)
+  fullName: Dropbox.Api.Files.SharedLink.SharedLink(System.String, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SharedLink.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SharedLink.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.SharedLink\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public SharedLink(string url, string password = null)
+    parameters:
+    - id: url
+      type: System.String
+      description: Shared link url.
+    - id: password
+      type: System.String
+      description: Password for the shared link.
+    content.vb: Public Sub New(url As String, password As String = Nothing)
+  overload: Dropbox.Api.Files.SharedLink.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.SharedLink.#ctor
+  commentId: M:Dropbox.Api.Files.SharedLink.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.SharedLink
+  langs:
+  - csharp
+  - vb
+  name: SharedLink()
+  nameWithType: SharedLink.SharedLink()
+  fullName: Dropbox.Api.Files.SharedLink.SharedLink()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SharedLink.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SharedLink.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.SharedLink\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public SharedLink()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.SharedLink.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.SharedLink.Url
+  commentId: P:Dropbox.Api.Files.SharedLink.Url
+  id: Url
+  parent: Dropbox.Api.Files.SharedLink
+  langs:
+  - csharp
+  - vb
+  name: Url
+  nameWithType: SharedLink.Url
+  fullName: Dropbox.Api.Files.SharedLink.Url
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SharedLink.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Url
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SharedLink.cs
+    startLine: 59
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Shared link url.</p>\n"
+  example: []
+  syntax:
+    content: public string Url { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Url As String
+  overload: Dropbox.Api.Files.SharedLink.Url*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.SharedLink.Password
+  commentId: P:Dropbox.Api.Files.SharedLink.Password
+  id: Password
+  parent: Dropbox.Api.Files.SharedLink
+  langs:
+  - csharp
+  - vb
+  name: Password
+  nameWithType: SharedLink.Password
+  fullName: Dropbox.Api.Files.SharedLink.Password
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SharedLink.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Password
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SharedLink.cs
+    startLine: 64
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Password for the shared link.</p>\n"
+  example: []
+  syntax:
+    content: public string Password { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Password As String
+  overload: Dropbox.Api.Files.SharedLink.Password*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.SharedLink
+  commentId: T:Dropbox.Api.Files.SharedLink
+  parent: Dropbox.Api.Files
+  name: SharedLink
+  nameWithType: SharedLink
+  fullName: Dropbox.Api.Files.SharedLink
+- uid: Dropbox.Api.Files.SharedLink.#ctor*
+  commentId: Overload:Dropbox.Api.Files.SharedLink.#ctor
+  name: SharedLink
+  nameWithType: SharedLink.SharedLink
+  fullName: Dropbox.Api.Files.SharedLink.SharedLink
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Files.SharedLink.Url*
+  commentId: Overload:Dropbox.Api.Files.SharedLink.Url
+  name: Url
+  nameWithType: SharedLink.Url
+  fullName: Dropbox.Api.Files.SharedLink.Url
+- uid: Dropbox.Api.Files.SharedLink.Password*
+  commentId: Overload:Dropbox.Api.Files.SharedLink.Password
+  name: Password
+  nameWithType: SharedLink.Password
+  fullName: Dropbox.Api.Files.SharedLink.Password
+shouldSkipMarkup: true

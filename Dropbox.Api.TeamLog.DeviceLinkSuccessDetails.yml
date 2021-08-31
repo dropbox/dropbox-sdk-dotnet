@@ -1,0 +1,188 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.DeviceLinkSuccessDetails
+  commentId: T:Dropbox.Api.TeamLog.DeviceLinkSuccessDetails
+  id: DeviceLinkSuccessDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.DeviceLinkSuccessDetails.#ctor
+  - Dropbox.Api.TeamLog.DeviceLinkSuccessDetails.#ctor(Dropbox.Api.TeamLog.DeviceSessionLogInfo)
+  - Dropbox.Api.TeamLog.DeviceLinkSuccessDetails.DeviceSessionInfo
+  langs:
+  - csharp
+  - vb
+  name: DeviceLinkSuccessDetails
+  nameWithType: DeviceLinkSuccessDetails
+  fullName: Dropbox.Api.TeamLog.DeviceLinkSuccessDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceLinkSuccessDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: DeviceLinkSuccessDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceLinkSuccessDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Linked device.</p>\n"
+  example: []
+  syntax:
+    content: 'public class DeviceLinkSuccessDetails : object'
+    content.vb: >-
+      Public Class DeviceLinkSuccessDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.DeviceLinkSuccessDetails.#ctor(Dropbox.Api.TeamLog.DeviceSessionLogInfo)
+  commentId: M:Dropbox.Api.TeamLog.DeviceLinkSuccessDetails.#ctor(Dropbox.Api.TeamLog.DeviceSessionLogInfo)
+  id: '#ctor(Dropbox.Api.TeamLog.DeviceSessionLogInfo)'
+  parent: Dropbox.Api.TeamLog.DeviceLinkSuccessDetails
+  langs:
+  - csharp
+  - vb
+  name: DeviceLinkSuccessDetails(DeviceSessionLogInfo)
+  nameWithType: DeviceLinkSuccessDetails.DeviceLinkSuccessDetails(DeviceSessionLogInfo)
+  fullName: Dropbox.Api.TeamLog.DeviceLinkSuccessDetails.DeviceLinkSuccessDetails(Dropbox.Api.TeamLog.DeviceSessionLogInfo)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceLinkSuccessDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceLinkSuccessDetails.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.DeviceLinkSuccessDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public DeviceLinkSuccessDetails(DeviceSessionLogInfo deviceSessionInfo = null)
+    parameters:
+    - id: deviceSessionInfo
+      type: Dropbox.Api.TeamLog.DeviceSessionLogInfo
+      description: Device&apos;s session logged information.
+    content.vb: Public Sub New(deviceSessionInfo As DeviceSessionLogInfo = Nothing)
+  overload: Dropbox.Api.TeamLog.DeviceLinkSuccessDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.DeviceLinkSuccessDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.DeviceLinkSuccessDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.DeviceLinkSuccessDetails
+  langs:
+  - csharp
+  - vb
+  name: DeviceLinkSuccessDetails()
+  nameWithType: DeviceLinkSuccessDetails.DeviceLinkSuccessDetails()
+  fullName: Dropbox.Api.TeamLog.DeviceLinkSuccessDetails.DeviceLinkSuccessDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceLinkSuccessDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceLinkSuccessDetails.cs
+    startLine: 45
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.DeviceLinkSuccessDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public DeviceLinkSuccessDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.DeviceLinkSuccessDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.DeviceLinkSuccessDetails.DeviceSessionInfo
+  commentId: P:Dropbox.Api.TeamLog.DeviceLinkSuccessDetails.DeviceSessionInfo
+  id: DeviceSessionInfo
+  parent: Dropbox.Api.TeamLog.DeviceLinkSuccessDetails
+  langs:
+  - csharp
+  - vb
+  name: DeviceSessionInfo
+  nameWithType: DeviceLinkSuccessDetails.DeviceSessionInfo
+  fullName: Dropbox.Api.TeamLog.DeviceLinkSuccessDetails.DeviceSessionInfo
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceLinkSuccessDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: DeviceSessionInfo
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceLinkSuccessDetails.cs
+    startLine: 53
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Device&apos;s session logged information.</p>\n"
+  example: []
+  syntax:
+    content: public DeviceSessionLogInfo DeviceSessionInfo { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.DeviceSessionLogInfo
+    content.vb: Public Property DeviceSessionInfo As DeviceSessionLogInfo
+  overload: Dropbox.Api.TeamLog.DeviceLinkSuccessDetails.DeviceSessionInfo*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.DeviceLinkSuccessDetails
+  commentId: T:Dropbox.Api.TeamLog.DeviceLinkSuccessDetails
+  parent: Dropbox.Api.TeamLog
+  name: DeviceLinkSuccessDetails
+  nameWithType: DeviceLinkSuccessDetails
+  fullName: Dropbox.Api.TeamLog.DeviceLinkSuccessDetails
+- uid: Dropbox.Api.TeamLog.DeviceLinkSuccessDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.DeviceLinkSuccessDetails.#ctor
+  name: DeviceLinkSuccessDetails
+  nameWithType: DeviceLinkSuccessDetails.DeviceLinkSuccessDetails
+  fullName: Dropbox.Api.TeamLog.DeviceLinkSuccessDetails.DeviceLinkSuccessDetails
+- uid: Dropbox.Api.TeamLog.DeviceSessionLogInfo
+  commentId: T:Dropbox.Api.TeamLog.DeviceSessionLogInfo
+  parent: Dropbox.Api.TeamLog
+  name: DeviceSessionLogInfo
+  nameWithType: DeviceSessionLogInfo
+  fullName: Dropbox.Api.TeamLog.DeviceSessionLogInfo
+- uid: Dropbox.Api.TeamLog.DeviceLinkSuccessDetails.DeviceSessionInfo*
+  commentId: Overload:Dropbox.Api.TeamLog.DeviceLinkSuccessDetails.DeviceSessionInfo
+  name: DeviceSessionInfo
+  nameWithType: DeviceLinkSuccessDetails.DeviceSessionInfo
+  fullName: Dropbox.Api.TeamLog.DeviceLinkSuccessDetails.DeviceSessionInfo
+shouldSkipMarkup: true

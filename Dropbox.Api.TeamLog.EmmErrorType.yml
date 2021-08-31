@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.EmmErrorType
+  commentId: T:Dropbox.Api.TeamLog.EmmErrorType
+  id: EmmErrorType
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.EmmErrorType.#ctor
+  - Dropbox.Api.TeamLog.EmmErrorType.#ctor(System.String)
+  - Dropbox.Api.TeamLog.EmmErrorType.Description
+  langs:
+  - csharp
+  - vb
+  name: EmmErrorType
+  nameWithType: EmmErrorType
+  fullName: Dropbox.Api.TeamLog.EmmErrorType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EmmErrorType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: EmmErrorType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EmmErrorType.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The emm error type object</p>\n"
+  example: []
+  syntax:
+    content: 'public class EmmErrorType : object'
+    content.vb: >-
+      Public Class EmmErrorType
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.EmmErrorType.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.EmmErrorType.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.EmmErrorType
+  langs:
+  - csharp
+  - vb
+  name: EmmErrorType(String)
+  nameWithType: EmmErrorType.EmmErrorType(String)
+  fullName: Dropbox.Api.TeamLog.EmmErrorType.EmmErrorType(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EmmErrorType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EmmErrorType.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.EmmErrorType\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public EmmErrorType(string description)
+    parameters:
+    - id: description
+      type: System.String
+      description: The description
+    content.vb: Public Sub New(description As String)
+  overload: Dropbox.Api.TeamLog.EmmErrorType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.EmmErrorType.#ctor
+  commentId: M:Dropbox.Api.TeamLog.EmmErrorType.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.EmmErrorType
+  langs:
+  - csharp
+  - vb
+  name: EmmErrorType()
+  nameWithType: EmmErrorType.EmmErrorType()
+  fullName: Dropbox.Api.TeamLog.EmmErrorType.EmmErrorType()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EmmErrorType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EmmErrorType.cs
+    startLine: 48
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.EmmErrorType\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public EmmErrorType()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.EmmErrorType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.EmmErrorType.Description
+  commentId: P:Dropbox.Api.TeamLog.EmmErrorType.Description
+  id: Description
+  parent: Dropbox.Api.TeamLog.EmmErrorType
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: EmmErrorType.Description
+  fullName: Dropbox.Api.TeamLog.EmmErrorType.Description
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EmmErrorType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Description
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EmmErrorType.cs
+    startLine: 56
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets the description of the emm error type</p>\n"
+  example: []
+  syntax:
+    content: public string Description { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Dropbox.Api.TeamLog.EmmErrorType.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.EmmErrorType
+  commentId: T:Dropbox.Api.TeamLog.EmmErrorType
+  parent: Dropbox.Api.TeamLog
+  name: EmmErrorType
+  nameWithType: EmmErrorType
+  fullName: Dropbox.Api.TeamLog.EmmErrorType
+- uid: Dropbox.Api.TeamLog.EmmErrorType.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.EmmErrorType.#ctor
+  name: EmmErrorType
+  nameWithType: EmmErrorType.EmmErrorType
+  fullName: Dropbox.Api.TeamLog.EmmErrorType.EmmErrorType
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.EmmErrorType.Description*
+  commentId: Overload:Dropbox.Api.TeamLog.EmmErrorType.Description
+  name: Description
+  nameWithType: EmmErrorType.Description
+  fullName: Dropbox.Api.TeamLog.EmmErrorType.Description
+shouldSkipMarkup: true

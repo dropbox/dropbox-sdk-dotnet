@@ -1,0 +1,660 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.MembersSetPermissions2Error
+  commentId: T:Dropbox.Api.Team.MembersSetPermissions2Error
+  id: MembersSetPermissions2Error
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.MembersSetPermissions2Error.#ctor
+  - Dropbox.Api.Team.MembersSetPermissions2Error.AsCannotSetPermissions
+  - Dropbox.Api.Team.MembersSetPermissions2Error.AsLastAdmin
+  - Dropbox.Api.Team.MembersSetPermissions2Error.AsOther
+  - Dropbox.Api.Team.MembersSetPermissions2Error.AsRoleNotFound
+  - Dropbox.Api.Team.MembersSetPermissions2Error.AsUserNotFound
+  - Dropbox.Api.Team.MembersSetPermissions2Error.AsUserNotInTeam
+  - Dropbox.Api.Team.MembersSetPermissions2Error.IsCannotSetPermissions
+  - Dropbox.Api.Team.MembersSetPermissions2Error.IsLastAdmin
+  - Dropbox.Api.Team.MembersSetPermissions2Error.IsOther
+  - Dropbox.Api.Team.MembersSetPermissions2Error.IsRoleNotFound
+  - Dropbox.Api.Team.MembersSetPermissions2Error.IsUserNotFound
+  - Dropbox.Api.Team.MembersSetPermissions2Error.IsUserNotInTeam
+  langs:
+  - csharp
+  - vb
+  name: MembersSetPermissions2Error
+  nameWithType: MembersSetPermissions2Error
+  fullName: Dropbox.Api.Team.MembersSetPermissions2Error
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetPermissions2Error.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: MembersSetPermissions2Error
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetPermissions2Error.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The members set permissions2 error object</p>\n"
+  example: []
+  syntax:
+    content: 'public class MembersSetPermissions2Error : object'
+    content.vb: >-
+      Public Class MembersSetPermissions2Error
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Team.MembersSetPermissions2Error.CannotSetPermissions
+  - Dropbox.Api.Team.MembersSetPermissions2Error.LastAdmin
+  - Dropbox.Api.Team.MembersSetPermissions2Error.Other
+  - Dropbox.Api.Team.MembersSetPermissions2Error.RoleNotFound
+  - Dropbox.Api.Team.MembersSetPermissions2Error.UserNotFound
+  - Dropbox.Api.Team.MembersSetPermissions2Error.UserNotInTeam
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.MembersSetPermissions2Error.#ctor
+  commentId: M:Dropbox.Api.Team.MembersSetPermissions2Error.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.MembersSetPermissions2Error
+  langs:
+  - csharp
+  - vb
+  name: MembersSetPermissions2Error()
+  nameWithType: MembersSetPermissions2Error.MembersSetPermissions2Error()
+  fullName: Dropbox.Api.Team.MembersSetPermissions2Error.MembersSetPermissions2Error()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetPermissions2Error.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetPermissions2Error.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.MembersSetPermissions2Error\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public MembersSetPermissions2Error()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.MembersSetPermissions2Error.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.MembersSetPermissions2Error.IsLastAdmin
+  commentId: P:Dropbox.Api.Team.MembersSetPermissions2Error.IsLastAdmin
+  id: IsLastAdmin
+  parent: Dropbox.Api.Team.MembersSetPermissions2Error
+  langs:
+  - csharp
+  - vb
+  name: IsLastAdmin
+  nameWithType: MembersSetPermissions2Error.IsLastAdmin
+  fullName: Dropbox.Api.Team.MembersSetPermissions2Error.IsLastAdmin
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetPermissions2Error.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsLastAdmin
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetPermissions2Error.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is LastAdmin</p>\n"
+  example: []
+  syntax:
+    content: public bool IsLastAdmin { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsLastAdmin As Boolean
+  overload: Dropbox.Api.Team.MembersSetPermissions2Error.IsLastAdmin*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersSetPermissions2Error.AsLastAdmin
+  commentId: P:Dropbox.Api.Team.MembersSetPermissions2Error.AsLastAdmin
+  id: AsLastAdmin
+  parent: Dropbox.Api.Team.MembersSetPermissions2Error
+  langs:
+  - csharp
+  - vb
+  name: AsLastAdmin
+  nameWithType: MembersSetPermissions2Error.AsLastAdmin
+  fullName: Dropbox.Api.Team.MembersSetPermissions2Error.AsLastAdmin
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetPermissions2Error.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsLastAdmin
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetPermissions2Error.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a LastAdmin, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MembersSetPermissions2Error.LastAdmin AsLastAdmin { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.MembersSetPermissions2Error.LastAdmin
+    content.vb: Public ReadOnly Property AsLastAdmin As MembersSetPermissions2Error.LastAdmin
+  overload: Dropbox.Api.Team.MembersSetPermissions2Error.AsLastAdmin*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersSetPermissions2Error.IsUserNotInTeam
+  commentId: P:Dropbox.Api.Team.MembersSetPermissions2Error.IsUserNotInTeam
+  id: IsUserNotInTeam
+  parent: Dropbox.Api.Team.MembersSetPermissions2Error
+  langs:
+  - csharp
+  - vb
+  name: IsUserNotInTeam
+  nameWithType: MembersSetPermissions2Error.IsUserNotInTeam
+  fullName: Dropbox.Api.Team.MembersSetPermissions2Error.IsUserNotInTeam
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetPermissions2Error.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsUserNotInTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetPermissions2Error.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is UserNotInTeam</p>\n"
+  example: []
+  syntax:
+    content: public bool IsUserNotInTeam { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsUserNotInTeam As Boolean
+  overload: Dropbox.Api.Team.MembersSetPermissions2Error.IsUserNotInTeam*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersSetPermissions2Error.AsUserNotInTeam
+  commentId: P:Dropbox.Api.Team.MembersSetPermissions2Error.AsUserNotInTeam
+  id: AsUserNotInTeam
+  parent: Dropbox.Api.Team.MembersSetPermissions2Error
+  langs:
+  - csharp
+  - vb
+  name: AsUserNotInTeam
+  nameWithType: MembersSetPermissions2Error.AsUserNotInTeam
+  fullName: Dropbox.Api.Team.MembersSetPermissions2Error.AsUserNotInTeam
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetPermissions2Error.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsUserNotInTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetPermissions2Error.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a UserNotInTeam, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MembersSetPermissions2Error.UserNotInTeam AsUserNotInTeam { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.MembersSetPermissions2Error.UserNotInTeam
+    content.vb: Public ReadOnly Property AsUserNotInTeam As MembersSetPermissions2Error.UserNotInTeam
+  overload: Dropbox.Api.Team.MembersSetPermissions2Error.AsUserNotInTeam*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersSetPermissions2Error.IsCannotSetPermissions
+  commentId: P:Dropbox.Api.Team.MembersSetPermissions2Error.IsCannotSetPermissions
+  id: IsCannotSetPermissions
+  parent: Dropbox.Api.Team.MembersSetPermissions2Error
+  langs:
+  - csharp
+  - vb
+  name: IsCannotSetPermissions
+  nameWithType: MembersSetPermissions2Error.IsCannotSetPermissions
+  fullName: Dropbox.Api.Team.MembersSetPermissions2Error.IsCannotSetPermissions
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetPermissions2Error.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsCannotSetPermissions
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetPermissions2Error.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is CannotSetPermissions</p>\n"
+  example: []
+  syntax:
+    content: public bool IsCannotSetPermissions { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsCannotSetPermissions As Boolean
+  overload: Dropbox.Api.Team.MembersSetPermissions2Error.IsCannotSetPermissions*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersSetPermissions2Error.AsCannotSetPermissions
+  commentId: P:Dropbox.Api.Team.MembersSetPermissions2Error.AsCannotSetPermissions
+  id: AsCannotSetPermissions
+  parent: Dropbox.Api.Team.MembersSetPermissions2Error
+  langs:
+  - csharp
+  - vb
+  name: AsCannotSetPermissions
+  nameWithType: MembersSetPermissions2Error.AsCannotSetPermissions
+  fullName: Dropbox.Api.Team.MembersSetPermissions2Error.AsCannotSetPermissions
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetPermissions2Error.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsCannotSetPermissions
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetPermissions2Error.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a CannotSetPermissions, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MembersSetPermissions2Error.CannotSetPermissions AsCannotSetPermissions { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.MembersSetPermissions2Error.CannotSetPermissions
+    content.vb: Public ReadOnly Property AsCannotSetPermissions As MembersSetPermissions2Error.CannotSetPermissions
+  overload: Dropbox.Api.Team.MembersSetPermissions2Error.AsCannotSetPermissions*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersSetPermissions2Error.IsRoleNotFound
+  commentId: P:Dropbox.Api.Team.MembersSetPermissions2Error.IsRoleNotFound
+  id: IsRoleNotFound
+  parent: Dropbox.Api.Team.MembersSetPermissions2Error
+  langs:
+  - csharp
+  - vb
+  name: IsRoleNotFound
+  nameWithType: MembersSetPermissions2Error.IsRoleNotFound
+  fullName: Dropbox.Api.Team.MembersSetPermissions2Error.IsRoleNotFound
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetPermissions2Error.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsRoleNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetPermissions2Error.cs
+    startLine: 106
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is RoleNotFound</p>\n"
+  example: []
+  syntax:
+    content: public bool IsRoleNotFound { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsRoleNotFound As Boolean
+  overload: Dropbox.Api.Team.MembersSetPermissions2Error.IsRoleNotFound*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersSetPermissions2Error.AsRoleNotFound
+  commentId: P:Dropbox.Api.Team.MembersSetPermissions2Error.AsRoleNotFound
+  id: AsRoleNotFound
+  parent: Dropbox.Api.Team.MembersSetPermissions2Error
+  langs:
+  - csharp
+  - vb
+  name: AsRoleNotFound
+  nameWithType: MembersSetPermissions2Error.AsRoleNotFound
+  fullName: Dropbox.Api.Team.MembersSetPermissions2Error.AsRoleNotFound
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetPermissions2Error.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsRoleNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetPermissions2Error.cs
+    startLine: 117
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a RoleNotFound, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MembersSetPermissions2Error.RoleNotFound AsRoleNotFound { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.MembersSetPermissions2Error.RoleNotFound
+    content.vb: Public ReadOnly Property AsRoleNotFound As MembersSetPermissions2Error.RoleNotFound
+  overload: Dropbox.Api.Team.MembersSetPermissions2Error.AsRoleNotFound*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersSetPermissions2Error.IsOther
+  commentId: P:Dropbox.Api.Team.MembersSetPermissions2Error.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Team.MembersSetPermissions2Error
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: MembersSetPermissions2Error.IsOther
+  fullName: Dropbox.Api.Team.MembersSetPermissions2Error.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetPermissions2Error.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetPermissions2Error.cs
+    startLine: 128
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Team.MembersSetPermissions2Error.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersSetPermissions2Error.AsOther
+  commentId: P:Dropbox.Api.Team.MembersSetPermissions2Error.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Team.MembersSetPermissions2Error
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: MembersSetPermissions2Error.AsOther
+  fullName: Dropbox.Api.Team.MembersSetPermissions2Error.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetPermissions2Error.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetPermissions2Error.cs
+    startLine: 139
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MembersSetPermissions2Error.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.MembersSetPermissions2Error.Other
+    content.vb: Public ReadOnly Property AsOther As MembersSetPermissions2Error.Other
+  overload: Dropbox.Api.Team.MembersSetPermissions2Error.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersSetPermissions2Error.IsUserNotFound
+  commentId: P:Dropbox.Api.Team.MembersSetPermissions2Error.IsUserNotFound
+  id: IsUserNotFound
+  parent: Dropbox.Api.Team.MembersSetPermissions2Error
+  langs:
+  - csharp
+  - vb
+  name: IsUserNotFound
+  nameWithType: MembersSetPermissions2Error.IsUserNotFound
+  fullName: Dropbox.Api.Team.MembersSetPermissions2Error.IsUserNotFound
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetPermissions2Error.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsUserNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetPermissions2Error.cs
+    startLine: 150
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is UserNotFound</p>\n"
+  example: []
+  syntax:
+    content: public bool IsUserNotFound { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsUserNotFound As Boolean
+  overload: Dropbox.Api.Team.MembersSetPermissions2Error.IsUserNotFound*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.MembersSetPermissions2Error.AsUserNotFound
+  commentId: P:Dropbox.Api.Team.MembersSetPermissions2Error.AsUserNotFound
+  id: AsUserNotFound
+  parent: Dropbox.Api.Team.MembersSetPermissions2Error
+  langs:
+  - csharp
+  - vb
+  name: AsUserNotFound
+  nameWithType: MembersSetPermissions2Error.AsUserNotFound
+  fullName: Dropbox.Api.Team.MembersSetPermissions2Error.AsUserNotFound
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetPermissions2Error.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsUserNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MembersSetPermissions2Error.cs
+    startLine: 161
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a UserNotFound, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MembersSetPermissions2Error.UserNotFound AsUserNotFound { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.MembersSetPermissions2Error.UserNotFound
+    content.vb: Public ReadOnly Property AsUserNotFound As MembersSetPermissions2Error.UserNotFound
+  overload: Dropbox.Api.Team.MembersSetPermissions2Error.AsUserNotFound*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.MembersSetPermissions2Error
+  commentId: T:Dropbox.Api.Team.MembersSetPermissions2Error
+  parent: Dropbox.Api.Team
+  name: MembersSetPermissions2Error
+  nameWithType: MembersSetPermissions2Error
+  fullName: Dropbox.Api.Team.MembersSetPermissions2Error
+- uid: Dropbox.Api.Team.MembersSetPermissions2Error.#ctor*
+  commentId: Overload:Dropbox.Api.Team.MembersSetPermissions2Error.#ctor
+  name: MembersSetPermissions2Error
+  nameWithType: MembersSetPermissions2Error.MembersSetPermissions2Error
+  fullName: Dropbox.Api.Team.MembersSetPermissions2Error.MembersSetPermissions2Error
+- uid: Dropbox.Api.Team.MembersSetPermissions2Error.IsLastAdmin*
+  commentId: Overload:Dropbox.Api.Team.MembersSetPermissions2Error.IsLastAdmin
+  name: IsLastAdmin
+  nameWithType: MembersSetPermissions2Error.IsLastAdmin
+  fullName: Dropbox.Api.Team.MembersSetPermissions2Error.IsLastAdmin
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Team.MembersSetPermissions2Error.AsLastAdmin*
+  commentId: Overload:Dropbox.Api.Team.MembersSetPermissions2Error.AsLastAdmin
+  name: AsLastAdmin
+  nameWithType: MembersSetPermissions2Error.AsLastAdmin
+  fullName: Dropbox.Api.Team.MembersSetPermissions2Error.AsLastAdmin
+- uid: Dropbox.Api.Team.MembersSetPermissions2Error.LastAdmin
+  commentId: T:Dropbox.Api.Team.MembersSetPermissions2Error.LastAdmin
+  parent: Dropbox.Api.Team
+  name: MembersSetPermissions2Error.LastAdmin
+  nameWithType: MembersSetPermissions2Error.LastAdmin
+  fullName: Dropbox.Api.Team.MembersSetPermissions2Error.LastAdmin
+- uid: Dropbox.Api.Team.MembersSetPermissions2Error.IsUserNotInTeam*
+  commentId: Overload:Dropbox.Api.Team.MembersSetPermissions2Error.IsUserNotInTeam
+  name: IsUserNotInTeam
+  nameWithType: MembersSetPermissions2Error.IsUserNotInTeam
+  fullName: Dropbox.Api.Team.MembersSetPermissions2Error.IsUserNotInTeam
+- uid: Dropbox.Api.Team.MembersSetPermissions2Error.AsUserNotInTeam*
+  commentId: Overload:Dropbox.Api.Team.MembersSetPermissions2Error.AsUserNotInTeam
+  name: AsUserNotInTeam
+  nameWithType: MembersSetPermissions2Error.AsUserNotInTeam
+  fullName: Dropbox.Api.Team.MembersSetPermissions2Error.AsUserNotInTeam
+- uid: Dropbox.Api.Team.MembersSetPermissions2Error.UserNotInTeam
+  commentId: T:Dropbox.Api.Team.MembersSetPermissions2Error.UserNotInTeam
+  parent: Dropbox.Api.Team
+  name: MembersSetPermissions2Error.UserNotInTeam
+  nameWithType: MembersSetPermissions2Error.UserNotInTeam
+  fullName: Dropbox.Api.Team.MembersSetPermissions2Error.UserNotInTeam
+- uid: Dropbox.Api.Team.MembersSetPermissions2Error.IsCannotSetPermissions*
+  commentId: Overload:Dropbox.Api.Team.MembersSetPermissions2Error.IsCannotSetPermissions
+  name: IsCannotSetPermissions
+  nameWithType: MembersSetPermissions2Error.IsCannotSetPermissions
+  fullName: Dropbox.Api.Team.MembersSetPermissions2Error.IsCannotSetPermissions
+- uid: Dropbox.Api.Team.MembersSetPermissions2Error.AsCannotSetPermissions*
+  commentId: Overload:Dropbox.Api.Team.MembersSetPermissions2Error.AsCannotSetPermissions
+  name: AsCannotSetPermissions
+  nameWithType: MembersSetPermissions2Error.AsCannotSetPermissions
+  fullName: Dropbox.Api.Team.MembersSetPermissions2Error.AsCannotSetPermissions
+- uid: Dropbox.Api.Team.MembersSetPermissions2Error.CannotSetPermissions
+  commentId: T:Dropbox.Api.Team.MembersSetPermissions2Error.CannotSetPermissions
+  parent: Dropbox.Api.Team
+  name: MembersSetPermissions2Error.CannotSetPermissions
+  nameWithType: MembersSetPermissions2Error.CannotSetPermissions
+  fullName: Dropbox.Api.Team.MembersSetPermissions2Error.CannotSetPermissions
+- uid: Dropbox.Api.Team.MembersSetPermissions2Error.IsRoleNotFound*
+  commentId: Overload:Dropbox.Api.Team.MembersSetPermissions2Error.IsRoleNotFound
+  name: IsRoleNotFound
+  nameWithType: MembersSetPermissions2Error.IsRoleNotFound
+  fullName: Dropbox.Api.Team.MembersSetPermissions2Error.IsRoleNotFound
+- uid: Dropbox.Api.Team.MembersSetPermissions2Error.AsRoleNotFound*
+  commentId: Overload:Dropbox.Api.Team.MembersSetPermissions2Error.AsRoleNotFound
+  name: AsRoleNotFound
+  nameWithType: MembersSetPermissions2Error.AsRoleNotFound
+  fullName: Dropbox.Api.Team.MembersSetPermissions2Error.AsRoleNotFound
+- uid: Dropbox.Api.Team.MembersSetPermissions2Error.RoleNotFound
+  commentId: T:Dropbox.Api.Team.MembersSetPermissions2Error.RoleNotFound
+  parent: Dropbox.Api.Team
+  name: MembersSetPermissions2Error.RoleNotFound
+  nameWithType: MembersSetPermissions2Error.RoleNotFound
+  fullName: Dropbox.Api.Team.MembersSetPermissions2Error.RoleNotFound
+- uid: Dropbox.Api.Team.MembersSetPermissions2Error.IsOther*
+  commentId: Overload:Dropbox.Api.Team.MembersSetPermissions2Error.IsOther
+  name: IsOther
+  nameWithType: MembersSetPermissions2Error.IsOther
+  fullName: Dropbox.Api.Team.MembersSetPermissions2Error.IsOther
+- uid: Dropbox.Api.Team.MembersSetPermissions2Error.AsOther*
+  commentId: Overload:Dropbox.Api.Team.MembersSetPermissions2Error.AsOther
+  name: AsOther
+  nameWithType: MembersSetPermissions2Error.AsOther
+  fullName: Dropbox.Api.Team.MembersSetPermissions2Error.AsOther
+- uid: Dropbox.Api.Team.MembersSetPermissions2Error.Other
+  commentId: T:Dropbox.Api.Team.MembersSetPermissions2Error.Other
+  parent: Dropbox.Api.Team
+  name: MembersSetPermissions2Error.Other
+  nameWithType: MembersSetPermissions2Error.Other
+  fullName: Dropbox.Api.Team.MembersSetPermissions2Error.Other
+- uid: Dropbox.Api.Team.MembersSetPermissions2Error.IsUserNotFound*
+  commentId: Overload:Dropbox.Api.Team.MembersSetPermissions2Error.IsUserNotFound
+  name: IsUserNotFound
+  nameWithType: MembersSetPermissions2Error.IsUserNotFound
+  fullName: Dropbox.Api.Team.MembersSetPermissions2Error.IsUserNotFound
+- uid: Dropbox.Api.Team.MembersSetPermissions2Error.AsUserNotFound*
+  commentId: Overload:Dropbox.Api.Team.MembersSetPermissions2Error.AsUserNotFound
+  name: AsUserNotFound
+  nameWithType: MembersSetPermissions2Error.AsUserNotFound
+  fullName: Dropbox.Api.Team.MembersSetPermissions2Error.AsUserNotFound
+- uid: Dropbox.Api.Team.MembersSetPermissions2Error.UserNotFound
+  commentId: T:Dropbox.Api.Team.MembersSetPermissions2Error.UserNotFound
+  parent: Dropbox.Api.Team
+  name: MembersSetPermissions2Error.UserNotFound
+  nameWithType: MembersSetPermissions2Error.UserNotFound
+  fullName: Dropbox.Api.Team.MembersSetPermissions2Error.UserNotFound
+shouldSkipMarkup: true

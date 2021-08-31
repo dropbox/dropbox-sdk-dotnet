@@ -1,0 +1,283 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.GroupLogInfo
+  commentId: T:Dropbox.Api.TeamLog.GroupLogInfo
+  id: GroupLogInfo
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.GroupLogInfo.#ctor
+  - Dropbox.Api.TeamLog.GroupLogInfo.#ctor(System.String,System.String,System.String)
+  - Dropbox.Api.TeamLog.GroupLogInfo.DisplayName
+  - Dropbox.Api.TeamLog.GroupLogInfo.ExternalId
+  - Dropbox.Api.TeamLog.GroupLogInfo.GroupId
+  langs:
+  - csharp
+  - vb
+  name: GroupLogInfo
+  nameWithType: GroupLogInfo
+  fullName: Dropbox.Api.TeamLog.GroupLogInfo
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GroupLogInfo
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupLogInfo.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Group&apos;s logged information.</p>\n"
+  example: []
+  syntax:
+    content: 'public class GroupLogInfo : object'
+    content.vb: >-
+      Public Class GroupLogInfo
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.GroupLogInfo.#ctor(System.String,System.String,System.String)
+  commentId: M:Dropbox.Api.TeamLog.GroupLogInfo.#ctor(System.String,System.String,System.String)
+  id: '#ctor(System.String,System.String,System.String)'
+  parent: Dropbox.Api.TeamLog.GroupLogInfo
+  langs:
+  - csharp
+  - vb
+  name: GroupLogInfo(String, String, String)
+  nameWithType: GroupLogInfo.GroupLogInfo(String, String, String)
+  fullName: Dropbox.Api.TeamLog.GroupLogInfo.GroupLogInfo(System.String, System.String, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupLogInfo.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.GroupLogInfo\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public GroupLogInfo(string displayName, string groupId = null, string externalId = null)
+    parameters:
+    - id: displayName
+      type: System.String
+      description: The name of this group.
+    - id: groupId
+      type: System.String
+      description: The unique id of this group.
+    - id: externalId
+      type: System.String
+      description: External group ID.
+    content.vb: Public Sub New(displayName As String, groupId As String = Nothing, externalId As String = Nothing)
+  overload: Dropbox.Api.TeamLog.GroupLogInfo.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.GroupLogInfo.#ctor
+  commentId: M:Dropbox.Api.TeamLog.GroupLogInfo.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.GroupLogInfo
+  langs:
+  - csharp
+  - vb
+  name: GroupLogInfo()
+  nameWithType: GroupLogInfo.GroupLogInfo()
+  fullName: Dropbox.Api.TeamLog.GroupLogInfo.GroupLogInfo()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupLogInfo.cs
+    startLine: 54
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.GroupLogInfo\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public GroupLogInfo()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.GroupLogInfo.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.GroupLogInfo.DisplayName
+  commentId: P:Dropbox.Api.TeamLog.GroupLogInfo.DisplayName
+  id: DisplayName
+  parent: Dropbox.Api.TeamLog.GroupLogInfo
+  langs:
+  - csharp
+  - vb
+  name: DisplayName
+  nameWithType: GroupLogInfo.DisplayName
+  fullName: Dropbox.Api.TeamLog.GroupLogInfo.DisplayName
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: DisplayName
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupLogInfo.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The name of this group.</p>\n"
+  example: []
+  syntax:
+    content: public string DisplayName { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property DisplayName As String
+  overload: Dropbox.Api.TeamLog.GroupLogInfo.DisplayName*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.GroupLogInfo.GroupId
+  commentId: P:Dropbox.Api.TeamLog.GroupLogInfo.GroupId
+  id: GroupId
+  parent: Dropbox.Api.TeamLog.GroupLogInfo
+  langs:
+  - csharp
+  - vb
+  name: GroupId
+  nameWithType: GroupLogInfo.GroupId
+  fullName: Dropbox.Api.TeamLog.GroupLogInfo.GroupId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GroupId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupLogInfo.cs
+    startLine: 67
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The unique id of this group.</p>\n"
+  example: []
+  syntax:
+    content: public string GroupId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property GroupId As String
+  overload: Dropbox.Api.TeamLog.GroupLogInfo.GroupId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.GroupLogInfo.ExternalId
+  commentId: P:Dropbox.Api.TeamLog.GroupLogInfo.ExternalId
+  id: ExternalId
+  parent: Dropbox.Api.TeamLog.GroupLogInfo
+  langs:
+  - csharp
+  - vb
+  name: ExternalId
+  nameWithType: GroupLogInfo.ExternalId
+  fullName: Dropbox.Api.TeamLog.GroupLogInfo.ExternalId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupLogInfo.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ExternalId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupLogInfo.cs
+    startLine: 72
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>External group ID.</p>\n"
+  example: []
+  syntax:
+    content: public string ExternalId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ExternalId As String
+  overload: Dropbox.Api.TeamLog.GroupLogInfo.ExternalId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.GroupLogInfo
+  commentId: T:Dropbox.Api.TeamLog.GroupLogInfo
+  parent: Dropbox.Api.TeamLog
+  name: GroupLogInfo
+  nameWithType: GroupLogInfo
+  fullName: Dropbox.Api.TeamLog.GroupLogInfo
+- uid: Dropbox.Api.TeamLog.GroupLogInfo.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.GroupLogInfo.#ctor
+  name: GroupLogInfo
+  nameWithType: GroupLogInfo.GroupLogInfo
+  fullName: Dropbox.Api.TeamLog.GroupLogInfo.GroupLogInfo
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.GroupLogInfo.DisplayName*
+  commentId: Overload:Dropbox.Api.TeamLog.GroupLogInfo.DisplayName
+  name: DisplayName
+  nameWithType: GroupLogInfo.DisplayName
+  fullName: Dropbox.Api.TeamLog.GroupLogInfo.DisplayName
+- uid: Dropbox.Api.TeamLog.GroupLogInfo.GroupId*
+  commentId: Overload:Dropbox.Api.TeamLog.GroupLogInfo.GroupId
+  name: GroupId
+  nameWithType: GroupLogInfo.GroupId
+  fullName: Dropbox.Api.TeamLog.GroupLogInfo.GroupId
+- uid: Dropbox.Api.TeamLog.GroupLogInfo.ExternalId*
+  commentId: Overload:Dropbox.Api.TeamLog.GroupLogInfo.ExternalId
+  name: ExternalId
+  nameWithType: GroupLogInfo.ExternalId
+  fullName: Dropbox.Api.TeamLog.GroupLogInfo.ExternalId
+shouldSkipMarkup: true

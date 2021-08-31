@@ -1,0 +1,188 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.CreateFolderEntryResult
+  commentId: T:Dropbox.Api.Files.CreateFolderEntryResult
+  id: CreateFolderEntryResult
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.CreateFolderEntryResult.#ctor
+  - Dropbox.Api.Files.CreateFolderEntryResult.#ctor(Dropbox.Api.Files.FolderMetadata)
+  - Dropbox.Api.Files.CreateFolderEntryResult.Metadata
+  langs:
+  - csharp
+  - vb
+  name: CreateFolderEntryResult
+  nameWithType: CreateFolderEntryResult
+  fullName: Dropbox.Api.Files.CreateFolderEntryResult
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/CreateFolderEntryResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: CreateFolderEntryResult
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/CreateFolderEntryResult.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The create folder entry result object</p>\n"
+  example: []
+  syntax:
+    content: 'public class CreateFolderEntryResult : object'
+    content.vb: >-
+      Public Class CreateFolderEntryResult
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.CreateFolderEntryResult.#ctor(Dropbox.Api.Files.FolderMetadata)
+  commentId: M:Dropbox.Api.Files.CreateFolderEntryResult.#ctor(Dropbox.Api.Files.FolderMetadata)
+  id: '#ctor(Dropbox.Api.Files.FolderMetadata)'
+  parent: Dropbox.Api.Files.CreateFolderEntryResult
+  langs:
+  - csharp
+  - vb
+  name: CreateFolderEntryResult(FolderMetadata)
+  nameWithType: CreateFolderEntryResult.CreateFolderEntryResult(FolderMetadata)
+  fullName: Dropbox.Api.Files.CreateFolderEntryResult.CreateFolderEntryResult(Dropbox.Api.Files.FolderMetadata)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/CreateFolderEntryResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/CreateFolderEntryResult.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.CreateFolderEntryResult\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public CreateFolderEntryResult(FolderMetadata metadata)
+    parameters:
+    - id: metadata
+      type: Dropbox.Api.Files.FolderMetadata
+      description: Metadata of the created folder.
+    content.vb: Public Sub New(metadata As FolderMetadata)
+  overload: Dropbox.Api.Files.CreateFolderEntryResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.CreateFolderEntryResult.#ctor
+  commentId: M:Dropbox.Api.Files.CreateFolderEntryResult.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.CreateFolderEntryResult
+  langs:
+  - csharp
+  - vb
+  name: CreateFolderEntryResult()
+  nameWithType: CreateFolderEntryResult.CreateFolderEntryResult()
+  fullName: Dropbox.Api.Files.CreateFolderEntryResult.CreateFolderEntryResult()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/CreateFolderEntryResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/CreateFolderEntryResult.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.CreateFolderEntryResult\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public CreateFolderEntryResult()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.CreateFolderEntryResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.CreateFolderEntryResult.Metadata
+  commentId: P:Dropbox.Api.Files.CreateFolderEntryResult.Metadata
+  id: Metadata
+  parent: Dropbox.Api.Files.CreateFolderEntryResult
+  langs:
+  - csharp
+  - vb
+  name: Metadata
+  nameWithType: CreateFolderEntryResult.Metadata
+  fullName: Dropbox.Api.Files.CreateFolderEntryResult.Metadata
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/CreateFolderEntryResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Metadata
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/CreateFolderEntryResult.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Metadata of the created folder.</p>\n"
+  example: []
+  syntax:
+    content: public FolderMetadata Metadata { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.FolderMetadata
+    content.vb: Public Property Metadata As FolderMetadata
+  overload: Dropbox.Api.Files.CreateFolderEntryResult.Metadata*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.CreateFolderEntryResult
+  commentId: T:Dropbox.Api.Files.CreateFolderEntryResult
+  parent: Dropbox.Api.Files
+  name: CreateFolderEntryResult
+  nameWithType: CreateFolderEntryResult
+  fullName: Dropbox.Api.Files.CreateFolderEntryResult
+- uid: Dropbox.Api.Files.CreateFolderEntryResult.#ctor*
+  commentId: Overload:Dropbox.Api.Files.CreateFolderEntryResult.#ctor
+  name: CreateFolderEntryResult
+  nameWithType: CreateFolderEntryResult.CreateFolderEntryResult
+  fullName: Dropbox.Api.Files.CreateFolderEntryResult.CreateFolderEntryResult
+- uid: Dropbox.Api.Files.FolderMetadata
+  commentId: T:Dropbox.Api.Files.FolderMetadata
+  parent: Dropbox.Api.Files
+  name: FolderMetadata
+  nameWithType: FolderMetadata
+  fullName: Dropbox.Api.Files.FolderMetadata
+- uid: Dropbox.Api.Files.CreateFolderEntryResult.Metadata*
+  commentId: Overload:Dropbox.Api.Files.CreateFolderEntryResult.Metadata
+  name: Metadata
+  nameWithType: CreateFolderEntryResult.Metadata
+  fullName: Dropbox.Api.Files.CreateFolderEntryResult.Metadata
+shouldSkipMarkup: true

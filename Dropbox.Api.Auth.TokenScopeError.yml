@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Auth.TokenScopeError
+  commentId: T:Dropbox.Api.Auth.TokenScopeError
+  id: TokenScopeError
+  parent: Dropbox.Api.Auth
+  children:
+  - Dropbox.Api.Auth.TokenScopeError.#ctor
+  - Dropbox.Api.Auth.TokenScopeError.#ctor(System.String)
+  - Dropbox.Api.Auth.TokenScopeError.RequiredScope
+  langs:
+  - csharp
+  - vb
+  name: TokenScopeError
+  nameWithType: TokenScopeError
+  fullName: Dropbox.Api.Auth.TokenScopeError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/TokenScopeError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TokenScopeError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/TokenScopeError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth
+  summary: "\n<p>The token scope error object</p>\n"
+  example: []
+  syntax:
+    content: 'public class TokenScopeError : object'
+    content.vb: >-
+      Public Class TokenScopeError
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Auth.TokenScopeError.#ctor(System.String)
+  commentId: M:Dropbox.Api.Auth.TokenScopeError.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.Auth.TokenScopeError
+  langs:
+  - csharp
+  - vb
+  name: TokenScopeError(String)
+  nameWithType: TokenScopeError.TokenScopeError(String)
+  fullName: Dropbox.Api.Auth.TokenScopeError.TokenScopeError(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/TokenScopeError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/TokenScopeError.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Auth.TokenScopeError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public TokenScopeError(string requiredScope)
+    parameters:
+    - id: requiredScope
+      type: System.String
+      description: The required scope to access the route.
+    content.vb: Public Sub New(requiredScope As String)
+  overload: Dropbox.Api.Auth.TokenScopeError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Auth.TokenScopeError.#ctor
+  commentId: M:Dropbox.Api.Auth.TokenScopeError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Auth.TokenScopeError
+  langs:
+  - csharp
+  - vb
+  name: TokenScopeError()
+  nameWithType: TokenScopeError.TokenScopeError()
+  fullName: Dropbox.Api.Auth.TokenScopeError.TokenScopeError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/TokenScopeError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/TokenScopeError.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Auth.TokenScopeError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public TokenScopeError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Auth.TokenScopeError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Auth.TokenScopeError.RequiredScope
+  commentId: P:Dropbox.Api.Auth.TokenScopeError.RequiredScope
+  id: RequiredScope
+  parent: Dropbox.Api.Auth.TokenScopeError
+  langs:
+  - csharp
+  - vb
+  name: RequiredScope
+  nameWithType: TokenScopeError.RequiredScope
+  fullName: Dropbox.Api.Auth.TokenScopeError.RequiredScope
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/TokenScopeError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: RequiredScope
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/TokenScopeError.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth
+  summary: "\n<p>The required scope to access the route.</p>\n"
+  example: []
+  syntax:
+    content: public string RequiredScope { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property RequiredScope As String
+  overload: Dropbox.Api.Auth.TokenScopeError.RequiredScope*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Auth
+  commentId: N:Dropbox.Api.Auth
+  name: Dropbox.Api.Auth
+  nameWithType: Dropbox.Api.Auth
+  fullName: Dropbox.Api.Auth
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Auth.TokenScopeError
+  commentId: T:Dropbox.Api.Auth.TokenScopeError
+  parent: Dropbox.Api.Auth
+  name: TokenScopeError
+  nameWithType: TokenScopeError
+  fullName: Dropbox.Api.Auth.TokenScopeError
+- uid: Dropbox.Api.Auth.TokenScopeError.#ctor*
+  commentId: Overload:Dropbox.Api.Auth.TokenScopeError.#ctor
+  name: TokenScopeError
+  nameWithType: TokenScopeError.TokenScopeError
+  fullName: Dropbox.Api.Auth.TokenScopeError.TokenScopeError
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Auth.TokenScopeError.RequiredScope*
+  commentId: Overload:Dropbox.Api.Auth.TokenScopeError.RequiredScope
+  name: RequiredScope
+  nameWithType: TokenScopeError.RequiredScope
+  fullName: Dropbox.Api.Auth.TokenScopeError.RequiredScope
+shouldSkipMarkup: true

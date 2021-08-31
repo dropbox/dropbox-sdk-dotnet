@@ -1,0 +1,148 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Paper.UserOnPaperDocFilter.Other
+  commentId: T:Dropbox.Api.Paper.UserOnPaperDocFilter.Other
+  id: UserOnPaperDocFilter.Other
+  parent: Dropbox.Api.Paper
+  children:
+  - Dropbox.Api.Paper.UserOnPaperDocFilter.Other.Instance
+  langs:
+  - csharp
+  - vb
+  name: UserOnPaperDocFilter.Other
+  nameWithType: UserOnPaperDocFilter.Other
+  fullName: Dropbox.Api.Paper.UserOnPaperDocFilter.Other
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/UserOnPaperDocFilter.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Other
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/UserOnPaperDocFilter.cs
+    startLine: 321
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>The other object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Other : UserOnPaperDocFilter'
+    content.vb: >-
+      Public NotInheritable Class Other
+          Inherits UserOnPaperDocFilter
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Paper.UserOnPaperDocFilter
+  inheritedMembers:
+  - Dropbox.Api.Paper.UserOnPaperDocFilter.IsVisited
+  - Dropbox.Api.Paper.UserOnPaperDocFilter.AsVisited
+  - Dropbox.Api.Paper.UserOnPaperDocFilter.IsShared
+  - Dropbox.Api.Paper.UserOnPaperDocFilter.AsShared
+  - Dropbox.Api.Paper.UserOnPaperDocFilter.IsOther
+  - Dropbox.Api.Paper.UserOnPaperDocFilter.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Paper.UserOnPaperDocFilter.Other.Instance
+  commentId: F:Dropbox.Api.Paper.UserOnPaperDocFilter.Other.Instance
+  id: Instance
+  parent: Dropbox.Api.Paper.UserOnPaperDocFilter.Other
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: UserOnPaperDocFilter.Other.Instance
+  fullName: Dropbox.Api.Paper.UserOnPaperDocFilter.Other.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/UserOnPaperDocFilter.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/UserOnPaperDocFilter.cs
+    startLine: 345
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>A singleton instance of Other</p>\n"
+  example: []
+  syntax:
+    content: public static readonly UserOnPaperDocFilter.Other Instance
+    return:
+      type: Dropbox.Api.Paper.UserOnPaperDocFilter.Other
+    content.vb: Public Shared ReadOnly Instance As UserOnPaperDocFilter.Other
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Paper
+  commentId: N:Dropbox.Api.Paper
+  name: Dropbox.Api.Paper
+  nameWithType: Dropbox.Api.Paper
+  fullName: Dropbox.Api.Paper
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Paper.UserOnPaperDocFilter
+  commentId: T:Dropbox.Api.Paper.UserOnPaperDocFilter
+  parent: Dropbox.Api.Paper
+  name: UserOnPaperDocFilter
+  nameWithType: UserOnPaperDocFilter
+  fullName: Dropbox.Api.Paper.UserOnPaperDocFilter
+- uid: Dropbox.Api.Paper.UserOnPaperDocFilter.IsVisited
+  commentId: P:Dropbox.Api.Paper.UserOnPaperDocFilter.IsVisited
+  parent: Dropbox.Api.Paper.UserOnPaperDocFilter
+  name: IsVisited
+  nameWithType: UserOnPaperDocFilter.IsVisited
+  fullName: Dropbox.Api.Paper.UserOnPaperDocFilter.IsVisited
+- uid: Dropbox.Api.Paper.UserOnPaperDocFilter.AsVisited
+  commentId: P:Dropbox.Api.Paper.UserOnPaperDocFilter.AsVisited
+  parent: Dropbox.Api.Paper.UserOnPaperDocFilter
+  name: AsVisited
+  nameWithType: UserOnPaperDocFilter.AsVisited
+  fullName: Dropbox.Api.Paper.UserOnPaperDocFilter.AsVisited
+- uid: Dropbox.Api.Paper.UserOnPaperDocFilter.IsShared
+  commentId: P:Dropbox.Api.Paper.UserOnPaperDocFilter.IsShared
+  parent: Dropbox.Api.Paper.UserOnPaperDocFilter
+  name: IsShared
+  nameWithType: UserOnPaperDocFilter.IsShared
+  fullName: Dropbox.Api.Paper.UserOnPaperDocFilter.IsShared
+- uid: Dropbox.Api.Paper.UserOnPaperDocFilter.AsShared
+  commentId: P:Dropbox.Api.Paper.UserOnPaperDocFilter.AsShared
+  parent: Dropbox.Api.Paper.UserOnPaperDocFilter
+  name: AsShared
+  nameWithType: UserOnPaperDocFilter.AsShared
+  fullName: Dropbox.Api.Paper.UserOnPaperDocFilter.AsShared
+- uid: Dropbox.Api.Paper.UserOnPaperDocFilter.IsOther
+  commentId: P:Dropbox.Api.Paper.UserOnPaperDocFilter.IsOther
+  parent: Dropbox.Api.Paper.UserOnPaperDocFilter
+  name: IsOther
+  nameWithType: UserOnPaperDocFilter.IsOther
+  fullName: Dropbox.Api.Paper.UserOnPaperDocFilter.IsOther
+- uid: Dropbox.Api.Paper.UserOnPaperDocFilter.AsOther
+  commentId: P:Dropbox.Api.Paper.UserOnPaperDocFilter.AsOther
+  parent: Dropbox.Api.Paper.UserOnPaperDocFilter
+  name: AsOther
+  nameWithType: UserOnPaperDocFilter.AsOther
+  fullName: Dropbox.Api.Paper.UserOnPaperDocFilter.AsOther
+- uid: Dropbox.Api.Paper.UserOnPaperDocFilter.Other
+  commentId: T:Dropbox.Api.Paper.UserOnPaperDocFilter.Other
+  parent: Dropbox.Api.Paper
+  name: UserOnPaperDocFilter.Other
+  nameWithType: UserOnPaperDocFilter.Other
+  fullName: Dropbox.Api.Paper.UserOnPaperDocFilter.Other
+shouldSkipMarkup: true

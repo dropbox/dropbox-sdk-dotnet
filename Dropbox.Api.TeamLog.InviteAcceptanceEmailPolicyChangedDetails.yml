@@ -1,0 +1,236 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.InviteAcceptanceEmailPolicyChangedDetails
+  commentId: T:Dropbox.Api.TeamLog.InviteAcceptanceEmailPolicyChangedDetails
+  id: InviteAcceptanceEmailPolicyChangedDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.InviteAcceptanceEmailPolicyChangedDetails.#ctor
+  - Dropbox.Api.TeamLog.InviteAcceptanceEmailPolicyChangedDetails.#ctor(Dropbox.Api.TeamLog.InviteAcceptanceEmailPolicy,Dropbox.Api.TeamLog.InviteAcceptanceEmailPolicy)
+  - Dropbox.Api.TeamLog.InviteAcceptanceEmailPolicyChangedDetails.NewValue
+  - Dropbox.Api.TeamLog.InviteAcceptanceEmailPolicyChangedDetails.PreviousValue
+  langs:
+  - csharp
+  - vb
+  name: InviteAcceptanceEmailPolicyChangedDetails
+  nameWithType: InviteAcceptanceEmailPolicyChangedDetails
+  fullName: Dropbox.Api.TeamLog.InviteAcceptanceEmailPolicyChangedDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/InviteAcceptanceEmailPolicyChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: InviteAcceptanceEmailPolicyChangedDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/InviteAcceptanceEmailPolicyChangedDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Changed invite accept email policy for team.</p>\n"
+  example: []
+  syntax:
+    content: 'public class InviteAcceptanceEmailPolicyChangedDetails : object'
+    content.vb: >-
+      Public Class InviteAcceptanceEmailPolicyChangedDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.InviteAcceptanceEmailPolicyChangedDetails.#ctor(Dropbox.Api.TeamLog.InviteAcceptanceEmailPolicy,Dropbox.Api.TeamLog.InviteAcceptanceEmailPolicy)
+  commentId: M:Dropbox.Api.TeamLog.InviteAcceptanceEmailPolicyChangedDetails.#ctor(Dropbox.Api.TeamLog.InviteAcceptanceEmailPolicy,Dropbox.Api.TeamLog.InviteAcceptanceEmailPolicy)
+  id: '#ctor(Dropbox.Api.TeamLog.InviteAcceptanceEmailPolicy,Dropbox.Api.TeamLog.InviteAcceptanceEmailPolicy)'
+  parent: Dropbox.Api.TeamLog.InviteAcceptanceEmailPolicyChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: InviteAcceptanceEmailPolicyChangedDetails(InviteAcceptanceEmailPolicy, InviteAcceptanceEmailPolicy)
+  nameWithType: InviteAcceptanceEmailPolicyChangedDetails.InviteAcceptanceEmailPolicyChangedDetails(InviteAcceptanceEmailPolicy, InviteAcceptanceEmailPolicy)
+  fullName: Dropbox.Api.TeamLog.InviteAcceptanceEmailPolicyChangedDetails.InviteAcceptanceEmailPolicyChangedDetails(Dropbox.Api.TeamLog.InviteAcceptanceEmailPolicy, Dropbox.Api.TeamLog.InviteAcceptanceEmailPolicy)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/InviteAcceptanceEmailPolicyChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/InviteAcceptanceEmailPolicyChangedDetails.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.InviteAcceptanceEmailPolicyChangedDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public InviteAcceptanceEmailPolicyChangedDetails(InviteAcceptanceEmailPolicy newValue, InviteAcceptanceEmailPolicy previousValue)
+    parameters:
+    - id: newValue
+      type: Dropbox.Api.TeamLog.InviteAcceptanceEmailPolicy
+      description: To.
+    - id: previousValue
+      type: Dropbox.Api.TeamLog.InviteAcceptanceEmailPolicy
+      description: From.
+    content.vb: Public Sub New(newValue As InviteAcceptanceEmailPolicy, previousValue As InviteAcceptanceEmailPolicy)
+  overload: Dropbox.Api.TeamLog.InviteAcceptanceEmailPolicyChangedDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.InviteAcceptanceEmailPolicyChangedDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.InviteAcceptanceEmailPolicyChangedDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.InviteAcceptanceEmailPolicyChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: InviteAcceptanceEmailPolicyChangedDetails()
+  nameWithType: InviteAcceptanceEmailPolicyChangedDetails.InviteAcceptanceEmailPolicyChangedDetails()
+  fullName: Dropbox.Api.TeamLog.InviteAcceptanceEmailPolicyChangedDetails.InviteAcceptanceEmailPolicyChangedDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/InviteAcceptanceEmailPolicyChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/InviteAcceptanceEmailPolicyChangedDetails.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.InviteAcceptanceEmailPolicyChangedDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public InviteAcceptanceEmailPolicyChangedDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.InviteAcceptanceEmailPolicyChangedDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.InviteAcceptanceEmailPolicyChangedDetails.NewValue
+  commentId: P:Dropbox.Api.TeamLog.InviteAcceptanceEmailPolicyChangedDetails.NewValue
+  id: NewValue
+  parent: Dropbox.Api.TeamLog.InviteAcceptanceEmailPolicyChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: NewValue
+  nameWithType: InviteAcceptanceEmailPolicyChangedDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.InviteAcceptanceEmailPolicyChangedDetails.NewValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/InviteAcceptanceEmailPolicyChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NewValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/InviteAcceptanceEmailPolicyChangedDetails.cs
+    startLine: 66
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>To.</p>\n"
+  example: []
+  syntax:
+    content: public InviteAcceptanceEmailPolicy NewValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.InviteAcceptanceEmailPolicy
+    content.vb: Public Property NewValue As InviteAcceptanceEmailPolicy
+  overload: Dropbox.Api.TeamLog.InviteAcceptanceEmailPolicyChangedDetails.NewValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.InviteAcceptanceEmailPolicyChangedDetails.PreviousValue
+  commentId: P:Dropbox.Api.TeamLog.InviteAcceptanceEmailPolicyChangedDetails.PreviousValue
+  id: PreviousValue
+  parent: Dropbox.Api.TeamLog.InviteAcceptanceEmailPolicyChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: PreviousValue
+  nameWithType: InviteAcceptanceEmailPolicyChangedDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.InviteAcceptanceEmailPolicyChangedDetails.PreviousValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/InviteAcceptanceEmailPolicyChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PreviousValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/InviteAcceptanceEmailPolicyChangedDetails.cs
+    startLine: 71
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>From.</p>\n"
+  example: []
+  syntax:
+    content: public InviteAcceptanceEmailPolicy PreviousValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.InviteAcceptanceEmailPolicy
+    content.vb: Public Property PreviousValue As InviteAcceptanceEmailPolicy
+  overload: Dropbox.Api.TeamLog.InviteAcceptanceEmailPolicyChangedDetails.PreviousValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.InviteAcceptanceEmailPolicyChangedDetails
+  commentId: T:Dropbox.Api.TeamLog.InviteAcceptanceEmailPolicyChangedDetails
+  parent: Dropbox.Api.TeamLog
+  name: InviteAcceptanceEmailPolicyChangedDetails
+  nameWithType: InviteAcceptanceEmailPolicyChangedDetails
+  fullName: Dropbox.Api.TeamLog.InviteAcceptanceEmailPolicyChangedDetails
+- uid: Dropbox.Api.TeamLog.InviteAcceptanceEmailPolicyChangedDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.InviteAcceptanceEmailPolicyChangedDetails.#ctor
+  name: InviteAcceptanceEmailPolicyChangedDetails
+  nameWithType: InviteAcceptanceEmailPolicyChangedDetails.InviteAcceptanceEmailPolicyChangedDetails
+  fullName: Dropbox.Api.TeamLog.InviteAcceptanceEmailPolicyChangedDetails.InviteAcceptanceEmailPolicyChangedDetails
+- uid: Dropbox.Api.TeamLog.InviteAcceptanceEmailPolicy
+  commentId: T:Dropbox.Api.TeamLog.InviteAcceptanceEmailPolicy
+  parent: Dropbox.Api.TeamLog
+  name: InviteAcceptanceEmailPolicy
+  nameWithType: InviteAcceptanceEmailPolicy
+  fullName: Dropbox.Api.TeamLog.InviteAcceptanceEmailPolicy
+- uid: Dropbox.Api.TeamLog.InviteAcceptanceEmailPolicyChangedDetails.NewValue*
+  commentId: Overload:Dropbox.Api.TeamLog.InviteAcceptanceEmailPolicyChangedDetails.NewValue
+  name: NewValue
+  nameWithType: InviteAcceptanceEmailPolicyChangedDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.InviteAcceptanceEmailPolicyChangedDetails.NewValue
+- uid: Dropbox.Api.TeamLog.InviteAcceptanceEmailPolicyChangedDetails.PreviousValue*
+  commentId: Overload:Dropbox.Api.TeamLog.InviteAcceptanceEmailPolicyChangedDetails.PreviousValue
+  name: PreviousValue
+  nameWithType: InviteAcceptanceEmailPolicyChangedDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.InviteAcceptanceEmailPolicyChangedDetails.PreviousValue
+shouldSkipMarkup: true

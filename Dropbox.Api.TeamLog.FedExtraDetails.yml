@@ -1,0 +1,381 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.FedExtraDetails
+  commentId: T:Dropbox.Api.TeamLog.FedExtraDetails
+  id: FedExtraDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.FedExtraDetails.#ctor
+  - Dropbox.Api.TeamLog.FedExtraDetails.AsOrganization
+  - Dropbox.Api.TeamLog.FedExtraDetails.AsOther
+  - Dropbox.Api.TeamLog.FedExtraDetails.AsTeam
+  - Dropbox.Api.TeamLog.FedExtraDetails.IsOrganization
+  - Dropbox.Api.TeamLog.FedExtraDetails.IsOther
+  - Dropbox.Api.TeamLog.FedExtraDetails.IsTeam
+  langs:
+  - csharp
+  - vb
+  name: FedExtraDetails
+  nameWithType: FedExtraDetails
+  fullName: Dropbox.Api.TeamLog.FedExtraDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FedExtraDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: FedExtraDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FedExtraDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>More details about the organization or team.</p>\n"
+  example: []
+  syntax:
+    content: 'public class FedExtraDetails : object'
+    content.vb: >-
+      Public Class FedExtraDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.TeamLog.FedExtraDetails.Organization
+  - Dropbox.Api.TeamLog.FedExtraDetails.Other
+  - Dropbox.Api.TeamLog.FedExtraDetails.Team
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.FedExtraDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.FedExtraDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.FedExtraDetails
+  langs:
+  - csharp
+  - vb
+  name: FedExtraDetails()
+  nameWithType: FedExtraDetails.FedExtraDetails()
+  fullName: Dropbox.Api.TeamLog.FedExtraDetails.FedExtraDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FedExtraDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FedExtraDetails.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.FedExtraDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public FedExtraDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.FedExtraDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.FedExtraDetails.IsOrganization
+  commentId: P:Dropbox.Api.TeamLog.FedExtraDetails.IsOrganization
+  id: IsOrganization
+  parent: Dropbox.Api.TeamLog.FedExtraDetails
+  langs:
+  - csharp
+  - vb
+  name: IsOrganization
+  nameWithType: FedExtraDetails.IsOrganization
+  fullName: Dropbox.Api.TeamLog.FedExtraDetails.IsOrganization
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FedExtraDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOrganization
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FedExtraDetails.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Organization</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOrganization { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOrganization As Boolean
+  overload: Dropbox.Api.TeamLog.FedExtraDetails.IsOrganization*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.FedExtraDetails.AsOrganization
+  commentId: P:Dropbox.Api.TeamLog.FedExtraDetails.AsOrganization
+  id: AsOrganization
+  parent: Dropbox.Api.TeamLog.FedExtraDetails
+  langs:
+  - csharp
+  - vb
+  name: AsOrganization
+  nameWithType: FedExtraDetails.AsOrganization
+  fullName: Dropbox.Api.TeamLog.FedExtraDetails.AsOrganization
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FedExtraDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOrganization
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FedExtraDetails.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Organization, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public FedExtraDetails.Organization AsOrganization { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.FedExtraDetails.Organization
+    content.vb: Public ReadOnly Property AsOrganization As FedExtraDetails.Organization
+  overload: Dropbox.Api.TeamLog.FedExtraDetails.AsOrganization*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.FedExtraDetails.IsTeam
+  commentId: P:Dropbox.Api.TeamLog.FedExtraDetails.IsTeam
+  id: IsTeam
+  parent: Dropbox.Api.TeamLog.FedExtraDetails
+  langs:
+  - csharp
+  - vb
+  name: IsTeam
+  nameWithType: FedExtraDetails.IsTeam
+  fullName: Dropbox.Api.TeamLog.FedExtraDetails.IsTeam
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FedExtraDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FedExtraDetails.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Team</p>\n"
+  example: []
+  syntax:
+    content: public bool IsTeam { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsTeam As Boolean
+  overload: Dropbox.Api.TeamLog.FedExtraDetails.IsTeam*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.FedExtraDetails.AsTeam
+  commentId: P:Dropbox.Api.TeamLog.FedExtraDetails.AsTeam
+  id: AsTeam
+  parent: Dropbox.Api.TeamLog.FedExtraDetails
+  langs:
+  - csharp
+  - vb
+  name: AsTeam
+  nameWithType: FedExtraDetails.AsTeam
+  fullName: Dropbox.Api.TeamLog.FedExtraDetails.AsTeam
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FedExtraDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsTeam
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FedExtraDetails.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Team, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public FedExtraDetails.Team AsTeam { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.FedExtraDetails.Team
+    content.vb: Public ReadOnly Property AsTeam As FedExtraDetails.Team
+  overload: Dropbox.Api.TeamLog.FedExtraDetails.AsTeam*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.FedExtraDetails.IsOther
+  commentId: P:Dropbox.Api.TeamLog.FedExtraDetails.IsOther
+  id: IsOther
+  parent: Dropbox.Api.TeamLog.FedExtraDetails
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: FedExtraDetails.IsOther
+  fullName: Dropbox.Api.TeamLog.FedExtraDetails.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FedExtraDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FedExtraDetails.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.TeamLog.FedExtraDetails.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamLog.FedExtraDetails.AsOther
+  commentId: P:Dropbox.Api.TeamLog.FedExtraDetails.AsOther
+  id: AsOther
+  parent: Dropbox.Api.TeamLog.FedExtraDetails
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: FedExtraDetails.AsOther
+  fullName: Dropbox.Api.TeamLog.FedExtraDetails.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FedExtraDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FedExtraDetails.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public FedExtraDetails.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.FedExtraDetails.Other
+    content.vb: Public ReadOnly Property AsOther As FedExtraDetails.Other
+  overload: Dropbox.Api.TeamLog.FedExtraDetails.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.FedExtraDetails
+  commentId: T:Dropbox.Api.TeamLog.FedExtraDetails
+  parent: Dropbox.Api.TeamLog
+  name: FedExtraDetails
+  nameWithType: FedExtraDetails
+  fullName: Dropbox.Api.TeamLog.FedExtraDetails
+- uid: Dropbox.Api.TeamLog.FedExtraDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.FedExtraDetails.#ctor
+  name: FedExtraDetails
+  nameWithType: FedExtraDetails.FedExtraDetails
+  fullName: Dropbox.Api.TeamLog.FedExtraDetails.FedExtraDetails
+- uid: Dropbox.Api.TeamLog.FedExtraDetails.IsOrganization*
+  commentId: Overload:Dropbox.Api.TeamLog.FedExtraDetails.IsOrganization
+  name: IsOrganization
+  nameWithType: FedExtraDetails.IsOrganization
+  fullName: Dropbox.Api.TeamLog.FedExtraDetails.IsOrganization
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.TeamLog.FedExtraDetails.AsOrganization*
+  commentId: Overload:Dropbox.Api.TeamLog.FedExtraDetails.AsOrganization
+  name: AsOrganization
+  nameWithType: FedExtraDetails.AsOrganization
+  fullName: Dropbox.Api.TeamLog.FedExtraDetails.AsOrganization
+- uid: Dropbox.Api.TeamLog.FedExtraDetails.Organization
+  commentId: T:Dropbox.Api.TeamLog.FedExtraDetails.Organization
+  parent: Dropbox.Api.TeamLog
+  name: FedExtraDetails.Organization
+  nameWithType: FedExtraDetails.Organization
+  fullName: Dropbox.Api.TeamLog.FedExtraDetails.Organization
+- uid: Dropbox.Api.TeamLog.FedExtraDetails.IsTeam*
+  commentId: Overload:Dropbox.Api.TeamLog.FedExtraDetails.IsTeam
+  name: IsTeam
+  nameWithType: FedExtraDetails.IsTeam
+  fullName: Dropbox.Api.TeamLog.FedExtraDetails.IsTeam
+- uid: Dropbox.Api.TeamLog.FedExtraDetails.AsTeam*
+  commentId: Overload:Dropbox.Api.TeamLog.FedExtraDetails.AsTeam
+  name: AsTeam
+  nameWithType: FedExtraDetails.AsTeam
+  fullName: Dropbox.Api.TeamLog.FedExtraDetails.AsTeam
+- uid: Dropbox.Api.TeamLog.FedExtraDetails.Team
+  commentId: T:Dropbox.Api.TeamLog.FedExtraDetails.Team
+  parent: Dropbox.Api.TeamLog
+  name: FedExtraDetails.Team
+  nameWithType: FedExtraDetails.Team
+  fullName: Dropbox.Api.TeamLog.FedExtraDetails.Team
+- uid: Dropbox.Api.TeamLog.FedExtraDetails.IsOther*
+  commentId: Overload:Dropbox.Api.TeamLog.FedExtraDetails.IsOther
+  name: IsOther
+  nameWithType: FedExtraDetails.IsOther
+  fullName: Dropbox.Api.TeamLog.FedExtraDetails.IsOther
+- uid: Dropbox.Api.TeamLog.FedExtraDetails.AsOther*
+  commentId: Overload:Dropbox.Api.TeamLog.FedExtraDetails.AsOther
+  name: AsOther
+  nameWithType: FedExtraDetails.AsOther
+  fullName: Dropbox.Api.TeamLog.FedExtraDetails.AsOther
+- uid: Dropbox.Api.TeamLog.FedExtraDetails.Other
+  commentId: T:Dropbox.Api.TeamLog.FedExtraDetails.Other
+  parent: Dropbox.Api.TeamLog
+  name: FedExtraDetails.Other
+  nameWithType: FedExtraDetails.Other
+  fullName: Dropbox.Api.TeamLog.FedExtraDetails.Other
+shouldSkipMarkup: true

@@ -1,0 +1,176 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.TfaConfiguration.Disabled
+  commentId: T:Dropbox.Api.TeamLog.TfaConfiguration.Disabled
+  id: TfaConfiguration.Disabled
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.TfaConfiguration.Disabled.Instance
+  langs:
+  - csharp
+  - vb
+  name: TfaConfiguration.Disabled
+  nameWithType: TfaConfiguration.Disabled
+  fullName: Dropbox.Api.TeamLog.TfaConfiguration.Disabled
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaConfiguration.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Disabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaConfiguration.cs
+    startLine: 313
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The disabled object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Disabled : TfaConfiguration'
+    content.vb: >-
+      Public NotInheritable Class Disabled
+          Inherits TfaConfiguration
+  inheritance:
+  - System.Object
+  - Dropbox.Api.TeamLog.TfaConfiguration
+  inheritedMembers:
+  - Dropbox.Api.TeamLog.TfaConfiguration.IsAuthenticator
+  - Dropbox.Api.TeamLog.TfaConfiguration.AsAuthenticator
+  - Dropbox.Api.TeamLog.TfaConfiguration.IsDisabled
+  - Dropbox.Api.TeamLog.TfaConfiguration.AsDisabled
+  - Dropbox.Api.TeamLog.TfaConfiguration.IsEnabled
+  - Dropbox.Api.TeamLog.TfaConfiguration.AsEnabled
+  - Dropbox.Api.TeamLog.TfaConfiguration.IsSms
+  - Dropbox.Api.TeamLog.TfaConfiguration.AsSms
+  - Dropbox.Api.TeamLog.TfaConfiguration.IsOther
+  - Dropbox.Api.TeamLog.TfaConfiguration.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.TeamLog.TfaConfiguration.Disabled.Instance
+  commentId: F:Dropbox.Api.TeamLog.TfaConfiguration.Disabled.Instance
+  id: Instance
+  parent: Dropbox.Api.TeamLog.TfaConfiguration.Disabled
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: TfaConfiguration.Disabled.Instance
+  fullName: Dropbox.Api.TeamLog.TfaConfiguration.Disabled.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaConfiguration.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TfaConfiguration.cs
+    startLine: 337
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>A singleton instance of Disabled</p>\n"
+  example: []
+  syntax:
+    content: public static readonly TfaConfiguration.Disabled Instance
+    return:
+      type: Dropbox.Api.TeamLog.TfaConfiguration.Disabled
+    content.vb: Public Shared ReadOnly Instance As TfaConfiguration.Disabled
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.TfaConfiguration
+  commentId: T:Dropbox.Api.TeamLog.TfaConfiguration
+  parent: Dropbox.Api.TeamLog
+  name: TfaConfiguration
+  nameWithType: TfaConfiguration
+  fullName: Dropbox.Api.TeamLog.TfaConfiguration
+- uid: Dropbox.Api.TeamLog.TfaConfiguration.IsAuthenticator
+  commentId: P:Dropbox.Api.TeamLog.TfaConfiguration.IsAuthenticator
+  parent: Dropbox.Api.TeamLog.TfaConfiguration
+  name: IsAuthenticator
+  nameWithType: TfaConfiguration.IsAuthenticator
+  fullName: Dropbox.Api.TeamLog.TfaConfiguration.IsAuthenticator
+- uid: Dropbox.Api.TeamLog.TfaConfiguration.AsAuthenticator
+  commentId: P:Dropbox.Api.TeamLog.TfaConfiguration.AsAuthenticator
+  parent: Dropbox.Api.TeamLog.TfaConfiguration
+  name: AsAuthenticator
+  nameWithType: TfaConfiguration.AsAuthenticator
+  fullName: Dropbox.Api.TeamLog.TfaConfiguration.AsAuthenticator
+- uid: Dropbox.Api.TeamLog.TfaConfiguration.IsDisabled
+  commentId: P:Dropbox.Api.TeamLog.TfaConfiguration.IsDisabled
+  parent: Dropbox.Api.TeamLog.TfaConfiguration
+  name: IsDisabled
+  nameWithType: TfaConfiguration.IsDisabled
+  fullName: Dropbox.Api.TeamLog.TfaConfiguration.IsDisabled
+- uid: Dropbox.Api.TeamLog.TfaConfiguration.AsDisabled
+  commentId: P:Dropbox.Api.TeamLog.TfaConfiguration.AsDisabled
+  parent: Dropbox.Api.TeamLog.TfaConfiguration
+  name: AsDisabled
+  nameWithType: TfaConfiguration.AsDisabled
+  fullName: Dropbox.Api.TeamLog.TfaConfiguration.AsDisabled
+- uid: Dropbox.Api.TeamLog.TfaConfiguration.IsEnabled
+  commentId: P:Dropbox.Api.TeamLog.TfaConfiguration.IsEnabled
+  parent: Dropbox.Api.TeamLog.TfaConfiguration
+  name: IsEnabled
+  nameWithType: TfaConfiguration.IsEnabled
+  fullName: Dropbox.Api.TeamLog.TfaConfiguration.IsEnabled
+- uid: Dropbox.Api.TeamLog.TfaConfiguration.AsEnabled
+  commentId: P:Dropbox.Api.TeamLog.TfaConfiguration.AsEnabled
+  parent: Dropbox.Api.TeamLog.TfaConfiguration
+  name: AsEnabled
+  nameWithType: TfaConfiguration.AsEnabled
+  fullName: Dropbox.Api.TeamLog.TfaConfiguration.AsEnabled
+- uid: Dropbox.Api.TeamLog.TfaConfiguration.IsSms
+  commentId: P:Dropbox.Api.TeamLog.TfaConfiguration.IsSms
+  parent: Dropbox.Api.TeamLog.TfaConfiguration
+  name: IsSms
+  nameWithType: TfaConfiguration.IsSms
+  fullName: Dropbox.Api.TeamLog.TfaConfiguration.IsSms
+- uid: Dropbox.Api.TeamLog.TfaConfiguration.AsSms
+  commentId: P:Dropbox.Api.TeamLog.TfaConfiguration.AsSms
+  parent: Dropbox.Api.TeamLog.TfaConfiguration
+  name: AsSms
+  nameWithType: TfaConfiguration.AsSms
+  fullName: Dropbox.Api.TeamLog.TfaConfiguration.AsSms
+- uid: Dropbox.Api.TeamLog.TfaConfiguration.IsOther
+  commentId: P:Dropbox.Api.TeamLog.TfaConfiguration.IsOther
+  parent: Dropbox.Api.TeamLog.TfaConfiguration
+  name: IsOther
+  nameWithType: TfaConfiguration.IsOther
+  fullName: Dropbox.Api.TeamLog.TfaConfiguration.IsOther
+- uid: Dropbox.Api.TeamLog.TfaConfiguration.AsOther
+  commentId: P:Dropbox.Api.TeamLog.TfaConfiguration.AsOther
+  parent: Dropbox.Api.TeamLog.TfaConfiguration
+  name: AsOther
+  nameWithType: TfaConfiguration.AsOther
+  fullName: Dropbox.Api.TeamLog.TfaConfiguration.AsOther
+- uid: Dropbox.Api.TeamLog.TfaConfiguration.Disabled
+  commentId: T:Dropbox.Api.TeamLog.TfaConfiguration.Disabled
+  parent: Dropbox.Api.TeamLog
+  name: TfaConfiguration.Disabled
+  nameWithType: TfaConfiguration.Disabled
+  fullName: Dropbox.Api.TeamLog.TfaConfiguration.Disabled
+shouldSkipMarkup: true

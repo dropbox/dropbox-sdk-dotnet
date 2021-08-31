@@ -1,0 +1,846 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Auth.AuthError
+  commentId: T:Dropbox.Api.Auth.AuthError
+  id: AuthError
+  parent: Dropbox.Api.Auth
+  children:
+  - Dropbox.Api.Auth.AuthError.#ctor
+  - Dropbox.Api.Auth.AuthError.AsExpiredAccessToken
+  - Dropbox.Api.Auth.AuthError.AsInvalidAccessToken
+  - Dropbox.Api.Auth.AuthError.AsInvalidSelectAdmin
+  - Dropbox.Api.Auth.AuthError.AsInvalidSelectUser
+  - Dropbox.Api.Auth.AuthError.AsMissingScope
+  - Dropbox.Api.Auth.AuthError.AsOther
+  - Dropbox.Api.Auth.AuthError.AsRouteAccessDenied
+  - Dropbox.Api.Auth.AuthError.AsUserSuspended
+  - Dropbox.Api.Auth.AuthError.IsExpiredAccessToken
+  - Dropbox.Api.Auth.AuthError.IsInvalidAccessToken
+  - Dropbox.Api.Auth.AuthError.IsInvalidSelectAdmin
+  - Dropbox.Api.Auth.AuthError.IsInvalidSelectUser
+  - Dropbox.Api.Auth.AuthError.IsMissingScope
+  - Dropbox.Api.Auth.AuthError.IsOther
+  - Dropbox.Api.Auth.AuthError.IsRouteAccessDenied
+  - Dropbox.Api.Auth.AuthError.IsUserSuspended
+  langs:
+  - csharp
+  - vb
+  name: AuthError
+  nameWithType: AuthError
+  fullName: Dropbox.Api.Auth.AuthError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AuthError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth
+  summary: "\n<p>Errors occurred during authentication.</p>\n"
+  example: []
+  syntax:
+    content: 'public class AuthError : object'
+    content.vb: >-
+      Public Class AuthError
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Auth.AuthError.ExpiredAccessToken
+  - Dropbox.Api.Auth.AuthError.InvalidAccessToken
+  - Dropbox.Api.Auth.AuthError.InvalidSelectAdmin
+  - Dropbox.Api.Auth.AuthError.InvalidSelectUser
+  - Dropbox.Api.Auth.AuthError.MissingScope
+  - Dropbox.Api.Auth.AuthError.Other
+  - Dropbox.Api.Auth.AuthError.RouteAccessDenied
+  - Dropbox.Api.Auth.AuthError.UserSuspended
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Auth.AuthError.#ctor
+  commentId: M:Dropbox.Api.Auth.AuthError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Auth.AuthError
+  langs:
+  - csharp
+  - vb
+  name: AuthError()
+  nameWithType: AuthError.AuthError()
+  fullName: Dropbox.Api.Auth.AuthError.AuthError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthError.cs
+    startLine: 32
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Auth.AuthError\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public AuthError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Auth.AuthError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Auth.AuthError.IsInvalidAccessToken
+  commentId: P:Dropbox.Api.Auth.AuthError.IsInvalidAccessToken
+  id: IsInvalidAccessToken
+  parent: Dropbox.Api.Auth.AuthError
+  langs:
+  - csharp
+  - vb
+  name: IsInvalidAccessToken
+  nameWithType: AuthError.IsInvalidAccessToken
+  fullName: Dropbox.Api.Auth.AuthError.IsInvalidAccessToken
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsInvalidAccessToken
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthError.cs
+    startLine: 39
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth
+  summary: "\n<p>Gets a value indicating whether this instance is InvalidAccessToken</p>\n"
+  example: []
+  syntax:
+    content: public bool IsInvalidAccessToken { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsInvalidAccessToken As Boolean
+  overload: Dropbox.Api.Auth.AuthError.IsInvalidAccessToken*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Auth.AuthError.AsInvalidAccessToken
+  commentId: P:Dropbox.Api.Auth.AuthError.AsInvalidAccessToken
+  id: AsInvalidAccessToken
+  parent: Dropbox.Api.Auth.AuthError
+  langs:
+  - csharp
+  - vb
+  name: AsInvalidAccessToken
+  nameWithType: AuthError.AsInvalidAccessToken
+  fullName: Dropbox.Api.Auth.AuthError.AsInvalidAccessToken
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsInvalidAccessToken
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthError.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth
+  summary: "\n<p>Gets this instance as a InvalidAccessToken, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public AuthError.InvalidAccessToken AsInvalidAccessToken { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Auth.AuthError.InvalidAccessToken
+    content.vb: Public ReadOnly Property AsInvalidAccessToken As AuthError.InvalidAccessToken
+  overload: Dropbox.Api.Auth.AuthError.AsInvalidAccessToken*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Auth.AuthError.IsInvalidSelectUser
+  commentId: P:Dropbox.Api.Auth.AuthError.IsInvalidSelectUser
+  id: IsInvalidSelectUser
+  parent: Dropbox.Api.Auth.AuthError
+  langs:
+  - csharp
+  - vb
+  name: IsInvalidSelectUser
+  nameWithType: AuthError.IsInvalidSelectUser
+  fullName: Dropbox.Api.Auth.AuthError.IsInvalidSelectUser
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsInvalidSelectUser
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthError.cs
+    startLine: 61
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth
+  summary: "\n<p>Gets a value indicating whether this instance is InvalidSelectUser</p>\n"
+  example: []
+  syntax:
+    content: public bool IsInvalidSelectUser { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsInvalidSelectUser As Boolean
+  overload: Dropbox.Api.Auth.AuthError.IsInvalidSelectUser*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Auth.AuthError.AsInvalidSelectUser
+  commentId: P:Dropbox.Api.Auth.AuthError.AsInvalidSelectUser
+  id: AsInvalidSelectUser
+  parent: Dropbox.Api.Auth.AuthError
+  langs:
+  - csharp
+  - vb
+  name: AsInvalidSelectUser
+  nameWithType: AuthError.AsInvalidSelectUser
+  fullName: Dropbox.Api.Auth.AuthError.AsInvalidSelectUser
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsInvalidSelectUser
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthError.cs
+    startLine: 72
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth
+  summary: "\n<p>Gets this instance as a InvalidSelectUser, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public AuthError.InvalidSelectUser AsInvalidSelectUser { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Auth.AuthError.InvalidSelectUser
+    content.vb: Public ReadOnly Property AsInvalidSelectUser As AuthError.InvalidSelectUser
+  overload: Dropbox.Api.Auth.AuthError.AsInvalidSelectUser*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Auth.AuthError.IsInvalidSelectAdmin
+  commentId: P:Dropbox.Api.Auth.AuthError.IsInvalidSelectAdmin
+  id: IsInvalidSelectAdmin
+  parent: Dropbox.Api.Auth.AuthError
+  langs:
+  - csharp
+  - vb
+  name: IsInvalidSelectAdmin
+  nameWithType: AuthError.IsInvalidSelectAdmin
+  fullName: Dropbox.Api.Auth.AuthError.IsInvalidSelectAdmin
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsInvalidSelectAdmin
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthError.cs
+    startLine: 83
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth
+  summary: "\n<p>Gets a value indicating whether this instance is InvalidSelectAdmin</p>\n"
+  example: []
+  syntax:
+    content: public bool IsInvalidSelectAdmin { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsInvalidSelectAdmin As Boolean
+  overload: Dropbox.Api.Auth.AuthError.IsInvalidSelectAdmin*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Auth.AuthError.AsInvalidSelectAdmin
+  commentId: P:Dropbox.Api.Auth.AuthError.AsInvalidSelectAdmin
+  id: AsInvalidSelectAdmin
+  parent: Dropbox.Api.Auth.AuthError
+  langs:
+  - csharp
+  - vb
+  name: AsInvalidSelectAdmin
+  nameWithType: AuthError.AsInvalidSelectAdmin
+  fullName: Dropbox.Api.Auth.AuthError.AsInvalidSelectAdmin
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsInvalidSelectAdmin
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthError.cs
+    startLine: 94
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth
+  summary: "\n<p>Gets this instance as a InvalidSelectAdmin, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public AuthError.InvalidSelectAdmin AsInvalidSelectAdmin { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Auth.AuthError.InvalidSelectAdmin
+    content.vb: Public ReadOnly Property AsInvalidSelectAdmin As AuthError.InvalidSelectAdmin
+  overload: Dropbox.Api.Auth.AuthError.AsInvalidSelectAdmin*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Auth.AuthError.IsUserSuspended
+  commentId: P:Dropbox.Api.Auth.AuthError.IsUserSuspended
+  id: IsUserSuspended
+  parent: Dropbox.Api.Auth.AuthError
+  langs:
+  - csharp
+  - vb
+  name: IsUserSuspended
+  nameWithType: AuthError.IsUserSuspended
+  fullName: Dropbox.Api.Auth.AuthError.IsUserSuspended
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsUserSuspended
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthError.cs
+    startLine: 105
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth
+  summary: "\n<p>Gets a value indicating whether this instance is UserSuspended</p>\n"
+  example: []
+  syntax:
+    content: public bool IsUserSuspended { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsUserSuspended As Boolean
+  overload: Dropbox.Api.Auth.AuthError.IsUserSuspended*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Auth.AuthError.AsUserSuspended
+  commentId: P:Dropbox.Api.Auth.AuthError.AsUserSuspended
+  id: AsUserSuspended
+  parent: Dropbox.Api.Auth.AuthError
+  langs:
+  - csharp
+  - vb
+  name: AsUserSuspended
+  nameWithType: AuthError.AsUserSuspended
+  fullName: Dropbox.Api.Auth.AuthError.AsUserSuspended
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsUserSuspended
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthError.cs
+    startLine: 116
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth
+  summary: "\n<p>Gets this instance as a UserSuspended, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public AuthError.UserSuspended AsUserSuspended { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Auth.AuthError.UserSuspended
+    content.vb: Public ReadOnly Property AsUserSuspended As AuthError.UserSuspended
+  overload: Dropbox.Api.Auth.AuthError.AsUserSuspended*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Auth.AuthError.IsExpiredAccessToken
+  commentId: P:Dropbox.Api.Auth.AuthError.IsExpiredAccessToken
+  id: IsExpiredAccessToken
+  parent: Dropbox.Api.Auth.AuthError
+  langs:
+  - csharp
+  - vb
+  name: IsExpiredAccessToken
+  nameWithType: AuthError.IsExpiredAccessToken
+  fullName: Dropbox.Api.Auth.AuthError.IsExpiredAccessToken
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsExpiredAccessToken
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthError.cs
+    startLine: 127
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth
+  summary: "\n<p>Gets a value indicating whether this instance is ExpiredAccessToken</p>\n"
+  example: []
+  syntax:
+    content: public bool IsExpiredAccessToken { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsExpiredAccessToken As Boolean
+  overload: Dropbox.Api.Auth.AuthError.IsExpiredAccessToken*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Auth.AuthError.AsExpiredAccessToken
+  commentId: P:Dropbox.Api.Auth.AuthError.AsExpiredAccessToken
+  id: AsExpiredAccessToken
+  parent: Dropbox.Api.Auth.AuthError
+  langs:
+  - csharp
+  - vb
+  name: AsExpiredAccessToken
+  nameWithType: AuthError.AsExpiredAccessToken
+  fullName: Dropbox.Api.Auth.AuthError.AsExpiredAccessToken
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsExpiredAccessToken
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthError.cs
+    startLine: 138
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth
+  summary: "\n<p>Gets this instance as a ExpiredAccessToken, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public AuthError.ExpiredAccessToken AsExpiredAccessToken { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Auth.AuthError.ExpiredAccessToken
+    content.vb: Public ReadOnly Property AsExpiredAccessToken As AuthError.ExpiredAccessToken
+  overload: Dropbox.Api.Auth.AuthError.AsExpiredAccessToken*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Auth.AuthError.IsMissingScope
+  commentId: P:Dropbox.Api.Auth.AuthError.IsMissingScope
+  id: IsMissingScope
+  parent: Dropbox.Api.Auth.AuthError
+  langs:
+  - csharp
+  - vb
+  name: IsMissingScope
+  nameWithType: AuthError.IsMissingScope
+  fullName: Dropbox.Api.Auth.AuthError.IsMissingScope
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsMissingScope
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthError.cs
+    startLine: 149
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth
+  summary: "\n<p>Gets a value indicating whether this instance is MissingScope</p>\n"
+  example: []
+  syntax:
+    content: public bool IsMissingScope { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsMissingScope As Boolean
+  overload: Dropbox.Api.Auth.AuthError.IsMissingScope*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Auth.AuthError.AsMissingScope
+  commentId: P:Dropbox.Api.Auth.AuthError.AsMissingScope
+  id: AsMissingScope
+  parent: Dropbox.Api.Auth.AuthError
+  langs:
+  - csharp
+  - vb
+  name: AsMissingScope
+  nameWithType: AuthError.AsMissingScope
+  fullName: Dropbox.Api.Auth.AuthError.AsMissingScope
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsMissingScope
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthError.cs
+    startLine: 160
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth
+  summary: "\n<p>Gets this instance as a MissingScope, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public AuthError.MissingScope AsMissingScope { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Auth.AuthError.MissingScope
+    content.vb: Public ReadOnly Property AsMissingScope As AuthError.MissingScope
+  overload: Dropbox.Api.Auth.AuthError.AsMissingScope*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Auth.AuthError.IsRouteAccessDenied
+  commentId: P:Dropbox.Api.Auth.AuthError.IsRouteAccessDenied
+  id: IsRouteAccessDenied
+  parent: Dropbox.Api.Auth.AuthError
+  langs:
+  - csharp
+  - vb
+  name: IsRouteAccessDenied
+  nameWithType: AuthError.IsRouteAccessDenied
+  fullName: Dropbox.Api.Auth.AuthError.IsRouteAccessDenied
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsRouteAccessDenied
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthError.cs
+    startLine: 171
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth
+  summary: "\n<p>Gets a value indicating whether this instance is RouteAccessDenied</p>\n"
+  example: []
+  syntax:
+    content: public bool IsRouteAccessDenied { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsRouteAccessDenied As Boolean
+  overload: Dropbox.Api.Auth.AuthError.IsRouteAccessDenied*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Auth.AuthError.AsRouteAccessDenied
+  commentId: P:Dropbox.Api.Auth.AuthError.AsRouteAccessDenied
+  id: AsRouteAccessDenied
+  parent: Dropbox.Api.Auth.AuthError
+  langs:
+  - csharp
+  - vb
+  name: AsRouteAccessDenied
+  nameWithType: AuthError.AsRouteAccessDenied
+  fullName: Dropbox.Api.Auth.AuthError.AsRouteAccessDenied
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsRouteAccessDenied
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthError.cs
+    startLine: 182
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth
+  summary: "\n<p>Gets this instance as a RouteAccessDenied, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public AuthError.RouteAccessDenied AsRouteAccessDenied { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Auth.AuthError.RouteAccessDenied
+    content.vb: Public ReadOnly Property AsRouteAccessDenied As AuthError.RouteAccessDenied
+  overload: Dropbox.Api.Auth.AuthError.AsRouteAccessDenied*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Auth.AuthError.IsOther
+  commentId: P:Dropbox.Api.Auth.AuthError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Auth.AuthError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: AuthError.IsOther
+  fullName: Dropbox.Api.Auth.AuthError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthError.cs
+    startLine: 193
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Auth.AuthError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Auth.AuthError.AsOther
+  commentId: P:Dropbox.Api.Auth.AuthError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Auth.AuthError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: AuthError.AsOther
+  fullName: Dropbox.Api.Auth.AuthError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Auth/AuthError.cs
+    startLine: 204
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Auth
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public AuthError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Auth.AuthError.Other
+    content.vb: Public ReadOnly Property AsOther As AuthError.Other
+  overload: Dropbox.Api.Auth.AuthError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Auth
+  commentId: N:Dropbox.Api.Auth
+  name: Dropbox.Api.Auth
+  nameWithType: Dropbox.Api.Auth
+  fullName: Dropbox.Api.Auth
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Auth.AuthError
+  commentId: T:Dropbox.Api.Auth.AuthError
+  parent: Dropbox.Api.Auth
+  name: AuthError
+  nameWithType: AuthError
+  fullName: Dropbox.Api.Auth.AuthError
+- uid: Dropbox.Api.Auth.AuthError.#ctor*
+  commentId: Overload:Dropbox.Api.Auth.AuthError.#ctor
+  name: AuthError
+  nameWithType: AuthError.AuthError
+  fullName: Dropbox.Api.Auth.AuthError.AuthError
+- uid: Dropbox.Api.Auth.AuthError.IsInvalidAccessToken*
+  commentId: Overload:Dropbox.Api.Auth.AuthError.IsInvalidAccessToken
+  name: IsInvalidAccessToken
+  nameWithType: AuthError.IsInvalidAccessToken
+  fullName: Dropbox.Api.Auth.AuthError.IsInvalidAccessToken
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Auth.AuthError.AsInvalidAccessToken*
+  commentId: Overload:Dropbox.Api.Auth.AuthError.AsInvalidAccessToken
+  name: AsInvalidAccessToken
+  nameWithType: AuthError.AsInvalidAccessToken
+  fullName: Dropbox.Api.Auth.AuthError.AsInvalidAccessToken
+- uid: Dropbox.Api.Auth.AuthError.InvalidAccessToken
+  commentId: T:Dropbox.Api.Auth.AuthError.InvalidAccessToken
+  parent: Dropbox.Api.Auth
+  name: AuthError.InvalidAccessToken
+  nameWithType: AuthError.InvalidAccessToken
+  fullName: Dropbox.Api.Auth.AuthError.InvalidAccessToken
+- uid: Dropbox.Api.Auth.AuthError.IsInvalidSelectUser*
+  commentId: Overload:Dropbox.Api.Auth.AuthError.IsInvalidSelectUser
+  name: IsInvalidSelectUser
+  nameWithType: AuthError.IsInvalidSelectUser
+  fullName: Dropbox.Api.Auth.AuthError.IsInvalidSelectUser
+- uid: Dropbox.Api.Auth.AuthError.AsInvalidSelectUser*
+  commentId: Overload:Dropbox.Api.Auth.AuthError.AsInvalidSelectUser
+  name: AsInvalidSelectUser
+  nameWithType: AuthError.AsInvalidSelectUser
+  fullName: Dropbox.Api.Auth.AuthError.AsInvalidSelectUser
+- uid: Dropbox.Api.Auth.AuthError.InvalidSelectUser
+  commentId: T:Dropbox.Api.Auth.AuthError.InvalidSelectUser
+  parent: Dropbox.Api.Auth
+  name: AuthError.InvalidSelectUser
+  nameWithType: AuthError.InvalidSelectUser
+  fullName: Dropbox.Api.Auth.AuthError.InvalidSelectUser
+- uid: Dropbox.Api.Auth.AuthError.IsInvalidSelectAdmin*
+  commentId: Overload:Dropbox.Api.Auth.AuthError.IsInvalidSelectAdmin
+  name: IsInvalidSelectAdmin
+  nameWithType: AuthError.IsInvalidSelectAdmin
+  fullName: Dropbox.Api.Auth.AuthError.IsInvalidSelectAdmin
+- uid: Dropbox.Api.Auth.AuthError.AsInvalidSelectAdmin*
+  commentId: Overload:Dropbox.Api.Auth.AuthError.AsInvalidSelectAdmin
+  name: AsInvalidSelectAdmin
+  nameWithType: AuthError.AsInvalidSelectAdmin
+  fullName: Dropbox.Api.Auth.AuthError.AsInvalidSelectAdmin
+- uid: Dropbox.Api.Auth.AuthError.InvalidSelectAdmin
+  commentId: T:Dropbox.Api.Auth.AuthError.InvalidSelectAdmin
+  parent: Dropbox.Api.Auth
+  name: AuthError.InvalidSelectAdmin
+  nameWithType: AuthError.InvalidSelectAdmin
+  fullName: Dropbox.Api.Auth.AuthError.InvalidSelectAdmin
+- uid: Dropbox.Api.Auth.AuthError.IsUserSuspended*
+  commentId: Overload:Dropbox.Api.Auth.AuthError.IsUserSuspended
+  name: IsUserSuspended
+  nameWithType: AuthError.IsUserSuspended
+  fullName: Dropbox.Api.Auth.AuthError.IsUserSuspended
+- uid: Dropbox.Api.Auth.AuthError.AsUserSuspended*
+  commentId: Overload:Dropbox.Api.Auth.AuthError.AsUserSuspended
+  name: AsUserSuspended
+  nameWithType: AuthError.AsUserSuspended
+  fullName: Dropbox.Api.Auth.AuthError.AsUserSuspended
+- uid: Dropbox.Api.Auth.AuthError.UserSuspended
+  commentId: T:Dropbox.Api.Auth.AuthError.UserSuspended
+  parent: Dropbox.Api.Auth
+  name: AuthError.UserSuspended
+  nameWithType: AuthError.UserSuspended
+  fullName: Dropbox.Api.Auth.AuthError.UserSuspended
+- uid: Dropbox.Api.Auth.AuthError.IsExpiredAccessToken*
+  commentId: Overload:Dropbox.Api.Auth.AuthError.IsExpiredAccessToken
+  name: IsExpiredAccessToken
+  nameWithType: AuthError.IsExpiredAccessToken
+  fullName: Dropbox.Api.Auth.AuthError.IsExpiredAccessToken
+- uid: Dropbox.Api.Auth.AuthError.AsExpiredAccessToken*
+  commentId: Overload:Dropbox.Api.Auth.AuthError.AsExpiredAccessToken
+  name: AsExpiredAccessToken
+  nameWithType: AuthError.AsExpiredAccessToken
+  fullName: Dropbox.Api.Auth.AuthError.AsExpiredAccessToken
+- uid: Dropbox.Api.Auth.AuthError.ExpiredAccessToken
+  commentId: T:Dropbox.Api.Auth.AuthError.ExpiredAccessToken
+  parent: Dropbox.Api.Auth
+  name: AuthError.ExpiredAccessToken
+  nameWithType: AuthError.ExpiredAccessToken
+  fullName: Dropbox.Api.Auth.AuthError.ExpiredAccessToken
+- uid: Dropbox.Api.Auth.AuthError.IsMissingScope*
+  commentId: Overload:Dropbox.Api.Auth.AuthError.IsMissingScope
+  name: IsMissingScope
+  nameWithType: AuthError.IsMissingScope
+  fullName: Dropbox.Api.Auth.AuthError.IsMissingScope
+- uid: Dropbox.Api.Auth.AuthError.AsMissingScope*
+  commentId: Overload:Dropbox.Api.Auth.AuthError.AsMissingScope
+  name: AsMissingScope
+  nameWithType: AuthError.AsMissingScope
+  fullName: Dropbox.Api.Auth.AuthError.AsMissingScope
+- uid: Dropbox.Api.Auth.AuthError.MissingScope
+  commentId: T:Dropbox.Api.Auth.AuthError.MissingScope
+  parent: Dropbox.Api.Auth
+  name: AuthError.MissingScope
+  nameWithType: AuthError.MissingScope
+  fullName: Dropbox.Api.Auth.AuthError.MissingScope
+- uid: Dropbox.Api.Auth.AuthError.IsRouteAccessDenied*
+  commentId: Overload:Dropbox.Api.Auth.AuthError.IsRouteAccessDenied
+  name: IsRouteAccessDenied
+  nameWithType: AuthError.IsRouteAccessDenied
+  fullName: Dropbox.Api.Auth.AuthError.IsRouteAccessDenied
+- uid: Dropbox.Api.Auth.AuthError.AsRouteAccessDenied*
+  commentId: Overload:Dropbox.Api.Auth.AuthError.AsRouteAccessDenied
+  name: AsRouteAccessDenied
+  nameWithType: AuthError.AsRouteAccessDenied
+  fullName: Dropbox.Api.Auth.AuthError.AsRouteAccessDenied
+- uid: Dropbox.Api.Auth.AuthError.RouteAccessDenied
+  commentId: T:Dropbox.Api.Auth.AuthError.RouteAccessDenied
+  parent: Dropbox.Api.Auth
+  name: AuthError.RouteAccessDenied
+  nameWithType: AuthError.RouteAccessDenied
+  fullName: Dropbox.Api.Auth.AuthError.RouteAccessDenied
+- uid: Dropbox.Api.Auth.AuthError.IsOther*
+  commentId: Overload:Dropbox.Api.Auth.AuthError.IsOther
+  name: IsOther
+  nameWithType: AuthError.IsOther
+  fullName: Dropbox.Api.Auth.AuthError.IsOther
+- uid: Dropbox.Api.Auth.AuthError.AsOther*
+  commentId: Overload:Dropbox.Api.Auth.AuthError.AsOther
+  name: AsOther
+  nameWithType: AuthError.AsOther
+  fullName: Dropbox.Api.Auth.AuthError.AsOther
+- uid: Dropbox.Api.Auth.AuthError.Other
+  commentId: T:Dropbox.Api.Auth.AuthError.Other
+  parent: Dropbox.Api.Auth
+  name: AuthError.Other
+  nameWithType: AuthError.Other
+  fullName: Dropbox.Api.Auth.AuthError.Other
+shouldSkipMarkup: true

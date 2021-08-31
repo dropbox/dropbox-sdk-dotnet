@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.UploadSessionOffsetError
+  commentId: T:Dropbox.Api.Files.UploadSessionOffsetError
+  id: UploadSessionOffsetError
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.UploadSessionOffsetError.#ctor
+  - Dropbox.Api.Files.UploadSessionOffsetError.#ctor(System.UInt64)
+  - Dropbox.Api.Files.UploadSessionOffsetError.CorrectOffset
+  langs:
+  - csharp
+  - vb
+  name: UploadSessionOffsetError
+  nameWithType: UploadSessionOffsetError
+  fullName: Dropbox.Api.Files.UploadSessionOffsetError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionOffsetError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: UploadSessionOffsetError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionOffsetError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The upload session offset error object</p>\n"
+  example: []
+  syntax:
+    content: 'public class UploadSessionOffsetError : object'
+    content.vb: >-
+      Public Class UploadSessionOffsetError
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.UploadSessionOffsetError.#ctor(System.UInt64)
+  commentId: M:Dropbox.Api.Files.UploadSessionOffsetError.#ctor(System.UInt64)
+  id: '#ctor(System.UInt64)'
+  parent: Dropbox.Api.Files.UploadSessionOffsetError
+  langs:
+  - csharp
+  - vb
+  name: UploadSessionOffsetError(UInt64)
+  nameWithType: UploadSessionOffsetError.UploadSessionOffsetError(UInt64)
+  fullName: Dropbox.Api.Files.UploadSessionOffsetError.UploadSessionOffsetError(System.UInt64)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionOffsetError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionOffsetError.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.UploadSessionOffsetError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public UploadSessionOffsetError(ulong correctOffset)
+    parameters:
+    - id: correctOffset
+      type: System.UInt64
+      description: The offset up to which data has been collected.
+    content.vb: Public Sub New(correctOffset As ULong)
+  overload: Dropbox.Api.Files.UploadSessionOffsetError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.UploadSessionOffsetError.#ctor
+  commentId: M:Dropbox.Api.Files.UploadSessionOffsetError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.UploadSessionOffsetError
+  langs:
+  - csharp
+  - vb
+  name: UploadSessionOffsetError()
+  nameWithType: UploadSessionOffsetError.UploadSessionOffsetError()
+  fullName: Dropbox.Api.Files.UploadSessionOffsetError.UploadSessionOffsetError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionOffsetError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionOffsetError.cs
+    startLine: 45
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.UploadSessionOffsetError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public UploadSessionOffsetError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.UploadSessionOffsetError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.UploadSessionOffsetError.CorrectOffset
+  commentId: P:Dropbox.Api.Files.UploadSessionOffsetError.CorrectOffset
+  id: CorrectOffset
+  parent: Dropbox.Api.Files.UploadSessionOffsetError
+  langs:
+  - csharp
+  - vb
+  name: CorrectOffset
+  nameWithType: UploadSessionOffsetError.CorrectOffset
+  fullName: Dropbox.Api.Files.UploadSessionOffsetError.CorrectOffset
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionOffsetError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: CorrectOffset
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/UploadSessionOffsetError.cs
+    startLine: 53
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The offset up to which data has been collected.</p>\n"
+  example: []
+  syntax:
+    content: public ulong CorrectOffset { get; protected set; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: Public Property CorrectOffset As ULong
+  overload: Dropbox.Api.Files.UploadSessionOffsetError.CorrectOffset*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.UploadSessionOffsetError
+  commentId: T:Dropbox.Api.Files.UploadSessionOffsetError
+  parent: Dropbox.Api.Files
+  name: UploadSessionOffsetError
+  nameWithType: UploadSessionOffsetError
+  fullName: Dropbox.Api.Files.UploadSessionOffsetError
+- uid: Dropbox.Api.Files.UploadSessionOffsetError.#ctor*
+  commentId: Overload:Dropbox.Api.Files.UploadSessionOffsetError.#ctor
+  name: UploadSessionOffsetError
+  nameWithType: UploadSessionOffsetError.UploadSessionOffsetError
+  fullName: Dropbox.Api.Files.UploadSessionOffsetError.UploadSessionOffsetError
+- uid: System.UInt64
+  isExternal: true
+  name: UInt64
+  nameWithType: UInt64
+  fullName: System.UInt64
+- uid: Dropbox.Api.Files.UploadSessionOffsetError.CorrectOffset*
+  commentId: Overload:Dropbox.Api.Files.UploadSessionOffsetError.CorrectOffset
+  name: CorrectOffset
+  nameWithType: UploadSessionOffsetError.CorrectOffset
+  fullName: Dropbox.Api.Files.UploadSessionOffsetError.CorrectOffset
+shouldSkipMarkup: true

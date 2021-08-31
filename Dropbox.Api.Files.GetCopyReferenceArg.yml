@@ -1,0 +1,190 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.GetCopyReferenceArg
+  commentId: T:Dropbox.Api.Files.GetCopyReferenceArg
+  id: GetCopyReferenceArg
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.GetCopyReferenceArg.#ctor
+  - Dropbox.Api.Files.GetCopyReferenceArg.#ctor(System.String)
+  - Dropbox.Api.Files.GetCopyReferenceArg.Path
+  langs:
+  - csharp
+  - vb
+  name: GetCopyReferenceArg
+  nameWithType: GetCopyReferenceArg
+  fullName: Dropbox.Api.Files.GetCopyReferenceArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetCopyReferenceArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GetCopyReferenceArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetCopyReferenceArg.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The get copy reference arg object</p>\n"
+  example: []
+  syntax:
+    content: 'public class GetCopyReferenceArg : object'
+    content.vb: >-
+      Public Class GetCopyReferenceArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.GetCopyReferenceArg.#ctor(System.String)
+  commentId: M:Dropbox.Api.Files.GetCopyReferenceArg.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.Files.GetCopyReferenceArg
+  langs:
+  - csharp
+  - vb
+  name: GetCopyReferenceArg(String)
+  nameWithType: GetCopyReferenceArg.GetCopyReferenceArg(String)
+  fullName: Dropbox.Api.Files.GetCopyReferenceArg.GetCopyReferenceArg(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetCopyReferenceArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetCopyReferenceArg.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.GetCopyReferenceArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public GetCopyReferenceArg(string path)
+    parameters:
+    - id: path
+      type: System.String
+      description: >-
+        The path to the file or folder you want to get a copy reference
+
+        to.
+    content.vb: Public Sub New(path As String)
+  overload: Dropbox.Api.Files.GetCopyReferenceArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.GetCopyReferenceArg.#ctor
+  commentId: M:Dropbox.Api.Files.GetCopyReferenceArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.GetCopyReferenceArg
+  langs:
+  - csharp
+  - vb
+  name: GetCopyReferenceArg()
+  nameWithType: GetCopyReferenceArg.GetCopyReferenceArg()
+  fullName: Dropbox.Api.Files.GetCopyReferenceArg.GetCopyReferenceArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetCopyReferenceArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetCopyReferenceArg.cs
+    startLine: 55
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.GetCopyReferenceArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public GetCopyReferenceArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.GetCopyReferenceArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.GetCopyReferenceArg.Path
+  commentId: P:Dropbox.Api.Files.GetCopyReferenceArg.Path
+  id: Path
+  parent: Dropbox.Api.Files.GetCopyReferenceArg
+  langs:
+  - csharp
+  - vb
+  name: Path
+  nameWithType: GetCopyReferenceArg.Path
+  fullName: Dropbox.Api.Files.GetCopyReferenceArg.Path
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetCopyReferenceArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Path
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetCopyReferenceArg.cs
+    startLine: 63
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The path to the file or folder you want to get a copy reference to.</p>\n"
+  example: []
+  syntax:
+    content: public string Path { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Path As String
+  overload: Dropbox.Api.Files.GetCopyReferenceArg.Path*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.GetCopyReferenceArg
+  commentId: T:Dropbox.Api.Files.GetCopyReferenceArg
+  parent: Dropbox.Api.Files
+  name: GetCopyReferenceArg
+  nameWithType: GetCopyReferenceArg
+  fullName: Dropbox.Api.Files.GetCopyReferenceArg
+- uid: Dropbox.Api.Files.GetCopyReferenceArg.#ctor*
+  commentId: Overload:Dropbox.Api.Files.GetCopyReferenceArg.#ctor
+  name: GetCopyReferenceArg
+  nameWithType: GetCopyReferenceArg.GetCopyReferenceArg
+  fullName: Dropbox.Api.Files.GetCopyReferenceArg.GetCopyReferenceArg
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Files.GetCopyReferenceArg.Path*
+  commentId: Overload:Dropbox.Api.Files.GetCopyReferenceArg.Path
+  name: Path
+  nameWithType: GetCopyReferenceArg.Path
+  fullName: Dropbox.Api.Files.GetCopyReferenceArg.Path
+shouldSkipMarkup: true

@@ -1,0 +1,532 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.MobileClientSession
+  commentId: T:Dropbox.Api.Team.MobileClientSession
+  id: MobileClientSession
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.MobileClientSession.#ctor
+  - Dropbox.Api.Team.MobileClientSession.#ctor(System.String,System.String,Dropbox.Api.Team.MobileClientPlatform,System.String,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.String,System.String,System.String)
+  - Dropbox.Api.Team.MobileClientSession.ClientType
+  - Dropbox.Api.Team.MobileClientSession.ClientVersion
+  - Dropbox.Api.Team.MobileClientSession.DeviceName
+  - Dropbox.Api.Team.MobileClientSession.LastCarrier
+  - Dropbox.Api.Team.MobileClientSession.OsVersion
+  langs:
+  - csharp
+  - vb
+  name: MobileClientSession
+  nameWithType: MobileClientSession
+  fullName: Dropbox.Api.Team.MobileClientSession
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MobileClientSession.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: MobileClientSession
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MobileClientSession.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Information about linked Dropbox mobile client sessions.</p>\n"
+  example: []
+  syntax:
+    content: 'public class MobileClientSession : DeviceSession'
+    content.vb: >-
+      Public Class MobileClientSession
+          Inherits DeviceSession
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.DeviceSession
+  inheritedMembers:
+  - Dropbox.Api.Team.DeviceSession.SessionId
+  - Dropbox.Api.Team.DeviceSession.IpAddress
+  - Dropbox.Api.Team.DeviceSession.Country
+  - Dropbox.Api.Team.DeviceSession.Created
+  - Dropbox.Api.Team.DeviceSession.Updated
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.MobileClientSession.#ctor(System.String,System.String,Dropbox.Api.Team.MobileClientPlatform,System.String,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.String,System.String,System.String)
+  commentId: M:Dropbox.Api.Team.MobileClientSession.#ctor(System.String,System.String,Dropbox.Api.Team.MobileClientPlatform,System.String,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.String,System.String,System.String)
+  id: '#ctor(System.String,System.String,Dropbox.Api.Team.MobileClientPlatform,System.String,System.String,System.Nullable{System.DateTime},System.Nullable{System.DateTime},System.String,System.String,System.String)'
+  parent: Dropbox.Api.Team.MobileClientSession
+  langs:
+  - csharp
+  - vb
+  name: MobileClientSession(String, String, MobileClientPlatform, String, String, Nullable<System.DateTime>, Nullable<System.DateTime>, String, String, String)
+  nameWithType: MobileClientSession.MobileClientSession(String, String, MobileClientPlatform, String, String, Nullable<System.DateTime>, Nullable<System.DateTime>, String, String, String)
+  fullName: Dropbox.Api.Team.MobileClientSession.MobileClientSession(System.String, System.String, Dropbox.Api.Team.MobileClientPlatform, System.String, System.String, System.Nullable<System.DateTime>, System.Nullable<System.DateTime>, System.String, System.String, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MobileClientSession.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MobileClientSession.cs
+    startLine: 46
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.MobileClientSession\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public MobileClientSession(string sessionId, string deviceName, MobileClientPlatform clientType, string ipAddress = null, string country = null, System.DateTime? created = null, System.DateTime? updated = null, string clientVersion = null, string osVersion = null, string lastCarrier = null)
+    parameters:
+    - id: sessionId
+      type: System.String
+      description: The session id.
+    - id: deviceName
+      type: System.String
+      description: The device name.
+    - id: clientType
+      type: Dropbox.Api.Team.MobileClientPlatform
+      description: The mobile application type.
+    - id: ipAddress
+      type: System.String
+      description: >-
+        The IP address of the last activity from this
+
+        session.
+    - id: country
+      type: System.String
+      description: >-
+        The country from which the last activity from this session
+
+        was made.
+    - id: created
+      type: System.Nullable{System.DateTime}
+      description: The time this session was created.
+    - id: updated
+      type: System.Nullable{System.DateTime}
+      description: The time of the last activity from this session.
+    - id: clientVersion
+      type: System.String
+      description: The dropbox client version.
+    - id: osVersion
+      type: System.String
+      description: The hosting OS version.
+    - id: lastCarrier
+      type: System.String
+      description: last carrier used by the device.
+    content.vb: Public Sub New(sessionId As String, deviceName As String, clientType As MobileClientPlatform, ipAddress As String = Nothing, country As String = Nothing, created As System.DateTime? = Nothing, updated As System.DateTime? = Nothing, clientVersion As String = Nothing, osVersion As String = Nothing, lastCarrier As String = Nothing)
+  overload: Dropbox.Api.Team.MobileClientSession.#ctor*
+  nameWithType.vb: MobileClientSession.MobileClientSession(String, String, MobileClientPlatform, String, String, Nullable(Of System.DateTime), Nullable(Of System.DateTime), String, String, String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Team.MobileClientSession.MobileClientSession(System.String, System.String, Dropbox.Api.Team.MobileClientPlatform, System.String, System.String, System.Nullable(Of System.DateTime), System.Nullable(Of System.DateTime), System.String, System.String, System.String)
+  name.vb: MobileClientSession(String, String, MobileClientPlatform, String, String, Nullable(Of System.DateTime), Nullable(Of System.DateTime), String, String, String)
+- uid: Dropbox.Api.Team.MobileClientSession.#ctor
+  commentId: M:Dropbox.Api.Team.MobileClientSession.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.MobileClientSession
+  langs:
+  - csharp
+  - vb
+  name: MobileClientSession()
+  nameWithType: MobileClientSession.MobileClientSession()
+  fullName: Dropbox.Api.Team.MobileClientSession.MobileClientSession()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MobileClientSession.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MobileClientSession.cs
+    startLine: 81
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.MobileClientSession\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public MobileClientSession()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.MobileClientSession.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.MobileClientSession.DeviceName
+  commentId: P:Dropbox.Api.Team.MobileClientSession.DeviceName
+  id: DeviceName
+  parent: Dropbox.Api.Team.MobileClientSession
+  langs:
+  - csharp
+  - vb
+  name: DeviceName
+  nameWithType: MobileClientSession.DeviceName
+  fullName: Dropbox.Api.Team.MobileClientSession.DeviceName
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MobileClientSession.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: DeviceName
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MobileClientSession.cs
+    startLine: 89
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The device name.</p>\n"
+  example: []
+  syntax:
+    content: public string DeviceName { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property DeviceName As String
+  overload: Dropbox.Api.Team.MobileClientSession.DeviceName*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.MobileClientSession.ClientType
+  commentId: P:Dropbox.Api.Team.MobileClientSession.ClientType
+  id: ClientType
+  parent: Dropbox.Api.Team.MobileClientSession
+  langs:
+  - csharp
+  - vb
+  name: ClientType
+  nameWithType: MobileClientSession.ClientType
+  fullName: Dropbox.Api.Team.MobileClientSession.ClientType
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MobileClientSession.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ClientType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MobileClientSession.cs
+    startLine: 94
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The mobile application type.</p>\n"
+  example: []
+  syntax:
+    content: public MobileClientPlatform ClientType { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.MobileClientPlatform
+    content.vb: Public Property ClientType As MobileClientPlatform
+  overload: Dropbox.Api.Team.MobileClientSession.ClientType*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.MobileClientSession.ClientVersion
+  commentId: P:Dropbox.Api.Team.MobileClientSession.ClientVersion
+  id: ClientVersion
+  parent: Dropbox.Api.Team.MobileClientSession
+  langs:
+  - csharp
+  - vb
+  name: ClientVersion
+  nameWithType: MobileClientSession.ClientVersion
+  fullName: Dropbox.Api.Team.MobileClientSession.ClientVersion
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MobileClientSession.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ClientVersion
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MobileClientSession.cs
+    startLine: 99
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The dropbox client version.</p>\n"
+  example: []
+  syntax:
+    content: public string ClientVersion { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ClientVersion As String
+  overload: Dropbox.Api.Team.MobileClientSession.ClientVersion*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.MobileClientSession.OsVersion
+  commentId: P:Dropbox.Api.Team.MobileClientSession.OsVersion
+  id: OsVersion
+  parent: Dropbox.Api.Team.MobileClientSession
+  langs:
+  - csharp
+  - vb
+  name: OsVersion
+  nameWithType: MobileClientSession.OsVersion
+  fullName: Dropbox.Api.Team.MobileClientSession.OsVersion
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MobileClientSession.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: OsVersion
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MobileClientSession.cs
+    startLine: 104
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The hosting OS version.</p>\n"
+  example: []
+  syntax:
+    content: public string OsVersion { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property OsVersion As String
+  overload: Dropbox.Api.Team.MobileClientSession.OsVersion*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.MobileClientSession.LastCarrier
+  commentId: P:Dropbox.Api.Team.MobileClientSession.LastCarrier
+  id: LastCarrier
+  parent: Dropbox.Api.Team.MobileClientSession
+  langs:
+  - csharp
+  - vb
+  name: LastCarrier
+  nameWithType: MobileClientSession.LastCarrier
+  fullName: Dropbox.Api.Team.MobileClientSession.LastCarrier
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MobileClientSession.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: LastCarrier
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/MobileClientSession.cs
+    startLine: 109
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>last carrier used by the device.</p>\n"
+  example: []
+  syntax:
+    content: public string LastCarrier { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property LastCarrier As String
+  overload: Dropbox.Api.Team.MobileClientSession.LastCarrier*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.DeviceSession
+  commentId: T:Dropbox.Api.Team.DeviceSession
+  parent: Dropbox.Api.Team
+  name: DeviceSession
+  nameWithType: DeviceSession
+  fullName: Dropbox.Api.Team.DeviceSession
+- uid: Dropbox.Api.Team.DeviceSession.SessionId
+  commentId: P:Dropbox.Api.Team.DeviceSession.SessionId
+  parent: Dropbox.Api.Team.DeviceSession
+  name: SessionId
+  nameWithType: DeviceSession.SessionId
+  fullName: Dropbox.Api.Team.DeviceSession.SessionId
+- uid: Dropbox.Api.Team.DeviceSession.IpAddress
+  commentId: P:Dropbox.Api.Team.DeviceSession.IpAddress
+  parent: Dropbox.Api.Team.DeviceSession
+  name: IpAddress
+  nameWithType: DeviceSession.IpAddress
+  fullName: Dropbox.Api.Team.DeviceSession.IpAddress
+- uid: Dropbox.Api.Team.DeviceSession.Country
+  commentId: P:Dropbox.Api.Team.DeviceSession.Country
+  parent: Dropbox.Api.Team.DeviceSession
+  name: Country
+  nameWithType: DeviceSession.Country
+  fullName: Dropbox.Api.Team.DeviceSession.Country
+- uid: Dropbox.Api.Team.DeviceSession.Created
+  commentId: P:Dropbox.Api.Team.DeviceSession.Created
+  parent: Dropbox.Api.Team.DeviceSession
+  name: Created
+  nameWithType: DeviceSession.Created
+  fullName: Dropbox.Api.Team.DeviceSession.Created
+- uid: Dropbox.Api.Team.DeviceSession.Updated
+  commentId: P:Dropbox.Api.Team.DeviceSession.Updated
+  parent: Dropbox.Api.Team.DeviceSession
+  name: Updated
+  nameWithType: DeviceSession.Updated
+  fullName: Dropbox.Api.Team.DeviceSession.Updated
+- uid: Dropbox.Api.Team.MobileClientSession
+  commentId: T:Dropbox.Api.Team.MobileClientSession
+  name: MobileClientSession
+  nameWithType: MobileClientSession
+  fullName: Dropbox.Api.Team.MobileClientSession
+- uid: Dropbox.Api.Team.MobileClientSession.#ctor*
+  commentId: Overload:Dropbox.Api.Team.MobileClientSession.#ctor
+  name: MobileClientSession
+  nameWithType: MobileClientSession.MobileClientSession
+  fullName: Dropbox.Api.Team.MobileClientSession.MobileClientSession
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Team.MobileClientPlatform
+  commentId: T:Dropbox.Api.Team.MobileClientPlatform
+  parent: Dropbox.Api.Team
+  name: MobileClientPlatform
+  nameWithType: MobileClientPlatform
+  fullName: Dropbox.Api.Team.MobileClientPlatform
+- uid: System.Nullable{System.DateTime}
+  commentId: '!:System.Nullable{System.DateTime}'
+  definition: System.Nullable`1
+  name: Nullable<System.DateTime>
+  nameWithType: Nullable<System.DateTime>
+  fullName: System.Nullable<System.DateTime>
+  nameWithType.vb: Nullable(Of System.DateTime)
+  fullName.vb: System.Nullable(Of System.DateTime)
+  name.vb: Nullable(Of System.DateTime)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.DateTime
+    name: System.DateTime
+    nameWithType: System.DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.DateTime
+    name: System.DateTime
+    nameWithType: System.DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  isExternal: true
+  name: Nullable<>
+  nameWithType: Nullable<>
+  fullName: System.Nullable<>
+  nameWithType.vb: Nullable(Of )
+  fullName.vb: System.Nullable(Of )
+  name.vb: Nullable(Of )
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Team.MobileClientSession.DeviceName*
+  commentId: Overload:Dropbox.Api.Team.MobileClientSession.DeviceName
+  name: DeviceName
+  nameWithType: MobileClientSession.DeviceName
+  fullName: Dropbox.Api.Team.MobileClientSession.DeviceName
+- uid: Dropbox.Api.Team.MobileClientSession.ClientType*
+  commentId: Overload:Dropbox.Api.Team.MobileClientSession.ClientType
+  name: ClientType
+  nameWithType: MobileClientSession.ClientType
+  fullName: Dropbox.Api.Team.MobileClientSession.ClientType
+- uid: Dropbox.Api.Team.MobileClientSession.ClientVersion*
+  commentId: Overload:Dropbox.Api.Team.MobileClientSession.ClientVersion
+  name: ClientVersion
+  nameWithType: MobileClientSession.ClientVersion
+  fullName: Dropbox.Api.Team.MobileClientSession.ClientVersion
+- uid: Dropbox.Api.Team.MobileClientSession.OsVersion*
+  commentId: Overload:Dropbox.Api.Team.MobileClientSession.OsVersion
+  name: OsVersion
+  nameWithType: MobileClientSession.OsVersion
+  fullName: Dropbox.Api.Team.MobileClientSession.OsVersion
+- uid: Dropbox.Api.Team.MobileClientSession.LastCarrier*
+  commentId: Overload:Dropbox.Api.Team.MobileClientSession.LastCarrier
+  name: LastCarrier
+  nameWithType: MobileClientSession.LastCarrier
+  fullName: Dropbox.Api.Team.MobileClientSession.LastCarrier
+shouldSkipMarkup: true

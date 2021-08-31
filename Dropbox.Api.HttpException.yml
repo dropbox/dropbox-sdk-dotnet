@@ -1,0 +1,190 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.HttpException
+  commentId: T:Dropbox.Api.HttpException
+  id: HttpException
+  parent: Dropbox.Api
+  children:
+  - Dropbox.Api.HttpException.RequestUri
+  - Dropbox.Api.HttpException.StatusCode
+  langs:
+  - csharp
+  - vb
+  name: HttpException
+  nameWithType: HttpException
+  fullName: Dropbox.Api.HttpException
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/DropboxException.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: HttpException
+    path: dropbox-sdk-dotnet/Dropbox.Api/DropboxException.cs
+    startLine: 53
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api
+  summary: "\nGeneral HTTP exception.\n"
+  example: []
+  syntax:
+    content: 'public class HttpException : DropboxException'
+    content.vb: >-
+      Public Class HttpException
+          Inherits DropboxException
+  inheritance:
+  - System.Object
+  - Dropbox.Api.DropboxException
+  derivedClasses:
+  - Dropbox.Api.BadInputException
+  - Dropbox.Api.RetryException
+  inheritedMembers:
+  - Dropbox.Api.DropboxException.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.HttpException.StatusCode
+  commentId: P:Dropbox.Api.HttpException.StatusCode
+  id: StatusCode
+  parent: Dropbox.Api.HttpException
+  langs:
+  - csharp
+  - vb
+  name: StatusCode
+  nameWithType: HttpException.StatusCode
+  fullName: Dropbox.Api.HttpException.StatusCode
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/DropboxException.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: StatusCode
+    path: dropbox-sdk-dotnet/Dropbox.Api/DropboxException.cs
+    startLine: 76
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api
+  summary: "\nGets the HTTP status code that prompted this exception.\n"
+  example: []
+  syntax:
+    content: public int StatusCode { get; }
+    parameters: []
+    return:
+      type: System.Int32
+      description: "\nThe status code.\n"
+    content.vb: Public ReadOnly Property StatusCode As Integer
+  overload: Dropbox.Api.HttpException.StatusCode*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.HttpException.RequestUri
+  commentId: P:Dropbox.Api.HttpException.RequestUri
+  id: RequestUri
+  parent: Dropbox.Api.HttpException
+  langs:
+  - csharp
+  - vb
+  name: RequestUri
+  nameWithType: HttpException.RequestUri
+  fullName: Dropbox.Api.HttpException.RequestUri
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/DropboxException.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: RequestUri
+    path: dropbox-sdk-dotnet/Dropbox.Api/DropboxException.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api
+  summary: "\nGets the URI for the request that prompted this exception.\n"
+  example: []
+  syntax:
+    content: public Uri RequestUri { get; }
+    parameters: []
+    return:
+      type: Uri
+      description: "\nThe request URI.\n"
+    content.vb: Public ReadOnly Property RequestUri As Uri
+  overload: Dropbox.Api.HttpException.RequestUri*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api
+  commentId: N:Dropbox.Api
+  name: Dropbox.Api
+  nameWithType: Dropbox.Api
+  fullName: Dropbox.Api
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.DropboxException
+  commentId: T:Dropbox.Api.DropboxException
+  parent: Dropbox.Api
+  name: DropboxException
+  nameWithType: DropboxException
+  fullName: Dropbox.Api.DropboxException
+- uid: Dropbox.Api.DropboxException.ToString
+  commentId: M:Dropbox.Api.DropboxException.ToString
+  parent: Dropbox.Api.DropboxException
+  name: ToString()
+  nameWithType: DropboxException.ToString()
+  fullName: Dropbox.Api.DropboxException.ToString()
+  spec.csharp:
+  - uid: Dropbox.Api.DropboxException.ToString
+    name: ToString
+    nameWithType: DropboxException.ToString
+    fullName: Dropbox.Api.DropboxException.ToString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Dropbox.Api.DropboxException.ToString
+    name: ToString
+    nameWithType: DropboxException.ToString
+    fullName: Dropbox.Api.DropboxException.ToString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.HttpException.StatusCode*
+  commentId: Overload:Dropbox.Api.HttpException.StatusCode
+  name: StatusCode
+  nameWithType: HttpException.StatusCode
+  fullName: Dropbox.Api.HttpException.StatusCode
+- uid: System.Int32
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Dropbox.Api.HttpException.RequestUri*
+  commentId: Overload:Dropbox.Api.HttpException.RequestUri
+  name: RequestUri
+  nameWithType: HttpException.RequestUri
+  fullName: Dropbox.Api.HttpException.RequestUri
+- uid: Uri
+  isExternal: true
+  name: Uri
+  nameWithType: Uri
+  fullName: Uri
+shouldSkipMarkup: true

@@ -1,0 +1,367 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamPolicies.TeamMemberPolicies
+  commentId: T:Dropbox.Api.TeamPolicies.TeamMemberPolicies
+  id: TeamMemberPolicies
+  parent: Dropbox.Api.TeamPolicies
+  children:
+  - Dropbox.Api.TeamPolicies.TeamMemberPolicies.#ctor
+  - Dropbox.Api.TeamPolicies.TeamMemberPolicies.#ctor(Dropbox.Api.TeamPolicies.TeamSharingPolicies,Dropbox.Api.TeamPolicies.EmmState,Dropbox.Api.TeamPolicies.OfficeAddInPolicy,Dropbox.Api.TeamPolicies.SuggestMembersPolicy)
+  - Dropbox.Api.TeamPolicies.TeamMemberPolicies.EmmState
+  - Dropbox.Api.TeamPolicies.TeamMemberPolicies.OfficeAddin
+  - Dropbox.Api.TeamPolicies.TeamMemberPolicies.Sharing
+  - Dropbox.Api.TeamPolicies.TeamMemberPolicies.SuggestMembersPolicy
+  langs:
+  - csharp
+  - vb
+  name: TeamMemberPolicies
+  nameWithType: TeamMemberPolicies
+  fullName: Dropbox.Api.TeamPolicies.TeamMemberPolicies
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/TeamMemberPolicies.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TeamMemberPolicies
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/TeamMemberPolicies.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Policies governing team members.</p>\n"
+  example: []
+  syntax:
+    content: 'public class TeamMemberPolicies : object'
+    content.vb: >-
+      Public Class TeamMemberPolicies
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamPolicies.TeamMemberPolicies.#ctor(Dropbox.Api.TeamPolicies.TeamSharingPolicies,Dropbox.Api.TeamPolicies.EmmState,Dropbox.Api.TeamPolicies.OfficeAddInPolicy,Dropbox.Api.TeamPolicies.SuggestMembersPolicy)
+  commentId: M:Dropbox.Api.TeamPolicies.TeamMemberPolicies.#ctor(Dropbox.Api.TeamPolicies.TeamSharingPolicies,Dropbox.Api.TeamPolicies.EmmState,Dropbox.Api.TeamPolicies.OfficeAddInPolicy,Dropbox.Api.TeamPolicies.SuggestMembersPolicy)
+  id: '#ctor(Dropbox.Api.TeamPolicies.TeamSharingPolicies,Dropbox.Api.TeamPolicies.EmmState,Dropbox.Api.TeamPolicies.OfficeAddInPolicy,Dropbox.Api.TeamPolicies.SuggestMembersPolicy)'
+  parent: Dropbox.Api.TeamPolicies.TeamMemberPolicies
+  langs:
+  - csharp
+  - vb
+  name: TeamMemberPolicies(TeamSharingPolicies, EmmState, OfficeAddInPolicy, SuggestMembersPolicy)
+  nameWithType: TeamMemberPolicies.TeamMemberPolicies(TeamSharingPolicies, EmmState, OfficeAddInPolicy, SuggestMembersPolicy)
+  fullName: Dropbox.Api.TeamPolicies.TeamMemberPolicies.TeamMemberPolicies(Dropbox.Api.TeamPolicies.TeamSharingPolicies, Dropbox.Api.TeamPolicies.EmmState, Dropbox.Api.TeamPolicies.OfficeAddInPolicy, Dropbox.Api.TeamPolicies.SuggestMembersPolicy)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/TeamMemberPolicies.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/TeamMemberPolicies.cs
+    startLine: 44
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamPolicies.TeamMemberPolicies\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public TeamMemberPolicies(TeamSharingPolicies sharing, EmmState emmState, OfficeAddInPolicy officeAddin, SuggestMembersPolicy suggestMembersPolicy)
+    parameters:
+    - id: sharing
+      type: Dropbox.Api.TeamPolicies.TeamSharingPolicies
+      description: Policies governing sharing.
+    - id: emmState
+      type: Dropbox.Api.TeamPolicies.EmmState
+      description: >-
+        This describes the Enterprise Mobility Management (EMM)
+
+        state for this team. This information can be used to understand if an organization
+
+        is integrating with a third-party EMM vendor to further manage and apply
+
+        restrictions upon the team&apos;s Dropbox usage on mobile devices. This is a new feature
+
+        and in the future we&apos;ll be adding more new fields and additional
+
+        documentation.
+    - id: officeAddin
+      type: Dropbox.Api.TeamPolicies.OfficeAddInPolicy
+      description: >-
+        The admin policy around the Dropbox Office Add-In for
+
+        this team.
+    - id: suggestMembersPolicy
+      type: Dropbox.Api.TeamPolicies.SuggestMembersPolicy
+      description: >-
+        The team policy on if teammembers are allowed to
+
+        suggest users for admins to invite to the team.
+    content.vb: Public Sub New(sharing As TeamSharingPolicies, emmState As EmmState, officeAddin As OfficeAddInPolicy, suggestMembersPolicy As SuggestMembersPolicy)
+  overload: Dropbox.Api.TeamPolicies.TeamMemberPolicies.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamPolicies.TeamMemberPolicies.#ctor
+  commentId: M:Dropbox.Api.TeamPolicies.TeamMemberPolicies.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamPolicies.TeamMemberPolicies
+  langs:
+  - csharp
+  - vb
+  name: TeamMemberPolicies()
+  nameWithType: TeamMemberPolicies.TeamMemberPolicies()
+  fullName: Dropbox.Api.TeamPolicies.TeamMemberPolicies.TeamMemberPolicies()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/TeamMemberPolicies.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/TeamMemberPolicies.cs
+    startLine: 81
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamPolicies.TeamMemberPolicies\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public TeamMemberPolicies()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamPolicies.TeamMemberPolicies.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamPolicies.TeamMemberPolicies.Sharing
+  commentId: P:Dropbox.Api.TeamPolicies.TeamMemberPolicies.Sharing
+  id: Sharing
+  parent: Dropbox.Api.TeamPolicies.TeamMemberPolicies
+  langs:
+  - csharp
+  - vb
+  name: Sharing
+  nameWithType: TeamMemberPolicies.Sharing
+  fullName: Dropbox.Api.TeamPolicies.TeamMemberPolicies.Sharing
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/TeamMemberPolicies.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Sharing
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/TeamMemberPolicies.cs
+    startLine: 89
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Policies governing sharing.</p>\n"
+  example: []
+  syntax:
+    content: public TeamSharingPolicies Sharing { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamPolicies.TeamSharingPolicies
+    content.vb: Public Property Sharing As TeamSharingPolicies
+  overload: Dropbox.Api.TeamPolicies.TeamMemberPolicies.Sharing*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamPolicies.TeamMemberPolicies.EmmState
+  commentId: P:Dropbox.Api.TeamPolicies.TeamMemberPolicies.EmmState
+  id: EmmState
+  parent: Dropbox.Api.TeamPolicies.TeamMemberPolicies
+  langs:
+  - csharp
+  - vb
+  name: EmmState
+  nameWithType: TeamMemberPolicies.EmmState
+  fullName: Dropbox.Api.TeamPolicies.TeamMemberPolicies.EmmState
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/TeamMemberPolicies.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: EmmState
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/TeamMemberPolicies.cs
+    startLine: 98
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>This describes the Enterprise Mobility Management (EMM) state for this team.\nThis information can be used to understand if an organization is integrating with a\nthird-party EMM vendor to further manage and apply restrictions upon the team&apos;s\nDropbox usage on mobile devices. This is a new feature and in the future we&apos;ll be\nadding more new fields and additional documentation.</p>\n"
+  example: []
+  syntax:
+    content: public EmmState EmmState { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamPolicies.EmmState
+    content.vb: Public Property EmmState As EmmState
+  overload: Dropbox.Api.TeamPolicies.TeamMemberPolicies.EmmState*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamPolicies.TeamMemberPolicies.OfficeAddin
+  commentId: P:Dropbox.Api.TeamPolicies.TeamMemberPolicies.OfficeAddin
+  id: OfficeAddin
+  parent: Dropbox.Api.TeamPolicies.TeamMemberPolicies
+  langs:
+  - csharp
+  - vb
+  name: OfficeAddin
+  nameWithType: TeamMemberPolicies.OfficeAddin
+  fullName: Dropbox.Api.TeamPolicies.TeamMemberPolicies.OfficeAddin
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/TeamMemberPolicies.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: OfficeAddin
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/TeamMemberPolicies.cs
+    startLine: 103
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>The admin policy around the Dropbox Office Add-In for this team.</p>\n"
+  example: []
+  syntax:
+    content: public OfficeAddInPolicy OfficeAddin { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamPolicies.OfficeAddInPolicy
+    content.vb: Public Property OfficeAddin As OfficeAddInPolicy
+  overload: Dropbox.Api.TeamPolicies.TeamMemberPolicies.OfficeAddin*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamPolicies.TeamMemberPolicies.SuggestMembersPolicy
+  commentId: P:Dropbox.Api.TeamPolicies.TeamMemberPolicies.SuggestMembersPolicy
+  id: SuggestMembersPolicy
+  parent: Dropbox.Api.TeamPolicies.TeamMemberPolicies
+  langs:
+  - csharp
+  - vb
+  name: SuggestMembersPolicy
+  nameWithType: TeamMemberPolicies.SuggestMembersPolicy
+  fullName: Dropbox.Api.TeamPolicies.TeamMemberPolicies.SuggestMembersPolicy
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/TeamMemberPolicies.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SuggestMembersPolicy
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/TeamMemberPolicies.cs
+    startLine: 109
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>The team policy on if teammembers are allowed to suggest users for admins to\ninvite to the team.</p>\n"
+  example: []
+  syntax:
+    content: public SuggestMembersPolicy SuggestMembersPolicy { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamPolicies.SuggestMembersPolicy
+    content.vb: Public Property SuggestMembersPolicy As SuggestMembersPolicy
+  overload: Dropbox.Api.TeamPolicies.TeamMemberPolicies.SuggestMembersPolicy*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamPolicies
+  commentId: N:Dropbox.Api.TeamPolicies
+  name: Dropbox.Api.TeamPolicies
+  nameWithType: Dropbox.Api.TeamPolicies
+  fullName: Dropbox.Api.TeamPolicies
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamPolicies.TeamMemberPolicies
+  commentId: T:Dropbox.Api.TeamPolicies.TeamMemberPolicies
+  parent: Dropbox.Api.TeamPolicies
+  name: TeamMemberPolicies
+  nameWithType: TeamMemberPolicies
+  fullName: Dropbox.Api.TeamPolicies.TeamMemberPolicies
+- uid: Dropbox.Api.TeamPolicies.TeamMemberPolicies.#ctor*
+  commentId: Overload:Dropbox.Api.TeamPolicies.TeamMemberPolicies.#ctor
+  name: TeamMemberPolicies
+  nameWithType: TeamMemberPolicies.TeamMemberPolicies
+  fullName: Dropbox.Api.TeamPolicies.TeamMemberPolicies.TeamMemberPolicies
+- uid: Dropbox.Api.TeamPolicies.TeamSharingPolicies
+  commentId: T:Dropbox.Api.TeamPolicies.TeamSharingPolicies
+  parent: Dropbox.Api.TeamPolicies
+  name: TeamSharingPolicies
+  nameWithType: TeamSharingPolicies
+  fullName: Dropbox.Api.TeamPolicies.TeamSharingPolicies
+- uid: Dropbox.Api.TeamPolicies.EmmState
+  commentId: T:Dropbox.Api.TeamPolicies.EmmState
+  parent: Dropbox.Api.TeamPolicies
+  name: EmmState
+  nameWithType: EmmState
+  fullName: Dropbox.Api.TeamPolicies.EmmState
+- uid: Dropbox.Api.TeamPolicies.OfficeAddInPolicy
+  commentId: T:Dropbox.Api.TeamPolicies.OfficeAddInPolicy
+  parent: Dropbox.Api.TeamPolicies
+  name: OfficeAddInPolicy
+  nameWithType: OfficeAddInPolicy
+  fullName: Dropbox.Api.TeamPolicies.OfficeAddInPolicy
+- uid: Dropbox.Api.TeamPolicies.SuggestMembersPolicy
+  commentId: T:Dropbox.Api.TeamPolicies.SuggestMembersPolicy
+  parent: Dropbox.Api.TeamPolicies
+  name: SuggestMembersPolicy
+  nameWithType: SuggestMembersPolicy
+  fullName: Dropbox.Api.TeamPolicies.SuggestMembersPolicy
+- uid: Dropbox.Api.TeamPolicies.TeamMemberPolicies.Sharing*
+  commentId: Overload:Dropbox.Api.TeamPolicies.TeamMemberPolicies.Sharing
+  name: Sharing
+  nameWithType: TeamMemberPolicies.Sharing
+  fullName: Dropbox.Api.TeamPolicies.TeamMemberPolicies.Sharing
+- uid: Dropbox.Api.TeamPolicies.TeamMemberPolicies.EmmState*
+  commentId: Overload:Dropbox.Api.TeamPolicies.TeamMemberPolicies.EmmState
+  name: EmmState
+  nameWithType: TeamMemberPolicies.EmmState
+  fullName: Dropbox.Api.TeamPolicies.TeamMemberPolicies.EmmState
+- uid: Dropbox.Api.TeamPolicies.TeamMemberPolicies.OfficeAddin*
+  commentId: Overload:Dropbox.Api.TeamPolicies.TeamMemberPolicies.OfficeAddin
+  name: OfficeAddin
+  nameWithType: TeamMemberPolicies.OfficeAddin
+  fullName: Dropbox.Api.TeamPolicies.TeamMemberPolicies.OfficeAddin
+- uid: Dropbox.Api.TeamPolicies.TeamMemberPolicies.SuggestMembersPolicy*
+  commentId: Overload:Dropbox.Api.TeamPolicies.TeamMemberPolicies.SuggestMembersPolicy
+  name: SuggestMembersPolicy
+  nameWithType: TeamMemberPolicies.SuggestMembersPolicy
+  fullName: Dropbox.Api.TeamPolicies.TeamMemberPolicies.SuggestMembersPolicy
+shouldSkipMarkup: true

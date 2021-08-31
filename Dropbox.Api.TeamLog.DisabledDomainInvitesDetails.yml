@@ -1,0 +1,96 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.DisabledDomainInvitesDetails
+  commentId: T:Dropbox.Api.TeamLog.DisabledDomainInvitesDetails
+  id: DisabledDomainInvitesDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.DisabledDomainInvitesDetails.#ctor
+  langs:
+  - csharp
+  - vb
+  name: DisabledDomainInvitesDetails
+  nameWithType: DisabledDomainInvitesDetails
+  fullName: Dropbox.Api.TeamLog.DisabledDomainInvitesDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DisabledDomainInvitesDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: DisabledDomainInvitesDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DisabledDomainInvitesDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Disabled domain invites.</p>\n"
+  example: []
+  syntax:
+    content: 'public class DisabledDomainInvitesDetails : object'
+    content.vb: >-
+      Public Class DisabledDomainInvitesDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.DisabledDomainInvitesDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.DisabledDomainInvitesDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.DisabledDomainInvitesDetails
+  langs:
+  - csharp
+  - vb
+  name: DisabledDomainInvitesDetails()
+  nameWithType: DisabledDomainInvitesDetails.DisabledDomainInvitesDetails()
+  fullName: Dropbox.Api.TeamLog.DisabledDomainInvitesDetails.DisabledDomainInvitesDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DisabledDomainInvitesDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DisabledDomainInvitesDetails.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.DisabledDomainInvitesDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public DisabledDomainInvitesDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.DisabledDomainInvitesDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.DisabledDomainInvitesDetails
+  commentId: T:Dropbox.Api.TeamLog.DisabledDomainInvitesDetails
+  parent: Dropbox.Api.TeamLog
+  name: DisabledDomainInvitesDetails
+  nameWithType: DisabledDomainInvitesDetails
+  fullName: Dropbox.Api.TeamLog.DisabledDomainInvitesDetails
+- uid: Dropbox.Api.TeamLog.DisabledDomainInvitesDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.DisabledDomainInvitesDetails.#ctor
+  name: DisabledDomainInvitesDetails
+  nameWithType: DisabledDomainInvitesDetails.DisabledDomainInvitesDetails
+  fullName: Dropbox.Api.TeamLog.DisabledDomainInvitesDetails.DisabledDomainInvitesDetails
+shouldSkipMarkup: true

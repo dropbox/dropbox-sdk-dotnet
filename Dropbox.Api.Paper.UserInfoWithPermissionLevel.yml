@@ -1,0 +1,246 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Paper.UserInfoWithPermissionLevel
+  commentId: T:Dropbox.Api.Paper.UserInfoWithPermissionLevel
+  id: UserInfoWithPermissionLevel
+  parent: Dropbox.Api.Paper
+  children:
+  - Dropbox.Api.Paper.UserInfoWithPermissionLevel.#ctor
+  - Dropbox.Api.Paper.UserInfoWithPermissionLevel.#ctor(Dropbox.Api.Sharing.UserInfo,Dropbox.Api.Paper.PaperDocPermissionLevel)
+  - Dropbox.Api.Paper.UserInfoWithPermissionLevel.PermissionLevel
+  - Dropbox.Api.Paper.UserInfoWithPermissionLevel.User
+  langs:
+  - csharp
+  - vb
+  name: UserInfoWithPermissionLevel
+  nameWithType: UserInfoWithPermissionLevel
+  fullName: Dropbox.Api.Paper.UserInfoWithPermissionLevel
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/UserInfoWithPermissionLevel.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: UserInfoWithPermissionLevel
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/UserInfoWithPermissionLevel.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>The user info with permission level object</p>\n"
+  example: []
+  syntax:
+    content: 'public class UserInfoWithPermissionLevel : object'
+    content.vb: >-
+      Public Class UserInfoWithPermissionLevel
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Paper.UserInfoWithPermissionLevel.#ctor(Dropbox.Api.Sharing.UserInfo,Dropbox.Api.Paper.PaperDocPermissionLevel)
+  commentId: M:Dropbox.Api.Paper.UserInfoWithPermissionLevel.#ctor(Dropbox.Api.Sharing.UserInfo,Dropbox.Api.Paper.PaperDocPermissionLevel)
+  id: '#ctor(Dropbox.Api.Sharing.UserInfo,Dropbox.Api.Paper.PaperDocPermissionLevel)'
+  parent: Dropbox.Api.Paper.UserInfoWithPermissionLevel
+  langs:
+  - csharp
+  - vb
+  name: UserInfoWithPermissionLevel(UserInfo, PaperDocPermissionLevel)
+  nameWithType: UserInfoWithPermissionLevel.UserInfoWithPermissionLevel(UserInfo, PaperDocPermissionLevel)
+  fullName: Dropbox.Api.Paper.UserInfoWithPermissionLevel.UserInfoWithPermissionLevel(Dropbox.Api.Sharing.UserInfo, Dropbox.Api.Paper.PaperDocPermissionLevel)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/UserInfoWithPermissionLevel.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/UserInfoWithPermissionLevel.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Paper.UserInfoWithPermissionLevel\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public UserInfoWithPermissionLevel(UserInfo user, PaperDocPermissionLevel permissionLevel)
+    parameters:
+    - id: user
+      type: Dropbox.Api.Sharing.UserInfo
+      description: User shared on the Paper doc.
+    - id: permissionLevel
+      type: Dropbox.Api.Paper.PaperDocPermissionLevel
+      description: Permission level for the user.
+    content.vb: Public Sub New(user As UserInfo, permissionLevel As PaperDocPermissionLevel)
+  overload: Dropbox.Api.Paper.UserInfoWithPermissionLevel.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Paper.UserInfoWithPermissionLevel.#ctor
+  commentId: M:Dropbox.Api.Paper.UserInfoWithPermissionLevel.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Paper.UserInfoWithPermissionLevel
+  langs:
+  - csharp
+  - vb
+  name: UserInfoWithPermissionLevel()
+  nameWithType: UserInfoWithPermissionLevel.UserInfoWithPermissionLevel()
+  fullName: Dropbox.Api.Paper.UserInfoWithPermissionLevel.UserInfoWithPermissionLevel()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/UserInfoWithPermissionLevel.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/UserInfoWithPermissionLevel.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Paper.UserInfoWithPermissionLevel\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public UserInfoWithPermissionLevel()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Paper.UserInfoWithPermissionLevel.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Paper.UserInfoWithPermissionLevel.User
+  commentId: P:Dropbox.Api.Paper.UserInfoWithPermissionLevel.User
+  id: User
+  parent: Dropbox.Api.Paper.UserInfoWithPermissionLevel
+  langs:
+  - csharp
+  - vb
+  name: User
+  nameWithType: UserInfoWithPermissionLevel.User
+  fullName: Dropbox.Api.Paper.UserInfoWithPermissionLevel.User
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/UserInfoWithPermissionLevel.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: User
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/UserInfoWithPermissionLevel.cs
+    startLine: 66
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>User shared on the Paper doc.</p>\n"
+  example: []
+  syntax:
+    content: public UserInfo User { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.UserInfo
+    content.vb: Public Property User As UserInfo
+  overload: Dropbox.Api.Paper.UserInfoWithPermissionLevel.User*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Paper.UserInfoWithPermissionLevel.PermissionLevel
+  commentId: P:Dropbox.Api.Paper.UserInfoWithPermissionLevel.PermissionLevel
+  id: PermissionLevel
+  parent: Dropbox.Api.Paper.UserInfoWithPermissionLevel
+  langs:
+  - csharp
+  - vb
+  name: PermissionLevel
+  nameWithType: UserInfoWithPermissionLevel.PermissionLevel
+  fullName: Dropbox.Api.Paper.UserInfoWithPermissionLevel.PermissionLevel
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/UserInfoWithPermissionLevel.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PermissionLevel
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/UserInfoWithPermissionLevel.cs
+    startLine: 71
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Permission level for the user.</p>\n"
+  example: []
+  syntax:
+    content: public PaperDocPermissionLevel PermissionLevel { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Paper.PaperDocPermissionLevel
+    content.vb: Public Property PermissionLevel As PaperDocPermissionLevel
+  overload: Dropbox.Api.Paper.UserInfoWithPermissionLevel.PermissionLevel*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Paper
+  commentId: N:Dropbox.Api.Paper
+  name: Dropbox.Api.Paper
+  nameWithType: Dropbox.Api.Paper
+  fullName: Dropbox.Api.Paper
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Paper.UserInfoWithPermissionLevel
+  commentId: T:Dropbox.Api.Paper.UserInfoWithPermissionLevel
+  name: UserInfoWithPermissionLevel
+  nameWithType: UserInfoWithPermissionLevel
+  fullName: Dropbox.Api.Paper.UserInfoWithPermissionLevel
+- uid: Dropbox.Api.Paper.UserInfoWithPermissionLevel.#ctor*
+  commentId: Overload:Dropbox.Api.Paper.UserInfoWithPermissionLevel.#ctor
+  name: UserInfoWithPermissionLevel
+  nameWithType: UserInfoWithPermissionLevel.UserInfoWithPermissionLevel
+  fullName: Dropbox.Api.Paper.UserInfoWithPermissionLevel.UserInfoWithPermissionLevel
+- uid: Dropbox.Api.Sharing.UserInfo
+  commentId: T:Dropbox.Api.Sharing.UserInfo
+  parent: Dropbox.Api.Sharing
+  name: UserInfo
+  nameWithType: UserInfo
+  fullName: Dropbox.Api.Sharing.UserInfo
+- uid: Dropbox.Api.Paper.PaperDocPermissionLevel
+  commentId: T:Dropbox.Api.Paper.PaperDocPermissionLevel
+  parent: Dropbox.Api.Paper
+  name: PaperDocPermissionLevel
+  nameWithType: PaperDocPermissionLevel
+  fullName: Dropbox.Api.Paper.PaperDocPermissionLevel
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: Dropbox.Api.Paper.UserInfoWithPermissionLevel.User*
+  commentId: Overload:Dropbox.Api.Paper.UserInfoWithPermissionLevel.User
+  name: User
+  nameWithType: UserInfoWithPermissionLevel.User
+  fullName: Dropbox.Api.Paper.UserInfoWithPermissionLevel.User
+- uid: Dropbox.Api.Paper.UserInfoWithPermissionLevel.PermissionLevel*
+  commentId: Overload:Dropbox.Api.Paper.UserInfoWithPermissionLevel.PermissionLevel
+  name: PermissionLevel
+  nameWithType: UserInfoWithPermissionLevel.PermissionLevel
+  fullName: Dropbox.Api.Paper.UserInfoWithPermissionLevel.PermissionLevel
+shouldSkipMarkup: true

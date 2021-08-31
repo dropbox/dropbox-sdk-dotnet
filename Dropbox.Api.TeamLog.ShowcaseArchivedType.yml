@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.ShowcaseArchivedType
+  commentId: T:Dropbox.Api.TeamLog.ShowcaseArchivedType
+  id: ShowcaseArchivedType
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.ShowcaseArchivedType.#ctor
+  - Dropbox.Api.TeamLog.ShowcaseArchivedType.#ctor(System.String)
+  - Dropbox.Api.TeamLog.ShowcaseArchivedType.Description
+  langs:
+  - csharp
+  - vb
+  name: ShowcaseArchivedType
+  nameWithType: ShowcaseArchivedType
+  fullName: Dropbox.Api.TeamLog.ShowcaseArchivedType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseArchivedType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ShowcaseArchivedType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseArchivedType.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The showcase archived type object</p>\n"
+  example: []
+  syntax:
+    content: 'public class ShowcaseArchivedType : object'
+    content.vb: >-
+      Public Class ShowcaseArchivedType
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.ShowcaseArchivedType.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.ShowcaseArchivedType.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.ShowcaseArchivedType
+  langs:
+  - csharp
+  - vb
+  name: ShowcaseArchivedType(String)
+  nameWithType: ShowcaseArchivedType.ShowcaseArchivedType(String)
+  fullName: Dropbox.Api.TeamLog.ShowcaseArchivedType.ShowcaseArchivedType(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseArchivedType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseArchivedType.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.ShowcaseArchivedType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public ShowcaseArchivedType(string description)
+    parameters:
+    - id: description
+      type: System.String
+      description: The description
+    content.vb: Public Sub New(description As String)
+  overload: Dropbox.Api.TeamLog.ShowcaseArchivedType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.ShowcaseArchivedType.#ctor
+  commentId: M:Dropbox.Api.TeamLog.ShowcaseArchivedType.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.ShowcaseArchivedType
+  langs:
+  - csharp
+  - vb
+  name: ShowcaseArchivedType()
+  nameWithType: ShowcaseArchivedType.ShowcaseArchivedType()
+  fullName: Dropbox.Api.TeamLog.ShowcaseArchivedType.ShowcaseArchivedType()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseArchivedType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseArchivedType.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.ShowcaseArchivedType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public ShowcaseArchivedType()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.ShowcaseArchivedType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.ShowcaseArchivedType.Description
+  commentId: P:Dropbox.Api.TeamLog.ShowcaseArchivedType.Description
+  id: Description
+  parent: Dropbox.Api.TeamLog.ShowcaseArchivedType
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: ShowcaseArchivedType.Description
+  fullName: Dropbox.Api.TeamLog.ShowcaseArchivedType.Description
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseArchivedType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Description
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseArchivedType.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets the description of the showcase archived type</p>\n"
+  example: []
+  syntax:
+    content: public string Description { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Dropbox.Api.TeamLog.ShowcaseArchivedType.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.ShowcaseArchivedType
+  commentId: T:Dropbox.Api.TeamLog.ShowcaseArchivedType
+  parent: Dropbox.Api.TeamLog
+  name: ShowcaseArchivedType
+  nameWithType: ShowcaseArchivedType
+  fullName: Dropbox.Api.TeamLog.ShowcaseArchivedType
+- uid: Dropbox.Api.TeamLog.ShowcaseArchivedType.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.ShowcaseArchivedType.#ctor
+  name: ShowcaseArchivedType
+  nameWithType: ShowcaseArchivedType.ShowcaseArchivedType
+  fullName: Dropbox.Api.TeamLog.ShowcaseArchivedType.ShowcaseArchivedType
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.ShowcaseArchivedType.Description*
+  commentId: Overload:Dropbox.Api.TeamLog.ShowcaseArchivedType.Description
+  name: Description
+  nameWithType: ShowcaseArchivedType.Description
+  fullName: Dropbox.Api.TeamLog.ShowcaseArchivedType.Description
+shouldSkipMarkup: true

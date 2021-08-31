@@ -1,0 +1,425 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.GroupMembersAddArg
+  commentId: T:Dropbox.Api.Team.GroupMembersAddArg
+  id: GroupMembersAddArg
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.GroupMembersAddArg.#ctor
+  - Dropbox.Api.Team.GroupMembersAddArg.#ctor(Dropbox.Api.Team.GroupSelector,System.Collections.Generic.IEnumerable{Dropbox.Api.Team.MemberAccess},System.Boolean)
+  - Dropbox.Api.Team.GroupMembersAddArg.Group
+  - Dropbox.Api.Team.GroupMembersAddArg.Members
+  langs:
+  - csharp
+  - vb
+  name: GroupMembersAddArg
+  nameWithType: GroupMembersAddArg
+  fullName: Dropbox.Api.Team.GroupMembersAddArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupMembersAddArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GroupMembersAddArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupMembersAddArg.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The group members add arg object</p>\n"
+  example: []
+  syntax:
+    content: 'public class GroupMembersAddArg : IncludeMembersArg'
+    content.vb: >-
+      Public Class GroupMembersAddArg
+          Inherits IncludeMembersArg
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.IncludeMembersArg
+  inheritedMembers:
+  - Dropbox.Api.Team.IncludeMembersArg.ReturnMembers
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.GroupMembersAddArg.#ctor(Dropbox.Api.Team.GroupSelector,System.Collections.Generic.IEnumerable{Dropbox.Api.Team.MemberAccess},System.Boolean)
+  commentId: M:Dropbox.Api.Team.GroupMembersAddArg.#ctor(Dropbox.Api.Team.GroupSelector,System.Collections.Generic.IEnumerable{Dropbox.Api.Team.MemberAccess},System.Boolean)
+  id: '#ctor(Dropbox.Api.Team.GroupSelector,System.Collections.Generic.IEnumerable{Dropbox.Api.Team.MemberAccess},System.Boolean)'
+  parent: Dropbox.Api.Team.GroupMembersAddArg
+  langs:
+  - csharp
+  - vb
+  name: GroupMembersAddArg(GroupSelector, System.Collections.Generic.IEnumerable<MemberAccess>, Boolean)
+  nameWithType: GroupMembersAddArg.GroupMembersAddArg(GroupSelector, System.Collections.Generic.IEnumerable<MemberAccess>, Boolean)
+  fullName: Dropbox.Api.Team.GroupMembersAddArg.GroupMembersAddArg(Dropbox.Api.Team.GroupSelector, System.Collections.Generic.IEnumerable<Dropbox.Api.Team.MemberAccess>, System.Boolean)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupMembersAddArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupMembersAddArg.cs
+    startLine: 39
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.GroupMembersAddArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public GroupMembersAddArg(GroupSelector group, System.Collections.Generic.IEnumerable<MemberAccess> members, bool returnMembers = true)
+    parameters:
+    - id: group
+      type: Dropbox.Api.Team.GroupSelector
+      description: Group to which users will be added.
+    - id: members
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.Team.MemberAccess}
+      description: List of users to be added to the group.
+    - id: returnMembers
+      type: System.Boolean
+      description: >-
+        Whether to return the list of members in the group.
+
+        Note that the default value will cause all the group members  to be returned in the
+
+        response. This may take a long time for large groups.
+    content.vb: Public Sub New(group As GroupSelector, members As System.Collections.Generic.IEnumerable(Of MemberAccess), returnMembers As Boolean = True)
+  overload: Dropbox.Api.Team.GroupMembersAddArg.#ctor*
+  nameWithType.vb: GroupMembersAddArg.GroupMembersAddArg(GroupSelector, System.Collections.Generic.IEnumerable(Of MemberAccess), Boolean)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Team.GroupMembersAddArg.GroupMembersAddArg(Dropbox.Api.Team.GroupSelector, System.Collections.Generic.IEnumerable(Of Dropbox.Api.Team.MemberAccess), System.Boolean)
+  name.vb: GroupMembersAddArg(GroupSelector, System.Collections.Generic.IEnumerable(Of MemberAccess), Boolean)
+- uid: Dropbox.Api.Team.GroupMembersAddArg.#ctor
+  commentId: M:Dropbox.Api.Team.GroupMembersAddArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.GroupMembersAddArg
+  langs:
+  - csharp
+  - vb
+  name: GroupMembersAddArg()
+  nameWithType: GroupMembersAddArg.GroupMembersAddArg()
+  fullName: Dropbox.Api.Team.GroupMembersAddArg.GroupMembersAddArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupMembersAddArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupMembersAddArg.cs
+    startLine: 66
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.GroupMembersAddArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public GroupMembersAddArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.GroupMembersAddArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.GroupMembersAddArg.Group
+  commentId: P:Dropbox.Api.Team.GroupMembersAddArg.Group
+  id: Group
+  parent: Dropbox.Api.Team.GroupMembersAddArg
+  langs:
+  - csharp
+  - vb
+  name: Group
+  nameWithType: GroupMembersAddArg.Group
+  fullName: Dropbox.Api.Team.GroupMembersAddArg.Group
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupMembersAddArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Group
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupMembersAddArg.cs
+    startLine: 74
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Group to which users will be added.</p>\n"
+  example: []
+  syntax:
+    content: public GroupSelector Group { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.GroupSelector
+    content.vb: Public Property Group As GroupSelector
+  overload: Dropbox.Api.Team.GroupMembersAddArg.Group*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Team.GroupMembersAddArg.Members
+  commentId: P:Dropbox.Api.Team.GroupMembersAddArg.Members
+  id: Members
+  parent: Dropbox.Api.Team.GroupMembersAddArg
+  langs:
+  - csharp
+  - vb
+  name: Members
+  nameWithType: GroupMembersAddArg.Members
+  fullName: Dropbox.Api.Team.GroupMembersAddArg.Members
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupMembersAddArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Members
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/GroupMembersAddArg.cs
+    startLine: 79
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>List of users to be added to the group.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<MemberAccess> Members { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{Dropbox.Api.Team.MemberAccess}
+    content.vb: Public Property Members As System.Collections.Generic.IList(Of MemberAccess)
+  overload: Dropbox.Api.Team.GroupMembersAddArg.Members*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.IncludeMembersArg
+  commentId: T:Dropbox.Api.Team.IncludeMembersArg
+  parent: Dropbox.Api.Team
+  name: IncludeMembersArg
+  nameWithType: IncludeMembersArg
+  fullName: Dropbox.Api.Team.IncludeMembersArg
+- uid: Dropbox.Api.Team.IncludeMembersArg.ReturnMembers
+  commentId: P:Dropbox.Api.Team.IncludeMembersArg.ReturnMembers
+  parent: Dropbox.Api.Team.IncludeMembersArg
+  name: ReturnMembers
+  nameWithType: IncludeMembersArg.ReturnMembers
+  fullName: Dropbox.Api.Team.IncludeMembersArg.ReturnMembers
+- uid: Dropbox.Api.Team.GroupMembersAddArg
+  commentId: T:Dropbox.Api.Team.GroupMembersAddArg
+  parent: Dropbox.Api.Team
+  name: GroupMembersAddArg
+  nameWithType: GroupMembersAddArg
+  fullName: Dropbox.Api.Team.GroupMembersAddArg
+- uid: Dropbox.Api.Team.GroupMembersAddArg.#ctor*
+  commentId: Overload:Dropbox.Api.Team.GroupMembersAddArg.#ctor
+  name: GroupMembersAddArg
+  nameWithType: GroupMembersAddArg.GroupMembersAddArg
+  fullName: Dropbox.Api.Team.GroupMembersAddArg.GroupMembersAddArg
+- uid: Dropbox.Api.Team.GroupSelector
+  commentId: T:Dropbox.Api.Team.GroupSelector
+  parent: Dropbox.Api.Team
+  name: GroupSelector
+  nameWithType: GroupSelector
+  fullName: Dropbox.Api.Team.GroupSelector
+- uid: System.Collections.Generic.IEnumerable{Dropbox.Api.Team.MemberAccess}
+  commentId: '!:System.Collections.Generic.IEnumerable{Dropbox.Api.Team.MemberAccess}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<MemberAccess>
+  nameWithType: System.Collections.Generic.IEnumerable<MemberAccess>
+  fullName: System.Collections.Generic.IEnumerable<Dropbox.Api.Team.MemberAccess>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of MemberAccess)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Dropbox.Api.Team.MemberAccess)
+  name.vb: System.Collections.Generic.IEnumerable(Of MemberAccess)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Team.MemberAccess
+    name: MemberAccess
+    nameWithType: MemberAccess
+    fullName: Dropbox.Api.Team.MemberAccess
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Team.MemberAccess
+    name: MemberAccess
+    nameWithType: MemberAccess
+    fullName: Dropbox.Api.Team.MemberAccess
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: System.Collections.Generic.IEnumerable<>
+  nameWithType: System.Collections.Generic.IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: System.Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Team.GroupMembersAddArg.Group*
+  commentId: Overload:Dropbox.Api.Team.GroupMembersAddArg.Group
+  name: Group
+  nameWithType: GroupMembersAddArg.Group
+  fullName: Dropbox.Api.Team.GroupMembersAddArg.Group
+- uid: Dropbox.Api.Team.GroupMembersAddArg.Members*
+  commentId: Overload:Dropbox.Api.Team.GroupMembersAddArg.Members
+  name: Members
+  nameWithType: GroupMembersAddArg.Members
+  fullName: Dropbox.Api.Team.GroupMembersAddArg.Members
+- uid: System.Collections.Generic.IList{Dropbox.Api.Team.MemberAccess}
+  commentId: '!:System.Collections.Generic.IList{Dropbox.Api.Team.MemberAccess}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<MemberAccess>
+  nameWithType: System.Collections.Generic.IList<MemberAccess>
+  fullName: System.Collections.Generic.IList<Dropbox.Api.Team.MemberAccess>
+  nameWithType.vb: System.Collections.Generic.IList(Of MemberAccess)
+  fullName.vb: System.Collections.Generic.IList(Of Dropbox.Api.Team.MemberAccess)
+  name.vb: System.Collections.Generic.IList(Of MemberAccess)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Team.MemberAccess
+    name: MemberAccess
+    nameWithType: MemberAccess
+    fullName: Dropbox.Api.Team.MemberAccess
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Team.MemberAccess
+    name: MemberAccess
+    nameWithType: MemberAccess
+    fullName: Dropbox.Api.Team.MemberAccess
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  isExternal: true
+  name: System.Collections.Generic.IList<>
+  nameWithType: System.Collections.Generic.IList<>
+  fullName: System.Collections.Generic.IList<>
+  nameWithType.vb: System.Collections.Generic.IList(Of )
+  fullName.vb: System.Collections.Generic.IList(Of )
+  name.vb: System.Collections.Generic.IList(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+shouldSkipMarkup: true

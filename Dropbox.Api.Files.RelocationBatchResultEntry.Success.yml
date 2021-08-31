@@ -1,0 +1,201 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.RelocationBatchResultEntry.Success
+  commentId: T:Dropbox.Api.Files.RelocationBatchResultEntry.Success
+  id: RelocationBatchResultEntry.Success
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.RelocationBatchResultEntry.Success.#ctor(Dropbox.Api.Files.Metadata)
+  - Dropbox.Api.Files.RelocationBatchResultEntry.Success.Value
+  langs:
+  - csharp
+  - vb
+  name: RelocationBatchResultEntry.Success
+  nameWithType: RelocationBatchResultEntry.Success
+  fullName: Dropbox.Api.Files.RelocationBatchResultEntry.Success
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchResultEntry.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Success
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchResultEntry.cs
+    startLine: 183
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The success object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Success : RelocationBatchResultEntry'
+    content.vb: >-
+      Public NotInheritable Class Success
+          Inherits RelocationBatchResultEntry
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Files.RelocationBatchResultEntry
+  inheritedMembers:
+  - Dropbox.Api.Files.RelocationBatchResultEntry.IsSuccess
+  - Dropbox.Api.Files.RelocationBatchResultEntry.AsSuccess
+  - Dropbox.Api.Files.RelocationBatchResultEntry.IsFailure
+  - Dropbox.Api.Files.RelocationBatchResultEntry.AsFailure
+  - Dropbox.Api.Files.RelocationBatchResultEntry.IsOther
+  - Dropbox.Api.Files.RelocationBatchResultEntry.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Files.RelocationBatchResultEntry.Success.#ctor(Dropbox.Api.Files.Metadata)
+  commentId: M:Dropbox.Api.Files.RelocationBatchResultEntry.Success.#ctor(Dropbox.Api.Files.Metadata)
+  id: '#ctor(Dropbox.Api.Files.Metadata)'
+  parent: Dropbox.Api.Files.RelocationBatchResultEntry.Success
+  langs:
+  - csharp
+  - vb
+  name: Success(Metadata)
+  nameWithType: RelocationBatchResultEntry.Success.Success(Metadata)
+  fullName: Dropbox.Api.Files.RelocationBatchResultEntry.Success.Success(Dropbox.Api.Files.Metadata)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchResultEntry.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchResultEntry.cs
+    startLine: 201
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.RelocationBatchResultEntry.Success\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public Success(Metadata value)
+    parameters:
+    - id: value
+      type: Dropbox.Api.Files.Metadata
+      description: The value
+    content.vb: Public Sub New(value As Metadata)
+  overload: Dropbox.Api.Files.RelocationBatchResultEntry.Success.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.RelocationBatchResultEntry.Success.Value
+  commentId: P:Dropbox.Api.Files.RelocationBatchResultEntry.Success.Value
+  id: Value
+  parent: Dropbox.Api.Files.RelocationBatchResultEntry.Success
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: RelocationBatchResultEntry.Success.Value
+  fullName: Dropbox.Api.Files.RelocationBatchResultEntry.Success.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchResultEntry.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/RelocationBatchResultEntry.cs
+    startLine: 215
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public Metadata Value { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.Metadata
+    content.vb: Public ReadOnly Property Value As Metadata
+  overload: Dropbox.Api.Files.RelocationBatchResultEntry.Success.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.RelocationBatchResultEntry
+  commentId: T:Dropbox.Api.Files.RelocationBatchResultEntry
+  parent: Dropbox.Api.Files
+  name: RelocationBatchResultEntry
+  nameWithType: RelocationBatchResultEntry
+  fullName: Dropbox.Api.Files.RelocationBatchResultEntry
+- uid: Dropbox.Api.Files.RelocationBatchResultEntry.IsSuccess
+  commentId: P:Dropbox.Api.Files.RelocationBatchResultEntry.IsSuccess
+  parent: Dropbox.Api.Files.RelocationBatchResultEntry
+  name: IsSuccess
+  nameWithType: RelocationBatchResultEntry.IsSuccess
+  fullName: Dropbox.Api.Files.RelocationBatchResultEntry.IsSuccess
+- uid: Dropbox.Api.Files.RelocationBatchResultEntry.AsSuccess
+  commentId: P:Dropbox.Api.Files.RelocationBatchResultEntry.AsSuccess
+  parent: Dropbox.Api.Files.RelocationBatchResultEntry
+  name: AsSuccess
+  nameWithType: RelocationBatchResultEntry.AsSuccess
+  fullName: Dropbox.Api.Files.RelocationBatchResultEntry.AsSuccess
+- uid: Dropbox.Api.Files.RelocationBatchResultEntry.IsFailure
+  commentId: P:Dropbox.Api.Files.RelocationBatchResultEntry.IsFailure
+  parent: Dropbox.Api.Files.RelocationBatchResultEntry
+  name: IsFailure
+  nameWithType: RelocationBatchResultEntry.IsFailure
+  fullName: Dropbox.Api.Files.RelocationBatchResultEntry.IsFailure
+- uid: Dropbox.Api.Files.RelocationBatchResultEntry.AsFailure
+  commentId: P:Dropbox.Api.Files.RelocationBatchResultEntry.AsFailure
+  parent: Dropbox.Api.Files.RelocationBatchResultEntry
+  name: AsFailure
+  nameWithType: RelocationBatchResultEntry.AsFailure
+  fullName: Dropbox.Api.Files.RelocationBatchResultEntry.AsFailure
+- uid: Dropbox.Api.Files.RelocationBatchResultEntry.IsOther
+  commentId: P:Dropbox.Api.Files.RelocationBatchResultEntry.IsOther
+  parent: Dropbox.Api.Files.RelocationBatchResultEntry
+  name: IsOther
+  nameWithType: RelocationBatchResultEntry.IsOther
+  fullName: Dropbox.Api.Files.RelocationBatchResultEntry.IsOther
+- uid: Dropbox.Api.Files.RelocationBatchResultEntry.AsOther
+  commentId: P:Dropbox.Api.Files.RelocationBatchResultEntry.AsOther
+  parent: Dropbox.Api.Files.RelocationBatchResultEntry
+  name: AsOther
+  nameWithType: RelocationBatchResultEntry.AsOther
+  fullName: Dropbox.Api.Files.RelocationBatchResultEntry.AsOther
+- uid: Dropbox.Api.Files.RelocationBatchResultEntry.Success
+  commentId: T:Dropbox.Api.Files.RelocationBatchResultEntry.Success
+  parent: Dropbox.Api.Files
+  name: RelocationBatchResultEntry.Success
+  nameWithType: RelocationBatchResultEntry.Success
+  fullName: Dropbox.Api.Files.RelocationBatchResultEntry.Success
+- uid: Dropbox.Api.Files.RelocationBatchResultEntry.Success.#ctor*
+  commentId: Overload:Dropbox.Api.Files.RelocationBatchResultEntry.Success.#ctor
+  name: Success
+  nameWithType: RelocationBatchResultEntry.Success.Success
+  fullName: Dropbox.Api.Files.RelocationBatchResultEntry.Success.Success
+- uid: Dropbox.Api.Files.Metadata
+  commentId: T:Dropbox.Api.Files.Metadata
+  parent: Dropbox.Api.Files
+  name: Metadata
+  nameWithType: Metadata
+  fullName: Dropbox.Api.Files.Metadata
+- uid: Dropbox.Api.Files.RelocationBatchResultEntry.Success.Value*
+  commentId: Overload:Dropbox.Api.Files.RelocationBatchResultEntry.Success.Value
+  name: Value
+  nameWithType: RelocationBatchResultEntry.Success.Value
+  fullName: Dropbox.Api.Files.RelocationBatchResultEntry.Success.Value
+shouldSkipMarkup: true

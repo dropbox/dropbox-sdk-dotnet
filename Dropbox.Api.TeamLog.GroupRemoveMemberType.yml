@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.GroupRemoveMemberType
+  commentId: T:Dropbox.Api.TeamLog.GroupRemoveMemberType
+  id: GroupRemoveMemberType
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.GroupRemoveMemberType.#ctor
+  - Dropbox.Api.TeamLog.GroupRemoveMemberType.#ctor(System.String)
+  - Dropbox.Api.TeamLog.GroupRemoveMemberType.Description
+  langs:
+  - csharp
+  - vb
+  name: GroupRemoveMemberType
+  nameWithType: GroupRemoveMemberType
+  fullName: Dropbox.Api.TeamLog.GroupRemoveMemberType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupRemoveMemberType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GroupRemoveMemberType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupRemoveMemberType.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The group remove member type object</p>\n"
+  example: []
+  syntax:
+    content: 'public class GroupRemoveMemberType : object'
+    content.vb: >-
+      Public Class GroupRemoveMemberType
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.GroupRemoveMemberType.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.GroupRemoveMemberType.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.GroupRemoveMemberType
+  langs:
+  - csharp
+  - vb
+  name: GroupRemoveMemberType(String)
+  nameWithType: GroupRemoveMemberType.GroupRemoveMemberType(String)
+  fullName: Dropbox.Api.TeamLog.GroupRemoveMemberType.GroupRemoveMemberType(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupRemoveMemberType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupRemoveMemberType.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.GroupRemoveMemberType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public GroupRemoveMemberType(string description)
+    parameters:
+    - id: description
+      type: System.String
+      description: The description
+    content.vb: Public Sub New(description As String)
+  overload: Dropbox.Api.TeamLog.GroupRemoveMemberType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.GroupRemoveMemberType.#ctor
+  commentId: M:Dropbox.Api.TeamLog.GroupRemoveMemberType.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.GroupRemoveMemberType
+  langs:
+  - csharp
+  - vb
+  name: GroupRemoveMemberType()
+  nameWithType: GroupRemoveMemberType.GroupRemoveMemberType()
+  fullName: Dropbox.Api.TeamLog.GroupRemoveMemberType.GroupRemoveMemberType()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupRemoveMemberType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupRemoveMemberType.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.GroupRemoveMemberType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public GroupRemoveMemberType()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.GroupRemoveMemberType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.GroupRemoveMemberType.Description
+  commentId: P:Dropbox.Api.TeamLog.GroupRemoveMemberType.Description
+  id: Description
+  parent: Dropbox.Api.TeamLog.GroupRemoveMemberType
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: GroupRemoveMemberType.Description
+  fullName: Dropbox.Api.TeamLog.GroupRemoveMemberType.Description
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupRemoveMemberType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Description
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GroupRemoveMemberType.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets the description of the group remove member type</p>\n"
+  example: []
+  syntax:
+    content: public string Description { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Dropbox.Api.TeamLog.GroupRemoveMemberType.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.GroupRemoveMemberType
+  commentId: T:Dropbox.Api.TeamLog.GroupRemoveMemberType
+  parent: Dropbox.Api.TeamLog
+  name: GroupRemoveMemberType
+  nameWithType: GroupRemoveMemberType
+  fullName: Dropbox.Api.TeamLog.GroupRemoveMemberType
+- uid: Dropbox.Api.TeamLog.GroupRemoveMemberType.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.GroupRemoveMemberType.#ctor
+  name: GroupRemoveMemberType
+  nameWithType: GroupRemoveMemberType.GroupRemoveMemberType
+  fullName: Dropbox.Api.TeamLog.GroupRemoveMemberType.GroupRemoveMemberType
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.GroupRemoveMemberType.Description*
+  commentId: Overload:Dropbox.Api.TeamLog.GroupRemoveMemberType.Description
+  name: Description
+  nameWithType: GroupRemoveMemberType.Description
+  fullName: Dropbox.Api.TeamLog.GroupRemoveMemberType.Description
+shouldSkipMarkup: true

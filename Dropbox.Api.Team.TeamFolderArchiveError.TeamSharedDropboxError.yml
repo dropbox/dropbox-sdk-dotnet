@@ -1,0 +1,215 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.TeamFolderArchiveError.TeamSharedDropboxError
+  commentId: T:Dropbox.Api.Team.TeamFolderArchiveError.TeamSharedDropboxError
+  id: TeamFolderArchiveError.TeamSharedDropboxError
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.TeamFolderArchiveError.TeamSharedDropboxError.#ctor(Dropbox.Api.Team.TeamFolderTeamSharedDropboxError)
+  - Dropbox.Api.Team.TeamFolderArchiveError.TeamSharedDropboxError.Value
+  langs:
+  - csharp
+  - vb
+  name: TeamFolderArchiveError.TeamSharedDropboxError
+  nameWithType: TeamFolderArchiveError.TeamSharedDropboxError
+  fullName: Dropbox.Api.Team.TeamFolderArchiveError.TeamSharedDropboxError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderArchiveError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TeamSharedDropboxError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderArchiveError.cs
+    startLine: 412
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The team shared dropbox error object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class TeamSharedDropboxError : TeamFolderArchiveError'
+    content.vb: >-
+      Public NotInheritable Class TeamSharedDropboxError
+          Inherits TeamFolderArchiveError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.TeamFolderArchiveError
+  inheritedMembers:
+  - Dropbox.Api.Team.TeamFolderArchiveError.IsAccessError
+  - Dropbox.Api.Team.TeamFolderArchiveError.AsAccessError
+  - Dropbox.Api.Team.TeamFolderArchiveError.IsStatusError
+  - Dropbox.Api.Team.TeamFolderArchiveError.AsStatusError
+  - Dropbox.Api.Team.TeamFolderArchiveError.IsTeamSharedDropboxError
+  - Dropbox.Api.Team.TeamFolderArchiveError.AsTeamSharedDropboxError
+  - Dropbox.Api.Team.TeamFolderArchiveError.IsOther
+  - Dropbox.Api.Team.TeamFolderArchiveError.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Team.TeamFolderArchiveError.TeamSharedDropboxError.#ctor(Dropbox.Api.Team.TeamFolderTeamSharedDropboxError)
+  commentId: M:Dropbox.Api.Team.TeamFolderArchiveError.TeamSharedDropboxError.#ctor(Dropbox.Api.Team.TeamFolderTeamSharedDropboxError)
+  id: '#ctor(Dropbox.Api.Team.TeamFolderTeamSharedDropboxError)'
+  parent: Dropbox.Api.Team.TeamFolderArchiveError.TeamSharedDropboxError
+  langs:
+  - csharp
+  - vb
+  name: TeamSharedDropboxError(TeamFolderTeamSharedDropboxError)
+  nameWithType: TeamFolderArchiveError.TeamSharedDropboxError.TeamSharedDropboxError(TeamFolderTeamSharedDropboxError)
+  fullName: Dropbox.Api.Team.TeamFolderArchiveError.TeamSharedDropboxError.TeamSharedDropboxError(Dropbox.Api.Team.TeamFolderTeamSharedDropboxError)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderArchiveError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderArchiveError.cs
+    startLine: 431
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.TeamFolderArchiveError.TeamSharedDropboxError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public TeamSharedDropboxError(TeamFolderTeamSharedDropboxError value)
+    parameters:
+    - id: value
+      type: Dropbox.Api.Team.TeamFolderTeamSharedDropboxError
+      description: The value
+    content.vb: Public Sub New(value As TeamFolderTeamSharedDropboxError)
+  overload: Dropbox.Api.Team.TeamFolderArchiveError.TeamSharedDropboxError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.TeamFolderArchiveError.TeamSharedDropboxError.Value
+  commentId: P:Dropbox.Api.Team.TeamFolderArchiveError.TeamSharedDropboxError.Value
+  id: Value
+  parent: Dropbox.Api.Team.TeamFolderArchiveError.TeamSharedDropboxError
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: TeamFolderArchiveError.TeamSharedDropboxError.Value
+  fullName: Dropbox.Api.Team.TeamFolderArchiveError.TeamSharedDropboxError.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderArchiveError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderArchiveError.cs
+    startLine: 446
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public TeamFolderTeamSharedDropboxError Value { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.TeamFolderTeamSharedDropboxError
+    content.vb: Public ReadOnly Property Value As TeamFolderTeamSharedDropboxError
+  overload: Dropbox.Api.Team.TeamFolderArchiveError.TeamSharedDropboxError.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.TeamFolderArchiveError
+  commentId: T:Dropbox.Api.Team.TeamFolderArchiveError
+  parent: Dropbox.Api.Team
+  name: TeamFolderArchiveError
+  nameWithType: TeamFolderArchiveError
+  fullName: Dropbox.Api.Team.TeamFolderArchiveError
+- uid: Dropbox.Api.Team.TeamFolderArchiveError.IsAccessError
+  commentId: P:Dropbox.Api.Team.TeamFolderArchiveError.IsAccessError
+  parent: Dropbox.Api.Team.TeamFolderArchiveError
+  name: IsAccessError
+  nameWithType: TeamFolderArchiveError.IsAccessError
+  fullName: Dropbox.Api.Team.TeamFolderArchiveError.IsAccessError
+- uid: Dropbox.Api.Team.TeamFolderArchiveError.AsAccessError
+  commentId: P:Dropbox.Api.Team.TeamFolderArchiveError.AsAccessError
+  parent: Dropbox.Api.Team.TeamFolderArchiveError
+  name: AsAccessError
+  nameWithType: TeamFolderArchiveError.AsAccessError
+  fullName: Dropbox.Api.Team.TeamFolderArchiveError.AsAccessError
+- uid: Dropbox.Api.Team.TeamFolderArchiveError.IsStatusError
+  commentId: P:Dropbox.Api.Team.TeamFolderArchiveError.IsStatusError
+  parent: Dropbox.Api.Team.TeamFolderArchiveError
+  name: IsStatusError
+  nameWithType: TeamFolderArchiveError.IsStatusError
+  fullName: Dropbox.Api.Team.TeamFolderArchiveError.IsStatusError
+- uid: Dropbox.Api.Team.TeamFolderArchiveError.AsStatusError
+  commentId: P:Dropbox.Api.Team.TeamFolderArchiveError.AsStatusError
+  parent: Dropbox.Api.Team.TeamFolderArchiveError
+  name: AsStatusError
+  nameWithType: TeamFolderArchiveError.AsStatusError
+  fullName: Dropbox.Api.Team.TeamFolderArchiveError.AsStatusError
+- uid: Dropbox.Api.Team.TeamFolderArchiveError.IsTeamSharedDropboxError
+  commentId: P:Dropbox.Api.Team.TeamFolderArchiveError.IsTeamSharedDropboxError
+  parent: Dropbox.Api.Team.TeamFolderArchiveError
+  name: IsTeamSharedDropboxError
+  nameWithType: TeamFolderArchiveError.IsTeamSharedDropboxError
+  fullName: Dropbox.Api.Team.TeamFolderArchiveError.IsTeamSharedDropboxError
+- uid: Dropbox.Api.Team.TeamFolderArchiveError.AsTeamSharedDropboxError
+  commentId: P:Dropbox.Api.Team.TeamFolderArchiveError.AsTeamSharedDropboxError
+  parent: Dropbox.Api.Team.TeamFolderArchiveError
+  name: AsTeamSharedDropboxError
+  nameWithType: TeamFolderArchiveError.AsTeamSharedDropboxError
+  fullName: Dropbox.Api.Team.TeamFolderArchiveError.AsTeamSharedDropboxError
+- uid: Dropbox.Api.Team.TeamFolderArchiveError.IsOther
+  commentId: P:Dropbox.Api.Team.TeamFolderArchiveError.IsOther
+  parent: Dropbox.Api.Team.TeamFolderArchiveError
+  name: IsOther
+  nameWithType: TeamFolderArchiveError.IsOther
+  fullName: Dropbox.Api.Team.TeamFolderArchiveError.IsOther
+- uid: Dropbox.Api.Team.TeamFolderArchiveError.AsOther
+  commentId: P:Dropbox.Api.Team.TeamFolderArchiveError.AsOther
+  parent: Dropbox.Api.Team.TeamFolderArchiveError
+  name: AsOther
+  nameWithType: TeamFolderArchiveError.AsOther
+  fullName: Dropbox.Api.Team.TeamFolderArchiveError.AsOther
+- uid: Dropbox.Api.Team.TeamFolderArchiveError.TeamSharedDropboxError
+  commentId: T:Dropbox.Api.Team.TeamFolderArchiveError.TeamSharedDropboxError
+  parent: Dropbox.Api.Team
+  name: TeamFolderArchiveError.TeamSharedDropboxError
+  nameWithType: TeamFolderArchiveError.TeamSharedDropboxError
+  fullName: Dropbox.Api.Team.TeamFolderArchiveError.TeamSharedDropboxError
+- uid: Dropbox.Api.Team.TeamFolderArchiveError.TeamSharedDropboxError.#ctor*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderArchiveError.TeamSharedDropboxError.#ctor
+  name: TeamSharedDropboxError
+  nameWithType: TeamFolderArchiveError.TeamSharedDropboxError.TeamSharedDropboxError
+  fullName: Dropbox.Api.Team.TeamFolderArchiveError.TeamSharedDropboxError.TeamSharedDropboxError
+- uid: Dropbox.Api.Team.TeamFolderTeamSharedDropboxError
+  commentId: T:Dropbox.Api.Team.TeamFolderTeamSharedDropboxError
+  parent: Dropbox.Api.Team
+  name: TeamFolderTeamSharedDropboxError
+  nameWithType: TeamFolderTeamSharedDropboxError
+  fullName: Dropbox.Api.Team.TeamFolderTeamSharedDropboxError
+- uid: Dropbox.Api.Team.TeamFolderArchiveError.TeamSharedDropboxError.Value*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderArchiveError.TeamSharedDropboxError.Value
+  name: Value
+  nameWithType: TeamFolderArchiveError.TeamSharedDropboxError.Value
+  fullName: Dropbox.Api.Team.TeamFolderArchiveError.TeamSharedDropboxError.Value
+shouldSkipMarkup: true

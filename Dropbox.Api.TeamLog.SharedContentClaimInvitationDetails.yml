@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.SharedContentClaimInvitationDetails
+  commentId: T:Dropbox.Api.TeamLog.SharedContentClaimInvitationDetails
+  id: SharedContentClaimInvitationDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.SharedContentClaimInvitationDetails.#ctor
+  - Dropbox.Api.TeamLog.SharedContentClaimInvitationDetails.#ctor(System.String)
+  - Dropbox.Api.TeamLog.SharedContentClaimInvitationDetails.SharedContentLink
+  langs:
+  - csharp
+  - vb
+  name: SharedContentClaimInvitationDetails
+  nameWithType: SharedContentClaimInvitationDetails
+  fullName: Dropbox.Api.TeamLog.SharedContentClaimInvitationDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentClaimInvitationDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SharedContentClaimInvitationDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentClaimInvitationDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Acquired membership of shared file/folder by accepting invite.</p>\n"
+  example: []
+  syntax:
+    content: 'public class SharedContentClaimInvitationDetails : object'
+    content.vb: >-
+      Public Class SharedContentClaimInvitationDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.SharedContentClaimInvitationDetails.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.SharedContentClaimInvitationDetails.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.SharedContentClaimInvitationDetails
+  langs:
+  - csharp
+  - vb
+  name: SharedContentClaimInvitationDetails(String)
+  nameWithType: SharedContentClaimInvitationDetails.SharedContentClaimInvitationDetails(String)
+  fullName: Dropbox.Api.TeamLog.SharedContentClaimInvitationDetails.SharedContentClaimInvitationDetails(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentClaimInvitationDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentClaimInvitationDetails.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SharedContentClaimInvitationDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public SharedContentClaimInvitationDetails(string sharedContentLink = null)
+    parameters:
+    - id: sharedContentLink
+      type: System.String
+      description: Shared content link.
+    content.vb: Public Sub New(sharedContentLink As String = Nothing)
+  overload: Dropbox.Api.TeamLog.SharedContentClaimInvitationDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SharedContentClaimInvitationDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.SharedContentClaimInvitationDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.SharedContentClaimInvitationDetails
+  langs:
+  - csharp
+  - vb
+  name: SharedContentClaimInvitationDetails()
+  nameWithType: SharedContentClaimInvitationDetails.SharedContentClaimInvitationDetails()
+  fullName: Dropbox.Api.TeamLog.SharedContentClaimInvitationDetails.SharedContentClaimInvitationDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentClaimInvitationDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentClaimInvitationDetails.cs
+    startLine: 45
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SharedContentClaimInvitationDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public SharedContentClaimInvitationDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.SharedContentClaimInvitationDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SharedContentClaimInvitationDetails.SharedContentLink
+  commentId: P:Dropbox.Api.TeamLog.SharedContentClaimInvitationDetails.SharedContentLink
+  id: SharedContentLink
+  parent: Dropbox.Api.TeamLog.SharedContentClaimInvitationDetails
+  langs:
+  - csharp
+  - vb
+  name: SharedContentLink
+  nameWithType: SharedContentClaimInvitationDetails.SharedContentLink
+  fullName: Dropbox.Api.TeamLog.SharedContentClaimInvitationDetails.SharedContentLink
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentClaimInvitationDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SharedContentLink
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentClaimInvitationDetails.cs
+    startLine: 53
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Shared content link.</p>\n"
+  example: []
+  syntax:
+    content: public string SharedContentLink { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SharedContentLink As String
+  overload: Dropbox.Api.TeamLog.SharedContentClaimInvitationDetails.SharedContentLink*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.SharedContentClaimInvitationDetails
+  commentId: T:Dropbox.Api.TeamLog.SharedContentClaimInvitationDetails
+  parent: Dropbox.Api.TeamLog
+  name: SharedContentClaimInvitationDetails
+  nameWithType: SharedContentClaimInvitationDetails
+  fullName: Dropbox.Api.TeamLog.SharedContentClaimInvitationDetails
+- uid: Dropbox.Api.TeamLog.SharedContentClaimInvitationDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedContentClaimInvitationDetails.#ctor
+  name: SharedContentClaimInvitationDetails
+  nameWithType: SharedContentClaimInvitationDetails.SharedContentClaimInvitationDetails
+  fullName: Dropbox.Api.TeamLog.SharedContentClaimInvitationDetails.SharedContentClaimInvitationDetails
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.SharedContentClaimInvitationDetails.SharedContentLink*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedContentClaimInvitationDetails.SharedContentLink
+  name: SharedContentLink
+  nameWithType: SharedContentClaimInvitationDetails.SharedContentLink
+  fullName: Dropbox.Api.TeamLog.SharedContentClaimInvitationDetails.SharedContentLink
+shouldSkipMarkup: true

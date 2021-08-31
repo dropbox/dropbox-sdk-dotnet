@@ -1,0 +1,190 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.SecondaryTeamRequestExpiredDetails
+  commentId: T:Dropbox.Api.TeamLog.SecondaryTeamRequestExpiredDetails
+  id: SecondaryTeamRequestExpiredDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.SecondaryTeamRequestExpiredDetails.#ctor
+  - Dropbox.Api.TeamLog.SecondaryTeamRequestExpiredDetails.#ctor(System.String)
+  - Dropbox.Api.TeamLog.SecondaryTeamRequestExpiredDetails.SentTo
+  langs:
+  - csharp
+  - vb
+  name: SecondaryTeamRequestExpiredDetails
+  nameWithType: SecondaryTeamRequestExpiredDetails
+  fullName: Dropbox.Api.TeamLog.SecondaryTeamRequestExpiredDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SecondaryTeamRequestExpiredDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SecondaryTeamRequestExpiredDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SecondaryTeamRequestExpiredDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Team merge request expiration details shown to the secondary team</p>\n"
+  example: []
+  syntax:
+    content: 'public class SecondaryTeamRequestExpiredDetails : object'
+    content.vb: >-
+      Public Class SecondaryTeamRequestExpiredDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.SecondaryTeamRequestExpiredDetails.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.SecondaryTeamRequestExpiredDetails.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.SecondaryTeamRequestExpiredDetails
+  langs:
+  - csharp
+  - vb
+  name: SecondaryTeamRequestExpiredDetails(String)
+  nameWithType: SecondaryTeamRequestExpiredDetails.SecondaryTeamRequestExpiredDetails(String)
+  fullName: Dropbox.Api.TeamLog.SecondaryTeamRequestExpiredDetails.SecondaryTeamRequestExpiredDetails(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SecondaryTeamRequestExpiredDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SecondaryTeamRequestExpiredDetails.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SecondaryTeamRequestExpiredDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public SecondaryTeamRequestExpiredDetails(string sentTo)
+    parameters:
+    - id: sentTo
+      type: System.String
+      description: >-
+        The email of the primary team admin the request was sent
+
+        to.
+    content.vb: Public Sub New(sentTo As String)
+  overload: Dropbox.Api.TeamLog.SecondaryTeamRequestExpiredDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SecondaryTeamRequestExpiredDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.SecondaryTeamRequestExpiredDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.SecondaryTeamRequestExpiredDetails
+  langs:
+  - csharp
+  - vb
+  name: SecondaryTeamRequestExpiredDetails()
+  nameWithType: SecondaryTeamRequestExpiredDetails.SecondaryTeamRequestExpiredDetails()
+  fullName: Dropbox.Api.TeamLog.SecondaryTeamRequestExpiredDetails.SecondaryTeamRequestExpiredDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SecondaryTeamRequestExpiredDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SecondaryTeamRequestExpiredDetails.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SecondaryTeamRequestExpiredDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public SecondaryTeamRequestExpiredDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.SecondaryTeamRequestExpiredDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SecondaryTeamRequestExpiredDetails.SentTo
+  commentId: P:Dropbox.Api.TeamLog.SecondaryTeamRequestExpiredDetails.SentTo
+  id: SentTo
+  parent: Dropbox.Api.TeamLog.SecondaryTeamRequestExpiredDetails
+  langs:
+  - csharp
+  - vb
+  name: SentTo
+  nameWithType: SecondaryTeamRequestExpiredDetails.SentTo
+  fullName: Dropbox.Api.TeamLog.SecondaryTeamRequestExpiredDetails.SentTo
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SecondaryTeamRequestExpiredDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SentTo
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SecondaryTeamRequestExpiredDetails.cs
+    startLine: 59
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The email of the primary team admin the request was sent to.</p>\n"
+  example: []
+  syntax:
+    content: public string SentTo { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SentTo As String
+  overload: Dropbox.Api.TeamLog.SecondaryTeamRequestExpiredDetails.SentTo*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.SecondaryTeamRequestExpiredDetails
+  commentId: T:Dropbox.Api.TeamLog.SecondaryTeamRequestExpiredDetails
+  parent: Dropbox.Api.TeamLog
+  name: SecondaryTeamRequestExpiredDetails
+  nameWithType: SecondaryTeamRequestExpiredDetails
+  fullName: Dropbox.Api.TeamLog.SecondaryTeamRequestExpiredDetails
+- uid: Dropbox.Api.TeamLog.SecondaryTeamRequestExpiredDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.SecondaryTeamRequestExpiredDetails.#ctor
+  name: SecondaryTeamRequestExpiredDetails
+  nameWithType: SecondaryTeamRequestExpiredDetails.SecondaryTeamRequestExpiredDetails
+  fullName: Dropbox.Api.TeamLog.SecondaryTeamRequestExpiredDetails.SecondaryTeamRequestExpiredDetails
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.SecondaryTeamRequestExpiredDetails.SentTo*
+  commentId: Overload:Dropbox.Api.TeamLog.SecondaryTeamRequestExpiredDetails.SentTo
+  name: SentTo
+  nameWithType: SecondaryTeamRequestExpiredDetails.SentTo
+  fullName: Dropbox.Api.TeamLog.SecondaryTeamRequestExpiredDetails.SentTo
+shouldSkipMarkup: true

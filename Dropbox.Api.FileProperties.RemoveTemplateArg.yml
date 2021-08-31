@@ -1,0 +1,193 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.FileProperties.RemoveTemplateArg
+  commentId: T:Dropbox.Api.FileProperties.RemoveTemplateArg
+  id: RemoveTemplateArg
+  parent: Dropbox.Api.FileProperties
+  children:
+  - Dropbox.Api.FileProperties.RemoveTemplateArg.#ctor
+  - Dropbox.Api.FileProperties.RemoveTemplateArg.#ctor(System.String)
+  - Dropbox.Api.FileProperties.RemoveTemplateArg.TemplateId
+  langs:
+  - csharp
+  - vb
+  name: RemoveTemplateArg
+  nameWithType: RemoveTemplateArg
+  fullName: Dropbox.Api.FileProperties.RemoveTemplateArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/RemoveTemplateArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: RemoveTemplateArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/RemoveTemplateArg.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>The remove template arg object</p>\n"
+  example: []
+  syntax:
+    content: 'public class RemoveTemplateArg : object'
+    content.vb: >-
+      Public Class RemoveTemplateArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.FileProperties.RemoveTemplateArg.#ctor(System.String)
+  commentId: M:Dropbox.Api.FileProperties.RemoveTemplateArg.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.FileProperties.RemoveTemplateArg
+  langs:
+  - csharp
+  - vb
+  name: RemoveTemplateArg(String)
+  nameWithType: RemoveTemplateArg.RemoveTemplateArg(String)
+  fullName: Dropbox.Api.FileProperties.RemoveTemplateArg.RemoveTemplateArg(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/RemoveTemplateArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/RemoveTemplateArg.cs
+    startLine: 38
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.FileProperties.RemoveTemplateArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public RemoveTemplateArg(string templateId)
+    parameters:
+    - id: templateId
+      type: System.String
+      description: An identifier for a template created by <xref href="Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.TemplatesAddForUserAsync(Dropbox.Api.FileProperties.AddTemplateArg)" data-throw-if-not-resolved="false"></xref> or <xref href="Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesAddForTeamAsync(Dropbox.Api.FileProperties.AddTemplateArg)" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Sub New(templateId As String)
+  overload: Dropbox.Api.FileProperties.RemoveTemplateArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileProperties.RemoveTemplateArg.#ctor
+  commentId: M:Dropbox.Api.FileProperties.RemoveTemplateArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.FileProperties.RemoveTemplateArg
+  langs:
+  - csharp
+  - vb
+  name: RemoveTemplateArg()
+  nameWithType: RemoveTemplateArg.RemoveTemplateArg()
+  fullName: Dropbox.Api.FileProperties.RemoveTemplateArg.RemoveTemplateArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/RemoveTemplateArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/RemoveTemplateArg.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.FileProperties.RemoveTemplateArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public RemoveTemplateArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.FileProperties.RemoveTemplateArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileProperties.RemoveTemplateArg.TemplateId
+  commentId: P:Dropbox.Api.FileProperties.RemoveTemplateArg.TemplateId
+  id: TemplateId
+  parent: Dropbox.Api.FileProperties.RemoveTemplateArg
+  langs:
+  - csharp
+  - vb
+  name: TemplateId
+  nameWithType: RemoveTemplateArg.TemplateId
+  fullName: Dropbox.Api.FileProperties.RemoveTemplateArg.TemplateId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/RemoveTemplateArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TemplateId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/RemoveTemplateArg.cs
+    startLine: 74
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>An identifier for a template created by <xref href=\"Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.TemplatesAddForUserAsync(Dropbox.Api.FileProperties.AddTemplateArg)\" data-throw-if-not-resolved=\"false\"></xref> or <xref href=\"Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesAddForTeamAsync(Dropbox.Api.FileProperties.AddTemplateArg)\" data-throw-if-not-resolved=\"false\"></xref>.</p>\n"
+  example: []
+  syntax:
+    content: public string TemplateId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property TemplateId As String
+  overload: Dropbox.Api.FileProperties.RemoveTemplateArg.TemplateId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.FileProperties
+  commentId: N:Dropbox.Api.FileProperties
+  name: Dropbox.Api.FileProperties
+  nameWithType: Dropbox.Api.FileProperties
+  fullName: Dropbox.Api.FileProperties
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.FileProperties.RemoveTemplateArg
+  commentId: T:Dropbox.Api.FileProperties.RemoveTemplateArg
+  parent: Dropbox.Api.FileProperties
+  name: RemoveTemplateArg
+  nameWithType: RemoveTemplateArg
+  fullName: Dropbox.Api.FileProperties.RemoveTemplateArg
+- uid: Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.TemplatesAddForUserAsync(Dropbox.Api.FileProperties.AddTemplateArg)
+  commentId: M:Dropbox.Api.FileProperties.Routes.FilePropertiesUserRoutes.TemplatesAddForUserAsync(Dropbox.Api.FileProperties.AddTemplateArg)
+  isExternal: true
+- uid: Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesAddForTeamAsync(Dropbox.Api.FileProperties.AddTemplateArg)
+  commentId: M:Dropbox.Api.FileProperties.Routes.FilePropertiesTeamRoutes.TemplatesAddForTeamAsync(Dropbox.Api.FileProperties.AddTemplateArg)
+  isExternal: true
+- uid: Dropbox.Api.FileProperties.RemoveTemplateArg.#ctor*
+  commentId: Overload:Dropbox.Api.FileProperties.RemoveTemplateArg.#ctor
+  name: RemoveTemplateArg
+  nameWithType: RemoveTemplateArg.RemoveTemplateArg
+  fullName: Dropbox.Api.FileProperties.RemoveTemplateArg.RemoveTemplateArg
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.FileProperties.RemoveTemplateArg.TemplateId*
+  commentId: Overload:Dropbox.Api.FileProperties.RemoveTemplateArg.TemplateId
+  name: TemplateId
+  nameWithType: RemoveTemplateArg.TemplateId
+  fullName: Dropbox.Api.FileProperties.RemoveTemplateArg.TemplateId
+shouldSkipMarkup: true

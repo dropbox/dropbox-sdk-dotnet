@@ -1,0 +1,236 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.PaperDefaultFolderPolicyChangedDetails
+  commentId: T:Dropbox.Api.TeamLog.PaperDefaultFolderPolicyChangedDetails
+  id: PaperDefaultFolderPolicyChangedDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.PaperDefaultFolderPolicyChangedDetails.#ctor
+  - Dropbox.Api.TeamLog.PaperDefaultFolderPolicyChangedDetails.#ctor(Dropbox.Api.TeamLog.PaperDefaultFolderPolicy,Dropbox.Api.TeamLog.PaperDefaultFolderPolicy)
+  - Dropbox.Api.TeamLog.PaperDefaultFolderPolicyChangedDetails.NewValue
+  - Dropbox.Api.TeamLog.PaperDefaultFolderPolicyChangedDetails.PreviousValue
+  langs:
+  - csharp
+  - vb
+  name: PaperDefaultFolderPolicyChangedDetails
+  nameWithType: PaperDefaultFolderPolicyChangedDetails
+  fullName: Dropbox.Api.TeamLog.PaperDefaultFolderPolicyChangedDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDefaultFolderPolicyChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PaperDefaultFolderPolicyChangedDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDefaultFolderPolicyChangedDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Changed Paper Default Folder Policy setting for team.</p>\n"
+  example: []
+  syntax:
+    content: 'public class PaperDefaultFolderPolicyChangedDetails : object'
+    content.vb: >-
+      Public Class PaperDefaultFolderPolicyChangedDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.PaperDefaultFolderPolicyChangedDetails.#ctor(Dropbox.Api.TeamLog.PaperDefaultFolderPolicy,Dropbox.Api.TeamLog.PaperDefaultFolderPolicy)
+  commentId: M:Dropbox.Api.TeamLog.PaperDefaultFolderPolicyChangedDetails.#ctor(Dropbox.Api.TeamLog.PaperDefaultFolderPolicy,Dropbox.Api.TeamLog.PaperDefaultFolderPolicy)
+  id: '#ctor(Dropbox.Api.TeamLog.PaperDefaultFolderPolicy,Dropbox.Api.TeamLog.PaperDefaultFolderPolicy)'
+  parent: Dropbox.Api.TeamLog.PaperDefaultFolderPolicyChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: PaperDefaultFolderPolicyChangedDetails(PaperDefaultFolderPolicy, PaperDefaultFolderPolicy)
+  nameWithType: PaperDefaultFolderPolicyChangedDetails.PaperDefaultFolderPolicyChangedDetails(PaperDefaultFolderPolicy, PaperDefaultFolderPolicy)
+  fullName: Dropbox.Api.TeamLog.PaperDefaultFolderPolicyChangedDetails.PaperDefaultFolderPolicyChangedDetails(Dropbox.Api.TeamLog.PaperDefaultFolderPolicy, Dropbox.Api.TeamLog.PaperDefaultFolderPolicy)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDefaultFolderPolicyChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDefaultFolderPolicyChangedDetails.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.PaperDefaultFolderPolicyChangedDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public PaperDefaultFolderPolicyChangedDetails(PaperDefaultFolderPolicy newValue, PaperDefaultFolderPolicy previousValue)
+    parameters:
+    - id: newValue
+      type: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy
+      description: New Paper Default Folder Policy.
+    - id: previousValue
+      type: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy
+      description: Previous Paper Default Folder Policy.
+    content.vb: Public Sub New(newValue As PaperDefaultFolderPolicy, previousValue As PaperDefaultFolderPolicy)
+  overload: Dropbox.Api.TeamLog.PaperDefaultFolderPolicyChangedDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.PaperDefaultFolderPolicyChangedDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.PaperDefaultFolderPolicyChangedDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.PaperDefaultFolderPolicyChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: PaperDefaultFolderPolicyChangedDetails()
+  nameWithType: PaperDefaultFolderPolicyChangedDetails.PaperDefaultFolderPolicyChangedDetails()
+  fullName: Dropbox.Api.TeamLog.PaperDefaultFolderPolicyChangedDetails.PaperDefaultFolderPolicyChangedDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDefaultFolderPolicyChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDefaultFolderPolicyChangedDetails.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.PaperDefaultFolderPolicyChangedDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public PaperDefaultFolderPolicyChangedDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.PaperDefaultFolderPolicyChangedDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.PaperDefaultFolderPolicyChangedDetails.NewValue
+  commentId: P:Dropbox.Api.TeamLog.PaperDefaultFolderPolicyChangedDetails.NewValue
+  id: NewValue
+  parent: Dropbox.Api.TeamLog.PaperDefaultFolderPolicyChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: NewValue
+  nameWithType: PaperDefaultFolderPolicyChangedDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.PaperDefaultFolderPolicyChangedDetails.NewValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDefaultFolderPolicyChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NewValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDefaultFolderPolicyChangedDetails.cs
+    startLine: 66
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>New Paper Default Folder Policy.</p>\n"
+  example: []
+  syntax:
+    content: public PaperDefaultFolderPolicy NewValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy
+    content.vb: Public Property NewValue As PaperDefaultFolderPolicy
+  overload: Dropbox.Api.TeamLog.PaperDefaultFolderPolicyChangedDetails.NewValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.PaperDefaultFolderPolicyChangedDetails.PreviousValue
+  commentId: P:Dropbox.Api.TeamLog.PaperDefaultFolderPolicyChangedDetails.PreviousValue
+  id: PreviousValue
+  parent: Dropbox.Api.TeamLog.PaperDefaultFolderPolicyChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: PreviousValue
+  nameWithType: PaperDefaultFolderPolicyChangedDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.PaperDefaultFolderPolicyChangedDetails.PreviousValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDefaultFolderPolicyChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PreviousValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDefaultFolderPolicyChangedDetails.cs
+    startLine: 71
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Previous Paper Default Folder Policy.</p>\n"
+  example: []
+  syntax:
+    content: public PaperDefaultFolderPolicy PreviousValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy
+    content.vb: Public Property PreviousValue As PaperDefaultFolderPolicy
+  overload: Dropbox.Api.TeamLog.PaperDefaultFolderPolicyChangedDetails.PreviousValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.PaperDefaultFolderPolicyChangedDetails
+  commentId: T:Dropbox.Api.TeamLog.PaperDefaultFolderPolicyChangedDetails
+  parent: Dropbox.Api.TeamLog
+  name: PaperDefaultFolderPolicyChangedDetails
+  nameWithType: PaperDefaultFolderPolicyChangedDetails
+  fullName: Dropbox.Api.TeamLog.PaperDefaultFolderPolicyChangedDetails
+- uid: Dropbox.Api.TeamLog.PaperDefaultFolderPolicyChangedDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.PaperDefaultFolderPolicyChangedDetails.#ctor
+  name: PaperDefaultFolderPolicyChangedDetails
+  nameWithType: PaperDefaultFolderPolicyChangedDetails.PaperDefaultFolderPolicyChangedDetails
+  fullName: Dropbox.Api.TeamLog.PaperDefaultFolderPolicyChangedDetails.PaperDefaultFolderPolicyChangedDetails
+- uid: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy
+  commentId: T:Dropbox.Api.TeamLog.PaperDefaultFolderPolicy
+  parent: Dropbox.Api.TeamLog
+  name: PaperDefaultFolderPolicy
+  nameWithType: PaperDefaultFolderPolicy
+  fullName: Dropbox.Api.TeamLog.PaperDefaultFolderPolicy
+- uid: Dropbox.Api.TeamLog.PaperDefaultFolderPolicyChangedDetails.NewValue*
+  commentId: Overload:Dropbox.Api.TeamLog.PaperDefaultFolderPolicyChangedDetails.NewValue
+  name: NewValue
+  nameWithType: PaperDefaultFolderPolicyChangedDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.PaperDefaultFolderPolicyChangedDetails.NewValue
+- uid: Dropbox.Api.TeamLog.PaperDefaultFolderPolicyChangedDetails.PreviousValue*
+  commentId: Overload:Dropbox.Api.TeamLog.PaperDefaultFolderPolicyChangedDetails.PreviousValue
+  name: PreviousValue
+  nameWithType: PaperDefaultFolderPolicyChangedDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.PaperDefaultFolderPolicyChangedDetails.PreviousValue
+shouldSkipMarkup: true

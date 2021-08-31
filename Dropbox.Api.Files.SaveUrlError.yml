@@ -1,0 +1,567 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.SaveUrlError
+  commentId: T:Dropbox.Api.Files.SaveUrlError
+  id: SaveUrlError
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.SaveUrlError.#ctor
+  - Dropbox.Api.Files.SaveUrlError.AsDownloadFailed
+  - Dropbox.Api.Files.SaveUrlError.AsInvalidUrl
+  - Dropbox.Api.Files.SaveUrlError.AsNotFound
+  - Dropbox.Api.Files.SaveUrlError.AsOther
+  - Dropbox.Api.Files.SaveUrlError.AsPath
+  - Dropbox.Api.Files.SaveUrlError.IsDownloadFailed
+  - Dropbox.Api.Files.SaveUrlError.IsInvalidUrl
+  - Dropbox.Api.Files.SaveUrlError.IsNotFound
+  - Dropbox.Api.Files.SaveUrlError.IsOther
+  - Dropbox.Api.Files.SaveUrlError.IsPath
+  langs:
+  - csharp
+  - vb
+  name: SaveUrlError
+  nameWithType: SaveUrlError
+  fullName: Dropbox.Api.Files.SaveUrlError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SaveUrlError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SaveUrlError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SaveUrlError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The save url error object</p>\n"
+  example: []
+  syntax:
+    content: 'public class SaveUrlError : object'
+    content.vb: >-
+      Public Class SaveUrlError
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Files.SaveUrlError.DownloadFailed
+  - Dropbox.Api.Files.SaveUrlError.InvalidUrl
+  - Dropbox.Api.Files.SaveUrlError.NotFound
+  - Dropbox.Api.Files.SaveUrlError.Other
+  - Dropbox.Api.Files.SaveUrlError.Path
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.SaveUrlError.#ctor
+  commentId: M:Dropbox.Api.Files.SaveUrlError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.SaveUrlError
+  langs:
+  - csharp
+  - vb
+  name: SaveUrlError()
+  nameWithType: SaveUrlError.SaveUrlError()
+  fullName: Dropbox.Api.Files.SaveUrlError.SaveUrlError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SaveUrlError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SaveUrlError.cs
+    startLine: 32
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.SaveUrlError\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public SaveUrlError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.SaveUrlError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.SaveUrlError.IsPath
+  commentId: P:Dropbox.Api.Files.SaveUrlError.IsPath
+  id: IsPath
+  parent: Dropbox.Api.Files.SaveUrlError
+  langs:
+  - csharp
+  - vb
+  name: IsPath
+  nameWithType: SaveUrlError.IsPath
+  fullName: Dropbox.Api.Files.SaveUrlError.IsPath
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SaveUrlError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsPath
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SaveUrlError.cs
+    startLine: 39
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is Path</p>\n"
+  example: []
+  syntax:
+    content: public bool IsPath { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsPath As Boolean
+  overload: Dropbox.Api.Files.SaveUrlError.IsPath*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.SaveUrlError.AsPath
+  commentId: P:Dropbox.Api.Files.SaveUrlError.AsPath
+  id: AsPath
+  parent: Dropbox.Api.Files.SaveUrlError
+  langs:
+  - csharp
+  - vb
+  name: AsPath
+  nameWithType: SaveUrlError.AsPath
+  fullName: Dropbox.Api.Files.SaveUrlError.AsPath
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SaveUrlError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsPath
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SaveUrlError.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a Path, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SaveUrlError.Path AsPath { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.SaveUrlError.Path
+    content.vb: Public ReadOnly Property AsPath As SaveUrlError.Path
+  overload: Dropbox.Api.Files.SaveUrlError.AsPath*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.SaveUrlError.IsDownloadFailed
+  commentId: P:Dropbox.Api.Files.SaveUrlError.IsDownloadFailed
+  id: IsDownloadFailed
+  parent: Dropbox.Api.Files.SaveUrlError
+  langs:
+  - csharp
+  - vb
+  name: IsDownloadFailed
+  nameWithType: SaveUrlError.IsDownloadFailed
+  fullName: Dropbox.Api.Files.SaveUrlError.IsDownloadFailed
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SaveUrlError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsDownloadFailed
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SaveUrlError.cs
+    startLine: 61
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is DownloadFailed</p>\n"
+  example: []
+  syntax:
+    content: public bool IsDownloadFailed { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsDownloadFailed As Boolean
+  overload: Dropbox.Api.Files.SaveUrlError.IsDownloadFailed*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.SaveUrlError.AsDownloadFailed
+  commentId: P:Dropbox.Api.Files.SaveUrlError.AsDownloadFailed
+  id: AsDownloadFailed
+  parent: Dropbox.Api.Files.SaveUrlError
+  langs:
+  - csharp
+  - vb
+  name: AsDownloadFailed
+  nameWithType: SaveUrlError.AsDownloadFailed
+  fullName: Dropbox.Api.Files.SaveUrlError.AsDownloadFailed
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SaveUrlError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsDownloadFailed
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SaveUrlError.cs
+    startLine: 72
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a DownloadFailed, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SaveUrlError.DownloadFailed AsDownloadFailed { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.SaveUrlError.DownloadFailed
+    content.vb: Public ReadOnly Property AsDownloadFailed As SaveUrlError.DownloadFailed
+  overload: Dropbox.Api.Files.SaveUrlError.AsDownloadFailed*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.SaveUrlError.IsInvalidUrl
+  commentId: P:Dropbox.Api.Files.SaveUrlError.IsInvalidUrl
+  id: IsInvalidUrl
+  parent: Dropbox.Api.Files.SaveUrlError
+  langs:
+  - csharp
+  - vb
+  name: IsInvalidUrl
+  nameWithType: SaveUrlError.IsInvalidUrl
+  fullName: Dropbox.Api.Files.SaveUrlError.IsInvalidUrl
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SaveUrlError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsInvalidUrl
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SaveUrlError.cs
+    startLine: 83
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is InvalidUrl</p>\n"
+  example: []
+  syntax:
+    content: public bool IsInvalidUrl { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsInvalidUrl As Boolean
+  overload: Dropbox.Api.Files.SaveUrlError.IsInvalidUrl*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.SaveUrlError.AsInvalidUrl
+  commentId: P:Dropbox.Api.Files.SaveUrlError.AsInvalidUrl
+  id: AsInvalidUrl
+  parent: Dropbox.Api.Files.SaveUrlError
+  langs:
+  - csharp
+  - vb
+  name: AsInvalidUrl
+  nameWithType: SaveUrlError.AsInvalidUrl
+  fullName: Dropbox.Api.Files.SaveUrlError.AsInvalidUrl
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SaveUrlError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsInvalidUrl
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SaveUrlError.cs
+    startLine: 94
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a InvalidUrl, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SaveUrlError.InvalidUrl AsInvalidUrl { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.SaveUrlError.InvalidUrl
+    content.vb: Public ReadOnly Property AsInvalidUrl As SaveUrlError.InvalidUrl
+  overload: Dropbox.Api.Files.SaveUrlError.AsInvalidUrl*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.SaveUrlError.IsNotFound
+  commentId: P:Dropbox.Api.Files.SaveUrlError.IsNotFound
+  id: IsNotFound
+  parent: Dropbox.Api.Files.SaveUrlError
+  langs:
+  - csharp
+  - vb
+  name: IsNotFound
+  nameWithType: SaveUrlError.IsNotFound
+  fullName: Dropbox.Api.Files.SaveUrlError.IsNotFound
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SaveUrlError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SaveUrlError.cs
+    startLine: 105
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is NotFound</p>\n"
+  example: []
+  syntax:
+    content: public bool IsNotFound { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsNotFound As Boolean
+  overload: Dropbox.Api.Files.SaveUrlError.IsNotFound*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.SaveUrlError.AsNotFound
+  commentId: P:Dropbox.Api.Files.SaveUrlError.AsNotFound
+  id: AsNotFound
+  parent: Dropbox.Api.Files.SaveUrlError
+  langs:
+  - csharp
+  - vb
+  name: AsNotFound
+  nameWithType: SaveUrlError.AsNotFound
+  fullName: Dropbox.Api.Files.SaveUrlError.AsNotFound
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SaveUrlError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SaveUrlError.cs
+    startLine: 116
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a NotFound, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SaveUrlError.NotFound AsNotFound { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.SaveUrlError.NotFound
+    content.vb: Public ReadOnly Property AsNotFound As SaveUrlError.NotFound
+  overload: Dropbox.Api.Files.SaveUrlError.AsNotFound*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.SaveUrlError.IsOther
+  commentId: P:Dropbox.Api.Files.SaveUrlError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Files.SaveUrlError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: SaveUrlError.IsOther
+  fullName: Dropbox.Api.Files.SaveUrlError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SaveUrlError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SaveUrlError.cs
+    startLine: 127
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Files.SaveUrlError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.SaveUrlError.AsOther
+  commentId: P:Dropbox.Api.Files.SaveUrlError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Files.SaveUrlError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: SaveUrlError.AsOther
+  fullName: Dropbox.Api.Files.SaveUrlError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SaveUrlError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SaveUrlError.cs
+    startLine: 138
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SaveUrlError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.SaveUrlError.Other
+    content.vb: Public ReadOnly Property AsOther As SaveUrlError.Other
+  overload: Dropbox.Api.Files.SaveUrlError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.SaveUrlError
+  commentId: T:Dropbox.Api.Files.SaveUrlError
+  parent: Dropbox.Api.Files
+  name: SaveUrlError
+  nameWithType: SaveUrlError
+  fullName: Dropbox.Api.Files.SaveUrlError
+- uid: Dropbox.Api.Files.SaveUrlError.#ctor*
+  commentId: Overload:Dropbox.Api.Files.SaveUrlError.#ctor
+  name: SaveUrlError
+  nameWithType: SaveUrlError.SaveUrlError
+  fullName: Dropbox.Api.Files.SaveUrlError.SaveUrlError
+- uid: Dropbox.Api.Files.SaveUrlError.IsPath*
+  commentId: Overload:Dropbox.Api.Files.SaveUrlError.IsPath
+  name: IsPath
+  nameWithType: SaveUrlError.IsPath
+  fullName: Dropbox.Api.Files.SaveUrlError.IsPath
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Files.SaveUrlError.AsPath*
+  commentId: Overload:Dropbox.Api.Files.SaveUrlError.AsPath
+  name: AsPath
+  nameWithType: SaveUrlError.AsPath
+  fullName: Dropbox.Api.Files.SaveUrlError.AsPath
+- uid: Dropbox.Api.Files.SaveUrlError.Path
+  commentId: T:Dropbox.Api.Files.SaveUrlError.Path
+  parent: Dropbox.Api.Files
+  name: SaveUrlError.Path
+  nameWithType: SaveUrlError.Path
+  fullName: Dropbox.Api.Files.SaveUrlError.Path
+- uid: Dropbox.Api.Files.SaveUrlError.IsDownloadFailed*
+  commentId: Overload:Dropbox.Api.Files.SaveUrlError.IsDownloadFailed
+  name: IsDownloadFailed
+  nameWithType: SaveUrlError.IsDownloadFailed
+  fullName: Dropbox.Api.Files.SaveUrlError.IsDownloadFailed
+- uid: Dropbox.Api.Files.SaveUrlError.AsDownloadFailed*
+  commentId: Overload:Dropbox.Api.Files.SaveUrlError.AsDownloadFailed
+  name: AsDownloadFailed
+  nameWithType: SaveUrlError.AsDownloadFailed
+  fullName: Dropbox.Api.Files.SaveUrlError.AsDownloadFailed
+- uid: Dropbox.Api.Files.SaveUrlError.DownloadFailed
+  commentId: T:Dropbox.Api.Files.SaveUrlError.DownloadFailed
+  parent: Dropbox.Api.Files
+  name: SaveUrlError.DownloadFailed
+  nameWithType: SaveUrlError.DownloadFailed
+  fullName: Dropbox.Api.Files.SaveUrlError.DownloadFailed
+- uid: Dropbox.Api.Files.SaveUrlError.IsInvalidUrl*
+  commentId: Overload:Dropbox.Api.Files.SaveUrlError.IsInvalidUrl
+  name: IsInvalidUrl
+  nameWithType: SaveUrlError.IsInvalidUrl
+  fullName: Dropbox.Api.Files.SaveUrlError.IsInvalidUrl
+- uid: Dropbox.Api.Files.SaveUrlError.AsInvalidUrl*
+  commentId: Overload:Dropbox.Api.Files.SaveUrlError.AsInvalidUrl
+  name: AsInvalidUrl
+  nameWithType: SaveUrlError.AsInvalidUrl
+  fullName: Dropbox.Api.Files.SaveUrlError.AsInvalidUrl
+- uid: Dropbox.Api.Files.SaveUrlError.InvalidUrl
+  commentId: T:Dropbox.Api.Files.SaveUrlError.InvalidUrl
+  parent: Dropbox.Api.Files
+  name: SaveUrlError.InvalidUrl
+  nameWithType: SaveUrlError.InvalidUrl
+  fullName: Dropbox.Api.Files.SaveUrlError.InvalidUrl
+- uid: Dropbox.Api.Files.SaveUrlError.IsNotFound*
+  commentId: Overload:Dropbox.Api.Files.SaveUrlError.IsNotFound
+  name: IsNotFound
+  nameWithType: SaveUrlError.IsNotFound
+  fullName: Dropbox.Api.Files.SaveUrlError.IsNotFound
+- uid: Dropbox.Api.Files.SaveUrlError.AsNotFound*
+  commentId: Overload:Dropbox.Api.Files.SaveUrlError.AsNotFound
+  name: AsNotFound
+  nameWithType: SaveUrlError.AsNotFound
+  fullName: Dropbox.Api.Files.SaveUrlError.AsNotFound
+- uid: Dropbox.Api.Files.SaveUrlError.NotFound
+  commentId: T:Dropbox.Api.Files.SaveUrlError.NotFound
+  parent: Dropbox.Api.Files
+  name: SaveUrlError.NotFound
+  nameWithType: SaveUrlError.NotFound
+  fullName: Dropbox.Api.Files.SaveUrlError.NotFound
+- uid: Dropbox.Api.Files.SaveUrlError.IsOther*
+  commentId: Overload:Dropbox.Api.Files.SaveUrlError.IsOther
+  name: IsOther
+  nameWithType: SaveUrlError.IsOther
+  fullName: Dropbox.Api.Files.SaveUrlError.IsOther
+- uid: Dropbox.Api.Files.SaveUrlError.AsOther*
+  commentId: Overload:Dropbox.Api.Files.SaveUrlError.AsOther
+  name: AsOther
+  nameWithType: SaveUrlError.AsOther
+  fullName: Dropbox.Api.Files.SaveUrlError.AsOther
+- uid: Dropbox.Api.Files.SaveUrlError.Other
+  commentId: T:Dropbox.Api.Files.SaveUrlError.Other
+  parent: Dropbox.Api.Files
+  name: SaveUrlError.Other
+  nameWithType: SaveUrlError.Other
+  fullName: Dropbox.Api.Files.SaveUrlError.Other
+shouldSkipMarkup: true

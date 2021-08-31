@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.SfTeamGrantAccessType
+  commentId: T:Dropbox.Api.TeamLog.SfTeamGrantAccessType
+  id: SfTeamGrantAccessType
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.SfTeamGrantAccessType.#ctor
+  - Dropbox.Api.TeamLog.SfTeamGrantAccessType.#ctor(System.String)
+  - Dropbox.Api.TeamLog.SfTeamGrantAccessType.Description
+  langs:
+  - csharp
+  - vb
+  name: SfTeamGrantAccessType
+  nameWithType: SfTeamGrantAccessType
+  fullName: Dropbox.Api.TeamLog.SfTeamGrantAccessType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SfTeamGrantAccessType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SfTeamGrantAccessType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SfTeamGrantAccessType.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The sf team grant access type object</p>\n"
+  example: []
+  syntax:
+    content: 'public class SfTeamGrantAccessType : object'
+    content.vb: >-
+      Public Class SfTeamGrantAccessType
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.SfTeamGrantAccessType.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.SfTeamGrantAccessType.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.SfTeamGrantAccessType
+  langs:
+  - csharp
+  - vb
+  name: SfTeamGrantAccessType(String)
+  nameWithType: SfTeamGrantAccessType.SfTeamGrantAccessType(String)
+  fullName: Dropbox.Api.TeamLog.SfTeamGrantAccessType.SfTeamGrantAccessType(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SfTeamGrantAccessType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SfTeamGrantAccessType.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SfTeamGrantAccessType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public SfTeamGrantAccessType(string description)
+    parameters:
+    - id: description
+      type: System.String
+      description: The description
+    content.vb: Public Sub New(description As String)
+  overload: Dropbox.Api.TeamLog.SfTeamGrantAccessType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SfTeamGrantAccessType.#ctor
+  commentId: M:Dropbox.Api.TeamLog.SfTeamGrantAccessType.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.SfTeamGrantAccessType
+  langs:
+  - csharp
+  - vb
+  name: SfTeamGrantAccessType()
+  nameWithType: SfTeamGrantAccessType.SfTeamGrantAccessType()
+  fullName: Dropbox.Api.TeamLog.SfTeamGrantAccessType.SfTeamGrantAccessType()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SfTeamGrantAccessType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SfTeamGrantAccessType.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SfTeamGrantAccessType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public SfTeamGrantAccessType()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.SfTeamGrantAccessType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SfTeamGrantAccessType.Description
+  commentId: P:Dropbox.Api.TeamLog.SfTeamGrantAccessType.Description
+  id: Description
+  parent: Dropbox.Api.TeamLog.SfTeamGrantAccessType
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: SfTeamGrantAccessType.Description
+  fullName: Dropbox.Api.TeamLog.SfTeamGrantAccessType.Description
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SfTeamGrantAccessType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Description
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SfTeamGrantAccessType.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets the description of the sf team grant access type</p>\n"
+  example: []
+  syntax:
+    content: public string Description { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Dropbox.Api.TeamLog.SfTeamGrantAccessType.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.SfTeamGrantAccessType
+  commentId: T:Dropbox.Api.TeamLog.SfTeamGrantAccessType
+  parent: Dropbox.Api.TeamLog
+  name: SfTeamGrantAccessType
+  nameWithType: SfTeamGrantAccessType
+  fullName: Dropbox.Api.TeamLog.SfTeamGrantAccessType
+- uid: Dropbox.Api.TeamLog.SfTeamGrantAccessType.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.SfTeamGrantAccessType.#ctor
+  name: SfTeamGrantAccessType
+  nameWithType: SfTeamGrantAccessType.SfTeamGrantAccessType
+  fullName: Dropbox.Api.TeamLog.SfTeamGrantAccessType.SfTeamGrantAccessType
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.SfTeamGrantAccessType.Description*
+  commentId: Overload:Dropbox.Api.TeamLog.SfTeamGrantAccessType.Description
+  name: Description
+  nameWithType: SfTeamGrantAccessType.Description
+  fullName: Dropbox.Api.TeamLog.SfTeamGrantAccessType.Description
+shouldSkipMarkup: true

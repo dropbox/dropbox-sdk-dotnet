@@ -1,0 +1,288 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.SharedLinkSettingsError
+  commentId: T:Dropbox.Api.Sharing.SharedLinkSettingsError
+  id: SharedLinkSettingsError
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.SharedLinkSettingsError.#ctor
+  - Dropbox.Api.Sharing.SharedLinkSettingsError.AsInvalidSettings
+  - Dropbox.Api.Sharing.SharedLinkSettingsError.AsNotAuthorized
+  - Dropbox.Api.Sharing.SharedLinkSettingsError.IsInvalidSettings
+  - Dropbox.Api.Sharing.SharedLinkSettingsError.IsNotAuthorized
+  langs:
+  - csharp
+  - vb
+  name: SharedLinkSettingsError
+  nameWithType: SharedLinkSettingsError
+  fullName: Dropbox.Api.Sharing.SharedLinkSettingsError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedLinkSettingsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SharedLinkSettingsError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedLinkSettingsError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The shared link settings error object</p>\n"
+  example: []
+  syntax:
+    content: 'public class SharedLinkSettingsError : object'
+    content.vb: >-
+      Public Class SharedLinkSettingsError
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Sharing.SharedLinkSettingsError.InvalidSettings
+  - Dropbox.Api.Sharing.SharedLinkSettingsError.NotAuthorized
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Sharing.SharedLinkSettingsError.#ctor
+  commentId: M:Dropbox.Api.Sharing.SharedLinkSettingsError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Sharing.SharedLinkSettingsError
+  langs:
+  - csharp
+  - vb
+  name: SharedLinkSettingsError()
+  nameWithType: SharedLinkSettingsError.SharedLinkSettingsError()
+  fullName: Dropbox.Api.Sharing.SharedLinkSettingsError.SharedLinkSettingsError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedLinkSettingsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedLinkSettingsError.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.SharedLinkSettingsError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public SharedLinkSettingsError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Sharing.SharedLinkSettingsError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.SharedLinkSettingsError.IsInvalidSettings
+  commentId: P:Dropbox.Api.Sharing.SharedLinkSettingsError.IsInvalidSettings
+  id: IsInvalidSettings
+  parent: Dropbox.Api.Sharing.SharedLinkSettingsError
+  langs:
+  - csharp
+  - vb
+  name: IsInvalidSettings
+  nameWithType: SharedLinkSettingsError.IsInvalidSettings
+  fullName: Dropbox.Api.Sharing.SharedLinkSettingsError.IsInvalidSettings
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedLinkSettingsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsInvalidSettings
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedLinkSettingsError.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is InvalidSettings</p>\n"
+  example: []
+  syntax:
+    content: public bool IsInvalidSettings { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsInvalidSettings As Boolean
+  overload: Dropbox.Api.Sharing.SharedLinkSettingsError.IsInvalidSettings*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.SharedLinkSettingsError.AsInvalidSettings
+  commentId: P:Dropbox.Api.Sharing.SharedLinkSettingsError.AsInvalidSettings
+  id: AsInvalidSettings
+  parent: Dropbox.Api.Sharing.SharedLinkSettingsError
+  langs:
+  - csharp
+  - vb
+  name: AsInvalidSettings
+  nameWithType: SharedLinkSettingsError.AsInvalidSettings
+  fullName: Dropbox.Api.Sharing.SharedLinkSettingsError.AsInvalidSettings
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedLinkSettingsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsInvalidSettings
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedLinkSettingsError.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a InvalidSettings, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SharedLinkSettingsError.InvalidSettings AsInvalidSettings { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.SharedLinkSettingsError.InvalidSettings
+    content.vb: Public ReadOnly Property AsInvalidSettings As SharedLinkSettingsError.InvalidSettings
+  overload: Dropbox.Api.Sharing.SharedLinkSettingsError.AsInvalidSettings*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.SharedLinkSettingsError.IsNotAuthorized
+  commentId: P:Dropbox.Api.Sharing.SharedLinkSettingsError.IsNotAuthorized
+  id: IsNotAuthorized
+  parent: Dropbox.Api.Sharing.SharedLinkSettingsError
+  langs:
+  - csharp
+  - vb
+  name: IsNotAuthorized
+  nameWithType: SharedLinkSettingsError.IsNotAuthorized
+  fullName: Dropbox.Api.Sharing.SharedLinkSettingsError.IsNotAuthorized
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedLinkSettingsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsNotAuthorized
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedLinkSettingsError.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets a value indicating whether this instance is NotAuthorized</p>\n"
+  example: []
+  syntax:
+    content: public bool IsNotAuthorized { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsNotAuthorized As Boolean
+  overload: Dropbox.Api.Sharing.SharedLinkSettingsError.IsNotAuthorized*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Sharing.SharedLinkSettingsError.AsNotAuthorized
+  commentId: P:Dropbox.Api.Sharing.SharedLinkSettingsError.AsNotAuthorized
+  id: AsNotAuthorized
+  parent: Dropbox.Api.Sharing.SharedLinkSettingsError
+  langs:
+  - csharp
+  - vb
+  name: AsNotAuthorized
+  nameWithType: SharedLinkSettingsError.AsNotAuthorized
+  fullName: Dropbox.Api.Sharing.SharedLinkSettingsError.AsNotAuthorized
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedLinkSettingsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsNotAuthorized
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedLinkSettingsError.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Gets this instance as a NotAuthorized, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SharedLinkSettingsError.NotAuthorized AsNotAuthorized { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.SharedLinkSettingsError.NotAuthorized
+    content.vb: Public ReadOnly Property AsNotAuthorized As SharedLinkSettingsError.NotAuthorized
+  overload: Dropbox.Api.Sharing.SharedLinkSettingsError.AsNotAuthorized*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.SharedLinkSettingsError
+  commentId: T:Dropbox.Api.Sharing.SharedLinkSettingsError
+  parent: Dropbox.Api.Sharing
+  name: SharedLinkSettingsError
+  nameWithType: SharedLinkSettingsError
+  fullName: Dropbox.Api.Sharing.SharedLinkSettingsError
+- uid: Dropbox.Api.Sharing.SharedLinkSettingsError.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.SharedLinkSettingsError.#ctor
+  name: SharedLinkSettingsError
+  nameWithType: SharedLinkSettingsError.SharedLinkSettingsError
+  fullName: Dropbox.Api.Sharing.SharedLinkSettingsError.SharedLinkSettingsError
+- uid: Dropbox.Api.Sharing.SharedLinkSettingsError.IsInvalidSettings*
+  commentId: Overload:Dropbox.Api.Sharing.SharedLinkSettingsError.IsInvalidSettings
+  name: IsInvalidSettings
+  nameWithType: SharedLinkSettingsError.IsInvalidSettings
+  fullName: Dropbox.Api.Sharing.SharedLinkSettingsError.IsInvalidSettings
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Sharing.SharedLinkSettingsError.AsInvalidSettings*
+  commentId: Overload:Dropbox.Api.Sharing.SharedLinkSettingsError.AsInvalidSettings
+  name: AsInvalidSettings
+  nameWithType: SharedLinkSettingsError.AsInvalidSettings
+  fullName: Dropbox.Api.Sharing.SharedLinkSettingsError.AsInvalidSettings
+- uid: Dropbox.Api.Sharing.SharedLinkSettingsError.InvalidSettings
+  commentId: T:Dropbox.Api.Sharing.SharedLinkSettingsError.InvalidSettings
+  parent: Dropbox.Api.Sharing
+  name: SharedLinkSettingsError.InvalidSettings
+  nameWithType: SharedLinkSettingsError.InvalidSettings
+  fullName: Dropbox.Api.Sharing.SharedLinkSettingsError.InvalidSettings
+- uid: Dropbox.Api.Sharing.SharedLinkSettingsError.IsNotAuthorized*
+  commentId: Overload:Dropbox.Api.Sharing.SharedLinkSettingsError.IsNotAuthorized
+  name: IsNotAuthorized
+  nameWithType: SharedLinkSettingsError.IsNotAuthorized
+  fullName: Dropbox.Api.Sharing.SharedLinkSettingsError.IsNotAuthorized
+- uid: Dropbox.Api.Sharing.SharedLinkSettingsError.AsNotAuthorized*
+  commentId: Overload:Dropbox.Api.Sharing.SharedLinkSettingsError.AsNotAuthorized
+  name: AsNotAuthorized
+  nameWithType: SharedLinkSettingsError.AsNotAuthorized
+  fullName: Dropbox.Api.Sharing.SharedLinkSettingsError.AsNotAuthorized
+- uid: Dropbox.Api.Sharing.SharedLinkSettingsError.NotAuthorized
+  commentId: T:Dropbox.Api.Sharing.SharedLinkSettingsError.NotAuthorized
+  parent: Dropbox.Api.Sharing
+  name: SharedLinkSettingsError.NotAuthorized
+  nameWithType: SharedLinkSettingsError.NotAuthorized
+  fullName: Dropbox.Api.Sharing.SharedLinkSettingsError.NotAuthorized
+shouldSkipMarkup: true

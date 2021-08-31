@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestRevokedDetails
+  commentId: T:Dropbox.Api.TeamLog.TeamMergeRequestRevokedDetails
+  id: TeamMergeRequestRevokedDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.TeamMergeRequestRevokedDetails.#ctor
+  - Dropbox.Api.TeamLog.TeamMergeRequestRevokedDetails.#ctor(System.String)
+  - Dropbox.Api.TeamLog.TeamMergeRequestRevokedDetails.Team
+  langs:
+  - csharp
+  - vb
+  name: TeamMergeRequestRevokedDetails
+  nameWithType: TeamMergeRequestRevokedDetails
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestRevokedDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestRevokedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TeamMergeRequestRevokedDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestRevokedDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Canceled the team merge.</p>\n"
+  example: []
+  syntax:
+    content: 'public class TeamMergeRequestRevokedDetails : object'
+    content.vb: >-
+      Public Class TeamMergeRequestRevokedDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestRevokedDetails.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.TeamMergeRequestRevokedDetails.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.TeamMergeRequestRevokedDetails
+  langs:
+  - csharp
+  - vb
+  name: TeamMergeRequestRevokedDetails(String)
+  nameWithType: TeamMergeRequestRevokedDetails.TeamMergeRequestRevokedDetails(String)
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestRevokedDetails.TeamMergeRequestRevokedDetails(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestRevokedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestRevokedDetails.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.TeamMergeRequestRevokedDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public TeamMergeRequestRevokedDetails(string team)
+    parameters:
+    - id: team
+      type: System.String
+      description: The name of the other team.
+    content.vb: Public Sub New(team As String)
+  overload: Dropbox.Api.TeamLog.TeamMergeRequestRevokedDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestRevokedDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.TeamMergeRequestRevokedDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.TeamMergeRequestRevokedDetails
+  langs:
+  - csharp
+  - vb
+  name: TeamMergeRequestRevokedDetails()
+  nameWithType: TeamMergeRequestRevokedDetails.TeamMergeRequestRevokedDetails()
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestRevokedDetails.TeamMergeRequestRevokedDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestRevokedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestRevokedDetails.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.TeamMergeRequestRevokedDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public TeamMergeRequestRevokedDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.TeamMergeRequestRevokedDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestRevokedDetails.Team
+  commentId: P:Dropbox.Api.TeamLog.TeamMergeRequestRevokedDetails.Team
+  id: Team
+  parent: Dropbox.Api.TeamLog.TeamMergeRequestRevokedDetails
+  langs:
+  - csharp
+  - vb
+  name: Team
+  nameWithType: TeamMergeRequestRevokedDetails.Team
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestRevokedDetails.Team
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestRevokedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Team
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/TeamMergeRequestRevokedDetails.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The name of the other team.</p>\n"
+  example: []
+  syntax:
+    content: public string Team { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Team As String
+  overload: Dropbox.Api.TeamLog.TeamMergeRequestRevokedDetails.Team*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestRevokedDetails
+  commentId: T:Dropbox.Api.TeamLog.TeamMergeRequestRevokedDetails
+  parent: Dropbox.Api.TeamLog
+  name: TeamMergeRequestRevokedDetails
+  nameWithType: TeamMergeRequestRevokedDetails
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestRevokedDetails
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestRevokedDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.TeamMergeRequestRevokedDetails.#ctor
+  name: TeamMergeRequestRevokedDetails
+  nameWithType: TeamMergeRequestRevokedDetails.TeamMergeRequestRevokedDetails
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestRevokedDetails.TeamMergeRequestRevokedDetails
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.TeamMergeRequestRevokedDetails.Team*
+  commentId: Overload:Dropbox.Api.TeamLog.TeamMergeRequestRevokedDetails.Team
+  name: Team
+  nameWithType: TeamMergeRequestRevokedDetails.Team
+  fullName: Dropbox.Api.TeamLog.TeamMergeRequestRevokedDetails.Team
+shouldSkipMarkup: true

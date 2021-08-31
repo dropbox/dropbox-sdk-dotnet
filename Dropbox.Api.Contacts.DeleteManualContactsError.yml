@@ -1,0 +1,288 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Contacts.DeleteManualContactsError
+  commentId: T:Dropbox.Api.Contacts.DeleteManualContactsError
+  id: DeleteManualContactsError
+  parent: Dropbox.Api.Contacts
+  children:
+  - Dropbox.Api.Contacts.DeleteManualContactsError.#ctor
+  - Dropbox.Api.Contacts.DeleteManualContactsError.AsContactsNotFound
+  - Dropbox.Api.Contacts.DeleteManualContactsError.AsOther
+  - Dropbox.Api.Contacts.DeleteManualContactsError.IsContactsNotFound
+  - Dropbox.Api.Contacts.DeleteManualContactsError.IsOther
+  langs:
+  - csharp
+  - vb
+  name: DeleteManualContactsError
+  nameWithType: DeleteManualContactsError
+  fullName: Dropbox.Api.Contacts.DeleteManualContactsError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Contacts/DeleteManualContactsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: DeleteManualContactsError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Contacts/DeleteManualContactsError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Contacts
+  summary: "\n<p>The delete manual contacts error object</p>\n"
+  example: []
+  syntax:
+    content: 'public class DeleteManualContactsError : object'
+    content.vb: >-
+      Public Class DeleteManualContactsError
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Contacts.DeleteManualContactsError.ContactsNotFound
+  - Dropbox.Api.Contacts.DeleteManualContactsError.Other
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Contacts.DeleteManualContactsError.#ctor
+  commentId: M:Dropbox.Api.Contacts.DeleteManualContactsError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Contacts.DeleteManualContactsError
+  langs:
+  - csharp
+  - vb
+  name: DeleteManualContactsError()
+  nameWithType: DeleteManualContactsError.DeleteManualContactsError()
+  fullName: Dropbox.Api.Contacts.DeleteManualContactsError.DeleteManualContactsError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Contacts/DeleteManualContactsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Contacts/DeleteManualContactsError.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Contacts
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Contacts.DeleteManualContactsError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public DeleteManualContactsError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Contacts.DeleteManualContactsError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Contacts.DeleteManualContactsError.IsContactsNotFound
+  commentId: P:Dropbox.Api.Contacts.DeleteManualContactsError.IsContactsNotFound
+  id: IsContactsNotFound
+  parent: Dropbox.Api.Contacts.DeleteManualContactsError
+  langs:
+  - csharp
+  - vb
+  name: IsContactsNotFound
+  nameWithType: DeleteManualContactsError.IsContactsNotFound
+  fullName: Dropbox.Api.Contacts.DeleteManualContactsError.IsContactsNotFound
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Contacts/DeleteManualContactsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsContactsNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Contacts/DeleteManualContactsError.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Contacts
+  summary: "\n<p>Gets a value indicating whether this instance is ContactsNotFound</p>\n"
+  example: []
+  syntax:
+    content: public bool IsContactsNotFound { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsContactsNotFound As Boolean
+  overload: Dropbox.Api.Contacts.DeleteManualContactsError.IsContactsNotFound*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Contacts.DeleteManualContactsError.AsContactsNotFound
+  commentId: P:Dropbox.Api.Contacts.DeleteManualContactsError.AsContactsNotFound
+  id: AsContactsNotFound
+  parent: Dropbox.Api.Contacts.DeleteManualContactsError
+  langs:
+  - csharp
+  - vb
+  name: AsContactsNotFound
+  nameWithType: DeleteManualContactsError.AsContactsNotFound
+  fullName: Dropbox.Api.Contacts.DeleteManualContactsError.AsContactsNotFound
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Contacts/DeleteManualContactsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsContactsNotFound
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Contacts/DeleteManualContactsError.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Contacts
+  summary: "\n<p>Gets this instance as a ContactsNotFound, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public DeleteManualContactsError.ContactsNotFound AsContactsNotFound { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Contacts.DeleteManualContactsError.ContactsNotFound
+    content.vb: Public ReadOnly Property AsContactsNotFound As DeleteManualContactsError.ContactsNotFound
+  overload: Dropbox.Api.Contacts.DeleteManualContactsError.AsContactsNotFound*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Contacts.DeleteManualContactsError.IsOther
+  commentId: P:Dropbox.Api.Contacts.DeleteManualContactsError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Contacts.DeleteManualContactsError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: DeleteManualContactsError.IsOther
+  fullName: Dropbox.Api.Contacts.DeleteManualContactsError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Contacts/DeleteManualContactsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Contacts/DeleteManualContactsError.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Contacts
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Contacts.DeleteManualContactsError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Contacts.DeleteManualContactsError.AsOther
+  commentId: P:Dropbox.Api.Contacts.DeleteManualContactsError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Contacts.DeleteManualContactsError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: DeleteManualContactsError.AsOther
+  fullName: Dropbox.Api.Contacts.DeleteManualContactsError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Contacts/DeleteManualContactsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Contacts/DeleteManualContactsError.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Contacts
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public DeleteManualContactsError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Contacts.DeleteManualContactsError.Other
+    content.vb: Public ReadOnly Property AsOther As DeleteManualContactsError.Other
+  overload: Dropbox.Api.Contacts.DeleteManualContactsError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Contacts
+  commentId: N:Dropbox.Api.Contacts
+  name: Dropbox.Api.Contacts
+  nameWithType: Dropbox.Api.Contacts
+  fullName: Dropbox.Api.Contacts
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Contacts.DeleteManualContactsError
+  commentId: T:Dropbox.Api.Contacts.DeleteManualContactsError
+  parent: Dropbox.Api.Contacts
+  name: DeleteManualContactsError
+  nameWithType: DeleteManualContactsError
+  fullName: Dropbox.Api.Contacts.DeleteManualContactsError
+- uid: Dropbox.Api.Contacts.DeleteManualContactsError.#ctor*
+  commentId: Overload:Dropbox.Api.Contacts.DeleteManualContactsError.#ctor
+  name: DeleteManualContactsError
+  nameWithType: DeleteManualContactsError.DeleteManualContactsError
+  fullName: Dropbox.Api.Contacts.DeleteManualContactsError.DeleteManualContactsError
+- uid: Dropbox.Api.Contacts.DeleteManualContactsError.IsContactsNotFound*
+  commentId: Overload:Dropbox.Api.Contacts.DeleteManualContactsError.IsContactsNotFound
+  name: IsContactsNotFound
+  nameWithType: DeleteManualContactsError.IsContactsNotFound
+  fullName: Dropbox.Api.Contacts.DeleteManualContactsError.IsContactsNotFound
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Contacts.DeleteManualContactsError.AsContactsNotFound*
+  commentId: Overload:Dropbox.Api.Contacts.DeleteManualContactsError.AsContactsNotFound
+  name: AsContactsNotFound
+  nameWithType: DeleteManualContactsError.AsContactsNotFound
+  fullName: Dropbox.Api.Contacts.DeleteManualContactsError.AsContactsNotFound
+- uid: Dropbox.Api.Contacts.DeleteManualContactsError.ContactsNotFound
+  commentId: T:Dropbox.Api.Contacts.DeleteManualContactsError.ContactsNotFound
+  parent: Dropbox.Api.Contacts
+  name: DeleteManualContactsError.ContactsNotFound
+  nameWithType: DeleteManualContactsError.ContactsNotFound
+  fullName: Dropbox.Api.Contacts.DeleteManualContactsError.ContactsNotFound
+- uid: Dropbox.Api.Contacts.DeleteManualContactsError.IsOther*
+  commentId: Overload:Dropbox.Api.Contacts.DeleteManualContactsError.IsOther
+  name: IsOther
+  nameWithType: DeleteManualContactsError.IsOther
+  fullName: Dropbox.Api.Contacts.DeleteManualContactsError.IsOther
+- uid: Dropbox.Api.Contacts.DeleteManualContactsError.AsOther*
+  commentId: Overload:Dropbox.Api.Contacts.DeleteManualContactsError.AsOther
+  name: AsOther
+  nameWithType: DeleteManualContactsError.AsOther
+  fullName: Dropbox.Api.Contacts.DeleteManualContactsError.AsOther
+- uid: Dropbox.Api.Contacts.DeleteManualContactsError.Other
+  commentId: T:Dropbox.Api.Contacts.DeleteManualContactsError.Other
+  parent: Dropbox.Api.Contacts
+  name: DeleteManualContactsError.Other
+  nameWithType: DeleteManualContactsError.Other
+  fullName: Dropbox.Api.Contacts.DeleteManualContactsError.Other
+shouldSkipMarkup: true

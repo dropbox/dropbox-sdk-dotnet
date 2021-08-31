@@ -1,0 +1,134 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.ListMembersAppsError.Other
+  commentId: T:Dropbox.Api.Team.ListMembersAppsError.Other
+  id: ListMembersAppsError.Other
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.ListMembersAppsError.Other.Instance
+  langs:
+  - csharp
+  - vb
+  name: ListMembersAppsError.Other
+  nameWithType: ListMembersAppsError.Other
+  fullName: Dropbox.Api.Team.ListMembersAppsError.Other
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListMembersAppsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Other
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListMembersAppsError.cs
+    startLine: 225
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The other object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Other : ListMembersAppsError'
+    content.vb: >-
+      Public NotInheritable Class Other
+          Inherits ListMembersAppsError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.ListMembersAppsError
+  inheritedMembers:
+  - Dropbox.Api.Team.ListMembersAppsError.IsReset
+  - Dropbox.Api.Team.ListMembersAppsError.AsReset
+  - Dropbox.Api.Team.ListMembersAppsError.IsOther
+  - Dropbox.Api.Team.ListMembersAppsError.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Team.ListMembersAppsError.Other.Instance
+  commentId: F:Dropbox.Api.Team.ListMembersAppsError.Other.Instance
+  id: Instance
+  parent: Dropbox.Api.Team.ListMembersAppsError.Other
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: ListMembersAppsError.Other.Instance
+  fullName: Dropbox.Api.Team.ListMembersAppsError.Other.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListMembersAppsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListMembersAppsError.cs
+    startLine: 249
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>A singleton instance of Other</p>\n"
+  example: []
+  syntax:
+    content: public static readonly ListMembersAppsError.Other Instance
+    return:
+      type: Dropbox.Api.Team.ListMembersAppsError.Other
+    content.vb: Public Shared ReadOnly Instance As ListMembersAppsError.Other
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.ListMembersAppsError
+  commentId: T:Dropbox.Api.Team.ListMembersAppsError
+  parent: Dropbox.Api.Team
+  name: ListMembersAppsError
+  nameWithType: ListMembersAppsError
+  fullName: Dropbox.Api.Team.ListMembersAppsError
+- uid: Dropbox.Api.Team.ListMembersAppsError.IsReset
+  commentId: P:Dropbox.Api.Team.ListMembersAppsError.IsReset
+  parent: Dropbox.Api.Team.ListMembersAppsError
+  name: IsReset
+  nameWithType: ListMembersAppsError.IsReset
+  fullName: Dropbox.Api.Team.ListMembersAppsError.IsReset
+- uid: Dropbox.Api.Team.ListMembersAppsError.AsReset
+  commentId: P:Dropbox.Api.Team.ListMembersAppsError.AsReset
+  parent: Dropbox.Api.Team.ListMembersAppsError
+  name: AsReset
+  nameWithType: ListMembersAppsError.AsReset
+  fullName: Dropbox.Api.Team.ListMembersAppsError.AsReset
+- uid: Dropbox.Api.Team.ListMembersAppsError.IsOther
+  commentId: P:Dropbox.Api.Team.ListMembersAppsError.IsOther
+  parent: Dropbox.Api.Team.ListMembersAppsError
+  name: IsOther
+  nameWithType: ListMembersAppsError.IsOther
+  fullName: Dropbox.Api.Team.ListMembersAppsError.IsOther
+- uid: Dropbox.Api.Team.ListMembersAppsError.AsOther
+  commentId: P:Dropbox.Api.Team.ListMembersAppsError.AsOther
+  parent: Dropbox.Api.Team.ListMembersAppsError
+  name: AsOther
+  nameWithType: ListMembersAppsError.AsOther
+  fullName: Dropbox.Api.Team.ListMembersAppsError.AsOther
+- uid: Dropbox.Api.Team.ListMembersAppsError.Other
+  commentId: T:Dropbox.Api.Team.ListMembersAppsError.Other
+  parent: Dropbox.Api.Team
+  name: ListMembersAppsError.Other
+  nameWithType: ListMembersAppsError.Other
+  fullName: Dropbox.Api.Team.ListMembersAppsError.Other
+shouldSkipMarkup: true

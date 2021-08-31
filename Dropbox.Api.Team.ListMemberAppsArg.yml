@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.ListMemberAppsArg
+  commentId: T:Dropbox.Api.Team.ListMemberAppsArg
+  id: ListMemberAppsArg
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.ListMemberAppsArg.#ctor
+  - Dropbox.Api.Team.ListMemberAppsArg.#ctor(System.String)
+  - Dropbox.Api.Team.ListMemberAppsArg.TeamMemberId
+  langs:
+  - csharp
+  - vb
+  name: ListMemberAppsArg
+  nameWithType: ListMemberAppsArg
+  fullName: Dropbox.Api.Team.ListMemberAppsArg
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListMemberAppsArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ListMemberAppsArg
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListMemberAppsArg.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The list member apps arg object</p>\n"
+  example: []
+  syntax:
+    content: 'public class ListMemberAppsArg : object'
+    content.vb: >-
+      Public Class ListMemberAppsArg
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.ListMemberAppsArg.#ctor(System.String)
+  commentId: M:Dropbox.Api.Team.ListMemberAppsArg.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.Team.ListMemberAppsArg
+  langs:
+  - csharp
+  - vb
+  name: ListMemberAppsArg(String)
+  nameWithType: ListMemberAppsArg.ListMemberAppsArg(String)
+  fullName: Dropbox.Api.Team.ListMemberAppsArg.ListMemberAppsArg(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListMemberAppsArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListMemberAppsArg.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.ListMemberAppsArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public ListMemberAppsArg(string teamMemberId)
+    parameters:
+    - id: teamMemberId
+      type: System.String
+      description: The team member id.
+    content.vb: Public Sub New(teamMemberId As String)
+  overload: Dropbox.Api.Team.ListMemberAppsArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.ListMemberAppsArg.#ctor
+  commentId: M:Dropbox.Api.Team.ListMemberAppsArg.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.ListMemberAppsArg
+  langs:
+  - csharp
+  - vb
+  name: ListMemberAppsArg()
+  nameWithType: ListMemberAppsArg.ListMemberAppsArg()
+  fullName: Dropbox.Api.Team.ListMemberAppsArg.ListMemberAppsArg()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListMemberAppsArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListMemberAppsArg.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.ListMemberAppsArg\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public ListMemberAppsArg()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.ListMemberAppsArg.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.ListMemberAppsArg.TeamMemberId
+  commentId: P:Dropbox.Api.Team.ListMemberAppsArg.TeamMemberId
+  id: TeamMemberId
+  parent: Dropbox.Api.Team.ListMemberAppsArg
+  langs:
+  - csharp
+  - vb
+  name: TeamMemberId
+  nameWithType: ListMemberAppsArg.TeamMemberId
+  fullName: Dropbox.Api.Team.ListMemberAppsArg.TeamMemberId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListMemberAppsArg.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TeamMemberId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListMemberAppsArg.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The team member id.</p>\n"
+  example: []
+  syntax:
+    content: public string TeamMemberId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property TeamMemberId As String
+  overload: Dropbox.Api.Team.ListMemberAppsArg.TeamMemberId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.ListMemberAppsArg
+  commentId: T:Dropbox.Api.Team.ListMemberAppsArg
+  parent: Dropbox.Api.Team
+  name: ListMemberAppsArg
+  nameWithType: ListMemberAppsArg
+  fullName: Dropbox.Api.Team.ListMemberAppsArg
+- uid: Dropbox.Api.Team.ListMemberAppsArg.#ctor*
+  commentId: Overload:Dropbox.Api.Team.ListMemberAppsArg.#ctor
+  name: ListMemberAppsArg
+  nameWithType: ListMemberAppsArg.ListMemberAppsArg
+  fullName: Dropbox.Api.Team.ListMemberAppsArg.ListMemberAppsArg
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Team.ListMemberAppsArg.TeamMemberId*
+  commentId: Overload:Dropbox.Api.Team.ListMemberAppsArg.TeamMemberId
+  name: TeamMemberId
+  nameWithType: ListMemberAppsArg.TeamMemberId
+  fullName: Dropbox.Api.Team.ListMemberAppsArg.TeamMemberId
+shouldSkipMarkup: true

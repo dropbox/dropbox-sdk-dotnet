@@ -1,0 +1,474 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy
+  commentId: T:Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy
+  id: SharedLinkCreatePolicy
+  parent: Dropbox.Api.TeamPolicies
+  children:
+  - Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.#ctor
+  - Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.AsDefaultPublic
+  - Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.AsDefaultTeamOnly
+  - Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.AsOther
+  - Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.AsTeamOnly
+  - Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.IsDefaultPublic
+  - Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.IsDefaultTeamOnly
+  - Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.IsOther
+  - Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.IsTeamOnly
+  langs:
+  - csharp
+  - vb
+  name: SharedLinkCreatePolicy
+  nameWithType: SharedLinkCreatePolicy
+  fullName: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SharedLinkCreatePolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SharedLinkCreatePolicy
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SharedLinkCreatePolicy.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Policy governing the visibility of shared links. This policy can apply to newly\ncreated shared links, or all shared links.</p>\n"
+  example: []
+  syntax:
+    content: 'public class SharedLinkCreatePolicy : object'
+    content.vb: >-
+      Public Class SharedLinkCreatePolicy
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.DefaultPublic
+  - Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.DefaultTeamOnly
+  - Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.Other
+  - Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.TeamOnly
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.#ctor
+  commentId: M:Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy
+  langs:
+  - csharp
+  - vb
+  name: SharedLinkCreatePolicy()
+  nameWithType: SharedLinkCreatePolicy.SharedLinkCreatePolicy()
+  fullName: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.SharedLinkCreatePolicy()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SharedLinkCreatePolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SharedLinkCreatePolicy.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public SharedLinkCreatePolicy()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.IsDefaultPublic
+  commentId: P:Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.IsDefaultPublic
+  id: IsDefaultPublic
+  parent: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy
+  langs:
+  - csharp
+  - vb
+  name: IsDefaultPublic
+  nameWithType: SharedLinkCreatePolicy.IsDefaultPublic
+  fullName: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.IsDefaultPublic
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SharedLinkCreatePolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsDefaultPublic
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SharedLinkCreatePolicy.cs
+    startLine: 41
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Gets a value indicating whether this instance is DefaultPublic</p>\n"
+  example: []
+  syntax:
+    content: public bool IsDefaultPublic { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsDefaultPublic As Boolean
+  overload: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.IsDefaultPublic*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.AsDefaultPublic
+  commentId: P:Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.AsDefaultPublic
+  id: AsDefaultPublic
+  parent: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy
+  langs:
+  - csharp
+  - vb
+  name: AsDefaultPublic
+  nameWithType: SharedLinkCreatePolicy.AsDefaultPublic
+  fullName: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.AsDefaultPublic
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SharedLinkCreatePolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsDefaultPublic
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SharedLinkCreatePolicy.cs
+    startLine: 52
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Gets this instance as a DefaultPublic, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SharedLinkCreatePolicy.DefaultPublic AsDefaultPublic { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.DefaultPublic
+    content.vb: Public ReadOnly Property AsDefaultPublic As SharedLinkCreatePolicy.DefaultPublic
+  overload: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.AsDefaultPublic*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.IsDefaultTeamOnly
+  commentId: P:Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.IsDefaultTeamOnly
+  id: IsDefaultTeamOnly
+  parent: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy
+  langs:
+  - csharp
+  - vb
+  name: IsDefaultTeamOnly
+  nameWithType: SharedLinkCreatePolicy.IsDefaultTeamOnly
+  fullName: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.IsDefaultTeamOnly
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SharedLinkCreatePolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsDefaultTeamOnly
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SharedLinkCreatePolicy.cs
+    startLine: 63
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Gets a value indicating whether this instance is DefaultTeamOnly</p>\n"
+  example: []
+  syntax:
+    content: public bool IsDefaultTeamOnly { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsDefaultTeamOnly As Boolean
+  overload: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.IsDefaultTeamOnly*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.AsDefaultTeamOnly
+  commentId: P:Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.AsDefaultTeamOnly
+  id: AsDefaultTeamOnly
+  parent: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy
+  langs:
+  - csharp
+  - vb
+  name: AsDefaultTeamOnly
+  nameWithType: SharedLinkCreatePolicy.AsDefaultTeamOnly
+  fullName: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.AsDefaultTeamOnly
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SharedLinkCreatePolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsDefaultTeamOnly
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SharedLinkCreatePolicy.cs
+    startLine: 74
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Gets this instance as a DefaultTeamOnly, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SharedLinkCreatePolicy.DefaultTeamOnly AsDefaultTeamOnly { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.DefaultTeamOnly
+    content.vb: Public ReadOnly Property AsDefaultTeamOnly As SharedLinkCreatePolicy.DefaultTeamOnly
+  overload: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.AsDefaultTeamOnly*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.IsTeamOnly
+  commentId: P:Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.IsTeamOnly
+  id: IsTeamOnly
+  parent: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy
+  langs:
+  - csharp
+  - vb
+  name: IsTeamOnly
+  nameWithType: SharedLinkCreatePolicy.IsTeamOnly
+  fullName: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.IsTeamOnly
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SharedLinkCreatePolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsTeamOnly
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SharedLinkCreatePolicy.cs
+    startLine: 85
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Gets a value indicating whether this instance is TeamOnly</p>\n"
+  example: []
+  syntax:
+    content: public bool IsTeamOnly { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsTeamOnly As Boolean
+  overload: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.IsTeamOnly*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.AsTeamOnly
+  commentId: P:Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.AsTeamOnly
+  id: AsTeamOnly
+  parent: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy
+  langs:
+  - csharp
+  - vb
+  name: AsTeamOnly
+  nameWithType: SharedLinkCreatePolicy.AsTeamOnly
+  fullName: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.AsTeamOnly
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SharedLinkCreatePolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsTeamOnly
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SharedLinkCreatePolicy.cs
+    startLine: 96
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Gets this instance as a TeamOnly, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SharedLinkCreatePolicy.TeamOnly AsTeamOnly { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.TeamOnly
+    content.vb: Public ReadOnly Property AsTeamOnly As SharedLinkCreatePolicy.TeamOnly
+  overload: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.AsTeamOnly*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.IsOther
+  commentId: P:Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.IsOther
+  id: IsOther
+  parent: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: SharedLinkCreatePolicy.IsOther
+  fullName: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SharedLinkCreatePolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SharedLinkCreatePolicy.cs
+    startLine: 107
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.AsOther
+  commentId: P:Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.AsOther
+  id: AsOther
+  parent: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: SharedLinkCreatePolicy.AsOther
+  fullName: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SharedLinkCreatePolicy.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamPolicies/SharedLinkCreatePolicy.cs
+    startLine: 118
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamPolicies
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public SharedLinkCreatePolicy.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.Other
+    content.vb: Public ReadOnly Property AsOther As SharedLinkCreatePolicy.Other
+  overload: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.TeamPolicies
+  commentId: N:Dropbox.Api.TeamPolicies
+  name: Dropbox.Api.TeamPolicies
+  nameWithType: Dropbox.Api.TeamPolicies
+  fullName: Dropbox.Api.TeamPolicies
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy
+  commentId: T:Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy
+  parent: Dropbox.Api.TeamPolicies
+  name: SharedLinkCreatePolicy
+  nameWithType: SharedLinkCreatePolicy
+  fullName: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy
+- uid: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.#ctor*
+  commentId: Overload:Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.#ctor
+  name: SharedLinkCreatePolicy
+  nameWithType: SharedLinkCreatePolicy.SharedLinkCreatePolicy
+  fullName: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.SharedLinkCreatePolicy
+- uid: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.IsDefaultPublic*
+  commentId: Overload:Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.IsDefaultPublic
+  name: IsDefaultPublic
+  nameWithType: SharedLinkCreatePolicy.IsDefaultPublic
+  fullName: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.IsDefaultPublic
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.AsDefaultPublic*
+  commentId: Overload:Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.AsDefaultPublic
+  name: AsDefaultPublic
+  nameWithType: SharedLinkCreatePolicy.AsDefaultPublic
+  fullName: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.AsDefaultPublic
+- uid: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.DefaultPublic
+  commentId: T:Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.DefaultPublic
+  parent: Dropbox.Api.TeamPolicies
+  name: SharedLinkCreatePolicy.DefaultPublic
+  nameWithType: SharedLinkCreatePolicy.DefaultPublic
+  fullName: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.DefaultPublic
+- uid: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.IsDefaultTeamOnly*
+  commentId: Overload:Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.IsDefaultTeamOnly
+  name: IsDefaultTeamOnly
+  nameWithType: SharedLinkCreatePolicy.IsDefaultTeamOnly
+  fullName: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.IsDefaultTeamOnly
+- uid: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.AsDefaultTeamOnly*
+  commentId: Overload:Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.AsDefaultTeamOnly
+  name: AsDefaultTeamOnly
+  nameWithType: SharedLinkCreatePolicy.AsDefaultTeamOnly
+  fullName: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.AsDefaultTeamOnly
+- uid: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.DefaultTeamOnly
+  commentId: T:Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.DefaultTeamOnly
+  parent: Dropbox.Api.TeamPolicies
+  name: SharedLinkCreatePolicy.DefaultTeamOnly
+  nameWithType: SharedLinkCreatePolicy.DefaultTeamOnly
+  fullName: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.DefaultTeamOnly
+- uid: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.IsTeamOnly*
+  commentId: Overload:Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.IsTeamOnly
+  name: IsTeamOnly
+  nameWithType: SharedLinkCreatePolicy.IsTeamOnly
+  fullName: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.IsTeamOnly
+- uid: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.AsTeamOnly*
+  commentId: Overload:Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.AsTeamOnly
+  name: AsTeamOnly
+  nameWithType: SharedLinkCreatePolicy.AsTeamOnly
+  fullName: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.AsTeamOnly
+- uid: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.TeamOnly
+  commentId: T:Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.TeamOnly
+  parent: Dropbox.Api.TeamPolicies
+  name: SharedLinkCreatePolicy.TeamOnly
+  nameWithType: SharedLinkCreatePolicy.TeamOnly
+  fullName: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.TeamOnly
+- uid: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.IsOther*
+  commentId: Overload:Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.IsOther
+  name: IsOther
+  nameWithType: SharedLinkCreatePolicy.IsOther
+  fullName: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.IsOther
+- uid: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.AsOther*
+  commentId: Overload:Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.AsOther
+  name: AsOther
+  nameWithType: SharedLinkCreatePolicy.AsOther
+  fullName: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.AsOther
+- uid: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.Other
+  commentId: T:Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.Other
+  parent: Dropbox.Api.TeamPolicies
+  name: SharedLinkCreatePolicy.Other
+  nameWithType: SharedLinkCreatePolicy.Other
+  fullName: Dropbox.Api.TeamPolicies.SharedLinkCreatePolicy.Other
+shouldSkipMarkup: true

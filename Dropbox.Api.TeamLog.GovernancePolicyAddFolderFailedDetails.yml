@@ -1,0 +1,385 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedDetails
+  commentId: T:Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedDetails
+  id: GovernancePolicyAddFolderFailedDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedDetails.#ctor
+  - Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedDetails.#ctor(System.String,System.String,System.String,Dropbox.Api.TeamLog.PolicyType,System.String)
+  - Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedDetails.Folder
+  - Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedDetails.GovernancePolicyId
+  - Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedDetails.Name
+  - Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedDetails.PolicyType
+  - Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedDetails.Reason
+  langs:
+  - csharp
+  - vb
+  name: GovernancePolicyAddFolderFailedDetails
+  nameWithType: GovernancePolicyAddFolderFailedDetails
+  fullName: Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GovernancePolicyAddFolderFailedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GovernancePolicyAddFolderFailedDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GovernancePolicyAddFolderFailedDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Couldn&apos;t add a folder to a policy.</p>\n"
+  example: []
+  syntax:
+    content: 'public class GovernancePolicyAddFolderFailedDetails : object'
+    content.vb: >-
+      Public Class GovernancePolicyAddFolderFailedDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedDetails.#ctor(System.String,System.String,System.String,Dropbox.Api.TeamLog.PolicyType,System.String)
+  commentId: M:Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedDetails.#ctor(System.String,System.String,System.String,Dropbox.Api.TeamLog.PolicyType,System.String)
+  id: '#ctor(System.String,System.String,System.String,Dropbox.Api.TeamLog.PolicyType,System.String)'
+  parent: Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedDetails
+  langs:
+  - csharp
+  - vb
+  name: GovernancePolicyAddFolderFailedDetails(String, String, String, PolicyType, String)
+  nameWithType: GovernancePolicyAddFolderFailedDetails.GovernancePolicyAddFolderFailedDetails(String, String, String, PolicyType, String)
+  fullName: Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedDetails.GovernancePolicyAddFolderFailedDetails(System.String, System.String, System.String, Dropbox.Api.TeamLog.PolicyType, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GovernancePolicyAddFolderFailedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GovernancePolicyAddFolderFailedDetails.cs
+    startLine: 38
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public GovernancePolicyAddFolderFailedDetails(string governancePolicyId, string name, string folder, PolicyType policyType = null, string reason = null)
+    parameters:
+    - id: governancePolicyId
+      type: System.String
+      description: Policy ID.
+    - id: name
+      type: System.String
+      description: Policy name.
+    - id: folder
+      type: System.String
+      description: Folder.
+    - id: policyType
+      type: Dropbox.Api.TeamLog.PolicyType
+      description: Policy type.
+    - id: reason
+      type: System.String
+      description: Reason.
+    content.vb: Public Sub New(governancePolicyId As String, name As String, folder As String, policyType As PolicyType = Nothing, reason As String = Nothing)
+  overload: Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedDetails
+  langs:
+  - csharp
+  - vb
+  name: GovernancePolicyAddFolderFailedDetails()
+  nameWithType: GovernancePolicyAddFolderFailedDetails.GovernancePolicyAddFolderFailedDetails()
+  fullName: Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedDetails.GovernancePolicyAddFolderFailedDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GovernancePolicyAddFolderFailedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GovernancePolicyAddFolderFailedDetails.cs
+    startLine: 72
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public GovernancePolicyAddFolderFailedDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedDetails.GovernancePolicyId
+  commentId: P:Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedDetails.GovernancePolicyId
+  id: GovernancePolicyId
+  parent: Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedDetails
+  langs:
+  - csharp
+  - vb
+  name: GovernancePolicyId
+  nameWithType: GovernancePolicyAddFolderFailedDetails.GovernancePolicyId
+  fullName: Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedDetails.GovernancePolicyId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GovernancePolicyAddFolderFailedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GovernancePolicyId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GovernancePolicyAddFolderFailedDetails.cs
+    startLine: 80
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Policy ID.</p>\n"
+  example: []
+  syntax:
+    content: public string GovernancePolicyId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property GovernancePolicyId As String
+  overload: Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedDetails.GovernancePolicyId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedDetails.Name
+  commentId: P:Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedDetails.Name
+  id: Name
+  parent: Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedDetails
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: GovernancePolicyAddFolderFailedDetails.Name
+  fullName: Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedDetails.Name
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GovernancePolicyAddFolderFailedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Name
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GovernancePolicyAddFolderFailedDetails.cs
+    startLine: 85
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Policy name.</p>\n"
+  example: []
+  syntax:
+    content: public string Name { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedDetails.Name*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedDetails.Folder
+  commentId: P:Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedDetails.Folder
+  id: Folder
+  parent: Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedDetails
+  langs:
+  - csharp
+  - vb
+  name: Folder
+  nameWithType: GovernancePolicyAddFolderFailedDetails.Folder
+  fullName: Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedDetails.Folder
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GovernancePolicyAddFolderFailedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Folder
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GovernancePolicyAddFolderFailedDetails.cs
+    startLine: 90
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Folder.</p>\n"
+  example: []
+  syntax:
+    content: public string Folder { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Folder As String
+  overload: Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedDetails.Folder*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedDetails.PolicyType
+  commentId: P:Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedDetails.PolicyType
+  id: PolicyType
+  parent: Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedDetails
+  langs:
+  - csharp
+  - vb
+  name: PolicyType
+  nameWithType: GovernancePolicyAddFolderFailedDetails.PolicyType
+  fullName: Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedDetails.PolicyType
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GovernancePolicyAddFolderFailedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PolicyType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GovernancePolicyAddFolderFailedDetails.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Policy type.</p>\n"
+  example: []
+  syntax:
+    content: public PolicyType PolicyType { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.PolicyType
+    content.vb: Public Property PolicyType As PolicyType
+  overload: Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedDetails.PolicyType*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedDetails.Reason
+  commentId: P:Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedDetails.Reason
+  id: Reason
+  parent: Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedDetails
+  langs:
+  - csharp
+  - vb
+  name: Reason
+  nameWithType: GovernancePolicyAddFolderFailedDetails.Reason
+  fullName: Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedDetails.Reason
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GovernancePolicyAddFolderFailedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Reason
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/GovernancePolicyAddFolderFailedDetails.cs
+    startLine: 100
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Reason.</p>\n"
+  example: []
+  syntax:
+    content: public string Reason { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Reason As String
+  overload: Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedDetails.Reason*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedDetails
+  commentId: T:Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedDetails
+  parent: Dropbox.Api.TeamLog
+  name: GovernancePolicyAddFolderFailedDetails
+  nameWithType: GovernancePolicyAddFolderFailedDetails
+  fullName: Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedDetails
+- uid: Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedDetails.#ctor
+  name: GovernancePolicyAddFolderFailedDetails
+  nameWithType: GovernancePolicyAddFolderFailedDetails.GovernancePolicyAddFolderFailedDetails
+  fullName: Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedDetails.GovernancePolicyAddFolderFailedDetails
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.PolicyType
+  commentId: T:Dropbox.Api.TeamLog.PolicyType
+  parent: Dropbox.Api.TeamLog
+  name: PolicyType
+  nameWithType: PolicyType
+  fullName: Dropbox.Api.TeamLog.PolicyType
+- uid: Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedDetails.GovernancePolicyId*
+  commentId: Overload:Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedDetails.GovernancePolicyId
+  name: GovernancePolicyId
+  nameWithType: GovernancePolicyAddFolderFailedDetails.GovernancePolicyId
+  fullName: Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedDetails.GovernancePolicyId
+- uid: Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedDetails.Name*
+  commentId: Overload:Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedDetails.Name
+  name: Name
+  nameWithType: GovernancePolicyAddFolderFailedDetails.Name
+  fullName: Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedDetails.Name
+- uid: Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedDetails.Folder*
+  commentId: Overload:Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedDetails.Folder
+  name: Folder
+  nameWithType: GovernancePolicyAddFolderFailedDetails.Folder
+  fullName: Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedDetails.Folder
+- uid: Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedDetails.PolicyType*
+  commentId: Overload:Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedDetails.PolicyType
+  name: PolicyType
+  nameWithType: GovernancePolicyAddFolderFailedDetails.PolicyType
+  fullName: Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedDetails.PolicyType
+- uid: Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedDetails.Reason*
+  commentId: Overload:Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedDetails.Reason
+  name: Reason
+  nameWithType: GovernancePolicyAddFolderFailedDetails.Reason
+  fullName: Dropbox.Api.TeamLog.GovernancePolicyAddFolderFailedDetails.Reason
+shouldSkipMarkup: true

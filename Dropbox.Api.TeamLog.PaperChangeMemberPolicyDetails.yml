@@ -1,0 +1,239 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.PaperChangeMemberPolicyDetails
+  commentId: T:Dropbox.Api.TeamLog.PaperChangeMemberPolicyDetails
+  id: PaperChangeMemberPolicyDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.PaperChangeMemberPolicyDetails.#ctor
+  - Dropbox.Api.TeamLog.PaperChangeMemberPolicyDetails.#ctor(Dropbox.Api.TeamLog.PaperMemberPolicy,Dropbox.Api.TeamLog.PaperMemberPolicy)
+  - Dropbox.Api.TeamLog.PaperChangeMemberPolicyDetails.NewValue
+  - Dropbox.Api.TeamLog.PaperChangeMemberPolicyDetails.PreviousValue
+  langs:
+  - csharp
+  - vb
+  name: PaperChangeMemberPolicyDetails
+  nameWithType: PaperChangeMemberPolicyDetails
+  fullName: Dropbox.Api.TeamLog.PaperChangeMemberPolicyDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperChangeMemberPolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PaperChangeMemberPolicyDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperChangeMemberPolicyDetails.cs
+    startLine: 16
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Changed whether members can share Paper docs outside team, and if docs are\naccessible only by team members or anyone by default.</p>\n"
+  example: []
+  syntax:
+    content: 'public class PaperChangeMemberPolicyDetails : object'
+    content.vb: >-
+      Public Class PaperChangeMemberPolicyDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.PaperChangeMemberPolicyDetails.#ctor(Dropbox.Api.TeamLog.PaperMemberPolicy,Dropbox.Api.TeamLog.PaperMemberPolicy)
+  commentId: M:Dropbox.Api.TeamLog.PaperChangeMemberPolicyDetails.#ctor(Dropbox.Api.TeamLog.PaperMemberPolicy,Dropbox.Api.TeamLog.PaperMemberPolicy)
+  id: '#ctor(Dropbox.Api.TeamLog.PaperMemberPolicy,Dropbox.Api.TeamLog.PaperMemberPolicy)'
+  parent: Dropbox.Api.TeamLog.PaperChangeMemberPolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: PaperChangeMemberPolicyDetails(PaperMemberPolicy, PaperMemberPolicy)
+  nameWithType: PaperChangeMemberPolicyDetails.PaperChangeMemberPolicyDetails(PaperMemberPolicy, PaperMemberPolicy)
+  fullName: Dropbox.Api.TeamLog.PaperChangeMemberPolicyDetails.PaperChangeMemberPolicyDetails(Dropbox.Api.TeamLog.PaperMemberPolicy, Dropbox.Api.TeamLog.PaperMemberPolicy)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperChangeMemberPolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperChangeMemberPolicyDetails.cs
+    startLine: 37
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.PaperChangeMemberPolicyDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public PaperChangeMemberPolicyDetails(PaperMemberPolicy newValue, PaperMemberPolicy previousValue = null)
+    parameters:
+    - id: newValue
+      type: Dropbox.Api.TeamLog.PaperMemberPolicy
+      description: New paper external accessibility policy.
+    - id: previousValue
+      type: Dropbox.Api.TeamLog.PaperMemberPolicy
+      description: >-
+        Previous paper external accessibility policy. Might be
+
+        missing due to historical data gap.
+    content.vb: Public Sub New(newValue As PaperMemberPolicy, previousValue As PaperMemberPolicy = Nothing)
+  overload: Dropbox.Api.TeamLog.PaperChangeMemberPolicyDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.PaperChangeMemberPolicyDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.PaperChangeMemberPolicyDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.PaperChangeMemberPolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: PaperChangeMemberPolicyDetails()
+  nameWithType: PaperChangeMemberPolicyDetails.PaperChangeMemberPolicyDetails()
+  fullName: Dropbox.Api.TeamLog.PaperChangeMemberPolicyDetails.PaperChangeMemberPolicyDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperChangeMemberPolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperChangeMemberPolicyDetails.cs
+    startLine: 55
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.PaperChangeMemberPolicyDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public PaperChangeMemberPolicyDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.PaperChangeMemberPolicyDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.PaperChangeMemberPolicyDetails.NewValue
+  commentId: P:Dropbox.Api.TeamLog.PaperChangeMemberPolicyDetails.NewValue
+  id: NewValue
+  parent: Dropbox.Api.TeamLog.PaperChangeMemberPolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: NewValue
+  nameWithType: PaperChangeMemberPolicyDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.PaperChangeMemberPolicyDetails.NewValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperChangeMemberPolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NewValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperChangeMemberPolicyDetails.cs
+    startLine: 63
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>New paper external accessibility policy.</p>\n"
+  example: []
+  syntax:
+    content: public PaperMemberPolicy NewValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.PaperMemberPolicy
+    content.vb: Public Property NewValue As PaperMemberPolicy
+  overload: Dropbox.Api.TeamLog.PaperChangeMemberPolicyDetails.NewValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.PaperChangeMemberPolicyDetails.PreviousValue
+  commentId: P:Dropbox.Api.TeamLog.PaperChangeMemberPolicyDetails.PreviousValue
+  id: PreviousValue
+  parent: Dropbox.Api.TeamLog.PaperChangeMemberPolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: PreviousValue
+  nameWithType: PaperChangeMemberPolicyDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.PaperChangeMemberPolicyDetails.PreviousValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperChangeMemberPolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PreviousValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperChangeMemberPolicyDetails.cs
+    startLine: 69
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Previous paper external accessibility policy. Might be missing due to\nhistorical data gap.</p>\n"
+  example: []
+  syntax:
+    content: public PaperMemberPolicy PreviousValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.PaperMemberPolicy
+    content.vb: Public Property PreviousValue As PaperMemberPolicy
+  overload: Dropbox.Api.TeamLog.PaperChangeMemberPolicyDetails.PreviousValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.PaperChangeMemberPolicyDetails
+  commentId: T:Dropbox.Api.TeamLog.PaperChangeMemberPolicyDetails
+  parent: Dropbox.Api.TeamLog
+  name: PaperChangeMemberPolicyDetails
+  nameWithType: PaperChangeMemberPolicyDetails
+  fullName: Dropbox.Api.TeamLog.PaperChangeMemberPolicyDetails
+- uid: Dropbox.Api.TeamLog.PaperChangeMemberPolicyDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.PaperChangeMemberPolicyDetails.#ctor
+  name: PaperChangeMemberPolicyDetails
+  nameWithType: PaperChangeMemberPolicyDetails.PaperChangeMemberPolicyDetails
+  fullName: Dropbox.Api.TeamLog.PaperChangeMemberPolicyDetails.PaperChangeMemberPolicyDetails
+- uid: Dropbox.Api.TeamLog.PaperMemberPolicy
+  commentId: T:Dropbox.Api.TeamLog.PaperMemberPolicy
+  parent: Dropbox.Api.TeamLog
+  name: PaperMemberPolicy
+  nameWithType: PaperMemberPolicy
+  fullName: Dropbox.Api.TeamLog.PaperMemberPolicy
+- uid: Dropbox.Api.TeamLog.PaperChangeMemberPolicyDetails.NewValue*
+  commentId: Overload:Dropbox.Api.TeamLog.PaperChangeMemberPolicyDetails.NewValue
+  name: NewValue
+  nameWithType: PaperChangeMemberPolicyDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.PaperChangeMemberPolicyDetails.NewValue
+- uid: Dropbox.Api.TeamLog.PaperChangeMemberPolicyDetails.PreviousValue*
+  commentId: Overload:Dropbox.Api.TeamLog.PaperChangeMemberPolicyDetails.PreviousValue
+  name: PreviousValue
+  nameWithType: PaperChangeMemberPolicyDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.PaperChangeMemberPolicyDetails.PreviousValue
+shouldSkipMarkup: true

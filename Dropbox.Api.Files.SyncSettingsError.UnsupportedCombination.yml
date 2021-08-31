@@ -1,0 +1,162 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.SyncSettingsError.UnsupportedCombination
+  commentId: T:Dropbox.Api.Files.SyncSettingsError.UnsupportedCombination
+  id: SyncSettingsError.UnsupportedCombination
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.SyncSettingsError.UnsupportedCombination.Instance
+  langs:
+  - csharp
+  - vb
+  name: SyncSettingsError.UnsupportedCombination
+  nameWithType: SyncSettingsError.UnsupportedCombination
+  fullName: Dropbox.Api.Files.SyncSettingsError.UnsupportedCombination
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SyncSettingsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: UnsupportedCombination
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SyncSettingsError.cs
+    startLine: 311
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Setting this combination of sync settings simultaneously is not\nsupported.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class UnsupportedCombination : SyncSettingsError'
+    content.vb: >-
+      Public NotInheritable Class UnsupportedCombination
+          Inherits SyncSettingsError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Files.SyncSettingsError
+  inheritedMembers:
+  - Dropbox.Api.Files.SyncSettingsError.IsPath
+  - Dropbox.Api.Files.SyncSettingsError.AsPath
+  - Dropbox.Api.Files.SyncSettingsError.IsUnsupportedCombination
+  - Dropbox.Api.Files.SyncSettingsError.AsUnsupportedCombination
+  - Dropbox.Api.Files.SyncSettingsError.IsUnsupportedConfiguration
+  - Dropbox.Api.Files.SyncSettingsError.AsUnsupportedConfiguration
+  - Dropbox.Api.Files.SyncSettingsError.IsOther
+  - Dropbox.Api.Files.SyncSettingsError.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Files.SyncSettingsError.UnsupportedCombination.Instance
+  commentId: F:Dropbox.Api.Files.SyncSettingsError.UnsupportedCombination.Instance
+  id: Instance
+  parent: Dropbox.Api.Files.SyncSettingsError.UnsupportedCombination
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: SyncSettingsError.UnsupportedCombination.Instance
+  fullName: Dropbox.Api.Files.SyncSettingsError.UnsupportedCombination.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SyncSettingsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SyncSettingsError.cs
+    startLine: 336
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>A singleton instance of UnsupportedCombination</p>\n"
+  example: []
+  syntax:
+    content: public static readonly SyncSettingsError.UnsupportedCombination Instance
+    return:
+      type: Dropbox.Api.Files.SyncSettingsError.UnsupportedCombination
+    content.vb: Public Shared ReadOnly Instance As SyncSettingsError.UnsupportedCombination
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.SyncSettingsError
+  commentId: T:Dropbox.Api.Files.SyncSettingsError
+  parent: Dropbox.Api.Files
+  name: SyncSettingsError
+  nameWithType: SyncSettingsError
+  fullName: Dropbox.Api.Files.SyncSettingsError
+- uid: Dropbox.Api.Files.SyncSettingsError.IsPath
+  commentId: P:Dropbox.Api.Files.SyncSettingsError.IsPath
+  parent: Dropbox.Api.Files.SyncSettingsError
+  name: IsPath
+  nameWithType: SyncSettingsError.IsPath
+  fullName: Dropbox.Api.Files.SyncSettingsError.IsPath
+- uid: Dropbox.Api.Files.SyncSettingsError.AsPath
+  commentId: P:Dropbox.Api.Files.SyncSettingsError.AsPath
+  parent: Dropbox.Api.Files.SyncSettingsError
+  name: AsPath
+  nameWithType: SyncSettingsError.AsPath
+  fullName: Dropbox.Api.Files.SyncSettingsError.AsPath
+- uid: Dropbox.Api.Files.SyncSettingsError.IsUnsupportedCombination
+  commentId: P:Dropbox.Api.Files.SyncSettingsError.IsUnsupportedCombination
+  parent: Dropbox.Api.Files.SyncSettingsError
+  name: IsUnsupportedCombination
+  nameWithType: SyncSettingsError.IsUnsupportedCombination
+  fullName: Dropbox.Api.Files.SyncSettingsError.IsUnsupportedCombination
+- uid: Dropbox.Api.Files.SyncSettingsError.AsUnsupportedCombination
+  commentId: P:Dropbox.Api.Files.SyncSettingsError.AsUnsupportedCombination
+  parent: Dropbox.Api.Files.SyncSettingsError
+  name: AsUnsupportedCombination
+  nameWithType: SyncSettingsError.AsUnsupportedCombination
+  fullName: Dropbox.Api.Files.SyncSettingsError.AsUnsupportedCombination
+- uid: Dropbox.Api.Files.SyncSettingsError.IsUnsupportedConfiguration
+  commentId: P:Dropbox.Api.Files.SyncSettingsError.IsUnsupportedConfiguration
+  parent: Dropbox.Api.Files.SyncSettingsError
+  name: IsUnsupportedConfiguration
+  nameWithType: SyncSettingsError.IsUnsupportedConfiguration
+  fullName: Dropbox.Api.Files.SyncSettingsError.IsUnsupportedConfiguration
+- uid: Dropbox.Api.Files.SyncSettingsError.AsUnsupportedConfiguration
+  commentId: P:Dropbox.Api.Files.SyncSettingsError.AsUnsupportedConfiguration
+  parent: Dropbox.Api.Files.SyncSettingsError
+  name: AsUnsupportedConfiguration
+  nameWithType: SyncSettingsError.AsUnsupportedConfiguration
+  fullName: Dropbox.Api.Files.SyncSettingsError.AsUnsupportedConfiguration
+- uid: Dropbox.Api.Files.SyncSettingsError.IsOther
+  commentId: P:Dropbox.Api.Files.SyncSettingsError.IsOther
+  parent: Dropbox.Api.Files.SyncSettingsError
+  name: IsOther
+  nameWithType: SyncSettingsError.IsOther
+  fullName: Dropbox.Api.Files.SyncSettingsError.IsOther
+- uid: Dropbox.Api.Files.SyncSettingsError.AsOther
+  commentId: P:Dropbox.Api.Files.SyncSettingsError.AsOther
+  parent: Dropbox.Api.Files.SyncSettingsError
+  name: AsOther
+  nameWithType: SyncSettingsError.AsOther
+  fullName: Dropbox.Api.Files.SyncSettingsError.AsOther
+- uid: Dropbox.Api.Files.SyncSettingsError.UnsupportedCombination
+  commentId: T:Dropbox.Api.Files.SyncSettingsError.UnsupportedCombination
+  parent: Dropbox.Api.Files
+  name: SyncSettingsError.UnsupportedCombination
+  nameWithType: SyncSettingsError.UnsupportedCombination
+  fullName: Dropbox.Api.Files.SyncSettingsError.UnsupportedCombination
+shouldSkipMarkup: true

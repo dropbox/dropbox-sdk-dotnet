@@ -1,0 +1,381 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.AddSecondaryEmailsError
+  commentId: T:Dropbox.Api.Team.AddSecondaryEmailsError
+  id: AddSecondaryEmailsError
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.AddSecondaryEmailsError.#ctor
+  - Dropbox.Api.Team.AddSecondaryEmailsError.AsOther
+  - Dropbox.Api.Team.AddSecondaryEmailsError.AsSecondaryEmailsDisabled
+  - Dropbox.Api.Team.AddSecondaryEmailsError.AsTooManyEmails
+  - Dropbox.Api.Team.AddSecondaryEmailsError.IsOther
+  - Dropbox.Api.Team.AddSecondaryEmailsError.IsSecondaryEmailsDisabled
+  - Dropbox.Api.Team.AddSecondaryEmailsError.IsTooManyEmails
+  langs:
+  - csharp
+  - vb
+  name: AddSecondaryEmailsError
+  nameWithType: AddSecondaryEmailsError
+  fullName: Dropbox.Api.Team.AddSecondaryEmailsError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/AddSecondaryEmailsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AddSecondaryEmailsError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/AddSecondaryEmailsError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Error returned when adding secondary emails fails.</p>\n"
+  example: []
+  syntax:
+    content: 'public class AddSecondaryEmailsError : object'
+    content.vb: >-
+      Public Class AddSecondaryEmailsError
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Team.AddSecondaryEmailsError.Other
+  - Dropbox.Api.Team.AddSecondaryEmailsError.SecondaryEmailsDisabled
+  - Dropbox.Api.Team.AddSecondaryEmailsError.TooManyEmails
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.AddSecondaryEmailsError.#ctor
+  commentId: M:Dropbox.Api.Team.AddSecondaryEmailsError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.AddSecondaryEmailsError
+  langs:
+  - csharp
+  - vb
+  name: AddSecondaryEmailsError()
+  nameWithType: AddSecondaryEmailsError.AddSecondaryEmailsError()
+  fullName: Dropbox.Api.Team.AddSecondaryEmailsError.AddSecondaryEmailsError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/AddSecondaryEmailsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/AddSecondaryEmailsError.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.AddSecondaryEmailsError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public AddSecondaryEmailsError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.AddSecondaryEmailsError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.AddSecondaryEmailsError.IsSecondaryEmailsDisabled
+  commentId: P:Dropbox.Api.Team.AddSecondaryEmailsError.IsSecondaryEmailsDisabled
+  id: IsSecondaryEmailsDisabled
+  parent: Dropbox.Api.Team.AddSecondaryEmailsError
+  langs:
+  - csharp
+  - vb
+  name: IsSecondaryEmailsDisabled
+  nameWithType: AddSecondaryEmailsError.IsSecondaryEmailsDisabled
+  fullName: Dropbox.Api.Team.AddSecondaryEmailsError.IsSecondaryEmailsDisabled
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/AddSecondaryEmailsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsSecondaryEmailsDisabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/AddSecondaryEmailsError.cs
+    startLine: 41
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is\nSecondaryEmailsDisabled</p>\n"
+  example: []
+  syntax:
+    content: public bool IsSecondaryEmailsDisabled { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsSecondaryEmailsDisabled As Boolean
+  overload: Dropbox.Api.Team.AddSecondaryEmailsError.IsSecondaryEmailsDisabled*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.AddSecondaryEmailsError.AsSecondaryEmailsDisabled
+  commentId: P:Dropbox.Api.Team.AddSecondaryEmailsError.AsSecondaryEmailsDisabled
+  id: AsSecondaryEmailsDisabled
+  parent: Dropbox.Api.Team.AddSecondaryEmailsError
+  langs:
+  - csharp
+  - vb
+  name: AsSecondaryEmailsDisabled
+  nameWithType: AddSecondaryEmailsError.AsSecondaryEmailsDisabled
+  fullName: Dropbox.Api.Team.AddSecondaryEmailsError.AsSecondaryEmailsDisabled
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/AddSecondaryEmailsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsSecondaryEmailsDisabled
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/AddSecondaryEmailsError.cs
+    startLine: 52
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a SecondaryEmailsDisabled, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public AddSecondaryEmailsError.SecondaryEmailsDisabled AsSecondaryEmailsDisabled { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.AddSecondaryEmailsError.SecondaryEmailsDisabled
+    content.vb: Public ReadOnly Property AsSecondaryEmailsDisabled As AddSecondaryEmailsError.SecondaryEmailsDisabled
+  overload: Dropbox.Api.Team.AddSecondaryEmailsError.AsSecondaryEmailsDisabled*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.AddSecondaryEmailsError.IsTooManyEmails
+  commentId: P:Dropbox.Api.Team.AddSecondaryEmailsError.IsTooManyEmails
+  id: IsTooManyEmails
+  parent: Dropbox.Api.Team.AddSecondaryEmailsError
+  langs:
+  - csharp
+  - vb
+  name: IsTooManyEmails
+  nameWithType: AddSecondaryEmailsError.IsTooManyEmails
+  fullName: Dropbox.Api.Team.AddSecondaryEmailsError.IsTooManyEmails
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/AddSecondaryEmailsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsTooManyEmails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/AddSecondaryEmailsError.cs
+    startLine: 63
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is TooManyEmails</p>\n"
+  example: []
+  syntax:
+    content: public bool IsTooManyEmails { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsTooManyEmails As Boolean
+  overload: Dropbox.Api.Team.AddSecondaryEmailsError.IsTooManyEmails*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.AddSecondaryEmailsError.AsTooManyEmails
+  commentId: P:Dropbox.Api.Team.AddSecondaryEmailsError.AsTooManyEmails
+  id: AsTooManyEmails
+  parent: Dropbox.Api.Team.AddSecondaryEmailsError
+  langs:
+  - csharp
+  - vb
+  name: AsTooManyEmails
+  nameWithType: AddSecondaryEmailsError.AsTooManyEmails
+  fullName: Dropbox.Api.Team.AddSecondaryEmailsError.AsTooManyEmails
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/AddSecondaryEmailsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsTooManyEmails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/AddSecondaryEmailsError.cs
+    startLine: 74
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a TooManyEmails, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public AddSecondaryEmailsError.TooManyEmails AsTooManyEmails { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.AddSecondaryEmailsError.TooManyEmails
+    content.vb: Public ReadOnly Property AsTooManyEmails As AddSecondaryEmailsError.TooManyEmails
+  overload: Dropbox.Api.Team.AddSecondaryEmailsError.AsTooManyEmails*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.AddSecondaryEmailsError.IsOther
+  commentId: P:Dropbox.Api.Team.AddSecondaryEmailsError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Team.AddSecondaryEmailsError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: AddSecondaryEmailsError.IsOther
+  fullName: Dropbox.Api.Team.AddSecondaryEmailsError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/AddSecondaryEmailsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/AddSecondaryEmailsError.cs
+    startLine: 85
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Team.AddSecondaryEmailsError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.AddSecondaryEmailsError.AsOther
+  commentId: P:Dropbox.Api.Team.AddSecondaryEmailsError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Team.AddSecondaryEmailsError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: AddSecondaryEmailsError.AsOther
+  fullName: Dropbox.Api.Team.AddSecondaryEmailsError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/AddSecondaryEmailsError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/AddSecondaryEmailsError.cs
+    startLine: 96
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public AddSecondaryEmailsError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.AddSecondaryEmailsError.Other
+    content.vb: Public ReadOnly Property AsOther As AddSecondaryEmailsError.Other
+  overload: Dropbox.Api.Team.AddSecondaryEmailsError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.AddSecondaryEmailsError
+  commentId: T:Dropbox.Api.Team.AddSecondaryEmailsError
+  parent: Dropbox.Api.Team
+  name: AddSecondaryEmailsError
+  nameWithType: AddSecondaryEmailsError
+  fullName: Dropbox.Api.Team.AddSecondaryEmailsError
+- uid: Dropbox.Api.Team.AddSecondaryEmailsError.#ctor*
+  commentId: Overload:Dropbox.Api.Team.AddSecondaryEmailsError.#ctor
+  name: AddSecondaryEmailsError
+  nameWithType: AddSecondaryEmailsError.AddSecondaryEmailsError
+  fullName: Dropbox.Api.Team.AddSecondaryEmailsError.AddSecondaryEmailsError
+- uid: Dropbox.Api.Team.AddSecondaryEmailsError.IsSecondaryEmailsDisabled*
+  commentId: Overload:Dropbox.Api.Team.AddSecondaryEmailsError.IsSecondaryEmailsDisabled
+  name: IsSecondaryEmailsDisabled
+  nameWithType: AddSecondaryEmailsError.IsSecondaryEmailsDisabled
+  fullName: Dropbox.Api.Team.AddSecondaryEmailsError.IsSecondaryEmailsDisabled
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Team.AddSecondaryEmailsError.AsSecondaryEmailsDisabled*
+  commentId: Overload:Dropbox.Api.Team.AddSecondaryEmailsError.AsSecondaryEmailsDisabled
+  name: AsSecondaryEmailsDisabled
+  nameWithType: AddSecondaryEmailsError.AsSecondaryEmailsDisabled
+  fullName: Dropbox.Api.Team.AddSecondaryEmailsError.AsSecondaryEmailsDisabled
+- uid: Dropbox.Api.Team.AddSecondaryEmailsError.SecondaryEmailsDisabled
+  commentId: T:Dropbox.Api.Team.AddSecondaryEmailsError.SecondaryEmailsDisabled
+  parent: Dropbox.Api.Team
+  name: AddSecondaryEmailsError.SecondaryEmailsDisabled
+  nameWithType: AddSecondaryEmailsError.SecondaryEmailsDisabled
+  fullName: Dropbox.Api.Team.AddSecondaryEmailsError.SecondaryEmailsDisabled
+- uid: Dropbox.Api.Team.AddSecondaryEmailsError.IsTooManyEmails*
+  commentId: Overload:Dropbox.Api.Team.AddSecondaryEmailsError.IsTooManyEmails
+  name: IsTooManyEmails
+  nameWithType: AddSecondaryEmailsError.IsTooManyEmails
+  fullName: Dropbox.Api.Team.AddSecondaryEmailsError.IsTooManyEmails
+- uid: Dropbox.Api.Team.AddSecondaryEmailsError.AsTooManyEmails*
+  commentId: Overload:Dropbox.Api.Team.AddSecondaryEmailsError.AsTooManyEmails
+  name: AsTooManyEmails
+  nameWithType: AddSecondaryEmailsError.AsTooManyEmails
+  fullName: Dropbox.Api.Team.AddSecondaryEmailsError.AsTooManyEmails
+- uid: Dropbox.Api.Team.AddSecondaryEmailsError.TooManyEmails
+  commentId: T:Dropbox.Api.Team.AddSecondaryEmailsError.TooManyEmails
+  parent: Dropbox.Api.Team
+  name: AddSecondaryEmailsError.TooManyEmails
+  nameWithType: AddSecondaryEmailsError.TooManyEmails
+  fullName: Dropbox.Api.Team.AddSecondaryEmailsError.TooManyEmails
+- uid: Dropbox.Api.Team.AddSecondaryEmailsError.IsOther*
+  commentId: Overload:Dropbox.Api.Team.AddSecondaryEmailsError.IsOther
+  name: IsOther
+  nameWithType: AddSecondaryEmailsError.IsOther
+  fullName: Dropbox.Api.Team.AddSecondaryEmailsError.IsOther
+- uid: Dropbox.Api.Team.AddSecondaryEmailsError.AsOther*
+  commentId: Overload:Dropbox.Api.Team.AddSecondaryEmailsError.AsOther
+  name: AsOther
+  nameWithType: AddSecondaryEmailsError.AsOther
+  fullName: Dropbox.Api.Team.AddSecondaryEmailsError.AsOther
+- uid: Dropbox.Api.Team.AddSecondaryEmailsError.Other
+  commentId: T:Dropbox.Api.Team.AddSecondaryEmailsError.Other
+  parent: Dropbox.Api.Team
+  name: AddSecondaryEmailsError.Other
+  nameWithType: AddSecondaryEmailsError.Other
+  fullName: Dropbox.Api.Team.AddSecondaryEmailsError.Other
+shouldSkipMarkup: true

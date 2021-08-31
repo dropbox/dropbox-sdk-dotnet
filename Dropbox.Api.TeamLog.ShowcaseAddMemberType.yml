@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.ShowcaseAddMemberType
+  commentId: T:Dropbox.Api.TeamLog.ShowcaseAddMemberType
+  id: ShowcaseAddMemberType
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.ShowcaseAddMemberType.#ctor
+  - Dropbox.Api.TeamLog.ShowcaseAddMemberType.#ctor(System.String)
+  - Dropbox.Api.TeamLog.ShowcaseAddMemberType.Description
+  langs:
+  - csharp
+  - vb
+  name: ShowcaseAddMemberType
+  nameWithType: ShowcaseAddMemberType
+  fullName: Dropbox.Api.TeamLog.ShowcaseAddMemberType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseAddMemberType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ShowcaseAddMemberType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseAddMemberType.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The showcase add member type object</p>\n"
+  example: []
+  syntax:
+    content: 'public class ShowcaseAddMemberType : object'
+    content.vb: >-
+      Public Class ShowcaseAddMemberType
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.ShowcaseAddMemberType.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.ShowcaseAddMemberType.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.ShowcaseAddMemberType
+  langs:
+  - csharp
+  - vb
+  name: ShowcaseAddMemberType(String)
+  nameWithType: ShowcaseAddMemberType.ShowcaseAddMemberType(String)
+  fullName: Dropbox.Api.TeamLog.ShowcaseAddMemberType.ShowcaseAddMemberType(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseAddMemberType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseAddMemberType.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.ShowcaseAddMemberType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public ShowcaseAddMemberType(string description)
+    parameters:
+    - id: description
+      type: System.String
+      description: The description
+    content.vb: Public Sub New(description As String)
+  overload: Dropbox.Api.TeamLog.ShowcaseAddMemberType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.ShowcaseAddMemberType.#ctor
+  commentId: M:Dropbox.Api.TeamLog.ShowcaseAddMemberType.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.ShowcaseAddMemberType
+  langs:
+  - csharp
+  - vb
+  name: ShowcaseAddMemberType()
+  nameWithType: ShowcaseAddMemberType.ShowcaseAddMemberType()
+  fullName: Dropbox.Api.TeamLog.ShowcaseAddMemberType.ShowcaseAddMemberType()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseAddMemberType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseAddMemberType.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.ShowcaseAddMemberType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public ShowcaseAddMemberType()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.ShowcaseAddMemberType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.ShowcaseAddMemberType.Description
+  commentId: P:Dropbox.Api.TeamLog.ShowcaseAddMemberType.Description
+  id: Description
+  parent: Dropbox.Api.TeamLog.ShowcaseAddMemberType
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: ShowcaseAddMemberType.Description
+  fullName: Dropbox.Api.TeamLog.ShowcaseAddMemberType.Description
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseAddMemberType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Description
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ShowcaseAddMemberType.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets the description of the showcase add member type</p>\n"
+  example: []
+  syntax:
+    content: public string Description { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Dropbox.Api.TeamLog.ShowcaseAddMemberType.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.ShowcaseAddMemberType
+  commentId: T:Dropbox.Api.TeamLog.ShowcaseAddMemberType
+  parent: Dropbox.Api.TeamLog
+  name: ShowcaseAddMemberType
+  nameWithType: ShowcaseAddMemberType
+  fullName: Dropbox.Api.TeamLog.ShowcaseAddMemberType
+- uid: Dropbox.Api.TeamLog.ShowcaseAddMemberType.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.ShowcaseAddMemberType.#ctor
+  name: ShowcaseAddMemberType
+  nameWithType: ShowcaseAddMemberType.ShowcaseAddMemberType
+  fullName: Dropbox.Api.TeamLog.ShowcaseAddMemberType.ShowcaseAddMemberType
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.ShowcaseAddMemberType.Description*
+  commentId: Overload:Dropbox.Api.TeamLog.ShowcaseAddMemberType.Description
+  name: Description
+  nameWithType: ShowcaseAddMemberType.Description
+  fullName: Dropbox.Api.TeamLog.ShowcaseAddMemberType.Description
+shouldSkipMarkup: true

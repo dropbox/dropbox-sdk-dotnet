@@ -1,0 +1,288 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.MoveIntoVaultError
+  commentId: T:Dropbox.Api.Files.MoveIntoVaultError
+  id: MoveIntoVaultError
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.MoveIntoVaultError.#ctor
+  - Dropbox.Api.Files.MoveIntoVaultError.AsIsSharedFolder
+  - Dropbox.Api.Files.MoveIntoVaultError.AsOther
+  - Dropbox.Api.Files.MoveIntoVaultError.IsIsSharedFolder
+  - Dropbox.Api.Files.MoveIntoVaultError.IsOther
+  langs:
+  - csharp
+  - vb
+  name: MoveIntoVaultError
+  nameWithType: MoveIntoVaultError
+  fullName: Dropbox.Api.Files.MoveIntoVaultError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MoveIntoVaultError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: MoveIntoVaultError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MoveIntoVaultError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The move into vault error object</p>\n"
+  example: []
+  syntax:
+    content: 'public class MoveIntoVaultError : object'
+    content.vb: >-
+      Public Class MoveIntoVaultError
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Files.MoveIntoVaultError.IsSharedFolder
+  - Dropbox.Api.Files.MoveIntoVaultError.Other
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.MoveIntoVaultError.#ctor
+  commentId: M:Dropbox.Api.Files.MoveIntoVaultError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.MoveIntoVaultError
+  langs:
+  - csharp
+  - vb
+  name: MoveIntoVaultError()
+  nameWithType: MoveIntoVaultError.MoveIntoVaultError()
+  fullName: Dropbox.Api.Files.MoveIntoVaultError.MoveIntoVaultError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MoveIntoVaultError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MoveIntoVaultError.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.MoveIntoVaultError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public MoveIntoVaultError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.MoveIntoVaultError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.MoveIntoVaultError.IsIsSharedFolder
+  commentId: P:Dropbox.Api.Files.MoveIntoVaultError.IsIsSharedFolder
+  id: IsIsSharedFolder
+  parent: Dropbox.Api.Files.MoveIntoVaultError
+  langs:
+  - csharp
+  - vb
+  name: IsIsSharedFolder
+  nameWithType: MoveIntoVaultError.IsIsSharedFolder
+  fullName: Dropbox.Api.Files.MoveIntoVaultError.IsIsSharedFolder
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MoveIntoVaultError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsIsSharedFolder
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MoveIntoVaultError.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is IsSharedFolder</p>\n"
+  example: []
+  syntax:
+    content: public bool IsIsSharedFolder { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsIsSharedFolder As Boolean
+  overload: Dropbox.Api.Files.MoveIntoVaultError.IsIsSharedFolder*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.MoveIntoVaultError.AsIsSharedFolder
+  commentId: P:Dropbox.Api.Files.MoveIntoVaultError.AsIsSharedFolder
+  id: AsIsSharedFolder
+  parent: Dropbox.Api.Files.MoveIntoVaultError
+  langs:
+  - csharp
+  - vb
+  name: AsIsSharedFolder
+  nameWithType: MoveIntoVaultError.AsIsSharedFolder
+  fullName: Dropbox.Api.Files.MoveIntoVaultError.AsIsSharedFolder
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MoveIntoVaultError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsIsSharedFolder
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MoveIntoVaultError.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a IsSharedFolder, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MoveIntoVaultError.IsSharedFolder AsIsSharedFolder { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.MoveIntoVaultError.IsSharedFolder
+    content.vb: Public ReadOnly Property AsIsSharedFolder As MoveIntoVaultError.IsSharedFolder
+  overload: Dropbox.Api.Files.MoveIntoVaultError.AsIsSharedFolder*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.MoveIntoVaultError.IsOther
+  commentId: P:Dropbox.Api.Files.MoveIntoVaultError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Files.MoveIntoVaultError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: MoveIntoVaultError.IsOther
+  fullName: Dropbox.Api.Files.MoveIntoVaultError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MoveIntoVaultError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MoveIntoVaultError.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Files.MoveIntoVaultError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.MoveIntoVaultError.AsOther
+  commentId: P:Dropbox.Api.Files.MoveIntoVaultError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Files.MoveIntoVaultError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: MoveIntoVaultError.AsOther
+  fullName: Dropbox.Api.Files.MoveIntoVaultError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MoveIntoVaultError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/MoveIntoVaultError.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public MoveIntoVaultError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.MoveIntoVaultError.Other
+    content.vb: Public ReadOnly Property AsOther As MoveIntoVaultError.Other
+  overload: Dropbox.Api.Files.MoveIntoVaultError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.MoveIntoVaultError
+  commentId: T:Dropbox.Api.Files.MoveIntoVaultError
+  parent: Dropbox.Api.Files
+  name: MoveIntoVaultError
+  nameWithType: MoveIntoVaultError
+  fullName: Dropbox.Api.Files.MoveIntoVaultError
+- uid: Dropbox.Api.Files.MoveIntoVaultError.#ctor*
+  commentId: Overload:Dropbox.Api.Files.MoveIntoVaultError.#ctor
+  name: MoveIntoVaultError
+  nameWithType: MoveIntoVaultError.MoveIntoVaultError
+  fullName: Dropbox.Api.Files.MoveIntoVaultError.MoveIntoVaultError
+- uid: Dropbox.Api.Files.MoveIntoVaultError.IsIsSharedFolder*
+  commentId: Overload:Dropbox.Api.Files.MoveIntoVaultError.IsIsSharedFolder
+  name: IsIsSharedFolder
+  nameWithType: MoveIntoVaultError.IsIsSharedFolder
+  fullName: Dropbox.Api.Files.MoveIntoVaultError.IsIsSharedFolder
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Files.MoveIntoVaultError.AsIsSharedFolder*
+  commentId: Overload:Dropbox.Api.Files.MoveIntoVaultError.AsIsSharedFolder
+  name: AsIsSharedFolder
+  nameWithType: MoveIntoVaultError.AsIsSharedFolder
+  fullName: Dropbox.Api.Files.MoveIntoVaultError.AsIsSharedFolder
+- uid: Dropbox.Api.Files.MoveIntoVaultError.IsSharedFolder
+  commentId: T:Dropbox.Api.Files.MoveIntoVaultError.IsSharedFolder
+  parent: Dropbox.Api.Files
+  name: MoveIntoVaultError.IsSharedFolder
+  nameWithType: MoveIntoVaultError.IsSharedFolder
+  fullName: Dropbox.Api.Files.MoveIntoVaultError.IsSharedFolder
+- uid: Dropbox.Api.Files.MoveIntoVaultError.IsOther*
+  commentId: Overload:Dropbox.Api.Files.MoveIntoVaultError.IsOther
+  name: IsOther
+  nameWithType: MoveIntoVaultError.IsOther
+  fullName: Dropbox.Api.Files.MoveIntoVaultError.IsOther
+- uid: Dropbox.Api.Files.MoveIntoVaultError.AsOther*
+  commentId: Overload:Dropbox.Api.Files.MoveIntoVaultError.AsOther
+  name: AsOther
+  nameWithType: MoveIntoVaultError.AsOther
+  fullName: Dropbox.Api.Files.MoveIntoVaultError.AsOther
+- uid: Dropbox.Api.Files.MoveIntoVaultError.Other
+  commentId: T:Dropbox.Api.Files.MoveIntoVaultError.Other
+  parent: Dropbox.Api.Files
+  name: MoveIntoVaultError.Other
+  nameWithType: MoveIntoVaultError.Other
+  fullName: Dropbox.Api.Files.MoveIntoVaultError.Other
+shouldSkipMarkup: true

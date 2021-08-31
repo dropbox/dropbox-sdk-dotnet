@@ -1,0 +1,1032 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.AddSecondaryEmailResult
+  commentId: T:Dropbox.Api.Team.AddSecondaryEmailResult
+  id: AddSecondaryEmailResult
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.AddSecondaryEmailResult.#ctor
+  - Dropbox.Api.Team.AddSecondaryEmailResult.AsAlreadyOwnedByUser
+  - Dropbox.Api.Team.AddSecondaryEmailResult.AsAlreadyPending
+  - Dropbox.Api.Team.AddSecondaryEmailResult.AsOther
+  - Dropbox.Api.Team.AddSecondaryEmailResult.AsRateLimited
+  - Dropbox.Api.Team.AddSecondaryEmailResult.AsReachedLimit
+  - Dropbox.Api.Team.AddSecondaryEmailResult.AsSuccess
+  - Dropbox.Api.Team.AddSecondaryEmailResult.AsTooManyUpdates
+  - Dropbox.Api.Team.AddSecondaryEmailResult.AsTransientError
+  - Dropbox.Api.Team.AddSecondaryEmailResult.AsUnavailable
+  - Dropbox.Api.Team.AddSecondaryEmailResult.AsUnknownError
+  - Dropbox.Api.Team.AddSecondaryEmailResult.IsAlreadyOwnedByUser
+  - Dropbox.Api.Team.AddSecondaryEmailResult.IsAlreadyPending
+  - Dropbox.Api.Team.AddSecondaryEmailResult.IsOther
+  - Dropbox.Api.Team.AddSecondaryEmailResult.IsRateLimited
+  - Dropbox.Api.Team.AddSecondaryEmailResult.IsReachedLimit
+  - Dropbox.Api.Team.AddSecondaryEmailResult.IsSuccess
+  - Dropbox.Api.Team.AddSecondaryEmailResult.IsTooManyUpdates
+  - Dropbox.Api.Team.AddSecondaryEmailResult.IsTransientError
+  - Dropbox.Api.Team.AddSecondaryEmailResult.IsUnavailable
+  - Dropbox.Api.Team.AddSecondaryEmailResult.IsUnknownError
+  langs:
+  - csharp
+  - vb
+  name: AddSecondaryEmailResult
+  nameWithType: AddSecondaryEmailResult
+  fullName: Dropbox.Api.Team.AddSecondaryEmailResult
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/AddSecondaryEmailResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AddSecondaryEmailResult
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/AddSecondaryEmailResult.cs
+    startLine: 18
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Result of trying to add a secondary email to a user. &apos;success&apos; is the only value\nindicating that a secondary email was successfully added to a user. The other values\nexplain the type of error that occurred, and include the email for which the error\noccurred.</p>\n"
+  example: []
+  syntax:
+    content: 'public class AddSecondaryEmailResult : object'
+    content.vb: >-
+      Public Class AddSecondaryEmailResult
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Team.AddSecondaryEmailResult.AlreadyOwnedByUser
+  - Dropbox.Api.Team.AddSecondaryEmailResult.AlreadyPending
+  - Dropbox.Api.Team.AddSecondaryEmailResult.Other
+  - Dropbox.Api.Team.AddSecondaryEmailResult.RateLimited
+  - Dropbox.Api.Team.AddSecondaryEmailResult.ReachedLimit
+  - Dropbox.Api.Team.AddSecondaryEmailResult.Success
+  - Dropbox.Api.Team.AddSecondaryEmailResult.TooManyUpdates
+  - Dropbox.Api.Team.AddSecondaryEmailResult.TransientError
+  - Dropbox.Api.Team.AddSecondaryEmailResult.Unavailable
+  - Dropbox.Api.Team.AddSecondaryEmailResult.UnknownError
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.AddSecondaryEmailResult.#ctor
+  commentId: M:Dropbox.Api.Team.AddSecondaryEmailResult.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.AddSecondaryEmailResult
+  langs:
+  - csharp
+  - vb
+  name: AddSecondaryEmailResult()
+  nameWithType: AddSecondaryEmailResult.AddSecondaryEmailResult()
+  fullName: Dropbox.Api.Team.AddSecondaryEmailResult.AddSecondaryEmailResult()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/AddSecondaryEmailResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/AddSecondaryEmailResult.cs
+    startLine: 36
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.AddSecondaryEmailResult\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public AddSecondaryEmailResult()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.AddSecondaryEmailResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.AddSecondaryEmailResult.IsSuccess
+  commentId: P:Dropbox.Api.Team.AddSecondaryEmailResult.IsSuccess
+  id: IsSuccess
+  parent: Dropbox.Api.Team.AddSecondaryEmailResult
+  langs:
+  - csharp
+  - vb
+  name: IsSuccess
+  nameWithType: AddSecondaryEmailResult.IsSuccess
+  fullName: Dropbox.Api.Team.AddSecondaryEmailResult.IsSuccess
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/AddSecondaryEmailResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsSuccess
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/AddSecondaryEmailResult.cs
+    startLine: 43
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is Success</p>\n"
+  example: []
+  syntax:
+    content: public bool IsSuccess { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsSuccess As Boolean
+  overload: Dropbox.Api.Team.AddSecondaryEmailResult.IsSuccess*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.AddSecondaryEmailResult.AsSuccess
+  commentId: P:Dropbox.Api.Team.AddSecondaryEmailResult.AsSuccess
+  id: AsSuccess
+  parent: Dropbox.Api.Team.AddSecondaryEmailResult
+  langs:
+  - csharp
+  - vb
+  name: AsSuccess
+  nameWithType: AddSecondaryEmailResult.AsSuccess
+  fullName: Dropbox.Api.Team.AddSecondaryEmailResult.AsSuccess
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/AddSecondaryEmailResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsSuccess
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/AddSecondaryEmailResult.cs
+    startLine: 54
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a Success, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public AddSecondaryEmailResult.Success AsSuccess { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.AddSecondaryEmailResult.Success
+    content.vb: Public ReadOnly Property AsSuccess As AddSecondaryEmailResult.Success
+  overload: Dropbox.Api.Team.AddSecondaryEmailResult.AsSuccess*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.AddSecondaryEmailResult.IsUnavailable
+  commentId: P:Dropbox.Api.Team.AddSecondaryEmailResult.IsUnavailable
+  id: IsUnavailable
+  parent: Dropbox.Api.Team.AddSecondaryEmailResult
+  langs:
+  - csharp
+  - vb
+  name: IsUnavailable
+  nameWithType: AddSecondaryEmailResult.IsUnavailable
+  fullName: Dropbox.Api.Team.AddSecondaryEmailResult.IsUnavailable
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/AddSecondaryEmailResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsUnavailable
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/AddSecondaryEmailResult.cs
+    startLine: 65
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is Unavailable</p>\n"
+  example: []
+  syntax:
+    content: public bool IsUnavailable { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsUnavailable As Boolean
+  overload: Dropbox.Api.Team.AddSecondaryEmailResult.IsUnavailable*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.AddSecondaryEmailResult.AsUnavailable
+  commentId: P:Dropbox.Api.Team.AddSecondaryEmailResult.AsUnavailable
+  id: AsUnavailable
+  parent: Dropbox.Api.Team.AddSecondaryEmailResult
+  langs:
+  - csharp
+  - vb
+  name: AsUnavailable
+  nameWithType: AddSecondaryEmailResult.AsUnavailable
+  fullName: Dropbox.Api.Team.AddSecondaryEmailResult.AsUnavailable
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/AddSecondaryEmailResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsUnavailable
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/AddSecondaryEmailResult.cs
+    startLine: 76
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a Unavailable, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public AddSecondaryEmailResult.Unavailable AsUnavailable { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.AddSecondaryEmailResult.Unavailable
+    content.vb: Public ReadOnly Property AsUnavailable As AddSecondaryEmailResult.Unavailable
+  overload: Dropbox.Api.Team.AddSecondaryEmailResult.AsUnavailable*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.AddSecondaryEmailResult.IsAlreadyPending
+  commentId: P:Dropbox.Api.Team.AddSecondaryEmailResult.IsAlreadyPending
+  id: IsAlreadyPending
+  parent: Dropbox.Api.Team.AddSecondaryEmailResult
+  langs:
+  - csharp
+  - vb
+  name: IsAlreadyPending
+  nameWithType: AddSecondaryEmailResult.IsAlreadyPending
+  fullName: Dropbox.Api.Team.AddSecondaryEmailResult.IsAlreadyPending
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/AddSecondaryEmailResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsAlreadyPending
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/AddSecondaryEmailResult.cs
+    startLine: 87
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is AlreadyPending</p>\n"
+  example: []
+  syntax:
+    content: public bool IsAlreadyPending { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsAlreadyPending As Boolean
+  overload: Dropbox.Api.Team.AddSecondaryEmailResult.IsAlreadyPending*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.AddSecondaryEmailResult.AsAlreadyPending
+  commentId: P:Dropbox.Api.Team.AddSecondaryEmailResult.AsAlreadyPending
+  id: AsAlreadyPending
+  parent: Dropbox.Api.Team.AddSecondaryEmailResult
+  langs:
+  - csharp
+  - vb
+  name: AsAlreadyPending
+  nameWithType: AddSecondaryEmailResult.AsAlreadyPending
+  fullName: Dropbox.Api.Team.AddSecondaryEmailResult.AsAlreadyPending
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/AddSecondaryEmailResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsAlreadyPending
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/AddSecondaryEmailResult.cs
+    startLine: 98
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a AlreadyPending, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public AddSecondaryEmailResult.AlreadyPending AsAlreadyPending { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.AddSecondaryEmailResult.AlreadyPending
+    content.vb: Public ReadOnly Property AsAlreadyPending As AddSecondaryEmailResult.AlreadyPending
+  overload: Dropbox.Api.Team.AddSecondaryEmailResult.AsAlreadyPending*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.AddSecondaryEmailResult.IsAlreadyOwnedByUser
+  commentId: P:Dropbox.Api.Team.AddSecondaryEmailResult.IsAlreadyOwnedByUser
+  id: IsAlreadyOwnedByUser
+  parent: Dropbox.Api.Team.AddSecondaryEmailResult
+  langs:
+  - csharp
+  - vb
+  name: IsAlreadyOwnedByUser
+  nameWithType: AddSecondaryEmailResult.IsAlreadyOwnedByUser
+  fullName: Dropbox.Api.Team.AddSecondaryEmailResult.IsAlreadyOwnedByUser
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/AddSecondaryEmailResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsAlreadyOwnedByUser
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/AddSecondaryEmailResult.cs
+    startLine: 109
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is AlreadyOwnedByUser</p>\n"
+  example: []
+  syntax:
+    content: public bool IsAlreadyOwnedByUser { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsAlreadyOwnedByUser As Boolean
+  overload: Dropbox.Api.Team.AddSecondaryEmailResult.IsAlreadyOwnedByUser*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.AddSecondaryEmailResult.AsAlreadyOwnedByUser
+  commentId: P:Dropbox.Api.Team.AddSecondaryEmailResult.AsAlreadyOwnedByUser
+  id: AsAlreadyOwnedByUser
+  parent: Dropbox.Api.Team.AddSecondaryEmailResult
+  langs:
+  - csharp
+  - vb
+  name: AsAlreadyOwnedByUser
+  nameWithType: AddSecondaryEmailResult.AsAlreadyOwnedByUser
+  fullName: Dropbox.Api.Team.AddSecondaryEmailResult.AsAlreadyOwnedByUser
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/AddSecondaryEmailResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsAlreadyOwnedByUser
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/AddSecondaryEmailResult.cs
+    startLine: 120
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a AlreadyOwnedByUser, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public AddSecondaryEmailResult.AlreadyOwnedByUser AsAlreadyOwnedByUser { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.AddSecondaryEmailResult.AlreadyOwnedByUser
+    content.vb: Public ReadOnly Property AsAlreadyOwnedByUser As AddSecondaryEmailResult.AlreadyOwnedByUser
+  overload: Dropbox.Api.Team.AddSecondaryEmailResult.AsAlreadyOwnedByUser*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.AddSecondaryEmailResult.IsReachedLimit
+  commentId: P:Dropbox.Api.Team.AddSecondaryEmailResult.IsReachedLimit
+  id: IsReachedLimit
+  parent: Dropbox.Api.Team.AddSecondaryEmailResult
+  langs:
+  - csharp
+  - vb
+  name: IsReachedLimit
+  nameWithType: AddSecondaryEmailResult.IsReachedLimit
+  fullName: Dropbox.Api.Team.AddSecondaryEmailResult.IsReachedLimit
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/AddSecondaryEmailResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsReachedLimit
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/AddSecondaryEmailResult.cs
+    startLine: 131
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is ReachedLimit</p>\n"
+  example: []
+  syntax:
+    content: public bool IsReachedLimit { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsReachedLimit As Boolean
+  overload: Dropbox.Api.Team.AddSecondaryEmailResult.IsReachedLimit*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.AddSecondaryEmailResult.AsReachedLimit
+  commentId: P:Dropbox.Api.Team.AddSecondaryEmailResult.AsReachedLimit
+  id: AsReachedLimit
+  parent: Dropbox.Api.Team.AddSecondaryEmailResult
+  langs:
+  - csharp
+  - vb
+  name: AsReachedLimit
+  nameWithType: AddSecondaryEmailResult.AsReachedLimit
+  fullName: Dropbox.Api.Team.AddSecondaryEmailResult.AsReachedLimit
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/AddSecondaryEmailResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsReachedLimit
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/AddSecondaryEmailResult.cs
+    startLine: 142
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a ReachedLimit, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public AddSecondaryEmailResult.ReachedLimit AsReachedLimit { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.AddSecondaryEmailResult.ReachedLimit
+    content.vb: Public ReadOnly Property AsReachedLimit As AddSecondaryEmailResult.ReachedLimit
+  overload: Dropbox.Api.Team.AddSecondaryEmailResult.AsReachedLimit*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.AddSecondaryEmailResult.IsTransientError
+  commentId: P:Dropbox.Api.Team.AddSecondaryEmailResult.IsTransientError
+  id: IsTransientError
+  parent: Dropbox.Api.Team.AddSecondaryEmailResult
+  langs:
+  - csharp
+  - vb
+  name: IsTransientError
+  nameWithType: AddSecondaryEmailResult.IsTransientError
+  fullName: Dropbox.Api.Team.AddSecondaryEmailResult.IsTransientError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/AddSecondaryEmailResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsTransientError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/AddSecondaryEmailResult.cs
+    startLine: 153
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is TransientError</p>\n"
+  example: []
+  syntax:
+    content: public bool IsTransientError { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsTransientError As Boolean
+  overload: Dropbox.Api.Team.AddSecondaryEmailResult.IsTransientError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.AddSecondaryEmailResult.AsTransientError
+  commentId: P:Dropbox.Api.Team.AddSecondaryEmailResult.AsTransientError
+  id: AsTransientError
+  parent: Dropbox.Api.Team.AddSecondaryEmailResult
+  langs:
+  - csharp
+  - vb
+  name: AsTransientError
+  nameWithType: AddSecondaryEmailResult.AsTransientError
+  fullName: Dropbox.Api.Team.AddSecondaryEmailResult.AsTransientError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/AddSecondaryEmailResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsTransientError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/AddSecondaryEmailResult.cs
+    startLine: 164
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a TransientError, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public AddSecondaryEmailResult.TransientError AsTransientError { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.AddSecondaryEmailResult.TransientError
+    content.vb: Public ReadOnly Property AsTransientError As AddSecondaryEmailResult.TransientError
+  overload: Dropbox.Api.Team.AddSecondaryEmailResult.AsTransientError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.AddSecondaryEmailResult.IsTooManyUpdates
+  commentId: P:Dropbox.Api.Team.AddSecondaryEmailResult.IsTooManyUpdates
+  id: IsTooManyUpdates
+  parent: Dropbox.Api.Team.AddSecondaryEmailResult
+  langs:
+  - csharp
+  - vb
+  name: IsTooManyUpdates
+  nameWithType: AddSecondaryEmailResult.IsTooManyUpdates
+  fullName: Dropbox.Api.Team.AddSecondaryEmailResult.IsTooManyUpdates
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/AddSecondaryEmailResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsTooManyUpdates
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/AddSecondaryEmailResult.cs
+    startLine: 175
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is TooManyUpdates</p>\n"
+  example: []
+  syntax:
+    content: public bool IsTooManyUpdates { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsTooManyUpdates As Boolean
+  overload: Dropbox.Api.Team.AddSecondaryEmailResult.IsTooManyUpdates*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.AddSecondaryEmailResult.AsTooManyUpdates
+  commentId: P:Dropbox.Api.Team.AddSecondaryEmailResult.AsTooManyUpdates
+  id: AsTooManyUpdates
+  parent: Dropbox.Api.Team.AddSecondaryEmailResult
+  langs:
+  - csharp
+  - vb
+  name: AsTooManyUpdates
+  nameWithType: AddSecondaryEmailResult.AsTooManyUpdates
+  fullName: Dropbox.Api.Team.AddSecondaryEmailResult.AsTooManyUpdates
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/AddSecondaryEmailResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsTooManyUpdates
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/AddSecondaryEmailResult.cs
+    startLine: 186
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a TooManyUpdates, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public AddSecondaryEmailResult.TooManyUpdates AsTooManyUpdates { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.AddSecondaryEmailResult.TooManyUpdates
+    content.vb: Public ReadOnly Property AsTooManyUpdates As AddSecondaryEmailResult.TooManyUpdates
+  overload: Dropbox.Api.Team.AddSecondaryEmailResult.AsTooManyUpdates*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.AddSecondaryEmailResult.IsUnknownError
+  commentId: P:Dropbox.Api.Team.AddSecondaryEmailResult.IsUnknownError
+  id: IsUnknownError
+  parent: Dropbox.Api.Team.AddSecondaryEmailResult
+  langs:
+  - csharp
+  - vb
+  name: IsUnknownError
+  nameWithType: AddSecondaryEmailResult.IsUnknownError
+  fullName: Dropbox.Api.Team.AddSecondaryEmailResult.IsUnknownError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/AddSecondaryEmailResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsUnknownError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/AddSecondaryEmailResult.cs
+    startLine: 197
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is UnknownError</p>\n"
+  example: []
+  syntax:
+    content: public bool IsUnknownError { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsUnknownError As Boolean
+  overload: Dropbox.Api.Team.AddSecondaryEmailResult.IsUnknownError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.AddSecondaryEmailResult.AsUnknownError
+  commentId: P:Dropbox.Api.Team.AddSecondaryEmailResult.AsUnknownError
+  id: AsUnknownError
+  parent: Dropbox.Api.Team.AddSecondaryEmailResult
+  langs:
+  - csharp
+  - vb
+  name: AsUnknownError
+  nameWithType: AddSecondaryEmailResult.AsUnknownError
+  fullName: Dropbox.Api.Team.AddSecondaryEmailResult.AsUnknownError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/AddSecondaryEmailResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsUnknownError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/AddSecondaryEmailResult.cs
+    startLine: 208
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a UnknownError, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public AddSecondaryEmailResult.UnknownError AsUnknownError { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.AddSecondaryEmailResult.UnknownError
+    content.vb: Public ReadOnly Property AsUnknownError As AddSecondaryEmailResult.UnknownError
+  overload: Dropbox.Api.Team.AddSecondaryEmailResult.AsUnknownError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.AddSecondaryEmailResult.IsRateLimited
+  commentId: P:Dropbox.Api.Team.AddSecondaryEmailResult.IsRateLimited
+  id: IsRateLimited
+  parent: Dropbox.Api.Team.AddSecondaryEmailResult
+  langs:
+  - csharp
+  - vb
+  name: IsRateLimited
+  nameWithType: AddSecondaryEmailResult.IsRateLimited
+  fullName: Dropbox.Api.Team.AddSecondaryEmailResult.IsRateLimited
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/AddSecondaryEmailResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsRateLimited
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/AddSecondaryEmailResult.cs
+    startLine: 219
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is RateLimited</p>\n"
+  example: []
+  syntax:
+    content: public bool IsRateLimited { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsRateLimited As Boolean
+  overload: Dropbox.Api.Team.AddSecondaryEmailResult.IsRateLimited*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.AddSecondaryEmailResult.AsRateLimited
+  commentId: P:Dropbox.Api.Team.AddSecondaryEmailResult.AsRateLimited
+  id: AsRateLimited
+  parent: Dropbox.Api.Team.AddSecondaryEmailResult
+  langs:
+  - csharp
+  - vb
+  name: AsRateLimited
+  nameWithType: AddSecondaryEmailResult.AsRateLimited
+  fullName: Dropbox.Api.Team.AddSecondaryEmailResult.AsRateLimited
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/AddSecondaryEmailResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsRateLimited
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/AddSecondaryEmailResult.cs
+    startLine: 230
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a RateLimited, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public AddSecondaryEmailResult.RateLimited AsRateLimited { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.AddSecondaryEmailResult.RateLimited
+    content.vb: Public ReadOnly Property AsRateLimited As AddSecondaryEmailResult.RateLimited
+  overload: Dropbox.Api.Team.AddSecondaryEmailResult.AsRateLimited*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.AddSecondaryEmailResult.IsOther
+  commentId: P:Dropbox.Api.Team.AddSecondaryEmailResult.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Team.AddSecondaryEmailResult
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: AddSecondaryEmailResult.IsOther
+  fullName: Dropbox.Api.Team.AddSecondaryEmailResult.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/AddSecondaryEmailResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/AddSecondaryEmailResult.cs
+    startLine: 241
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Team.AddSecondaryEmailResult.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.AddSecondaryEmailResult.AsOther
+  commentId: P:Dropbox.Api.Team.AddSecondaryEmailResult.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Team.AddSecondaryEmailResult
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: AddSecondaryEmailResult.AsOther
+  fullName: Dropbox.Api.Team.AddSecondaryEmailResult.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/AddSecondaryEmailResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/AddSecondaryEmailResult.cs
+    startLine: 252
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public AddSecondaryEmailResult.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.AddSecondaryEmailResult.Other
+    content.vb: Public ReadOnly Property AsOther As AddSecondaryEmailResult.Other
+  overload: Dropbox.Api.Team.AddSecondaryEmailResult.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.AddSecondaryEmailResult
+  commentId: T:Dropbox.Api.Team.AddSecondaryEmailResult
+  parent: Dropbox.Api.Team
+  name: AddSecondaryEmailResult
+  nameWithType: AddSecondaryEmailResult
+  fullName: Dropbox.Api.Team.AddSecondaryEmailResult
+- uid: Dropbox.Api.Team.AddSecondaryEmailResult.#ctor*
+  commentId: Overload:Dropbox.Api.Team.AddSecondaryEmailResult.#ctor
+  name: AddSecondaryEmailResult
+  nameWithType: AddSecondaryEmailResult.AddSecondaryEmailResult
+  fullName: Dropbox.Api.Team.AddSecondaryEmailResult.AddSecondaryEmailResult
+- uid: Dropbox.Api.Team.AddSecondaryEmailResult.IsSuccess*
+  commentId: Overload:Dropbox.Api.Team.AddSecondaryEmailResult.IsSuccess
+  name: IsSuccess
+  nameWithType: AddSecondaryEmailResult.IsSuccess
+  fullName: Dropbox.Api.Team.AddSecondaryEmailResult.IsSuccess
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Team.AddSecondaryEmailResult.AsSuccess*
+  commentId: Overload:Dropbox.Api.Team.AddSecondaryEmailResult.AsSuccess
+  name: AsSuccess
+  nameWithType: AddSecondaryEmailResult.AsSuccess
+  fullName: Dropbox.Api.Team.AddSecondaryEmailResult.AsSuccess
+- uid: Dropbox.Api.Team.AddSecondaryEmailResult.Success
+  commentId: T:Dropbox.Api.Team.AddSecondaryEmailResult.Success
+  parent: Dropbox.Api.Team
+  name: AddSecondaryEmailResult.Success
+  nameWithType: AddSecondaryEmailResult.Success
+  fullName: Dropbox.Api.Team.AddSecondaryEmailResult.Success
+- uid: Dropbox.Api.Team.AddSecondaryEmailResult.IsUnavailable*
+  commentId: Overload:Dropbox.Api.Team.AddSecondaryEmailResult.IsUnavailable
+  name: IsUnavailable
+  nameWithType: AddSecondaryEmailResult.IsUnavailable
+  fullName: Dropbox.Api.Team.AddSecondaryEmailResult.IsUnavailable
+- uid: Dropbox.Api.Team.AddSecondaryEmailResult.AsUnavailable*
+  commentId: Overload:Dropbox.Api.Team.AddSecondaryEmailResult.AsUnavailable
+  name: AsUnavailable
+  nameWithType: AddSecondaryEmailResult.AsUnavailable
+  fullName: Dropbox.Api.Team.AddSecondaryEmailResult.AsUnavailable
+- uid: Dropbox.Api.Team.AddSecondaryEmailResult.Unavailable
+  commentId: T:Dropbox.Api.Team.AddSecondaryEmailResult.Unavailable
+  parent: Dropbox.Api.Team
+  name: AddSecondaryEmailResult.Unavailable
+  nameWithType: AddSecondaryEmailResult.Unavailable
+  fullName: Dropbox.Api.Team.AddSecondaryEmailResult.Unavailable
+- uid: Dropbox.Api.Team.AddSecondaryEmailResult.IsAlreadyPending*
+  commentId: Overload:Dropbox.Api.Team.AddSecondaryEmailResult.IsAlreadyPending
+  name: IsAlreadyPending
+  nameWithType: AddSecondaryEmailResult.IsAlreadyPending
+  fullName: Dropbox.Api.Team.AddSecondaryEmailResult.IsAlreadyPending
+- uid: Dropbox.Api.Team.AddSecondaryEmailResult.AsAlreadyPending*
+  commentId: Overload:Dropbox.Api.Team.AddSecondaryEmailResult.AsAlreadyPending
+  name: AsAlreadyPending
+  nameWithType: AddSecondaryEmailResult.AsAlreadyPending
+  fullName: Dropbox.Api.Team.AddSecondaryEmailResult.AsAlreadyPending
+- uid: Dropbox.Api.Team.AddSecondaryEmailResult.AlreadyPending
+  commentId: T:Dropbox.Api.Team.AddSecondaryEmailResult.AlreadyPending
+  parent: Dropbox.Api.Team
+  name: AddSecondaryEmailResult.AlreadyPending
+  nameWithType: AddSecondaryEmailResult.AlreadyPending
+  fullName: Dropbox.Api.Team.AddSecondaryEmailResult.AlreadyPending
+- uid: Dropbox.Api.Team.AddSecondaryEmailResult.IsAlreadyOwnedByUser*
+  commentId: Overload:Dropbox.Api.Team.AddSecondaryEmailResult.IsAlreadyOwnedByUser
+  name: IsAlreadyOwnedByUser
+  nameWithType: AddSecondaryEmailResult.IsAlreadyOwnedByUser
+  fullName: Dropbox.Api.Team.AddSecondaryEmailResult.IsAlreadyOwnedByUser
+- uid: Dropbox.Api.Team.AddSecondaryEmailResult.AsAlreadyOwnedByUser*
+  commentId: Overload:Dropbox.Api.Team.AddSecondaryEmailResult.AsAlreadyOwnedByUser
+  name: AsAlreadyOwnedByUser
+  nameWithType: AddSecondaryEmailResult.AsAlreadyOwnedByUser
+  fullName: Dropbox.Api.Team.AddSecondaryEmailResult.AsAlreadyOwnedByUser
+- uid: Dropbox.Api.Team.AddSecondaryEmailResult.AlreadyOwnedByUser
+  commentId: T:Dropbox.Api.Team.AddSecondaryEmailResult.AlreadyOwnedByUser
+  parent: Dropbox.Api.Team
+  name: AddSecondaryEmailResult.AlreadyOwnedByUser
+  nameWithType: AddSecondaryEmailResult.AlreadyOwnedByUser
+  fullName: Dropbox.Api.Team.AddSecondaryEmailResult.AlreadyOwnedByUser
+- uid: Dropbox.Api.Team.AddSecondaryEmailResult.IsReachedLimit*
+  commentId: Overload:Dropbox.Api.Team.AddSecondaryEmailResult.IsReachedLimit
+  name: IsReachedLimit
+  nameWithType: AddSecondaryEmailResult.IsReachedLimit
+  fullName: Dropbox.Api.Team.AddSecondaryEmailResult.IsReachedLimit
+- uid: Dropbox.Api.Team.AddSecondaryEmailResult.AsReachedLimit*
+  commentId: Overload:Dropbox.Api.Team.AddSecondaryEmailResult.AsReachedLimit
+  name: AsReachedLimit
+  nameWithType: AddSecondaryEmailResult.AsReachedLimit
+  fullName: Dropbox.Api.Team.AddSecondaryEmailResult.AsReachedLimit
+- uid: Dropbox.Api.Team.AddSecondaryEmailResult.ReachedLimit
+  commentId: T:Dropbox.Api.Team.AddSecondaryEmailResult.ReachedLimit
+  parent: Dropbox.Api.Team
+  name: AddSecondaryEmailResult.ReachedLimit
+  nameWithType: AddSecondaryEmailResult.ReachedLimit
+  fullName: Dropbox.Api.Team.AddSecondaryEmailResult.ReachedLimit
+- uid: Dropbox.Api.Team.AddSecondaryEmailResult.IsTransientError*
+  commentId: Overload:Dropbox.Api.Team.AddSecondaryEmailResult.IsTransientError
+  name: IsTransientError
+  nameWithType: AddSecondaryEmailResult.IsTransientError
+  fullName: Dropbox.Api.Team.AddSecondaryEmailResult.IsTransientError
+- uid: Dropbox.Api.Team.AddSecondaryEmailResult.AsTransientError*
+  commentId: Overload:Dropbox.Api.Team.AddSecondaryEmailResult.AsTransientError
+  name: AsTransientError
+  nameWithType: AddSecondaryEmailResult.AsTransientError
+  fullName: Dropbox.Api.Team.AddSecondaryEmailResult.AsTransientError
+- uid: Dropbox.Api.Team.AddSecondaryEmailResult.TransientError
+  commentId: T:Dropbox.Api.Team.AddSecondaryEmailResult.TransientError
+  parent: Dropbox.Api.Team
+  name: AddSecondaryEmailResult.TransientError
+  nameWithType: AddSecondaryEmailResult.TransientError
+  fullName: Dropbox.Api.Team.AddSecondaryEmailResult.TransientError
+- uid: Dropbox.Api.Team.AddSecondaryEmailResult.IsTooManyUpdates*
+  commentId: Overload:Dropbox.Api.Team.AddSecondaryEmailResult.IsTooManyUpdates
+  name: IsTooManyUpdates
+  nameWithType: AddSecondaryEmailResult.IsTooManyUpdates
+  fullName: Dropbox.Api.Team.AddSecondaryEmailResult.IsTooManyUpdates
+- uid: Dropbox.Api.Team.AddSecondaryEmailResult.AsTooManyUpdates*
+  commentId: Overload:Dropbox.Api.Team.AddSecondaryEmailResult.AsTooManyUpdates
+  name: AsTooManyUpdates
+  nameWithType: AddSecondaryEmailResult.AsTooManyUpdates
+  fullName: Dropbox.Api.Team.AddSecondaryEmailResult.AsTooManyUpdates
+- uid: Dropbox.Api.Team.AddSecondaryEmailResult.TooManyUpdates
+  commentId: T:Dropbox.Api.Team.AddSecondaryEmailResult.TooManyUpdates
+  parent: Dropbox.Api.Team
+  name: AddSecondaryEmailResult.TooManyUpdates
+  nameWithType: AddSecondaryEmailResult.TooManyUpdates
+  fullName: Dropbox.Api.Team.AddSecondaryEmailResult.TooManyUpdates
+- uid: Dropbox.Api.Team.AddSecondaryEmailResult.IsUnknownError*
+  commentId: Overload:Dropbox.Api.Team.AddSecondaryEmailResult.IsUnknownError
+  name: IsUnknownError
+  nameWithType: AddSecondaryEmailResult.IsUnknownError
+  fullName: Dropbox.Api.Team.AddSecondaryEmailResult.IsUnknownError
+- uid: Dropbox.Api.Team.AddSecondaryEmailResult.AsUnknownError*
+  commentId: Overload:Dropbox.Api.Team.AddSecondaryEmailResult.AsUnknownError
+  name: AsUnknownError
+  nameWithType: AddSecondaryEmailResult.AsUnknownError
+  fullName: Dropbox.Api.Team.AddSecondaryEmailResult.AsUnknownError
+- uid: Dropbox.Api.Team.AddSecondaryEmailResult.UnknownError
+  commentId: T:Dropbox.Api.Team.AddSecondaryEmailResult.UnknownError
+  parent: Dropbox.Api.Team
+  name: AddSecondaryEmailResult.UnknownError
+  nameWithType: AddSecondaryEmailResult.UnknownError
+  fullName: Dropbox.Api.Team.AddSecondaryEmailResult.UnknownError
+- uid: Dropbox.Api.Team.AddSecondaryEmailResult.IsRateLimited*
+  commentId: Overload:Dropbox.Api.Team.AddSecondaryEmailResult.IsRateLimited
+  name: IsRateLimited
+  nameWithType: AddSecondaryEmailResult.IsRateLimited
+  fullName: Dropbox.Api.Team.AddSecondaryEmailResult.IsRateLimited
+- uid: Dropbox.Api.Team.AddSecondaryEmailResult.AsRateLimited*
+  commentId: Overload:Dropbox.Api.Team.AddSecondaryEmailResult.AsRateLimited
+  name: AsRateLimited
+  nameWithType: AddSecondaryEmailResult.AsRateLimited
+  fullName: Dropbox.Api.Team.AddSecondaryEmailResult.AsRateLimited
+- uid: Dropbox.Api.Team.AddSecondaryEmailResult.RateLimited
+  commentId: T:Dropbox.Api.Team.AddSecondaryEmailResult.RateLimited
+  parent: Dropbox.Api.Team
+  name: AddSecondaryEmailResult.RateLimited
+  nameWithType: AddSecondaryEmailResult.RateLimited
+  fullName: Dropbox.Api.Team.AddSecondaryEmailResult.RateLimited
+- uid: Dropbox.Api.Team.AddSecondaryEmailResult.IsOther*
+  commentId: Overload:Dropbox.Api.Team.AddSecondaryEmailResult.IsOther
+  name: IsOther
+  nameWithType: AddSecondaryEmailResult.IsOther
+  fullName: Dropbox.Api.Team.AddSecondaryEmailResult.IsOther
+- uid: Dropbox.Api.Team.AddSecondaryEmailResult.AsOther*
+  commentId: Overload:Dropbox.Api.Team.AddSecondaryEmailResult.AsOther
+  name: AsOther
+  nameWithType: AddSecondaryEmailResult.AsOther
+  fullName: Dropbox.Api.Team.AddSecondaryEmailResult.AsOther
+- uid: Dropbox.Api.Team.AddSecondaryEmailResult.Other
+  commentId: T:Dropbox.Api.Team.AddSecondaryEmailResult.Other
+  parent: Dropbox.Api.Team
+  name: AddSecondaryEmailResult.Other
+  nameWithType: AddSecondaryEmailResult.Other
+  fullName: Dropbox.Api.Team.AddSecondaryEmailResult.Other
+shouldSkipMarkup: true

@@ -1,0 +1,236 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.CaptureTranscriptPolicyChangedDetails
+  commentId: T:Dropbox.Api.TeamLog.CaptureTranscriptPolicyChangedDetails
+  id: CaptureTranscriptPolicyChangedDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.CaptureTranscriptPolicyChangedDetails.#ctor
+  - Dropbox.Api.TeamLog.CaptureTranscriptPolicyChangedDetails.#ctor(Dropbox.Api.TeamLog.CaptureTranscriptPolicy,Dropbox.Api.TeamLog.CaptureTranscriptPolicy)
+  - Dropbox.Api.TeamLog.CaptureTranscriptPolicyChangedDetails.NewValue
+  - Dropbox.Api.TeamLog.CaptureTranscriptPolicyChangedDetails.PreviousValue
+  langs:
+  - csharp
+  - vb
+  name: CaptureTranscriptPolicyChangedDetails
+  nameWithType: CaptureTranscriptPolicyChangedDetails
+  fullName: Dropbox.Api.TeamLog.CaptureTranscriptPolicyChangedDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/CaptureTranscriptPolicyChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: CaptureTranscriptPolicyChangedDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/CaptureTranscriptPolicyChangedDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Changed Capture transcription policy for team.</p>\n"
+  example: []
+  syntax:
+    content: 'public class CaptureTranscriptPolicyChangedDetails : object'
+    content.vb: >-
+      Public Class CaptureTranscriptPolicyChangedDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.CaptureTranscriptPolicyChangedDetails.#ctor(Dropbox.Api.TeamLog.CaptureTranscriptPolicy,Dropbox.Api.TeamLog.CaptureTranscriptPolicy)
+  commentId: M:Dropbox.Api.TeamLog.CaptureTranscriptPolicyChangedDetails.#ctor(Dropbox.Api.TeamLog.CaptureTranscriptPolicy,Dropbox.Api.TeamLog.CaptureTranscriptPolicy)
+  id: '#ctor(Dropbox.Api.TeamLog.CaptureTranscriptPolicy,Dropbox.Api.TeamLog.CaptureTranscriptPolicy)'
+  parent: Dropbox.Api.TeamLog.CaptureTranscriptPolicyChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: CaptureTranscriptPolicyChangedDetails(CaptureTranscriptPolicy, CaptureTranscriptPolicy)
+  nameWithType: CaptureTranscriptPolicyChangedDetails.CaptureTranscriptPolicyChangedDetails(CaptureTranscriptPolicy, CaptureTranscriptPolicy)
+  fullName: Dropbox.Api.TeamLog.CaptureTranscriptPolicyChangedDetails.CaptureTranscriptPolicyChangedDetails(Dropbox.Api.TeamLog.CaptureTranscriptPolicy, Dropbox.Api.TeamLog.CaptureTranscriptPolicy)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/CaptureTranscriptPolicyChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/CaptureTranscriptPolicyChangedDetails.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.CaptureTranscriptPolicyChangedDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public CaptureTranscriptPolicyChangedDetails(CaptureTranscriptPolicy newValue, CaptureTranscriptPolicy previousValue)
+    parameters:
+    - id: newValue
+      type: Dropbox.Api.TeamLog.CaptureTranscriptPolicy
+      description: To.
+    - id: previousValue
+      type: Dropbox.Api.TeamLog.CaptureTranscriptPolicy
+      description: From.
+    content.vb: Public Sub New(newValue As CaptureTranscriptPolicy, previousValue As CaptureTranscriptPolicy)
+  overload: Dropbox.Api.TeamLog.CaptureTranscriptPolicyChangedDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.CaptureTranscriptPolicyChangedDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.CaptureTranscriptPolicyChangedDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.CaptureTranscriptPolicyChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: CaptureTranscriptPolicyChangedDetails()
+  nameWithType: CaptureTranscriptPolicyChangedDetails.CaptureTranscriptPolicyChangedDetails()
+  fullName: Dropbox.Api.TeamLog.CaptureTranscriptPolicyChangedDetails.CaptureTranscriptPolicyChangedDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/CaptureTranscriptPolicyChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/CaptureTranscriptPolicyChangedDetails.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.CaptureTranscriptPolicyChangedDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public CaptureTranscriptPolicyChangedDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.CaptureTranscriptPolicyChangedDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.CaptureTranscriptPolicyChangedDetails.NewValue
+  commentId: P:Dropbox.Api.TeamLog.CaptureTranscriptPolicyChangedDetails.NewValue
+  id: NewValue
+  parent: Dropbox.Api.TeamLog.CaptureTranscriptPolicyChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: NewValue
+  nameWithType: CaptureTranscriptPolicyChangedDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.CaptureTranscriptPolicyChangedDetails.NewValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/CaptureTranscriptPolicyChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NewValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/CaptureTranscriptPolicyChangedDetails.cs
+    startLine: 66
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>To.</p>\n"
+  example: []
+  syntax:
+    content: public CaptureTranscriptPolicy NewValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.CaptureTranscriptPolicy
+    content.vb: Public Property NewValue As CaptureTranscriptPolicy
+  overload: Dropbox.Api.TeamLog.CaptureTranscriptPolicyChangedDetails.NewValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.CaptureTranscriptPolicyChangedDetails.PreviousValue
+  commentId: P:Dropbox.Api.TeamLog.CaptureTranscriptPolicyChangedDetails.PreviousValue
+  id: PreviousValue
+  parent: Dropbox.Api.TeamLog.CaptureTranscriptPolicyChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: PreviousValue
+  nameWithType: CaptureTranscriptPolicyChangedDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.CaptureTranscriptPolicyChangedDetails.PreviousValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/CaptureTranscriptPolicyChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PreviousValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/CaptureTranscriptPolicyChangedDetails.cs
+    startLine: 71
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>From.</p>\n"
+  example: []
+  syntax:
+    content: public CaptureTranscriptPolicy PreviousValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.CaptureTranscriptPolicy
+    content.vb: Public Property PreviousValue As CaptureTranscriptPolicy
+  overload: Dropbox.Api.TeamLog.CaptureTranscriptPolicyChangedDetails.PreviousValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.CaptureTranscriptPolicyChangedDetails
+  commentId: T:Dropbox.Api.TeamLog.CaptureTranscriptPolicyChangedDetails
+  parent: Dropbox.Api.TeamLog
+  name: CaptureTranscriptPolicyChangedDetails
+  nameWithType: CaptureTranscriptPolicyChangedDetails
+  fullName: Dropbox.Api.TeamLog.CaptureTranscriptPolicyChangedDetails
+- uid: Dropbox.Api.TeamLog.CaptureTranscriptPolicyChangedDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.CaptureTranscriptPolicyChangedDetails.#ctor
+  name: CaptureTranscriptPolicyChangedDetails
+  nameWithType: CaptureTranscriptPolicyChangedDetails.CaptureTranscriptPolicyChangedDetails
+  fullName: Dropbox.Api.TeamLog.CaptureTranscriptPolicyChangedDetails.CaptureTranscriptPolicyChangedDetails
+- uid: Dropbox.Api.TeamLog.CaptureTranscriptPolicy
+  commentId: T:Dropbox.Api.TeamLog.CaptureTranscriptPolicy
+  parent: Dropbox.Api.TeamLog
+  name: CaptureTranscriptPolicy
+  nameWithType: CaptureTranscriptPolicy
+  fullName: Dropbox.Api.TeamLog.CaptureTranscriptPolicy
+- uid: Dropbox.Api.TeamLog.CaptureTranscriptPolicyChangedDetails.NewValue*
+  commentId: Overload:Dropbox.Api.TeamLog.CaptureTranscriptPolicyChangedDetails.NewValue
+  name: NewValue
+  nameWithType: CaptureTranscriptPolicyChangedDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.CaptureTranscriptPolicyChangedDetails.NewValue
+- uid: Dropbox.Api.TeamLog.CaptureTranscriptPolicyChangedDetails.PreviousValue*
+  commentId: Overload:Dropbox.Api.TeamLog.CaptureTranscriptPolicyChangedDetails.PreviousValue
+  name: PreviousValue
+  nameWithType: CaptureTranscriptPolicyChangedDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.CaptureTranscriptPolicyChangedDetails.PreviousValue
+shouldSkipMarkup: true

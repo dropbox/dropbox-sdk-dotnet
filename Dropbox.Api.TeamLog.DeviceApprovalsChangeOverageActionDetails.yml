@@ -1,0 +1,247 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.DeviceApprovalsChangeOverageActionDetails
+  commentId: T:Dropbox.Api.TeamLog.DeviceApprovalsChangeOverageActionDetails
+  id: DeviceApprovalsChangeOverageActionDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.DeviceApprovalsChangeOverageActionDetails.#ctor
+  - Dropbox.Api.TeamLog.DeviceApprovalsChangeOverageActionDetails.#ctor(Dropbox.Api.TeamPolicies.RolloutMethod,Dropbox.Api.TeamPolicies.RolloutMethod)
+  - Dropbox.Api.TeamLog.DeviceApprovalsChangeOverageActionDetails.NewValue
+  - Dropbox.Api.TeamLog.DeviceApprovalsChangeOverageActionDetails.PreviousValue
+  langs:
+  - csharp
+  - vb
+  name: DeviceApprovalsChangeOverageActionDetails
+  nameWithType: DeviceApprovalsChangeOverageActionDetails
+  fullName: Dropbox.Api.TeamLog.DeviceApprovalsChangeOverageActionDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceApprovalsChangeOverageActionDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: DeviceApprovalsChangeOverageActionDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceApprovalsChangeOverageActionDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Changed device approvals setting when member is over limit.</p>\n"
+  example: []
+  syntax:
+    content: 'public class DeviceApprovalsChangeOverageActionDetails : object'
+    content.vb: >-
+      Public Class DeviceApprovalsChangeOverageActionDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.DeviceApprovalsChangeOverageActionDetails.#ctor(Dropbox.Api.TeamPolicies.RolloutMethod,Dropbox.Api.TeamPolicies.RolloutMethod)
+  commentId: M:Dropbox.Api.TeamLog.DeviceApprovalsChangeOverageActionDetails.#ctor(Dropbox.Api.TeamPolicies.RolloutMethod,Dropbox.Api.TeamPolicies.RolloutMethod)
+  id: '#ctor(Dropbox.Api.TeamPolicies.RolloutMethod,Dropbox.Api.TeamPolicies.RolloutMethod)'
+  parent: Dropbox.Api.TeamLog.DeviceApprovalsChangeOverageActionDetails
+  langs:
+  - csharp
+  - vb
+  name: DeviceApprovalsChangeOverageActionDetails(RolloutMethod, RolloutMethod)
+  nameWithType: DeviceApprovalsChangeOverageActionDetails.DeviceApprovalsChangeOverageActionDetails(RolloutMethod, RolloutMethod)
+  fullName: Dropbox.Api.TeamLog.DeviceApprovalsChangeOverageActionDetails.DeviceApprovalsChangeOverageActionDetails(Dropbox.Api.TeamPolicies.RolloutMethod, Dropbox.Api.TeamPolicies.RolloutMethod)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceApprovalsChangeOverageActionDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceApprovalsChangeOverageActionDetails.cs
+    startLine: 37
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.DeviceApprovalsChangeOverageActionDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public DeviceApprovalsChangeOverageActionDetails(RolloutMethod newValue = null, RolloutMethod previousValue = null)
+    parameters:
+    - id: newValue
+      type: Dropbox.Api.TeamPolicies.RolloutMethod
+      description: >-
+        New over the limits policy. Might be missing due to
+
+        historical data gap.
+    - id: previousValue
+      type: Dropbox.Api.TeamPolicies.RolloutMethod
+      description: >-
+        Previous over the limit policy. Might be missing due to
+
+        historical data gap.
+    content.vb: Public Sub New(newValue As RolloutMethod = Nothing, previousValue As RolloutMethod = Nothing)
+  overload: Dropbox.Api.TeamLog.DeviceApprovalsChangeOverageActionDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.DeviceApprovalsChangeOverageActionDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.DeviceApprovalsChangeOverageActionDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.DeviceApprovalsChangeOverageActionDetails
+  langs:
+  - csharp
+  - vb
+  name: DeviceApprovalsChangeOverageActionDetails()
+  nameWithType: DeviceApprovalsChangeOverageActionDetails.DeviceApprovalsChangeOverageActionDetails()
+  fullName: Dropbox.Api.TeamLog.DeviceApprovalsChangeOverageActionDetails.DeviceApprovalsChangeOverageActionDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceApprovalsChangeOverageActionDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceApprovalsChangeOverageActionDetails.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.DeviceApprovalsChangeOverageActionDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public DeviceApprovalsChangeOverageActionDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.DeviceApprovalsChangeOverageActionDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.DeviceApprovalsChangeOverageActionDetails.NewValue
+  commentId: P:Dropbox.Api.TeamLog.DeviceApprovalsChangeOverageActionDetails.NewValue
+  id: NewValue
+  parent: Dropbox.Api.TeamLog.DeviceApprovalsChangeOverageActionDetails
+  langs:
+  - csharp
+  - vb
+  name: NewValue
+  nameWithType: DeviceApprovalsChangeOverageActionDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.DeviceApprovalsChangeOverageActionDetails.NewValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceApprovalsChangeOverageActionDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NewValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceApprovalsChangeOverageActionDetails.cs
+    startLine: 59
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>New over the limits policy. Might be missing due to historical data\ngap.</p>\n"
+  example: []
+  syntax:
+    content: public RolloutMethod NewValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamPolicies.RolloutMethod
+    content.vb: Public Property NewValue As RolloutMethod
+  overload: Dropbox.Api.TeamLog.DeviceApprovalsChangeOverageActionDetails.NewValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.DeviceApprovalsChangeOverageActionDetails.PreviousValue
+  commentId: P:Dropbox.Api.TeamLog.DeviceApprovalsChangeOverageActionDetails.PreviousValue
+  id: PreviousValue
+  parent: Dropbox.Api.TeamLog.DeviceApprovalsChangeOverageActionDetails
+  langs:
+  - csharp
+  - vb
+  name: PreviousValue
+  nameWithType: DeviceApprovalsChangeOverageActionDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.DeviceApprovalsChangeOverageActionDetails.PreviousValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceApprovalsChangeOverageActionDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PreviousValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DeviceApprovalsChangeOverageActionDetails.cs
+    startLine: 65
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Previous over the limit policy. Might be missing due to historical data\ngap.</p>\n"
+  example: []
+  syntax:
+    content: public RolloutMethod PreviousValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamPolicies.RolloutMethod
+    content.vb: Public Property PreviousValue As RolloutMethod
+  overload: Dropbox.Api.TeamLog.DeviceApprovalsChangeOverageActionDetails.PreviousValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.DeviceApprovalsChangeOverageActionDetails
+  commentId: T:Dropbox.Api.TeamLog.DeviceApprovalsChangeOverageActionDetails
+  parent: Dropbox.Api.TeamLog
+  name: DeviceApprovalsChangeOverageActionDetails
+  nameWithType: DeviceApprovalsChangeOverageActionDetails
+  fullName: Dropbox.Api.TeamLog.DeviceApprovalsChangeOverageActionDetails
+- uid: Dropbox.Api.TeamLog.DeviceApprovalsChangeOverageActionDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.DeviceApprovalsChangeOverageActionDetails.#ctor
+  name: DeviceApprovalsChangeOverageActionDetails
+  nameWithType: DeviceApprovalsChangeOverageActionDetails.DeviceApprovalsChangeOverageActionDetails
+  fullName: Dropbox.Api.TeamLog.DeviceApprovalsChangeOverageActionDetails.DeviceApprovalsChangeOverageActionDetails
+- uid: Dropbox.Api.TeamPolicies.RolloutMethod
+  commentId: T:Dropbox.Api.TeamPolicies.RolloutMethod
+  parent: Dropbox.Api.TeamPolicies
+  name: RolloutMethod
+  nameWithType: RolloutMethod
+  fullName: Dropbox.Api.TeamPolicies.RolloutMethod
+- uid: Dropbox.Api.TeamPolicies
+  commentId: N:Dropbox.Api.TeamPolicies
+  name: Dropbox.Api.TeamPolicies
+  nameWithType: Dropbox.Api.TeamPolicies
+  fullName: Dropbox.Api.TeamPolicies
+- uid: Dropbox.Api.TeamLog.DeviceApprovalsChangeOverageActionDetails.NewValue*
+  commentId: Overload:Dropbox.Api.TeamLog.DeviceApprovalsChangeOverageActionDetails.NewValue
+  name: NewValue
+  nameWithType: DeviceApprovalsChangeOverageActionDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.DeviceApprovalsChangeOverageActionDetails.NewValue
+- uid: Dropbox.Api.TeamLog.DeviceApprovalsChangeOverageActionDetails.PreviousValue*
+  commentId: Overload:Dropbox.Api.TeamLog.DeviceApprovalsChangeOverageActionDetails.PreviousValue
+  name: PreviousValue
+  nameWithType: DeviceApprovalsChangeOverageActionDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.DeviceApprovalsChangeOverageActionDetails.PreviousValue
+shouldSkipMarkup: true

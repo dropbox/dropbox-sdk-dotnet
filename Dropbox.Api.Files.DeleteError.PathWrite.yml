@@ -1,0 +1,229 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.DeleteError.PathWrite
+  commentId: T:Dropbox.Api.Files.DeleteError.PathWrite
+  id: DeleteError.PathWrite
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.DeleteError.PathWrite.#ctor(Dropbox.Api.Files.WriteError)
+  - Dropbox.Api.Files.DeleteError.PathWrite.Value
+  langs:
+  - csharp
+  - vb
+  name: DeleteError.PathWrite
+  nameWithType: DeleteError.PathWrite
+  fullName: Dropbox.Api.Files.DeleteError.PathWrite
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/DeleteError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PathWrite
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/DeleteError.cs
+    startLine: 338
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The path write object</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class PathWrite : DeleteError'
+    content.vb: >-
+      Public NotInheritable Class PathWrite
+          Inherits DeleteError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Files.DeleteError
+  inheritedMembers:
+  - Dropbox.Api.Files.DeleteError.IsPathLookup
+  - Dropbox.Api.Files.DeleteError.AsPathLookup
+  - Dropbox.Api.Files.DeleteError.IsPathWrite
+  - Dropbox.Api.Files.DeleteError.AsPathWrite
+  - Dropbox.Api.Files.DeleteError.IsTooManyWriteOperations
+  - Dropbox.Api.Files.DeleteError.AsTooManyWriteOperations
+  - Dropbox.Api.Files.DeleteError.IsTooManyFiles
+  - Dropbox.Api.Files.DeleteError.AsTooManyFiles
+  - Dropbox.Api.Files.DeleteError.IsOther
+  - Dropbox.Api.Files.DeleteError.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Files.DeleteError.PathWrite.#ctor(Dropbox.Api.Files.WriteError)
+  commentId: M:Dropbox.Api.Files.DeleteError.PathWrite.#ctor(Dropbox.Api.Files.WriteError)
+  id: '#ctor(Dropbox.Api.Files.WriteError)'
+  parent: Dropbox.Api.Files.DeleteError.PathWrite
+  langs:
+  - csharp
+  - vb
+  name: PathWrite(WriteError)
+  nameWithType: DeleteError.PathWrite.PathWrite(WriteError)
+  fullName: Dropbox.Api.Files.DeleteError.PathWrite.PathWrite(Dropbox.Api.Files.WriteError)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/DeleteError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/DeleteError.cs
+    startLine: 356
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.DeleteError.PathWrite\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public PathWrite(WriteError value)
+    parameters:
+    - id: value
+      type: Dropbox.Api.Files.WriteError
+      description: The value
+    content.vb: Public Sub New(value As WriteError)
+  overload: Dropbox.Api.Files.DeleteError.PathWrite.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.DeleteError.PathWrite.Value
+  commentId: P:Dropbox.Api.Files.DeleteError.PathWrite.Value
+  id: Value
+  parent: Dropbox.Api.Files.DeleteError.PathWrite
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: DeleteError.PathWrite.Value
+  fullName: Dropbox.Api.Files.DeleteError.PathWrite.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/DeleteError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/DeleteError.cs
+    startLine: 370
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public WriteError Value { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.WriteError
+    content.vb: Public ReadOnly Property Value As WriteError
+  overload: Dropbox.Api.Files.DeleteError.PathWrite.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.DeleteError
+  commentId: T:Dropbox.Api.Files.DeleteError
+  parent: Dropbox.Api.Files
+  name: DeleteError
+  nameWithType: DeleteError
+  fullName: Dropbox.Api.Files.DeleteError
+- uid: Dropbox.Api.Files.DeleteError.IsPathLookup
+  commentId: P:Dropbox.Api.Files.DeleteError.IsPathLookup
+  parent: Dropbox.Api.Files.DeleteError
+  name: IsPathLookup
+  nameWithType: DeleteError.IsPathLookup
+  fullName: Dropbox.Api.Files.DeleteError.IsPathLookup
+- uid: Dropbox.Api.Files.DeleteError.AsPathLookup
+  commentId: P:Dropbox.Api.Files.DeleteError.AsPathLookup
+  parent: Dropbox.Api.Files.DeleteError
+  name: AsPathLookup
+  nameWithType: DeleteError.AsPathLookup
+  fullName: Dropbox.Api.Files.DeleteError.AsPathLookup
+- uid: Dropbox.Api.Files.DeleteError.IsPathWrite
+  commentId: P:Dropbox.Api.Files.DeleteError.IsPathWrite
+  parent: Dropbox.Api.Files.DeleteError
+  name: IsPathWrite
+  nameWithType: DeleteError.IsPathWrite
+  fullName: Dropbox.Api.Files.DeleteError.IsPathWrite
+- uid: Dropbox.Api.Files.DeleteError.AsPathWrite
+  commentId: P:Dropbox.Api.Files.DeleteError.AsPathWrite
+  parent: Dropbox.Api.Files.DeleteError
+  name: AsPathWrite
+  nameWithType: DeleteError.AsPathWrite
+  fullName: Dropbox.Api.Files.DeleteError.AsPathWrite
+- uid: Dropbox.Api.Files.DeleteError.IsTooManyWriteOperations
+  commentId: P:Dropbox.Api.Files.DeleteError.IsTooManyWriteOperations
+  parent: Dropbox.Api.Files.DeleteError
+  name: IsTooManyWriteOperations
+  nameWithType: DeleteError.IsTooManyWriteOperations
+  fullName: Dropbox.Api.Files.DeleteError.IsTooManyWriteOperations
+- uid: Dropbox.Api.Files.DeleteError.AsTooManyWriteOperations
+  commentId: P:Dropbox.Api.Files.DeleteError.AsTooManyWriteOperations
+  parent: Dropbox.Api.Files.DeleteError
+  name: AsTooManyWriteOperations
+  nameWithType: DeleteError.AsTooManyWriteOperations
+  fullName: Dropbox.Api.Files.DeleteError.AsTooManyWriteOperations
+- uid: Dropbox.Api.Files.DeleteError.IsTooManyFiles
+  commentId: P:Dropbox.Api.Files.DeleteError.IsTooManyFiles
+  parent: Dropbox.Api.Files.DeleteError
+  name: IsTooManyFiles
+  nameWithType: DeleteError.IsTooManyFiles
+  fullName: Dropbox.Api.Files.DeleteError.IsTooManyFiles
+- uid: Dropbox.Api.Files.DeleteError.AsTooManyFiles
+  commentId: P:Dropbox.Api.Files.DeleteError.AsTooManyFiles
+  parent: Dropbox.Api.Files.DeleteError
+  name: AsTooManyFiles
+  nameWithType: DeleteError.AsTooManyFiles
+  fullName: Dropbox.Api.Files.DeleteError.AsTooManyFiles
+- uid: Dropbox.Api.Files.DeleteError.IsOther
+  commentId: P:Dropbox.Api.Files.DeleteError.IsOther
+  parent: Dropbox.Api.Files.DeleteError
+  name: IsOther
+  nameWithType: DeleteError.IsOther
+  fullName: Dropbox.Api.Files.DeleteError.IsOther
+- uid: Dropbox.Api.Files.DeleteError.AsOther
+  commentId: P:Dropbox.Api.Files.DeleteError.AsOther
+  parent: Dropbox.Api.Files.DeleteError
+  name: AsOther
+  nameWithType: DeleteError.AsOther
+  fullName: Dropbox.Api.Files.DeleteError.AsOther
+- uid: Dropbox.Api.Files.DeleteError.PathWrite
+  commentId: T:Dropbox.Api.Files.DeleteError.PathWrite
+  parent: Dropbox.Api.Files
+  name: DeleteError.PathWrite
+  nameWithType: DeleteError.PathWrite
+  fullName: Dropbox.Api.Files.DeleteError.PathWrite
+- uid: Dropbox.Api.Files.DeleteError.PathWrite.#ctor*
+  commentId: Overload:Dropbox.Api.Files.DeleteError.PathWrite.#ctor
+  name: PathWrite
+  nameWithType: DeleteError.PathWrite.PathWrite
+  fullName: Dropbox.Api.Files.DeleteError.PathWrite.PathWrite
+- uid: Dropbox.Api.Files.WriteError
+  commentId: T:Dropbox.Api.Files.WriteError
+  parent: Dropbox.Api.Files
+  name: WriteError
+  nameWithType: WriteError
+  fullName: Dropbox.Api.Files.WriteError
+- uid: Dropbox.Api.Files.DeleteError.PathWrite.Value*
+  commentId: Overload:Dropbox.Api.Files.DeleteError.PathWrite.Value
+  name: Value
+  nameWithType: DeleteError.PathWrite.Value
+  fullName: Dropbox.Api.Files.DeleteError.PathWrite.Value
+shouldSkipMarkup: true

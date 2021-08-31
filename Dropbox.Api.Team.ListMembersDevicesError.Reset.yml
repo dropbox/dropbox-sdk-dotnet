@@ -1,0 +1,137 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.ListMembersDevicesError.Reset
+  commentId: T:Dropbox.Api.Team.ListMembersDevicesError.Reset
+  id: ListMembersDevicesError.Reset
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.ListMembersDevicesError.Reset.Instance
+  langs:
+  - csharp
+  - vb
+  name: ListMembersDevicesError.Reset
+  nameWithType: ListMembersDevicesError.Reset
+  fullName: Dropbox.Api.Team.ListMembersDevicesError.Reset
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListMembersDevicesError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Reset
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListMembersDevicesError.cs
+    startLine: 155
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Indicates that the cursor has been invalidated. Call <xref href=\"Dropbox.Api.Team.Routes.TeamTeamRoutes.DevicesListMembersDevicesAsync(Dropbox.Api.Team.ListMembersDevicesArg)\" data-throw-if-not-resolved=\"false\"></xref>\nagain with an empty cursor to obtain a new cursor.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class Reset : ListMembersDevicesError'
+    content.vb: >-
+      Public NotInheritable Class Reset
+          Inherits ListMembersDevicesError
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Team.ListMembersDevicesError
+  inheritedMembers:
+  - Dropbox.Api.Team.ListMembersDevicesError.IsReset
+  - Dropbox.Api.Team.ListMembersDevicesError.AsReset
+  - Dropbox.Api.Team.ListMembersDevicesError.IsOther
+  - Dropbox.Api.Team.ListMembersDevicesError.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Team.ListMembersDevicesError.Reset.Instance
+  commentId: F:Dropbox.Api.Team.ListMembersDevicesError.Reset.Instance
+  id: Instance
+  parent: Dropbox.Api.Team.ListMembersDevicesError.Reset
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: ListMembersDevicesError.Reset.Instance
+  fullName: Dropbox.Api.Team.ListMembersDevicesError.Reset.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListMembersDevicesError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ListMembersDevicesError.cs
+    startLine: 179
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>A singleton instance of Reset</p>\n"
+  example: []
+  syntax:
+    content: public static readonly ListMembersDevicesError.Reset Instance
+    return:
+      type: Dropbox.Api.Team.ListMembersDevicesError.Reset
+    content.vb: Public Shared ReadOnly Instance As ListMembersDevicesError.Reset
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team.Routes.TeamTeamRoutes.DevicesListMembersDevicesAsync(Dropbox.Api.Team.ListMembersDevicesArg)
+  commentId: M:Dropbox.Api.Team.Routes.TeamTeamRoutes.DevicesListMembersDevicesAsync(Dropbox.Api.Team.ListMembersDevicesArg)
+  isExternal: true
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.ListMembersDevicesError
+  commentId: T:Dropbox.Api.Team.ListMembersDevicesError
+  parent: Dropbox.Api.Team
+  name: ListMembersDevicesError
+  nameWithType: ListMembersDevicesError
+  fullName: Dropbox.Api.Team.ListMembersDevicesError
+- uid: Dropbox.Api.Team.ListMembersDevicesError.IsReset
+  commentId: P:Dropbox.Api.Team.ListMembersDevicesError.IsReset
+  parent: Dropbox.Api.Team.ListMembersDevicesError
+  name: IsReset
+  nameWithType: ListMembersDevicesError.IsReset
+  fullName: Dropbox.Api.Team.ListMembersDevicesError.IsReset
+- uid: Dropbox.Api.Team.ListMembersDevicesError.AsReset
+  commentId: P:Dropbox.Api.Team.ListMembersDevicesError.AsReset
+  parent: Dropbox.Api.Team.ListMembersDevicesError
+  name: AsReset
+  nameWithType: ListMembersDevicesError.AsReset
+  fullName: Dropbox.Api.Team.ListMembersDevicesError.AsReset
+- uid: Dropbox.Api.Team.ListMembersDevicesError.IsOther
+  commentId: P:Dropbox.Api.Team.ListMembersDevicesError.IsOther
+  parent: Dropbox.Api.Team.ListMembersDevicesError
+  name: IsOther
+  nameWithType: ListMembersDevicesError.IsOther
+  fullName: Dropbox.Api.Team.ListMembersDevicesError.IsOther
+- uid: Dropbox.Api.Team.ListMembersDevicesError.AsOther
+  commentId: P:Dropbox.Api.Team.ListMembersDevicesError.AsOther
+  parent: Dropbox.Api.Team.ListMembersDevicesError
+  name: AsOther
+  nameWithType: ListMembersDevicesError.AsOther
+  fullName: Dropbox.Api.Team.ListMembersDevicesError.AsOther
+- uid: Dropbox.Api.Team.ListMembersDevicesError.Reset
+  commentId: T:Dropbox.Api.Team.ListMembersDevicesError.Reset
+  parent: Dropbox.Api.Team
+  name: ListMembersDevicesError.Reset
+  nameWithType: ListMembersDevicesError.Reset
+  fullName: Dropbox.Api.Team.ListMembersDevicesError.Reset
+shouldSkipMarkup: true

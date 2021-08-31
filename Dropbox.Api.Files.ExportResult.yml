@@ -1,0 +1,241 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.ExportResult
+  commentId: T:Dropbox.Api.Files.ExportResult
+  id: ExportResult
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.ExportResult.#ctor
+  - Dropbox.Api.Files.ExportResult.#ctor(Dropbox.Api.Files.ExportMetadata,Dropbox.Api.Files.FileMetadata)
+  - Dropbox.Api.Files.ExportResult.ExportMetadata
+  - Dropbox.Api.Files.ExportResult.FileMetadata
+  langs:
+  - csharp
+  - vb
+  name: ExportResult
+  nameWithType: ExportResult
+  fullName: Dropbox.Api.Files.ExportResult
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ExportResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ExportResult
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ExportResult.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The export result object</p>\n"
+  example: []
+  syntax:
+    content: 'public class ExportResult : object'
+    content.vb: >-
+      Public Class ExportResult
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.ExportResult.#ctor(Dropbox.Api.Files.ExportMetadata,Dropbox.Api.Files.FileMetadata)
+  commentId: M:Dropbox.Api.Files.ExportResult.#ctor(Dropbox.Api.Files.ExportMetadata,Dropbox.Api.Files.FileMetadata)
+  id: '#ctor(Dropbox.Api.Files.ExportMetadata,Dropbox.Api.Files.FileMetadata)'
+  parent: Dropbox.Api.Files.ExportResult
+  langs:
+  - csharp
+  - vb
+  name: ExportResult(ExportMetadata, FileMetadata)
+  nameWithType: ExportResult.ExportResult(ExportMetadata, FileMetadata)
+  fullName: Dropbox.Api.Files.ExportResult.ExportResult(Dropbox.Api.Files.ExportMetadata, Dropbox.Api.Files.FileMetadata)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ExportResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ExportResult.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.ExportResult\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public ExportResult(ExportMetadata exportMetadata, FileMetadata fileMetadata)
+    parameters:
+    - id: exportMetadata
+      type: Dropbox.Api.Files.ExportMetadata
+      description: Metadata for the exported version of the file.
+    - id: fileMetadata
+      type: Dropbox.Api.Files.FileMetadata
+      description: Metadata for the original file.
+    content.vb: Public Sub New(exportMetadata As ExportMetadata, fileMetadata As FileMetadata)
+  overload: Dropbox.Api.Files.ExportResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.ExportResult.#ctor
+  commentId: M:Dropbox.Api.Files.ExportResult.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.ExportResult
+  langs:
+  - csharp
+  - vb
+  name: ExportResult()
+  nameWithType: ExportResult.ExportResult()
+  fullName: Dropbox.Api.Files.ExportResult.ExportResult()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ExportResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ExportResult.cs
+    startLine: 56
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.ExportResult\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public ExportResult()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.ExportResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.ExportResult.ExportMetadata
+  commentId: P:Dropbox.Api.Files.ExportResult.ExportMetadata
+  id: ExportMetadata
+  parent: Dropbox.Api.Files.ExportResult
+  langs:
+  - csharp
+  - vb
+  name: ExportMetadata
+  nameWithType: ExportResult.ExportMetadata
+  fullName: Dropbox.Api.Files.ExportResult.ExportMetadata
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ExportResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ExportMetadata
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ExportResult.cs
+    startLine: 64
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Metadata for the exported version of the file.</p>\n"
+  example: []
+  syntax:
+    content: public ExportMetadata ExportMetadata { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.ExportMetadata
+    content.vb: Public Property ExportMetadata As ExportMetadata
+  overload: Dropbox.Api.Files.ExportResult.ExportMetadata*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.ExportResult.FileMetadata
+  commentId: P:Dropbox.Api.Files.ExportResult.FileMetadata
+  id: FileMetadata
+  parent: Dropbox.Api.Files.ExportResult
+  langs:
+  - csharp
+  - vb
+  name: FileMetadata
+  nameWithType: ExportResult.FileMetadata
+  fullName: Dropbox.Api.Files.ExportResult.FileMetadata
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ExportResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: FileMetadata
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/ExportResult.cs
+    startLine: 69
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Metadata for the original file.</p>\n"
+  example: []
+  syntax:
+    content: public FileMetadata FileMetadata { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.FileMetadata
+    content.vb: Public Property FileMetadata As FileMetadata
+  overload: Dropbox.Api.Files.ExportResult.FileMetadata*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.ExportResult
+  commentId: T:Dropbox.Api.Files.ExportResult
+  name: ExportResult
+  nameWithType: ExportResult
+  fullName: Dropbox.Api.Files.ExportResult
+- uid: Dropbox.Api.Files.ExportResult.#ctor*
+  commentId: Overload:Dropbox.Api.Files.ExportResult.#ctor
+  name: ExportResult
+  nameWithType: ExportResult.ExportResult
+  fullName: Dropbox.Api.Files.ExportResult.ExportResult
+- uid: Dropbox.Api.Files.ExportMetadata
+  commentId: T:Dropbox.Api.Files.ExportMetadata
+  parent: Dropbox.Api.Files
+  name: ExportMetadata
+  nameWithType: ExportMetadata
+  fullName: Dropbox.Api.Files.ExportMetadata
+- uid: Dropbox.Api.Files.FileMetadata
+  commentId: T:Dropbox.Api.Files.FileMetadata
+  parent: Dropbox.Api.Files
+  name: FileMetadata
+  nameWithType: FileMetadata
+  fullName: Dropbox.Api.Files.FileMetadata
+- uid: Dropbox.Api.Files.ExportResult.ExportMetadata*
+  commentId: Overload:Dropbox.Api.Files.ExportResult.ExportMetadata
+  name: ExportMetadata
+  nameWithType: ExportResult.ExportMetadata
+  fullName: Dropbox.Api.Files.ExportResult.ExportMetadata
+- uid: Dropbox.Api.Files.ExportResult.FileMetadata*
+  commentId: Overload:Dropbox.Api.Files.ExportResult.FileMetadata
+  name: FileMetadata
+  nameWithType: ExportResult.FileMetadata
+  fullName: Dropbox.Api.Files.ExportResult.FileMetadata
+shouldSkipMarkup: true

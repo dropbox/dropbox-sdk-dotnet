@@ -1,0 +1,343 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.GetThumbnailBatchResult
+  commentId: T:Dropbox.Api.Files.GetThumbnailBatchResult
+  id: GetThumbnailBatchResult
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.GetThumbnailBatchResult.#ctor
+  - Dropbox.Api.Files.GetThumbnailBatchResult.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Files.GetThumbnailBatchResultEntry})
+  - Dropbox.Api.Files.GetThumbnailBatchResult.Entries
+  langs:
+  - csharp
+  - vb
+  name: GetThumbnailBatchResult
+  nameWithType: GetThumbnailBatchResult
+  fullName: Dropbox.Api.Files.GetThumbnailBatchResult
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetThumbnailBatchResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: GetThumbnailBatchResult
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetThumbnailBatchResult.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The get thumbnail batch result object</p>\n"
+  example: []
+  syntax:
+    content: 'public class GetThumbnailBatchResult : object'
+    content.vb: >-
+      Public Class GetThumbnailBatchResult
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.GetThumbnailBatchResult.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Files.GetThumbnailBatchResultEntry})
+  commentId: M:Dropbox.Api.Files.GetThumbnailBatchResult.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Files.GetThumbnailBatchResultEntry})
+  id: '#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Files.GetThumbnailBatchResultEntry})'
+  parent: Dropbox.Api.Files.GetThumbnailBatchResult
+  langs:
+  - csharp
+  - vb
+  name: GetThumbnailBatchResult(System.Collections.Generic.IEnumerable<GetThumbnailBatchResultEntry>)
+  nameWithType: GetThumbnailBatchResult.GetThumbnailBatchResult(System.Collections.Generic.IEnumerable<GetThumbnailBatchResultEntry>)
+  fullName: Dropbox.Api.Files.GetThumbnailBatchResult.GetThumbnailBatchResult(System.Collections.Generic.IEnumerable<Dropbox.Api.Files.GetThumbnailBatchResultEntry>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetThumbnailBatchResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetThumbnailBatchResult.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.GetThumbnailBatchResult\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public GetThumbnailBatchResult(System.Collections.Generic.IEnumerable<GetThumbnailBatchResultEntry> entries)
+    parameters:
+    - id: entries
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.Files.GetThumbnailBatchResultEntry}
+      description: List of files and their thumbnails.
+    content.vb: Public Sub New(entries As System.Collections.Generic.IEnumerable(Of GetThumbnailBatchResultEntry))
+  overload: Dropbox.Api.Files.GetThumbnailBatchResult.#ctor*
+  nameWithType.vb: GetThumbnailBatchResult.GetThumbnailBatchResult(System.Collections.Generic.IEnumerable(Of GetThumbnailBatchResultEntry))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Files.GetThumbnailBatchResult.GetThumbnailBatchResult(System.Collections.Generic.IEnumerable(Of Dropbox.Api.Files.GetThumbnailBatchResultEntry))
+  name.vb: GetThumbnailBatchResult(System.Collections.Generic.IEnumerable(Of GetThumbnailBatchResultEntry))
+- uid: Dropbox.Api.Files.GetThumbnailBatchResult.#ctor
+  commentId: M:Dropbox.Api.Files.GetThumbnailBatchResult.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.GetThumbnailBatchResult
+  langs:
+  - csharp
+  - vb
+  name: GetThumbnailBatchResult()
+  nameWithType: GetThumbnailBatchResult.GetThumbnailBatchResult()
+  fullName: Dropbox.Api.Files.GetThumbnailBatchResult.GetThumbnailBatchResult()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetThumbnailBatchResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetThumbnailBatchResult.cs
+    startLine: 52
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.GetThumbnailBatchResult\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public GetThumbnailBatchResult()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.GetThumbnailBatchResult.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.GetThumbnailBatchResult.Entries
+  commentId: P:Dropbox.Api.Files.GetThumbnailBatchResult.Entries
+  id: Entries
+  parent: Dropbox.Api.Files.GetThumbnailBatchResult
+  langs:
+  - csharp
+  - vb
+  name: Entries
+  nameWithType: GetThumbnailBatchResult.Entries
+  fullName: Dropbox.Api.Files.GetThumbnailBatchResult.Entries
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetThumbnailBatchResult.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Entries
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/GetThumbnailBatchResult.cs
+    startLine: 60
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>List of files and their thumbnails.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<GetThumbnailBatchResultEntry> Entries { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{Dropbox.Api.Files.GetThumbnailBatchResultEntry}
+    content.vb: Public Property Entries As System.Collections.Generic.IList(Of GetThumbnailBatchResultEntry)
+  overload: Dropbox.Api.Files.GetThumbnailBatchResult.Entries*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.GetThumbnailBatchResult
+  commentId: T:Dropbox.Api.Files.GetThumbnailBatchResult
+  parent: Dropbox.Api.Files
+  name: GetThumbnailBatchResult
+  nameWithType: GetThumbnailBatchResult
+  fullName: Dropbox.Api.Files.GetThumbnailBatchResult
+- uid: Dropbox.Api.Files.GetThumbnailBatchResult.#ctor*
+  commentId: Overload:Dropbox.Api.Files.GetThumbnailBatchResult.#ctor
+  name: GetThumbnailBatchResult
+  nameWithType: GetThumbnailBatchResult.GetThumbnailBatchResult
+  fullName: Dropbox.Api.Files.GetThumbnailBatchResult.GetThumbnailBatchResult
+- uid: System.Collections.Generic.IEnumerable{Dropbox.Api.Files.GetThumbnailBatchResultEntry}
+  commentId: '!:System.Collections.Generic.IEnumerable{Dropbox.Api.Files.GetThumbnailBatchResultEntry}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<GetThumbnailBatchResultEntry>
+  nameWithType: System.Collections.Generic.IEnumerable<GetThumbnailBatchResultEntry>
+  fullName: System.Collections.Generic.IEnumerable<Dropbox.Api.Files.GetThumbnailBatchResultEntry>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of GetThumbnailBatchResultEntry)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Dropbox.Api.Files.GetThumbnailBatchResultEntry)
+  name.vb: System.Collections.Generic.IEnumerable(Of GetThumbnailBatchResultEntry)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Files.GetThumbnailBatchResultEntry
+    name: GetThumbnailBatchResultEntry
+    nameWithType: GetThumbnailBatchResultEntry
+    fullName: Dropbox.Api.Files.GetThumbnailBatchResultEntry
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Files.GetThumbnailBatchResultEntry
+    name: GetThumbnailBatchResultEntry
+    nameWithType: GetThumbnailBatchResultEntry
+    fullName: Dropbox.Api.Files.GetThumbnailBatchResultEntry
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: System.Collections.Generic.IEnumerable<>
+  nameWithType: System.Collections.Generic.IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: System.Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Files.GetThumbnailBatchResult.Entries*
+  commentId: Overload:Dropbox.Api.Files.GetThumbnailBatchResult.Entries
+  name: Entries
+  nameWithType: GetThumbnailBatchResult.Entries
+  fullName: Dropbox.Api.Files.GetThumbnailBatchResult.Entries
+- uid: System.Collections.Generic.IList{Dropbox.Api.Files.GetThumbnailBatchResultEntry}
+  commentId: '!:System.Collections.Generic.IList{Dropbox.Api.Files.GetThumbnailBatchResultEntry}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<GetThumbnailBatchResultEntry>
+  nameWithType: System.Collections.Generic.IList<GetThumbnailBatchResultEntry>
+  fullName: System.Collections.Generic.IList<Dropbox.Api.Files.GetThumbnailBatchResultEntry>
+  nameWithType.vb: System.Collections.Generic.IList(Of GetThumbnailBatchResultEntry)
+  fullName.vb: System.Collections.Generic.IList(Of Dropbox.Api.Files.GetThumbnailBatchResultEntry)
+  name.vb: System.Collections.Generic.IList(Of GetThumbnailBatchResultEntry)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Files.GetThumbnailBatchResultEntry
+    name: GetThumbnailBatchResultEntry
+    nameWithType: GetThumbnailBatchResultEntry
+    fullName: Dropbox.Api.Files.GetThumbnailBatchResultEntry
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Files.GetThumbnailBatchResultEntry
+    name: GetThumbnailBatchResultEntry
+    nameWithType: GetThumbnailBatchResultEntry
+    fullName: Dropbox.Api.Files.GetThumbnailBatchResultEntry
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  isExternal: true
+  name: System.Collections.Generic.IList<>
+  nameWithType: System.Collections.Generic.IList<>
+  fullName: System.Collections.Generic.IList<>
+  nameWithType.vb: System.Collections.Generic.IList(Of )
+  fullName.vb: System.Collections.Generic.IList(Of )
+  name.vb: System.Collections.Generic.IList(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+shouldSkipMarkup: true

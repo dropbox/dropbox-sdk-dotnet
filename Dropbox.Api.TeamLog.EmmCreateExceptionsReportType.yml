@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.EmmCreateExceptionsReportType
+  commentId: T:Dropbox.Api.TeamLog.EmmCreateExceptionsReportType
+  id: EmmCreateExceptionsReportType
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.EmmCreateExceptionsReportType.#ctor
+  - Dropbox.Api.TeamLog.EmmCreateExceptionsReportType.#ctor(System.String)
+  - Dropbox.Api.TeamLog.EmmCreateExceptionsReportType.Description
+  langs:
+  - csharp
+  - vb
+  name: EmmCreateExceptionsReportType
+  nameWithType: EmmCreateExceptionsReportType
+  fullName: Dropbox.Api.TeamLog.EmmCreateExceptionsReportType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EmmCreateExceptionsReportType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: EmmCreateExceptionsReportType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EmmCreateExceptionsReportType.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The emm create exceptions report type object</p>\n"
+  example: []
+  syntax:
+    content: 'public class EmmCreateExceptionsReportType : object'
+    content.vb: >-
+      Public Class EmmCreateExceptionsReportType
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.EmmCreateExceptionsReportType.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.EmmCreateExceptionsReportType.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.EmmCreateExceptionsReportType
+  langs:
+  - csharp
+  - vb
+  name: EmmCreateExceptionsReportType(String)
+  nameWithType: EmmCreateExceptionsReportType.EmmCreateExceptionsReportType(String)
+  fullName: Dropbox.Api.TeamLog.EmmCreateExceptionsReportType.EmmCreateExceptionsReportType(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EmmCreateExceptionsReportType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EmmCreateExceptionsReportType.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.EmmCreateExceptionsReportType\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public EmmCreateExceptionsReportType(string description)
+    parameters:
+    - id: description
+      type: System.String
+      description: The description
+    content.vb: Public Sub New(description As String)
+  overload: Dropbox.Api.TeamLog.EmmCreateExceptionsReportType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.EmmCreateExceptionsReportType.#ctor
+  commentId: M:Dropbox.Api.TeamLog.EmmCreateExceptionsReportType.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.EmmCreateExceptionsReportType
+  langs:
+  - csharp
+  - vb
+  name: EmmCreateExceptionsReportType()
+  nameWithType: EmmCreateExceptionsReportType.EmmCreateExceptionsReportType()
+  fullName: Dropbox.Api.TeamLog.EmmCreateExceptionsReportType.EmmCreateExceptionsReportType()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EmmCreateExceptionsReportType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EmmCreateExceptionsReportType.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.EmmCreateExceptionsReportType\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public EmmCreateExceptionsReportType()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.EmmCreateExceptionsReportType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.EmmCreateExceptionsReportType.Description
+  commentId: P:Dropbox.Api.TeamLog.EmmCreateExceptionsReportType.Description
+  id: Description
+  parent: Dropbox.Api.TeamLog.EmmCreateExceptionsReportType
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: EmmCreateExceptionsReportType.Description
+  fullName: Dropbox.Api.TeamLog.EmmCreateExceptionsReportType.Description
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EmmCreateExceptionsReportType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Description
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/EmmCreateExceptionsReportType.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets the description of the emm create exceptions report type</p>\n"
+  example: []
+  syntax:
+    content: public string Description { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Dropbox.Api.TeamLog.EmmCreateExceptionsReportType.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.EmmCreateExceptionsReportType
+  commentId: T:Dropbox.Api.TeamLog.EmmCreateExceptionsReportType
+  parent: Dropbox.Api.TeamLog
+  name: EmmCreateExceptionsReportType
+  nameWithType: EmmCreateExceptionsReportType
+  fullName: Dropbox.Api.TeamLog.EmmCreateExceptionsReportType
+- uid: Dropbox.Api.TeamLog.EmmCreateExceptionsReportType.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.EmmCreateExceptionsReportType.#ctor
+  name: EmmCreateExceptionsReportType
+  nameWithType: EmmCreateExceptionsReportType.EmmCreateExceptionsReportType
+  fullName: Dropbox.Api.TeamLog.EmmCreateExceptionsReportType.EmmCreateExceptionsReportType
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.EmmCreateExceptionsReportType.Description*
+  commentId: Overload:Dropbox.Api.TeamLog.EmmCreateExceptionsReportType.Description
+  name: Description
+  nameWithType: EmmCreateExceptionsReportType.Description
+  fullName: Dropbox.Api.TeamLog.EmmCreateExceptionsReportType.Description
+shouldSkipMarkup: true

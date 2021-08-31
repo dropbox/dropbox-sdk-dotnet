@@ -1,0 +1,186 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.FileProperties.PropertiesSearchMode.FieldName
+  commentId: T:Dropbox.Api.FileProperties.PropertiesSearchMode.FieldName
+  id: PropertiesSearchMode.FieldName
+  parent: Dropbox.Api.FileProperties
+  children:
+  - Dropbox.Api.FileProperties.PropertiesSearchMode.FieldName.#ctor(System.String)
+  - Dropbox.Api.FileProperties.PropertiesSearchMode.FieldName.Value
+  langs:
+  - csharp
+  - vb
+  name: PropertiesSearchMode.FieldName
+  nameWithType: PropertiesSearchMode.FieldName
+  fullName: Dropbox.Api.FileProperties.PropertiesSearchMode.FieldName
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertiesSearchMode.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: FieldName
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertiesSearchMode.cs
+    startLine: 152
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Search for a value associated with this field name.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class FieldName : PropertiesSearchMode'
+    content.vb: >-
+      Public NotInheritable Class FieldName
+          Inherits PropertiesSearchMode
+  inheritance:
+  - System.Object
+  - Dropbox.Api.FileProperties.PropertiesSearchMode
+  inheritedMembers:
+  - Dropbox.Api.FileProperties.PropertiesSearchMode.IsFieldName
+  - Dropbox.Api.FileProperties.PropertiesSearchMode.AsFieldName
+  - Dropbox.Api.FileProperties.PropertiesSearchMode.IsOther
+  - Dropbox.Api.FileProperties.PropertiesSearchMode.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.FileProperties.PropertiesSearchMode.FieldName.#ctor(System.String)
+  commentId: M:Dropbox.Api.FileProperties.PropertiesSearchMode.FieldName.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.FileProperties.PropertiesSearchMode.FieldName
+  langs:
+  - csharp
+  - vb
+  name: FieldName(String)
+  nameWithType: PropertiesSearchMode.FieldName.FieldName(String)
+  fullName: Dropbox.Api.FileProperties.PropertiesSearchMode.FieldName.FieldName(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertiesSearchMode.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertiesSearchMode.cs
+    startLine: 170
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.FileProperties.PropertiesSearchMode.FieldName\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public FieldName(string value)
+    parameters:
+    - id: value
+      type: System.String
+      description: The value
+    content.vb: Public Sub New(value As String)
+  overload: Dropbox.Api.FileProperties.PropertiesSearchMode.FieldName.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.FileProperties.PropertiesSearchMode.FieldName.Value
+  commentId: P:Dropbox.Api.FileProperties.PropertiesSearchMode.FieldName.Value
+  id: Value
+  parent: Dropbox.Api.FileProperties.PropertiesSearchMode.FieldName
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: PropertiesSearchMode.FieldName.Value
+  fullName: Dropbox.Api.FileProperties.PropertiesSearchMode.FieldName.Value
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertiesSearchMode.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Value
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/FileProperties/PropertiesSearchMode.cs
+    startLine: 184
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.FileProperties
+  summary: "\n<p>Gets the value of this instance.</p>\n"
+  example: []
+  syntax:
+    content: public string Value { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Value As String
+  overload: Dropbox.Api.FileProperties.PropertiesSearchMode.FieldName.Value*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.FileProperties
+  commentId: N:Dropbox.Api.FileProperties
+  name: Dropbox.Api.FileProperties
+  nameWithType: Dropbox.Api.FileProperties
+  fullName: Dropbox.Api.FileProperties
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.FileProperties.PropertiesSearchMode
+  commentId: T:Dropbox.Api.FileProperties.PropertiesSearchMode
+  parent: Dropbox.Api.FileProperties
+  name: PropertiesSearchMode
+  nameWithType: PropertiesSearchMode
+  fullName: Dropbox.Api.FileProperties.PropertiesSearchMode
+- uid: Dropbox.Api.FileProperties.PropertiesSearchMode.IsFieldName
+  commentId: P:Dropbox.Api.FileProperties.PropertiesSearchMode.IsFieldName
+  parent: Dropbox.Api.FileProperties.PropertiesSearchMode
+  name: IsFieldName
+  nameWithType: PropertiesSearchMode.IsFieldName
+  fullName: Dropbox.Api.FileProperties.PropertiesSearchMode.IsFieldName
+- uid: Dropbox.Api.FileProperties.PropertiesSearchMode.AsFieldName
+  commentId: P:Dropbox.Api.FileProperties.PropertiesSearchMode.AsFieldName
+  parent: Dropbox.Api.FileProperties.PropertiesSearchMode
+  name: AsFieldName
+  nameWithType: PropertiesSearchMode.AsFieldName
+  fullName: Dropbox.Api.FileProperties.PropertiesSearchMode.AsFieldName
+- uid: Dropbox.Api.FileProperties.PropertiesSearchMode.IsOther
+  commentId: P:Dropbox.Api.FileProperties.PropertiesSearchMode.IsOther
+  parent: Dropbox.Api.FileProperties.PropertiesSearchMode
+  name: IsOther
+  nameWithType: PropertiesSearchMode.IsOther
+  fullName: Dropbox.Api.FileProperties.PropertiesSearchMode.IsOther
+- uid: Dropbox.Api.FileProperties.PropertiesSearchMode.AsOther
+  commentId: P:Dropbox.Api.FileProperties.PropertiesSearchMode.AsOther
+  parent: Dropbox.Api.FileProperties.PropertiesSearchMode
+  name: AsOther
+  nameWithType: PropertiesSearchMode.AsOther
+  fullName: Dropbox.Api.FileProperties.PropertiesSearchMode.AsOther
+- uid: Dropbox.Api.FileProperties.PropertiesSearchMode.FieldName
+  commentId: T:Dropbox.Api.FileProperties.PropertiesSearchMode.FieldName
+  parent: Dropbox.Api.FileProperties
+  name: PropertiesSearchMode.FieldName
+  nameWithType: PropertiesSearchMode.FieldName
+  fullName: Dropbox.Api.FileProperties.PropertiesSearchMode.FieldName
+- uid: Dropbox.Api.FileProperties.PropertiesSearchMode.FieldName.#ctor*
+  commentId: Overload:Dropbox.Api.FileProperties.PropertiesSearchMode.FieldName.#ctor
+  name: FieldName
+  nameWithType: PropertiesSearchMode.FieldName.FieldName
+  fullName: Dropbox.Api.FileProperties.PropertiesSearchMode.FieldName.FieldName
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.FileProperties.PropertiesSearchMode.FieldName.Value*
+  commentId: Overload:Dropbox.Api.FileProperties.PropertiesSearchMode.FieldName.Value
+  name: Value
+  nameWithType: PropertiesSearchMode.FieldName.Value
+  fullName: Dropbox.Api.FileProperties.PropertiesSearchMode.FieldName.Value
+shouldSkipMarkup: true

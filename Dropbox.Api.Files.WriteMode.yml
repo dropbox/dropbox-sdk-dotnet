@@ -1,0 +1,381 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.WriteMode
+  commentId: T:Dropbox.Api.Files.WriteMode
+  id: WriteMode
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.WriteMode.#ctor
+  - Dropbox.Api.Files.WriteMode.AsAdd
+  - Dropbox.Api.Files.WriteMode.AsOverwrite
+  - Dropbox.Api.Files.WriteMode.AsUpdate
+  - Dropbox.Api.Files.WriteMode.IsAdd
+  - Dropbox.Api.Files.WriteMode.IsOverwrite
+  - Dropbox.Api.Files.WriteMode.IsUpdate
+  langs:
+  - csharp
+  - vb
+  name: WriteMode
+  nameWithType: WriteMode
+  fullName: Dropbox.Api.Files.WriteMode
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/WriteMode.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: WriteMode
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/WriteMode.cs
+    startLine: 22
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Your intent when writing a file to some path. This is used to determine what\nconstitutes a conflict and what the autorename strategy is.</p>\n<p>In some situations, the conflict behavior is identical: (a) If the target path\ndoesn&apos;t refer to anything, the file is always written; no conflict. (b) If the target\npath refers to a folder, it&apos;s always a conflict. (c) If the target path refers to a\nfile with identical contents, nothing gets written; no conflict.</p>\n<p>The conflict checking differs in the case where there&apos;s a file at the target path\nwith contents different from the contents you&apos;re trying to write.</p>\n"
+  example: []
+  syntax:
+    content: 'public class WriteMode : object'
+    content.vb: >-
+      Public Class WriteMode
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Files.WriteMode.Add
+  - Dropbox.Api.Files.WriteMode.Overwrite
+  - Dropbox.Api.Files.WriteMode.Update
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.WriteMode.#ctor
+  commentId: M:Dropbox.Api.Files.WriteMode.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.WriteMode
+  langs:
+  - csharp
+  - vb
+  name: WriteMode()
+  nameWithType: WriteMode.WriteMode()
+  fullName: Dropbox.Api.Files.WriteMode.WriteMode()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/WriteMode.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/WriteMode.cs
+    startLine: 39
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.WriteMode\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public WriteMode()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.WriteMode.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.WriteMode.IsAdd
+  commentId: P:Dropbox.Api.Files.WriteMode.IsAdd
+  id: IsAdd
+  parent: Dropbox.Api.Files.WriteMode
+  langs:
+  - csharp
+  - vb
+  name: IsAdd
+  nameWithType: WriteMode.IsAdd
+  fullName: Dropbox.Api.Files.WriteMode.IsAdd
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/WriteMode.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsAdd
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/WriteMode.cs
+    startLine: 46
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is Add</p>\n"
+  example: []
+  syntax:
+    content: public bool IsAdd { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsAdd As Boolean
+  overload: Dropbox.Api.Files.WriteMode.IsAdd*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.WriteMode.AsAdd
+  commentId: P:Dropbox.Api.Files.WriteMode.AsAdd
+  id: AsAdd
+  parent: Dropbox.Api.Files.WriteMode
+  langs:
+  - csharp
+  - vb
+  name: AsAdd
+  nameWithType: WriteMode.AsAdd
+  fullName: Dropbox.Api.Files.WriteMode.AsAdd
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/WriteMode.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsAdd
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/WriteMode.cs
+    startLine: 57
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a Add, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public WriteMode.Add AsAdd { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.WriteMode.Add
+    content.vb: Public ReadOnly Property AsAdd As WriteMode.Add
+  overload: Dropbox.Api.Files.WriteMode.AsAdd*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.WriteMode.IsOverwrite
+  commentId: P:Dropbox.Api.Files.WriteMode.IsOverwrite
+  id: IsOverwrite
+  parent: Dropbox.Api.Files.WriteMode
+  langs:
+  - csharp
+  - vb
+  name: IsOverwrite
+  nameWithType: WriteMode.IsOverwrite
+  fullName: Dropbox.Api.Files.WriteMode.IsOverwrite
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/WriteMode.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOverwrite
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/WriteMode.cs
+    startLine: 68
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is Overwrite</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOverwrite { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOverwrite As Boolean
+  overload: Dropbox.Api.Files.WriteMode.IsOverwrite*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.WriteMode.AsOverwrite
+  commentId: P:Dropbox.Api.Files.WriteMode.AsOverwrite
+  id: AsOverwrite
+  parent: Dropbox.Api.Files.WriteMode
+  langs:
+  - csharp
+  - vb
+  name: AsOverwrite
+  nameWithType: WriteMode.AsOverwrite
+  fullName: Dropbox.Api.Files.WriteMode.AsOverwrite
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/WriteMode.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOverwrite
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/WriteMode.cs
+    startLine: 79
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a Overwrite, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public WriteMode.Overwrite AsOverwrite { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.WriteMode.Overwrite
+    content.vb: Public ReadOnly Property AsOverwrite As WriteMode.Overwrite
+  overload: Dropbox.Api.Files.WriteMode.AsOverwrite*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.WriteMode.IsUpdate
+  commentId: P:Dropbox.Api.Files.WriteMode.IsUpdate
+  id: IsUpdate
+  parent: Dropbox.Api.Files.WriteMode
+  langs:
+  - csharp
+  - vb
+  name: IsUpdate
+  nameWithType: WriteMode.IsUpdate
+  fullName: Dropbox.Api.Files.WriteMode.IsUpdate
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/WriteMode.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsUpdate
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/WriteMode.cs
+    startLine: 90
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets a value indicating whether this instance is Update</p>\n"
+  example: []
+  syntax:
+    content: public bool IsUpdate { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsUpdate As Boolean
+  overload: Dropbox.Api.Files.WriteMode.IsUpdate*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Files.WriteMode.AsUpdate
+  commentId: P:Dropbox.Api.Files.WriteMode.AsUpdate
+  id: AsUpdate
+  parent: Dropbox.Api.Files.WriteMode
+  langs:
+  - csharp
+  - vb
+  name: AsUpdate
+  nameWithType: WriteMode.AsUpdate
+  fullName: Dropbox.Api.Files.WriteMode.AsUpdate
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/WriteMode.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsUpdate
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/WriteMode.cs
+    startLine: 101
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Gets this instance as a Update, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public WriteMode.Update AsUpdate { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.WriteMode.Update
+    content.vb: Public ReadOnly Property AsUpdate As WriteMode.Update
+  overload: Dropbox.Api.Files.WriteMode.AsUpdate*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.WriteMode
+  commentId: T:Dropbox.Api.Files.WriteMode
+  parent: Dropbox.Api.Files
+  name: WriteMode
+  nameWithType: WriteMode
+  fullName: Dropbox.Api.Files.WriteMode
+- uid: Dropbox.Api.Files.WriteMode.#ctor*
+  commentId: Overload:Dropbox.Api.Files.WriteMode.#ctor
+  name: WriteMode
+  nameWithType: WriteMode.WriteMode
+  fullName: Dropbox.Api.Files.WriteMode.WriteMode
+- uid: Dropbox.Api.Files.WriteMode.IsAdd*
+  commentId: Overload:Dropbox.Api.Files.WriteMode.IsAdd
+  name: IsAdd
+  nameWithType: WriteMode.IsAdd
+  fullName: Dropbox.Api.Files.WriteMode.IsAdd
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Files.WriteMode.AsAdd*
+  commentId: Overload:Dropbox.Api.Files.WriteMode.AsAdd
+  name: AsAdd
+  nameWithType: WriteMode.AsAdd
+  fullName: Dropbox.Api.Files.WriteMode.AsAdd
+- uid: Dropbox.Api.Files.WriteMode.Add
+  commentId: T:Dropbox.Api.Files.WriteMode.Add
+  parent: Dropbox.Api.Files
+  name: WriteMode.Add
+  nameWithType: WriteMode.Add
+  fullName: Dropbox.Api.Files.WriteMode.Add
+- uid: Dropbox.Api.Files.WriteMode.IsOverwrite*
+  commentId: Overload:Dropbox.Api.Files.WriteMode.IsOverwrite
+  name: IsOverwrite
+  nameWithType: WriteMode.IsOverwrite
+  fullName: Dropbox.Api.Files.WriteMode.IsOverwrite
+- uid: Dropbox.Api.Files.WriteMode.AsOverwrite*
+  commentId: Overload:Dropbox.Api.Files.WriteMode.AsOverwrite
+  name: AsOverwrite
+  nameWithType: WriteMode.AsOverwrite
+  fullName: Dropbox.Api.Files.WriteMode.AsOverwrite
+- uid: Dropbox.Api.Files.WriteMode.Overwrite
+  commentId: T:Dropbox.Api.Files.WriteMode.Overwrite
+  parent: Dropbox.Api.Files
+  name: WriteMode.Overwrite
+  nameWithType: WriteMode.Overwrite
+  fullName: Dropbox.Api.Files.WriteMode.Overwrite
+- uid: Dropbox.Api.Files.WriteMode.IsUpdate*
+  commentId: Overload:Dropbox.Api.Files.WriteMode.IsUpdate
+  name: IsUpdate
+  nameWithType: WriteMode.IsUpdate
+  fullName: Dropbox.Api.Files.WriteMode.IsUpdate
+- uid: Dropbox.Api.Files.WriteMode.AsUpdate*
+  commentId: Overload:Dropbox.Api.Files.WriteMode.AsUpdate
+  name: AsUpdate
+  nameWithType: WriteMode.AsUpdate
+  fullName: Dropbox.Api.Files.WriteMode.AsUpdate
+- uid: Dropbox.Api.Files.WriteMode.Update
+  commentId: T:Dropbox.Api.Files.WriteMode.Update
+  parent: Dropbox.Api.Files
+  name: WriteMode.Update
+  nameWithType: WriteMode.Update
+  fullName: Dropbox.Api.Files.WriteMode.Update
+shouldSkipMarkup: true

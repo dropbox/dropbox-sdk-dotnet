@@ -1,0 +1,188 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.ObjectLabelRemovedDetails
+  commentId: T:Dropbox.Api.TeamLog.ObjectLabelRemovedDetails
+  id: ObjectLabelRemovedDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.ObjectLabelRemovedDetails.#ctor
+  - Dropbox.Api.TeamLog.ObjectLabelRemovedDetails.#ctor(Dropbox.Api.TeamLog.LabelType)
+  - Dropbox.Api.TeamLog.ObjectLabelRemovedDetails.LabelType
+  langs:
+  - csharp
+  - vb
+  name: ObjectLabelRemovedDetails
+  nameWithType: ObjectLabelRemovedDetails
+  fullName: Dropbox.Api.TeamLog.ObjectLabelRemovedDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ObjectLabelRemovedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ObjectLabelRemovedDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ObjectLabelRemovedDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Removed a label.</p>\n"
+  example: []
+  syntax:
+    content: 'public class ObjectLabelRemovedDetails : object'
+    content.vb: >-
+      Public Class ObjectLabelRemovedDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.ObjectLabelRemovedDetails.#ctor(Dropbox.Api.TeamLog.LabelType)
+  commentId: M:Dropbox.Api.TeamLog.ObjectLabelRemovedDetails.#ctor(Dropbox.Api.TeamLog.LabelType)
+  id: '#ctor(Dropbox.Api.TeamLog.LabelType)'
+  parent: Dropbox.Api.TeamLog.ObjectLabelRemovedDetails
+  langs:
+  - csharp
+  - vb
+  name: ObjectLabelRemovedDetails(LabelType)
+  nameWithType: ObjectLabelRemovedDetails.ObjectLabelRemovedDetails(LabelType)
+  fullName: Dropbox.Api.TeamLog.ObjectLabelRemovedDetails.ObjectLabelRemovedDetails(Dropbox.Api.TeamLog.LabelType)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ObjectLabelRemovedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ObjectLabelRemovedDetails.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.ObjectLabelRemovedDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public ObjectLabelRemovedDetails(LabelType labelType)
+    parameters:
+    - id: labelType
+      type: Dropbox.Api.TeamLog.LabelType
+      description: Labels mark a file or folder.
+    content.vb: Public Sub New(labelType As LabelType)
+  overload: Dropbox.Api.TeamLog.ObjectLabelRemovedDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.ObjectLabelRemovedDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.ObjectLabelRemovedDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.ObjectLabelRemovedDetails
+  langs:
+  - csharp
+  - vb
+  name: ObjectLabelRemovedDetails()
+  nameWithType: ObjectLabelRemovedDetails.ObjectLabelRemovedDetails()
+  fullName: Dropbox.Api.TeamLog.ObjectLabelRemovedDetails.ObjectLabelRemovedDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ObjectLabelRemovedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ObjectLabelRemovedDetails.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.ObjectLabelRemovedDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public ObjectLabelRemovedDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.ObjectLabelRemovedDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.ObjectLabelRemovedDetails.LabelType
+  commentId: P:Dropbox.Api.TeamLog.ObjectLabelRemovedDetails.LabelType
+  id: LabelType
+  parent: Dropbox.Api.TeamLog.ObjectLabelRemovedDetails
+  langs:
+  - csharp
+  - vb
+  name: LabelType
+  nameWithType: ObjectLabelRemovedDetails.LabelType
+  fullName: Dropbox.Api.TeamLog.ObjectLabelRemovedDetails.LabelType
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ObjectLabelRemovedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: LabelType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/ObjectLabelRemovedDetails.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Labels mark a file or folder.</p>\n"
+  example: []
+  syntax:
+    content: public LabelType LabelType { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.LabelType
+    content.vb: Public Property LabelType As LabelType
+  overload: Dropbox.Api.TeamLog.ObjectLabelRemovedDetails.LabelType*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.ObjectLabelRemovedDetails
+  commentId: T:Dropbox.Api.TeamLog.ObjectLabelRemovedDetails
+  parent: Dropbox.Api.TeamLog
+  name: ObjectLabelRemovedDetails
+  nameWithType: ObjectLabelRemovedDetails
+  fullName: Dropbox.Api.TeamLog.ObjectLabelRemovedDetails
+- uid: Dropbox.Api.TeamLog.ObjectLabelRemovedDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.ObjectLabelRemovedDetails.#ctor
+  name: ObjectLabelRemovedDetails
+  nameWithType: ObjectLabelRemovedDetails.ObjectLabelRemovedDetails
+  fullName: Dropbox.Api.TeamLog.ObjectLabelRemovedDetails.ObjectLabelRemovedDetails
+- uid: Dropbox.Api.TeamLog.LabelType
+  commentId: T:Dropbox.Api.TeamLog.LabelType
+  parent: Dropbox.Api.TeamLog
+  name: LabelType
+  nameWithType: LabelType
+  fullName: Dropbox.Api.TeamLog.LabelType
+- uid: Dropbox.Api.TeamLog.ObjectLabelRemovedDetails.LabelType*
+  commentId: Overload:Dropbox.Api.TeamLog.ObjectLabelRemovedDetails.LabelType
+  name: LabelType
+  nameWithType: ObjectLabelRemovedDetails.LabelType
+  fullName: Dropbox.Api.TeamLog.ObjectLabelRemovedDetails.LabelType
+shouldSkipMarkup: true

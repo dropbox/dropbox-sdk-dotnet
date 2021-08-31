@@ -1,0 +1,176 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.SearchMatchTypeV2.FilenameAndContent
+  commentId: T:Dropbox.Api.Files.SearchMatchTypeV2.FilenameAndContent
+  id: SearchMatchTypeV2.FilenameAndContent
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.SearchMatchTypeV2.FilenameAndContent.Instance
+  langs:
+  - csharp
+  - vb
+  name: SearchMatchTypeV2.FilenameAndContent
+  nameWithType: SearchMatchTypeV2.FilenameAndContent
+  fullName: Dropbox.Api.Files.SearchMatchTypeV2.FilenameAndContent
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchMatchTypeV2.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: FilenameAndContent
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchMatchTypeV2.cs
+    startLine: 381
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>This item was matched based on both its contents and its file name.</p>\n"
+  example: []
+  syntax:
+    content: 'public sealed class FilenameAndContent : SearchMatchTypeV2'
+    content.vb: >-
+      Public NotInheritable Class FilenameAndContent
+          Inherits SearchMatchTypeV2
+  inheritance:
+  - System.Object
+  - Dropbox.Api.Files.SearchMatchTypeV2
+  inheritedMembers:
+  - Dropbox.Api.Files.SearchMatchTypeV2.IsFilename
+  - Dropbox.Api.Files.SearchMatchTypeV2.AsFilename
+  - Dropbox.Api.Files.SearchMatchTypeV2.IsFileContent
+  - Dropbox.Api.Files.SearchMatchTypeV2.AsFileContent
+  - Dropbox.Api.Files.SearchMatchTypeV2.IsFilenameAndContent
+  - Dropbox.Api.Files.SearchMatchTypeV2.AsFilenameAndContent
+  - Dropbox.Api.Files.SearchMatchTypeV2.IsImageContent
+  - Dropbox.Api.Files.SearchMatchTypeV2.AsImageContent
+  - Dropbox.Api.Files.SearchMatchTypeV2.IsOther
+  - Dropbox.Api.Files.SearchMatchTypeV2.AsOther
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: Dropbox.Api.Files.SearchMatchTypeV2.FilenameAndContent.Instance
+  commentId: F:Dropbox.Api.Files.SearchMatchTypeV2.FilenameAndContent.Instance
+  id: Instance
+  parent: Dropbox.Api.Files.SearchMatchTypeV2.FilenameAndContent
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: SearchMatchTypeV2.FilenameAndContent.Instance
+  fullName: Dropbox.Api.Files.SearchMatchTypeV2.FilenameAndContent.Instance
+  type: Field
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchMatchTypeV2.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Instance
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchMatchTypeV2.cs
+    startLine: 406
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>A singleton instance of FilenameAndContent</p>\n"
+  example: []
+  syntax:
+    content: public static readonly SearchMatchTypeV2.FilenameAndContent Instance
+    return:
+      type: Dropbox.Api.Files.SearchMatchTypeV2.FilenameAndContent
+    content.vb: Public Shared ReadOnly Instance As SearchMatchTypeV2.FilenameAndContent
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.SearchMatchTypeV2
+  commentId: T:Dropbox.Api.Files.SearchMatchTypeV2
+  parent: Dropbox.Api.Files
+  name: SearchMatchTypeV2
+  nameWithType: SearchMatchTypeV2
+  fullName: Dropbox.Api.Files.SearchMatchTypeV2
+- uid: Dropbox.Api.Files.SearchMatchTypeV2.IsFilename
+  commentId: P:Dropbox.Api.Files.SearchMatchTypeV2.IsFilename
+  parent: Dropbox.Api.Files.SearchMatchTypeV2
+  name: IsFilename
+  nameWithType: SearchMatchTypeV2.IsFilename
+  fullName: Dropbox.Api.Files.SearchMatchTypeV2.IsFilename
+- uid: Dropbox.Api.Files.SearchMatchTypeV2.AsFilename
+  commentId: P:Dropbox.Api.Files.SearchMatchTypeV2.AsFilename
+  parent: Dropbox.Api.Files.SearchMatchTypeV2
+  name: AsFilename
+  nameWithType: SearchMatchTypeV2.AsFilename
+  fullName: Dropbox.Api.Files.SearchMatchTypeV2.AsFilename
+- uid: Dropbox.Api.Files.SearchMatchTypeV2.IsFileContent
+  commentId: P:Dropbox.Api.Files.SearchMatchTypeV2.IsFileContent
+  parent: Dropbox.Api.Files.SearchMatchTypeV2
+  name: IsFileContent
+  nameWithType: SearchMatchTypeV2.IsFileContent
+  fullName: Dropbox.Api.Files.SearchMatchTypeV2.IsFileContent
+- uid: Dropbox.Api.Files.SearchMatchTypeV2.AsFileContent
+  commentId: P:Dropbox.Api.Files.SearchMatchTypeV2.AsFileContent
+  parent: Dropbox.Api.Files.SearchMatchTypeV2
+  name: AsFileContent
+  nameWithType: SearchMatchTypeV2.AsFileContent
+  fullName: Dropbox.Api.Files.SearchMatchTypeV2.AsFileContent
+- uid: Dropbox.Api.Files.SearchMatchTypeV2.IsFilenameAndContent
+  commentId: P:Dropbox.Api.Files.SearchMatchTypeV2.IsFilenameAndContent
+  parent: Dropbox.Api.Files.SearchMatchTypeV2
+  name: IsFilenameAndContent
+  nameWithType: SearchMatchTypeV2.IsFilenameAndContent
+  fullName: Dropbox.Api.Files.SearchMatchTypeV2.IsFilenameAndContent
+- uid: Dropbox.Api.Files.SearchMatchTypeV2.AsFilenameAndContent
+  commentId: P:Dropbox.Api.Files.SearchMatchTypeV2.AsFilenameAndContent
+  parent: Dropbox.Api.Files.SearchMatchTypeV2
+  name: AsFilenameAndContent
+  nameWithType: SearchMatchTypeV2.AsFilenameAndContent
+  fullName: Dropbox.Api.Files.SearchMatchTypeV2.AsFilenameAndContent
+- uid: Dropbox.Api.Files.SearchMatchTypeV2.IsImageContent
+  commentId: P:Dropbox.Api.Files.SearchMatchTypeV2.IsImageContent
+  parent: Dropbox.Api.Files.SearchMatchTypeV2
+  name: IsImageContent
+  nameWithType: SearchMatchTypeV2.IsImageContent
+  fullName: Dropbox.Api.Files.SearchMatchTypeV2.IsImageContent
+- uid: Dropbox.Api.Files.SearchMatchTypeV2.AsImageContent
+  commentId: P:Dropbox.Api.Files.SearchMatchTypeV2.AsImageContent
+  parent: Dropbox.Api.Files.SearchMatchTypeV2
+  name: AsImageContent
+  nameWithType: SearchMatchTypeV2.AsImageContent
+  fullName: Dropbox.Api.Files.SearchMatchTypeV2.AsImageContent
+- uid: Dropbox.Api.Files.SearchMatchTypeV2.IsOther
+  commentId: P:Dropbox.Api.Files.SearchMatchTypeV2.IsOther
+  parent: Dropbox.Api.Files.SearchMatchTypeV2
+  name: IsOther
+  nameWithType: SearchMatchTypeV2.IsOther
+  fullName: Dropbox.Api.Files.SearchMatchTypeV2.IsOther
+- uid: Dropbox.Api.Files.SearchMatchTypeV2.AsOther
+  commentId: P:Dropbox.Api.Files.SearchMatchTypeV2.AsOther
+  parent: Dropbox.Api.Files.SearchMatchTypeV2
+  name: AsOther
+  nameWithType: SearchMatchTypeV2.AsOther
+  fullName: Dropbox.Api.Files.SearchMatchTypeV2.AsOther
+- uid: Dropbox.Api.Files.SearchMatchTypeV2.FilenameAndContent
+  commentId: T:Dropbox.Api.Files.SearchMatchTypeV2.FilenameAndContent
+  parent: Dropbox.Api.Files
+  name: SearchMatchTypeV2.FilenameAndContent
+  nameWithType: SearchMatchTypeV2.FilenameAndContent
+  fullName: Dropbox.Api.Files.SearchMatchTypeV2.FilenameAndContent
+shouldSkipMarkup: true

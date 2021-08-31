@@ -1,0 +1,288 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.ExcludedUsersListError
+  commentId: T:Dropbox.Api.Team.ExcludedUsersListError
+  id: ExcludedUsersListError
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.ExcludedUsersListError.#ctor
+  - Dropbox.Api.Team.ExcludedUsersListError.AsListError
+  - Dropbox.Api.Team.ExcludedUsersListError.AsOther
+  - Dropbox.Api.Team.ExcludedUsersListError.IsListError
+  - Dropbox.Api.Team.ExcludedUsersListError.IsOther
+  langs:
+  - csharp
+  - vb
+  name: ExcludedUsersListError
+  nameWithType: ExcludedUsersListError
+  fullName: Dropbox.Api.Team.ExcludedUsersListError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ExcludedUsersListError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ExcludedUsersListError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ExcludedUsersListError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Excluded users list error.</p>\n"
+  example: []
+  syntax:
+    content: 'public class ExcludedUsersListError : object'
+    content.vb: >-
+      Public Class ExcludedUsersListError
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Team.ExcludedUsersListError.ListError
+  - Dropbox.Api.Team.ExcludedUsersListError.Other
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.ExcludedUsersListError.#ctor
+  commentId: M:Dropbox.Api.Team.ExcludedUsersListError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.ExcludedUsersListError
+  langs:
+  - csharp
+  - vb
+  name: ExcludedUsersListError()
+  nameWithType: ExcludedUsersListError.ExcludedUsersListError()
+  fullName: Dropbox.Api.Team.ExcludedUsersListError.ExcludedUsersListError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ExcludedUsersListError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ExcludedUsersListError.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.ExcludedUsersListError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public ExcludedUsersListError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.ExcludedUsersListError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.ExcludedUsersListError.IsListError
+  commentId: P:Dropbox.Api.Team.ExcludedUsersListError.IsListError
+  id: IsListError
+  parent: Dropbox.Api.Team.ExcludedUsersListError
+  langs:
+  - csharp
+  - vb
+  name: IsListError
+  nameWithType: ExcludedUsersListError.IsListError
+  fullName: Dropbox.Api.Team.ExcludedUsersListError.IsListError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ExcludedUsersListError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsListError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ExcludedUsersListError.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is ListError</p>\n"
+  example: []
+  syntax:
+    content: public bool IsListError { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsListError As Boolean
+  overload: Dropbox.Api.Team.ExcludedUsersListError.IsListError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.ExcludedUsersListError.AsListError
+  commentId: P:Dropbox.Api.Team.ExcludedUsersListError.AsListError
+  id: AsListError
+  parent: Dropbox.Api.Team.ExcludedUsersListError
+  langs:
+  - csharp
+  - vb
+  name: AsListError
+  nameWithType: ExcludedUsersListError.AsListError
+  fullName: Dropbox.Api.Team.ExcludedUsersListError.AsListError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ExcludedUsersListError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsListError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ExcludedUsersListError.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a ListError, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ExcludedUsersListError.ListError AsListError { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.ExcludedUsersListError.ListError
+    content.vb: Public ReadOnly Property AsListError As ExcludedUsersListError.ListError
+  overload: Dropbox.Api.Team.ExcludedUsersListError.AsListError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.ExcludedUsersListError.IsOther
+  commentId: P:Dropbox.Api.Team.ExcludedUsersListError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Team.ExcludedUsersListError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: ExcludedUsersListError.IsOther
+  fullName: Dropbox.Api.Team.ExcludedUsersListError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ExcludedUsersListError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ExcludedUsersListError.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Team.ExcludedUsersListError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.ExcludedUsersListError.AsOther
+  commentId: P:Dropbox.Api.Team.ExcludedUsersListError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Team.ExcludedUsersListError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: ExcludedUsersListError.AsOther
+  fullName: Dropbox.Api.Team.ExcludedUsersListError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ExcludedUsersListError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/ExcludedUsersListError.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public ExcludedUsersListError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.ExcludedUsersListError.Other
+    content.vb: Public ReadOnly Property AsOther As ExcludedUsersListError.Other
+  overload: Dropbox.Api.Team.ExcludedUsersListError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.ExcludedUsersListError
+  commentId: T:Dropbox.Api.Team.ExcludedUsersListError
+  parent: Dropbox.Api.Team
+  name: ExcludedUsersListError
+  nameWithType: ExcludedUsersListError
+  fullName: Dropbox.Api.Team.ExcludedUsersListError
+- uid: Dropbox.Api.Team.ExcludedUsersListError.#ctor*
+  commentId: Overload:Dropbox.Api.Team.ExcludedUsersListError.#ctor
+  name: ExcludedUsersListError
+  nameWithType: ExcludedUsersListError.ExcludedUsersListError
+  fullName: Dropbox.Api.Team.ExcludedUsersListError.ExcludedUsersListError
+- uid: Dropbox.Api.Team.ExcludedUsersListError.IsListError*
+  commentId: Overload:Dropbox.Api.Team.ExcludedUsersListError.IsListError
+  name: IsListError
+  nameWithType: ExcludedUsersListError.IsListError
+  fullName: Dropbox.Api.Team.ExcludedUsersListError.IsListError
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Team.ExcludedUsersListError.AsListError*
+  commentId: Overload:Dropbox.Api.Team.ExcludedUsersListError.AsListError
+  name: AsListError
+  nameWithType: ExcludedUsersListError.AsListError
+  fullName: Dropbox.Api.Team.ExcludedUsersListError.AsListError
+- uid: Dropbox.Api.Team.ExcludedUsersListError.ListError
+  commentId: T:Dropbox.Api.Team.ExcludedUsersListError.ListError
+  parent: Dropbox.Api.Team
+  name: ExcludedUsersListError.ListError
+  nameWithType: ExcludedUsersListError.ListError
+  fullName: Dropbox.Api.Team.ExcludedUsersListError.ListError
+- uid: Dropbox.Api.Team.ExcludedUsersListError.IsOther*
+  commentId: Overload:Dropbox.Api.Team.ExcludedUsersListError.IsOther
+  name: IsOther
+  nameWithType: ExcludedUsersListError.IsOther
+  fullName: Dropbox.Api.Team.ExcludedUsersListError.IsOther
+- uid: Dropbox.Api.Team.ExcludedUsersListError.AsOther*
+  commentId: Overload:Dropbox.Api.Team.ExcludedUsersListError.AsOther
+  name: AsOther
+  nameWithType: ExcludedUsersListError.AsOther
+  fullName: Dropbox.Api.Team.ExcludedUsersListError.AsOther
+- uid: Dropbox.Api.Team.ExcludedUsersListError.Other
+  commentId: T:Dropbox.Api.Team.ExcludedUsersListError.Other
+  parent: Dropbox.Api.Team
+  name: ExcludedUsersListError.Other
+  nameWithType: ExcludedUsersListError.Other
+  fullName: Dropbox.Api.Team.ExcludedUsersListError.Other
+shouldSkipMarkup: true

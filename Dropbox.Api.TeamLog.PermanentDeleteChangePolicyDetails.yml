@@ -1,0 +1,239 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.PermanentDeleteChangePolicyDetails
+  commentId: T:Dropbox.Api.TeamLog.PermanentDeleteChangePolicyDetails
+  id: PermanentDeleteChangePolicyDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.PermanentDeleteChangePolicyDetails.#ctor
+  - Dropbox.Api.TeamLog.PermanentDeleteChangePolicyDetails.#ctor(Dropbox.Api.TeamLog.ContentPermanentDeletePolicy,Dropbox.Api.TeamLog.ContentPermanentDeletePolicy)
+  - Dropbox.Api.TeamLog.PermanentDeleteChangePolicyDetails.NewValue
+  - Dropbox.Api.TeamLog.PermanentDeleteChangePolicyDetails.PreviousValue
+  langs:
+  - csharp
+  - vb
+  name: PermanentDeleteChangePolicyDetails
+  nameWithType: PermanentDeleteChangePolicyDetails
+  fullName: Dropbox.Api.TeamLog.PermanentDeleteChangePolicyDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PermanentDeleteChangePolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PermanentDeleteChangePolicyDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PermanentDeleteChangePolicyDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Enabled/disabled ability of team members to permanently delete content.</p>\n"
+  example: []
+  syntax:
+    content: 'public class PermanentDeleteChangePolicyDetails : object'
+    content.vb: >-
+      Public Class PermanentDeleteChangePolicyDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.PermanentDeleteChangePolicyDetails.#ctor(Dropbox.Api.TeamLog.ContentPermanentDeletePolicy,Dropbox.Api.TeamLog.ContentPermanentDeletePolicy)
+  commentId: M:Dropbox.Api.TeamLog.PermanentDeleteChangePolicyDetails.#ctor(Dropbox.Api.TeamLog.ContentPermanentDeletePolicy,Dropbox.Api.TeamLog.ContentPermanentDeletePolicy)
+  id: '#ctor(Dropbox.Api.TeamLog.ContentPermanentDeletePolicy,Dropbox.Api.TeamLog.ContentPermanentDeletePolicy)'
+  parent: Dropbox.Api.TeamLog.PermanentDeleteChangePolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: PermanentDeleteChangePolicyDetails(ContentPermanentDeletePolicy, ContentPermanentDeletePolicy)
+  nameWithType: PermanentDeleteChangePolicyDetails.PermanentDeleteChangePolicyDetails(ContentPermanentDeletePolicy, ContentPermanentDeletePolicy)
+  fullName: Dropbox.Api.TeamLog.PermanentDeleteChangePolicyDetails.PermanentDeleteChangePolicyDetails(Dropbox.Api.TeamLog.ContentPermanentDeletePolicy, Dropbox.Api.TeamLog.ContentPermanentDeletePolicy)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PermanentDeleteChangePolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PermanentDeleteChangePolicyDetails.cs
+    startLine: 36
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.PermanentDeleteChangePolicyDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public PermanentDeleteChangePolicyDetails(ContentPermanentDeletePolicy newValue, ContentPermanentDeletePolicy previousValue = null)
+    parameters:
+    - id: newValue
+      type: Dropbox.Api.TeamLog.ContentPermanentDeletePolicy
+      description: New permanent delete content policy.
+    - id: previousValue
+      type: Dropbox.Api.TeamLog.ContentPermanentDeletePolicy
+      description: >-
+        Previous permanent delete content policy. Might be
+
+        missing due to historical data gap.
+    content.vb: Public Sub New(newValue As ContentPermanentDeletePolicy, previousValue As ContentPermanentDeletePolicy = Nothing)
+  overload: Dropbox.Api.TeamLog.PermanentDeleteChangePolicyDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.PermanentDeleteChangePolicyDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.PermanentDeleteChangePolicyDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.PermanentDeleteChangePolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: PermanentDeleteChangePolicyDetails()
+  nameWithType: PermanentDeleteChangePolicyDetails.PermanentDeleteChangePolicyDetails()
+  fullName: Dropbox.Api.TeamLog.PermanentDeleteChangePolicyDetails.PermanentDeleteChangePolicyDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PermanentDeleteChangePolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PermanentDeleteChangePolicyDetails.cs
+    startLine: 54
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.PermanentDeleteChangePolicyDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public PermanentDeleteChangePolicyDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.PermanentDeleteChangePolicyDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.PermanentDeleteChangePolicyDetails.NewValue
+  commentId: P:Dropbox.Api.TeamLog.PermanentDeleteChangePolicyDetails.NewValue
+  id: NewValue
+  parent: Dropbox.Api.TeamLog.PermanentDeleteChangePolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: NewValue
+  nameWithType: PermanentDeleteChangePolicyDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.PermanentDeleteChangePolicyDetails.NewValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PermanentDeleteChangePolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NewValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PermanentDeleteChangePolicyDetails.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>New permanent delete content policy.</p>\n"
+  example: []
+  syntax:
+    content: public ContentPermanentDeletePolicy NewValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.ContentPermanentDeletePolicy
+    content.vb: Public Property NewValue As ContentPermanentDeletePolicy
+  overload: Dropbox.Api.TeamLog.PermanentDeleteChangePolicyDetails.NewValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.PermanentDeleteChangePolicyDetails.PreviousValue
+  commentId: P:Dropbox.Api.TeamLog.PermanentDeleteChangePolicyDetails.PreviousValue
+  id: PreviousValue
+  parent: Dropbox.Api.TeamLog.PermanentDeleteChangePolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: PreviousValue
+  nameWithType: PermanentDeleteChangePolicyDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.PermanentDeleteChangePolicyDetails.PreviousValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PermanentDeleteChangePolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PreviousValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PermanentDeleteChangePolicyDetails.cs
+    startLine: 68
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Previous permanent delete content policy. Might be missing due to historical\ndata gap.</p>\n"
+  example: []
+  syntax:
+    content: public ContentPermanentDeletePolicy PreviousValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.ContentPermanentDeletePolicy
+    content.vb: Public Property PreviousValue As ContentPermanentDeletePolicy
+  overload: Dropbox.Api.TeamLog.PermanentDeleteChangePolicyDetails.PreviousValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.PermanentDeleteChangePolicyDetails
+  commentId: T:Dropbox.Api.TeamLog.PermanentDeleteChangePolicyDetails
+  parent: Dropbox.Api.TeamLog
+  name: PermanentDeleteChangePolicyDetails
+  nameWithType: PermanentDeleteChangePolicyDetails
+  fullName: Dropbox.Api.TeamLog.PermanentDeleteChangePolicyDetails
+- uid: Dropbox.Api.TeamLog.PermanentDeleteChangePolicyDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.PermanentDeleteChangePolicyDetails.#ctor
+  name: PermanentDeleteChangePolicyDetails
+  nameWithType: PermanentDeleteChangePolicyDetails.PermanentDeleteChangePolicyDetails
+  fullName: Dropbox.Api.TeamLog.PermanentDeleteChangePolicyDetails.PermanentDeleteChangePolicyDetails
+- uid: Dropbox.Api.TeamLog.ContentPermanentDeletePolicy
+  commentId: T:Dropbox.Api.TeamLog.ContentPermanentDeletePolicy
+  parent: Dropbox.Api.TeamLog
+  name: ContentPermanentDeletePolicy
+  nameWithType: ContentPermanentDeletePolicy
+  fullName: Dropbox.Api.TeamLog.ContentPermanentDeletePolicy
+- uid: Dropbox.Api.TeamLog.PermanentDeleteChangePolicyDetails.NewValue*
+  commentId: Overload:Dropbox.Api.TeamLog.PermanentDeleteChangePolicyDetails.NewValue
+  name: NewValue
+  nameWithType: PermanentDeleteChangePolicyDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.PermanentDeleteChangePolicyDetails.NewValue
+- uid: Dropbox.Api.TeamLog.PermanentDeleteChangePolicyDetails.PreviousValue*
+  commentId: Overload:Dropbox.Api.TeamLog.PermanentDeleteChangePolicyDetails.PreviousValue
+  name: PreviousValue
+  nameWithType: PermanentDeleteChangePolicyDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.PermanentDeleteChangePolicyDetails.PreviousValue
+shouldSkipMarkup: true

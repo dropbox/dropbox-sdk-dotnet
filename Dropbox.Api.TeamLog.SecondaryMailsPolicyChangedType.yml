@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.SecondaryMailsPolicyChangedType
+  commentId: T:Dropbox.Api.TeamLog.SecondaryMailsPolicyChangedType
+  id: SecondaryMailsPolicyChangedType
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.SecondaryMailsPolicyChangedType.#ctor
+  - Dropbox.Api.TeamLog.SecondaryMailsPolicyChangedType.#ctor(System.String)
+  - Dropbox.Api.TeamLog.SecondaryMailsPolicyChangedType.Description
+  langs:
+  - csharp
+  - vb
+  name: SecondaryMailsPolicyChangedType
+  nameWithType: SecondaryMailsPolicyChangedType
+  fullName: Dropbox.Api.TeamLog.SecondaryMailsPolicyChangedType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SecondaryMailsPolicyChangedType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SecondaryMailsPolicyChangedType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SecondaryMailsPolicyChangedType.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The secondary mails policy changed type object</p>\n"
+  example: []
+  syntax:
+    content: 'public class SecondaryMailsPolicyChangedType : object'
+    content.vb: >-
+      Public Class SecondaryMailsPolicyChangedType
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.SecondaryMailsPolicyChangedType.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.SecondaryMailsPolicyChangedType.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.SecondaryMailsPolicyChangedType
+  langs:
+  - csharp
+  - vb
+  name: SecondaryMailsPolicyChangedType(String)
+  nameWithType: SecondaryMailsPolicyChangedType.SecondaryMailsPolicyChangedType(String)
+  fullName: Dropbox.Api.TeamLog.SecondaryMailsPolicyChangedType.SecondaryMailsPolicyChangedType(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SecondaryMailsPolicyChangedType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SecondaryMailsPolicyChangedType.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SecondaryMailsPolicyChangedType\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public SecondaryMailsPolicyChangedType(string description)
+    parameters:
+    - id: description
+      type: System.String
+      description: The description
+    content.vb: Public Sub New(description As String)
+  overload: Dropbox.Api.TeamLog.SecondaryMailsPolicyChangedType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SecondaryMailsPolicyChangedType.#ctor
+  commentId: M:Dropbox.Api.TeamLog.SecondaryMailsPolicyChangedType.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.SecondaryMailsPolicyChangedType
+  langs:
+  - csharp
+  - vb
+  name: SecondaryMailsPolicyChangedType()
+  nameWithType: SecondaryMailsPolicyChangedType.SecondaryMailsPolicyChangedType()
+  fullName: Dropbox.Api.TeamLog.SecondaryMailsPolicyChangedType.SecondaryMailsPolicyChangedType()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SecondaryMailsPolicyChangedType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SecondaryMailsPolicyChangedType.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SecondaryMailsPolicyChangedType\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public SecondaryMailsPolicyChangedType()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.SecondaryMailsPolicyChangedType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SecondaryMailsPolicyChangedType.Description
+  commentId: P:Dropbox.Api.TeamLog.SecondaryMailsPolicyChangedType.Description
+  id: Description
+  parent: Dropbox.Api.TeamLog.SecondaryMailsPolicyChangedType
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: SecondaryMailsPolicyChangedType.Description
+  fullName: Dropbox.Api.TeamLog.SecondaryMailsPolicyChangedType.Description
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SecondaryMailsPolicyChangedType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Description
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SecondaryMailsPolicyChangedType.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets the description of the secondary mails policy changed type</p>\n"
+  example: []
+  syntax:
+    content: public string Description { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Dropbox.Api.TeamLog.SecondaryMailsPolicyChangedType.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.SecondaryMailsPolicyChangedType
+  commentId: T:Dropbox.Api.TeamLog.SecondaryMailsPolicyChangedType
+  parent: Dropbox.Api.TeamLog
+  name: SecondaryMailsPolicyChangedType
+  nameWithType: SecondaryMailsPolicyChangedType
+  fullName: Dropbox.Api.TeamLog.SecondaryMailsPolicyChangedType
+- uid: Dropbox.Api.TeamLog.SecondaryMailsPolicyChangedType.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.SecondaryMailsPolicyChangedType.#ctor
+  name: SecondaryMailsPolicyChangedType
+  nameWithType: SecondaryMailsPolicyChangedType.SecondaryMailsPolicyChangedType
+  fullName: Dropbox.Api.TeamLog.SecondaryMailsPolicyChangedType.SecondaryMailsPolicyChangedType
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.SecondaryMailsPolicyChangedType.Description*
+  commentId: Overload:Dropbox.Api.TeamLog.SecondaryMailsPolicyChangedType.Description
+  name: Description
+  nameWithType: SecondaryMailsPolicyChangedType.Description
+  fullName: Dropbox.Api.TeamLog.SecondaryMailsPolicyChangedType.Description
+shouldSkipMarkup: true

@@ -1,0 +1,756 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Files.SearchOptions
+  commentId: T:Dropbox.Api.Files.SearchOptions
+  id: SearchOptions
+  parent: Dropbox.Api.Files
+  children:
+  - Dropbox.Api.Files.SearchOptions.#ctor
+  - Dropbox.Api.Files.SearchOptions.#ctor(System.String,System.UInt64,Dropbox.Api.Files.SearchOrderBy,Dropbox.Api.Files.FileStatus,System.Boolean,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{Dropbox.Api.Files.FileCategory})
+  - Dropbox.Api.Files.SearchOptions.FileCategories
+  - Dropbox.Api.Files.SearchOptions.FileExtensions
+  - Dropbox.Api.Files.SearchOptions.FilenameOnly
+  - Dropbox.Api.Files.SearchOptions.FileStatus
+  - Dropbox.Api.Files.SearchOptions.MaxResults
+  - Dropbox.Api.Files.SearchOptions.OrderBy
+  - Dropbox.Api.Files.SearchOptions.Path
+  langs:
+  - csharp
+  - vb
+  name: SearchOptions
+  nameWithType: SearchOptions
+  fullName: Dropbox.Api.Files.SearchOptions
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchOptions.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SearchOptions
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchOptions.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The search options object</p>\n"
+  example: []
+  syntax:
+    content: 'public class SearchOptions : object'
+    content.vb: >-
+      Public Class SearchOptions
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Files.SearchOptions.#ctor(System.String,System.UInt64,Dropbox.Api.Files.SearchOrderBy,Dropbox.Api.Files.FileStatus,System.Boolean,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{Dropbox.Api.Files.FileCategory})
+  commentId: M:Dropbox.Api.Files.SearchOptions.#ctor(System.String,System.UInt64,Dropbox.Api.Files.SearchOrderBy,Dropbox.Api.Files.FileStatus,System.Boolean,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{Dropbox.Api.Files.FileCategory})
+  id: '#ctor(System.String,System.UInt64,Dropbox.Api.Files.SearchOrderBy,Dropbox.Api.Files.FileStatus,System.Boolean,System.Collections.Generic.IEnumerable{System.String},System.Collections.Generic.IEnumerable{Dropbox.Api.Files.FileCategory})'
+  parent: Dropbox.Api.Files.SearchOptions
+  langs:
+  - csharp
+  - vb
+  name: SearchOptions(String, UInt64, SearchOrderBy, FileStatus, Boolean, System.Collections.Generic.IEnumerable<String>, System.Collections.Generic.IEnumerable<FileCategory>)
+  nameWithType: SearchOptions.SearchOptions(String, UInt64, SearchOrderBy, FileStatus, Boolean, System.Collections.Generic.IEnumerable<String>, System.Collections.Generic.IEnumerable<FileCategory>)
+  fullName: Dropbox.Api.Files.SearchOptions.SearchOptions(System.String, System.UInt64, Dropbox.Api.Files.SearchOrderBy, Dropbox.Api.Files.FileStatus, System.Boolean, System.Collections.Generic.IEnumerable<System.String>, System.Collections.Generic.IEnumerable<Dropbox.Api.Files.FileCategory>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchOptions.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchOptions.cs
+    startLine: 43
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.SearchOptions\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public SearchOptions(string path = null, ulong maxResults = null, SearchOrderBy orderBy = null, FileStatus fileStatus = null, bool filenameOnly = false, System.Collections.Generic.IEnumerable<string> fileExtensions = null, System.Collections.Generic.IEnumerable<FileCategory> fileCategories = null)
+    parameters:
+    - id: path
+      type: System.String
+      description: >-
+        Scopes the search to a path in the user&apos;s Dropbox. Searches the
+
+        entire Dropbox if not specified.
+    - id: maxResults
+      type: System.UInt64
+      description: The maximum number of search results to return.
+    - id: orderBy
+      type: Dropbox.Api.Files.SearchOrderBy
+      description: >-
+        Specified property of the order of search results. By
+
+        default, results are sorted by relevance.
+    - id: fileStatus
+      type: Dropbox.Api.Files.FileStatus
+      description: Restricts search to the given file status.
+    - id: filenameOnly
+      type: System.Boolean
+      description: Restricts search to only match on filenames.
+    - id: fileExtensions
+      type: System.Collections.Generic.IEnumerable{System.String}
+      description: >-
+        Restricts search to only the extensions specified.
+
+        Only supported for active file search.
+    - id: fileCategories
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.Files.FileCategory}
+      description: >-
+        Restricts search to only the file categories
+
+        specified. Only supported for active file search.
+    content.vb: Public Sub New(path As String = Nothing, maxResults As ULong = Nothing, orderBy As SearchOrderBy = Nothing, fileStatus As FileStatus = Nothing, filenameOnly As Boolean = False, fileExtensions As System.Collections.Generic.IEnumerable(Of String) = Nothing, fileCategories As System.Collections.Generic.IEnumerable(Of FileCategory) = Nothing)
+  overload: Dropbox.Api.Files.SearchOptions.#ctor*
+  nameWithType.vb: SearchOptions.SearchOptions(String, UInt64, SearchOrderBy, FileStatus, Boolean, System.Collections.Generic.IEnumerable(Of String), System.Collections.Generic.IEnumerable(Of FileCategory))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Files.SearchOptions.SearchOptions(System.String, System.UInt64, Dropbox.Api.Files.SearchOrderBy, Dropbox.Api.Files.FileStatus, System.Boolean, System.Collections.Generic.IEnumerable(Of System.String), System.Collections.Generic.IEnumerable(Of Dropbox.Api.Files.FileCategory))
+  name.vb: SearchOptions(String, UInt64, SearchOrderBy, FileStatus, Boolean, System.Collections.Generic.IEnumerable(Of String), System.Collections.Generic.IEnumerable(Of FileCategory))
+- uid: Dropbox.Api.Files.SearchOptions.#ctor
+  commentId: M:Dropbox.Api.Files.SearchOptions.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Files.SearchOptions
+  langs:
+  - csharp
+  - vb
+  name: SearchOptions()
+  nameWithType: SearchOptions.SearchOptions()
+  fullName: Dropbox.Api.Files.SearchOptions.SearchOptions()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchOptions.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchOptions.cs
+    startLine: 90
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Files.SearchOptions\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public SearchOptions()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Files.SearchOptions.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Files.SearchOptions.Path
+  commentId: P:Dropbox.Api.Files.SearchOptions.Path
+  id: Path
+  parent: Dropbox.Api.Files.SearchOptions
+  langs:
+  - csharp
+  - vb
+  name: Path
+  nameWithType: SearchOptions.Path
+  fullName: Dropbox.Api.Files.SearchOptions.Path
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchOptions.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Path
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchOptions.cs
+    startLine: 102
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Scopes the search to a path in the user&apos;s Dropbox. Searches the entire\nDropbox if not specified.</p>\n"
+  example: []
+  syntax:
+    content: public string Path { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Path As String
+  overload: Dropbox.Api.Files.SearchOptions.Path*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.SearchOptions.MaxResults
+  commentId: P:Dropbox.Api.Files.SearchOptions.MaxResults
+  id: MaxResults
+  parent: Dropbox.Api.Files.SearchOptions
+  langs:
+  - csharp
+  - vb
+  name: MaxResults
+  nameWithType: SearchOptions.MaxResults
+  fullName: Dropbox.Api.Files.SearchOptions.MaxResults
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchOptions.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: MaxResults
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchOptions.cs
+    startLine: 107
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>The maximum number of search results to return.</p>\n"
+  example: []
+  syntax:
+    content: public ulong MaxResults { get; protected set; }
+    parameters: []
+    return:
+      type: System.UInt64
+    content.vb: Public Property MaxResults As ULong
+  overload: Dropbox.Api.Files.SearchOptions.MaxResults*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.SearchOptions.OrderBy
+  commentId: P:Dropbox.Api.Files.SearchOptions.OrderBy
+  id: OrderBy
+  parent: Dropbox.Api.Files.SearchOptions
+  langs:
+  - csharp
+  - vb
+  name: OrderBy
+  nameWithType: SearchOptions.OrderBy
+  fullName: Dropbox.Api.Files.SearchOptions.OrderBy
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchOptions.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: OrderBy
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchOptions.cs
+    startLine: 113
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Specified property of the order of search results. By default, results are\nsorted by relevance.</p>\n"
+  example: []
+  syntax:
+    content: public SearchOrderBy OrderBy { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.SearchOrderBy
+    content.vb: Public Property OrderBy As SearchOrderBy
+  overload: Dropbox.Api.Files.SearchOptions.OrderBy*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.SearchOptions.FileStatus
+  commentId: P:Dropbox.Api.Files.SearchOptions.FileStatus
+  id: FileStatus
+  parent: Dropbox.Api.Files.SearchOptions
+  langs:
+  - csharp
+  - vb
+  name: FileStatus
+  nameWithType: SearchOptions.FileStatus
+  fullName: Dropbox.Api.Files.SearchOptions.FileStatus
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchOptions.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: FileStatus
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchOptions.cs
+    startLine: 118
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Restricts search to the given file status.</p>\n"
+  example: []
+  syntax:
+    content: public FileStatus FileStatus { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Files.FileStatus
+    content.vb: Public Property FileStatus As FileStatus
+  overload: Dropbox.Api.Files.SearchOptions.FileStatus*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.SearchOptions.FilenameOnly
+  commentId: P:Dropbox.Api.Files.SearchOptions.FilenameOnly
+  id: FilenameOnly
+  parent: Dropbox.Api.Files.SearchOptions
+  langs:
+  - csharp
+  - vb
+  name: FilenameOnly
+  nameWithType: SearchOptions.FilenameOnly
+  fullName: Dropbox.Api.Files.SearchOptions.FilenameOnly
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchOptions.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: FilenameOnly
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchOptions.cs
+    startLine: 123
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Restricts search to only match on filenames.</p>\n"
+  example: []
+  syntax:
+    content: public bool FilenameOnly { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property FilenameOnly As Boolean
+  overload: Dropbox.Api.Files.SearchOptions.FilenameOnly*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.SearchOptions.FileExtensions
+  commentId: P:Dropbox.Api.Files.SearchOptions.FileExtensions
+  id: FileExtensions
+  parent: Dropbox.Api.Files.SearchOptions
+  langs:
+  - csharp
+  - vb
+  name: FileExtensions
+  nameWithType: SearchOptions.FileExtensions
+  fullName: Dropbox.Api.Files.SearchOptions.FileExtensions
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchOptions.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: FileExtensions
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchOptions.cs
+    startLine: 129
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Restricts search to only the extensions specified. Only supported for active\nfile search.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<string> FileExtensions { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{System.String}
+    content.vb: Public Property FileExtensions As System.Collections.Generic.IList(Of String)
+  overload: Dropbox.Api.Files.SearchOptions.FileExtensions*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Files.SearchOptions.FileCategories
+  commentId: P:Dropbox.Api.Files.SearchOptions.FileCategories
+  id: FileCategories
+  parent: Dropbox.Api.Files.SearchOptions
+  langs:
+  - csharp
+  - vb
+  name: FileCategories
+  nameWithType: SearchOptions.FileCategories
+  fullName: Dropbox.Api.Files.SearchOptions.FileCategories
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchOptions.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: FileCategories
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Files/SearchOptions.cs
+    startLine: 135
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Files
+  summary: "\n<p>Restricts search to only the file categories specified. Only supported for\nactive file search.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<FileCategory> FileCategories { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{Dropbox.Api.Files.FileCategory}
+    content.vb: Public Property FileCategories As System.Collections.Generic.IList(Of FileCategory)
+  overload: Dropbox.Api.Files.SearchOptions.FileCategories*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Files
+  commentId: N:Dropbox.Api.Files
+  name: Dropbox.Api.Files
+  nameWithType: Dropbox.Api.Files
+  fullName: Dropbox.Api.Files
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Files.SearchOptions
+  commentId: T:Dropbox.Api.Files.SearchOptions
+  parent: Dropbox.Api.Files
+  name: SearchOptions
+  nameWithType: SearchOptions
+  fullName: Dropbox.Api.Files.SearchOptions
+- uid: Dropbox.Api.Files.SearchOptions.#ctor*
+  commentId: Overload:Dropbox.Api.Files.SearchOptions.#ctor
+  name: SearchOptions
+  nameWithType: SearchOptions.SearchOptions
+  fullName: Dropbox.Api.Files.SearchOptions.SearchOptions
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.UInt64
+  isExternal: true
+  name: UInt64
+  nameWithType: UInt64
+  fullName: System.UInt64
+- uid: Dropbox.Api.Files.SearchOrderBy
+  commentId: T:Dropbox.Api.Files.SearchOrderBy
+  parent: Dropbox.Api.Files
+  name: SearchOrderBy
+  nameWithType: SearchOrderBy
+  fullName: Dropbox.Api.Files.SearchOrderBy
+- uid: Dropbox.Api.Files.FileStatus
+  commentId: T:Dropbox.Api.Files.FileStatus
+  parent: Dropbox.Api.Files
+  name: FileStatus
+  nameWithType: FileStatus
+  fullName: Dropbox.Api.Files.FileStatus
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.Collections.Generic.IEnumerable{System.String}
+  commentId: '!:System.Collections.Generic.IEnumerable{System.String}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<String>
+  nameWithType: System.Collections.Generic.IEnumerable<String>
+  fullName: System.Collections.Generic.IEnumerable<System.String>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of String)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.String)
+  name.vb: System.Collections.Generic.IEnumerable(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable{Dropbox.Api.Files.FileCategory}
+  commentId: '!:System.Collections.Generic.IEnumerable{Dropbox.Api.Files.FileCategory}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<FileCategory>
+  nameWithType: System.Collections.Generic.IEnumerable<FileCategory>
+  fullName: System.Collections.Generic.IEnumerable<Dropbox.Api.Files.FileCategory>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of FileCategory)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Dropbox.Api.Files.FileCategory)
+  name.vb: System.Collections.Generic.IEnumerable(Of FileCategory)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Files.FileCategory
+    name: FileCategory
+    nameWithType: FileCategory
+    fullName: Dropbox.Api.Files.FileCategory
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Files.FileCategory
+    name: FileCategory
+    nameWithType: FileCategory
+    fullName: Dropbox.Api.Files.FileCategory
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: System.Collections.Generic.IEnumerable<>
+  nameWithType: System.Collections.Generic.IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: System.Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Files.SearchOptions.Path*
+  commentId: Overload:Dropbox.Api.Files.SearchOptions.Path
+  name: Path
+  nameWithType: SearchOptions.Path
+  fullName: Dropbox.Api.Files.SearchOptions.Path
+- uid: Dropbox.Api.Files.SearchOptions.MaxResults*
+  commentId: Overload:Dropbox.Api.Files.SearchOptions.MaxResults
+  name: MaxResults
+  nameWithType: SearchOptions.MaxResults
+  fullName: Dropbox.Api.Files.SearchOptions.MaxResults
+- uid: Dropbox.Api.Files.SearchOptions.OrderBy*
+  commentId: Overload:Dropbox.Api.Files.SearchOptions.OrderBy
+  name: OrderBy
+  nameWithType: SearchOptions.OrderBy
+  fullName: Dropbox.Api.Files.SearchOptions.OrderBy
+- uid: Dropbox.Api.Files.SearchOptions.FileStatus*
+  commentId: Overload:Dropbox.Api.Files.SearchOptions.FileStatus
+  name: FileStatus
+  nameWithType: SearchOptions.FileStatus
+  fullName: Dropbox.Api.Files.SearchOptions.FileStatus
+- uid: Dropbox.Api.Files.SearchOptions.FilenameOnly*
+  commentId: Overload:Dropbox.Api.Files.SearchOptions.FilenameOnly
+  name: FilenameOnly
+  nameWithType: SearchOptions.FilenameOnly
+  fullName: Dropbox.Api.Files.SearchOptions.FilenameOnly
+- uid: Dropbox.Api.Files.SearchOptions.FileExtensions*
+  commentId: Overload:Dropbox.Api.Files.SearchOptions.FileExtensions
+  name: FileExtensions
+  nameWithType: SearchOptions.FileExtensions
+  fullName: Dropbox.Api.Files.SearchOptions.FileExtensions
+- uid: System.Collections.Generic.IList{System.String}
+  commentId: '!:System.Collections.Generic.IList{System.String}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<String>
+  nameWithType: System.Collections.Generic.IList<String>
+  fullName: System.Collections.Generic.IList<System.String>
+  nameWithType.vb: System.Collections.Generic.IList(Of String)
+  fullName.vb: System.Collections.Generic.IList(Of System.String)
+  name.vb: System.Collections.Generic.IList(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  isExternal: true
+  name: System.Collections.Generic.IList<>
+  nameWithType: System.Collections.Generic.IList<>
+  fullName: System.Collections.Generic.IList<>
+  nameWithType.vb: System.Collections.Generic.IList(Of )
+  fullName.vb: System.Collections.Generic.IList(Of )
+  name.vb: System.Collections.Generic.IList(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Files.SearchOptions.FileCategories*
+  commentId: Overload:Dropbox.Api.Files.SearchOptions.FileCategories
+  name: FileCategories
+  nameWithType: SearchOptions.FileCategories
+  fullName: Dropbox.Api.Files.SearchOptions.FileCategories
+- uid: System.Collections.Generic.IList{Dropbox.Api.Files.FileCategory}
+  commentId: '!:System.Collections.Generic.IList{Dropbox.Api.Files.FileCategory}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<FileCategory>
+  nameWithType: System.Collections.Generic.IList<FileCategory>
+  fullName: System.Collections.Generic.IList<Dropbox.Api.Files.FileCategory>
+  nameWithType.vb: System.Collections.Generic.IList(Of FileCategory)
+  fullName.vb: System.Collections.Generic.IList(Of Dropbox.Api.Files.FileCategory)
+  name.vb: System.Collections.Generic.IList(Of FileCategory)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Files.FileCategory
+    name: FileCategory
+    nameWithType: FileCategory
+    fullName: Dropbox.Api.Files.FileCategory
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Files.FileCategory
+    name: FileCategory
+    nameWithType: FileCategory
+    fullName: Dropbox.Api.Files.FileCategory
+  - name: )
+    nameWithType: )
+    fullName: )
+shouldSkipMarkup: true

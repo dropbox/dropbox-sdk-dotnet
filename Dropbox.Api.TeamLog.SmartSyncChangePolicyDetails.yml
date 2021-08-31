@@ -1,0 +1,241 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.SmartSyncChangePolicyDetails
+  commentId: T:Dropbox.Api.TeamLog.SmartSyncChangePolicyDetails
+  id: SmartSyncChangePolicyDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.SmartSyncChangePolicyDetails.#ctor
+  - Dropbox.Api.TeamLog.SmartSyncChangePolicyDetails.#ctor(Dropbox.Api.TeamPolicies.SmartSyncPolicy,Dropbox.Api.TeamPolicies.SmartSyncPolicy)
+  - Dropbox.Api.TeamLog.SmartSyncChangePolicyDetails.NewValue
+  - Dropbox.Api.TeamLog.SmartSyncChangePolicyDetails.PreviousValue
+  langs:
+  - csharp
+  - vb
+  name: SmartSyncChangePolicyDetails
+  nameWithType: SmartSyncChangePolicyDetails
+  fullName: Dropbox.Api.TeamLog.SmartSyncChangePolicyDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SmartSyncChangePolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SmartSyncChangePolicyDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SmartSyncChangePolicyDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Changed default Smart Sync setting for team members.</p>\n"
+  example: []
+  syntax:
+    content: 'public class SmartSyncChangePolicyDetails : object'
+    content.vb: >-
+      Public Class SmartSyncChangePolicyDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.SmartSyncChangePolicyDetails.#ctor(Dropbox.Api.TeamPolicies.SmartSyncPolicy,Dropbox.Api.TeamPolicies.SmartSyncPolicy)
+  commentId: M:Dropbox.Api.TeamLog.SmartSyncChangePolicyDetails.#ctor(Dropbox.Api.TeamPolicies.SmartSyncPolicy,Dropbox.Api.TeamPolicies.SmartSyncPolicy)
+  id: '#ctor(Dropbox.Api.TeamPolicies.SmartSyncPolicy,Dropbox.Api.TeamPolicies.SmartSyncPolicy)'
+  parent: Dropbox.Api.TeamLog.SmartSyncChangePolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: SmartSyncChangePolicyDetails(SmartSyncPolicy, SmartSyncPolicy)
+  nameWithType: SmartSyncChangePolicyDetails.SmartSyncChangePolicyDetails(SmartSyncPolicy, SmartSyncPolicy)
+  fullName: Dropbox.Api.TeamLog.SmartSyncChangePolicyDetails.SmartSyncChangePolicyDetails(Dropbox.Api.TeamPolicies.SmartSyncPolicy, Dropbox.Api.TeamPolicies.SmartSyncPolicy)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SmartSyncChangePolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SmartSyncChangePolicyDetails.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SmartSyncChangePolicyDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public SmartSyncChangePolicyDetails(SmartSyncPolicy newValue = null, SmartSyncPolicy previousValue = null)
+    parameters:
+    - id: newValue
+      type: Dropbox.Api.TeamPolicies.SmartSyncPolicy
+      description: New smart sync policy.
+    - id: previousValue
+      type: Dropbox.Api.TeamPolicies.SmartSyncPolicy
+      description: Previous smart sync policy.
+    content.vb: Public Sub New(newValue As SmartSyncPolicy = Nothing, previousValue As SmartSyncPolicy = Nothing)
+  overload: Dropbox.Api.TeamLog.SmartSyncChangePolicyDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SmartSyncChangePolicyDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.SmartSyncChangePolicyDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.SmartSyncChangePolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: SmartSyncChangePolicyDetails()
+  nameWithType: SmartSyncChangePolicyDetails.SmartSyncChangePolicyDetails()
+  fullName: Dropbox.Api.TeamLog.SmartSyncChangePolicyDetails.SmartSyncChangePolicyDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SmartSyncChangePolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SmartSyncChangePolicyDetails.cs
+    startLine: 48
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SmartSyncChangePolicyDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public SmartSyncChangePolicyDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.SmartSyncChangePolicyDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SmartSyncChangePolicyDetails.NewValue
+  commentId: P:Dropbox.Api.TeamLog.SmartSyncChangePolicyDetails.NewValue
+  id: NewValue
+  parent: Dropbox.Api.TeamLog.SmartSyncChangePolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: NewValue
+  nameWithType: SmartSyncChangePolicyDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.SmartSyncChangePolicyDetails.NewValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SmartSyncChangePolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NewValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SmartSyncChangePolicyDetails.cs
+    startLine: 56
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>New smart sync policy.</p>\n"
+  example: []
+  syntax:
+    content: public SmartSyncPolicy NewValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamPolicies.SmartSyncPolicy
+    content.vb: Public Property NewValue As SmartSyncPolicy
+  overload: Dropbox.Api.TeamLog.SmartSyncChangePolicyDetails.NewValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.SmartSyncChangePolicyDetails.PreviousValue
+  commentId: P:Dropbox.Api.TeamLog.SmartSyncChangePolicyDetails.PreviousValue
+  id: PreviousValue
+  parent: Dropbox.Api.TeamLog.SmartSyncChangePolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: PreviousValue
+  nameWithType: SmartSyncChangePolicyDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.SmartSyncChangePolicyDetails.PreviousValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SmartSyncChangePolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PreviousValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SmartSyncChangePolicyDetails.cs
+    startLine: 61
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Previous smart sync policy.</p>\n"
+  example: []
+  syntax:
+    content: public SmartSyncPolicy PreviousValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamPolicies.SmartSyncPolicy
+    content.vb: Public Property PreviousValue As SmartSyncPolicy
+  overload: Dropbox.Api.TeamLog.SmartSyncChangePolicyDetails.PreviousValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.SmartSyncChangePolicyDetails
+  commentId: T:Dropbox.Api.TeamLog.SmartSyncChangePolicyDetails
+  parent: Dropbox.Api.TeamLog
+  name: SmartSyncChangePolicyDetails
+  nameWithType: SmartSyncChangePolicyDetails
+  fullName: Dropbox.Api.TeamLog.SmartSyncChangePolicyDetails
+- uid: Dropbox.Api.TeamLog.SmartSyncChangePolicyDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.SmartSyncChangePolicyDetails.#ctor
+  name: SmartSyncChangePolicyDetails
+  nameWithType: SmartSyncChangePolicyDetails.SmartSyncChangePolicyDetails
+  fullName: Dropbox.Api.TeamLog.SmartSyncChangePolicyDetails.SmartSyncChangePolicyDetails
+- uid: Dropbox.Api.TeamPolicies.SmartSyncPolicy
+  commentId: T:Dropbox.Api.TeamPolicies.SmartSyncPolicy
+  parent: Dropbox.Api.TeamPolicies
+  name: SmartSyncPolicy
+  nameWithType: SmartSyncPolicy
+  fullName: Dropbox.Api.TeamPolicies.SmartSyncPolicy
+- uid: Dropbox.Api.TeamPolicies
+  commentId: N:Dropbox.Api.TeamPolicies
+  name: Dropbox.Api.TeamPolicies
+  nameWithType: Dropbox.Api.TeamPolicies
+  fullName: Dropbox.Api.TeamPolicies
+- uid: Dropbox.Api.TeamLog.SmartSyncChangePolicyDetails.NewValue*
+  commentId: Overload:Dropbox.Api.TeamLog.SmartSyncChangePolicyDetails.NewValue
+  name: NewValue
+  nameWithType: SmartSyncChangePolicyDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.SmartSyncChangePolicyDetails.NewValue
+- uid: Dropbox.Api.TeamLog.SmartSyncChangePolicyDetails.PreviousValue*
+  commentId: Overload:Dropbox.Api.TeamLog.SmartSyncChangePolicyDetails.PreviousValue
+  name: PreviousValue
+  nameWithType: SmartSyncChangePolicyDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.SmartSyncChangePolicyDetails.PreviousValue
+shouldSkipMarkup: true

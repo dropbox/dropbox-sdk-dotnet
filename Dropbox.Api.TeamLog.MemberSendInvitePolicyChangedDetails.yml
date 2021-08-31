@@ -1,0 +1,236 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.MemberSendInvitePolicyChangedDetails
+  commentId: T:Dropbox.Api.TeamLog.MemberSendInvitePolicyChangedDetails
+  id: MemberSendInvitePolicyChangedDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.MemberSendInvitePolicyChangedDetails.#ctor
+  - Dropbox.Api.TeamLog.MemberSendInvitePolicyChangedDetails.#ctor(Dropbox.Api.TeamLog.MemberSendInvitePolicy,Dropbox.Api.TeamLog.MemberSendInvitePolicy)
+  - Dropbox.Api.TeamLog.MemberSendInvitePolicyChangedDetails.NewValue
+  - Dropbox.Api.TeamLog.MemberSendInvitePolicyChangedDetails.PreviousValue
+  langs:
+  - csharp
+  - vb
+  name: MemberSendInvitePolicyChangedDetails
+  nameWithType: MemberSendInvitePolicyChangedDetails
+  fullName: Dropbox.Api.TeamLog.MemberSendInvitePolicyChangedDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSendInvitePolicyChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: MemberSendInvitePolicyChangedDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSendInvitePolicyChangedDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Changed member send invite policy for team.</p>\n"
+  example: []
+  syntax:
+    content: 'public class MemberSendInvitePolicyChangedDetails : object'
+    content.vb: >-
+      Public Class MemberSendInvitePolicyChangedDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.MemberSendInvitePolicyChangedDetails.#ctor(Dropbox.Api.TeamLog.MemberSendInvitePolicy,Dropbox.Api.TeamLog.MemberSendInvitePolicy)
+  commentId: M:Dropbox.Api.TeamLog.MemberSendInvitePolicyChangedDetails.#ctor(Dropbox.Api.TeamLog.MemberSendInvitePolicy,Dropbox.Api.TeamLog.MemberSendInvitePolicy)
+  id: '#ctor(Dropbox.Api.TeamLog.MemberSendInvitePolicy,Dropbox.Api.TeamLog.MemberSendInvitePolicy)'
+  parent: Dropbox.Api.TeamLog.MemberSendInvitePolicyChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: MemberSendInvitePolicyChangedDetails(MemberSendInvitePolicy, MemberSendInvitePolicy)
+  nameWithType: MemberSendInvitePolicyChangedDetails.MemberSendInvitePolicyChangedDetails(MemberSendInvitePolicy, MemberSendInvitePolicy)
+  fullName: Dropbox.Api.TeamLog.MemberSendInvitePolicyChangedDetails.MemberSendInvitePolicyChangedDetails(Dropbox.Api.TeamLog.MemberSendInvitePolicy, Dropbox.Api.TeamLog.MemberSendInvitePolicy)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSendInvitePolicyChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSendInvitePolicyChangedDetails.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.MemberSendInvitePolicyChangedDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public MemberSendInvitePolicyChangedDetails(MemberSendInvitePolicy newValue, MemberSendInvitePolicy previousValue)
+    parameters:
+    - id: newValue
+      type: Dropbox.Api.TeamLog.MemberSendInvitePolicy
+      description: New team member send invite policy.
+    - id: previousValue
+      type: Dropbox.Api.TeamLog.MemberSendInvitePolicy
+      description: Previous team member send invite policy.
+    content.vb: Public Sub New(newValue As MemberSendInvitePolicy, previousValue As MemberSendInvitePolicy)
+  overload: Dropbox.Api.TeamLog.MemberSendInvitePolicyChangedDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.MemberSendInvitePolicyChangedDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.MemberSendInvitePolicyChangedDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.MemberSendInvitePolicyChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: MemberSendInvitePolicyChangedDetails()
+  nameWithType: MemberSendInvitePolicyChangedDetails.MemberSendInvitePolicyChangedDetails()
+  fullName: Dropbox.Api.TeamLog.MemberSendInvitePolicyChangedDetails.MemberSendInvitePolicyChangedDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSendInvitePolicyChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSendInvitePolicyChangedDetails.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.MemberSendInvitePolicyChangedDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public MemberSendInvitePolicyChangedDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.MemberSendInvitePolicyChangedDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.MemberSendInvitePolicyChangedDetails.NewValue
+  commentId: P:Dropbox.Api.TeamLog.MemberSendInvitePolicyChangedDetails.NewValue
+  id: NewValue
+  parent: Dropbox.Api.TeamLog.MemberSendInvitePolicyChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: NewValue
+  nameWithType: MemberSendInvitePolicyChangedDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.MemberSendInvitePolicyChangedDetails.NewValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSendInvitePolicyChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NewValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSendInvitePolicyChangedDetails.cs
+    startLine: 66
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>New team member send invite policy.</p>\n"
+  example: []
+  syntax:
+    content: public MemberSendInvitePolicy NewValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.MemberSendInvitePolicy
+    content.vb: Public Property NewValue As MemberSendInvitePolicy
+  overload: Dropbox.Api.TeamLog.MemberSendInvitePolicyChangedDetails.NewValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.MemberSendInvitePolicyChangedDetails.PreviousValue
+  commentId: P:Dropbox.Api.TeamLog.MemberSendInvitePolicyChangedDetails.PreviousValue
+  id: PreviousValue
+  parent: Dropbox.Api.TeamLog.MemberSendInvitePolicyChangedDetails
+  langs:
+  - csharp
+  - vb
+  name: PreviousValue
+  nameWithType: MemberSendInvitePolicyChangedDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.MemberSendInvitePolicyChangedDetails.PreviousValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSendInvitePolicyChangedDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PreviousValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/MemberSendInvitePolicyChangedDetails.cs
+    startLine: 71
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Previous team member send invite policy.</p>\n"
+  example: []
+  syntax:
+    content: public MemberSendInvitePolicy PreviousValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.MemberSendInvitePolicy
+    content.vb: Public Property PreviousValue As MemberSendInvitePolicy
+  overload: Dropbox.Api.TeamLog.MemberSendInvitePolicyChangedDetails.PreviousValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.MemberSendInvitePolicyChangedDetails
+  commentId: T:Dropbox.Api.TeamLog.MemberSendInvitePolicyChangedDetails
+  parent: Dropbox.Api.TeamLog
+  name: MemberSendInvitePolicyChangedDetails
+  nameWithType: MemberSendInvitePolicyChangedDetails
+  fullName: Dropbox.Api.TeamLog.MemberSendInvitePolicyChangedDetails
+- uid: Dropbox.Api.TeamLog.MemberSendInvitePolicyChangedDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberSendInvitePolicyChangedDetails.#ctor
+  name: MemberSendInvitePolicyChangedDetails
+  nameWithType: MemberSendInvitePolicyChangedDetails.MemberSendInvitePolicyChangedDetails
+  fullName: Dropbox.Api.TeamLog.MemberSendInvitePolicyChangedDetails.MemberSendInvitePolicyChangedDetails
+- uid: Dropbox.Api.TeamLog.MemberSendInvitePolicy
+  commentId: T:Dropbox.Api.TeamLog.MemberSendInvitePolicy
+  parent: Dropbox.Api.TeamLog
+  name: MemberSendInvitePolicy
+  nameWithType: MemberSendInvitePolicy
+  fullName: Dropbox.Api.TeamLog.MemberSendInvitePolicy
+- uid: Dropbox.Api.TeamLog.MemberSendInvitePolicyChangedDetails.NewValue*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberSendInvitePolicyChangedDetails.NewValue
+  name: NewValue
+  nameWithType: MemberSendInvitePolicyChangedDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.MemberSendInvitePolicyChangedDetails.NewValue
+- uid: Dropbox.Api.TeamLog.MemberSendInvitePolicyChangedDetails.PreviousValue*
+  commentId: Overload:Dropbox.Api.TeamLog.MemberSendInvitePolicyChangedDetails.PreviousValue
+  name: PreviousValue
+  nameWithType: MemberSendInvitePolicyChangedDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.MemberSendInvitePolicyChangedDetails.PreviousValue
+shouldSkipMarkup: true

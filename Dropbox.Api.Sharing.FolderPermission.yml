@@ -1,0 +1,300 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.FolderPermission
+  commentId: T:Dropbox.Api.Sharing.FolderPermission
+  id: FolderPermission
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.FolderPermission.#ctor
+  - Dropbox.Api.Sharing.FolderPermission.#ctor(Dropbox.Api.Sharing.FolderAction,System.Boolean,Dropbox.Api.Sharing.PermissionDeniedReason)
+  - Dropbox.Api.Sharing.FolderPermission.Action
+  - Dropbox.Api.Sharing.FolderPermission.Allow
+  - Dropbox.Api.Sharing.FolderPermission.Reason
+  langs:
+  - csharp
+  - vb
+  name: FolderPermission
+  nameWithType: FolderPermission
+  fullName: Dropbox.Api.Sharing.FolderPermission
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderPermission.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: FolderPermission
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderPermission.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Whether the user is allowed to take the action on the shared folder.</p>\n"
+  example: []
+  syntax:
+    content: 'public class FolderPermission : object'
+    content.vb: >-
+      Public Class FolderPermission
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Sharing.FolderPermission.#ctor(Dropbox.Api.Sharing.FolderAction,System.Boolean,Dropbox.Api.Sharing.PermissionDeniedReason)
+  commentId: M:Dropbox.Api.Sharing.FolderPermission.#ctor(Dropbox.Api.Sharing.FolderAction,System.Boolean,Dropbox.Api.Sharing.PermissionDeniedReason)
+  id: '#ctor(Dropbox.Api.Sharing.FolderAction,System.Boolean,Dropbox.Api.Sharing.PermissionDeniedReason)'
+  parent: Dropbox.Api.Sharing.FolderPermission
+  langs:
+  - csharp
+  - vb
+  name: FolderPermission(FolderAction, Boolean, PermissionDeniedReason)
+  nameWithType: FolderPermission.FolderPermission(FolderAction, Boolean, PermissionDeniedReason)
+  fullName: Dropbox.Api.Sharing.FolderPermission.FolderPermission(Dropbox.Api.Sharing.FolderAction, System.Boolean, Dropbox.Api.Sharing.PermissionDeniedReason)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderPermission.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderPermission.cs
+    startLine: 38
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.FolderPermission\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public FolderPermission(FolderAction action, bool allow, PermissionDeniedReason reason = null)
+    parameters:
+    - id: action
+      type: Dropbox.Api.Sharing.FolderAction
+      description: >-
+        The action that the user may wish to take on the
+
+        folder.
+    - id: allow
+      type: System.Boolean
+      description: True if the user is allowed to take the action.
+    - id: reason
+      type: Dropbox.Api.Sharing.PermissionDeniedReason
+      description: >-
+        The reason why the user is denied the permission. Not present
+
+        if the action is allowed, or if no reason is available.
+    content.vb: Public Sub New(action As FolderAction, allow As Boolean, reason As PermissionDeniedReason = Nothing)
+  overload: Dropbox.Api.Sharing.FolderPermission.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.FolderPermission.#ctor
+  commentId: M:Dropbox.Api.Sharing.FolderPermission.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Sharing.FolderPermission
+  langs:
+  - csharp
+  - vb
+  name: FolderPermission()
+  nameWithType: FolderPermission.FolderPermission()
+  fullName: Dropbox.Api.Sharing.FolderPermission.FolderPermission()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderPermission.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderPermission.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.FolderPermission\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public FolderPermission()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Sharing.FolderPermission.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.FolderPermission.Action
+  commentId: P:Dropbox.Api.Sharing.FolderPermission.Action
+  id: Action
+  parent: Dropbox.Api.Sharing.FolderPermission
+  langs:
+  - csharp
+  - vb
+  name: Action
+  nameWithType: FolderPermission.Action
+  fullName: Dropbox.Api.Sharing.FolderPermission.Action
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderPermission.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Action
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderPermission.cs
+    startLine: 66
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The action that the user may wish to take on the folder.</p>\n"
+  example: []
+  syntax:
+    content: public FolderAction Action { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.FolderAction
+    content.vb: Public Property Action As FolderAction
+  overload: Dropbox.Api.Sharing.FolderPermission.Action*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.FolderPermission.Allow
+  commentId: P:Dropbox.Api.Sharing.FolderPermission.Allow
+  id: Allow
+  parent: Dropbox.Api.Sharing.FolderPermission
+  langs:
+  - csharp
+  - vb
+  name: Allow
+  nameWithType: FolderPermission.Allow
+  fullName: Dropbox.Api.Sharing.FolderPermission.Allow
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderPermission.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Allow
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderPermission.cs
+    startLine: 71
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>True if the user is allowed to take the action.</p>\n"
+  example: []
+  syntax:
+    content: public bool Allow { get; protected set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property Allow As Boolean
+  overload: Dropbox.Api.Sharing.FolderPermission.Allow*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.FolderPermission.Reason
+  commentId: P:Dropbox.Api.Sharing.FolderPermission.Reason
+  id: Reason
+  parent: Dropbox.Api.Sharing.FolderPermission
+  langs:
+  - csharp
+  - vb
+  name: Reason
+  nameWithType: FolderPermission.Reason
+  fullName: Dropbox.Api.Sharing.FolderPermission.Reason
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderPermission.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Reason
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/FolderPermission.cs
+    startLine: 77
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The reason why the user is denied the permission. Not present if the action\nis allowed, or if no reason is available.</p>\n"
+  example: []
+  syntax:
+    content: public PermissionDeniedReason Reason { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.PermissionDeniedReason
+    content.vb: Public Property Reason As PermissionDeniedReason
+  overload: Dropbox.Api.Sharing.FolderPermission.Reason*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.FolderPermission
+  commentId: T:Dropbox.Api.Sharing.FolderPermission
+  name: FolderPermission
+  nameWithType: FolderPermission
+  fullName: Dropbox.Api.Sharing.FolderPermission
+- uid: Dropbox.Api.Sharing.FolderPermission.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.FolderPermission.#ctor
+  name: FolderPermission
+  nameWithType: FolderPermission.FolderPermission
+  fullName: Dropbox.Api.Sharing.FolderPermission.FolderPermission
+- uid: Dropbox.Api.Sharing.FolderAction
+  commentId: T:Dropbox.Api.Sharing.FolderAction
+  parent: Dropbox.Api.Sharing
+  name: FolderAction
+  nameWithType: FolderAction
+  fullName: Dropbox.Api.Sharing.FolderAction
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Sharing.PermissionDeniedReason
+  commentId: T:Dropbox.Api.Sharing.PermissionDeniedReason
+  parent: Dropbox.Api.Sharing
+  name: PermissionDeniedReason
+  nameWithType: PermissionDeniedReason
+  fullName: Dropbox.Api.Sharing.PermissionDeniedReason
+- uid: Dropbox.Api.Sharing.FolderPermission.Action*
+  commentId: Overload:Dropbox.Api.Sharing.FolderPermission.Action
+  name: Action
+  nameWithType: FolderPermission.Action
+  fullName: Dropbox.Api.Sharing.FolderPermission.Action
+- uid: Dropbox.Api.Sharing.FolderPermission.Allow*
+  commentId: Overload:Dropbox.Api.Sharing.FolderPermission.Allow
+  name: Allow
+  nameWithType: FolderPermission.Allow
+  fullName: Dropbox.Api.Sharing.FolderPermission.Allow
+- uid: Dropbox.Api.Sharing.FolderPermission.Reason*
+  commentId: Overload:Dropbox.Api.Sharing.FolderPermission.Reason
+  name: Reason
+  nameWithType: FolderPermission.Reason
+  fullName: Dropbox.Api.Sharing.FolderPermission.Reason
+shouldSkipMarkup: true

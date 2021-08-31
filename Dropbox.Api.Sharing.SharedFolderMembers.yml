@@ -1,0 +1,662 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Sharing.SharedFolderMembers
+  commentId: T:Dropbox.Api.Sharing.SharedFolderMembers
+  id: SharedFolderMembers
+  parent: Dropbox.Api.Sharing
+  children:
+  - Dropbox.Api.Sharing.SharedFolderMembers.#ctor
+  - Dropbox.Api.Sharing.SharedFolderMembers.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.UserMembershipInfo},System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.GroupMembershipInfo},System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.InviteeMembershipInfo},System.String)
+  - Dropbox.Api.Sharing.SharedFolderMembers.Cursor
+  - Dropbox.Api.Sharing.SharedFolderMembers.Groups
+  - Dropbox.Api.Sharing.SharedFolderMembers.Invitees
+  - Dropbox.Api.Sharing.SharedFolderMembers.Users
+  langs:
+  - csharp
+  - vb
+  name: SharedFolderMembers
+  nameWithType: SharedFolderMembers
+  fullName: Dropbox.Api.Sharing.SharedFolderMembers
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedFolderMembers.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SharedFolderMembers
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedFolderMembers.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Shared folder user and group membership.</p>\n"
+  example: []
+  syntax:
+    content: 'public class SharedFolderMembers : object'
+    content.vb: >-
+      Public Class SharedFolderMembers
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Sharing.SharedFolderMembers.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.UserMembershipInfo},System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.GroupMembershipInfo},System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.InviteeMembershipInfo},System.String)
+  commentId: M:Dropbox.Api.Sharing.SharedFolderMembers.#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.UserMembershipInfo},System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.GroupMembershipInfo},System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.InviteeMembershipInfo},System.String)
+  id: '#ctor(System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.UserMembershipInfo},System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.GroupMembershipInfo},System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.InviteeMembershipInfo},System.String)'
+  parent: Dropbox.Api.Sharing.SharedFolderMembers
+  langs:
+  - csharp
+  - vb
+  name: SharedFolderMembers(System.Collections.Generic.IEnumerable<UserMembershipInfo>, System.Collections.Generic.IEnumerable<GroupMembershipInfo>, System.Collections.Generic.IEnumerable<InviteeMembershipInfo>, String)
+  nameWithType: SharedFolderMembers.SharedFolderMembers(System.Collections.Generic.IEnumerable<UserMembershipInfo>, System.Collections.Generic.IEnumerable<GroupMembershipInfo>, System.Collections.Generic.IEnumerable<InviteeMembershipInfo>, String)
+  fullName: Dropbox.Api.Sharing.SharedFolderMembers.SharedFolderMembers(System.Collections.Generic.IEnumerable<Dropbox.Api.Sharing.UserMembershipInfo>, System.Collections.Generic.IEnumerable<Dropbox.Api.Sharing.GroupMembershipInfo>, System.Collections.Generic.IEnumerable<Dropbox.Api.Sharing.InviteeMembershipInfo>, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedFolderMembers.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedFolderMembers.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.SharedFolderMembers\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public SharedFolderMembers(System.Collections.Generic.IEnumerable<UserMembershipInfo> users, System.Collections.Generic.IEnumerable<GroupMembershipInfo> groups, System.Collections.Generic.IEnumerable<InviteeMembershipInfo> invitees, string cursor = null)
+    parameters:
+    - id: users
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.UserMembershipInfo}
+      description: The list of user members of the shared folder.
+    - id: groups
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.GroupMembershipInfo}
+      description: The list of group members of the shared folder.
+    - id: invitees
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.InviteeMembershipInfo}
+      description: The list of invitees to the shared folder.
+    - id: cursor
+      type: System.String
+      description: >-
+        Present if there are additional shared folder members that
+
+        have not been returned yet. Pass the cursor into <xref href="Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListFolderMembersContinueAsync(Dropbox.Api.Sharing.ListFolderMembersContinueArg)" data-throw-if-not-resolved="false"></xref> to list additional members.
+    content.vb: Public Sub New(users As System.Collections.Generic.IEnumerable(Of UserMembershipInfo), groups As System.Collections.Generic.IEnumerable(Of GroupMembershipInfo), invitees As System.Collections.Generic.IEnumerable(Of InviteeMembershipInfo), cursor As String = Nothing)
+  overload: Dropbox.Api.Sharing.SharedFolderMembers.#ctor*
+  nameWithType.vb: SharedFolderMembers.SharedFolderMembers(System.Collections.Generic.IEnumerable(Of UserMembershipInfo), System.Collections.Generic.IEnumerable(Of GroupMembershipInfo), System.Collections.Generic.IEnumerable(Of InviteeMembershipInfo), String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.Sharing.SharedFolderMembers.SharedFolderMembers(System.Collections.Generic.IEnumerable(Of Dropbox.Api.Sharing.UserMembershipInfo), System.Collections.Generic.IEnumerable(Of Dropbox.Api.Sharing.GroupMembershipInfo), System.Collections.Generic.IEnumerable(Of Dropbox.Api.Sharing.InviteeMembershipInfo), System.String)
+  name.vb: SharedFolderMembers(System.Collections.Generic.IEnumerable(Of UserMembershipInfo), System.Collections.Generic.IEnumerable(Of GroupMembershipInfo), System.Collections.Generic.IEnumerable(Of InviteeMembershipInfo), String)
+- uid: Dropbox.Api.Sharing.SharedFolderMembers.#ctor
+  commentId: M:Dropbox.Api.Sharing.SharedFolderMembers.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Sharing.SharedFolderMembers
+  langs:
+  - csharp
+  - vb
+  name: SharedFolderMembers()
+  nameWithType: SharedFolderMembers.SharedFolderMembers()
+  fullName: Dropbox.Api.Sharing.SharedFolderMembers.SharedFolderMembers()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedFolderMembers.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedFolderMembers.cs
+    startLine: 78
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Sharing.SharedFolderMembers\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public SharedFolderMembers()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Sharing.SharedFolderMembers.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Sharing.SharedFolderMembers.Users
+  commentId: P:Dropbox.Api.Sharing.SharedFolderMembers.Users
+  id: Users
+  parent: Dropbox.Api.Sharing.SharedFolderMembers
+  langs:
+  - csharp
+  - vb
+  name: Users
+  nameWithType: SharedFolderMembers.Users
+  fullName: Dropbox.Api.Sharing.SharedFolderMembers.Users
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedFolderMembers.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Users
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedFolderMembers.cs
+    startLine: 86
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The list of user members of the shared folder.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<UserMembershipInfo> Users { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{Dropbox.Api.Sharing.UserMembershipInfo}
+    content.vb: Public Property Users As System.Collections.Generic.IList(Of UserMembershipInfo)
+  overload: Dropbox.Api.Sharing.SharedFolderMembers.Users*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.SharedFolderMembers.Groups
+  commentId: P:Dropbox.Api.Sharing.SharedFolderMembers.Groups
+  id: Groups
+  parent: Dropbox.Api.Sharing.SharedFolderMembers
+  langs:
+  - csharp
+  - vb
+  name: Groups
+  nameWithType: SharedFolderMembers.Groups
+  fullName: Dropbox.Api.Sharing.SharedFolderMembers.Groups
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedFolderMembers.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Groups
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedFolderMembers.cs
+    startLine: 91
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The list of group members of the shared folder.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<GroupMembershipInfo> Groups { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{Dropbox.Api.Sharing.GroupMembershipInfo}
+    content.vb: Public Property Groups As System.Collections.Generic.IList(Of GroupMembershipInfo)
+  overload: Dropbox.Api.Sharing.SharedFolderMembers.Groups*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.SharedFolderMembers.Invitees
+  commentId: P:Dropbox.Api.Sharing.SharedFolderMembers.Invitees
+  id: Invitees
+  parent: Dropbox.Api.Sharing.SharedFolderMembers
+  langs:
+  - csharp
+  - vb
+  name: Invitees
+  nameWithType: SharedFolderMembers.Invitees
+  fullName: Dropbox.Api.Sharing.SharedFolderMembers.Invitees
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedFolderMembers.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Invitees
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedFolderMembers.cs
+    startLine: 96
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>The list of invitees to the shared folder.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<InviteeMembershipInfo> Invitees { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{Dropbox.Api.Sharing.InviteeMembershipInfo}
+    content.vb: Public Property Invitees As System.Collections.Generic.IList(Of InviteeMembershipInfo)
+  overload: Dropbox.Api.Sharing.SharedFolderMembers.Invitees*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Sharing.SharedFolderMembers.Cursor
+  commentId: P:Dropbox.Api.Sharing.SharedFolderMembers.Cursor
+  id: Cursor
+  parent: Dropbox.Api.Sharing.SharedFolderMembers
+  langs:
+  - csharp
+  - vb
+  name: Cursor
+  nameWithType: SharedFolderMembers.Cursor
+  fullName: Dropbox.Api.Sharing.SharedFolderMembers.Cursor
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedFolderMembers.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Cursor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Sharing/SharedFolderMembers.cs
+    startLine: 104
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Sharing
+  summary: "\n<p>Present if there are additional shared folder members that have not been\nreturned yet. Pass the cursor into <xref href=\"Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListFolderMembersContinueAsync(Dropbox.Api.Sharing.ListFolderMembersContinueArg)\" data-throw-if-not-resolved=\"false\"></xref> to list additional members.</p>\n"
+  example: []
+  syntax:
+    content: public string Cursor { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Cursor As String
+  overload: Dropbox.Api.Sharing.SharedFolderMembers.Cursor*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Sharing.SharedFolderMembers
+  commentId: T:Dropbox.Api.Sharing.SharedFolderMembers
+  parent: Dropbox.Api.Sharing
+  name: SharedFolderMembers
+  nameWithType: SharedFolderMembers
+  fullName: Dropbox.Api.Sharing.SharedFolderMembers
+- uid: Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListFolderMembersContinueAsync(Dropbox.Api.Sharing.ListFolderMembersContinueArg)
+  commentId: M:Dropbox.Api.Sharing.Routes.SharingUserRoutes.ListFolderMembersContinueAsync(Dropbox.Api.Sharing.ListFolderMembersContinueArg)
+  isExternal: true
+- uid: Dropbox.Api.Sharing.SharedFolderMembers.#ctor*
+  commentId: Overload:Dropbox.Api.Sharing.SharedFolderMembers.#ctor
+  name: SharedFolderMembers
+  nameWithType: SharedFolderMembers.SharedFolderMembers
+  fullName: Dropbox.Api.Sharing.SharedFolderMembers.SharedFolderMembers
+- uid: System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.UserMembershipInfo}
+  commentId: '!:System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.UserMembershipInfo}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<UserMembershipInfo>
+  nameWithType: System.Collections.Generic.IEnumerable<UserMembershipInfo>
+  fullName: System.Collections.Generic.IEnumerable<Dropbox.Api.Sharing.UserMembershipInfo>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of UserMembershipInfo)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Dropbox.Api.Sharing.UserMembershipInfo)
+  name.vb: System.Collections.Generic.IEnumerable(Of UserMembershipInfo)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Sharing.UserMembershipInfo
+    name: UserMembershipInfo
+    nameWithType: UserMembershipInfo
+    fullName: Dropbox.Api.Sharing.UserMembershipInfo
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Sharing.UserMembershipInfo
+    name: UserMembershipInfo
+    nameWithType: UserMembershipInfo
+    fullName: Dropbox.Api.Sharing.UserMembershipInfo
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.GroupMembershipInfo}
+  commentId: '!:System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.GroupMembershipInfo}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<GroupMembershipInfo>
+  nameWithType: System.Collections.Generic.IEnumerable<GroupMembershipInfo>
+  fullName: System.Collections.Generic.IEnumerable<Dropbox.Api.Sharing.GroupMembershipInfo>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of GroupMembershipInfo)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Dropbox.Api.Sharing.GroupMembershipInfo)
+  name.vb: System.Collections.Generic.IEnumerable(Of GroupMembershipInfo)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Sharing.GroupMembershipInfo
+    name: GroupMembershipInfo
+    nameWithType: GroupMembershipInfo
+    fullName: Dropbox.Api.Sharing.GroupMembershipInfo
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Sharing.GroupMembershipInfo
+    name: GroupMembershipInfo
+    nameWithType: GroupMembershipInfo
+    fullName: Dropbox.Api.Sharing.GroupMembershipInfo
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.InviteeMembershipInfo}
+  commentId: '!:System.Collections.Generic.IEnumerable{Dropbox.Api.Sharing.InviteeMembershipInfo}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<InviteeMembershipInfo>
+  nameWithType: System.Collections.Generic.IEnumerable<InviteeMembershipInfo>
+  fullName: System.Collections.Generic.IEnumerable<Dropbox.Api.Sharing.InviteeMembershipInfo>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of InviteeMembershipInfo)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Dropbox.Api.Sharing.InviteeMembershipInfo)
+  name.vb: System.Collections.Generic.IEnumerable(Of InviteeMembershipInfo)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Sharing.InviteeMembershipInfo
+    name: InviteeMembershipInfo
+    nameWithType: InviteeMembershipInfo
+    fullName: Dropbox.Api.Sharing.InviteeMembershipInfo
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Sharing.InviteeMembershipInfo
+    name: InviteeMembershipInfo
+    nameWithType: InviteeMembershipInfo
+    fullName: Dropbox.Api.Sharing.InviteeMembershipInfo
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: System.Collections.Generic.IEnumerable<>
+  nameWithType: System.Collections.Generic.IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: System.Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Sharing.SharedFolderMembers.Users*
+  commentId: Overload:Dropbox.Api.Sharing.SharedFolderMembers.Users
+  name: Users
+  nameWithType: SharedFolderMembers.Users
+  fullName: Dropbox.Api.Sharing.SharedFolderMembers.Users
+- uid: System.Collections.Generic.IList{Dropbox.Api.Sharing.UserMembershipInfo}
+  commentId: '!:System.Collections.Generic.IList{Dropbox.Api.Sharing.UserMembershipInfo}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<UserMembershipInfo>
+  nameWithType: System.Collections.Generic.IList<UserMembershipInfo>
+  fullName: System.Collections.Generic.IList<Dropbox.Api.Sharing.UserMembershipInfo>
+  nameWithType.vb: System.Collections.Generic.IList(Of UserMembershipInfo)
+  fullName.vb: System.Collections.Generic.IList(Of Dropbox.Api.Sharing.UserMembershipInfo)
+  name.vb: System.Collections.Generic.IList(Of UserMembershipInfo)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Sharing.UserMembershipInfo
+    name: UserMembershipInfo
+    nameWithType: UserMembershipInfo
+    fullName: Dropbox.Api.Sharing.UserMembershipInfo
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Sharing.UserMembershipInfo
+    name: UserMembershipInfo
+    nameWithType: UserMembershipInfo
+    fullName: Dropbox.Api.Sharing.UserMembershipInfo
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  isExternal: true
+  name: System.Collections.Generic.IList<>
+  nameWithType: System.Collections.Generic.IList<>
+  fullName: System.Collections.Generic.IList<>
+  nameWithType.vb: System.Collections.Generic.IList(Of )
+  fullName.vb: System.Collections.Generic.IList(Of )
+  name.vb: System.Collections.Generic.IList(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Sharing.SharedFolderMembers.Groups*
+  commentId: Overload:Dropbox.Api.Sharing.SharedFolderMembers.Groups
+  name: Groups
+  nameWithType: SharedFolderMembers.Groups
+  fullName: Dropbox.Api.Sharing.SharedFolderMembers.Groups
+- uid: System.Collections.Generic.IList{Dropbox.Api.Sharing.GroupMembershipInfo}
+  commentId: '!:System.Collections.Generic.IList{Dropbox.Api.Sharing.GroupMembershipInfo}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<GroupMembershipInfo>
+  nameWithType: System.Collections.Generic.IList<GroupMembershipInfo>
+  fullName: System.Collections.Generic.IList<Dropbox.Api.Sharing.GroupMembershipInfo>
+  nameWithType.vb: System.Collections.Generic.IList(Of GroupMembershipInfo)
+  fullName.vb: System.Collections.Generic.IList(Of Dropbox.Api.Sharing.GroupMembershipInfo)
+  name.vb: System.Collections.Generic.IList(Of GroupMembershipInfo)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Sharing.GroupMembershipInfo
+    name: GroupMembershipInfo
+    nameWithType: GroupMembershipInfo
+    fullName: Dropbox.Api.Sharing.GroupMembershipInfo
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Sharing.GroupMembershipInfo
+    name: GroupMembershipInfo
+    nameWithType: GroupMembershipInfo
+    fullName: Dropbox.Api.Sharing.GroupMembershipInfo
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Sharing.SharedFolderMembers.Invitees*
+  commentId: Overload:Dropbox.Api.Sharing.SharedFolderMembers.Invitees
+  name: Invitees
+  nameWithType: SharedFolderMembers.Invitees
+  fullName: Dropbox.Api.Sharing.SharedFolderMembers.Invitees
+- uid: System.Collections.Generic.IList{Dropbox.Api.Sharing.InviteeMembershipInfo}
+  commentId: '!:System.Collections.Generic.IList{Dropbox.Api.Sharing.InviteeMembershipInfo}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<InviteeMembershipInfo>
+  nameWithType: System.Collections.Generic.IList<InviteeMembershipInfo>
+  fullName: System.Collections.Generic.IList<Dropbox.Api.Sharing.InviteeMembershipInfo>
+  nameWithType.vb: System.Collections.Generic.IList(Of InviteeMembershipInfo)
+  fullName.vb: System.Collections.Generic.IList(Of Dropbox.Api.Sharing.InviteeMembershipInfo)
+  name.vb: System.Collections.Generic.IList(Of InviteeMembershipInfo)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.Sharing.InviteeMembershipInfo
+    name: InviteeMembershipInfo
+    nameWithType: InviteeMembershipInfo
+    fullName: Dropbox.Api.Sharing.InviteeMembershipInfo
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.Sharing.InviteeMembershipInfo
+    name: InviteeMembershipInfo
+    nameWithType: InviteeMembershipInfo
+    fullName: Dropbox.Api.Sharing.InviteeMembershipInfo
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.Sharing.SharedFolderMembers.Cursor*
+  commentId: Overload:Dropbox.Api.Sharing.SharedFolderMembers.Cursor
+  name: Cursor
+  nameWithType: SharedFolderMembers.Cursor
+  fullName: Dropbox.Api.Sharing.SharedFolderMembers.Cursor
+shouldSkipMarkup: true

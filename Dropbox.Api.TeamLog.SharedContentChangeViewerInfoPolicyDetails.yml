@@ -1,0 +1,241 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.SharedContentChangeViewerInfoPolicyDetails
+  commentId: T:Dropbox.Api.TeamLog.SharedContentChangeViewerInfoPolicyDetails
+  id: SharedContentChangeViewerInfoPolicyDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.SharedContentChangeViewerInfoPolicyDetails.#ctor
+  - Dropbox.Api.TeamLog.SharedContentChangeViewerInfoPolicyDetails.#ctor(Dropbox.Api.Sharing.ViewerInfoPolicy,Dropbox.Api.Sharing.ViewerInfoPolicy)
+  - Dropbox.Api.TeamLog.SharedContentChangeViewerInfoPolicyDetails.NewValue
+  - Dropbox.Api.TeamLog.SharedContentChangeViewerInfoPolicyDetails.PreviousValue
+  langs:
+  - csharp
+  - vb
+  name: SharedContentChangeViewerInfoPolicyDetails
+  nameWithType: SharedContentChangeViewerInfoPolicyDetails
+  fullName: Dropbox.Api.TeamLog.SharedContentChangeViewerInfoPolicyDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentChangeViewerInfoPolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SharedContentChangeViewerInfoPolicyDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentChangeViewerInfoPolicyDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Changed whether members can see who viewed shared file/folder.</p>\n"
+  example: []
+  syntax:
+    content: 'public class SharedContentChangeViewerInfoPolicyDetails : object'
+    content.vb: >-
+      Public Class SharedContentChangeViewerInfoPolicyDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.SharedContentChangeViewerInfoPolicyDetails.#ctor(Dropbox.Api.Sharing.ViewerInfoPolicy,Dropbox.Api.Sharing.ViewerInfoPolicy)
+  commentId: M:Dropbox.Api.TeamLog.SharedContentChangeViewerInfoPolicyDetails.#ctor(Dropbox.Api.Sharing.ViewerInfoPolicy,Dropbox.Api.Sharing.ViewerInfoPolicy)
+  id: '#ctor(Dropbox.Api.Sharing.ViewerInfoPolicy,Dropbox.Api.Sharing.ViewerInfoPolicy)'
+  parent: Dropbox.Api.TeamLog.SharedContentChangeViewerInfoPolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: SharedContentChangeViewerInfoPolicyDetails(ViewerInfoPolicy, ViewerInfoPolicy)
+  nameWithType: SharedContentChangeViewerInfoPolicyDetails.SharedContentChangeViewerInfoPolicyDetails(ViewerInfoPolicy, ViewerInfoPolicy)
+  fullName: Dropbox.Api.TeamLog.SharedContentChangeViewerInfoPolicyDetails.SharedContentChangeViewerInfoPolicyDetails(Dropbox.Api.Sharing.ViewerInfoPolicy, Dropbox.Api.Sharing.ViewerInfoPolicy)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentChangeViewerInfoPolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentChangeViewerInfoPolicyDetails.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SharedContentChangeViewerInfoPolicyDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public SharedContentChangeViewerInfoPolicyDetails(ViewerInfoPolicy newValue, ViewerInfoPolicy previousValue = null)
+    parameters:
+    - id: newValue
+      type: Dropbox.Api.Sharing.ViewerInfoPolicy
+      description: New viewer info policy.
+    - id: previousValue
+      type: Dropbox.Api.Sharing.ViewerInfoPolicy
+      description: Previous view info policy.
+    content.vb: Public Sub New(newValue As ViewerInfoPolicy, previousValue As ViewerInfoPolicy = Nothing)
+  overload: Dropbox.Api.TeamLog.SharedContentChangeViewerInfoPolicyDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SharedContentChangeViewerInfoPolicyDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.SharedContentChangeViewerInfoPolicyDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.SharedContentChangeViewerInfoPolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: SharedContentChangeViewerInfoPolicyDetails()
+  nameWithType: SharedContentChangeViewerInfoPolicyDetails.SharedContentChangeViewerInfoPolicyDetails()
+  fullName: Dropbox.Api.TeamLog.SharedContentChangeViewerInfoPolicyDetails.SharedContentChangeViewerInfoPolicyDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentChangeViewerInfoPolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentChangeViewerInfoPolicyDetails.cs
+    startLine: 53
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SharedContentChangeViewerInfoPolicyDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public SharedContentChangeViewerInfoPolicyDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.SharedContentChangeViewerInfoPolicyDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SharedContentChangeViewerInfoPolicyDetails.NewValue
+  commentId: P:Dropbox.Api.TeamLog.SharedContentChangeViewerInfoPolicyDetails.NewValue
+  id: NewValue
+  parent: Dropbox.Api.TeamLog.SharedContentChangeViewerInfoPolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: NewValue
+  nameWithType: SharedContentChangeViewerInfoPolicyDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.SharedContentChangeViewerInfoPolicyDetails.NewValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentChangeViewerInfoPolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NewValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentChangeViewerInfoPolicyDetails.cs
+    startLine: 61
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>New viewer info policy.</p>\n"
+  example: []
+  syntax:
+    content: public ViewerInfoPolicy NewValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.ViewerInfoPolicy
+    content.vb: Public Property NewValue As ViewerInfoPolicy
+  overload: Dropbox.Api.TeamLog.SharedContentChangeViewerInfoPolicyDetails.NewValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.SharedContentChangeViewerInfoPolicyDetails.PreviousValue
+  commentId: P:Dropbox.Api.TeamLog.SharedContentChangeViewerInfoPolicyDetails.PreviousValue
+  id: PreviousValue
+  parent: Dropbox.Api.TeamLog.SharedContentChangeViewerInfoPolicyDetails
+  langs:
+  - csharp
+  - vb
+  name: PreviousValue
+  nameWithType: SharedContentChangeViewerInfoPolicyDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.SharedContentChangeViewerInfoPolicyDetails.PreviousValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentChangeViewerInfoPolicyDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PreviousValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedContentChangeViewerInfoPolicyDetails.cs
+    startLine: 66
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Previous view info policy.</p>\n"
+  example: []
+  syntax:
+    content: public ViewerInfoPolicy PreviousValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Sharing.ViewerInfoPolicy
+    content.vb: Public Property PreviousValue As ViewerInfoPolicy
+  overload: Dropbox.Api.TeamLog.SharedContentChangeViewerInfoPolicyDetails.PreviousValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.SharedContentChangeViewerInfoPolicyDetails
+  commentId: T:Dropbox.Api.TeamLog.SharedContentChangeViewerInfoPolicyDetails
+  parent: Dropbox.Api.TeamLog
+  name: SharedContentChangeViewerInfoPolicyDetails
+  nameWithType: SharedContentChangeViewerInfoPolicyDetails
+  fullName: Dropbox.Api.TeamLog.SharedContentChangeViewerInfoPolicyDetails
+- uid: Dropbox.Api.TeamLog.SharedContentChangeViewerInfoPolicyDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedContentChangeViewerInfoPolicyDetails.#ctor
+  name: SharedContentChangeViewerInfoPolicyDetails
+  nameWithType: SharedContentChangeViewerInfoPolicyDetails.SharedContentChangeViewerInfoPolicyDetails
+  fullName: Dropbox.Api.TeamLog.SharedContentChangeViewerInfoPolicyDetails.SharedContentChangeViewerInfoPolicyDetails
+- uid: Dropbox.Api.Sharing.ViewerInfoPolicy
+  commentId: T:Dropbox.Api.Sharing.ViewerInfoPolicy
+  parent: Dropbox.Api.Sharing
+  name: ViewerInfoPolicy
+  nameWithType: ViewerInfoPolicy
+  fullName: Dropbox.Api.Sharing.ViewerInfoPolicy
+- uid: Dropbox.Api.Sharing
+  commentId: N:Dropbox.Api.Sharing
+  name: Dropbox.Api.Sharing
+  nameWithType: Dropbox.Api.Sharing
+  fullName: Dropbox.Api.Sharing
+- uid: Dropbox.Api.TeamLog.SharedContentChangeViewerInfoPolicyDetails.NewValue*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedContentChangeViewerInfoPolicyDetails.NewValue
+  name: NewValue
+  nameWithType: SharedContentChangeViewerInfoPolicyDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.SharedContentChangeViewerInfoPolicyDetails.NewValue
+- uid: Dropbox.Api.TeamLog.SharedContentChangeViewerInfoPolicyDetails.PreviousValue*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedContentChangeViewerInfoPolicyDetails.PreviousValue
+  name: PreviousValue
+  nameWithType: SharedContentChangeViewerInfoPolicyDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.SharedContentChangeViewerInfoPolicyDetails.PreviousValue
+shouldSkipMarkup: true

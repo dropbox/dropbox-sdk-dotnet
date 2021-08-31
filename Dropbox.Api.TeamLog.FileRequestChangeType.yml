@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.FileRequestChangeType
+  commentId: T:Dropbox.Api.TeamLog.FileRequestChangeType
+  id: FileRequestChangeType
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.FileRequestChangeType.#ctor
+  - Dropbox.Api.TeamLog.FileRequestChangeType.#ctor(System.String)
+  - Dropbox.Api.TeamLog.FileRequestChangeType.Description
+  langs:
+  - csharp
+  - vb
+  name: FileRequestChangeType
+  nameWithType: FileRequestChangeType
+  fullName: Dropbox.Api.TeamLog.FileRequestChangeType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestChangeType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: FileRequestChangeType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestChangeType.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The file request change type object</p>\n"
+  example: []
+  syntax:
+    content: 'public class FileRequestChangeType : object'
+    content.vb: >-
+      Public Class FileRequestChangeType
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.FileRequestChangeType.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.FileRequestChangeType.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.FileRequestChangeType
+  langs:
+  - csharp
+  - vb
+  name: FileRequestChangeType(String)
+  nameWithType: FileRequestChangeType.FileRequestChangeType(String)
+  fullName: Dropbox.Api.TeamLog.FileRequestChangeType.FileRequestChangeType(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestChangeType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestChangeType.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.FileRequestChangeType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public FileRequestChangeType(string description)
+    parameters:
+    - id: description
+      type: System.String
+      description: The description
+    content.vb: Public Sub New(description As String)
+  overload: Dropbox.Api.TeamLog.FileRequestChangeType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.FileRequestChangeType.#ctor
+  commentId: M:Dropbox.Api.TeamLog.FileRequestChangeType.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.FileRequestChangeType
+  langs:
+  - csharp
+  - vb
+  name: FileRequestChangeType()
+  nameWithType: FileRequestChangeType.FileRequestChangeType()
+  fullName: Dropbox.Api.TeamLog.FileRequestChangeType.FileRequestChangeType()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestChangeType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestChangeType.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.FileRequestChangeType\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public FileRequestChangeType()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.FileRequestChangeType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.FileRequestChangeType.Description
+  commentId: P:Dropbox.Api.TeamLog.FileRequestChangeType.Description
+  id: Description
+  parent: Dropbox.Api.TeamLog.FileRequestChangeType
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: FileRequestChangeType.Description
+  fullName: Dropbox.Api.TeamLog.FileRequestChangeType.Description
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestChangeType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Description
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/FileRequestChangeType.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets the description of the file request change type</p>\n"
+  example: []
+  syntax:
+    content: public string Description { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Dropbox.Api.TeamLog.FileRequestChangeType.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.FileRequestChangeType
+  commentId: T:Dropbox.Api.TeamLog.FileRequestChangeType
+  parent: Dropbox.Api.TeamLog
+  name: FileRequestChangeType
+  nameWithType: FileRequestChangeType
+  fullName: Dropbox.Api.TeamLog.FileRequestChangeType
+- uid: Dropbox.Api.TeamLog.FileRequestChangeType.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.FileRequestChangeType.#ctor
+  name: FileRequestChangeType
+  nameWithType: FileRequestChangeType.FileRequestChangeType
+  fullName: Dropbox.Api.TeamLog.FileRequestChangeType.FileRequestChangeType
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.FileRequestChangeType.Description*
+  commentId: Overload:Dropbox.Api.TeamLog.FileRequestChangeType.Description
+  name: Description
+  nameWithType: FileRequestChangeType.Description
+  fullName: Dropbox.Api.TeamLog.FileRequestChangeType.Description
+shouldSkipMarkup: true

@@ -1,0 +1,246 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Paper.PaperDocCreateArgs
+  commentId: T:Dropbox.Api.Paper.PaperDocCreateArgs
+  id: PaperDocCreateArgs
+  parent: Dropbox.Api.Paper
+  children:
+  - Dropbox.Api.Paper.PaperDocCreateArgs.#ctor
+  - Dropbox.Api.Paper.PaperDocCreateArgs.#ctor(Dropbox.Api.Paper.ImportFormat,System.String)
+  - Dropbox.Api.Paper.PaperDocCreateArgs.ImportFormat
+  - Dropbox.Api.Paper.PaperDocCreateArgs.ParentFolderId
+  langs:
+  - csharp
+  - vb
+  name: PaperDocCreateArgs
+  nameWithType: PaperDocCreateArgs
+  fullName: Dropbox.Api.Paper.PaperDocCreateArgs
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperDocCreateArgs.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PaperDocCreateArgs
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperDocCreateArgs.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>The paper doc create args object</p>\n"
+  example: []
+  syntax:
+    content: 'public class PaperDocCreateArgs : object'
+    content.vb: >-
+      Public Class PaperDocCreateArgs
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Paper.PaperDocCreateArgs.#ctor(Dropbox.Api.Paper.ImportFormat,System.String)
+  commentId: M:Dropbox.Api.Paper.PaperDocCreateArgs.#ctor(Dropbox.Api.Paper.ImportFormat,System.String)
+  id: '#ctor(Dropbox.Api.Paper.ImportFormat,System.String)'
+  parent: Dropbox.Api.Paper.PaperDocCreateArgs
+  langs:
+  - csharp
+  - vb
+  name: PaperDocCreateArgs(ImportFormat, String)
+  nameWithType: PaperDocCreateArgs.PaperDocCreateArgs(ImportFormat, String)
+  fullName: Dropbox.Api.Paper.PaperDocCreateArgs.PaperDocCreateArgs(Dropbox.Api.Paper.ImportFormat, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperDocCreateArgs.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperDocCreateArgs.cs
+    startLine: 37
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Paper.PaperDocCreateArgs\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public PaperDocCreateArgs(ImportFormat importFormat, string parentFolderId = null)
+    parameters:
+    - id: importFormat
+      type: Dropbox.Api.Paper.ImportFormat
+      description: The format of provided data.
+    - id: parentFolderId
+      type: System.String
+      description: >-
+        The Paper folder ID where the Paper document should be
+
+        created. The API user has to have write access to this folder or error is
+
+        thrown.
+    content.vb: Public Sub New(importFormat As ImportFormat, parentFolderId As String = Nothing)
+  overload: Dropbox.Api.Paper.PaperDocCreateArgs.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Paper.PaperDocCreateArgs.#ctor
+  commentId: M:Dropbox.Api.Paper.PaperDocCreateArgs.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Paper.PaperDocCreateArgs
+  langs:
+  - csharp
+  - vb
+  name: PaperDocCreateArgs()
+  nameWithType: PaperDocCreateArgs.PaperDocCreateArgs()
+  fullName: Dropbox.Api.Paper.PaperDocCreateArgs.PaperDocCreateArgs()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperDocCreateArgs.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperDocCreateArgs.cs
+    startLine: 55
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Paper.PaperDocCreateArgs\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public PaperDocCreateArgs()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Paper.PaperDocCreateArgs.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Paper.PaperDocCreateArgs.ImportFormat
+  commentId: P:Dropbox.Api.Paper.PaperDocCreateArgs.ImportFormat
+  id: ImportFormat
+  parent: Dropbox.Api.Paper.PaperDocCreateArgs
+  langs:
+  - csharp
+  - vb
+  name: ImportFormat
+  nameWithType: PaperDocCreateArgs.ImportFormat
+  fullName: Dropbox.Api.Paper.PaperDocCreateArgs.ImportFormat
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperDocCreateArgs.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ImportFormat
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperDocCreateArgs.cs
+    startLine: 63
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>The format of provided data.</p>\n"
+  example: []
+  syntax:
+    content: public ImportFormat ImportFormat { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Paper.ImportFormat
+    content.vb: Public Property ImportFormat As ImportFormat
+  overload: Dropbox.Api.Paper.PaperDocCreateArgs.ImportFormat*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.Paper.PaperDocCreateArgs.ParentFolderId
+  commentId: P:Dropbox.Api.Paper.PaperDocCreateArgs.ParentFolderId
+  id: ParentFolderId
+  parent: Dropbox.Api.Paper.PaperDocCreateArgs
+  langs:
+  - csharp
+  - vb
+  name: ParentFolderId
+  nameWithType: PaperDocCreateArgs.ParentFolderId
+  fullName: Dropbox.Api.Paper.PaperDocCreateArgs.ParentFolderId
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperDocCreateArgs.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ParentFolderId
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Paper/PaperDocCreateArgs.cs
+    startLine: 69
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Paper
+  summary: "\n<p>The Paper folder ID where the Paper document should be created. The API user\nhas to have write access to this folder or error is thrown.</p>\n"
+  example: []
+  syntax:
+    content: public string ParentFolderId { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ParentFolderId As String
+  overload: Dropbox.Api.Paper.PaperDocCreateArgs.ParentFolderId*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.Paper
+  commentId: N:Dropbox.Api.Paper
+  name: Dropbox.Api.Paper
+  nameWithType: Dropbox.Api.Paper
+  fullName: Dropbox.Api.Paper
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Paper.PaperDocCreateArgs
+  commentId: T:Dropbox.Api.Paper.PaperDocCreateArgs
+  parent: Dropbox.Api.Paper
+  name: PaperDocCreateArgs
+  nameWithType: PaperDocCreateArgs
+  fullName: Dropbox.Api.Paper.PaperDocCreateArgs
+- uid: Dropbox.Api.Paper.PaperDocCreateArgs.#ctor*
+  commentId: Overload:Dropbox.Api.Paper.PaperDocCreateArgs.#ctor
+  name: PaperDocCreateArgs
+  nameWithType: PaperDocCreateArgs.PaperDocCreateArgs
+  fullName: Dropbox.Api.Paper.PaperDocCreateArgs.PaperDocCreateArgs
+- uid: Dropbox.Api.Paper.ImportFormat
+  commentId: T:Dropbox.Api.Paper.ImportFormat
+  parent: Dropbox.Api.Paper
+  name: ImportFormat
+  nameWithType: ImportFormat
+  fullName: Dropbox.Api.Paper.ImportFormat
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.Paper.PaperDocCreateArgs.ImportFormat*
+  commentId: Overload:Dropbox.Api.Paper.PaperDocCreateArgs.ImportFormat
+  name: ImportFormat
+  nameWithType: PaperDocCreateArgs.ImportFormat
+  fullName: Dropbox.Api.Paper.PaperDocCreateArgs.ImportFormat
+- uid: Dropbox.Api.Paper.PaperDocCreateArgs.ParentFolderId*
+  commentId: Overload:Dropbox.Api.Paper.PaperDocCreateArgs.ParentFolderId
+  name: ParentFolderId
+  nameWithType: PaperDocCreateArgs.ParentFolderId
+  fullName: Dropbox.Api.Paper.PaperDocCreateArgs.ParentFolderId
+shouldSkipMarkup: true

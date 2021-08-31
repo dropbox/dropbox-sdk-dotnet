@@ -1,0 +1,753 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.Team.TeamFolderRenameError
+  commentId: T:Dropbox.Api.Team.TeamFolderRenameError
+  id: TeamFolderRenameError
+  parent: Dropbox.Api.Team
+  children:
+  - Dropbox.Api.Team.TeamFolderRenameError.#ctor
+  - Dropbox.Api.Team.TeamFolderRenameError.AsAccessError
+  - Dropbox.Api.Team.TeamFolderRenameError.AsFolderNameAlreadyUsed
+  - Dropbox.Api.Team.TeamFolderRenameError.AsFolderNameReserved
+  - Dropbox.Api.Team.TeamFolderRenameError.AsInvalidFolderName
+  - Dropbox.Api.Team.TeamFolderRenameError.AsOther
+  - Dropbox.Api.Team.TeamFolderRenameError.AsStatusError
+  - Dropbox.Api.Team.TeamFolderRenameError.AsTeamSharedDropboxError
+  - Dropbox.Api.Team.TeamFolderRenameError.IsAccessError
+  - Dropbox.Api.Team.TeamFolderRenameError.IsFolderNameAlreadyUsed
+  - Dropbox.Api.Team.TeamFolderRenameError.IsFolderNameReserved
+  - Dropbox.Api.Team.TeamFolderRenameError.IsInvalidFolderName
+  - Dropbox.Api.Team.TeamFolderRenameError.IsOther
+  - Dropbox.Api.Team.TeamFolderRenameError.IsStatusError
+  - Dropbox.Api.Team.TeamFolderRenameError.IsTeamSharedDropboxError
+  langs:
+  - csharp
+  - vb
+  name: TeamFolderRenameError
+  nameWithType: TeamFolderRenameError
+  fullName: Dropbox.Api.Team.TeamFolderRenameError
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderRenameError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: TeamFolderRenameError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderRenameError.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>The team folder rename error object</p>\n"
+  example: []
+  syntax:
+    content: 'public class TeamFolderRenameError : object'
+    content.vb: >-
+      Public Class TeamFolderRenameError
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Dropbox.Api.Team.TeamFolderRenameError.AccessError
+  - Dropbox.Api.Team.TeamFolderRenameError.FolderNameAlreadyUsed
+  - Dropbox.Api.Team.TeamFolderRenameError.FolderNameReserved
+  - Dropbox.Api.Team.TeamFolderRenameError.InvalidFolderName
+  - Dropbox.Api.Team.TeamFolderRenameError.Other
+  - Dropbox.Api.Team.TeamFolderRenameError.StatusError
+  - Dropbox.Api.Team.TeamFolderRenameError.TeamSharedDropboxError
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.Team.TeamFolderRenameError.#ctor
+  commentId: M:Dropbox.Api.Team.TeamFolderRenameError.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.Team.TeamFolderRenameError
+  langs:
+  - csharp
+  - vb
+  name: TeamFolderRenameError()
+  nameWithType: TeamFolderRenameError.TeamFolderRenameError()
+  fullName: Dropbox.Api.Team.TeamFolderRenameError.TeamFolderRenameError()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderRenameError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderRenameError.cs
+    startLine: 33
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.Team.TeamFolderRenameError\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public TeamFolderRenameError()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.Team.TeamFolderRenameError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.Team.TeamFolderRenameError.IsInvalidFolderName
+  commentId: P:Dropbox.Api.Team.TeamFolderRenameError.IsInvalidFolderName
+  id: IsInvalidFolderName
+  parent: Dropbox.Api.Team.TeamFolderRenameError
+  langs:
+  - csharp
+  - vb
+  name: IsInvalidFolderName
+  nameWithType: TeamFolderRenameError.IsInvalidFolderName
+  fullName: Dropbox.Api.Team.TeamFolderRenameError.IsInvalidFolderName
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderRenameError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsInvalidFolderName
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderRenameError.cs
+    startLine: 40
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is InvalidFolderName</p>\n"
+  example: []
+  syntax:
+    content: public bool IsInvalidFolderName { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsInvalidFolderName As Boolean
+  overload: Dropbox.Api.Team.TeamFolderRenameError.IsInvalidFolderName*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.TeamFolderRenameError.AsInvalidFolderName
+  commentId: P:Dropbox.Api.Team.TeamFolderRenameError.AsInvalidFolderName
+  id: AsInvalidFolderName
+  parent: Dropbox.Api.Team.TeamFolderRenameError
+  langs:
+  - csharp
+  - vb
+  name: AsInvalidFolderName
+  nameWithType: TeamFolderRenameError.AsInvalidFolderName
+  fullName: Dropbox.Api.Team.TeamFolderRenameError.AsInvalidFolderName
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderRenameError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsInvalidFolderName
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderRenameError.cs
+    startLine: 51
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a InvalidFolderName, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public TeamFolderRenameError.InvalidFolderName AsInvalidFolderName { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.TeamFolderRenameError.InvalidFolderName
+    content.vb: Public ReadOnly Property AsInvalidFolderName As TeamFolderRenameError.InvalidFolderName
+  overload: Dropbox.Api.Team.TeamFolderRenameError.AsInvalidFolderName*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.TeamFolderRenameError.IsFolderNameAlreadyUsed
+  commentId: P:Dropbox.Api.Team.TeamFolderRenameError.IsFolderNameAlreadyUsed
+  id: IsFolderNameAlreadyUsed
+  parent: Dropbox.Api.Team.TeamFolderRenameError
+  langs:
+  - csharp
+  - vb
+  name: IsFolderNameAlreadyUsed
+  nameWithType: TeamFolderRenameError.IsFolderNameAlreadyUsed
+  fullName: Dropbox.Api.Team.TeamFolderRenameError.IsFolderNameAlreadyUsed
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderRenameError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsFolderNameAlreadyUsed
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderRenameError.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is FolderNameAlreadyUsed</p>\n"
+  example: []
+  syntax:
+    content: public bool IsFolderNameAlreadyUsed { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsFolderNameAlreadyUsed As Boolean
+  overload: Dropbox.Api.Team.TeamFolderRenameError.IsFolderNameAlreadyUsed*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.TeamFolderRenameError.AsFolderNameAlreadyUsed
+  commentId: P:Dropbox.Api.Team.TeamFolderRenameError.AsFolderNameAlreadyUsed
+  id: AsFolderNameAlreadyUsed
+  parent: Dropbox.Api.Team.TeamFolderRenameError
+  langs:
+  - csharp
+  - vb
+  name: AsFolderNameAlreadyUsed
+  nameWithType: TeamFolderRenameError.AsFolderNameAlreadyUsed
+  fullName: Dropbox.Api.Team.TeamFolderRenameError.AsFolderNameAlreadyUsed
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderRenameError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsFolderNameAlreadyUsed
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderRenameError.cs
+    startLine: 73
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a FolderNameAlreadyUsed, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public TeamFolderRenameError.FolderNameAlreadyUsed AsFolderNameAlreadyUsed { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.TeamFolderRenameError.FolderNameAlreadyUsed
+    content.vb: Public ReadOnly Property AsFolderNameAlreadyUsed As TeamFolderRenameError.FolderNameAlreadyUsed
+  overload: Dropbox.Api.Team.TeamFolderRenameError.AsFolderNameAlreadyUsed*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.TeamFolderRenameError.IsFolderNameReserved
+  commentId: P:Dropbox.Api.Team.TeamFolderRenameError.IsFolderNameReserved
+  id: IsFolderNameReserved
+  parent: Dropbox.Api.Team.TeamFolderRenameError
+  langs:
+  - csharp
+  - vb
+  name: IsFolderNameReserved
+  nameWithType: TeamFolderRenameError.IsFolderNameReserved
+  fullName: Dropbox.Api.Team.TeamFolderRenameError.IsFolderNameReserved
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderRenameError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsFolderNameReserved
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderRenameError.cs
+    startLine: 84
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is FolderNameReserved</p>\n"
+  example: []
+  syntax:
+    content: public bool IsFolderNameReserved { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsFolderNameReserved As Boolean
+  overload: Dropbox.Api.Team.TeamFolderRenameError.IsFolderNameReserved*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.TeamFolderRenameError.AsFolderNameReserved
+  commentId: P:Dropbox.Api.Team.TeamFolderRenameError.AsFolderNameReserved
+  id: AsFolderNameReserved
+  parent: Dropbox.Api.Team.TeamFolderRenameError
+  langs:
+  - csharp
+  - vb
+  name: AsFolderNameReserved
+  nameWithType: TeamFolderRenameError.AsFolderNameReserved
+  fullName: Dropbox.Api.Team.TeamFolderRenameError.AsFolderNameReserved
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderRenameError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsFolderNameReserved
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderRenameError.cs
+    startLine: 95
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a FolderNameReserved, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public TeamFolderRenameError.FolderNameReserved AsFolderNameReserved { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.TeamFolderRenameError.FolderNameReserved
+    content.vb: Public ReadOnly Property AsFolderNameReserved As TeamFolderRenameError.FolderNameReserved
+  overload: Dropbox.Api.Team.TeamFolderRenameError.AsFolderNameReserved*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.TeamFolderRenameError.IsAccessError
+  commentId: P:Dropbox.Api.Team.TeamFolderRenameError.IsAccessError
+  id: IsAccessError
+  parent: Dropbox.Api.Team.TeamFolderRenameError
+  langs:
+  - csharp
+  - vb
+  name: IsAccessError
+  nameWithType: TeamFolderRenameError.IsAccessError
+  fullName: Dropbox.Api.Team.TeamFolderRenameError.IsAccessError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderRenameError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsAccessError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderRenameError.cs
+    startLine: 106
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is AccessError</p>\n"
+  example: []
+  syntax:
+    content: public bool IsAccessError { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsAccessError As Boolean
+  overload: Dropbox.Api.Team.TeamFolderRenameError.IsAccessError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.TeamFolderRenameError.AsAccessError
+  commentId: P:Dropbox.Api.Team.TeamFolderRenameError.AsAccessError
+  id: AsAccessError
+  parent: Dropbox.Api.Team.TeamFolderRenameError
+  langs:
+  - csharp
+  - vb
+  name: AsAccessError
+  nameWithType: TeamFolderRenameError.AsAccessError
+  fullName: Dropbox.Api.Team.TeamFolderRenameError.AsAccessError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderRenameError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsAccessError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderRenameError.cs
+    startLine: 117
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a AccessError, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public TeamFolderRenameError.AccessError AsAccessError { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.TeamFolderRenameError.AccessError
+    content.vb: Public ReadOnly Property AsAccessError As TeamFolderRenameError.AccessError
+  overload: Dropbox.Api.Team.TeamFolderRenameError.AsAccessError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.TeamFolderRenameError.IsStatusError
+  commentId: P:Dropbox.Api.Team.TeamFolderRenameError.IsStatusError
+  id: IsStatusError
+  parent: Dropbox.Api.Team.TeamFolderRenameError
+  langs:
+  - csharp
+  - vb
+  name: IsStatusError
+  nameWithType: TeamFolderRenameError.IsStatusError
+  fullName: Dropbox.Api.Team.TeamFolderRenameError.IsStatusError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderRenameError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsStatusError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderRenameError.cs
+    startLine: 128
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is StatusError</p>\n"
+  example: []
+  syntax:
+    content: public bool IsStatusError { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsStatusError As Boolean
+  overload: Dropbox.Api.Team.TeamFolderRenameError.IsStatusError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.TeamFolderRenameError.AsStatusError
+  commentId: P:Dropbox.Api.Team.TeamFolderRenameError.AsStatusError
+  id: AsStatusError
+  parent: Dropbox.Api.Team.TeamFolderRenameError
+  langs:
+  - csharp
+  - vb
+  name: AsStatusError
+  nameWithType: TeamFolderRenameError.AsStatusError
+  fullName: Dropbox.Api.Team.TeamFolderRenameError.AsStatusError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderRenameError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsStatusError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderRenameError.cs
+    startLine: 139
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a StatusError, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public TeamFolderRenameError.StatusError AsStatusError { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.TeamFolderRenameError.StatusError
+    content.vb: Public ReadOnly Property AsStatusError As TeamFolderRenameError.StatusError
+  overload: Dropbox.Api.Team.TeamFolderRenameError.AsStatusError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.TeamFolderRenameError.IsTeamSharedDropboxError
+  commentId: P:Dropbox.Api.Team.TeamFolderRenameError.IsTeamSharedDropboxError
+  id: IsTeamSharedDropboxError
+  parent: Dropbox.Api.Team.TeamFolderRenameError
+  langs:
+  - csharp
+  - vb
+  name: IsTeamSharedDropboxError
+  nameWithType: TeamFolderRenameError.IsTeamSharedDropboxError
+  fullName: Dropbox.Api.Team.TeamFolderRenameError.IsTeamSharedDropboxError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderRenameError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsTeamSharedDropboxError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderRenameError.cs
+    startLine: 151
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is\nTeamSharedDropboxError</p>\n"
+  example: []
+  syntax:
+    content: public bool IsTeamSharedDropboxError { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsTeamSharedDropboxError As Boolean
+  overload: Dropbox.Api.Team.TeamFolderRenameError.IsTeamSharedDropboxError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.TeamFolderRenameError.AsTeamSharedDropboxError
+  commentId: P:Dropbox.Api.Team.TeamFolderRenameError.AsTeamSharedDropboxError
+  id: AsTeamSharedDropboxError
+  parent: Dropbox.Api.Team.TeamFolderRenameError
+  langs:
+  - csharp
+  - vb
+  name: AsTeamSharedDropboxError
+  nameWithType: TeamFolderRenameError.AsTeamSharedDropboxError
+  fullName: Dropbox.Api.Team.TeamFolderRenameError.AsTeamSharedDropboxError
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderRenameError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsTeamSharedDropboxError
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderRenameError.cs
+    startLine: 162
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a TeamSharedDropboxError, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public TeamFolderRenameError.TeamSharedDropboxError AsTeamSharedDropboxError { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.TeamFolderRenameError.TeamSharedDropboxError
+    content.vb: Public ReadOnly Property AsTeamSharedDropboxError As TeamFolderRenameError.TeamSharedDropboxError
+  overload: Dropbox.Api.Team.TeamFolderRenameError.AsTeamSharedDropboxError*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.TeamFolderRenameError.IsOther
+  commentId: P:Dropbox.Api.Team.TeamFolderRenameError.IsOther
+  id: IsOther
+  parent: Dropbox.Api.Team.TeamFolderRenameError
+  langs:
+  - csharp
+  - vb
+  name: IsOther
+  nameWithType: TeamFolderRenameError.IsOther
+  fullName: Dropbox.Api.Team.TeamFolderRenameError.IsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderRenameError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: IsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderRenameError.cs
+    startLine: 173
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets a value indicating whether this instance is Other</p>\n"
+  example: []
+  syntax:
+    content: public bool IsOther { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsOther As Boolean
+  overload: Dropbox.Api.Team.TeamFolderRenameError.IsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Dropbox.Api.Team.TeamFolderRenameError.AsOther
+  commentId: P:Dropbox.Api.Team.TeamFolderRenameError.AsOther
+  id: AsOther
+  parent: Dropbox.Api.Team.TeamFolderRenameError
+  langs:
+  - csharp
+  - vb
+  name: AsOther
+  nameWithType: TeamFolderRenameError.AsOther
+  fullName: Dropbox.Api.Team.TeamFolderRenameError.AsOther
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderRenameError.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AsOther
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/Team/TeamFolderRenameError.cs
+    startLine: 184
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.Team
+  summary: "\n<p>Gets this instance as a Other, or <code>null</code>.</p>\n"
+  example: []
+  syntax:
+    content: public TeamFolderRenameError.Other AsOther { get; }
+    parameters: []
+    return:
+      type: Dropbox.Api.Team.TeamFolderRenameError.Other
+    content.vb: Public ReadOnly Property AsOther As TeamFolderRenameError.Other
+  overload: Dropbox.Api.Team.TeamFolderRenameError.AsOther*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Dropbox.Api.Team
+  commentId: N:Dropbox.Api.Team
+  name: Dropbox.Api.Team
+  nameWithType: Dropbox.Api.Team
+  fullName: Dropbox.Api.Team
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.Team.TeamFolderRenameError
+  commentId: T:Dropbox.Api.Team.TeamFolderRenameError
+  parent: Dropbox.Api.Team
+  name: TeamFolderRenameError
+  nameWithType: TeamFolderRenameError
+  fullName: Dropbox.Api.Team.TeamFolderRenameError
+- uid: Dropbox.Api.Team.TeamFolderRenameError.#ctor*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderRenameError.#ctor
+  name: TeamFolderRenameError
+  nameWithType: TeamFolderRenameError.TeamFolderRenameError
+  fullName: Dropbox.Api.Team.TeamFolderRenameError.TeamFolderRenameError
+- uid: Dropbox.Api.Team.TeamFolderRenameError.IsInvalidFolderName*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderRenameError.IsInvalidFolderName
+  name: IsInvalidFolderName
+  nameWithType: TeamFolderRenameError.IsInvalidFolderName
+  fullName: Dropbox.Api.Team.TeamFolderRenameError.IsInvalidFolderName
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Dropbox.Api.Team.TeamFolderRenameError.AsInvalidFolderName*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderRenameError.AsInvalidFolderName
+  name: AsInvalidFolderName
+  nameWithType: TeamFolderRenameError.AsInvalidFolderName
+  fullName: Dropbox.Api.Team.TeamFolderRenameError.AsInvalidFolderName
+- uid: Dropbox.Api.Team.TeamFolderRenameError.InvalidFolderName
+  commentId: T:Dropbox.Api.Team.TeamFolderRenameError.InvalidFolderName
+  parent: Dropbox.Api.Team
+  name: TeamFolderRenameError.InvalidFolderName
+  nameWithType: TeamFolderRenameError.InvalidFolderName
+  fullName: Dropbox.Api.Team.TeamFolderRenameError.InvalidFolderName
+- uid: Dropbox.Api.Team.TeamFolderRenameError.IsFolderNameAlreadyUsed*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderRenameError.IsFolderNameAlreadyUsed
+  name: IsFolderNameAlreadyUsed
+  nameWithType: TeamFolderRenameError.IsFolderNameAlreadyUsed
+  fullName: Dropbox.Api.Team.TeamFolderRenameError.IsFolderNameAlreadyUsed
+- uid: Dropbox.Api.Team.TeamFolderRenameError.AsFolderNameAlreadyUsed*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderRenameError.AsFolderNameAlreadyUsed
+  name: AsFolderNameAlreadyUsed
+  nameWithType: TeamFolderRenameError.AsFolderNameAlreadyUsed
+  fullName: Dropbox.Api.Team.TeamFolderRenameError.AsFolderNameAlreadyUsed
+- uid: Dropbox.Api.Team.TeamFolderRenameError.FolderNameAlreadyUsed
+  commentId: T:Dropbox.Api.Team.TeamFolderRenameError.FolderNameAlreadyUsed
+  parent: Dropbox.Api.Team
+  name: TeamFolderRenameError.FolderNameAlreadyUsed
+  nameWithType: TeamFolderRenameError.FolderNameAlreadyUsed
+  fullName: Dropbox.Api.Team.TeamFolderRenameError.FolderNameAlreadyUsed
+- uid: Dropbox.Api.Team.TeamFolderRenameError.IsFolderNameReserved*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderRenameError.IsFolderNameReserved
+  name: IsFolderNameReserved
+  nameWithType: TeamFolderRenameError.IsFolderNameReserved
+  fullName: Dropbox.Api.Team.TeamFolderRenameError.IsFolderNameReserved
+- uid: Dropbox.Api.Team.TeamFolderRenameError.AsFolderNameReserved*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderRenameError.AsFolderNameReserved
+  name: AsFolderNameReserved
+  nameWithType: TeamFolderRenameError.AsFolderNameReserved
+  fullName: Dropbox.Api.Team.TeamFolderRenameError.AsFolderNameReserved
+- uid: Dropbox.Api.Team.TeamFolderRenameError.FolderNameReserved
+  commentId: T:Dropbox.Api.Team.TeamFolderRenameError.FolderNameReserved
+  parent: Dropbox.Api.Team
+  name: TeamFolderRenameError.FolderNameReserved
+  nameWithType: TeamFolderRenameError.FolderNameReserved
+  fullName: Dropbox.Api.Team.TeamFolderRenameError.FolderNameReserved
+- uid: Dropbox.Api.Team.TeamFolderRenameError.IsAccessError*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderRenameError.IsAccessError
+  name: IsAccessError
+  nameWithType: TeamFolderRenameError.IsAccessError
+  fullName: Dropbox.Api.Team.TeamFolderRenameError.IsAccessError
+- uid: Dropbox.Api.Team.TeamFolderRenameError.AsAccessError*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderRenameError.AsAccessError
+  name: AsAccessError
+  nameWithType: TeamFolderRenameError.AsAccessError
+  fullName: Dropbox.Api.Team.TeamFolderRenameError.AsAccessError
+- uid: Dropbox.Api.Team.TeamFolderRenameError.AccessError
+  commentId: T:Dropbox.Api.Team.TeamFolderRenameError.AccessError
+  parent: Dropbox.Api.Team
+  name: TeamFolderRenameError.AccessError
+  nameWithType: TeamFolderRenameError.AccessError
+  fullName: Dropbox.Api.Team.TeamFolderRenameError.AccessError
+- uid: Dropbox.Api.Team.TeamFolderRenameError.IsStatusError*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderRenameError.IsStatusError
+  name: IsStatusError
+  nameWithType: TeamFolderRenameError.IsStatusError
+  fullName: Dropbox.Api.Team.TeamFolderRenameError.IsStatusError
+- uid: Dropbox.Api.Team.TeamFolderRenameError.AsStatusError*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderRenameError.AsStatusError
+  name: AsStatusError
+  nameWithType: TeamFolderRenameError.AsStatusError
+  fullName: Dropbox.Api.Team.TeamFolderRenameError.AsStatusError
+- uid: Dropbox.Api.Team.TeamFolderRenameError.StatusError
+  commentId: T:Dropbox.Api.Team.TeamFolderRenameError.StatusError
+  parent: Dropbox.Api.Team
+  name: TeamFolderRenameError.StatusError
+  nameWithType: TeamFolderRenameError.StatusError
+  fullName: Dropbox.Api.Team.TeamFolderRenameError.StatusError
+- uid: Dropbox.Api.Team.TeamFolderRenameError.IsTeamSharedDropboxError*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderRenameError.IsTeamSharedDropboxError
+  name: IsTeamSharedDropboxError
+  nameWithType: TeamFolderRenameError.IsTeamSharedDropboxError
+  fullName: Dropbox.Api.Team.TeamFolderRenameError.IsTeamSharedDropboxError
+- uid: Dropbox.Api.Team.TeamFolderRenameError.AsTeamSharedDropboxError*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderRenameError.AsTeamSharedDropboxError
+  name: AsTeamSharedDropboxError
+  nameWithType: TeamFolderRenameError.AsTeamSharedDropboxError
+  fullName: Dropbox.Api.Team.TeamFolderRenameError.AsTeamSharedDropboxError
+- uid: Dropbox.Api.Team.TeamFolderRenameError.TeamSharedDropboxError
+  commentId: T:Dropbox.Api.Team.TeamFolderRenameError.TeamSharedDropboxError
+  parent: Dropbox.Api.Team
+  name: TeamFolderRenameError.TeamSharedDropboxError
+  nameWithType: TeamFolderRenameError.TeamSharedDropboxError
+  fullName: Dropbox.Api.Team.TeamFolderRenameError.TeamSharedDropboxError
+- uid: Dropbox.Api.Team.TeamFolderRenameError.IsOther*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderRenameError.IsOther
+  name: IsOther
+  nameWithType: TeamFolderRenameError.IsOther
+  fullName: Dropbox.Api.Team.TeamFolderRenameError.IsOther
+- uid: Dropbox.Api.Team.TeamFolderRenameError.AsOther*
+  commentId: Overload:Dropbox.Api.Team.TeamFolderRenameError.AsOther
+  name: AsOther
+  nameWithType: TeamFolderRenameError.AsOther
+  fullName: Dropbox.Api.Team.TeamFolderRenameError.AsOther
+- uid: Dropbox.Api.Team.TeamFolderRenameError.Other
+  commentId: T:Dropbox.Api.Team.TeamFolderRenameError.Other
+  parent: Dropbox.Api.Team
+  name: TeamFolderRenameError.Other
+  nameWithType: TeamFolderRenameError.Other
+  fullName: Dropbox.Api.Team.TeamFolderRenameError.Other
+shouldSkipMarkup: true

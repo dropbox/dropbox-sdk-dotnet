@@ -1,0 +1,187 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.DomainInvitesApproveRequestToJoinTeamType
+  commentId: T:Dropbox.Api.TeamLog.DomainInvitesApproveRequestToJoinTeamType
+  id: DomainInvitesApproveRequestToJoinTeamType
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.DomainInvitesApproveRequestToJoinTeamType.#ctor
+  - Dropbox.Api.TeamLog.DomainInvitesApproveRequestToJoinTeamType.#ctor(System.String)
+  - Dropbox.Api.TeamLog.DomainInvitesApproveRequestToJoinTeamType.Description
+  langs:
+  - csharp
+  - vb
+  name: DomainInvitesApproveRequestToJoinTeamType
+  nameWithType: DomainInvitesApproveRequestToJoinTeamType
+  fullName: Dropbox.Api.TeamLog.DomainInvitesApproveRequestToJoinTeamType
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DomainInvitesApproveRequestToJoinTeamType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: DomainInvitesApproveRequestToJoinTeamType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DomainInvitesApproveRequestToJoinTeamType.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>The domain invites approve request to join team type object</p>\n"
+  example: []
+  syntax:
+    content: 'public class DomainInvitesApproveRequestToJoinTeamType : object'
+    content.vb: >-
+      Public Class DomainInvitesApproveRequestToJoinTeamType
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.DomainInvitesApproveRequestToJoinTeamType.#ctor(System.String)
+  commentId: M:Dropbox.Api.TeamLog.DomainInvitesApproveRequestToJoinTeamType.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Dropbox.Api.TeamLog.DomainInvitesApproveRequestToJoinTeamType
+  langs:
+  - csharp
+  - vb
+  name: DomainInvitesApproveRequestToJoinTeamType(String)
+  nameWithType: DomainInvitesApproveRequestToJoinTeamType.DomainInvitesApproveRequestToJoinTeamType(String)
+  fullName: Dropbox.Api.TeamLog.DomainInvitesApproveRequestToJoinTeamType.DomainInvitesApproveRequestToJoinTeamType(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DomainInvitesApproveRequestToJoinTeamType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DomainInvitesApproveRequestToJoinTeamType.cs
+    startLine: 34
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.DomainInvitesApproveRequestToJoinTeamType\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public DomainInvitesApproveRequestToJoinTeamType(string description)
+    parameters:
+    - id: description
+      type: System.String
+      description: The description
+    content.vb: Public Sub New(description As String)
+  overload: Dropbox.Api.TeamLog.DomainInvitesApproveRequestToJoinTeamType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.DomainInvitesApproveRequestToJoinTeamType.#ctor
+  commentId: M:Dropbox.Api.TeamLog.DomainInvitesApproveRequestToJoinTeamType.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.DomainInvitesApproveRequestToJoinTeamType
+  langs:
+  - csharp
+  - vb
+  name: DomainInvitesApproveRequestToJoinTeamType()
+  nameWithType: DomainInvitesApproveRequestToJoinTeamType.DomainInvitesApproveRequestToJoinTeamType()
+  fullName: Dropbox.Api.TeamLog.DomainInvitesApproveRequestToJoinTeamType.DomainInvitesApproveRequestToJoinTeamType()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DomainInvitesApproveRequestToJoinTeamType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DomainInvitesApproveRequestToJoinTeamType.cs
+    startLine: 50
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.DomainInvitesApproveRequestToJoinTeamType\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public DomainInvitesApproveRequestToJoinTeamType()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.DomainInvitesApproveRequestToJoinTeamType.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.DomainInvitesApproveRequestToJoinTeamType.Description
+  commentId: P:Dropbox.Api.TeamLog.DomainInvitesApproveRequestToJoinTeamType.Description
+  id: Description
+  parent: Dropbox.Api.TeamLog.DomainInvitesApproveRequestToJoinTeamType
+  langs:
+  - csharp
+  - vb
+  name: Description
+  nameWithType: DomainInvitesApproveRequestToJoinTeamType.Description
+  fullName: Dropbox.Api.TeamLog.DomainInvitesApproveRequestToJoinTeamType.Description
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DomainInvitesApproveRequestToJoinTeamType.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: Description
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/DomainInvitesApproveRequestToJoinTeamType.cs
+    startLine: 59
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Gets the description of the domain invites approve request to join team\ntype</p>\n"
+  example: []
+  syntax:
+    content: public string Description { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Description As String
+  overload: Dropbox.Api.TeamLog.DomainInvitesApproveRequestToJoinTeamType.Description*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.DomainInvitesApproveRequestToJoinTeamType
+  commentId: T:Dropbox.Api.TeamLog.DomainInvitesApproveRequestToJoinTeamType
+  parent: Dropbox.Api.TeamLog
+  name: DomainInvitesApproveRequestToJoinTeamType
+  nameWithType: DomainInvitesApproveRequestToJoinTeamType
+  fullName: Dropbox.Api.TeamLog.DomainInvitesApproveRequestToJoinTeamType
+- uid: Dropbox.Api.TeamLog.DomainInvitesApproveRequestToJoinTeamType.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.DomainInvitesApproveRequestToJoinTeamType.#ctor
+  name: DomainInvitesApproveRequestToJoinTeamType
+  nameWithType: DomainInvitesApproveRequestToJoinTeamType.DomainInvitesApproveRequestToJoinTeamType
+  fullName: Dropbox.Api.TeamLog.DomainInvitesApproveRequestToJoinTeamType.DomainInvitesApproveRequestToJoinTeamType
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.DomainInvitesApproveRequestToJoinTeamType.Description*
+  commentId: Overload:Dropbox.Api.TeamLog.DomainInvitesApproveRequestToJoinTeamType.Description
+  name: Description
+  nameWithType: DomainInvitesApproveRequestToJoinTeamType.Description
+  fullName: Dropbox.Api.TeamLog.DomainInvitesApproveRequestToJoinTeamType.Description
+shouldSkipMarkup: true

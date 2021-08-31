@@ -1,0 +1,239 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.AccountCaptureChangeAvailabilityDetails
+  commentId: T:Dropbox.Api.TeamLog.AccountCaptureChangeAvailabilityDetails
+  id: AccountCaptureChangeAvailabilityDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.AccountCaptureChangeAvailabilityDetails.#ctor
+  - Dropbox.Api.TeamLog.AccountCaptureChangeAvailabilityDetails.#ctor(Dropbox.Api.TeamLog.AccountCaptureAvailability,Dropbox.Api.TeamLog.AccountCaptureAvailability)
+  - Dropbox.Api.TeamLog.AccountCaptureChangeAvailabilityDetails.NewValue
+  - Dropbox.Api.TeamLog.AccountCaptureChangeAvailabilityDetails.PreviousValue
+  langs:
+  - csharp
+  - vb
+  name: AccountCaptureChangeAvailabilityDetails
+  nameWithType: AccountCaptureChangeAvailabilityDetails
+  fullName: Dropbox.Api.TeamLog.AccountCaptureChangeAvailabilityDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AccountCaptureChangeAvailabilityDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AccountCaptureChangeAvailabilityDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AccountCaptureChangeAvailabilityDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Granted/revoked option to enable account capture on team domains.</p>\n"
+  example: []
+  syntax:
+    content: 'public class AccountCaptureChangeAvailabilityDetails : object'
+    content.vb: >-
+      Public Class AccountCaptureChangeAvailabilityDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.AccountCaptureChangeAvailabilityDetails.#ctor(Dropbox.Api.TeamLog.AccountCaptureAvailability,Dropbox.Api.TeamLog.AccountCaptureAvailability)
+  commentId: M:Dropbox.Api.TeamLog.AccountCaptureChangeAvailabilityDetails.#ctor(Dropbox.Api.TeamLog.AccountCaptureAvailability,Dropbox.Api.TeamLog.AccountCaptureAvailability)
+  id: '#ctor(Dropbox.Api.TeamLog.AccountCaptureAvailability,Dropbox.Api.TeamLog.AccountCaptureAvailability)'
+  parent: Dropbox.Api.TeamLog.AccountCaptureChangeAvailabilityDetails
+  langs:
+  - csharp
+  - vb
+  name: AccountCaptureChangeAvailabilityDetails(AccountCaptureAvailability, AccountCaptureAvailability)
+  nameWithType: AccountCaptureChangeAvailabilityDetails.AccountCaptureChangeAvailabilityDetails(AccountCaptureAvailability, AccountCaptureAvailability)
+  fullName: Dropbox.Api.TeamLog.AccountCaptureChangeAvailabilityDetails.AccountCaptureChangeAvailabilityDetails(Dropbox.Api.TeamLog.AccountCaptureAvailability, Dropbox.Api.TeamLog.AccountCaptureAvailability)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AccountCaptureChangeAvailabilityDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AccountCaptureChangeAvailabilityDetails.cs
+    startLine: 36
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.AccountCaptureChangeAvailabilityDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public AccountCaptureChangeAvailabilityDetails(AccountCaptureAvailability newValue, AccountCaptureAvailability previousValue = null)
+    parameters:
+    - id: newValue
+      type: Dropbox.Api.TeamLog.AccountCaptureAvailability
+      description: New account capture availabilty value.
+    - id: previousValue
+      type: Dropbox.Api.TeamLog.AccountCaptureAvailability
+      description: >-
+        Previous account capture availabilty value. Might be
+
+        missing due to historical data gap.
+    content.vb: Public Sub New(newValue As AccountCaptureAvailability, previousValue As AccountCaptureAvailability = Nothing)
+  overload: Dropbox.Api.TeamLog.AccountCaptureChangeAvailabilityDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.AccountCaptureChangeAvailabilityDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.AccountCaptureChangeAvailabilityDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.AccountCaptureChangeAvailabilityDetails
+  langs:
+  - csharp
+  - vb
+  name: AccountCaptureChangeAvailabilityDetails()
+  nameWithType: AccountCaptureChangeAvailabilityDetails.AccountCaptureChangeAvailabilityDetails()
+  fullName: Dropbox.Api.TeamLog.AccountCaptureChangeAvailabilityDetails.AccountCaptureChangeAvailabilityDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AccountCaptureChangeAvailabilityDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AccountCaptureChangeAvailabilityDetails.cs
+    startLine: 54
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.AccountCaptureChangeAvailabilityDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public AccountCaptureChangeAvailabilityDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.AccountCaptureChangeAvailabilityDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.AccountCaptureChangeAvailabilityDetails.NewValue
+  commentId: P:Dropbox.Api.TeamLog.AccountCaptureChangeAvailabilityDetails.NewValue
+  id: NewValue
+  parent: Dropbox.Api.TeamLog.AccountCaptureChangeAvailabilityDetails
+  langs:
+  - csharp
+  - vb
+  name: NewValue
+  nameWithType: AccountCaptureChangeAvailabilityDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.AccountCaptureChangeAvailabilityDetails.NewValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AccountCaptureChangeAvailabilityDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: NewValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AccountCaptureChangeAvailabilityDetails.cs
+    startLine: 62
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>New account capture availabilty value.</p>\n"
+  example: []
+  syntax:
+    content: public AccountCaptureAvailability NewValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.AccountCaptureAvailability
+    content.vb: Public Property NewValue As AccountCaptureAvailability
+  overload: Dropbox.Api.TeamLog.AccountCaptureChangeAvailabilityDetails.NewValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.AccountCaptureChangeAvailabilityDetails.PreviousValue
+  commentId: P:Dropbox.Api.TeamLog.AccountCaptureChangeAvailabilityDetails.PreviousValue
+  id: PreviousValue
+  parent: Dropbox.Api.TeamLog.AccountCaptureChangeAvailabilityDetails
+  langs:
+  - csharp
+  - vb
+  name: PreviousValue
+  nameWithType: AccountCaptureChangeAvailabilityDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.AccountCaptureChangeAvailabilityDetails.PreviousValue
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AccountCaptureChangeAvailabilityDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PreviousValue
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/AccountCaptureChangeAvailabilityDetails.cs
+    startLine: 68
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Previous account capture availabilty value. Might be missing due to\nhistorical data gap.</p>\n"
+  example: []
+  syntax:
+    content: public AccountCaptureAvailability PreviousValue { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.AccountCaptureAvailability
+    content.vb: Public Property PreviousValue As AccountCaptureAvailability
+  overload: Dropbox.Api.TeamLog.AccountCaptureChangeAvailabilityDetails.PreviousValue*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.AccountCaptureChangeAvailabilityDetails
+  commentId: T:Dropbox.Api.TeamLog.AccountCaptureChangeAvailabilityDetails
+  parent: Dropbox.Api.TeamLog
+  name: AccountCaptureChangeAvailabilityDetails
+  nameWithType: AccountCaptureChangeAvailabilityDetails
+  fullName: Dropbox.Api.TeamLog.AccountCaptureChangeAvailabilityDetails
+- uid: Dropbox.Api.TeamLog.AccountCaptureChangeAvailabilityDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.AccountCaptureChangeAvailabilityDetails.#ctor
+  name: AccountCaptureChangeAvailabilityDetails
+  nameWithType: AccountCaptureChangeAvailabilityDetails.AccountCaptureChangeAvailabilityDetails
+  fullName: Dropbox.Api.TeamLog.AccountCaptureChangeAvailabilityDetails.AccountCaptureChangeAvailabilityDetails
+- uid: Dropbox.Api.TeamLog.AccountCaptureAvailability
+  commentId: T:Dropbox.Api.TeamLog.AccountCaptureAvailability
+  parent: Dropbox.Api.TeamLog
+  name: AccountCaptureAvailability
+  nameWithType: AccountCaptureAvailability
+  fullName: Dropbox.Api.TeamLog.AccountCaptureAvailability
+- uid: Dropbox.Api.TeamLog.AccountCaptureChangeAvailabilityDetails.NewValue*
+  commentId: Overload:Dropbox.Api.TeamLog.AccountCaptureChangeAvailabilityDetails.NewValue
+  name: NewValue
+  nameWithType: AccountCaptureChangeAvailabilityDetails.NewValue
+  fullName: Dropbox.Api.TeamLog.AccountCaptureChangeAvailabilityDetails.NewValue
+- uid: Dropbox.Api.TeamLog.AccountCaptureChangeAvailabilityDetails.PreviousValue*
+  commentId: Overload:Dropbox.Api.TeamLog.AccountCaptureChangeAvailabilityDetails.PreviousValue
+  name: PreviousValue
+  nameWithType: AccountCaptureChangeAvailabilityDetails.PreviousValue
+  fullName: Dropbox.Api.TeamLog.AccountCaptureChangeAvailabilityDetails.PreviousValue
+shouldSkipMarkup: true

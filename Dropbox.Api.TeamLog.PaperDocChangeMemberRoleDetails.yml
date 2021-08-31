@@ -1,0 +1,241 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.PaperDocChangeMemberRoleDetails
+  commentId: T:Dropbox.Api.TeamLog.PaperDocChangeMemberRoleDetails
+  id: PaperDocChangeMemberRoleDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.PaperDocChangeMemberRoleDetails.#ctor
+  - Dropbox.Api.TeamLog.PaperDocChangeMemberRoleDetails.#ctor(System.String,Dropbox.Api.TeamLog.PaperAccessType)
+  - Dropbox.Api.TeamLog.PaperDocChangeMemberRoleDetails.AccessType
+  - Dropbox.Api.TeamLog.PaperDocChangeMemberRoleDetails.EventUuid
+  langs:
+  - csharp
+  - vb
+  name: PaperDocChangeMemberRoleDetails
+  nameWithType: PaperDocChangeMemberRoleDetails
+  fullName: Dropbox.Api.TeamLog.PaperDocChangeMemberRoleDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDocChangeMemberRoleDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: PaperDocChangeMemberRoleDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDocChangeMemberRoleDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Changed member permissions for Paper doc.</p>\n"
+  example: []
+  syntax:
+    content: 'public class PaperDocChangeMemberRoleDetails : object'
+    content.vb: >-
+      Public Class PaperDocChangeMemberRoleDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.PaperDocChangeMemberRoleDetails.#ctor(System.String,Dropbox.Api.TeamLog.PaperAccessType)
+  commentId: M:Dropbox.Api.TeamLog.PaperDocChangeMemberRoleDetails.#ctor(System.String,Dropbox.Api.TeamLog.PaperAccessType)
+  id: '#ctor(System.String,Dropbox.Api.TeamLog.PaperAccessType)'
+  parent: Dropbox.Api.TeamLog.PaperDocChangeMemberRoleDetails
+  langs:
+  - csharp
+  - vb
+  name: PaperDocChangeMemberRoleDetails(String, PaperAccessType)
+  nameWithType: PaperDocChangeMemberRoleDetails.PaperDocChangeMemberRoleDetails(String, PaperAccessType)
+  fullName: Dropbox.Api.TeamLog.PaperDocChangeMemberRoleDetails.PaperDocChangeMemberRoleDetails(System.String, Dropbox.Api.TeamLog.PaperAccessType)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDocChangeMemberRoleDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDocChangeMemberRoleDetails.cs
+    startLine: 35
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.PaperDocChangeMemberRoleDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  example: []
+  syntax:
+    content: public PaperDocChangeMemberRoleDetails(string eventUuid, PaperAccessType accessType)
+    parameters:
+    - id: eventUuid
+      type: System.String
+      description: Event unique identifier.
+    - id: accessType
+      type: Dropbox.Api.TeamLog.PaperAccessType
+      description: Paper doc access type.
+    content.vb: Public Sub New(eventUuid As String, accessType As PaperAccessType)
+  overload: Dropbox.Api.TeamLog.PaperDocChangeMemberRoleDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.PaperDocChangeMemberRoleDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.PaperDocChangeMemberRoleDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.PaperDocChangeMemberRoleDetails
+  langs:
+  - csharp
+  - vb
+  name: PaperDocChangeMemberRoleDetails()
+  nameWithType: PaperDocChangeMemberRoleDetails.PaperDocChangeMemberRoleDetails()
+  fullName: Dropbox.Api.TeamLog.PaperDocChangeMemberRoleDetails.PaperDocChangeMemberRoleDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDocChangeMemberRoleDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDocChangeMemberRoleDetails.cs
+    startLine: 58
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.PaperDocChangeMemberRoleDetails\" data-throw-if-not-resolved=\"false\"></xref> class.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public PaperDocChangeMemberRoleDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.PaperDocChangeMemberRoleDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.PaperDocChangeMemberRoleDetails.EventUuid
+  commentId: P:Dropbox.Api.TeamLog.PaperDocChangeMemberRoleDetails.EventUuid
+  id: EventUuid
+  parent: Dropbox.Api.TeamLog.PaperDocChangeMemberRoleDetails
+  langs:
+  - csharp
+  - vb
+  name: EventUuid
+  nameWithType: PaperDocChangeMemberRoleDetails.EventUuid
+  fullName: Dropbox.Api.TeamLog.PaperDocChangeMemberRoleDetails.EventUuid
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDocChangeMemberRoleDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: EventUuid
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDocChangeMemberRoleDetails.cs
+    startLine: 66
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Event unique identifier.</p>\n"
+  example: []
+  syntax:
+    content: public string EventUuid { get; protected set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property EventUuid As String
+  overload: Dropbox.Api.TeamLog.PaperDocChangeMemberRoleDetails.EventUuid*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.PaperDocChangeMemberRoleDetails.AccessType
+  commentId: P:Dropbox.Api.TeamLog.PaperDocChangeMemberRoleDetails.AccessType
+  id: AccessType
+  parent: Dropbox.Api.TeamLog.PaperDocChangeMemberRoleDetails
+  langs:
+  - csharp
+  - vb
+  name: AccessType
+  nameWithType: PaperDocChangeMemberRoleDetails.AccessType
+  fullName: Dropbox.Api.TeamLog.PaperDocChangeMemberRoleDetails.AccessType
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDocChangeMemberRoleDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: AccessType
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/PaperDocChangeMemberRoleDetails.cs
+    startLine: 71
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Paper doc access type.</p>\n"
+  example: []
+  syntax:
+    content: public PaperAccessType AccessType { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.PaperAccessType
+    content.vb: Public Property AccessType As PaperAccessType
+  overload: Dropbox.Api.TeamLog.PaperDocChangeMemberRoleDetails.AccessType*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.PaperDocChangeMemberRoleDetails
+  commentId: T:Dropbox.Api.TeamLog.PaperDocChangeMemberRoleDetails
+  parent: Dropbox.Api.TeamLog
+  name: PaperDocChangeMemberRoleDetails
+  nameWithType: PaperDocChangeMemberRoleDetails
+  fullName: Dropbox.Api.TeamLog.PaperDocChangeMemberRoleDetails
+- uid: Dropbox.Api.TeamLog.PaperDocChangeMemberRoleDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.PaperDocChangeMemberRoleDetails.#ctor
+  name: PaperDocChangeMemberRoleDetails
+  nameWithType: PaperDocChangeMemberRoleDetails.PaperDocChangeMemberRoleDetails
+  fullName: Dropbox.Api.TeamLog.PaperDocChangeMemberRoleDetails.PaperDocChangeMemberRoleDetails
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Dropbox.Api.TeamLog.PaperAccessType
+  commentId: T:Dropbox.Api.TeamLog.PaperAccessType
+  parent: Dropbox.Api.TeamLog
+  name: PaperAccessType
+  nameWithType: PaperAccessType
+  fullName: Dropbox.Api.TeamLog.PaperAccessType
+- uid: Dropbox.Api.TeamLog.PaperDocChangeMemberRoleDetails.EventUuid*
+  commentId: Overload:Dropbox.Api.TeamLog.PaperDocChangeMemberRoleDetails.EventUuid
+  name: EventUuid
+  nameWithType: PaperDocChangeMemberRoleDetails.EventUuid
+  fullName: Dropbox.Api.TeamLog.PaperDocChangeMemberRoleDetails.EventUuid
+- uid: Dropbox.Api.TeamLog.PaperDocChangeMemberRoleDetails.AccessType*
+  commentId: Overload:Dropbox.Api.TeamLog.PaperDocChangeMemberRoleDetails.AccessType
+  name: AccessType
+  nameWithType: PaperDocChangeMemberRoleDetails.AccessType
+  fullName: Dropbox.Api.TeamLog.PaperDocChangeMemberRoleDetails.AccessType
+shouldSkipMarkup: true

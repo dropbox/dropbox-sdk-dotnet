@@ -1,0 +1,403 @@
+### YamlMime:ManagedReference
+items:
+- uid: Dropbox.Api.TeamLog.SharedLinkShareDetails
+  commentId: T:Dropbox.Api.TeamLog.SharedLinkShareDetails
+  id: SharedLinkShareDetails
+  parent: Dropbox.Api.TeamLog
+  children:
+  - Dropbox.Api.TeamLog.SharedLinkShareDetails.#ctor
+  - Dropbox.Api.TeamLog.SharedLinkShareDetails.#ctor(Dropbox.Api.TeamLog.UserLogInfo,System.Collections.Generic.IEnumerable{Dropbox.Api.TeamLog.ExternalUserLogInfo})
+  - Dropbox.Api.TeamLog.SharedLinkShareDetails.ExternalUsers
+  - Dropbox.Api.TeamLog.SharedLinkShareDetails.SharedLinkOwner
+  langs:
+  - csharp
+  - vb
+  name: SharedLinkShareDetails
+  nameWithType: SharedLinkShareDetails
+  fullName: Dropbox.Api.TeamLog.SharedLinkShareDetails
+  type: Class
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedLinkShareDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SharedLinkShareDetails
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedLinkShareDetails.cs
+    startLine: 15
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Added members as audience of shared link.</p>\n"
+  example: []
+  syntax:
+    content: 'public class SharedLinkShareDetails : object'
+    content.vb: >-
+      Public Class SharedLinkShareDetails
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Dropbox.Api.TeamLog.SharedLinkShareDetails.#ctor(Dropbox.Api.TeamLog.UserLogInfo,System.Collections.Generic.IEnumerable{Dropbox.Api.TeamLog.ExternalUserLogInfo})
+  commentId: M:Dropbox.Api.TeamLog.SharedLinkShareDetails.#ctor(Dropbox.Api.TeamLog.UserLogInfo,System.Collections.Generic.IEnumerable{Dropbox.Api.TeamLog.ExternalUserLogInfo})
+  id: '#ctor(Dropbox.Api.TeamLog.UserLogInfo,System.Collections.Generic.IEnumerable{Dropbox.Api.TeamLog.ExternalUserLogInfo})'
+  parent: Dropbox.Api.TeamLog.SharedLinkShareDetails
+  langs:
+  - csharp
+  - vb
+  name: SharedLinkShareDetails(UserLogInfo, System.Collections.Generic.IEnumerable<ExternalUserLogInfo>)
+  nameWithType: SharedLinkShareDetails.SharedLinkShareDetails(UserLogInfo, System.Collections.Generic.IEnumerable<ExternalUserLogInfo>)
+  fullName: Dropbox.Api.TeamLog.SharedLinkShareDetails.SharedLinkShareDetails(Dropbox.Api.TeamLog.UserLogInfo, System.Collections.Generic.IEnumerable<Dropbox.Api.TeamLog.ExternalUserLogInfo>)
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedLinkShareDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedLinkShareDetails.cs
+    startLine: 37
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SharedLinkShareDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  example: []
+  syntax:
+    content: public SharedLinkShareDetails(UserLogInfo sharedLinkOwner = null, System.Collections.Generic.IEnumerable<ExternalUserLogInfo> externalUsers = null)
+    parameters:
+    - id: sharedLinkOwner
+      type: Dropbox.Api.TeamLog.UserLogInfo
+      description: >-
+        Shared link owner details. Might be missing due to
+
+        historical data gap.
+    - id: externalUsers
+      type: System.Collections.Generic.IEnumerable{Dropbox.Api.TeamLog.ExternalUserLogInfo}
+      description: >-
+        Users without a Dropbox account that were added as
+
+        shared link audience.
+    content.vb: Public Sub New(sharedLinkOwner As UserLogInfo = Nothing, externalUsers As System.Collections.Generic.IEnumerable(Of ExternalUserLogInfo) = Nothing)
+  overload: Dropbox.Api.TeamLog.SharedLinkShareDetails.#ctor*
+  nameWithType.vb: SharedLinkShareDetails.SharedLinkShareDetails(UserLogInfo, System.Collections.Generic.IEnumerable(Of ExternalUserLogInfo))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Dropbox.Api.TeamLog.SharedLinkShareDetails.SharedLinkShareDetails(Dropbox.Api.TeamLog.UserLogInfo, System.Collections.Generic.IEnumerable(Of Dropbox.Api.TeamLog.ExternalUserLogInfo))
+  name.vb: SharedLinkShareDetails(UserLogInfo, System.Collections.Generic.IEnumerable(Of ExternalUserLogInfo))
+- uid: Dropbox.Api.TeamLog.SharedLinkShareDetails.#ctor
+  commentId: M:Dropbox.Api.TeamLog.SharedLinkShareDetails.#ctor
+  id: '#ctor'
+  parent: Dropbox.Api.TeamLog.SharedLinkShareDetails
+  langs:
+  - csharp
+  - vb
+  name: SharedLinkShareDetails()
+  nameWithType: SharedLinkShareDetails.SharedLinkShareDetails()
+  fullName: Dropbox.Api.TeamLog.SharedLinkShareDetails.SharedLinkShareDetails()
+  type: Constructor
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedLinkShareDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: .ctor
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedLinkShareDetails.cs
+    startLine: 52
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Initializes a new instance of the <xref href=\"Dropbox.Api.TeamLog.SharedLinkShareDetails\" data-throw-if-not-resolved=\"false\"></xref>\nclass.</p>\n"
+  remarks: >-
+    This is to construct an instance of the object when
+
+    deserializing.
+  example: []
+  syntax:
+    content: public SharedLinkShareDetails()
+    content.vb: Public Sub New
+  overload: Dropbox.Api.TeamLog.SharedLinkShareDetails.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Dropbox.Api.TeamLog.SharedLinkShareDetails.SharedLinkOwner
+  commentId: P:Dropbox.Api.TeamLog.SharedLinkShareDetails.SharedLinkOwner
+  id: SharedLinkOwner
+  parent: Dropbox.Api.TeamLog.SharedLinkShareDetails
+  langs:
+  - csharp
+  - vb
+  name: SharedLinkOwner
+  nameWithType: SharedLinkShareDetails.SharedLinkOwner
+  fullName: Dropbox.Api.TeamLog.SharedLinkShareDetails.SharedLinkOwner
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedLinkShareDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: SharedLinkOwner
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedLinkShareDetails.cs
+    startLine: 61
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Shared link owner details. Might be missing due to historical data\ngap.</p>\n"
+  example: []
+  syntax:
+    content: public UserLogInfo SharedLinkOwner { get; protected set; }
+    parameters: []
+    return:
+      type: Dropbox.Api.TeamLog.UserLogInfo
+    content.vb: Public Property SharedLinkOwner As UserLogInfo
+  overload: Dropbox.Api.TeamLog.SharedLinkShareDetails.SharedLinkOwner*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Dropbox.Api.TeamLog.SharedLinkShareDetails.ExternalUsers
+  commentId: P:Dropbox.Api.TeamLog.SharedLinkShareDetails.ExternalUsers
+  id: ExternalUsers
+  parent: Dropbox.Api.TeamLog.SharedLinkShareDetails
+  langs:
+  - csharp
+  - vb
+  name: ExternalUsers
+  nameWithType: SharedLinkShareDetails.ExternalUsers
+  fullName: Dropbox.Api.TeamLog.SharedLinkShareDetails.ExternalUsers
+  type: Property
+  source:
+    remote:
+      path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedLinkShareDetails.cs
+      branch: doc_fx_test
+      repo: https://github.com/dropbox/dropbox-sdk-dotnet
+    id: ExternalUsers
+    path: dropbox-sdk-dotnet/Dropbox.Api/Generated/TeamLog/SharedLinkShareDetails.cs
+    startLine: 67
+  assemblies:
+  - Dropbox.Api
+  namespace: Dropbox.Api.TeamLog
+  summary: "\n<p>Users without a Dropbox account that were added as shared link\naudience.</p>\n"
+  example: []
+  syntax:
+    content: public System.Collections.Generic.IList<ExternalUserLogInfo> ExternalUsers { get; protected set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IList{Dropbox.Api.TeamLog.ExternalUserLogInfo}
+    content.vb: Public Property ExternalUsers As System.Collections.Generic.IList(Of ExternalUserLogInfo)
+  overload: Dropbox.Api.TeamLog.SharedLinkShareDetails.ExternalUsers*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+references:
+- uid: Dropbox.Api.TeamLog
+  commentId: N:Dropbox.Api.TeamLog
+  name: Dropbox.Api.TeamLog
+  nameWithType: Dropbox.Api.TeamLog
+  fullName: Dropbox.Api.TeamLog
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Dropbox.Api.TeamLog.SharedLinkShareDetails
+  commentId: T:Dropbox.Api.TeamLog.SharedLinkShareDetails
+  parent: Dropbox.Api.TeamLog
+  name: SharedLinkShareDetails
+  nameWithType: SharedLinkShareDetails
+  fullName: Dropbox.Api.TeamLog.SharedLinkShareDetails
+- uid: Dropbox.Api.TeamLog.SharedLinkShareDetails.#ctor*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedLinkShareDetails.#ctor
+  name: SharedLinkShareDetails
+  nameWithType: SharedLinkShareDetails.SharedLinkShareDetails
+  fullName: Dropbox.Api.TeamLog.SharedLinkShareDetails.SharedLinkShareDetails
+- uid: Dropbox.Api.TeamLog.UserLogInfo
+  commentId: T:Dropbox.Api.TeamLog.UserLogInfo
+  parent: Dropbox.Api.TeamLog
+  name: UserLogInfo
+  nameWithType: UserLogInfo
+  fullName: Dropbox.Api.TeamLog.UserLogInfo
+- uid: System.Collections.Generic.IEnumerable{Dropbox.Api.TeamLog.ExternalUserLogInfo}
+  commentId: '!:System.Collections.Generic.IEnumerable{Dropbox.Api.TeamLog.ExternalUserLogInfo}'
+  definition: System.Collections.Generic.IEnumerable`1
+  name: System.Collections.Generic.IEnumerable<ExternalUserLogInfo>
+  nameWithType: System.Collections.Generic.IEnumerable<ExternalUserLogInfo>
+  fullName: System.Collections.Generic.IEnumerable<Dropbox.Api.TeamLog.ExternalUserLogInfo>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of ExternalUserLogInfo)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Dropbox.Api.TeamLog.ExternalUserLogInfo)
+  name.vb: System.Collections.Generic.IEnumerable(Of ExternalUserLogInfo)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.TeamLog.ExternalUserLogInfo
+    name: ExternalUserLogInfo
+    nameWithType: ExternalUserLogInfo
+    fullName: Dropbox.Api.TeamLog.ExternalUserLogInfo
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.TeamLog.ExternalUserLogInfo
+    name: ExternalUserLogInfo
+    nameWithType: ExternalUserLogInfo
+    fullName: Dropbox.Api.TeamLog.ExternalUserLogInfo
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: System.Collections.Generic.IEnumerable<>
+  nameWithType: System.Collections.Generic.IEnumerable<>
+  fullName: System.Collections.Generic.IEnumerable<>
+  nameWithType.vb: System.Collections.Generic.IEnumerable(Of )
+  fullName.vb: System.Collections.Generic.IEnumerable(Of )
+  name.vb: System.Collections.Generic.IEnumerable(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: System.Collections.Generic.IEnumerable
+    nameWithType: System.Collections.Generic.IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dropbox.Api.TeamLog.SharedLinkShareDetails.SharedLinkOwner*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedLinkShareDetails.SharedLinkOwner
+  name: SharedLinkOwner
+  nameWithType: SharedLinkShareDetails.SharedLinkOwner
+  fullName: Dropbox.Api.TeamLog.SharedLinkShareDetails.SharedLinkOwner
+- uid: Dropbox.Api.TeamLog.SharedLinkShareDetails.ExternalUsers*
+  commentId: Overload:Dropbox.Api.TeamLog.SharedLinkShareDetails.ExternalUsers
+  name: ExternalUsers
+  nameWithType: SharedLinkShareDetails.ExternalUsers
+  fullName: Dropbox.Api.TeamLog.SharedLinkShareDetails.ExternalUsers
+- uid: System.Collections.Generic.IList{Dropbox.Api.TeamLog.ExternalUserLogInfo}
+  commentId: '!:System.Collections.Generic.IList{Dropbox.Api.TeamLog.ExternalUserLogInfo}'
+  definition: System.Collections.Generic.IList`1
+  name: System.Collections.Generic.IList<ExternalUserLogInfo>
+  nameWithType: System.Collections.Generic.IList<ExternalUserLogInfo>
+  fullName: System.Collections.Generic.IList<Dropbox.Api.TeamLog.ExternalUserLogInfo>
+  nameWithType.vb: System.Collections.Generic.IList(Of ExternalUserLogInfo)
+  fullName.vb: System.Collections.Generic.IList(Of Dropbox.Api.TeamLog.ExternalUserLogInfo)
+  name.vb: System.Collections.Generic.IList(Of ExternalUserLogInfo)
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Dropbox.Api.TeamLog.ExternalUserLogInfo
+    name: ExternalUserLogInfo
+    nameWithType: ExternalUserLogInfo
+    fullName: Dropbox.Api.TeamLog.ExternalUserLogInfo
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Dropbox.Api.TeamLog.ExternalUserLogInfo
+    name: ExternalUserLogInfo
+    nameWithType: ExternalUserLogInfo
+    fullName: Dropbox.Api.TeamLog.ExternalUserLogInfo
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IList`1
+  isExternal: true
+  name: System.Collections.Generic.IList<>
+  nameWithType: System.Collections.Generic.IList<>
+  fullName: System.Collections.Generic.IList<>
+  nameWithType.vb: System.Collections.Generic.IList(Of )
+  fullName.vb: System.Collections.Generic.IList(Of )
+  name.vb: System.Collections.Generic.IList(Of )
+  spec.csharp:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IList`1
+    name: System.Collections.Generic.IList
+    nameWithType: System.Collections.Generic.IList
+    fullName: System.Collections.Generic.IList
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+shouldSkipMarkup: true
