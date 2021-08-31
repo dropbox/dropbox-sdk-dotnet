@@ -15,7 +15,10 @@
             "src": "dropbox-sdk-dotnet/Dropbox.Api"
           }
         ],
-        "dest": "obj/api"
+        "dest": "obj/api",
+        "properties": {
+            "TargetFramework": "netstandard2.0"
+        }
       }
     ],
     "build": {
