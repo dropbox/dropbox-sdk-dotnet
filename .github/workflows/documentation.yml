@@ -1,0 +1,31 @@
+name: Update Documentation
+
+on:
+  push:
+    pull_request:
+
+jobs:
+  npm:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2.3.4
+      - name: Setup .NET Core
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 3.1.101
+      - name: Setup DocFX
+        uses: crazy-max/ghaction-chocolatey@v1
+        with:
+          args: install docfx
+      - name: Install dependencies
+        run: dotnet restore
+      - name: DocFX Build
+        working-directory: docs
+        run: docfx ../docfx.json
+        continue-on-error: false
+      - name: Push Documentation
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          ACCESS_TOKEN: ${{ secrets.GH_PAGES_PUBLISH_TOKEN }}
+          BRANCH: doc_fx_test # The branch the action should deploy to.
+          FOLDER: docs # The folder the action should deploy.
