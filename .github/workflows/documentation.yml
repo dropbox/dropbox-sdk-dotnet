@@ -20,7 +20,7 @@ jobs:
         with:
           args: docfx.json
       - name: debug prints
-        run: ls _site
+        run: ls obj/api
       - uses: nikeee/docfx-action@v1.0.0
         name: Build Documentation Site
         with:
