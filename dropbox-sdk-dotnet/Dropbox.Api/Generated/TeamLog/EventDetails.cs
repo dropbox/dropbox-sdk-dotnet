@@ -2295,6 +2295,29 @@ namespace Dropbox.Api.TeamLog
 
         /// <summary>
         /// <para>Gets a value indicating whether this instance is
+        /// EmailIngestReceiveFileDetails</para>
+        /// </summary>
+        public bool IsEmailIngestReceiveFileDetails
+        {
+            get
+            {
+                return this is EmailIngestReceiveFileDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a EmailIngestReceiveFileDetails, or <c>null</c>.</para>
+        /// </summary>
+        public EmailIngestReceiveFileDetails AsEmailIngestReceiveFileDetails
+        {
+            get
+            {
+                return this as EmailIngestReceiveFileDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
         /// FileRequestChangeDetails</para>
         /// </summary>
         public bool IsFileRequestChangeDetails
@@ -8560,6 +8583,30 @@ namespace Dropbox.Api.TeamLog
 
         /// <summary>
         /// <para>Gets a value indicating whether this instance is
+        /// EmailIngestPolicyChangedDetails</para>
+        /// </summary>
+        public bool IsEmailIngestPolicyChangedDetails
+        {
+            get
+            {
+                return this is EmailIngestPolicyChangedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a EmailIngestPolicyChangedDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public EmailIngestPolicyChangedDetails AsEmailIngestPolicyChangedDetails
+        {
+            get
+            {
+                return this as EmailIngestPolicyChangedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
         /// EmmAddExceptionDetails</para>
         /// </summary>
         public bool IsEmmAddExceptionDetails
@@ -11711,6 +11758,12 @@ namespace Dropbox.Api.TeamLog
                     UserTagsRemovedDetails.Encoder.EncodeFields((UserTagsRemovedDetails)value, writer);
                     return;
                 }
+                if (value is EmailIngestReceiveFileDetails)
+                {
+                    WriteProperty(".tag", "email_ingest_receive_file_details", writer, enc.StringEncoder.Instance);
+                    EmailIngestReceiveFileDetails.Encoder.EncodeFields((EmailIngestReceiveFileDetails)value, writer);
+                    return;
+                }
                 if (value is FileRequestChangeDetails)
                 {
                     WriteProperty(".tag", "file_request_change_details", writer, enc.StringEncoder.Instance);
@@ -13325,6 +13378,12 @@ namespace Dropbox.Api.TeamLog
                     DirectoryRestrictionsRemoveMembersDetails.Encoder.EncodeFields((DirectoryRestrictionsRemoveMembersDetails)value, writer);
                     return;
                 }
+                if (value is EmailIngestPolicyChangedDetails)
+                {
+                    WriteProperty(".tag", "email_ingest_policy_changed_details", writer, enc.StringEncoder.Instance);
+                    EmailIngestPolicyChangedDetails.Encoder.EncodeFields((EmailIngestPolicyChangedDetails)value, writer);
+                    return;
+                }
                 if (value is EmmAddExceptionDetails)
                 {
                     WriteProperty(".tag", "emm_add_exception_details", writer, enc.StringEncoder.Instance);
@@ -14199,6 +14258,8 @@ namespace Dropbox.Api.TeamLog
                         return UserTagsAddedDetails.Decoder.DecodeFields(reader);
                     case "user_tags_removed_details":
                         return UserTagsRemovedDetails.Decoder.DecodeFields(reader);
+                    case "email_ingest_receive_file_details":
+                        return EmailIngestReceiveFileDetails.Decoder.DecodeFields(reader);
                     case "file_request_change_details":
                         return FileRequestChangeDetails.Decoder.DecodeFields(reader);
                     case "file_request_close_details":
@@ -14737,6 +14798,8 @@ namespace Dropbox.Api.TeamLog
                         return DirectoryRestrictionsAddMembersDetails.Decoder.DecodeFields(reader);
                     case "directory_restrictions_remove_members_details":
                         return DirectoryRestrictionsRemoveMembersDetails.Decoder.DecodeFields(reader);
+                    case "email_ingest_policy_changed_details":
+                        return EmailIngestPolicyChangedDetails.Decoder.DecodeFields(reader);
                     case "emm_add_exception_details":
                         return EmmAddExceptionDetails.Decoder.DecodeFields(reader);
                     case "emm_change_policy_details":
@@ -23711,6 +23774,96 @@ namespace Dropbox.Api.TeamLog
                 public override UserTagsRemovedDetails DecodeFields(enc.IJsonReader reader)
                 {
                     return new UserTagsRemovedDetails(global::Dropbox.Api.TeamLog.UserTagsRemovedDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The email ingest receive file details object</para>
+        /// </summary>
+        public sealed class EmailIngestReceiveFileDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<EmailIngestReceiveFileDetails> Encoder = new EmailIngestReceiveFileDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<EmailIngestReceiveFileDetails> Decoder = new EmailIngestReceiveFileDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="EmailIngestReceiveFileDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public EmailIngestReceiveFileDetails(global::Dropbox.Api.TeamLog.EmailIngestReceiveFileDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="EmailIngestReceiveFileDetails" /> class.</para>
+            /// </summary>
+            private EmailIngestReceiveFileDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.EmailIngestReceiveFileDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="EmailIngestReceiveFileDetails" />.</para>
+            /// </summary>
+            private class EmailIngestReceiveFileDetailsEncoder : enc.StructEncoder<EmailIngestReceiveFileDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(EmailIngestReceiveFileDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("email_ingest_receive_file_details", value.Value, writer, global::Dropbox.Api.TeamLog.EmailIngestReceiveFileDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="EmailIngestReceiveFileDetails" />.</para>
+            /// </summary>
+            private class EmailIngestReceiveFileDetailsDecoder : enc.StructDecoder<EmailIngestReceiveFileDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="EmailIngestReceiveFileDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override EmailIngestReceiveFileDetails Create()
+                {
+                    return new EmailIngestReceiveFileDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override EmailIngestReceiveFileDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new EmailIngestReceiveFileDetails(global::Dropbox.Api.TeamLog.EmailIngestReceiveFileDetails.Decoder.DecodeFields(reader));
                 }
             }
 
@@ -47993,6 +48146,96 @@ namespace Dropbox.Api.TeamLog
                 public override DirectoryRestrictionsRemoveMembersDetails DecodeFields(enc.IJsonReader reader)
                 {
                     return new DirectoryRestrictionsRemoveMembersDetails(global::Dropbox.Api.TeamLog.DirectoryRestrictionsRemoveMembersDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The email ingest policy changed details object</para>
+        /// </summary>
+        public sealed class EmailIngestPolicyChangedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<EmailIngestPolicyChangedDetails> Encoder = new EmailIngestPolicyChangedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<EmailIngestPolicyChangedDetails> Decoder = new EmailIngestPolicyChangedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="EmailIngestPolicyChangedDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public EmailIngestPolicyChangedDetails(global::Dropbox.Api.TeamLog.EmailIngestPolicyChangedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="EmailIngestPolicyChangedDetails" /> class.</para>
+            /// </summary>
+            private EmailIngestPolicyChangedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.EmailIngestPolicyChangedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="EmailIngestPolicyChangedDetails" />.</para>
+            /// </summary>
+            private class EmailIngestPolicyChangedDetailsEncoder : enc.StructEncoder<EmailIngestPolicyChangedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(EmailIngestPolicyChangedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("email_ingest_policy_changed_details", value.Value, writer, global::Dropbox.Api.TeamLog.EmailIngestPolicyChangedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="EmailIngestPolicyChangedDetails" />.</para>
+            /// </summary>
+            private class EmailIngestPolicyChangedDetailsDecoder : enc.StructDecoder<EmailIngestPolicyChangedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="EmailIngestPolicyChangedDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override EmailIngestPolicyChangedDetails Create()
+                {
+                    return new EmailIngestPolicyChangedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override EmailIngestPolicyChangedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new EmailIngestPolicyChangedDetails(global::Dropbox.Api.TeamLog.EmailIngestPolicyChangedDetails.Decoder.DecodeFields(reader));
                 }
             }
 
