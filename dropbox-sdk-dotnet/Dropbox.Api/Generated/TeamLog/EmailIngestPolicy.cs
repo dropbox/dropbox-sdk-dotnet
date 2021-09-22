@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Email ingest policy</para>
+    /// <para>Policy for deciding whether a team can use Email to my Dropbox feature</para>
     /// </summary>
     public class EmailIngestPolicy
     {
