@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Changed email to my dropbox policy for team.</para>
+    /// <para>Changed email to my Dropbox policy for team.</para>
     /// </summary>
     public class EmailIngestPolicyChangedDetails
     {
@@ -31,8 +31,8 @@ namespace Dropbox.Api.TeamLog
         /// <para>Initializes a new instance of the <see cref="EmailIngestPolicyChangedDetails"
         /// /> class.</para>
         /// </summary>
-        /// <param name="newValue">New email to my dropbox policy.</param>
-        /// <param name="previousValue">Previous email to my dropbox policy.</param>
+        /// <param name="newValue">To.</param>
+        /// <param name="previousValue">From.</param>
         public EmailIngestPolicyChangedDetails(EmailIngestPolicy newValue,
                                                EmailIngestPolicy previousValue)
         {
@@ -62,12 +62,12 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>New email to my dropbox policy.</para>
+        /// <para>To.</para>
         /// </summary>
         public EmailIngestPolicy NewValue { get; protected set; }
 
         /// <summary>
-        /// <para>Previous email to my dropbox policy.</para>
+        /// <para>From.</para>
         /// </summary>
         public EmailIngestPolicy PreviousValue { get; protected set; }
 

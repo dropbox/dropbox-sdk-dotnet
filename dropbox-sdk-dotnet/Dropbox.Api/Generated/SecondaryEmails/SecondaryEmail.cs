@@ -44,9 +44,9 @@ namespace Dropbox.Api.SecondaryEmails
             {
                 throw new sys.ArgumentOutOfRangeException("email", "Length should be at most 255");
             }
-            if (!re.Regex.IsMatch(email, @"\A(?:^['&A-Za-z0-9._%+-]+@[A-Za-z0-9-][A-Za-z0-9.-]*\.[A-Za-z]{2,15}$)\z"))
+            if (!re.Regex.IsMatch(email, @"\A(?:^['#&A-Za-z0-9._%+-]+@[A-Za-z0-9-][A-Za-z0-9.-]*\.[A-Za-z]{2,15}$)\z"))
             {
-                throw new sys.ArgumentOutOfRangeException("email", @"Value should match pattern '\A(?:^['&A-Za-z0-9._%+-]+@[A-Za-z0-9-][A-Za-z0-9.-]*\.[A-Za-z]{2,15}$)\z'");
+                throw new sys.ArgumentOutOfRangeException("email", @"Value should match pattern '\A(?:^['#&A-Za-z0-9._%+-]+@[A-Za-z0-9-][A-Za-z0-9.-]*\.[A-Za-z]{2,15}$)\z'");
             }
 
             this.Email = email;

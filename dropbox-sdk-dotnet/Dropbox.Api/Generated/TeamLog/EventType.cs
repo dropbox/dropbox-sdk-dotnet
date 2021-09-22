@@ -47676,7 +47676,7 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>(team_policies) Changed email to my dropbox policy for team</para>
+        /// <para>(team_policies) Changed email to my Dropbox policy for team</para>
         /// </summary>
         public sealed class EmailIngestPolicyChanged : EventType
         {
