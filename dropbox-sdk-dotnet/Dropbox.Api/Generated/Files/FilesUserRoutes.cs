@@ -6841,6 +6841,120 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
+        /// <para>This route helps you commit many files at once into a user's Dropbox. Use
+        /// <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionStartAsync" /> and
+        /// <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" />
+        /// to upload file contents. We recommend uploading many files in parallel to increase
+        /// throughput. Once the file contents have been uploaded, rather than calling <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionFinishAsync" />, use
+        /// this route to finish all your upload sessions in a single request.</para>
+        /// <para><see cref="Dropbox.Api.Files.UploadSessionStartArg.Close" /> or <see
+        /// cref="Dropbox.Api.Files.UploadSessionAppendArg.Close" /> needs to be true for the
+        /// last <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionStartAsync"
+        /// /> or <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" /> call
+        /// of each upload session. The maximum size of a file one can upload to an upload
+        /// session is 350 GB.</para>
+        /// <para>We allow up to 1000 entries in a single request.</para>
+        /// <para>Calls to this endpoint will count as data transport calls for any Dropbox
+        /// Business teams with a limit on the number of data transport calls allowed per
+        /// month. For more information, see the <a
+        /// href="https://www.dropbox.com/developers/reference/data-transport-limit">Data
+        /// transport limit page</a>.</para>
+        /// </summary>
+        /// <param name="uploadSessionFinishBatchArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        public t.Task<UploadSessionFinishBatchResult> UploadSessionFinishBatchV2Async(UploadSessionFinishBatchArg uploadSessionFinishBatchArg)
+        {
+            return this.Transport.SendRpcRequestAsync<UploadSessionFinishBatchArg, UploadSessionFinishBatchResult, enc.Empty>(uploadSessionFinishBatchArg, "api", "/files/upload_session/finish_batch_v2", "user", global::Dropbox.Api.Files.UploadSessionFinishBatchArg.Encoder, global::Dropbox.Api.Files.UploadSessionFinishBatchResult.Decoder, enc.EmptyDecoder.Instance);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the upload session finish batch route.</para>
+        /// </summary>
+        /// <param name="uploadSessionFinishBatchArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginUploadSessionFinishBatchV2(UploadSessionFinishBatchArg uploadSessionFinishBatchArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.UploadSessionFinishBatchV2Async(uploadSessionFinishBatchArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>This route helps you commit many files at once into a user's Dropbox. Use
+        /// <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionStartAsync" /> and
+        /// <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" />
+        /// to upload file contents. We recommend uploading many files in parallel to increase
+        /// throughput. Once the file contents have been uploaded, rather than calling <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionFinishAsync" />, use
+        /// this route to finish all your upload sessions in a single request.</para>
+        /// <para><see cref="Dropbox.Api.Files.UploadSessionStartArg.Close" /> or <see
+        /// cref="Dropbox.Api.Files.UploadSessionAppendArg.Close" /> needs to be true for the
+        /// last <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionStartAsync"
+        /// /> or <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" /> call
+        /// of each upload session. The maximum size of a file one can upload to an upload
+        /// session is 350 GB.</para>
+        /// <para>We allow up to 1000 entries in a single request.</para>
+        /// <para>Calls to this endpoint will count as data transport calls for any Dropbox
+        /// Business teams with a limit on the number of data transport calls allowed per
+        /// month. For more information, see the <a
+        /// href="https://www.dropbox.com/developers/reference/data-transport-limit">Data
+        /// transport limit page</a>.</para>
+        /// </summary>
+        /// <param name="entries">Commit information for each file in the batch.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        public t.Task<UploadSessionFinishBatchResult> UploadSessionFinishBatchV2Async(col.IEnumerable<UploadSessionFinishArg> entries)
+        {
+            var uploadSessionFinishBatchArg = new UploadSessionFinishBatchArg(entries);
+
+            return this.UploadSessionFinishBatchV2Async(uploadSessionFinishBatchArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the upload session finish batch route.</para>
+        /// </summary>
+        /// <param name="entries">Commit information for each file in the batch.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginUploadSessionFinishBatchV2(col.IEnumerable<UploadSessionFinishArg> entries,
+                                                                sys.AsyncCallback callback,
+                                                                object callbackState = null)
+        {
+            var uploadSessionFinishBatchArg = new UploadSessionFinishBatchArg(entries);
+
+            return this.BeginUploadSessionFinishBatchV2(uploadSessionFinishBatchArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the upload session finish batch
+        /// route to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        public UploadSessionFinishBatchResult EndUploadSessionFinishBatchV2(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<UploadSessionFinishBatchResult>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
         /// <para>Returns the status of an asynchronous job for <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionFinishBatchAsync" />.
         /// If success, it returns list of result for each entry.</para>
