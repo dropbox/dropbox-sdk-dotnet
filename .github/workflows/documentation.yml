@@ -19,14 +19,10 @@ jobs:
         name: Build Documentation YAML
         with:
           args: docfx.json
-      - name: debug prints
-        run: ls obj/api
       - uses: nikeee/docfx-action@v1.0.0
         name: Build Documentation Site
         with:
           args: docfx_build.json
-      - name: debug prints
-        run: ls _site
       - name: Push Documentation
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
