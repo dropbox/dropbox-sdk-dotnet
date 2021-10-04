@@ -6,7 +6,7 @@ on:
 
 jobs:
   npm:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2.3.4
       - name: Setup .NET Core
