@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Contributing to the Dropbox SDK for DotNet </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Contributing to the Dropbox SDK for DotNet ">
+    <meta name="generator" content="docfx 2.58.4.0">
+    
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/docfx.vendor.css">
+    <link rel="stylesheet" href="styles/docfx.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <meta property="docfx:navrel" content="toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="contributing-to-the-dropbox-sdk-for-dotnet">Contributing to the Dropbox SDK for DotNet</h1>
+
+<p>We value and rely on the feedback from our community. This comes in the form of bug reports, feature requests, and general guidance. We welcome your issues and pull requests and try our hardest to be timely in both response and resolution. Please read through this document before submitting issues or pull requests to ensure we have the necessary information to help you resolve your issue.</p>
+<h2 id="filing-bug-reports">Filing Bug Reports</h2>
+<p>You can file a bug report on the <a href="https://github.com/dropbox/dropbox-sdk-dotnet/issues">GitHub Issues</a> page.</p>
+<ol>
+<li><p>Search through existing issues to ensure that your issue has not been reported. If it is a common issue, there is likely already an issue.</p>
+</li>
+<li><p>Please ensure you are using the latest version of the SDK. While this may be a valid issue, we only will fix bugs affecting the latest version and your bug may have been fixed in a newer version.</p>
+</li>
+<li><p>Provide as much information as you can regarding the language version, SDK version, and any other relevant information about your environment so we can help resolve the issue as quickly as possible.</p>
+</li>
+</ol>
+<h2 id="submitting-pull-requests">Submitting Pull Requests</h2>
+<p>We are more than happy to recieve pull requests helping us improve the state of our SDK. You can open a new pull request on the <a href="https://github.com/dropbox/dropbox-sdk-dotnet/pulls">GitHub Pull Requests</a> page.</p>
+<ol>
+<li><p>Please ensure that you have read the <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/master/LICENSE">License</a>, <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a> and have signed the <a href="https://opensource.dropbox.com/cla/">Contributing License Agreement (CLA)</a>.</p>
+</li>
+<li><p>Please add tests confirming the new functionality works. Pull requests will not be merged without passing continuous integration tests unless the pull requests aims to fix existing issues with these tests.</p>
+</li>
+</ol>
+<h2 id="updating-generated-code">Updating Generated Code</h2>
+<p>Generated code can be updated by running the following code:</p>
+<pre><code>$ git submodule init
+$ git submodule update --remote --recursive
+$ cd stone
+$ python setup.py install
+$ cd ..
+$ python generate.py
+</code></pre><p>Note: the <code>buildall.ps1</code> file also will update generated code so unless you are looking to explicitely test something new, this step is generally unnecessary</p>
+<h2 id="testing-the-code">Testing the Code</h2>
+<p>Tests live under the Dropbox.Api.Tests Project.  Please fill in the dropbox.runsettings file with test tokens in order to successfully make calls to the Dropbox servers.</p>
+<p>The tests are run as a part of the build script we use, this can be run the following way: </p>
+<pre><code>powershell -ExecutionPolicy Bypass -File buildall.ps1 -testSettings &lt;PATH_TO_TEST_SETTINGS&gt; 
+</code></pre><p>Where test settings is the <code>dropbox.runsettings</code> file mentioned above.</p>
+<p>If you need to test the documentation, you can add the <code>-doc</code> flag to the build command to also generate that.</p>
+<pre><code>powershell -ExecutionPolicy Bypass -File buildall.ps1 -testSettings &lt;PATH_TO_TEST_SETTINGS&gt; -doc
+</code></pre></article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/dropbox/dropbox-sdk-dotnet/blob/doc_fx_integration/CONTRIBUTING.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="styles/docfx.js"></script>
+    <script type="text/javascript" src="styles/main.js"></script>
+  </body>
+</html>
