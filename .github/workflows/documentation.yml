@@ -15,14 +15,12 @@ jobs:
           dotnet-version: 3.1.101
       - name: Install dependencies
         run: dotnet restore dropbox-sdk-dotnet/Dropbox.Api
+      - name: Copy for index
+        run: cp README.md index.md
       - uses: nikeee/docfx-action@v1.0.0
         name: Build Documentation YAML
         with:
           args: ./docfx.json
-      - uses: nikeee/docfx-action@v1.0.0
-        name: Build Documentation Site
-        with:
-          args: clearly_invalid/docfx_build.json
       - name: Push Documentation
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
