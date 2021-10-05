@@ -10,11 +10,11 @@
             "exclude": [
               "**/obj/**",
               "**/bin/**",
-              "_site/**"
+              "gh-pages/_site/**"
             ]
           }
         ],
-        "dest": "obj/api",
+        "dest": "gh-pages/obj/api",
         "properties": {
             "TargetFramework": "net45"
         }
@@ -24,7 +24,7 @@
       "content": [
         {
           "files": [
-            "obj/api/**.yml"
+            "gh-pages/obj/api/**.yml"
           ]
         },
         {
@@ -32,11 +32,11 @@
             "*.md", "toc.yml"
           ],
           "exclude": [
-            "_site/**"
+            "gh-pages/_site/**"
           ]
         }
       ],
-      "dest": "_site",
+      "dest": "gh-pages/_site",
       "template": [
         "default"
       ]

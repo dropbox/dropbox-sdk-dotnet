@@ -12,9 +12,7 @@ jobs:
         uses: actions/checkout@v2.3.4
         with:
           ref: gh-pages-holder
-          path: _site
-      - name: debug prints
-        run: ls _site
+          path: gh-pages
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v1
         with:
@@ -31,5 +29,5 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
           ACCESS_TOKEN: ${{ secrets.GH_PAGES_PUBLISH_TOKEN }}
-          BRANCH: gh_pages_docfx # The branch the action should deploy to.
+          BRANCH: gh-pages-holder # The branch the action should deploy to.
           FOLDER: _site # The folder the action should deploy.
