@@ -9,6 +9,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2.3.4
+      - name: Setup existing site
+        uses: actions/checkout@v2.3.4
+        with:
+          ref: gh-pages-holder
+          path: _site
+      - name: debug prints
+        run: ls _site
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v1
         with:
