@@ -36,6 +36,28 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is DefaultNoOne</para>
+        /// </summary>
+        public bool IsDefaultNoOne
+        {
+            get
+            {
+                return this is DefaultNoOne;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a DefaultNoOne, or <c>null</c>.</para>
+        /// </summary>
+        public DefaultNoOne AsDefaultNoOne
+        {
+            get
+            {
+                return this as DefaultNoOne;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is DefaultPrivate</para>
         /// </summary>
         public bool IsDefaultPrivate
@@ -137,6 +159,12 @@ namespace Dropbox.Api.TeamLog
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(SharingLinkPolicy value, enc.IJsonWriter writer)
             {
+                if (value is DefaultNoOne)
+                {
+                    WriteProperty(".tag", "default_no_one", writer, enc.StringEncoder.Instance);
+                    DefaultNoOne.Encoder.EncodeFields((DefaultNoOne)value, writer);
+                    return;
+                }
                 if (value is DefaultPrivate)
                 {
                     WriteProperty(".tag", "default_private", writer, enc.StringEncoder.Instance);
@@ -193,6 +221,8 @@ namespace Dropbox.Api.TeamLog
             {
                 switch (tag)
                 {
+                    case "default_no_one":
+                        return DefaultNoOne.Decoder.DecodeFields(reader);
                     case "default_private":
                         return DefaultPrivate.Decoder.DecodeFields(reader);
                     case "default_public":
@@ -206,6 +236,76 @@ namespace Dropbox.Api.TeamLog
         }
 
         #endregion
+
+        /// <summary>
+        /// <para>The default no one object</para>
+        /// </summary>
+        public sealed class DefaultNoOne : SharingLinkPolicy
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<DefaultNoOne> Encoder = new DefaultNoOneEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<DefaultNoOne> Decoder = new DefaultNoOneDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="DefaultNoOne" />
+            /// class.</para>
+            /// </summary>
+            private DefaultNoOne()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of DefaultNoOne</para>
+            /// </summary>
+            public static readonly DefaultNoOne Instance = new DefaultNoOne();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="DefaultNoOne" />.</para>
+            /// </summary>
+            private class DefaultNoOneEncoder : enc.StructEncoder<DefaultNoOne>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(DefaultNoOne value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="DefaultNoOne" />.</para>
+            /// </summary>
+            private class DefaultNoOneDecoder : enc.StructDecoder<DefaultNoOne>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="DefaultNoOne" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override DefaultNoOne Create()
+                {
+                    return DefaultNoOne.Instance;
+                }
+
+            }
+
+            #endregion
+        }
 
         /// <summary>
         /// <para>The default private object</para>
