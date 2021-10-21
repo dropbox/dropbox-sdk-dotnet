@@ -6746,6 +6746,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="uploadSessionFinishBatchArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
+        [sys.Obsolete("This function is deprecated, please use UploadSessionFinishBatchV2Async instead.")]
         public t.Task<UploadSessionFinishBatchLaunch> UploadSessionFinishBatchAsync(UploadSessionFinishBatchArg uploadSessionFinishBatchArg)
         {
             return this.Transport.SendRpcRequestAsync<UploadSessionFinishBatchArg, UploadSessionFinishBatchLaunch, enc.Empty>(uploadSessionFinishBatchArg, "api", "/files/upload_session/finish_batch", "user", global::Dropbox.Api.Files.UploadSessionFinishBatchArg.Encoder, global::Dropbox.Api.Files.UploadSessionFinishBatchLaunch.Decoder, enc.EmptyDecoder.Instance);
@@ -6760,6 +6761,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated, please use BeginUploadSessionFinishBatchV2 instead.")]
         public sys.IAsyncResult BeginUploadSessionFinishBatch(UploadSessionFinishBatchArg uploadSessionFinishBatchArg, sys.AsyncCallback callback, object state = null)
         {
             var task = this.UploadSessionFinishBatchAsync(uploadSessionFinishBatchArg);
@@ -6797,6 +6799,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="entries">Commit information for each file in the batch.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
+        [sys.Obsolete("This function is deprecated, please use UploadSessionFinishBatchV2Async instead.")]
         public t.Task<UploadSessionFinishBatchLaunch> UploadSessionFinishBatchAsync(col.IEnumerable<UploadSessionFinishArg> entries)
         {
             var uploadSessionFinishBatchArg = new UploadSessionFinishBatchArg(entries);
@@ -6813,6 +6816,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
+        [sys.Obsolete("This function is deprecated, please use BeginUploadSessionFinishBatchV2 instead.")]
         public sys.IAsyncResult BeginUploadSessionFinishBatch(col.IEnumerable<UploadSessionFinishArg> entries,
                                                               sys.AsyncCallback callback,
                                                               object callbackState = null)
@@ -6829,6 +6833,7 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="asyncResult">The reference to the pending asynchronous send
         /// request</param>
         /// <returns>The response to the send request</returns>
+        [sys.Obsolete("This function is deprecated, please use EndUploadSessionFinishBatchV2 instead.")]
         public UploadSessionFinishBatchLaunch EndUploadSessionFinishBatch(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<UploadSessionFinishBatchLaunch>;
