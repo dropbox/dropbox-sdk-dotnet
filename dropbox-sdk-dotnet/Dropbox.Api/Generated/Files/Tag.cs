@@ -11,49 +11,48 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>The list folder longpoll error object</para>
+    /// <para>Tag that can be added in multiple ways.</para>
     /// </summary>
-    public class ListFolderLongpollError
+    public class Tag
     {
         #pragma warning disable 108
 
         /// <summary>
         /// <para>The encoder instance.</para>
         /// </summary>
-        internal static enc.StructEncoder<ListFolderLongpollError> Encoder = new ListFolderLongpollErrorEncoder();
+        internal static enc.StructEncoder<Tag> Encoder = new TagEncoder();
 
         /// <summary>
         /// <para>The decoder instance.</para>
         /// </summary>
-        internal static enc.StructDecoder<ListFolderLongpollError> Decoder = new ListFolderLongpollErrorDecoder();
+        internal static enc.StructDecoder<Tag> Decoder = new TagDecoder();
 
         /// <summary>
-        /// <para>Initializes a new instance of the <see cref="ListFolderLongpollError" />
-        /// class.</para>
+        /// <para>Initializes a new instance of the <see cref="Tag" /> class.</para>
         /// </summary>
-        public ListFolderLongpollError()
+        public Tag()
         {
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is Reset</para>
+        /// <para>Gets a value indicating whether this instance is UserGeneratedTag</para>
         /// </summary>
-        public bool IsReset
+        public bool IsUserGeneratedTag
         {
             get
             {
-                return this is Reset;
+                return this is UserGeneratedTag;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a Reset, or <c>null</c>.</para>
+        /// <para>Gets this instance as a UserGeneratedTag, or <c>null</c>.</para>
         /// </summary>
-        public Reset AsReset
+        public UserGeneratedTag AsUserGeneratedTag
         {
             get
             {
-                return this as Reset;
+                return this as UserGeneratedTag;
             }
         }
 
@@ -82,21 +81,21 @@ namespace Dropbox.Api.Files
         #region Encoder class
 
         /// <summary>
-        /// <para>Encoder for  <see cref="ListFolderLongpollError" />.</para>
+        /// <para>Encoder for  <see cref="Tag" />.</para>
         /// </summary>
-        private class ListFolderLongpollErrorEncoder : enc.StructEncoder<ListFolderLongpollError>
+        private class TagEncoder : enc.StructEncoder<Tag>
         {
             /// <summary>
             /// <para>Encode fields of given value.</para>
             /// </summary>
             /// <param name="value">The value.</param>
             /// <param name="writer">The writer.</param>
-            public override void EncodeFields(ListFolderLongpollError value, enc.IJsonWriter writer)
+            public override void EncodeFields(Tag value, enc.IJsonWriter writer)
             {
-                if (value is Reset)
+                if (value is UserGeneratedTag)
                 {
-                    WriteProperty(".tag", "reset", writer, enc.StringEncoder.Instance);
-                    Reset.Encoder.EncodeFields((Reset)value, writer);
+                    WriteProperty(".tag", "user_generated_tag", writer, enc.StringEncoder.Instance);
+                    UserGeneratedTag.Encoder.EncodeFields((UserGeneratedTag)value, writer);
                     return;
                 }
                 if (value is Other)
@@ -114,18 +113,17 @@ namespace Dropbox.Api.Files
         #region Decoder class
 
         /// <summary>
-        /// <para>Decoder for  <see cref="ListFolderLongpollError" />.</para>
+        /// <para>Decoder for  <see cref="Tag" />.</para>
         /// </summary>
-        private class ListFolderLongpollErrorDecoder : enc.UnionDecoder<ListFolderLongpollError>
+        private class TagDecoder : enc.UnionDecoder<Tag>
         {
             /// <summary>
-            /// <para>Create a new instance of type <see cref="ListFolderLongpollError"
-            /// />.</para>
+            /// <para>Create a new instance of type <see cref="Tag" />.</para>
             /// </summary>
             /// <returns>The struct instance.</returns>
-            protected override ListFolderLongpollError Create()
+            protected override Tag Create()
             {
-                return new ListFolderLongpollError();
+                return new Tag();
             }
 
             /// <summary>
@@ -134,12 +132,12 @@ namespace Dropbox.Api.Files
             /// <param name="tag">The tag.</param>
             /// <param name="reader">The json reader.</param>
             /// <returns>The decoded object.</returns>
-            protected override ListFolderLongpollError Decode(string tag, enc.IJsonReader reader)
+            protected override Tag Decode(string tag, enc.IJsonReader reader)
             {
                 switch (tag)
                 {
-                    case "reset":
-                        return Reset.Decoder.DecodeFields(reader);
+                    case "user_generated_tag":
+                        return UserGeneratedTag.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -149,51 +147,59 @@ namespace Dropbox.Api.Files
         #endregion
 
         /// <summary>
-        /// <para>Indicates that the cursor has been invalidated. Call <see
-        /// cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderAsync" /> <see
-        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderAsync" /> to obtain a new
-        /// cursor.</para>
+        /// <para>Tag generated by the user.</para>
         /// </summary>
-        public sealed class Reset : ListFolderLongpollError
+        public sealed class UserGeneratedTag : Tag
         {
             #pragma warning disable 108
 
             /// <summary>
             /// <para>The encoder instance.</para>
             /// </summary>
-            internal static enc.StructEncoder<Reset> Encoder = new ResetEncoder();
+            internal static enc.StructEncoder<UserGeneratedTag> Encoder = new UserGeneratedTagEncoder();
 
             /// <summary>
             /// <para>The decoder instance.</para>
             /// </summary>
-            internal static enc.StructDecoder<Reset> Decoder = new ResetDecoder();
+            internal static enc.StructDecoder<UserGeneratedTag> Decoder = new UserGeneratedTagDecoder();
 
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Reset" /> class.</para>
+            /// <para>Initializes a new instance of the <see cref="UserGeneratedTag" />
+            /// class.</para>
             /// </summary>
-            private Reset()
+            /// <param name="value">The value</param>
+            public UserGeneratedTag(global::Dropbox.Api.Files.UserGeneratedTag value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="UserGeneratedTag" />
+            /// class.</para>
+            /// </summary>
+            private UserGeneratedTag()
             {
             }
 
             /// <summary>
-            /// <para>A singleton instance of Reset</para>
+            /// <para>Gets the value of this instance.</para>
             /// </summary>
-            public static readonly Reset Instance = new Reset();
+            public global::Dropbox.Api.Files.UserGeneratedTag Value { get; private set; }
 
             #region Encoder class
 
             /// <summary>
-            /// <para>Encoder for  <see cref="Reset" />.</para>
+            /// <para>Encoder for  <see cref="UserGeneratedTag" />.</para>
             /// </summary>
-            private class ResetEncoder : enc.StructEncoder<Reset>
+            private class UserGeneratedTagEncoder : enc.StructEncoder<UserGeneratedTag>
             {
                 /// <summary>
                 /// <para>Encode fields of given value.</para>
                 /// </summary>
                 /// <param name="value">The value.</param>
                 /// <param name="writer">The writer.</param>
-                public override void EncodeFields(Reset value, enc.IJsonWriter writer)
+                public override void EncodeFields(UserGeneratedTag value, enc.IJsonWriter writer)
                 {
+                    WriteProperty("user_generated_tag", value.Value, writer, global::Dropbox.Api.Files.UserGeneratedTag.Encoder);
                 }
             }
 
@@ -202,19 +208,28 @@ namespace Dropbox.Api.Files
             #region Decoder class
 
             /// <summary>
-            /// <para>Decoder for  <see cref="Reset" />.</para>
+            /// <para>Decoder for  <see cref="UserGeneratedTag" />.</para>
             /// </summary>
-            private class ResetDecoder : enc.StructDecoder<Reset>
+            private class UserGeneratedTagDecoder : enc.StructDecoder<UserGeneratedTag>
             {
                 /// <summary>
-                /// <para>Create a new instance of type <see cref="Reset" />.</para>
+                /// <para>Create a new instance of type <see cref="UserGeneratedTag" />.</para>
                 /// </summary>
                 /// <returns>The struct instance.</returns>
-                protected override Reset Create()
+                protected override UserGeneratedTag Create()
                 {
-                    return Reset.Instance;
+                    return new UserGeneratedTag();
                 }
 
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override UserGeneratedTag DecodeFields(enc.IJsonReader reader)
+                {
+                    return new UserGeneratedTag(global::Dropbox.Api.Files.UserGeneratedTag.Decoder.DecodeFields(reader));
+                }
             }
 
             #endregion
@@ -223,7 +238,7 @@ namespace Dropbox.Api.Files
         /// <summary>
         /// <para>The other object</para>
         /// </summary>
-        public sealed class Other : ListFolderLongpollError
+        public sealed class Other : Tag
         {
             #pragma warning disable 108
 

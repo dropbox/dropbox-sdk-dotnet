@@ -3148,9 +3148,10 @@ namespace Dropbox.Api.Files.Routes
         /// <summary>
         /// <para>Starts returning the contents of a folder. If the result's <see
         /// cref="Dropbox.Api.Files.ListFolderResult.HasMore" /> field is <c>true</c>, call
-        /// <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync" />
-        /// with the returned <see cref="Dropbox.Api.Files.ListFolderResult.Cursor" /> to
-        /// retrieve more entries.</para>
+        /// <see cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderContinueAsync" /> <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync" /> with the
+        /// returned <see cref="Dropbox.Api.Files.ListFolderResult.Cursor" /> to retrieve more
+        /// entries.</para>
         /// <para>If you're using <see cref="Dropbox.Api.Files.ListFolderArg.Recursive" /> set
         /// to <c>true</c> to keep a local cache of the contents of a Dropbox account, iterate
         /// through each entry in order and process them as follows to keep your local state in
@@ -3169,7 +3170,9 @@ namespace Dropbox.Api.Files.Routes
         /// the given path, remove it and all its children. If there's nothing at the given
         /// path, ignore this entry.</para>
         /// <para>Note: <see cref="Auth.RateLimitError" /> may be returned if multiple <see
+        /// cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderAsync" /> <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderAsync" /> or <see
+        /// cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderContinueAsync" /> <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync" /> calls
         /// with same parameters are made simultaneously by same API app for same user. If your
         /// app implements retry logic, please hold off the retry until the previous request
@@ -3205,9 +3208,10 @@ namespace Dropbox.Api.Files.Routes
         /// <summary>
         /// <para>Starts returning the contents of a folder. If the result's <see
         /// cref="Dropbox.Api.Files.ListFolderResult.HasMore" /> field is <c>true</c>, call
-        /// <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync" />
-        /// with the returned <see cref="Dropbox.Api.Files.ListFolderResult.Cursor" /> to
-        /// retrieve more entries.</para>
+        /// <see cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderContinueAsync" /> <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync" /> with the
+        /// returned <see cref="Dropbox.Api.Files.ListFolderResult.Cursor" /> to retrieve more
+        /// entries.</para>
         /// <para>If you're using <see cref="Dropbox.Api.Files.ListFolderArg.Recursive" /> set
         /// to <c>true</c> to keep a local cache of the contents of a Dropbox account, iterate
         /// through each entry in order and process them as follows to keep your local state in
@@ -3226,7 +3230,9 @@ namespace Dropbox.Api.Files.Routes
         /// the given path, remove it and all its children. If there's nothing at the given
         /// path, ignore this entry.</para>
         /// <para>Note: <see cref="Auth.RateLimitError" /> may be returned if multiple <see
+        /// cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderAsync" /> <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderAsync" /> or <see
+        /// cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderContinueAsync" /> <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync" /> calls
         /// with same parameters are made simultaneously by same API app for same user. If your
         /// app implements retry logic, please hold off the retry until the previous request
@@ -3372,9 +3378,11 @@ namespace Dropbox.Api.Files.Routes
 
         /// <summary>
         /// <para>Once a cursor has been retrieved from <see
+        /// cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderAsync" /> <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderAsync" />, use this to
         /// paginate through all files and retrieve updates to the folder, following the same
         /// rules as documented for <see
+        /// cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderAsync" /> <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderAsync" />.</para>
         /// </summary>
         /// <param name="listFolderContinueArg">The request parameters</param>
@@ -3406,13 +3414,17 @@ namespace Dropbox.Api.Files.Routes
 
         /// <summary>
         /// <para>Once a cursor has been retrieved from <see
+        /// cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderAsync" /> <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderAsync" />, use this to
         /// paginate through all files and retrieve updates to the folder, following the same
         /// rules as documented for <see
+        /// cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderAsync" /> <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderAsync" />.</para>
         /// </summary>
         /// <param name="cursor">The cursor returned by your last call to <see
+        /// cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderAsync" /> <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderAsync" /> or <see
+        /// cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderContinueAsync" /> <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync" />.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
@@ -3430,7 +3442,9 @@ namespace Dropbox.Api.Files.Routes
         /// <para>Begins an asynchronous send to the list folder continue route.</para>
         /// </summary>
         /// <param name="cursor">The cursor returned by your last call to <see
+        /// cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderAsync" /> <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderAsync" /> or <see
+        /// cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderContinueAsync" /> <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync" />.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
@@ -3469,6 +3483,7 @@ namespace Dropbox.Api.Files.Routes
 
         /// <summary>
         /// <para>A way to quickly get a cursor for the folder's state. Unlike <see
+        /// cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderAsync" /> <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderAsync" />, <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderGetLatestCursorAsync" />
         /// doesn't return any entries. This endpoint is for app which only needs to know about
@@ -3505,6 +3520,7 @@ namespace Dropbox.Api.Files.Routes
 
         /// <summary>
         /// <para>A way to quickly get a cursor for the folder's state. Unlike <see
+        /// cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderAsync" /> <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderAsync" />, <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderGetLatestCursorAsync" />
         /// doesn't return any entries. This endpoint is for app which only needs to know about
@@ -3652,8 +3668,9 @@ namespace Dropbox.Api.Files.Routes
 
         /// <summary>
         /// <para>A longpoll endpoint to wait for changes on an account. In conjunction with
-        /// <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync" />,
-        /// this call gives you a low-latency way to monitor an account for file changes. The
+        /// <see cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderContinueAsync" /> <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync" />, this
+        /// call gives you a low-latency way to monitor an account for file changes. The
         /// connection will block until there are changes available or a timeout occurs. This
         /// endpoint is useful mostly for client-side apps. If you're looking for server-side
         /// notifications, check out our <a
@@ -3689,8 +3706,9 @@ namespace Dropbox.Api.Files.Routes
 
         /// <summary>
         /// <para>A longpoll endpoint to wait for changes on an account. In conjunction with
-        /// <see cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync" />,
-        /// this call gives you a low-latency way to monitor an account for file changes. The
+        /// <see cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderContinueAsync" /> <see
+        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync" />, this
+        /// call gives you a low-latency way to monitor an account for file changes. The
         /// connection will block until there are changes available or a timeout occurs. This
         /// endpoint is useful mostly for client-side apps. If you're looking for server-side
         /// notifications, check out our <a
@@ -3698,7 +3716,9 @@ namespace Dropbox.Api.Files.Routes
         /// documentation</a>.</para>
         /// </summary>
         /// <param name="cursor">A cursor as returned by <see
+        /// cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderAsync" /> <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderAsync" /> or <see
+        /// cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderContinueAsync" /> <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync" />. Cursors
         /// retrieved by setting <see cref="Dropbox.Api.Files.ListFolderArg.IncludeMediaInfo"
         /// /> to <c>true</c> are not supported.</param>
@@ -3724,7 +3744,9 @@ namespace Dropbox.Api.Files.Routes
         /// <para>Begins an asynchronous send to the list folder longpoll route.</para>
         /// </summary>
         /// <param name="cursor">A cursor as returned by <see
+        /// cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderAsync" /> <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderAsync" /> or <see
+        /// cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderContinueAsync" /> <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.ListFolderContinueAsync" />. Cursors
         /// retrieved by setting <see cref="Dropbox.Api.Files.ListFolderArg.IncludeMediaInfo"
         /// /> to <c>true</c> are not supported.</param>
@@ -6103,6 +6125,259 @@ namespace Dropbox.Api.Files.Routes
             }
 
             return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Add a tag to an item. A tag is a string. No more than 20 tags can be added to
+        /// a given item.</para>
+        /// </summary>
+        /// <param name="addTagArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see cref="AddTagError"/>.</exception>
+        public t.Task TagsAddAsync(AddTagArg addTagArg)
+        {
+            return this.Transport.SendRpcRequestAsync<AddTagArg, enc.Empty, AddTagError>(addTagArg, "api", "/files/tags/add", "user", global::Dropbox.Api.Files.AddTagArg.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Files.AddTagError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the tags add route.</para>
+        /// </summary>
+        /// <param name="addTagArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginTagsAdd(AddTagArg addTagArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.TagsAddAsync(addTagArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Add a tag to an item. A tag is a string. No more than 20 tags can be added to
+        /// a given item.</para>
+        /// </summary>
+        /// <param name="path">Path to the item to be tagged.</param>
+        /// <param name="tagText">The value of the tag to add.</param>
+        /// <returns>The task that represents the asynchronous send operation.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see cref="AddTagError"/>.</exception>
+        public t.Task TagsAddAsync(string path,
+                                   string tagText)
+        {
+            var addTagArg = new AddTagArg(path,
+                                          tagText);
+
+            return this.TagsAddAsync(addTagArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the tags add route.</para>
+        /// </summary>
+        /// <param name="path">Path to the item to be tagged.</param>
+        /// <param name="tagText">The value of the tag to add.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginTagsAdd(string path,
+                                             string tagText,
+                                             sys.AsyncCallback callback,
+                                             object callbackState = null)
+        {
+            var addTagArg = new AddTagArg(path,
+                                          tagText);
+
+            return this.BeginTagsAdd(addTagArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the tags add route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see cref="AddTagError"/>.</exception>
+        public void EndTagsAdd(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+        }
+
+        /// <summary>
+        /// <para>Get list of tags assigned to items.</para>
+        /// </summary>
+        /// <param name="getTagsArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see cref="BaseTagError"/>.</exception>
+        public t.Task<GetTagsResult> TagsGetAsync(GetTagsArg getTagsArg)
+        {
+            return this.Transport.SendRpcRequestAsync<GetTagsArg, GetTagsResult, BaseTagError>(getTagsArg, "api", "/files/tags/get", "user", global::Dropbox.Api.Files.GetTagsArg.Encoder, global::Dropbox.Api.Files.GetTagsResult.Decoder, global::Dropbox.Api.Files.BaseTagError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the tags get route.</para>
+        /// </summary>
+        /// <param name="getTagsArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginTagsGet(GetTagsArg getTagsArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.TagsGetAsync(getTagsArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Get list of tags assigned to items.</para>
+        /// </summary>
+        /// <param name="paths">Path to the items.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see cref="BaseTagError"/>.</exception>
+        public t.Task<GetTagsResult> TagsGetAsync(col.IEnumerable<string> paths)
+        {
+            var getTagsArg = new GetTagsArg(paths);
+
+            return this.TagsGetAsync(getTagsArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the tags get route.</para>
+        /// </summary>
+        /// <param name="paths">Path to the items.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginTagsGet(col.IEnumerable<string> paths,
+                                             sys.AsyncCallback callback,
+                                             object callbackState = null)
+        {
+            var getTagsArg = new GetTagsArg(paths);
+
+            return this.BeginTagsGet(getTagsArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the tags get route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see cref="BaseTagError"/>.</exception>
+        public GetTagsResult EndTagsGet(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<GetTagsResult>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
+
+        /// <summary>
+        /// <para>Remove a tag from an item.</para>
+        /// </summary>
+        /// <param name="removeTagArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="RemoveTagError"/>.</exception>
+        public t.Task TagsRemoveAsync(RemoveTagArg removeTagArg)
+        {
+            return this.Transport.SendRpcRequestAsync<RemoveTagArg, enc.Empty, RemoveTagError>(removeTagArg, "api", "/files/tags/remove", "user", global::Dropbox.Api.Files.RemoveTagArg.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Files.RemoveTagError.Decoder);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the tags remove route.</para>
+        /// </summary>
+        /// <param name="removeTagArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginTagsRemove(RemoveTagArg removeTagArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.TagsRemoveAsync(removeTagArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>Remove a tag from an item.</para>
+        /// </summary>
+        /// <param name="path">Path to the item to tag.</param>
+        /// <param name="tagText">The tag to remove.</param>
+        /// <returns>The task that represents the asynchronous send operation.</returns>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="RemoveTagError"/>.</exception>
+        public t.Task TagsRemoveAsync(string path,
+                                      string tagText)
+        {
+            var removeTagArg = new RemoveTagArg(path,
+                                                tagText);
+
+            return this.TagsRemoveAsync(removeTagArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the tags remove route.</para>
+        /// </summary>
+        /// <param name="path">Path to the item to tag.</param>
+        /// <param name="tagText">The tag to remove.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginTagsRemove(string path,
+                                                string tagText,
+                                                sys.AsyncCallback callback,
+                                                object callbackState = null)
+        {
+            var removeTagArg = new RemoveTagArg(path,
+                                                tagText);
+
+            return this.BeginTagsRemove(removeTagArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the tags remove route to
+        /// complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
+        /// processing the request; This will contain a <see
+        /// cref="RemoveTagError"/>.</exception>
+        public void EndTagsRemove(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
         }
 
         /// <summary>
