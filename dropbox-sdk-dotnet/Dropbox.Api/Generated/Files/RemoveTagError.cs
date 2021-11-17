@@ -35,157 +35,46 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is
-        /// TagNotExistsForThisPath</para>
+        /// <para>Gets a value indicating whether this instance is TagNotPresent</para>
         /// </summary>
-        public bool IsTagNotExistsForThisPath
+        public bool IsTagNotPresent
         {
             get
             {
-                return this is TagNotExistsForThisPath;
+                return this is TagNotPresent;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a TagNotExistsForThisPath, or <c>null</c>.</para>
+        /// <para>Gets this instance as a TagNotPresent, or <c>null</c>.</para>
         /// </summary>
-        public TagNotExistsForThisPath AsTagNotExistsForThisPath
+        public TagNotPresent AsTagNotPresent
         {
             get
             {
-                return this as TagNotExistsForThisPath;
+                return this as TagNotPresent;
             }
         }
 
         /// <summary>
-        /// <para>Gets a value indicating whether this instance is FeatureNotSupported</para>
+        /// <para>Gets a value indicating whether this instance is Path</para>
         /// </summary>
-        public bool IsFeatureNotSupported
+        public bool IsPath
         {
             get
             {
-                return this is FeatureNotSupported;
+                return this is Path;
             }
         }
 
         /// <summary>
-        /// <para>Gets this instance as a FeatureNotSupported, or <c>null</c>.</para>
+        /// <para>Gets this instance as a Path, or <c>null</c>.</para>
         /// </summary>
-        public FeatureNotSupported AsFeatureNotSupported
+        public Path AsPath
         {
             get
             {
-                return this as FeatureNotSupported;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets a value indicating whether this instance is PathNotFound</para>
-        /// </summary>
-        public bool IsPathNotFound
-        {
-            get
-            {
-                return this is PathNotFound;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a PathNotFound, or <c>null</c>.</para>
-        /// </summary>
-        public PathNotFound AsPathNotFound
-        {
-            get
-            {
-                return this as PathNotFound;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets a value indicating whether this instance is Unknown</para>
-        /// </summary>
-        public bool IsUnknown
-        {
-            get
-            {
-                return this is Unknown;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a Unknown, or <c>null</c>.</para>
-        /// </summary>
-        public Unknown AsUnknown
-        {
-            get
-            {
-                return this as Unknown;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets a value indicating whether this instance is Transient</para>
-        /// </summary>
-        public bool IsTransient
-        {
-            get
-            {
-                return this is Transient;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a Transient, or <c>null</c>.</para>
-        /// </summary>
-        public Transient AsTransient
-        {
-            get
-            {
-                return this as Transient;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets a value indicating whether this instance is InputValidation</para>
-        /// </summary>
-        public bool IsInputValidation
-        {
-            get
-            {
-                return this is InputValidation;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a InputValidation, or <c>null</c>.</para>
-        /// </summary>
-        public InputValidation AsInputValidation
-        {
-            get
-            {
-                return this as InputValidation;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets a value indicating whether this instance is Cancelled</para>
-        /// </summary>
-        public bool IsCancelled
-        {
-            get
-            {
-                return this is Cancelled;
-            }
-        }
-
-        /// <summary>
-        /// <para>Gets this instance as a Cancelled, or <c>null</c>.</para>
-        /// </summary>
-        public Cancelled AsCancelled
-        {
-            get
-            {
-                return this as Cancelled;
+                return this as Path;
             }
         }
 
@@ -225,46 +114,16 @@ namespace Dropbox.Api.Files
             /// <param name="writer">The writer.</param>
             public override void EncodeFields(RemoveTagError value, enc.IJsonWriter writer)
             {
-                if (value is TagNotExistsForThisPath)
+                if (value is TagNotPresent)
                 {
-                    WriteProperty(".tag", "tag_not_exists_for_this_path", writer, enc.StringEncoder.Instance);
-                    TagNotExistsForThisPath.Encoder.EncodeFields((TagNotExistsForThisPath)value, writer);
+                    WriteProperty(".tag", "tag_not_present", writer, enc.StringEncoder.Instance);
+                    TagNotPresent.Encoder.EncodeFields((TagNotPresent)value, writer);
                     return;
                 }
-                if (value is FeatureNotSupported)
+                if (value is Path)
                 {
-                    WriteProperty(".tag", "feature_not_supported", writer, enc.StringEncoder.Instance);
-                    FeatureNotSupported.Encoder.EncodeFields((FeatureNotSupported)value, writer);
-                    return;
-                }
-                if (value is PathNotFound)
-                {
-                    WriteProperty(".tag", "path_not_found", writer, enc.StringEncoder.Instance);
-                    PathNotFound.Encoder.EncodeFields((PathNotFound)value, writer);
-                    return;
-                }
-                if (value is Unknown)
-                {
-                    WriteProperty(".tag", "unknown", writer, enc.StringEncoder.Instance);
-                    Unknown.Encoder.EncodeFields((Unknown)value, writer);
-                    return;
-                }
-                if (value is Transient)
-                {
-                    WriteProperty(".tag", "transient", writer, enc.StringEncoder.Instance);
-                    Transient.Encoder.EncodeFields((Transient)value, writer);
-                    return;
-                }
-                if (value is InputValidation)
-                {
-                    WriteProperty(".tag", "input_validation", writer, enc.StringEncoder.Instance);
-                    InputValidation.Encoder.EncodeFields((InputValidation)value, writer);
-                    return;
-                }
-                if (value is Cancelled)
-                {
-                    WriteProperty(".tag", "cancelled", writer, enc.StringEncoder.Instance);
-                    Cancelled.Encoder.EncodeFields((Cancelled)value, writer);
+                    WriteProperty(".tag", "path", writer, enc.StringEncoder.Instance);
+                    Path.Encoder.EncodeFields((Path)value, writer);
                     return;
                 }
                 if (value is Other)
@@ -305,20 +164,10 @@ namespace Dropbox.Api.Files
             {
                 switch (tag)
                 {
-                    case "tag_not_exists_for_this_path":
-                        return TagNotExistsForThisPath.Decoder.DecodeFields(reader);
-                    case "feature_not_supported":
-                        return FeatureNotSupported.Decoder.DecodeFields(reader);
-                    case "path_not_found":
-                        return PathNotFound.Decoder.DecodeFields(reader);
-                    case "unknown":
-                        return Unknown.Decoder.DecodeFields(reader);
-                    case "transient":
-                        return Transient.Decoder.DecodeFields(reader);
-                    case "input_validation":
-                        return InputValidation.Decoder.DecodeFields(reader);
-                    case "cancelled":
-                        return Cancelled.Decoder.DecodeFields(reader);
+                    case "tag_not_present":
+                        return TagNotPresent.Decoder.DecodeFields(reader);
+                    case "path":
+                        return Path.Decoder.DecodeFields(reader);
                     case "other":
                         return Other.Decoder.DecodeFields(reader);
                     default:
@@ -332,46 +181,46 @@ namespace Dropbox.Api.Files
         /// <summary>
         /// <para>That tag doesn't exist at this path.</para>
         /// </summary>
-        public sealed class TagNotExistsForThisPath : RemoveTagError
+        public sealed class TagNotPresent : RemoveTagError
         {
             #pragma warning disable 108
 
             /// <summary>
             /// <para>The encoder instance.</para>
             /// </summary>
-            internal static enc.StructEncoder<TagNotExistsForThisPath> Encoder = new TagNotExistsForThisPathEncoder();
+            internal static enc.StructEncoder<TagNotPresent> Encoder = new TagNotPresentEncoder();
 
             /// <summary>
             /// <para>The decoder instance.</para>
             /// </summary>
-            internal static enc.StructDecoder<TagNotExistsForThisPath> Decoder = new TagNotExistsForThisPathDecoder();
+            internal static enc.StructDecoder<TagNotPresent> Decoder = new TagNotPresentDecoder();
 
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="TagNotExistsForThisPath" />
+            /// <para>Initializes a new instance of the <see cref="TagNotPresent" />
             /// class.</para>
             /// </summary>
-            private TagNotExistsForThisPath()
+            private TagNotPresent()
             {
             }
 
             /// <summary>
-            /// <para>A singleton instance of TagNotExistsForThisPath</para>
+            /// <para>A singleton instance of TagNotPresent</para>
             /// </summary>
-            public static readonly TagNotExistsForThisPath Instance = new TagNotExistsForThisPath();
+            public static readonly TagNotPresent Instance = new TagNotPresent();
 
             #region Encoder class
 
             /// <summary>
-            /// <para>Encoder for  <see cref="TagNotExistsForThisPath" />.</para>
+            /// <para>Encoder for  <see cref="TagNotPresent" />.</para>
             /// </summary>
-            private class TagNotExistsForThisPathEncoder : enc.StructEncoder<TagNotExistsForThisPath>
+            private class TagNotPresentEncoder : enc.StructEncoder<TagNotPresent>
             {
                 /// <summary>
                 /// <para>Encode fields of given value.</para>
                 /// </summary>
                 /// <param name="value">The value.</param>
                 /// <param name="writer">The writer.</param>
-                public override void EncodeFields(TagNotExistsForThisPath value, enc.IJsonWriter writer)
+                public override void EncodeFields(TagNotPresent value, enc.IJsonWriter writer)
                 {
                 }
             }
@@ -381,18 +230,17 @@ namespace Dropbox.Api.Files
             #region Decoder class
 
             /// <summary>
-            /// <para>Decoder for  <see cref="TagNotExistsForThisPath" />.</para>
+            /// <para>Decoder for  <see cref="TagNotPresent" />.</para>
             /// </summary>
-            private class TagNotExistsForThisPathDecoder : enc.StructDecoder<TagNotExistsForThisPath>
+            private class TagNotPresentDecoder : enc.StructDecoder<TagNotPresent>
             {
                 /// <summary>
-                /// <para>Create a new instance of type <see cref="TagNotExistsForThisPath"
-                /// />.</para>
+                /// <para>Create a new instance of type <see cref="TagNotPresent" />.</para>
                 /// </summary>
                 /// <returns>The struct instance.</returns>
-                protected override TagNotExistsForThisPath Create()
+                protected override TagNotPresent Create()
                 {
-                    return TagNotExistsForThisPath.Instance;
+                    return TagNotPresent.Instance;
                 }
 
             }
@@ -401,49 +249,57 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>Tags are not turned on for your team. Please turn on the feature.</para>
+        /// <para>The path object</para>
         /// </summary>
-        public sealed class FeatureNotSupported : RemoveTagError
+        public sealed class Path : RemoveTagError
         {
             #pragma warning disable 108
 
             /// <summary>
             /// <para>The encoder instance.</para>
             /// </summary>
-            internal static enc.StructEncoder<FeatureNotSupported> Encoder = new FeatureNotSupportedEncoder();
+            internal static enc.StructEncoder<Path> Encoder = new PathEncoder();
 
             /// <summary>
             /// <para>The decoder instance.</para>
             /// </summary>
-            internal static enc.StructDecoder<FeatureNotSupported> Decoder = new FeatureNotSupportedDecoder();
+            internal static enc.StructDecoder<Path> Decoder = new PathDecoder();
 
             /// <summary>
-            /// <para>Initializes a new instance of the <see cref="FeatureNotSupported" />
-            /// class.</para>
+            /// <para>Initializes a new instance of the <see cref="Path" /> class.</para>
             /// </summary>
-            private FeatureNotSupported()
+            /// <param name="value">The value</param>
+            public Path(LookupError value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="Path" /> class.</para>
+            /// </summary>
+            private Path()
             {
             }
 
             /// <summary>
-            /// <para>A singleton instance of FeatureNotSupported</para>
+            /// <para>Gets the value of this instance.</para>
             /// </summary>
-            public static readonly FeatureNotSupported Instance = new FeatureNotSupported();
+            public LookupError Value { get; private set; }
 
             #region Encoder class
 
             /// <summary>
-            /// <para>Encoder for  <see cref="FeatureNotSupported" />.</para>
+            /// <para>Encoder for  <see cref="Path" />.</para>
             /// </summary>
-            private class FeatureNotSupportedEncoder : enc.StructEncoder<FeatureNotSupported>
+            private class PathEncoder : enc.StructEncoder<Path>
             {
                 /// <summary>
                 /// <para>Encode fields of given value.</para>
                 /// </summary>
                 /// <param name="value">The value.</param>
                 /// <param name="writer">The writer.</param>
-                public override void EncodeFields(FeatureNotSupported value, enc.IJsonWriter writer)
+                public override void EncodeFields(Path value, enc.IJsonWriter writer)
                 {
+                    WriteProperty("path", value.Value, writer, global::Dropbox.Api.Files.LookupError.Encoder);
                 }
             }
 
@@ -452,367 +308,37 @@ namespace Dropbox.Api.Files
             #region Decoder class
 
             /// <summary>
-            /// <para>Decoder for  <see cref="FeatureNotSupported" />.</para>
+            /// <para>Decoder for  <see cref="Path" />.</para>
             /// </summary>
-            private class FeatureNotSupportedDecoder : enc.StructDecoder<FeatureNotSupported>
+            private class PathDecoder : enc.StructDecoder<Path>
             {
                 /// <summary>
-                /// <para>Create a new instance of type <see cref="FeatureNotSupported"
-                /// />.</para>
+                /// <para>Create a new instance of type <see cref="Path" />.</para>
                 /// </summary>
                 /// <returns>The struct instance.</returns>
-                protected override FeatureNotSupported Create()
+                protected override Path Create()
                 {
-                    return FeatureNotSupported.Instance;
+                    return new Path();
                 }
 
-            }
-
-            #endregion
-        }
-
-        /// <summary>
-        /// <para>Path not found.</para>
-        /// </summary>
-        public sealed class PathNotFound : RemoveTagError
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<PathNotFound> Encoder = new PathNotFoundEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<PathNotFound> Decoder = new PathNotFoundDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="PathNotFound" />
-            /// class.</para>
-            /// </summary>
-            private PathNotFound()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of PathNotFound</para>
-            /// </summary>
-            public static readonly PathNotFound Instance = new PathNotFound();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="PathNotFound" />.</para>
-            /// </summary>
-            private class PathNotFoundEncoder : enc.StructEncoder<PathNotFound>
-            {
                 /// <summary>
-                /// <para>Encode fields of given value.</para>
+                /// <para>Set given field.</para>
                 /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(PathNotFound value, enc.IJsonWriter writer)
+                /// <param name="value">The field value.</param>
+                /// <param name="fieldName">The field name.</param>
+                /// <param name="reader">The json reader.</param>
+                protected override void SetField(Path value, string fieldName, enc.IJsonReader reader)
                 {
+                    switch (fieldName)
+                    {
+                        case "path":
+                            value.Value = global::Dropbox.Api.Files.LookupError.Decoder.Decode(reader);
+                            break;
+                        default:
+                            reader.Skip();
+                            break;
+                    }
                 }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="PathNotFound" />.</para>
-            /// </summary>
-            private class PathNotFoundDecoder : enc.StructDecoder<PathNotFound>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="PathNotFound" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override PathNotFound Create()
-                {
-                    return PathNotFound.Instance;
-                }
-
-            }
-
-            #endregion
-        }
-
-        /// <summary>
-        /// <para>Action failed.</para>
-        /// </summary>
-        public sealed class Unknown : RemoveTagError
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<Unknown> Encoder = new UnknownEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<Unknown> Decoder = new UnknownDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Unknown" /> class.</para>
-            /// </summary>
-            private Unknown()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of Unknown</para>
-            /// </summary>
-            public static readonly Unknown Instance = new Unknown();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="Unknown" />.</para>
-            /// </summary>
-            private class UnknownEncoder : enc.StructEncoder<Unknown>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(Unknown value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="Unknown" />.</para>
-            /// </summary>
-            private class UnknownDecoder : enc.StructDecoder<Unknown>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="Unknown" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override Unknown Create()
-                {
-                    return Unknown.Instance;
-                }
-
-            }
-
-            #endregion
-        }
-
-        /// <summary>
-        /// <para>Action failed. Try again.</para>
-        /// </summary>
-        public sealed class Transient : RemoveTagError
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<Transient> Encoder = new TransientEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<Transient> Decoder = new TransientDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Transient" /> class.</para>
-            /// </summary>
-            private Transient()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of Transient</para>
-            /// </summary>
-            public static readonly Transient Instance = new Transient();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="Transient" />.</para>
-            /// </summary>
-            private class TransientEncoder : enc.StructEncoder<Transient>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(Transient value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="Transient" />.</para>
-            /// </summary>
-            private class TransientDecoder : enc.StructDecoder<Transient>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="Transient" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override Transient Create()
-                {
-                    return Transient.Instance;
-                }
-
-            }
-
-            #endregion
-        }
-
-        /// <summary>
-        /// <para>Action failed due to wrong params.</para>
-        /// </summary>
-        public sealed class InputValidation : RemoveTagError
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<InputValidation> Encoder = new InputValidationEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<InputValidation> Decoder = new InputValidationDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="InputValidation" />
-            /// class.</para>
-            /// </summary>
-            private InputValidation()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of InputValidation</para>
-            /// </summary>
-            public static readonly InputValidation Instance = new InputValidation();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="InputValidation" />.</para>
-            /// </summary>
-            private class InputValidationEncoder : enc.StructEncoder<InputValidation>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(InputValidation value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="InputValidation" />.</para>
-            /// </summary>
-            private class InputValidationDecoder : enc.StructDecoder<InputValidation>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="InputValidation" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override InputValidation Create()
-                {
-                    return InputValidation.Instance;
-                }
-
-            }
-
-            #endregion
-        }
-
-        /// <summary>
-        /// <para>Action cancelled.</para>
-        /// </summary>
-        public sealed class Cancelled : RemoveTagError
-        {
-            #pragma warning disable 108
-
-            /// <summary>
-            /// <para>The encoder instance.</para>
-            /// </summary>
-            internal static enc.StructEncoder<Cancelled> Encoder = new CancelledEncoder();
-
-            /// <summary>
-            /// <para>The decoder instance.</para>
-            /// </summary>
-            internal static enc.StructDecoder<Cancelled> Decoder = new CancelledDecoder();
-
-            /// <summary>
-            /// <para>Initializes a new instance of the <see cref="Cancelled" /> class.</para>
-            /// </summary>
-            private Cancelled()
-            {
-            }
-
-            /// <summary>
-            /// <para>A singleton instance of Cancelled</para>
-            /// </summary>
-            public static readonly Cancelled Instance = new Cancelled();
-
-            #region Encoder class
-
-            /// <summary>
-            /// <para>Encoder for  <see cref="Cancelled" />.</para>
-            /// </summary>
-            private class CancelledEncoder : enc.StructEncoder<Cancelled>
-            {
-                /// <summary>
-                /// <para>Encode fields of given value.</para>
-                /// </summary>
-                /// <param name="value">The value.</param>
-                /// <param name="writer">The writer.</param>
-                public override void EncodeFields(Cancelled value, enc.IJsonWriter writer)
-                {
-                }
-            }
-
-            #endregion
-
-            #region Decoder class
-
-            /// <summary>
-            /// <para>Decoder for  <see cref="Cancelled" />.</para>
-            /// </summary>
-            private class CancelledDecoder : enc.StructDecoder<Cancelled>
-            {
-                /// <summary>
-                /// <para>Create a new instance of type <see cref="Cancelled" />.</para>
-                /// </summary>
-                /// <returns>The struct instance.</returns>
-                protected override Cancelled Create()
-                {
-                    return Cancelled.Instance;
-                }
-
             }
 
             #endregion
