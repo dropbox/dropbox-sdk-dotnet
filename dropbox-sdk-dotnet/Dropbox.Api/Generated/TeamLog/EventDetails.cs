@@ -2249,6 +2249,53 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// UndoNamingConventionDetails</para>
+        /// </summary>
+        public bool IsUndoNamingConventionDetails
+        {
+            get
+            {
+                return this is UndoNamingConventionDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a UndoNamingConventionDetails, or <c>null</c>.</para>
+        /// </summary>
+        public UndoNamingConventionDetails AsUndoNamingConventionDetails
+        {
+            get
+            {
+                return this as UndoNamingConventionDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// UndoOrganizeFolderWithTidyDetails</para>
+        /// </summary>
+        public bool IsUndoOrganizeFolderWithTidyDetails
+        {
+            get
+            {
+                return this is UndoOrganizeFolderWithTidyDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a UndoOrganizeFolderWithTidyDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public UndoOrganizeFolderWithTidyDetails AsUndoOrganizeFolderWithTidyDetails
+        {
+            get
+            {
+                return this as UndoOrganizeFolderWithTidyDetails;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is UserTagsAddedDetails</para>
         /// </summary>
         public bool IsUserTagsAddedDetails
@@ -11746,6 +11793,18 @@ namespace Dropbox.Api.TeamLog
                     RewindFolderDetails.Encoder.EncodeFields((RewindFolderDetails)value, writer);
                     return;
                 }
+                if (value is UndoNamingConventionDetails)
+                {
+                    WriteProperty(".tag", "undo_naming_convention_details", writer, enc.StringEncoder.Instance);
+                    UndoNamingConventionDetails.Encoder.EncodeFields((UndoNamingConventionDetails)value, writer);
+                    return;
+                }
+                if (value is UndoOrganizeFolderWithTidyDetails)
+                {
+                    WriteProperty(".tag", "undo_organize_folder_with_tidy_details", writer, enc.StringEncoder.Instance);
+                    UndoOrganizeFolderWithTidyDetails.Encoder.EncodeFields((UndoOrganizeFolderWithTidyDetails)value, writer);
+                    return;
+                }
                 if (value is UserTagsAddedDetails)
                 {
                     WriteProperty(".tag", "user_tags_added_details", writer, enc.StringEncoder.Instance);
@@ -14254,6 +14313,10 @@ namespace Dropbox.Api.TeamLog
                         return OrganizeFolderWithTidyDetails.Decoder.DecodeFields(reader);
                     case "rewind_folder_details":
                         return RewindFolderDetails.Decoder.DecodeFields(reader);
+                    case "undo_naming_convention_details":
+                        return UndoNamingConventionDetails.Decoder.DecodeFields(reader);
+                    case "undo_organize_folder_with_tidy_details":
+                        return UndoOrganizeFolderWithTidyDetails.Decoder.DecodeFields(reader);
                     case "user_tags_added_details":
                         return UserTagsAddedDetails.Decoder.DecodeFields(reader);
                     case "user_tags_removed_details":
@@ -23594,6 +23657,186 @@ namespace Dropbox.Api.TeamLog
                 public override RewindFolderDetails DecodeFields(enc.IJsonReader reader)
                 {
                     return new RewindFolderDetails(global::Dropbox.Api.TeamLog.RewindFolderDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The undo naming convention details object</para>
+        /// </summary>
+        public sealed class UndoNamingConventionDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<UndoNamingConventionDetails> Encoder = new UndoNamingConventionDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<UndoNamingConventionDetails> Decoder = new UndoNamingConventionDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="UndoNamingConventionDetails"
+            /// /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public UndoNamingConventionDetails(global::Dropbox.Api.TeamLog.UndoNamingConventionDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="UndoNamingConventionDetails"
+            /// /> class.</para>
+            /// </summary>
+            private UndoNamingConventionDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.UndoNamingConventionDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="UndoNamingConventionDetails" />.</para>
+            /// </summary>
+            private class UndoNamingConventionDetailsEncoder : enc.StructEncoder<UndoNamingConventionDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(UndoNamingConventionDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("undo_naming_convention_details", value.Value, writer, global::Dropbox.Api.TeamLog.UndoNamingConventionDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="UndoNamingConventionDetails" />.</para>
+            /// </summary>
+            private class UndoNamingConventionDetailsDecoder : enc.StructDecoder<UndoNamingConventionDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="UndoNamingConventionDetails"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override UndoNamingConventionDetails Create()
+                {
+                    return new UndoNamingConventionDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override UndoNamingConventionDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new UndoNamingConventionDetails(global::Dropbox.Api.TeamLog.UndoNamingConventionDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The undo organize folder with tidy details object</para>
+        /// </summary>
+        public sealed class UndoOrganizeFolderWithTidyDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<UndoOrganizeFolderWithTidyDetails> Encoder = new UndoOrganizeFolderWithTidyDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<UndoOrganizeFolderWithTidyDetails> Decoder = new UndoOrganizeFolderWithTidyDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="UndoOrganizeFolderWithTidyDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public UndoOrganizeFolderWithTidyDetails(global::Dropbox.Api.TeamLog.UndoOrganizeFolderWithTidyDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="UndoOrganizeFolderWithTidyDetails" /> class.</para>
+            /// </summary>
+            private UndoOrganizeFolderWithTidyDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.UndoOrganizeFolderWithTidyDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="UndoOrganizeFolderWithTidyDetails" />.</para>
+            /// </summary>
+            private class UndoOrganizeFolderWithTidyDetailsEncoder : enc.StructEncoder<UndoOrganizeFolderWithTidyDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(UndoOrganizeFolderWithTidyDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("undo_organize_folder_with_tidy_details", value.Value, writer, global::Dropbox.Api.TeamLog.UndoOrganizeFolderWithTidyDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="UndoOrganizeFolderWithTidyDetails" />.</para>
+            /// </summary>
+            private class UndoOrganizeFolderWithTidyDetailsDecoder : enc.StructDecoder<UndoOrganizeFolderWithTidyDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="UndoOrganizeFolderWithTidyDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override UndoOrganizeFolderWithTidyDetails Create()
+                {
+                    return new UndoOrganizeFolderWithTidyDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override UndoOrganizeFolderWithTidyDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new UndoOrganizeFolderWithTidyDetails(global::Dropbox.Api.TeamLog.UndoOrganizeFolderWithTidyDetails.Decoder.DecodeFields(reader));
                 }
             }
 

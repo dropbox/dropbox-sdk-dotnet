@@ -11,43 +11,43 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Applied naming convention.</para>
+    /// <para>Removed multi-file organize.</para>
     /// </summary>
-    public class ApplyNamingConventionDetails
+    public class UndoOrganizeFolderWithTidyDetails
     {
         #pragma warning disable 108
 
         /// <summary>
         /// <para>The encoder instance.</para>
         /// </summary>
-        internal static enc.StructEncoder<ApplyNamingConventionDetails> Encoder = new ApplyNamingConventionDetailsEncoder();
+        internal static enc.StructEncoder<UndoOrganizeFolderWithTidyDetails> Encoder = new UndoOrganizeFolderWithTidyDetailsEncoder();
 
         /// <summary>
         /// <para>The decoder instance.</para>
         /// </summary>
-        internal static enc.StructDecoder<ApplyNamingConventionDetails> Decoder = new ApplyNamingConventionDetailsDecoder();
+        internal static enc.StructDecoder<UndoOrganizeFolderWithTidyDetails> Decoder = new UndoOrganizeFolderWithTidyDetailsDecoder();
 
         /// <summary>
-        /// <para>Initializes a new instance of the <see cref="ApplyNamingConventionDetails" />
-        /// class.</para>
+        /// <para>Initializes a new instance of the <see
+        /// cref="UndoOrganizeFolderWithTidyDetails" /> class.</para>
         /// </summary>
-        public ApplyNamingConventionDetails()
+        public UndoOrganizeFolderWithTidyDetails()
         {
         }
 
         #region Encoder class
 
         /// <summary>
-        /// <para>Encoder for  <see cref="ApplyNamingConventionDetails" />.</para>
+        /// <para>Encoder for  <see cref="UndoOrganizeFolderWithTidyDetails" />.</para>
         /// </summary>
-        private class ApplyNamingConventionDetailsEncoder : enc.StructEncoder<ApplyNamingConventionDetails>
+        private class UndoOrganizeFolderWithTidyDetailsEncoder : enc.StructEncoder<UndoOrganizeFolderWithTidyDetails>
         {
             /// <summary>
             /// <para>Encode fields of given value.</para>
             /// </summary>
             /// <param name="value">The value.</param>
             /// <param name="writer">The writer.</param>
-            public override void EncodeFields(ApplyNamingConventionDetails value, enc.IJsonWriter writer)
+            public override void EncodeFields(UndoOrganizeFolderWithTidyDetails value, enc.IJsonWriter writer)
             {
             }
         }
@@ -58,18 +58,18 @@ namespace Dropbox.Api.TeamLog
         #region Decoder class
 
         /// <summary>
-        /// <para>Decoder for  <see cref="ApplyNamingConventionDetails" />.</para>
+        /// <para>Decoder for  <see cref="UndoOrganizeFolderWithTidyDetails" />.</para>
         /// </summary>
-        private class ApplyNamingConventionDetailsDecoder : enc.StructDecoder<ApplyNamingConventionDetails>
+        private class UndoOrganizeFolderWithTidyDetailsDecoder : enc.StructDecoder<UndoOrganizeFolderWithTidyDetails>
         {
             /// <summary>
-            /// <para>Create a new instance of type <see cref="ApplyNamingConventionDetails"
-            /// />.</para>
+            /// <para>Create a new instance of type <see
+            /// cref="UndoOrganizeFolderWithTidyDetails" />.</para>
             /// </summary>
             /// <returns>The struct instance.</returns>
-            protected override ApplyNamingConventionDetails Create()
+            protected override UndoOrganizeFolderWithTidyDetails Create()
             {
-                return new ApplyNamingConventionDetails();
+                return new UndoOrganizeFolderWithTidyDetails();
             }
 
             /// <summary>
@@ -78,7 +78,7 @@ namespace Dropbox.Api.TeamLog
             /// <param name="value">The field value.</param>
             /// <param name="fieldName">The field name.</param>
             /// <param name="reader">The json reader.</param>
-            protected override void SetField(ApplyNamingConventionDetails value, string fieldName, enc.IJsonReader reader)
+            protected override void SetField(UndoOrganizeFolderWithTidyDetails value, string fieldName, enc.IJsonReader reader)
             {
                 switch (fieldName)
                 {
