@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Organized a folder with the Tidy Up action.</para>
+    /// <para>Organized a folder with multi-file organize.</para>
     /// </summary>
     public class OrganizeFolderWithTidyDetails
     {
