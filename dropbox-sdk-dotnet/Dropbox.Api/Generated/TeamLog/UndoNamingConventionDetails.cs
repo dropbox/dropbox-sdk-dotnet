@@ -11,43 +11,43 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Applied naming convention.</para>
+    /// <para>Reverted naming convention.</para>
     /// </summary>
-    public class ApplyNamingConventionDetails
+    public class UndoNamingConventionDetails
     {
         #pragma warning disable 108
 
         /// <summary>
         /// <para>The encoder instance.</para>
         /// </summary>
-        internal static enc.StructEncoder<ApplyNamingConventionDetails> Encoder = new ApplyNamingConventionDetailsEncoder();
+        internal static enc.StructEncoder<UndoNamingConventionDetails> Encoder = new UndoNamingConventionDetailsEncoder();
 
         /// <summary>
         /// <para>The decoder instance.</para>
         /// </summary>
-        internal static enc.StructDecoder<ApplyNamingConventionDetails> Decoder = new ApplyNamingConventionDetailsDecoder();
+        internal static enc.StructDecoder<UndoNamingConventionDetails> Decoder = new UndoNamingConventionDetailsDecoder();
 
         /// <summary>
-        /// <para>Initializes a new instance of the <see cref="ApplyNamingConventionDetails" />
+        /// <para>Initializes a new instance of the <see cref="UndoNamingConventionDetails" />
         /// class.</para>
         /// </summary>
-        public ApplyNamingConventionDetails()
+        public UndoNamingConventionDetails()
         {
         }
 
         #region Encoder class
 
         /// <summary>
-        /// <para>Encoder for  <see cref="ApplyNamingConventionDetails" />.</para>
+        /// <para>Encoder for  <see cref="UndoNamingConventionDetails" />.</para>
         /// </summary>
-        private class ApplyNamingConventionDetailsEncoder : enc.StructEncoder<ApplyNamingConventionDetails>
+        private class UndoNamingConventionDetailsEncoder : enc.StructEncoder<UndoNamingConventionDetails>
         {
             /// <summary>
             /// <para>Encode fields of given value.</para>
             /// </summary>
             /// <param name="value">The value.</param>
             /// <param name="writer">The writer.</param>
-            public override void EncodeFields(ApplyNamingConventionDetails value, enc.IJsonWriter writer)
+            public override void EncodeFields(UndoNamingConventionDetails value, enc.IJsonWriter writer)
             {
             }
         }
@@ -58,18 +58,18 @@ namespace Dropbox.Api.TeamLog
         #region Decoder class
 
         /// <summary>
-        /// <para>Decoder for  <see cref="ApplyNamingConventionDetails" />.</para>
+        /// <para>Decoder for  <see cref="UndoNamingConventionDetails" />.</para>
         /// </summary>
-        private class ApplyNamingConventionDetailsDecoder : enc.StructDecoder<ApplyNamingConventionDetails>
+        private class UndoNamingConventionDetailsDecoder : enc.StructDecoder<UndoNamingConventionDetails>
         {
             /// <summary>
-            /// <para>Create a new instance of type <see cref="ApplyNamingConventionDetails"
+            /// <para>Create a new instance of type <see cref="UndoNamingConventionDetails"
             /// />.</para>
             /// </summary>
             /// <returns>The struct instance.</returns>
-            protected override ApplyNamingConventionDetails Create()
+            protected override UndoNamingConventionDetails Create()
             {
-                return new ApplyNamingConventionDetails();
+                return new UndoNamingConventionDetails();
             }
 
             /// <summary>
@@ -78,7 +78,7 @@ namespace Dropbox.Api.TeamLog
             /// <param name="value">The field value.</param>
             /// <param name="fieldName">The field name.</param>
             /// <param name="reader">The json reader.</param>
-            protected override void SetField(ApplyNamingConventionDetails value, string fieldName, enc.IJsonReader reader)
+            protected override void SetField(UndoNamingConventionDetails value, string fieldName, enc.IJsonReader reader)
             {
                 switch (fieldName)
                 {

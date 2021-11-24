@@ -343,6 +343,28 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is IsVaultLocked</para>
+        /// </summary>
+        public bool IsIsVaultLocked
+        {
+            get
+            {
+                return this is IsVaultLocked;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a IsVaultLocked, or <c>null</c>.</para>
+        /// </summary>
+        public IsVaultLocked AsIsVaultLocked
+        {
+            get
+            {
+                return this as IsVaultLocked;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is IsFamily</para>
         /// </summary>
         public bool IsIsFamily
@@ -484,6 +506,12 @@ namespace Dropbox.Api.Sharing
                     IsVault.Encoder.EncodeFields((IsVault)value, writer);
                     return;
                 }
+                if (value is IsVaultLocked)
+                {
+                    WriteProperty(".tag", "is_vault_locked", writer, enc.StringEncoder.Instance);
+                    IsVaultLocked.Encoder.EncodeFields((IsVaultLocked)value, writer);
+                    return;
+                }
                 if (value is IsFamily)
                 {
                     WriteProperty(".tag", "is_family", writer, enc.StringEncoder.Instance);
@@ -556,6 +584,8 @@ namespace Dropbox.Api.Sharing
                         return InsideOsxPackage.Decoder.DecodeFields(reader);
                     case "is_vault":
                         return IsVault.Decoder.DecodeFields(reader);
+                    case "is_vault_locked":
+                        return IsVaultLocked.Decoder.DecodeFields(reader);
                     case "is_family":
                         return IsFamily.Decoder.DecodeFields(reader);
                     default:
@@ -1563,6 +1593,76 @@ namespace Dropbox.Api.Sharing
                 protected override IsVault Create()
                 {
                     return IsVault.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>We do not support sharing a folder inside a locked Vault.</para>
+        /// </summary>
+        public sealed class IsVaultLocked : SharePathError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<IsVaultLocked> Encoder = new IsVaultLockedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<IsVaultLocked> Decoder = new IsVaultLockedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="IsVaultLocked" />
+            /// class.</para>
+            /// </summary>
+            private IsVaultLocked()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of IsVaultLocked</para>
+            /// </summary>
+            public static readonly IsVaultLocked Instance = new IsVaultLocked();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="IsVaultLocked" />.</para>
+            /// </summary>
+            private class IsVaultLockedEncoder : enc.StructEncoder<IsVaultLocked>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(IsVaultLocked value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="IsVaultLocked" />.</para>
+            /// </summary>
+            private class IsVaultLockedDecoder : enc.StructDecoder<IsVaultLocked>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="IsVaultLocked" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override IsVaultLocked Create()
+                {
+                    return IsVaultLocked.Instance;
                 }
 
             }

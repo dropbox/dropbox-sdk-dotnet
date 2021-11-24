@@ -2196,6 +2196,51 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is UndoNamingConvention</para>
+        /// </summary>
+        public bool IsUndoNamingConvention
+        {
+            get
+            {
+                return this is UndoNamingConvention;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a UndoNamingConvention, or <c>null</c>.</para>
+        /// </summary>
+        public UndoNamingConvention AsUndoNamingConvention
+        {
+            get
+            {
+                return this as UndoNamingConvention;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// UndoOrganizeFolderWithTidy</para>
+        /// </summary>
+        public bool IsUndoOrganizeFolderWithTidy
+        {
+            get
+            {
+                return this is UndoOrganizeFolderWithTidy;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a UndoOrganizeFolderWithTidy, or <c>null</c>.</para>
+        /// </summary>
+        public UndoOrganizeFolderWithTidy AsUndoOrganizeFolderWithTidy
+        {
+            get
+            {
+                return this as UndoOrganizeFolderWithTidy;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is UserTagsAdded</para>
         /// </summary>
         public bool IsUserTagsAdded
@@ -11429,6 +11474,18 @@ namespace Dropbox.Api.TeamLog
                     RewindFolder.Encoder.EncodeFields((RewindFolder)value, writer);
                     return;
                 }
+                if (value is UndoNamingConvention)
+                {
+                    WriteProperty(".tag", "undo_naming_convention", writer, enc.StringEncoder.Instance);
+                    UndoNamingConvention.Encoder.EncodeFields((UndoNamingConvention)value, writer);
+                    return;
+                }
+                if (value is UndoOrganizeFolderWithTidy)
+                {
+                    WriteProperty(".tag", "undo_organize_folder_with_tidy", writer, enc.StringEncoder.Instance);
+                    UndoOrganizeFolderWithTidy.Encoder.EncodeFields((UndoOrganizeFolderWithTidy)value, writer);
+                    return;
+                }
                 if (value is UserTagsAdded)
                 {
                     WriteProperty(".tag", "user_tags_added", writer, enc.StringEncoder.Instance);
@@ -13931,6 +13988,10 @@ namespace Dropbox.Api.TeamLog
                         return OrganizeFolderWithTidy.Decoder.DecodeFields(reader);
                     case "rewind_folder":
                         return RewindFolder.Decoder.DecodeFields(reader);
+                    case "undo_naming_convention":
+                        return UndoNamingConvention.Decoder.DecodeFields(reader);
+                    case "undo_organize_folder_with_tidy":
+                        return UndoOrganizeFolderWithTidy.Decoder.DecodeFields(reader);
                     case "user_tags_added":
                         return UserTagsAdded.Decoder.DecodeFields(reader);
                     case "user_tags_removed":
@@ -19667,7 +19728,7 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>(file_operations) Applied a Naming Convention rule</para>
+        /// <para>(file_operations) Applied naming convention</para>
         /// </summary>
         public sealed class ApplyNamingConvention : EventTypeArg
         {
@@ -21281,7 +21342,7 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>(file_operations) Organized a folder with the Tidy Up action</para>
+        /// <para>(file_operations) Organized a folder with multi-file organize</para>
         /// </summary>
         public sealed class OrganizeFolderWithTidy : EventTypeArg
         {
@@ -21414,6 +21475,148 @@ namespace Dropbox.Api.TeamLog
                 protected override RewindFolder Create()
                 {
                     return RewindFolder.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(file_operations) Reverted naming convention</para>
+        /// </summary>
+        public sealed class UndoNamingConvention : EventTypeArg
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<UndoNamingConvention> Encoder = new UndoNamingConventionEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<UndoNamingConvention> Decoder = new UndoNamingConventionDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="UndoNamingConvention" />
+            /// class.</para>
+            /// </summary>
+            private UndoNamingConvention()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of UndoNamingConvention</para>
+            /// </summary>
+            public static readonly UndoNamingConvention Instance = new UndoNamingConvention();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="UndoNamingConvention" />.</para>
+            /// </summary>
+            private class UndoNamingConventionEncoder : enc.StructEncoder<UndoNamingConvention>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(UndoNamingConvention value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="UndoNamingConvention" />.</para>
+            /// </summary>
+            private class UndoNamingConventionDecoder : enc.StructDecoder<UndoNamingConvention>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="UndoNamingConvention"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override UndoNamingConvention Create()
+                {
+                    return UndoNamingConvention.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(file_operations) Removed multi-file organize</para>
+        /// </summary>
+        public sealed class UndoOrganizeFolderWithTidy : EventTypeArg
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<UndoOrganizeFolderWithTidy> Encoder = new UndoOrganizeFolderWithTidyEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<UndoOrganizeFolderWithTidy> Decoder = new UndoOrganizeFolderWithTidyDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="UndoOrganizeFolderWithTidy"
+            /// /> class.</para>
+            /// </summary>
+            private UndoOrganizeFolderWithTidy()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of UndoOrganizeFolderWithTidy</para>
+            /// </summary>
+            public static readonly UndoOrganizeFolderWithTidy Instance = new UndoOrganizeFolderWithTidy();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="UndoOrganizeFolderWithTidy" />.</para>
+            /// </summary>
+            private class UndoOrganizeFolderWithTidyEncoder : enc.StructEncoder<UndoOrganizeFolderWithTidy>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(UndoOrganizeFolderWithTidy value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="UndoOrganizeFolderWithTidy" />.</para>
+            /// </summary>
+            private class UndoOrganizeFolderWithTidyDecoder : enc.StructDecoder<UndoOrganizeFolderWithTidy>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="UndoOrganizeFolderWithTidy"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override UndoOrganizeFolderWithTidy Create()
+                {
+                    return UndoOrganizeFolderWithTidy.Instance;
                 }
 
             }
