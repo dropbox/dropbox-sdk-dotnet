@@ -276,7 +276,7 @@ namespace Dropbox.Api
 
             // if response is an invalid grant, we want to throw this exception rather than the one thrown in
             // response.EnsureSuccessStatusCode();
-            if (response.StatusCode == HttpStatusCode.Unauthorized)
+            if (response.StatusCode == HttpStatusCode.BadRequest)
             {
                 var reason = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
                 if (reason == "invalid_grant")
