@@ -80,6 +80,28 @@ namespace Dropbox.Api.TeamPolicies
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is Default</para>
+        /// </summary>
+        public bool IsDefault
+        {
+            get
+            {
+                return this is Default;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a Default, or <c>null</c>.</para>
+        /// </summary>
+        public Default AsDefault
+        {
+            get
+            {
+                return this as Default;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -127,6 +149,12 @@ namespace Dropbox.Api.TeamPolicies
                     Enabled.Encoder.EncodeFields((Enabled)value, writer);
                     return;
                 }
+                if (value is Default)
+                {
+                    WriteProperty(".tag", "default", writer, enc.StringEncoder.Instance);
+                    Default.Encoder.EncodeFields((Default)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -170,6 +198,8 @@ namespace Dropbox.Api.TeamPolicies
                         return Disabled.Decoder.DecodeFields(reader);
                     case "enabled":
                         return Enabled.Decoder.DecodeFields(reader);
+                    case "default":
+                        return Default.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -309,6 +339,75 @@ namespace Dropbox.Api.TeamPolicies
                 protected override Enabled Create()
                 {
                     return Enabled.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>External Drive Backup default value based on team tier.</para>
+        /// </summary>
+        public sealed class Default : ExternalDriveBackupPolicyState
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Default> Encoder = new DefaultEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Default> Decoder = new DefaultDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="Default" /> class.</para>
+            /// </summary>
+            private Default()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of Default</para>
+            /// </summary>
+            public static readonly Default Instance = new Default();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="Default" />.</para>
+            /// </summary>
+            private class DefaultEncoder : enc.StructEncoder<Default>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Default value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="Default" />.</para>
+            /// </summary>
+            private class DefaultDecoder : enc.StructDecoder<Default>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Default" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Default Create()
+                {
+                    return Default.Instance;
                 }
 
             }
