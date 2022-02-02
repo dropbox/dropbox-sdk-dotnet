@@ -80,6 +80,28 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is PayloadTooLarge</para>
+        /// </summary>
+        public bool IsPayloadTooLarge
+        {
+            get
+            {
+                return this is PayloadTooLarge;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a PayloadTooLarge, or <c>null</c>.</para>
+        /// </summary>
+        public PayloadTooLarge AsPayloadTooLarge
+        {
+            get
+            {
+                return this as PayloadTooLarge;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -127,6 +149,12 @@ namespace Dropbox.Api.Files
                     PropertiesError.Encoder.EncodeFields((PropertiesError)value, writer);
                     return;
                 }
+                if (value is PayloadTooLarge)
+                {
+                    WriteProperty(".tag", "payload_too_large", writer, enc.StringEncoder.Instance);
+                    PayloadTooLarge.Encoder.EncodeFields((PayloadTooLarge)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -170,6 +198,8 @@ namespace Dropbox.Api.Files
                         return Path.Decoder.DecodeFields(reader);
                     case "properties_error":
                         return PropertiesError.Decoder.DecodeFields(reader);
+                    case "payload_too_large":
+                        return PayloadTooLarge.Decoder.DecodeFields(reader);
                     case "other":
                         return Other.Decoder.DecodeFields(reader);
                     default:
@@ -361,6 +391,76 @@ namespace Dropbox.Api.Files
                             break;
                     }
                 }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The request payload must be at most 150 MB.</para>
+        /// </summary>
+        public sealed class PayloadTooLarge : UploadErrorWithProperties
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<PayloadTooLarge> Encoder = new PayloadTooLargeEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<PayloadTooLarge> Decoder = new PayloadTooLargeDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="PayloadTooLarge" />
+            /// class.</para>
+            /// </summary>
+            private PayloadTooLarge()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of PayloadTooLarge</para>
+            /// </summary>
+            public static readonly PayloadTooLarge Instance = new PayloadTooLarge();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="PayloadTooLarge" />.</para>
+            /// </summary>
+            private class PayloadTooLargeEncoder : enc.StructEncoder<PayloadTooLarge>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(PayloadTooLarge value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="PayloadTooLarge" />.</para>
+            /// </summary>
+            private class PayloadTooLargeDecoder : enc.StructDecoder<PayloadTooLarge>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="PayloadTooLarge" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override PayloadTooLarge Create()
+                {
+                    return PayloadTooLarge.Instance;
+                }
+
             }
 
             #endregion

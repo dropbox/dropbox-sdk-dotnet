@@ -69,7 +69,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// the user's main account email.</param>
         /// <param name="customMessage">Message to send to added members in their
         /// invitation.</param>
-        /// <param name="quiet">Whether added members should be notified via device
+        /// <param name="quiet">Whether added members should be notified via email and device
         /// notifications of their invitation.</param>
         /// <param name="accessLevel">AccessLevel union object, describing what access level we
         /// want to give new members.</param>
@@ -106,7 +106,7 @@ namespace Dropbox.Api.Sharing.Routes
         /// the user's main account email.</param>
         /// <param name="customMessage">Message to send to added members in their
         /// invitation.</param>
-        /// <param name="quiet">Whether added members should be notified via device
+        /// <param name="quiet">Whether added members should be notified via email and device
         /// notifications of their invitation.</param>
         /// <param name="accessLevel">AccessLevel union object, describing what access level we
         /// want to give new members.</param>

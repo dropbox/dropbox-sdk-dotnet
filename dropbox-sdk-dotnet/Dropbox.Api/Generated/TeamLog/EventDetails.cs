@@ -10175,6 +10175,54 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// DataResidencyMigrationRequestSuccessfulDetails</para>
+        /// </summary>
+        public bool IsDataResidencyMigrationRequestSuccessfulDetails
+        {
+            get
+            {
+                return this is DataResidencyMigrationRequestSuccessfulDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a DataResidencyMigrationRequestSuccessfulDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public DataResidencyMigrationRequestSuccessfulDetails AsDataResidencyMigrationRequestSuccessfulDetails
+        {
+            get
+            {
+                return this as DataResidencyMigrationRequestSuccessfulDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// DataResidencyMigrationRequestUnsuccessfulDetails</para>
+        /// </summary>
+        public bool IsDataResidencyMigrationRequestUnsuccessfulDetails
+        {
+            get
+            {
+                return this is DataResidencyMigrationRequestUnsuccessfulDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a DataResidencyMigrationRequestUnsuccessfulDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public DataResidencyMigrationRequestUnsuccessfulDetails AsDataResidencyMigrationRequestUnsuccessfulDetails
+        {
+            get
+            {
+                return this as DataResidencyMigrationRequestUnsuccessfulDetails;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is TeamMergeFromDetails</para>
         /// </summary>
         public bool IsTeamMergeFromDetails
@@ -13827,6 +13875,18 @@ namespace Dropbox.Api.TeamLog
                     WebSessionsChangeIdleLengthPolicyDetails.Encoder.EncodeFields((WebSessionsChangeIdleLengthPolicyDetails)value, writer);
                     return;
                 }
+                if (value is DataResidencyMigrationRequestSuccessfulDetails)
+                {
+                    WriteProperty(".tag", "data_residency_migration_request_successful_details", writer, enc.StringEncoder.Instance);
+                    DataResidencyMigrationRequestSuccessfulDetails.Encoder.EncodeFields((DataResidencyMigrationRequestSuccessfulDetails)value, writer);
+                    return;
+                }
+                if (value is DataResidencyMigrationRequestUnsuccessfulDetails)
+                {
+                    WriteProperty(".tag", "data_residency_migration_request_unsuccessful_details", writer, enc.StringEncoder.Instance);
+                    DataResidencyMigrationRequestUnsuccessfulDetails.Encoder.EncodeFields((DataResidencyMigrationRequestUnsuccessfulDetails)value, writer);
+                    return;
+                }
                 if (value is TeamMergeFromDetails)
                 {
                     WriteProperty(".tag", "team_merge_from_details", writer, enc.StringEncoder.Instance);
@@ -14991,6 +15051,10 @@ namespace Dropbox.Api.TeamLog
                         return WebSessionsChangeFixedLengthPolicyDetails.Decoder.DecodeFields(reader);
                     case "web_sessions_change_idle_length_policy_details":
                         return WebSessionsChangeIdleLengthPolicyDetails.Decoder.DecodeFields(reader);
+                    case "data_residency_migration_request_successful_details":
+                        return DataResidencyMigrationRequestSuccessfulDetails.Decoder.DecodeFields(reader);
+                    case "data_residency_migration_request_unsuccessful_details":
+                        return DataResidencyMigrationRequestUnsuccessfulDetails.Decoder.DecodeFields(reader);
                     case "team_merge_from_details":
                         return TeamMergeFromDetails.Decoder.DecodeFields(reader);
                     case "team_merge_to_details":
@@ -54275,6 +54339,190 @@ namespace Dropbox.Api.TeamLog
                 public override WebSessionsChangeIdleLengthPolicyDetails DecodeFields(enc.IJsonReader reader)
                 {
                     return new WebSessionsChangeIdleLengthPolicyDetails(global::Dropbox.Api.TeamLog.WebSessionsChangeIdleLengthPolicyDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The data residency migration request successful details object</para>
+        /// </summary>
+        public sealed class DataResidencyMigrationRequestSuccessfulDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<DataResidencyMigrationRequestSuccessfulDetails> Encoder = new DataResidencyMigrationRequestSuccessfulDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<DataResidencyMigrationRequestSuccessfulDetails> Decoder = new DataResidencyMigrationRequestSuccessfulDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="DataResidencyMigrationRequestSuccessfulDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public DataResidencyMigrationRequestSuccessfulDetails(global::Dropbox.Api.TeamLog.DataResidencyMigrationRequestSuccessfulDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="DataResidencyMigrationRequestSuccessfulDetails" /> class.</para>
+            /// </summary>
+            private DataResidencyMigrationRequestSuccessfulDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.DataResidencyMigrationRequestSuccessfulDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="DataResidencyMigrationRequestSuccessfulDetails"
+            /// />.</para>
+            /// </summary>
+            private class DataResidencyMigrationRequestSuccessfulDetailsEncoder : enc.StructEncoder<DataResidencyMigrationRequestSuccessfulDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(DataResidencyMigrationRequestSuccessfulDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("data_residency_migration_request_successful_details", value.Value, writer, global::Dropbox.Api.TeamLog.DataResidencyMigrationRequestSuccessfulDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="DataResidencyMigrationRequestSuccessfulDetails"
+            /// />.</para>
+            /// </summary>
+            private class DataResidencyMigrationRequestSuccessfulDetailsDecoder : enc.StructDecoder<DataResidencyMigrationRequestSuccessfulDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="DataResidencyMigrationRequestSuccessfulDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override DataResidencyMigrationRequestSuccessfulDetails Create()
+                {
+                    return new DataResidencyMigrationRequestSuccessfulDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override DataResidencyMigrationRequestSuccessfulDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new DataResidencyMigrationRequestSuccessfulDetails(global::Dropbox.Api.TeamLog.DataResidencyMigrationRequestSuccessfulDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The data residency migration request unsuccessful details object</para>
+        /// </summary>
+        public sealed class DataResidencyMigrationRequestUnsuccessfulDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<DataResidencyMigrationRequestUnsuccessfulDetails> Encoder = new DataResidencyMigrationRequestUnsuccessfulDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<DataResidencyMigrationRequestUnsuccessfulDetails> Decoder = new DataResidencyMigrationRequestUnsuccessfulDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="DataResidencyMigrationRequestUnsuccessfulDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public DataResidencyMigrationRequestUnsuccessfulDetails(global::Dropbox.Api.TeamLog.DataResidencyMigrationRequestUnsuccessfulDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="DataResidencyMigrationRequestUnsuccessfulDetails" /> class.</para>
+            /// </summary>
+            private DataResidencyMigrationRequestUnsuccessfulDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.DataResidencyMigrationRequestUnsuccessfulDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="DataResidencyMigrationRequestUnsuccessfulDetails"
+            /// />.</para>
+            /// </summary>
+            private class DataResidencyMigrationRequestUnsuccessfulDetailsEncoder : enc.StructEncoder<DataResidencyMigrationRequestUnsuccessfulDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(DataResidencyMigrationRequestUnsuccessfulDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("data_residency_migration_request_unsuccessful_details", value.Value, writer, global::Dropbox.Api.TeamLog.DataResidencyMigrationRequestUnsuccessfulDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="DataResidencyMigrationRequestUnsuccessfulDetails"
+            /// />.</para>
+            /// </summary>
+            private class DataResidencyMigrationRequestUnsuccessfulDetailsDecoder : enc.StructDecoder<DataResidencyMigrationRequestUnsuccessfulDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="DataResidencyMigrationRequestUnsuccessfulDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override DataResidencyMigrationRequestUnsuccessfulDetails Create()
+                {
+                    return new DataResidencyMigrationRequestUnsuccessfulDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override DataResidencyMigrationRequestUnsuccessfulDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new DataResidencyMigrationRequestUnsuccessfulDetails(global::Dropbox.Api.TeamLog.DataResidencyMigrationRequestUnsuccessfulDetails.Decoder.DecodeFields(reader));
                 }
             }
 
