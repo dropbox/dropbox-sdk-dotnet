@@ -347,6 +347,28 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is CantMoveIntoFamily</para>
+        /// </summary>
+        public bool IsCantMoveIntoFamily
+        {
+            get
+            {
+                return this is CantMoveIntoFamily;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a CantMoveIntoFamily, or <c>null</c>.</para>
+        /// </summary>
+        public CantMoveIntoFamily AsCantMoveIntoFamily
+        {
+            get
+            {
+                return this as CantMoveIntoFamily;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -466,6 +488,12 @@ namespace Dropbox.Api.Files
                     CantMoveIntoVault.Encoder.EncodeFields((CantMoveIntoVault)value, writer);
                     return;
                 }
+                if (value is CantMoveIntoFamily)
+                {
+                    WriteProperty(".tag", "cant_move_into_family", writer, enc.StringEncoder.Instance);
+                    CantMoveIntoFamily.Encoder.EncodeFields((CantMoveIntoFamily)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -532,6 +560,8 @@ namespace Dropbox.Api.Files
                         return CantMoveSharedFolder.Decoder.DecodeFields(reader);
                     case "cant_move_into_vault":
                         return CantMoveIntoVault.Decoder.DecodeFields(reader);
+                    case "cant_move_into_family":
+                        return CantMoveIntoFamily.Decoder.DecodeFields(reader);
                     case "other":
                         return Other.Decoder.DecodeFields(reader);
                     default:
@@ -1635,6 +1665,106 @@ namespace Dropbox.Api.Files
                     {
                         case "cant_move_into_vault":
                             value.Value = global::Dropbox.Api.Files.MoveIntoVaultError.Decoder.Decode(reader);
+                            break;
+                        default:
+                            reader.Skip();
+                            break;
+                    }
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>Some content cannot be moved into the Family Room folder under certain
+        /// circumstances, see detailed error.</para>
+        /// </summary>
+        public sealed class CantMoveIntoFamily : RelocationBatchError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<CantMoveIntoFamily> Encoder = new CantMoveIntoFamilyEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<CantMoveIntoFamily> Decoder = new CantMoveIntoFamilyDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="CantMoveIntoFamily" />
+            /// class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public CantMoveIntoFamily(MoveIntoFamilyError value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="CantMoveIntoFamily" />
+            /// class.</para>
+            /// </summary>
+            private CantMoveIntoFamily()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public MoveIntoFamilyError Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="CantMoveIntoFamily" />.</para>
+            /// </summary>
+            private class CantMoveIntoFamilyEncoder : enc.StructEncoder<CantMoveIntoFamily>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(CantMoveIntoFamily value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("cant_move_into_family", value.Value, writer, global::Dropbox.Api.Files.MoveIntoFamilyError.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="CantMoveIntoFamily" />.</para>
+            /// </summary>
+            private class CantMoveIntoFamilyDecoder : enc.StructDecoder<CantMoveIntoFamily>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="CantMoveIntoFamily"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override CantMoveIntoFamily Create()
+                {
+                    return new CantMoveIntoFamily();
+                }
+
+                /// <summary>
+                /// <para>Set given field.</para>
+                /// </summary>
+                /// <param name="value">The field value.</param>
+                /// <param name="fieldName">The field name.</param>
+                /// <param name="reader">The json reader.</param>
+                protected override void SetField(CantMoveIntoFamily value, string fieldName, enc.IJsonReader reader)
+                {
+                    switch (fieldName)
+                    {
+                        case "cant_move_into_family":
+                            value.Value = global::Dropbox.Api.Files.MoveIntoFamilyError.Decoder.Decode(reader);
                             break;
                         default:
                             reader.Skip();
