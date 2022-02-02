@@ -38,7 +38,7 @@ namespace Dropbox.Api.Sharing
         /// the user's main account email.</param>
         /// <param name="customMessage">Message to send to added members in their
         /// invitation.</param>
-        /// <param name="quiet">Whether added members should be notified via device
+        /// <param name="quiet">Whether added members should be notified via email and device
         /// notifications of their invitation.</param>
         /// <param name="accessLevel">AccessLevel union object, describing what access level we
         /// want to give new members.</param>
@@ -115,8 +115,8 @@ namespace Dropbox.Api.Sharing
         public string CustomMessage { get; protected set; }
 
         /// <summary>
-        /// <para>Whether added members should be notified via device notifications of their
-        /// invitation.</para>
+        /// <para>Whether added members should be notified via email and device notifications
+        /// of their invitation.</para>
         /// </summary>
         public bool Quiet { get; protected set; }
 
