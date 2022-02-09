@@ -36,16 +36,35 @@ namespace Dropbox.Api.Files
         /// won't be able to call <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" />
         /// anymore with the current session.</param>
+        /// <param name="contentHash">NOT YET SUPPORTED. A hash of the file content uploaded in
+        /// this call. If provided and the uploaded content does not match this hash, an error
+        /// will be returned. For more information see our <a
+        /// href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
+        /// page.</param>
         public UploadSessionAppendArg(UploadSessionCursor cursor,
-                                      bool close = false)
+                                      bool close = false,
+                                      string contentHash = null)
         {
             if (cursor == null)
             {
                 throw new sys.ArgumentNullException("cursor");
             }
 
+            if (contentHash != null)
+            {
+                if (contentHash.Length < 64)
+                {
+                    throw new sys.ArgumentOutOfRangeException("contentHash", "Length should be at least 64");
+                }
+                if (contentHash.Length > 64)
+                {
+                    throw new sys.ArgumentOutOfRangeException("contentHash", "Length should be at most 64");
+                }
+            }
+
             this.Cursor = cursor;
             this.Close = close;
+            this.ContentHash = contentHash;
         }
 
         /// <summary>
@@ -73,6 +92,15 @@ namespace Dropbox.Api.Files
         /// </summary>
         public bool Close { get; protected set; }
 
+        /// <summary>
+        /// <para>NOT YET SUPPORTED. A hash of the file content uploaded in this call. If
+        /// provided and the uploaded content does not match this hash, an error will be
+        /// returned. For more information see our <a
+        /// href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
+        /// page.</para>
+        /// </summary>
+        public string ContentHash { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -89,6 +117,10 @@ namespace Dropbox.Api.Files
             {
                 WriteProperty("cursor", value.Cursor, writer, global::Dropbox.Api.Files.UploadSessionCursor.Encoder);
                 WriteProperty("close", value.Close, writer, enc.BooleanEncoder.Instance);
+                if (value.ContentHash != null)
+                {
+                    WriteProperty("content_hash", value.ContentHash, writer, enc.StringEncoder.Instance);
+                }
             }
         }
 
@@ -127,6 +159,9 @@ namespace Dropbox.Api.Files
                         break;
                     case "close":
                         value.Close = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
+                    case "content_hash":
+                        value.ContentHash = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

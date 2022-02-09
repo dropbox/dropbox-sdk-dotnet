@@ -38,11 +38,30 @@ namespace Dropbox.Api.Files
         /// <param name="sessionType">Type of upload session you want to start. If not
         /// specified, default is <see cref="Dropbox.Api.Files.UploadSessionType.Sequential"
         /// />.</param>
+        /// <param name="contentHash">NOT YET SUPPORTED. A hash of the file content uploaded in
+        /// this call. If provided and the uploaded content does not match this hash, an error
+        /// will be returned. For more information see our <a
+        /// href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
+        /// page.</param>
         public UploadSessionStartArg(bool close = false,
-                                     UploadSessionType sessionType = null)
+                                     UploadSessionType sessionType = null,
+                                     string contentHash = null)
         {
+            if (contentHash != null)
+            {
+                if (contentHash.Length < 64)
+                {
+                    throw new sys.ArgumentOutOfRangeException("contentHash", "Length should be at least 64");
+                }
+                if (contentHash.Length > 64)
+                {
+                    throw new sys.ArgumentOutOfRangeException("contentHash", "Length should be at most 64");
+                }
+            }
+
             this.Close = close;
             this.SessionType = sessionType;
+            this.ContentHash = contentHash;
         }
 
         /// <summary>
@@ -71,6 +90,15 @@ namespace Dropbox.Api.Files
         /// </summary>
         public UploadSessionType SessionType { get; protected set; }
 
+        /// <summary>
+        /// <para>NOT YET SUPPORTED. A hash of the file content uploaded in this call. If
+        /// provided and the uploaded content does not match this hash, an error will be
+        /// returned. For more information see our <a
+        /// href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
+        /// page.</para>
+        /// </summary>
+        public string ContentHash { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -89,6 +117,10 @@ namespace Dropbox.Api.Files
                 if (value.SessionType != null)
                 {
                     WriteProperty("session_type", value.SessionType, writer, global::Dropbox.Api.Files.UploadSessionType.Encoder);
+                }
+                if (value.ContentHash != null)
+                {
+                    WriteProperty("content_hash", value.ContentHash, writer, enc.StringEncoder.Instance);
                 }
             }
         }
@@ -128,6 +160,9 @@ namespace Dropbox.Api.Files
                         break;
                     case "session_type":
                         value.SessionType = global::Dropbox.Api.Files.UploadSessionType.Decoder.Decode(reader);
+                        break;
+                    case "content_hash":
+                        value.ContentHash = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

@@ -11,26 +11,25 @@ namespace Dropbox.Api.Files
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>The commit info with properties object</para>
+    /// <para>The upload arg object</para>
     /// </summary>
     /// <seealso cref="Global::Dropbox.Api.Files.CommitInfo" />
-    public class CommitInfoWithProperties : CommitInfo
+    public class UploadArg : CommitInfo
     {
         #pragma warning disable 108
 
         /// <summary>
         /// <para>The encoder instance.</para>
         /// </summary>
-        internal static enc.StructEncoder<CommitInfoWithProperties> Encoder = new CommitInfoWithPropertiesEncoder();
+        internal static enc.StructEncoder<UploadArg> Encoder = new UploadArgEncoder();
 
         /// <summary>
         /// <para>The decoder instance.</para>
         /// </summary>
-        internal static enc.StructDecoder<CommitInfoWithProperties> Decoder = new CommitInfoWithPropertiesDecoder();
+        internal static enc.StructDecoder<UploadArg> Decoder = new UploadArgDecoder();
 
         /// <summary>
-        /// <para>Initializes a new instance of the <see cref="CommitInfoWithProperties" />
-        /// class.</para>
+        /// <para>Initializes a new instance of the <see cref="UploadArg" /> class.</para>
         /// </summary>
         /// <param name="path">Path in the user's Dropbox to save the file.</param>
         /// <param name="mode">Selects what to do if the file already exists.</param>
@@ -53,41 +52,68 @@ namespace Dropbox.Api.Files
         /// "rev" doesn't match the existing file's "rev", even if the existing file has been
         /// deleted. This also forces a conflict even when the target path refers to a file
         /// with identical contents.</param>
-        public CommitInfoWithProperties(string path,
-                                        WriteMode mode = null,
-                                        bool autorename = false,
-                                        sys.DateTime? clientModified = null,
-                                        bool mute = false,
-                                        col.IEnumerable<global::Dropbox.Api.FileProperties.PropertyGroup> propertyGroups = null,
-                                        bool strictConflict = false)
+        /// <param name="contentHash">NOT YET SUPPORTED. A hash of the file content uploaded in
+        /// this call. If provided and the uploaded content does not match this hash, an error
+        /// will be returned. For more information see our <a
+        /// href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
+        /// page.</param>
+        public UploadArg(string path,
+                         WriteMode mode = null,
+                         bool autorename = false,
+                         sys.DateTime? clientModified = null,
+                         bool mute = false,
+                         col.IEnumerable<global::Dropbox.Api.FileProperties.PropertyGroup> propertyGroups = null,
+                         bool strictConflict = false,
+                         string contentHash = null)
             : base(path, mode, autorename, clientModified, mute, propertyGroups, strictConflict)
         {
+            if (contentHash != null)
+            {
+                if (contentHash.Length < 64)
+                {
+                    throw new sys.ArgumentOutOfRangeException("contentHash", "Length should be at least 64");
+                }
+                if (contentHash.Length > 64)
+                {
+                    throw new sys.ArgumentOutOfRangeException("contentHash", "Length should be at most 64");
+                }
+            }
+
+            this.ContentHash = contentHash;
         }
 
         /// <summary>
-        /// <para>Initializes a new instance of the <see cref="CommitInfoWithProperties" />
-        /// class.</para>
+        /// <para>Initializes a new instance of the <see cref="UploadArg" /> class.</para>
         /// </summary>
         /// <remarks>This is to construct an instance of the object when
         /// deserializing.</remarks>
         [sys.ComponentModel.EditorBrowsable(sys.ComponentModel.EditorBrowsableState.Never)]
-        public CommitInfoWithProperties()
+        public UploadArg()
         {
         }
+
+        /// <summary>
+        /// <para>NOT YET SUPPORTED. A hash of the file content uploaded in this call. If
+        /// provided and the uploaded content does not match this hash, an error will be
+        /// returned. For more information see our <a
+        /// href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
+        /// page.</para>
+        /// </summary>
+        public string ContentHash { get; protected set; }
 
         #region Encoder class
 
         /// <summary>
-        /// <para>Encoder for  <see cref="CommitInfoWithProperties" />.</para>
+        /// <para>Encoder for  <see cref="UploadArg" />.</para>
         /// </summary>
-        private class CommitInfoWithPropertiesEncoder : enc.StructEncoder<CommitInfoWithProperties>
+        private class UploadArgEncoder : enc.StructEncoder<UploadArg>
         {
             /// <summary>
             /// <para>Encode fields of given value.</para>
             /// </summary>
             /// <param name="value">The value.</param>
             /// <param name="writer">The writer.</param>
-            public override void EncodeFields(CommitInfoWithProperties value, enc.IJsonWriter writer)
+            public override void EncodeFields(UploadArg value, enc.IJsonWriter writer)
             {
                 WriteProperty("path", value.Path, writer, enc.StringEncoder.Instance);
                 WriteProperty("mode", value.Mode, writer, global::Dropbox.Api.Files.WriteMode.Encoder);
@@ -102,6 +128,10 @@ namespace Dropbox.Api.Files
                     WriteListProperty("property_groups", value.PropertyGroups, writer, global::Dropbox.Api.FileProperties.PropertyGroup.Encoder);
                 }
                 WriteProperty("strict_conflict", value.StrictConflict, writer, enc.BooleanEncoder.Instance);
+                if (value.ContentHash != null)
+                {
+                    WriteProperty("content_hash", value.ContentHash, writer, enc.StringEncoder.Instance);
+                }
             }
         }
 
@@ -111,18 +141,17 @@ namespace Dropbox.Api.Files
         #region Decoder class
 
         /// <summary>
-        /// <para>Decoder for  <see cref="CommitInfoWithProperties" />.</para>
+        /// <para>Decoder for  <see cref="UploadArg" />.</para>
         /// </summary>
-        private class CommitInfoWithPropertiesDecoder : enc.StructDecoder<CommitInfoWithProperties>
+        private class UploadArgDecoder : enc.StructDecoder<UploadArg>
         {
             /// <summary>
-            /// <para>Create a new instance of type <see cref="CommitInfoWithProperties"
-            /// />.</para>
+            /// <para>Create a new instance of type <see cref="UploadArg" />.</para>
             /// </summary>
             /// <returns>The struct instance.</returns>
-            protected override CommitInfoWithProperties Create()
+            protected override UploadArg Create()
             {
-                return new CommitInfoWithProperties();
+                return new UploadArg();
             }
 
             /// <summary>
@@ -131,7 +160,7 @@ namespace Dropbox.Api.Files
             /// <param name="value">The field value.</param>
             /// <param name="fieldName">The field name.</param>
             /// <param name="reader">The json reader.</param>
-            protected override void SetField(CommitInfoWithProperties value, string fieldName, enc.IJsonReader reader)
+            protected override void SetField(UploadArg value, string fieldName, enc.IJsonReader reader)
             {
                 switch (fieldName)
                 {
@@ -155,6 +184,9 @@ namespace Dropbox.Api.Files
                         break;
                     case "strict_conflict":
                         value.StrictConflict = enc.BooleanDecoder.Instance.Decode(reader);
+                        break;
+                    case "content_hash":
+                        value.ContentHash = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();
