@@ -175,48 +175,45 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
-        /// <para>Create a new file with the contents provided in the request. Note that this
-        /// endpoint is part of the properties API alpha and is slightly different from <see
-        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadAsync" />.</para>
+        /// <para>Create a new file with the contents provided in the request. Note that the
+        /// behavior of this alpha endpoint is unstable and subject to change.</para>
         /// <para>Do not use this to upload a file larger than 150 MB. Instead, create an
         /// upload session with <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionStartAsync" />.</para>
         /// </summary>
-        /// <param name="commitInfoWithProperties">The request parameters</param>
+        /// <param name="uploadArg">The request parameters</param>
         /// <param name="body">The content to upload.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see
-        /// cref="UploadErrorWithProperties"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use AlphaUploadAsync instead.")]
-        public t.Task<FileMetadata> AlphaUploadAsync(CommitInfoWithProperties commitInfoWithProperties, io.Stream body)
+        /// processing the request; This will contain a <see cref="UploadError"/>.</exception>
+        [sys.Obsolete("This function is deprecated, please use UploadAsync instead.")]
+        public t.Task<FileMetadata> AlphaUploadAsync(UploadArg uploadArg, io.Stream body)
         {
-            return this.Transport.SendUploadRequestAsync<CommitInfoWithProperties, FileMetadata, UploadErrorWithProperties>(commitInfoWithProperties, body, "content", "/files/alpha/upload", "user", global::Dropbox.Api.Files.CommitInfoWithProperties.Encoder, global::Dropbox.Api.Files.FileMetadata.Decoder, global::Dropbox.Api.Files.UploadErrorWithProperties.Decoder);
+            return this.Transport.SendUploadRequestAsync<UploadArg, FileMetadata, UploadError>(uploadArg, body, "content", "/files/alpha/upload", "user", global::Dropbox.Api.Files.UploadArg.Encoder, global::Dropbox.Api.Files.FileMetadata.Decoder, global::Dropbox.Api.Files.UploadError.Decoder);
         }
 
         /// <summary>
         /// <para>Begins an asynchronous send to the alpha upload route.</para>
         /// </summary>
-        /// <param name="commitInfoWithProperties">The request parameters.</param>
+        /// <param name="uploadArg">The request parameters.</param>
         /// <param name="body">The content to upload.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        [sys.Obsolete("This function is deprecated, please use BeginAlphaUpload instead.")]
-        public sys.IAsyncResult BeginAlphaUpload(CommitInfoWithProperties commitInfoWithProperties, io.Stream body, sys.AsyncCallback callback, object state = null)
+        [sys.Obsolete("This function is deprecated, please use BeginUpload instead.")]
+        public sys.IAsyncResult BeginAlphaUpload(UploadArg uploadArg, io.Stream body, sys.AsyncCallback callback, object state = null)
         {
-            var task = this.AlphaUploadAsync(commitInfoWithProperties, body);
+            var task = this.AlphaUploadAsync(uploadArg, body);
 
             return enc.Util.ToApm(task, callback, state);
         }
 
         /// <summary>
-        /// <para>Create a new file with the contents provided in the request. Note that this
-        /// endpoint is part of the properties API alpha and is slightly different from <see
-        /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadAsync" />.</para>
+        /// <para>Create a new file with the contents provided in the request. Note that the
+        /// behavior of this alpha endpoint is unstable and subject to change.</para>
         /// <para>Do not use this to upload a file larger than 150 MB. Instead, create an
         /// upload session with <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionStartAsync" />.</para>
@@ -242,13 +239,17 @@ namespace Dropbox.Api.Files.Routes
         /// "rev" doesn't match the existing file's "rev", even if the existing file has been
         /// deleted. This also forces a conflict even when the target path refers to a file
         /// with identical contents.</param>
+        /// <param name="contentHash">NOT YET SUPPORTED. A hash of the file content uploaded in
+        /// this call. If provided and the uploaded content does not match this hash, an error
+        /// will be returned. For more information see our <a
+        /// href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
+        /// page.</param>
         /// <param name="body">The document to upload</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see
-        /// cref="UploadErrorWithProperties"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use AlphaUploadAsync instead.")]
+        /// processing the request; This will contain a <see cref="UploadError"/>.</exception>
+        [sys.Obsolete("This function is deprecated, please use UploadAsync instead.")]
         public t.Task<FileMetadata> AlphaUploadAsync(string path,
                                                      WriteMode mode = null,
                                                      bool autorename = false,
@@ -256,17 +257,19 @@ namespace Dropbox.Api.Files.Routes
                                                      bool mute = false,
                                                      col.IEnumerable<global::Dropbox.Api.FileProperties.PropertyGroup> propertyGroups = null,
                                                      bool strictConflict = false,
+                                                     string contentHash = null,
                                                      io.Stream body = null)
         {
-            var commitInfoWithProperties = new CommitInfoWithProperties(path,
-                                                                        mode,
-                                                                        autorename,
-                                                                        clientModified,
-                                                                        mute,
-                                                                        propertyGroups,
-                                                                        strictConflict);
+            var uploadArg = new UploadArg(path,
+                                          mode,
+                                          autorename,
+                                          clientModified,
+                                          mute,
+                                          propertyGroups,
+                                          strictConflict,
+                                          contentHash);
 
-            return this.AlphaUploadAsync(commitInfoWithProperties, body);
+            return this.AlphaUploadAsync(uploadArg, body);
         }
 
         /// <summary>
@@ -293,13 +296,18 @@ namespace Dropbox.Api.Files.Routes
         /// "rev" doesn't match the existing file's "rev", even if the existing file has been
         /// deleted. This also forces a conflict even when the target path refers to a file
         /// with identical contents.</param>
+        /// <param name="contentHash">NOT YET SUPPORTED. A hash of the file content uploaded in
+        /// this call. If provided and the uploaded content does not match this hash, an error
+        /// will be returned. For more information see our <a
+        /// href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
+        /// page.</param>
         /// <param name="body">The document to upload</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="callbackState">A user provided object that distinguished this send
         /// from other send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        [sys.Obsolete("This function is deprecated, please use BeginAlphaUpload instead.")]
+        [sys.Obsolete("This function is deprecated, please use BeginUpload instead.")]
         public sys.IAsyncResult BeginAlphaUpload(string path,
                                                  WriteMode mode = null,
                                                  bool autorename = false,
@@ -307,19 +315,21 @@ namespace Dropbox.Api.Files.Routes
                                                  bool mute = false,
                                                  col.IEnumerable<global::Dropbox.Api.FileProperties.PropertyGroup> propertyGroups = null,
                                                  bool strictConflict = false,
+                                                 string contentHash = null,
                                                  io.Stream body = null,
                                                  sys.AsyncCallback callback = null,
                                                  object callbackState = null)
         {
-            var commitInfoWithProperties = new CommitInfoWithProperties(path,
-                                                                        mode,
-                                                                        autorename,
-                                                                        clientModified,
-                                                                        mute,
-                                                                        propertyGroups,
-                                                                        strictConflict);
+            var uploadArg = new UploadArg(path,
+                                          mode,
+                                          autorename,
+                                          clientModified,
+                                          mute,
+                                          propertyGroups,
+                                          strictConflict,
+                                          contentHash);
 
-            return this.BeginAlphaUpload(commitInfoWithProperties, body, callback, callbackState);
+            return this.BeginAlphaUpload(uploadArg, body, callback, callbackState);
         }
 
         /// <summary>
@@ -330,9 +340,8 @@ namespace Dropbox.Api.Files.Routes
         /// request</param>
         /// <returns>The response to the send request</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
-        /// processing the request; This will contain a <see
-        /// cref="UploadErrorWithProperties"/>.</exception>
-        [sys.Obsolete("This function is deprecated, please use EndAlphaUpload instead.")]
+        /// processing the request; This will contain a <see cref="UploadError"/>.</exception>
+        [sys.Obsolete("This function is deprecated, please use EndUpload instead.")]
         public FileMetadata EndAlphaUpload(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task<FileMetadata>;
@@ -6486,30 +6495,30 @@ namespace Dropbox.Api.Files.Routes
         /// href="https://www.dropbox.com/developers/reference/data-transport-limit">Data
         /// transport limit page</a>.</para>
         /// </summary>
-        /// <param name="commitInfo">The request parameters</param>
+        /// <param name="uploadArg">The request parameters</param>
         /// <param name="body">The content to upload.</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see cref="UploadError"/>.</exception>
-        public t.Task<FileMetadata> UploadAsync(CommitInfo commitInfo, io.Stream body)
+        public t.Task<FileMetadata> UploadAsync(UploadArg uploadArg, io.Stream body)
         {
-            return this.Transport.SendUploadRequestAsync<CommitInfo, FileMetadata, UploadError>(commitInfo, body, "content", "/files/upload", "user", global::Dropbox.Api.Files.CommitInfo.Encoder, global::Dropbox.Api.Files.FileMetadata.Decoder, global::Dropbox.Api.Files.UploadError.Decoder);
+            return this.Transport.SendUploadRequestAsync<UploadArg, FileMetadata, UploadError>(uploadArg, body, "content", "/files/upload", "user", global::Dropbox.Api.Files.UploadArg.Encoder, global::Dropbox.Api.Files.FileMetadata.Decoder, global::Dropbox.Api.Files.UploadError.Decoder);
         }
 
         /// <summary>
         /// <para>Begins an asynchronous send to the upload route.</para>
         /// </summary>
-        /// <param name="commitInfo">The request parameters.</param>
+        /// <param name="uploadArg">The request parameters.</param>
         /// <param name="body">The content to upload.</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
         /// <param name="state">A user provided object that distinguished this send from other
         /// send requests.</param>
         /// <returns>An object that represents the asynchronous send request.</returns>
-        public sys.IAsyncResult BeginUpload(CommitInfo commitInfo, io.Stream body, sys.AsyncCallback callback, object state = null)
+        public sys.IAsyncResult BeginUpload(UploadArg uploadArg, io.Stream body, sys.AsyncCallback callback, object state = null)
         {
-            var task = this.UploadAsync(commitInfo, body);
+            var task = this.UploadAsync(uploadArg, body);
 
             return enc.Util.ToApm(task, callback, state);
         }
@@ -6546,6 +6555,11 @@ namespace Dropbox.Api.Files.Routes
         /// "rev" doesn't match the existing file's "rev", even if the existing file has been
         /// deleted. This also forces a conflict even when the target path refers to a file
         /// with identical contents.</param>
+        /// <param name="contentHash">NOT YET SUPPORTED. A hash of the file content uploaded in
+        /// this call. If provided and the uploaded content does not match this hash, an error
+        /// will be returned. For more information see our <a
+        /// href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
+        /// page.</param>
         /// <param name="body">The document to upload</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
@@ -6558,17 +6572,19 @@ namespace Dropbox.Api.Files.Routes
                                                 bool mute = false,
                                                 col.IEnumerable<global::Dropbox.Api.FileProperties.PropertyGroup> propertyGroups = null,
                                                 bool strictConflict = false,
+                                                string contentHash = null,
                                                 io.Stream body = null)
         {
-            var commitInfo = new CommitInfo(path,
-                                            mode,
-                                            autorename,
-                                            clientModified,
-                                            mute,
-                                            propertyGroups,
-                                            strictConflict);
+            var uploadArg = new UploadArg(path,
+                                          mode,
+                                          autorename,
+                                          clientModified,
+                                          mute,
+                                          propertyGroups,
+                                          strictConflict,
+                                          contentHash);
 
-            return this.UploadAsync(commitInfo, body);
+            return this.UploadAsync(uploadArg, body);
         }
 
         /// <summary>
@@ -6595,6 +6611,11 @@ namespace Dropbox.Api.Files.Routes
         /// "rev" doesn't match the existing file's "rev", even if the existing file has been
         /// deleted. This also forces a conflict even when the target path refers to a file
         /// with identical contents.</param>
+        /// <param name="contentHash">NOT YET SUPPORTED. A hash of the file content uploaded in
+        /// this call. If provided and the uploaded content does not match this hash, an error
+        /// will be returned. For more information see our <a
+        /// href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
+        /// page.</param>
         /// <param name="body">The document to upload</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
@@ -6608,19 +6629,21 @@ namespace Dropbox.Api.Files.Routes
                                             bool mute = false,
                                             col.IEnumerable<global::Dropbox.Api.FileProperties.PropertyGroup> propertyGroups = null,
                                             bool strictConflict = false,
+                                            string contentHash = null,
                                             io.Stream body = null,
                                             sys.AsyncCallback callback = null,
                                             object callbackState = null)
         {
-            var commitInfo = new CommitInfo(path,
-                                            mode,
-                                            autorename,
-                                            clientModified,
-                                            mute,
-                                            propertyGroups,
-                                            strictConflict);
+            var uploadArg = new UploadArg(path,
+                                          mode,
+                                          autorename,
+                                          clientModified,
+                                          mute,
+                                          propertyGroups,
+                                          strictConflict,
+                                          contentHash);
 
-            return this.BeginUpload(commitInfo, body, callback, callbackState);
+            return this.BeginUpload(uploadArg, body, callback, callbackState);
         }
 
         /// <summary>
@@ -6659,10 +6682,10 @@ namespace Dropbox.Api.Files.Routes
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="UploadSessionLookupError"/>.</exception>
+        /// cref="UploadSessionAppendError"/>.</exception>
         public t.Task UploadSessionAppendV2Async(UploadSessionAppendArg uploadSessionAppendArg, io.Stream body)
         {
-            return this.Transport.SendUploadRequestAsync<UploadSessionAppendArg, enc.Empty, UploadSessionLookupError>(uploadSessionAppendArg, body, "content", "/files/upload_session/append_v2", "user", global::Dropbox.Api.Files.UploadSessionAppendArg.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Files.UploadSessionLookupError.Decoder);
+            return this.Transport.SendUploadRequestAsync<UploadSessionAppendArg, enc.Empty, UploadSessionAppendError>(uploadSessionAppendArg, body, "content", "/files/upload_session/append_v2", "user", global::Dropbox.Api.Files.UploadSessionAppendArg.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Files.UploadSessionAppendError.Decoder);
         }
 
         /// <summary>
@@ -6698,17 +6721,24 @@ namespace Dropbox.Api.Files.Routes
         /// won't be able to call <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" />
         /// anymore with the current session.</param>
+        /// <param name="contentHash">NOT YET SUPPORTED. A hash of the file content uploaded in
+        /// this call. If provided and the uploaded content does not match this hash, an error
+        /// will be returned. For more information see our <a
+        /// href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
+        /// page.</param>
         /// <param name="body">The document to upload</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="UploadSessionLookupError"/>.</exception>
+        /// cref="UploadSessionAppendError"/>.</exception>
         public t.Task UploadSessionAppendV2Async(UploadSessionCursor cursor,
                                                  bool close = false,
+                                                 string contentHash = null,
                                                  io.Stream body = null)
         {
             var uploadSessionAppendArg = new UploadSessionAppendArg(cursor,
-                                                                    close);
+                                                                    close,
+                                                                    contentHash);
 
             return this.UploadSessionAppendV2Async(uploadSessionAppendArg, body);
         }
@@ -6721,6 +6751,11 @@ namespace Dropbox.Api.Files.Routes
         /// won't be able to call <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" />
         /// anymore with the current session.</param>
+        /// <param name="contentHash">NOT YET SUPPORTED. A hash of the file content uploaded in
+        /// this call. If provided and the uploaded content does not match this hash, an error
+        /// will be returned. For more information see our <a
+        /// href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
+        /// page.</param>
         /// <param name="body">The document to upload</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
@@ -6729,12 +6764,14 @@ namespace Dropbox.Api.Files.Routes
         /// <returns>An object that represents the asynchronous send request.</returns>
         public sys.IAsyncResult BeginUploadSessionAppendV2(UploadSessionCursor cursor,
                                                            bool close = false,
+                                                           string contentHash = null,
                                                            io.Stream body = null,
                                                            sys.AsyncCallback callback = null,
                                                            object callbackState = null)
         {
             var uploadSessionAppendArg = new UploadSessionAppendArg(cursor,
-                                                                    close);
+                                                                    close,
+                                                                    contentHash);
 
             return this.BeginUploadSessionAppendV2(uploadSessionAppendArg, body, callback, callbackState);
         }
@@ -6747,7 +6784,7 @@ namespace Dropbox.Api.Files.Routes
         /// request</param>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="UploadSessionLookupError"/>.</exception>
+        /// cref="UploadSessionAppendError"/>.</exception>
         public void EndUploadSessionAppendV2(sys.IAsyncResult asyncResult)
         {
             var task = asyncResult as t.Task;
@@ -6772,11 +6809,11 @@ namespace Dropbox.Api.Files.Routes
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="UploadSessionLookupError"/>.</exception>
+        /// cref="UploadSessionAppendError"/>.</exception>
         [sys.Obsolete("This function is deprecated, please use UploadSessionAppendV2Async instead.")]
         public t.Task UploadSessionAppendAsync(UploadSessionCursor uploadSessionCursor, io.Stream body)
         {
-            return this.Transport.SendUploadRequestAsync<UploadSessionCursor, enc.Empty, UploadSessionLookupError>(uploadSessionCursor, body, "content", "/files/upload_session/append", "user", global::Dropbox.Api.Files.UploadSessionCursor.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Files.UploadSessionLookupError.Decoder);
+            return this.Transport.SendUploadRequestAsync<UploadSessionCursor, enc.Empty, UploadSessionAppendError>(uploadSessionCursor, body, "content", "/files/upload_session/append", "user", global::Dropbox.Api.Files.UploadSessionCursor.Encoder, enc.EmptyDecoder.Instance, global::Dropbox.Api.Files.UploadSessionAppendError.Decoder);
         }
 
         /// <summary>
@@ -6817,7 +6854,7 @@ namespace Dropbox.Api.Files.Routes
         /// <returns>The task that represents the asynchronous send operation.</returns>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="UploadSessionLookupError"/>.</exception>
+        /// cref="UploadSessionAppendError"/>.</exception>
         [sys.Obsolete("This function is deprecated, please use UploadSessionAppendV2Async instead.")]
         public t.Task UploadSessionAppendAsync(string sessionId,
                                                ulong offset,
@@ -6865,7 +6902,7 @@ namespace Dropbox.Api.Files.Routes
         /// request</param>
         /// <exception cref="Dropbox.Api.ApiException{TError}">Thrown if there is an error
         /// processing the request; This will contain a <see
-        /// cref="UploadSessionLookupError"/>.</exception>
+        /// cref="UploadSessionAppendError"/>.</exception>
         [sys.Obsolete("This function is deprecated, please use EndUploadSessionAppendV2 instead.")]
         public void EndUploadSessionAppend(sys.IAsyncResult asyncResult)
         {
@@ -6930,6 +6967,11 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="cursor">Contains the upload session ID and the offset.</param>
         /// <param name="commit">Contains the path and other optional modifiers for the
         /// commit.</param>
+        /// <param name="contentHash">NOT YET SUPPORTED. A hash of the file content uploaded in
+        /// this call. If provided and the uploaded content does not match this hash, an error
+        /// will be returned. For more information see our <a
+        /// href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
+        /// page.</param>
         /// <param name="body">The document to upload</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
@@ -6938,10 +6980,12 @@ namespace Dropbox.Api.Files.Routes
         /// cref="UploadSessionFinishError"/>.</exception>
         public t.Task<FileMetadata> UploadSessionFinishAsync(UploadSessionCursor cursor,
                                                              CommitInfo commit,
-                                                             io.Stream body)
+                                                             string contentHash = null,
+                                                             io.Stream body = null)
         {
             var uploadSessionFinishArg = new UploadSessionFinishArg(cursor,
-                                                                    commit);
+                                                                    commit,
+                                                                    contentHash);
 
             return this.UploadSessionFinishAsync(uploadSessionFinishArg, body);
         }
@@ -6952,6 +6996,11 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="cursor">Contains the upload session ID and the offset.</param>
         /// <param name="commit">Contains the path and other optional modifiers for the
         /// commit.</param>
+        /// <param name="contentHash">NOT YET SUPPORTED. A hash of the file content uploaded in
+        /// this call. If provided and the uploaded content does not match this hash, an error
+        /// will be returned. For more information see our <a
+        /// href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
+        /// page.</param>
         /// <param name="body">The document to upload</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
@@ -6960,12 +7009,14 @@ namespace Dropbox.Api.Files.Routes
         /// <returns>An object that represents the asynchronous send request.</returns>
         public sys.IAsyncResult BeginUploadSessionFinish(UploadSessionCursor cursor,
                                                          CommitInfo commit,
-                                                         io.Stream body,
-                                                         sys.AsyncCallback callback,
+                                                         string contentHash = null,
+                                                         io.Stream body = null,
+                                                         sys.AsyncCallback callback = null,
                                                          object callbackState = null)
         {
             var uploadSessionFinishArg = new UploadSessionFinishArg(cursor,
-                                                                    commit);
+                                                                    commit,
+                                                                    contentHash);
 
             return this.BeginUploadSessionFinish(uploadSessionFinishArg, body, callback, callbackState);
         }
@@ -7459,6 +7510,11 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="sessionType">Type of upload session you want to start. If not
         /// specified, default is <see cref="Dropbox.Api.Files.UploadSessionType.Sequential"
         /// />.</param>
+        /// <param name="contentHash">NOT YET SUPPORTED. A hash of the file content uploaded in
+        /// this call. If provided and the uploaded content does not match this hash, an error
+        /// will be returned. For more information see our <a
+        /// href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
+        /// page.</param>
         /// <param name="body">The document to upload</param>
         /// <returns>The task that represents the asynchronous send operation. The TResult
         /// parameter contains the response from the server.</returns>
@@ -7467,10 +7523,12 @@ namespace Dropbox.Api.Files.Routes
         /// cref="UploadSessionStartError"/>.</exception>
         public t.Task<UploadSessionStartResult> UploadSessionStartAsync(bool close = false,
                                                                         UploadSessionType sessionType = null,
+                                                                        string contentHash = null,
                                                                         io.Stream body = null)
         {
             var uploadSessionStartArg = new UploadSessionStartArg(close,
-                                                                  sessionType);
+                                                                  sessionType,
+                                                                  contentHash);
 
             return this.UploadSessionStartAsync(uploadSessionStartArg, body);
         }
@@ -7485,6 +7543,11 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="sessionType">Type of upload session you want to start. If not
         /// specified, default is <see cref="Dropbox.Api.Files.UploadSessionType.Sequential"
         /// />.</param>
+        /// <param name="contentHash">NOT YET SUPPORTED. A hash of the file content uploaded in
+        /// this call. If provided and the uploaded content does not match this hash, an error
+        /// will be returned. For more information see our <a
+        /// href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
+        /// page.</param>
         /// <param name="body">The document to upload</param>
         /// <param name="callback">The method to be called when the asynchronous send is
         /// completed.</param>
@@ -7493,12 +7556,14 @@ namespace Dropbox.Api.Files.Routes
         /// <returns>An object that represents the asynchronous send request.</returns>
         public sys.IAsyncResult BeginUploadSessionStart(bool close = false,
                                                         UploadSessionType sessionType = null,
+                                                        string contentHash = null,
                                                         io.Stream body = null,
                                                         sys.AsyncCallback callback = null,
                                                         object callbackState = null)
         {
             var uploadSessionStartArg = new UploadSessionStartArg(close,
-                                                                  sessionType);
+                                                                  sessionType,
+                                                                  contentHash);
 
             return this.BeginUploadSessionStart(uploadSessionStartArg, body, callback, callbackState);
         }

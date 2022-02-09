@@ -101,6 +101,28 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is ContentHashMismatch</para>
+        /// </summary>
+        public bool IsContentHashMismatch
+        {
+            get
+            {
+                return this is ContentHashMismatch;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ContentHashMismatch, or <c>null</c>.</para>
+        /// </summary>
+        public ContentHashMismatch AsContentHashMismatch
+        {
+            get
+            {
+                return this as ContentHashMismatch;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -154,6 +176,12 @@ namespace Dropbox.Api.Files
                     PayloadTooLarge.Encoder.EncodeFields((PayloadTooLarge)value, writer);
                     return;
                 }
+                if (value is ContentHashMismatch)
+                {
+                    WriteProperty(".tag", "content_hash_mismatch", writer, enc.StringEncoder.Instance);
+                    ContentHashMismatch.Encoder.EncodeFields((ContentHashMismatch)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -198,6 +226,8 @@ namespace Dropbox.Api.Files
                         return PropertiesError.Decoder.DecodeFields(reader);
                     case "payload_too_large":
                         return PayloadTooLarge.Decoder.DecodeFields(reader);
+                    case "content_hash_mismatch":
+                        return ContentHashMismatch.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -455,6 +485,78 @@ namespace Dropbox.Api.Files
                 protected override PayloadTooLarge Create()
                 {
                     return PayloadTooLarge.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The content received by the Dropbox server in this call does not match the
+        /// provided content hash.</para>
+        /// </summary>
+        public sealed class ContentHashMismatch : UploadError
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ContentHashMismatch> Encoder = new ContentHashMismatchEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ContentHashMismatch> Decoder = new ContentHashMismatchDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="ContentHashMismatch" />
+            /// class.</para>
+            /// </summary>
+            private ContentHashMismatch()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of ContentHashMismatch</para>
+            /// </summary>
+            public static readonly ContentHashMismatch Instance = new ContentHashMismatch();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ContentHashMismatch" />.</para>
+            /// </summary>
+            private class ContentHashMismatchEncoder : enc.StructEncoder<ContentHashMismatch>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ContentHashMismatch value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ContentHashMismatch" />.</para>
+            /// </summary>
+            private class ContentHashMismatchDecoder : enc.StructDecoder<ContentHashMismatch>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="ContentHashMismatch"
+                /// />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ContentHashMismatch Create()
+                {
+                    return ContentHashMismatch.Instance;
                 }
 
             }
