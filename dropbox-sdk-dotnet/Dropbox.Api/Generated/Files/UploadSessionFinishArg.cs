@@ -34,8 +34,14 @@ namespace Dropbox.Api.Files
         /// <param name="cursor">Contains the upload session ID and the offset.</param>
         /// <param name="commit">Contains the path and other optional modifiers for the
         /// commit.</param>
+        /// <param name="contentHash">NOT YET SUPPORTED. A hash of the file content uploaded in
+        /// this call. If provided and the uploaded content does not match this hash, an error
+        /// will be returned. For more information see our <a
+        /// href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
+        /// page.</param>
         public UploadSessionFinishArg(UploadSessionCursor cursor,
-                                      CommitInfo commit)
+                                      CommitInfo commit,
+                                      string contentHash = null)
         {
             if (cursor == null)
             {
@@ -47,8 +53,21 @@ namespace Dropbox.Api.Files
                 throw new sys.ArgumentNullException("commit");
             }
 
+            if (contentHash != null)
+            {
+                if (contentHash.Length < 64)
+                {
+                    throw new sys.ArgumentOutOfRangeException("contentHash", "Length should be at least 64");
+                }
+                if (contentHash.Length > 64)
+                {
+                    throw new sys.ArgumentOutOfRangeException("contentHash", "Length should be at most 64");
+                }
+            }
+
             this.Cursor = cursor;
             this.Commit = commit;
+            this.ContentHash = contentHash;
         }
 
         /// <summary>
@@ -72,6 +91,15 @@ namespace Dropbox.Api.Files
         /// </summary>
         public CommitInfo Commit { get; protected set; }
 
+        /// <summary>
+        /// <para>NOT YET SUPPORTED. A hash of the file content uploaded in this call. If
+        /// provided and the uploaded content does not match this hash, an error will be
+        /// returned. For more information see our <a
+        /// href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
+        /// page.</para>
+        /// </summary>
+        public string ContentHash { get; protected set; }
+
         #region Encoder class
 
         /// <summary>
@@ -88,6 +116,10 @@ namespace Dropbox.Api.Files
             {
                 WriteProperty("cursor", value.Cursor, writer, global::Dropbox.Api.Files.UploadSessionCursor.Encoder);
                 WriteProperty("commit", value.Commit, writer, global::Dropbox.Api.Files.CommitInfo.Encoder);
+                if (value.ContentHash != null)
+                {
+                    WriteProperty("content_hash", value.ContentHash, writer, enc.StringEncoder.Instance);
+                }
             }
         }
 
@@ -126,6 +158,9 @@ namespace Dropbox.Api.Files
                         break;
                     case "commit":
                         value.Commit = global::Dropbox.Api.Files.CommitInfo.Decoder.Decode(reader);
+                        break;
+                    case "content_hash":
+                        value.ContentHash = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();
