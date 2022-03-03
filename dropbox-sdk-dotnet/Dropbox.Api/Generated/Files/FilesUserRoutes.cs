@@ -239,9 +239,9 @@ namespace Dropbox.Api.Files.Routes
         /// "rev" doesn't match the existing file's "rev", even if the existing file has been
         /// deleted. This also forces a conflict even when the target path refers to a file
         /// with identical contents.</param>
-        /// <param name="contentHash">NOT YET SUPPORTED. A hash of the file content uploaded in
-        /// this call. If provided and the uploaded content does not match this hash, an error
-        /// will be returned. For more information see our <a
+        /// <param name="contentHash">A hash of the file content uploaded in this call. If
+        /// provided and the uploaded content does not match this hash, an error will be
+        /// returned. For more information see our <a
         /// href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
         /// page.</param>
         /// <param name="body">The document to upload</param>
@@ -296,9 +296,9 @@ namespace Dropbox.Api.Files.Routes
         /// "rev" doesn't match the existing file's "rev", even if the existing file has been
         /// deleted. This also forces a conflict even when the target path refers to a file
         /// with identical contents.</param>
-        /// <param name="contentHash">NOT YET SUPPORTED. A hash of the file content uploaded in
-        /// this call. If provided and the uploaded content does not match this hash, an error
-        /// will be returned. For more information see our <a
+        /// <param name="contentHash">A hash of the file content uploaded in this call. If
+        /// provided and the uploaded content does not match this hash, an error will be
+        /// returned. For more information see our <a
         /// href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
         /// page.</param>
         /// <param name="body">The document to upload</param>
@@ -6555,9 +6555,9 @@ namespace Dropbox.Api.Files.Routes
         /// "rev" doesn't match the existing file's "rev", even if the existing file has been
         /// deleted. This also forces a conflict even when the target path refers to a file
         /// with identical contents.</param>
-        /// <param name="contentHash">NOT YET SUPPORTED. A hash of the file content uploaded in
-        /// this call. If provided and the uploaded content does not match this hash, an error
-        /// will be returned. For more information see our <a
+        /// <param name="contentHash">A hash of the file content uploaded in this call. If
+        /// provided and the uploaded content does not match this hash, an error will be
+        /// returned. For more information see our <a
         /// href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
         /// page.</param>
         /// <param name="body">The document to upload</param>
@@ -6611,9 +6611,9 @@ namespace Dropbox.Api.Files.Routes
         /// "rev" doesn't match the existing file's "rev", even if the existing file has been
         /// deleted. This also forces a conflict even when the target path refers to a file
         /// with identical contents.</param>
-        /// <param name="contentHash">NOT YET SUPPORTED. A hash of the file content uploaded in
-        /// this call. If provided and the uploaded content does not match this hash, an error
-        /// will be returned. For more information see our <a
+        /// <param name="contentHash">A hash of the file content uploaded in this call. If
+        /// provided and the uploaded content does not match this hash, an error will be
+        /// returned. For more information see our <a
         /// href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
         /// page.</param>
         /// <param name="body">The document to upload</param>
@@ -6721,9 +6721,9 @@ namespace Dropbox.Api.Files.Routes
         /// won't be able to call <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" />
         /// anymore with the current session.</param>
-        /// <param name="contentHash">NOT YET SUPPORTED. A hash of the file content uploaded in
-        /// this call. If provided and the uploaded content does not match this hash, an error
-        /// will be returned. For more information see our <a
+        /// <param name="contentHash">A hash of the file content uploaded in this call. If
+        /// provided and the uploaded content does not match this hash, an error will be
+        /// returned. For more information see our <a
         /// href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
         /// page.</param>
         /// <param name="body">The document to upload</param>
@@ -6751,9 +6751,9 @@ namespace Dropbox.Api.Files.Routes
         /// won't be able to call <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" />
         /// anymore with the current session.</param>
-        /// <param name="contentHash">NOT YET SUPPORTED. A hash of the file content uploaded in
-        /// this call. If provided and the uploaded content does not match this hash, an error
-        /// will be returned. For more information see our <a
+        /// <param name="contentHash">A hash of the file content uploaded in this call. If
+        /// provided and the uploaded content does not match this hash, an error will be
+        /// returned. For more information see our <a
         /// href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
         /// page.</param>
         /// <param name="body">The document to upload</param>
@@ -6967,9 +6967,9 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="cursor">Contains the upload session ID and the offset.</param>
         /// <param name="commit">Contains the path and other optional modifiers for the
         /// commit.</param>
-        /// <param name="contentHash">NOT YET SUPPORTED. A hash of the file content uploaded in
-        /// this call. If provided and the uploaded content does not match this hash, an error
-        /// will be returned. For more information see our <a
+        /// <param name="contentHash">A hash of the file content uploaded in this call. If
+        /// provided and the uploaded content does not match this hash, an error will be
+        /// returned. For more information see our <a
         /// href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
         /// page.</param>
         /// <param name="body">The document to upload</param>
@@ -6996,9 +6996,9 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="cursor">Contains the upload session ID and the offset.</param>
         /// <param name="commit">Contains the path and other optional modifiers for the
         /// commit.</param>
-        /// <param name="contentHash">NOT YET SUPPORTED. A hash of the file content uploaded in
-        /// this call. If provided and the uploaded content does not match this hash, an error
-        /// will be returned. For more information see our <a
+        /// <param name="contentHash">A hash of the file content uploaded in this call. If
+        /// provided and the uploaded content does not match this hash, an error will be
+        /// returned. For more information see our <a
         /// href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
         /// page.</param>
         /// <param name="body">The document to upload</param>
@@ -7510,9 +7510,9 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="sessionType">Type of upload session you want to start. If not
         /// specified, default is <see cref="Dropbox.Api.Files.UploadSessionType.Sequential"
         /// />.</param>
-        /// <param name="contentHash">NOT YET SUPPORTED. A hash of the file content uploaded in
-        /// this call. If provided and the uploaded content does not match this hash, an error
-        /// will be returned. For more information see our <a
+        /// <param name="contentHash">A hash of the file content uploaded in this call. If
+        /// provided and the uploaded content does not match this hash, an error will be
+        /// returned. For more information see our <a
         /// href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
         /// page.</param>
         /// <param name="body">The document to upload</param>
@@ -7543,9 +7543,9 @@ namespace Dropbox.Api.Files.Routes
         /// <param name="sessionType">Type of upload session you want to start. If not
         /// specified, default is <see cref="Dropbox.Api.Files.UploadSessionType.Sequential"
         /// />.</param>
-        /// <param name="contentHash">NOT YET SUPPORTED. A hash of the file content uploaded in
-        /// this call. If provided and the uploaded content does not match this hash, an error
-        /// will be returned. For more information see our <a
+        /// <param name="contentHash">A hash of the file content uploaded in this call. If
+        /// provided and the uploaded content does not match this hash, an error will be
+        /// returned. For more information see our <a
         /// href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
         /// page.</param>
         /// <param name="body">The document to upload</param>
