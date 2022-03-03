@@ -23703,7 +23703,7 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>(file_requests) Received files via Email to my Dropbox</para>
+        /// <para>(file_requests) Received files via Email to Dropbox</para>
         /// </summary>
         public sealed class EmailIngestReceiveFile : EventType
         {
@@ -47981,7 +47981,7 @@ namespace Dropbox.Api.TeamLog
         }
 
         /// <summary>
-        /// <para>(team_policies) Changed email to my Dropbox policy for team</para>
+        /// <para>(team_policies) Changed email to Dropbox policy for team</para>
         /// </summary>
         public sealed class EmailIngestPolicyChanged : EventType
         {

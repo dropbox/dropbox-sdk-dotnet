@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Received files via Email to my Dropbox.</para>
+    /// <para>Received files via Email to Dropbox.</para>
     /// </summary>
     public class EmailIngestReceiveFileDetails
     {

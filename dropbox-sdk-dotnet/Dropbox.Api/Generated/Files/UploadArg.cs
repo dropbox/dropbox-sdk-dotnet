@@ -52,9 +52,9 @@ namespace Dropbox.Api.Files
         /// "rev" doesn't match the existing file's "rev", even if the existing file has been
         /// deleted. This also forces a conflict even when the target path refers to a file
         /// with identical contents.</param>
-        /// <param name="contentHash">NOT YET SUPPORTED. A hash of the file content uploaded in
-        /// this call. If provided and the uploaded content does not match this hash, an error
-        /// will be returned. For more information see our <a
+        /// <param name="contentHash">A hash of the file content uploaded in this call. If
+        /// provided and the uploaded content does not match this hash, an error will be
+        /// returned. For more information see our <a
         /// href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
         /// page.</param>
         public UploadArg(string path,
@@ -93,9 +93,9 @@ namespace Dropbox.Api.Files
         }
 
         /// <summary>
-        /// <para>NOT YET SUPPORTED. A hash of the file content uploaded in this call. If
-        /// provided and the uploaded content does not match this hash, an error will be
-        /// returned. For more information see our <a
+        /// <para>A hash of the file content uploaded in this call. If provided and the
+        /// uploaded content does not match this hash, an error will be returned. For more
+        /// information see our <a
         /// href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
         /// page.</para>
         /// </summary>
