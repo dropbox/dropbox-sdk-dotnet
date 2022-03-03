@@ -11,7 +11,7 @@ namespace Dropbox.Api.TeamLog
     using enc = Dropbox.Api.Stone;
 
     /// <summary>
-    /// <para>Changed email to my Dropbox policy for team.</para>
+    /// <para>Changed email to Dropbox policy for team.</para>
     /// </summary>
     public class EmailIngestPolicyChangedDetails
     {

@@ -36,9 +36,9 @@ namespace Dropbox.Api.Files
         /// won't be able to call <see
         /// cref="Dropbox.Api.Files.Routes.FilesUserRoutes.UploadSessionAppendV2Async" />
         /// anymore with the current session.</param>
-        /// <param name="contentHash">NOT YET SUPPORTED. A hash of the file content uploaded in
-        /// this call. If provided and the uploaded content does not match this hash, an error
-        /// will be returned. For more information see our <a
+        /// <param name="contentHash">A hash of the file content uploaded in this call. If
+        /// provided and the uploaded content does not match this hash, an error will be
+        /// returned. For more information see our <a
         /// href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
         /// page.</param>
         public UploadSessionAppendArg(UploadSessionCursor cursor,
@@ -93,9 +93,9 @@ namespace Dropbox.Api.Files
         public bool Close { get; protected set; }
 
         /// <summary>
-        /// <para>NOT YET SUPPORTED. A hash of the file content uploaded in this call. If
-        /// provided and the uploaded content does not match this hash, an error will be
-        /// returned. For more information see our <a
+        /// <para>A hash of the file content uploaded in this call. If provided and the
+        /// uploaded content does not match this hash, an error will be returned. For more
+        /// information see our <a
         /// href="https://www.dropbox.com/developers/reference/content-hash">Content hash</a>
         /// page.</para>
         /// </summary>

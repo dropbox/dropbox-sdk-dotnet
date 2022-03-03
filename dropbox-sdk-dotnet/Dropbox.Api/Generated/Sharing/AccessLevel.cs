@@ -123,6 +123,28 @@ namespace Dropbox.Api.Sharing
         }
 
         /// <summary>
+        /// <para>Gets a value indicating whether this instance is Traverse</para>
+        /// </summary>
+        public bool IsTraverse
+        {
+            get
+            {
+                return this is Traverse;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a Traverse, or <c>null</c>.</para>
+        /// </summary>
+        public Traverse AsTraverse
+        {
+            get
+            {
+                return this as Traverse;
+            }
+        }
+
+        /// <summary>
         /// <para>Gets a value indicating whether this instance is Other</para>
         /// </summary>
         public bool IsOther
@@ -182,6 +204,12 @@ namespace Dropbox.Api.Sharing
                     ViewerNoComment.Encoder.EncodeFields((ViewerNoComment)value, writer);
                     return;
                 }
+                if (value is Traverse)
+                {
+                    WriteProperty(".tag", "traverse", writer, enc.StringEncoder.Instance);
+                    Traverse.Encoder.EncodeFields((Traverse)value, writer);
+                    return;
+                }
                 if (value is Other)
                 {
                     WriteProperty(".tag", "other", writer, enc.StringEncoder.Instance);
@@ -228,6 +256,8 @@ namespace Dropbox.Api.Sharing
                         return Viewer.Decoder.DecodeFields(reader);
                     case "viewer_no_comment":
                         return ViewerNoComment.Decoder.DecodeFields(reader);
+                    case "traverse":
+                        return Traverse.Decoder.DecodeFields(reader);
                     default:
                         return Other.Decoder.DecodeFields(reader);
                 }
@@ -510,6 +540,76 @@ namespace Dropbox.Api.Sharing
                 protected override ViewerNoComment Create()
                 {
                     return ViewerNoComment.Instance;
+                }
+
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The collaborator can only view the shared folder that they have access
+        /// to.</para>
+        /// </summary>
+        public sealed class Traverse : AccessLevel
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<Traverse> Encoder = new TraverseEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<Traverse> Decoder = new TraverseDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see cref="Traverse" /> class.</para>
+            /// </summary>
+            private Traverse()
+            {
+            }
+
+            /// <summary>
+            /// <para>A singleton instance of Traverse</para>
+            /// </summary>
+            public static readonly Traverse Instance = new Traverse();
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="Traverse" />.</para>
+            /// </summary>
+            private class TraverseEncoder : enc.StructEncoder<Traverse>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(Traverse value, enc.IJsonWriter writer)
+                {
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="Traverse" />.</para>
+            /// </summary>
+            private class TraverseDecoder : enc.StructDecoder<Traverse>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see cref="Traverse" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override Traverse Create()
+                {
+                    return Traverse.Instance;
                 }
 
             }
