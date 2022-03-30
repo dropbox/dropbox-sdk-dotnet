@@ -49,11 +49,13 @@ namespace Dropbox.Api.Files
         /// <param name="parentSharedFolderId">Please use <see
         /// cref="Dropbox.Api.Files.FileSharingInfo.ParentSharedFolderId" /> or <see
         /// cref="Dropbox.Api.Files.FolderSharingInfo.ParentSharedFolderId" /> instead.</param>
+        /// <param name="previewUrl">The preview URL of the file.</param>
         public DeletedMetadata(string name,
                                string pathLower = null,
                                string pathDisplay = null,
-                               string parentSharedFolderId = null)
-            : base(name, pathLower, pathDisplay, parentSharedFolderId)
+                               string parentSharedFolderId = null,
+                               string previewUrl = null)
+            : base(name, pathLower, pathDisplay, parentSharedFolderId, previewUrl)
         {
         }
 
@@ -94,6 +96,10 @@ namespace Dropbox.Api.Files
                 if (value.ParentSharedFolderId != null)
                 {
                     WriteProperty("parent_shared_folder_id", value.ParentSharedFolderId, writer, enc.StringEncoder.Instance);
+                }
+                if (value.PreviewUrl != null)
+                {
+                    WriteProperty("preview_url", value.PreviewUrl, writer, enc.StringEncoder.Instance);
                 }
             }
         }
@@ -138,6 +144,9 @@ namespace Dropbox.Api.Files
                         break;
                     case "parent_shared_folder_id":
                         value.ParentSharedFolderId = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "preview_url":
+                        value.PreviewUrl = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     default:
                         reader.Skip();

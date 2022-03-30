@@ -62,6 +62,7 @@ namespace Dropbox.Api.Files
         /// <param name="parentSharedFolderId">Please use <see
         /// cref="Dropbox.Api.Files.FileSharingInfo.ParentSharedFolderId" /> or <see
         /// cref="Dropbox.Api.Files.FolderSharingInfo.ParentSharedFolderId" /> instead.</param>
+        /// <param name="previewUrl">The preview URL of the file.</param>
         /// <param name="mediaInfo">Additional information if the file is a photo or video.
         /// This field will not be set on entries returned by <see
         /// cref="Dropbox.Api.Files.Routes.FilesAppRoutes.ListFolderAsync" /> <see
@@ -102,6 +103,7 @@ namespace Dropbox.Api.Files
                             string pathLower = null,
                             string pathDisplay = null,
                             string parentSharedFolderId = null,
+                            string previewUrl = null,
                             MediaInfo mediaInfo = null,
                             SymlinkInfo symlinkInfo = null,
                             FileSharingInfo sharingInfo = null,
@@ -111,7 +113,7 @@ namespace Dropbox.Api.Files
                             bool? hasExplicitSharedMembers = null,
                             string contentHash = null,
                             FileLockMetadata fileLockInfo = null)
-            : base(name, pathLower, pathDisplay, parentSharedFolderId)
+            : base(name, pathLower, pathDisplay, parentSharedFolderId, previewUrl)
         {
             if (id == null)
             {
@@ -303,6 +305,10 @@ namespace Dropbox.Api.Files
                 {
                     WriteProperty("parent_shared_folder_id", value.ParentSharedFolderId, writer, enc.StringEncoder.Instance);
                 }
+                if (value.PreviewUrl != null)
+                {
+                    WriteProperty("preview_url", value.PreviewUrl, writer, enc.StringEncoder.Instance);
+                }
                 if (value.MediaInfo != null)
                 {
                     WriteProperty("media_info", value.MediaInfo, writer, global::Dropbox.Api.Files.MediaInfo.Encoder);
@@ -394,6 +400,9 @@ namespace Dropbox.Api.Files
                         break;
                     case "parent_shared_folder_id":
                         value.ParentSharedFolderId = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "preview_url":
+                        value.PreviewUrl = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "media_info":
                         value.MediaInfo = global::Dropbox.Api.Files.MediaInfo.Decoder.Decode(reader);

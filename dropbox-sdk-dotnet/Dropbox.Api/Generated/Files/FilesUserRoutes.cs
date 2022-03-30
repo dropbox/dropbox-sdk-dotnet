@@ -6137,8 +6137,9 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
-        /// <para>Add a tag to an item. A tag is a string. No more than 20 tags can be added to
-        /// a given item.</para>
+        /// <para>Add a tag to an item. A tag is a string. The strings are automatically
+        /// converted to lowercase letters. No more than 20 tags can be added to a given
+        /// item.</para>
         /// </summary>
         /// <param name="addTagArg">The request parameters</param>
         /// <returns>The task that represents the asynchronous send operation.</returns>
@@ -6166,8 +6167,9 @@ namespace Dropbox.Api.Files.Routes
         }
 
         /// <summary>
-        /// <para>Add a tag to an item. A tag is a string. No more than 20 tags can be added to
-        /// a given item.</para>
+        /// <para>Add a tag to an item. A tag is a string. The strings are automatically
+        /// converted to lowercase letters. No more than 20 tags can be added to a given
+        /// item.</para>
         /// </summary>
         /// <param name="path">Path to the item to be tagged.</param>
         /// <param name="tagText">The value of the tag to add.</param>

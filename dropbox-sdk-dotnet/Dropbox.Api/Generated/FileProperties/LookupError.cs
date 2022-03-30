@@ -574,8 +574,8 @@ namespace Dropbox.Api.FileProperties
         }
 
         /// <summary>
-        /// <para>The file cannot be transferred because the content is restricted.  For
-        /// example, sometimes there are legal restrictions due to copyright claims.</para>
+        /// <para>The file cannot be transferred because the content is restricted. For
+        /// example, we might restrict a file due to legal requirements.</para>
         /// </summary>
         public sealed class RestrictedContent : LookupError
         {

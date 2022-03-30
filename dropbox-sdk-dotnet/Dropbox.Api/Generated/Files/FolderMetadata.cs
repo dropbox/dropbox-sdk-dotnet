@@ -51,6 +51,7 @@ namespace Dropbox.Api.Files
         /// <param name="parentSharedFolderId">Please use <see
         /// cref="Dropbox.Api.Files.FileSharingInfo.ParentSharedFolderId" /> or <see
         /// cref="Dropbox.Api.Files.FolderSharingInfo.ParentSharedFolderId" /> instead.</param>
+        /// <param name="previewUrl">The preview URL of the file.</param>
         /// <param name="sharedFolderId">Please use <paramref name="sharingInfo" />
         /// instead.</param>
         /// <param name="sharingInfo">Set if the folder is contained in a shared folder or is a
@@ -64,10 +65,11 @@ namespace Dropbox.Api.Files
                               string pathLower = null,
                               string pathDisplay = null,
                               string parentSharedFolderId = null,
+                              string previewUrl = null,
                               string sharedFolderId = null,
                               FolderSharingInfo sharingInfo = null,
                               col.IEnumerable<global::Dropbox.Api.FileProperties.PropertyGroup> propertyGroups = null)
-            : base(name, pathLower, pathDisplay, parentSharedFolderId)
+            : base(name, pathLower, pathDisplay, parentSharedFolderId, previewUrl)
         {
             if (id == null)
             {
@@ -155,6 +157,10 @@ namespace Dropbox.Api.Files
                 {
                     WriteProperty("parent_shared_folder_id", value.ParentSharedFolderId, writer, enc.StringEncoder.Instance);
                 }
+                if (value.PreviewUrl != null)
+                {
+                    WriteProperty("preview_url", value.PreviewUrl, writer, enc.StringEncoder.Instance);
+                }
                 if (value.SharedFolderId != null)
                 {
                     WriteProperty("shared_folder_id", value.SharedFolderId, writer, enc.StringEncoder.Instance);
@@ -213,6 +219,9 @@ namespace Dropbox.Api.Files
                         break;
                     case "parent_shared_folder_id":
                         value.ParentSharedFolderId = enc.StringDecoder.Instance.Decode(reader);
+                        break;
+                    case "preview_url":
+                        value.PreviewUrl = enc.StringDecoder.Instance.Decode(reader);
                         break;
                     case "shared_folder_id":
                         value.SharedFolderId = enc.StringDecoder.Instance.Decode(reader);
