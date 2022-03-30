@@ -8630,6 +8630,30 @@ namespace Dropbox.Api.TeamLog
 
         /// <summary>
         /// <para>Gets a value indicating whether this instance is
+        /// DropboxPasswordsPolicyChangedDetails</para>
+        /// </summary>
+        public bool IsDropboxPasswordsPolicyChangedDetails
+        {
+            get
+            {
+                return this is DropboxPasswordsPolicyChangedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a DropboxPasswordsPolicyChangedDetails, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public DropboxPasswordsPolicyChangedDetails AsDropboxPasswordsPolicyChangedDetails
+        {
+            get
+            {
+                return this as DropboxPasswordsPolicyChangedDetails;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
         /// EmailIngestPolicyChangedDetails</para>
         /// </summary>
         public bool IsEmailIngestPolicyChangedDetails
@@ -13485,6 +13509,12 @@ namespace Dropbox.Api.TeamLog
                     DirectoryRestrictionsRemoveMembersDetails.Encoder.EncodeFields((DirectoryRestrictionsRemoveMembersDetails)value, writer);
                     return;
                 }
+                if (value is DropboxPasswordsPolicyChangedDetails)
+                {
+                    WriteProperty(".tag", "dropbox_passwords_policy_changed_details", writer, enc.StringEncoder.Instance);
+                    DropboxPasswordsPolicyChangedDetails.Encoder.EncodeFields((DropboxPasswordsPolicyChangedDetails)value, writer);
+                    return;
+                }
                 if (value is EmailIngestPolicyChangedDetails)
                 {
                     WriteProperty(".tag", "email_ingest_policy_changed_details", writer, enc.StringEncoder.Instance);
@@ -14921,6 +14951,8 @@ namespace Dropbox.Api.TeamLog
                         return DirectoryRestrictionsAddMembersDetails.Decoder.DecodeFields(reader);
                     case "directory_restrictions_remove_members_details":
                         return DirectoryRestrictionsRemoveMembersDetails.Decoder.DecodeFields(reader);
+                    case "dropbox_passwords_policy_changed_details":
+                        return DropboxPasswordsPolicyChangedDetails.Decoder.DecodeFields(reader);
                     case "email_ingest_policy_changed_details":
                         return EmailIngestPolicyChangedDetails.Decoder.DecodeFields(reader);
                     case "emm_add_exception_details":
@@ -48453,6 +48485,96 @@ namespace Dropbox.Api.TeamLog
                 public override DirectoryRestrictionsRemoveMembersDetails DecodeFields(enc.IJsonReader reader)
                 {
                     return new DirectoryRestrictionsRemoveMembersDetails(global::Dropbox.Api.TeamLog.DirectoryRestrictionsRemoveMembersDetails.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>The dropbox passwords policy changed details object</para>
+        /// </summary>
+        public sealed class DropboxPasswordsPolicyChangedDetails : EventDetails
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<DropboxPasswordsPolicyChangedDetails> Encoder = new DropboxPasswordsPolicyChangedDetailsEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<DropboxPasswordsPolicyChangedDetails> Decoder = new DropboxPasswordsPolicyChangedDetailsDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="DropboxPasswordsPolicyChangedDetails" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public DropboxPasswordsPolicyChangedDetails(global::Dropbox.Api.TeamLog.DropboxPasswordsPolicyChangedDetails value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="DropboxPasswordsPolicyChangedDetails" /> class.</para>
+            /// </summary>
+            private DropboxPasswordsPolicyChangedDetails()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public global::Dropbox.Api.TeamLog.DropboxPasswordsPolicyChangedDetails Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="DropboxPasswordsPolicyChangedDetails" />.</para>
+            /// </summary>
+            private class DropboxPasswordsPolicyChangedDetailsEncoder : enc.StructEncoder<DropboxPasswordsPolicyChangedDetails>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(DropboxPasswordsPolicyChangedDetails value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("dropbox_passwords_policy_changed_details", value.Value, writer, global::Dropbox.Api.TeamLog.DropboxPasswordsPolicyChangedDetails.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="DropboxPasswordsPolicyChangedDetails" />.</para>
+            /// </summary>
+            private class DropboxPasswordsPolicyChangedDetailsDecoder : enc.StructDecoder<DropboxPasswordsPolicyChangedDetails>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="DropboxPasswordsPolicyChangedDetails" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override DropboxPasswordsPolicyChangedDetails Create()
+                {
+                    return new DropboxPasswordsPolicyChangedDetails();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override DropboxPasswordsPolicyChangedDetails DecodeFields(enc.IJsonReader reader)
+                {
+                    return new DropboxPasswordsPolicyChangedDetails(global::Dropbox.Api.TeamLog.DropboxPasswordsPolicyChangedDetails.Decoder.DecodeFields(reader));
                 }
             }
 
