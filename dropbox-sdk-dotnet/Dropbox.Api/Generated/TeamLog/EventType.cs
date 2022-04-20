@@ -1285,6 +1285,54 @@ namespace Dropbox.Api.TeamLog
 
         /// <summary>
         /// <para>Gets a value indicating whether this instance is
+        /// ExternalDriveBackupEligibilityStatusChecked</para>
+        /// </summary>
+        public bool IsExternalDriveBackupEligibilityStatusChecked
+        {
+            get
+            {
+                return this is ExternalDriveBackupEligibilityStatusChecked;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ExternalDriveBackupEligibilityStatusChecked, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public ExternalDriveBackupEligibilityStatusChecked AsExternalDriveBackupEligibilityStatusChecked
+        {
+            get
+            {
+                return this as ExternalDriveBackupEligibilityStatusChecked;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
+        /// ExternalDriveBackupStatusChanged</para>
+        /// </summary>
+        public bool IsExternalDriveBackupStatusChanged
+        {
+            get
+            {
+                return this is ExternalDriveBackupStatusChanged;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets this instance as a ExternalDriveBackupStatusChanged, or
+        /// <c>null</c>.</para>
+        /// </summary>
+        public ExternalDriveBackupStatusChanged AsExternalDriveBackupStatusChanged
+        {
+            get
+            {
+                return this as ExternalDriveBackupStatusChanged;
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets a value indicating whether this instance is
         /// AccountCaptureChangeAvailability</para>
         /// </summary>
         public bool IsAccountCaptureChangeAvailability
@@ -11305,6 +11353,18 @@ namespace Dropbox.Api.TeamLog
                     EmmRefreshAuthToken.Encoder.EncodeFields((EmmRefreshAuthToken)value, writer);
                     return;
                 }
+                if (value is ExternalDriveBackupEligibilityStatusChecked)
+                {
+                    WriteProperty(".tag", "external_drive_backup_eligibility_status_checked", writer, enc.StringEncoder.Instance);
+                    ExternalDriveBackupEligibilityStatusChecked.Encoder.EncodeFields((ExternalDriveBackupEligibilityStatusChecked)value, writer);
+                    return;
+                }
+                if (value is ExternalDriveBackupStatusChanged)
+                {
+                    WriteProperty(".tag", "external_drive_backup_status_changed", writer, enc.StringEncoder.Instance);
+                    ExternalDriveBackupStatusChanged.Encoder.EncodeFields((ExternalDriveBackupStatusChanged)value, writer);
+                    return;
+                }
                 if (value is AccountCaptureChangeAvailability)
                 {
                     WriteProperty(".tag", "account_capture_change_availability", writer, enc.StringEncoder.Instance);
@@ -13997,6 +14057,10 @@ namespace Dropbox.Api.TeamLog
                         return DropboxPasswordsNewDeviceEnrolled.Decoder.DecodeFields(reader);
                     case "emm_refresh_auth_token":
                         return EmmRefreshAuthToken.Decoder.DecodeFields(reader);
+                    case "external_drive_backup_eligibility_status_checked":
+                        return ExternalDriveBackupEligibilityStatusChecked.Decoder.DecodeFields(reader);
+                    case "external_drive_backup_status_changed":
+                        return ExternalDriveBackupStatusChanged.Decoder.DecodeFields(reader);
                     case "account_capture_change_availability":
                         return AccountCaptureChangeAvailability.Decoder.DecodeFields(reader);
                     case "account_capture_migrate_account":
@@ -19789,6 +19853,188 @@ namespace Dropbox.Api.TeamLog
                 public override EmmRefreshAuthToken DecodeFields(enc.IJsonReader reader)
                 {
                     return new EmmRefreshAuthToken(global::Dropbox.Api.TeamLog.EmmRefreshAuthTokenType.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(devices) Checked external drive backup eligibility status</para>
+        /// </summary>
+        public sealed class ExternalDriveBackupEligibilityStatusChecked : EventType
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ExternalDriveBackupEligibilityStatusChecked> Encoder = new ExternalDriveBackupEligibilityStatusCheckedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ExternalDriveBackupEligibilityStatusChecked> Decoder = new ExternalDriveBackupEligibilityStatusCheckedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="ExternalDriveBackupEligibilityStatusChecked" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public ExternalDriveBackupEligibilityStatusChecked(ExternalDriveBackupEligibilityStatusCheckedType value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="ExternalDriveBackupEligibilityStatusChecked" /> class.</para>
+            /// </summary>
+            private ExternalDriveBackupEligibilityStatusChecked()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public ExternalDriveBackupEligibilityStatusCheckedType Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ExternalDriveBackupEligibilityStatusChecked"
+            /// />.</para>
+            /// </summary>
+            private class ExternalDriveBackupEligibilityStatusCheckedEncoder : enc.StructEncoder<ExternalDriveBackupEligibilityStatusChecked>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ExternalDriveBackupEligibilityStatusChecked value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("external_drive_backup_eligibility_status_checked", value.Value, writer, global::Dropbox.Api.TeamLog.ExternalDriveBackupEligibilityStatusCheckedType.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ExternalDriveBackupEligibilityStatusChecked"
+            /// />.</para>
+            /// </summary>
+            private class ExternalDriveBackupEligibilityStatusCheckedDecoder : enc.StructDecoder<ExternalDriveBackupEligibilityStatusChecked>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="ExternalDriveBackupEligibilityStatusChecked" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ExternalDriveBackupEligibilityStatusChecked Create()
+                {
+                    return new ExternalDriveBackupEligibilityStatusChecked();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override ExternalDriveBackupEligibilityStatusChecked DecodeFields(enc.IJsonReader reader)
+                {
+                    return new ExternalDriveBackupEligibilityStatusChecked(global::Dropbox.Api.TeamLog.ExternalDriveBackupEligibilityStatusCheckedType.Decoder.DecodeFields(reader));
+                }
+            }
+
+            #endregion
+        }
+
+        /// <summary>
+        /// <para>(devices) Modified external drive backup</para>
+        /// </summary>
+        public sealed class ExternalDriveBackupStatusChanged : EventType
+        {
+            #pragma warning disable 108
+
+            /// <summary>
+            /// <para>The encoder instance.</para>
+            /// </summary>
+            internal static enc.StructEncoder<ExternalDriveBackupStatusChanged> Encoder = new ExternalDriveBackupStatusChangedEncoder();
+
+            /// <summary>
+            /// <para>The decoder instance.</para>
+            /// </summary>
+            internal static enc.StructDecoder<ExternalDriveBackupStatusChanged> Decoder = new ExternalDriveBackupStatusChangedDecoder();
+
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="ExternalDriveBackupStatusChanged" /> class.</para>
+            /// </summary>
+            /// <param name="value">The value</param>
+            public ExternalDriveBackupStatusChanged(ExternalDriveBackupStatusChangedType value)
+            {
+                this.Value = value;
+            }
+            /// <summary>
+            /// <para>Initializes a new instance of the <see
+            /// cref="ExternalDriveBackupStatusChanged" /> class.</para>
+            /// </summary>
+            private ExternalDriveBackupStatusChanged()
+            {
+            }
+
+            /// <summary>
+            /// <para>Gets the value of this instance.</para>
+            /// </summary>
+            public ExternalDriveBackupStatusChangedType Value { get; private set; }
+
+            #region Encoder class
+
+            /// <summary>
+            /// <para>Encoder for  <see cref="ExternalDriveBackupStatusChanged" />.</para>
+            /// </summary>
+            private class ExternalDriveBackupStatusChangedEncoder : enc.StructEncoder<ExternalDriveBackupStatusChanged>
+            {
+                /// <summary>
+                /// <para>Encode fields of given value.</para>
+                /// </summary>
+                /// <param name="value">The value.</param>
+                /// <param name="writer">The writer.</param>
+                public override void EncodeFields(ExternalDriveBackupStatusChanged value, enc.IJsonWriter writer)
+                {
+                    WriteProperty("external_drive_backup_status_changed", value.Value, writer, global::Dropbox.Api.TeamLog.ExternalDriveBackupStatusChangedType.Encoder);
+                }
+            }
+
+            #endregion
+
+            #region Decoder class
+
+            /// <summary>
+            /// <para>Decoder for  <see cref="ExternalDriveBackupStatusChanged" />.</para>
+            /// </summary>
+            private class ExternalDriveBackupStatusChangedDecoder : enc.StructDecoder<ExternalDriveBackupStatusChanged>
+            {
+                /// <summary>
+                /// <para>Create a new instance of type <see
+                /// cref="ExternalDriveBackupStatusChanged" />.</para>
+                /// </summary>
+                /// <returns>The struct instance.</returns>
+                protected override ExternalDriveBackupStatusChanged Create()
+                {
+                    return new ExternalDriveBackupStatusChanged();
+                }
+
+                /// <summary>
+                /// <para>Decode fields without ensuring start and end object.</para>
+                /// </summary>
+                /// <param name="reader">The json reader.</param>
+                /// <returns>The decoded object.</returns>
+                public override ExternalDriveBackupStatusChanged DecodeFields(enc.IJsonReader reader)
+                {
+                    return new ExternalDriveBackupStatusChanged(global::Dropbox.Api.TeamLog.ExternalDriveBackupStatusChangedType.Decoder.DecodeFields(reader));
                 }
             }
 

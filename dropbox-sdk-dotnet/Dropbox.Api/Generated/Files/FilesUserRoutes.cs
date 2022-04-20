@@ -7590,5 +7590,93 @@ namespace Dropbox.Api.Files.Routes
 
             return task.Result;
         }
+
+        /// <summary>
+        /// <para>This route starts batch of upload_sessions. Please refer to
+        /// `upload_session/start` usage.</para>
+        /// </summary>
+        /// <param name="uploadSessionStartBatchArg">The request parameters</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        public t.Task<UploadSessionStartBatchResult> UploadSessionStartBatchAsync(UploadSessionStartBatchArg uploadSessionStartBatchArg)
+        {
+            return this.Transport.SendRpcRequestAsync<UploadSessionStartBatchArg, UploadSessionStartBatchResult, enc.Empty>(uploadSessionStartBatchArg, "api", "/files/upload_session/start_batch", "user", global::Dropbox.Api.Files.UploadSessionStartBatchArg.Encoder, global::Dropbox.Api.Files.UploadSessionStartBatchResult.Decoder, enc.EmptyDecoder.Instance);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the upload session start batch route.</para>
+        /// </summary>
+        /// <param name="uploadSessionStartBatchArg">The request parameters.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="state">A user provided object that distinguished this send from other
+        /// send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginUploadSessionStartBatch(UploadSessionStartBatchArg uploadSessionStartBatchArg, sys.AsyncCallback callback, object state = null)
+        {
+            var task = this.UploadSessionStartBatchAsync(uploadSessionStartBatchArg);
+
+            return enc.Util.ToApm(task, callback, state);
+        }
+
+        /// <summary>
+        /// <para>This route starts batch of upload_sessions. Please refer to
+        /// `upload_session/start` usage.</para>
+        /// </summary>
+        /// <param name="numSessions">The number of upload sessions to start.</param>
+        /// <param name="sessionType">Type of upload session you want to start. If not
+        /// specified, default is <see cref="Dropbox.Api.Files.UploadSessionType.Sequential"
+        /// />.</param>
+        /// <returns>The task that represents the asynchronous send operation. The TResult
+        /// parameter contains the response from the server.</returns>
+        public t.Task<UploadSessionStartBatchResult> UploadSessionStartBatchAsync(ulong numSessions,
+                                                                                  UploadSessionType sessionType = null)
+        {
+            var uploadSessionStartBatchArg = new UploadSessionStartBatchArg(numSessions,
+                                                                            sessionType);
+
+            return this.UploadSessionStartBatchAsync(uploadSessionStartBatchArg);
+        }
+
+        /// <summary>
+        /// <para>Begins an asynchronous send to the upload session start batch route.</para>
+        /// </summary>
+        /// <param name="numSessions">The number of upload sessions to start.</param>
+        /// <param name="sessionType">Type of upload session you want to start. If not
+        /// specified, default is <see cref="Dropbox.Api.Files.UploadSessionType.Sequential"
+        /// />.</param>
+        /// <param name="callback">The method to be called when the asynchronous send is
+        /// completed.</param>
+        /// <param name="callbackState">A user provided object that distinguished this send
+        /// from other send requests.</param>
+        /// <returns>An object that represents the asynchronous send request.</returns>
+        public sys.IAsyncResult BeginUploadSessionStartBatch(ulong numSessions,
+                                                             UploadSessionType sessionType = null,
+                                                             sys.AsyncCallback callback = null,
+                                                             object callbackState = null)
+        {
+            var uploadSessionStartBatchArg = new UploadSessionStartBatchArg(numSessions,
+                                                                            sessionType);
+
+            return this.BeginUploadSessionStartBatch(uploadSessionStartBatchArg, callback, callbackState);
+        }
+
+        /// <summary>
+        /// <para>Waits for the pending asynchronous send to the upload session start batch
+        /// route to complete</para>
+        /// </summary>
+        /// <param name="asyncResult">The reference to the pending asynchronous send
+        /// request</param>
+        /// <returns>The response to the send request</returns>
+        public UploadSessionStartBatchResult EndUploadSessionStartBatch(sys.IAsyncResult asyncResult)
+        {
+            var task = asyncResult as t.Task<UploadSessionStartBatchResult>;
+            if (task == null)
+            {
+                throw new sys.InvalidOperationException();
+            }
+
+            return task.Result;
+        }
     }
 }
