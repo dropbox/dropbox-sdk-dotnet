@@ -14,6 +14,8 @@ namespace Dropbox.Api.TeamLog
     /// <para>Information about linked Dropbox desktop client sessions</para>
     /// </summary>
     /// <seealso cref="DeviceSyncBackupStatusChangedDetails" />
+    /// <seealso cref="ExternalDriveBackupEligibilityStatusCheckedDetails" />
+    /// <seealso cref="ExternalDriveBackupStatusChangedDetails" />
     /// <seealso cref="Global::Dropbox.Api.TeamLog.DeviceSessionLogInfo" />
     public class DesktopDeviceSessionLogInfo : DeviceSessionLogInfo
     {
