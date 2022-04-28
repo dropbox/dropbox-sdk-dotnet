@@ -23,7 +23,9 @@ jobs:
       - name: Install dependencies
         run: dotnet restore dropbox-sdk-dotnet/Dropbox.Api
       - name: Copy for index
-        run: cp README.md index.md
+        run: cp README.md gh-pages/index.md
+      - name: Go into gh-pages
+        run: cd gh-pages
       - uses: nikeee/docfx-action@v1.0.0
         name: Build Documentation YAML
         with:
