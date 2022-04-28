@@ -24,12 +24,10 @@ jobs:
         run: dotnet restore dropbox-sdk-dotnet/Dropbox.Api
       - name: Copy for index
         run: cp README.md gh-pages/index.md
-      - name: Go into gh-pages
-        run: cd gh-pages
       - uses: nikeee/docfx-action@v1.0.0
         name: Build Documentation YAML
         with:
-          args: ./docfx.json
+          args: ./gh-pages/docfx.json
       - name: Push Documentation
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
